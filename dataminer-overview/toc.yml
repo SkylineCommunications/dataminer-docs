@@ -43,8 +43,8 @@
           topicUid: Stack_Data_Management
         - name: Augmented Operations
           topicUid:  Stack_Augmented_Operations
-        - name: Data_Visualisation
-          topicUid: Stack_Data_Visualisation
+        - name: Data_Visualization
+          topicUid: Stack_Data_Visualization
         - name: Infrastructure Discovery & Provisioning
           topicUid: Stack_IDP
         - name: DataMiner Object Models
@@ -57,8 +57,8 @@
           topicUid: Stack_Data_Aggregation
         - name: SLA Management
           topicUid: Stack_SLA_Management
-        - name: 3rd Party Integrations
-          topicUid: Stack_3rd_Party_Integrations
+        - name: Third-Party Integrations
+          topicUid: Stack_Third_Party_Integrations
     - name: Agile partnership
       topicUid: Overview_Agile_Partnership_intro
       items:

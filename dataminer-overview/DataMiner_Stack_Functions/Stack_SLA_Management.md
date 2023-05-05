@@ -4,7 +4,7 @@ uid: Stack_SLA_Management
 
 # SLA Management
 
-***Reduce operational expenses and ensure business stakes are always taken into account***
+***Reduce operational expenses and ensure that business stakes are always taken into account.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_SLA_management.png)
 
@@ -14,7 +14,7 @@ Automate, track, and measure the digital processes that a key relationship depen
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Service Monitoring
 
@@ -22,7 +22,7 @@ Checks the performance of different services and quickly detects and resolves an
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Element Management
 
@@ -30,4 +30,4 @@ Manage network elements on the network element-management layer.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*

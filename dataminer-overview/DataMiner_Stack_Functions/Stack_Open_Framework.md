@@ -4,7 +4,7 @@ uid: Stack_Open_Framework
 
 # Open Framework
 
-***Enable easy and secure integration with data from any source or system***
+***Enable easy and secure integration with data from any source or system.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_open_framework.png)
 
@@ -14,7 +14,7 @@ Create RESTful APIs on the fly, tailored to your use case.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Northbound APIs
 
@@ -22,7 +22,7 @@ The DataMiner Web Services API is north bound accessible for third-party applica
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Data Offloading
 
@@ -30,4 +30,4 @@ All data in DataMiner can easily be offloaded to a central database, your own da
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*

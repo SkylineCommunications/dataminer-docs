@@ -4,7 +4,7 @@ uid: Stack_Data_Connectivity
 
 # Data Connectivity
 
-***Configure and visualize signal paths throughout your infrastructure***
+***Configure and visualize signal paths throughout your infrastructure.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_data_connectivity.png)
 
@@ -14,7 +14,7 @@ Easily manage signal routes.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Connectivity Modelling
 
@@ -22,4 +22,4 @@ Provides accuracy of the phase and connectivity details of the network.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*

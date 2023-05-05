@@ -4,17 +4,17 @@ uid: Stack_Augmented_Operations
 
 # Augmented Operations
 
-***Ensure maximum uptime by leveraging big data and AI***
+***Ensure maximum uptime by leveraging big data and AI.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_augmented_operations.png)
 
 **Make the shift from reactive to proactive management.**
 
-DataMiner Augmented Operation **captures, correlates and analyzes** all data sources in **real time**. It learns the relationships between metrics and generates alarms when anomalies are detected. This predictive approach improves performance and reduces system downtime.
+DataMiner Augmented Operation **captures, correlates, and analyzes** all data sources in **real time**. It learns the relationships between metrics and generates alarms when anomalies are detected. This predictive approach improves performance and reduces system downtime.
 
-This technology, built into the core of DataMiner, leverages state-of-the-art big data and artificial intelligence (AI) technology. As we are dealing with **increasingly more complex and agile ecosystems that are continuously evolving**, the way it is set up today could be very different as opposed to how it is setup the day after.
+This technology, built into the core of DataMiner, leverages state-of-the-art big data and artificial intelligence (AI) technology. As we are dealing with **increasingly more complex and agile ecosystems that are continuously evolving**, the way it is set up today could be very different as opposed to how it is set up tomorrow.
 
-Today’s operations are more about the **behavior of metrics and resources rather than the absolute state or value**, and how they are evolving over time. A certain value which is normal right now, could be the same value one hour later, but with a completely different context, because of services that have been added, the time of the day, etc., turning it into a value which is no longer normal for the ongoing operations.
+Today’s operations are more about the **behavior of metrics and resources rather than their absolute state or value**, and about how they are evolving over time. A certain value that is normal right now could be the same value one hour later but with a completely different context, because of services that have been added, the time of the day, etc., turning it into a value that is no longer normal for ongoing operations.
 
 Equally, DataMiner Augmented Operation is about **reducing time for set-up & configuration, and increasing the efficiency of the management.**
 
@@ -25,13 +25,13 @@ Combined with the ability to **leverage the unique e2e value proposition of Data
 The **fully integrated out-of-the-box solution** and its **self-learning technology**, increases efficiency and accuracy, drastically reduces configuration effort and cost, and helps in adopting a proactive operating strategy.
 
 > [!TIP]
-> A 60 min webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [**Experts & Insights - Augmented Operations**](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/)
+> For more information:
+>
+> - A 60-min webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [**Experts & Insights - Augmented Operations**](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/)
+> - A high-level introduction video (50 minutes) is available from our Inspire Rewind section on our Community site, at [**Inspire Rewind – Augmented Operations**](https://community.dataminer.services/video/inspire-rewind-augmented-operations/)
 
-> [!TIP]
-> A high-level introduction video (50 mins) is available from our Inspire Rewind section on our Community site, at [**Inspire Rewind – Augmented Operations**](https://community.dataminer.services/video/inspire-rewind-augmented-operations/)
-
-> [!TIP]
-> Are you struggling with something? Are there any use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
+> [!NOTE]
+> Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
 
 ## Trend Forecast
 
@@ -40,7 +40,7 @@ Predictions based on data.
 The AI-powered forecasting functionality automatically learns the behavior and evolution of the operational system and its performance metrics, and extends that towards the future, allowing the operator to gain more in-depth insights and manage the operation more proactively.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - [DataMiner Forecasting Use case 1](https://community.dataminer.services/use-case/dataminer-forecasting-2/)
 > - [DataMiner Forecasting Use case 2](https://community.dataminer.services/use-case/dataminer-forecasting-3/)
@@ -57,7 +57,7 @@ Through automatic tagging functionality, behavioral patterns in the trend data, 
 Based on AI pattern matching algorithms, instances of tagged patterns are automatically recognized and labelled both in historical trend data and in the new incoming real-time data.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - [DataMiner Automated Tagging Use case 1](https://community.dataminer.services/use-case/dataminer-automatic-pattern-detection/)
 > - [DataMiner Automated Tagging Use case 2](https://community.dataminer.services/use-case/automatic-tag-detection/)
@@ -73,7 +73,7 @@ Detecting abrupt shifts in time series trends.
 DataMiner’s change point detection solution automatically identifies both abrupt and subtle behavioral changes in the trend data of individual performance metrics in (semi) real time. Detection of a change in level, trend or variance can be applied for early fault detection as a user can be warned about previously unseen or rare behavior. Knowledge of change points also proves useful in improving the modelling and prediction of the metric behavior, and in the automatic detection of relationships between metrics or DataMiner objects.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Change Point Detection, amongst others)
 > - User Guide: [Advanced Analytics in trend graphs](xref:Advanced_analytics_trending)
@@ -85,7 +85,7 @@ Locating unusual points or patterns in a set of data.
 An anomaly significance scoring mechanism augments the change point detection solution and identifies the changes in metric behavior which are truly exceptional or unexpected taking historical metric behavior and previously detected change points into account.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action)
 > - User Guide: [Advanced Analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
@@ -99,7 +99,7 @@ Reporting of certain trigger events.
 The automatic incident tracking feature autonomously learns about system behavior and leverages the rich context of alarms and relational information available in a DataMiner system to automatically correlate alarms belonging to a specific incident. No manual pre-analysis, and time-consuming setup and configuration of correlation logic is required.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Video: [Focus on the Root of Issues with Incident Analysis](https://community.dataminer.services/video/finding-the-root-of-problems-with-dataminer-incident-analysys/)
 > - Blog post about [Automatic Incident Detection](https://community.dataminer.services/tweak-automatically-detected-incidents-with-dataminer-10-2-5/)
@@ -107,14 +107,13 @@ The automatic incident tracking feature autonomously learns about system behavio
 
 ## Focus Alarms
 
-Show past behaviour of alarms.
+Show past behavior of alarms.
 
 Based on an analysis of the alarm history and its patterns, the focused alarms option reduces alarm noise and allows easy focus on the events and incidents which are truly impactful.
 Focus alarms only show the ‘unexpected’ alarms and ignore recurring alarms due to bad template configuration.
 
-
 > [!TIP]
-> See also:
+> For more information:
 >
 > - User Guide: [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)
 
@@ -127,7 +126,7 @@ The proactive cap detection solution provides an automated zero-configuration ri
 By continuously monitoring and modelling the trend of the metrics, proactive cap detection will give the user an early warning if it predicts problems on a metric in the future without generating many false positive alarms. This enables a proactive way of tackling emerging issues and prevents issues from impacting services.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, amongst others)
 > - User Guide: [Advanced Analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
@@ -137,7 +136,7 @@ By continuously monitoring and modelling the trend of the metrics, proactive cap
 Providing you with insights based on learned relations between the numerous integrated metrics/parameters.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
 > - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)

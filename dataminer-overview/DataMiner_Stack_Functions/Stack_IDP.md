@@ -4,7 +4,7 @@ uid: Stack_IDP
 
 # Infrastructure Discovery & Provisioning
 
-***Manage and automate all your network implementation workflows***
+***Manage and automate all your network implementation workflows.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_IDP.png)
 
@@ -14,7 +14,7 @@ Setting up IT infrastructure.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Document Management
 
@@ -22,7 +22,7 @@ Store, share, track and manage files or documents.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Rack Management
 
@@ -30,7 +30,7 @@ Automatically create highly graphical views of all your facilities, buildings, f
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Firmware Management
 
@@ -38,7 +38,7 @@ Automates end-to-end firmware orchestration processes.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Resource Inventory
 
@@ -46,7 +46,7 @@ Manage information of all resources used to implement services and products.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Resource Discovery
 
@@ -54,4 +54,4 @@ Focuses on finding resources, identifying their capabilities and properties.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*

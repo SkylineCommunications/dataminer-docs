@@ -4,7 +4,7 @@ uid: Stack_DOM
 
 # DataMiner Object Models (DOM)
 
-***Enrich your operations with administrative and business-related data***
+***Enrich your operations with administrative and business-related data.***
 
 ![stack.functions.categories](~/dataminer-overview/images/stack_DOM.png)
 
@@ -14,14 +14,14 @@ Automate complex business processes.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Object Modeling
 
 Visual representation of software or systems' objects, attributes, actions, and relationships.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - [Introduction to Stateful DataMiner Object Models](https://community.dataminer.services/video/introduction-to-stateful-dataminer-object-models-1-3/)
 > - [Model and Create an Object](https://community.dataminer.services/video/model-and-create-an-object-2-3//)
@@ -33,4 +33,4 @@ Planning, documenting, or scheduling any maintenance activity.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*

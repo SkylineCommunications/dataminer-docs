@@ -1,8 +1,8 @@
 ---
-uid: Stack_Data_Visualisation
+uid: Stack_Data_Visualization
 ---
 
-# Data Visualisation
+# Data Visualization
 
 ***Convert bits and bytes into uncluttered dashboards and easy control panels***
 
@@ -16,23 +16,23 @@ DataMiner Spectrum Analysis provides operators with the unique opportunity to be
 
 **any spectrum analyzer:**
 
- - high-end analyzers at strategic points in your operation
- - mainstream commodity analyzers in high volume
- - any product with spectrum monitoring measurement (e.g. cable modem, CMTS, remote PHY, etc.)
+- high-end analyzers at strategic points in your operation
+- mainstream commodity analyzers in high volume
+- any product with spectrum monitoring measurement (e.g. cable modem, CMTS, remote PHY, etc.)
 
 **but also:**
 
- - legacy products
- - packaged Carrier Management Systems
+- legacy products
+- packaged Carrier Management Systems
 
 **and**
 
- - RF routing/switching solutions (L-band router, return path switch, etc.)
+- RF routing/switching solutions (L-band router, return path switch, etc.)
 
 DataMiner brings it all together in one standard graphical UI, with a rich set of features and capabilities that runs completely transparently across any analyzer you have today or at any time in the future.
 
 > [!TIP]
-> See also:
+> For more information:
 >
 > - Solution Overview about [Spectrum analysis, monitoring and management](https://community.dataminer.services/solution/manage-your-rf-with-care-dataminer-spectrum-analysis-monitoring-and-management/)
 > - Discover all the capabilities of DataMiner Spectrum Management in this 60min [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-spectrum-management/)
@@ -51,20 +51,18 @@ DataMiner allows the user to define exactly for which parameters trending inform
 
 In combination with a Cassandra and Elastic database, DataMiner’s [Augmented Operation](xref:Stack_Augmented_Operations) is enabled, including AI features such as trend prediction, pattern matching and much more.
 
-
 > [!TIP]
-> See also:
+> For more information:
 >
-> - User Guide: [Trending](xref:trending)
-
+> - [Trending](xref:trending) in the DataMiner User Guide.
 
 ## Visual Overview
 
-Clear visualisation of data and insights.
+Clear visualization of data and insights.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Event Correlation
 
@@ -72,7 +70,7 @@ Detect identifiable patterns by relating various events.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Fault Management
 
@@ -80,7 +78,7 @@ Detect, isolate and resolve problems.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Dashboards
 
@@ -88,7 +86,7 @@ Visually display of all data.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## Button Panel
 
@@ -96,7 +94,7 @@ Software button panels.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
 
 ## No Code Apps
 
@@ -104,4 +102,4 @@ Create application software through graphical user interfaces.
 
 > [!TIP]
 >
-> *STAY TUNED, MORE INFO COMING SOON*
+> *More info coming soon. Stay tuned!*
