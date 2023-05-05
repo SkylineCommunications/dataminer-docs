@@ -12,7 +12,20 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In DataMiner Dashboards and Low-Code Apps, the following DOM data feeds are now available:
+
+- Object Manager Definitions
+- Object Manager Instances
+
+In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
+
+- object manager definitions
+- object manager instances
+- object manager modules
 
 ## Other features
 
