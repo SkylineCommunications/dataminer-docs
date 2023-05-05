@@ -24,14 +24,10 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
-## Correlation rules
+> [!NOTE]
+> Note that in versions prior to ID 6.1.8, correlation rules and automation scripts were employed to enable communication between the Backend and Workflow Manager. However, starting from the subsequent versions, interapps have been implemented as the communication channel between these entities. Therefore, the use of correlation rules and automation scripts is no longer necessary. 
+This change in communication methodology should be taken into consideration when developing software for the updated versions.
 
-The I-DOCSIS EPM Solution uses the following Correlation rules:
-
-- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
-- **WM to EPM BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
-- **EPM BE to EPM FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
-- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
 
 ## Automation scripts
 
@@ -40,8 +36,6 @@ The I-DOCSIS EPM Solution uses the following Automation scripts:
 - **EPM_I_DOCSIS_CCapToEpmFe**: Operates within the messaging system domain taking care of simple notifications between CCAP elements and the EPM engine.
 - **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
 - **EPM_I_DOCSIS_EpmBeToCcapPair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
-- **EPM_I_DOCSIS_EPMBeToWm**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
-- **EPM_I_DOCSIS_WmToBe**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
 - **EPM_I_DOCSIS_EPMBeToFePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
 - **EPM_I_DOCSIS_EPMFeToBePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
 - **EPM_I_DOCSIS_AddNewCcapCmPair**: Allows the user to create a CCAP/CM pair from the EPM UI.
