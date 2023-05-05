@@ -8,11 +8,13 @@ uid: Verifying_Elasticsearch_Synchronization
 
 - **Elasticsearch Cluster Monitor**
 
-  1. Go to the *General* page and configure the following settings:
+  1. In Cube, open the element card of the element using the *Elasticsearch Cluster Monitor* protocol and select *DATA* in the tree view in the navigation pane on the left. Select the *general* data display page and verify whether the following is displayed correctly:
 
-     - Parameter Connection Status: *Success*
+     - Connection Status: *Success*
 
-     - Parameter Cluster Status: *All primary and replica shards are active* or *All primary shards are active, but not all replica shards are active*
+     - Cluster Status: *All primary and replica shards are active* or *All primary shards are active, but not all replica shards are active*
+
+     ![Connection & Cluster Status](~/user-guide/images/Connection_Status_Cluster_Status.png)
 
   1. Make sure the element is not in timeout.
 
@@ -20,17 +22,19 @@ uid: Verifying_Elasticsearch_Synchronization
 
   1. Enter `[ELASTIC NODE IP]:9200/_cluster/health` in your browser's address bar.
 
-  1. Ensure that the field status is *green* or *yellow*.  
+  1. Ensure that the status is set to *green* or *yellow*.
+
+  ![Elasticsearch API - green status](~/user-guide/images/Elasticsearch_API_green_status.png)
 
 ## Ensuring matching index names
 
 - **Elasticsearch Cluster Monitor**
 
-  1. Go to the *Index Overview* page.
+  1. In Cube, open the element card of the element using the *Elasticsearch Cluster Monitor* protocol and select *DATA* in the tree view in the navigation pane on the left. Select the *Index Overview* data display page.
 
-  1. Get all values in the *Name [IDX]* column.
+  1. Retrieve all values in the *Name [IDX]* column.
 
-  1. Repeat steps 1 and 2 for the other database.
+  1. Repeat these steps for the second database.
 
   1. Make sure that the strings are identical across the databases.
 
@@ -38,9 +42,11 @@ uid: Verifying_Elasticsearch_Synchronization
 
   1. Enter `[IPADDRESS]:9200/_cat/indices?v&s=index:desc` in your browser's address bar; e.g. `1.2.3.4:9200/_cat/indices?v&s=index:desc`.
 
+     ![Indices](~/user-guide/images/Retrieve_Order_Indices.png)
+
   1. Get all values in the *index* column.
 
-  1. Repeat steps 1 and 2 for the other database.
+  1. Repeat these steps for the second database.
 
   1. Make sure that the strings are identical across the databases.
 
