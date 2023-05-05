@@ -26,6 +26,12 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
 
+#### Dashboards app & Low-Code Apps: Components would prematurely consider themselves loaded [ID_36142]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, components would incorrectly consider themselves loaded while they were still loading. As a result, it would already be possible to execute actions on those components before those actions could be properly processed.
+
 #### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
