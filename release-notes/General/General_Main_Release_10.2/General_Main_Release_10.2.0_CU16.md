@@ -41,3 +41,9 @@ When, in the *Resources* app, you created a resource and then opened the element
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In some cases, a *State* component would incorrectly not be cleared when its input feed was cleared.
+
+#### Low-Code Apps: Table actions would incorrectly be executed before the rows were fed [ID_36263]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, table actions would be executed before the rows were fed. As a result, the feed would get lost when you navigated away from the page via an action. From now on, a row will always be fed before row actions are executed.
