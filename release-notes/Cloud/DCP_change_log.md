@@ -6,6 +6,15 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 5 May 2023 - Fix -  CloudGateway 2.10.10 - NullReferenceException breaking the cloud connection [ID_36346]
+
+Resolved an issue that was introduced since CloudGateway 2.10.8 where the connection to the could become broken. The CloudGateway log file would periodically contain the next exception:
+
+```
+Unable to connect to the TunnelService[SLCcaGatewayService.Services.TunnelService.TunnelConnection.Impl.TunnelConnection]
+System.NullReferenceException: Object reference not set to an instance of an object.
+```
+
 #### 5 May 2023 - Enhancement -  CloudGateway 2.10.9 - ConnectionTester tool output improved [ID_36260]
 
 The ConnectionTester tool, which is included in the CloudGateway installation, has been improved and will have clearer logging output that is easier to understand. 
