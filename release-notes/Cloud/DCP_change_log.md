@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 5 May 2023 - Fix -  CloudGateway 2.10.10 - NullReferenceException breaking the cloud connection [ID_36346]
 
-Resolved an issue that was introduced since CloudGateway 2.10.8 where the connection to the could become broken. The CloudGateway log file would periodically contain the next exception:
+Resolved an issue that was introduced since CloudGateway 2.10.8 where the connection to the cloud could become broken. The CloudGateway log file would periodically contain the next exception:
 
 ```
 Unable to connect to the TunnelService[SLCcaGatewayService.Services.TunnelService.TunnelConnection.Impl.TunnelConnection]
