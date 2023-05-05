@@ -190,12 +190,6 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
-#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
-
 #### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -323,6 +317,12 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
+#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
+
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -350,3 +350,9 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.

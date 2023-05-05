@@ -6,7 +6,7 @@ uid: user-defined_API_benchmarks
 
 ## Specifications of the test VM server
 
-- Intel Core i7-12700
+- Intel Xeon E5-2620 v4
 - 8 cores
 - 32GB RAM
 - HDD

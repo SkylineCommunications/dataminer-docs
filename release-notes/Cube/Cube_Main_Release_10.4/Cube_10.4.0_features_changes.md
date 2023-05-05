@@ -168,6 +168,27 @@ From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedd
 
 When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
+#### Trending: Managing trend patterns in the 'Pattern Overview' window [ID_35694] [ID_36114]
+
+<!-- 35694: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36114: MR 10.4.0 - FR 10.3.6 -->
+<!-- Both released in MR 10.4.0 - FR 10.3.6 -->
+
+When you right-click a trend graph and select *Trend patterns...*, the *Pattern Overview* window will now appear.
+
+By default, this window will only list the existing patterns that apply to the trend graph you have opened. If you select the *Show all patterns* option, it will list all patterns found in the DataMiner System.
+
+- To update the properties of an existing pattern, select it in the list on the left, update its properties, and click *OK* or *Apply*.
+
+  Apart from changing its name and description, you can also indicate whether you want the pattern to be detected continuously in the background.
+
+- To delete a pattern, click the recycle bin icon next to its name in the list on the left.
+
+When you select a trend pattern from the list on the left, a thumbnail preview of the pattern will be displayed, together with the name of the element and parameter associated with the pattern.
+
+> [!NOTE]
+> Currently, this *Pattern Overview* window only supports single-variate patterns. Support for multi-variate patterns will be added in a later release.
+
 #### Search box in Cube header can now be hidden [ID_35826]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

@@ -99,12 +99,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
-
 #### Maps: Zoom range can now be set by means of a slider [ID_35381]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -196,6 +190,16 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
+
+#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
+
+#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
 ### Fixes
 

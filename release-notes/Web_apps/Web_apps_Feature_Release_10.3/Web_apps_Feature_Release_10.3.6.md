@@ -12,7 +12,20 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In DataMiner Dashboards and Low-Code Apps, the following DOM data feeds are now available:
+
+- Object Manager Definitions
+- Object Manager Instances
+
+In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
+
+- object manager definitions
+- object manager instances
+- object manager modules
 
 ## Other features
 
@@ -72,7 +85,7 @@ When editing a low-code app, it is now possible to duplicate an entire page or p
 
 #### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
@@ -241,3 +254,15 @@ This setting has now been renamed to *Number of decimals*.
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.
+
+#### Dashboards app: Order of parameters in State component of shared dashboard was incorrect [ID_36206]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.
+
+#### Low-Code Apps: Action buttons could have an incorrect background color [ID_36258]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
+
+In some cases, action buttons could have an incorrect background color.

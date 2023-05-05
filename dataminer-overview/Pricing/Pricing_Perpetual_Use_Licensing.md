@@ -29,7 +29,7 @@ Depending on the application, licensing is available as **server-based licenses*
 > All volume-based licenses are cumulative undividable capacity packages. For example, to manage 17,000 objects you can either buy one 20K capacity license or one 15K and two 1K capacity licenses.
 
 > [!NOTE]
-> The license restriction on the number of Managed Objects applies to active and paused element objects (not stopped elements), including both regular element objects and virtual element objects (a.k.a. DVEs), and objects representing applications and data aggregators. It does not apply to service objects, enhanced service objects, element objects derived from redundancy groups, and SLA objects.
+> The license restriction on the number of Managed Objects applies to active and paused element objects (not stopped elements), including both standard element objects and regular virtual element objects (a.k.a. DVEs), and objects representing applications and data aggregators. It does not apply to service objects, enhanced service objects, function DVEs, element objects derived from redundancy groups, and SLA objects.
 
 ### Optional functions
 

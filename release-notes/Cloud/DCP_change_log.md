@@ -6,6 +6,27 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 5 May 2023 - Enhancement -  CloudGateway 2.10.9 - ConnectionTester tool output improved [ID_36260]
+
+The ConnectionTester tool, which is included in the CloudGateway installation, has been improved and will have clearer logging output that is easier to understand. 
+
+#### 3 May 2023 - Fix - SupportAssistant 1.3.2 - Fixed incorrect timeout for Remote Log Collection uploads [ID_36311]
+
+An issue has been resolved where Remote Log Collection could incorrectly time out after 100 seconds of uploading.
+
+#### 26 April 2023 - Enhancement - ArtifactDeployer 1.4.5 - ArtifactDeployer no longer requires direct internet access [ID_36284]
+
+By using the cloud endpoint available since DataMiner CloudGateway 2.10.0 (included in the Cloud Pack 2.8.2), the DataMiner ArtifactDeployer can be installed on servers without internet access. As such, internet access is now no longer required for this DxM.
+
+> [!NOTE]
+> For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+
+#### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID_36014] [ID_36259]
+
+Changes have been implemented in DataMiner CloudGateway to make the service ignore requests when it is unable to access dataminer.services. This way, another CloudGateway service that does have access can pick them up and handle them successfully. This is most commonly needed when the CloudGateway is installed on a firewalled or offline server by accident. Previously, this could lead to seemingly random errors, for example when creating or renewing your cloud connection in Cube, or when creating or managing shares from the Dashboards app.
+
+An issue has also been resolved where CloudGateway did not sync the DMA online state with dataminer.services, causing features like sharing or remote access to stop working until the CloudGateway or DMA was restarted or the secure cloud connection was dropped and reestablished.
+
 #### 21 April 2023 - Enhancements - SupportAssistant 1.3.1 - General improvements and offloading of reports and notifications [ID_35482] [ID_35485] [ID_35492] [ID_35559] [ID_35756] [ID_36152] [ID_36201]
 
 Changes have been implemented in DataMiner SupportAssistant to improve its general stability.
@@ -269,7 +290,7 @@ The following limitations also apply:
 - Commands that run longer than 30 seconds are currently not supported.
 - Issues with the adaptive card output will not result in proper error feedback.
 
-For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-commands-for-the-teams-bot-to-a-dms)
+For more detailed information, refer to [Adding commands for the Teams bot to a DMS](xref:DataMiner_Teams_bot#adding-custom-commands-for-the-teams-bot-to-a-dms)
 
 #### 19 September 2022 – Enhancement – Improvements on Audit page in Admin app [ID_34457]
 

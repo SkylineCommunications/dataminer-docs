@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates.Template
 
 # Template element
 
-Specifies an information template to be included in the package for this protocol.
+Specifies an information template to include in the package for this protocol.
 
 ## Type
 

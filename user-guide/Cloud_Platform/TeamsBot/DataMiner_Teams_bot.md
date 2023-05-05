@@ -18,7 +18,7 @@ To install the DataMiner Teams bot, [click here](https://teams.microsoft.com/l/a
 
 Alternatively, you can also download the bot as follows:
 
-1. In Microsoft Teams, go to the apps store.
+1. In Microsoft Teams, select *Apps* in the app bar.
 
    > [!NOTE]
    > Depending on the configuration of your Microsoft tenant, your IT admin may need to explicitly allow the installation of the [DataMiner bot](https://teams.microsoft.com/l/app/9a09d087-5d07-4481-b34f-cd053eab7925) in your organization. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/microsoftteams/manage-apps).
@@ -66,9 +66,9 @@ When you start a conversation with the Teams bot, you will first need to log in:
 > - The DataMiner Teams bot can also be used in group chats and channel conversations.
 > - To be able to use the Teams bot, you need to be a member of a DMS that is connected to dataminer.services. See [Giving a user access to dataminer.services features](xref:Giving_users_access_to_cloud_features).
 
-## Available options
+## Available commands
 
-You can use the following options to interact with the DataMiner Teams bot:
+You can use the following out-of-the-box commands to interact with the DataMiner Teams bot:
 
 - **show dms**: Shows the active DataMiner System of this conversation.
 
@@ -86,11 +86,11 @@ You can use the following options to interact with the DataMiner Teams bot:
 
 - **show view *view name***: Shows the visual overview of the specified view
 
-- **show command *command name***: Displays the matching command with its description and a button to run the command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
+- **show command *command name***: Displays the matching command with its description and a button to run the command. See [Adding commands for the Teams bot to a DMS](#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
-- **show commands**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
+- **show commands**: Displays the first 10 commands found in the active DataMiner System with their description and buttons to run each command. See [Adding commands for the Teams bot to a DMS](#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
-- **run *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-commands-for-the-teams-bot-to-a-dms).
+- **run *command name***: Runs the matching command on the active DataMiner System. When necessary, the user will be asked for input and/or confirmation. See [Adding commands for the Teams bot to a DMS](#adding-custom-commands-for-the-teams-bot-to-a-dms).
 
 - **help**: Shows more detailed help information, if available.
 
@@ -105,9 +105,9 @@ You can use the following options to interact with the DataMiner Teams bot:
 > - If the latest version of the DataMiner Cloud Pack is not yet installed in your DMS, some of these options may not be available yet.
 > - For many of these commands, the bot will also understand variations. For example, instead of "run command *command name*", you can simply specify "run *command name*" to get the same result.
 
-## Adding commands for the Teams bot to a DMS
+## Adding custom commands for the Teams bot to a DMS
 
-To add a command for the Teams bot to your DMS, create an [Automation script](xref:automation) in the folder "bot" in the DMS.
+To add a custom command for the Teams bot to your DMS, create an [Automation script](xref:automation) in the folder "bot" in the DMS.
 
 > [!TIP]
 > For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
@@ -118,9 +118,9 @@ The commands allow dynamic input, such as [dummies](xref:Script_variables#creati
 
 They support the following output:
 
-- Key values
+- Key values.
 
-- Adaptive card body elements
+- Adaptive card body elements.
 
 - JSON, which is displayed as plain text by the bot.
 
