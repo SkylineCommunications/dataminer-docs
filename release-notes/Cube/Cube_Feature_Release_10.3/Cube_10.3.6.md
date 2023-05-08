@@ -43,7 +43,7 @@ When you select a trend pattern from the list on the left, a thumbnail preview o
 
 #### System Center: Overhaul of LDAP settings [ID_35782]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.6 -->
 
 In *System Center > System settings > LDAP*, you can configure a number of LDAP settings. These settings have had an overhaul.
 
