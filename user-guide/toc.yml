@@ -3026,6 +3026,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: RTEs caused by problem during automatic NATS reconfiguration
+          topicUid: KI_RTEs_NATS_reconfiguration
         - name: Activities and scripts delayed because of CheckVIPs thread
           topicUid: KI_CheckVIPs_delays_activities
         - name: Elasticsearch not initialized when DataMiner starts up
