@@ -350,9 +350,3 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
-
-#### Low-Code Apps: Custom icon of a low-code app without a draft version would not be displayed on the DataMiner landing page [ID_36277]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-When a low-code app with a custom icon did not have a draft version, the DataMiner landing page would incorrectly not display the icon of that app.
