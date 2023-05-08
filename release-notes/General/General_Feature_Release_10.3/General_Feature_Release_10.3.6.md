@@ -26,31 +26,26 @@ The main objects used by this new DataMiner module are API tokens and API defini
 
 ##### Configuring the UserDefinableApiEndpoint extension module
 
-The first time you use DataMiner User-Defined APIs, make sure you adjust the UserDefinableApiEndpoint DxM settings to match your API needs.
+If you want the UserDefinableApiEndpoint DxM to use a different port than the default port 5002, you can adjust this by creating custom DxM settings.
 
-To do so, go to the folder `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\`, and create a copy of the file *appsettings.json* with the name *appsettings.custom.json*. You can then create your custom settings in that new file.
+To do so, go to the folder `%programfiles%\Skyline Communications\DataMiner UserDefinableApiEndpoint\`, and create a copy of the file *appsettings.json* with the name *appsettings.custom.json*. You can then create your custom settings in that new file. You can then adjust the port with the *Kestrel* > *Endpoints* > *Http* > *Url* setting.
 
-These are the main settings you can adjust:
-
-- *Kestrel* > *Endpoints* > *Http* > *Url*: This setting contains the endpoint where the UserDefinableApiEndpoint DxM will be run. This is where you can customize which port is used. Note that IIS also has a rewrite rule (Reroute User Definable APIs) that forwards API requests to the port used by UserDefinableApiEndpoint (5002). When you specify a custom port, you will also have to update that rule.
-- *Kestrel* > *Limits* > *MaxConcurrentConnections*: This setting defines the maximum number of open connections. By default, the DxM will allow 100 concurrent connections, but you can customize this number here.
-- *Serilog*: Serilog is the logging service used for UserDefinableApiEndpoint. Here you can change where the log files should be located, how big they can get, and how many files should be kept. You can also change the default log levels.
-- *UserDefinableAPIs* > *MessageBrokerTimeOutSeconds*: This setting indicates how long the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes). If you increase the timeout value, you will also need to increase the timeout in IIS.
+This settings file also contains other customizable settings, such as the maximum number of open connections, the logging service used, and the timeout time of the message broker.
 
 > [!TIP]
 > For detailed information and examples, see [Configuring the DxM](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
 
 ##### Defining an API
 
-To define an API, you will first need to **create an Automation script** containing the logic of the API. This Automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output anything back to the API caller.
+To define an API, you will first need to **create an Automation script** containing the logic of the API. This Automation script should contain the OnApiTrigger entry point method, which will be executed when the API is triggered. Alternatively, you can also **use an existing script** and trigger the API through the *Run* method. However, the latter approach has some disadvantages: you will not have access to the *ApiTriggerInput* object and *ApiTriggerOutput* object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
 
-When the script is ready, you will then need to **create an API and tokens**. This can be done in the Automation module, or directly in code. If you use DataMiner Automation, open the script and click *Configure API* at the bottom of the window. This will open a window where you can specify the following information:
+When the script is ready, you will then need to **create an API and tokens**. This can be done in the Automation module or in System Center. If you use DataMiner Automation, open the script and click *Configure API* at the bottom of the window. This will open a window where you can specify the following information:
 
 - A **description** of the API (optional).
 - The **URL route** where the API will be available. This is a suffix that comes after the base URL `{hostname}/api/custom/`. This route must be unique, and must not start or end with a forward slash. For example, if you want to create an API to retrieve the status of all encoders in your system, a logical route would be `encoders/status`.
 - The **method** to be executed:
 
-  - If you are using a script with **OnApiTrigger** method, you can select whether you want to use the raw body of the JSON input or parse the JSON body of the HTTP request to a dictionary. Using the raw body provides the most flexibility, as it allows you to parse the input from any format you like. Using dictionary parsing makes it easier to handle basic user input, as you do not need to parse the JSON data yourself.
+  - If you are using a script with the **OnApiTrigger** method, you can select whether you want to use the raw body of the JSON input or parse the JSON body of the HTTP request to a dictionary. Using the raw body provides the most flexibility, as it allows you to parse the input from any format you like. Using dictionary parsing makes it easier to handle basic user input, as you do not need to parse the JSON data yourself.
   - If you are using an existing script and want to trigger the API through the *Run* method, select *Run method (no output)*.
 
 - The **tokens** that need access. You can also create new tokens here. At least one token has to be linked before the API will be usable.
@@ -67,9 +62,9 @@ To trigger an API, you can send an HTTP or HTTPS request to the UserDefinableApi
 
 To authenticate yourself to the API, you will need to add a *Bearer* authorization header to your request containing the secret. In case the API needs input from the user using the HTTP body, you need to specify a *Content-Type* header. The *Content-Length* header is calculated and filled in automatically depending on how you send the request. The format of input in the body is defined in the API definition. If the API definition is set to accept parameters, these are expected to be passed as JSON in a key-value format.
 
-The API will return an HTTP status code indicating the status of the request and a body. The response is encoded in UTF-8. In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API will return an HTTP status code indicating the error and a JSON body with more information. The endpoint itself can also return errors with corresponding status code to indicate something went wrong before the script was executed.
+The API will return an HTTP status code indicating the status of the request and a body. The response is encoded in UTF-8. In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API can return an HTTP status code indicating the error and a JSON body with more information (depending on how the script is designed). The endpoint itself can also return errors with corresponding status code to indicate something went wrong before the script was executed.
 
-API triggers are handled asynchronously. To protect DataMiner, there is a limit to the number of concurrent triggers. As soon as that limit is reached, new triggers are added to a queue, to be handled as soon as another trigger is finished. It is not possible to adjust this limit, as it is automatically set based on the number of logical processors in the system (with a minimal concurrency of 4). The exact limit is logged in the file `C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt`. Apart from this limit implemented by DataMiner, IIS for Windows 10 also has a concurrency limit of 10. IIS for Windows Server has no limits.
+API triggers are handled in parallel. To protect DataMiner, there is a limit to the number of concurrent triggers. As soon as that limit is reached, new triggers are added to a queue, to be handled as soon as another trigger is finished. It is not possible to adjust this limit, as it is automatically set based on the number of logical processors in the system (with a minimal concurrency of 4). The exact limit is logged in the file `C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt`. Apart from this limit implemented by DataMiner, IIS for Windows 10 also has a concurrency limit of 10. IIS for Windows Server has no limits.
 
 > [!TIP]
 > For detailed information and examples, see [Triggering a user-defined API](xref:UD_APIs_Triggering_an_API).
