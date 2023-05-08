@@ -89,7 +89,7 @@ On the *Users/Groups* page in System Center, several new user permissions are av
 - *Tokens > Add/Edit*: Permission to create and update API tokens.
 - *Tokens > Delete*: Permission to delete API tokens.
 - *APIs > UI available*: Permission to view API definitions.
-- *APIs > Add/Edit*: Permission to create and update API definitions. Note that users will also need to be granted the *Automation > Execute* permission.
+- *APIs > Add/Edit*: Permission to create and update API definitions.
 - *APIs > Delete*: Permission to delete API definitions.
 
 ##### Logging
