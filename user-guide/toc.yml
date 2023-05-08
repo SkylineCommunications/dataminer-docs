@@ -3026,6 +3026,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
+          topicUid: KI_Inaccessible_data_Elasticsearch_casing
         - name: RTEs caused by problem during automatic NATS reconfiguration
           topicUid: KI_RTEs_NATS_reconfiguration
         - name: Activities and scripts delayed because of CheckVIPs thread
