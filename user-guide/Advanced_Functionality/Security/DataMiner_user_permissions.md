@@ -1673,7 +1673,7 @@ Permission to view API definitions for user-defined APIs.
 
 #### Modules \> User-Defined APIs \> APIs \> Add/Edit
 
-Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+Permission to create and edit API definitions for user-defined APIs.
 
 #### Modules \> User-Defined APIs \> APIs \> Delete
 
