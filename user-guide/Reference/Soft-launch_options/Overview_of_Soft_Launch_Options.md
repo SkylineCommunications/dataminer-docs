@@ -339,6 +339,7 @@ Enables the service profiles export and import in the DataMiner Cube Services ap
 Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
 
 - **Minimum version**: 10.1.8
+- **Estimated release version**: 10.3.8
 
 ### SrmOwnServices
 
