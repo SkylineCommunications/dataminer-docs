@@ -150,7 +150,7 @@ It is possible to use a script such as the [example script](#example-script) as 
 To do this, define your API exactly as explained under [Creating an API and tokens](xref:UD_APIs_Define_New_API#creating-an-api-and-tokens-in-dataminer-automation), but next to *Method to be executed*, select *Run method*.
 
 > [!IMPORTANT]
-> If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route, request the method of the API trigger, or output anything back to the API caller.
+> If you use this approach, you will not have access to the `ApiTriggerInput` object and `ApiTriggerOutput` object in the script, and it will therefore not be possible to check the route or the request method, or to output anything back to the API caller.
 
 When the API is triggered with valid input data, the script will succeed, and an empty HTTP response will be returned with status code 200. This is an example of a valid input body for the trigger:
 
