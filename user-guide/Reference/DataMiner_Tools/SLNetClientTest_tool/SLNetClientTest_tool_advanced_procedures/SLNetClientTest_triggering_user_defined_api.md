@@ -22,7 +22,7 @@ With the SLNetClientTest tool, you can trigger a user-defined API in order to te
 
    ![Client Test Tool Trigger Screenshot](~/user-guide/images/UDAPIS_ClientTestToolTrigger.png)
 
-1. In the *API Definition* box, select the API you want to trigger.
+1. In the *Route* box, select the API you want to trigger.
 
    This will automatically fill in the description in the box below.
 
