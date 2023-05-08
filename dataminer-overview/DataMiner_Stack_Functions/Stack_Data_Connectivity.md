@@ -18,7 +18,7 @@ Easily manage signal routes.
 
 ## Connectivity Modeling
 
-Provides accuracy of the phase and connectivity details of the network.
+Configure and visualize signal paths throughout your infrastructure.
 
 > [!TIP]
 >
