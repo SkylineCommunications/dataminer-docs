@@ -1,74 +1,91 @@
+---
+uid: Scheduler_NuGet_Package
+---
 
+# Using the Scheduler NuGet package
 
-# Skyline.DataMiner.Core.Scheduler.Automation
-The Scheduler is a NuGet package that provides useful functionalities to interact between Automation Scripts and the DataMiner Scheduler module, allowing the creation, update and deletion of Scheduler Tasks.
+The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using Automation scripts, allowing the creation, updating, and deletion of scheduled tasks.
 
-## Installation
-You can install the Scheduler package via NuGet Package Manager: 
-```mathematica
+## Installing the Scheduler NuGet package
+
+You can install the Scheduler package using the NuGet Package Manager:
+
+```
 PM>  Install-Package Skyline.DataMiner.Core.Scheduler.Automation 
 ```
 
-## Usage
-To use library, first initialize the Scheduler class by passing a filter of which Scheduler Tasks you want to see retrieved upon initialization of the class:
+## Using the Skyline.DataMiner.Core.Scheduler.Automation library
+
+To use the library, first initialize the `Scheduler` class by passing a filter determining which scheduled tasks should be retrieved when the class is initialized:
+
 ```csharp
 var scheduler = new Scheduler(task => task != null);
 ```
-In the case presented below, all the tasks available in your DMS will be retrieved.
 
-Now you can call methods to Get and Delete Scheduler Tasks according to a given filter:
+In the case presented below, all the tasks available in the DMS will be retrieved.
+
+Now you can call methods to get and delete scheduled tasks according to a given filter:
+
 ```csharp
 IEnumerable<Skyline.DataMiner.Net.Messages.SchedulerTask> tasksToGet = scheduler.GetSchedulerTasksByFilter(task => task.TaskName == "Task Name");
 
 scheduler.DeleteSchedulerTasksByFilter(taskToDelete => taskToDelete.TaskName == "Task Name");
 ```
 
-In order to create a Scheduler Task it is necessary to first define the intended recurrence for such task.
+To create a scheduled task, you first need to **define the intended recurrence** for the task.
 
-For a task that is intended to be **executed only once**, the following constructor should be used:
+- For a task that should be **executed only once**, use the following constructor:
+
+  ```csharp
+  var scheduleOnce = new ScheduleOnce(createSchedulerEvent: true);
+  ```
+
+  > [!NOTE]
+  > If the *createScheduleEvent* flag is set to true, [an event](xref:Scheduling_an_event_based_on_a_Scheduler_template) will be created.
+
+- For a task that should be **executed on a daily basis**, follow the example below:
+
+  ```csharp
+  var now = DateTime.Now;
+  var repeats = 20;
+  var repetitionIntervalInMinutes = 30;
+  var startDate = now.AddDays(1);
+  var endDate = now.AddDays(2);
+  var scheduleDaily = new ScheduleDaily(startDate, repeats, repetitionIntervalInMinutes, endDate);
+  ```
+
+  With this example, a daily task will run from tomorrow until the day after tomorrow, getting repeated every 30 minutes until it has been executed at most 20 times before the task ends.
+
+- For a task that should be **executed weekly**, follow the example below:
+
+  ```csharp
+  var now = DateTime.Now;
+  var repeats = 20;
+  var repetitionIntervalInMinutes = 30;
+  var endDate = now.AddDays(10);
+  var weekDaysToRepeat = new List<WeekDays> { WeekDays.Saturday, WeekDays.Friday };
+  var scheduleWeekly = new ScheduleWeekly(now, weekDaysToRepeat, repeats, repetitionIntervalInMinutes, endDate);
+  ```
+
+  With this example, a weekly task will run every 30 minutes, on Saturdays and Fridays, for the next 10 days until it has been executed at most 20 times before the task ends.
+
+- For a task that is intended to be **executed monthly**, follow the example below:
+
+  ```csharp
+  var now = DateTime.Now;
+  var repeats = 400;
+  var repetitionIntervalInMinutes = 100;
+  var endDate = now.AddYears(1);
+  var monthsToRepeat = new List<Months> { Months.February, Months.August };
+  var daysInMonthToRepeat = new List<int> { 1, 2, 15, 16 };
+  var scheduleMonthly = new ScheduleMonthly(now, monthsToRepeat, daysInMonthToRepeat, repeats, repetitionIntervalInMinutes, endDate);
+  ```
+  
+  With this example, a monthly task will run every 100 minutes for the next year, in February and August, on the 1st, 2nd, 15th and 16th days of the referred months, until it has been executed at most 400 times before the task ends.
+
+Once you have defined the recurrence, you can **create the scheduled task**:
+
 ```csharp
-var scheduleOnce = new ScheduleOnce(createSchedulerEvent: true);
-```
-Note that if the *createScheduleEvent* flag is set to true, a scheduling event will be created as documented in [docs.dataminer.services](https://docs.dataminer.services/user-guide/Advanced_Modules/scheduler/Scheduling_an_event_based_on_a_Scheduler_template.html?q=schedule%20event).
-
-For a task that is intended to be **executed on a daily basis** the following constructor should be used:
- ```csharp
-var now = DateTime.Now;
-var repeats = 20;
-var repetitionIntervalInMinutes = 30;
-var startDate = now.AddDays(1);
-var endDate = now.AddDays(2);
-var scheduleDaily = new ScheduleDaily(startDate, repeats, repetitionIntervalInMinutes, endDate);
-```
-This daily task will run from tomorrow until the day after tomorrow, being repeated every 30 minutes until a maximum of 
-20 executions before the task is ended.
-
-For a task that is intended to be **executed weekly**, the following constructor should be used:
- ```csharp
-var now = DateTime.Now;
-var repeats = 20;
-var repetitionIntervalInMinutes = 30;
-var endDate = now.AddDays(10);
-var weekDaysToRepeat = new List<WeekDays> { WeekDays.Saturday, WeekDays.Friday };
-var scheduleWeekly = new ScheduleWeekly(now, weekDaysToRepeat, repeats, repetitionIntervalInMinutes, endDate);
-```
-This weekly task will run every 30 minutes, on Saturdays and Fridays for the next 10 days until a maximum of 
-20 executions before the task is ended.
-
-For a task that is intended to be **executed monthly**, the following constructor should be used:
- ```csharp
-var now = DateTime.Now;
-var repeats = 400;
-var repetitionIntervalInMinutes = 100;
-var endDate = now.AddYears(1);
-var monthsToRepeat = new List<Months> { Months.February, Months.August };
-var daysInMonthToRepeat = new List<int> { 1, 2, 15, 16 };
-var scheduleMonthly = new ScheduleMonthly(now, monthsToRepeat, daysInMonthToRepeat, repeats, repetitionIntervalInMinutes, endDate);
-```
-This monthly task will run every 100 minutes for the next year, on February and August, in the 1st, 2nd, 15th and 16th days of the referred months, until a  maximum of 400 executions before the task is ended.
-
-Once the schedule repetition is defined, it's time to **create the Scheduler task**:
- ```csharp
 var startRunTime = DateTime.Now;
 var endRunTime = startRunTime.AddHours(2);
 
