@@ -48,7 +48,7 @@ By default, DataMiner uses a Cassandra and Elasticsearch database. Other data st
 
 DataMiner offers detailed, uniform, and fully consolidated audit trailing, easy to browse and search via the DataMiner Cube client UI, and providing insight in all activities in the operational ecosystem.
 
-The administrator can see the changes made per user, device/element, which resources, which actions, etc.
+The administrator can see the changes made per user or per device/element, including which resources, which actions, etc.
 
 > [!TIP]
 > For more information:
