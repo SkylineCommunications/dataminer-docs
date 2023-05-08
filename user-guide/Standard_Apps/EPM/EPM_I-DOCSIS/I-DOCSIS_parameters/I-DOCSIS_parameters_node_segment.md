@@ -74,25 +74,25 @@ This page contains an overview of the Node Segment parameters available in the I
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by Pre-MTTER being out of spec (OOS) or Post-MTTER being out of spec (OOS).
 
-> [!NOTE]
-> Note that **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS** parameters were afected by NMTTER being out of spec, this was changed since **Percentage CM Group Delay or Reflection OOS** did not have relation between the two previous ones.
+  > [!NOTE]
+  > Note that **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS** parameters were afected by NMTTER being out of spec, This was because the parameter **Percentage CM Group Delay or Reflection   OOS** did not have a relation with **Percentage CM Group Delay OOS** and **Percentage CM Reflection OOS**.
 
-The following table provides information about the Group Delay and Reflection status for different cable modems in a given service group. The table consists of three rows: "Group Delay Status," "Reflection Status," and "Group Delay/Reflection Status." Each row represents a specific aspect of the cable modems performance.
+  The following table provides information about the Group Delay and Reflection status for different cable modems in a given service group. The table consists of three rows: "Group Delay Status", "Reflection Status", and "Group Delay/Reflection Status". Each row represents a specific aspect of the cable modems performance.
 
-| Cablemodem Number | Group Delay Status | Reflection Status | Group Delay or Reflection Status |
-|-------------------|--------------------|-------------------|----------------------------------|
-| CM 1              |         OOS        |        OK         |               OOS                |
-| CM 2              |         OK         |        OOS        |               OOS                |
-| CM 3              |         OK         |        OK         |               OK                 |
-| CM 4              |         OOS        |        OOS        |               OOS                |
+  | Cablemodem Number | Group Delay Status | Reflection Status | Group Delay or Reflection Status |
+  |-------------------|--------------------|-------------------|----------------------------------|
+  | CM 1              |         OOS        |        OK         |               OOS                |
+  | CM 2              |         OK         |        OOS        |               OOS                |
+  | CM 3              |         OK         |        OK         |               OK                 |
+  | CM 4              |         OOS        |        OOS        |               OOS                |
 
-- **Group Delay Status**: This column indicates whether a cable modem has a "Group Delay" outside the specified limits ("OOS") or within the acceptable range ("OK").
+  - **Group Delay Status**: This column indicates whether a cable modem has a "Group Delay" outside the specified limits ("OOS") or within the acceptable range ("OK").
 
-- **Reflection Status**: This column represents the "Reflection" status for each cable modem. If a modem has "Reflection" outside the specified limits ("OOS"), it is indicated as "OK" if it falls within the acceptable range.
+  - **Reflection Status**: This column represents the "Reflection" status for each cable modem. If a modem has "Reflection" outside the specified limits ("OOS"), it is indicated as "OK" if it falls within the acceptable range.
 
-- **Group Delay or Reflection Status**: This column combines the information from the previous column rows. If either the "Group Delay Status" or the "Reflection Status" indicates an "OOS" condition for a specific cable modem, it is marked as "OOS" in this column. Conversely, if both the "Group Delay Status" and the "Reflection Status" are "OK," the cable modem is marked as "OK" in this column.
+  - **Group Delay or Reflection Status**: This column combines the information from the previous column rows. If either the "Group Delay Status" or the "Reflection Status" indicates an "OOS" condition for a specific cable modem, it is marked as "OOS" in this column. Conversely, if both the "Group Delay Status" and the "Reflection Status" are "OK," the cable modem is marked as "OK" in this column.
 
-This table is an example for identification of cable modems affected by group delay or reflection issues by referencing their respective status values. It provides a clear overview of the performance status for each cable modem in the service group.
+  This table is an example for identification of cable modems affected by group delay or reflection issues by referencing their respective status values. It provides a clear overview of the performance status for each cable modem in the service group.
 
 - **Reflection Distance**: The average reflection distance for all associated CMs.
 
