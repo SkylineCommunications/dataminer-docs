@@ -26,7 +26,7 @@ Gathering, recording, and analyzing data.
 
 ## Data Mediation
 
-Collect data from various sources and converting into a uniform format.
+Collect data from various sources and convert them into a uniform format.
 
 > [!TIP]
 >

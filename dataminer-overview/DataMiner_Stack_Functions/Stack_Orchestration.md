@@ -12,7 +12,7 @@ uid: Stack_Orchestration
 
 DataMiner supports **four different use cases** that can flexibly be combined within or across workflows:
 
-- [Resource Scheduling](https://community.dataminer.services/service-resource-management/#resourceScheduling): Keeping tracks of all resource schedules without automating actions, for maximum flexibility.
+- [Resource Scheduling](https://community.dataminer.services/service-resource-management/#resourceScheduling): Keeping track of all resource schedules without automating actions, for maximum flexibility.
 - [Resource Automation](https://community.dataminer.services/service-resource-management/#resourceAutomation): Intelligent resource configuration with a click of a button.
 - [Resource Orchestration](https://community.dataminer.services/service-resource-management/#resourceOrchestration): The power of Resource Scheduling combined with automatic configuration actions at the start and end time of bookings.
 - [Service Orchestration](https://community.dataminer.services/service-resource-management/#serviceOrchestration): Orchestration of the complete life cycle of services.
@@ -48,7 +48,7 @@ The Scheduling Engine is the beating heart of DataMiner. It executes scheduled a
 >
 > - [The Scheduling Engine explained](https://community.dataminer.services/scheduling-engine/)
 > - [Overview of the 4 SRM use cases and SRM stack](https://community.dataminer.services/service-resource-management/)
-> - Demo Video: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/)
+> - Demo video: [How To Schedule your Resources using SRM](https://community.dataminer.services/video/how-to-schedule-your-resources-using-srm/)
 > - Various Scheduler-related videos are available in the [video library](https://community.dataminer.services/videos?_sf_s=schedule)
 > - Various Scheduler use cases with screenshots are available in the [use case library](https://community.dataminer.services/use-cases/?_sf_s=scheduler)
 > - [Free DataMiner Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
@@ -63,8 +63,8 @@ The DataMiner Job Manager can be used to create and manage jobs, which are then 
 > [!TIP]
 > For more information:
 >
-> - [**Watch how it works: from event creation to live event monitoring.**](https://community.dataminer.services/event-job-management-dataminer-covers-your-complete-media-service-supply-chain/) This demo series consists of 8 chronological videos demonstrating how DataMiner can manage events and jobs in any media service supply chain.
-> - [**Production Event Management: From job to booking**](https://community.dataminer.services/video/production-event-management-1-5-from-job-to-booking/). This 5-part demo about managing and orchestrating live productions in a more efficient way covers the complete workflow: from scheduling a production and gathering all data that is required for that production to making reservations for people, incoming signals, media assets, and production equipment. Linked to this, you will also find an 8-part use case with many screenshots.
+> - [Watch how it works: from event creation to live event monitoring.](https://community.dataminer.services/event-job-management-dataminer-covers-your-complete-media-service-supply-chain/) This demo series consists of 8 chronological videos demonstrating how DataMiner can manage events and jobs in any media service supply chain.
+> - [Production Event Management: From job to booking](https://community.dataminer.services/video/production-event-management-1-5-from-job-to-booking/). This 5-part demo about managing and orchestrating live productions in a more efficient way covers the complete workflow: from scheduling a production and gathering all data that is required for that production to making reservations for people, incoming signals, media assets, and production equipment. Linked to this, you will also find an 8-part use case with many screenshots.
 > - Videos related to Job Manager in the [video library](https://community.dataminer.services/videos?_sf_s=Job)
 > - [Job Manager user guide](xref:jobs)
 
@@ -79,7 +79,7 @@ The Automation Engine performs all automation tasks in the ecosystem. Its pronou
 >
 > - [The Automation Engine explained](https://community.dataminer.services/automation-engine/)
 > - [Overview of the 4 SRM use cases and SRM stack](https://community.dataminer.services/service-resource-management/)
-> - Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/)
+> - Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/)
 > - Various SRM use cases with screenshots are available in the [SRM use case library](https://community.dataminer.services/use-cases/?_sf_s=SRM)
 > - [Free Orchestration and Automation training](https://community.dataminer.services/learning/courses/orchestration-automation/)
 > - [Automation user guide](xref:automation)

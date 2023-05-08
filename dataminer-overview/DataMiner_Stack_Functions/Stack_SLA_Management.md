@@ -18,7 +18,7 @@ Automate, track, and measure the digital processes that a key relationship depen
 
 ## Service Monitoring
 
-Checks the performance of different services and quickly detects and resolves any issues.
+Monitor the performance of different services and quickly detect and resolve any issues.
 
 > [!TIP]
 >

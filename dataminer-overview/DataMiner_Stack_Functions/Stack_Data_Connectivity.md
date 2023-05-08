@@ -16,7 +16,7 @@ Easily manage signal routes.
 >
 > *More info coming soon. Stay tuned!*
 
-## Connectivity Modelling
+## Connectivity Modeling
 
 Provides accuracy of the phase and connectivity details of the network.
 

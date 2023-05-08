@@ -18,7 +18,7 @@ Automate complex business processes.
 
 ## Object Modeling
 
-Visual representation of software or systems' objects, attributes, actions, and relationships.
+Visual representation of software or system objects, attributes, actions, and relationships.
 
 > [!TIP]
 > For more information:

@@ -26,7 +26,7 @@ Application-specific network security for mobile application infrastructures.
 
 ## Notifications
 
-Gives an indicator that an event has occurred.
+Get notified when specific events occur.
 
 > [!TIP]
 >

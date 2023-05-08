@@ -43,7 +43,7 @@
           topicUid: Stack_Data_Management
         - name: Augmented Operations
           topicUid:  Stack_Augmented_Operations
-        - name: Data_Visualization
+        - name: Data Visualization
           topicUid: Stack_Data_Visualization
         - name: Infrastructure Discovery & Provisioning
           topicUid: Stack_IDP

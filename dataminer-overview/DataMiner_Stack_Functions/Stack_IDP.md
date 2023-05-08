@@ -18,7 +18,7 @@ Setting up IT infrastructure.
 
 ## Document Management
 
-Store, share, track and manage files or documents.
+Store, share, track, and manage files or documents.
 
 > [!TIP]
 >
@@ -50,7 +50,7 @@ Manage information of all resources used to implement services and products.
 
 ## Resource Discovery
 
-Focuses on finding resources, identifying their capabilities and properties.
+Automatically discover resources and identify their capabilities and properties.
 
 > [!TIP]
 >
