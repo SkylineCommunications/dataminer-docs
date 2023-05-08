@@ -15,7 +15,7 @@ If a logger table that has `Indexing` set to `true` contains column names with u
 
 ## Fix
 
-Install DataMiner 10.3.0 [CU3]/10.3.6. You can then recover the data by launching a `POST <loggertableAlias>/_update_by_query` with the following body (adjusted to reflect your column names):
+Install DataMiner 10.3.0 [CU3]/10.3.6<!-- RN 36343 -->. You can then recover the data by launching a `POST <loggertableAlias>/_update_by_query` with the following body (adjusted to reflect your column names):
 
 ```json
 {
