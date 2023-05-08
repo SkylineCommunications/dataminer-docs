@@ -22,7 +22,7 @@ With the DataMiner User-Defined APIs, you can define custom API calls that will 
 The main objects used by this new DataMiner module are API tokens and API definitions. These are stored in the indexing database. Consequently, this feature is only available in DataMiner Systems that use an Elasticsearch database or equivalent indexing database.
 
 > [!IMPORTANT]
-> This feature replaces the *APIDeployment* soft-launch feature, which will eventually become unavailable. If you were using it, we recommend that you move your old APIs from API deployment to the new feature. To make this migration easier, we support creating APIs based on existing scripts.
+> This feature replaces the *APIDeployment* soft-launch feature, which will eventually become unavailable. If you were using it, we recommend that you move your old APIs from API deployment to the new feature.
 
 ##### Configuring the UserDefinableApiEndpoint extension module
 
