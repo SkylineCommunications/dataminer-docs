@@ -1657,27 +1657,27 @@ Permission to view histograms of parameters that are being trended.
 
 #### Modules \> User-Defined APIs \> Tokens \> UI available
 
-Permission to view tokens for user-defined APIs.
+Permission to view tokens for [user-defined APIs](xref:UD_APIs).
 
 #### Modules \> User-Defined APIs \> Tokens \> Add/Edit
 
-Permission to create and edit tokens for user-defined APIs.
+Permission to create and edit tokens for [user-defined APIs](xref:UD_APIs).
 
 #### Modules \> User-Defined APIs \> Tokens \> Delete
 
-Permission to delete tokens for user-defined APIs.
+Permission to delete tokens for [user-defined APIs](xref:UD_APIs).
 
 #### Modules \> User-Defined APIs \> APIs \> UI available
 
-Permission to view API definitions for user-defined APIs.
+Permission to view API definitions for [user-defined APIs](xref:UD_APIs).
 
 #### Modules \> User-Defined APIs \> APIs \> Add/Edit
 
-Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+Permission to create and edit API definitions for [user-defined APIs](xref:UD_APIs). In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
 
 #### Modules \> User-Defined APIs \> APIs \> Delete
 
-Permission to delete API definitions for user-defined APIs.
+Permission to delete API definitions for [user-defined APIs](xref:UD_APIs).
 
 ### Modules \> User-definable apps
 

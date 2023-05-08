@@ -168,7 +168,7 @@ You can also use the `StatusCode` enum, which contains suggestions, and cast tha
 
 1. In the *URL* box, specify the unique [route](#route).
 
-1. If you want to parse the JSON body of the HTTP request to a dictionary, make sure *Parse JSON of raw body to dictionary* is selected. See [User input data](#user-input-data).
+1. If you want to parse the JSON body of the HTTP request to a dictionary, make sure *Dictionary (parsed from JSON)* is selected. See [User input data](#user-input-data).
 
    > [!NOTE]
    > Leave *Method to be executed* set to the default selection. This option should only be changed for legacy scripts without the `OnApiTrigger` entry point. See [Using existing scripts](xref:UD_APIs_Using_existing_scripts).
