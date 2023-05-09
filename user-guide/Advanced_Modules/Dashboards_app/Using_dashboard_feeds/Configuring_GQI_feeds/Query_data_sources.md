@@ -54,7 +54,7 @@ Retrieves a parameter table from the Elasticsearch database using the specified 
 
 ## Get object manager instances
 
-Retrieves [DOM manager instances](xref:DOM_managers).
+Retrieves [DOM instances](xref:DomInstance).
 
 ## Get parameter table by ID
 
