@@ -19,7 +19,24 @@ uid: General_Feature_Release_10.3.7
 
 ## Other features
 
-*No other features yet*
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
+
+- DataMiner ArtifactDeployer (version 1.4.5)
+- DataMiner CoreGateway (version 2.12.2)
+- DataMiner FieldControl (version 2.8.3)
+- DataMiner Orchestrator (version 1.3.3)
+- DataMiner SupportAssistant (version 1.3.2)
+
+An upgrade action is also included that will check if the cloud endpoint hosted in CloudGateway will be reachable (TCP port 5100).
+
+In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
+
+> [!NOTE]
+> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ## Changes
 
