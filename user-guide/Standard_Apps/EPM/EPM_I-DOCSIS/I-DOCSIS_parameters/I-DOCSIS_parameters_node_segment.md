@@ -73,7 +73,7 @@ This page contains an overview of the Node Segment parameters available in the I
 - **Number CM Group Delay or Reflection OOS**: Calculated. The number of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
 
 - **Percentage CM Group Delay or Reflection OOS**: Calculated. The percentage of cable modems associated with the given service group that are affected by NMTER being out of spec (OOS).
- 
+
 - **Reflection Distance**: The average reflection distance for all associated CMs.
 
 - **Average Latency**: The average latency for all CMs associated with the given level.
