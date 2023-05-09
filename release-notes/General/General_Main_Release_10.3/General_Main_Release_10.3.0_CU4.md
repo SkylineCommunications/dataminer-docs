@@ -28,35 +28,13 @@ This obsolete thread has now been removed.
 
 ### Fixes
 
-#### Service & Resource Management: Contributing resources where the contributing booking was ended were never available [ID_35757]
+#### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-When an ongoing main booking that made use of a contributing resource of which the contributing booking had already ended, the ResourceManager would mark the contributing resource as unavailable even though it is available.
+When updating an ongoing main booking that made use of a contributing resource of which the contributing booking had already ended, the ResourceManager would incorrectly mark the contributing resource as unavailable. As a result, the update would fail and the main booking would go into quarantine with reason "ContributingResourceNotAvailable".
 
-
-
-
-A contributing resource is only available within the time frame of the associated contributing booking.
-
-When updating an ongoing main booking that makes use of a contributing resource that had an unlocked contributing booking that was already ended, the ResourceManager would mark the contributing resource as unavailable even though it is available.
-
-Example use case:
-
-Past                                     now                                future
------------------------------------------------------------------------------------> time
-
-    Contributing booking
-|---------------------------|
-                               Main booking using contributing
-             |-------------------------------------------------------------|
-
-Updating the main booking would fail and make it go into quarantine with reason 'ContributingResourceNotAvailable'. Calling 'GetEligibleResources' would also not return the contributing resource.
-
-
-
-
-
+Also, a *GetEligibleResources* call would not return the contributing resource.
 
 #### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
 

@@ -58,6 +58,14 @@ This obsolete thread has now been removed.
 
 ### Fixes
 
+#### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When updating an ongoing main booking that made use of a contributing resource of which the contributing booking had already ended, the ResourceManager would incorrectly mark the contributing resource as unavailable. As a result, the update would fail and the main booking would go into quarantine with reason "ContributingResourceNotAvailable".
+
+Also, a *GetEligibleResources* call would not return the contributing resource.
+
 #### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
