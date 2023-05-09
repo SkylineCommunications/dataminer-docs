@@ -1,8 +1,8 @@
 ---
-uid: Configuring_a_dedicated_clustered_storage
+uid: Configuring_dedicated_clustered_storage
 ---
 
-# Configuring a dedicated clustered storage
+# Configuring dedicated clustered storage
 
 To properly configure a dedicated clustered storage setup, both a Cassandra-compatible database service and Search Cluster are required. This setup can be either on premises or in the cloud, or a mix of both.
 
