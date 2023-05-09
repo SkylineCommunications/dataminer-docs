@@ -58,4 +58,10 @@ This obsolete thread has now been removed.
 
 ### Fixes
 
-*No fixes yet*
+#### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, before a QAction was compiled, three compiler directives were added to its source code. As a result, all compilation errors would refer to incorrect line numbers.
+
+From now on, the compiler directives will no longer be added to the source code. Instead, they will be passed to the compiler directly.
