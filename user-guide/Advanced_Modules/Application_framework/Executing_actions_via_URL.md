@@ -10,7 +10,7 @@ From DataMiner 10.3.6/10.4.0 onwards<!-- RN 35979 -->, you can make an app execu
 
 1. Configure the actions in the action editor.
 
-1. Click the *Copy actions* button to copy the action configuration to the Windows clipboard as a JSON object.
+1. Click the *Copy actions* button to copy the action configuration to the clipboard as a JSON object.
 
 1. Add `#{"actions": }` to the URL, and paste the copied JSON object between the colon (`:`) and the closing bracket (`}`).
 
