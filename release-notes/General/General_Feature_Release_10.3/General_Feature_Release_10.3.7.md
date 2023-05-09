@@ -66,6 +66,18 @@ When updating an ongoing main booking that made use of a contributing resource o
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
 
+#### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The secondary index of certain SLA logger tables would not be created correctly. As a result, certain rows in those tables would not get cleaned up and exceptions like the following would be added to the *SLDBConnection.txt* log file:
+
+```txt
+SLDataGateway.Types.DBGatewayException: CassandraConnection ExecuteQuery - exception while executing query: SELECT "array_active_service_alarms_id","array_active_service_alarms_time" FROM ELEMENTDATA_7102_1334_750 WHERE "array_active_service_alarms_rootid" = '0/0'; - Cannot execute this query as it might involve data filtering and thus may have unpredictable performance. If you want to execute this query despite the performance unpredictability, use ALLOW FILTERING
+```
+
+When SLAs were stored in a Cassandra cluster, none of their rows would get cleaned up.
+
 #### Service & Resource Management: Problem when updating a booking while actions were being performed [ID_36268]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
