@@ -36,6 +36,14 @@ When updating an ongoing main booking that made use of a contributing resource o
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
 
+#### Service & Resource Management: Problem when updating a booking while actions were being performed [ID_36268]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When a booking was updated while actions were being performed, in some cases, it could become corrupted.
+
+For example, when a booking was rescheduled while it was being started, it could end up in an *Ongoing* status with a start time somewhere in the future.
+
 #### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
