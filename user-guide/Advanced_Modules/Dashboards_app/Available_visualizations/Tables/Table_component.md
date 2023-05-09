@@ -19,6 +19,9 @@ It displays the different possible data sources of queries as follows:
 > [!NOTE]
 > From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
 
+> [!NOTE]
+> From DataMiner 10.3.7/10.4.0 onwards, the component will try to reapply the previous selection after the data is refetched using a [trigger component](xref:DashboardTriggerFeed) or a [component action](xref:LowCodeApps_event_config). This means that the table will keep fetching more data until all previously selected rows are found. When a previously selected row would be missing, the table will fetch all data looking for it. Reapplying the previous selection will take precedence over selecting the first row when the *Initial Selection* setting is enabled. The table will also update its feeds to reflect the new selection.
+
 ## Configuring the layout
 
 In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
