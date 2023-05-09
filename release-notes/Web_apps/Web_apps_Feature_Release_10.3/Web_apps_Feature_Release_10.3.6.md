@@ -41,7 +41,7 @@ To do so, proceed as follows:
 1. Click the *Copy actions* button to copy the action configuration to the Windows clipboard as a JSON object.
 1. Add `#{"actions": }` to the URL, and paste the JSON object between the colon (`:`) and the closing bracket (`}`).
 
-When you add an action configuration to a URL of an app, the action(s) will immediately be executed. The app doesn't need to be reloaded. This way, even apps that are embedded in a visual overview can easily be forced to execute actions.
+When you add an action configuration to a URL of an app, the action(s) will immediately be executed. The app does not need to be reloaded. This way, even apps that are embedded in a visual overview can easily be forced to execute actions.
 
 As soon as the actions have been executed, the action configuration will be removed from the URL to prevent them from being executed multiple times.
 
