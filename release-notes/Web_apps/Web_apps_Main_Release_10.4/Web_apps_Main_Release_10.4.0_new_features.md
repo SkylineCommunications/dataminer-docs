@@ -318,7 +318,8 @@ From now on, it is possible to edit a shared dashboard.
 
 Also, a *Shared* button will now be displayed in the header bar of a shared dashboard. Clicking this button will open the same pop-up box that opens when you click *Share > Manage share*.
 
-> [!NOTE> It is not possible to rename or to move a shared dashboard.
+> [!NOTE]
+> It is not possible to rename or to move a shared dashboard.
 
 #### Low-Code Apps: Making an app execute actions by adding action configurations to the app's URL [ID_35979]
 
