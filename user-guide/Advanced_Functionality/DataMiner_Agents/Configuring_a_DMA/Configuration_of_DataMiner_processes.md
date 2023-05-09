@@ -693,6 +693,9 @@ Example:
 </MaintenanceSettings>
 ```
 
+> [!IMPORTANT]
+> Make sure this is configured the same way for all Agents in a DMS.
+
 ## Configuring the ports for .NET Remoting and/or XML Web Services
 
 On a DMA, you can specify the ports to be used for both .NET Remoting and (for legacy DMAs) XML Web Services.
