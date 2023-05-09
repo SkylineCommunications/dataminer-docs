@@ -15,6 +15,27 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 The new icon component allows you to display an icon on a dashboard or a low-code app.
 
+#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
+
+<!-- MR 10.4.0 - FR 10.3.1 -->
+
+In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
+
+When you apply this style to a button
+
+- the background color of the button will be the color of the app,
+- the color of the text on the button will be white, and
+- the button will have a shadow.
+
+To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
+
+Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
+
+> [!NOTE]
+>
+> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
+> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
+
 #### BREAKING CHANGE: One single authentication app for all web apps [ID_35772] [ID_35896]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -35,6 +56,56 @@ In this element, `https://dataminer.example.com` has to be replaced with the IP 
 >
 > - When using external authentication via SAML, DataMiner should be configured to use HTTPS.
 > - This new authentication app will also be used by DataMiner Cube, but only to authenticate users who want to access a web page stored on a DataMiner Agent, not to authenticate users who log in to Cube itself.
+
+#### Interactive Automation scripts: New DownloadButton component [ID_35869]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In an interactive Automation script launched from a dashboard or a low-code app, you can now use *DownloadButton* components. These components allow you to add download buttons that will enable users to download a specified file from the server.
+
+To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
+
+To configure the download properties, assign an `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
+
+These are the supported download properties:
+
+- **Url**: The URL of the file. This URL can be either an absolute or a relative path.
+
+  - An absolute path must refer to a file that is publicly accessible on the internet.
+  - A relative path is relative to the DMA hostname and must start with `/`, `./` or `../`.
+
+  Examples:
+
+  - Example of an absolute path: To download the latest Cube version from DataMiner Services, set *Url* to `https://dataminer.services/install/DataMinerCube.exe`.
+  - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e. the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
+
+- **FileNameToSave**: The name that will be given to the file once it has been downloaded. By default, this name is identical to that of the file on the location.
+
+  > [!NOTE]
+  > Overriding the filename is blocked by some browsers when the file to download is on another host (so not on the DataMiner agent). In this case the original filename will be used. See the note here for more info.
+
+- **StartDownloadImmediately**: If set to true (the default is false), the download will start immediately when the component is displayed. The button stays visible and can be clicked to download the file again.
+
+- **ReturnWhenDownloadIsStarted**: If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started (either immediately or when clicked by the user, depending on StartDownloadImmediately). When both StartDownloadImmediately and ReturnWhenDownloadIsStarted are set to true, the script will start the download and exit immediately (unless a new ShowUI() is called).
+
+  > [!NOTE]
+  > you will see the script UI pop up for about half a second.
+
+The UIResult now also supports the following function method: bool WasOnDownloadStarted(string key).
+It returns true if a download button with the given destination var and property ReturnWhenDownloadIsStarted on the AutomationDownloadButtonOptions set to true has started the file download. For this method ever to return true, you have to set .ReturnWhenDownloadIsStarted to true on the AutomationDownloadButtonOptions, in the ConfigOptions of the UIBlockDefinition. Once the download is started, the control is given to the browser, so there is no way to know when the download is finished.
+
+Documentation PR: https://github.com/SkylineCommunications/dataminer-docs/pull/1271/
+
+Note: Modern browsers will block downloads of file:/// url's when on a http(s) site, so you can not download a file on a share. You can copy the file from the share to Documents (or any other http-reachable location) first, and then let the client download it from that URL. 
+
+At time of writing, the current IIS configuration doesn't allow downloading all file extensions. A task has been created to allow all filetypes: DCP208466. Attached is a list of allowed file extensions.
+
+
+
+
+
+
+
 
 #### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
 
