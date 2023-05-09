@@ -2040,6 +2040,8 @@
           topicUid: Deleting_custom_apps
         - name: Specifying data input in an app URL
           topicUid: Specifying_data_input_in_URL
+        - name: Executing actions via the app URL
+          topicUid: Executing_actions_via_URL
     - name: Maps
       topicUid: maps
       items:
