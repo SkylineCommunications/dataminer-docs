@@ -198,10 +198,6 @@ You can change the time-out in IIS as follows:
 
 1. In the pane on the right, under *Proxy*, click *Server Proxy Settings*.
 
-1. In the *Connections* pane on the left, select the top icon with the server name and click *Application Request Routing Cache*.
-
-1. Click *Server Proxy Settings* in the pane on the far right.
-
 1. Specify the timeout value in seconds in the *Time-out (seconds)* box.
 
    ![IIS time-out 3](~/user-guide/images/UDAPIS_IIS_TimeOut.jpg)

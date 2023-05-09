@@ -55,7 +55,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
   1. On the DMA, got to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint 1.X.X.X.msi`.
 
-- **Found rewrite rule, but has inconsistencies:**
+- **Found rewrite rule, but it has inconsistencies:**
 
   If you find this error in the logging, the log lines below it will contain the inconsistencies of the IIS rewrite rule. This rewrite rule forwards requests coming in on port 80 or 443 to the UserDefinableApiEndpoint DxM. It should contain the correct port that the DxM is using. The installer will always verify if the port mentioned in the rewrite rule matches the one configured in the [settings of the DxM](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-dxm).
 
@@ -111,8 +111,8 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
    To allow communication between the DxM and the manager in SLNet, a connection to the NATS message bus is required.
 
-   - For the DxM, open the [UserDefinableApiEndpointInstaller.txt](#logging) log file and check whether the log line with message "Successfully initialized the MessageBrokerWrapper" is displayed after the most recent startup. There may be errors before this that indicate that the creation of the connection had to be retried. This is fine as long as the success message is logged at the end.
+   - For the DxM, open the [UserDefinableApiEndpoint.txt](#logging) log file and check whether the log line with message "Successfully initialized the MessageBrokerWrapper" is displayed after the most recent startup. There may be errors before this that indicate that the creation of the connection had to be retried. This is fine as long as the success message is logged at the end.
 
    - For the manager in SLNet, you can check the [SLUserDefinableApiManager.txt](#logging) log file and check for a log line with the exact same message. After that, you should also see a line stating that a subscription was made on a subject ending with "UserDefinableApiTriggerRequest".
 
-   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [investigating NATS issues](xref:Investigating_NATS_Issues).
+   - If both log files are fine, communication should be possible between the DxM and the manager in SLNet. If you do not see the above-mentioned messages in the logging, something could be wrong with the NATS setup. For more information, see [investigating NATS issues](xref:Investigating_NATS_Issues).
