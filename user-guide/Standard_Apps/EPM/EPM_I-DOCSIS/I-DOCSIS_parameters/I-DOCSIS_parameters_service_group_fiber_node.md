@@ -22,7 +22,7 @@ This page contains an overview of the Service Group (Fiber Node) parameters avai
 
 - **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
 
-Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the Service Group (Fiber Node).
+Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the service group (fiber node).
 
 - **Percentage DS Utilization**
 

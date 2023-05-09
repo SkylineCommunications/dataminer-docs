@@ -32,7 +32,7 @@ This page contains an overview of the Cable Modem parameters available in the I-
 
   OID: 1.3.6.1.2.1.10.127.1.1.5.
 
-  The *Unknown* value indicates that the DOCSIS version could not be retrieved from the device (e.g., the device is not reachable).
+  The *Unknown* value indicates that the DOCSIS version could not be retrieved from the device (e.g. the device is not reachable).
 
 - **Hardware Version**: Direct value. The hardware version of the cable modem.
 

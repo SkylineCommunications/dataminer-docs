@@ -22,7 +22,7 @@ This page contains an overview of the Linecard parameters available in the I-DOC
 
 - **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
 
-  Calculated by adding up the number of CMs with an unknown DOCSIS version that are served by the Linecard.
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are served by the line card.
 
 - **Number CM Ping Unreachable**
 
