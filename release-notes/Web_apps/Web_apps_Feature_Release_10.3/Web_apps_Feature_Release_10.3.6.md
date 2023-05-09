@@ -45,7 +45,7 @@ When you add an action configuration to a URL of an app, the action(s) will imme
 
 As soon as the actions have been executed, the action configuration will be removed from the URL to prevent them from being executed multiple times.
 
-Example of an `Open a panel` action added to the URL of an app:
+Example of an *Open a panel* action added to the URL of an app:
 
 ```txt
 https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner.Web.Common.v1.DMAApplicationPagePanelAction","Panel":"4507edc7-fcee-47bd-985c-f40d844e72cb","Position":"Center","Width":30,"AsOverlay":true}]}
@@ -56,9 +56,9 @@ https://myDMA/APP_ID/PAGE_NAME#{"actions":[{"Type":6,"__type":"Skyline.DataMiner
 > - Making an app execute actions by adding a configuration to its URL does not work while that app is in edit mode.
 > - Currently, the following actions cannot be executed this way for security reasons:
 >
->   - `Execute a script`
->   - `Execute component action: delete current instance/save current changes`
->   - `Navigate to an URL`
+>   - *Launch a script*
+>   - *Execute component action: delete current instance/save current changes*
+>   - *Navigate to a URL*
 
 #### Dashboards app & Low-Code Apps - Table and State components: New 'Initial selection' setting [ID_35984]
 
