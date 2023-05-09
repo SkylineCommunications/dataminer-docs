@@ -38,7 +38,7 @@ It is now possible to make an app execute one or more actions by adding action c
 To do so, proceed as follows:
 
 1. Configure the action(s) in the action editor.
-1. Click the *Copy actions* button to copy the action configuration to the Windows clipboard as a JSON object.
+1. Click the *Copy actions* button to copy the action configuration to the clipboard as a JSON object.
 1. Add `#{"actions": }` to the URL, and paste the JSON object between the colon (`:`) and the closing bracket (`}`).
 
 When you add an action configuration to a URL of an app, the action(s) will immediately be executed. The app does not need to be reloaded. This way, even apps that are embedded in a visual overview can easily be forced to execute actions.
