@@ -101,7 +101,7 @@ This method returns true if a download button with the given destination var and
 
 > [!NOTE]
 >
-> - Modern browsers will block downloads of file:/// url's when on a http(s) site, so you can not download a file on a share. You can copy the file from the share to Documents (or any other http-reachable location) first, and then let the client download it from that URL.
+> - Modern browsers will block downloads of `file:///` URLs when on a http(s) site, so you can not download a file on a share. You can copy the file from the share to Documents (or any other http-reachable location) first, and then let the client download it from that URL.
 > - At time of writing, the current IIS configuration doesn't allow downloading all file extensions. A task has been created to allow all filetypes: DCP208466. Attached is a list of allowed file extensions.
 
 #### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
