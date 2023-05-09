@@ -91,13 +91,11 @@ These are the supported download properties:
   > [!NOTE]
   > The script's UI will be visible for about half a second.
 
-The `UIResult` now also supports the following function method:
+The `UIResult` now also supports the following function method, which returns true when a download button with *ReturnWhenDownloadIsStarted* set to true has started a download.
 
 ```csharp
 bool WasOnDownloadStarted(string key)
 ```
-
-This method returns true if a download button with the given destination var and property ReturnWhenDownloadIsStarted on the AutomationDownloadButtonOptions set to true has started the file download. For this method ever to return true, you have to set *ReturnWhenDownloadIsStarted* to true on the *AutomationDownloadButtonOptions*, in the *ConfigOptions* of the *UIBlockDefinition*. Once the download is started, the control is given to the browser, so there is no way to know when the download is finished.
 
 > [!NOTE]
 >
