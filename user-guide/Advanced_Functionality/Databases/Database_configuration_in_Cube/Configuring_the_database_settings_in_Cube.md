@@ -11,6 +11,13 @@ In older DataMiner systems, this database was also known as the "local database"
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
+From DataMiner 10.3.6/10.4.0 onwards, if a DataMiner Agent in a cluster is offline, the following warning will be displayed at the top of the *Database* page in System Center:
+
+`Warning: 1 of 2 Agents are currently not running. Database configuration changes will not be applied to Agents that are not running.`
+
+> [!NOTE]
+> This warning will not be triggered when the backup Agent in a Failover setup is offline.
+
 ## Cassandra database
 
 ### [Cassandra cluster database](#tab/tabid-1)
@@ -48,6 +55,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
 
 1. Click *Save*.
+
+   > [!NOTE]
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
 
 ### [Cassandra database per DMA](#tab/tabid-2)
 
@@ -91,6 +101,9 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 
 1. Click *Save*.
 
+   > [!NOTE]
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+
 ***
 
 ## Amazon Keyspaces
@@ -126,6 +139,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Password**: The password of your [Amazon Keyspaces credentials](xref:Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
 
+1. Click *Save*.
+
+   > [!NOTE]
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+
 1. Restart the DMS.
 
    The first restart after configuring Amazon Keyspaces can take up to 15 minutes on top of the normal startup time as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
@@ -154,6 +172,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Password**: The password of the master user of your domain.
 
    ![OpenSearch Cube Config](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
+
+1. Click *Save*.
+
+   > [!NOTE]
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
 
 1. Optionally, you can verify that the DMS is using the database.
 
@@ -230,6 +253,9 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
    - **Fallback minimum**: If the *Maximum alarms* setting has been reached, the oldest alarms will automatically be deleted until the database contains exactly the number of alarms specified in the *Fallback minimum* box.
 
 1. Click *Save*.
+
+   > [!NOTE]
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
 
 > [!NOTE]
 >
