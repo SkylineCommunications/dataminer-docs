@@ -31,7 +31,7 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 - DataMiner Orchestrator (version 1.3.3)
 - DataMiner SupportAssistant (version 1.3.2)
 
-The BPA test *Firewall Configuration* will check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
+The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
 In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
@@ -93,6 +93,14 @@ When SLAs were stored in a Cassandra cluster, none of their rows would get clean
 When a booking was updated while actions were being performed, in some cases, it could become corrupted.
 
 For example, when a booking was rescheduled while it was being started, it could end up in an *Ongoing* status with a start time somewhere in the future.
+
+#### Client connection would be dropped because an SLNet request handled by SLHelper took too long to process [ID_36296]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When it took SLHelper more than 15 minutes to process an SLNet request received from a client, a NATS exception was returned to the client. However, as this exception was not serialized, the client would not receive it, causing the client connection to get dropped.
+
+From now on, NATS exceptions returned to a client following an SLHelper timeout will always be serialized.
 
 #### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
 
