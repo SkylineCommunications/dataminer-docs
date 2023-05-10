@@ -65,7 +65,11 @@ bool WasOnDownloadStarted(string key)
 
 ### Enhancements
 
-*No enhancements yet*
+#### Security enhancements [ID_36217]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
