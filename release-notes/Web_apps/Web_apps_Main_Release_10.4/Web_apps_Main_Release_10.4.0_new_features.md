@@ -527,8 +527,8 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
-#### Low-Code Apps: Duplicating pages and panels [ID_36097]
+#### Low-Code Apps: Duplicating pages and panels is now possible via new context menu [ID_36097]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-When editing a low-code app, it is now possible to duplicate an entire page or panel.
+When editing a low-code app, it is now possible to duplicate an entire page or panel via the new context menu, accessible by clicking the ellipsis icon next to the page name in the pane on the left or the panel name in the page configuration pane. This context menu also allows you to delete a page or panel, as well as hide a page from the sidebar.
