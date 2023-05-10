@@ -223,6 +223,18 @@ Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summa
 
 Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
 
+#### Monitoring app: Enhanced parameter controls [ID_36275]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Monitoring* app, the parameter controls have been enhanced. You will now be able to edit a parameter by clicking a pencil icon.
+
+#### Dashboards app & Monitoring app: Parameter page component now supports WebSockets [ID_36314]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
