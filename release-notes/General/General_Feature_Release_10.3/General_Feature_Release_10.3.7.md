@@ -74,12 +74,6 @@ When updating an ongoing main booking that made use of a contributing resource o
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
 
-#### Failover: Problem when starting elements that contained DVE child elements or virtual function elements [ID_36244]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-When, in a Failover setup, a switchback occurred to a DataMiner Agent that had already been online before, in some rare cases, an error could occur in the SLElement process of that Agent when starting elements that contained DVE child elements or virtual function elements.
-
 #### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
