@@ -53,7 +53,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted. From DataMiner 10.3.6/10.4.0 onwards, a pop-up message will alert you of this when clicking *Save*.
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 ### [Cassandra database per DMA](#tab/tabid-2)
 
@@ -98,7 +98,7 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted. From DataMiner 10.3.6/10.4.0 onwards, a pop-up message will alert you of this when clicking *Save*.
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 ***
 
@@ -138,7 +138,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted. From DataMiner 10.3.6/10.4.0 onwards, a pop-up message will alert you of this when clicking *Save*.
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 1. Restart the DMS.
 
@@ -172,7 +172,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted. From DataMiner 10.3.6/10.4.0 onwards, a pop-up message will alert you of this when clicking *Save*.
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 1. Optionally, you can verify that the DMS is using the database.
 
@@ -251,7 +251,7 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted. From DataMiner 10.3.6/10.4.0 onwards, a pop-up message will alert you of this when clicking *Save*.
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 > [!NOTE]
 >
