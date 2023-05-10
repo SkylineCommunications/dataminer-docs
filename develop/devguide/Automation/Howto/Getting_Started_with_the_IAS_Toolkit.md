@@ -68,10 +68,10 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED OUT CODE OR THE SCRIPT WONT RUN!
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
         // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
-        // However, due to the toolkit nuget package, this string cannot be found here.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
         //// engine.ShowUI();
     
@@ -172,10 +172,10 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED OUT CODE OR THE SCRIPT WONT RUN!
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
         // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
-        // However, due to the toolkit nuget package, this string cannot be found here.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
         //// engine.ShowUI();
         
@@ -225,10 +225,10 @@ public class Script
     /// <param name="engine">Link with SLAutomation process.</param>
     public void Run(Engine engine)
     {
-        // DO NOT REMOVE THIS COMMENTED OUT CODE OR THE SCRIPT WONT RUN!
+        // DO NOT REMOVE THIS COMMENTED-OUT CODE OR THE SCRIPT WON'T RUN!
         // DataMiner evaluates if the script needs to launch in interactive mode.
         // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
-        // However, due to the toolkit nuget package, this string cannot be found here.
+        // However, because of the toolkit NuGet package, this string cannot be found here.
         // So this comment is here as a workaround.
         //// engine.ShowUI();
     
