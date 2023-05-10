@@ -4,7 +4,7 @@ uid: DashboardForm
 
 # Form
 
-Available from DataMiner 10.3.6/10.4.0 onwards.
+Available from DataMiner 10.3.6/10.4.0 onwards.<!-- RN 36124 --> To use this visualization, you need to have at least one [DOM](xref:DOM) module defined in your DMS.
 
 This visualization takes an object manager instance or object manager definition as data input and displays it as a form:
 
