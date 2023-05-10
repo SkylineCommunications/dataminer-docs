@@ -2234,6 +2234,8 @@
           topicUid: Manually_starting_and_stopping_a_scheduled_event
         - name: Creating a Scheduler template
           topicUid: Creating_a_Scheduler_template
+        - name: Using the Scheduler NuGet package
+          topicUid: Scheduler_NuGet_Package
     - name: Service and Resource Management
       topicUid: SRM
       items:

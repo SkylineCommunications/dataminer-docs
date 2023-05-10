@@ -92,14 +92,15 @@ var endRunTime = startRunTime.AddHours(2);
 var schedulerTask = new SchedulerTask("Name", "Description", startRunTime, endRunTime, scheduleRepetition);
 ```
 
-Assuming that's 1PM, the task will be scheduled to run from 1PM to 3PM, being repeated according to the selected schedule repetition.
+Assuming that it is 1 PM in this example, the task will be scheduled to run from 1 PM until 3 PM, being repeated according to the selected schedule repetition.
 
-With the task already defined, it's time configure the **schedule action**. Currently, this library only supports Automation Script actions, which can be defined as follows:
+With the task already defined, it is time to configure the **schedule action**. Currently, this library only supports Automation script actions, which can be defined as follows:
+
  ```csharp
 var inputScriptParams = new List<AutomationScriptInputParameter>
 {
-	new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
-	new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
+  new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
+  new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
 };
 
 var automationScriptAction = new AutomationScriptAction("Script Name", inputScriptParams, checkSets: true, runAsync: false);
@@ -107,27 +108,29 @@ var automationScriptAction = new AutomationScriptAction("Script Name", inputScri
 schedulerTask.ISchedulerAction = automationScriptAction;
 schedulerTask.ISchedulerFinalAction = automationScriptAction;
 ```
-This action will execute an automation script asynchronously (*runAsync* flag), named *Script Name* that will receive the *InputScriptParam1* and *InputScriptParam2* arguments, by verifying through the optional *checkSets* flag whether a read parameter will be checked for a new value after a set command. 
-Note that it's possible to define a **final action** that will be executed when the Scheduler task is removed. In the presented case the same Automation Script action will be executed.
 
+This action will cause an Automation script (*runAsync* flag) named *Script Name* to be executed asynchronously. It will receive the *InputScriptParam1* and *InputScriptParam2* arguments by verifying whether a read parameter will be checked for a new value after a set command, using the optional *checkSets* flag.
 
-Finally, when the task is fully ready, it can be **created or updated at DataMiner Scheduler module level** using the following method: 
+Note that it is possible to define a **final action** that will be executed when the Scheduler task is removed. In the presented case, the same Automation script action will be executed.
+
+Finally, when the task is fully ready, it can be **created or updated at DataMiner Scheduler module level** using the following method:
+
  ```csharp
 scheduler.CreateOrUpdateSchedulerTask(schedulerTask);
 ```
 
-To create or update **multiple tasks** at the same time, where it's possible to define an optional flag to indicate whether to send changes in bulk:
+You can create or update **multiple tasks** at the same time, making it possible to define an optional flag to indicate whether to send changes in bulk:
+
  ```csharp
 var schedulerTasks = new List<SchedulerTask>
 {
-	schedulerTask1,
-	schedulerTask2,
-	schedulerTask3,
+  schedulerTask1,
+  schedulerTask2,
+  schedulerTask3,
 };
 
 scheduler.CreateOrUpdateSchedulerTasks(schedulerTasks, sendInBulk: true);
 ```
-
 
 ## API Reference
 
@@ -138,72 +141,77 @@ Initializes a new instance of the `Scheduler` class by retrieving the Scheduler 
  ```csharp
 public Scheduler(Func<Net.Messages.SchedulerTask, bool> selector = null)` 
 ```
+
 #### Parameters
 
--   `selector` - Selector that will be applied to the retrieved Scheduler tasks. If null, no Scheduler Tasks are retrieved.
+`selector`: Selector that will be applied to the retrieved Scheduler tasks. If left null, no Scheduler Tasks are retrieved.
 
 #### Properties
 
--   `SchedulerTasks` - Gets the current tasks in the DataMiner Scheduler.
+`SchedulerTasks`: Gets the current tasks in the DataMiner Scheduler.
 
 #### Methods
+
  ```csharp
 public void CreateOrUpdateSchedulerTask(SchedulerTask task) 
 ```
+
 Creates or updates a single Scheduler task.
+
 ##### Parameters
 
--   `task` - The SchedulerTask object to create/update.
+`task`: The SchedulerTask object to create/update.
 
 ##### Exceptions
 
--   `ArgumentNullException` - Thrown when task is null.
-    
--   `SaveSchedulerTasks` - Saves the Scheduler tasks after creating/updating.
-    
+- `ArgumentNullException`: Thrown when task is null.
+
+- `SaveSchedulerTasks`: Saves the Scheduler tasks after creating/updating.
+
  ```csharp
 public void CreateOrUpdateSchedulerTasks(IEnumerable<SchedulerTask> schedulerTasks, bool sendInBulk = false) 
 ```
+
  Creates or updates a collection of Scheduler tasks.
+
 ##### Parameters
 
--   `schedulerTasks` - The collection of SchedulerTask objects to create/update.
-    
--   `sendInBulk` - A flag indicating whether to send changes in bulk. Optional, defaults to false.
-    
+- `schedulerTasks`: The collection of SchedulerTask objects to create/update.
+
+- `sendInBulk`: A flag indicating whether to send changes in bulk. Optional, defaults to false.
 
 ##### Exceptions
 
--   `ArgumentNullException` - Thrown when schedulerTasks is null.
-    
--   `GetSchedulerTasksByFilter` - Retrieves a collection of SchedulerTask objects based on a filter specified by the selector Func parameter.
-    
+- `ArgumentNullException`: Thrown when schedulerTasks is null.
+
+- `GetSchedulerTasksByFilter`: Retrieves a collection of SchedulerTask objects based on a filter specified by the selector Func parameter.
 
  ```csharp
 public IEnumerable<Net.Messages.SchedulerTask> GetSchedulerTasksByFilter(Func<Net.Messages.SchedulerTask, bool> selector)
 ```
+
 ##### Parameters
 
--   `selector` - The function used to filter the SchedulerTask objects to return.
+- `selector`: The function used to filter the SchedulerTask objects to return.
 
 ##### Returns
 
--   A collection of SchedulerTask objects that match the given filter.
+- A collection of SchedulerTask objects that match the given filter.
 
 ##### Exceptions
 
--   `InvalidOperationException` - Thrown when the GetSchedulerTasksResponseMessage is null.
-    
--   `DeleteSchedulerTasksByFilter` - Deletes scheduler tasks based on the provided filter.
-    
+- `InvalidOperationException`: Thrown when the GetSchedulerTasksResponseMessage is null.
+
+- `DeleteSchedulerTasksByFilter`: Deletes scheduler tasks based on the provided filter.
 
  ```csharp
 public void DeleteSchedulerTasksByFilter(Func<Net.Messages.SchedulerTask, bool> selector) 
 ```
+
 ##### Parameters
 
--   `selector` - Filter function used to select tasks for deletion.
+- `selector`: Filter function used to select tasks for deletion.
 
 ##### Exceptions
 
--   `ArgumentNullException` - Thrown when the selector parameter is null.
+- `ArgumentNullException`: Thrown when the selector parameter is null.
