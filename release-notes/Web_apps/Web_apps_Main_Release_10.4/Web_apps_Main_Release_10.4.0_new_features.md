@@ -9,6 +9,43 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 ## Highlights
 
+#### DOM features now available in Dashboards and Low-Code Apps [ID_29732] [ID_31804] [ID_32236] [ID_36124]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In DataMiner Dashboards and Low-Code Apps, several new features related to DOM are now available.
+
+##### New data input options
+
+In the data pane, you will now find the following new data feeds:
+
+- Object Manager Definitions
+- Object Manager Instances
+
+In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
+
+- object manager definitions
+- object manager instances
+- object manager modules
+
+##### New Form component
+
+A new "Form" component is now also available. It takes an object manager instance or object manager definition as data input and displays it as a form:
+
+- In a dashboard, only an object manager instance can be used as input.
+- In a low-code app, you can use either an object manager instance or a object manager definition, or both. If you use a definition, the fields of the definition are displayed, which the user can fill in to create an instance. Using both definition and instance input at the same time can for example be useful in case you use a dynamic feed for the instance. In that case, as long as a value is being fed, the data of the instance is displayed; otherwise the empty fields of the definition are displayed.
+
+If you use this component with object manager instance input in a low-code app, you can use the *Read mode* layout setting to determine whether it should be an editable form or not. In a dashboard, a form can only be displayed in read-only mode.
+
+In a low-code app, this component will also make a number of component actions available, which you can for instance use with a button:
+
+- *Create a new instance*: This will create an empty form for the configured DOM definition even if a DOM instance is configured as data. This allows you to link a DOM instance feed to the component and at the same time make it possible to create a new DOM instance.
+- *Cancel current changes*: If you execute this action after you executed the action to create a new instance, the previously shown form will be displayed again.
+- *Delete instance*
+- *Save current changes*
+- *Set form to edit mode*
+- *Set form to read mode*
+
 #### Dashboards app & Low-Code Apps: Icon component [ID_34867]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -101,43 +138,6 @@ bool WasOnDownloadStarted(string key)
 >
 > - Modern browsers block downloads from a `file:///` URL to an HTTP(s) address. In other words, they don't allow you to download a file located on a network share. As a workaround, you can copy the file from the network share to *Documents* (or any other HTTP-reachable location), and then let the client download it from that URL.
 > - The current IIS configuration does not allow all file types to be downloaded.
-
-#### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In DataMiner Dashboards and Low-Code Apps, several new features related to DOM are now available.
-
-##### New data input options
-
-In the data pane, you will now find the following new data feeds:
-
-- Object Manager Definitions
-- Object Manager Instances
-
-In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
-
-- object manager definitions
-- object manager instances
-- object manager modules
-
-##### New Form component
-
-A new "Form" component is now also available. It takes an object manager instance or object manager definition as data input and displays it as a form:
-
-- In a dashboard, only an object manager instance can be used as input.
-- In a low-code app, you can use either an object manager instance or a object manager definition, or both. If you use a definition, the fields of the definition are displayed, which the user can fill in to create an instance. Using both definition and instance input at the same time can for example be useful in case you use a dynamic feed for the instance. In that case, as long as a value is being fed, the data of the instance is displayed; otherwise the empty fields of the definition are displayed.
-
-If you use this component with object manager instance input in a low-code app, you can use the *Read mode* layout setting to determine whether it should be an editable form or not. In a dashboard, a form can only be displayed in read-only mode.
-
-In a low-code app, this component will also make a number of component actions available, which you can for instance use with a button:
-
-- *Create a new instance*: This will create an empty form for the configured DOM definition even if a DOM instance is configured as data. This allows you to link a DOM instance feed to the component and at the same time make it possible to create a new DOM instance.
-- *Cancel current changes*: If you execute this action after you executed the action to create a new instance, the previously shown form will be displayed again.
-- *Delete instance*
-- *Save current changes*
-- *Set form to edit mode*
-- *Set form to read mode*
 
 ## Other new features
 
@@ -523,7 +523,7 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
