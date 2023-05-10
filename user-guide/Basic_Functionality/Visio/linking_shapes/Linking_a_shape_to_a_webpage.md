@@ -120,7 +120,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 >
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
 > - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
-> - Prior to DataMiner 10.3.6/10.4.0, when you use a placeholder in the URL and this causes the URL to be updated, the entire linked webpage needs to be reloaded, which means the user may need to log in again. From DataMiner 10.3.6/10.4.0 onwards, Visual Overview can recognize if only part of a URL changes and update only the necessary parts of the page, without requiring a full reload of the linked webpage.
+> - Prior to DataMiner 10.3.6/10.4.0, adding a URL fragment to a linked webpage causes the connection info to be automatically added after the fragment, rendering the URL invalid and requiring a reload of the page, which means the user may need to log in again. From DataMiner 10.3.6/10.4.0 onwards, Visual Overview can recognize if a URL fragment is added or changed and update only the necessary parts of the page, avoiding the need for a full page reload and login.
 
 ## Configuring a link to a DataMiner object within a webpage embedded in Visual Overview
 
