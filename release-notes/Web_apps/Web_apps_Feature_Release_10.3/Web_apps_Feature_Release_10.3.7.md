@@ -71,6 +71,12 @@ bool WasOnDownloadStarted(string key)
 
 A number of security enhancements have been made.
 
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]

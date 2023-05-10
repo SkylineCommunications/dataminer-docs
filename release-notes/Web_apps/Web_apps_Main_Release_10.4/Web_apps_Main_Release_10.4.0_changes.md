@@ -217,6 +217,12 @@ Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summa
 > [!NOTE]
 > When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
