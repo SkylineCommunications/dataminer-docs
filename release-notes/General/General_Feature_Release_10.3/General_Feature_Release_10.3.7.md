@@ -38,6 +38,14 @@ In addition, the DataMiner installer will now also add a firewall rule allowing 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
+
+To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
+
 ## Changes
 
 ### Enhancements

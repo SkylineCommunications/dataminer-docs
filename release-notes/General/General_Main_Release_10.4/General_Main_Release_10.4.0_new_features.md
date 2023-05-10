@@ -451,6 +451,16 @@ If you do not want the alarm property value to be added to the correlation alarm
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+### Maps
+
+#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
+
+To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
+
 ### Service & Resource Management
 
 #### Service & Resource Management: Exposers for resource capacities and capabilities [ID_34841]
