@@ -523,7 +523,7 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
