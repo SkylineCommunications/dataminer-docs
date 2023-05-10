@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.6
 
 ## Highlights
 
-#### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
+#### DOM features now available in Dashboards and Low-Code Apps [ID_29732] [ID_31804] [ID_32236] [ID_36124]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
