@@ -26,11 +26,11 @@ To configure a page:
 
    1. Make sure the sidebar is fully expanded. In case it is collapsed, you can expand it with the hamburger button at the top.
 
-   1. Hover over the page name until a crossed-out eye icon is displayed and click the icon.
+   1. Prior to DataMiner 10.3.6/10.4.0, hover over the page name until a crossed-out eye icon is displayed and click the icon. From DataMiner 10.3.6/10.4.0 onwards, click the ellipsis button next to the page name, and select *Hide from sidebar*.
 
-   When a page is hidden in an app, its icon is grayed out in the sidebar in edit mode. To show the page again, follow the same steps as detailed above. Instead of a crossed-out eye icon, you will need to click a full eye icon.
+   When a page is hidden in an app, its icon is grayed out in the sidebar in edit mode. To show the page again, follow the same steps as detailed above. Prior to DataMiner 10.3.6/10.4.0, instead of a crossed-out eye icon, you will need to click a full eye icon. From DataMiner 10.3.6/10.4.0 onwards, instead of *Hide from sidebar*, select *Show in sidebar*.
 
 > [!NOTE]
 >
-> - To delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
-> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a page, click the duplicate icon next to the page name in the pane on the left.
+> - Prior to DataMiner 10.3.6/10.4.0, to delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon. From DataMiner 10.3.6/10.4.0 onwards, to delete a page, click the ellipsis button next to the page name in the pane on the left, select *Delete*, and click the confirmation icon.
+> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a page, click the ellipsis button next to the page name in the pane on the left, and select *Duplicate*.
