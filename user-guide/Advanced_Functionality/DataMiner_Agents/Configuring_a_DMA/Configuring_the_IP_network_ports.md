@@ -50,5 +50,5 @@ The diagram below shows how communication within a DMS could be set up. The blue
 > [!TIP]
 > See also:
 >
-> - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-dma-communication-settings-in-slnetexeconfig)
+> - [Configuring DMA communication settings in SLNet.exe.config](xref:Configuration_of_DataMiner_processes#configuring-the-ports-for-net-remoting-andor-xml-web-services)
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
