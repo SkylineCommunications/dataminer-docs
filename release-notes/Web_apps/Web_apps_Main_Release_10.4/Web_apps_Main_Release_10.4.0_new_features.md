@@ -527,7 +527,7 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
-#### Low-Code Apps: Option to duplicate pages and panels has been added to new context menu [ID_36097]
+#### Low-Code Apps: Duplicating pages and panels is now possible via new context menu [ID_36097]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
