@@ -377,9 +377,3 @@ When an element that had more than 10,000 alarm events stored on a Cassandra clu
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
-
-#### Failover: Problem when starting elements that contained DVE child elements or virtual function elements [ID_36244]
-
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
-
-When, in a Failover setup, a switchback occurred to a DataMiner Agent that had already been online before, in some rare cases, an error could occur in the SLElement process of that Agent when starting elements that contained DVE child elements or virtual function elements.
