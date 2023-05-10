@@ -65,7 +65,7 @@ In an interactive Automation script launched from a dashboard or a low-code app,
 
 To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
 
-To configure the download properties, assign an `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
+To configure the download properties, assign `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
 
 These are the supported download properties:
 
@@ -99,8 +99,8 @@ bool WasOnDownloadStarted(string key)
 
 > [!NOTE]
 >
-> - Modern browsers will block downloads of `file:///` URLs when on a http(s) site, so you can not download a file on a share. You can copy the file from the share to Documents (or any other http-reachable location) first, and then let the client download it from that URL.
-> - At time of writing, the current IIS configuration doesn't allow downloading all file extensions. A task has been created to allow all filetypes: DCP208466. Attached is a list of allowed file extensions.
+> - Modern browsers block downloads from a `file:///` URL to an HTTP(s) address. In other words, they don't allow you to download a file located on a network share. As a workaround, you can copy the file from the network share to *Documents* (or any other HTTP-reachable location), and then let the client download it from that URL.
+> - The current IIS configuration does not allow all file types to be downloaded.
 
 #### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
 
