@@ -19,5 +19,5 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 > [!NOTE]
 >
 > - To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
-> - Prior to DataMiner 10.3.6/10.4.0, to delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon. From DataMiner 10.3.6/10.4.0 onwards, to delete a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Delete*.
-> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Duplicate*.
+> - Prior to DataMiner 10.3.6/10.4.0, to delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon. From DataMiner 10.3.6/10.4.0 onwards, to delete a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Delete*. <!-- RN 36097 -->
+> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a panel, click the ellipsis button next to the panel name in the page configuration pane, and select *Duplicate*. <!-- RN 36097 -->
