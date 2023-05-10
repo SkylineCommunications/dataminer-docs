@@ -5,6 +5,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing) | From DataMiner 10.3.0 to 10.3.0 [CU2]<br>From DataMiner 10.3.3 to 10.3.5.| May 8, 2023 |
 | [RTEs caused by problem during automatic NATS reconfiguration](xref:KI_RTEs_NATS_reconfiguration) | From DataMiner 10.3.4 onward | May 5, 2023 |
 | [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4]<br>DataMiner 10.1.12 up to 10.3.6 | April 28, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | April 20, 2023 |

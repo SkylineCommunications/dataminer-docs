@@ -201,6 +201,17 @@ As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use M
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
+#### DataMiner Cloud Packs have been restructured [ID_36335]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Two different DataMiner Cloud Packs are now available.
+
+| Cloud Pack  | Included modules | Description |
+|-------------|------------------|-------------|
+| Full pack | CloudGateway<br>CloudFeed<br>ArtifactDeployer<br>CoreGateway<br>FieldControl<br>Orchestrator<br>SupportAssistant | Pack to be installed on a DataMiner Agent that will connect to dataminer.services directly |
+| Proxy/DMZ pack | CloudGateway<br>CloudFeed<br>Orchestrator | Pack to be installed on a proxy server or a DMZ server via which a DataMiner Agent will connect to dataminer.services |
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
