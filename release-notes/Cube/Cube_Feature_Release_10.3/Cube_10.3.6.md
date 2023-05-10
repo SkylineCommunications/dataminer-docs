@@ -81,13 +81,7 @@ In *System Center*, a few enhancements have been made to the *Database > Offload
   > [!IMPORTANT]
   > If, before upgrading to this DataMiner version, *Parameter value* was selected and the frequency was set to "permanently", *Parameter value* will no longer be selected after upgrading. As a result, no snapshot will be offloaded until you reconfigure the snapshot offload settings.
 
-#### Visual Overview: Enhanced URL handling [ID_36044]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-A number of enhancements have been made with regard to URL handling within Visual Overview.
-
-#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36104]
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
