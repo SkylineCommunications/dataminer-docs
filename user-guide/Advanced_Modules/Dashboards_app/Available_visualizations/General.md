@@ -6,6 +6,8 @@ uid: General
 
 This category contains the following visualizations:
 
+- [Form](xref:DashboardForm)
+
 - [Block](xref:DashboardBlock)
 
 - [Button](xref:DashboardButton)
