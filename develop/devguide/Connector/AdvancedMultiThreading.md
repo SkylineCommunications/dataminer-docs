@@ -17,11 +17,11 @@ The following example defines an SNMP connection (the main connection) a serial 
 <Type relativeTimers="true" advanced="serial:mySerialConnection;http:myHttpConnection">snmp</Type>
 ```
 
-Next to the main execution thread (which is always created and active), a number of additional threads are defined. The thread with connection ID 1,2 will correspond with the serial connection and the http connection respectively. The other threads (with ID >1000) are threads used to execute logic that is not related to connections defined in the Type tag.
+Next to the main execution thread (which is always created and active), a number of additional threads are defined. The thread with connection IDs 1,2 will correspond with the serial connection and the http connection respectively. The other threads (with ID >1000) are threads used to execute logic that is not related to connections defined in the Type tag.
 
 ```xml
 <Threads>
-   <Thread connection="1,2" /> <!-- 2nd and 3rd Device connection = serial and http -->
+   <Thread connection="1,2" /> <!-- 2nd and 3rd Device connection = serial and http. -->
    <Thread connection="1001" /> <!-- Internal 1. -->
    <Thread connection="1002" /> <!-- Internal 2. -->
 </Threads>
