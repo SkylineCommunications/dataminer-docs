@@ -267,13 +267,7 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
-#### Visual Overview: Enhanced URL handling [ID_36044]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-A number of enhancements have been made with regard to URL handling within Visual Overview.
-
-#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36104]
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 

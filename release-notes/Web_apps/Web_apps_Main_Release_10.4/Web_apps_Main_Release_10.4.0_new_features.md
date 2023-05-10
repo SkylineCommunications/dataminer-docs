@@ -9,6 +9,43 @@ uid: Web_apps_Main_Release_10.4.0_new_features
 
 ## Highlights
 
+#### DOM features now available in Dashboards and Low-Code Apps [ID_29732] [ID_31804] [ID_32236] [ID_36124]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In DataMiner Dashboards and Low-Code Apps, several new features related to DOM are now available.
+
+##### New data input options
+
+In the data pane, you will now find the following new data feeds:
+
+- Object Manager Definitions
+- Object Manager Instances
+
+In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
+
+- object manager definitions
+- object manager instances
+- object manager modules
+
+##### New Form component
+
+A new "Form" component is now also available. It takes an object manager instance or object manager definition as data input and displays it as a form:
+
+- In a dashboard, only an object manager instance can be used as input.
+- In a low-code app, you can use either an object manager instance or a object manager definition, or both. If you use a definition, the fields of the definition are displayed, which the user can fill in to create an instance. Using both definition and instance input at the same time can for example be useful in case you use a dynamic feed for the instance. In that case, as long as a value is being fed, the data of the instance is displayed; otherwise the empty fields of the definition are displayed.
+
+If you use this component with object manager instance input in a low-code app, you can use the *Read mode* layout setting to determine whether it should be an editable form or not. In a dashboard, a form can only be displayed in read-only mode.
+
+In a low-code app, this component will also make a number of component actions available, which you can for instance use with a button:
+
+- *Create a new instance*: This will create an empty form for the configured DOM definition even if a DOM instance is configured as data. This allows you to link a DOM instance feed to the component and at the same time make it possible to create a new DOM instance.
+- *Cancel current changes*: If you execute this action after you executed the action to create a new instance, the previously shown form will be displayed again.
+- *Delete instance*
+- *Save current changes*
+- *Set form to edit mode*
+- *Set form to read mode*
+
 #### Dashboards app & Low-Code Apps: Icon component [ID_34867]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -65,7 +102,7 @@ In an interactive Automation script launched from a dashboard or a low-code app,
 
 To add a *DownloadButton* component to an interactive Automation script, create a *UIBlockDefinition* and set its *Type* property to "UIBlockType.DownloadButton". The button can be configured and styled in same way as a regular button component. For example, you can set the *Style* property to "Style.Button.CallToAction" and the *Text* property to "Download".
 
-To configure the download properties, assign an `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
+To configure the download properties, assign `AutomationDownloadButtonOptions` to the *ConfigOptions* property of the *UIBlockDefinition*.
 
 These are the supported download properties:
 
@@ -79,48 +116,28 @@ These are the supported download properties:
   - Example of an absolute path: To download the latest Cube version from DataMiner Services, set *Url* to `https://dataminer.services/install/DataMinerCube.exe`.
   - Example of a relative path: To download the file hosted on URL `http(s)://yourDma/Documents/MyElement/MyDocument.txt` (i.e. the file *MyDocument.txt* located in the folder `C:\Skyline DataMiner\Documents\MyElement\` of the DMA), set *Url* to `/Documents/MyElement/MyDocument.txt`.
 
-- **FileNameToSave**: The name that will be given to the file once it has been downloaded. By default, this name is identical to that of the file on the location.
+- **FileNameToSave**: The name that will be given to the file once it has been downloaded. By default, this name is identical to that of the file at the remote location.
 
   > [!NOTE]
-  > Overriding the filename is blocked by some browsers when the file to download is on another host (so not on the DataMiner agent). In this case the original filename will be used. See the note here for more info.
+  > Some browsers block overriding the file name when the file to be downloaded is not located on the DataMiner Agent. In this case, the original file name will be used.
 
-- **StartDownloadImmediately**: If set to true (the default is false), the download will start immediately when the component is displayed. The button stays visible and can be clicked to download the file again.
+- **StartDownloadImmediately**: If set to true (default setting is false), the download will start as soon as the component is displayed. The button will stay visible and can be clicked to download the file again.
 
-- **ReturnWhenDownloadIsStarted**: If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started (either immediately or when clicked by the user, depending on StartDownloadImmediately). When both StartDownloadImmediately and ReturnWhenDownloadIsStarted are set to true, the script will start the download and exit immediately (unless a new ShowUI() is called).
+- **ReturnWhenDownloadIsStarted**: If set to true (default default is false), the `engine.ShowUI()` method will return as soon as the download is started (either immediately or when the user clicks the button, depending on *StartDownloadImmediately*). When both *StartDownloadImmediately* and *ReturnWhenDownloadIsStarted* are set to true, the script will start the download and exit immediately (unless a new `engine.ShowUI()` call is made).
 
   > [!NOTE]
-  > you will see the script UI pop up for about half a second.
+  > The script's UI will be visible for about half a second.
 
-The UIResult now also supports the following function method: bool WasOnDownloadStarted(string key).
-It returns true if a download button with the given destination var and property ReturnWhenDownloadIsStarted on the AutomationDownloadButtonOptions set to true has started the file download. For this method ever to return true, you have to set .ReturnWhenDownloadIsStarted to true on the AutomationDownloadButtonOptions, in the ConfigOptions of the UIBlockDefinition. Once the download is started, the control is given to the browser, so there is no way to know when the download is finished.
+The `UIResult` now also supports the following function method, which returns true when a download button with *ReturnWhenDownloadIsStarted* set to true has started a download.
 
-Documentation PR: https://github.com/SkylineCommunications/dataminer-docs/pull/1271/
+```csharp
+bool WasOnDownloadStarted(string key)
+```
 
-Note: Modern browsers will block downloads of file:/// url's when on a http(s) site, so you can not download a file on a share. You can copy the file from the share to Documents (or any other http-reachable location) first, and then let the client download it from that URL. 
-
-At time of writing, the current IIS configuration doesn't allow downloading all file extensions. A task has been created to allow all filetypes: DCP208466. Attached is a list of allowed file extensions.
-
-
-
-
-
-
-
-
-#### DOM features now available in Dashboards and Low-Code Apps [ID_36124]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In DataMiner Dashboards and Low-Code Apps, the following DOM data feeds are now available:
-
-- Object Manager Definitions
-- Object Manager Instances
-
-In addition, you can now use object manager instances as a query (GQI) data source, and it is possible to specify the following objects in URL feeds:
-
-- object manager definitions
-- object manager instances
-- object manager modules
+> [!NOTE]
+>
+> - Modern browsers block downloads from a `file:///` URL to an HTTP(s) address. In other words, they don't allow you to download a file located on a network share. As a workaround, you can copy the file from the network share to *Documents* (or any other HTTP-reachable location), and then let the client download it from that URL.
+> - The current IIS configuration does not allow all file types to be downloaded.
 
 ## Other new features
 
@@ -506,7 +523,7 @@ Also, any slashes in the group values will be escaped before they are joined. Fo
 
 #### Dashboards app & Low-Code Apps: Clearing a State component by means of CTRL+Click [ID_36056]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
 You can now clear a *State* component by clicking it while holding down the CTRL key.
 
