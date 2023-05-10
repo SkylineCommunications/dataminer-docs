@@ -6,6 +6,9 @@ uid: DashboardState
 
 This component displays the state, name and, if applicable, the value of a DataMiner object. This can be an element, a view, a parameter, etc.
 
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
+
 To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
@@ -17,9 +20,7 @@ To configure the component:
    - From DataMiner 10.2.0/10.1.4 onwards, you can select view parameters as a data source to view the alarm state for aggregation rules on specific views. To select these, in the drop-down box for the parameter data source, select *View*.
 
    > [!NOTE]
-   >
-   > - From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
-   > - From DataMiner 10.3.6/10.4.0 onwards, once this component has been configured with data input, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, clearing it will also clear the data shown in those components. <!-- RN 36056 -->
+   > From DataMiner 10.2.0/10.1.6 onwards, once this component has been configured with data input, the component is available in the *feeds* section of the data pane so that it can be used as a feed for other components. This way, if the input for this component changes, it will also change for all other components using this component as their feed. However, note that this is only supported for query data input from DataMiner 10.1.7 onwards.
 
 1. Optionally, customize the following component options:
 
