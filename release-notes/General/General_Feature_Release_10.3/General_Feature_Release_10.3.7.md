@@ -64,6 +64,17 @@ In Failover setups using virtual IP addresses, once every minute the CheckVIPs t
 
 This obsolete thread has now been removed.
 
+#### DataMiner Cloud Packs have been restructured [ID_36335]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Two different DataMiner Cloud Packs are now available.
+
+| Cloud Pack  | Included modules | Description |
+|-------------|------------------|-------------|
+| Full pack | CloudGateway<br>CloudFeed<br>ArtifactDeployer<br>CoreGateway<br>FieldControl<br>Orchestrator<br>SupportAssistant | Pack to be installed on a DataMiner Agent that will connect to dataminer.services directly |
+| Proxy/DMZ pack | CloudGateway<br>CloudFeed<br>Orchestrator | Pack to be installed on a proxy server or a DMZ server via which a DataMiner Agent will connect to dataminer.services |
+
 ### Fixes
 
 #### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
