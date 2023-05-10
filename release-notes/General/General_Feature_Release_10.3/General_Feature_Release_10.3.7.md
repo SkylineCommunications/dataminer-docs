@@ -31,7 +31,7 @@ When you install or upgrade a DataMiner Agent, the following DataMiner Extension
 - DataMiner Orchestrator (version 1.3.3)
 - DataMiner SupportAssistant (version 1.3.2)
 
-An upgrade action is also included that will check if the cloud endpoint hosted in CloudGateway will be reachable (TCP port 5100).
+The BPA test *Firewall Configuration* will check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
 In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
