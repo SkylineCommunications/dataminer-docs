@@ -31,4 +31,6 @@ To configure a page:
    When a page is hidden in an app, its icon is grayed out in the sidebar in edit mode. To show the page again, follow the same steps as detailed above. Instead of a crossed-out eye icon, you will need to click a full eye icon.
 
 > [!NOTE]
-> To delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
+>
+> - To delete a page, click the garbage can icon next to the page name in the pane on the left, and then click the confirmation icon.
+> - From DataMiner 10.3.6/10.4.0 onwards, to duplicate a page, click the duplicate icon next to the page name in the pane on the left.
