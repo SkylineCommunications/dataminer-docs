@@ -144,3 +144,9 @@ When a query was updated, the query filter component would incorrectly only get 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### Dashboards app & Low-Code Apps - Line & area chart: Legend would incorrectly show the primary key of a parameter [ID_36381]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The chart legend would incorrectly show the primary key of a parameter instead of the display key.
