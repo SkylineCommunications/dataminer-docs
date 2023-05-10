@@ -18,6 +18,12 @@ uid: Web_apps_Main_Release_10.3.0_CU4
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### Security enhancements [ID_36217]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
