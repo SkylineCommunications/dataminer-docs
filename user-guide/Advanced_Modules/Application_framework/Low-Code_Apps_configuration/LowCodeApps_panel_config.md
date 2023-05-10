@@ -18,5 +18,5 @@ In addition to pages, panels can be configured in apps in the Low-Code Apps modu
 
 > [!NOTE]
 >
-> To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
-> To delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon.
+> - To allow users to open a panel, you will need to configure an event with the action [Open a panel](xref:LowCodeApps_event_config#opening-a-panel-of-the-app).
+> - To delete a panel, click the garbage can icon next to the panel name in the page configuration pane, and then click the confirmation icon.
