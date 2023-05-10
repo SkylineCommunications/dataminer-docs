@@ -24,7 +24,7 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner ModelHost* DxM is installed.
 
-- *DataMiner CloudFeed* must be running on your system.
+- *DataMiner CloudFeed* must be running on your system (minimum version 1.1.0).
 
   You can [use the Admin app](xref:Managing_cloud-connected_nodes) to check if the *DataMiner CloudFeed* DxM is installed.
 
