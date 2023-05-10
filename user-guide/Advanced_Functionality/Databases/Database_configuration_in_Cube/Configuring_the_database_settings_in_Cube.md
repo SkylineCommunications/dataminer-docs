@@ -11,12 +11,8 @@ In older DataMiner systems, this database was also known as the "local database"
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
-From DataMiner 10.3.6/10.4.0 onwards, if a DataMiner Agent in a cluster is offline, the following warning will be displayed at the top of the *Database* page in System Center:
-
-`Warning: 1 of 2 Agents are currently not running. Database configuration changes will not be applied to Agents that are not running.`
-
-> [!NOTE]
-> This warning will not be triggered when the backup Agent in a Failover setup is offline.
+> [!IMPORTANT]
+> If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered when the backup Agent in a Failover setup is offline.
 
 ## Cassandra database
 
