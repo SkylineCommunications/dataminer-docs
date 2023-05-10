@@ -56,6 +56,14 @@ When a booking was updated while actions were being performed, in some cases, it
 
 For example, when a booking was rescheduled while it was being started, it could end up in an *Ongoing* status with a start time somewhere in the future.
 
+#### Client connection would be dropped because an SLNet request handled by SLHelper took too long to process [ID_36296]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When it took SLHelper more than 15 minutes to process an SLNet request received from a client, a NATS exception was returned to the client. However, as this exception was not serialized, the client would not receive it, causing the client connection to get dropped.
+
+From now on, NATS exceptions returned to a client following an SLHelper timeout will always be serialized.
+
 #### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
