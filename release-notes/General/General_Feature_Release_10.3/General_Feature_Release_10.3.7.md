@@ -93,3 +93,12 @@ For example, when a booking was rescheduled while it was being started, it could
 Up to now, before a QAction was compiled, three compiler directives were added to its source code. As a result, all compilation errors would refer to incorrect line numbers.
 
 From now on, the compiler directives will no longer be added to the source code. Instead, they will be passed to the compiler directly.
+
+#### SLNetClientTest: Problem when trying to set up a connection using gRPC [ID_36322]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `MissingMethodException` exception could be thrown.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
