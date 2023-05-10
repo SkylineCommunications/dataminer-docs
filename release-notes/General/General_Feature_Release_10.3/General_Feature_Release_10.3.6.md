@@ -15,7 +15,7 @@ uid: General_Feature_Release_10.3.6
 
 ## Highlights
 
-#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273]
+#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
 
 With the DataMiner User-Defined APIs, you can define custom API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. This DxM is included in DataMiner upgrade packages from now on and will be automatically installed when you upgrade. The APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
 
@@ -107,25 +107,6 @@ If you trigger an API via the SLNetClientTest tool, this will bypass the endpoin
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-## Other features
-
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
-
-- DataMiner ArtifactDeployer (version 1.4.3)
-- DataMiner CloudFeed (version 1.0.8)
-- DataMiner CloudGateway (version 2.10.4)
-- DataMiner CoreGateway (version 2.12.1)
-- DataMiner FieldControl (version 2.8.2)
-- DataMiner Orchestrator (version 1.2.6)
-- DataMiner SupportAssistant (version 1.3.0)
-
-> [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ## Changes
 

@@ -1635,6 +1635,8 @@
             - name: General
               topicUid: General
               items:
+              - name: Form
+                topicUid: DashboardForm
               - name: Block
                 topicUid: DashboardBlock
               - name: Button
@@ -2040,6 +2042,8 @@
           topicUid: Deleting_custom_apps
         - name: Specifying data input in an app URL
           topicUid: Specifying_data_input_in_URL
+        - name: Executing actions via the app URL
+          topicUid: Executing_actions_via_URL
     - name: Maps
       topicUid: maps
       items:
@@ -2366,10 +2370,10 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: User-Defined APIs (preview)
+    - name: User-Defined APIs
       topicUid: UD_APIs
       items:
-        - name: Managing APIs and tokens
+        - name: Managing APIs and tokens in Cube
           topicUid: UD_APIs_Viewing_in_Cube
         - name: Defining an API
           topicUid: UD_APIs_Define_New_API
@@ -2378,10 +2382,21 @@
               topicUid: UD_APIs_Define_New_API
             - name: Using existing scripts
               topicUid: UD_APIs_Using_existing_scripts
+            - name: Creating APIs and tokens in code
+              topicUid: UD_APIs_Creating_in_code
+              items:
+                - name: ApiToken object
+                  topicUid: UD_APIs_Objects_ApiToken
+                - name: ApiDefinition object
+                  topicUid: UD_APIs_Objects_ApiDefinition
+            - name: API script examples
+              topicUid: UD_APIs_API_script_examples
         - name: Triggering an API
           topicUid: UD_APIs_Triggering_an_API
         - name: DataMiner UserDefinableApiEndpoint DxM
           topicUid: UD_APIs_UserDefinableApiEndpoint
+        - name: Troubleshooting
+          topicUid: UD_APIs_Troubleshooting
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -3383,7 +3398,7 @@
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
-              - name: Triggering a user-defined API
+              - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool
@@ -3524,7 +3539,7 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
-        - name: User-defined API benchmarks
+        - name: User-Defined APIs benchmarks
           topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks

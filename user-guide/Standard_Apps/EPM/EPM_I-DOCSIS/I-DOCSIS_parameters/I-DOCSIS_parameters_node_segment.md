@@ -93,7 +93,7 @@ This page contains an overview of the Node Segment parameters available in the I
   - **Group Delay or Reflection Status**: This column combines the information from the previous column rows. If either the "Group Delay Status" or the "Reflection Status" indicates an "OOS" condition for a specific cable modem, it is marked as "OOS" in this column. Conversely, if both the "Group Delay Status" and the "Reflection Status" are "OK," the cable modem is marked as "OK" in this column.
 
   This table is an example for identification of cable modems affected by group delay or reflection issues by referencing their respective status values. It provides a clear overview of the performance status for each cable modem in the service group.
-
+ 
 - **Reflection Distance**: The average reflection distance for all associated CMs.
 
 - **Average Latency**: The average latency for all CMs associated with the given level.

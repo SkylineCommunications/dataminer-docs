@@ -18,6 +18,12 @@ uid: Web_apps_Main_Release_10.3.0_CU4
 
 From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
+#### Security enhancements [ID_36217]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
@@ -62,8 +68,20 @@ When a low-code app with a custom icon did not have a draft version, the DataMin
 
 When you collapsed and expanded the *DATA USED IN DASHBOARD* section of the *DATA* tab, in some cases, the height of that section would incorrectly change.
 
+#### Dashboards app & Low-Code Apps: Updating a query would incorrectly not update the query filter component [ID_36283]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When a query was updated, the query filter component would incorrectly only get updated after a refresh.
+
 #### Monitoring app: Surveyor items would be sorted incorrectly [ID_36303]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### Dashboards app & Low-Code Apps - Line & area chart: Legend would incorrectly show the primary key of a parameter [ID_36381]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The chart legend would incorrectly show the primary key of a parameter instead of the display key.
