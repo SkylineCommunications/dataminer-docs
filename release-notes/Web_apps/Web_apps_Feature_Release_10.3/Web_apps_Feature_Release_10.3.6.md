@@ -95,11 +95,11 @@ When you enable this setting, the first entry of the GQI result set will automat
 > - This new setting has also been added to the *Grid* component, which is only available if you activate the *ReportsAndDashboardsDynamicVisuals* soft-launch option.
 > - For reasons of consistency, in the Drop-down feed, List feed, Parameter feed and Tree feed, the *Feed defaults* setting has now also been renamed to *Initial selection*
 
-#### Low-Code Apps: Duplicating pages and panels [ID_36097]
+#### Low-Code Apps: Duplicating pages and panels is now possible via new context menu [ID_36097]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-When editing a low-code app, it is now possible to duplicate an entire page or panel.
+When editing a low-code app, it is now possible to duplicate an entire page or panel via the new context menu, accessible by clicking the ellipsis icon next to the page name in the pane on the left or the panel name in the page configuration pane. This context menu also allows you to delete a page or panel, as well as hide a page from the sidebar.
 
 ## Changes
 
