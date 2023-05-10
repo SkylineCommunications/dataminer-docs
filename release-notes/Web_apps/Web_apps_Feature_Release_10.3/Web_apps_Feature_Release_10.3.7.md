@@ -115,6 +115,12 @@ When a low-code app with a custom icon did not have a draft version, the DataMin
 
 When you collapsed and expanded the *DATA USED IN DASHBOARD* section of the *DATA* tab, in some cases, the height of that section would incorrectly change.
 
+#### Dashboards app & Low-Code Apps: Updating a query would incorrectly not update the query filter component [ID_36283]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When a query was updated, the query filter component would incorrectly only get updated after a refresh.
+
 #### Monitoring app: Surveyor items would be sorted incorrectly [ID_36303]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
