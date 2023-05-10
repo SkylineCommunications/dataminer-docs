@@ -1635,6 +1635,8 @@
             - name: General
               topicUid: General
               items:
+              - name: Form
+                topicUid: DashboardForm
               - name: Block
                 topicUid: DashboardBlock
               - name: Button

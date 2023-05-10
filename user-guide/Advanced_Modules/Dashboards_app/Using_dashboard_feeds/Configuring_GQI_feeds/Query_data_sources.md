@@ -52,6 +52,10 @@ Retrieves the elements in the DataMiner System. From DataMiner 10.3.3/10.4.0 onw
 
 Retrieves a parameter table from the Elasticsearch database using the specified alias.
 
+## Get object manager instances
+
+Retrieves [DOM instances](xref:DomInstance).
+
 ## Get parameter table by ID
 
 Retrieves the selected parameter table from the element with the specified DataMiner ID and element ID.
