@@ -12,7 +12,7 @@ In older DataMiner systems, this database was also known as the "local database"
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 > [!IMPORTANT]
-> If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered when the backup Agent in a Failover setup is offline.
+> If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered when the backup Agent in a Failover setup is offline. <!-- RN 36184 -->
 
 ## Cassandra database
 
@@ -53,7 +53,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 1. Click *Save*.
 
    > [!NOTE]
-   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.` <!-- RN 36184 -->
 
 ### [Cassandra database per DMA](#tab/tabid-2)
 
@@ -98,7 +98,7 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
 1. Click *Save*.
 
    > [!NOTE]
-   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.` <!-- RN 36184 -->
 
 ***
 
@@ -138,7 +138,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 1. Click *Save*.
 
    > [!NOTE]
-   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.` <!-- RN 36184 -->
 
 1. Restart the DMS.
 
@@ -172,7 +172,7 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 1. Click *Save*.
 
    > [!NOTE]
-   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.` <!-- RN 36184 -->
 
 1. Optionally, you can verify that the DMS is using the database.
 
@@ -251,7 +251,7 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
 1. Click *Save*.
 
    > [!NOTE]
-   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.`
+   > From DataMiner 10.3.6/10.4.0 onwards, clicking *Save* after changing any of the database settings will cause the following pop-up message to appear: `Database configuration changes won't take effect until the Agent is restarted.` <!-- RN 36184 -->
 
 > [!NOTE]
 >
