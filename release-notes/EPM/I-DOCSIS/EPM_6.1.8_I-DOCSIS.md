@@ -19,6 +19,4 @@ uid: EPM_6.1.8_I-DOCSIS
 
 ### Fixes
 
-#### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
-
-In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".
+*No fixes have been added to this release yet.*
