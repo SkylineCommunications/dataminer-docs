@@ -9,28 +9,7 @@ uid: General_Main_Release_10.4.0_highlights
 
 ## Highlights
 
-#### Interactive Automation scripts: New button style 'CallToAction' [ID_34904]
-
-<!-- MR 10.4.0 - FR 10.3.1 -->
-
-In an interactive Automation script launched from a dashboard or a low-code app, you can now apply the *CallToAction* style to a button.
-
-When you apply this style to a button
-
-- the background color of the button will be the color of the app,
-- the color of the text on the button will be white, and
-- the button will have a shadow.
-
-To set the style of a button in an interactive Automation script, set the *Style* property of the button's *UIBlockDefinition* to the name of the style. All supported styles are available via `Style.Button`.
-
-Alternatively, you can also pass a button style directly to the `AppendButton` method on an `UIBuilder` object.
-
-> [!NOTE]
->
-> - Up to now, `StaticText` blocks already supported a number of styles. Those styles are now also available via `Style.Text`: *Title1*, *Title2* and *Title3*.
-> - The *CallToAction* style will only be applied in interactive Automation scripts launched from a web app. It will not be applied in interactive Automation scripts launched from Cube.
-
-#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273]
+#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
 
 With the DataMiner User-Defined APIs, you can define custom API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. This DxM is included in DataMiner upgrade packages from now on and will be automatically installed when you upgrade. The APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
 

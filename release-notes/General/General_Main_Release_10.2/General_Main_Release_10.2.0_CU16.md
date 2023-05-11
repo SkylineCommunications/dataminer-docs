@@ -53,6 +53,18 @@ From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configu
 
 When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
 
+#### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The secondary index of certain SLA logger tables would not be created correctly. As a result, certain rows in those tables would not get cleaned up and exceptions like the following would be added to the *SLDBConnection.txt* log file:
+
+```txt
+SLDataGateway.Types.DBGatewayException: CassandraConnection ExecuteQuery - exception while executing query: SELECT "array_active_service_alarms_id","array_active_service_alarms_time" FROM ELEMENTDATA_7102_1334_750 WHERE "array_active_service_alarms_rootid" = '0/0'; - Cannot execute this query as it might involve data filtering and thus may have unpredictable performance. If you want to execute this query despite the performance unpredictability, use ALLOW FILTERING
+```
+
+When SLAs were stored in a Cassandra cluster, none of their rows would get cleaned up.
+
 #### Dashboards app & Low-Code Apps: State component would incorrectly not be cleared when its input feed was cleared [ID_36261]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
@@ -65,6 +77,12 @@ In some cases, a *State* component would incorrectly not be cleared when its inp
 
 In some cases, table actions would be executed before the rows were fed. As a result, the feed would get lost when you navigated away from the page via an action. From now on, a row will always be fed before row actions are executed.
 
+#### Low-Code Apps: Custom icon of a low-code app without a draft version would not be displayed on the DataMiner landing page [ID_36277]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a low-code app with a custom icon did not have a draft version, the DataMiner landing page would incorrectly not display the icon of that app.
+
 #### Dashboards app: Height of 'DATA USED IN DASHBOARD' section would incorrectly change after collapsing and expanding it [ID_36282]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
@@ -76,3 +94,9 @@ When you collapsed and expanded the *DATA USED IN DASHBOARD* section of the *DAT
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### DataMiner Cube - Visual Overview: Problem when opening an EPM card [ID_36323]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
