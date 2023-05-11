@@ -6,12 +6,11 @@ uid: PTP_1.1.3_CU2
 
 ## Enhancements
 
-#### New parameters added to standard PTP mediation layer [ID_34993]
+#### Improved support for Arista Manager [ID_34993]
 
-Parameters for the following connectors that were still missing in the mediation layer have now been added:
+The following parameters from the Arista Manager connector have been added to the mediation layer:
 
-- Arista Manager
-- Tektronik SPG8000
+- Mode, which represent the switch clock mode, is now mapped to PID 33001 of the Arista Manager.
 
 #### New PTP parameters in Tektronix SPG8000 - PTP Interface connector [ID_34994]
 
