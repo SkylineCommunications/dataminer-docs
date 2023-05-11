@@ -57,6 +57,21 @@ bool WasOnDownloadStarted(string key)
 > - Modern browsers block downloads from a `file:///` URL to an HTTP(s) address. In other words, they don't allow you to download a file located on a network share. As a workaround, you can copy the file from the network share to *Documents* (or any other HTTP-reachable location), and then let the client download it from that URL.
 > - The current IIS configuration does not allow all file types to be downloaded.
 
+#### Dashboards app & Low-Code Apps - Column & bar chart / Pie & donut chart: Automatically select columns based on type [ID_36229]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you add a query to a *Column & bar chart* component or a *Pie & donut chart* component, the label, segment size and bars will now automatically be configured.
+
+To do so, the system will proceed as follows:
+
+1. Search for a column that contains label values (i.e. a column with heading "label", "name", etc.).
+1. Search for a column that contains segment size or bar size values (i.e. a column with heading "amount", "value", "quantity", etc.).
+1. If nothing could be found in steps 1 and 2, take the first string value as label and the first numeric value as segment size or bar size value.
+
+> [!NOTE]
+> Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
+
 ## Other features
 
 *No other features yet*
