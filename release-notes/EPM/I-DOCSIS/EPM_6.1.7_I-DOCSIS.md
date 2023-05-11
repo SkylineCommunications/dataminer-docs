@@ -108,6 +108,10 @@ In addition, the passive tables are now only filled in when the CCAP/collector p
 
 When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
 
+#### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
+
+The default value of the average percentage of US and DS utilization in aggregation and merge actions for the Skyline EPM Platform DOCSIS back-end connector was incorrect. This has now been changed from the incorrect 0 to -1.
+
 #### Too many cable modems report to have other DOCSIS version [ID_36317]
 
 A problem with the aggregating actions used to count the number of CMS with other DOCSIS versions could cause some CCAPs to incorrectly report a high number of cable modems with other DOCSIS versions.
