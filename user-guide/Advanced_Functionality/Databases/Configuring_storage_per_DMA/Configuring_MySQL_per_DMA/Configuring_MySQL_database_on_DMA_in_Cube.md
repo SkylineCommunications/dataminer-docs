@@ -4,6 +4,9 @@ uid: Configuring_MySQL_database_in_Cube
 
 # Configuring the SQL database settings
 
+> [!IMPORTANT]
+> If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered for the offline Agent in a Failover setup. <!-- RN 36184 -->
+
 For a legacy MySQL or MSSQL database, configure the settings as follows:
 
 1. Go to *Apps* > *System Center* > *Database*.
@@ -62,6 +65,9 @@ For a legacy MySQL or MSSQL database, configure the settings as follows:
    - **Fallback minimum**: If the *Maximum alarms* setting has been reached, the oldest alarms will automatically be deleted until the database contains exactly the number of alarms specified in the *Fallback minimum* box.
 
 1. Click *Save*.
+
+   > [!NOTE]
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 > [!NOTE]
 >
