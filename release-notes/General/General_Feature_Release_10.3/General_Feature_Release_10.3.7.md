@@ -118,3 +118,9 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### SLAnalytics - Pattern matching: Editing a newly created pattern would incorrectly cause that pattern to be recreated [ID_36375]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When a trend pattern was edited less than 15 minutes after being created, it would incorrectly be recreated instead of updated.
