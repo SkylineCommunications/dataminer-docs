@@ -862,6 +862,8 @@
           topicUid: PTP_1.1.3
         - name: Addendum CU1
           topicUid: PTP_1.1.3_CU1
+        - name: Addendum CU2
+          topicUid: PTP_1.1.3_CU2
       - name: PTP 1.1.2
         topicUid: PTP_1.1.2
         items:
