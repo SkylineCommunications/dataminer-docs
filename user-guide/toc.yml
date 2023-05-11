@@ -2408,6 +2408,8 @@
                   topicUid: I-DOCSIS_maps_deployment_multiple_backends
             - name: EPM I-DOCSIS upgrade
               topicUid: I-DOCSIS_upgrade
+            - name: Creating a new CCAP/CM pair
+              topicUid: I-DOCSIS_Create_CCAP_CM_pair
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
