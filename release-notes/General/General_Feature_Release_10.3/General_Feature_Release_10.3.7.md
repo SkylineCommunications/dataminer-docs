@@ -74,6 +74,12 @@ When updating an ongoing main booking that made use of a contributing resource o
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
 
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading service profile instances.
+
 #### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
