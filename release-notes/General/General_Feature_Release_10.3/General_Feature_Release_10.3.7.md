@@ -68,7 +68,9 @@ This obsolete thread has now been removed.
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-Up to now, when the function manager needed to deactivate function DVEs because the threshold was reached, it could do so for resources that were needed for bookings being started of which the status was not yet "ongoing". From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing.
+Up to now, when the function manager needed to deactivate function DVEs because the threshold was reached, it could do so for resources that were needed for bookings being started of which the status was not yet "ongoing".
+
+From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
 
 ### Fixes
 
