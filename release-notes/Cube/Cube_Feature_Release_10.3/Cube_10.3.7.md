@@ -41,7 +41,7 @@ Also, the following component options can no longer be used:
 
 #### Resources app: Saving a resource property with an empty value [ID_36345]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 In the *Resources* app, it is now possible to save a resource property with an empty value.
 

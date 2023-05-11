@@ -104,6 +104,12 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
+#### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when you clicked the trending icon of a parameter, the parameter edit pane would expand, showing additional information about that parameter. From now on, when you click the trending icon of a parameter, the trending page will open instead.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
