@@ -42,8 +42,8 @@ uid: Overview_Collaboration
 >
 > - [ChatOps User Guide](xref:ChatOps)
 > - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
-> - [Examples - Custom chat commands](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/CustomCommandExamples)
-> - [Examples - Chat integration](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples)
+> - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
+> - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
 
 ## API Share *(coming soon)*
 

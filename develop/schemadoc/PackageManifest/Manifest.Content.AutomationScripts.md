@@ -4,7 +4,7 @@ uid: Manifest.Content.AutomationScripts
 
 # AutomationScripts element
 
-Specifies the Automation scripts to be included in the package.
+Specifies the Automation scripts to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the Automation scripts to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[AutomationScript](xref:Manifest.Content.AutomationScripts.AutomationScript)|[1, *]|Specifies an Automation script to be included in the package.|
+|&nbsp;&nbsp;[AutomationScript](xref:Manifest.Content.AutomationScripts.AutomationScript)|[1, *]|Specifies an Automation script to include in the package.|

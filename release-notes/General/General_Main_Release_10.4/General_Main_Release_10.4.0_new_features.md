@@ -421,17 +421,19 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 #### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.3)
-- DataMiner CloudFeed (version 1.0.8)
-- DataMiner CloudGateway (version 2.10.4)
-- DataMiner CoreGateway (version 2.12.1)
-- DataMiner FieldControl (version 2.8.2)
-- DataMiner Orchestrator (version 1.2.6)
-- DataMiner SupportAssistant (version 1.3.0)
+- DataMiner ArtifactDeployer (version 1.4.5)
+- DataMiner CoreGateway (version 2.12.2)
+- DataMiner FieldControl (version 2.8.3)
+- DataMiner Orchestrator (version 1.3.3)
+- DataMiner SupportAssistant (version 1.3.2)
+
+The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
+
+In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
@@ -448,6 +450,16 @@ If you do not want the alarm property value to be added to the correlation alarm
 
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+### Maps
+
+#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
+
+To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
 
 ### Service & Resource Management
 

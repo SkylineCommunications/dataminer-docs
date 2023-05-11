@@ -177,9 +177,21 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+The following enhancements have been made with regard to the Web Services API:
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+- A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+- It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
 
 #### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
@@ -216,6 +228,24 @@ Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summa
 
 > [!NOTE]
 > When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
+#### Monitoring app: Enhanced parameter controls [ID_36275]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Monitoring* app, the parameter controls have been enhanced. You will now be able to edit a parameter by clicking a pencil icon.
+
+#### Dashboards app & Monitoring app: Parameter page component now supports WebSockets [ID_36314]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
 ### Fixes
 
@@ -317,12 +347,6 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -356,3 +380,9 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
