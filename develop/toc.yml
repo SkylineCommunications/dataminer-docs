@@ -718,8 +718,8 @@
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Protocol
     - name: Skyline.DataMiner.Net
       topicUid: Skyline.DataMiner.Net
-    - name: Skyline.DataMiner.Helper.OpenConfig.Api
-      topicUid: Skyline.DataMiner.Helper.OpenConfig.Api
+    - name: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
+      topicUid: Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api
     - name: Interop.SLDms
       topicUid: Interop.SLDms
     - name: Tamir.SharpSsh
@@ -3175,6 +3175,27 @@
       - name: Content
         topicUid: Manifest.Content
         items: 
+        - name: AppPackages
+          topicUid: Manifest.Content.AppPackages
+          items: 
+          - name: AppPackage
+            topicUid: Manifest.Content.AppPackages.AppPackage
+            items: 
+            - name: RepoPath
+              topicUid: Manifest.Content.AppPackages.AppPackage.RepoPath
+            - name: Version
+              topicUid: Manifest.Content.AppPackages.AppPackage.Version
+              items: 
+              - name: Selection
+                topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection
+                items: 
+                - name: Range
+                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range
+                  items: 
+                  - name: '@rangeSelection'
+                    topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range-rangeSelection
+                - name: Specific
+                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Specific
         - name: AutomationScripts
           topicUid: Manifest.Content.AutomationScripts
           items: 
@@ -3199,8 +3220,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Specific
         - name: CompanionFiles
@@ -3231,8 +3250,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Specific
         - name: CustomSolutions
@@ -3263,8 +3280,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Specific
         - name: Dashboards
@@ -3288,8 +3303,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
         - name: Functions
@@ -3311,8 +3324,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Functions.Function.Version.Selection.Specific
         - name: Protocols
@@ -3363,8 +3374,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Specific
               - name: SetAsProduction
@@ -3391,8 +3400,6 @@
                   items: 
                   - name: '@rangeSelection'
                     topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
-                  - name: '@triggerPackagePipelineOnChange '
-                    topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-triggerPackagePipelineOnChange 
                 - name: Specific
                   topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
               - name: SetAsDefault
@@ -5322,6 +5329,8 @@
           topicUid: Consuming_NuGet
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
+        - name: Middleware NuGet packages
+          topicUid: Nuget_Communication_Middleware
         - name: Assembly binding
           topicUid: Assembly_Binding
           items:
@@ -5510,6 +5519,13 @@
           topicUid: DMS_protocol
         - name: Viewer
           topicUid: Viewer
+    - name: OpenConfig
+      topicUid: DSI_OpenConfig
+      items:
+        - name: Introduction
+          topicUid: DSI_OpenConfig_Introduction
+        - name: Middleware package
+          topicUid: DSI_OpenConfig_Middleware
 - name: Third-party integrations
   topicUid: ThirdPartyIntegrations
   items:

@@ -36,7 +36,7 @@ This BPA does not create errors.
 
 ## Mitigation
 
-Restrict the number of ports allowed through the Windows firewall. For more information see: [Securing the DataMiner firewall](https://community.dataminer.services/securing-dataminer-part-2-firewall/).
+Restrict the number of ports allowed through the Windows firewall. For more information see [Configure the firewall](xref:DataMiner_hardening_guide#configure-the-firewall).
 
 ## Limitations
 

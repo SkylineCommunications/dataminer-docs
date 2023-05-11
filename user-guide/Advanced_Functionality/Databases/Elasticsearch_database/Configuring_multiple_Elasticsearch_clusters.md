@@ -50,7 +50,7 @@ To configure this setup:
     <Hosts>10.11.1.44,10.11.2.44,10.11.3.44</Hosts>
     <Username />
     <Password>root</Password>
-    <Prefix>replica</Prefix>
+    <Prefix>dms</Prefix>
     <FileOffloadIdentifier>cluster2</FileOffloadIdentifier>
     </ElasticCluster>
     </ElasticConnections>

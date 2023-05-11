@@ -19,6 +19,6 @@ uid: EPM_6.1.8_I-DOCSIS
 
 ### Fixes
 
-#### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
+#### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
 
-The default value of the average percentage of US and DS utilization in aggregation and merge actions for the Skyline EPM Platform DOCSIS back-end connector was incorrect. This has now been changed from the incorrect 0 to -1.
+In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".

@@ -19,7 +19,7 @@ It displays the different possible data sources of queries as follows:
 > [!NOTE]
 > From DataMiner 10.2.7/10.3.0 onwards, users can copy a cell, a column, a row, or the entire table via the right-click menu of the component. Unless a single cell is copied, the copy is in CSV format. If an entire column or single cell is copied, the values will not be encapsulated in double quotes. Copying an entire row or table will encapsulate all values in accordance with CSV formatting. If a value contains a double quote, this will be escaped when it is copied.
 
-## Layout configuration
+## Configuring the layout
 
 In the *Layout* tab for this component, the *Column filters* option is available, which allows you to highlight cells based on a condition. You can configure this option as follows:
 
@@ -50,6 +50,14 @@ To configure actions:
 1. In the *Icon* box, select an icon for the action.
 
 1. In the *Action* box, select the action that should be executed. You can for instance use this to add an update action to the table, or to allow users to select an item or clear their selection. See [Configuring low-code app events](xref:LowCodeApps_event_config).
+
+## Configuring other component settings
+
+In the *Settings* tab for this component, you can customize its behavior to suit your requirements.
+
+- If you want the data in the table to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
+
+- If you want the first row to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first row will be automatically selected whenever the component is loaded or when the data in the table is refreshed.
 
 ## Exporting the table
 

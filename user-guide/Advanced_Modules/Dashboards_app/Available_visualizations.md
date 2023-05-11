@@ -17,3 +17,5 @@ Many visualizations are available in the Dashboards app, in the categories liste
 - [Other](xref:Other)
 
 - [Feeds](xref:Feeds)
+
+- [Basic controls](xref:Basic_controls)

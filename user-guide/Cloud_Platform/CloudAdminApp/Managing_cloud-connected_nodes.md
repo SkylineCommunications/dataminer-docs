@@ -8,6 +8,21 @@ As of DataMiner Cloud Pack version 2.5.0, you can use the Admin app to manage th
 > [!NOTE]
 > If nodes in a DMS cannot be detected in the Admin app, this is likely because they are using an older version of the DataMiner Cloud Pack or because the DataMiner Cloud Pack is not yet installed. Download the latest version from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on every node in the DMS.
 
+## Deploying a DxM on a node
+
+Some DxMs are not included in the DataMiner Cloud Pack and must be deployed separately. To do so:
+
+1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+
+   > [!TIP]
+   > See also: [Accessing the Admin app](xref:Accessing_the_Admin_app)
+
+1. If a different organization should be selected, click the organization selector ![Organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+
+1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
+
+1. Next to your module of choice, e.g. *ModelHost*, click *Deploy* to start the automatic installation process.
+
 ## Upgrading nodes to the latest DxM versions
 
 To upgrade the DxMs used by the nodes in a DataMiner System connected to dataminer.services:

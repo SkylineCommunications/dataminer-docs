@@ -13,7 +13,7 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
 
-1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on **one or more DMAs** in the cluster.
+1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/) and install it on **one or more DMAs** in the cluster.
 
    If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
 
@@ -27,12 +27,14 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 ## Connecting to dataminer.services in System Center
 
-1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**. If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
+1. In DataMiner Cube, go to System Center \> *Users / Groups* and make sure you have the following **user permissions**:
 
    - [System configuration > Cloud gateway > Connect to DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--connect-to-clouddcp)
 
    - [System configuration > Cloud gateway > Disconnect from DCP](xref:DataMiner_user_permissions#modules--system-configuration--cloud-sharinggateway--disconnect-from-clouddcp)
 
+   If you need to make changes to the user permissions, reconnect to Cube afterwards to make sure your changes are applied in the UI.
+   
    > [!TIP]
    > See also: [User rights](xref:User_rights)
 
