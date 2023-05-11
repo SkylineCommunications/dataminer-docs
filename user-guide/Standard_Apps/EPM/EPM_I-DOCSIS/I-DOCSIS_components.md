@@ -25,9 +25,7 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
 > [!NOTE]
-> Note that in versions prior to ID 6.1.8, correlation rules and automation scripts were employed to enable communication between the Backend and Workflow Manager. However, starting from the subsequent versions, interapps have been implemented as the communication channel between these entities. Therefore, the use of correlation rules and automation scripts is no longer necessary. 
-This change in communication methodology should be taken into consideration when developing software for the updated versions.
-
+> In versions prior to I-DOCSIS 6.1.7<!-- RN 36326 -->, Correlation rules and Automation scripts are used to enable communication between the back end and the Workflow Manager. However, starting from I-DOCSIS 6.1.7, inter-app communication is used for this instead, making those Correlation rules and Automation scripts unnecessary. This change in communication methodology should be taken into consideration when developing software for recent I-DOCSIS versions.
 
 ## Automation scripts
 
