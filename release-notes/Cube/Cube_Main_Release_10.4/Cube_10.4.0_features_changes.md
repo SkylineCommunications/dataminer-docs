@@ -290,6 +290,12 @@ Also, when you click *Save* after changing any of the settings in this *Database
 > [!IMPORTANT]
 > No warning will appear to point out that the backup Agent in a Failover setup is offline.
 
+#### Resources app: Saving a resource property with an empty value [ID_36345]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to save a resource property with an empty value.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
