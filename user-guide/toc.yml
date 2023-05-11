@@ -1047,6 +1047,8 @@
           topicUid: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
+        - name: Storage as a Service
+          topicUid: STaaS
         - name: Configuring dedicated clustered storage
           topicUid: Configuring_dedicated_clustered_storage
           items:
@@ -1078,7 +1080,7 @@
                   items:
                     - name: Deploying the Amazon Keyspaces Service
                       topicUid: Deploying_Amazon_Keyspaces_Service
-            - name: Search Cluster
+            - name: Indexing database
               topicUid: Deploying_the_Elasticsearch_database
               items:
                 - name: Elasticsearch
