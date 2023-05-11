@@ -22,7 +22,7 @@ To use the library, first initialize the `Scheduler` class by passing a filter d
 var scheduler = new Scheduler(task => task != null);
 ```
 
-In the case presented below, all the tasks available in the DMS will be retrieved.
+With the filter presented above, all the tasks available in the DMS will be retrieved.
 
 Now you can call methods to get and delete scheduled tasks according to a given filter:
 
