@@ -179,7 +179,15 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
 
 #### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
@@ -368,3 +376,9 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.

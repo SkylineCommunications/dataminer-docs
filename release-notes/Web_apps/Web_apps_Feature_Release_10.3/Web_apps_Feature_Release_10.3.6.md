@@ -288,3 +288,9 @@ When you viewed a shared dashboard that contained a *State* component, in some c
 <!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
 
 In some cases, action buttons could have an incorrect background color.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
