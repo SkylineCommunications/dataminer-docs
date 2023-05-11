@@ -4,6 +4,10 @@ uid: Configuring_the_database_settings_in_Cube
 
 # Configuring the general database settings
 
+> [!TIP]
+> In the DB.xml file, you can specify the configuration data for several databases as well. See [General database settings](xref:DB_xml#general-database-settings).
+> [!IMPORTANT]
+
 The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MSSQL database can be used.
 
 In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
@@ -11,8 +15,10 @@ In older DataMiner systems, this database was also known as the "local database"
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
-> [!TIP]
-> In the DB.xml file, you can specify the configuration data for several databases as well. See [General database settings](xref:DB_xml#general-database-settings).
+> [!IMPORTANT]
+> If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered for the offline Agent in a Failover setup. <!-- RN 36184 -->
+
+## Cassandra database
 
 ## Cassandra cluster database
 
@@ -83,6 +89,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    - **Password**: The password of your [Amazon Keyspaces credentials](xref:Deploying_Amazon_Keyspaces_Service#generating-credentials-for-amazon-keyspaces).
 
+1. Click *Save*.
+
+   > [!NOTE]
+   > Database configuration changes will not take effect until the Agent is restarted.
+
 1. Restart the DMS.
 
    The first restart after configuring Amazon Keyspaces can take up to 15 minutes on top of the normal startup time as the keyspaces and tables will be created. In case of trouble, you can find the relevant logging in the *SLDBConnection.txt* file.
@@ -111,6 +122,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Password**: The password of the master user of your domain.
 
    ![OpenSearch Cube Config](~/user-guide/images/Amazon_OpenSearch_CubeConfig.png)
+
+1. Click *Save*.
+
+   > [!NOTE]
+   > Database configuration changes will not take effect until the Agent is restarted.
 
 1. Optionally, you can verify that the DMS is using the database.
 

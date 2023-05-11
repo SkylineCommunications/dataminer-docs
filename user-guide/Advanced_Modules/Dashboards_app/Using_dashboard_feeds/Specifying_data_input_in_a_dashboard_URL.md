@@ -127,4 +127,10 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a Text input component.
 
-- *numbers*:  Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a Numeric input component.
+- *numbers*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35911 -->. Numbers, which will serve as the default value for a Numeric input component.
+
+- *object manager definitions*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Requires the [DOM definition ID](xref:DomDefinition).
+
+- *object manager instances*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Requires the [DOM instance ID](xref:DomInstance).
+
+- *object manager modules*: Supported from DataMiner 10.3.6/10.4.0 onwards<!-- RN 36124 -->. Requires the [DOM module ID](xref:DOM_ModuleId).

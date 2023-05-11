@@ -217,6 +217,24 @@ Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summa
 > [!NOTE]
 > When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
 
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
+#### Monitoring app: Enhanced parameter controls [ID_36275]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Monitoring* app, the parameter controls have been enhanced. You will now be able to edit a parameter by clicking a pencil icon.
+
+#### Dashboards app & Monitoring app: Parameter page component now supports WebSockets [ID_36314]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -316,12 +334,6 @@ Could not find argument with name '{argument.Name}'.
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
-
-#### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-The X and Y axis labels of a line chart would not show the correct text when the data was grouped.
 
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
