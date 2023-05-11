@@ -48,7 +48,7 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
-1. A page will be displayed with a summary of your changes. At the top of the page, click Create pull request. A “pull request” is a request to pull changes into the repository.
+1. A page will be displayed with a summary of your changes. At the top of the page, click *Create pull request*. A “pull request” is a request to pull changes into the repository.
 
    ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
 
