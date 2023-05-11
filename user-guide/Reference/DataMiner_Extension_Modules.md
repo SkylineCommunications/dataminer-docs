@@ -46,16 +46,21 @@ The SupportAssistant module is responsible for features allowing Skyline Communi
 
 ### ModelHost
 
-The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
+The ModelHost module is responsible for allowing users to retrieve parameter relationship data on DataMiner Agents that are connected to dataminer.services and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads).
 
-The ModelHost module is not included in the Cloud Pack and must be deployed separately:
+The ModelHost DxM is not included in the Cloud Pack and [must be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-node).
 
-1. Open the Admin app. See [Accessing the Admin app](xref:Accessing_the_Admin_app).
+### UserDefinableApiEndpoint
 
-1. In the Admin app, check whether the correct organization is mentioned in the header bar.
+The UserDefinableApiEndpoint module is responsible for handling API triggers for DataMiner User-Defined APIs. See [DataMiner UserDefinableApiEndpoint DxM](xref:UD_APIs_UserDefinableApiEndpoint).
 
-1. If a different organization should be selected, click the organization selector ![organization selector](~/user-guide/images/Cloud_Admin_Selector_icon.png) in the top-right corner and select the organization in the list.
+### CommunicationGateway
 
-1. In the pane on the left, under *DataMiner Systems*, select your DataMiner System and select the *Nodes* page.
+The CommunicationGateway module makes it possible for connectors or scripts running in the DataMiner environment to communicate with devices that require a gRPC connection.
 
-1. Next to *ModelHost*, select to deploy this DxM.
+At present, we support the [gNMI](xref:DSI_OpenConfig_Introduction#gnmi) service, but more services and RPC connections may be added.
+
+This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communication_Middleware) that facilitates the NATS communication to the DxM. However, not all middleware require the CommunicationGateway to establish a connection with the device. The DxM is primarily used to bridge the gap between different .NET versions. This is because gRPC requires .NET 5 or higher for full functionality, while SLScripting still runs on .NET 4.6.2.
+
+> [!TIP]
+> See also: [OpenConfig Middleware](xref:DSI_OpenConfig_Middleware)

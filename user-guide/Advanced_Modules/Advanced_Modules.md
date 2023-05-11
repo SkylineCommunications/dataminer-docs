@@ -41,3 +41,5 @@ uid: Part4AdvancedModules
 - [Spectrum Analysis](xref:SpectrumAnalysis)
 
 - [Ticketing](xref:ticketing)
+
+- [User-Defined APIs](xref:UD_APIs)

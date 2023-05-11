@@ -14,4 +14,4 @@ In case the Automation script solution consists of multiple Automation scripts, 
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Name](xref:Manifest.Content.AutomationScripts.AutomationScript.Selection.Name)|[1, *]|Specifies the name of the Automation script from the Automation script solution to be included.|
+|&nbsp;&nbsp;[Name](xref:Manifest.Content.AutomationScripts.AutomationScript.Selection.Name)|[1, *]|Specifies the name of the Automation script from the Automation script solution to include. The extension (.xml) needs to be included.|

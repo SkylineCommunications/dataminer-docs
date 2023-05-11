@@ -37,9 +37,9 @@ A zip file containing:
 
     | File name       | Contents                                                  |
     |-------------------|-----------------------------------------------------------|
-    | FilesToDelete.txt | The list of files to be deleted.                          |
-    | FilesToLeave.txt  | The list of files to be kept.                             |
-    | UpdateContent.txt | The actions to be performed during the upgrade operation. |
+    | FilesToDelete.txt | The list of files to delete.                          |
+    | FilesToLeave.txt  | The list of files to keep.                             |
+    | UpdateContent.txt | The actions to perform during the upgrade operation. |
 
 In both *FilesToDelete.txt* and *FilesToLeave.txt*, each line has to refer to a file (or a collection of files) by means of an absolute path.
 

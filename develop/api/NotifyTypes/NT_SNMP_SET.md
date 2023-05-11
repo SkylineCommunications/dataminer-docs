@@ -39,6 +39,7 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
   - elementInfo[4] (int): Connection ID (default 0).
 
     > [!NOTE]
+    >
     > - If a connection ID of a connection defined in the protocol is specified, all the settings that are set on that interface (IP, community string, credentials, timeout, etc.) will be used. If you override some (or all) of these values with their dedicated field, they will override the interface setting for that specific GET/SET.
     > - Since DataMiner 9.5.0 [CU7]/9.5.10 (RN 17917), it is possible to specify the ID of an SNMPv3 interface.
 

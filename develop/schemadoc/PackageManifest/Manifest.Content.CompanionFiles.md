@@ -4,7 +4,7 @@ uid: Manifest.Content.CompanionFiles
 
 # CompanionFiles element
 
-Specifies the companion files to be included in the package.
+Specifies the companion files to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the companion files to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[CompanionFile](xref:Manifest.Content.CompanionFiles.CompanionFile)|[1, *]|Specifies a companion file to be included in the package.|
+|&nbsp;&nbsp;[CompanionFile](xref:Manifest.Content.CompanionFiles.CompanionFile)|[1, *]|Specifies a companion file to include in the package.|

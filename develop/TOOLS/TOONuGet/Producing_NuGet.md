@@ -14,9 +14,12 @@ On the [custom solutions tab](xref:Repository_types#custom-solutions) of the SLC
 The pipeline will automatically create pre-release packages, which can be used during development. Every build will have its own pre-release package.
 Every release build will have a signed released package.
 
+> [!TIP]
+> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates).
+
 ## General
 
-The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGets as well, as that will make it easy to transfer them to nuget.org when necessary.
+The rules below mainly focus on NuGet packages that are published to nuget.org. We highly recommend that you use the same rules for internal NuGet packages as well, as that will make it easy to transfer them to nuget.org when necessary.
 
 ### Mandatory rules for nuget.org
 
@@ -54,7 +57,7 @@ If there is a dependency on multiple DataMiner DLLs that are by default included
 
 ### Target Framework
 
-If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else.
+If possible, try to target .NET Standard 2.0, as this will give the most flexibility for use somewhere else. For more information and guidelines, refer to [Cross-platform targeting](https://learn.microsoft.com/en-us/dotnet/standard/library-guidance/cross-platform-targeting).
 
 If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you will need to target .NET Framework as well.
 
@@ -110,15 +113,23 @@ If you have a dependency on .NET Framework (e.g. Skyline.DataMiner.Dev.*), you w
 
 - *Skyline.DataMiner.Core.XXX*
 
-  - Holds the packages that have a direct link to DataMiner (AppPackage creation/installation, DataMinerSystem, InterAppCalls, etc.).
+  - Holds the packages dealing with direct (usually very generic) DataMiner features (AppPackage creation/installation, DataMinerSystem, InterAppCalls, etc.).
 
-  - DxMs also fall under this.
+  - This also applies for DxMs, except for packages that can communicate with external data sources.
 
 - *Skyline.DataMiner.Utils.XXX*
 
   - Holds all the utilities like helpers, parsers, etc.
 
     E.g. SNMP trap parsing, rate calculations, table context menu, etc.
+
+- *Skyline.DataMiner.ConnectorAPI.XXX*
+
+  - Holds InterAppCall messages that are specific to a connector, giving a given DataMiner connector some functions that can be called/triggered/consumed by other DataMiner components (other connectors, Automation scripts, etc.).
+
+- *Skyline.DataMiner.DataSources.XXX*
+
+  - Holds the packages that can communicate with external data sources. This also includes packages like OpenConfig.Gnmi that rely on the CommunicationGateway DxM.
 
 ## Versioning conventions
 
@@ -185,4 +196,4 @@ For an example, refer to [DataMinerSystem.Common](https://www.nuget.org/packages
 
 ### PackageLicenseFile and PackageIcon
 
-When NuGets are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.
+When NuGet packages are created via the [SLC SE Repository Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.

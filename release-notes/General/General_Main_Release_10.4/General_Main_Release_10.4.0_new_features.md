@@ -347,70 +347,96 @@ Two new field descriptors have been added to the DataMiner Object Models:
 
 When you start a DataMiner upgrade, the `ValidateConnectors` prerequisite will now scan the system for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. If such connectors are found, they will have to be removed before you can continue with the upgrade.
 
-#### GQI - Ad hoc data source: Sending and receiving DMS messages [ID_35701]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Ad hoc data sources can now retrieve data by means of DMS messages.
-
-To do so, the `IGQIDataSource` must implement the `IGQIOnInit` interface, of which the `OnInit` method can also be used to initialize a data source:
-
-```csharp
-OnInitOutputArgs OnInit(OnInitInputArgs args)
-```
-
-When passed to the `OnInit` method, `OnInitInputArgs` can now contain the following new property:
-
-```csharp
-GQIDMS DMS
-```
-
-The `GQIDMS` class contains the following methods, which can be used to request information in the form of `DMSMessage` objects:
-
-| Method | Function |
-|--------|----------|
-| `DMSMessage SendMessage(DMSMessage message)` | Sends a request that expects a single response. |
-| `DMSMessage[] SendMessages(params DMSMessage[] messages)` | Sends multiple requests at once, or sends a request that expects multiple responses. |
-
-The `GQIDMS` object is only generated when the property is used.
-
-Generally, an ad hoc data source implementation will want to add a private field where it can store the `GQIDMS` object to be used later in other callbacks when columns and rows are created.
-
-> [!IMPORTANT]
-> DMS messages are subject to change without notice. If you can implement an alternative using the DataMiner UI or the automation options provided in DataMiner Automation, we highly recommend that you do so instead.
-
-#### GQI: New 'ThenSort' query node allows sorting by multiple columns [ID_35807]
+#### Support for Azure Managed Instance for Apache Cassandra [ID_35830]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-To make sorting more intuitive, the new *ThenSort* node can now be used in combination with the *Sort* node.
+It is possible to use an Azure Managed Instance for Apache Cassandra as an alternative to a Cassandra cluster hosted on premises.
 
-Up to now, all sorting had to be configured by means of *Sort* nodes. For example, if you wanted to first sort by column A and then by column B, you had to create a query in the following counter-intuitive way:
+You will first need to [create your Azure Managed Instance for Apache Cassandra](#creating-your-azure-managed-instance-for-apache-cassandra), and then [connect your DataMiner System to the created instance](#connecting-your-dataminer-system-to-the-azure-managed-instance).
 
-1. Data source
-1. Sort by B
-1. Sort by A
+> [!TIP]
+> For detailed information on Azure Managed Instance for Apache Cassandra, refer to the [Microsoft documentation](https://learn.microsoft.com/en-us/azure/managed-instance-apache-cassandra/).
 
-or
+##### Creating your Azure Managed Instance for Apache Cassandra
 
-1. Query X (i.e. Data Source, sorted by B)
-1. Sort by A
+1. Go to [Azure Portal](https://portal.azure.com) and log in.
 
-From now on, you can create a query in a much more intuitive way. For example, if you want to first sort by column A and then by column B, you can now create a query in the following way:
+1. Search for *Azure Managed Instance for Apache Cassandra*.
 
-1. Data source
-1. Sort by A
-1. Then sort by B
+1. At the top of the window, click *Create*.
 
-Note that, from now on, every *Sort* node will nullify any preceding *Sort node*. For example, in the following query, the *Sort by B* node will be nullified by the *Sort by A* node, meaning that the result set will only be sorted by column A.
+1. On the *Basics* page, specify the required information.
 
-1. Data source
-1. Sort by B
-1. Sort by A
+   To have low latency, you should select a region near your own or the region where your Azure VMs are running. The password that you configure is for the *Cassandra* user in the system.
+
+1. Click *Next: Data center* and configure the kind of servers you want to use for your Cassandra cluster.
+
+   The *Sku Size* defines which VM will be used (the more resources, the more expensive). You can then also select the number of disks and nodes that you want. The minimum number of nodes is 3.
+
+1. If you want to configure a client certificate, click *Advanced* at the top.
+
+   If you do not need to do this, you can add some tags to the setup so you can easily find it again, or go to the next step.
+
+1. Go to the *Review + Create* page.
+
+   Here, Azure will do some checks to see if everything has been configured correctly.
+
+1. If everything is valid, click *Create*. Otherwise, adjust your configuration until Azure indicates that it is valid, and then click *Create*.
+
+A pop-up window on the Azure website will now indicate that your cluster is being created. This can take a while.
+
+Once the creation is finished, you will see your newly created cluster on the *Azure Managed Instance for Apache Cassandra* page.
+
+##### Connecting your DataMiner System to the Azure Managed Instance
+
+1. Retrieve the necessary information from the Azure portal:
+
+   1. Go to [Azure Portal](https://portal.azure.com) and log in.
+
+   1. Go to *Azure Managed Instance for Apache Cassandra*.
+
+   1. Select the cluster you want to connect your DataMiner System to.
+
+   1. In the *Settings* menu, select *Data Center*.
+
+   1. Click the arrow to open the data center, and copy the IP addresses DataMiner will need to connect to.
+
+   > [!NOTE]
+   > We recommend configuring all of the nodes in DataMiner. If a node should go down, DataMiner can then still connect to the other nodes.
+
+1. Using the copied IP addresses, configure the [Cassandra cluster database in System Center](xref:Configuring_the_database_settings_in_Cube).
+
+1. Stop DataMiner.
+
+1. Open the [DB.xml](xref:DB_xml) configuration file.
+
+1. Set the *TLSEnabled* tag to true in the file and save your changes:
+
+   ```xml
+   <TLSEnabled>True</TLSEnabled>
+   ```
+
+1. Restart DataMiner.
+
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
+
+- DataMiner ArtifactDeployer (version 1.4.5)
+- DataMiner CoreGateway (version 2.12.2)
+- DataMiner FieldControl (version 2.8.3)
+- DataMiner Orchestrator (version 1.3.3)
+- DataMiner SupportAssistant (version 1.3.2)
+
+The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
+
+In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
-> The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
-> For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
+> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
 ### Correlation
 
@@ -424,6 +450,16 @@ If you do not want the alarm property value to be added to the correlation alarm
 
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+### Maps
+
+#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
+
+To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
 
 ### Service & Resource Management
 
