@@ -10,28 +10,27 @@ uid: PTP_1.1.3_CU2
 
 Parameters for the following connectors that were still missing in the mediation layer have now been added:
 
-- Cisco Nexus
 - Arista Manager
 - Tektronik SPG8000
 
-#### New PTP parameters in Tektronik SPG8000 connector [ID_34994]
+#### New PTP parameters in Tektronix SPG8000 - PTP Interface connector [ID_34994]
 
-The following parameters have been added to the Tektronik SPG8000 connector:
+The following parameters have been added to the Tektronix SPG8000 - PTP Interface connector:
 
 - Clock class (in the PTP Status table)
 - Local Offset time (in the PTP Status table)
 - Step (in the PTP Status table)
 - Local Time (to be added to the DVE and mediated)
 
-#### Improved support for Tektronix SPG8000 [ID_35055]
+#### Improved support for Tektronix SPG8000 - PTP Interface [ID_35055]
 
-The following parameters from the Tektronix SPG8000 connector have been added to the mediation layer:
+The following parameters from the Tektronix SPG8000 - PTP Interface connector have been added to the mediation layer:
 
 - Local time (PID 10109)
 - Step mode (PID 11219)
 - Clock class (PID 11212)
 
-In addition, for the following Tektronix SPG8000 parameters, an N/A value will now be displayed in the mediation layer:
+In addition, for the following Tektronix SPG8000 - PTP Interface parameters, an N/A value will now be displayed in the mediation layer:
 
 - PID 10110 - PID10120
 - PID 14219 - PID14221
