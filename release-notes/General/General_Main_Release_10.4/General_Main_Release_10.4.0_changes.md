@@ -283,9 +283,3 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
-
-#### SLAnalytics - Pattern matching: Editing a newly created pattern would incorrectly cause that pattern to be recreated [ID_36375]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-When a trend pattern was edited less than 15 minutes after being created, it would incorrectly be recreated instead of updated.
