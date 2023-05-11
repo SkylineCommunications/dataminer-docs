@@ -42,9 +42,8 @@ namespace SLNetTypes.Automation
         public bool StartDownloadImmediately { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating which file must be downloaded. This URL can be either absolute path or relative path.
-        /// Example absolute: "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube from DataMiner Services.
-        /// Example relative: "/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf" will download the file 'DailyReport.PDF' hosted on the connected DMA, which is located in Documents module.
+        /// Gets or sets a value indicating which file must be downloaded. This URL can be either an absolute path or a relative path.
+        /// For example, the absolute path "https://dataminer.services/install/DataMinerCube.exe" will download the latest Cube version from dataminer.services, and the relative path "/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf" will download the file "DailyReport.PDF" hosted on the connected DMA, which is located in the Documents module.
         /// </summary>
         /// <remarks>
         /// <para>Default: <c>null</c>.</para>
@@ -52,7 +51,7 @@ namespace SLNetTypes.Automation
         public string URL { get; set; }
 
         /// <summary>
-        /// Gets or sets a value indicating what the filename is that will be saved. By default this is the same as the filename of the document.
+        /// Gets or sets a value indicating what the file name is that will be saved. By default, this is the same as the file name of the document.
         /// </summary>
         /// <remarks>
         /// <para>Default: <c>null</c>.</para>
@@ -61,7 +60,7 @@ namespace SLNetTypes.Automation
 
         /// <summary>
         /// Gets or sets a value indicating whether the engine.ShowUI() method will return as soon as the download is started (either immediately or when clicked by the user, depending on <see cref="StartDownloadImmediately"/>). 
-        /// When both <see cref="StartDownloadImmediately"/> property and <see cref="ReturnWhenDownloadIsStarted"/> property are set to true, the script will start the download and exit immediately.
+        /// When both the <see cref="StartDownloadImmediately"/> property and the <see cref="ReturnWhenDownloadIsStarted"/> property are set to true, the script will start the download and exit immediately.
         /// </summary>
         /// <value><c>true</c> to return as soon as possible when download is started; otherwise, <c>false</c>.</value>
         /// <remarks>
