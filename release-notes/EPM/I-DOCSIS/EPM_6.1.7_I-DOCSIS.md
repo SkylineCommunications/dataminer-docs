@@ -141,3 +141,7 @@ To resolve this, a number of changes were implemented to the Generic CM Collecto
 In the Skyline EPM Platform and Skyline EPM Platform DOCSIS connectors, exception values were also added to several columns of the cable modem overview table.
 
 In addition, for the Skyline EPM Platform DOCSIS connector, the *SetEmptyColumns* method will now set exception values for the latitude and longitude parameters.
+
+#### Group Delay or Reflection Status incorrectly calculated based on NMTTER threshold [ID_36344]
+
+Up to now, the Group Delay or Reflection Status parameter was not calculated correctly, because it was calculated based on the NMTTER threshold. To address this issue, new logic has been implemented: If either the Group Delay Status or the Reflection Status is marked as out of specification (OOS), the Group Delay or Reflection Status parameter will also be marked as out of specification (OOS). If both the Group Delay Status and the Reflection Status are marked as OK, the parameter will be marked as OK.
