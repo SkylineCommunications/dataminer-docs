@@ -54,7 +54,7 @@ Retrieves a parameter table from the Elasticsearch database using the specified 
 
 ## Get object manager instances
 
-Retrieves [DOM instances](xref:DomInstance). To use this data source, you need to have at least one [DOM](xref:DOM) module defined in your DMS.<!-- RN 36124 -->
+Retrieves [DOM instances](xref:DomInstance). To use this data source, you need to have at least one [DOM](xref:DOM) module defined in your DMS. When you configure the data source, you will first need to select the module the instance belongs to.<!-- RN 36124 -->
 
 ## Get parameter table by ID
 

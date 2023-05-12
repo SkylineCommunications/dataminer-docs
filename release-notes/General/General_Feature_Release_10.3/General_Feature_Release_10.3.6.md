@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.6
 ---
 
-# General Feature Release 10.3.6 – Preview
+# General Feature Release 10.3.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -377,3 +377,11 @@ When an element that had more than 10,000 alarm events stored on a Cassandra clu
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+
+For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

@@ -46,6 +46,12 @@ In *System Center > System settings > LDAP*, you can configure a number of LDAP 
 
 Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
 
+#### Resources app: Saving a resource property with an empty value [ID_36345]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to save a resource property with an empty value.
+
 ### Fixes
 
 #### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]

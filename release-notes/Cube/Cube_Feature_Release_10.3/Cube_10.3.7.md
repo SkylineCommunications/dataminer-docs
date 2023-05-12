@@ -39,6 +39,12 @@ Also, the following component options can no longer be used:
 - EditMode
 - Recursive
 
+#### Resources app: Saving a resource property with an empty value [ID_36345]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to save a resource property with an empty value.
+
 ### Fixes
 
 #### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
