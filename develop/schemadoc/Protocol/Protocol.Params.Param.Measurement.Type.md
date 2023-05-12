@@ -47,7 +47,7 @@ In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag c
 See also:
 
 - [Analog](xref:UIComponentsAnalog)
-- [Options for measurement type “analog”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-analog)
+- [Options for measurement type “analog”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)
 
 ### button
 
@@ -114,7 +114,7 @@ For example:
 
 See also
 
-- [Options for measurement type “discreet”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-discreet)
+- [Options for measurement type “discreet”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
 - [Drop-down list](xref:UIComponentsDropDownList)
 - [Protocol.Params.Param.Measurement.Discreets](xref:Protocol.Params.Param.Measurement.Discreets)
 
@@ -124,7 +124,7 @@ Used for visualizing a matrix. Only applicable for parameters of type “array�
 
 See also
 
-- [Options for measurement type “matrix”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-matrix)
+- [Options for measurement type “matrix”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-matrix)
 - [Matrix](xref:UIComponentsMatrix)
 
 ### number
@@ -133,7 +133,7 @@ The parameter will be displayed as a number.
 
 See also
 
-- [Options for measurement type “number”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-number)
+- [Options for measurement type “number”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)
 
 ### pagebutton
 
@@ -176,7 +176,7 @@ Example:
 
 See also
 
-- [Options for measurement type “string”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-string)
+- [Options for measurement type “string”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string)
 
 ### table
 
@@ -184,7 +184,7 @@ Only applicable to parameters of type “array”, which will, in this case, be 
 
 See also
 
-- [Options for measurement type “table”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-table)
+- [Options for measurement type “table”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
 
 ### title
 
@@ -204,7 +204,7 @@ Example:
 
 See also
 
-- [Options for measurement type “title”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-title)
+- [Options for measurement type “title”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)
 - [Title](xref:UIComponentsTitle)
 - [Group box](xref:UIComponentsGroupBox)
 
