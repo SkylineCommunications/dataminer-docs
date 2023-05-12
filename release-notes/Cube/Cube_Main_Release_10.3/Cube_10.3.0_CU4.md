@@ -16,7 +16,7 @@ uid: Cube_Main_Release_10.3.0_CU4
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-The following columns can no longer be added to a ListView component:
+The following columns have become obsolete. They can no longer be added to a ListView component:
 
 | Source   | Columns |
 |----------|---------|
@@ -46,16 +46,34 @@ In *System Center > System settings > LDAP*, you can configure a number of LDAP 
 
 Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
 
+#### Services app - Profiles tab: Profile instance selection box now sorted by name [ID_36332]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Services* app, you configure a service profile instance in the *Profiles* tab, you can link the different nodes of the service profile to existing profile instances using a profile instance selection box. Up to now, the profile instances listed in this selection box were sorted the creation date. From now on, they will be sorted by name. Also, this selection box can now be filtered.
+
+#### Resources app: Saving a resource property with an empty value [ID_36345]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to save a resource property with an empty value.
+
 ### Fixes
 
-#### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
+#### Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
 
-#### DataMiner Cube - Visual Overview: Problem when opening an EPM card [ID_36323]
+#### Visual Overview: Problem when opening an EPM card [ID_36323]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
+
+#### Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
