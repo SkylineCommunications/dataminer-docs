@@ -8,4 +8,4 @@ In this section:
 
 - [Text editor general](xref:Text_editor_general)
 
-- [C settings](xref:C_settings)
+- [C# settings](xref:C_settings)
