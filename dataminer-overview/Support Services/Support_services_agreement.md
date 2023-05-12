@@ -39,13 +39,13 @@ Skyline offers two levels of Support Services: Continuity and Evolve. An overvie
 
 ## Supported products
 
-Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [DataMiner Dojo](https://community.dataminer.services/3rd-party-software-support-life-cycle).
+Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [docs.dataminer.services](xref:Software_support_life_cycles#third-party-software-support-life-cycle).
 
 ## Supported versions
 
 Support and Updates for the Software shall only be provided on the two latest main releases of the Software. A new main release is issued by Skyline about every year. Main releases contain all new features and cumulative updates that were issued since the previous main release.
 
-It is the User's responsibility to make sure that their Software is updated timely to a supported Software version. An up-to-date Support timeline shall be available on [DataMiner Dojo](https://community.dataminer.services/dataminer-supported-versions-lifecycle/).
+It is the User's responsibility to make sure that their Software is updated timely to a supported Software version. An up-to-date Support timeline shall be available on [docs.dataminer.services](xref:Software_support_life_cycles).
 
 ## Upgrades and updates
 

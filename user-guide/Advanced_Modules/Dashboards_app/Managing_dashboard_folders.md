@@ -51,8 +51,11 @@ This is possible from DataMiner 10.0.0/10.0.2 onwards:
 
    The *Move dashboard* pop-up window will be displayed.
 
-2. Click the *Location* box and either manually specify the new location for the dashboard, or select it in the tree view below.
+1. Click the *Location* box and either manually specify the new location for the dashboard, or select it in the tree view below.
 
    You can also create folders at this point, by hovering the mouse pointer over the folder in the tree view where you want to create a folder and clicking the + icon. Then specify the folder name and click the check mark icon.
 
-3. Click *OK*.
+1. Click *OK*.
+
+> [!NOTE]
+> It is not possible to move a dashboard that is currently being shared. To move such a dashboard, you will need to temporarily stop sharing it and then share it again once it has been moved.

@@ -26,7 +26,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
-- **Booking Start Failure Script**: Determines which script will be triggered in case the start actions for a booking instance fail. An example script, *SRM_BookingStartFailureTemplate*, is included for this in the SRM package.
+- **Booking Start Failure Script**: See [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails).
 
 - **Create Booking Script**: See [Configuring the Booking Manager app to use custom scripts](xref:SRM_custom_scripts).
 
@@ -166,17 +166,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Service states settings
 
-- **Initial Service State**: Predefines the initial state of the service associated with a booking.
-
-- **Service State (Pre-roll)**: Predefines the state of the service during the pre-roll phase of a booking.
-
-- **Service State (Service Active)**: Predefines the state of the service associated with a booking immediately after the pre-roll phase ends.
-
-- **Service State (Post-roll)**: Predefines the state of the service during the post-roll phase of a booking.
-
-- **Service State (Ended)**: Predefines the state of the service associated with a booking immediately after the post-roll phase ends.
-
-- **Service State Transitions**: In this table, you can configure which transitions between service states are allowed.
+These settings can be used to customize which service state corresponds with which booking life cycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
 
 ### SLA settings
 

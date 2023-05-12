@@ -26,7 +26,7 @@ This page contains an overview of the US Port parameters available in the I-DOCS
 
 - **Number Other CM**: Calculated. The number of CMs served by the US port for the other DOCSIS versions.
 
-  Calculated by adding up the number of CMs with a DOCSIS version other than 2.0, 3.0, or 3.1.
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are served by the US port.
 
 - **Number CM Ping Unreachable**: Calculated. The number of CMs associated with the US port that are reporting the ping status "Unreachable".
 

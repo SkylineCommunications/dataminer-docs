@@ -6,6 +6,9 @@ uid: DashboardState
 
 This component displays the state, name and, if applicable, the value of a DataMiner object. This can be an element, a view, a parameter, etc.
 
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards, if an item in this component is selected, you can clear the selection by clicking it while keeping the Ctrl key pressed. If you are using the State component as a feed for other components, this will also clear the data shown in those components. <!-- RN 36056 -->
+
 To configure the component:
 
 1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
@@ -26,6 +29,10 @@ To configure the component:
    - If the component shows a parameter with a unit, but you do not want the unit to be displayed, in the *Settings* tab, clear the *Show units* option (available from DataMiner 10.1.9/10.2.0 onwards).
 
    - In case the component displays more than one item, in the *Settings* tab, select how the items should be grouped: by parameter, by element, by table index (if relevant) or by all the above together. Note that view parameters can only be grouped together with other parameters with the option *All together*, otherwise they are placed in a separate group.
+
+   - In case the component displays a query source and you want the data to be refreshed automatically, Set *Update data* to *On* (available from DataMiner 10.2.0/10.2.1 onwards<!-- RN 31450 -->).
+
+   - If you want the first item in the component to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first item will be automatically selected whenever the component is loaded or when the data is refreshed.
 
 1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
 

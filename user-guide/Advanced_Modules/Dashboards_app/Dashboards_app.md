@@ -4,29 +4,11 @@ uid: newR_D
 
 # Dashboards app
 
-From DataMiner 9.6.9 onwards, a Dashboards web app is available. This app allows you to make, manage and view dashboards that can display a wealth of information about the monitored system.
+With the Dashboards app, you can make, manage, and view dashboards that can display a wealth of information about the monitored system. You can [share your dashboards](xref:Sharing_a_dashboard) with just about anyone via dataminer.services, or [create a PDF report](xref:Generating_a_report_based_on_a_dashboard_Cube) based on them.
 
-In this section:
-
-- [Accessing the Dashboards app](xref:Accessing_the_Dashboards_app)
-
-- [Overview of the Dashboards app UI](xref:Overview_of_the_Dashboards_app_UI)
-
-- [Managing dashboard folders](xref:Managing_dashboard_folders)
-
-- [Creating and configuring dashboards](xref:Creating_and_configuring_dashboards)
-
-- [Available visualizations](xref:Available_visualizations)
-
-- [Using dashboard feeds](xref:Using_dashboard_feeds)
-
-- [Sharing a dashboard](xref:Sharing_a_dashboard)
-
-- [Generating a report based on a dashboard](xref:Generating_a_report_based_on_a_dashboard_Cube)
-
-- [Customizing the Dashboards app](xref:Customizing_the_Dashboards_app)
-
-- [Dashboard Gateway installation](xref:Dashboard_Gateway_installation)
+Many different [visualizations](xref:Available_visualizations) are available, which can make use of all sorts of [data feeds](xref:Using_dashboard_feeds), including [GQI-based query feeds](xref:Configuring_GQI_feeds).
 
 > [!NOTE]
-> A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](xref:dashboards).
+>
+> - Along with the other DataMiner web apps, you can upgrade the Dashboards app separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
+> - A legacy DMS Dashboards module also exists. For more information, see [DMS Dashboards](xref:dashboards).

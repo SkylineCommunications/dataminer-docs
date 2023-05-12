@@ -247,6 +247,8 @@ On the *Cube* page, the following settings are available:
 
 - **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
+- **Display the search box in the header**: Available from DataMiner 10.3.5/10.4.0 onwards. Determines whether the search box is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+
 ### Cube sides settings
 
 On the *Cube sides* page, you can change the following settings for each side of Cube:

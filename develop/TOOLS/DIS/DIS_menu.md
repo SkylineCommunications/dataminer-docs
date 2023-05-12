@@ -10,7 +10,7 @@ The following sections provide more information on the DIS menu:
 
 - [DMA](#dma)
 - [Protocol \> Generate QAction helper code](#protocol--generate-qaction-helper-code)
-- [Protocol \> Generate Class Library code](#protocol--generate-class-library-code)
+- [Protocol \> Generate Class Library code](#protocol--generate-class-library-code) (removed since v2.41)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
 - [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code)
 - [Plugins \> Generate driver help](#plugins--generate-driver-help)
@@ -85,6 +85,9 @@ In the *DMA* submenu, you can find the following commands:
 C# helper classes are automatically added or updated each time you switch from an XML editor tab to a C# editor tab (or vice versa). If, however, you want to force an ad hoc update of all C# helper classes, you can select *Protocol \> Generate QAction Helper Code*.
 
 ## Protocol \> Generate Class Library code
+
+> [!IMPORTANT]
+> The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
 
 If you want to force an ad hoc regeneration of the Class Library QAction 63000 and the Class Library EXE blocks, you can click Generate Class Library Code.
 
@@ -548,6 +551,8 @@ At the top of the tool window, you can find two buttons:
 
 - Click *Validate* to launch a new protocol validation.
 - Click *Export* to export the results of the latest validation to a CSV file.
+
+As of DIS v2.41, when you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols.
 
 ## Tool Windows \> DIS Comparer
 

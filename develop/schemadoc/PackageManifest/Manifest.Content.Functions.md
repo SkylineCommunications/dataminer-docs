@@ -4,7 +4,7 @@ uid: Manifest.Content.Functions
 
 # Functions element
 
-Specifies the functions to be included in the package.
+Specifies the functions to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the functions to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Function](xref:Manifest.Content.Functions.Function)|[1, *]|Specifies a function to be included in the package.|
+|&nbsp;&nbsp;[Function](xref:Manifest.Content.Functions.Function)|[1, *]|Specifies a function to include in the package.|
