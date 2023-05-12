@@ -28,7 +28,9 @@ There are several ways to install the DataMiner Cube desktop application, depend
      1. Click *Install*.
 
      > [!NOTE]
-     > Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
+     >
+     > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
+     > - Once the desktop app has been installed, a desktop and start menu shortcut will be added to your machine.
 
    - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is only used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
 
@@ -64,3 +66,8 @@ Alternatively, you can go to `http://[DMA name]/DataminerCubeStandalone/publish.
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
 
 ***
+
+<div>&nbsp;</div>
+
+> [!IMPORTANT]
+> During the installation of Cube, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
