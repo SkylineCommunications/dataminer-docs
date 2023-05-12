@@ -99,12 +99,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
-
 #### Maps: Zoom range can now be set by means of a slider [ID_35381]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -191,21 +185,29 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading service profile instances.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
+#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
+
+#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
+
 ### Fixes
-
-#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
-
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -254,6 +256,16 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -265,3 +277,15 @@ When a history alarm affected a closed outage to which a correction had been app
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
+
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.

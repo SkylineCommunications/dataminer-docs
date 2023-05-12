@@ -32,7 +32,7 @@ These are the error codes that can be returned when the CommunicationGateway is 
 
 ## Channel management handler error codes
 
-These are the error codes that can be returned when creating/connecting or disconnecting a gNMI handler in the CommunicationGateway.
+These are the error codes that can be returned when creating/connecting or disconnecting a handler in the CommunicationGateway.
 
 |Name|Friendly Name|Code|Message|
 |--- |--- |--- |--- |
@@ -43,6 +43,7 @@ These are the error codes that can be returned when creating/connecting or disco
 |ChannelManagementHandler_ConnectRequest_InvalidMessage|Channel management invalid ConnectRequest|1001005|The ConnectRequest could not be parsed. This topic should send a Request message containing a ConnectRequest.|
 |ChannelManagementHandler_DisconnectRequest_InvalidMessage|Channel management invalid DisconnectRequest|1001006|The DisconnectRequest could not be parsed. This topic should send a Request message containing a DisconnectRequest.|
 |ChannelManagementHandler_ConnectRequest_AlreadyRegistered|Channel management already registered|1001007|The ConnectRequest did not create a new channel since it has already been registered.|
+|ChannelManagementHandler_ConnectRequest_UnknownServiceType|Channel management unknown service type|1001008|The ConnectRequest contains a service type in the ChannelId that is not supported.|
 
 ## gNMI handler error codes
 

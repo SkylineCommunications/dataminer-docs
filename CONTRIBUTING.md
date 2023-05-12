@@ -9,7 +9,7 @@ Welcome to the docs.dataminer.services contributor guide!
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
 > [!TIP]
-> Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
+> Are you a member of the DataMiner DevOps Professional Program? You can earn points by proposing changes or pointing out issues in the documentation! Find out [how many DevOps Points you can earn](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points).
 
 ## General guidelines
 
@@ -40,17 +40,21 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
 1. Make your changes using the web editor. To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click *Propose changes*. For example:
+1. Once you have made your changes, click *Commit changes* in the top-right corner. This will open a pop-up window.
+
+   ![Commit changes](~/images/Commit_Changes.png)
+
+1. In the pop-up window, you can enter a title and description for your changes and click *Propose changes*. For example:
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
 1. A page will be displayed with a summary of your changes. At the top of the page, click *Create pull request*. A “pull request” is a request to pull changes into the repository.
 
+   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
+
 1. Double-check the title and description for the pull request, and modify them if necessary. We recommend that you select the option *Allow edits by maintainers*, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
 
 1. Click *Create pull request*.
-
-   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
@@ -457,13 +461,13 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
    > [!NOTE]
    > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
-1. When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
+1. When you have finished previewing the website, close the command window.
 
 > [!NOTE]
 > If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ##### Making a test build in the Visual Studio Code terminal
 
@@ -503,7 +507,7 @@ If you make repeated test builds to check changes you have made, and you are onl
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ## Markdown syntax
 

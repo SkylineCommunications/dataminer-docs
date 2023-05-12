@@ -6,6 +6,8 @@ uid: SaveSpectrumPreset
 
 Use this method to save a particular preset for a spectrum analyzer. Available from DataMiner 9.5.5 onwards.
 
+This method is obsolete from DataMiner 10.3.5/10.4.0 onwards. <!-- RN 36364 -->
+
 ## Input
 
 | Item | Format | Description |

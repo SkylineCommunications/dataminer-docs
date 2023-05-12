@@ -25,10 +25,11 @@ To do so:
 
    - **Host**: The name or IP of the LDAP server.
    - **Port**: The port to connect to the LDAP server.
-   - **Authentication type**: The authentication method to access the LDAP server. The following authentication types are available: *Anonymous*, *Max*, *Member System*, *Password*, *SASL*, and *Simple*.
+   - **Authentication type**: The authentication method to access the LDAP server. The following authentication types are supported: *Anonymous* and *Simple*.
    - **Naming context**: A suffix that identifies the top entry of the LDAP hierarchy.
+   - **Non-domain LDAP**: Available from DataMiner 10.2.0 [CU16]/10.3.0 [CU4]/10.3.6<!--  RN 35782 -->. An LDAP server that is not Windows Active Directory. This will be used to determine if DataMiner can subscribe to change notifications of the LDAP server, a feature that is only supported by Active Directory. DataMiner will only sync changes with a non-domain LDAP server through the *ReloadLDAP.js* script, which runs on an hourly basis through the *Skyline DataMiner LDAP Resync* scheduled task in Windows.
    - **Referral configured**: Available from DataMiner 10.1.0 [CU11]/10.2.2 onwards. To use referrals to retrieve users from another domain in case these are part of a user group in the DataMiner domain, select this option. This means that when information is asked from the DataMiner domain about a different domain, the request is automatically forwarded. If you do not select this option, instead a connection is made with the other Domain Controller and the latter is queried directly.
-   - **SSL/TLS**: Available from DataMiner 10.1.0 [CU11]/10.2.2 onwards. Select this option if you want DataMiner to use SSL/TLS when connecting to the LDAP server.
+   - **SSL/TLS**: Available from DataMiner 10.1.0 [CU11]/10.2.2 onwards. Select this option if you want DataMiner to use SSL/TLS when connecting to the LDAP server. When using SSL/TLS, make sure that the name or IP configured in **Host** matches the **Common Name** or an entry from the **Subject Alternative Names** in the certificate presented by the LDAP server.
    - **Use fully qualified domain name (FQDN)**: When this option is selected, the full user names will be retrieved by means of LDAP. Otherwise, full user names will be retrieved by means of NetAPI instead.
    - **User name**: The user name to connect to the LDAP server, if necessary.
    - **Password**: The password to connect to the LDAP server, if necessary.
@@ -53,8 +54,10 @@ To do so:
    - **Description**: The description of the group.
    - **Filter**: The LDAP search filter to find all groups. Note that in XML ampersands must be encoded as “&amp;”.
 
-    > [!NOTE]
-    > If a setting is left empty, the default setting will be applied.
+   > [!NOTE]
+   >
+   > - If a setting is left empty, the default setting will be applied.
+   > - If you change any of these settings, this change will only be applied to the DataMiner Agent you are connected to. The change is not synced with the rest of the cluster.
 
 1. Click the *Apply* button in the lower right corner.
 

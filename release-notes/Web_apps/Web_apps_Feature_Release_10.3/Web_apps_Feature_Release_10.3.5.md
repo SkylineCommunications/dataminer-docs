@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.5
 ---
 
-# DataMiner web apps Feature Release 10.3.5 – Preview
+# DataMiner web apps Feature Release 10.3.5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.5](xref:General_Feature_Release_10.3.5).
@@ -96,7 +96,7 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
-#### Dashboards app & Low-code apps: New 'Text input' feed [ID_35902]
+#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -123,7 +123,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-code apps: New 'Numeric input' feed [ID_35911]
+#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -148,7 +148,7 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Low-code apps: 'Open monitoring card' action can now also be linked to a feed [ID_35986]
+#### Low-Code Apps: 'Open monitoring card' action can now also be linked to a feed [ID_35986]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -156,7 +156,7 @@ Since DataMiner feature release version 10.3.4, in a low-code app, you can confi
 
 Also, up to now, when an *Open monitoring card* action was configured in the header bar or in page events, an `Operation is not valid due to the current state of the object` error could be thrown. This issue has now been fixed.
 
-#### Dashboards app & Low-code apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
+#### Dashboards app & Low-Code Apps - Table component: Enhanced visibility of rows that are selected or hovered over in dark mode [ID_35993]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
@@ -261,11 +261,23 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+The following enhancements have been made with regard to the Web Services API:
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+- A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
 
-#### Dashboards app & Low-code apps: New way to link components to feeds [ID_35837]
+- It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
+
+#### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -294,7 +306,7 @@ Up to now, GQI data sources that require an Elasticsearch database used the `Dat
 
 Overall error handling has been improved when executing an interactive Automation script by clicking a DOM button in a web app.
 
-#### Low-code apps - Line & area chart component: New 'Set timespan' action [ID_35933]
+#### Low-Code Apps - Line & area chart component: New 'Set timespan' action [ID_35933]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
@@ -326,25 +338,25 @@ When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data so
 Could not find argument with name '{argument.Name}'.
 ```
 
-#### Dashboards app & Low-code apps - GQI components: Problem when executing an empty query [ID_35803]
+#### Dashboards app & Low-Code Apps - GQI components: Problem when executing an empty query [ID_35803]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When GQI components tried to execute an empty query, up to now, they would keep on showing a "loading" indicator. From now on, an appropriate message will be displayed instead.
 
-#### Dashboards app & Low-code apps: Duplicated component would not have the size as the original [ID_35804]
+#### Dashboards app & Low-Code Apps: Duplicated component would not have the size as the original [ID_35804]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When you duplicated a component, the size of the duplicate would incorrectly be limited to 30 rows. From now on, when you duplicate a component, the duplicate will have the same size as the original.
 
-#### Dashboards app & Low-code apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
+#### Dashboards app & Low-Code Apps: Problem when feeding data from a GQI component to a query used in the same component [ID_35806]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-code apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
+#### Dashboards app & Low-Code Apps - GQI components: Open sessions would not be closed when a new query was triggered [ID_35824]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -356,7 +368,7 @@ When a GQI component still had a session open when a new query was triggered, in
 
 When the *Dashboards* app was opened on a mobile device, an error could occur when you entered something in the search box.
 
-#### Dashboards app & Low-code apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
+#### Dashboards app & Low-Code Apps - Form component: Problems with multiple-selection drop-down boxes [ID_35829]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -372,7 +384,7 @@ In some cases, a table component could appear to be empty when you rapidly switc
 
 Also, an error could be thrown when you tried to add an invalid query to a component.
 
-#### Dashboards app & Low-code apps: Problem with 'Share' button and subheader items on mobile devices [ID_35839]
+#### Dashboards app & Low-Code Apps: Problem with 'Share' button and subheader items on mobile devices [ID_35839]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -390,13 +402,13 @@ When you opened a visual overview in a web app, in some cases, the web app could
 
 When a dashboard with a state, ring or gauge component was shared, in some cases, an error could be thrown when an extra `GetParameterTable` call without `ValueFilters` was sent.
 
-#### Dashboards app & Low-code apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
+#### Dashboards app & Low-Code Apps: Text boxes in the Layout tab would not update when you selected another component [ID_35851]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When, in the *Layout* tab, a text box (e.g. the box containing the title of the selected component) had the focus, and you selected another component, the text box in the *Layout* tab would incorrectly still contain the value of the previously selected component.
 
-#### Dashboards app & Low-code apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID_35856]
+#### Dashboards app & Low-Code Apps - Table component: A collapsed group would incorrectly expand when new data was loaded into the table [ID_35856]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -420,7 +432,7 @@ When you generated a PDF of a dashboard that contained multiple parameter feeds,
 
 In web apps, certain icons would incorrectly not be displayed.
 
-#### Dashboards app & Low-code apps - Table component: Initial grouping would incorrectly be considered a modification [ID_35882]
+#### Dashboards app & Low-Code Apps - Table component: Initial grouping would incorrectly be considered a modification [ID_35882]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -428,19 +440,19 @@ In a table component, the initial grouping would incorrectly be considered a mod
 
 From now on, the initial grouping will no longer be considered a modification. When you modify the table by sorting, filtering, grouping or re-ordering data and then click the *Restore initial view* button, the initial grouping will now be restored.
 
-#### Dashboards app & Low-code apps - Table component: Issues with 'Loading' indicator [ID_35894]
+#### Dashboards app & Low-Code Apps - Table component: Issues with 'Loading' indicator [ID_35894]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 A number of issues with regard to the "Loading" indicator have been fixed.
 
-#### Dashboards app & Low-code apps - GQI components: Problems when a GQI request failed [ID_35904]
+#### Dashboards app & Low-Code Apps - GQI components: Problems when a GQI request failed [ID_35904]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
 When a GQI request failed, some GQI components would show either an unrelated error or no error at all, while other GQI components would show a correct error but incorrect data.
 
-#### Dashboards app & Low-code apps: Performance could decrease when State components had their Design option set to 'Auto size' [ID_35905]
+#### Dashboards app & Low-Code Apps: Performance could decrease when State components had their Design option set to 'Auto size' [ID_35905]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -458,7 +470,7 @@ Up to now, in some cases, the login button would incorrectly be disabled when yo
 
 When, in the Monitoring app, you clicked a region in a visual overview that opened an element, service or view card, up to now, the entire Monitoring app would reload. From now on, when you click a region in a visual overview that opens an element, service or view card, the card in question will open but the Monitoring app will no longer be reloaded.
 
-#### Dashboards app & Low-code apps - Clock components: Clock time would not update when set to server time [ID_35912]
+#### Dashboards app & Low-Code Apps - Clock components: Clock time would not update when set to server time [ID_35912]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -475,13 +487,13 @@ Also, a *Shared* button will now be displayed in the header bar of a shared dash
 > [!NOTE]
 > It is not possible to rename or to move a shared dashboard.
 
-#### Low-code apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
+#### Low-Code Apps: Problem when selecting an action with multiple components after having selected an action with a single component [ID_35947]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When you first selected an action with a single component, which was selected automatically, and then selected an action with multiple components, up to now, both the action selection box and the component selection box would incorrectly be cleared.
 
-#### Low-code apps: Page names and panel names could incorrectly be empty [ID_35960]
+#### Low-Code Apps: Page names and panel names could incorrectly be empty [ID_35960]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -495,7 +507,7 @@ When configuring a line & area chart, you can use the *Chart limit* setting to s
 
 In some cases, the number of disabled parameters shown in the legend would be incorrect.
 
-#### Dashboards app & Low-code apps: Filter box of visualizations panel would not reset [ID_36000]
+#### Dashboards app & Low-Code Apps: Filter box of visualizations panel would not reset [ID_36000]
 
 <!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
 
@@ -507,14 +519,42 @@ When you reloaded the editor, by clicking the *Refresh* button while editing a d
 
 When, in a table with a *Get parameter relations* query, you selected a relation between two standalone parameters, no element feed would be available.
 
-#### Dashboards apps & Low-code apps: Components would incorrectly make their own data available as feeds [ID_36008]
+#### Dashboards apps & Low-Code Apps: Components would incorrectly make their own data available as feeds [ID_36008]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Up to now, components would incorrectly make their own data available as feeds.
 
-#### Dashboards app & Low-code apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
+#### Dashboards app & Low-Code Apps - Table component: 'Restore initial view' button would incorrectly remain visible when switching to an empty query [ID_36010]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 When, in a table component, you switched from a non-empty query to an empty query, the *Restore initial view* button would incorrectly remain visible in the component header.
+
+#### Web apps: Problem with single sign-on when embedded in Cube [ID_36049]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When the *Dashboards*, *Jobs*, or *Ticketing* app was embedded in DataMiner Cube, in some cases, users would incorrectly be prompted to log in to the app.
+
+#### Dashboards app & Low-Code Apps: Incorrect error could appear when editing a dashboard or low-code app [ID_36132]
+
+<!-- MR 10.4.0 - FR 10.3.5 [CU0] -->
+
+When editing a dashboard or a low-code app, in some cases, the following error could incorrectly appear:
+
+```txt
+The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
+```
+
+#### Dashboards app: Problem when pressing an arrow key in the 'Create dashboard' window [ID_36146]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *Create dashboard* window, pressing an arrow key while one of the text boxes had the focus would incorrectly cause the *OK* or *Cancel* button to become selected.
+
+#### GQI: Web services API would not be able to correctly translate a server query to a web query [ID_36173]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
+
+In some cases, the web services API would not be able to correctly translate a server query to a web query.

@@ -892,6 +892,8 @@
         - name: Upgrading a DataMiner Agent
           topicUid: Upgrading_a_DataMiner_Agent
           items:
+            - name: DataMiner Main Release vs. Feature Release
+              topicUid: DataMiner_MR_vs_FR
             - name: Preparing to upgrade a DataMiner Agent
               topicUid: Preparing_to_upgrade_a_DataMiner_Agent
             - name: Upgrading a DataMiner Agent in the Update Center
@@ -1066,6 +1068,8 @@
           items:
           - name: Installing Cassandra on a Linux machine
             topicUid: Installing_Cassandra
+          - name: Setting up an Azure Managed Instance for Apache Cassandra
+            topicUid: Azure_Managed_Instance_for_Apache_Cassandra
           - name: Scaling a Cassandra cluster database
             topicUid: Scale_Cassandra_Database
           - name: Maintaining a Cassandra cluster
@@ -1631,6 +1635,8 @@
             - name: General
               topicUid: General
               items:
+              - name: Form
+                topicUid: DashboardForm
               - name: Block
                 topicUid: DashboardBlock
               - name: Button
@@ -1720,6 +1726,15 @@
                 topicUid: DashboardTreeFeed
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
+            - name: Basic controls
+              topicUid: 
+              items:
+              - name: Drop-down feed
+                topicUid: DashboardDropdownFeed
+              - name: Numeric input
+                topicUid: DashboardNumericInputFeed
+              - name: Text input
+                topicUid: DashboardTextInputFeed
         - name: Using dashboard feeds
           topicUid: Using_dashboard_feeds
           items:
@@ -2005,6 +2020,7 @@
         - name: Editing a low-code application
           topicUid: Editing_custom_apps
         - name: Configuring low-code applications
+          topicUid: LowCodeApps_Custom_Icon
           items:
             - name: Customizing the icon and color of an app
               topicUid: LowCodeApps_Custom_Icon
@@ -2020,12 +2036,14 @@
               topicUid: LowCodeApps_security_config
             - name: Retrieving an earlier version of a low-code app
               topicUid: LowCodeApps_earlier_version
-            - name: 
+            - name: Organizing the apps on the landing page in sections
               topicUid: LowCodeApps_organizing_landing_page
         - name: Deleting a low-code application
           topicUid: Deleting_custom_apps
         - name: Specifying data input in an app URL
           topicUid: Specifying_data_input_in_URL
+        - name: Executing actions via the app URL
+          topicUid: Executing_actions_via_URL
     - name: Maps
       topicUid: maps
       items:
@@ -2352,10 +2370,10 @@
               topicUid: About_DataMiner_elements_using_the_Ticketing_Gateway_API
             - name: Overview of the TicketingGatewayHelper class
               topicUid: Overview_of_the_TicketingGatewayHelper_class
-    - name: User-Defined APIs (preview)
+    - name: User-Defined APIs
       topicUid: UD_APIs
       items:
-        - name: Viewing APIs and tokens
+        - name: Managing APIs and tokens in Cube
           topicUid: UD_APIs_Viewing_in_Cube
         - name: Defining an API
           topicUid: UD_APIs_Define_New_API
@@ -2364,10 +2382,21 @@
               topicUid: UD_APIs_Define_New_API
             - name: Using existing scripts
               topicUid: UD_APIs_Using_existing_scripts
+            - name: Creating APIs and tokens in code
+              topicUid: UD_APIs_Creating_in_code
+              items:
+                - name: ApiToken object
+                  topicUid: UD_APIs_Objects_ApiToken
+                - name: ApiDefinition object
+                  topicUid: UD_APIs_Objects_ApiDefinition
+            - name: API script examples
+              topicUid: UD_APIs_API_script_examples
         - name: Triggering an API
           topicUid: UD_APIs_Triggering_an_API
         - name: DataMiner UserDefinableApiEndpoint DxM
           topicUid: UD_APIs_UserDefinableApiEndpoint
+        - name: Troubleshooting
+          topicUid: UD_APIs_Troubleshooting
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
@@ -2385,6 +2414,13 @@
               topicUid: I-DOCSIS_supported_technologies
             - name: EPM I-DOCSIS deployment
               topicUid: I-DOCSIS_deployment
+            - name: EPM I-DOCSIS maps deployment
+              topicUid: I-DOCSIS_maps_deployment
+              items:
+                - name: Systems with one back-end element
+                  topicUid: I-DOCSIS_maps_deployment_one_backend
+                - name: Systems with multiple back-end elements
+                  topicUid: I-DOCSIS_maps_deployment_multiple_backends
             - name: EPM I-DOCSIS upgrade
               topicUid: I-DOCSIS_upgrade
             - name: Available parameters in I-DOCSIS
@@ -2702,6 +2738,7 @@
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
+        topicUid: SRM_user_interface_customization
         items:
           - name: User interface customization
             topicUid: SRM_user_interface_customization
@@ -2719,6 +2756,7 @@
           - name: Configuring SRM logging
             topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
+            topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
@@ -2734,6 +2772,8 @@
                 topicUid: Service_Orchestration_custom_events
               - name: Booking life cycle states configuration
                 topicUid: Service_Orchestration_life_cycle_states
+              - name: Service states configuration
+                topicUid: Service_Orchestration_service_states
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services
@@ -2880,6 +2920,8 @@
       items:
         - name: Customizing the dataminer.services endpoint configuration
           topicUid: Custom_cloud_endpoint_configuration
+        - name: Disabling reports and notifications offloading
+          topicUid: Disable_Offloading_Reports_and_Notifications
 - name: Troubleshooting
   topicUid: Part6Troubleshooting
   items:
@@ -2978,6 +3020,12 @@
         - name: Finding a root cause
           topicUid: Finding_a_Root_Cause
           items:
+            - name: Troubleshooting - trending
+              topicUid: Troubleshooting_Trending
+            - name: Troubleshooting - alarms
+              topicUid: Troubleshooting_Alarms
+            - name: Troubleshooting - services
+              topicUid: Troubleshooting_Services
             - name: Troubleshooting - startup issues
               topicUid: Troubleshooting_Startup_Issues
             - name: Troubleshooting - critical issues
@@ -3094,6 +3142,16 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
+          topicUid: KI_Inaccessible_data_Elasticsearch_casing
+        - name: RTEs caused by problem during automatic NATS reconfiguration
+          topicUid: KI_RTEs_NATS_reconfiguration
+        - name: Activities and scripts delayed because of CheckVIPs thread
+          topicUid: KI_CheckVIPs_delays_activities
+        - name: Elasticsearch not initialized when DataMiner starts up
+          topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
+        - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
+          topicUid: KI_Restart_loop_when_Elasticsearch_unavailable
         - name: SRM - Auto Select Resource not read for silent booking
           topicUid: KI_SRM_Auto_Select_Resource_Not_Read
         - name: IP address in SAN field of TLS certificate ignored in Windows 2012 R2
@@ -3433,13 +3491,15 @@
                 topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
                 topicUid: SLNetClientTest_modifying_engine_id
+              - name: Removing a DOM manager
+                topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
                 topicUid: SLNetClientTest_removing_references
               - name: Setting the TTL for database records
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
-              - name: Triggering a user-defined API
+              - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
           topicUid: SLOffload_tool
@@ -3516,6 +3576,8 @@
           topicUid: Online_demo_license_for_DMA_to_be_installed_by_user
         - name: Offline demo license for DMA to be installed by user
           topicUid: Offline_demo_license_for_DMA_to_be_installed_by_user
+    - name: Software support life cycles
+      topicUid: Software_support_life_cycles
     - name: Soft-launch options
       topicUid: SoftLaunchOptions
       items: 
@@ -3578,7 +3640,7 @@
           topicUid: service_profile_benchmarks
         - name: Service & Resource Management benchmarks
           topicUid: service_resource_management_benchmarks
-        - name: User-defined API benchmarks
+        - name: User-Defined APIs benchmarks
           topicUid: user-defined_API_benchmarks
         - name: View benchmarks
           topicUid: view_benchmarks

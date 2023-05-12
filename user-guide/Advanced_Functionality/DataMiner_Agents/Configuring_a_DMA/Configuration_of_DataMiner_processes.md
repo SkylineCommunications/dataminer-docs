@@ -673,11 +673,34 @@ Example:
 </MaintenanceSettings>
 ```
 
-## Configuring DMA communication settings in SLNet.exe.config
+### Disabling .NET Remoting
 
-On a DMA, you have to specify the ports to be used for both .NET Remoting and XML Web Services.
+By default, .NET Remoting is used for communication between DMAs. From DataMiner 10.3.2/10.3.0 onwards, a gRPC connection can be used instead. To make gRPC the default for communication between DMAs, you can either [add Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag), or disable .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.
 
-1. On the DataMiner Agent on which you want to configure the communication settings, go to the *C:\\Skyline DataMiner\\Files* directory.
+To do the latter, add an *\<EnableDotNetRemoting>* tag in the *\<SLNet>* section of the *MaintenanceSettings.xml* file, and set this tag to “false”.<!-- RN 31498+36023 -->
+
+Example:
+
+```xml
+<MaintenanceSettings>
+  ...
+  <SLNet>
+    ...
+    <EnableDotNetRemoting>false</EnableDotNetRemoting>
+    ...
+  </SLNet>
+  ...
+</MaintenanceSettings>
+```
+
+> [!IMPORTANT]
+> Make sure this is configured the same way for all Agents in a DMS.
+
+## Configuring the ports for .NET Remoting and/or XML Web Services
+
+On a DMA, you can specify the ports to be used for both .NET Remoting and (for legacy DMAs) XML Web Services.
+
+1. On the DataMiner Agent on which you want to configure these settings, go to the *C:\\Skyline DataMiner\\Files* directory.
 
 1. In a text editor (e.g. Microsoft Notepad), open *SLNet.exe.config*.
 

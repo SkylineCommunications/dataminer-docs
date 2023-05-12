@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.4
 
 ## New features
 
-#### Dashboards app & Low-code apps: 'Lazy load components' setting [ID_35469] [ID_35486]
+#### Dashboards app & Low-Code Apps: 'Lazy load components' setting [ID_35469] [ID_35486]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -173,7 +173,7 @@ A clearer error message will now be returned when you are building a query again
 
 When a login attempt fails, a clearer error message will now appear.
 
-#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -197,7 +197,7 @@ Also, a number of enhancements have been made:
 
 - When an interactive Automation script run in a web app environment contains executable components, a message will now be displayed, saying that executable components are not supported in web apps.
 
-#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+#### Dashboards app & Low-Code Apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -223,19 +223,19 @@ When you tried to select a visualization for a newly added component that did no
 
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
 
 Also, in some cases, the left and right padding of PDF reports generated via Automation, Scheduler and the Dashboards app itself would be missing.
 
-#### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
+#### Low-Code Apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 Up to now, whether the sidebar was displayed or not would incorrectly depend on the number of pages. From now on, it will depend on the number of visible pages. In other words, the sidebar will only be displayed when there are at least two visible pages.
 
-#### Low-code apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
+#### Low-Code Apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -271,7 +271,7 @@ When the parameters of a spectrum element were retrieved in a web app, in some c
 
 When, in a dashboard, you added a trended spectrum parameter to a line & area chart component, the component would not be able to retrieve the trend data of that parameter.
 
-#### Low-code apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
+#### Low-Code Apps: Problem when opening a low-code app on a mobile device or when resizing the screen to a mobile size [ID_35683]
 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
@@ -283,13 +283,13 @@ When you opened a low-code app on a mobile device or when you resized the screen
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
-#### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
+#### Low-Code Apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, a feed used in a query would incorrectly not get updated when the data inside the feed was updated.
 
-#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+#### Dashboards app & Low-Code Apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -301,19 +301,19 @@ When you changed the order of the queries added to a State component, this chang
 
 When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
 
-#### Dashboards app & Low-code apps: Not possible to filter a GQI table by a boolean column [ID_35692]
+#### Dashboards app & Low-Code Apps: Not possible to filter a GQI table by a boolean column [ID_35692]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 Up to now, it would incorrectly not be possible to filter a GQI table by a boolean column.
 
-#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+#### Dashboards app & Low-Code Apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
 
-#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+#### Dashboards app & Low-Code Apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -325,7 +325,7 @@ When you hovered over a segment of an edge, in some cases, an incorrect tooltip 
 
 When data from one table was fed to another table, in some cases, the "loading" indicator of the table to which data was fed would incorrectly not disappear.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -369,7 +369,7 @@ Node edge actions would incorrectly no longer work.
 
 In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -385,19 +385,19 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 
 GQI queries containing float or GUID values would not get migrated correctly.
 
-#### Dashboards app & low-code apps: GQI components would incorrectly not clear their query row feed when refetching data [ID_35767]
+#### Dashboards app & Low-Code Apps: GQI components would incorrectly not clear their query row feed when refetching data [ID_35767]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 -->
 
 GQI components would incorrectly not clear their query row feed when refetching data.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 
 When a feed component was linked to an argument of an ad hoc data source, in some cases, the feed would not work correctly.
 
-#### Dashboards app & Low-code apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
+#### Dashboards app & Low-Code Apps - GQI: Queries linked to feeds would not always apply feed changes [ID_35903]
 
 <!-- MR 10.3.0 [CU2] - FR 10.3.4 [CU0] -->
 

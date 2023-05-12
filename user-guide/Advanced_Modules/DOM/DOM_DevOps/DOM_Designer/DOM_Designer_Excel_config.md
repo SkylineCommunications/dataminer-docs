@@ -21,9 +21,9 @@ In the fields tab, you should define all fields with their data type for the obj
 | SectionName | Name | Type | Default | Values | Tooltip | Linked DOM Module Name | Linked DOM Definition Name | ResourcePool Filter | View Filter |
 |---|---|---|---|---|---|---|---|---|---|
 | General information | Name contact | String |  |  |  |  |  |  |  |
-| General information | Role | Enum | Engineer/Operator/<br>Technician/Planner/<br>Technical Director/<br>Cameraman |  |  |  |  |  |  |
-| General information | Experience | Enum | Junior/Senior/<br>Principal |  |  |  |  |  |  |
-| General information | Team | Enum | IT/DOCSIS/Video/<br>IP/General/Production |  |  |  |  |  |  |
+| General information | Role | Enum | | Engineer/Operator/<br>Technician/Planner/<br>Technical Director/<br>Cameraman  |  |  |  |  |  |
+| General information | Experience | Enum |  | Junior/Senior/<br>Principal |  |  |  |  |  |
+| General information | Team | Enum |  | IT/DOCSIS/Video/<br>IP/General/Production |  |  |  |  |  |
 | General information | Street address | String |  |  |  |  |  |  |  |
 | General information | City | String |  |  |  |  |  |  |  |
 | General information | ZIP | Int64 |  |  |  |  |  |  |  |
