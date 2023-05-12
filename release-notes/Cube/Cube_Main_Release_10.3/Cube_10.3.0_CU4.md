@@ -16,7 +16,7 @@ uid: Cube_Main_Release_10.3.0_CU4
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-The following columns can no longer be added to a ListView component:
+The following columns have become obsolete. They can no longer be added to a ListView component:
 
 | Source   | Columns |
 |----------|---------|
@@ -45,6 +45,12 @@ In *System Center > System settings > LDAP*, you can configure a number of LDAP 
 - When you update LDAP settings, a warning will now appear to notify you that these settings will only be changed on the DataMiner Agent to which you are connected. Changes made to LDAP settings will not be synchronized among the agents in the cluster.
 
 Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
+
+#### Services app - Profiles tab: Profile instance selection box now sorted by name [ID_36332]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Services* app, you configure a service profile instance in the *Profiles* tab, you can link the different nodes of the service profile to existing profile instances using a profile instance selection box. Up to now, the profile instances listed in this selection box were sorted the creation date. From now on, they will be sorted by name. Also, this selection box can now be filtered.
 
 #### Resources app: Saving a resource property with an empty value [ID_36345]
 

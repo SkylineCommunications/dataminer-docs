@@ -26,7 +26,7 @@ uid: Cube_Feature_Release_10.3.7
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-The following columns can no longer be added to a ListView component:
+The following columns have become obsolete. They can no longer be added to a ListView component:
 
 | Source   | Columns |
 |----------|---------|
@@ -38,6 +38,12 @@ Also, the following component options can no longer be used:
 - DisableInUseItems
 - EditMode
 - Recursive
+
+#### Services app - Profiles tab: Profile instance selection box now sorted by name [ID_36332]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Services* app, you configure a service profile instance in the *Profiles* tab, you can link the different nodes of the service profile to existing profile instances using a profile instance selection box. Up to now, the profile instances listed in this selection box were sorted the creation date. From now on, they will be sorted by name. Also, this selection box can now be filtered.
 
 #### Resources app: Saving a resource property with an empty value [ID_36345]
 

@@ -262,7 +262,7 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 
 #### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
 When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
 
