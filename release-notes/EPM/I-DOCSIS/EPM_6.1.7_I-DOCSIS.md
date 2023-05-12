@@ -126,7 +126,7 @@ When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline
 
 #### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
 
-The default value of the average percentage of US and DS utilization in aggregation and merge actions for the Skyline EPM Platform DOCSIS back-end connector was incorrect. This has now been changed from the incorrect 0 to -1.
+Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
 
 #### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
 
