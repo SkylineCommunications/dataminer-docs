@@ -124,6 +124,10 @@ In addition, the passive tables are now only filled in when the CCAP/collector p
 
 When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
 
+#### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
+
+Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
+
 #### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
 
 In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".
