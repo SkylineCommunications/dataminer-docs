@@ -177,9 +177,21 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+The following enhancements have been made with regard to the Web Services API:
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+- A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+- It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
 
 #### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
@@ -189,12 +201,6 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
-
-#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
 
 #### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
 
@@ -213,6 +219,45 @@ In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, et
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
+
+#### Web services API: Multi-value DOM fields will now list all their values [ID_36190]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+
+> [!NOTE]
+> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
+#### Monitoring app: Enhanced parameter controls [ID_36275]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Monitoring* app, the parameter controls have been enhanced. You will now be able to edit a parameter by clicking a pencil icon.
+
+#### Dashboards app & Monitoring app: Parameter page component now supports WebSockets [ID_36314]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
+
+#### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when you clicked the trending icon of a parameter, the parameter edit pane would expand, showing additional information about that parameter. From now on, when you click the trending icon of a parameter, the trending page will open instead.
+
+#### Dashboards app & Low-Code Apps - Table component: Selected rows will again be selected after refetching the data [ID_36372]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
 ### Fixes
 
@@ -341,3 +386,15 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.

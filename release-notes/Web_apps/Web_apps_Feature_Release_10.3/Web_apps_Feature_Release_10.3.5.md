@@ -261,9 +261,21 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+The following enhancements have been made with regard to the Web Services API:
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+- A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+- It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
 
 #### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 

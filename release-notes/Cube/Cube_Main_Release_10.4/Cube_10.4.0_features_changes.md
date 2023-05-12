@@ -168,6 +168,27 @@ From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedd
 
 When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
+#### Trending: Managing trend patterns in the 'Pattern Overview' window [ID_35694] [ID_36114]
+
+<!-- 35694: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36114: MR 10.4.0 - FR 10.3.6 -->
+<!-- Both released in MR 10.4.0 - FR 10.3.6 -->
+
+When you right-click a trend graph and select *Trend patterns...*, the *Pattern Overview* window will now appear.
+
+By default, this window will only list the existing patterns that apply to the trend graph you have opened. If you select the *Show all patterns* option, it will list all patterns found in the DataMiner System.
+
+- To update the properties of an existing pattern, select it in the list on the left, update its properties, and click *OK* or *Apply*.
+
+  Apart from changing its name and description, you can also indicate whether you want the pattern to be detected continuously in the background.
+
+- To delete a pattern, click the recycle bin icon next to its name in the list on the left.
+
+When you select a trend pattern from the list on the left, a thumbnail preview of the pattern will be displayed, together with the name of the element and parameter associated with the pattern.
+
+> [!NOTE]
+> Currently, this *Pattern Overview* window only supports single-variate patterns. Support for multi-variate patterns will be added in a later release.
+
 #### Search box in Cube header can now be hidden [ID_35826]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -236,23 +257,6 @@ In the Automation script editor, Intellisense has been added for the new `timeUp
 
 This property is only applied in interactive Automation scripts that are launched from a web app.
 
-#### System Center: Overhaul of LDAP settings [ID_35782]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In *System Center > System settings > LDAP*, you can configure a number of LDAP settings. These settings have had an overhaul.
-
-- In the *General* tab, from now on, you will only be able to set *Authentication type* to either "Anonymous" or "Simple".
-
-  > [!NOTE]
-  > When you set *Authentication type* to "Anonymous", the *User name* and *Password* fields will now be disabled. When both fields contain a value, *Authentication type* will by default be set to "Simple".
-
-- In this section, it is now also possible to configure the *nonDomainLDAP* setting. Up to now, this setting could only be configured in the *DataMiner.xml* file.
-
-- When you update LDAP settings, a warning will now appear to notify you that these settings will only be changed on the DataMiner Agent to which you are connected. Changes made to LDAP settings will not be synchronized among the agents in the cluster.
-
-Also, a number of issues have been fixed. Up to now, the value entered in *Use fully qualified domain name (FQDN)* would not be saved to the *DataMiner.xml* file, an incorrect default value would be entered in the *User class name* field, and the value entered in the *Password* field would get lost when the LDAP settings were updated without changing the password.
-
 #### DataMiner Cube desktop app: Unused Cube versions will now automatically be removed [ID_35795]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -263,13 +267,7 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
-#### Visual Overview: Enhanced URL handling [ID_36044]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-A number of enhancements have been made with regard to URL handling within Visual Overview.
-
-#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36104]
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 

@@ -14,7 +14,7 @@ The general DataMiner release notes contain all new features, enhancements, and 
 
 > [!TIP]
 >
-> - For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](https://community.dataminer.services/dataminer-main-release-vs-feature-release/).
+> - For more information on the different release tracks, see [DataMiner Main Release vs. Feature Release](xref:DataMiner_MR_vs_FR).
 > - For detailed information on how to upgrade your DataMiner System, see [Upgrading your DataMiner system](xref:Upgrading_a_DataMiner_Agent).
 
 > [!NOTE]

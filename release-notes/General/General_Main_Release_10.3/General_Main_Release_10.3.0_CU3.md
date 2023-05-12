@@ -2,15 +2,21 @@
 uid: General_Main_Release_10.3.0_CU3
 ---
 
-# General Main Release 10.3.0 CU3 – Preview
+# General Main Release 10.3.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
+
+During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
 #### DataMiner Object Models: Enhanced performance when reading DOM objects and ModuleSettings [ID_35934]
 
@@ -55,6 +61,29 @@ This error will also be added to the *SLWatchDog2.txt* log file.
 > - This run-time error will appear when a custom booking event script that was configured to run synchronously has been running for more than 15 minutes. We highly recommend configuring custom booking events to run asynchronously. For more information, see [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
 > - Half-open run-time errors (which are thrown after an SRM event has been stuck for more than 7.5 minutes) will also be added to the *SLWatchDog2.txt* log file.
 
+#### DataMiner upgrades and downgrades can now be performed over gRPC [ID_36023]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+DataMiner upgrades and downgrades can now be performed over gRPC.
+
+To make gRPC the default communication method, do the following on every DataMiner Agent in the cluster:
+
+- To make gRPC the default communication method for **client-server communication**, modify [ConnectionSettings.txt](xref:ConnectionSettings_txt).
+
+- To make gRPC the default communication method for **server-server communication**, do one of the following:
+
+  - Disable *.NET Remoting* in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) by adding `<EnableDotNetRemoting>false</EnableDotNetRemoting>` to the `<SLNet>` section.
+  
+  OR
+  
+  - Add explicit `<Redirect>` tags in [DMS.xml](xref:DMS_xml).
+
+> [!NOTE]
+>
+> - *.NET Remoting* remains the default communication method for both client-server and server-server communication.
+> - Certain connectors and Automation scripts still rely on having the *.NET Remoting* port 8004 open.
+
 #### SLAnalytics: Trend data predictions displayed in trend graphs will be more accurate [ID_36038]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
@@ -67,7 +96,52 @@ Because of a number of enhancements with regard to the detection of periodic beh
 
 The verification of trend predictions has been enhanced.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced detection of behavioral changes after a gap in the trend data [ID_36186]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+A number of enhancements have been made with regard to the automatic detection of behavioral changes in trend data of trended parameters.
+
+Up to now, in some cases, level shifts and trend changes would remain unlabeled when they occurred immediately after a gap in the trend data.
+
+#### ConnectionSettings.txt: type=RemotingConnection now obsolete [ID_36196]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *ConnectionSettings.txt* file, the **type=** setting defines the default connection method to be used by DataMiner client applications.
+
+One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
+
+#### Element replication is now able to use gRPC [ID_36262]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Element replication will now automatically detect the connection settings of the target DMA and will use gRPC when the connection type is set to "GPRCConnection".
+
+#### Failover on RTE now also supports DMAs that communicate using gRPC [ID_36267]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *MaintenanceSettings.xml* file, SLWatchDog can be configured to trigger a Failover switch when it detects a run-time error in a critical process on the active Agent of a Failover pair. From now on, this *Failover on RTE* feature will also support Agents that communicate using gRPC.
+
+#### SLNetClientTest tool now supports gRPC when it needs to establish additional connections [ID_36279]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+The *SLNetClientTest* tool now supports gRPC when it needs to establish additional connections to remote DataMiner Agents.
+
+> [!WARNING]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
+
+#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
+
+At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
+
+From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
 
@@ -179,3 +253,23 @@ Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 When you restored a DataMiner backup that included low-code apps, those apps would incorrectly not be restored.
+
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
+
+#### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
+
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+
+For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

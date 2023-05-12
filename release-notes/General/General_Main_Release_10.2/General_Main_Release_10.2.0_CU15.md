@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU15
 ---
 
-# General Main Release 10.2.0 CU15 – Preview
+# General Main Release 10.2.0 CU15
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -192,8 +192,40 @@ From now on, a popup panel showing a PDF preview will take the full screen heigh
 
 In the *Create dashboard* window, pressing an arrow key while one of the text boxes had the focus would incorrectly cause the *OK* or *Cancel* button to become selected.
 
+#### Problem when multiple clients had subscribed to a cell of a partial table [ID_36148]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When multiple clients had subscribed to a cell of a partial table, in some cases, deleting the row or renaming the row via a display key would not trigger a deletion of the cell in the subscription.
+
 #### GQI: Web services API would not be able to correctly translate a server query to a web query [ID_36173]
 
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
 
 In some cases, the web services API would not be able to correctly translate a server query to a web query.
+
+#### Visual Overview - DataMiner Connectivity Framework: Active path would incorrectly not be highlighted [ID_36204]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When a visual overview had been configured to highlight the active path, in some rare cases, the active path would incorrectly not be highlighted.
+
+#### DataMiner Cube - Visual Overview: Problem when using placeholders in shape data fields of type 'ChildrenFilter' [ID_36227]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, using placeholders in shape data fields of type *ChildrenFilter* could, in some cases, cause incorrect filtering behavior. From now on, when placeholders are used in shape data fields of type *ChildrenFilter*, filtering will be applied correctly.
+
+#### DataMiner Cube - Alarm Console: First underscore would incorrectly be omitted from element, service and view names in 'Open' submenu [ID_36266]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When you right-click an alarm and hover over *Open*, the submenu that appears will list the names of the elements, the services and the views associated with that alarm. Up to now, when those names contained underscores, the first underscore would incorrectly be omitted.
+
+#### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, before a QAction was compiled, three compiler directives were added to its source code. As a result, all compilation errors would refer to incorrect line numbers.
+
+From now on, the compiler directives will no longer be added to the source code. Instead, they will be passed to the compiler directly.
