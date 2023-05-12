@@ -40,6 +40,9 @@ To create a new CCAP/CM pair:
 
    1. Define the Username and password with an account that can access the **FE DMA**.
 
+   1. Click *Create*.
+
+
 The elements will be created with the following specifications:
 
 - **CCAP:**
