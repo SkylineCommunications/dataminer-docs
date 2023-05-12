@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_CU3
 ---
 
-# DataMiner Cube Main Release 10.3.0 CU3 – Preview
+# DataMiner Cube Main Release 10.3.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU3](xref:General_Main_Release_10.3.0_CU3).
