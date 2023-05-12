@@ -50,7 +50,7 @@ Because its foundation is mutual commitment, the Evolve plan is not sold as a se
 |---|:-:|:-:|:-:|
 | Community | Included | Included | - |
 | Continuity | - | MUA >= 200 credits | Active Support Services agreement |
-| Evolve | - | MUA >= 200 credits <br>  **50,000 DevOps Credits** | Active Support Services agreement <br> **50,000 DevOps Credits**  |
+| Evolve | - | MUA >= 200 credits <br>  **50,000 DevOps Points** | Active Support Services agreement <br> **50,000 DevOps Points**  |
 
 ## Professional Service Credits
 

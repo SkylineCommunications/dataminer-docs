@@ -203,7 +203,7 @@ From now on, when you zoom in or out, the data of the previous zoom level will s
 
 #### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
 
 During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
 
@@ -251,17 +251,11 @@ From now on, anomaly detection will no longer be available for discrete paramete
 
 Because of a number of enhancements, overall memory usage of the SLAutomation process has improved.
 
-#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
-
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
 At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 

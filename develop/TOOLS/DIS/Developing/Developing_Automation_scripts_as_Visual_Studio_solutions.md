@@ -4,14 +4,26 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 
 # Developing Automation scripts as Visual Studio solutions
 
-As from DISv2.31, similar to DataMiner protocols, it is also possible to develop Automation scripts as Visual Studio solutions.
+As from DIS v2.31, similar to DataMiner protocols, it is also possible to develop Automation scripts as Visual Studio solutions.
 
 - An Automation script solution can contain multiple scripts, while a protocol solution can only contain one single protocol.
+
 - C# projects that contain the code for the Exe blocks of an Automation script can contain multiple .cs files. At compilation, the contents of those files will be combined into one Exe block.
+
 - DLL imports need to be configured on the C# project itself by adding references to the external components. These can be external DLL files (located in C:\\DataMiner\\ProtocolScripts or C:\\DataMiner\\Files) or other scripts in the same solution.
 
     > [!NOTE]
     > If you want an external DLL file to be placed in a specific folder instead of C:\\DataMiner\\ProtocolScripts, then specify the full path to that folder in the *DataMiner DLL Path* property of that DLL file.
+
+- ​Up to DIS v2.40, it was only possible to refer to a library script Exe from within the same Automation script. As from DIS v 2.41, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
+
+  See the following example, in which `{SCRIPTNAME}` is the name of the other script containing the library and `{LIBRARYNAME}` is the name of the library:
+
+  ```xml
+  <Param type="scriptRef">{SCRIPTNAME}:{LIBRARYNAME}</Param>
+  ```
+
+  As DIS will automatically add a `scriptRef`, developers will only need to add a reference to the project that represents the library.
 
 > [!TIP]
 > For a video course on creating Visual Studio Automation script solutions, see [DataMiner Automation](https://community.dataminer.services/courses/dataminer-automation/) on DataMiner Dojo.

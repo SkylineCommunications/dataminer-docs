@@ -10,15 +10,11 @@ On the *Packages* tab of the SLC SE Repo Manager, you can create a new repositor
 
 ![](~/develop/images/TOOProtocolDevelopmentWithCICD00071.jpg)
 
-
-
 When you click the new package button on the right, a new window will pop up:
 
 ![](~/develop/images/InstallPackage2.png)
 
-
-
-If you select the *Selection Mode* checkbox, you will enter selection mode. In this mode, you can select items to be included in the package from the other tabs in the repo manager (by double-clicking on an item in the tree view).
+If you select the *Selection Mode* checkbox, you will enter selection mode. In this mode, you can select items to include in the package from the other tabs in the repo manager (by double-clicking on an item in the tree view).
 
 Once the desired items have been selected, click the *Create* button to create the new repository.
 

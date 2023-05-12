@@ -118,6 +118,9 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 
 - UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is the case by default from DataMiner 9.6.11 onwards. However, if a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled until it is manually disabled. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
 
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
+
 The **Remote Administration** rule must be enabled when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
 
 **ICMP** is only required when Failover heartbeats are active or the *pingCount* attribute in the *DMS* tag in *DMS.xml* is set to a value greater than 0. For more information, see [Attributes of the DMS tag](xref:DMS_xml#attributes-of-the-dms-tag). Allowing ICMP is also useful to debug connectivity issues.

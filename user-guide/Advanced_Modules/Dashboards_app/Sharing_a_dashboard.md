@@ -37,12 +37,21 @@ uid: Sharing_a_dashboard
 1. Click *Share*. An email will be sent to the person you are sharing the dashboard with, to inform them that they now have access to the dashboard.
 
 > [!NOTE]
->
-> - You can stop sharing a dashboard by clicking the ... button again and selecting *Manage share*. This will open a pop-up box where you can delete the share or update the message.
-> - At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries using feeds, and visualizations based on query feeds (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
+> At present, sharing dashboards that use the following components is not supported: spectrum components, Maps, SRM components (service definition and resource usage line graph), pivot tables, queries using feeds, and visualizations based on query feeds (e.g. node edge graph, table). For dashboards with queries that have the *Update data* setting enabled, sharing is supported from DataMiner 10.2.0 [CU4]/10.2.6 onwards. If you attempt to share a dashboard with content that is not supported for sharing, a message will be displayed with more information.
 
 > [!TIP]
 > See also: [Cloud connectivity and security](xref:Cloud_connectivity_and_security)
+
+## Stopping a dashboard share
+
+1. In the list of dashboards on the left, select the dashboard you want to stop sharing.
+
+1. Click the *Shared* button in the dashboard header (available from DataMiner 10.3.5/10.4.0 onwards), or click the ... button in the top-right corner of the dashboard, and select *Manage share*.
+
+   This will open a pop-up box where you can delete the share.
+
+> [!NOTE]
+> If you only want to update the message for the dashboard share, you can also do this via the *Shared* button or the *Manage share* option.
 
 ## Sharing a dashboard URL
 

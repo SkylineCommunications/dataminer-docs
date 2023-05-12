@@ -24,7 +24,7 @@ The following settings are available:
 
 > [!NOTE]
 >
-> - The indexing configuration is saved in the file *Indexing.xml* in the folder *C:\\Skyline DataMiner*.
+> - The indexing configuration is saved in the file *Indexing.xml* in the folder *C:\\Skyline DataMiner\\Database*.
 > - To include booking data from the Elasticsearch database in a custom backup, select *Include SRM in backup* in the content tab of the *Backup* page. See [Configuring the DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups).
 > - Resources are not automatically migrated to Elasticsearch as well. For more information on how to migrate these, see [Resource migration to Elasticsearch](xref:Resources_migration_to_elastic).
 
