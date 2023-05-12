@@ -149,7 +149,7 @@ uiBuilder.AppendBlock(checkBoxList);
 
 ## DownloadButton
 
-Allows you to define a download button.
+Allows you to define a download button. Available from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 35869 -->
 
 Example:
 
