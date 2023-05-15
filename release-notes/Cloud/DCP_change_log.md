@@ -6,6 +6,22 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 15 May 2023 - Fix - CloudGateway 2.10.11 - Reconnect in case of a canceled connection [ID_36402]
+
+In some rare cases, it could occur that when DataMiner CloudGateway encountered a canceled connection to the cloud, it did not renew the connection automatically unless the DxM was restarted manually. This issue has been resolved.
+
+#### 15 May 2023 - Enhancement - SupportAssistant 1.3.3 - Connection improvements [ID_36419]
+
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
+
+#### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - Connection improvements [ID_36403]
+
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
+
+#### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID_36398]
+
+When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
+
 #### 5 May 2023 - Fix - CloudGateway 2.10.10 - Null reference exception breaking the cloud connection [ID_36346]
 
 An issue was introduced in CloudGateway 2.10.8 that could cause the cloud connection to break. This issue has now been resolved. When the issue occurred, the CloudGateway log file periodically contained the following exception:

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU3
 ---
 
-# General Main Release 10.3.0 CU3 – Preview
+# General Main Release 10.3.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -262,6 +262,14 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 
 #### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
 When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
+
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+
+For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

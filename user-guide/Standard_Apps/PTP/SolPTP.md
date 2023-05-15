@@ -19,4 +19,4 @@ This section contains the following information on the DataMiner PTP app:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/dataminer-ptp-app/>
+> [DataMiner PTP app](https://community.dataminer.services/video/dataminer-ptp-app/) ![Video](~/user-guide/images/video_Duo.png)

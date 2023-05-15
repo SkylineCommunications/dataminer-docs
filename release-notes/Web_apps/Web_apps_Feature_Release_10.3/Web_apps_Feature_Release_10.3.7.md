@@ -57,6 +57,21 @@ bool WasOnDownloadStarted(string key)
 > - Modern browsers block downloads from a `file:///` URL to an HTTP(s) address. In other words, they don't allow you to download a file located on a network share. As a workaround, you can copy the file from the network share to *Documents* (or any other HTTP-reachable location), and then let the client download it from that URL.
 > - The current IIS configuration does not allow all file types to be downloaded.
 
+#### Dashboards app & Low-Code Apps - Column & bar chart / Pie & donut chart: Automatically select columns based on type [ID_36229]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you add a query to a *Column & bar chart* component or a *Pie & donut chart* component, the label, segment size and bars will now automatically be configured.
+
+To do so, the system will proceed as follows:
+
+1. Search for a column that contains label values (i.e. a column with heading "label", "name", etc.).
+1. Search for a column that contains segment size or bar size values (i.e. a column with heading "amount", "value", "quantity", etc.).
+1. If nothing could be found in steps 1 and 2, take the first string value as label and the first numeric value as segment size or bar size value.
+
+> [!NOTE]
+> Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
+
 ## Other features
 
 *No other features yet*
@@ -88,6 +103,18 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
+
+#### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when you clicked the trending icon of a parameter, the parameter edit pane would expand, showing additional information about that parameter. From now on, when you click the trending icon of a parameter, the trending page will open instead.
+
+#### Dashboards app & Low-Code Apps - Table component: Selected rows will again be selected after refetching the data [ID_36372]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
 ### Fixes
 
@@ -123,7 +150,7 @@ In some cases, table actions would be executed before the rows were fed. As a re
 
 #### Low-Code Apps: Custom icon of a low-code app without a draft version would not be displayed on the DataMiner landing page [ID_36277]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a low-code app with a custom icon did not have a draft version, the DataMiner landing page would incorrectly not display the icon of that app.
 
@@ -144,6 +171,12 @@ When a query was updated, the query filter component would incorrectly only get 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
 
 #### Dashboards app & Low-Code Apps - Line & area chart: Legend would incorrectly show the primary key of a parameter [ID_36381]
 

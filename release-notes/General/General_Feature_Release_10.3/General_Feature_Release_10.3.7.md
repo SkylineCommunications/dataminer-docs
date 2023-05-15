@@ -64,16 +64,13 @@ In Failover setups using virtual IP addresses, once every minute the CheckVIPs t
 
 This obsolete thread has now been removed.
 
-#### DataMiner Cloud Packs have been restructured [ID_36335]
+#### Service & Resource Management: Enhanced logic to determine which function DVEs to deactivate [ID_36299]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
-Two different DataMiner Cloud Packs are now available.
+Up to now, when the function manager needed to deactivate function DVEs because the threshold was reached, it could do so for resources that were needed for bookings being started of which the status was not yet "ongoing".
 
-| Cloud Pack  | Included modules | Description |
-|-------------|------------------|-------------|
-| Full pack | CloudGateway<br>CloudFeed<br>ArtifactDeployer<br>CoreGateway<br>FieldControl<br>Orchestrator<br>SupportAssistant | Pack to be installed on a DataMiner Agent that will connect to dataminer.services directly |
-| Proxy/DMZ pack | CloudGateway<br>CloudFeed<br>Orchestrator | Pack to be installed on a proxy server or a DMZ server via which a DataMiner Agent will connect to dataminer.services |
+From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
 
 ### Fixes
 
@@ -84,6 +81,12 @@ Two different DataMiner Cloud Packs are now available.
 When updating an ongoing main booking that made use of a contributing resource of which the contributing booking had already ended, the ResourceManager would incorrectly mark the contributing resource as unavailable. As a result, the update would fail and the main booking would go into quarantine with reason "ContributingResourceNotAvailable".
 
 Also, a *GetEligibleResources* call would not return the contributing resource.
+
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading service profile instances.
 
 #### Business Intelligence: Secondary index of certain SLA logger tables would not be created correctly [ID_36245]
 

@@ -29,7 +29,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
 | Multiple protocols | 8222/tcp | NATS Monitoring (relevant from DataMiner 10.1.1 onwards) |
 | NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
-| HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner CloudGateway 2.10.0 onwards)
+| HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner 10.3.6/10.4.0/CloudGateway 2.10.0 onwards)
 | Telnet | 23/tcp   | Stream (by default disabled from DataMiner 9.6.5 onwards) |
 
 > [!NOTE]

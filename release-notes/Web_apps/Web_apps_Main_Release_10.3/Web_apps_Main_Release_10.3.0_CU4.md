@@ -58,7 +58,7 @@ In some cases, table actions would be executed before the rows were fed. As a re
 
 #### Low-Code Apps: Custom icon of a low-code app without a draft version would not be displayed on the DataMiner landing page [ID_36277]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a low-code app with a custom icon did not have a draft version, the DataMiner landing page would incorrectly not display the icon of that app.
 
@@ -79,6 +79,12 @@ When a query was updated, the query filter component would incorrectly only get 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
 
 #### Dashboards app & Low-Code Apps - Line & area chart: Legend would incorrectly show the primary key of a parameter [ID_36381]
 

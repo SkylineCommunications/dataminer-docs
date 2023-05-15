@@ -50,7 +50,7 @@ Once this has been configured, if users try to log in to the DMA using external 
 > If there are two DataMiner users who share the same email address, both users will not be able to log in. To prevent this from happening, we recommended not using more than one method to add users. For example, do not add Windows domain users if the Azure AD users use the same email address.
 
 > [!TIP]
-> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library
+> See also: [Authenticating Azure AD Users on DataMiner with SAML](https://community.dataminer.services/video/authenticating-azure-ad-users-on-dataminer-with-saml/) in the Dojo video library ![Video](~/user-guide/images/video_Duo.png)
 
 ## Creating a DataMiner metadata file
 
