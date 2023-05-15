@@ -7,8 +7,8 @@ uid: Upgrading_a_DataMiner_Agent
 > [!TIP]
 > For more information on DataMiner upgrades, check out the following videos on Dojo:
 >
-> - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/)
-> - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/)
+> - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Before you upgrade
 

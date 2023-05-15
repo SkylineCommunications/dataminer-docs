@@ -18,4 +18,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/visio-creating-compelling-visio-files/>
+> [Visio – Creating compelling Visio files](https://community.dataminer.services/video/visio-creating-compelling-visio-files/) ![Video](~/user-guide/images/video_Duo.png)

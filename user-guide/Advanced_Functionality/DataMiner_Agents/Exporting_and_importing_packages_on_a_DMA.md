@@ -20,4 +20,4 @@ This section consists of the following topics:
 > - External DLLs are not included in .dmimport packages. If you export and import an element that uses an external DLL, this external DLL will still need to be added to the DMA where you import the element, either manually, or by means of a separate install package.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – DELT](https://community.dataminer.services/video/ruis-rapid-recap-delt/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – DELT](https://community.dataminer.services/video/ruis-rapid-recap-delt/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

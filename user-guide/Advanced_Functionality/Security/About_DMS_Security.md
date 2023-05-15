@@ -18,5 +18,5 @@ The following topics provide more information on DataMiner Security:
 > [!TIP]
 > See also:
 >
-> - [Security – Introduction to DataMiner Security](https://community.dataminer.services/video/security-introduction-to-dataminer-security/) on DataMiner Dojo
+> - [Security – Introduction to DataMiner Security](https://community.dataminer.services/video/security-introduction-to-dataminer-security/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [Securing the DataMiner databases](xref:Database_security)

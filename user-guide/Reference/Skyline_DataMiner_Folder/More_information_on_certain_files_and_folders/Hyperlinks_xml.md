@@ -11,7 +11,7 @@ DataMiner administrators will often create custom commands that open a web page,
 > [!TIP]
 > See also:
 >
-> - [Alarm Console – Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo
+> - [Alarm Console – Extending the right-click menu](https://community.dataminer.services/video/alarm-console-extending-the-right-click-menu/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 > - [Adding a custom command to the Alarm Console shortcut menu](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu)
 
 ## File syntax
