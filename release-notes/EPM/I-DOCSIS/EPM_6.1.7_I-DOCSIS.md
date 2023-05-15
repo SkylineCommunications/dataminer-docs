@@ -44,11 +44,23 @@ string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO",
             };
 ```
 
+#### CPU Utilization, Memory Utilization, and Uptime parameters added to CCAP data pages [ID_35886]
+
+On the CCAP data pages, the CPU Utilization, Memory Utilization, and Uptime parameters have been added. Previously, these parameters were available on the visual pages, but they were missing on the data pages.
+
+#### Generic DOCSIS CM Collector connector performance improved [ID_35887]
+
+To improve performance, the logic used by the Generic DOCSIS CM Collector connector has been adjusted. This will prevent possible spikes in CPU usage.
+
 #### New trigger in Skyline EPM Platform visual overview improves DataMiner Maps loading time [ID_35952]
 
 A new trigger has been added to the *_epmBE* card variable in the *Skyline EPM Platform* visual overview. It sets the variable to the DMA ID/element ID of the back-end element based on the CCAP name.
 
 With this new trigger, it is no longer necessary to create a card variable for each back-end element in the system and different triggers for each of those card variables. This improves the DataMiner Maps loading time.
+
+#### CCAPs adjusted to ingest cable modems with ASCII IP addresses [ID_35977]
+
+The CCAP connectors have been adjusted so that they will now ingest cable modems with ASCII IP addresses. Previously, such cable modems were ignored and assigned an N/A value.
 
 #### Filter box loading time improved by enabling partial table option [ID_36055]
 
@@ -60,6 +72,27 @@ To improve the loading time of the filter box that is displayed when you use the
 - US and DS Linecard
 - Node Segment
 - Node, Tap, and Amplifier
+
+#### RTDisplay set to false for columns used for aggregating/debugging [ID_36112]
+
+To improve performance and reduce the load on SLElement, RTDisplay has now been set to false for all columns that are used for aggregating and debugging purposes.
+
+#### Elements in EPM Solution now use inter-app calls [ID_36326]
+
+Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by Automation scripts and Correlation rules.
+
+The following changes have been done to the Skyline EPM Platform DOCSIS connector (back end):
+
+- The connector no longer uses calls to information events to pass information.
+- Inter-app calls are now aggregated to send information to the WM.
+- Information from the WM is now processed through inter-app communication.
+
+The following changes have been done to the Skyline EPM Platform DOCSIS WM connector:
+
+- The connector no longer uses calls to information events to pass information.
+- Parameters that are used to capture information events are no longer used.
+- Inter-app calls are now aggregated to send information to the back end.
+- Information from the back end is now processed through inter-app communication.
 
 ### Fixes
 
@@ -108,6 +141,14 @@ In addition, the passive tables are now only filled in when the CCAP/collector p
 
 When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
 
+#### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
+
+Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
+
+#### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
+
+In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".
+
 #### Too many cable modems report to have other DOCSIS version [ID_36317]
 
 A problem with the aggregating actions used to count the number of CMS with other DOCSIS versions could cause some CCAPs to incorrectly report a high number of cable modems with other DOCSIS versions.
@@ -121,3 +162,7 @@ To resolve this, a number of changes were implemented to the Generic CM Collecto
 In the Skyline EPM Platform and Skyline EPM Platform DOCSIS connectors, exception values were also added to several columns of the cable modem overview table.
 
 In addition, for the Skyline EPM Platform DOCSIS connector, the *SetEmptyColumns* method will now set exception values for the latitude and longitude parameters.
+
+#### Group Delay or Reflection Status incorrectly calculated based on NMTTER threshold [ID_36344]
+
+Up to now, the Group Delay or Reflection Status parameter was not calculated correctly, because it was calculated based on the NMTTER threshold. To address this issue, new logic has been implemented: If either the Group Delay Status or the Reflection Status is marked as out of specification (OOS), the Group Delay or Reflection Status parameter will also be marked as out of specification (OOS). If both the Group Delay Status and the Reflection Status are marked as OK, the parameter will be marked as OK.

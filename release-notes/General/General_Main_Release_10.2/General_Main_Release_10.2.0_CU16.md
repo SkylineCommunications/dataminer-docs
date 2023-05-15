@@ -100,3 +100,15 @@ In the Surveyor of the Monitoring app, items of which the name contained a numbe
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
+
+#### DataMiner Cube - Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
+
+#### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.

@@ -2,10 +2,10 @@
 uid: Web_apps_Feature_Release_10.3.6
 ---
 
-# DataMiner web apps Feature Release 10.3.6 – Preview
+# DataMiner web apps Feature Release 10.3.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.6](xref:General_Feature_Release_10.3.6).
@@ -288,3 +288,9 @@ When you viewed a shared dashboard that contained a *State* component, in some c
 <!-- MR 10.3.0 [CU4] - FR 10.3.6 -->
 
 In some cases, action buttons could have an incorrect background color.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
