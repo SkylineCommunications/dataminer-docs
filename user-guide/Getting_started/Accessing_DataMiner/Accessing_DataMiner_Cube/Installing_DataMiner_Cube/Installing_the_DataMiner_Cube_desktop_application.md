@@ -30,12 +30,7 @@ There are several ways to install the DataMiner Cube desktop application, depend
      > [!NOTE]
      >
      > - Once the desktop app has been installed, it will be updated automatically when you connect to other DataMiner versions.
-     > - To install the app, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
-     > - To be able to run the app, you need Execute access for the files *DataMinerCube.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\` and *CefSharp.BrowserSubprocess.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\`.
-     > - To create a desktop shortcut, you need Modify access to the folder `%UserProfile%\Desktop`.
-     > - To create a start menu shortcut, you need Modify access to the folder `%AppData%\Microsoft\Windows\Start Menu\Programs`.
-     > - The *Start with Windows* feature requires write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`.
-     > - The eventing communication mode will only be available if the firewall allows the application `*%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe` to accept incoming connections.
+     > - Once the desktop app has been installed, a desktop and start menu shortcut will be added to your machine.
 
    - From DataMiner 10.2.0/10.2.2 onwards, it is also possible to install DataMiner Cube using an **MSI installer**, but this is **not recommended as this requires manual updating** when a new version is available. Typically, this is only used by a system administrator to deploy DataMiner Cube in bulk on many client machines at the same time using some form of automation. The MSI installer can be found in the folder `C:\Skyline DataMiner\Webpages\Tools\Installs` on each DMA.
 
@@ -71,3 +66,8 @@ Alternatively, you can go to `http://[DMA name]/DataminerCubeStandalone/publish.
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
 
 ***
+
+<div>&nbsp;</div>
+
+> [!IMPORTANT]
+> During the installation of Cube, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
