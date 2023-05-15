@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 15 May 2023 - Fix - CloudGateway 2.10.11 - Connection improvements [ID_36402]
+
+In an edge case it could occur that the DataMiner CloudGateway got stuck with a cancelled connection to the cloud without renewing it automatically unless the DxM was restarted manually. This issue has been resolved.
+
 #### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - Connection improvements [ID_36403]
 
 A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
