@@ -1127,12 +1127,7 @@
             - name: Configuring the general database settings
               topicUid: Configuring_the_database_settings_in_Cube
             - name: Migrating existing systems to dedicated clustered storage
-              topicUid: Migrating_the_general_database_to_Cassandra
-              items:
-                - name: Migrating the SQL general database to dedicated clustered storage
-                  topicUid: Migrating_the_general_database_to_Cassandra
-                - name: Migrating the general database to a DMS Cassandra cluster
-                  topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
+              topicUid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
         - name: Configuring storage per DMA
           topicUid: Configuring_storage_per_DMA
           items:

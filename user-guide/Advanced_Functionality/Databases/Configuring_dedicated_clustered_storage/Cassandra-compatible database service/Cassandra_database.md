@@ -20,5 +20,6 @@ For more information on how to monitor your database, keep your nodes repaired, 
 > See also:
 >
 > - [Securing the Cassandra general database](xref:Security_Cassandra_general)
-> - [Cassandra – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/)
+> - [DMA in a DMS using a Cassandra cluster](xref:Changing_the_IP_of_a_DMA#dma-in-a-dms-using-a-cassandra-cluster)
 > - [Apache Cassandra documentation](https://cassandra.apache.org/doc/latest/)
+> - [Cassandra – tips & tricks](https://community.dataminer.services/video/cassandra-tips-tricks/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

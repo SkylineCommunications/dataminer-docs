@@ -4,34 +4,13 @@ uid: Migrating_the_general_database_to_a_DMS_Cassandra_cluster
 
 # Migrating the general database to a DMS Cassandra cluster
 
-From DataMiner 10.1.0/10.1.2 onwards, you can use a single Cassandra cluster as the general database for the entire DataMiner System, along with an Elasticsearch database. This "Cassandra cluster" setup is the recommended data storage setup for DataMiner, as it allows you to scale the database for the entire DMS at once, unlike setups with a Cassandra cluster per individual DataMiner Agent.
-
-![Cassandra cluster](~/user-guide/images/Recommended-Setup-2.png)
-
-> [!NOTE]
-> For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
-
-> [!TIP]
-> See also:
->
-> - [DMA in a DMS using a Cassandra cluster](xref:Changing_the_IP_of_a_DMA#dma-in-a-dms-using-a-cassandra-cluster)
-> - [General database settings](xref:DB_xml#general-database-settings)
-
-## Limitations
-
-- .dmimport packages created on a DMS using a Cassandra cluster do not contain any database data, and it is not possible to import database data from .dmimport packages into such a DMS.
-
-- If the Cassandra cluster feature is used, alarm and information event information is always migrated to Elasticsearch. It is not possible to use this feature without enabling indexing on alarms.
-
-## Installation and configuration
-
-Regardless of whether your DataMiner System currently uses **SQL databases or Cassandra databases per DMA**, you can use the **Cassandra Cluster Migrator** to switch to a Cassandra cluster setup. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) and use the Cassandra Cluster Migrator instead.
+Regardless of whether your DataMiner System currently uses **SQL databases or Cassandra databases per DMA**, you can use the **Cassandra Cluster Migrator** to switch to a Cassandra cluster setup. In DataMiner versions prior to 10.2.0/10.2.2, a Cassandra to Cassandra Cluster Migrator tool was available; however, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher and use the Cassandra Cluster Migrator instead.
 
 The migration can be done while the DMAs are active; however, a **DataMiner restart** will be required after all data has been migrated.
 
-The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
+The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 [CU8]/10.2.11 or higher to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
-### Prerequisites
+## Prerequisites
 
 - All DMAs must run DataMiner 10.2.0/10.2.2 or higher.
 
@@ -47,7 +26,7 @@ The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on 
 > - The **migration will not clear any existing data from the given Cassandra cluster**. This means that any data that might conflict with the migrated data should first be deleted manually. We recommend that you make sure the target Cassandra cluster is clean before you proceed with the migration. You can use DevCenter to inspect the data in the cluster and any existing keyspaces and/or tables can be dropped.
 > - If there is an **existing Elasticsearch cluster** connected to the DMS, this cluster will be reused and any given input regarding Elasticsearch will be disregarded. In the existing Elasticsearch cluster, alarms will be deleted and migrated again from the DMS. Jobs, ticketing and SRM information will not be migrated, as this is expected to already be present in Elasticsearch. If this is not the case, migrate this data first through DataMiner Cube (see [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)).
 
-### Stages of the migration
+## Stages of the migration
 
 During the migration, each DMA will go through the following stages:
 
@@ -59,9 +38,9 @@ During the migration, each DMA will go through the following stages:
 | Finished migrating | The DMA has finished migrating and is ready for migration finalization, i.e. ready to switch to the Cassandra and Elasticsearch cluster configuration. |
 | Finalized | The DMA has been restarted and switched to the Cassandra and Elasticsearch cluster configuration. |
 
-### Running the migration
+## Running the migration
 
-#### [Running a migration with bespoke Elasticsearch data](#tab/tabid-1)
+### [Running a migration with bespoke Elasticsearch data](#tab/tabid-1)
 
 In case your system contains bespoke Elasticsearch data or SRM data, use the procedure below.
 
@@ -162,7 +141,7 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
 > - If you want to cancel the entire migration process for all DMAs, click *Abort migration*. This will undo all changes made to the DMAs.
 > - When you migrate a DataMiner Failover setup, only the data of the active DMA will be migrated. Once the migration has finished, both DMAs will be restarted.
 
-#### [Running a regular migration](#tab/tabid-2)
+### [Running a regular migration](#tab/tabid-2)
 
 1. On one of the DMAs in your cluster, go to `C:\Skyline DataMiner\Tools\`, and run *SLCCMigrator.exe*.
 
@@ -211,7 +190,7 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
 
 ***
 
-### Troubleshooting
+## Troubleshooting
 
 Any errors that occur during a migration process will be displayed in a pop-up window and stored in a log file.
 
@@ -233,27 +212,3 @@ If you encounter an **issue initializing all the Agents**, check whether the log
 
 > [!CAUTION]
 > Always be very careful when you use the SLNetClientTest tool, as it allows actions that can have far-reaching consequences for a DataMiner System. Always ask for support in case you need to use this tool and something is not clear.
-
-## Cluster health monitoring
-
-If a Cassandra node in the cluster goes down or if a Cassandra node is down when DataMiner starts up, an alarm will be generated in the Alarm Console. This alarm also indicates how much the health of the cluster is affected by the node being down, as this depends on multiple factors, including the cluster size and replication factor.
-
-## Customizing the consistency level of the Cassandra cluster
-
-When the Cassandra cluster feature is used, you can customize the consistency level for the Cassandra queries. You can do so as follows:
-
-1. Shut down the DMA.
-
-1. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
-
-1. In the `<Database>` tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
-
-   The following consistency levels are supported: One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
-
-   > [!NOTE]
-   > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For more information, see [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
-
-1. Restart DataMiner.
-
-> [!CAUTION]
-> Only change this attribute for a Cassandra Cluster setup. If you change it for a standard Cassandra setup with one Cassandra cluster per DMA, this can cause DataMiner to fail to start up.

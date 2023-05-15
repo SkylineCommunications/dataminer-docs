@@ -33,10 +33,25 @@ If a **custom replication factor** is required, you can configure this manually.
 
 The **consistency level** is an setting on query level that helps decide when a query succeeds or fails. It specifies the number of replicas that need to respond before the client considers a response acceptable. More specifically, the consistency level answers the following question: Out of x replicas of the data (depending on the replication factor), how many need to respond for a query to be successful?
 
-DataMiner uses the same consistency level for all its queries to the Cassandra database. If a **custom consistency level** is required, you can configure this in *DB.xml*. For more information, see [Customizing the consistency level of the Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#customizing-the-consistency-level-of-the-cassandra-cluster)
+DataMiner uses the same consistency level for all its queries to the Cassandra database. If a **custom consistency level** is required, you can configure this in *DB.xml*:
 
-> [!IMPORTANT]
-> If you change the consistency level incorrectly, this can increase the chance of Cassandra database queries failing. Therefore, if you have any doubts, please contact Skyline for assistance.
+1. Shut down the DMA.
+
+1. Open the file *DB.xml* from the directory *C:\\Skyline DataMiner* in a text editor.
+
+1. In the `<Database>` tag, add the *consistencyLevel="x"* attribute, and set it to the consistency level you want, e.g. *two*.
+
+   The following consistency levels are supported: One, Two, Three, Quorum, All, LocalQuorum, EachQuorum, Serial, LocalSerial, LocalOne. The default setting is "Quorum".
+
+   > [!NOTE]
+   > Together with the replication factor, the consistency level determines the maximum number of nodes that can be down before data unavailability occurs. For more information, see [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
+
+1. Restart DataMiner.
+
+> [!CAUTION]
+>
+> - Only change this attribute for a Cassandra Cluster setup. If you change it for a standard Cassandra setup with one Cassandra cluster per DMA, this can cause DataMiner to fail to start up.
+> - If you change the consistency level incorrectly, this can increase the chance of Cassandra database queries failing. Therefore, if you have any doubts, please contact Skyline for assistance.
 
 > [!TIP]
 > See also:
