@@ -12,9 +12,9 @@ To create a new CCAP/CM pair:
 
 1. In the lower right corner, click *Execute*.
 
-1. UI steps:
+   This will open a wizard with several steps.
 
-   **General**
+1. In the **General** step:
 
    1. Define the element name.
 
@@ -22,7 +22,7 @@ To create a new CCAP/CM pair:
 
    1. Select one of the back-end DMAs.
 
-   **CCAP Details**
+1. In the **CCAP Details** step:
 
    1. Select the desired CCAP protocol.
 
@@ -32,15 +32,20 @@ To create a new CCAP/CM pair:
 
    1. Define the desired community string.
 
-   **View Details**
+1. In the **View Details** step:
 
    1. Choose the location where the the CCAP/CM pair will be added according to the EPM view structure.
 
-   **Interface Setting**
+1. In the **Interface Setting** step:
 
    1. Define the Username and password with an account that can access the **FE DMA**.
 
-   1. Click *Create*.
+
+1. After checking all the previous steps, click *Create*.
+
+   > [!NOTE]
+   >  The larger the cluster, the longer it will take to create the elements.
+
 
 
 The elements will be created with the following specifications:
