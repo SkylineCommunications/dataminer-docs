@@ -398,9 +398,3 @@ In the query builder, when a *Select* node was not in edit mode, its description
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
-
-#### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
