@@ -68,6 +68,8 @@ Different types of trend prediction can be displayed, each in a different style.
 
 ***
 
+<div>&nbsp;</div>
+
 > [!NOTE]
 >
 > - The different prediction types correspond to the different time resolutions in the trend data logged by DataMiner.
