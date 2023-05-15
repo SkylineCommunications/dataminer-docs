@@ -158,7 +158,7 @@ Two types of hysteresis are available, Clear hysteresis and Alarm hysteresis, re
 > See also:
 >
 > - [Alarm hysteresis](xref:Alarm_hysteresis)
-> - [Alarm templates – Hysteresis](https://community.dataminer.services/video/alarm-templates-hysteresis/) on DataMiner Dojo.
+> - [Alarm templates – Hysteresis](https://community.dataminer.services/video/alarm-templates-hysteresis/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuring an alarm template with dynamic alarm thresholds
 
@@ -226,7 +226,7 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
 > - If normalization is triggered from the protocol, rather than from the template, up to DataMiner 9.5.1, the baseline editor is disabled. From DataMiner 9.5.1 onwards, baseline values are available as a read-only list.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Smart baseline](https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Smart baseline](https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuring an alarm template to generate information messages
 
@@ -293,7 +293,7 @@ When you click in the selection box in the *Condition* column, the following act
   > If there are multiple alarm template entries for the same parameter, each with a different condition, then the first entry of which the condition is false, starting from the top, will be applied.
 
 > [!TIP]
-> See also: [Alarm templates – Conditional monitoring](https://community.dataminer.services/video/alarm-templates-conditional-monitoring/) on DataMiner Dojo.
+> See also: [Alarm templates – Conditional monitoring](https://community.dataminer.services/video/alarm-templates-conditional-monitoring/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuring anomaly detection alarms for specific parameters
 

@@ -26,7 +26,7 @@ Platform services prioritize convenience. Imagine not having to manage your Cass
 > [!TIP]
 > See also:
 >
-> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/)
+> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## DataMiner Node as a Service *(coming soon)*
 

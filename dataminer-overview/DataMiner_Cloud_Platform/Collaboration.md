@@ -54,7 +54,7 @@ User-defined API sharing is primarily focused on **machine-to-machine interactio
 > [!TIP]
 > See also:
 >
-> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/)
+> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## App Share *(coming soon)*
 

@@ -55,7 +55,7 @@ The administrator can see the changes made per user or per device/element, inclu
 >
 > - [Security expert hub](https://community.dataminer.services/expert-hub-ict-security/)
 > - [Security](xref:security) in the DataMiner User Guide
-> - [Experts & Insights - DataMiner Security](https://community.dataminer.services/video/experts-insights-dataminer-security/) (webinar/video)
+> - [Experts & Insights - DataMiner Security](https://community.dataminer.services/video/experts-insights-dataminer-security/) (webinar/video) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Single sign-on
 
