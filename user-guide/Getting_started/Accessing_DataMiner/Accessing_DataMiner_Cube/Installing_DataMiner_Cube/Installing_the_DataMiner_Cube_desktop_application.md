@@ -66,8 +66,3 @@ Alternatively, you can go to `http://[DMA name]/DataminerCubeStandalone/publish.
 > Once you have installed the application, it will automatically be updated whenever a new version is available.
 
 ***
-
-<div>&nbsp;</div>
-
-> [!IMPORTANT]
-> During the installation of Cube, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
