@@ -67,7 +67,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 | Name | Type | Value | Information |
 | --- | --- | --- | --- |
 | Evaluation | string (discreet) | First Matching or All Matching | First Matching will stop when the first rule has a match. <br>All Matching will evaluate all the rules and only trigger if all of the conditions match. |
-| Rules | [Rule](#Rule-Object)[] | [Rule](#rule-object) ||
+| Rules | [Rule](#rule-object)[] | [Rule](#rule-object) ||
 
 #### Rule Object
 | Name | Type | Value | Information |
@@ -76,7 +76,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 | Description | string |  | Description for developers |
 | OutgoingInterfaceIds | int[] | 11, 12, 13, 14, 15 | Is the list of all the output interface this rule has to generate a token for, or in other words which outgoing interfaces need to be triggered when this rule matches. |
 | DoTagTokens | bool | true or false | |
-| Conditions | [RoutingCondition](#rutingcondition-object)[] | [RoutingCondition](#routingcondition-object) ||
+| Conditions | [RoutingCondition](#routingcondition-object)[] | [RoutingCondition](#routingcondition-object) ||
 
 #### RoutingCondition Object
 | Name | Type | Value | Information |
