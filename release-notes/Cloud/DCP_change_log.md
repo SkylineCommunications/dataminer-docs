@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - General improvements [ID_36403]
 
-A retry mechanism has been implemented to fetch the cloud endpoint that is needed since ArtifactDeployer 1.4.5. If eventually still no cloud endpoint can be received the module will fallback and try to access dataminer.services directly. If this is not possible the module will log the failed actions.
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
 
 #### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID_36398]
 
