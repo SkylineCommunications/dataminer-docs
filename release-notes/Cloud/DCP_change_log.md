@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - General improvements [ID_36284]
+
+A retry mechanism has been implemented to fetch the cloud endpoint that is needed since ArtifactDeployer 1.4.5. If eventually still no cloud endpoint can be received the module will fallback and try to access dataminer.services directly. If this is not possible the module will log the failed actions.
+
 #### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID_36398]
 
 When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
