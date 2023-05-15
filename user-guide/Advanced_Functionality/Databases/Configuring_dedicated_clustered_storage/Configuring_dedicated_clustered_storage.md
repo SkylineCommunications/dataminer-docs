@@ -30,6 +30,4 @@ When both of the above have been installed, you can [configure the database sett
 > For more information on this architecture and on other possible data storage architectures, see [Supported data storage architectures](xref:Supported_system_data_storage_architectures).
 
 > [!NOTE]
->
-> - .dmimport packages created on a DMS using clustered storage do not contain any database data, and it is not possible to import database data from .dmimport packages into such a DMS.
-> - If a node in the cluster goes down or if a node is down when DataMiner starts up, an alarm will be generated in the Alarm Console. This alarm also indicates how much the health of the cluster is affected by the node being down, as this depends on multiple factors, including the cluster size and replication factor.
+> .dmimport packages created on a DMS using clustered storage do not contain any database data, and it is not possible to import database data from .dmimport packages into such a DMS.

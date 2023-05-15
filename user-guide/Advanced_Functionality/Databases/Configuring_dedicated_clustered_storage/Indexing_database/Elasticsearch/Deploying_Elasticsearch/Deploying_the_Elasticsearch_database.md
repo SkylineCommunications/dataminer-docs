@@ -4,13 +4,11 @@ uid: Deploying_the_Elasticsearch_database
 
 # Deploying the Elasticsearch database
 
-To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, an Elasticsearch database can be deployed.
+To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, you can deploy an Elasticsearch database.
 
-- [Configuring the Elasticsearch database](xref:Configuring_Elasticsearch_Database)
+In that case, you will need to set up and [configure the Elasticsearch database](xref:Configuring_Elasticsearch_Database) outside of DataMiner. You can also [configure multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-- [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
-
-- [Manually connecting a DMA to an Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
+As an alternative to the Elasticsearch database, from DataMiner 10.3.0/10.3.3 onwards, [OpenSearch](xref:OpenSearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) are also supported.
 
 > [!NOTE]
 > For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).

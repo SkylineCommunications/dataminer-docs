@@ -1190,14 +1190,14 @@
             - name: Configuring an additional database
               topicUid: Configuring_an_additional_database
         - name: Database queries
-          topicUid: Database_queries
+          topicUid: Examples_of_database_queries
           items:
-            - name: Querying an SQL database
-              topicUid: Querying_an_SQL_database
-            - name: Querying an Elasticsearch database
-              topicUid: Querying_an_Elasticsearch_database
             - name: Examples of database queries
               topicUid: Examples_of_database_queries
+            - name: Querying an Elasticsearch database
+              topicUid: Querying_an_Elasticsearch_database
+            - name: Querying an SQL database
+              topicUid: Querying_an_SQL_database
         - name: Specifying TTL overrides
           topicUid: Specifying_TTL_overrides
     - name: Security
