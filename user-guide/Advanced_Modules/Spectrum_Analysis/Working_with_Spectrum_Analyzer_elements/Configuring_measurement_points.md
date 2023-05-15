@@ -16,7 +16,7 @@ The following sections provide more information on how to configure measurement 
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/>
+> [Spectrum Analyzer – About presets and measurement points](https://community.dataminer.services/video/spectrum-analyzer-about-presets-and-measurement-points/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## The measurement point configuration window
 

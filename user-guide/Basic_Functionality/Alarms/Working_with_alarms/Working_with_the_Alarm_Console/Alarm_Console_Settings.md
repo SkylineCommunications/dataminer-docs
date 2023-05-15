@@ -65,14 +65,14 @@ The following settings are available:
   E.g. if you set the delay to 30 seconds, when an alarm enters the Alarm Console, it will only be added to the list 30 seconds later. If in this interval the alarm has already been cleared, it will not be added to the list at all.
 
   > [!TIP]
-  > See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo.
+  > See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 - **Refresh rate**: Select to specify how frequently the selected tab will be refreshed. This rate will be applied from the moment this setting is set.
 
   E.g. if you set the refresh rate to 30 seconds at 11:48:00, the Alarm Console will be updated every 30 seconds with all the alarms that entered during those 30 seconds. The first refresh will take place at 11:48:30, the next at 11:49:00, etc.
 
   > [!TIP]
-  > See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo.
+  > See also: [Alarm Console – Delay & refresh rate of alarms](https://community.dataminer.services/video/alarm-console-delay-refresh-rate-of-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 - **Merge alarm trees**: This setting is only available if *History tracking* is enabled and *Automatically remove cleared alarms* and *Freeze* are disabled in the alarm tab (from DataMiner 9.6.13 onwards). When these settings are used, by default, when an alarm is cleared and then reappears, this results in a separate alarm tree. Activating *Merge alarm trees* combines these alarm trees, which can result in a better overview, e.g. in a sliding window tab. If you activate the option, you can also select an additional option to only merge alarm trees in case the time between the alarm trees is less than a particular time span (between 1 second and 1 day).
 

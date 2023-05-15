@@ -23,8 +23,8 @@ Visual representation of software or system objects, attributes, actions, and re
 > [!TIP]
 > For more information:
 >
-> - [Introduction to Stateful DataMiner Object Models](https://community.dataminer.services/video/introduction-to-stateful-dataminer-object-models-1-3/)
-> - [Model and Create an Object](https://community.dataminer.services/video/model-and-create-an-object-2-3//)
+> - [Introduction to Stateful DataMiner Object Models](https://community.dataminer.services/video/introduction-to-stateful-dataminer-object-models-1-3/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Model and Create an Object](https://community.dataminer.services/video/model-and-create-an-object-2-3//) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [DataMiner Object Models (DOM)](xref:DOM)
 
 ## Planned Maintenance

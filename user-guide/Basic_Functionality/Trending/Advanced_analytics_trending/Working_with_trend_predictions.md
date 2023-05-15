@@ -12,7 +12,7 @@ uid: Working_with_trend_predictions
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.*
 
 > [!TIP]
-> For a how-to video, see [Trending – Trend predictions in DataMiner](https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/) on DataMiner Dojo.
+> For a how-to video, see [Trending – Trend predictions in DataMiner](https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
 
