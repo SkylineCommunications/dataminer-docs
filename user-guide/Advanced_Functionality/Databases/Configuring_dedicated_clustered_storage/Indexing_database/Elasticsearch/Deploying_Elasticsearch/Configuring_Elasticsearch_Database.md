@@ -16,10 +16,4 @@ The most important of these settings can be found on the page [Important Elastic
 
 ## Configuring Elasticsearch cluster nodes
 
-- [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes)
-
-  > [!IMPORTANT]
-  > A correct master node configuration is extremely important since master nodes logically determine which nodes are part of the cluster. This page is therefore a must-read before you set up any Elasticsearch clusters.
-
-- [Adding an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_add)
-- [Removing an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_remove)
+A correct master node configuration is extremely important since **master nodes logically determine which nodes are part of the cluster**. Before you set up an Elasticsearch cluster, first read how to [Configure the master node](xref:Configuring_master_Elasticsearch_nodes). Then you can start [Adding Elasticsearch cluster nodes](xref:Configuring_Elasticsearch_node_add).

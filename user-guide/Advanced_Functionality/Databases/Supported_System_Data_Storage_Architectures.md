@@ -12,7 +12,7 @@ In the images illustrating the setups, the dark-blue line indicates a cluster of
 
 If you would like to use a setup that is not described below, please contact [Skyline tech support](mailto:techsupport@skyline.be).
 
-## Cassandra Cluster or equivalent managed service combined with Elasticsearch, OpenSearch, or Amazon OpenSearch Service
+## Dedicated clustered storage
 
 The **recommended** DataMiner setup can be either on premises or in the cloud, or a mix of both. You will need:
 

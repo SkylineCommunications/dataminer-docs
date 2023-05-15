@@ -4,9 +4,7 @@ uid: Deploying_the_Elasticsearch_database
 
 # Deploying the Elasticsearch database
 
-From DataMiner 9.6.4 onwards, an Elasticsearch database can be deployed to complete the configuration of a dedicated clustered storage, which consists of both a Cassandra-compatible database service and an indexing database or Search Cluster.
-
-The following procedures are described in this section:
+To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, an Elasticsearch database can be deployed.
 
 - [Configuring the Elasticsearch database](xref:Configuring_Elasticsearch_Database)
 

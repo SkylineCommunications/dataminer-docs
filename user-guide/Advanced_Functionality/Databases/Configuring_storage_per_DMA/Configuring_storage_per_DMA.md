@@ -6,23 +6,21 @@ uid: Configuring_storage_per_DMA
 
 ## Cassandra database per DMA
 
-- [Migrating a legacy setup to Cassandra](xref:Migrating_the_general_database_to_Cassandra)
+By default, when you install a new DataMiner System, a Cassandra database per DMA is configured. If you have an existing legacy DataMiner System with SQL database, [migrating to Cassandra](xref:Migrating_the_general_database_to_Cassandra) will give you access to additional DataMiner features (depending on your DataMiner version), including:
 
-- [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_per_DMA_in_Cube)
+- Advanced Analytics features such as alarm focus, behavioral anomaly detection, proactive cap detection, automatic incident tracking, and pattern matching
+- Trend predictions
+- DataMiner Service & Resource Management
+- The Generic Query Interface in DataMiner Dashboards
+- Alarm Console enhancements: heatline columns, reports view
+- Heatmap reports (in the legacy Reporter app)
 
-- [Maintaining a Cassandra database per DMA](xref:Configuring_Cassandra_Backups)
+> [!NOTE]
+> For many of the above-mentioned features, an [indexing database](xref:Configuring_Dedicated_Indexing_Database) is required as well.
 
 ## MySQL database
 
-On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. For the currently supported DataMiner versions, a Cassandra database is preferred instead. Though DataMiner can still be used with a MySQL or MSSQL database, switching to Cassandra is highly recommended as it leads to enhanced performance, and certain DataMiner features are only available if a Cassandra database is used.
-
-- [Activating one file per table for an existing MySQL database](xref:Activating_one_file_per_table_for_an_existing_MySQL_database)
-
-- [Deleting element data from a MySQL database](xref:Deleting_element_data_from_a_MySQL_database)
-
-- [Moving MySQL data to another location](xref:Moving_MySQL_data_to_another_location)
-
-- [Configuring a MySQL database on your DMA](xref:Configuring_MySQL_database_in_Cube)
+On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. For the currently supported DataMiner versions, a Cassandra database is preferred instead. Though DataMiner can still be used with a MySQL or MSSQL database, [switching to Cassandra](xref:Migrating_the_general_database_to_Cassandra) is highly recommended as it leads to enhanced performance, and certain DataMiner features are only available if a Cassandra database is used.
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.

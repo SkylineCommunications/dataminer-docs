@@ -4,15 +4,15 @@ uid: Configuring_Dedicated_Indexing_Database
 
 # Configuring a dedicated indexing database
 
-From DataMiner 9.6.4 onwards, on DataMiner Agents with a Cassandra database, it is possible to install a dedicated Elasticsearch indexing database, which is used to store specific data that can for instance be used in the Jobs app and the new Dashboards app.
+If your DataMiner System uses a Cassandra database per DataMiner Agent, you can also install a dedicated Elasticsearch indexing database in order to get access to additional DataMiner features, including:
 
-Certain features introduced from that version of DataMiner onwards, such as the Jobs app, can only be used in DataMiner Systems with Elasticsearch database.
+- DataMiner Advanced Analytics features such as pattern matching
+- The Generic Query Interface in DataMiner Dashboards
+- DataMiner Object Models (DOM)
+- DataMiner Service & Resource Management
+- DataMiner User-Defined APIs
 
-- [Deploying the dedicated Elasticsearch indexing database](xref:Installing_Elasticsearch_via_DataMiner)
-
-- [Configuring indexing settings](xref:Configuring_DataMiner_Indexing)
-
-- [Maintaining an indexing database](xref:Configuring_Elasticsearch_backups)
+You can [deploy the Elasticsearch indexing database](xref:Installing_Elasticsearch_via_DataMiner) via DataMiner Cube. When the database has been deployed, you can also [configure the indexing settings](xref:Configuring_DataMiner_Indexing) in DataMiner Cube.
 
 > [!NOTE]
 > For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).

@@ -4,7 +4,9 @@ uid: Amazon_OpenSearch_Service
 
 # Amazon OpenSearch Service
 
-From DataMiner 10.3.0/10.3.3 onwards, it is possible to use Amazon OpenSearch Service on AWS as an alternative to an on-premises hosted Elasticsearch/OpenSearch cluster.
+To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, you can use Amazon OpenSearch Service on AWS.
+
+This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!NOTE]
 > Although the service is named after OpenSearch, it offers both OpenSearch and Elasticsearch clusters.

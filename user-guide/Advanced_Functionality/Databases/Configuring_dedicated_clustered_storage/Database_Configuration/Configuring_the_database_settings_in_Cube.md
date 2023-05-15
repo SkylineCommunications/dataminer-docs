@@ -4,15 +4,18 @@ uid: Configuring_the_database_settings_in_Cube
 
 # Configuring the general database settings
 
-The general database is the main database used by a DataMiner Agent to store its data. By default, this is a Cassandra database. In legacy setups, a MySQL or MSSQL database can be used.
-
-In older DataMiner systems, this database was also known as the "local database", as the MySQL or MSSQL database was typically hosted locally on the same machine as DataMiner.
+You can configure the database settings for your DataMiner System's dedicated clustered storage in DataMiner Cube.
 
 > [!NOTE]
 > If you want an external program to execute queries against a DataMiner database, you will need to use an offload database. For information on offload database settings, see [Offload database](xref:Offload_database).
 
 > [!IMPORTANT]
 > If a DataMiner Agent in a cluster is offline, database configuration changes will not be applied to that DataMiner Agent. From DataMiner 10.3.6/10.4.0 onwards, you will get a warning on the *Database* page in System Center to make you aware of this. However, this warning will not be triggered for the offline Agent in a Failover setup. <!-- RN 36184 -->
+
+> [!TIP]
+>
+> - See also: [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_per_DMA_in_Cube) and [Configuring the SQL database settings](xref:Configuring_MySQL_database_in_Cube).
+> - Some database settings can also be configured in [DB.xml](xref:DB_xml#general-database-settings).
 
 ## Cassandra database
 
@@ -141,8 +144,3 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
 
    > [!NOTE]
    > In the example screenshots, the cluster health is set to yellow because only one node is used. Single-node clusters are always displayed in yellow.
-
-> [!TIP]
->
-> - See also: [Configuring a Cassandra database per DMA](xref:Configuring_Cassandra_per_DMA_in_Cube) and [Configuring the SQL database settings](xref:Configuring_MySQL_database_in_Cube).
-> - In the DB.xml file, you can specify the configuration data for several databases as well. See [General database settings](xref:DB_xml#general-database-settings).
