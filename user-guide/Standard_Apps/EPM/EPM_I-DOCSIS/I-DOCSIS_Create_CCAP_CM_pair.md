@@ -30,7 +30,7 @@ To create a new CCAP/CM pair:
 
    1. Enter the IP Address.
 
-   1. Define the desired community string.
+   1. Enter the community string that will be used to poll the device (SNMP).
 
 1. In the **View Details** step:
 
