@@ -72,6 +72,24 @@ Up to now, when the function manager needed to deactivate function DVEs because 
 
 From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
 
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
+
+In `C:\Skyline DataMiner\analytics\configuration.xml`, all `<item>` tags configured for relation properties should by default have their threshold set to 0.7.
+
+Example:
+
+```xml
+<item type="skyline::dataminer::analytics::workers::configuration::GenericRelationPropertyVisitorConfiguration">
+  <enable>true</enable>
+  <threshold>0.7</threshold>
+  <name>[PROPERTY_NAME]</name>
+</item>
+```
+
 ### Fixes
 
 #### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
