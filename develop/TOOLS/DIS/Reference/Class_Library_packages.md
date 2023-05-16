@@ -4,7 +4,7 @@ uid: Class_Library_packages
 
 # Class Library packages
 
-## [From DIS 2.41 onwards](#tab/CLC-1)
+## [From DIS 2.41 onwards](#tab/CLP-1)
 
 > [!IMPORTANT]
 > The class library generation feature has been removed from DIS v2.41 onwards in favor of NuGet packages. If you have a connector or Automation script that makes use of the official class library, replace it with the corresponding NuGet package(s). For more information, refer to [Class library introduction](xref:ClassLibraryIntroduction). If you have a connector or Automation script that makes use of a community package, we recommend turning this into a NuGet package (For more information on how to create a NuGet package, refer to [Producing NuGet packages](xref:Producing_NuGet)). Alternatively, you can put all the code from the community library zip file in a QAction/Exe block.
@@ -24,7 +24,7 @@ uid: Class_Library_packages
 > - [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol): This NuGet package provides functionality to easily parse traps in a connector.
 > - [Skyline.DataMiner.Utils.Table.ContextMenu](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Table.ContextMenu): This NuGet package provides functionality to easily create a custom context menu.
 
-## [Prior to DIS 2.41](#tab/CLC-1)
+## [Prior to DIS 2.41](#tab/CLP-2)
 
 A Class Library package (CLP) contains generic code that can be shared by multiple QActions and Automation scripts.
 
