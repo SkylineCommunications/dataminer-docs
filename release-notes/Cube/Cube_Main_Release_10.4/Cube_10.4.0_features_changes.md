@@ -283,7 +283,7 @@ If any of the mandatory requirements for the parameter relationship feature have
 
 If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
 
-Both messages are clickable and link to the relevant section of the DataMiner Documentation.
+Both messages are clickable and link to the relevant section of the DataMiner documentation.
 
 #### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
