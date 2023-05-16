@@ -212,9 +212,10 @@ To indicate that a logger table should be stored in the indexing database instea
 </Database>
 ```
 
-Logger tables have the following restriction when using the indexing database:
-    - The columnName cannot start with -, _ or +
-    - The columnName cannot include \, /, *, ?, ", <, >, ' ' (space character), ',', #, . or :
+When logger tables are stored the indexing database, the following restrictions apply:
+
+- The columnName must not start with `-`, `_`, or `+`.
+- The columnName must not include `\`, `/`, `*`, `?`, `"`, `<`, `>`, " " (space character), `,`, `#`, `.`, or `:`.
 
 > [!NOTE]
 >
