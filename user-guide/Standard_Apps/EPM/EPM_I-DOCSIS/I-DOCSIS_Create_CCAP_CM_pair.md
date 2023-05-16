@@ -18,7 +18,8 @@ To create a new CCAP/CM pair:
 
    1. Define the element name.
 
-      The name of the collector element will consist of the defined element name with the suffix "_COLLECTOR".
+      > [!NOTE]
+      > The name of the collector element will consist of the defined element name with the suffix "_COLLECTOR".
 
    1. Select one of the back-end DMAs.
 
@@ -26,27 +27,17 @@ To create a new CCAP/CM pair:
 
    1. Select the desired CCAP protocol.
 
-   1. Select the desired protocol version. We recommend to be the production version.
+   1. Select the desired protocol version. We recommend the production version.
 
-   1. Enter the IP Address.
+   1. Enter the IP address.
 
    1. Enter the community string that will be used to poll the device (SNMP).
 
-1. In the **View Details** step:
+1. In the **View Details** step, select the location where the CCAP/CM pair will be added in the EPM view structure.
 
-   1. Choose the location where the the CCAP/CM pair will be added according to the EPM view structure.
+1. In the **Interface Setting** step, define the username and password of an account that can access the **front-end DMA**.
 
-1. In the **Interface Setting** step:
-
-   1. Define the Username and password with an account that can access the **FE DMA**.
-
-
-1. After checking all the previous steps, click *Create*.
-
-   > [!NOTE]
-   >  The larger the cluster, the longer it will take to create the elements.
-
-
+1. Click *Create*.
 
 The elements will be created with the following specifications:
 
@@ -78,3 +69,6 @@ The elements will be created with the following specifications:
   - **Entity import directory type**: Remote.
   - **System username**: The system username.
   - **System password**: The system password.
+
+> [!NOTE]
+> It may take some time before the elements are created. The larger the cluster, the longer it will take to create the elements.
