@@ -38,13 +38,12 @@ To grant admin consent and configure your tenant:
 
 1. Click *Confirm*.
 
-1. In the pop-up window, log in to our multi-tenant app with your Microsoft account. **Make sure to log in with the same user as you granted consent with**.
+1. In the pop-up window, log in with your Microsoft account. **Make sure to log in with the same user as you granted consent with**.
 
-   After you log in successfully, your tenant is configured.
+   After you log in successfully, the DataMiner app will be approved in your tenant.
 
 > [!NOTE]
 >
-> - You can **revoke the permissions given to Skyline Communications at any time in the Azure Portal**. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
-> - You can unlink the tenant by clicking the *Remove* button next to the tenant ID. However, **unlinking the tenant** from the organization **will not remove the permissions given to Skyline Communications**.
+> - You can **revoke the permissions given to the DataMiner app at any time in the Azure Portal**. For more information, refer to the [Microsoft documentation](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/manage-application-permissions?pivots=portal).
+> - You can unlink the tenant by clicking the *Remove* button next to the tenant ID. However, **unlinking the tenant** from the organization **will not remove the permissions given to the DataMiner app**.
 > - If there are **changes to the software** that cause new or different permissions to be required, you can grant admin consent again by clicking the *Regrant* button next to the tenant ID.
-
