@@ -48,6 +48,4 @@ For example:
 <xref:AdvancedDataMinerMediationLayerSyntaxOfMediationLinkToTags>
 
 > [!NOTE]
-> Note that currently, the mapping for mediation parameters is a 1-1 mapping.
-> Each mediation parameter (on a given mediation protocol) can only link to a single data source parameter (on a given data source protocol).
-> Each data source parameter (on a given data source protocol) can only be linked by one mediation parameter (on a given mediation protocol).
+> Note that currently the mapping for mediation parameters is a 1-1 mapping. Each mediation parameter (on a given mediation protocol) can only link to a single data source parameter (on a given data source protocol). Each data source parameter (on a given data source protocol) can only be linked to one mediation parameter (on a given mediation protocol).
