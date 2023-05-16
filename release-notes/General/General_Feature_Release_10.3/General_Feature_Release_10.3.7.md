@@ -78,17 +78,19 @@ From now on, function DVEs will no longer be deactivated when they are part of a
 
 Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
 
-In `C:\Skyline DataMiner\analytics\configuration.xml`, all `<item>` tags configured for relation properties should by default have their threshold set to 0.7.
+On systems running alarm grouping based on both parameter and alarm relationship data, the `C:\Skyline DataMiner\analytics\configuration.xml` will contain an `<item>` tag like the following. Note that `cpRelationThreshold` has been renamed to `relationThreshold` and that its value is set to 0.7 by default.
 
 Example:
 
 ```xml
-<item type="skyline::dataminer::analytics::workers::configuration::GenericRelationPropertyVisitorConfiguration">
-  <enable>true</enable>
-  <threshold>0.7</threshold>
-  <name>[PROPERTY_NAME]</name>
-</item>
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
 ```
+
+> [!CAUTION]
+> Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ### Fixes
 
