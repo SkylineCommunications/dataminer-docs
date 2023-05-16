@@ -60,44 +60,48 @@ In systems with a Cassandra and Elasticsearch database, DataMiner’s [Augmented
 
 **Clear visualization of data and insights.**
 
-DataMiner provides one of the most comprehensive and most powerful and fully user-definable UIs to display mimic diagrams that are compatible with Microsoft Visio®. As such, operators can leverage existing Microsoft Visio® drawings and the power of Microsoft Visio® to create appealing and fully customized graphical presentations of the operational ecosystem managed by DataMiner. Any part of the user's network can be graphically represented according to the user's needs, on any level of the network and completed with any requested real-time data.
+DataMiner provides one of the most comprehensive and powerful UIs with extensive user-definable capabilities, allowing the display of mimic diagrams that are compatible with Microsoft Visio. By leveraging existing Visio drawings and harnessing the power of Microsoft Visio, operators can create visually appealing and fully customized graphical presentations of their DataMiner-managed operational ecosystem. Any part of the user's network can be graphically represented, tailored to their specific needs, at any level of the network and completed by any requested real-time data.
 
-DataMiner enriches these Visio® drawings, using special shape data fields, to provide highly customized graphical user interfaces.
+DataMiner further enriches these Visio drawings, using special shape data fields to provide highly customized graphical user interfaces.
 
-In a nutshell, Visual Overviews provide you with a very powerful and graphical way to navigate, monitor, and manage your entire infrastructure.
+In summary, Visual Overview offers a remarkably powerful and graphical way to navigate, monitor, and manage your entire infrastructure.
 
 > [!TIP]
-> For more information:
+> See also:
 >
-> - Demo Video about the [Benefits of the Visual Overviews](https://community.dataminer.services/video/benefits-of-the-visual-overviews/)
-> - Visual Overview sample of [an Earth Station uplink](https://community.dataminer.services/use-case/earth-station-uplink-visual-overview-sample/)
-> - Visual Overview sample of [control surfaces and panels](https://community.dataminer.services/use-case/control-surfaces/)
-> - [DataMiner Ziine Demo System - Your reference for Visual Overview functionality](https://community.dataminer.services/ziine-your-reference-for-visual-overview-functionality/)
-> - User Guide: [Visio® drawings](xref:visio)
-> - Full course about [Visual Overview in DataMiner](https://community.dataminer.services/courses/visio/)
-> - More videos related to Visual Overview in the [Video Library](https://community.dataminer.services/videos?_sf_s=visual%20overview/)
-> - [Expert Hub](https://community.dataminer.services/exphub-visualoverview/)
+> - [Benefits of the Visual Overviews](https://community.dataminer.services/video/benefits-of-the-visual-overviews/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Earth Station Uplink Visual Overview sample](https://community.dataminer.services/use-case/earth-station-uplink-visual-overview-sample/)
+> - [Control Surfaces](https://community.dataminer.services/use-case/control-surfaces/)
+> - [Ziine – your reference for Visual Overview functionality](https://community.dataminer.services/ziine-your-reference-for-visual-overview-functionality/)
+> - User Guide: [Visio drawings](xref:visio)
+> - [Visual Overview training course](https://community.dataminer.services/courses/visio/)
+> - [Expert Hub - DataMiner Visual Overview](https://community.dataminer.services/exphub-visualoverview/)
 
 ## Event Correlation
 
 **Detect identifiable patterns by relating various events.**
 
-The fully integrated Correlation Engine is a valuable asset for operators who wish to reduce the time to repair by means of automated root cause analysis, and who wish to move towards a proactive operation.
+The fully integrated Correlation Engine is a valuable asset for operators seeking to expedite the repair process through automated root cause analysis and move towards a proactive operation.
 
-Correlation Engine provides the technology to further enhance the alarm detection on the operational environment by processing the raw alarm information based on a user-defined knowledge base, in real time as events occur.  It’s capable of:
+Correlation Engine provides the technology to further enhance alarm detection within the operational environment by processing the raw alarm information utilizing on a user-defined knowledge base, in real time as events occur.
 
-- Detecting single alarm events as well as patterns of alarm occurrences across the entire system
-- Checking real-time values of parameters prior to making any decisions and taking actions
-- Detecting single occurrences, persistent occurrences or recurring occurrences of single alarms events or alarm patterns across the entire operational environment
-- Taking actions when certain conditions occur in the operational environment, including generating new alarm messages for the operator (i.e. most probable cause), triggering automation scripts (e.g. to take automatic corrective measurements), notifying operators, etc.
+The Correlation Engine is capable of:
 
-DataMiner also includes root cause analysis based on connectivity information. Connectivity information can be fed into the system via the integrated connectivity editor, or by linking the DataMiner System to a third-party connectivity database. DataMiner RCA provides a very intuitive way for the operator to find the most probable cause and to filter out sympathetic alarms. This is achieved by assigning a so-called RCA level to each alarm. The RCA level indicates how far away the device is located from the most probable cause.
+- Detecting single alarm events and patterns of alarm occurrences across the entire system.
+
+- Checking real-time parameter values, prior to making any decisions or taking actions.
+
+- Detecting single occurrences, persistent occurrences, or recurring occurrences of both single alarms events and alarm patterns across the entire operational environment.
+
+- Taking actions when certain conditions occur within the operational environment, including generating new alarm messages for the operator (e.g. the most probable cause), triggering Automation scripts (e.g. to take automatic corrective measures), notifying operators, and more.
+
+DataMiner also includes root cause analysis (RCA) based on connectivity information. Connectivity information can be fed into the system via the integrated connectivity editor or by linking the DataMiner System to a third-party connectivity database. DataMiner's RCA functionality offers operators a highly intuitive method to determine the most probable cause and filter out sympathetic alarms. This is achieved by assigning an RCA level to each alarm, indicating how far they are removed from their probable root cause.
 
 > [!TIP]
 > For more information:
 >
-> - DataMiner Correlation in the [User Guide](xref:correlation)
-> - Full course about [DataMiner Correlation](https://community.dataminer.services/courses/dataminer-advanced/lessons/dms-correlation-2/)
+> - [DataMiner Correlation](xref:correlation)
+> - [DMS Correlation training video](https://community.dataminer.services/courses/dataminer-advanced/lessons/dms-correlation-2/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Fault Management
 
