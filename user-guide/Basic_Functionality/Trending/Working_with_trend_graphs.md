@@ -17,7 +17,7 @@ Whether you access a trend graph from a card or do so from the *Trending* module
 - A light bulb icon in the top-right corner to add parameters related to those shown in the trend graph (from DataMiner 10.2.12/10.3.0 onwards). See [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph).
 
   > [!NOTE]
-  > From DataMiner 10.3.6/10.4.0 onwards, the color of the light bulb icon reflects whether parameter relationships have been found. When related parameters are available, the light bulb will be filled in with a darker color. If DataMiner was unable to find related parameters, the light bulb will remain blank. <!-- RN 35868-->
+  > From DataMiner 10.3.6/10.4.0 onwards, the color of the light bulb icon reflects whether parameter relationships have been found. When related parameters are available, the light bulb will be "lit up", using an accent color. If DataMiner was unable to find related parameters, the light bulb will remain blank and appear turned off. <!-- RN 35868-->
 
 Depending on the type of data that is displayed, the trend line looks different. For example, take a look at this trend graph in DataMiner 10.2.1:
 

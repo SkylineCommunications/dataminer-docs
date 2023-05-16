@@ -68,17 +68,17 @@ From now on, Cube versions that meet the following conditions will be removed au
 
 <!-- MR 10.4.0 - FR 10.3.6 Also see Fixes-->
 
-In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found parameters related to the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
+In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found relations for the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
 
 - Related parameters have been found.
 - No related parameters have been found.
 - The requirements have not been met.
 
-When related parameters have been found, the light bulb icon will now be filled in with a darker color to provide a visual indication of its state.
+When related parameters have been found, the light bulb icon will "light up" in an accent color to provide a visual indication of its state.
 
-If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will cause the following message to appear: `Requirements are not met. Learn more.`
+If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that indicates the requirements are not met.
 
-If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will cause the following message to appear: `Unlock all capabilities of this feature. Learn more.`
+If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
 
 Both messages are clickable and link to the relevant section of the DataMiner Documentation.
 

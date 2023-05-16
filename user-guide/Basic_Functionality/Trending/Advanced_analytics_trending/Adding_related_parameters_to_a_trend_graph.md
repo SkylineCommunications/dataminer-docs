@@ -31,7 +31,7 @@ The following prerequisites are **mandatory**. You will not be able to use this 
 - The option *Allow performance and usage data offload* must be enabled. See [Controlling cloud feed data offloads](xref:Controlling_cloudfeed_data_offloads).
 
 > [!NOTE]
-> From DataMiner 10.3.6/10.4.0 onwards, the light bulb icon is displayed in the top-right corner of the trend graph regardless of whether certain mandatory prerequisites are still missing. <!-- RN 35868 --> However, clicking the icon will prompt a message indicating that the necessary requirements have not been met, preventing you from using this feature without them. <!--RN 36157-->Prior to DataMiner 10.3.6/10.4.0, the light bulb icon will not appear until all mandatory requirements are met.
+> From DataMiner 10.3.6/10.4.0 onwards, the light bulb icon is always displayed in the top-right corner of the trend graph, regardless of whether DataMiner was able to find related parameters. If no related parameters were found, the light bulb icon will not be "lit up" with an accent color as it would be otherwise. <!-- RN 35868 --> Clicking the icon will prompt a message indicating that the necessary requirements have not been met, hereby explaining why the feature could not find related parameters. <!--RN 36157-->
 
 The following prerequisites are **optional** but highly recommended, as they will unlock the full capabilities of the feature:
 
@@ -46,7 +46,7 @@ If both optional requirements are met, DataMiner can study the system more effic
 
 > [!NOTE]
 >
-> - From DataMiner 10.3.6/10.4.0 onwards, you can check if any of these (optional) requirements are still missing in your system by clicking the light bulb icon in the top-right corner of the trend graph. If any of these requirements are missing, a message will appear advising you to unlock all capabilities of this feature. Note that this message will not appear if the mandatory prerequisites are also still missing. <!-- RN 35868 --> Prior to DataMiner 10.3.6/10.4.0, you can check if any of these (optional) requirements are still missing in your system by checking the logs via *System Center* > *Logging* > *cube*. Filter the logs on "requirements" to quickly find the relevant entries.
+> - From DataMiner 10.3.6/10.4.0 onwards, if you have met all mandatory prerequisites, you can check if any of these optional requirements are still missing in your system by clicking the light bulb icon in the top-right corner of the trend graph. If any are missing, a message will appear advising you to unlock all capabilities of this feature. <!-- RN 35868 --> Prior to DataMiner 10.3.6/10.4.0, you can check if any of these (optional) requirements are still missing in your system by checking the logs via *System Center* > *Logging* > *cube*. Filter the logs on "requirements" to quickly find the relevant entries.
 > - When you have activated this feature, it may take up to a week before the first results are available. During this time, DataMiner will analyze your system in order to learn which parameters are related.
 
 ## Adding a related parameter to a trend graph
