@@ -31,7 +31,7 @@ To create a new CCAP/CM pair:
 
    1. Enter the IP address.
 
-   1. Define the desired community string.
+   1. Enter the community string that will be used to poll the device (SNMP).
 
 1. In the **View Details** step, select the location where the CCAP/CM pair will be added in the EPM view structure.
 
