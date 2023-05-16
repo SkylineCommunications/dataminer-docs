@@ -267,6 +267,24 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
+#### Trending - Parameter relationships: Light bulb icon is now always displayed in top-right corner of trend graph and has one of three states [ID_35868] [ID_36157] [ID_36199]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see Fixes-->
+
+In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found parameters related to the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
+
+- Related parameters have been found.
+- No related parameters have been found.
+- The requirements have not been met.
+
+When related parameters have been found, the light bulb icon will now be filled in with a darker color to provide a visual indication of its state.
+
+If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will cause the following message to appear: `Requirements are not met. Learn more.`
+
+If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will cause the following message to appear: `Unlock all capabilities of this feature. Learn more.`
+
+Both messages are clickable and link to the relevant section of the DataMiner Documentation.
+
 #### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -315,6 +333,12 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### Trending - Parameter relationships: Light bulb icon would not appear if ModelHost DxM stopped working [ID_35868]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
+
+The light bulb icon would not be displayed in the top-right corner of a trend graph if the ModelHost DxM stopped working after Cube had already been started.
 
 #### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
 
