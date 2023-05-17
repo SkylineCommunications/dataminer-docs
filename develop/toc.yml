@@ -5314,17 +5314,15 @@
     - name: dnSpy
       topicUid: dnSpy
     - name: EBU LIST
-      topicUID: EBU_Live_IP_Software_Toolkit_LIST
+      topicUid: EBU_Live_IP_Software_Toolkit_LIST
     - name: Fiddler
-      topicUID: Fiddler
-    - name: Interactive Automation Script Toolkit
-      topicUID: Interactive_Automation_Script_Toolkit
-    - name: ManageEngine MIB Browser
-      topicUID: ManageEngine_MIB_Browser
-    - name: MySQL Workbench
-      topicUID: MySQL_Workbench
+      topicUid: Fiddler
     - name: Interactive Automation Script Toolkit
       topicUid: Interactive_Automation_Script_Toolkit
+    - name: ManageEngine MIB Browser
+      topicUid: ManageEngine_MIB_Browser
+    - name: MySQL Workbench
+      topicUid: MySQL_Workbench
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5347,7 +5345,9 @@
           - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
     - name: Postman
-      topicUID: Postman
+      topicUid: Postman
+    - name: RawCap
+      topicUid: RawCap
     - name: Skyline Device Simulator
       topicUid: TOOQASNMPSimulator
       items:
@@ -5417,6 +5417,8 @@
           topicUid: Updating_gitignore_and_Jenkins_file
         - name: Repository types
           topicUid: Repository_types
+    - name: SoapUI
+      topicUid: SoapUI
     - name: SourceTree
       topicUid: TOOSourceTree
       items:
