@@ -11,4 +11,4 @@ You can download this tool from the [Netresec website](http://www.netresec.com/?
 RawCap generates a packet capture file (.pcap), which can be opened in Wireshark.
 
 > [!TIP]
-> For more information on Wireshark, see <https://community.dataminer.services/documentation/wireshark/>.
+> For more information on Wireshark, see [Wireshark](xref:Wireshark).
