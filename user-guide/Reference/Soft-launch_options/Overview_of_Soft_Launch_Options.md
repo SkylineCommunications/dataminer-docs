@@ -12,14 +12,14 @@ The table also details the minimum DataMiner version to start using each option 
 See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
 
 - **Minimum version**: 9.6.13
-- **Release version**: 10.0.1
+- **Release version**: 10.0.0/10.0.2 ([RN 23911](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-alarm-focus-23911id_24083id_24102id_24128))
 
 ### AlarmForecasting
 
 Enables proactive cap detection. See [Proactive cap detection](xref:Proactive_cap_detection).
 
 - **Minimum version**: 9.5.12
-- **Release version**: 10.0.11
+- **Release version**: 10.1.0/10.0.11 ([RN 27132](xref:General_Feature_Release_10.0.11#proactive-cap-detection-id_26637id_27132id_27241id_27355id_27393))
 
 ### AlarmGrouping
 
