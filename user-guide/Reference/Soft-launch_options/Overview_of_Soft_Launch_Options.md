@@ -372,4 +372,4 @@ Uses an embedded web browser for Automation script execution instead of the nati
 Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
-- **Estimated release version**: 10.3.6
+- **Release version**: 10.3.6
