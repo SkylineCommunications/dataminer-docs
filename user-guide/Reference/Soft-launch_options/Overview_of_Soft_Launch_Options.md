@@ -26,21 +26,21 @@ Enables proactive cap detection. See [Proactive cap detection](xref:Proactive_ca
 Enables automatic incident tracking. See [Automatic incident tracking](xref:Automatic_incident_tracking).
 
 - **Minimum version**: 10.0.3
-- **Release version**: 10.0.11
+- **Release version**: 10.1.0/10.0.11 ([RN 27027](xref:General_Feature_Release_10.0.11#alarm-console-automatic-incident-tracking-id_25162id_25802id_25905id_26592id_27027id_27336))
 
 ### AlarmSquashing
 
 Enables alarm tree optimization.
 
 - **Minimum version**: 10.0.1
-- **Release version**: 10.0.12
+- **Release version**: 10.1.0/10.0.12 ([RN 27413](xref:General_Feature_Release_10.0.12#alarm-console-alarm-events-without-a-severity-change-can-now-be-consolidated-in-the-preceding-event-in-the-alarm-tree-id_23234id_23526id_24462id_27413))
 
 ### AnomalyDetection
 
 Enables behavioral anomaly detection and suggestion events. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
 - **Minimum version**: 9.5.12
-- **Release version**: 10.0.2
+- **Release version**: 10.0.0/10.0.2 ([RN 24095](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-behavioral-anomaly-detection-and-suggestion-events-id_15723id_15914id_15916id_15951id_15952id_15976id_16001id_16050id_16163id_17279id_17462id_19224id_24095id_24126id_24147))
 
 ### APIDeployment
 
@@ -61,7 +61,7 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 > Requires an IIS restart.
 
 - **Minimum version**: 10.0.8
-- **Release version**: 10.2.5
+- **Release version**: 10.2.5/10.3.0 ([RN 33040](xref:General_Feature_Release_10.2.5#application-framework-id_33002-id_33040))
 
 ### BookingData
 
