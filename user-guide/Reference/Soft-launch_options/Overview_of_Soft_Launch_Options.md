@@ -75,14 +75,14 @@ Enables the “BookingData” Visual Overview component.
 Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) configuration in DataMiner Cube.
 
 - **Minimum version**: 10.0.13
-- **Release version**: 10.1.2
+- **Release version**: 10.1.0/10.1.2 ([RN 28406](xref:General_Feature_Release_10.1.2#new-cassandra-cluster-feature-id_23210id_23975id_25945id_26144id_26475id_27080-id_27520id_27615id_27648id_27694id_28406))
 
 ### CloudConnectedAgents
 
 Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **Minimum version**: 10.1.2
-- **Release version**: 10.1.9
+- **Release version**: 10.1.9/10.2.0 ([RN 30513](xref:General_Feature_Release_10.1.9#connecting-a-dataminer-system-to-the-cloud-id_30513))
 
 ### CorrectedDisplayKeyOnNaming
 
@@ -123,7 +123,7 @@ Updates the values of direct view tables.
 Enables the use of DOM data in dashboards and applications.
 
 - **Minimum version**: 10.1.7
-- **Release version**: 10.3.6<!-- RN 36124 -->
+- **Release version**: 10.3.6/10.4.0 ([RN 36124](xref:Web_apps_Feature_Release_10.3.6#dom-features-now-available-in-dashboards-and-low-code-apps-id_29732-id_31804-id_32236-id_36124))
 
 ### DynamicUnits
 
@@ -137,7 +137,7 @@ Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. 
 Allows you to store tickets in the Elasticsearch database.
 
 - **Minimum version**: 9.6.4
-- **Release version**: 10.0.13
+- **Release version**: 10.0.13/10.1.0 ([RN 26677](xref:General_Feature_Release_10.0.13_new_features#ticketing-app-move-to-elasticsearch-database-and-other-improvements-id_24667id_25539-id_25713id_26644id_26676id_26677id_26911id_26982id_27974id_28016id_28043-id_28079id_28153))
 
 ### FeatureOffload
 
