@@ -12,6 +12,8 @@ uid: Part7Reference
 
 - [Obtaining a DataMiner license](xref:DataminerLicenses)
 
+- [Software support life cycles](xref:Software_support_life_cycles)
+
 - [Support services terms](xref:Support_services_terms)
 
 - [Soft-launch options](xref:SoftLaunchOptions)

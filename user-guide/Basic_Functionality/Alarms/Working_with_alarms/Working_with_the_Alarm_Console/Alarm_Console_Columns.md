@@ -5,7 +5,7 @@ uid: AlarmConsoleColumns
 # Alarm Console columns
 
 > [!TIP]
-> See also: [Alarm Console – Adding columns to the Alarm Console](https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/) on DataMiner Dojo.
+> See also: [Alarm Console – Adding columns to the Alarm Console](https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 Below, all columns available in the Alarm Console are listed. By default, not all columns are shown in Cube. The mentioned column names are the default column names; however, these names can be customized in Cube.
 

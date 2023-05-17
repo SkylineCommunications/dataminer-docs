@@ -168,6 +168,27 @@ From now on, when using the Microsoft Edge (WebView2) web browser plugin, embedd
 
 When a low-code app was embedded in Cube (e.g. in a visual overview), up to now, users had to explicitly log in to that app. From now on, Cube will automatically pass the authentication ticket to the low-code app, allowing users to access the app without having to log in again.
 
+#### Trending: Managing trend patterns in the 'Pattern Overview' window [ID_35694] [ID_36114]
+
+<!-- 35694: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36114: MR 10.4.0 - FR 10.3.6 -->
+<!-- Both released in MR 10.4.0 - FR 10.3.6 -->
+
+When you right-click a trend graph and select *Trend patterns...*, the *Pattern Overview* window will now appear.
+
+By default, this window will only list the existing patterns that apply to the trend graph you have opened. If you select the *Show all patterns* option, it will list all patterns found in the DataMiner System.
+
+- To update the properties of an existing pattern, select it in the list on the left, update its properties, and click *OK* or *Apply*.
+
+  Apart from changing its name and description, you can also indicate whether you want the pattern to be detected continuously in the background.
+
+- To delete a pattern, click the recycle bin icon next to its name in the list on the left.
+
+When you select a trend pattern from the list on the left, a thumbnail preview of the pattern will be displayed, together with the name of the element and parameter associated with the pattern.
+
+> [!NOTE]
+> Currently, this *Pattern Overview* window only supports single-variate patterns. Support for multi-variate patterns will be added in a later release.
+
 #### Search box in Cube header can now be hidden [ID_35826]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -236,6 +257,57 @@ In the Automation script editor, Intellisense has been added for the new `timeUp
 
 This property is only applied in interactive Automation scripts that are launched from a web app.
 
+#### DataMiner Cube desktop app: Unused Cube versions will now automatically be removed [ID_35795]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+From now on, Cube versions that meet the following conditions will be removed automatically:
+
+- Not marked as the active version for a certain DataMiner Agent.
+- Not downloaded recently.
+- Not used recently.
+
+#### Trending - Parameter relationships: Light bulb icon is now always displayed in top-right corner of trend graph and has one of three states [ID_35868] [ID_36157] [ID_36199]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see Fixes-->
+
+In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found relations for the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
+
+- Related parameters have been found.
+- No related parameters have been found.
+- The requirements have not been met.
+
+When related parameters have been found, the light bulb icon will "light up" in an accent color to provide a visual indication of its state.
+
+If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that indicates the requirements are not met.
+
+If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
+
+Both messages are clickable and link to the relevant section of the DataMiner documentation.
+
+#### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, a browser shape would always be reloaded whenever its URL was changed. From now on, this will no longer be the case when the URL only had a fragment change.
+
+Examples:
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map#urlfragment`, the browser shape will not be reloaded because the URL only had its fragment changed.
+
+- When `#https://company.be/#/app/Map` changes to `#https://company.be/#/app/Map?embed=true#urlfragment`, the browser shape will be reloaded because the URL not only had its fragment changed but also its query parameter.
+
+#### System Center - Database: Warning when a DataMiner Agent in the cluster is offline [ID_36184]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In the *Database* section of *System Center*, a warning will now appear whenever a DataMiner Agent in the cluster is offline.
+
+Also, when you click *Save* after changing any of the settings in this *Database* section, a popup message will now appear, saying that the Agents need to be restarted for the changes to take effect.
+
+> [!IMPORTANT]
+> No warning will appear to point out that the backup Agent in a Failover setup is offline.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -262,6 +334,12 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
 
+#### Trending - Parameter relationships: Light bulb icon would not appear if ModelHost DxM stopped working [ID_35868]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
+
+The light bulb icon would not be displayed in the top-right corner of a trend graph if the ModelHost DxM stopped working after Cube had already been started.
+
 #### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
@@ -273,3 +351,9 @@ When, in the *Automation*, *Correlation* and *Scheduler* modules, you generated 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 When, in an alarm template, a suggestion event was promoted to an alarm event, it would correctly appear in the active alarms tab but it would incorrectly not be removed from the suggestion events tab.
+
+#### Problem when connecting to a DataMiner Agent using gRPC [ID_35950]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.

@@ -49,6 +49,8 @@ To configure the component:
 
    - *Trend points*: Available from DataMiner 10.2.0/10.2.3 onwards. Determines which type of trend data points are added to the graph: *Average (changes only)*, *Average (fixed interval)*, or *Real-time*. By default, *Average (changes only)* is selected. This setting will also be taken into account when you export the chart to CSV.
 
+   - *Trend points interval*: Available from DataMiner 10.3.5/10.4.0 onwards, but only if *Trend points* is set to an average type. Determines how much time there is between each trend point that is being tracked or analyzed. This interval is also used when exporting the data. You can set this to *Auto* (i.e. an interval relative to the specified trend span), *Five minutes*, *One hour*, or *One day*.
+
    - *Show real-time trend data*: If real-time trending is available, this box allows you to set the chart to display real-time trending instead of average trending.
 
    - *Show average*: Available from DataMiner 10.0.13 onwards, if *Show real-time trend data* is not selected. Displays the average trend data. By default, this is enabled.

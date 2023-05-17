@@ -25,13 +25,13 @@ Several factors are taken into account for the grouping:
 
 - Time
 
-- Alarm focus information
+- Alarm focus information (see [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)).
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
 - Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
 
-If no suitable match is found, alarms will not be grouped. Also, since only alarms with a focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
+If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
 The grouping of alarms into incidents is updated in real time whenever appropriate:
 

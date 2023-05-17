@@ -21,7 +21,7 @@ The following topics provide more information on working with spectrum monitor:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/>
+> [Spectrum Analyzer – Setting up continuous background RF measurements](https://community.dataminer.services/video/spectrum-analyzer-setting-up-continuous-background-rf-measurements/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Managing spectrum monitors
 

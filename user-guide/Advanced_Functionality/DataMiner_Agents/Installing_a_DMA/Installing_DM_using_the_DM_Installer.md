@@ -30,7 +30,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
 
-1. Double-click *Setup.exe*.
+1. Double-click the setup executable.
 
 1. Click *Install*.
 
@@ -38,6 +38,8 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
    > [!IMPORTANT]
    > To get this DataMiner ID, contact <dataminer.licensing@skyline.be>. The DataMiner ID will uniquely identify the DataMiner Agent you are installing.
+   >
+   > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
 
 1. Click next.
 
@@ -48,6 +50,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Click *go to Request.lic* to browse to *Request.lic*.
 
 1. Send the *Request.lic* file to <dataminer.licensing@skyline.be>, and wait until you receive the reply.
+
+   > [!NOTE]
+   > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
 
 1. Once you have received the license files, save these somewhere on the computer; however, not in the "Skyline DataMiner" folder.
 
@@ -63,6 +68,9 @@ At this point, the basic installation is complete. However, to be able to make f
 - [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
+> [!IMPORTANT]
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
@@ -72,7 +80,7 @@ At this point, the basic installation is complete. However, to be able to make f
 
 1. Make sure you are logged into Windows as a user account with administrative rights.
 
-1. Double-click *Setup.exe*.
+1. Double-click the setup executable.
 
 1. Click *Customize*.
 
@@ -126,6 +134,9 @@ At this point, the basic installation is complete. However, to be able to make f
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
 - [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+
+> [!IMPORTANT]
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
 
 > [!NOTE]
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.

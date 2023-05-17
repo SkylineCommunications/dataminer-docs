@@ -91,7 +91,7 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
 The list of alarms in an Alarm Console tab can be manipulated in several ways.
 
 > [!TIP]
-> See also: [Alarm Console – Adding columns to the Alarm Console](https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/) on DataMiner Dojo.
+> See also: [Alarm Console – Adding columns to the Alarm Console](https://community.dataminer.services/video/alarm-console-adding-columns-to-the-alarm-console/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ### Sorting and grouping columns
 
@@ -164,7 +164,7 @@ To return the columns to the default layout:
 It is possible to create a different default layout for the Alarm Console, which is saved across sessions. This can be done both at group level and at user level.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Configuring the Alarm Console at group level](https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Configuring the Alarm Console at group level](https://community.dataminer.services/video/ruis-rapid-recap-configuring-the-alarm-console-at-group-level/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To do so:
 

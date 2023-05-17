@@ -12,7 +12,7 @@ In System Center, you can migrate the general database from MySQL or MSSQL to Ca
 > Cassandra is free to use, so no additional license is required for the migration. Though a commercial version of the database software is also available, this is not necessary.
 
 > [!TIP]
-> See also: [Cassandra - Migrating to Cassandra](https://community.dataminer.services/video/cassandra-migrating-to-cassandra/) on DataMiner Dojo
+> See also: [Cassandra - Migrating to Cassandra](https://community.dataminer.services/video/cassandra-migrating-to-cassandra/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
