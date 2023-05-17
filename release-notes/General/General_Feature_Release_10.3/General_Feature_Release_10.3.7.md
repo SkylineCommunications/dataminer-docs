@@ -92,6 +92,16 @@ Example:
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The following scheduled tasks will now by default return 0 instead of error code 1.
+
+- Skyline DataMiner Backup (DataMinerBackup.js)
+- Skyline DataMiner Database Optimization (OptimizeDB.js)
+- Skyline DataMiner LDAP Resync (ReloadLDAP.js)
+
 ### Fixes
 
 #### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]
