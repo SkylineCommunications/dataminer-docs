@@ -132,7 +132,7 @@ To address the challenges of fault detection, ensuring **good data hygiene** is 
 - Customizing alarm definitions exactly the way your operation requires, eliminating noisy alarms.
 - Triggering alarms in a far more intelligent way and reducing the alarm count to what is truly necessary.
 - Conserving valuable resources and time by reducing the need to resolve shortcomings with complex and cumbersome event correlation.
-- Significantly reducing Mean Time to Repair (MTTR), increasing optional efficiency, lowering operational costs, and increasing Quality of Service (QoS).
+- Significantly reducing Mean Time to Repair (MTTR), increasing operational efficiency, lowering operational costs, and increasing Quality of Service (QoS).
 
 The unified platform provides **highly enriched fault messages**, **out of the box requiring zero effort**.
 
