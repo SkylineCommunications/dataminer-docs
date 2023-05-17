@@ -43,7 +43,7 @@ uid: Overview_Collaboration
 >
 > - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
 > - [ChatOps User Guide](xref:ChatOps)
-> - [Example Use Case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
+> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-commands/)
 > - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
 > - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
 
