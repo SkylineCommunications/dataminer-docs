@@ -64,35 +64,39 @@ A rule contains one or multiple conditions comparing the field value of the proc
 ### Routing Rule Json Object
 
 #### RoutingRule Object
+
 | Name | Type | Value | Information |
 | --- | --- | --- | --- |
-| Evaluation | string (discreet) | First Matching or All Matching | First Matching will stop when the first rule has a match. <br>All Matching will evaluate all the rules and only trigger if all of the conditions match. |
-| Rules | [Rule](#rule-object)[] | [Rule](#rule-object) ||
+| Evaluation | string (discrete) | First Matching <br>or All Matching | First Matching: The evaluation will stop when the first rule has a match. <br>All Matching: All rules will be evaluated. Only triggered if all of the conditions match. |
+| Rules | [Rule](#rule-object)[] | [Rule](#rule-object) | |
 
 #### Rule Object
+
 | Name | Type | Value | Information |
 | --- | --- | --- | --- |
-| SequenceId | int |  | Needs to be unique |
-| Description | string |  | Description for developers |
-| OutgoingInterfaceIds | int[] | 11, 12, 13, 14, 15 | Is the list of all the output interface this rule has to generate a token for, or in other words which outgoing interfaces need to be triggered when this rule matches. |
+| SequenceId | int |  | Needs to be unique. |
+| Description | string |  | Description for developers. |
+| OutgoingInterfaceIds | int[] | 11, 12, 13, 14, 15 | The list of all the output interface IDs that this rule has to generate a token for. These represent the outgoing interfaces that need to be triggered when this rule matches. |
 | DoTagTokens | bool | true or false | |
-| Conditions | [RoutingCondition](#routingcondition-object)[] | [RoutingCondition](#routingcondition-object) ||
+| Conditions | [RoutingCondition](#routingcondition-object)[] | [RoutingCondition](#routingcondition-object) | |
 
 #### RoutingCondition Object
+
 | Name | Type | Value | Information |
 | --- | --- | --- | --- |
-| IncomingGatewayKeyName | nullable string | "*" or null or something else | No idea except for null or "*" which means any incoming gateway key name. But if you use a DomField then this is ignored entirely, so this will most likely just be null.|
-| Value | string | | The value that will be used to validate a DOM Field against |
-| Operation | string (discreet) | any or equal | When operation is **any** the incoming gateway key name and value or ignored.<br>**equal** will match when the incoming value matches the Value field. <br> When a DomField is given it will check the DOM Field instead of the incoming gateway key name. |
-| IncomingInterfaceId | int | -1, 1, 2, 3, 4, 5 | Can be one of those values where -1 means all the interfaces. |
+| IncomingGatewayKeyName | nullable string | "\*", null, or another value | For null or "*": Any incoming gateway key name.<br>If you use a DomField, this is entirely ignored, so this will most likely be null.|
+| Value | string | | The value that will be used to validate a DOM Field against. |
+| Operation | string (discrete) | any or equal | When operation is **any**, the incoming gateway key name and value are ignored.<br>When operation is **equal**, it will match when the incoming value matches the *Value* field. <br> When a DomField is given, it will check the DOM Field instead of the incoming gateway key name. |
+| IncomingInterfaceId | int | -1, 1, 2, 3, 4, 5 | It can be one of the specified values. -1 represents all interfaces. |
 | DomField | [IncomingDomField](#incomingdomfield-object) | | |
 
 #### IncomingDomField Object
+
 | Name | Type | Value | Information |
 | --- | --- | --- | --- |
-| FieldDescriptorId | string | | The guid of the field descriptor defines in the Section Definition of the DOM definition |
-| SectionDefinitionId | string | | The guid of the Section definition where the field descriptor belongs to |
-| UserDomInstance | string | | The name of the user DOM instance. When this is defined it will process a user DOM instance instead of the Process DOM instance |
+| FieldDescriptorId | string | | The GUID of the field descriptor defined in the Section Definition of the DOM definition. |
+| SectionDefinitionId | string | | The GUID of the Section definition where the field descriptor belongs to. |
+| UserDomInstance | string | | The name of the user DOM instance. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
 
 Below you can find examples of the possible routing rules.
 
