@@ -165,7 +165,7 @@ DataMiner Dashboards offers a wide range of visualizations that can make use of 
 >
 > - Example use case: [Dashboard Components Showcase](https://community.dataminer.services/use-case/dashboard-components-showcase/)
 > - Example use case: [Monitor a Group of Servers via GQI](https://community.dataminer.services/use-case/monitor-a-group-of-servers-via-gqi/)
-> - User Guide: [DataMiner Dashboards](xref:correlation)
+> - User Guide: [DataMiner Dashboards](xref:newR_D)
 > - [Videos on the Dashboards app](https://community.dataminer.services/videos?_sf_s=dashboard) ![Video](~/user-guide/images/video_Duo.png)
 > - [GQI-related videos](https://community.dataminer.services/videos?_sf_s=GQI) ![Video](~/user-guide/images/video_Duo.png)
 > - [Analyzing a network of switches with the DataMiner Dashboards module](https://www.youtube.com/watch?v=e0tqNFMqgwo&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
