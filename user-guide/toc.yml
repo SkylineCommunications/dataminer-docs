@@ -716,6 +716,15 @@
               topicUid: Working_with_behavioral_anomaly_detection
             - name: Working with pattern matching
               topicUid: Working_with_pattern_matching
+              items:
+              - name: Defining a pattern
+                topicUid: Defining_a_pattern
+              - name: Editing a pattern definition
+                topicUid: Editing_a_pattern_definition
+              - name: Deleting a pattern definition
+                topicUid: Deleting_a_pattern_definition
+              - name: Managing pattern definitions
+                topicUid: Managing_pattern_definitions
             - name: Adding related parameters to a trend graph
               topicUid: Adding_related_parameters_to_a_trend_graph
         - name: Working with histograms

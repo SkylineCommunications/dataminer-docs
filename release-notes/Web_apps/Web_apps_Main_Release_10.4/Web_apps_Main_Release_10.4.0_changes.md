@@ -247,6 +247,12 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
+#### Monitoring app: Enhanced performance when editing a parameter on a parameter page component [ID_36348]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when editing a parameter on a parameter page component.
+
 #### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
