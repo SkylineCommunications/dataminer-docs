@@ -6,9 +6,9 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved a concurrency issue [ID_RN36432]
+#### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
-A concurrency issue has been fixed that was introduced since CloudGateway 2.10.8 where the CloudGateway wouldn't respond to certain requests while it should. As an example it randomly wouldn't be possible to create a share anymore. 
+A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.
 
 #### 15 May 2023 - Fix - CloudGateway 2.10.11 - Reconnect in case of a canceled connection [ID_36402]
 
