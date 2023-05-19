@@ -6,10 +6,13 @@ uid: Specifying_data_input_in_a_dashboard_URL
 
 If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened.
 
+> [!TIP]
+> See also: [Making it dynamic - URL feeds](https://community.dataminer.services/courses/dashboard/lessons/making-it-dynamic/topic/url-feeds/) ![Video](~/user-guide/images/video_Duo.png)
+
 > [!NOTE]
 >
 > - From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
-> - To refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
+> - To refer to a query in the dashboard URL, use the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
 > - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
@@ -123,7 +126,7 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value. Prior to DataMiner 10.0.5, the DMA ID, the element ID, the field PID, the table PID, and the value are required.
 
-- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes"). To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
+- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
 
 - *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a Text input component.
 
