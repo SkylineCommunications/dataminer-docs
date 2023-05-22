@@ -8,7 +8,7 @@ uid: Display_keys1
 
 - [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) should be favored over using the *displayColumn* attribute. The implementation of *displayColumn* has an impact on trend data in the database, as the data is stored with a relation between the key and the value of display column. Every time the display column value changes, the database will be updated.
 
-- Existing drivers that use displayColumn should not be changed to use [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) (as this will result in loss of data) unless this change is required for a specific reason.
+- Existing protocols that use *displayColumn* should not be changed to use [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) (as this will result in loss of data) unless this change is required for a specific reason.
 
 - If no Display Key is explicitely defined in the protocol, the Primary Key will be used as Display Key by default.
 
