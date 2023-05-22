@@ -10,7 +10,7 @@ uid: Part4AdvancedModules
 
 - [Correlation](xref:correlation)
 
-- [Dashboards and Low-Code Apps](xref:newR_D)
+- [Dashboards and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps)
 
 - [DMS Dashboards](xref:dashboards)
 
