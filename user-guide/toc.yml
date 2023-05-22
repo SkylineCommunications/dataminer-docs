@@ -3052,6 +3052,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Cassandra cluster data not offloaded while database is unavailable
+          topicUid: KI_Cassandra_cluster_data_not_offloaded
         - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
           topicUid: KI_Inaccessible_data_Elasticsearch_casing
         - name: RTEs caused by problem during automatic NATS reconfiguration
