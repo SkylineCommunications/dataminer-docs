@@ -10,7 +10,7 @@ uid: Part4AdvancedModules
 
 - [Correlation](xref:correlation)
 
-- [Dashboards app](xref:newR_D)
+- [Dashboards and Low-Code Apps](xref:newR_D)
 
 - [DMS Dashboards](xref:dashboards)
 
@@ -23,8 +23,6 @@ uid: Part4AdvancedModules
 - [Inventory & Asset Management](xref:AssetManagement)
 
 - [Job Manager](xref:jobs)
-
-- [Low-Code Apps](xref:Application_framework)
 
 - [Maps](xref:maps)
 
