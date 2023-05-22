@@ -177,6 +177,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 Enables the ownership framework.
 
 - **Minimum version**: 9.5.11
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Indexing
 
@@ -342,13 +343,14 @@ Enables the service profiles export and import in the DataMiner Cube Services ap
 Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
 
 - **Minimum version**: 10.1.8
-- **Estimated release version**: 10.3.8
+- **Estimated release version**: 10.3.9
 
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+- **Estimated release version**: Will not be released (deprecated)
 
 ### SrmProtocolGeneration
 
