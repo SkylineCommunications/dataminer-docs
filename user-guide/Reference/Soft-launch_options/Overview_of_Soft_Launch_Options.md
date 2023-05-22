@@ -157,10 +157,12 @@ Enables the Virtual Functions module in Cube. This is a Cube-only feature that c
 
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
 
+> [!IMPORTANT]
+> Requires an IIS and DataMiner restart.
+
 > [!NOTE]
 > Some features that originally required this option are fully available in recent DataMiner versions:
 >
-> - Requires an IIS and DataMiner restart.
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
