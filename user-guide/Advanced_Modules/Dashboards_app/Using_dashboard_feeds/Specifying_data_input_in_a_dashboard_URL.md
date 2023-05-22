@@ -6,9 +6,6 @@ uid: Specifying_data_input_in_a_dashboard_URL
 
 If a dashboard has been configured with one or more feed components, it is possible to specify data input for these feeds in a dashboard URL. This way, you can immediately make the dashboard display specific data when it is opened.
 
-> [!TIP]
-> See also: [Making it dynamic - URL feeds](https://community.dataminer.services/courses/dashboard/lessons/making-it-dynamic/topic/url-feeds/) ![Video](~/user-guide/images/video_Duo.png)
-
 > [!NOTE]
 >
 > - From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
@@ -34,7 +31,10 @@ This JSON object has to have the following structure:
 }
 ```
 
-- ``<data>`` is a JSON object with a number of property keys (corresponding with the objects listed below) and property values (as an array of strings). For example:
+> [!TIP]
+> See: [Example of passing the data using a JSON object in the URL](#example-passing-the-data-using-a-json-object-in-the-url)
+
+- ``<data>`` is a JSON object with a number of property keys (corresponding with the [objects listed below](#supported-objects)) and property values (as an array of strings). For example:
 
   ```json
   {
@@ -44,7 +44,7 @@ This JSON object has to have the following structure:
   }
   ```
 
-- When you provide data in the (optional) *feedAndSelect* item, that data will be interpreted as if it was passed using the legacy syntax described below.
+- When you provide data in the (optional) *feedAndSelect* item, that data will be interpreted as if it was passed using the [legacy syntax](#legacy-syntax) described below.
 
 - When you provide data in the (optional) *feed* item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
 
@@ -61,6 +61,49 @@ This JSON object has to have the following structure:
 
   > [!NOTE]
   > You can find the ID of each component in the lower right corner of the component while in edit mode.
+
+### Example: passing the data using a JSON object in the URL
+
+The following JSON object demonstrates an example of passing data by using a JSON object in the URL:
+
+```json
+{
+"version": 1,
+"components": [
+    {
+      "cid": 123,
+      "select": {
+          "elements": [
+              "1/2",
+              "1/8",
+              "212/123"
+          ],
+          "parameters": [
+              "1/2/3",
+              "1/4/6"
+          ]
+      }
+    }
+  ]
+}
+```
+
+This JSON object adheres to the required structure specified in [JSON syntax](#json-syntax).
+
+By using this JSON object to pass data, three different elements ("1/2","1/8", and "212/123") and two parameters ("1/2/3" and "1/4/6") will be selected for the component with ID 123.
+
+To pass this JSON object as part of a URL, it needs to be URL-encoded.
+
+`https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?data=%7B%22version%22%3A1%2C%22components%22%3A%5B%7B%22cid%22%3A123%2C%22select%22%3A%7B%22elements%22%3A%5B%221%2F2%22%2C%221%2F8%22%2C%22212%2F123%22%5D%2C%22parameters%22%3A%5B%221%2F2%2F3%22%2C%221%2F4%2F6%22%5D%7D%7D%5D%7D`
+
+> [!NOTE]
+>
+> - " is encoded as %22.
+> - : is encoded as %3A.
+> - , is encoded as %2C.
+> - [ is encoded as %5B.
+> - ] is encoded as %5D.
+> - / is encoded as %2F.
 
 ## Legacy syntax
 
