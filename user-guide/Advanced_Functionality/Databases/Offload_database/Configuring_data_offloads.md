@@ -72,6 +72,9 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
+     > [!NOTE]
+     > This option corresponds with the `clean="true"` configuration in the Offload tag in DB.xml. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
+
 ## Disabling data offloads to the offload database on element level
 
 By default, data offloads are enabled for every element. In every *Element.xml* file, you should find the following setting:

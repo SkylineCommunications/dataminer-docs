@@ -239,8 +239,6 @@ The following configuration is possible for the offload database:
 
 - [Specifying the offload rate of real-time trend data records](#specifying-the-offload-rate-of-real-time-trend-data-records)
 
-- [Configuring the clean snapshot option](#configuring-the-clean-snapshot-option)
-
 - [Configuring the collation for an MSSQL database](#configuring-the-collation-for-an-mssql-database)
 
 - [Configuring data offloads to an MSSQL database in another domain](#configuring-data-offloads-to-an-mssql-database-in-another-domain)
@@ -315,28 +313,6 @@ In the following example, “1;TRUE” means that the real-time trend data recor
 >
 > - If you specify an offload rate, then the real-time trend data records with a negative iStatus value other than -9, -10, -15 and -16 will not be offloaded. Also, since the periodic offloads are not triggered by a user, the *chOwner* field of the offloaded records will be empty.
 > - If you specify an offload interval larger than 24 hours, DataMiner will set the offload interval to the maximum value, i.e. 24 hours.
-
-
-### Configuring the clean snapshot option
-
-Once this option is enabled, DataMiner will first truncate the table from the central database, before sending new information into the Central Database table.  This way, the central database table will always contain the latest snapshot information and not also snapshot information from the past.  
-
-```xml
-<DataBases>
-  <DataBase>
-    <Offloads>
-      ...
-      <Offload state="active" local="data" remote="data" rate="2;FALSE;00:00:02;TRUE" clean="true" />
-      ...
-    </Offloads>
-  </DataBase>
-</DataBases>
-```
-
-> [!NOTE]
->
-> - This option can only be configured for the data table. If it's configured for other tables, then it will get ignored.
-
 
 ### Configuring the collation for an MSSQL database
 
