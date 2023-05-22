@@ -5493,6 +5493,8 @@
           items:
             - name: StyleCop.Analyzers
               topicUid: StyleCopAnalyzers
+    - name: Visual Studio Code
+      topicUid: Visual_Studio_Code
     - name: WFetch
       topicUid: TOOWFetch
     - name: Wireshark
