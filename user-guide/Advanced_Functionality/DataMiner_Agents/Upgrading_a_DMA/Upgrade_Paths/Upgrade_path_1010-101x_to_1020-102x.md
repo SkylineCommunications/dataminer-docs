@@ -23,4 +23,4 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 
 ## Installing the DataMiner upgrade
 
-Install the DataMiner 10.2.0 or 10.2.x upgrade package.
+Install the DataMiner [DataMiner 10.2.0 or 10.2.x](https://community.dataminer.services/dataminer-server-upgrade-packages/) upgrade package.
