@@ -23,6 +23,10 @@ A new parameter, *Script Name*, has been added to the *Configuration* page of th
 
 Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
+#### Passive overview pages with linked CM overview dashboards [ID_36450]
+
+Overview pages have been added for the passive levels (node, amplifier, and tap), which display the KPIs for the selected entry and contain links to navigate to a dashboard with all cable modems associated with the selected device.
+
 ## Changes
 
 ### Enhancements
@@ -93,6 +97,18 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 - Parameters that are used to capture information events are no longer used.
 - Inter-app calls are now aggregated to send information to the back end.
 - Information from the back end is now processed through inter-app communication.
+
+#### Geomarketing DB passive tables no longer displayed + new export button [ID_36449]
+
+To improve performance, the Geomarketing DB passive (node, amplifier, tab, and subscriber) tables are no longer displayed. An export button has been added that allows you to export such hidden tables for debugging purposes.
+
+#### ID columns hidden on topology data pages [ID_36451]
+
+On the topology data pages, unnecessary ID columns are now hidden, so that the pages have a cleaner look.
+
+#### Exception values added for percentage, latitude, and longitude parameters [ID_36452]
+
+To prevent parameters getting an incorrect negative value, exception values have been added to the Percentage Ping OK and Percentage Ping Unreachable parameters on the node and amplifier level, as well as to the latitude and longitude parameters on amplifier and tap level.
 
 ### Fixes
 
@@ -166,3 +182,7 @@ In addition, for the Skyline EPM Platform DOCSIS connector, the *SetEmptyColumns
 #### Group Delay or Reflection Status incorrectly calculated based on NMTTER threshold [ID_36344]
 
 Up to now, the Group Delay or Reflection Status parameter was not calculated correctly, because it was calculated based on the NMTTER threshold. To address this issue, new logic has been implemented: If either the Group Delay Status or the Reflection Status is marked as out of specification (OOS), the Group Delay or Reflection Status parameter will also be marked as out of specification (OOS). If both the Group Delay Status and the Reflection Status are marked as OK, the parameter will be marked as OK.
+
+#### CM missing on map [ID_36448]
+
+It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML that controls the maps have been adjusted to correct this issue.
