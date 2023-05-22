@@ -10,6 +10,6 @@ uid: Display_keys1
 
 - Existing protocols that use *displayColumn* should not be changed to use [NamingFormat](xref:Protocol.Params.Param.ArrayOptions.NamingFormat) (as this will result in loss of data) unless this change is required for a specific reason.
 
-- If no Display Key is explicitely defined in the protocol, the Primary Key will be used as Display Key by default.
+- By default, if no display key is explicitly defined in the protocol, the primary key will be used as the display key.
 
 - On new implementations, the "\[IDX\]" suffix is not required anymore. However, on existing implementations, removing such "\[IDX\]" suffix is not recommended as it could have some impact on existing systems.
