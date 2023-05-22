@@ -77,7 +77,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 | SequenceId | int |  | Needs to be unique. |
 | Description | string |  | Description for developers. |
 | OutgoingInterfaceIds | int[] | 11, 12, 13, 14, 15 | The list of all the output interface IDs that this rule has to generate a token for. These represent the outgoing interfaces that need to be triggered when this rule matches. |
-| DoTagTokens | bool | true or false | |
+| DoTagTokens | bool | true or false | Used on a split gateway to tag all tokens generated from the same incoming token with the same unique identifier. On the associated merge gateway, only tokens with the same tag will be considered together for evaluating routing rules. |
 | Conditions | [RoutingCondition](#routingcondition-object)[] | [RoutingCondition](#routingcondition-object) | |
 
 #### RoutingCondition Object
@@ -96,7 +96,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 | --- | --- | --- | --- |
 | FieldDescriptorId | string | | The GUID of the field descriptor defined in the Section Definition of the DOM definition. |
 | SectionDefinitionId | string | | The GUID of the Section definition where the field descriptor belongs to. |
-| UserDomInstance | string | | The name of the user DOM instance. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
+| UserDomInstance | string | | The label of the Activity from the Process Definition where the user task gets generated. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
 
 Below you can find examples of the possible routing rules.
 
