@@ -16,7 +16,7 @@ DataMiner supports the following types of directories for user management:
 By default, DataMiner will import users from its local Active Directory.
 
 > [!NOTE]
-> Importing users via these methods does not necessarily allow these users to sign in. For user authentication, see [User authentication](#user-authentication).
+> Importing users via these methods does not necessarily allow these users to sign in. See [User authentication](#user-authentication).
 
 ## Local users
 
