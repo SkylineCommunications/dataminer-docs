@@ -1609,7 +1609,7 @@
             - name: Managing aggregation rules
               topicUid: Managing_aggregation_rules
     - name: Dashboards and Low-Code Apps
-      topicUid: newR_D
+      topicUid: Dashboards_and_Low_Code_Apps
       items:
         - name: Dashboards app
           topicUid: newR_D
