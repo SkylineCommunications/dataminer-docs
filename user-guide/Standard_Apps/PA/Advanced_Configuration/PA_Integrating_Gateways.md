@@ -96,7 +96,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 | --- | --- | --- | --- |
 | FieldDescriptorId | string | | The GUID of the field descriptor defined in the Section Definition of the DOM definition. |
 | SectionDefinitionId | string | | The GUID of the Section definition where the field descriptor belongs to. |
-| UserDomInstance | string | | The label of the Activity from the Process Definition where the user task gets generated. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
+| UserDomInstance | string | | The label of the Activity from the Process Definition where the user task is generated. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
 
 Below you can find examples of the possible routing rules.
 
