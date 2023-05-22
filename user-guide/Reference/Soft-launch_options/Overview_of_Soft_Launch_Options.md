@@ -177,7 +177,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 Enables the ownership framework.
 
 - **Minimum version**: 9.5.11
-- **Estimated release version**: Deprecated and will not be released
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Indexing
 
@@ -350,7 +350,7 @@ Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLa
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
-- **Estimated release version**: Deprecated and will not be released
+- **Estimated release version**: Will not be released (deprecated)
 
 ### SrmProtocolGeneration
 
