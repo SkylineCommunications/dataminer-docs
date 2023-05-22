@@ -20,6 +20,16 @@ For large-scale clusters, this might be very difficult to manage as you need to 
 >[!IMPORTANT]
 > It is absolutely essential that you perform repairs on your Cassandra nodes. Not repairing your tables might have severe consequences, as detailed in [Cassandra docs - Repair](https://cassandra.apache.org/doc/4.0/cassandra/operating/repair.html). We highly recommend automating your repairs with Cassandra Reaper as outlined above.
 
+> [!NOTE]
+> Tables using TimeWindowCompactionStrategy should be excluded from automated repairs. These tables are:
+> - element_state_changes
+> - spectrum_sharded
+> - state_changes
+> - trend_data_rt
+> - trend_data_short
+> - trend_data_medium
+> - trend_data_long
+
 ## Keeping the software up to date
 
 We recommend that you update your Cassandra software regularly.
