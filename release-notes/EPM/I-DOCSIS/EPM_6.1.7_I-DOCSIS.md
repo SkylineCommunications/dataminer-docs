@@ -27,6 +27,10 @@ Similarly, a *Script Name* parameter has been added to the *Configuration* page 
 
 Overview pages have been added for the passive levels (node, amplifier, and tap), which display the KPIs for the selected entry and contain links to navigate to a dashboard with all cable modems associated with the selected device.
 
+#### New Automation script to add CCAP/CM pair [ID_36459]
+
+A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
+
 ## Changes
 
 ### Enhancements
