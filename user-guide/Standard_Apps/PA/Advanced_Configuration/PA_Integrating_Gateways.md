@@ -35,7 +35,46 @@ The *PA GW RoutingRules* parameter of a profile instance can contain a set of or
 
 A rule contains one or multiple conditions comparing the field value of the process DOM instance or user DOM instance to fixed values.
 
-### General Build
+### Routing rule JSON object
+
+#### RoutingRule object
+
+| Name | Type | Information |
+| --- | --- | --- |
+| Evaluation | string (discrete) | Possible values:<br>- *First Matching*: The evaluation will stop when the first rule has a match.<br>- *All Matching*: All rules will be evaluated. Only triggered if all of the conditions match. |
+| Rules | [Rule](#rule-object)[] | See [Rule object](#rule-object). |
+
+#### Rule object
+
+| Name | Type | Information |
+| --- | --- | --- |
+| SequenceId | int | Needs to be unique. |
+| Description | string | Description for developers. |
+| OutgoingInterfaceIds | int[] | Value: *11*, *12*, *13*, *14*, and/or *15*.<br>The list of all the output interface IDs that this rule has to generate a token for. These represent the outgoing interfaces that need to be triggered when this rule matches. |
+| DoTagTokens | bool | Value: *true* or *false*<br>Used on a split gateway to tag all tokens generated from the same incoming token with the same unique identifier. On the associated merge gateway, only tokens with the same tag will be considered together for evaluating routing rules. |
+| Conditions | [RoutingCondition](#routingcondition-object)[] | See [RoutingCondition object](#routingcondition-object). |
+
+#### RoutingCondition object
+
+| Name | Type | Information |
+| --- | --- | --- |
+| IncomingGatewayKeyName | nullable string | Value: "\*", null, or another value.<br>Null or "*" means any incoming gateway key name.<br>If you use a DOM field, this is entirely ignored, so this will most likely be null.|
+| Value | string | The value that will be used to validate a DOM field against. |
+| Operation | string (discrete) | Possible values:<br>- *any*: The incoming gateway key name and value are ignored.<br>- *equal*: The operation will match when the incoming value matches the *Value* field. When a DOM field is specified, the DOM field will be checked instead of the incoming gateway key name. |
+| IncomingInterfaceId | int | Value: -1, 1, 2, 3, 4, or 5.<br>-1 represents all interfaces. |
+| DomField | [IncomingDomField](#incomingdomfield-object) | See [IncomingDomField object](#incomingdomfield-object). |
+
+#### IncomingDomField object
+
+| Name | Type | Information |
+| --- | --- | --- |
+| FieldDescriptorId | string | The GUID of the field descriptor defined in the section definition of the DOM definition. |
+| SectionDefinitionId | string | The GUID of the section definition that the field descriptor belongs to. |
+| UserDomInstance | string | The label of the activity from the process definition where the user task is generated. When this is defined, a user DOM instance will be processed instead of the process DOM instance. |
+
+Below you can find examples of the possible routing rules.
+
+### General example
 
 ```json
 {
@@ -61,46 +100,7 @@ A rule contains one or multiple conditions comparing the field value of the proc
 }
 ```
 
-### Routing Rule Json Object
-
-#### RoutingRule Object
-
-| Name | Type | Value | Information |
-| --- | --- | --- | --- |
-| Evaluation | string (discrete) | First Matching <br>or All Matching | First Matching: The evaluation will stop when the first rule has a match. <br>All Matching: All rules will be evaluated. Only triggered if all of the conditions match. |
-| Rules | [Rule](#rule-object)[] | [Rule](#rule-object) | |
-
-#### Rule Object
-
-| Name | Type | Value | Information |
-| --- | --- | --- | --- |
-| SequenceId | int |  | Needs to be unique. |
-| Description | string |  | Description for developers. |
-| OutgoingInterfaceIds | int[] | 11, 12, 13, 14, 15 | The list of all the output interface IDs that this rule has to generate a token for. These represent the outgoing interfaces that need to be triggered when this rule matches. |
-| DoTagTokens | bool | true or false | Used on a split gateway to tag all tokens generated from the same incoming token with the same unique identifier. On the associated merge gateway, only tokens with the same tag will be considered together for evaluating routing rules. |
-| Conditions | [RoutingCondition](#routingcondition-object)[] | [RoutingCondition](#routingcondition-object) | |
-
-#### RoutingCondition Object
-
-| Name | Type | Value | Information |
-| --- | --- | --- | --- |
-| IncomingGatewayKeyName | nullable string | "\*", null, or another value | For null or "*": Any incoming gateway key name.<br>If you use a DomField, this is entirely ignored, so this will most likely be null.|
-| Value | string | | The value that will be used to validate a DOM Field against. |
-| Operation | string (discrete) | any or equal | When operation is **any**, the incoming gateway key name and value are ignored.<br>When operation is **equal**, it will match when the incoming value matches the *Value* field. <br> When a DomField is given, it will check the DOM Field instead of the incoming gateway key name. |
-| IncomingInterfaceId | int | -1, 1, 2, 3, 4, 5 | It can be one of the specified values. -1 represents all interfaces. |
-| DomField | [IncomingDomField](#incomingdomfield-object) | | |
-
-#### IncomingDomField Object
-
-| Name | Type | Value | Information |
-| --- | --- | --- | --- |
-| FieldDescriptorId | string | | The GUID of the field descriptor defined in the Section Definition of the DOM definition. |
-| SectionDefinitionId | string | | The GUID of the Section definition where the field descriptor belongs to. |
-| UserDomInstance | string | | The label of the Activity from the Process Definition where the user task is generated. When this is defined, it will process a user DOM instance instead of the Process DOM instance. |
-
-Below you can find examples of the possible routing rules.
-
-### Parallel split
+### Parallel split example
 
 ```json
 {
@@ -122,7 +122,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Exclusive split
+### Exclusive split examples
 
 #### Example 1: Process DOM instance
 
@@ -205,7 +205,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Inclusive split
+### Inclusive split example
 
 ```json
 {
@@ -247,7 +247,7 @@ Below you can find examples of the possible routing rules.
 }
 ```
 
-### Parallel merge
+### Parallel merge examples
 
 #### Example 1
 
