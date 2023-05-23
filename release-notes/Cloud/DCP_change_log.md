@@ -10,6 +10,14 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.
 
+#### 17 May 2023 - Enchancement - CloudFeed 1.1.0 - Allows other processes to query its state [ID_35914]
+
+Other DataMiner processes can check up on the state of CloudFeed. for now Cube uses this to check if Relation Learning is available.
+
+#### 17 May 2023 - Enchancement - CloudFeed 1.1.0 - Allows CloudGateway to be a proxy for cloud connection [ID_35663]
+
+This mechanism makes it possible to install CloudFeed on systems that are not allowed to have outbound connections to the cloud.
+
 #### 15 May 2023 - Fix - CloudGateway 2.10.11 - Reconnect in case of a canceled connection [ID_36402]
 
 In some rare cases, it could occur that when DataMiner CloudGateway encountered a canceled connection to the cloud, it did not renew the connection automatically unless the DxM was restarted manually. This issue has been resolved.
