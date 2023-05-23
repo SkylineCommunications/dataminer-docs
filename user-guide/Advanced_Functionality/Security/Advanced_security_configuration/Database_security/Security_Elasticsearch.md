@@ -113,77 +113,77 @@ To configure TLS encryption for client-server communication:
 
 1. Save the changes and start the DataMiner Agent.
 
-### Troubleshooting
-
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
-#### Generate-certificates
+### Troubleshooting: executing the generate-certificates.sh script
 
-##### Syntax error
+#### Syntax error
 
-When cloning the GitHub repo - Generate-TLS-Certificates on a Windows machine, and moving the generate-certificates.sh file using SCP to the Linux machine and executing the script:
+**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
 
 ```bash
 sudo generate-certificates.sh
 ```
 
-Bash could indicate that there are syntax errors in the script.
+**Symptom**: Bash indicates that there are syntax errors in the script.
 
-To fix this, run:
+**Resolution**: Convert the .sh file to Unix format.
 
-```bash
-sudo apt install dos2unix
-```
+1. Begin by installing *dos2unix* with the following command:
 
-Now run:
+   ```bash
+   sudo apt install dos2unix
+   ```
 
-```bash
-dos2unix generate-certificates.sh
-```
+1. Next, run the following command:
 
-This will convert the .sh file to Unix format. After conversion the script can be executed again.
+   ```bash
+   dos2unix generate-certificates.sh
+   ```
 
-##### Keytool: command not found
+   Once the conversion is complete, you can execute the script again.
 
-When executing the generate-certificates.sh script, bash could indicate that keytool: command not found.
+#### Keytool: command not found
 
-To solve this, we need to add the location of the keytool to the PATH system variable.
+**Situation**: You have tried executing the *generate-certificates.sh* script.
 
-```bash
-sudo nano /etc/environment
-```
+**Symptom**: `Keytool: command not found.`
 
-Append the following at the end of the line:
+**Resolution**: Add the location of the keytool to the PATH system variable.
 
-```text
-:/usr/share/opensearch/jdk/bin
-```
+1. Run the following command:
 
-So it becomes:
+   ```bash
+   sudo nano /etc/environment
+   ```
 
-```text
-PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/opensearch/jdk/bin"
-```
+1. Next, add `:/usr/share/opensearch/jdk/bin` to the end of the line.
 
-Save the changes (press *Ctrl+O* in nano), and exit the editor (press *Ctrl+X* in nano).
+   The modified line should look like this:
 
-To apply the changes, either reboot your server, or run the following command to reload the PATH variable:
+   ```text
+   PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/opensearch/jdk/bin"
+   ```
 
-```bash
-source /etc/environment
-```
+1. Save the changes by pressing *Ctrl+O* in nano, then exit the editor by pressing *Ctrl+X* in nano.
 
-Verify that the directory has been added to the system PATH variable by executing:
+1. To apply the changes, either reboot your server, or reload the PATH variable by running the following command:
 
-```bash
-echo $PATH
-```
+   ```bash
+   source /etc/environment
+   ```
 
-After following this procedure, the generate-certificates.sh script should be able to execute again.
+1. Verify that the directory has been successfully added to the system PATH variable by executing:
+
+   ```bash
+   echo $PATH
+   ```
+
+After following these steps, the *generate-certificates.sh* script should be able to execute without encountering the `Keytool:command not found` error.
 
 > [!TIP]
-> Above example is with the keytool, located in the /usr/share/opensearch/jdk/bin, for Elasticsearch the same procedure applies.
+> The example above is specific to the keytool located in `/usr/share/opensearch/jdk/bin`. For Elasticsearch, the same procedure applies.
 
 ## Inter-node TLS encryption
 
