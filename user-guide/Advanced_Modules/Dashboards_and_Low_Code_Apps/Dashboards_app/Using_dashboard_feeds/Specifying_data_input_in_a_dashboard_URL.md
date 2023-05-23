@@ -9,7 +9,7 @@ If a dashboard has been configured with one or more feed components, it is possi
 > [!NOTE]
 >
 > - From DataMiner 10.2.0/10.2.2 onwards, when a dashboard updates its own URL, it will use a compressed JSON syntax. In this compressed syntax, the query parameter “d” is used instead of “data”.
-> - To refer to a query in the dashboard URL, using the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
+> - To refer to a query in the dashboard URL, use the following format: *?queries=\[***alias***\]\\x1F\[***queryJsonString***\]*. In this format, \[alias\] is the name of the query and \[queryJsonString\] is the query in the format of a JSON string, for example: *?queries=Get Elements/{"ID": "Elements"}*.
 > - From DataMiner 10.0.2 onwards, to only display a dashboard without the rest of the app, add the argument “*embed=true*”. To display the *Clear all* button for an embedded dashboard, add “*subheader=true*” as well. For example: *https://**\[DMA IP\]**/dashboard/#/MyDashboards/dashboard.dmadb?embed=true&subheader=true*
 > - The *showAdvancedSettings=true* URL option can be used with some components in order to make additional functionality available.
 
@@ -31,7 +31,10 @@ This JSON object has to have the following structure:
 }
 ```
 
-- ``<data>`` is a JSON object with a number of property keys (corresponding with the objects listed below) and property values (as an array of strings). For example:
+> [!TIP]
+> See [Example of passing the data using a JSON object in the URL](#example-passing-the-data-using-a-json-object-in-the-url)
+
+- ``<data>`` is a JSON object with a number of property keys (corresponding with the [objects listed below](#supported-objects)) and property values (as an array of strings). For example:
 
   ```json
   {
@@ -41,7 +44,7 @@ This JSON object has to have the following structure:
   }
   ```
 
-- When you provide data in the (optional) *feedAndSelect* item, that data will be interpreted as if it was passed using the legacy syntax described below.
+- When you provide data in the (optional) *feedAndSelect* item, that data will be interpreted as if it was passed using the [legacy syntax](#legacy-syntax) described below.
 
 - When you provide data in the (optional) *feed* item, that data will only be used in the URL feed. It will not be used to select items in selection boxes on the dashboard.
 
@@ -58,6 +61,47 @@ This JSON object has to have the following structure:
 
   > [!NOTE]
   > You can find the ID of each component in the lower right corner of the component while in edit mode.
+
+### Example: passing the data using a JSON object in the URL
+
+With the following JSON object, three different elements ("1/2","1/8", and "212/123") and two parameters ("1/2/3" and "1/4/6") will be selected for the component with ID 123:
+
+```json
+{
+"version": 1,
+"components": [
+    {
+      "cid": 123,
+      "select": {
+          "elements": [
+              "1/2",
+              "1/8",
+              "212/123"
+          ],
+          "parameters": [
+              "1/2/3",
+              "1/4/6"
+          ]
+      }
+    }
+  ]
+}
+```
+
+This JSON object adheres to the required structure specified in [JSON syntax](#json-syntax).
+
+To pass this JSON object as part of a URL, it needs to be URL-encoded.
+
+`https://[DMA IP]/dashboard/#/MyDashboards/dashboard.dmadb?data=%7B%22version%22%3A1%2C%22components%22%3A%5B%7B%22cid%22%3A123%2C%22select%22%3A%7B%22elements%22%3A%5B%221%2F2%22%2C%221%2F8%22%2C%22212%2F123%22%5D%2C%22parameters%22%3A%5B%221%2F2%2F3%22%2C%221%2F4%2F6%22%5D%7D%7D%5D%7D`
+
+> [!NOTE]
+>
+> - " is encoded as %22.
+> - : is encoded as %3A.
+> - , is encoded as %2C.
+> - [ is encoded as %5B.
+> - ] is encoded as %5D.
+> - / is encoded as %2F.
 
 ## Legacy syntax
 
@@ -123,7 +167,7 @@ Within the dashboard URL, the following data objects can be specified:
 
 - *cpes*: Deprecated from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (but still supported for the sake of backwards compatibility). To specify an EPM filter. Requires the DMA ID, the element ID, the field PID, the field value, the table index PID, and the index value. Prior to DataMiner 10.0.5, the DMA ID, the element ID, the field PID, the table PID, and the value are required.
 
-- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes"). To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
+- *epm-selections*: Available from DataMiner 10.2.0 [CU1] and 10.2.4 onwards (replaces "cpes")<!-- RN 32594 -->. To specify an EPM filter. Requires the DMA ID, element ID, field PID and primary key value, separated by forward slashes. Unlike the deprecated "cpes", "epm-selections" allows forward slashes in the primary key value.
 
 - *strings*: Supported from DataMiner 10.3.5/10.4.0 onwards<!--  RN 35902 -->. A text string, which will serve as the default value for a Text input component.
 
