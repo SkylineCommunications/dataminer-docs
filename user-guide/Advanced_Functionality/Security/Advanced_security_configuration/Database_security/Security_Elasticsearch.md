@@ -125,7 +125,7 @@ To configure TLS encryption for client-server communication:
 When cloning the GitHub repo - Generate-TLS-Certificates on a Windows machine, and moving the generate-certificates.sh file using SCP to the Linux machine and executing the script:
 
 ```bash
-sudo bash generate-certificates.sh
+sudo generate-certificates.sh
 ```
 
 Bash could indicate that there are syntax errors in the script.
