@@ -122,6 +122,12 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
+#### Dashboards app & Low-Code Apps: A message will now be displayed while a component is being migrated [ID_36410]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, no indication would be given when a component was being migrated to the most recent GQI version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will be displayed.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
@@ -177,6 +183,12 @@ When a query was updated, the query filter component would incorrectly only get 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
+
+#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In a PDF report of a dashboard, in some cases, trend components would collide with other components.
 
 #### GQI: Table unable to feed data when its query included a column manipulation [ID_36350]
 
