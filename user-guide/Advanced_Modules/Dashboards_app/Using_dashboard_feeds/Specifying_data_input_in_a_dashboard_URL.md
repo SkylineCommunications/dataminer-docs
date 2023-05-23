@@ -32,7 +32,7 @@ This JSON object has to have the following structure:
 ```
 
 > [!TIP]
-> See: [Example of passing the data using a JSON object in the URL](#example-passing-the-data-using-a-json-object-in-the-url)
+> See [Example of passing the data using a JSON object in the URL](#example-passing-the-data-using-a-json-object-in-the-url)
 
 - ``<data>`` is a JSON object with a number of property keys (corresponding with the [objects listed below](#supported-objects)) and property values (as an array of strings). For example:
 
@@ -64,7 +64,7 @@ This JSON object has to have the following structure:
 
 ### Example: passing the data using a JSON object in the URL
 
-The following JSON object demonstrates an example of passing data by using a JSON object in the URL:
+With the following JSON object, three different elements ("1/2","1/8", and "212/123") and two parameters ("1/2/3" and "1/4/6") will be selected for the component with ID 123:
 
 ```json
 {
@@ -89,8 +89,6 @@ The following JSON object demonstrates an example of passing data by using a JSO
 ```
 
 This JSON object adheres to the required structure specified in [JSON syntax](#json-syntax).
-
-By using this JSON object to pass data, three different elements ("1/2","1/8", and "212/123") and two parameters ("1/2/3" and "1/4/6") will be selected for the component with ID 123.
 
 To pass this JSON object as part of a URL, it needs to be URL-encoded.
 
