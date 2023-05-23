@@ -50,6 +50,12 @@ To generate a marker image dynamically, you can use placeholders in the `url` at
 
 ### Enhancements
 
+#### Cassandra Cluster Migrator tool now supports TLS [ID_34852]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) is now able to establish TLS connections towards the databases.
+
 #### Enhanced performance when retrieving resources [ID_36129]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
