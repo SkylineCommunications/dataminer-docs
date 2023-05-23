@@ -116,6 +116,75 @@ To configure TLS encryption for client-server communication:
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
 
+### Troubleshooting: executing the generate-certificates.sh script
+
+#### Syntax error
+
+**Situation**: You have cloned the "Generate-TLS-Certificates" GitHub repository on a Windows machine, and have transferred the *generate-certificates.sh* file to a Linux machine using SCP. You have executed the following command:
+
+```bash
+sudo generate-certificates.sh
+```
+
+**Symptom**: Bash indicates that there are syntax errors in the script.
+
+**Resolution**: Convert the .sh file to Unix format.
+
+1. Begin by installing *dos2unix* with the following command:
+
+   ```bash
+   sudo apt install dos2unix
+   ```
+
+1. Next, run the following command:
+
+   ```bash
+   dos2unix generate-certificates.sh
+   ```
+
+   Once the conversion is complete, you can execute the script again.
+
+#### Keytool: command not found
+
+**Situation**: You have tried executing the *generate-certificates.sh* script.
+
+**Symptom**: `Keytool: command not found.`
+
+**Resolution**: Add the location of the keytool to the PATH system variable.
+
+1. Run the following command:
+
+   ```bash
+   sudo nano /etc/environment
+   ```
+
+1. Next, add `:/usr/share/opensearch/jdk/bin` to the end of the line.
+
+   The modified line should look like this:
+
+   ```text
+   PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/opensearch/jdk/bin"
+   ```
+
+1. Save the changes by pressing *Ctrl+O* in nano, then exit the editor by pressing *Ctrl+X* in nano.
+
+1. To apply the changes, either reboot your server, or reload the PATH variable by running the following command:
+
+   ```bash
+   source /etc/environment
+   ```
+
+1. Verify that the directory has been successfully added to the system PATH variable by executing:
+
+   ```bash
+   echo $PATH
+   ```
+
+After following these steps, the *generate-certificates.sh* script should be able to execute without encountering the `Keytool:command not found` error.
+
+> [!TIP]
+> The example above is specific to the keytool located in `/usr/share/opensearch/jdk/bin`. For Elasticsearch, the same procedure applies.
+
 ## Inter-node TLS encryption
 
 By default inter-node communication in Elasticsearch is unencrypted.
