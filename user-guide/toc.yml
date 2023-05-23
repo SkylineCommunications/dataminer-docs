@@ -3304,6 +3304,8 @@
           topicUid: Cassandra_Cleaner
         - name: Cassandra Clone
           topicUid: Cassandra_Clone
+        - name: Cassandra Cluster Migrator
+          topicUid: Cassandra_Cluster_Migrator
         - name: Cassandra Cluster Validator
           topicUid: Cassandra_Cluster_Validator
         - name: Connection Check
