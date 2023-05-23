@@ -4,10 +4,8 @@ uid: Dashboards_and_Low_Code_Apps
 
 # Dashboards and Low-Code Apps
 
-This section of the documentation provides you with an overview of two DataMiner modules: the [Dashboards app](xref:newR_D) and [Low-Code Apps](xref:Application_framework).
+With the [Dashboards app](xref:newR_D) and [Low-Code Apps](xref:Application_framework) module, you can consolidate any data from your monitored system, so you can access it on any device.
 
-Both the Dashboards app and Low-Code Apps module are platform-independent web interfaces that allow you to consolidate any data from the monitored system. Dashboards and applications can be as simple or complex as you want, using components that are configured in the same way across both modules. These modules are particularly useful for selectively sharing specific data with third parties, without the need to grant access to your entire system.
+Dashboards and low-code apps can be as simple or complex as you want, using [components](xref:Available_visualizations) that are configured in the same way across both modules. They are particularly useful for selectively [sharing specific data with third parties](xref:Sharing_a_dashboard), without the need to grant access to your entire system.
 
-However, Low-Code Apps deviate from the Dashboards app in that they also offer the functionality to trigger actions based on events, display panels as pop-up window or overlays on pages, and incorporate menus and submenus into the header bar.
-
-Both Dashboards and Low-Code Apps leverage the same [set of visualizations](xref:Available_visualizations), enabling you to create custom dashboards and applications that seamlessly interact with data from your DataMiner System.
+The main difference between a dashboard and a low-code app is that the latter can combine multiple "dashboards" in one application, with additional functionality: [actions can be triggered based on specific events](xref:LowCodeApps_event_config) (e.g. a user clicks a button, a page is loaded, a panel is closed, etc.), you can [configure panels](xref:LowCodeApps_panel_config) that can for instance be shown as a pop-up window or an overlay, and you can [incorporate menus and submenus into the header bar](xref:LowCodeApps_header_config).
