@@ -27,7 +27,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
 %% Define blocks %%
 START([Trend issue])
 GetDELT{{Get a .dmimport package with trend data,\nunzip it and check the 'Database' folder.}}
-TrendDataInspector{{"Check the data with the trend data inspector.\n(Client test tool => Advanced => Test => Trend Data Inspector)"}}
+TrendDataInspector{{"Check the data with the trend data inspector."}}
 QueryDatabase{{Query the database directly.}}
 DataPresent([Is the data there?])
 ReadIssue([Read issue])
@@ -53,6 +53,9 @@ class DataPresent classDecision;
 class NotFixed classSolution;
 class ReadIssue,WriteIssue classExternalRef;
 </div>
+
+> [!NOTE]
+> More details on accessing the Trend Inspector can be found [here](xref:SLNetClientTest_trend_data_inspector)
 
 ### Read Issue
 
@@ -88,6 +91,11 @@ class DataPresent classDecision;
 class NotFixed classSolution;
 </div>
 
+
+> [!NOTE]
+> More details on the Trend Logging can be found [here](xref:Computer_settings#debug-settings).
+> More details on following a Cube session via the Client Test tool can be found [here](xref:SLNetClientTest_tracking_dma_communication). Tracking the 'Requests/Responses' communication should be sufficient.
+ 
 ### Write Issue
 
 <div class="mermaid">
