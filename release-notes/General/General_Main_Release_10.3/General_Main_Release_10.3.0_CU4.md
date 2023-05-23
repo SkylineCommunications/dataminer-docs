@@ -34,6 +34,16 @@ Up to now, when the function manager needed to deactivate function DVEs because 
 
 From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
 
+#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The following scheduled tasks will now by default return 0 instead of error code 1.
+
+- Skyline DataMiner Backup (DataMinerBackup.js)
+- Skyline DataMiner Database Optimization (OptimizeDB.js)
+- Skyline DataMiner LDAP Resync (ReloadLDAP.js)
+
 ### Fixes
 
 #### Service & Resource Management: Contributing resources of which the contributing booking had ended would not be marked available [ID_35757]

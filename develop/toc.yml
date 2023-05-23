@@ -5018,8 +5018,6 @@
               topicUid: Primary_keys1
             - name: Display keys
               topicUid: Display_keys1
-            - name: Key column description
-              topicUid: Key_column_description
             - name: Data handling
               topicUid: Data_handling
             - name: Integrity constraints

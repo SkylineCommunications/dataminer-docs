@@ -37,6 +37,16 @@ In Failover setups using virtual IP addresses, once every minute the CheckVIPs t
 
 This obsolete thread has now been removed.
 
+#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The following scheduled tasks will now by default return 0 instead of error code 1.
+
+- Skyline DataMiner Backup (DataMinerBackup.js)
+- Skyline DataMiner Database Optimization (OptimizeDB.js)
+- Skyline DataMiner LDAP Resync (ReloadLDAP.js)
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
@@ -112,3 +122,9 @@ When you restarted a spectrum element while its card was open, the trace would n
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
+
+#### Dashboards app: Problem when updating a query linked to a feed [ID_36414]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.

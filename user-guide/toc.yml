@@ -716,6 +716,15 @@
               topicUid: Working_with_behavioral_anomaly_detection
             - name: Working with pattern matching
               topicUid: Working_with_pattern_matching
+              items:
+              - name: Defining a pattern
+                topicUid: Defining_a_pattern
+              - name: Editing a pattern definition
+                topicUid: Editing_a_pattern_definition
+              - name: Deleting a pattern definition
+                topicUid: Deleting_a_pattern_definition
+              - name: Managing pattern definitions
+                topicUid: Managing_pattern_definitions
             - name: Adding related parameters to a trend graph
               topicUid: Adding_related_parameters_to_a_trend_graph
         - name: Working with histograms
@@ -2476,6 +2485,8 @@
                   topicUid: I-DOCSIS_maps_deployment_multiple_backends
             - name: EPM I-DOCSIS upgrade
               topicUid: I-DOCSIS_upgrade
+            - name: Creating a new CCAP/CM pair
+              topicUid: I-DOCSIS_Create_CCAP_CM_pair
             - name: Available parameters in I-DOCSIS
               topicUid: I-DOCSIS_parameters
               items:
@@ -3094,6 +3105,8 @@
     - name: Known issues
       topicUid: Known_issues
       items:
+        - name: Cassandra cluster data not offloaded while database is unavailable
+          topicUid: KI_Cassandra_cluster_data_not_offloaded
         - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
           topicUid: KI_Inaccessible_data_Elasticsearch_casing
         - name: RTEs caused by problem during automatic NATS reconfiguration

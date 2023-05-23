@@ -15,7 +15,9 @@ uid: EPM_6.1.8_I-DOCSIS
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### EPM front end removed from passive logic workflow [ID_36356]
+
+To improve performance, the EPM front-end element is no longer involved in retrieving the passive data in the system.
 
 ### Fixes
 
