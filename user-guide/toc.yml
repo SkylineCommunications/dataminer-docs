@@ -1608,36 +1608,106 @@
               topicUid: Viewing_aggregation_information
             - name: Managing aggregation rules
               topicUid: Managing_aggregation_rules
-    - name: Dashboards app
-      topicUid: newR_D
+    - name: Dashboards and Low-Code Apps
+      topicUid: Dashboards_and_Low_Code_Apps
       items:
-        - name: Accessing the Dashboards app
-          topicUid: Accessing_the_Dashboards_app
-        - name: Overview of the Dashboards app UI
-          topicUid: Overview_of_the_Dashboards_app_UI
-        - name: Managing dashboard folders
-          topicUid: Managing_dashboard_folders
-        - name: Creating and configuring dashboards
-          topicUid: Creating_and_configuring_dashboards
+        - name: Dashboards app
+          topicUid: newR_D
           items:
-            - name: Creating a completely new dashboard
-              topicUid: Creating_a_completely_new_dashboard
-            - name: Creating a dashboard based on an example
-              topicUid: Creating_a_dashboard_based_on_an_example
-            - name: Duplicating a dashboard
-              topicUid: Duplicating_a_dashboard
-            - name: Deleting a dashboard
-              topicUid: Deleting_a_dashboard
-            - name: Editing a dashboard
-              topicUid: Editing_a_dashboard
-            - name: Changing dashboard settings
-              topicUid: Changing_dashboard_settings
-            - name: Configuring the dashboard layout
-              topicUid: Configuring_the_dashboard_layout
-            - name: Configuring dashboard components
-              topicUid: Configuring_dashboard_components
-            - name: Embedding a dashboard component in a webpage or Visio drawing
-              topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+            - name: Accessing the Dashboards app
+              topicUid: Accessing_the_Dashboards_app
+            - name: Overview of the Dashboards app UI
+              topicUid: Overview_of_the_Dashboards_app_UI
+            - name: Managing dashboard folders
+              topicUid: Managing_dashboard_folders
+            - name: Creating and configuring dashboards
+              topicUid: Creating_and_configuring_dashboards
+              items:
+                - name: Creating a completely new dashboard
+                  topicUid: Creating_a_completely_new_dashboard
+                - name: Creating a dashboard based on an example
+                  topicUid: Creating_a_dashboard_based_on_an_example
+                - name: Duplicating a dashboard
+                  topicUid: Duplicating_a_dashboard
+                - name: Deleting a dashboard
+                  topicUid: Deleting_a_dashboard
+                - name: Editing a dashboard
+                  topicUid: Editing_a_dashboard
+                - name: Changing dashboard settings
+                  topicUid: Changing_dashboard_settings
+                - name: Configuring the dashboard layout
+                  topicUid: Configuring_the_dashboard_layout
+                - name: Configuring dashboard components
+                  topicUid: Configuring_dashboard_components
+                - name: Embedding a dashboard component in a webpage or Visio drawing
+                  topicUid: Embedding_a_dashboard_component_in_a_webpage_or_Visio_drawing
+            - name: Using dashboard feeds
+              topicUid: Using_dashboard_feeds
+              items:
+                - name: Configuring feed components
+                  topicUid: Configuring_feed_components
+                - name: Configuring query (GQI) data feeds
+                  topicUid: Configuring_GQI_feeds
+                  items:
+                    - name: Query data sources
+                      topicUid: Query_data_sources
+                    - name: Configuring an external data source in a query
+                      topicUid: Configuring_an_external_data_source_in_a_query
+                    - name: Query operators
+                      topicUid: Query_operators
+                    - name: Importing a query
+                      topicUid: Importing_a_query
+                - name: Specifying data input in a dashboard URL
+                  topicUid: Specifying_data_input_in_a_dashboard_URL
+                - name: Configuring a dashboard to use a URL feed without a feed component
+                  topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
+            - name: Sharing a dashboard
+              topicUid: Sharing_a_dashboard
+            - name: Generating a report based on a dashboard
+              topicUid: Generating_a_report_based_on_a_dashboard_Cube
+              items:
+                - name: From DataMiner Cube
+                  topicUid: Generating_a_report_based_on_a_dashboard_Cube
+                - name: From the Dashboards app
+                  topicUid: Sharing_PDF_report_from_Dashboards_app
+            - name: Customizing the Dashboards app
+              topicUid: Customizing_the_Dashboards_app
+            - name: Dashboard Gateway installation
+              topicUid: Dashboard_Gateway_installation
+        - name: Low-Code Apps
+          topicUid: Application_framework
+          items:
+            - name: Accessing the Low-Code Apps module
+              topicUid: Accessing_custom_apps
+            - name: Creating low-code applications
+              topicUid: Creating_custom_apps
+            - name: Editing a low-code application
+              topicUid: Editing_custom_apps
+            - name: Configuring low-code applications
+              topicUid: LowCodeApps_Custom_Icon
+              items:
+                - name: Customizing the icon and color of an app
+                  topicUid: LowCodeApps_Custom_Icon
+                - name: Configuring a page of a low-code app
+                  topicUid: LowCodeApps_page_config
+                - name: Configuring a panel of a low-code app
+                  topicUid: LowCodeApps_panel_config
+                - name: Configuring the header bar of a low-code app page
+                  topicUid: LowCodeApps_header_config
+                - name: Configuring low-code app events
+                  topicUid: LowCodeApps_event_config
+                - name: Configuring security for a low-code app
+                  topicUid: LowCodeApps_security_config
+                - name: Retrieving an earlier version of a low-code app
+                  topicUid: LowCodeApps_earlier_version
+                - name: Organizing the apps on the landing page in sections
+                  topicUid: LowCodeApps_organizing_landing_page
+            - name: Deleting a low-code application
+              topicUid: Deleting_custom_apps
+            - name: Specifying data input in an app URL
+              topicUid: Specifying_data_input_in_URL
+            - name: Executing actions via the app URL
+              topicUid: Executing_actions_via_URL
         - name: Available visualizations
           topicUid: Available_visualizations
           items:
@@ -1736,7 +1806,7 @@
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
             - name: Basic controls
-              topicUid: 
+              topicUid: DashboardDropdownFeed
               items:
               - name: Drop-down feed
                 topicUid: DashboardDropdownFeed
@@ -1744,38 +1814,6 @@
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
-        - name: Using dashboard feeds
-          topicUid: Using_dashboard_feeds
-          items:
-            - name: Configuring feed components
-              topicUid: Configuring_feed_components
-            - name: Configuring query (GQI) data feeds
-              topicUid: Configuring_GQI_feeds
-              items:
-                - name: Query data sources
-                  topicUid: Query_data_sources
-                - name: Configuring an external data source in a query
-                  topicUid: Configuring_an_external_data_source_in_a_query
-                - name: Query operators
-                  topicUid: Query_operators
-                - name: Importing a query
-                  topicUid: Importing_a_query
-            - name: Specifying data input in a dashboard URL
-              topicUid: Specifying_data_input_in_a_dashboard_URL
-            - name: Configuring a dashboard to use a URL feed without a feed component
-              topicUid: Configuring_a_dashboard_to_use_a_URL_feed_without_a_feed_component
-        - name: Sharing a dashboard
-          topicUid: Sharing_a_dashboard
-        - name: Generating a report based on a dashboard
-          items:
-            - name: From DataMiner Cube
-              topicUid: Generating_a_report_based_on_a_dashboard_Cube
-            - name: From the Dashboards app
-              topicUid: Sharing_PDF_report_from_Dashboards_app
-        - name: Customizing the Dashboards app
-          topicUid: Customizing_the_Dashboards_app
-        - name: Dashboard Gateway installation
-          topicUid: Dashboard_Gateway_installation
     - name: DMS Dashboards (legacy)
       topicUid: dashboards
       items:
@@ -2019,40 +2057,6 @@
           topicUid: Manually_removing_a_job
         - name: Working with job templates
           topicUid: Working_with_job_templates
-    - name: Low-Code Apps
-      topicUid: Application_framework
-      items:
-        - name: Accessing the Low-Code Apps module
-          topicUid: Accessing_custom_apps
-        - name: Creating low-code applications
-          topicUid: Creating_custom_apps
-        - name: Editing a low-code application
-          topicUid: Editing_custom_apps
-        - name: Configuring low-code applications
-          topicUid: LowCodeApps_Custom_Icon
-          items:
-            - name: Customizing the icon and color of an app
-              topicUid: LowCodeApps_Custom_Icon
-            - name: Configuring a page of a low-code app
-              topicUid: LowCodeApps_page_config
-            - name: Configuring a panel of a low-code app
-              topicUid: LowCodeApps_panel_config
-            - name: Configuring the header bar of a low-code app page
-              topicUid: LowCodeApps_header_config
-            - name: Configuring low-code app events
-              topicUid: LowCodeApps_event_config
-            - name: Configuring security for a low-code app
-              topicUid: LowCodeApps_security_config
-            - name: Retrieving an earlier version of a low-code app
-              topicUid: LowCodeApps_earlier_version
-            - name: Organizing the apps on the landing page in sections
-              topicUid: LowCodeApps_organizing_landing_page
-        - name: Deleting a low-code application
-          topicUid: Deleting_custom_apps
-        - name: Specifying data input in an app URL
-          topicUid: Specifying_data_input_in_URL
-        - name: Executing actions via the app URL
-          topicUid: Executing_actions_via_URL
     - name: Maps
       topicUid: maps
       items:
