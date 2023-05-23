@@ -24,7 +24,7 @@ uid: Part1GettingStarted
 
 ### More on specific DataMiner modules, apps, etc.
 
-- [Advanced DataMiner modules](xref:Part4AdvancedModules)
+- [DataMiner modules](xref:Part4AdvancedModules)
 - [DataMiner Standard Apps, Frameworks, and Solutions](xref:Part5StandardApps)
 
 ### Are you a DataMiner Administrator?

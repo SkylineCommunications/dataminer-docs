@@ -31,7 +31,7 @@ DELETE FROM elementdata_[DMAID] WHERE iEID = [Element ID, NOT preceded by the DM
     ALTER TABLE elementdata_[DMAID] RENAME TO elementdata_[DMAID]_old
     ```
 
-    If you are using MySQL Workbench, you can also rename the table in the following way:
+    If you are using [MySQL Workbench](xref:MySQL_Workbench), you can also rename the table in the following way:
 
     1. Go to SQL Editor.
 
