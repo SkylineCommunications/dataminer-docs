@@ -42,6 +42,7 @@ TrendDataInspector --- DataPresent
 DataPresent --- |Yes|ReadIssue
 DataPresent --- |No|WriteIssue
 %% Define hyperlinks %%
+click TrendDataInspector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
 click ReadIssue "#read-issue" "Trending"
 click WriteIssue "#write-issue" "Trending"
 %% Apply styles to blocks %%
@@ -53,9 +54,6 @@ class DataPresent classDecision;
 class NotFixed classSolution;
 class ReadIssue,WriteIssue classExternalRef;
 </div>
-
-> [!NOTE]
-> More details on accessing the Trend Inspector can be found [here](xref:SLNetClientTest_trend_data_inspector)
 
 ### Read Issue
 
@@ -91,11 +89,11 @@ class DataPresent classDecision;
 class NotFixed classSolution;
 </div>
 
-
 > [!NOTE]
-> More details on the Trend Logging can be found [here](xref:Computer_settings#debug-settings).
-> More details on following a Cube session via the Client Test tool can be found [here](xref:SLNetClientTest_tracking_dma_communication). Tracking the 'Requests/Responses' communication should be sufficient.
- 
+>
+> - For more information on trend logging, see [Debug settings](xref:Computer_settings#debug-settings).
+> - For more information on following a Cube session via the SLNetClientTest tool, see [Tracking DMA communication](xref:SLNetClientTest_tracking_dma_communication). Tracking the requests and responses should be sufficient.
+
 ### Write Issue
 
 <div class="mermaid">
