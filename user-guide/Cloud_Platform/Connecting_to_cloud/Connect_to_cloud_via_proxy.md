@@ -24,3 +24,6 @@ To configure this:
    ```
 
 1. Restart the CloudGateway service for the changes to take effect.
+
+   > [!NOTE]
+   > If you are using a version of CloudFeed prior to 1.1.0 or a version of ArtifactDeployer prior to 1.4.5, you will need to restart these DxMs as well.
