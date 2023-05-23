@@ -12,6 +12,8 @@ To configure this:
 
 1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).
 
+1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, configure the file *appsettings.proxy.json* as follows:
+
    ```json
    {
       "ProxyOptions": {
