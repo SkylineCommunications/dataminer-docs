@@ -7,12 +7,12 @@ uid: Activating_SLProtocol_as_a_64_Bit_Process
 There are **two ways** to activate this soft-launch feature, depending on whether you want to combine this with an upgrade action, or without.
 
 > [!NOTE]
-> This requires DataMiner version 10.1.8 or higher.
+> This requires DataMiner version 10.1.8 or higher to be installed, or to be upgraded to.
 
 > [!TIP]
 > This can be activated on any or all agents in a cluster, though, we encourage you to select all agents in the cluster.
 
-- **Using an upgrade**:
+- **Combining with an upgrade action**:
 
   1. Create an empty text file named *SoftLaunchX64_SLProtocol.txt* in the folder `C:\Skyline DataMiner\Tools` on each DMA. The agents can still be active for this step.
   1. Install the upgrade package.
