@@ -11,4 +11,4 @@ Use the [Proxy Cloud Pack](https://community.dataminer.services/dataminer-cloud-
 The proxy server has to support both HTTP and WebSocket traffic.
 
 > [!NOTE]
-> Prior to CloudFeed 1.1.0, it was also necessary to configure the file `C:\ProgramData\Skyline Communications\DxMs Shared\appsettings.proxy.json` for this. However, CloudFeed 1.1.0 makes it possible to use CloudGateway as a proxy for the cloud connection, so that no more manual configuration is needed. If you want to connect via proxy server, you should therefore make sure you have CloudFeed 1.1.0 or higher installed.
+> Prior to CloudFeed 1.1.0/ArtiFactDeployer 1.4.5/CloudGateway 2.10.0, it was also necessary to configure the file `C:\ProgramData\Skyline Communications\DxMs Shared\appsettings.proxy.json` for this. However, with the recent versions of these DxMs, CloudGateway can be used as a proxy for the cloud connection, so that no more manual configuration is needed. If you want to connect via proxy server, you should therefore make sure you have **CloudFeed 1.1.0/ArtiFactDeployer 1.4.5/CloudGateway 2.10.0 or higher** installed.

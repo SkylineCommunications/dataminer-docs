@@ -59,7 +59,9 @@ An issue has been resolved where Remote Log Collection could incorrectly time ou
 By using the cloud endpoint available since DataMiner CloudGateway 2.10.0 (included in the Cloud Pack 2.8.2), the DataMiner ArtifactDeployer can be installed on servers without internet access. As such, internet access is now no longer required for this DxM.
 
 > [!NOTE]
-> For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+>
+> - For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+> - This makes the [previous proxy configuration for ArtifactDeployer](#18-july-2022--new-feature--cloudfeed-106--cloudgateway-270--artifactdeployer-140--proxy-support-id_33955-id_33961-id_33972) unnecessary.
 
 #### 26 April 2023 - Enhancement/fix -  CloudGateway 2.10.8 - General improvements [ID_36014] [ID_36259]
 
