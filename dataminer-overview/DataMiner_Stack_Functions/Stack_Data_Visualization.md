@@ -39,6 +39,7 @@ DataMiner brings it all together in one standard UI, with a rich set of features
 > - Example use case: [Spectrum Assurance and Teleport Interference](https://community.dataminer.services/use-case/spectrum-assurance-and-teleport-interference/)
 > - Example use case: [L-Band Spectrum Monitoring](https://community.dataminer.services/use-case/l-band-spectrum-monitoring/)
 > - Different spectrum-related videos in the [Dojo video library](https://community.dataminer.services/videos/?_sf_s=spectrum) ![Video](~/user-guide/images/video_Duo.png)
+> - Different videos related to Visual Overview in the [Dojo video library](https://community.dataminer.services/videos/?_sf_s=visual%20overview) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [DataMiner Spectrum Analysis](xref:SpectrumAnalysis)
 
 ## Performance Management

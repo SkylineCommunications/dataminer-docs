@@ -157,10 +157,12 @@ Enables the Virtual Functions module in Cube. This is a Cube-only feature that c
 
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
 
+> [!IMPORTANT]
+> Requires an IIS and DataMiner restart.
+
 > [!NOTE]
 > Some features that originally required this option are fully available in recent DataMiner versions:
 >
-> - Requires an IIS and DataMiner restart.
 > - The DCF connections GQI data source (available from DataMiner 10.1.6 onwards).
 > - The "Sort" operator (available from DataMiner 10.2.11/10.3.0 onwards).
 > - The trend data patterns, trend data pattern events, and behavioral change events data sources (available from DataMiner 10.3.3/10.4.0 onwards).
@@ -175,6 +177,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 Enables the ownership framework.
 
 - **Minimum version**: 9.5.11
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Indexing
 
@@ -340,13 +343,14 @@ Enables the service profiles export and import in the DataMiner Cube Services ap
 Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
 
 - **Minimum version**: 10.1.8
-- **Estimated release version**: 10.3.8
+- **Estimated release version**: 10.3.9
 
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+- **Estimated release version**: Will not be released (deprecated)
 
 ### SrmProtocolGeneration
 
