@@ -113,8 +113,77 @@ To configure TLS encryption for client-server communication:
 
 1. Save the changes and start the DataMiner Agent.
 
+### Troubleshooting
+
 > [!TIP]
 > To troubleshoot problems after enabling TLS encryption, consult the *SLSearch.txt* log file.
+
+#### Generate-certificates
+
+##### Syntax error
+
+When cloning the GitHub repo - Generate-TLS-Certificates on a Windows machine, and moving the generate-certificates.sh file using SCP to the Linux machine and executing the script:
+
+```bash
+sudo bash generate-certificates.sh
+```
+
+Bash could indicate that there are syntax errors in the script.
+
+To fix this, run:
+
+```bash
+sudo apt install dos2unix
+```
+
+Now run:
+
+```bash
+dos2unix generate-certificates.sh
+```
+
+This will convert the .sh file to Unix format. After conversion the script can be executed again.
+
+##### Keytool: command not found
+
+When executing the generate-certificates.sh script, bash could indicate that keytool: command not found.
+
+To solve this, we need to add the location of the keytool to the PATH system variable.
+
+```bash
+sudo nano /etc/environment
+```
+
+Append the following at the end of the line:
+
+```text
+:/usr/share/opensearch/jdk/bin
+```
+
+So it becomes:
+
+```text
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/opensearch/jdk/bin"
+```
+
+Save the changes (press *Ctrl+O* in nano), and exit the editor (press *Ctrl+X* in nano).
+
+To apply the changes, either reboot your server, or run the following command to reload the PATH variable:
+
+```bash
+source /etc/environment
+```
+
+Verify that the directory has been added to the system PATH variable by executing:
+
+```bash
+echo $PATH
+```
+
+After following this procedure, the generate-certificates.sh script should be able to execute again.
+
+> [!TIP]
+> Above example is with the keytool, located in the /usr/share/opensearch/jdk/bin, for Elasticsearch the same procedure applies.
 
 ## Inter-node TLS encryption
 
