@@ -2,7 +2,7 @@
 uid: Part4AdvancedModules
 ---
 
-# Advanced DataMiner modules
+# DataMiner modules
 
 - [Automation](xref:automation)
 
