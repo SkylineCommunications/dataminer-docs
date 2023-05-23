@@ -66,6 +66,12 @@ In the *Resources* app, it is now possible to save a resource property with an e
 
 When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
 
+#### Automation app: C# editor would incorrectly jump to the first line of code when saving a script [ID_36321]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Automation* app, you saved an Automation script after making changes to a C# code block, the C# editor would incorrectly jump to the first line of that code block. From now on, when you save an Automation script, the C# editor will jump to the last line of code that was changed.
+
 #### Visual Overview: Problem when opening an EPM card [ID_36323]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->

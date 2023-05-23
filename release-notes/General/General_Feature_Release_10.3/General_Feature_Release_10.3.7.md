@@ -162,3 +162,15 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Exported DVE child protocols would no longer be set as production after re-uploading a main DVE protocol version used as production version [ID_36334]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you re-uploaded a main DVE protocol with the same version as the one that was being used as production version, the exported child protocols would incorrectly no longer be set as production.
+
+#### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, while editing an element using a (production) protocol with an advanced port of type SNMPv1 or SNMPv2, you set the type of the advanced port to SNMPv3, then the advanced port settings would get lost when the production version of the protocol was set to another version that also did not have SNMPv3 configured. Moreover, when you tried to correct the advanced port settings of the element, an error would occur in SLDataMiner as soon as you applied the changes.
