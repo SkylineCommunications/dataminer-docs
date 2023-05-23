@@ -416,3 +416,9 @@ In a PDF report of a dashboard, in some cases, trend components would collide wi
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.

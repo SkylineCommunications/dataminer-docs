@@ -213,3 +213,9 @@ The chart legend would incorrectly show the primary key of a parameter instead o
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
