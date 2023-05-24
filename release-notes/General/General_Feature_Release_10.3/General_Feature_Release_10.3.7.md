@@ -50,6 +50,12 @@ To generate a marker image dynamically, you can use placeholders in the `url` at
 
 ### Enhancements
 
+#### Cassandra Cluster Migrator tool now supports TLS [ID_34852]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The Cassandra Cluster Migrator tool (*SLCCMigrator.exe*) is now able to establish TLS connections towards the databases.
+
 #### Enhanced performance when retrieving resources [ID_36129]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
@@ -71,6 +77,36 @@ This obsolete thread has now been removed.
 Up to now, when the function manager needed to deactivate function DVEs because the threshold was reached, it could do so for resources that were needed for bookings being started of which the status was not yet "ongoing".
 
 From now on, function DVEs will no longer be deactivated when they are part of a booking that is either confirmed or ongoing with a start time (minus hysteresis) in the past and an end time in the future.
+
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
+
+On systems running alarm grouping based on both parameter and alarm relationship data, the `C:\Skyline DataMiner\analytics\configuration.xml` will contain an `<item>` tag like the following. Note that `cpRelationThreshold` has been renamed to `relationThreshold` and that its value is set to 0.7 by default.
+
+Example:
+
+```xml
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
+```
+
+> [!CAUTION]
+> Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+The following scheduled tasks will now by default return 0 instead of error code 1.
+
+- Skyline DataMiner Backup (DataMinerBackup.js)
+- Skyline DataMiner Database Optimization (OptimizeDB.js)
+- Skyline DataMiner LDAP Resync (ReloadLDAP.js)
 
 ### Fixes
 
@@ -132,3 +168,15 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Exported DVE child protocols would no longer be set as production after re-uploading a main DVE protocol version used as production version [ID_36334]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you re-uploaded a main DVE protocol with the same version as the one that was being used as production version, the exported child protocols would incorrectly no longer be set as production.
+
+#### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, while editing an element using a (production) protocol with an advanced port of type SNMPv1 or SNMPv2, you set the type of the advanced port to SNMPv3, then the advanced port settings would get lost when the production version of the protocol was set to another version that also did not have SNMPv3 configured. Moreover, when you tried to correct the advanced port settings of the element, an error would occur in SLDataMiner as soon as you applied the changes.

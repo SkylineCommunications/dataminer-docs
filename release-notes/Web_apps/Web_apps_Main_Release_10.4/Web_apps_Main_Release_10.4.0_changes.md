@@ -247,6 +247,12 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
+#### Monitoring app: Enhanced performance when editing a parameter on a parameter page component [ID_36348]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when editing a parameter on a parameter page component.
+
 #### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -258,6 +264,12 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
+
+#### Dashboards app & Low-Code Apps: A message will now be displayed while a component is being migrated [ID_36410]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, no indication would be given when a component was being migrated to the most recent GQI version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will be displayed.
 
 ### Fixes
 
@@ -393,8 +405,30 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
+#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In a PDF report of a dashboard, in some cases, trend components would collide with other components.
+
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
+
+#### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When the same query was used in two different GQI visualizations, one of those visualizations would display the following error:
+
+```txt
+Cannot read properties of null ('reading delete')
+```

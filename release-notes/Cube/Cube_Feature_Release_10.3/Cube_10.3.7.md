@@ -16,7 +16,21 @@ uid: Cube_Feature_Release_10.3.7
 
 ## Other features
 
-*No other features have been added to this release yet*
+#### Resources app: Duplicating a resource [ID_36308]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to duplicate a resource.
+
+To do so, right-click a resource in the list, and select *Duplicate*.
+
+- The name of the newly created duplicate resource will be the name of the original resource with the suffix `- copy` added to it.
+
+- All general information, properties and device data will be copied from the original resource to the duplicate resource.
+
+- The duplicate resource will be added to all resource pools that contain the original resource.
+
+- If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
 ## Changes
 
@@ -53,14 +67,26 @@ In the *Resources* app, it is now possible to save a resource property with an e
 
 ### Fixes
 
-#### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
+#### Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
 
-#### DataMiner Cube - Visual Overview: Problem when opening an EPM card [ID_36323]
+#### Automation app: C# editor would incorrectly jump to the first line of code when saving a script [ID_36321]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Automation* app, you saved an Automation script after making changes to a C# code block, the C# editor would incorrectly jump to the first line of that code block. From now on, when you save an Automation script, the C# editor will jump to the last line of code that was changed.
+
+#### Visual Overview: Problem when opening an EPM card [ID_36323]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
+
+#### Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.

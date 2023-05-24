@@ -77,6 +77,23 @@ To improve the loading time of the filter box that is displayed when you use the
 
 To improve performance and reduce the load on SLElement, RTDisplay has now been set to false for all columns that are used for aggregating and debugging purposes.
 
+#### Elements in EPM Solution now use inter-app calls [ID_36326]
+
+Inter-app calls will now be used for the communication between elements used in the EPM Solution, such as the back end and the Workflow Manager (WM), resulting in faster and more efficient communication. This way, the solution no longer needs to rely on information events and alarms triggered by Automation scripts and Correlation rules.
+
+The following changes have been done to the Skyline EPM Platform DOCSIS connector (back end):
+
+- The connector no longer uses calls to information events to pass information.
+- Inter-app calls are now aggregated to send information to the WM.
+- Information from the WM is now processed through inter-app communication.
+
+The following changes have been done to the Skyline EPM Platform DOCSIS WM connector:
+
+- The connector no longer uses calls to information events to pass information.
+- Parameters that are used to capture information events are no longer used.
+- Inter-app calls are now aggregated to send information to the back end.
+- Information from the back end is now processed through inter-app communication.
+
 ### Fixes
 
 #### EPM front-end element threw 'process cannot access the file because it is being used by another process' exceptions [ID_34658]
@@ -123,6 +140,10 @@ In addition, the passive tables are now only filled in when the CCAP/collector p
 #### CCAP visual pages not loading correctly [ID_35953]
 
 When the name of CCAP elements contained a hyphen, the CCAP page of the *Skyline EPM Platform* and *Skyline EPM Platform DOCSIS* visual overviews did not load correctly, because this character was also used as a separator in those visual overviews. To resolve this issue, a dollar sign is now used as separator instead.
+
+#### Skyline EPM Platform DOCSIS: Incorrect default value for average percentage US and DS utilization [ID_36096]
+
+Up to now, the default value of the average percentage of US and DS utilization for the Skyline EPM Platform DOCSIS back-end connector was incorrectly indicated as "0". This has now been corrected to the exception value "-1".
 
 #### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
 

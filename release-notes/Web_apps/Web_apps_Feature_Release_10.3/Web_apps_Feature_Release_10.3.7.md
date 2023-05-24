@@ -104,6 +104,12 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
+#### Monitoring app: Enhanced performance when editing a parameter on a parameter page component [ID_36348]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when editing a parameter on a parameter page component.
+
 #### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -115,6 +121,12 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
+
+#### Dashboards app & Low-Code Apps: A message will now be displayed while a component is being migrated [ID_36410]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, no indication would be given when a component was being migrated to the most recent GQI version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will be displayed.
 
 ### Fixes
 
@@ -172,8 +184,48 @@ When a query was updated, the query filter component would incorrectly only get 
 
 In the Surveyor of the Monitoring app, items of which the name contained a number would be sorted incorrectly. For example, *Element 2* would appear below *Element 11*. From now on, the items in the Surveyor of the Monitoring app will be sorted in the same way as those in the Surveyor of DataMiner Cube.
 
+#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In a PDF report of a dashboard, in some cases, trend components would collide with other components.
+
+#### GQI: Table unable to feed data when its query included a column manipulation [ID_36350]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When a query that retrieved object manager instances followed by a column manipulation and a select operator was added to a table component, the table would incorrectly not be able to feed object manager instances to other components.
+
+#### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
+
 #### Dashboards app & Low-Code Apps - Line & area chart: Legend would incorrectly show the primary key of a parameter [ID_36381]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
+
+#### Dashboards app: Problem when updating a query linked to a feed [ID_36414]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
+
+#### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When the same query was used in two different GQI visualizations, one of those visualizations would display the following error:
+
+```txt
+Cannot read properties of null ('reading delete')
+```

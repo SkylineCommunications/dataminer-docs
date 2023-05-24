@@ -207,6 +207,26 @@ As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use M
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
+
+On systems running alarm grouping based on both parameter and alarm relationship data, the `C:\Skyline DataMiner\analytics\configuration.xml` will contain an `<item>` tag like the following. Note that `cpRelationThreshold` has been renamed to `relationThreshold` and that its value is set to 0.7 by default.
+
+Example:
+
+```xml
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
+```
+
+> [!CAUTION]
+> Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

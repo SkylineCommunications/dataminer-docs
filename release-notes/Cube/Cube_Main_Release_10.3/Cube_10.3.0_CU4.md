@@ -60,14 +60,26 @@ In the *Resources* app, it is now possible to save a resource property with an e
 
 ### Fixes
 
-#### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
+#### Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When, in the *Resources* app, you created a resource and then opened the element list in the *device* tab in order to link a device to that newly created resource, in some cases, DataMiner Cube could become unresponsive, especially when the element list contained a large number of elements.
 
-#### DataMiner Cube - Visual Overview: Problem when opening an EPM card [ID_36323]
+#### Automation app: C# editor would incorrectly jump to the first line of code when saving a script [ID_36321]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When, in the *Automation* app, you saved an Automation script after making changes to a C# code block, the C# editor would incorrectly jump to the first line of that code block. From now on, when you save an Automation script, the C# editor will jump to the last line of code that was changed.
+
+#### Visual Overview: Problem when opening an EPM card [ID_36323]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
+
+#### Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.

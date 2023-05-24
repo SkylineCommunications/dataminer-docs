@@ -16,7 +16,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 > - From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
 
 > [!TIP]
-> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo.
+> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 

@@ -201,6 +201,22 @@ It is now possible to either show or hide the search box in the middle of the Cu
 
 Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
 
+#### Resources app: Duplicating a resource [ID_36308]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to duplicate a resource.
+
+To do so, right-click a resource in the list, and select *Duplicate*.
+
+- The name of the newly created duplicate resource will be the name of the original resource with the suffix `- copy` added to it.
+
+- All general information, properties and device data will be copied from the original resource to the duplicate resource.
+
+- The duplicate resource will be added to all resource pools that contain the original resource.
+
+- If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
+
 ## Changes
 
 ### Enhancements
@@ -267,6 +283,24 @@ From now on, Cube versions that meet the following conditions will be removed au
 - Not downloaded recently.
 - Not used recently.
 
+#### Trending - Parameter relationships: Light bulb icon is now always displayed in top-right corner of trend graph and has one of three states [ID_35868] [ID_36157] [ID_36199]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see Fixes-->
+
+In the top-right corner of a trend graph, a light bulb icon was previously only displayed if DataMiner found relations for the parameters shown in the trend graph. From now on, this icon will always be visible, regardless of whether related parameters have been found and whether all necessary requirements for the parameter relationship feature are met. The light bulb icon can now have one of three states:
+
+- Related parameters have been found.
+- No related parameters have been found.
+- The requirements have not been met.
+
+When related parameters have been found, the light bulb icon will "light up" in an accent color to provide a visual indication of its state.
+
+If any of the mandatory requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that indicates the requirements are not met.
+
+If any of the optional requirements for the parameter relationship feature have not been met, clicking the light bulb icon in the top-right corner of the trend graph will show a message that advises to unlock all capabilities of this feature.
+
+Both messages are clickable and link to the relevant section of the DataMiner documentation.
+
 #### Visual Overview: Browser shapes will no longer be reloaded when their URL only had a fragment change [ID_36044] [ID_36104]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -315,6 +349,12 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 <!-- MR 10.4.0 - FR 10.3.3 -->
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
+
+#### Trending - Parameter relationships: Light bulb icon would not appear if ModelHost DxM stopped working [ID_35868]
+
+<!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
+
+The light bulb icon would not be displayed in the top-right corner of a trend graph if the ModelHost DxM stopped working after Cube had already been started.
 
 #### No longer possible to configure a PDF report generated based on a dashboard [ID_35874]
 

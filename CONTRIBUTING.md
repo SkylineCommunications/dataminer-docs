@@ -24,7 +24,7 @@ Our documentation is open to contributions from any user. Contributions are crea
 ## Doing a quick edit to a page
 
 > [!TIP]
-> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo
+> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 On every page of the documentation on docs.dataminer.services, a *Propose changes* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
 
@@ -114,7 +114,7 @@ Until a pull request is merged, everyone can review it and add comments of their
 ### Getting started
 
 > [!TIP]
-> See also: [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo
+> See also: [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software, in the indicated order:
 

@@ -12,35 +12,35 @@ The table also details the minimum DataMiner version to start using each option 
 See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus).
 
 - **Minimum version**: 9.6.13
-- **Release version**: 10.0.1
+- **Release version**: 10.0.0/10.0.2 ([RN 23911](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-alarm-focus-23911id_24083id_24102id_24128))
 
 ### AlarmForecasting
 
 Enables proactive cap detection. See [Proactive cap detection](xref:Proactive_cap_detection).
 
 - **Minimum version**: 9.5.12
-- **Release version**: 10.0.11
+- **Release version**: 10.1.0/10.0.11 ([RN 27132](xref:General_Feature_Release_10.0.11#proactive-cap-detection-id_26637id_27132id_27241id_27355id_27393))
 
 ### AlarmGrouping
 
 Enables automatic incident tracking. See [Automatic incident tracking](xref:Automatic_incident_tracking).
 
 - **Minimum version**: 10.0.3
-- **Release version**: 10.0.11
+- **Release version**: 10.1.0/10.0.11 ([RN 27027](xref:General_Feature_Release_10.0.11#alarm-console-automatic-incident-tracking-id_25162id_25802id_25905id_26592id_27027id_27336))
 
 ### AlarmSquashing
 
 Enables alarm tree optimization.
 
 - **Minimum version**: 10.0.1
-- **Release version**: 10.0.12
+- **Release version**: 10.1.0/10.0.12 ([RN 27413](xref:General_Feature_Release_10.0.12#alarm-console-alarm-events-without-a-severity-change-can-now-be-consolidated-in-the-preceding-event-in-the-alarm-tree-id_23234id_23526id_24462id_27413))
 
 ### AnomalyDetection
 
 Enables behavioral anomaly detection and suggestion events. See [Behavioral anomaly detection](xref:Behavioral_anomaly_detection).
 
 - **Minimum version**: 9.5.12
-- **Release version**: 10.0.2
+- **Release version**: 10.0.0/10.0.2 ([RN 24095](xref:General_Feature_Release_10.0.2_new_features#dataminer-analytics-behavioral-anomaly-detection-and-suggestion-events-id_15723id_15914id_15916id_15951id_15952id_15976id_16001id_16050id_16163id_17279id_17462id_19224id_24095id_24126id_24147))
 
 ### APIDeployment
 
@@ -61,7 +61,7 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 > Requires an IIS restart.
 
 - **Minimum version**: 10.0.8
-- **Release version**: 10.2.5
+- **Release version**: 10.2.5/10.3.0 ([RN 33040](xref:General_Feature_Release_10.2.5#application-framework-id_33002-id_33040))
 
 ### BookingData
 
@@ -75,14 +75,14 @@ Enables the “BookingData” Visual Overview component.
 Allows you to set up the [Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) configuration in DataMiner Cube.
 
 - **Minimum version**: 10.0.13
-- **Release version**: 10.1.2
+- **Release version**: 10.1.0/10.1.2 ([RN 28406](xref:General_Feature_Release_10.1.2#new-cassandra-cluster-feature-id_23210id_23975id_25945id_26144id_26475id_27080-id_27520id_27615id_27648id_27694id_28406))
 
 ### CloudConnectedAgents
 
 Makes it possible to [connect the DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **Minimum version**: 10.1.2
-- **Release version**: 10.1.9
+- **Release version**: 10.1.9/10.2.0 ([RN 30513](xref:General_Feature_Release_10.1.9#connecting-a-dataminer-system-to-the-cloud-id_30513))
 
 ### CorrectedDisplayKeyOnNaming
 
@@ -123,7 +123,7 @@ Updates the values of direct view tables.
 Enables the use of DOM data in dashboards and applications.
 
 - **Minimum version**: 10.1.7
-- **Release version**: 10.3.6<!-- RN 36124 -->
+- **Release version**: 10.3.6/10.4.0 ([RN 36124](xref:Web_apps_Feature_Release_10.3.6#dom-features-now-available-in-dashboards-and-low-code-apps-id_29732-id_31804-id_32236-id_36124))
 
 ### DynamicUnits
 
@@ -137,7 +137,7 @@ Enables dynamic units in Data Display in DataMiner Cube and the Monitoring app. 
 Allows you to store tickets in the Elasticsearch database.
 
 - **Minimum version**: 9.6.4
-- **Release version**: 10.0.13
+- **Release version**: 10.0.13/10.1.0 ([RN 26677](xref:General_Feature_Release_10.0.13_new_features#ticketing-app-move-to-elasticsearch-database-and-other-improvements-id_24667id_25539-id_25713id_26644id_26676id_26677id_26911id_26982id_27974id_28016id_28043-id_28079id_28153))
 
 ### FeatureOffload
 
@@ -157,6 +157,9 @@ Enables the Virtual Functions module in Cube. This is a Cube-only feature that c
 
 Provides access to additional data sources and operators for GQI in the Dashboards app and Low-Code Apps.
 
+> [!IMPORTANT]
+> Requires an IIS and DataMiner restart.
+
 > [!NOTE]
 > Some features that originally required this option are fully available in recent DataMiner versions:
 >
@@ -174,6 +177,7 @@ Provides access to additional data sources and operators for GQI in the Dashboar
 Enables the ownership framework.
 
 - **Minimum version**: 9.5.11
+- **Estimated release version**: Will not be released (deprecated)
 
 ### Indexing
 
@@ -339,13 +343,14 @@ Enables the service profiles export and import in the DataMiner Cube Services ap
 Enables SLProtocol as a 64-bit process. This option is not configured in *SoftLaunchOptions.xml*. For more information on how to activate this, refer to [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
 
 - **Minimum version**: 10.1.8
-- **Estimated release version**: 10.3.8
+- **Estimated release version**: 10.3.9
 
 ### SrmOwnServices
 
 Enables ownership support for SRM services.
 
 - **Minimum version**: 9.6.1
+- **Estimated release version**: Will not be released (deprecated)
 
 ### SrmProtocolGeneration
 
@@ -372,4 +377,4 @@ Uses an embedded web browser for Automation script execution instead of the nati
 Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
-- **Estimated release version**: 10.3.6
+- **Release version**: 10.3.6

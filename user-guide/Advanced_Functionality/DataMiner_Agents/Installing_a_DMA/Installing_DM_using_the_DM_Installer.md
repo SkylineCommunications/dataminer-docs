@@ -24,7 +24,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Download the DataMiner installer from [DataMiner Dojo](https://community.dataminer.services/download/dataminer-installer-v10-2).
 
 > [!NOTE]
-> The default installation requires that WinPcap is installed for systems intended for DataMiner Failover. In a custom DataMiner installation, WinPcap can be included in the DataMiner installation.
+> The default installation requires that WinPCap or [NPCap](https://nmap.org/npcap/) is installed for systems intended for DataMiner Failover based on virtual IP. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. WinPCap can be installed with a custom installation using the DataMiner 10.0 installer; however, note that WinPCap is considered obsolete since 2018. For now, NPCap is not included in the DataMiner Installer.
 
 ### Default DataMiner installation
 
@@ -68,6 +68,9 @@ At this point, the basic installation is complete. However, to be able to make f
 - [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
 
+> [!IMPORTANT]
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
+
 > [!NOTE]
 >
 > - To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
@@ -93,15 +96,18 @@ At this point, the basic installation is complete. However, to be able to make f
      > [!NOTE]
      > By default, a DataMiner Agent uses a single Cassandra node that is hosted on the same physical or virtual server. However, different architectures are also possible. For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures), or check with your Technical Account Manager.
 
-   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally *MySQL Workbench*.
+   - To install a MySQL database instead of a Cassandra database, select *MySQL Server*, and optionally [*MySQL Workbench*](xref:MySQL_Workbench).
 
      > [!NOTE]
      > As MySQL support will go **End of Life** as of DataMiner version 10.3.X (Q4 2022), we recommend the **Cassandra database** for all new installations. MySQL is no longer included in the 10.2.0 DataMiner installer.
      > If a MySQL database is used, certain DataMiner features (e.g. trend predictions, ticketing, jobs, service & resource manager) will **not be available**.
 
-   - On systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap is launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
+   - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
      On Windows 8 and Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
+
+     > [!NOTE]
+     > The DataMiner 10.2 installer no longer supports WinPCap. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.
 
    - If the built-in Administrator account is not enabled, select *Create administrator account for current user* to create a Windows user account.
 
@@ -131,6 +137,9 @@ At this point, the basic installation is complete. However, to be able to make f
 - [Upgrade to the latest feature or main release version](xref:Upgrading_a_DataMiner_Agent)
 - [Install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner)
 - [Connect your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud)
+
+> [!IMPORTANT]
+> During the DataMiner installation, you are automatically added to the Administrator group by the installation wizard, giving you all Administrator rights. To grant others access to your DMA, log in to Cube using the same username and password as during the installation process, and configure user permissions as described in [Basic security configuration](xref:Basic_security_configuration).
 
 > [!NOTE]
 > To view detailed log information on the installation process, in the last step of the installer, click the *open log files* button.
