@@ -437,12 +437,6 @@ The web API would no longer be able to correctly migrate queries in which ad hoc
 
 Also, when those queries were linked to feeds, the migration would break those links.
 
-#### Low-Code Apps: Action to open an already open panel would not resolve [ID_36457]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-Up to now, when an action to open an already open panel was triggered, it would incorrectly not resolve. As a result, all actions configured to be executed upon completion of that *Open* action would not be executed.
-
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->

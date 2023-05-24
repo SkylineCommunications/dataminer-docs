@@ -109,3 +109,9 @@ A message would incorrectly no longer be displayed when a component was being mi
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### Low-Code Apps: Action to open an already open panel would not resolve [ID_36457]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, when an action to open an already open panel was triggered, it would incorrectly not resolve. As a result, all actions configured to be executed upon completion of that *Open* action would not be executed.
