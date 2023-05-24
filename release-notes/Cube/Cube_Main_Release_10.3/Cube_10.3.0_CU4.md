@@ -88,6 +88,6 @@ When you restarted a spectrum element while its card was open, the trace would n
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
-When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connection while creating or updated an element, you would incorrectly not be required to select any predefined credentials. As a result, an error would occur when the element was created or the update was applied. From now on, when you select this option, the label will turn red and the *Create* or *Apply* button will be disabled as long as no credentials have been selected.
+When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connection while creating or updating an element, you would incorrectly not be required to select any predefined credentials. As a result, an error would occur when the element was created or the update was applied. From now on, when you select this option, the label will turn red and the *Create* or *Apply* button will be disabled as long as no credentials have been selected.
 
 Also, when you edited an element for which credentials had been selected, the *Use credentials* selection box would be disabled and the *Get community string* and *Set community string* boxes would be enabled until you toggled the *Use credentials* option off and on again.
