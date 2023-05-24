@@ -175,6 +175,12 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 
 When you re-uploaded a main DVE protocol with the same version as the one that was being used as production version, the exported child protocols would incorrectly no longer be set as production.
 
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->

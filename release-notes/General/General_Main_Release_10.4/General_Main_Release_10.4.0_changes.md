@@ -309,3 +309,9 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
