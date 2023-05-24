@@ -716,7 +716,7 @@
       - name: VSAT
         topicUid: EPM_1.0.2_VSAT
         items:
-        - name: EPM 1.0.2 VSAT
+        - name: EPM 1.0.2 VSAT - Preview
           topicUid: EPM_1.0.2_VSAT
     - name: IDP release notes
       topicUid: IDP_1.2.1
