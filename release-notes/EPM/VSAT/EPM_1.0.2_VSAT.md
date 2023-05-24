@@ -55,3 +55,7 @@ Up to now, it was not possible to push the SES S.A. Skala connector to the pipel
 #### VerSat On ETMS Automation script caused error when inter-app messages were sent [ID_36483]
 
 When inter-app messages were sent from the VerSat On ETMS Automation script to ETMS connectors, this could cause an error. To prevent this, the InterApp library has now been updated in the script.
+
+#### Verizon ETMS Platform connector caused error when inter-app messages were sent [ID_36485]
+
+When inter-app messages were sent from the Verizon ETMS Platform connector, this could cause an error. To prevent this, the InterApp library has now been updated in the connector.
