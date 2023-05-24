@@ -9,6 +9,7 @@ uid: Installing_a_DataMiner_Agent
 - [Checking the DataMiner installation](xref:Checking_the_DM_installation)
 - [Regarding virtual servers](xref:Regarding_virtual_servers)
 - [Regarding antivirus software](xref:Regarding_antivirus_software)
+- [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)
 - [Frequently asked questions](xref:Installing_a_DMA_FAQ)
 
 > [!IMPORTANT]
