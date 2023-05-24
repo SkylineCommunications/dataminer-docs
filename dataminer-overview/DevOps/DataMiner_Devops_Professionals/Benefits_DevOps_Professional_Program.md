@@ -15,8 +15,6 @@ A short overview of all benefits that can be unlocked using DevOps Points:
 
 - Access to the Evolve Support Services plan
 
-- Free personal DIS license
-
 - Free personal DataMiner licenses
 
 - Access to DIS source code
