@@ -42,7 +42,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 
 The diagrams below show how communication within a DMS could be set up. The blue lines indicate the communication towards the databases (in this case an Elasticsearch and Cassandra cluster of three nodes each).
 
-Using gRPC (recommended):
+Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
 ![DMS communication overview new](~/user-guide/images/dms_ip_communication_with_DB_updated.png)
 
