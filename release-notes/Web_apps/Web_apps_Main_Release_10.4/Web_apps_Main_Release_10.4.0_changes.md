@@ -265,11 +265,11 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
-#### Dashboards app & Low-Code Apps: A message will now be displayed while a component is being migrated [ID_36410]
+#### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
-Up to now, no indication would be given when a component was being migrated to the most recent GQI version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will be displayed.
+From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
 ### Fixes
 
@@ -416,6 +416,12 @@ In a PDF report of a dashboard, in some cases, trend components would collide wi
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: A message would no longer be displayed when a component was being migrated [ID_36410]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+A message would incorrectly no longer be displayed when a component was being migrated to the most recent version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will again be displayed.
 
 #### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
 

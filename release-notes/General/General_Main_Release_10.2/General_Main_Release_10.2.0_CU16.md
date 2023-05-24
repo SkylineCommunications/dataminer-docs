@@ -57,6 +57,12 @@ At start-up, every DataMiner Agent with a Cassandra Cluster configuration would 
 
 From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
+#### Alarm templates: Problem with anomaly detection alarms [ID_33216]
+
+<!-- MR 10.2.0 [CU16] - FR 10.2.6 -->
+
+When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
+
 #### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
