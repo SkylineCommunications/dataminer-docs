@@ -411,12 +411,6 @@ The dashboard has not been saved: Invalid revision sequence, the dashboard might
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
-#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-In a PDF report of a dashboard, in some cases, trend components would collide with other components.
-
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
