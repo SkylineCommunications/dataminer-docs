@@ -180,7 +180,7 @@ sudo generate-certificates.sh
    echo $PATH
    ```
 
-After following these steps, the *generate-certificates.sh* script should be able to execute without encountering the `Keytool:command not found` error.
+The *generate-certificates.sh* script should now be able to execute without encountering the `Keytool:command not found` error.
 
 > [!TIP]
 > The example above is specific to the keytool located in `/usr/share/opensearch/jdk/bin`. For Elasticsearch, the same procedure applies.
