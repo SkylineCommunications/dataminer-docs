@@ -4,7 +4,7 @@ uid: Regarding_virtual_servers
 
 # Regarding virtual servers
 
-The DataMiner software can be run on a virtual server as long as it has sufficient resources available (CPU, memory, hard disk space and throughput, etc.), as indicated in the [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+The DataMiner software can be run on a virtual server as long as it has sufficient resources available (CPU, memory, hard disk space and throughput, etc.), as indicated in the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements
 
 Please note the following:
 

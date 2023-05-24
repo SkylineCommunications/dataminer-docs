@@ -8,7 +8,7 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 ## Before you run the installer
 
-1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
    > [!TIP]
    >
