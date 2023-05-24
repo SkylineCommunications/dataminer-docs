@@ -40,6 +40,10 @@ TSDB Rx technology data has been integrated into the EPM Solution with formula u
 
 The *Satmanage_Id* field of exported sun outage files will now contain the entity name instead of the circuit ID. This will prevent possible problems when processing sun outage data.
 
+#### Verizon DSM RDS: Only 'Present' entities now processed [ID_36487]
+
+The Verizon DSM RDS connector will now only process entities that have the status "Present". Entities with status "Removed" will be skipped in the files exported by the DSM RDS. This will prevent possible problems when processing the files.
+
 ### Fixes
 
 #### WM Ticketing exceptions related to load balancing [ID_36470]
