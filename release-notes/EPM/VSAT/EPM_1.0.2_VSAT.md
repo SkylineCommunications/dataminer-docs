@@ -46,3 +46,7 @@ To prevent these exceptions, if the previous ticket has "N/A" as the ticket hand
 #### Not possible to push SES S.A. Skala connector to pipeline [ID_36472]
 
 Up to now, it was not possible to push the SES S.A. Skala connector to the pipeline and get a signed copy. Now, the latest version of the connector is available in the pipeline.
+
+#### VerSat On ETMS Automation script caused error when inter-app messages were sent [ID_36483]
+
+When inter-app messages were sent from the VerSat On ETMS Automation script to ETMS connectors, this could cause an error. To prevent this, the InterApp library has now been updated in the script.
