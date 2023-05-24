@@ -16,7 +16,21 @@ uid: Cube_Feature_Release_10.3.7
 
 ## Other features
 
-*No other features have been added to this release yet*
+#### Resources app: Duplicating a resource [ID_36308]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Resources* app, it is now possible to duplicate a resource.
+
+To do so, right-click a resource in the list, and select *Duplicate*.
+
+- The name of the newly created duplicate resource will be the name of the original resource with the suffix `- copy` added to it.
+
+- All general information, properties and device data will be copied from the original resource to the duplicate resource.
+
+- The duplicate resource will be added to all resource pools that contain the original resource.
+
+- If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
 ## Changes
 
