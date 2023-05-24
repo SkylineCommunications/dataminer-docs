@@ -98,6 +98,12 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
 
+#### Dashboards app & Low-Code Apps: A message would no longer be displayed when a component was being migrated [ID_36410]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+A message would incorrectly no longer be displayed when a component was being migrated to the most recent version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will again be displayed.
+
 #### Dashboards app: Problem when updating a query linked to a feed [ID_36414]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->

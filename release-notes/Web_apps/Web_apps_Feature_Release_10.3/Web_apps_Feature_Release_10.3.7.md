@@ -210,7 +210,7 @@ The chart legend would incorrectly show the primary key of a parameter instead o
 
 #### Dashboards app & Low-Code Apps: A message would no longer be displayed when a component was being migrated [ID_36410]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 A message would incorrectly no longer be displayed when a component was being migrated to the most recent version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will again be displayed.
 
@@ -233,6 +233,12 @@ When multiple table components used the same GQI query, in some rare cases, thos
 The web API would no longer be able to correctly migrate queries in which ad hoc data source arguments contained null values.
 
 Also, when those queries were linked to feeds, the migration would break those links.
+
+#### Low-Code Apps: Action to open an already open panel would not resolve [ID_36457]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when an action to open an already open panel was triggered, it would incorrectly not resolve. As a result, all actions configured to be executed upon completion of that *Open* action would not be executed.
 
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
