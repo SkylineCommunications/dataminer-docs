@@ -36,6 +36,10 @@ The MODCOD reference for hub return carriers has been updated.
 
 TSDB Rx technology data has been integrated into the EPM Solution with formula updates for the Circuit Overview Table of the Newtec Dialog Platform VSAT connector. In addition, the connector user interface has been adjusted in several places: tables have been moved and the order of the pages has changed.
 
+#### Verizons Computer Associates Interface: Satmanage_Id field of exported sun outage files now contains entity name [ID_36486]
+
+The *Satmanage_Id* field of exported sun outage files will now contain the entity name instead of the circuit ID. This will prevent possible problems when processing sun outage data.
+
 ### Fixes
 
 #### WM Ticketing exceptions related to load balancing [ID_36470]
