@@ -271,6 +271,12 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
+#### Dashboards app & Low-Code Apps: No visual replacement will be displayed anymore when a State component feeds empty query rows [ID_36460]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
