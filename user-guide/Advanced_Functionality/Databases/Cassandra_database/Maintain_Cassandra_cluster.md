@@ -31,7 +31,7 @@ For large-scale clusters, this might be very difficult to manage as you need to 
 > - trend_data_medium
 > - trend_data_long
 >
-> This can be disalbed in reaper config file with setting the following tag **blacklistTwcsTables** to **true**.
+> From Reaper version 1.4.0 this can be disabled in reaper config file with setting the following tag **blacklistTwcsTables** to **true**.
 
 ## Keeping the software up to date
 

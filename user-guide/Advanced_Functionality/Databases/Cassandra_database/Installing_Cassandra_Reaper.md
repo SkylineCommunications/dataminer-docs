@@ -64,8 +64,8 @@ Cassandra Reaper is an application that can manage Cassandra cluster repairs on 
    - Enable autoscheduling to let reaper schedule the repairs automatically.
 
    - Under the Cassandra configuration, add the authProvider tag to provide credential for Cassandra.
-   
-   - Make sure the blacklistTwcsTables is set to true. This will disable repairs on TimeWindowCompactionStragy tables, for this see [Maintain Cassandra Cluster](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Cassandra_database/Maintain_Cassandra_cluster.html#keeping-your-nodes-repaired).
+
+   - From Reaper v1.4.0 make sure the blacklistTwcsTables is set to true. This will disable repairs on TimeWindowCompactionStragy tables, for this see [Maintain Cassandra Cluster](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Cassandra_database/Maintain_Cassandra_cluster.html#keeping-your-nodes-repaired). For previous versions you'll have to exclude the keyspaces that contain these tables.
 
    For more information on the different options, refer to the [Reaper documentation](http://cassandra-reaper.io/docs/configuration/).
   
