@@ -9,7 +9,12 @@ uid: EPM_1.0.2_VSAT
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Generic KAFKA Consumer connector: new parameters [ID_36484]
+
+Two new parameters have been added to the Generic KAFKA Consumer connector:
+
+- A certificate location type parameter on the Authentication page.
+- A Kafka logging debug parameter on the Configuration page.
 
 ## Changes
 
