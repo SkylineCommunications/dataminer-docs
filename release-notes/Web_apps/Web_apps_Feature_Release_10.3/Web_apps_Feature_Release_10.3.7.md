@@ -226,6 +226,14 @@ When a dashboard contained a query component that was linked to a feed, the app 
 
 When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
 
+#### Web API: Problem when migrating queries [ID_36442]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The web API would no longer be able to correctly migrate queries in which ad hoc data source arguments contained null values.
+
+Also, when those queries were linked to feeds, the migration would break those links.
+
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
