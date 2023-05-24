@@ -72,7 +72,7 @@ Examples:
      > - Make sure the Elasticsearch user has enough rights to the folder to read, write, and execute its contents.
 
      > [!TIP]
-     > It is also possible to set up an NFS-share on Windows and share it with the destination Linux-system. See the following guide, [Windows Server 2016 as an NFS server for Linux clients](https://blog.bobbyallen.me/2018/01/18/windows-server-2016-as-an-nfs-server-for-linux-clients/)
+     > It is also possible to set up an NFS share on Windows and share it with the destination Linux system. See [Windows Server 2016 as an NFS server for Linux clients](https://blog.bobbyallen.me/2018/01/18/windows-server-2016-as-an-nfs-server-for-linux-clients/).
 
 1. On the source Elasticsearch cluster, navigate to the *Elasticsearch.yml* file. Open the file and set *path.repo* as your previously created shared folder.
 
