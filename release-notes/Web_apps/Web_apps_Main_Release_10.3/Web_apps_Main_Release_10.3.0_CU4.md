@@ -24,6 +24,12 @@ From now on, legacy reports and dashboards will no longer be prefetched if the s
 
 A number of security enhancements have been made.
 
+#### Dashboards app & Low-Code Apps: No visual replacement will be displayed anymore when a State component feeds empty query rows [ID_36460]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps - Line chart: X and Y axis labels would not show the correct text [ID_35943]
