@@ -2789,6 +2789,8 @@
                 topicUid: Service_Orchestration_life_cycle_states
               - name: Service states configuration
                 topicUid: Service_Orchestration_service_states
+              - name: LSO script configuration
+                topicUid: Service_Orchestration_LSO_script
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services
