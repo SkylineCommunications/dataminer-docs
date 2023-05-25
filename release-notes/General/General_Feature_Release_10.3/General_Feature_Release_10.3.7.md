@@ -106,12 +106,12 @@ Example:
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### User-defined APIs: UserDefinableApiEndpointGateway DxM now targets Microsoft .NET 6.0 [ID_36338]
+#### User-defined APIs: UserDefinableApiEndpoint DxM now targets Microsoft .NET 6.0 [ID_36338]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- Not added to MR 10.4.0 -->
 
-As Microsoft .NET 5 is being phased out, the *UserDefinableApiEndpointGateway* DxM will now use Microsoft .NET 6.0 instead.
+As Microsoft .NET 5 is being phased out, the *UserDefinableApiEndpoint* DxM will now use Microsoft .NET 6.0 instead.
 
 Also, in the module's *appsettings.json* file, `NatsSubject` is now an optional setting.
 
