@@ -120,7 +120,7 @@ Example of a query that would cause the above-mentioned exception to be thrown:
 
 ```txt
 1. Get parameter table by ID (fetches the data from the Elasticsearch table)
-2. Filter "column 1" on value "A" (due to this filter, no rows will be returned)
+2. Filter "column 1" on value "A" (in this particular example, a filter will cause no rows to be returned)
 3. Aggregate "column 1"
 4. Group by "column 2"
 ```
