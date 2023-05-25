@@ -98,6 +98,16 @@ When, in the *Automation* app, you saved an Automation script after making chang
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
 
+#### Visual Overview: Dynamically positioned top-level shapes would lose their connections when a child shape had 'DisableConnectivity' set [ID_36340]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When dynamically positioned shapes contained subshapes that disabled the connectivity, in some cases, no connections would be drawn.
+
+From now on, connections will be drawn when a dynamically positioned shape has at least one subshape with connectivity.
+
+When all subshapes have the `DisableConnectivity` option set, then no connections will be drawn.
+
 #### Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
