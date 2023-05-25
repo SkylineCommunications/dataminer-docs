@@ -137,6 +137,14 @@ A message would incorrectly no longer be displayed when a component was being mi
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
 
+#### Web API: Problem when migrating queries [ID_36442]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+The web API would no longer be able to correctly migrate queries in which ad hoc data source arguments contained null values.
+
+Also, when those queries were linked to feeds, the migration would break those links.
+
 #### Low-Code Apps: Action to open an already open panel would not resolve [ID_36457]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->

@@ -255,7 +255,7 @@ When multiple table components used the same GQI query, in some rare cases, thos
 
 #### Web API: Problem when migrating queries [ID_36442]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 The web API would no longer be able to correctly migrate queries in which ad hoc data source arguments contained null values.
 
