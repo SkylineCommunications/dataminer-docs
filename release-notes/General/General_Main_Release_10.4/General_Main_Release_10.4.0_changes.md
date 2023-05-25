@@ -207,6 +207,8 @@ Up to now, when an event associated with a DVE child element was generated, inte
 
 #### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
 
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
 As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
 
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
