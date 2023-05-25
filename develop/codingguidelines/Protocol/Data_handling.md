@@ -21,7 +21,7 @@ This should be implemented as follows:
 
   - A read/write parameter "\[Table Name\] Auto Removal Delay" that has an appropriate range (low and high) and a "Remove Immediately" exception value. When the table is updated:
     - If the parameter is set to *Remove Immediately*, remove any missing entries.
-    - Otherwise, for all missing entries, compare this configuration with the "Missing Since" date and remove the row(s) if needed. If the "Missing Since" is empty, fill it in with current date time and update the "Status" column.
+    - Otherwise, for all missing entries, compare this configuration with the "Missing Since" date and remove the row(s) if needed. If the "Missing Since" field is empty, enter the current date and time, and update the *Status* column.
 
   - A button "Remove All \[Content Type\]" to remove all missing or old entries.
 
