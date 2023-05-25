@@ -20,7 +20,7 @@ The following pages are available:
 
     Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
 
-  - <!--screenshot pencil icon incoming-->: Allows you to edit a parameter (From DataMiner 10.3.7/10.4.0 onwards).
+  - <!--screenshot pencil icon incoming-->: Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards).
 
 - *Alarms*: Displays the active alarms for the element.
 
