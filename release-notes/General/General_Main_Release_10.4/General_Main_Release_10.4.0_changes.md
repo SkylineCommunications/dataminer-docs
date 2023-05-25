@@ -36,6 +36,14 @@ From now on, SLXML will no longer be used to read out the following files contai
 > - NT_SET_ITEM_DATA
 > - NT_SET_PARAMETER_BY_DATA
 
+#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
+
+For tables containing data with TTL set, this property will be set 4 hours.
+
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
