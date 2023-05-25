@@ -6,13 +6,11 @@ uid: Part1GettingStarted
 
 ### Get to know the basics
 
+- [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent)
 - [Basic concepts](xref:BasicConcepts)
 - [DataMiner System layout](xref:GeneralLayout)
 - [Accessing DataMiner](xref:DataminerApplications)
 - [The DataMiner user interface](xref:GettingStarted)
-
-> [!NOTE]
-> For detailed installation information, see [Installing a DataMiner Agent](xref:Installing_a_DataMiner_Agent).
 
 ### Discover DataMiner in detail
 

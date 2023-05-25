@@ -11,6 +11,9 @@ The unattended installation process can be used to install a standalone DMA, but
 
 To make sure the installation is executed correctly, a valid configuration file and license file must be included in the same folder as *Setup.exe*. See [Unattended installation configuration file](#unattended-installation-configuration-file).
 
+> [!TIP]
+> See also: [Obtaining a DataMiner license](xref:DataminerLicenses)
+
 You can then start the unattended installation by running the following command:
 
 ```txt

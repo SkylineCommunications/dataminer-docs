@@ -4,11 +4,14 @@ uid: Installing_DM_using_the_DM_installer
 
 # Installing DataMiner using the DataMiner Installer
 
+> [!TIP]
+> Not familiar with DataMiner? See [Basic concepts](xref:BasicConcepts).
+
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
 
 ## Before you run the installer
 
-1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
    > [!TIP]
    >
@@ -50,6 +53,9 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 1. Click *go to Request.lic* to browse to *Request.lic*.
 
 1. Send the *Request.lic* file to <dataminer.licensing@skyline.be>, and wait until you receive the reply.
+
+   > [!TIP]
+   > See also: [Obtaining a DataMiner license](xref:DataminerLicenses)
 
    > [!NOTE]
    > If you are a Skyline employee, use the procedure from the [Skyline internal documentation](https://internaldocs.skyline.be/Corporate/OperatingProcedures/OP_RequestDecommissionMaintainInternalServer/Requesting_a_DMA_ID_or_a_DataMiner_license_for_an_internal_DataMiner_Agent.html) instead.
