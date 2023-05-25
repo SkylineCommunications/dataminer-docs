@@ -191,26 +191,26 @@ Enables the use of Elasticsearch for alarm indexing and other applications. To p
 Enables the [Jobs app](xref:jobs).
 
 - **Minimum version**: 9.6.2
-- **Release version**: 9.6.4
+- **Release version**: 9.6.4/10.0.0 (RN 21098)
 
 ### LegacyAnnotations
 
 Shows the legacy Annotations module in Cube. By default set to false for new installations, but set to true when updating existing setups.
 
-- **Minimum version**: 10.1.12
+- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 ### LegacyReportsAndDashboards
 
 Shows the legacy Reports & Dashboards module in Cube. By default set to false for new installations, but set to true when updating existing setups.
 
-- **Minimum version**: 10.1.12
+- **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 ### MonitoringAndControl
 
 Enables the new Monitoring app. See [Accessing the Monitoring app](xref:Accessing_the_Monitoring_app) and [The Monitoring app user interface](xref:The_Monitoring_app_user_interface).
 
 - **Minimum version**: 9.6.7
-- **Release version**: 10.0.0
+- **Release version**: 10.0.2/10.0.0 ([RN 24180](xref:General_Feature_Release_10.0.2_new_features#new-monitoring--control-app-id_21736id_22023id_22209id_22750id_22801id_22888id_22943id_23025id_23036id_23090id_23387id_23798id_23874id_24017id_24059id_24072id_24080id_24114id_24134id_24180id_24192))
 
 ### NATS
 
