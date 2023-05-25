@@ -14,8 +14,6 @@
           topicUid: Regarding_virtual_servers
         - name: Regarding antivirus software
           topicUid: Regarding_antivirus_software
-        - name: DataMiner Compute Requirements
-          topicUid: DataMiner_Compute_Requirements
         - name: Frequently asked questions
           topicUid: Installing_a_DMA_FAQ
     - name: Basic concepts
@@ -3183,6 +3181,8 @@
 - name: Reference
   topicUid: Part7Reference
   items:
+    - name: DataMiner Compute Requirements
+      topicUid: DataMiner_Compute_Requirements
     - name: Skyline DataMiner folder
       topicUid: SkylineDataminerFolder
       items:
