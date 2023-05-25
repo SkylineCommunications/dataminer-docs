@@ -4,9 +4,10 @@ uid: UD_APIs_Viewing_in_Cube
 
 # Managing APIs and tokens in DataMiner Cube
 
-## Configuring APIs and tokens
+> [!NOTE]
+> Before you try to execute these procedures, make sure you have the user permissions available under [Modules > User-Defined APIs](xref:DataMiner_user_permissions#modules--user-defined-apis).
 
-1. Go to *System Center* > *User/Groups*. Make sure the  *Modules* > *User-Defined APIs* permissions are enabled.
+## Configuring APIs and tokens
 
 1. Go to *System Center* > *User-Defined APIs*.
 
