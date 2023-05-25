@@ -104,6 +104,27 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
 
+#### GQI: Exception thrown when grouping an empty aggregation result [ID_36392]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+An exception would be thrown when executing a query that first applied an aggregation on an Elasticsearch table, which produced an empty result set, and then grouped that empty result set by operation.
+
+Exception that was thrown:
+
+```txt
+(*) Error trapped: Unable to cast object of type '<CastIterator>d__97`1[Skyline.DataMiner.Net.SLSearch.Messages.ValueAggregation]' to type 'Skyline.DataMiner.Net.SLSearch.Messages.AggregationContainer'.
+```
+
+Example of a query that would cause the above-mentioned exception to be thrown:
+
+```txt
+1. Get parameter table by ID (fetches the data from the Elasticsearch table)
+2. Filter "column 1" on value "A" (due to this filter, no rows will be returned)
+3. Aggregate "column 1"
+4. Group by "column 2"
+```
+
 #### Dashboards app & Low-Code Apps: A message would no longer be displayed when a component was being migrated [ID_36410]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
