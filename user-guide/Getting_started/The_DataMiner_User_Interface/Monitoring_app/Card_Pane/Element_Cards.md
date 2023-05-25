@@ -16,9 +16,7 @@ The following pages are available:
 
   - ![Histogram icon](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
-  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed.
-
-    Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
+  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : From DataMiner 10.3.7/10.4.0 onwards: Allows you to access the [trending page](xref:Trending_Page). Prior to DataMiner 10.3.7/10.4.0: Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
 
 - *Alarms*: Displays the active alarms for the element.
 
