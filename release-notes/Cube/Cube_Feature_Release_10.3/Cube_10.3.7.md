@@ -65,6 +65,19 @@ When, in the *Services* app, you configure a service profile instance in the *Pr
 
 In the *Resources* app, it is now possible to save a resource property with an empty value.
 
+#### Alarm Console - Proactive cap detection: Enhanced suggestion event value for predicted minimum or maximum values [ID_36440]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The proactive cap detection feature generates suggestion events for predicted data range violations. The value of these suggestion events has now been changed
+
+- from  `Predicted above range violation between ... and ...` or `Predicted below range violation between ... and ...`
+- to `Predicted maximum value [x] [unit] between ... and ...` or `Predicted minimum value [x] [unit] between ... and ...`
+
+\*[x] being the value of the maximum or minimum value of the data range for the parameter as specified in the protocol, and [unit] being the unit of the parameter as specified in the protocol.
+
+The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
+
 ### Fixes
 
 #### Resources app: Problem when opening the element list in the 'device' tab [ID_36239]

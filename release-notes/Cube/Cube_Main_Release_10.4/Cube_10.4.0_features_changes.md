@@ -324,6 +324,19 @@ Also, when you click *Save* after changing any of the settings in this *Database
 > [!IMPORTANT]
 > No warning will appear to point out that the backup Agent in a Failover setup is offline.
 
+#### Alarm Console - Proactive cap detection: Enhanced suggestion event value for predicted minimum or maximum values [ID_36440]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The proactive cap detection feature generates suggestion events for predicted data range violations. The value of these suggestion events has now been changed
+
+- from  `Predicted above range violation between ... and ...` or `Predicted below range violation between ... and ...`
+- to `Predicted maximum value [x] [unit] between ... and ...` or `Predicted minimum value [x] [unit] between ... and ...`
+
+\*[x] being the value of the maximum or minimum value of the data range for the parameter as specified in the protocol, and [unit] being the unit of the parameter as specified in the protocol.
+
+The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

@@ -42,7 +42,7 @@ From now on, SLXML will no longer be used to read out the following files contai
 
 In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
 
-For tables containing data with TTL set, this property will be set 4 hours.
+For tables containing data with TTL set, this property will be set to 4 hours.
 
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 

@@ -56,7 +56,7 @@ To generate a marker image dynamically, you can use placeholders in the `url` at
 
 In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
 
-For tables containing data with TTL set, this property will be set 4 hours.
+For tables containing data with TTL set, this property will be set to 4 hours.
 
 #### Cassandra Cluster Migrator tool now supports TLS [ID_34852]
 
