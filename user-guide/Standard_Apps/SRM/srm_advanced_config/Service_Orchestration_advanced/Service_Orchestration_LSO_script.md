@@ -22,7 +22,7 @@ LSO scripts can make use of the following classes to interact with bookings and 
 > [!TIP]
 > Load *SLSRMLibrary.dll* in a software development environment to get an exhaustive list of the available methods.
 
-## LsoEnhancedAction class
+### LsoEnhancedAction class
 
 With the *LsoEnhancedAction* class, an LSO script can implement different logic based on:
 
@@ -106,13 +106,78 @@ The *SrmResourceConfiguration* object allows the use of the following methods to
 By default, the methods above will launch a Profile-Load Script and validate each set. This means that by default, the *performCheckSets* flag is set to true. However, overloaded methods exist to launch the script without validating each set:<!--  RN 26236 -->
 
 - `SrmResourceConfiguration.ApplyContributingState(string serviceState, bool performCheckSets)`
+
 - `SrmResourceConfiguration.ApplyProfile(string profileAction, bool performCheckSets)`
+
 - `SrmResourceConfiguration.ApplyServiceActionProfile(string serviceAction, string profileAction, bool performCheckSets)`
 
 When data needs to be returned from the execution of a Profile-Load Script, you can use the following methods:<!--  RN 30862 -->
 
 - `resourceConfig.ApplyContributingStateWithReturn`
+
 - `resourceConfig.ApplyServiceActionProfileWithReturn`
+
 - `resourceConfig.ApplyProfileWithReturn`
 
 These three methods will return a <string,string> dictionary. However, for this to happen, the Profile-Load Script must build the dictionary (see [Returning data](xref:creating_profile_load_scripts#returning-data)).
+
+## Updating booking parameters
+
+In LSO scripts, you can update profile parameters or profile instances on booking level using the *SrmResourceConfigurationSetParameter()* or *SrmResourceConfigurationSetProfileInstance()* methods. For example:
+
+- `resource.SetParameter(TestSystemIds.ProfileParameters.Video_State, "Test Video State", false);`
+- `resource.SetParameter(TestSystemProfileParameters.Vendor.Name, "VendorB", false);`
+
+- `resource.SetParameter(InterfaceType.In, "ASI", TestSystemIds.ProfileParameters.Bitrate, 55, false);`
+- `resource.SetParameter(1, TestSystemProfileParameters.Active_ASI_Interface.Name, "SDI", false);`
+- `resource.SetParameter(InterfaceType.In, 1, TestSystemProfileParameters.Active_ASI_Interface_Port.ID, 99, false);`
+
+- `resource.SetProfileInstance(TestSystemProfileInstances.Decoding_VendorB.ID, false);`
+- `resource.SetProfileInstance(TestSystemProfileInstances.ASI_Profile_2.ID, 1, true);`
+
+> [!NOTE]
+> The *forceSave* boolean should only be set to "true" for the last call, as it will effectively trigger the update of the booking. This way you avoid unnecessary updates of the booking, which would affect performance.
+
+## Manipulating unlinked resources<!--  RN 30228 -->
+
+When a booking contains resources that are not linked to any node of the service definition, it is still possible to retrieve them from within an LSO script and trigger their configuration:
+
+```csharp
+// Select all unmapped resources, assigned to the booking
+var unmappedResources = srmBookingConfig.GetUnmappedResources();
+```
+
+You can then use the following methods to initiate their configuration:
+
+- `ApplyProfile("APPLY");`
+- `ApplyServiceActionProfile("START", "APPLY");`
+- `orchestrationHelper.ApplyCombinedProfile("START", "APPLY");`
+
+> [!NOTE]
+> To retrieve all resources in a booking regardless of whether they are linked to a node in the service definition, you can use the following method:
+>
+> ```csharp
+> // Select all mapped and unmapped resources, assigned to the booking
+> var resources = srmBookingConfig.GetResourcesToOrchestrate();
+> ```
+
+## Handling LSO script failures
+
+In case an LSO script fails and throws an exception or exits with `engine.ExitFail`, the service state will be set to *Failed*.
+
+The booking life cycle state will also be adjusted to one of the following values:<!-- RN 33121 -->
+
+- *Failed Service Pre-Roll*: If the LSO script failed at the start of a booking, i.e. at the start of the pre-roll stage.
+
+- *Failed Service Active*: If the LSO script failed at the end of the pre-roll stage.
+
+- *Failed Service Post-Roll*: If the LSO script failed at the start of the post-roll stage.
+
+- *Failed Completed*: If the LSO script failed at the end of the post-roll stage.
+
+Future events can detect that a previous event has failed, and they can decide to skip Profile-Load Script execution and keep the booking in a "Failed" service state. This is illustrated in the example LSO script.<!--  RN 27090 -->
+
+```csharp
+var enhancedAction = new LsoEnhancedAction(engine.GetScriptParamValue<string>("Action"));
+string previousState = enhancedAction.PreviousServiceState
+```
