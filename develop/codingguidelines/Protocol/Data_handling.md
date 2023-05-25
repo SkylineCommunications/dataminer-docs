@@ -28,7 +28,7 @@ This should be implemented as follows:
   - Table:
     - A column containing buttons to remove a missing entry.
     - A *Status* column that allows alarms for missing entries.
-    - A "Missing Since" column (saved) to display the data and time when an entry is considered missing. This column is also used for the logic regarding the removal delay.
+    - A *Missing Since* column (saved) to display the data and time when an entry is considered missing. This column is also used for the logic regarding the removal delay.
 
 ## Infinitely growing amount of data
 
