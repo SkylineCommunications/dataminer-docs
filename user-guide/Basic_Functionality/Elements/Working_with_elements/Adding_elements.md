@@ -1,10 +1,8 @@
 ---
-uid: Adding_and_deleting_elements
+uid: Adding_elements
 ---
 
-# Adding and deleting elements
-
-## Adding an element
+# Adding an element
 
 1. Right-click in the Surveyor, and select *New \> Element*.
 
@@ -66,6 +64,8 @@ uid: Adding_and_deleting_elements
    > In some fields, a default value may be filled in. If you have deleted this default value, you can still see what it was by removing all data from the field. The default value will then be shown in the tooltip.
 
 1. Depending on the protocol you have chosen, more connection settings may need to be specified:
+
+<!--Instead of listing what to do for all different connections, create subpages under "Adding an element" for every type of connection-->
 
    - For an **SNMPv1/v2** connection:
 
@@ -272,25 +272,3 @@ uid: Adding_and_deleting_elements
 
 > [!TIP]
 > See also: [Locating devices in your system to add to your DMS](xref:Locating_devices_in_your_system_to_add_to_your_DMS)
-
-## Duplicating an element
-
-To quickly add an element that is very similar to an existing element, you can duplicate that existing element:
-
-1. Right-click the element in the Surveyor, and select *Duplicate*.
-
-   A card appears, similar to when you create a new element, except that it already contains the information from the element you duplicated.
-
-1. Make the necessary changes in the card, and click *Create*.
-
-> [!NOTE]
-> When you duplicate an SNMPv3 from another DMA, you will need to enter the SNMPv3 credentials again for the element to work.
-
-## Deleting an element
-
-1. Right-click the element in the Surveyor, and select *Delete*.
-
-1. In the confirmation box, click *Yes*.
-
-> [!NOTE]
-> Some elements may be created by a different parent element. In that case, deleting these elements may not be possible, except by an Administrator, or via the parent element.
