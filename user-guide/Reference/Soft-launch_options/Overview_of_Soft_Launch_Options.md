@@ -217,14 +217,14 @@ Enables the new Monitoring app. See [Accessing the Monitoring app](xref:Accessin
 Installs NATS and NAS on the DMA. If this option is enabled on all DMAs in the cluster, the NATS configuration will be updated so that a single NATS cluster is created.
 
 - **Minimum version**: 10.0.13
-- **Release version**: 10.1.1
+- **Release version**: 10.1.1/10.1.0 ([RN 28131](xref:General_Feature_Release_10.1.1#gradual-introduction-of-inter-process-communication-via-nats-id_27496id_28082id_28131-id_28233))
 
 ### NewAverageTrending
 
 Enables the new average trending feature. From DataMiner 10.0.12 onwards, this is automatically enabled if a Cassandra cluster setup is used.
 
 - **Minimum version**: 10.0.6
-- **Release version**: 10.1.10
+- **Release version**: 10.1.10/10.2.0 ([RN 28684](xref:General_Feature_Release_10.1.10#improved-average-trending-id_28684))
 
 ### PlannedMaintenance
 
@@ -240,14 +240,14 @@ Enables the Planned Maintenance module.
 Enables the [Dashboards app](xref:newR_D).
 
 - **Minimum version**: 9.5.8
-- **Release version**: 9.6.9
+- **Release version**: 9.6.9/10.0.0 ([RN 22517](xref:General_Main_Release_10.0.0_new_features_4#new-dashboards-app-id_19638id_20719id_20739id_21182id_21199id_21213id_21220-id_21223id_21234id_21263id_21340id_21437id_21706id_21848id_21932id_21957-id_22072id_22117id_22273id_22325id_22517id_22672id_22761id_22855id_22874-id_23080-id_23097id_23131id_23161id_23173id_23176id_23245id_23249id_23293-id_23401id_23481id_23546id_23563id_23671-id_23692id_23747id_23754id_23839-id_24171))
 
 ### ReportsAndDashboardsAlarmList
 
 Enables the alarm list component in the Dashboards app.
 
 - **Minimum version**: 9.6.8
-- **Release version**: 10.1.5
+- **Release version**: 10.1.5/10.2.0 ([RN 29456](xref:General_Feature_Release_10.1.5#dashboards-app-alarm-table-component-id_27790-id_28012-id_28142-id_28519-id_28718-id_28887-id_29131-id_29456))
 
 ### ReportsAndDashboardsAlpha
 
@@ -289,7 +289,7 @@ Enables the grid component in the Dashboards app.
 Enables the export to PDF button within the Dashboards app itself. Creating PDFs of dashboards is possible outside the app (e.g. via DataMiner Scheduler) without this soft-launch option.
 
 - **Minimum version**: 9.6.4
-- **Release version**: 10.2.12/10.3.0
+- **Release version**: 10.2.12/10.3.0 ([RN 34634](xref:General_Feature_Release_10.2.12#dashboards-app-jobs-and-dashboards-app-now-support-pdf-module-id_34634))
 
 ### ReportsAndDashboardsGQIMaps
 
