@@ -19,7 +19,7 @@ This should be implemented as follows:
 
 - Add a PageButton "\[Table Name\] Config…" above the table that contains:
 
-  - A read/write parameter "\[Table Name\] Auto Removal Delay" which has an appropriate range (low and high) and a "Remove Immediately" exception value. When the table is updated:
+  - A read/write parameter "\[Table Name\] Auto Removal Delay" that has an appropriate range (low and high) and a "Remove Immediately" exception value. When the table is updated:
     - If parameter is set to "Remove Immediately", remove missing entries.
     - Otherwise, for all missing entries, compare this configuration with the "Missing Since" date and remove the row(s) if needed. If the "Missing Since" is empty, fill it in with current date time and update the "Status" column.
 
