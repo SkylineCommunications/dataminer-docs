@@ -191,7 +191,7 @@ Enables the use of Elasticsearch for alarm indexing and other applications. To p
 Enables the [Jobs app](xref:jobs).
 
 - **Minimum version**: 9.6.2
-- **Release version**: 9.6.4/10.0.0 (RN 21098)
+- **Release version**: 9.6.4/10.0.0 ([RN 21098](xref:General_Main_Release_10.0.0_new_features_1#new-job-manager-app-id_19964id_20130id_20583id_21098id_21180id_21422id_21660-id_21724id_21767id_21940id_22289id_22331id_22772id_22758id_22823id_22895-id_22909id_22913id_22966-id_22988id_23007id_23042id_23049id_23790))
 
 ### LegacyAnnotations
 
@@ -326,10 +326,10 @@ Enables the Timeline component in the Dashboards app.
 
 ### ResourceList
 
-Enables support for the source type “Resources” in list view components. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=ResourceList`.
+Enables support for the source type "Resources" in list view components. This is a Cube-only feature that can only be activated per session with the argument `ENABLEFEATURE=ResourceList`.
 
 - **Minimum version**: 10.1.3
-- **Release version**: 10.1.11
+- **Release version**: 10.1.11/10.2.0 ([RN 30998](xref:General_Feature_Release_10.1.11#visual-overview-listview-component-can-now-be-used-to-list-resources-id_28723-id_30998))
 
 ### ServiceProfilesMigration
 
@@ -357,7 +357,7 @@ Enables ownership support for SRM services.
 Enables contributing service protocol generation.
 
 - **Minimum version**: 9.6.1
-- **Release version**: 9.6.11
+- **Release version**: 9.6.11/10.0.0 ([RN 23201](xref:General_Main_Release_10.0.0_new_features_5#service--resource-management-possibility-to-generate-protocols-and-function-definitions-based-on-service-definitions-and-enhanced-services-based-on-reservations-id_19330id_19359id_19385id_19386id_19415id_19431id_19450-id_19491id_19498id_19556id_19632id_19789id_23201))
 
 ### VisualDataManager
 
@@ -377,4 +377,4 @@ Uses an embedded web browser for Automation script execution instead of the nati
 Enables the Cube UI for [User-Defined APIs](xref:UD_APIs).
 
 - **Minimum version**: 10.3.5
-- **Release version**: 10.3.6
+- **Release version**: 10.3.6/10.4.0 ([RN 36273](xref:General_Feature_Release_10.3.6#user-defined-apis-id_34910-id_35134-id_35169-id_35417-id_35743-id_35810-id_35880-id_35885-id_36118-id_36250-id_36273-id_36366))
