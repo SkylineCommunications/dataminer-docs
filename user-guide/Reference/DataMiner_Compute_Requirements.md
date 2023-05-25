@@ -6,6 +6,11 @@ uid: DataMiner_Compute_Requirements
 
 To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with Cassandra and Elasticsearch. Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
 
+> [!TIP]
+>
+> - To estimate how many nodes your DMS will need and what the specifications of these nodes should be, you can use the [DataMiner Node Calculator](https://community.dataminer.services/calculator/)
+> - For other information on requirements (e.g. client requirements), see [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/).
+
 > [!IMPORTANT]
 > If you intend to run e.g. DataMiner, Cassandra, and Elasticsearch on a single server, the hardware requirements in the diagram below need to be added up. So, when it comes to RAM, in this case you would need a minimum of 96 GB (32 GB for DataMiner, 32 GB for Cassandra, and 32 GB for Elasticsearch).
 
@@ -67,7 +72,7 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 - From DataMiner **10.3.0 [CU6]/10.3.4** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
 
 > [!NOTE]
-> We recommend to always upgrade to the latest .NET Framework version.
+> We recommend always upgrading to the latest .NET Framework version.
 
 ## Cassandra requirements
 
@@ -153,9 +158,3 @@ If there are multiple Elasticsearch nodes in the cluster, a [shared network path
 ### Operating System
 
 Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
-
-## Interesting links
-
-- [DataMiner Node Calculator](https://community.dataminer.services/calculator/)
-
-- [DataMiner System Requirements](https://community.dataminer.services/documentation/dataminer-system-requirements/)
