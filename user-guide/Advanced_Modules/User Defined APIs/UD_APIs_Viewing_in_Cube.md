@@ -6,6 +6,8 @@ uid: UD_APIs_Viewing_in_Cube
 
 ## Configuring APIs and tokens
 
+1. Go to *System Center* > *User/Groups*. Make sure the "Modules" > *User-Defined APIs* permissions are enabled.
+
 1. Go to *System Center* > *User-Defined APIs*.
 
 1. Use the buttons below the table to create an API or token, or to edit or delete the selected API or token.
