@@ -21,7 +21,7 @@ Certain features introduced from that version of DataMiner onwards, such as the 
 - [Manually connecting a DMA to an Elasticsearch cluster](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster)
 
 > [!NOTE]
-> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements
+> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 > [!TIP]
 > See also:
