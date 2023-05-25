@@ -30,6 +30,8 @@ For large-scale clusters, this might be very difficult to manage as you need to 
 > - trend_data_short
 > - trend_data_medium
 > - trend_data_long
+>
+> From Reaper v1.4.0 onwards, you can disable repairs on TimeWindowCompactionStrategy tables by setting the **blacklistTwcsTables tag to *true*** in the *cassandra-reaper.yaml* file.
 
 ## Keeping the software up to date
 
