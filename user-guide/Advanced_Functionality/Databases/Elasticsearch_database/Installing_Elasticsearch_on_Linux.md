@@ -6,26 +6,10 @@ uid: Installing_Elasticsearch_on_Linux
 
 If you want to use an Elasticsearch cluster for your DMS (which is required to use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature), install Elasticsearch on a Linux machine as detailed below.
 
-1. Install the Elasticsearch software on  the Linux machine as described under [Installing from the RPM repository](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/rpm.html#rpm-repo) in the official Elasticsearch documentation.
+> [!NOTE]
+> We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
-1. Make sure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300.
-
-   - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
-
-     `$ systemctl start firewalld.service`
-
-   - To add the correct ports to the firewall, you can for example use the following commands:
-
-     - `$ firewall-cmd --add-port=9200/tcp --permanent`
-
-     - `$ firewall-cmd --add-port=9300/tcp --permanent`
-
-     - `$ firewall-cmd --reload`
-
-   > [!IMPORTANT]
-   >
-   > - These commands could be **different depending on the Linux distribution** you are using. Refer to [the official Elastic page on installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) for detailed information.
-   > - If you connect to your Linux server with **SSH**, you must **immediately exclude port 22**, or you will be locked out of the session. Use the following command for this: `$ firewall-cmd --zone=public --add-port=22/tcp`
+1. Install the Elasticsearch software on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) in the official Elasticsearch documentation.
 
 1. Mount the data folder to the data disk.
 
@@ -49,6 +33,9 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
    - To change *elasticsearch.yml* files, you can use the following command:
 
      `$ vi /etc/elasticsearch/elasticsearch.yml`
+     
+> [!TIP]
+> To know more about vi editor visit What is vi(https://www.cs.colostate.edu/helpdocs/vi.html).
 
    - Make the following adjustments in the *elasticsearch.yml* file based on your setup:
 
@@ -57,6 +44,11 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
      - **node.name**: The name of the Elasticsearch node.
 
      - **path.data**: The location(s) where you want to store the data.
+
+     - **path.repo**: The location(s) where you want to store the Snapshots.
+     
+     > [!TIP]
+     > For information about taking and restoring snapshots, refer to Taking and Restoring Snapshots(xref:Configuring_Elasticsearch_backups_Windows_Linux)
 
      - **bootstrap.memory_lock**: Set this to *true*.
 
@@ -68,14 +60,14 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
        > [!NOTE]
        >
-       > - We recommend a cluster of three nodes, preferably in different racks.
+       > - We recommend a cluster of minimum three nodes, preferably in different racks.
        > - To add a node to an existing cluster, see [Adding an Elasticsearch cluster node](xref:Configuring_Elasticsearch_node_add).
 
-     - **discovery.zen.minimum_master_nodes**: Set this to *2*. For more information on master nodes, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
+     - **discovery.zen.minimum_master_nodes**: see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
-     - **gateway.recover_after_nodes**: Set this to *1*.
+     - **gateway.recover_after_nodes**: See [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
-     - **node.master**: Set this to *true*. For more information on master nodes, see [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
+     - **node.master**: See [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
 1. Make the following adjustments in */etc/sysconfig/elasticsearch*:
 
@@ -88,6 +80,10 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
    - **LimitMEMLOCK**: Set this to *infinity*. This must be set under the *Service* tag.
 
 1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*. For more information, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
+
+       > [!NOTE]
+       >
+       > - Elasticsearch uses quite a bit of memory and atleat 8Gb of Heap size should be specified, more could be required depending on the system demands. 
 
 1. Start Elasticsearch and evaluate if the service is up and running.
 
