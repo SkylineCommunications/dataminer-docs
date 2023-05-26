@@ -223,24 +223,6 @@ Example:
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-#### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-When you set up an SSH connection in a protocol, you can store the username, the password, the SSH options and the IP address in parameters using a `<Type options="">` element inside the `<Param>` element.
-
-| Parameter          | Option                          |
-|--------------------|---------------------------------|
-| SSH username       | `<Type options="SSH USERNAME">` |
-| SSH password       | `<Type options="SSH PWD">`      |
-| SSH options        | `<Type options="SSH OPTIONS">`  |
-| Dynamic IP address | `<Type options="DYNAMIC IP">`   |
-
-Up to now, when an element with an SSH connection was started, these values would each be passed separately to SLPort. From now on, they will all be passed together to SLPort.
-
-> [!NOTE]
-> A separate set will be performed whenever one of the above-mentioned values is changed at runtime.
-
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
