@@ -14,13 +14,13 @@ The following pages are available:
 
   - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter. Obsolete from DataMiner 10.3.7/10.4.0 onwards.
 
+  - ![Pencil icon](~/user-guide/images/PencilIcon.png): Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards).
+
   - ![Histogram icon](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
   - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed.
 
     Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
-
-  - <!--screenshot pencil icon incoming-->: Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards).
 
 - *Alarms*: Displays the active alarms for the element.
 
