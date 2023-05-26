@@ -12,9 +12,9 @@ The following pages are available:
 
 - *Data*: One or more pages with parameters, as configured in the element protocol. The following icons provide access to additional functionality:
 
-  - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter. Obsolete from DataMiner 10.3.7/10.4.0 onwards.
+  - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter. Obsolete from DataMiner 10.3.7/10.4.0 onwards. <!-- RN 36275-->
 
-  - ![Pencil icon](~/user-guide/images/PencilIcon.png): Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards).
+  - ![Pencil icon](~/user-guide/images/PencilIcon.png): Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards). <!-- RN 36275 -->
 
   - ![Histogram icon](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
