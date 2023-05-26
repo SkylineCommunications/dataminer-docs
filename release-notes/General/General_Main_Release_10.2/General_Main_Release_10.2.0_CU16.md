@@ -135,6 +135,14 @@ When you re-uploaded a main DVE protocol with the same version as the one that w
 
 When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
 
+#### DataMiner Cube - Visual Overview: Blinking shapes would affect other components [ID_36357]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, setting a shape to blink in Visual Overview could unintentionally affect other components. For example, when the parameter table contained monitored parameters, the monitored cells would incorrectly blink along with the shape.
+
+From now on, when a shape is set to blink, other components will no longer be affected.
+
 #### DataMiner Cube: Problem with 'Use credentials' selection box when creating or editing an element [ID_36362]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
@@ -148,6 +156,12 @@ Also, when you edited an element for which credentials had been selected, the *U
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
+
+#### DataMiner Cube : Reports and heatline of a monitored parameter of a DVE child element would incorrectly show "No monitoring" [ID_36384]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you opened the card of a DVE child element, drilled down to a monitored parameter and opened the *Details* tab, the reports would incorrectly show "No monitoring". Also, "No monitoring" would be shown when you viewed the heatline of the parameter in question.
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 
