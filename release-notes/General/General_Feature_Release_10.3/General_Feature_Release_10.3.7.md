@@ -19,7 +19,7 @@ uid: General_Feature_Release_10.3.7
 
 ## Other features
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36514]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
