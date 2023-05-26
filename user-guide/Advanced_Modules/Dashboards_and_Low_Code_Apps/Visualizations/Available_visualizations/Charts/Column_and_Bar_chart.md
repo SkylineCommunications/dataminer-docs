@@ -35,7 +35,7 @@ To configure the component:
 
    - *Label*: Allows you to select which data should be used as a label. Depending on how many different variables are displayed in the chart, several labels can be selected.
 
-   - *Segment size*: Allows you to select which data should determine the size of segments in the chart.
+   - *Bars*: Allows you to select which data should determine the size of the bars in the chart. Multiple bars can be selected.
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
 
