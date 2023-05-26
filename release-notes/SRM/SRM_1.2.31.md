@@ -39,7 +39,7 @@ Up to now, when calculating a path within the same element, a *GetEligibleResour
 
 <!-- See Fixes for fix part of RN -->
 
-When the main booking uses the external service feature, this feature will now also be enabled for the transport booking, so that transport bookings are no longer always created for such main bookings.
+When the main booking uses the external service feature, this feature will now also be enabled for the transport service, so that transport services are no longer always created for such main bookings.
 
 ### Fixes
 
