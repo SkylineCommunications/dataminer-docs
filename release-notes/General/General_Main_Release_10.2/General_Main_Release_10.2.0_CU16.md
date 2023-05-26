@@ -186,3 +186,11 @@ When a dashboard contained a query component that was linked to a feed, the app 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.
+
+#### Cube: Problem when trying to export all elements to a CSV file [ID_36512]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, the following exception could be thrown when you tried to export all elements to a CSV file:
+
+`Export failed: Object reference not set to an instance of an object`
