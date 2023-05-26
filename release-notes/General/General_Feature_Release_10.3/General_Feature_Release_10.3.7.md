@@ -52,7 +52,7 @@ To generate a marker image dynamically, you can use placeholders in the `url` at
 
 #### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
 
