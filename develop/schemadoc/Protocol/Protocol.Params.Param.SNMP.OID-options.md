@@ -74,9 +74,13 @@ A subtable is a reduced SNMP table, based on an instance filter (defined in the 
 To use this option with a set of instances, please follow the steps described in [how to implement the subtable feature](xref:How_to_implement_the_subtable_feature).
 
 The instance filter has two operating modes.
-* As a single value, it will act as a wildcard that accepts any row where the instance starts with the filter value. Using the instance option in this case also does not add an additional column to the result.
-As of DataMiner version 10.3.7, 10.3.0-CU5, and 10.2.0-CU16, it is possible to use a wildcard "*" as well. For example:
-    - "1.2" will accept values like "1.2.1" and "1.2.2", but reject "1.3.1" and "2.2".
-    - "1.*" will accept values like "1.1" and "1.2.3", but reject "1" and "2.1.2".
-    - "*.1" will accept values like "2.1" and "2.1.2", but reject "1.1" and "1.2.1".
-* As multiple values separated by a comma, it will poll those specific instances, and expects all of the instances to be complete and valid. In this case, the instance option does add an additional column to the result.
+
+- An instance filter with a single value will act as a wildcard that accepts any row where the instance starts with the filter value. Using the instance option in this case also does not add an additional column to the result.
+
+  As of DataMiner version 10.3.7, 10.3.0 [CU5] and 10.2.0 [CU16], it is also possible to use a "\*" wildcard. For example:
+
+  - "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+  - "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+  - "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
+
+- An instance filter with multiple values separated by commas will poll those specific instances, and expects all the instances to be complete and valid. In this case, the instance option does add an additional column to the result.
