@@ -52,7 +52,7 @@ To generate a marker image dynamically, you can use placeholders in the `url` at
 
 #### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
 
 In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
 
@@ -105,6 +105,15 @@ Example:
 
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### User-defined APIs: UserDefinableApiEndpoint DxM now targets Microsoft .NET 6.0 [ID_36338]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- Not added to MR 10.4.0 -->
+
+As Microsoft .NET 5 is being phased out, the *UserDefinableApiEndpoint* DxM will now use Microsoft .NET 6.0 instead.
+
+Also, in the module's *appsettings.json* file, `NatsSubject` is now an optional setting.
 
 #### DataMiner tasks in Windows Task Scheduler will now return 0 instead of error code 1 [ID_36393]
 

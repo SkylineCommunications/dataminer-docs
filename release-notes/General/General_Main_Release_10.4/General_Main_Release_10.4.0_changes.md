@@ -36,14 +36,6 @@ From now on, SLXML will no longer be used to read out the following files contai
 > - NT_SET_ITEM_DATA
 > - NT_SET_PARAMETER_BY_DATA
 
-#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
-
-For tables containing data with TTL set, this property will be set to 4 hours.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -206,6 +198,8 @@ Because of a number of enhancements, overall performance has increased when load
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
 #### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
 
 As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
 
