@@ -276,3 +276,9 @@ When the same query was used in two different GQI visualizations, one of those v
 ```txt
 Cannot read properties of null ('reading delete')
 ```
+
+#### Problem with IIS W3WP process when requesting URLs that exceeded the maximum allowed length [ID_36510]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+An error could occur in the IIS W3WP process when requesting URLs that exceeded the maximum allowed length.
