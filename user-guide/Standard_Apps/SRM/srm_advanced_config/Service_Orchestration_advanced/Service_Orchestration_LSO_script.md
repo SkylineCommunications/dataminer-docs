@@ -7,7 +7,7 @@ uid: Service_Orchestration_LSO_script
 > [!TIP]
 > An example LSO script is available as part of the framework: *SRM_LSOTemplate*.
 
-LSO scripts are responsible for orchestrating the configuration of resources, i.e. launching Profile-Load Scripts to configure the resources included in bookings. See [Life cycle Service Orchestration (LSO) script](#srm_scripting#life-cycle-service-orchestration-lso-script).
+LSO scripts are responsible for orchestrating the configuration of resources, i.e. launching Profile-Load Scripts to configure the resources included in bookings. See [Life cycle Service Orchestration (LSO) script](xref:srm_scripting#life-cycle-service-orchestration-lso-script).
 
 When an event needs to be triggered (e.g. end of pre-roll) for a specific booking, the SRM framework will look up the [target service state](xref:Service_Orchestration_service_states) defined in the Booking Manager app (e.g. START). Based on this, it will then identify the LSO script to run by looking at the list of [actions defined in the service definition](xref:Service_Orchestration_service_states#configuring-the-action-linked-to-each-service-state).
 
