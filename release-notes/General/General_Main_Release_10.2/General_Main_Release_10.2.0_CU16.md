@@ -180,3 +180,9 @@ A message would incorrectly no longer be displayed when a component was being mi
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### DataMiner Cube: Problem when opening the alarm template of a large matrix parameter [ID_36444]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.

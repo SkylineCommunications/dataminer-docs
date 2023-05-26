@@ -115,3 +115,9 @@ Also, when you edited an element for which credentials had been selected, the *U
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you opened the card of a DVE child element, drilled down to a monitored parameter and opened the *Details* tab, the reports would incorrectly show "No monitoring". Also, "No monitoring" would be shown when you viewed the heatline of the parameter in question.
+
+#### Problem when opening the alarm template of a large matrix parameter [ID_36444]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.
