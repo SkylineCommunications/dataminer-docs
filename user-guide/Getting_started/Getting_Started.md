@@ -55,7 +55,7 @@ uid: Part1GettingStarted
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="User Guide" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>
+    <a href="/user-guide/Troubleshooting/Troubleshooting.html" title="Troubleshooting" target="_self"><img src="~/user-guide/images/Docs_Troubleshooting.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Reference/Reference.html" title="Reference" target="_self"><img src="~/user-guide/images/Docs_Reference.svg" style="width:100%"></a>
