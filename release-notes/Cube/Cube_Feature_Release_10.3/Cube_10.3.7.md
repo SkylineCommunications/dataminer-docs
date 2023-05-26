@@ -80,6 +80,12 @@ The value of the suggestion events generated for predicted (critical) alarm thre
 
 ### Fixes
 
+#### System Center - Database: Problem when saving a trend data offload configuration with frequency set to 'permanently' [ID_35679]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved incorrectly, causing the offload process to not work properly.
+
 #### Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->

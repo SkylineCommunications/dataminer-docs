@@ -363,6 +363,12 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
 
+#### System Center - Database: Problem when saving a trend data offload configuration with frequency set to 'permanently' [ID_35679]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved incorrectly, causing the offload process to not work properly.
+
 #### Trending - Parameter relationships: Light bulb icon would not appear if ModelHost DxM stopped working [ID_35868]
 
 <!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
