@@ -19,17 +19,17 @@ uid: General_Feature_Release_10.3.7
 
 ## Other features
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36514]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.5)
+- DataMiner ArtifactDeployer (version 1.4.6)
 - DataMiner CoreGateway (version 2.12.2)
 - DataMiner FieldControl (version 2.8.3)
 - DataMiner Orchestrator (version 1.3.3)
-- DataMiner SupportAssistant (version 1.3.2)
+- DataMiner SupportAssistant (version 1.3.3)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
