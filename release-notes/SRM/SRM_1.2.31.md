@@ -39,7 +39,7 @@ Up to now, when calculating a path within the same element, a *GetEligibleResour
 
 <!-- See Fixes for fix part of RN -->
 
-When the main booking uses the external service feature, this feature will now also be enabled for the transport service, so that transport services are no longer always created for such main bookings.
+When the main booking uses the external service feature, this feature will now also be enabled for the transport booking, so that transport services are no longer always created for such main bookings.
 
 ### Fixes
 
@@ -51,7 +51,7 @@ In some cases, it could occur that the services for transport bookings were not 
 
 #### Problem when end time for booking was set in the past [ID_36426]
 
-​When an ongoing booking is updated, its status will first change to *Confirmed* and then to the correct status. Because of this behavior, a retry mechanism was implemented to wait for the correct status. However, this did not work correctly when the end time for a booking was set in the past.
+When an ongoing booking is updated, its status will first change to *Confirmed* and then to the correct status. Because of this behavior, a retry mechanism was implemented to wait for the correct status. However, this did not work correctly when the end time for a booking was set in the past.
 
 This could for instance cause errors like in the example below:
 
