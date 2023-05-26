@@ -248,6 +248,9 @@ This property is used to transfer data between nodes of a booking. When a profil
 
 As the value of this property, in JSON, specify the script that implements the transfer logic and the parameters, resources or profile instances of which a change will trigger the script.
 
+> [!TIP]
+> See also: [Service Orchestration Data Transfer Rules configuration](xref:Service_Orchestration_DTR)
+
 **Example values**:
 
 ```json
@@ -295,7 +298,7 @@ The property value above will cause the script "SRM_ApplyDataTransferRules" to b
 }
 ```
 
-The property value above will cause the script “SRM_DataTransferRulesTemplate” to be triggered whenever the profile instance on the node with label “Demodulator 1” changes.
+The property value above will cause the script "SRM_DataTransferRulesTemplate" to be triggered whenever the profile instance on the node with label "Demodulator 1" changes.
 
 ### Enhanced Protocol
 
@@ -560,6 +563,9 @@ This property allows you to define the script that should be launched during boo
 Set this property to a JSON object with a *Script* key, as illustrated below.
 
 If the property is defined both on instance and on definition level, the instance level takes precedence. If several service profiles have a configuration defined, the scripts will be executed top-down.
+
+> [!TIP]
+> See also: [Configuring service profile Data Transfer Rules](xref:Service_Orchestration_DTR#configuring-service-profile-data-transfer-rules)
 
 **Example value**:
 

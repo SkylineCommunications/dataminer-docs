@@ -48,7 +48,7 @@ Two types of Data Transfer Rules exist:
 
 A regular DTR script can be triggered when the following actions happen:
 
-- A profile instance is selected
+- A profile instance is initially assigned or selected (by the user or a DTR script)<!-- RN 26363 -->
 - A resource is selected
 - A parameter is updated
 

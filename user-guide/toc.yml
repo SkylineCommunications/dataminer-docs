@@ -2791,6 +2791,8 @@
                 topicUid: Service_Orchestration_service_states
               - name: LSO script configuration
                 topicUid: Service_Orchestration_LSO_script
+              - name: Data Transfer Rules configuration
+                topicUid: Service_Orchestration_DTR
               - name: Manual Orchestration
                 topicUid: Service_Orchestration_manual_orchestration
       - name: SRM logging
