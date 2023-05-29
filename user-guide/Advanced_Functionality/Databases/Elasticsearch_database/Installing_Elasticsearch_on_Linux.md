@@ -11,6 +11,61 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
 1. Install the Elasticsearch software on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) in the official Elasticsearch documentation.
 
+1. Make sure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300.
+
+   - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
+
+     `$ sudo ufw enable`
+     
+     > [!IMPORTANT]
+     > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
+     >
+     > For this, use the following command: `$ sudo ufw allow 22/tcp`
+
+   - To add the correct ports to the firewall, you can for example use the following commands:
+
+      - Commands node 1:
+
+        `$ sudo ufw allow from [IP node 2] to [IP node 1] proto tcp port 9200,9300`
+
+        `$ sudo ufw allow from [IP node 3] to [IP node 1] proto tcp port 9200,9300`
+
+     - Commands node 2:
+
+       `$ sudo ufw allow from [IP node 1] to [IP node 2] proto tcp port 9200,9300`
+
+       `$ sudo ufw allow from [IP node 3] to [IP node 2] proto tcp port 9200,9300`
+
+     - Commands node 3:
+
+       `$ sudo ufw allow from [IP node 1] to [IP node 3] proto tcp port 9200,9300`
+
+       `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 9200,9300`
+       
+   - Make sure all DMAs in the DMS can connect to port 9200,9300:
+
+     - Commands DMA 1:
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9200,9300`  
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9200,9300`  
+
+       `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9200,9300`  
+
+     - Commands DMA 2:
+  
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9200,9300`  
+
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9200,9300`  
+
+       `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9200,9300`  
+
+     - And so on.
+
+   > [!IMPORTANT]
+   >
+   > - These commands could be **different depending on the Linux distribution** you are using. Refer to [the official Elastic page on installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) for detailed information.
+
 1. Mount the data folder to the data disk.
 
    > [!NOTE]
