@@ -41,4 +41,4 @@ Example:
 > [!NOTE]
 >
 > - From DataMiner 9.6.13 onwards, it is possible to specify parameters of enhanced services in \<Detail> tags, in the same way as element parameters.
-> - From DataMiner 10.3.7/10.4.0 onwards, additional values can be added dynamically to the URL in layers with `sourceType` set to "objects".
+> - From DataMiner 10.3.7/10.4.0 onwards, additional values can be added dynamically to the URL in layers with `sourceType` set to "objects". <!-- RN 36246 -->
