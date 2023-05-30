@@ -155,3 +155,10 @@ In some cases, Cube could become unresponsive when you tried to open the alarm t
 In some cases, the following exception could be thrown when you tried to export all elements to a CSV file:
 
 `Export failed: Object reference not set to an instance of an object`
+
+#### Trending: Only one related parameter shown when clicking the light bulb icon [ID_36518]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- Not added to 10.4.0 -->
+
+When you clicked the light bulb icon in the top-right corner of a trend graph, Cube would incorrectly only list one related parameter. From now on, it will again list the ten most important ones.
