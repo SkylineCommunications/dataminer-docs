@@ -427,6 +427,12 @@ When the same query was used in two different GQI visualizations, one of those v
 Cannot read properties of null ('reading delete')
 ```
 
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
 #### Problem with IIS W3WP process when requesting URLs that exceeded the maximum allowed length [ID_36510]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->

@@ -38,6 +38,12 @@ Up to now, when an element with an SSH connection was started, these values woul
 > [!NOTE]
 > A separate set will be performed whenever one of the above-mentioned values is changed at runtime.
 
+#### Dashboards app & Low-Code Apps: No visual replacement will be displayed anymore when a State component feeds empty query rows [ID_36460]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
+
 ### Fixes
 
 *No fixes yet*
