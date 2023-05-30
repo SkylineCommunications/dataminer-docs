@@ -1,8 +1,8 @@
 ---
-uid: General_Main_Release_10.3.0_CU5
+uid: General_Main_Release_10.2.0_CU17
 ---
 
-# General Main Release 10.3.0 CU5 – Preview
+# General Main Release 10.2.0 CU17 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -11,6 +11,14 @@ uid: General_Main_Release_10.3.0_CU5
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Enhancements
+
+#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
+
+For tables containing data with TTL set, this property will be set to 4 hours.
 
 #### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
 
