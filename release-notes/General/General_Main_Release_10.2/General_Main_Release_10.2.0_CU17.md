@@ -46,4 +46,10 @@ Up to now, when a *State* component fed empty query rows, a visual replacement w
 
 ### Fixes
 
-*No fixes have been added yet*
+#### DataMiner Cube - Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
+
+From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
