@@ -40,6 +40,8 @@ Several special alarm types exist in DataMiner:
 - Information events are messages intended to inform users without raising an alarm. See [Information event](#information-event).
 
 - Timeout alarms indicate non-responding devices. See [Timeout](#timeout).
+ 
+- Suggestion events are messages intented to give users insights on the data behavior of their metrics. See [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
 
 - Masked alarms, indicated in purple, are “hidden” to prevent unnecessary follow-up. See [Masking and unmasking alarms](xref:Masking_and_unmasking_alarms).
 
