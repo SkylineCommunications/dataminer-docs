@@ -31,6 +31,8 @@ Several factors are taken into account for the grouping:
 
 - Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
 
+- Alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)
+
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
 The grouping of alarms into incidents is updated in real time whenever appropriate:
@@ -129,6 +131,20 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
   ```
 
 - After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
+
+## Configuration of incident tracking based on parameter and alarm relationship data
+
+On systems running alarm grouping based on both **parameter and alarm relationship data** (from DataMiner 10.3.7/10.4.0 onwards), this \<item> tag should be configured as illustrated below.
+
+```xml
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
+```
+
+> [!NOTE]
+> From DataMiner 10.3.7/10.4.0 onwards, `cpRelationThreshold` has been renamed to `relationThreshold`. Its value is set to 0.7 by default.
 
 ## Alarm groups in the Alarm Console
 
