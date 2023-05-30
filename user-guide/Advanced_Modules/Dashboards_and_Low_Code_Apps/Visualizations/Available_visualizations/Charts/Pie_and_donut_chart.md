@@ -16,6 +16,9 @@ To configure the component:
 
    - *Segment size*: Allows you to select which data should determine the size of segments in the chart.
 
+   > [!NOTE]
+   > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and segment size will automatically be configured. <!-- RN 36229 -->
+
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - *Chart shape*: Can be set to *Pie* or *Donut*.
