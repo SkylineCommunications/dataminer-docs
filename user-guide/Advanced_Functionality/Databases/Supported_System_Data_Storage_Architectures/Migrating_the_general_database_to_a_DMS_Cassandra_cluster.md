@@ -31,7 +31,8 @@ The migration can be done while the DMAs are active; however, a **DataMiner rest
 
 The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
-From DataMiner 10.3.7/10.3.0[CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and Elasticsearch settings](#running-the-migration) after running *SLCCMigrator.exe*. <!-- RN 34852 -->
+> [!NOTE]
+> From DataMiner 10.3.7/10.3.0[CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and Elasticsearch settings](#running-the-migration) after running *SLCCMigrator.exe*. <!-- RN 34852 -->
 
 ### Prerequisites
 
