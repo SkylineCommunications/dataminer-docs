@@ -2775,6 +2775,8 @@
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
+              - name: Contributing bookings configuration
+                topicUid: Service_Orchestration_contrib_bookings
               - name: Resources configuration
                 topicUid: Service_Orchestration_resources_advanced
               - name: Profile instances configuration

@@ -159,7 +159,7 @@ Set the value to an integer indicating the position of the resource for this nod
 
 **Mandatory**: No
 
-This property is used to define how to generate a contributing booking for a specific service definition.
+This property is used to define how to generate a contributing booking for a specific service definition. (See [Creating contributing bookings](xref:Service_Orchestration_contrib_bookings#creating-contributing-bookings).)
 
 The JSON value of this property should contain the following fields:
 
@@ -170,6 +170,8 @@ The JSON value of this property should contain the following fields:
 - *ConvertToContributing*: Determines whether the *Convert to Contributing* checkbox is selected by default (true) or not (false).
 
 - *LifeCycle*: The type of lock life cycle, which can be *Locked* or *Unlocked*. *Locked* means the timing of the contributing booking is tied to that of the main booking; *Unlocked* means it is independent from the main booking.
+
+- *LiteContributingResource*: Determines whether a lite contributing resource is used. If the property is not specified, regular contributing resources will be created. See [Enabling lite contributing bookings](xref:Service_Orchestration_contrib_bookings#enabling-lite-contributing-bookings).<!-- RN 31182 -->
 
 - *OrchestrationTrigger*: *Local* or *Main*. If set to *Main*, the service state will not be updated and LSO will not be triggered.
 
