@@ -25,7 +25,17 @@ uid: General_Feature_Release_10.3.8
 
 ### Enhancements
 
-*No enhancements have been added yet*
+#### SLLogCollector now collects more API Gateway data [ID_34967]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+SLLogCollector packages now include the following API Gateway data:
+
+- *appsettings.json*
+- DLL version
+- Health
+- Log file
+- Version
 
 ### Fixes
 
