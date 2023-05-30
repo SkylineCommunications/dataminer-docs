@@ -132,20 +132,6 @@ In addition, the following configuration is needed in the file *C:\\Skyline Data
 
 - After you have edited the configuration file, **restart the SLAnalytics process** to make sure your changes take effect.
 
-## Configuration of incident tracking based on parameter and alarm relationship data
-
-On systems running alarm grouping based on both **parameter and alarm relationship data** (from DataMiner 10.3.7/10.4.0 onwards), this \<item> tag should be configured as illustrated below.
-
-```xml
-<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
-   <enable>true</enable>
-   <relationThreshold>0.7</relationThreshold>
-</Value>
-```
-
-> [!NOTE]
-> From DataMiner 10.3.7/10.4.0 onwards, `cpRelationThreshold` has been renamed to `relationThreshold`. Its value is set to 0.7 by default.
-
 ## Alarm groups in the Alarm Console
 
 In the Alarm Console, alarm groups are displayed as a special kind of alarm entries:
