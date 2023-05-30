@@ -16,3 +16,6 @@ In order to run this app, your DataMiner System must use a setup with a Cassandr
 >
 > - Along with the other DataMiner web apps, you can upgrade the Ticketing app separately from your main DataMiner installation. This means that you can for example have a DataMiner System using version 10.3.4, while you already use version 10.3.5 for the web apps. You can [download the web apps upgrade package from DataMiner Dojo](https://community.dataminer.services/downloads/).
 > - The Ticketing app requires a separate license. For more information on acquiring a Ticketing license, contact the Skyline Sales department.
+
+> [!CAUTION]
+> The Ticketing app is being retired. See [DataMiner functionality evolution and retirement](xref:Software_support_life_cycles) for more details.
