@@ -46,4 +46,4 @@ Up to now, when a *State* component fed empty query rows, a visual replacement w
 
 ### Fixes
 
-*No fixes yet*
+*No fixes have been added yet*

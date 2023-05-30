@@ -32,4 +32,4 @@ Up to now, when an element with an SSH connection was started, these values woul
 
 ### Fixes
 
-*No fixes yet*
+*No fixes have been added yet*
