@@ -31,7 +31,7 @@ Several factors are taken into account for the grouping:
 
 - Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
 
-- Alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards)
+- Alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards) <!-- RN 36337 -->
 
 If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
