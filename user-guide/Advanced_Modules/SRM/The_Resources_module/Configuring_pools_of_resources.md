@@ -44,11 +44,14 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 1. In the dialog box, fill in the name of the resource property you wish to define.
 
-1. If you wish to restrict the possible values for the property, there are two possibilities:
+1. To restrict the possible values for the property, there are two possibilities:
 
    - Select *Regex pattern* and specify a regular expression that the property in question must match.
 
    - Select *Value list*, and, for each possible value for the property, click the *Add value* button and specify the value.
+
+   > [!NOTE]
+   > From DataMiner 10.3.7/10.3.0[CU4], you can save a resource property without specifying a value for that property.
 
 ## Adding resources to a pool
 
