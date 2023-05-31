@@ -300,3 +300,13 @@ System.Net.Http.HttpRequestException: An error occurred while sending the reques
 ```
 
 Above exception in the SLDBConnection logging can be fixed by adding the rootCA.crt in the  *Trusted Root Certification Authorities* store.
+
+### Multiple DNS names for IP
+
+In case multiple DNS names point to a single IP-address, set the below option to false in the opensearch.yml file:
+
+```yaml
+plugins.security.ssl.transport.resolve_hostname: false
+```
+
+See also [(Advanced) Hostname verification and DNS lookup](https://opensearch.org/docs/1.2/security-plugin/configuration/tls/#advanced-hostname-verification-and-dns-lookup).
