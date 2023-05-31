@@ -129,7 +129,7 @@ When your DataMiner System is connected to dataminer.services, additional config
    </md:EntityDescriptor>
     ```
 
-1. Update your provider settings. For more information, see [Identity providers](#identity-providers).
+1. Update your provider settings. See [Identity providers](#identity-providers).
 
 ## Identity providers
 
