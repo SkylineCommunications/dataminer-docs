@@ -102,29 +102,34 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
 ## Additional configuration for systems connected to dataminer.services
-When your DMS is cloud connected, some extra configuration is needed both in the `spMetadata.xml` and the Identity provider.
 
-The following URLs need to be added
-- https://<dms-dns-name>-<organization-name>/API/
-- https://<dms-dns-name>-<organization-name>/account-linking
-- https://<dms-dns-name>-<organization-name>/account-linking/
+When your DataMiner System is connected to dataminer.services, additional configuration is required for both the *spMetadata.xml* file and the identity provider.
 
-In the example below, our dms-dns name is **dataminer** and our organization name is **skyline**.  
-This results in the following remote access url: https://**dataminer**-**skyline**.on.dataminer.services
+1. Add the following URLs:
 
-1. Extend the _spMetadata.xml_ file with the following
-    ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
-    <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
-     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
-       ...
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/API/" index="1" isDefault="true"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="true"/>
-       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="true"/>
-     </md:SPSSODescriptor>
-    </md:EntityDescriptor>
-       ```
-1. Update your provider settings. See [Identity providers](#identity-providers).
+   - `https://<dms-dns-name>-<organization-name>/API/`
+   - `https://<dms-dns-name>-<organization-name>/account-linking`
+   - `https://<dms-dns-name>-<organization-name>/account-linking/`
+
+   In this example, our DMS DNS name is **dataminer** and our organization name is **skyline**.
+
+   This results in the following remote access URL: <https://dataminer-skyline.on.dataminer.services>
+
+1. Extend the *spMetadata.xml* file with the following code:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+    <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      ...
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/API/" index="1" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="true"/>
+    </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+    ```
+
+1. Update your provider settings. For more information, see [Identity providers](#identity-providers).
 
 ## Identity providers
 
@@ -380,7 +385,7 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
 
        > [!TIP]
-       > See also: [Additional configuration for systems connected to dataminerservices](#additional-configuration-for-systems-connected-to-dataminerservices)
+       > See also: [Additional configuration for systems connected to dataminer.services](#additional-configuration-for-systems-connected-to-dataminerservices)
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 
