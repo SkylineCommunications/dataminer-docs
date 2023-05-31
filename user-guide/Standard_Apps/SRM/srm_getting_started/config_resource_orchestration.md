@@ -48,4 +48,4 @@ After they click *Confirm*, the booking will be created.
 
 The wizard can be launched from Visual Overview or from a low-code app.
 
-A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-front-end-for-the-wizard).
+A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-front-end-for-the-resource-scheduling-wizard).

@@ -4,7 +4,7 @@ uid: Service_Orchestration_contrib_bookings
 
 # Service Orchestration: contributing bookings configuration
 
-Before you start [creating contributing bookings](#creating-contributing-bookings), it is important that you understand which [types of contributing bookings](#types-of-contributing-bookings) there are and [how they behave](#contributing-booking-behavior).
+Before you start [creating contributing bookings](#configuring-contributing-bookings), it is important that you understand which [types of contributing bookings](#types-of-contributing-bookings) there are and [how they behave](#contributing-booking-behavior).
 
 > [!TIP]
 > See also: [Contributing booking](xref:srm_instantiations#contributing-booking)

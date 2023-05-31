@@ -159,7 +159,7 @@ Set the value to an integer indicating the position of the resource for this nod
 
 **Mandatory**: No
 
-This property is used to define how to generate a contributing booking for a specific service definition. (See [Creating contributing bookings](xref:Service_Orchestration_contrib_bookings#creating-contributing-bookings).)
+This property is used to define how to generate a contributing booking for a specific service definition. (See [Configuring contributing bookings](xref:Service_Orchestration_contrib_bookings#configuring-contributing-bookings).)
 
 The JSON value of this property can contain the following fields:
 
@@ -388,7 +388,7 @@ This property identifies a contributing node in a service definition, so that th
 Set the property to *TRUE* to indicate that a node is a contributing node.
 
 > [!TIP]
-> See also: [Creating contributing bookings](xref:Service_Orchestration_contrib_bookings#creating-contributing-bookings)
+> See also: [Configuring contributing bookings](xref:Service_Orchestration_contrib_bookings#configuring-contributing-bookings)
 
 ### IsProfileInstanceOptional
 
