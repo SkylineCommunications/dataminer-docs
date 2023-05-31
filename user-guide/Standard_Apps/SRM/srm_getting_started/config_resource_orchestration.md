@@ -25,6 +25,7 @@ The wizard is an interactive Automation script called *SRM_ResourceManagement*. 
 - *BookingManagerElement*: The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.
 - *ReservationId*: Optional. Used to edit the booking.
 - *Timing*: Optional. The timing of the booking.
+- *TimeRange*: Optional. The proposed time of the booking to be created (in string format). This is a semicolon-separated list of start and stop time in binary format, as provided by Cube when a time range is selected on the timeline component.
 
 For example: `{"BookingManagerElement":"Resource Orchestration","ReservationId":"00000000-0000-0000-0000-000000000000","ResourceIds":"e489a83d-182b-45c7-a981-615c253525b2","Timing":{"EffectiveStart":"2022-09-07T16:18:24.1242596+02:00","PreRoll":"00:00:00","StartDate":"2022-09-07T16:18:24.1242596+02:00","EffectiveEnd":"2022-09-07T17:25:27.9282596+02:00","EndDate":"2022-09-07T17:25:27.9282596+02:00","PostRoll":"00:00:00","IsSilent":false}}`
 
