@@ -39,3 +39,9 @@ Also, because of a number of enhancements, overall performance has increased whe
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.

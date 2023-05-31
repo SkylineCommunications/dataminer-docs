@@ -392,3 +392,9 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
+
+#### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.
