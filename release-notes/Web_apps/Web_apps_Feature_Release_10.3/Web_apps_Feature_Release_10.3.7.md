@@ -219,7 +219,7 @@ The chart legend would incorrectly show the primary key of a parameter instead o
 <!-- MR 10.4.0 - FR 10.3.7 -->
 <!-- Not added to MR 10.4.0 -->
 
-When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error message.
+When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error.
 
 #### GQI: Exception thrown when grouping an empty aggregation result [ID_36392]
 
