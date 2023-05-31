@@ -111,9 +111,9 @@ When your DataMiner System is connected to dataminer.services, additional config
    - `https://<dms-dns-name>-<organization-name>/account-linking`
    - `https://<dms-dns-name>-<organization-name>/account-linking/`
 
-   In this example, our DMS DNS name is **dataminer** and our organization name is **skyline**.
+   Example of remote access URL: <https://dataminer-skyline.on.dataminer.services>
 
-   This results in the following remote access URL: <https://dataminer-skyline.on.dataminer.services>
+   In this example, our DMS DNS name is "dataminer" and our organization name is "skyline".
 
 1. Extend the *spMetadata.xml* file with the following code:
 
