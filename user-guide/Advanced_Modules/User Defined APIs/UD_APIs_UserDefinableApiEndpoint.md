@@ -179,7 +179,6 @@ For example, this is the default configuration:
 ```json
 {
   "UserDefinableAPIs": {
-    "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
     "MessageBrokerTimeOutSeconds": 90
   }
 }
