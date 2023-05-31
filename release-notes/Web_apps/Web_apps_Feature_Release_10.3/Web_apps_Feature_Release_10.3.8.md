@@ -26,9 +26,4 @@ uid: Web_apps_Feature_Release_10.3.8
 
 ### Fixes
 
-#### Low-Code Apps: Table actions would not get triggered when the GQI data source row key was of type string [ID_36488]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-<!-- Not added to 10.4.0 -->
-
-Table actions would incorrectly not be triggered when the key of the GQI data source row was of type string.
+*No fixes have been added yet*

@@ -277,6 +277,13 @@ When the same query was used in two different GQI visualizations, one of those v
 Cannot read properties of null ('reading delete')
 ```
 
+#### Low-Code Apps: Table actions would not get triggered when the GQI data source row key was of type string [ID_36488]
+
+<!-- MR 10.4.0 - FR 10.3.7 [CU0] -->
+<!-- Not added to 10.4.0 -->
+
+Table actions would incorrectly not be triggered when the key of the GQI data source row was of type string.
+
 #### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
