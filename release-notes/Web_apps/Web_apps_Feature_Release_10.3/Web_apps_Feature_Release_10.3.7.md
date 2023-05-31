@@ -214,6 +214,13 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
 
+#### Dashboards app: Problem when opening a dashboard of which the URL was longer than 2048 characters [ID_36382] [ID_36510]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- Not added to MR 10.4.0 -->
+
+When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error message.
+
 #### GQI: Exception thrown when grouping an empty aggregation result [ID_36392]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
@@ -289,9 +296,3 @@ Table actions would incorrectly not be triggered when the key of the GQI data so
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
-
-#### Problem with IIS W3WP process when requesting URLs that exceeded the maximum allowed length [ID_36510]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-An error could occur in the IIS W3WP process when requesting URLs that exceeded the maximum allowed length.
