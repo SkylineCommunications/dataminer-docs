@@ -14,3 +14,6 @@ There are a great many possibilities for fine-tuning the SRM deployment so that 
 
 > [!NOTE]
 > Redundancy groups cannot be integrated with DataMiner Service and Resource Management (SRM).
+
+> [!TIP]
+> See also: [SRM project configuration using CI/CD](xref:SRM_project_config_using_CICD)
