@@ -2,7 +2,7 @@
 uid: Service_Orchestration_resources_advanced
 ---
 
-# Service Orchestration resources configuration
+# Service Orchestration: resources configuration
 
 ## Resource filtering configuration
 

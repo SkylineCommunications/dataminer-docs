@@ -2,7 +2,7 @@
 uid: Service_Orchestration_LSO_script
 ---
 
-# Service Orchestration LSO script configuration
+# Service Orchestration: LSO script configuration
 
 > [!TIP]
 > An example LSO script is available as part of the framework: *SRM_LSOTemplate*.

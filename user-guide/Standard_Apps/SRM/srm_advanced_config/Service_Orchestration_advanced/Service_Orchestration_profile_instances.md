@@ -2,7 +2,7 @@
 uid: Service_Orchestration_profile_instances
 ---
 
-# Service Orchestration profile instances configuration
+# Service Orchestration: profile instances configuration
 
 ## Configuring a default profile instance for a node
 

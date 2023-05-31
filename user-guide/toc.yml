@@ -2797,6 +2797,8 @@
                 topicUid: Service_Orchestration_DTR
               - name: Manual Orchestration
                 topicUid: Service_Orchestration_manual_orchestration
+              - name: Configuring SLA creation
+                topicUid: Service_Orchestration_SLA_creation
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services

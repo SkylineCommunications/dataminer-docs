@@ -2,7 +2,7 @@
 uid: Service_Orchestration_contrib_bookings
 ---
 
-# Service Orchestration contributing bookings configuration
+# Service Orchestration: contributing bookings configuration
 
 Before you start [creating contributing bookings](#creating-contributing-bookings), it is important that you understand which [types of contributing bookings](#types-of-contributing-bookings) there are and [how they behave](#contributing-booking-behavior).
 
@@ -108,7 +108,10 @@ Like a main booking, a contributing booking can have different [life cycle state
 
 - When the **end time of the booking has passed**, a locked contributing booking will automatically be deleted. An unlocked contributing resource will only be deleted if the *Delete Unlocked Contributing Resource* parameter is set to *Yes* (see [Contributing Reservations settings](xref:Booking_Manager_Config_tab#contributing-reservations-settings)). In case it is part of a main booking that is still running, the contributing resource will only be deleted at the end time of the main booking.<!-- RN 25723 -->
 
-## Creating contributing bookings
+## Configuring contributing bookings
+
+> [!TIP]
+> See also: [Enabling reuse of contributing bookings](xref:Service_Orchestration_service_definition_advanced#enabling-reuse-of-contributing-bookings)
 
 ### Basic configuration
 
@@ -177,7 +180,7 @@ Here are the steps to configure this:
 
 1. In the LSO script associated with the main booking, initiate the configuration of the contributing resource, using the *ApplyContributingState* method. See [Service Orchestration LSO script configuration](xref:Service_Orchestration_LSO_script).
 
-## Customizing late conversion behavior
+### Customizing late conversion behavior
 
 A contributing booking generates a DataMiner service, an enhanced element, and a function DVE at booking creation time. However, for bookings that are not scheduled to start in the near future, this is unnecessary overhead. By default, the SRM framework will therefore only create the above-mentioned components 48 hours prior to the booking start time.
 
@@ -194,7 +197,7 @@ You can adjust this 48-hour sliding window can be adjusted or even disable this 
    > [!NOTE]
    > At the bottom of this section, the *Late Conversion Status* parameter indicates if bookings are currently being converted. Every 10 minutes, the Booking Manager app will check if there are bookings in the conversion window and initiate the conversion when applicable.
 
-## Enabling lite contributing bookings
+### Enabling lite contributing bookings
 
 For setups where many contributing bookings have to be created, you can reduce the load on the system by enabling the "lite" contributing feature. By default, for each contributing booking, an enhanced element is created. However, for lite contributing bookings, this does not happen.
 
