@@ -3057,8 +3057,10 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_app_corruption_after_editing
+          topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
           items:
+            - name: Cassandra disconnects after loss of a single node
+              topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
             - name: Corrupted low-code app after concurrent editing actions
               topicUid: KI_app_corruption_after_editing
             - name: Cassandra cluster data not offloaded while database is unavailable
