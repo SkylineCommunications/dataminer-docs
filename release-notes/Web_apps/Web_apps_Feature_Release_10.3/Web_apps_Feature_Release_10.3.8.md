@@ -31,3 +31,9 @@ uid: Web_apps_Feature_Release_10.3.8
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.

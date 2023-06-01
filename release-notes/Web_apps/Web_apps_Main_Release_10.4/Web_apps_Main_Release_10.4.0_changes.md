@@ -423,6 +423,12 @@ In the Dashboards app and the Monitoring app, spectrum components would get stuc
 
 When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
 
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
