@@ -37,6 +37,17 @@ SLLogCollector packages now include the following API Gateway data:
 - Log file
 - Version
 
+#### DataMiner Agents joining a cluster will now synchronize their ProtocolScripts\DllImport folder [ID_36494]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When a DataMiner Agent joins a cluster, it will now synchronize its `ProtocolScripts\DllImport` folder.
+
+Also, when processing a protocol, a DataMiner Agent will now synchronize
+
+- the files in the `ProtocolScripts/DllImport` folder, and
+- the files in the folders mentioned in the *QAction@dllImport* attribute.
+
 ### Fixes
 
 *No fixes have been added yet*
