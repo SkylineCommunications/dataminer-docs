@@ -265,6 +265,18 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
+
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.

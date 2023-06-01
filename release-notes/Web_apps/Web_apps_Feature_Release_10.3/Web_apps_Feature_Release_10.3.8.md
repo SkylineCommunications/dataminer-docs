@@ -22,7 +22,17 @@ uid: Web_apps_Feature_Release_10.3.8
 
 ### Enhancements
 
-*No enhancements have been added yet*
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
 
 ### Fixes
 
