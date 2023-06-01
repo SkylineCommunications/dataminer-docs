@@ -14,6 +14,7 @@ For more information on how to monitor your database, keep your nodes repaired, 
 >
 > - For information on the system requirements for Cassandra, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 > - If a node in the cluster goes down or if a node is down when DataMiner starts up, an alarm will be generated in the Alarm Console. This alarm also indicates how much the health of the cluster is affected by the node being down, as this depends on multiple factors, including the cluster size and replication factor.
+> - For information on how to query a Cassandra database, see [Querying a Cassandra database compared to MySQL](xref:Querying_Cassandra_vs_MySQL).
 
 > [!TIP]
 > See also:

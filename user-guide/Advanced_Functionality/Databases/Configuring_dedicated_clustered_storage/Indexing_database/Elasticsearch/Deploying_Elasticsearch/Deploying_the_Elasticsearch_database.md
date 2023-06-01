@@ -11,7 +11,9 @@ In that case, you will need to [install](xref:Installing_Elasticsearch_on_separa
 As an alternative to the Elasticsearch database, from DataMiner 10.3.0/10.3.3 onwards, [OpenSearch](xref:OpenSearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service) are also supported.
 
 > [!NOTE]
-> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+>
+> - For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+> - For information on how to query an Elasticsearch database, see [Querying an Elasticsearch database](xref:Querying_an_Elasticsearch_database).
 
 > [!TIP]
 > See also:

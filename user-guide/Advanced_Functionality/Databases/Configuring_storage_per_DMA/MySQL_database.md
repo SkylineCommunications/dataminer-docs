@@ -8,3 +8,6 @@ On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as th
 
 > [!IMPORTANT]
 > MSSQL is no longer supported as the general database as from DataMiner 10.3.0.
+
+> [!NOTE]
+> For more information on how to query a MySQL database, see [Querying an SQL database](xref:Querying_an_SQL_database) and [Querying a Cassandra database compared to MySQL](xref:Querying_Cassandra_vs_MySQL).

@@ -2,7 +2,7 @@
 uid: Scale_Cassandra_Database
 ---
 
-# Scaling a Cassandra cluster database
+# Adding and removing nodes in a Cassandra cluster database
 
 ## Adding nodes
 
