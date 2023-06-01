@@ -9,7 +9,9 @@ Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and
 Resources are not automatically migrated when you [install Elasticsearch](xref:Installing_Elasticsearch_via_DataMiner) and [migrate booking data](xref:Configuring_DataMiner_Indexing). Based on your specific setup, and keeping in mind the [limitations and differences between XML and Elasticsearch storage](#limitations-and-differences-with-xml-storage), you can decide independently whether or not you want to start this migration.
 
 > [!TIP]
-> For metrics related to resource performance with Elasticsearch or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
+>
+> - For metrics related to resource performance with Elasticsearch or with XML storage, see [Resources benchmarks](xref:resources_benchmarks).
+> - If you are looking for information on how to migrate an SRM configuration from one DMA to another, see [Migrating an SRM configuration](xref:SMR_migrating).
 
 > [!NOTE]
 > From DataMiner 10.4.0 onwards, the use of Elasticsearch to store resources and resource pools is mandatory. XML storage will no longer be supported. Upgrading to 10.4.0 will not be possible if the resources data is still stored in XML.

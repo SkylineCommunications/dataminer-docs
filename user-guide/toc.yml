@@ -2801,6 +2801,13 @@
                 topicUid: Service_Orchestration_SLA_creation
       - name: SRM logging
         topicUid: SRM_logging
+      - name: Migrating an SRM configuration
+        topicUid: SMR_migrating
+        items:
+          - name: Migrating virtual function definitions
+            topicUid: SRM_migrating_functions
+          - name: Migrating profile instances
+            topicUid: SRM_migrating_profile_instances
 - name: dataminer.services
   topicUid: AboutCloudPlatform
   items:
