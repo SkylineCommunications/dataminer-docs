@@ -1,8 +1,8 @@
 ---
-uid: Querying_MySQL_vs_Cassandra
+uid: Querying_Cassandra_vs_MySQL
 ---
 
-# Querying MySQL vs Cassandra
+# Querying a Cassandra database compared to MySQL
 
 ## Introduction
 

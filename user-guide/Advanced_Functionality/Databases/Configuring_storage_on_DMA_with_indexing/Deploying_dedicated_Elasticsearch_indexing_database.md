@@ -15,7 +15,7 @@ If your DataMiner System uses a Cassandra database per DataMiner Agent, you can 
 You can [deploy the Elasticsearch indexing database](xref:Installing_Elasticsearch_via_DataMiner) via DataMiner Cube. When the database has been deployed, you can also [configure the indexing settings](xref:Configuring_DataMiner_Indexing) in DataMiner Cube.
 
 > [!NOTE]
-> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/).
+> For information on the system requirements for Elasticsearch, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 > [!TIP]
 > See also:
