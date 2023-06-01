@@ -1054,10 +1054,12 @@
       items:
         - name: About databases
           topicUid: Databases_about
-        - name: Storage as a Service
-          topicUid: STaaS
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
+        - name: Storage as a Service
+          topicUid: STaaS
+        - name: Database configuration
+          topicUid: Configuring_dedicated_clustered_storage
           items:
             - name: Configuring dedicated clustered storage
               topicUid: Configuring_dedicated_clustered_storage
@@ -1099,6 +1101,8 @@
                         - name: Deploying the Elasticsearch database
                           topicUid: Deploying_the_Elasticsearch_database
                           items:
+                            - name: Installing the Elasticsearch database
+                              topicUid: Installing_Elasticsearch_on_separate_Linux_machine
                             - name: Configuring the Elasticsearch database
                               topicUid: Configuring_Elasticsearch_Database
                               items:
@@ -1188,22 +1192,22 @@
               items:
                 - name: Specifying TTL overrides
                   topicUid: Specifying_TTL_overrides
-        - name: Optional database configuration
-          topicUid: Offload_database
-          items:
-            - name: Offload database
+            - name: Optional database configuration
               topicUid: Offload_database
               items:
-                - name: Setting up an offload database
-                  topicUid: Setting_up_an_offload_database
-                - name: Structure of the offload database
-                  topicUid: Structure_of_the_offload_database
-                - name: Configuring data offloads
-                  topicUid: Configuring_data_offloads
-                - name: How DataMiner offloads data
-                  topicUid: How_DataMiner_offloads_data
-            - name: Configuring an additional database
-              topicUid: Configuring_an_additional_database
+                - name: Offload database
+                  topicUid: Offload_database
+                  items:
+                    - name: Setting up an offload database
+                      topicUid: Setting_up_an_offload_database
+                    - name: Structure of the offload database
+                      topicUid: Structure_of_the_offload_database
+                    - name: Configuring data offloads
+                      topicUid: Configuring_data_offloads
+                    - name: How DataMiner offloads data
+                      topicUid: How_DataMiner_offloads_data
+                - name: Configuring an additional database
+                  topicUid: Configuring_an_additional_database
         - name: Database queries
           topicUid: Examples_of_database_queries
           items:
