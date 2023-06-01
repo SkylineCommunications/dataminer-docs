@@ -25,9 +25,9 @@ Geo-redundant or site-redundant Cassandra Cluster setups that have the following
 
 ## Cause
 
-- **Cassandra Cluster setup without failover**: In a setup where a single DMS connects to multiple data centers, the DMS automatically detects the data center of the first contact point and evenly distributes queries across all nodes within that data center. If a query consistently fails, the policy will not attempt to connect with nodes in other data centers. In such cases, a DataMiner offload alarm will be triggered, and DataMiner will initiate the process of offloading.
+- **Cassandra Cluster setup without Failover**: In a setup where a single DMS connects to multiple data centers, the DMS automatically detects the data center of the first contact point and evenly distributes queries across all nodes within that data center. If a query consistently fails, the policy will not attempt to connect with nodes in other data centers. In such cases, a DataMiner offload alarm will be triggered, and DataMiner will initiate the process of offloading.
 
-- **Cassandra Cluster setup with failover**: In a setup where a DMS with two failover nodes connects to multiple data centers, the contact points are spread across these two failover nodes. This allows for failover switching if one of the data centers goes down or becomes unresponsive to queries. After the failover sync, both machines will have contact points in the *db.xml* file. Although both nodes have synchronized contact points, the order in which they connect to the data centers cannot be guaranteed. Therefore, this mechanism is not entirely reliable.
+- **Cassandra Cluster setup with Failover**: In a setup where a DMS with two Failover nodes connects to multiple data centers, the contact points are spread across these two Failover nodes. This allows for Failover switching if one of the data centers goes down or becomes unresponsive to queries. After the Failover sync, both machines will have contact points in the *db.xml* file. Although both nodes have synchronized contact points, the order in which they connect to the data centers cannot be guaranteed. Therefore, this mechanism is not entirely reliable.
 
 ## Issues
 
