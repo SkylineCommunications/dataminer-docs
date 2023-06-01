@@ -215,6 +215,12 @@ Up to now, when an event associated with a DVE child element was generated, inte
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
+
 #### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
