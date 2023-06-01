@@ -37,6 +37,18 @@ SLLogCollector packages now include the following API Gateway data:
 - Log file
 - Version
 
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
+
+#### Service & Resource Management: Enhanced performance of GetEligibleResources call [ID_36430]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance of the *GetEligibleResources* call has increased.
+
 #### DataMiner Agents joining a cluster will now synchronize their ProtocolScripts\DllImport folder [ID_36494]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

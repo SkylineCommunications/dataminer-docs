@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU5
 
 ### Enhancements
 
+#### Service & Resource Management: Enhanced performance of GetEligibleResources call [ID_36430]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance of the *GetEligibleResources* call has increased.
+
 #### DataMiner Agents joining a cluster will now synchronize their ProtocolScripts\DllImport folder [ID_36494]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
