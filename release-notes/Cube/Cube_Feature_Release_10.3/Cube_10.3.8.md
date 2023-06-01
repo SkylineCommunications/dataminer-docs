@@ -14,9 +14,13 @@ uid: Cube_Feature_Release_10.3.8
 
 *No highlights have been selected for this release yet*
 
-## Other features
+## Other new features
 
-*No other features have been added yet*
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
 
 ## Changes
 
