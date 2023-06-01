@@ -2,7 +2,7 @@
 uid: Resources_migration_to_elastic
 ---
 
-# Resource migration to Elasticsearch
+# Migrating SRM resources to Elasticsearch
 
 Starting from DataMiner version 10.3.0/10.3.2, you can migrate the resources and resource pools from the *Resources.xml* file to Elasticsearch. This improves the scalability and performance on systems that have a large number of resources.
 
