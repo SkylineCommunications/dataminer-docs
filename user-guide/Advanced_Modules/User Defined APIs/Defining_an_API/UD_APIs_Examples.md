@@ -222,7 +222,7 @@ namespace UserDefinableApiScripts.Examples.RequestMethodAndRoute
 
 ### Starting long-running actions asynchronously
 
-when you trigger the execution of a long-running action or script, we recommend executing this asynchronously and not blocking the HTTP trigger until the action is completed. The example below shows how you can start an asynchronous subscript in your entry point method.
+When you trigger the execution of a long-running action or script, we recommend executing this asynchronously and not blocking the HTTP trigger until the action is completed. The example below shows how you can start an asynchronous subscript in your entry point method.
 
 As the HTTP call will immediately return after it is started, it will not be possible to return any result of this subscript. If you want to know whether the action is completed, you can implement a second API that polls a part of your solution that is altered by this long-running action to see if that action is finished. This could for example be the status of a DOM instance, the status of a booking, or a value of a parameter of a specific element. There is currently no reliable built-in way of knowing whether the subscript is finished.
 
