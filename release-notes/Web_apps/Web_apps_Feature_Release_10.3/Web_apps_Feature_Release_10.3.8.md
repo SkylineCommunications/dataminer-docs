@@ -47,3 +47,9 @@ When an empty query was used by more than one table component, in some rare case
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
+#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
