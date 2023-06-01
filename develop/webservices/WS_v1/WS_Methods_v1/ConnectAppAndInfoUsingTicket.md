@@ -19,7 +19,7 @@ The method is used to display web apps inside DataMiner Cube, so that it is not 
 
 > [!NOTE]
 >
-> - By default, the ticket remains valid for 30 seconds. This is determined by the [TicketExpirationTime](xref:Configuration_of_DataMiner_processes#customizing-how-long-a-connection-ticket-remains-valid) setting in *MaintenanceSettings.xml*.
+> - By default, the ticket remains valid for 30 seconds. This is determined by the [AuthenticationTicketExpirationTime](xref:Configuration_of_DataMiner_processes#customizing-how-long-a-connection-ticket-remains-valid) setting in *MaintenanceSettings.xml*.
 > - Prior to DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12, for the *ClientAppName*, a registered app name must be specified. If this is not done, the connection will be removed after 10 minutes. To request a valid *ClientAppName*, contact your Skyline Technical Account Manager. From DataMiner 9.6.0 CU19/10.0.0 CU7/10.0.12 onwards, this registration is no longer required. The client app name is then merely used in the audit trail.
 
 ## Output
