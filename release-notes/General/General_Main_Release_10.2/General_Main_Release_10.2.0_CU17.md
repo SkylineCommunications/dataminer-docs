@@ -37,6 +37,14 @@ Also, when processing a protocol, a DataMiner Agent will now synchronize
 - the files in the `ProtocolScripts/DllImport` folder, and
 - the files in the folders mentioned in the *QAction@dllImport* attribute.
 
+#### Stream Viewer will now display parameter IDs in decimal format instead of octal format [ID_36525]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Stream Viewer will display an error message when an SNMP poll group contained either an invalid parameter or a parameter that did not have its SNMP setting enabled.
+
+Up to now, that error message would contain the ID of the parameter in octal format. From now on, it will contain the ID of the parameter in decimal format instead.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
