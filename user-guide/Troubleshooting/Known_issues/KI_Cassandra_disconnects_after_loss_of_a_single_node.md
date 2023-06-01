@@ -26,7 +26,7 @@ However, in the case of a Cassandra Cluster setup or any setup using NetworkTopo
 "{'class': 'org.apache.cassandra.locator.NetworkTopologyStrategy', 'datacenter1': '2'}"
 ```
 
-Here, instead of the expected “replication_factor” keyword, the name of the datacenter ("datacenter1" in this example) is found. The difference in the response causes parsing to fail. The Cassandra driver assumes that in this case, there is no redundancy and therefore allows only the loss of one Cassandra node before marking the database node as down.
+Here, instead of the expected “replication_factor” keyword, the name of the data center ("datacenter1" in this example) is found. The difference in the response causes parsing to fail. The Cassandra driver assumes that in this case, there is no redundancy and therefore allows only the loss of one Cassandra node before marking the database node as down.
 
 ## Fix
 
@@ -34,4 +34,4 @@ No fix is available yet.
 
 ## Description
 
-Even though your Cassandra cluster has three or more nodes and should be able to survive the loss of a node, DataMiner goes into offload mode and displays an “error” alarm in the Alarm Console after losing only one node. This may also occur if the cluster has more than one datacenter.
+Even though your Cassandra cluster has three or more nodes and should be able to survive the loss of a node, DataMiner goes into offload mode and displays an “error” alarm in the Alarm Console after losing only one node. This may also occur if the cluster has more than one data center.
