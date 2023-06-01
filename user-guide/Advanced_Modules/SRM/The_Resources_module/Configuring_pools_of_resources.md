@@ -182,4 +182,4 @@ From DataMiner 10.3.7/10.3.4 onwards, you can duplicate a resource from a pool a
 > - The duplicate resource will have the same name as the original resource, with the suffix `- copy` added to it.
 > - All general information, properties, and device data will be copied from the original resource to the duplicate resource.
 > - The duplicate resource will be added to all resource pools that contain the original resource.
-> - For function resources, the instance dropdown will be left empty, and the function instance will have the same name as the original function instance, with the suffix `- copy` added to it.
+> - For function resources, the instance dropdown list will be left empty, and the function instance will have the same name as the original function instance, with the suffix `- copy` added to it.
