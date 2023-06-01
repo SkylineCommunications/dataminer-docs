@@ -12,6 +12,12 @@ uid: Cube_Main_Release_10.3.0_CU5
 
 ### Enhancements
 
+#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID_36333]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, external connectivity updates for dynamically positioned shapes would not be applied in real time. To see the changes, you had to close the visual overview and open it again. From now on, any external connectivity updates for dynamically positioned shapes will immediately be visible.
+
 #### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID_36363]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
