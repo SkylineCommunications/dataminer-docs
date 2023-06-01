@@ -399,6 +399,12 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
 
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
 #### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->

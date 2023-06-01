@@ -26,4 +26,8 @@ uid: Web_apps_Feature_Release_10.3.8
 
 ### Fixes
 
-*No fixes have been added yet*
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
