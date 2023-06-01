@@ -14,7 +14,7 @@ uid: General_Main_Release_10.3.0_CU5
 
 #### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
 
-<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU5] - FR 10.3.7 -->
 
 When you set up an SSH connection in a protocol, you can store the username, the password, the SSH options and the IP address in parameters using a `<Type options="">` element inside the `<Param>` element.
 
