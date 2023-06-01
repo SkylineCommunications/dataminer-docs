@@ -47,6 +47,24 @@ The following scheduled tasks will now by default return 0 instead of error code
 - Skyline DataMiner Database Optimization (OptimizeDB.js)
 - Skyline DataMiner LDAP Resync (ReloadLDAP.js)
 
+#### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU5] - FR 10.3.7 -->
+
+When you set up an SSH connection in a protocol, you can store the username, the password, the SSH options and the IP address in parameters using a `<Type options="">` element inside the `<Param>` element.
+
+| Parameter          | Option                          |
+|--------------------|---------------------------------|
+| SSH username       | `<Type options="SSH USERNAME">` |
+| SSH password       | `<Type options="SSH PWD">`      |
+| SSH options        | `<Type options="SSH OPTIONS">`  |
+| Dynamic IP address | `<Type options="DYNAMIC IP">`<br>Note: This value can also be used for other types of connections. |
+
+Up to now, when an element with an SSH connection was started, these values would each be passed separately to SLPort. From now on, they will all be passed together to SLPort.
+
+> [!NOTE]
+> A separate set will be performed whenever one of the above-mentioned values is changed at runtime.
+
 ### Fixes
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
@@ -56,6 +74,12 @@ The following scheduled tasks will now by default return 0 instead of error code
 At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 
 From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
+
+#### Alarm templates: Problem with anomaly detection alarms [ID_33216]
+
+<!-- MR 10.2.0 [CU16] - FR 10.2.6 -->
+
+When you created an element with an alarm template in which anomaly detection alarms were configured for table parameters, in some cases, none of the enabled types of change points would trigger an alarm.
 
 #### DataMiner Cube - Resources app: Problem when opening the element list in the 'device' tab [ID_36239]
 
@@ -129,11 +153,33 @@ When you re-uploaded a main DVE protocol with the same version as the one that w
 
 When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
 
+#### DataMiner Cube - Visual Overview: Blinking shapes would affect other components [ID_36357]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, setting a shape to blink in Visual Overview could unintentionally affect other components. For example, when the parameter table contained monitored parameters, the monitored cells would incorrectly blink along with the shape.
+
+From now on, when a shape is set to blink, other components will no longer be affected.
+
+#### DataMiner Cube: Problem with 'Use credentials' selection box when creating or editing an element [ID_36362]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connection while creating or updating an element, you would incorrectly not be required to select any predefined credentials. As a result, an error would occur when the element was created or the update was applied. From now on, when you select this option, the label will turn red and the *Create* or *Apply* button will be disabled as long as no credentials have been selected.
+
+Also, when you edited an element for which credentials had been selected, the *Use credentials* selection box would be disabled and the *Get community string* and *Set community string* boxes would be enabled until you toggled the *Use credentials* option off and on again.
+
 #### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
+
+#### DataMiner Cube : Reports and heatline of a monitored parameter of a DVE child element would incorrectly show "No monitoring" [ID_36384]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you opened the card of a DVE child element, drilled down to a monitored parameter and opened the *Details* tab, the reports would incorrectly show "No monitoring". Also, "No monitoring" would be shown when you viewed the heatline of the parameter in question.
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 
@@ -141,8 +187,28 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 When, while editing an element using a (production) protocol with an advanced port of type SNMPv1 or SNMPv2, you set the type of the advanced port to SNMPv3, then the advanced port settings would get lost when the production version of the protocol was set to another version that also did not have SNMPv3 configured. Moreover, when you tried to correct the advanced port settings of the element, an error would occur in SLDataMiner as soon as you applied the changes.
 
+#### Dashboards app & Low-Code Apps: A message would no longer be displayed when a component was being migrated [ID_36410]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+A message would incorrectly no longer be displayed when a component was being migrated to the most recent version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will again be displayed.
+
 #### Dashboards app: Problem when updating a query linked to a feed [ID_36414]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### DataMiner Cube: Problem when opening the alarm template of a large matrix parameter [ID_36444]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.
+
+#### Cube: Problem when trying to export all elements to a CSV file [ID_36512]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, the following exception could be thrown when you tried to export all elements to a CSV file:
+
+`Export failed: Object reference not set to an instance of an object`

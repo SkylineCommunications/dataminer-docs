@@ -112,6 +112,12 @@ In the *ConnectionSettings.txt* file, the **type=** setting defines the default 
 
 One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
 
+#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
+
 #### Element replication is now able to use gRPC [ID_36262]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

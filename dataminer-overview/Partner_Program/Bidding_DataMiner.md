@@ -29,7 +29,7 @@ Beyond the DataMiner deployment, there is a set of important intel that contribu
 
 - Is a BOQ available? Which vendors, which data sources (equipment, etc.) are to be integrated into DataMiner?
 - Are there third-party platforms (northbound & southbound) that need to be interfaced with? If yes, which ones?
-- On which platform will DataMiner be running, and which party will offer the standard off-the-shelf hardware based on the [recommended hardware specifications](https://community.dataminer.services/dataminer-compute-requirements/)?
+- On which platform will DataMiner be running, and which party will offer the standard off-the-shelf hardware based on the [recommended hardware specifications](xref:DataMiner_Compute_Requirements)?
   - On-premises physical servers
   - On-premises running on [virtual servers/VM instances](xref:Regarding_virtual_servers)
   - User-provided cloud platform

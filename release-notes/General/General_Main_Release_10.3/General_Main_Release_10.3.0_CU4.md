@@ -12,6 +12,14 @@ uid: General_Main_Release_10.3.0_CU4
 
 ### Enhancements
 
+#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
+
+For tables containing data with TTL set, this property will be set to 4 hours.
+
 #### Cassandra Cluster Migrator tool now supports TLS [ID_34852]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->

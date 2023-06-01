@@ -265,6 +265,12 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
+#### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
+
+When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
+
+From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -404,3 +410,25 @@ In the query builder, when a *Select* node was not in edit mode, its description
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
+
+#### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When the same query was used in two different GQI visualizations, one of those visualizations would display the following error:
+
+```txt
+Cannot read properties of null ('reading delete')
+```
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.

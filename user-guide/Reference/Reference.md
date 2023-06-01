@@ -4,6 +4,8 @@ uid: Part7Reference
 
 # Reference
 
+- [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)
+
 - [Skyline DataMiner folder](xref:SkylineDataminerFolder)
 
 - [Tools](xref:DataminerTools)

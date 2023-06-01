@@ -44,6 +44,18 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
+#### SLLogCollector now collects more API Gateway data [ID_34967]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+SLLogCollector packages now include the following API Gateway data:
+
+- *appsettings.json*
+- DLL version
+- Health
+- Log file
+- Version
+
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -197,10 +209,6 @@ Because of a number of enhancements, overall performance has increased when load
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
-
-As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
-
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
@@ -309,3 +317,9 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
