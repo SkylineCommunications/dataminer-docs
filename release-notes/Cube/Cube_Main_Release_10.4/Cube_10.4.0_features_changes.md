@@ -15,6 +15,8 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 For past, ongoing and future bookings, operators need an easy way to view the selected profile instance (if applicable) and profile parameter values of resources included in those bookings.
 
+This shape will show the booking data when a booking ID is passed to that shape.
+
 A new componentvisioshape (type:'BookingData') is now available showing:
 
 - a sidepanel containing all resources in the booking, both linked to a service definition or not.
