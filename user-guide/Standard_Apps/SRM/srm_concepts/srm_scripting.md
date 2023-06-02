@@ -68,7 +68,7 @@ When a Service Profile DTR script is executed, this does not immediately update 
 
 Custom events are only applicable in the context of Service Orchestration.
 
-In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:SolSRM).
+In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:Booking_Manager_user_interface).
 
 These custom events are **linked to Automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
 

@@ -1,0 +1,19 @@
+---
+uid: Silent_actions
+---
+
+# Silent actions
+
+Multiple "silent actions" are possible in scripts, allowing the scripts to interact with bookings without any user interaction. This section lists the most common use cases. Adjusting bookings in ways that are not described here is not supported and could have a severe impact on the stability of SRM. However, if a specific feature you need is not described here, you can submit a feature request to Skyline Communications to evaluate whether this could be added.
+
+- [Silently creating a booking](xref:SRM_creating_booking_silently)
+
+- [Silently assigning resource, profile and parameter values](xref:SRM_assigning_resource_profile_parameter_value_silently)
+
+- [Silently adding properties to an existing booking](xref:SRM_adding_properties_to_booking_silently)
+
+- [Silently applying booking life cycle transitions](xref:SRM_apply_LS_transition_silently)
+
+- [Silently applying service state transitions](xref:SRM_apply_service_state_transitions_silently)
+
+- [Silently updating the timing of a booking](xref:SRM_update_timing_booking_silently)

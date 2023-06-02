@@ -2732,7 +2732,7 @@
         - name: Additional configuration for Resource Orchestration
           topicUid: config_resource_orchestration
       - name: Booking Manager app
-        topicUid: SolSRM
+        topicUid: Booking_Manager_user_interface
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
@@ -2743,18 +2743,13 @@
                 topicUid: Booking_Manager_Config_tab
               - name: Admin tab
                 topicUid: Booking_Manager_Admin_tab
-          - name: Interacting with the Booking Manager app using custom Automation scripts
-            topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
-            items:
-              - name: Silent actions
-                topicUid: Silent_actions
-              - name: Frequently asked questions related to bookings and scripting
-                topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
-        topicUid: SRM_user_interface_customization
+        topicUid: SRM_logging_config
         items:
+          - name: Configuring SRM logging
+            topicUid: SRM_logging_config
           - name: User interface customization
             topicUid: SRM_user_interface_customization
             items:
@@ -2768,8 +2763,6 @@
                 topicUid: SRM_custom_booking_blocks
           - name: Configuring SRM alarm monitoring
             topicUid: SRM_alarm_monitoring
-          - name: Configuring SRM logging
-            topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             topicUid: Service_Orchestration_bookings_advanced
             items:
@@ -2799,8 +2792,6 @@
                 topicUid: Service_Orchestration_manual_orchestration
               - name: Configuring SLA creation
                 topicUid: Service_Orchestration_SLA_creation
-      - name: SRM logging
-        topicUid: SRM_logging
       - name: Migrating an SRM configuration
         topicUid: SRM_migrating
         items:
@@ -2812,6 +2803,30 @@
             topicUid: SRM_migrating_resources
           - name: Migrating service definitions
             topicUid: SRM_migrating_service_definitions
+      - name: Interacting with SRM using code
+        topicUid: Interacting_with_SRM_using_code
+        items:
+          - name: Finding the reference of an object
+            topicUid: SRM_find_reference_of_object
+          - name: Silent actions
+            topicUid: Silent_actions
+            items:
+              - name: Creating a booking
+                topicUid: SRM_creating_booking_silently
+              - name: Assigning resource, profile and parameter values
+                topicUid: SRM_assigning_resource_profile_parameter_value_silently
+              - name: Adding properties to an existing booking
+                topicUid: SRM_adding_properties_to_booking_silently
+              - name: Applying booking life cycle transitions
+                topicUid: SRM_apply_LS_transition_silently
+              - name: Applying service state transitions
+                topicUid: SRM_apply_service_state_transitions_silently
+              - name: Updating the timing of a booking
+                topicUid: SRM_update_timing_booking_silently
+          - name: Frequently asked questions related to bookings and scripting
+            topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
+      - name: SRM logging
+        topicUid: SRM_logging
 - name: dataminer.services
   topicUid: AboutCloudPlatform
   items:
