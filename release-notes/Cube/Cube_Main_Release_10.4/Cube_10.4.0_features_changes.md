@@ -9,6 +9,46 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 ## Other new features
 
+#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+For past, ongoing and future bookings, operators need an easy way to view the selected profile instance (if applicable) and profile parameter values of resources included in those bookings.
+
+A new componentvisioshape (type:'BookingData') is now available showing:
+
+- a sidepanel containing all resources in the booking, both linked to a service definition or not.
+
+  - Each resource is represented with its name and the icon of its function
+  - Each resource shows its node label or its node functiondefinition name in case no node label is defined
+  - Each resource shows a servicedefinition node icon in case it is mapped to a node on a service definition
+
+- the righthand side details section showing :
+
+  - the node label on top. (or fallback to node function name). In case the node has interfaces, a selector is used to view any of the interfaces
+  - the details section shows profile data for the selected node or interface : the selected profile instance and the set of overridden parameter values. The parameter values are used according to following priority :
+
+    - Resource usage parameter overrides
+    - Resource usage profile instance
+    - Resource usage profile definition
+
+- ShapeData 'Reservation' is used to provide the reservation selection to this component.
+
+This new component is available:
+
+- when licensed for service manager and resource manager
+- when all of following permission are granted :
+
+  - Modules\Bookings\UI Available
+  - Modules\Resources\UI Available
+  - Modules\Services\UI Available
+  - Modules\Profiles\UI Available
+  - Modules\Functions\UI Available
+
+- when elastic engine has been installed
+
+Demosetup available at ziinedev.skyline.be view 'BookingData'
+
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->

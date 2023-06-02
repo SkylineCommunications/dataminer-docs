@@ -16,6 +16,15 @@ uid: Cube_Feature_Release_10.3.8
 
 ## Other new features
 
+#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+
+
+
+
+
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
