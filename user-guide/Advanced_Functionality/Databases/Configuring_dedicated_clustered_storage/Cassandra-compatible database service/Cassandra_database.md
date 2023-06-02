@@ -4,11 +4,11 @@ uid: Cassandra_database
 
 # Cassandra Cluster
 
-In this section of the documentation, you can find instructions on [how to deploy a Cassandra Cluster setup](xref:Installing_Cassandra). Deploying a Cassandra Cluster setup is the first step in configuring dedicated clustered storage.
+In this section of the documentation, you can find instructions on [how to deploy a Cassandra Cluster setup](xref:Installing_Cassandra). **Deploying a Cassandra Cluster setup** is the first step in configuring dedicated clustered storage.
 
 A different Cassandra-compatible database service that can be used as an alternative to the Cassandra Cluster setup is the [Amazon Keyspaces Service](xref:Amazon_Keyspaces_Service) (Available from DataMiner 10.3.0/10.3.3 onwards).
 
-For more information on how to monitor your database, keep your nodes repaired, and keep your software up to date, see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster). For information on how to configure the settings for your Cassandra Cluster setup in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
+For information on how to **configure the settings** for your Cassandra Cluster setup in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube). For more information on how to **monitor your database, keep your nodes repaired, and keep your software up to date**, see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster).
 
 > [!NOTE]
 >

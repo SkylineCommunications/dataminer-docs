@@ -195,7 +195,7 @@ After the migration is finished, the DataMiner features that depend on the use o
 > - To improve efficiency and scalability using Cassandra, after the migration, all trend data is stored in one table, instead of in a table per element.
 > - If an element with a logger table (e.g. an SLA) is stopped at the moment when the migration takes place, the data of that element will not be migrated.
 > - To ensure optimal performance, the Cassandra database should be installed on a different drive than DataMiner. If you migrated to a Cassandra database on the same drive as DataMiner, you can move the database afterwards. See [Moving the Cassandra database to a different disk drive](xref:Moving_the_Cassandra_database_to_a_different_disk_drive).
-> - When your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations. The best way to do so is by adding one or more external nodes to the Cassandra cluster and then decommissioning the original node on the DataMiner machine. See [Scaling a Cassandra cluster database](xref:Scale_Cassandra_Database).
+> - When your system has a high load, it is strongly recommended to move the Cassandra database towards an external (Windows or Linux) machine. This way, DataMiner and Cassandra do not affect each other during heavy operations. The best way to do so is by adding one or more external nodes to the Cassandra cluster and then decommissioning the original node on the DataMiner machine. See [Adding and removing nodes in a Cassandra cluster database](xref:Scale_Cassandra_Database).
 
 ## After the migration
 

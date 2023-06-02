@@ -1075,10 +1075,10 @@
                           items:
                             - name: Installing Cassandra on a Linux machine
                               topicUid: Installing_Cassandra
-                            - name: Scaling a Cassandra cluster database
-                              topicUid: Scale_Cassandra_Database
                             - name: Installing Cassandra Reaper
                               topicUid: Installing_Cassandra_Reaper
+                            - name: Adding and removing nodes in a Cassandra cluster database
+                              topicUid: Scale_Cassandra_Database
                             - name: Making Cassandra nodetool accessible remotely
                               topicUid: Making_Cassandra_nodetool_accessible_remotely
                             - name: Configuring the replication factor and consistency level
@@ -1093,32 +1093,29 @@
                         - name: Deploying the Amazon Keyspaces Service
                           topicUid: Deploying_Amazon_Keyspaces_Service
                 - name: Indexing database
-                  topicUid: Deploying_the_Elasticsearch_database
+                  topicUid: Elasticsearch_database
                   items:
                     - name: Elasticsearch
-                      topicUid: Deploying_the_Elasticsearch_database
+                      topicUid: Elasticsearch_database
                       items:
-                        - name: Deploying the Elasticsearch database
-                          topicUid: Deploying_the_Elasticsearch_database
+                        - name: Installing the Elasticsearch database
+                          topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                        - name: Manually connecting a DMA to an Elasticsearch cluster
+                          topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                        - name: Configuring the Elasticsearch database
+                          topicUid: Configuring_Elasticsearch_Database
                           items:
-                            - name: Installing the Elasticsearch database
-                              topicUid: Installing_Elasticsearch_on_separate_Linux_machine
-                            - name: Configuring the Elasticsearch database
-                              topicUid: Configuring_Elasticsearch_Database
-                              items:
-                                - name: Configuring the master nodes
-                                  topicUid: Configuring_master_Elasticsearch_nodes
-                                - name: Adding an Elasticsearch cluster node
-                                  topicUid: Configuring_Elasticsearch_node_add
-                            - name: Configuring multiple Elasticsearch clusters
-                              topicUid: Configuring_multiple_Elasticsearch_clusters
-                              items:
-                                - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
-                                  topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                                - name: Verify Elasticsearch synchronization
-                                  topicUid: Verifying_Elasticsearch_Synchronization
-                            - name: Manually connecting a DMA to an Elasticsearch cluster
-                              topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                            - name: Configuring the master nodes
+                              topicUid: Configuring_master_Elasticsearch_nodes
+                            - name: Adding an Elasticsearch cluster node
+                              topicUid: Configuring_Elasticsearch_node_add
+                        - name: Configuring multiple Elasticsearch clusters
+                          topicUid: Configuring_multiple_Elasticsearch_clusters
+                          items:
+                            - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                              topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                            - name: Verify Elasticsearch synchronization
+                              topicUid: Verifying_Elasticsearch_Synchronization
                         - name: Maintaining the Elasticsearch database
                           topicUid: Configuring_Elasticsearch_backups
                           items:
@@ -1136,6 +1133,8 @@
                     - name: OpenSearch database
                       topicUid: OpenSearch_database
                       items:
+                        - name: Installing an OpenSearch database
+                          topicUid: Installing_OpenSearch_database
                         - name: Configuring multiple OpenSearch clusters
                           topicUid: Configuring_multiple_OpenSearch_clusters
                 - name: Configuring the general database settings
@@ -1170,8 +1169,8 @@
                       topicUid: Moving_MySQL_data_to_another_location
                     - name: Configuring the SQL database settings
                       topicUid: Configuring_MySQL_database_in_Cube
-            - name: Configuring a dedicated indexing database
-              topicUid: Configuring_Dedicated_Indexing_Database
+            - name: Configuring an indexing database per DMA
+              topicUid: Configuring_indexing_database_per_DMA
               items:
                 - name: Deploying the dedicated Elasticsearch indexing database
                   topicUid: Installing_Elasticsearch_via_DataMiner

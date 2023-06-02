@@ -4,7 +4,11 @@ uid: Specifying_TTL_overrides
 
 # Specifying TTL overrides
 
-In System Center, you can configure a custom "time to live" (TTL) for data in the database. This determines how long the data is kept in the database.
+The "time to live" (TTL) determines how long specific data is retained before being automatically removed from your DataMiner System. By setting TTL overrides, you can control the lifespan of various data types, such as real-time trending, minute trending, and alarm events. Some data types, such as elements, do not have a TTL and never expire.
+
+This page explains how to configure TTL settings to optimize your database performance and resource utilization.
+
+In System Center, you can configure a custom TTL for data in the database. This determines how long the data is kept in the database.
 
 1. Go to System Center \> *System settings* > *time to live*.
 

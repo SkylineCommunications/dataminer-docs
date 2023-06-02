@@ -183,5 +183,4 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
 1. Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
-> [!IMPORTANT]
-> In this setup, the Cassandra database is not managed by DataMiner, so it is essential that you manage it yourself (see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster)).
+1. In this setup, the Cassandra database is not managed by DataMiner, so **it is essential that you manage it yourself**. See [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster).

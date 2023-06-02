@@ -18,7 +18,7 @@ Then install the indexing database. You can use an on-premises Elasticsearch clu
 
 - **Indexing database or Search Cluster**
 
-  - [Elasticsearch](xref:Deploying_the_Elasticsearch_database): Supported from DataMiner 9.6.4 onwards.
+  - [Elasticsearch](xref:Elasticsearch_database): Supported from DataMiner 9.6.4 onwards.
 
   - [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service): Supported from DataMiner 10.3.0/10.3.3 onwards.
 

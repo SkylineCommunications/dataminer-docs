@@ -16,7 +16,7 @@ By default, when you install a new DataMiner System, a Cassandra database per DM
 - Heatmap reports (in the legacy Reporter app)
 
 > [!NOTE]
-> For many of the above-mentioned features, an [indexing database](xref:Configuring_Dedicated_Indexing_Database) is required as well.
+> For many of the above-mentioned features, an [indexing database](xref:Configuring_indexing_database_per_DMA) is required as well.
 
 ## MySQL database
 

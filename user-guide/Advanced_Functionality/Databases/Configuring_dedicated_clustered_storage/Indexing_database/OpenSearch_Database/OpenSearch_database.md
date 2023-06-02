@@ -6,35 +6,13 @@ uid: OpenSearch_database
 
 To complete the configuration of a dedicated clustered storage setup, when a Cassandra-compatible database service has been set up, you can install a dedicated OpenSearch indexing database cluster.
 
+Alternatives to the OpenSearch database are the [Elasticsearch database](xref:Elasticsearch_database) and the [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
+For more information on how to **install an OpenSearch database**, see [Installing an OpenSearch database](xref:Installing_OpenSearch_database).
+
+From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to **multiple OpenSearch clusters**. For more information on how to configure this setup, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters).
+
 This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!NOTE]
 > If you are looking to use the Amazon OpenSearch Service instead of on-premises hosted OpenSearch nodes, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
-
-## Compatibility
-
-Supported versions:
-
-- OpenSearch 1.X
-- OpenSearch 2.X
-
-## Setting up the OpenSearch cluster
-
-See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
-
-> [!IMPORTANT]
->
-> - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
-> - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
-
-> [!NOTE]
-> OpenSearch is only supported on Linux.
-
-It is also possible to set up OpenSearch Dashboards, which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
-
-## Connecting your DMS to an OpenSearch cluster
-
-To configure the connection to an OpenSearch database, configure the settings as detailed in [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
-
-> [!IMPORTANT]
-> An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.
