@@ -2802,12 +2802,16 @@
       - name: SRM logging
         topicUid: SRM_logging
       - name: Migrating an SRM configuration
-        topicUid: SMR_migrating
+        topicUid: SRM_migrating
         items:
           - name: Migrating virtual function definitions
             topicUid: SRM_migrating_functions
           - name: Migrating profile instances
             topicUid: SRM_migrating_profile_instances
+          - name: Migrating resources
+            topicUid: SRM_migrating_resources
+          - name: Migrating service definitions
+            topicUid: SRM_migrating_service_definitions
 - name: dataminer.services
   topicUid: AboutCloudPlatform
   items:
