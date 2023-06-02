@@ -451,12 +451,6 @@ When the same query was used in two different GQI visualizations, one of those v
 Cannot read properties of null ('reading delete')
 ```
 
-#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
-
 #### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
