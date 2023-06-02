@@ -174,9 +174,9 @@ plugins.security.ssl.http.truststore_password: ReplaceMeByGeneratedPasswordByGit
 
 plugins.security.allow_default_init_securityindex: true
 plugins.security.nodes_dn:
-  - 'CN=FQDNOpenSearchNode1,OU=DMS,O=OpenSearch,C=BE'
-  - 'CN=FQDNOpenSearchNode2,OU=DMS,O=OpenSearch,C=BE'
-  - 'CN=FQDNOpenSearchNode3,OU=DMS,O=OpenSearch,C=BE'
+  - 'CN=FQDNOpenSearchNode1,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - 'CN=FQDNOpenSearchNode2,OU=NameOfYourCluster,O=OpenSearch,C=BE'
+  - 'CN=FQDNOpenSearchNode3,OU=NameOfYourCluster,O=OpenSearch,C=BE'
 plugins.security.audit.type: internal_opensearch
 plugins.security.enable_snapshot_restore_privilege: true
 plugins.security.check_snapshot_restore_write_privileges: true
@@ -310,3 +310,7 @@ plugins.security.ssl.transport.resolve_hostname: false
 ```
 
 See also [(Advanced) Hostname verification and DNS lookup](https://opensearch.org/docs/1.2/security-plugin/configuration/tls/#advanced-hostname-verification-and-dns-lookup).
+
+### SLSearch.txt logging displays - OpenSearch version is not officially supported
+
+You need to upgrade to DataMiner, starting from version 10.3.6.0 onwards. Then this will not be shown anymore in SLSearch.txt and the DataMiner software is then compatible.
