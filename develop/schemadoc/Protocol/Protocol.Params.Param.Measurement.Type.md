@@ -216,4 +216,4 @@ In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag i
 
 See also
 
-- [Group box](xref:UIComponentsToggleButton)
+- [Toggle button](xref:UIComponentsToggleButton)
