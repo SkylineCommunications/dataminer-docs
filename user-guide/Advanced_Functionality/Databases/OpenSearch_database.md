@@ -311,6 +311,16 @@ plugins.security.ssl.transport.resolve_hostname: false
 
 See also [(Advanced) Hostname verification and DNS lookup](https://opensearch.org/docs/1.2/security-plugin/configuration/tls/#advanced-hostname-verification-and-dns-lookup).
 
+### Transport client authentication is no longer support exception in OpenSearch logging
+
+When encountering:
+
+```text
+Caused by: org.opensearch.OpenSearchException: Transport client authentication no longer supported.
+```
+
+The root cause of this error is that *plugins.security.nodes_dn:* are not matching the certificates subject.
+
 ### SLSearch.txt logging displays - OpenSearch version is not officially supported
 
 You need to upgrade to DataMiner, starting from version 10.3.6.0 onwards. Then this will not be shown anymore in SLSearch.txt and the DataMiner software is then compatible.
