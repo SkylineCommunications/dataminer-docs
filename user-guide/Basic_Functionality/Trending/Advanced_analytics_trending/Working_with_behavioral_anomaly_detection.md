@@ -65,7 +65,7 @@ Please note the following regarding these icons:
 
 - If a change point is considered anomalous, the icon is displayed in red.
 
-- The selection of a particular icon is based on the change points that have occurred within a time interval specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. By default, this is set to 3600 seconds.
+- The selection of a particular icon is based on the trend data behavior and the change points that have occurred within a configurable time interval. By default, this time interval is set to 3600 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the time interval can be configured via *System Center* > *System settings* > *analytics config*.
 
 ## Change points in trend graphs
 
