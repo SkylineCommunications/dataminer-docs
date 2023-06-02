@@ -2813,6 +2813,8 @@
             items:
               - name: Creating a booking
                 topicUid: SRM_creating_booking_silently
+              - name: Editing a pending booking
+                topicUid: SRM_editing_pending_booking_silently
               - name: Assigning resource, profile and parameter values
                 topicUid: SRM_assigning_resource_profile_parameter_value_silently
               - name: Adding properties to an existing booking
@@ -2823,6 +2825,15 @@
                 topicUid: SRM_apply_service_state_transitions_silently
               - name: Updating the timing of a booking
                 topicUid: SRM_update_timing_booking_silently
+              - name: Extending the timing of a booking
+                topicUid: SRM_extend_timing_booking_silently
+          - name: Launching default wizards from custom scripts
+            topicUid: SRM_launching_booking_wizard
+            items:
+              - name: Launching the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard
+              - name: Launching specific pages of the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard_pages
           - name: Frequently asked questions related to bookings and scripting
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging

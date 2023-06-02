@@ -4,8 +4,34 @@ uid: SRM_apply_service_state_transitions_silently
 
 # Silently applying service state transitions
 
-In an Automation script, you can apply service state transitions (Start, Stop, Pause, Standby, etc.) or force the same service state without user interaction by executing the *SRM_BookingAction* script with the following input arguments:
+The example below shows how you can apply service state transitions (Start, Stop, Pause, Standby, etc.) or force the same service state without user interaction by means of an Automation script.
 
-- Booking Manager Element Info : *{"Action":2,"Element":"\<booking_manager_elementname>",<br>"Reason":null,"ServiceId":null,"TableIndex":"\<reservation_guid>"}*
+```cs
+using System;
+using Skyline.DataMiner.Library.Solutions.SRM;
+using Skyline.DataMiner.Net.ResourceManager.Objects;
+using Skyline.DataMiner.Automation;
 
-- Action: *{"Events":\["EXTERNAL"\],"ServiceStates":\["\<target service state>"\]}*
+    public class Script
+    {
+        public static void Run(Engine engine)
+        {
+            // Replace with reservation guid
+            var ReservationGuid = Guid.NewGuid();
+
+            // Replace with Element Name of the Booking Manager 
+            string BookingManagerElementName = "Booking Manager";
+
+            var sri = SrmManagers.ResourceManager.GetReservationInstance(ReservationGuid) as ServiceReservationInstance;
+            
+
+            var bookingManager = new BookingManager(engine,
+                                    engine.FindElement(BookingManagerElementName));
+
+            bookingManager.ApplyServiceState(engine, sri, "STANDBY");
+        }
+    }
+```
+
+> [!NOTE]
+> This call will run synchronously. An overloaded method can be used to run it synchronously.<!-- RN 30454 -->

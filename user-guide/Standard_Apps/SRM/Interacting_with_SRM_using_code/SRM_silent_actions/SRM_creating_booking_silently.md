@@ -102,3 +102,8 @@ public class Script
  }
 }
 ```
+
+> [!NOTE]
+>
+> - In case a null service definition is provided, SRM will use a dynamically generated blank service definition.<!-- RN 30324 -->
+> - To add a resource without linking it to a node in the service definition, do not provide the *Id* attribute of the *Function* object.<!-- RN 30324 -->

@@ -8,6 +8,8 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 
 - [Silently creating a booking](xref:SRM_creating_booking_silently)
 
+- [Silently editing a pending booking](xref:SRM_editing_pending_booking_silently)
+
 - [Silently assigning resource, profile and parameter values](xref:SRM_assigning_resource_profile_parameter_value_silently)
 
 - [Silently adding properties to an existing booking](xref:SRM_adding_properties_to_booking_silently)
@@ -17,3 +19,5 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 - [Silently applying service state transitions](xref:SRM_apply_service_state_transitions_silently)
 
 - [Silently updating the timing of a booking](xref:SRM_update_timing_booking_silently)
+
+- [Silently extending the timing of a booking](xref:SRM_extend_timing_booking_silently)

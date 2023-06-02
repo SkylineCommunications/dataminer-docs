@@ -18,6 +18,7 @@ public class Script
  public static void Run(Engine engine)
  {
  // Replace with reservation guid
+
  var reservationId = Guid.NewGuid();
 
  var properties = new Dictionary<string, object> { { "testproperty", "testvalue" } };
