@@ -60,3 +60,9 @@ Up to now, the factory reset tool *SLReset.exe* would log an exception each time
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
