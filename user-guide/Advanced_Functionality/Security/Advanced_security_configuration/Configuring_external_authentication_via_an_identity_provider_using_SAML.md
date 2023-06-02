@@ -107,9 +107,9 @@ When your DataMiner System is connected to dataminer.services, additional config
 
 1. Specify the following URLs, replacing `<dms-dns-name>` with the DNS name in the *spMetadata.xml* file and `<organization-name>` with the name of the organization:
 
-   - `https://<dms-dns-name>-<organization-name>/API/`
-   - `https://<dms-dns-name>-<organization-name>/account-linking`
-   - `https://<dms-dns-name>-<organization-name>/account-linking/`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
    
      > [!NOTE]
      > Note the trailing "/".
