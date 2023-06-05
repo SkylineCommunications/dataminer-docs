@@ -84,7 +84,7 @@ A typical use case is to make use of the Resource Manager component in Visual Ov
 
 ## Other front-end scripts
 
-The SRM framework also includes other front-end scripts that can be used as the default wizards to execute certain actions.
+The SRM framework also includes other front-end scripts that can be used to execute certain actions.
 
 ### Default wizard to extend an existing booking with a resource
 

@@ -26,7 +26,7 @@ To export and import virtual functions definitions and the associated objects, y
 
 ## Importing virtual function definitions
 
-1. Deploy the .dmapp packages you want to import on the target DMS.<!-- TBD: deploy them all at once? -->
+1. Deploy the .dmapp package you want to import on the target DMS.
 
 1. In the Automation module, execute the *SRM_ImportFunctions* script.
 
