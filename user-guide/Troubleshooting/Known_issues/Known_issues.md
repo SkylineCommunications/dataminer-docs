@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
 | [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded) | Cassandra Cluster setups | May 22, 2023 |
@@ -42,6 +43,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
 | [Cassandra cluster data not offloaded while database is unavailable](xref:KI_Cassandra_cluster_data_not_offloaded) | Cassandra Cluster setups | May 22, 2023 |
@@ -85,6 +87,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [SRM - Auto Select Resource not read for silent booking](xref:KI_SRM_Auto_Select_Resource_Not_Read) | SRM 1.2.30 CU2 | March 29, 2023 |
 | [IP address in SAN field of TLS certificate ignored in Windows 2012 R2](xref:KI_Win2012R2_ignores_IP_in_SAN_field) | Systems using Windows 2012 R2 | March 20, 2023 |
