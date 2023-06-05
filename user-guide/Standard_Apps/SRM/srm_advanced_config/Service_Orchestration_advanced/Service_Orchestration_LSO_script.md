@@ -161,6 +161,9 @@ You can then use the following methods to initiate their configuration:
 > var resources = srmBookingConfig.GetResourcesToOrchestrate();
 > ```
 
+> [!TIP]
+> See also: [Silently applying a profile to an unmapped resource](xref:SRM_apply_profile_to_unmatched_resource)
+
 ## Handling LSO script failures
 
 In case an LSO script fails and throws an exception or exits with `engine.ExitFail`, the service state will be set to *Failed*.

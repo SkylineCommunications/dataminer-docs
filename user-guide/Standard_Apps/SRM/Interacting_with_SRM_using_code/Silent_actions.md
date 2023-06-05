@@ -21,3 +21,13 @@ Multiple "silent actions" are possible in scripts, allowing the scripts to inter
 - [Silently updating the timing of a booking](xref:SRM_update_timing_booking_silently)
 
 - [Silently extending the timing of a booking](xref:SRM_extend_timing_booking_silently)
+
+- [Silently renaming a booking](xref:SRM_rename_booking_silently)
+
+- [Silently adding an extra resource and potentially creating a new service definition](xref:SRM_adding_extra_resource_silently)
+
+- [Silently removing a resource and node from a booking and potentially creating a new service definition](xref:SRM_removing_resource_and_node_silently)
+
+- [Silently creating or editing many bookings using caching](xref:SRM_creating_editing_many_bookings_with_caching)
+
+- [Silently applying a profile to an unmapped resource or resource not part of a booking](xref:SRM_apply_profile_to_unmatched_resource)

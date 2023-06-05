@@ -2827,6 +2827,16 @@
                 topicUid: SRM_update_timing_booking_silently
               - name: Extending the timing of a booking
                 topicUid: SRM_extend_timing_booking_silently
+              - name: Renaming a booking
+                topicUid: SRM_rename_booking_silently
+              - name: Adding an extra resource
+                topicUid: SRM_adding_extra_resource_silently
+              - name: Removing a resource and node
+                topicUid: SRM_removing_resource_and_node_silently
+              - name: Creating or editing many bookings using caching
+                topicUid: SRM_creating_editing_many_bookings_with_caching
+              - name: Applying a profile to an unmapped resource
+                topicUid: SRM_apply_profile_to_unmatched_resource
           - name: Launching default wizards from custom scripts
             topicUid: SRM_launching_booking_wizard
             items:
@@ -2834,6 +2844,8 @@
                 topicUid: SRM_launching_booking_wizard
               - name: Launching specific pages of the standard Booking Wizard from a custom script
                 topicUid: SRM_launching_booking_wizard_pages
+              - name: Launching the Service Profile Booking Wizard from a custom script
+                topicUid: SRM_launching_service_profile_wizard
           - name: Frequently asked questions related to bookings and scripting
             topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging
