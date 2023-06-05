@@ -8,6 +8,4 @@ uid: CommunicationGateway_1.1.0
 
 ### Added support for additional gRPC services [ID_36281]
 
-* Support for Arista CloudVision
-
-* Support for Mellanox Telemetry Agent
+The Communication Gateway module now supports Arista CloudVision and Mellanox Telemetry Agent gRPC services.

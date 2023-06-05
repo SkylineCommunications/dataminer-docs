@@ -8,4 +8,4 @@ uid: CommunicationGateway_1.2.0
 
 ### DotNet target version upgrade [ID_36579]
 
-* The module is now targeting .NET6.0 and no longer uses .NET5.0, which is out of support.
+The Communication Gateway module now targets .NET 6.0 and no longer uses .NET 5.0, which is out of support.
