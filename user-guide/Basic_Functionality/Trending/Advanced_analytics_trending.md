@@ -18,7 +18,5 @@ Other features depend on a connection to dataminer.services. These cannot be act
 
 - [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
 
-
 > [!TIP]
 >  For more artificial intelligence capabilities, see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console).
-
