@@ -103,16 +103,16 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 
 ## Additional configuration for systems connected to dataminer.services
 
-When your DataMiner System is connected to dataminer.services, additional configuration is required for both the *spMetadata.xml* file and the identity provider.
+When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
 
 1. Specify the following URLs, replacing `<dms-dns-name>` with the DNS name in the *spMetadata.xml* file and `<organization-name>` with the name of the organization:
 
    - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
    - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
    - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
-   
-     > [!NOTE]
-     > Note the trailing "/".
+
+   > [!NOTE]
+   > Note the trailing "/".
 
    Example of remote access URL: <https://dataminer-skyline.on.dataminer.services>
 
