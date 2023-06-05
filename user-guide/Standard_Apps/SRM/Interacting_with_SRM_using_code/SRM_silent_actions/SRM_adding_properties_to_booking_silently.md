@@ -6,7 +6,7 @@ uid: SRM_adding_properties_to_booking_silently
 
 The example below shows how properties can be added to an existing booking without user interaction by means of an Automation script.
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using Skyline.DataMiner.Automation;

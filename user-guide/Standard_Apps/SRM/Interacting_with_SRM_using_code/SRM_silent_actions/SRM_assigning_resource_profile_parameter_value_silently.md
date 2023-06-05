@@ -9,7 +9,7 @@ The example below shows how resource, profile, and parameter values can be assig
 > [!NOTE]
 > If you assign a resource to a running booking, SRM will update the content of the DataMiner service accordingly. However, you will need to force the service state to transition again so that LSO and Profile-Load Scripts will be executed. This is also necessary if you change the settings applied to a resource while the booking is already running. If the booking has not started yet, the updated settings will automatically be used when LSO and PLS are applied.
 
-```cs
+```csharp
 using System;
 using Skyline.DataMiner.Library.Solutions.SRM;
 using Skyline.DataMiner.Library.Solutions.SRM.Model.AssignProfilesAndResources;

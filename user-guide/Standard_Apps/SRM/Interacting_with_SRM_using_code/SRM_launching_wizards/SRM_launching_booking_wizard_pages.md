@@ -4,7 +4,7 @@ uid: SRM_launching_booking_wizard_pages
 
 # Launching specific pages of the standard Booking Wizard from a custom script
 
-From a custom script, you can launch the standard Booking Wizard and show only specific page of that wizard. This way, you can execute the actions of some of the pages silently, but still use user interaction for other pages.
+From a custom script, you can launch the standard Booking Wizard and show only specific pages of that wizard. This way, you can execute the actions of some of the pages silently, but still use user interaction for other pages.
 
 To do so:
 

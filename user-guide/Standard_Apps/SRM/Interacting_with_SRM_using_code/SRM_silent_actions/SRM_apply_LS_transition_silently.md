@@ -9,7 +9,7 @@ The example below shows how booking life cycle transitions (Finish, On-Hold, Con
 > [!NOTE]
 > Using the *TryChangeStateToConfirmed* call as illustrated below will also trigger any Created Booking custom script.
 
-```cs
+```csharp
 using System;
 using Skyline.DataMiner.Library.Solutions.SRM;
 using Skyline.DataMiner.Automation;

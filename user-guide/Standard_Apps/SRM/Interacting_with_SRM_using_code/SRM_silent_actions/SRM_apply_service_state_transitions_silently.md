@@ -6,7 +6,7 @@ uid: SRM_apply_service_state_transitions_silently
 
 The example below shows how you can apply service state transitions (Start, Stop, Pause, Standby, etc.) or force the same service state without user interaction by means of an Automation script.
 
-```cs
+```csharp
 using System;
 using Skyline.DataMiner.Library.Solutions.SRM;
 using Skyline.DataMiner.Net.ResourceManager.Objects;
@@ -34,4 +34,4 @@ using Skyline.DataMiner.Automation;
 ```
 
 > [!NOTE]
-> This call will run synchronously. An overloaded method can be used to run it synchronously.<!-- RN 30454 -->
+> This call will run asynchronously. An overloaded method can be used to run it synchronously.<!-- RN 30454 -->

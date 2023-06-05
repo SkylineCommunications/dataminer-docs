@@ -6,7 +6,7 @@ uid: SRM_creating_booking_silently
 
 The example below shows how a booking can be created without user interaction by means of an Automation script.
 
-```cs
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -9,7 +9,7 @@ The example below shows how the timing of a booking can be changed without user 
 > [!NOTE]
 > The timing of events that have already been executed cannot be changed.
 
-```cs
+```csharp
 using System;
 using Skyline.DataMiner.Library.Solutions.SRM;
 using Skyline.DataMiner.Library.Solutions.SRM.Model.ReservationAction;
