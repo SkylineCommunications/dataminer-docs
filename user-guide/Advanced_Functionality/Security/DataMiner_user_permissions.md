@@ -412,7 +412,10 @@ Available from DataMiner 10.2.0/10.1.10 onwards. Permission to send emails via t
 
 ### Modules \> API
 
-These user permissions are used for the API deployment feature, which is currently still in [soft launch](xref:SoftLaunchOptions).
+These user permissions are used for the API deployment feature. This is a deprecated [soft launch feature](xref:SoftLaunchOptions).
+
+>[!NOTE]
+> This feature has been marked obsolete from DataMiner version 10.3.6 onwards. It has been replaced by the [User-Defined APIs](xref:UD_APIs) feature and will be removed in the future.
 
 #### Modules \> API \> Deploy script API
 
@@ -1647,34 +1650,34 @@ Permission to view trend graphs of parameters that are being trended.
 
 Permission to view histograms of parameters that are being trended.
 
-### Modules \> User-defined APIs
+### Modules \> User-Defined APIs
 
 > [!NOTE]
-> The User-Defined APIs feature is in preview and is only available if the *UserDefinableAPI* [soft-launch option](xref:SoftLaunchOptions) is enabled.
+> This feature is available from DataMiner 10.3.6/10.4.0 onwards. In DataMiner 10.3.5, it is available in preview if the soft-launch option *UserDefinableAPI* is enabled. See [soft-launch options](xref:SoftLaunchOptions).
 
-#### Modules \> User-defined APIs \> Tokens \> UI available
+#### Modules \> User-Defined APIs \> Tokens \> UI available
 
-Permission to view tokens for user-defined APIs.
+Permission to view tokens for [user-defined APIs](xref:UD_APIs).
 
-#### Modules \> User-defined APIs \> Tokens \> Add/Edit
+#### Modules \> User-Defined APIs \> Tokens \> Add/Edit
 
-Permission to create and edit tokens for user-defined APIs.
+Permission to create and edit tokens for [user-defined APIs](xref:UD_APIs).
 
-#### Modules \> User-defined APIs \> Tokens \> Delete
+#### Modules \> User-Defined APIs \> Tokens \> Delete
 
-Permission to delete tokens for user-defined APIs.
+Permission to delete tokens for [user-defined APIs](xref:UD_APIs).
 
-#### Modules \> User-defined APIs \> APIs \> UI available
+#### Modules \> User-Defined APIs \> APIs \> UI available
 
-Permission to view API definitions for user-defined APIs.
+Permission to view API definitions for [user-defined APIs](xref:UD_APIs).
 
-#### Modules \> User-defined APIs \> APIs \> Add/Edit
+#### Modules \> User-Defined APIs \> APIs \> Add/Edit
 
-Permission to create and edit API definitions for user-defined APIs. In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
+Permission to create and edit API definitions for [user-defined APIs](xref:UD_APIs). In order to create or edit API definitions, you also need the [Automation > execute](#modules--automation--execute) permission.
 
-#### Modules \> User-defined APIs \> APIs \> Delete
+#### Modules \> User-Defined APIs \> APIs \> Delete
 
-Permission to delete API definitions for user-defined APIs.
+Permission to delete API definitions for [user-defined APIs](xref:UD_APIs).
 
 ### Modules \> User-definable apps
 

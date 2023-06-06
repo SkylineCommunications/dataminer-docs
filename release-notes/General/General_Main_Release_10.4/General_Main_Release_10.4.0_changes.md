@@ -44,6 +44,18 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
+#### SLLogCollector now collects more API Gateway data [ID_34967]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+SLLogCollector packages now include the following API Gateway data:
+
+- *appsettings.json*
+- DLL version
+- Health
+- Log file
+- Version
+
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -99,12 +111,6 @@ Also, log entries indicating an exception thrown during baseline calculations wi
 
 From now on, when you zoom in or out, the data of the previous zoom level will stay visible until the data of the current zoom level has been loaded.
 
-#### DataMiner upgrade: Installation of Microsoft .NET 6.0 [ID_35363]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-During a DataMiner upgrade, Microsoft .NET 6.0 will now be installed if not installed already.
-
 #### Maps: Zoom range can now be set by means of a slider [ID_35381]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -137,12 +143,6 @@ From now on, anomaly detection will no longer be available for discrete paramete
 
 Because of a number of enhancements, overall performance has increased when detecting trend patterns that cover more than 30,000 data points.
 
-#### Support for GQI queries from Data Aggregator with ad hoc data sources [ID_35526]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-GQI now supports queries from [Data Aggregator](xref:Data_Aggregator_DxM) that use ad hoc data sources.
-
 #### SLNetClientTest: New DOM-related features [ID_35550]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -167,15 +167,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
 <!-- MR 10.4.0 - FR 10.3.4 -->
 
 Up to now, when SLAnalytics sent a notification, it would generate an event of type *client notification* with parameter ID 64574. From now on, it will instead generate an event of type *notification* with parameter ID 64570.
-
-#### GQI: Raw datetime values will now be converted to UTC [ID_35640]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-Up to now, after each step in a GQI query, raw datetime values were always converted to the time zone that was specified in the query options. From now on, raw datetime values will be converted to UTC instead. The time zone specified in the query options will now only be used when converting a raw datetime value to a display value.
-
-> [!IMPORTANT]
-> **BREAKING CHANGE**: When, in an ad hoc data source or a query operation, a datetime value is not in UTC format, an exception will now be thrown.
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy [ID_35695]
 
@@ -206,21 +197,57 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading service profile instances.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
+#### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
+
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
+
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
+
+On systems running alarm grouping based on both parameter and alarm relationship data, the `C:\Skyline DataMiner\analytics\configuration.xml` will contain an `<item>` tag like the following. Note that `cpRelationThreshold` has been renamed to `relationThreshold` and that its value is set to 0.7 by default.
+
+Example:
+
+```xml
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
+```
+
+> [!CAUTION]
+> Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
+
 ### Fixes
-
-#### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
-
-<!-- MR 10.4.0 - FR 10.3.3 -->
-
-At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
-
-From now on, at start-up, every DataMiner Agent with a Cassandra Cluster configuration will only delete the old Cassandra compaction and repair tasks found locally.
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
 
@@ -235,12 +262,6 @@ In some cases, Resource Manager could throw a NullReferenceException when *Resou
 Using Okta as identity provider, it would incorrectly no longer be possible to read out signed assertions. Also, when the group claim setting is enabled in the *DataMiner.xml* file, the user will now be added to the correct groups.
 
 Up to now, in case of a claim mismatch, an exception would be thrown. From now on, an entry containing a clear message will be added to the *SLNet.txt* log file instead.
-
-#### Cassandra Cluster Migrator tool would incorrectly not migrate the state-changes table from a single-node Cassandra to a Cassandra Cluster [ID_35699]
-
-<!-- MR 10.4.0 - FR 10.3.4 -->
-
-When you used the Cassandra Cluster Migrator tool to migrate a single-node Cassandra database to a Cassandra Cluster setup, up to now, the `state-changes` table would incorrectly not be migrated.
 
 #### Automation: DataMiner would incorrectly remove the xmlns attribute when importing or saving an Automation script [ID_35708]
 
@@ -263,16 +284,6 @@ Example:
 
 When an SLNet connection supported protocol buffer serialization, DateTime instances would not get serialized correctly.
 
-#### GQI: GetArgumentValue method would throw an exception when used to access the value of an optional argument [ID_35783]
-
-<!-- MR 10.4.0 - FR 10.3.5 -->
-
-When the `GetArgumentValue<T>(string name)` method was used in an ad hoc data source or a custom operator script to access the value of an optional argument that had not been passed, the following exception would be thrown:
-
-```txt
-Could not find argument with name '{argument.Name}'.
-```
-
 #### Input/output values of a matrix element would incorrectly be overridden due to a caching issue [ID_35857]
 
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
@@ -285,6 +296,16 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
+
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -296,3 +317,21 @@ When a history alarm affected a closed outage to which a correction had been app
 <!-- MR 10.4.0 - FR 10.3.4 [CU0] -->
 
 In some cases, a handle in the Timer class would not be cleaned correctly, causing handles to leak.
+
+#### DataMiner Object Models: Problem when creating a DomInstance with an empty status [ID_36063]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When a DomInstance was created with an empty status, in some cases, a `MultipleSectionsNotAllowedForSectionDefinition` error could be returned, even when the configuration was correct.
+
+#### External authentication via SAML: Removal of whitespace characters from signatures would cause validation to fail [ID_36181]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.

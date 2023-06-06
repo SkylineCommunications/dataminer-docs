@@ -29,4 +29,11 @@ The time span for a trend graph can be configured:
 
 ## Histograms
 
-The time span for a histogram can be configured on the left of the trending page.
+On the left, you can configure the following settings:
+
+- *Relative frequency*: Determines whether the frequency on the Y-axis should be shown in percent.
+- *Use custom intervals*: Allows you to specify a custom number of intervals and interval range.
+
+Prior to DataMiner 10.3.5/10.4.0, the time span for a histogram can also be configured on the left.
+
+From DataMiner 10.3.5/10.4.0 onwards, you can use the time range buttons in the top-right corner of the page to select one of the preset time ranges: 1 day (last 24 hours), 1 week (last 7 days), 1 month (last 30 days), 1 year (last year), and 5 years (last 5 years). <!-- RN 35733 -->

@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU2
 ---
 
-# General Main Release 10.3.0 CU2 – Preview
+# General Main Release 10.3.0 CU2
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -37,26 +37,6 @@ From now on, SLAnalytics will also take into account first-time alarm template a
 <!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
 
 Overall performance of SLAnalytics has increased because of a number of enhancements made to its caching mechanism.
-
-#### GQI data sources that require an Elasticsearch database will now use GetInfoMessage(InfoType.Database) to check whether Elasticsearch is available [ID_35907]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-Up to now, GQI data sources that require an Elasticsearch database used the `DatabaseStateRequest<ElasticsearchState>` message to check whether Elasticsearch was available. From now on, they will use the `GetInfoMessage(InfoType.Database)` message instead.
-
-#### Improved error handling when elements go into an error state [ID_35944]
-
-<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
-
-When an element goes into an error state after an attempt to activate it failed, from now on, no more calls to SLProtocol, SLElement or SLSpectrum will be made for that element.
-
-Also, when an element that generates DVE child elements or virtual functions goes into an error state, from now on, the generated DVE child elements or virtual functions will also go into an error state. However, in order to avoid too many alarms to be generated, only one alarm (for the main element) will be generated.
-
-The following issues have also been fixed:
-
-- When a DVE parent element in an error state on DataMiner startup was activated, its DVE child elements or virtual functions would not be properly loaded.
-
-- When a DVE parent element was started, the method that has to make sure that ElementInfo and ElementData are in sync would incorrectly not check all child elements.
 
 ### Fixes
 
@@ -173,6 +153,18 @@ The first time a message with an object of a type that inherited from `InfoData`
 ```txt
 Skyline.DataMiner.Net.Exceptions.DataMinerException: Failed to deserialize message (ProtoBuf). Possible version incompatibility between client and server.  ---&gt; System.InvalidOperationException: It was not possible to prepare a serializer for: Skyline.DataMiner.Net.InfoData ---&gt; System.InvalidOperationException: Unable to resolve a suitable Add method for System.Collections.Generic.IReadOnlyList`1[[System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]&#xD;
 ```
+
+#### Problem with SLElement when a timed action was stopped [ID_35928]
+
+<!-- MR 10.3.0 [CU2] - FR 10.3.5 -->
+
+In some rare cases, an error could occur in SLElement when a timed action was stopped.
+
+#### SNMP: OIDs with a leading dot would incorrectly no longer be allowed [ID_35954]
+
+<!-- MR 10.2.0 [CU14]/10.3.0 [CU2] - FR 10.3.5 -->
+
+OIDs with a leading dot would incorrectly no longer be allowed. From now on, OIDs with a leading dot are allowed again.
 
 #### NT Notify type NT_GET_BITRATE_DELTA would not return a valid value for a table with a single row [ID_35967]
 

@@ -9,7 +9,7 @@ In the Surveyor, statistical alarm data can be displayed next to elements, servi
 The settings that control the data being displayed have to be configured in *MaintenanceSettings.xml* and are synchronized across all DMAs in the DMS.
 
 > [!TIP]
-> See also: [Surveyor – Displaying alarm statistics](https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/) on DataMiner Dojo
+> See also: [Surveyor – Displaying alarm statistics](https://community.dataminer.services/video/surveyor-displaying-alarm-statistics/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Configuration in MaintenanceSettings.xml
 

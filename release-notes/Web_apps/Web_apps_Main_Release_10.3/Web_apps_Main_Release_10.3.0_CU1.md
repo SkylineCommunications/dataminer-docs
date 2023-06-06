@@ -58,7 +58,7 @@ A clearer error message will now be returned when you are building a query again
 
 When a login attempt fails, a clearer error message will now appear.
 
-#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -88,7 +88,7 @@ Also, a number of enhancements have been made:
 
 When you entered an invalid value into a text box, an error message would be displayed for a very short moment, and the invalid value would incorrectly be replaced by the last valid value that was entered.
 
-#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+#### Dashboards app & Low-Code Apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -106,13 +106,13 @@ In an interactive Automation script executed in a web app, components positioned
 > [!IMPORTANT]
 > **BREAKING CHANGE**: If, in an interactive Automation script designed to be executed in a web app, the column property was altered to position a component at a specific spot, because of this fix, the component in question will no longer be displayed. It will be hidden by the component of which the row span is greater than 1. The component can be made visible again by changing the column property.
 
-#### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
+#### Low-Code Apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 Up to now, whether the sidebar was displayed or not would incorrectly depend on the number of pages. From now on, it will depend on the number of visible pages. In other words, the sidebar will only be displayed when there are at least two visible pages.
 
-#### Low-code apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
+#### Low-Code Apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -129,6 +129,12 @@ The submenu in the subheader bar of a dashboard would incorrectly be displayed w
 <!-- MR 10.3.0 [CU1] - FR 10.3.3 [CU0] -->
 
 It would incorrectly no longer be possible to clear a radio button group.
+
+#### GQI: Problem when applying an 'aggregation' or 'group by' operation on a datetime column of an Elasticsearch table [ID_35609]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+When an *aggregation* or *group by* operation was applied on a datetime column of an Elasticsearch table, the datetime values in that column would be parsed incorrectly.
 
 #### Web apps: Auto-complete control could clear its content while you were entering a value [ID_35623]
 
@@ -154,13 +160,13 @@ When, in a dashboard, you added a trended spectrum parameter to a line & area ch
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
-#### Low-code apps: Feeds used in queries would incorrectly not get updated [ID_35689]
+#### Low-Code Apps: Feeds used in queries would incorrectly not get updated [ID_35689]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 In some cases, a feed used in a query would incorrectly not get updated when the data inside the feed was updated.
 
-#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+#### Dashboards app & Low-Code Apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -172,25 +178,25 @@ When you changed the order of the queries added to a State component, this chang
 
 When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
 
-#### Dashboards app & Low-code apps: Not possible to filter a GQI table by a boolean column [ID_35692]
+#### Dashboards app & Low-Code Apps: Not possible to filter a GQI table by a boolean column [ID_35692]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
 Up to now, it would incorrectly not be possible to filter a GQI table by a boolean column.
 
-#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+#### Dashboards app & Low-Code Apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
 
-#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+#### Dashboards app & Low-Code Apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When you hovered over a segment of an edge, in some cases, an incorrect tooltip would appear.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when linking a data source argument of type string to a query column of type GUID [ID_35700]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -210,6 +216,12 @@ When you selected a dashboard, the *Clear all* button would incorrectly also be 
 
 When editing a dashboard, DOM instances used by components on that dashboard would incorrectly not be listed in the *Data used in dashboard* section of the *DATA* tab.
 
+#### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
+
+<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
+
+The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
+
 #### Web apps: Node edge actions would incorrectly no longer work [ID_35723]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -222,7 +234,7 @@ Node edge actions would incorrectly no longer work.
 
 In the query builder, query nodes that by default only had a single value would incorrectly not be displayed.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when trying to create a GQI query with an ad hoc data source that contained an optional DateTime argument [ID_35738]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -238,7 +250,7 @@ Skyline.DataMiner.Web.Common.v1.Utilities.UTCToDateTimeUTC(long)' has some inval
 
 GQI queries containing float or GUID values would not get migrated correctly.
 
-#### Dashboards app & Low-code apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
+#### Dashboards app & Low-Code Apps - Query builder: Problem when linking a feed component to an argument of an ad hoc data source [ID_35808]
 
 <!-- MR 10.3.0 [CU1] - FR 10.3.4 [CU0] -->
 

@@ -5,10 +5,22 @@
         {
           "files": [
             "src/**.csproj",
-            "assemblies/**.dll"
+            "assemblies/**.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Automation.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Common.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Matrix.Protocol.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.InterAppCalls.Common.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Interfaces.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Common.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Protocol.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SafeConverters.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.Traps.Protocol.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Table.ContextMenu.dll",
+			"src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll"
           ],
           "exclude": [
-            "**/bin/**",
             "**/obj/**",
             "_site/**"
           ]
@@ -17,7 +29,8 @@
       "dest": "develop/api/types",
       "disableDefaultFilter": false,
       "disableGitFeatures": false,
-      "filter": "filterConfig.yml"
+	  "filter": "filterConfig.yml",
+	  "memberLayout": "separatePages"
     }
   ],
   "build": {
@@ -49,8 +62,8 @@
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
-		      "develop/schemadoc/Protocol/images/**",
-		      "develop/schemadoc/Automation/images/**"
+		  "develop/schemadoc/Protocol/images/**",
+		  "develop/schemadoc/Automation/images/**"
         ]
       }
     ],
@@ -66,7 +79,6 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "memberpage",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

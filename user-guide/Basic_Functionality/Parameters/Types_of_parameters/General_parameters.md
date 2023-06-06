@@ -11,7 +11,7 @@ For each element in DataMiner, a *GENERAL PARAMETERS* page can be displayed in C
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/>
+> [Rui’s Rapid Recap – General parameters](https://community.dataminer.services/video/ruis-rapid-recap-general-parameters/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### \[Lock status\]
 

@@ -26,7 +26,9 @@ This page contains an overview of the Market parameters available in the I-DOCSI
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS Other**
+- **Number CM DOCSIS Other** : Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are part of the market.
 
 - **Number CM Ping OK**
 

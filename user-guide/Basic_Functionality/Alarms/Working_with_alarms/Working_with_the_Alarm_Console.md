@@ -32,4 +32,4 @@ This section consists of the following topics:
 > The Alarm Console is limited to never show more than 100,000 alarms. If there are more alarms in the DMS, they will no longer be forwarded to Cube.
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Alarm Console introduction](https://community.dataminer.services/video/ruis-rapid-recap-alarm-console-introduction/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
