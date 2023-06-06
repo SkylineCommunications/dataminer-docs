@@ -53,9 +53,3 @@ When users without permission to access a low-code app tried to log on to that a
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
-
-#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
