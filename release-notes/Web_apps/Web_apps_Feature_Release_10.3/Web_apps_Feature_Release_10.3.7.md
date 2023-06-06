@@ -130,7 +130,7 @@ From now on, when the user has edit permission, the message will only appear whe
 
 #### Dashboards app & Low-Code Apps: No visual replacement will be displayed anymore when a State component feeds empty query rows [ID_36460]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
 
@@ -214,6 +214,13 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
 
+#### Dashboards app: Problem when opening a dashboard of which the URL was longer than 2048 characters [ID_36382] [ID_36510]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- Not added to MR 10.4.0 -->
+
+When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error.
+
 #### GQI: Exception thrown when grouping an empty aggregation result [ID_36392]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
@@ -276,3 +283,16 @@ When the same query was used in two different GQI visualizations, one of those v
 ```txt
 Cannot read properties of null ('reading delete')
 ```
+
+#### Low-Code Apps: Table actions would not get triggered when the GQI data source row key was of type string [ID_36488]
+
+<!-- MR 10.4.0 - FR 10.3.7 [CU0] -->
+<!-- Not added to 10.4.0 -->
+
+Table actions would incorrectly not be triggered when the key of the GQI data source row was of type string.
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.

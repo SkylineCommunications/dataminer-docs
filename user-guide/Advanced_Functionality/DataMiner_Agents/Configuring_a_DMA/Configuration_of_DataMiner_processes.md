@@ -673,6 +673,29 @@ Example:
 </MaintenanceSettings>
 ```
 
+### Customizing how long a connection ticket remains valid
+
+When establishing a new connection (e.g. using the DataMiner Web Services), SLNet makes use of a ticket for authentication. The *AuthenticationTicketExpirationTime* setting in *MaintenanceSettings.xml* determines how long this ticket remains valid. If a request for a new connection is made after the specified time has elapsed, the system will consider the request invalid.
+
+By default, this is set to 30 seconds.
+
+Example:
+
+```xml
+<MaintenanceSettings>
+  ...
+  <SLNet>
+    ...
+    <AuthenticationTicketExpirationTime>30</AuthenticationTicketExpirationTime>
+    ...
+  </SLNet>
+  ...
+</MaintenanceSettings>
+```
+
+> [!NOTE]
+> Within the SLNet element in *MaintenanceSettings.xml*, there is also a *TicketExpirationTime* setting. This determines the duration (in seconds) that a ticket used to perform privileged instructions remains valid (default value: 300 seconds). This is for instance used to grant a user permission to start DataMiner. If a request for the privileged instruction is made after the specified time period has passed, the system considers the ticket invalid and denies the request.
+
 ### Disabling .NET Remoting
 
 By default, .NET Remoting is used for communication between DMAs. From DataMiner 10.3.2/10.3.0 onwards, a gRPC connection can be used instead. To make gRPC the default for communication between DMAs, you can either [add Redirect tags in DMS.xml](xref:DMS_xml#redirects-subtag), or disable .NET Remoting in *MaintenanceSettings.xml*. However, note that the latter is **only recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards**, as prior to this there is no support for DataMiner upgrades over gRPC.

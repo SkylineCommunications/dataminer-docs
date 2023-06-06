@@ -31,6 +31,9 @@ The migration can be done while the DMAs are active; however, a **DataMiner rest
 
 The Cassandra Cluster Migrator tool (called *SLCCMigrator.exe*) is available on every DMA running DataMiner version 10.2.0/10.2.2 or higher. You can find it in the folder `C:\Skyline DataMiner\Tools\`. However, we highly recommend that you upgrade to DataMiner 10.2.0 CU8 or 10.2.11 (or higher) to use the tool, as this version includes an improved version of the tool that will prevent possible issues.
 
+> [!NOTE]
+> From DataMiner 10.3.7/10.3.0[CU4] onwards, the Cassandra Cluster Migrator tool is able to establish TLS connections towards the databases. To enable this functionality, configure TLS encryption on your [Elasticsearch database](xref:Security_Elasticsearch#client-server-tls-encryption) and [Cassandra database](xref:Security_Cassandra_TLS), and enable the *Cassandra TLS* and *Elastic TLS* options when configuring the [Cassandra and Elasticsearch settings](#running-the-migration) after running *SLCCMigrator.exe*. <!-- RN 34852 -->
+
 ### Prerequisites
 
 - All DMAs must run DataMiner 10.2.0/10.2.2 or higher.
@@ -130,6 +133,8 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
        > - If there are less than 4 nodes, we recommend setting this to *One*.
        > - If there are more than 4 nodes, we recommend setting this to [Quorum](xref:replication_and_consistency_configuration#examples).
 
+     - *Cassandra TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
+
    - Elasticsearch settings: These are not used in case there already is an Elasticsearch cluster connected to your DMS. In that case, you can just fill in dummy data.
 
      - *Elastic IP(s)*: The IPs of the Elasticsearch cluster. For example: `10.11.1.70,10.11.2.70,10.11.3.70` or `10.11.1.70:9042` or `https://10.11.1.70:9042` or `ES-NODE-01,ES-NODE-02`.
@@ -142,6 +147,8 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
      - *Elastic user*: The Elasticsearch username.
 
      - *Elastic password*: The password for the specified username. This is not mandatory, unless manually specified.
+
+     - *Elastic TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
 
 1. Once the DMAs have been initialized, start the migration. You can do this for all DMAs at once with the *Start Migration* button at the top, or for one DMA at a time by clicking the *Details* button for that DMA and selecting *Migrate all storages*.
 
@@ -185,6 +192,8 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
 
      - *Cassandra consistency*: The consistency level. For more information, see [How is the consistency level configured?](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/dml/dmlConfigConsistency.html)
 
+     - *Cassandra TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
+
    - Elasticsearch settings: These are not used in case there already is an Elasticsearch cluster connected to your DMS. In that case, you can just fill in dummy data.
 
      - *Elastic IP(s)*: The IPs of the Elasticsearch cluster. For example: `10.11.1.70,10.11.2.70,10.11.3.70` or `10.11.1.70:9042` or `https://10.11.1.70:9042` or `ES-NODE-01,ES-NODE-02`.
@@ -194,6 +203,8 @@ In case your system contains bespoke Elasticsearch data or SRM data, use the pro
      - *Elastic user*: The Elasticsearch username.
 
      - *Elastic password*: The password for the specified username.
+
+     - *Elastic TLS*: Available from DataMiner 10.3.7/10.3.0[CU4] onwards. Allows you to establish TLS connections towards the databases. <!-- RN 34852 -->
 
 1. Once the DMAs have been initialized, start the migration. You can do this for all DMAs at once with the *Start Migration* button at the top, or for one DMA at a time by clicking the *Details* button for that DMA and selecting *Migrate all storages*.
 

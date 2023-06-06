@@ -265,6 +265,18 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
+
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
@@ -399,6 +411,12 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
 
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
 #### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -417,6 +435,12 @@ In the Dashboards app and the Monitoring app, spectrum components would get stuc
 
 When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
 
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -426,3 +450,15 @@ When the same query was used in two different GQI visualizations, one of those v
 ```txt
 Cannot read properties of null ('reading delete')
 ```
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.

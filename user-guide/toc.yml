@@ -3061,8 +3061,14 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_Cassandra_cluster_data_not_offloaded
+          topicUid: KI_Multiple_Datacenters
           items:
+            - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
+              topicUid: KI_Multiple_Datacenters
+            - name: Cassandra disconnects after loss of a single node
+              topicUid: KI_Cassandra_disconnects_after_loss_of_a_single_node
+            - name: Corrupted low-code app after concurrent editing actions
+              topicUid: KI_app_corruption_after_editing
             - name: Cassandra cluster data not offloaded while database is unavailable
               topicUid: KI_Cassandra_cluster_data_not_offloaded
             - name: RTEs caused by problem during automatic NATS reconfiguration
