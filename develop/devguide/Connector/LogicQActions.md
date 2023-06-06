@@ -480,7 +480,10 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 ## Implementing the IDisposable interface
 
-From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on non-static QAction classes with a non-static entry point method. DataMiner will then call the method when the QAction instance is released (i.e. when the element is stopped, removed, or restarted).
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on non-static QAction classes with a non-static entry point method. DataMiner will then call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method when the QAction instance is released (i.e. when the element is stopped, removed, or restarted).
+
+> [!NOTE]
+> DataMiner will only create an instance of the class containting the entry point method if this method is not a static method (see [Instance entry methods](xref:LogicQActions#instance-entry-methods)). Therefore, if you want to make use of the IDisposable functionality, make sure that an instance gets created by having a non-static entry point method.
 
 > [!NOTE]
 >
