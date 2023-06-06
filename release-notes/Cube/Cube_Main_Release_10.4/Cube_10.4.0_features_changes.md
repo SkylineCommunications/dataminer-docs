@@ -13,19 +13,27 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-For past, ongoing and future bookings, operators need an easy way to view the selected profile instance (if applicable) and profile parameter values of resources included in those bookings.
+You can now create a special `BookingData` shape and make it display all data associated with a particular booking.
 
-This shape will show the booking data when a booking ID is passed to that shape.
+To do so, create a shape with the following shape data fields:
 
-A new componentvisioshape (type:'BookingData') is now available showing:
+|Shape data field | Value |
+|-------------|---------------|
+| Component   | `BookingData` |
+| Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
 
-- a sidepanel containing all resources in the booking, both linked to a service definition or not.
+A BookingData shape will show the following information:
 
-  - Each resource is represented with its name and the icon of its function
-  - Each resource shows its node label or its node functiondefinition name in case no node label is defined
-  - Each resource shows a servicedefinition node icon in case it is mapped to a node on a service definition
+- On the left-hand side, you will find a list of all resources in the booking.
 
-- the righthand side details section showing :
+  For every resource, this list shows the following information:
+  
+  - the resource name
+  - an icon indicating the function of the resource
+  - the node label or, if no node label is defined, the name of the function definition
+  - the icon of the service definition node (only if the resource to mapped to a service definition node)
+
+- On the right-hand side, you will find a section showing the following details:
 
   - the node label on top. (or fallback to node function name). In case the node has interfaces, a selector is used to view any of the interfaces
   - the details section shows profile data for the selected node or interface : the selected profile instance and the set of overridden parameter values. The parameter values are used according to following priority :
@@ -33,8 +41,6 @@ A new componentvisioshape (type:'BookingData') is now available showing:
     - Resource usage parameter overrides
     - Resource usage profile instance
     - Resource usage profile definition
-
-- ShapeData 'Reservation' is used to provide the reservation selection to this component.
 
 This new component is available:
 
@@ -50,6 +56,11 @@ This new component is available:
 - when elastic engine has been installed
 
 Demosetup available at ziinedev.skyline.be view 'BookingData'
+
+
+
+
+
 
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 
