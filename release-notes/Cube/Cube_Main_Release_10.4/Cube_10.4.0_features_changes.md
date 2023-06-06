@@ -13,7 +13,7 @@ uid: Cube_Main_Release_10.4.0_other_features_changes
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-You can now create a special `BookingData` shape and make it display all data associated with a particular booking.
+You can now create a special *BookingData* shape and make it display all data associated with a particular booking.
 
 To do so, create a shape with the following shape data fields:
 
@@ -22,7 +22,7 @@ To do so, create a shape with the following shape data fields:
 | Component   | `BookingData` |
 | Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
 
-A BookingData shape will show the following information:
+A *BookingData* shape will show the following information:
 
 - On the left-hand side, you will find a list of all resources in the booking.
 
@@ -33,34 +33,32 @@ A BookingData shape will show the following information:
   - the node label or, if no node label is defined, the name of the function definition
   - the icon of the service definition node (only if the resource to mapped to a service definition node)
 
-- On the right-hand side, you will find a section showing the following details:
+- On the right-hand side, you can select a node or node interface of the resource selected in the list on the left.
 
-  - the node label on top. (or fallback to node function name). In case the node has interfaces, a selector is used to view any of the interfaces
-  - the details section shows profile data for the selected node or interface : the selected profile instance and the set of overridden parameter values. The parameter values are used according to following priority :
+  After selecting a node or node interface, this section will show the profile data of this node or node interface:
 
-    - Resource usage parameter overrides
-    - Resource usage profile instance
-    - Resource usage profile definition
+  - the profile instance, and
+  - the overridden parameter values.
+  
+  > [!NOTE]
+  > Parameter value priority:
+  >
+  > - Resource usage parameter overrides
+  > - Resource usage profile instance
+  > - Resource usage profile definition
 
-This new component is available:
+To be able to use the *BookingData* component, you will need
 
-- when licensed for service manager and resource manager
-- when all of following permission are granted :
+- a system with an Elasticsearch database
+- a service manager license
+- a resource manager license
+- the following user permissions:
 
-  - Modules\Bookings\UI Available
-  - Modules\Resources\UI Available
-  - Modules\Services\UI Available
-  - Modules\Profiles\UI Available
-  - Modules\Functions\UI Available
-
-- when elastic engine has been installed
-
-Demosetup available at ziinedev.skyline.be view 'BookingData'
-
-
-
-
-
+  - Modules > Bookings > UI Available
+  - Modules > Functions > UI Available
+  - Modules > Profiles > UI Available
+  - Modules > Resources > UI Available
+  - Modules > Services > UI Available
 
 #### System Center - Analytics config: New Pattern Matching setting 'Maximum memory usage' [ID_34803]
 

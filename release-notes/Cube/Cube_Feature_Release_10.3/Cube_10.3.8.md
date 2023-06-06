@@ -20,10 +20,52 @@ uid: Cube_Feature_Release_10.3.8
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
+You can now create a special *BookingData* shape and make it display all data associated with a particular booking.
 
+To do so, create a shape with the following shape data fields:
 
+|Shape data field | Value |
+|-------------|---------------|
+| Component   | `BookingData` |
+| Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
 
+A *BookingData* shape will show the following information:
 
+- On the left-hand side, you will find a list of all resources in the booking.
+
+  For every resource, this list shows the following information:
+  
+  - the resource name
+  - an icon indicating the function of the resource
+  - the node label or, if no node label is defined, the name of the function definition
+  - the icon of the service definition node (only if the resource to mapped to a service definition node)
+
+- On the right-hand side, you can select a node or node interface of the resource selected in the list on the left.
+
+  After selecting a node or node interface, this section will show the profile data of this node or node interface:
+
+  - the profile instance, and
+  - the overridden parameter values.
+  
+  > [!NOTE]
+  > Parameter value priority:
+  >
+  > - Resource usage parameter overrides
+  > - Resource usage profile instance
+  > - Resource usage profile definition
+
+To be able to use the *BookingData* component, you will need
+
+- a system with an Elasticsearch database
+- a service manager license
+- a resource manager license
+- the following user permissions:
+
+  - Modules > Bookings > UI Available
+  - Modules > Functions > UI Available
+  - Modules > Profiles > UI Available
+  - Modules > Resources > UI Available
+  - Modules > Services > UI Available
 
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
