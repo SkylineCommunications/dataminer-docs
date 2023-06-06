@@ -61,6 +61,12 @@ Because of a number of enhancements, overall performance has increased when crea
 
 Because of a number of enhancements, overall performance of the *GetEligibleResources* call has increased.
 
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
+
 #### DataMiner Agents joining a cluster will now synchronize their ProtocolScripts\DllImport folder [ID_36494]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

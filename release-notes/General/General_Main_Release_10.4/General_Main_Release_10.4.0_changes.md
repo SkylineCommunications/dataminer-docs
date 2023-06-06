@@ -248,6 +248,12 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
 
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
