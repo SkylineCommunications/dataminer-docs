@@ -59,3 +59,9 @@ When users without permission to access a low-code app tried to log on to that a
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
+
+#### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID_36552]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.
