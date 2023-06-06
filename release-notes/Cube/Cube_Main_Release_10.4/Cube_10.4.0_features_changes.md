@@ -35,9 +35,9 @@ A *BookingData* shape will show the following information:
 
 - On the right-hand side, you can select a node or node interface of the resource selected in the list on the left.
 
-  After selecting a node or node interface, if applicable, this section will show the profile data of this node or node interface:
+  After selecting a node or node interface, this section will show the profile data of this node or node interface:
 
-  - the profile instance, and
+  - the profile instance (if applicable), and
   - the profile parameter values that will be used (note that these values can be overriden on several levels).
   
   > [!NOTE]
