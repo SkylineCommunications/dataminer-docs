@@ -74,6 +74,10 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
 
+### Computer name
+
+DataMiner requires a server with a name that is **no longer than 15 characters**. Make sure the name does not contain any characters that are disallowed in NetBIOS computer names or DNS host names. For more information, refer to [learn.microsoft.com](https://learn.microsoft.com/en-us/troubleshoot/windows-server/identity/naming-conventions-for-computer-domain-site-ou#netbios-computer-names).
+
 ## Cassandra requirements
 
 For DataMiner Agents that make use of one or more Cassandra nodes for their [system database](xref:Databases_about), additional requirements apply. For these, we follow Cassandra’s official [guidelines](https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html). A Cassandra node can be hosted on the same server as DataMiner, or on a different server. It is also possible to use multiple Cassandra nodes with one DataMiner Agent.
