@@ -34,6 +34,12 @@ From now on, when a parameter value is a URL starting with one of the following 
 - https://
 - mailto://
 
+#### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID_36530]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]

@@ -12,7 +12,11 @@ uid: Web_apps_Main_Release_10.3.0_CU5
 
 ### Enhancements
 
-*No enhancements have been added yet*
+#### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID_36530]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
 
 ### Fixes
 
