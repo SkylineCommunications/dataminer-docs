@@ -555,9 +555,9 @@
       topicUid: DCP_2.2
     - name: DataMiner Cloud Pack 2.0
       topicUid: DCP_2.0
-  - name: Other release notes
-    topicUid: DataAggregator_1.0.0
-    items:
+  - name: DxM release notes
+    topicUid: DxM_RNs_index
+    items: 
     - name: Data Aggregator release notes
       topicUid: DataAggregator_1.0.0
       items:
@@ -572,6 +572,9 @@
         topicUid: CommunicationGateway_1.1.0
       - name: Communication Gateway 1.0.0
         topicUid: CommunicationGateway_1.0.0
+  - name: Other release notes
+    topicUid: ClassLibrary_Range_1.4
+    items:
     - name: Class Library release notes
       topicUid: ClassLibrary_Range_1.4
       items:
