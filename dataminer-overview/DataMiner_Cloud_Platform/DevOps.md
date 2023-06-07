@@ -59,7 +59,7 @@ This process includes using **Git for push and pull requests** and utilizing a C
 > - [CI-CD – Our technical implementation & choice of tools](https://community.dataminer.services/ci-cd-our-technical-implementation-choice-of-tools/)
 > - [CI/CD and the Agile Principles](https://community.dataminer.services/ci-cd-and-the-agile-principles/)
 > - [Empower your DevOps engineers with the DataMiner CI/CD infrastructure](https://community.dataminer.services/empower-your-devops-engineers-with-the-dataminer-ci-cd-infrastructure/)
-> - [CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/)
+> - [CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [CI/CD User Guide](xref:CICD)
 
 ## DataMiner Integration Studio (DIS)
@@ -72,5 +72,5 @@ Moreover, the IDE's integration with online code repository services like GitHub
 > See also:
 >
 > - [DIS Expert Hub](https://community.dataminer.services/exphub-dis/)
-> - [Video: CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/)
+> - [Video: CI/CD using DIS, the Cloud Platform and GitHub actions](https://community.dataminer.services/video/ci-cd-using-dis-the-cloud-platform-and-github-actions/) ![Video](~/user-guide/images/video_Duo.png)
 > - [DIS User Guide](xref:DIS)

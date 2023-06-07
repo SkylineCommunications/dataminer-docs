@@ -24,4 +24,4 @@ The page consists of four tabs:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-logging/>
+> [Rui's Rapid Recap - Logging](https://community.dataminer.services/video/ruis-rapid-recap-logging/) ![Video](~/user-guide/images/video_Duo.png)

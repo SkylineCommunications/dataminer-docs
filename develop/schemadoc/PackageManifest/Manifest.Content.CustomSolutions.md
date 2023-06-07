@@ -4,7 +4,7 @@ uid: Manifest.Content.CustomSolutions
 
 # CustomSolutions element
 
-Specifies the custom solutions to be included in the package.
+Specifies the custom solutions to include in the package.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the custom solutions to be included in the package.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[CustomSolution](xref:Manifest.Content.CustomSolutions.CustomSolution)|[1, *]|Specifies a custom solution to be included in the package.|
+|&nbsp;&nbsp;[CustomSolution](xref:Manifest.Content.CustomSolutions.CustomSolution)|[1, *]|Specifies a custom solution to include in the package.|

@@ -31,7 +31,7 @@ In an element protocol, three different timers have been specified:
 
 - a 1-hour timer
 
-If you set the element’s \[Timer base\] parameter to 3.00, the frequencies of those three timers will all be multiplied by 3.00.
+If you set the element’s \[Timer base\] parameter to 3.00, the polling periods of those three timers will all be multiplied by 3.00.
 
 - The 2-second timer will now be a 6-second timer.
 

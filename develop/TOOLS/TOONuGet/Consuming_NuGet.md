@@ -50,3 +50,5 @@ A NuGet with direct communication will circumvent the use of DataMiner processes
 - It will not be possible to edit some communication settings (e.g. retries, timeouts) via the element settings.
 - Communication will be hidden from the Stream Viewer.
 - Unless this is taken into account during development, there will be no element timeouts when communication is lost.
+
+We try to solve some of these limitations by writing middleware packages that bridge the QAction with the external communication package or technology. For more information, go to [Communication middleware](xref:Nuget_Communication_Middleware).

@@ -4,7 +4,7 @@ uid: Manifest.Content.CustomSolutions.CustomSolution.Selections.File
 
 # File element
 
-Specifies a file to be included.
+Specifies a file to include.
 
 ## Content type
 

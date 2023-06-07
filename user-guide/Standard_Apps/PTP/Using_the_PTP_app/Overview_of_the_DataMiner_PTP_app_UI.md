@@ -192,7 +192,7 @@ This tab consists of the following subtabs:
 
 - **Transparent clocks**: Lists all transparent clocks in the PTP topology.
 
-- **Slaves**: Lists all slaves in the PTP topology, each with a number of PTP-related parameters.
+- **Slave clocks**: Lists all slave clocks in the PTP topology, each with a number of PTP-related parameters.
 
 - **Analyzers**: Allows you to compare a number of parameters of two PTP analyzers, i.e. slave devices that have been specially assigned to monitor and analyze the PTP signal they retrieve from a clock.
 

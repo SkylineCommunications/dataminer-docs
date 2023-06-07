@@ -4,7 +4,7 @@ uid: MarkerDetails
 
 # MarkerDetails
 
-In the *\<MarkerDetails>* tag, placeholders can be defined so that marker images can be generated dynamically.
+In the *\<MarkerDetails>* tag, placeholders can be defined to add additional values dynamically to the URL, which can be used for various purposes, including generating marker images dynamically.
 
 To do so, add a *\<Detail>* tag for every placeholder used in the *\<MarkerImages>* tag, and then configure the placeholder in the same way as for the *\<PopupDetails>* tag. See [PopupDetails](xref:PopupSkeleton_and_PopupDetails#popupdetails).
 
@@ -39,4 +39,6 @@ Example:
 ```
 
 > [!NOTE]
-> From DataMiner 9.6.13 onwards, it is possible to specify parameters of enhanced services in \<Detail> tags, in the same way as element parameters.
+>
+> - From DataMiner 9.6.13 onwards, it is possible to specify parameters of enhanced services in \<Detail> tags, in the same way as element parameters.
+> - From DataMiner 10.3.7/10.4.0 onwards, additional values can be added dynamically to the URL in layers with `sourceType` set to "objects". <!-- RN 36246 -->

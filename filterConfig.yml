@@ -90,9 +90,6 @@ apiRules:
     uidRegex: ^Skyline\.DataMiner\.Net\.History\.CrudType$
     type: Type
 - exclude:
-    uidRegex: ^Skyline\.DataMiner\.Net\.IConnection$
-    type: Type
-- exclude:
     uidRegex: ^Skyline\.DataMiner\.Net\.IDMAObjectRef$
     type: Type
 - exclude:

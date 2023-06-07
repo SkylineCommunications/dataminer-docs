@@ -47,7 +47,7 @@ In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag c
 See also:
 
 - [Analog](xref:UIComponentsAnalog)
-- [Options for measurement type “analog”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-analog)
+- [Options for measurement type “analog”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-analog)
 
 ### button
 
@@ -112,9 +112,9 @@ For example:
 </Measurement>
 ```
 
-See also
+See also:
 
-- [Options for measurement type “discreet”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-discreet)
+- [Options for measurement type “discreet”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-discreet)
 - [Drop-down list](xref:UIComponentsDropDownList)
 - [Protocol.Params.Param.Measurement.Discreets](xref:Protocol.Params.Param.Measurement.Discreets)
 
@@ -122,18 +122,18 @@ See also
 
 Used for visualizing a matrix. Only applicable for parameters of type “array” or “write”.
 
-See also
+See also:
 
-- [Options for measurement type “matrix”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-matrix)
+- [Options for measurement type “matrix”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-matrix)
 - [Matrix](xref:UIComponentsMatrix)
 
 ### number
 
 The parameter will be displayed as a number.
 
-See also
+See also:
 
-- [Options for measurement type “number”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-number)
+- [Options for measurement type “number”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)
 
 ### pagebutton
 
@@ -145,7 +145,7 @@ In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag h
 
 Labels of page buttons must end with ”...”. So, inside a Protocol.Params.Param. Measurement.Discreets.Discreet tag, the Protocol.Params.Param.Measurement.Discreets.Discreet.Display tag must contain a button label ending with ”...”.
 
-See also
+See also:
 
 - [Page button](xref:UIComponentsPageButton)
 
@@ -160,7 +160,7 @@ The Param.Display.Range tag is used to define the range of the progress bar. If 
 > [!NOTE]
 > The measurement type "progress" is only used with parameters of type "read".
 
-See also
+See also:
 
 - [Progress bar](xref:UIComponentsProgressBar)
 
@@ -174,9 +174,9 @@ Example:
 <Type lines="3" case="upper" options="hscroll;tab=100;fixedfont">string</Type>
 ```
 
-See also
+See also:
 
-- [Options for measurement type “string”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-string)
+- [Options for measurement type “string”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-string)
 
 ### table
 
@@ -184,7 +184,7 @@ Only applicable to parameters of type “array”, which will, in this case, be 
 
 See also
 
-- [Options for measurement type “table”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-table)
+- [Options for measurement type “table”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-table)
 
 ### title
 
@@ -202,9 +202,9 @@ Example:
 > - The measurement type "title" is only used with parameters of type "read".
 > - To include support for the legacy System Display application, add the “connect” option (`options="end;connect"`).
 
-See also
+See also:
 
-- [Options for measurement type “title”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-title)
+- [Options for measurement type “title”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-title)
 - [Title](xref:UIComponentsTitle)
 - [Group box](xref:UIComponentsGroupBox)
 
@@ -212,8 +212,6 @@ See also
 
 When a parameter of type “write” includes only two discreet values, it can be represented by a toggle button. When the “read” parameter associated with the “write” parameter contains the first discreet value, the second discreet value will be used in the set command when the toggle button is clicked.
 
-In this case, the accompanying Protocol.Params.Param.Measurement.Discreets tag is used for the parameter of type READ or READ BIT. In rare cases it can be set on the parameter of type WRITE.
+See also:
 
-See also
-
-- [Group box](xref:UIComponentsToggleButton)
+- [Toggle button](xref:UIComponentsToggleButton)

@@ -45,6 +45,14 @@ A number of improvements have been implemented to the Skyline CCAP Platform EPM 
 
 *DCF Interface* tables have been removed from the collectors. Instead, they are now using *CIN Interface* and *DPIC Interface* tables, as those also exist at the EPM level. This allows EPM to know the destination and source of all interfaces in the system, so that it can show the user how all interfaces are connected to one another.
 
+#### Topology visual pages can now display up to 20 RPDs [ID_34313]
+
+The topology visual pages have been adjusted so that they can now display up to 20 RPDs.
+
+#### Cox CBR-8 Platform D-DOCSIS/CISCO CBR-8 CCAP Platform Collector: Core IP retrieval improvement [ID_34314]
+
+An improvement has been implemented to the way Core IPv6 values are retrieved for the Cable Modem Overview table. This way, the table can better represent what the values are supposed to be, and there are fewer rows showing exception values.
+
 #### Standalone Elastic Backup tool improvement to secure credentials [ID_34438]
 
 As the commands of the Standalone Elastic Backup tool could expose the password, the tool has been modified to use an encrypted password instead of plain text. A separate tool, *PasswordEncryptionTool.exe*, has also been created to encrypt a plain text password.
