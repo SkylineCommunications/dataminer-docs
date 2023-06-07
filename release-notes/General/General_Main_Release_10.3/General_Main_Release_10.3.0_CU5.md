@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU5
 
 ### Enhancements
 
+#### Security enhancements [ID_36294]
+
+<!-- 36294: MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+A number of security enhancements have been made.
+
 #### Service & Resource Management: Enhanced performance of GetEligibleResources call [ID_36430]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->

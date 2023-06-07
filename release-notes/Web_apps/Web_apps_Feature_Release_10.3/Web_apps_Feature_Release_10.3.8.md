@@ -62,6 +62,6 @@ When you changed the name of a low-code app page, the application would incorrec
 
 #### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID_36552]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.

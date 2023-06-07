@@ -456,15 +456,3 @@ Cannot read properties of null ('reading delete')
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
-
-#### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID_36552]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.
-
-#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
-
-<!-- MR 10.4.0 - FR 10.3.7 [CU0] -->
-
-When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.

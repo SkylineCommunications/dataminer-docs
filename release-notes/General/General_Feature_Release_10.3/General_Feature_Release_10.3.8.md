@@ -45,7 +45,7 @@ Up to now, when a trend pattern was created or edited, the system would automati
 
 #### Security enhancements [ID_36294]
 
-<!-- 36294: MR 10.4.0 - FR 10.3.8 -->
+<!-- 36294: MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 A number of security enhancements have been made.
 

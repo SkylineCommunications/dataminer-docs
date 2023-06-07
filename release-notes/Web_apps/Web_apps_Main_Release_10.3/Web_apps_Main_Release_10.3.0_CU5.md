@@ -25,3 +25,15 @@ In the action editor, the *Which scheduler?* button has now been renamed to *Whi
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
+
+#### Dashboards app & Low-Code Apps: Problem when migrating a query to the current GQI version [ID_36552]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.
+
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
