@@ -127,7 +127,7 @@ The following scheduled tasks will now by default return 0 instead of error code
 
 #### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
 
-<!-- MR 10.2.0 [CU16]/10.3.0 [CU5] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you set up an SSH connection in a protocol, you can store the username, the password, the SSH options and the IP address in parameters using a `<Type options="">` element inside the `<Param>` element.
 
@@ -215,6 +215,20 @@ When you re-uploaded a main DVE protocol with the same version as the one that w
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a single-value filter was applied to an SNMP table using the `subtable` option, in some cases, the table would no longer receive any data.
+
+Due to a filtering problem, using a single filter like "1.1" would no longer poll instances like "1.1" and "1.1.2". This has now been fixed.
+
+Also, it is now possible to use a "\*" wildcard in a filter. See the following examples:
+
+- "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+- "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+- "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 

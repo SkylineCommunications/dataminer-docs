@@ -215,6 +215,12 @@ Up to now, when an event associated with a DVE child element was generated, inte
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
 
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
+
 #### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -234,6 +240,18 @@ Example:
 
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
+
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
 
 ### Fixes
 
