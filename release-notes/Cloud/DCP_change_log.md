@@ -6,10 +6,6 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 5 June 2023 - New option to export audit records to CSV [ID_36584]
-
-In the Admin app, it is now possible to export audit records to a CSV file. You can configure the separator to use in the export and select whether column titles should be included as the header in the file.
-
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
 A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.
