@@ -73,3 +73,9 @@ When you changed the name of a low-code app page, the application would incorrec
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When you opened a query that was created using an older GQI version, and that query was configured to start from another query recursively in combination with joins, in some cases, it would incorrectly be migrated to the current GQI version.
+
+#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.

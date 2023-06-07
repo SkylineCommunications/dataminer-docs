@@ -466,3 +466,9 @@ Cannot read properties of null ('reading delete')
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
