@@ -1,13 +1,8 @@
 ---
-uid: OpenSearch_database
+uid: Installing_OpenSearch_database
 ---
 
-# OpenSearch database
-
-From DataMiner 10.3.0/10.3.3 onwards, it is possible to install a dedicated OpenSearch indexing database cluster as an alternative for Elasticsearch. This indexing cluster also requires a Cassandra cluster.
-
-> [!NOTE]
-> If you are looking to use the Amazon OpenSearch Service instead of on-prem hosted OpenSearch nodes, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+# Installing an OpenSearch database
 
 ## Compatibility
 
@@ -16,107 +11,109 @@ Supported versions:
 - OpenSearch 1.X
 - OpenSearch 2.X
 
-## Setting up the OpenSearch cluster(on premises)
-
 > [!NOTE]
-> Below steps were conducted following the Debian installation guide at [Debian](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/) on a Ubuntu Server system.
+> OpenSearch is only supported on Linux.
 
-1. Install OpenSearch using the [Install OpenSearch from an APT repository](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#install-opensearch-from-an-apt-repository) topic of the installation guide.
-1. Follow [Step 2:(Optional) Test OpenSearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-2-optional-test-opensearch) from the guide, don't forget to also query the plugins endpoint.
-1. Follow [Step 3: Set up OpenSearch in your environment](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-3-set-up-opensearch-in-your-environment) and change the *JVM Heap Space*.
-1. In addition to the guide on [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/) follow below steps.
+## Setting up the OpenSearch cluster
+
+See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
 
 > [!IMPORTANT]
-
+>
 > - On production systems, the *JVM Heap Space* must be set to a value larger than the default. To configure this setting, see [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings).
 > - The `indices.query.bool.max_clause_count` setting should be set to "2147483647" (i.e. the maximum integer value).
 
-### OpenSearch.yml configuration
+> [!NOTE]
+> It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
 
-For every node in your cluster configure the following in OpenSearch.yml(below is an example of three nodes):
+### Example configuration
 
-```yml
-# Use a descriptive name for your cluster:
-#
-cluster.name: NameOfYourCluster
-cluster.initial_master_nodes: ["opensearchnode1"]
-#
-# ------------------------------------ Node ------------------------------------
-#
-# Use a descriptive name for the node(node.name can be anything you desire, but we recommend hostname of node):
-#
-#Make the node.name reflect the name of your node
-node.name: opensearchnode1
-#
-# ----------------------------------- Paths ------------------------------------
-#
-# Path to directory where to store the data (separate multiple locations by comma):
-#
-path.data: /var/lib/opensearch
-#
-# Path to log files:
-#
-path.logs: /var/log/opensearch
-# ---------------------------------- Network -----------------------------------
-#
-# Set the bind address to a specific IP (IPv4 or IPv6), best is to use the real-ip of the node:
-#
-network.host: ipAddressOfTheNode
+Below you can find an example of how to set up an OpenSearch cluster on premises on a Ubuntu system, in accordance with the [Debian installation guide](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/).
 
-network.publish_host: ipAddressOfTheNode
-#
-# Set a custom port for HTTP:
-#
-http.port: 9200
-#
-# For more information, consult the network module documentation.
-#
-# --------------------------------- Discovery ----------------------------------
-#
-# Pass an initial list of hosts to perform discovery when this node is started:
-# The default list of hosts is ["127.0.0.1", "[::1]"]
-#
-discovery.seed_hosts: ["ipAddressOfTheFirstNode","ipAddressOfTheSecondNode","ipAddressOfTheThirdNode"]
+#### Main steps
 
-discovery.type: zen
-```
+These are the main steps of the setup:
 
-#### Data Nodes
+1. Install OpenSearch as detailed under [Install OpenSearch from an APT repository](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#install-opensearch-from-an-apt-repository).
 
-If you want a node to be a data node add the following configuration:
+1. Follow [Step 2:(Optional) Test OpenSearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-2-optional-test-opensearch) from the installation guide. Remember to also **query the plugins endpoint**.
 
-```yml
-node.roles: [ data, ingest ]
-```
+1. Follow [Step 3: Set up OpenSearch in your environment](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-3-set-up-opensearch-in-your-environment) and change the *JVM Heap Space*.
 
-#### Cluster Manager
+1. Set up a cluster as detailed under [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/). Take the sections below into account when you do so.
+
+#### OpenSearch.yml configuration
+
+- For every node in your cluster, configure the *OpenSearch.yml* file as illustrated below (the example uses three nodes):
+
+  ```yml
+  # Use a descriptive name for your cluster:
+  #
+  cluster.name: NameOfYourCluster
+  cluster.initial_master_nodes: ["opensearchnode1"]
+  #
+  # ------------------------------------ Node ------------------------------------
+  #
+  # Use a descriptive name for the node(node.name can be anything you desire, but we recommend hostname of node):
+  #
+  # Make the node.name reflect the name of your node
+  node.name: opensearchnode1
+  #
+  # ----------------------------------- Paths ------------------------------------
+  #
+  # Path to directory where to store the data (separate multiple locations by comma):
+  #
+  path.data: /var/lib/opensearch
+  #
+  # Path to log files:
+  #
+  path.logs: /var/log/opensearch
+  # ---------------------------------- Network -----------------------------------
+  #
+  # Set the bind address to a specific IP (IPv4 or IPv6), best is to use the real-ip of the node:
+  #
+  network.host: ipAddressOfTheNode
+  
+  network.publish_host: ipAddressOfTheNode
+  #
+  # Set a custom port for HTTP:
+  #
+  http.port: 9200
+  #
+  # For more information, consult the network module documentation.
+  #
+  # --------------------------------- Discovery ----------------------------------
+  #
+  # Pass an initial list of hosts to perform discovery when this node is started:
+  # The default list of hosts is ["127.0.0.1", "[::1]"]
+   #
+  discovery.seed_hosts: ["ipAddressOfTheFirstNode","ipAddressOfTheSecondNode","ipAddressOfTheThirdNode"]
+  
+  discovery.type: zen
+  ```
+
+- If you want a node to be a **data node**, add the following configuration in *OpenSearch.yml*:
+
+  ```yml
+  node.roles: [ data, ingest ]
+  ```
+
+- If you want a node to be the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
+
+  ```yml
+  node.roles: [ cluster_manager ]
+  ```
+
+#### TLS configuration
+
+To configure TLS, instead of using .pem files, we recommend generating p12 keystore and truststore .p12 files using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script on GitHub. This script will generate a .p12 file for every node. Place the correct .p12 file on each corresponding node. The GitHub script will provide you with the keystore and truststore password. Add this to the keystore and truststore password fields in the OpenSearch.yml file. A rootCA.crt will also be generated by the GitHub script.
 
 > [!NOTE]
-> The nomenclature changed for the master node, it is now called cluster manager node.
+> In case you want to query the OpenSearch database from a different computer, you can also install the rootCA.crt on a Windows machine by double-clicking it. Use *Local Machine* as *Store Location* when adding the certificate, and place the certificate in *Trusted Root Certification Authorities*. This is similar to the [Client-server TLS encryption](xref:Security_Elasticsearch#client-server-tls-encryption) procedure for Elasticsearch. Once the certificate has been imported, there is trust between your machine running DataMiner and the OpenSearch database/cluster.
 
-For a node to be considered a master node, add the following:
+##### Remove the demo certificates
 
-```yml
-node.roles: [ cluster_manager ]
-```
-
-#### TLS Configuration
-
-##### Prerequisites
-
-In the official help they suggest to use .pem files. However we recommend generating p12 keystore and truststore .p12 files using the script on GitHub [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates).
-
-It will generate.p12 files for every node. Place the correct .p12 file on each corresponding node. The GitHub script will provide you with the keystore and truststore password. This needs to be added to the keystore and truststore password fields in the OpenSearch.yml file:
-
-A rootCA.crt will also be generated by the GitHub script.
-
-> [!NOTE]
-> The rootCA.crt can also be installed on a Windows machine by double-clicking it in case you want to query the OpenSearch from a different computer. As *Store Location* when adding the certificate, use *Local Machine* and place the certificate in *Trusted Root Certification Authorities*.
-> It is the same procedure like when you would use Elastic, [Client-server TLS encryption](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/Advanced_security_configuration/Database_security/Security_Elasticsearch.html#client-server-tls-encryption). So once the certificate is imported, there is trust between your machine running DataMiner and the OpenSearch database/cluster.
-
-###### Remove the demo-certificates
-
-Remove the demo-certificates located in /etc/opensearch:
+Remove the demo certificates located in /etc/opensearch:
 
 ```bash
 cd /etc/opensearch
@@ -126,7 +123,7 @@ cd /etc/opensearch
 sudo rm -f *pem
 ```
 
-###### Update the trusted root certificates with rootCA.crt
+##### Update the trusted root certificates with rootCA.crt
 
 Navigate to the location where your rootCA.crt file is stored and copy it using the following commands:
 
@@ -146,11 +143,11 @@ You can verify the rootCA.crt using the following command, it should return the 
 openssl verify rootCA.crt
 ```
 
-###### Configure users
+##### Configure users
 
 Generate a new hash for the admin user using [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) section in the OpenSearch help. As the help indicated, remove all demo users except the *admin* user an replace the hash for admin with the generated hash.
 
-##### Setup TLS in the OpenSearch.yml file
+##### Set up TLS in the OpenSearch.yml file
 
 ```yml
 plugins.security.disabled: false
@@ -187,15 +184,15 @@ node.max_local_storage_nodes: 3
 indices.query.bool.max_clause_count: 2147483647
 ```
 
-#### Restart OpenSearch
+##### Restart OpenSearch
 
-After the TLS configuration was done, and a different hash was set for the admin user, restart OpenSearch:
+When you have finished the TLS configuration and set a different hash for the admin user, restart OpenSearch:
 
 ```bash
 sudo systemctl restart opensearch
 ```
 
-Check via the command-line if returns data:
+Check via the command line if data is returned:
 
 ```curl
 curl https://your.host.address:9200 -u admin:yournewpassword --ssl-no-revoke
@@ -223,26 +220,15 @@ This should return the following:
 }
 ```
 
-### Querying the OpenSearch Database
+#### Setting up OpenSearch Dashboards
 
-#### ElasticVue
+Optionally, you can set up OpenSearch Dashboards, which is the equivalent of Kibana for Elasticsearch. To do so, follow the instructions under [Installing OpenSearch Dashboards (Debian)](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/debian/).
 
-The OpenSearch database can be queried using a browser or you can use [ElasticVue](https://elasticvue.com/) browser extension.
+You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`.
 
-> [!IMPORTANT]
-> ElasticVue was created for ElasticSearch, we cannot guarantee everything will work.
+To configure TLS, instead of using .pem certificates as recommended in the [OpenSearch documentation](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/), we recommend using .p12 files for trust and keystore. You can generate these using the [Generate TLS Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script maintained by the Skyline security team.
 
-#### OpenSearch Dashboards
-
-It is also possible to set up OpenSearch Dashboards, which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
-
-Follow the installation guide at [Installing OpenSearch Dashboards (Debian)](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/debian/). We recommend installing it on a Ubuntu Server(below is an example of configuration on Ubuntu server), either from an APT repository or using .deb-packages. You will be able to connect to your server using `http(s)://ipaddress:5601`.
-
-##### Installation with TLS
-
-The official documentation, [Configure TLS for OpenSearch Dashboards](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/) makes use of .pem certificates. However we recommend using .p12 files for trust and keystore. These .p12 files can be generated by the scripts [Generate TLS Certificates](https://github.com/SkylineCommunications/generate-tls-certificates), maintained by our Security team.
-
-To configure OpenSearch Dashboards to use .p12 files add the following to `/etc/opensearch-dashboards/opensearch_dashboards.yml`:
+To configure OpenSearch Dashboards to use .p12 files, add the following to `/etc/opensearch-dashboards/opensearch_dashboards.yml`:
 
 ```yaml
 # OpenSearch Dashboards is served by a back end server. This setting specifies the port to use.
@@ -279,10 +265,8 @@ opensearch.username: userName
 opensearch.password: pwd
 ```
 
-See also the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster in case something isn't covered.
-
-> [!NOTE]
-> Contrary to Elasticsearch, OpenSearch is only supported on Linux and not on Windows.
+> [!TIP]
+> See also: <https://opensearch.org/docs/latest/>
 
 ## Connecting your DMS to an OpenSearch cluster
 
@@ -299,28 +283,27 @@ To configure the connection to an OpenSearch database, configure the settings as
 System.Net.Http.HttpRequestException: An error occurred while sending the request. ---> System.Net.WebException: The underlying connection was closed: Could not establish trust relationship for the SSL/TLS secure channel. ---> System.Security.Authentication.AuthenticationException: The remote certificate is invalid according to the validation procedure.
 ```
 
-Above exception in the SLDBConnection logging can be fixed by adding the rootCA.crt in the  *Trusted Root Certification Authorities* store.
+If you encounter the exception above in the SLDBConnection logging, add the rootCA.crt in the  *Trusted Root Certification Authorities* store.
 
 ### Multiple DNS names for IP
 
-In case multiple DNS names point to a single IP-address, set the below option to false in the opensearch.yml file:
+In case multiple DNS names point to a single IP address, set the option below to false in the *opensearch.yml* file:
 
 ```yaml
 plugins.security.ssl.transport.resolve_hostname: false
 ```
 
-See also [(Advanced) Hostname verification and DNS lookup](https://opensearch.org/docs/1.2/security-plugin/configuration/tls/#advanced-hostname-verification-and-dns-lookup).
+> [!TIP]
+> See also: [(Advanced) Hostname verification and DNS lookup](https://opensearch.org/docs/1.2/security-plugin/configuration/tls/#advanced-hostname-verification-and-dns-lookup).
 
 ### Transport client authentication is no longer support exception in OpenSearch logging
-
-When encountering:
 
 ```text
 Caused by: org.opensearch.OpenSearchException: Transport client authentication no longer supported.
 ```
 
-The root cause of this error is that *plugins.security.nodes_dn:* are not matching the certificates subject.
+If you encounter the exception above in the OpenSearch logging, make sure *plugins.security.nodes_dn:* matches the certificates subject.
 
-### SLSearch.txt logging displays - OpenSearch version is not officially supported
+### SLSearch.txt logging mentions OpenSearch version is not officially supported
 
-You need to upgrade to DataMiner, starting from version 10.3.6.0 onwards. Then this will not be shown anymore in SLSearch.txt and the DataMiner software is then compatible.
+If the SLSearch.txt log file mentions that the OpenSearch version is not officially supported, upgrade your DMS to DataMiner 10.3.6 or higher.
