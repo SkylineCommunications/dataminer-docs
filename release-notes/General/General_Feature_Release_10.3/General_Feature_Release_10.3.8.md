@@ -101,3 +101,9 @@ Up to now, the factory reset tool *SLReset.exe* would log an exception each time
 If, in the protocol, a data range is specified for a parameters for which trend data prediction is required, the trend prediction algorithm will cap the prediction values to the data range. For example, if a parameter has a rangeLow value equal to 0 and a rangeHigh value equal to 100, the prediction will not contain values lower than 0 or higher than 100.
 
 From now on, if the trend data contains values outside of the specified data range, the trend prediction algorithm will no longer consider the data range values to be valid or reliable, and will not limit the prediction to this range.
+
+#### Problem with SLElement due to timeout actions of an element being overwritten [ID_36591]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
