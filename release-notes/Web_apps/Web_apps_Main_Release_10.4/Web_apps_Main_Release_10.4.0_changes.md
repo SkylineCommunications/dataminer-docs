@@ -285,6 +285,25 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
+#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
+
+`Error trapped: Elastic returned unexpected value ''.`
+
+From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
+
+Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
+
+| ​Type | ​RawValue | ​DisplayValue |
+|------|----------|--------------|
+| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
+| ​(Distinct) Count   | 0    | 0                |
+| ​Std dev/Percentile | ​null | ​​"Not applicable" |
+| ​Sum                | 0    | 0                |
+
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
