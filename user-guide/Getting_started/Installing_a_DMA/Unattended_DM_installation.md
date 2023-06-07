@@ -109,7 +109,7 @@ The *DMA* tag has the following possible subtags:
 
 - **MachineName**
 
-  The name of the server where the DMA is installed.
+  The NetBIOS name of the server where the DMA is installed (max. 15 characters).
 
 - **IP1**
 

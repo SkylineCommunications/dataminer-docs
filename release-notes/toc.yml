@@ -523,6 +523,8 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU3
         - name: DataMiner web apps Main Release 10.3.0 CU4 - Preview
           topicUid: Web_apps_Main_Release_10.3.0_CU4
+        - name: DataMiner web apps Main Release 10.3.0 CU5 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU5
       - name: Feature Release
         topicUid: Web_apps_Feature_Release_10.3.8
         items:
@@ -561,6 +563,15 @@
       items:
       - name: Data Aggregator 1.0.0
         topicUid: DataAggregator_1.0.0
+    - name: Communication Gateway release notes
+      topicUid: CommunicationGateway_1.2.0
+      items:
+      - name: Communication Gateway 1.2.0
+        topicUid: CommunicationGateway_1.2.0
+      - name: Communication Gateway 1.1.0
+        topicUid: CommunicationGateway_1.1.0
+      - name: Communication Gateway 1.0.0
+        topicUid: CommunicationGateway_1.0.0
     - name: Class Library release notes
       topicUid: ClassLibrary_Range_1.4
       items:
@@ -725,6 +736,11 @@
           topicUid: EPM_6.0.0_I-DOCSIS
         - name: EPM 5.0.0 I-DOCSIS 
           topicUid: EPM_5.0.0_I-DOCSIS
+      - name: VSAT
+        topicUid: EPM_1.0.2_VSAT
+        items:
+        - name: EPM 1.0.2 VSAT - Preview
+          topicUid: EPM_1.0.2_VSAT
     - name: IDP release notes
       topicUid: IDP_1.2.1
       items:

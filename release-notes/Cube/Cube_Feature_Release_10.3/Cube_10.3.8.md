@@ -14,13 +14,23 @@ uid: Cube_Feature_Release_10.3.8
 
 *No highlights have been selected for this release yet*
 
-## Other features
+## Other new features
 
-*No other features have been added yet*
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
 
 ## Changes
 
 ### Enhancements
+
+#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID_36333]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, external connectivity updates for dynamically positioned shapes would not be applied in real time. To see the changes, you had to close the visual overview and open it again. From now on, any external connectivity updates for dynamically positioned shapes will immediately be visible.
 
 #### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID_36363]
 
@@ -39,6 +49,14 @@ Also, because of a number of enhancements, overall performance has increased whe
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### System Center: Problem with 'Show agent alarms' link [ID_36463]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you selected an agent in the *Agents* section of *System Center*, in some cases, the alarm numbers shown in the *Show agent alarms* link would not be correct.
+
+Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
 
 #### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
 

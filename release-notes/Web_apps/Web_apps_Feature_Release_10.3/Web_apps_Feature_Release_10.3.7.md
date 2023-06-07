@@ -124,6 +124,8 @@ From now on, when table data is refetched with a trigger or an action, the rows 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
@@ -296,3 +298,9 @@ Table actions would incorrectly not be triggered when the key of the GQI data so
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.

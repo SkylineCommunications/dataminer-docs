@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 5 June 2023 - New option to export audit records to CSV [ID_36584]
+
+In the Admin app, it is now possible to export audit records to a CSV file. You can configure the separator to use in the export and select whether column titles should be included as the header in the file.
+
 #### 30 May 2023 - Enhancement - Catalog 1.3.1 - Notification when deploying from the catalog [ID_36543]
 
 When you deploy something (e.g. a connector) from the catalog to a DMA, a notification will now indicate if the deployment has started properly. The notification also contains a link to the Admin page, where you can view the status of the deployment.

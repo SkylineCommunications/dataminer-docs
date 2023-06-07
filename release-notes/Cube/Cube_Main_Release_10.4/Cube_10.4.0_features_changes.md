@@ -201,6 +201,12 @@ It is now possible to either show or hide the search box in the middle of the Cu
 
 Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
 
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
+
 #### Resources app: Duplicating a resource [ID_36308]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->

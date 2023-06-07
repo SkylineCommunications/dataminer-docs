@@ -4,7 +4,7 @@ uid: KI_SLElement_various_resolved_issues
 
 # Various resolved SLElement issues
 
-A number issues could lead to SLElement problems, which could cause a memory leak or an unexpected DMA restart. Below you can find an overview of these issues.
+A number of issues could lead to SLElement problems, which could cause a memory leak or an unexpected DMA restart. Below you can find an overview of these issues.
 
 | Issue | Affected versions | Workaround | Fix |
 |--|--|--|--|
