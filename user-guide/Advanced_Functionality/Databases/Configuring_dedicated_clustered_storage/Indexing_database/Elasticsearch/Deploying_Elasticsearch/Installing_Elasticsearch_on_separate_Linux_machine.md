@@ -21,7 +21,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
      `$ sudo ufw enable`
 
      > [!IMPORTANT]
-     > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
+     > If you connect to your Linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
      >
      > For this, use the following command: `$ sudo ufw allow 22/tcp`
 
@@ -45,7 +45,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
        `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 9200,9300`
 
-   - Make sure all DMAs in the DMS can connect to port 9200,9300:
+   - Make sure all DMAs in the DMS can connect to port 9200 and 9300:
 
      - Commands DMA 1:
 
@@ -66,8 +66,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
      - And so on.
 
    > [!IMPORTANT]
-   >
-   > - These commands could be **different depending on the Linux distribution** you are using. Refer to [the official Elastic page on installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) for detailed information.
+   > These commands could be **different depending on the Linux distribution** you are using. Refer to [the official Elastic page on installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/current/install-elasticsearch.html) for detailed information.
 
 1. Mount the data folder to the data disk.
 
@@ -88,7 +87,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
      `$ sudo systemctl stop elasticsearch.service`
 
-   - To change *elasticsearch.yml* files, you can use the following command:
+   - To change *elasticsearch.yml* files, you can for instance use the following command:
 
      `$ vi /etc/elasticsearch/elasticsearch.yml`
 
@@ -140,7 +139,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*. For more information, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
 
    > [!NOTE]
-   > Elasticsearch can use quite a bit of memory. At least 8 Gb of heap size should be specified. More could be required depending your system.
+   > Elasticsearch can use quite a bit of memory. At least 8 GB of heap size should be specified. More could be required depending your system.
 
 1. Start Elasticsearch and evaluate if the service is up and running.
 
