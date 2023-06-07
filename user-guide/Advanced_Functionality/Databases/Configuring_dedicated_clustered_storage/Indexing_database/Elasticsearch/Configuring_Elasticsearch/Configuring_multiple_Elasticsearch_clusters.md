@@ -8,6 +8,11 @@ From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple El
 
 Configuring multiple Elasticsearch clusters becomes crucial when on-premises setups are considered, as Elastic strongly advises against setting up clusters across high-latency nodes. Rather than spreading Elasticsearch nodes across locations with high latency, it is preferable to offload data to multiple Elasticsearch clusters. This approach allows for geo-redundancy, ensuring that data remains accessible even if one cluster becomes temporarily unavailable. With this configuration, if inconsistencies arise between the Elasticsearch clusters, synchronization issues can be avoided.
 
+> [!IMPORTANT]
+>
+> - A setup with multiple Elasticsearch clusters is only recommended for high latency scenarios. For low or medium latency, we strongly advise using the [standard Elasticsearch setup](xref:Configuring_Elasticsearch_Database).
+> - Contact Skyline if you are unsure about the setup that best fits your circumstances.
+
 > [!TIP]
 > For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures#failover-setups-with-geo-redundancy).
 
