@@ -177,9 +177,21 @@ In the *Monitoring* app, a number of enhancements have been made to the sidebar 
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
-A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+The following enhancements have been made with regard to the Web Services API:
 
-Also, it is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open websocket connections using the same connection ID.
+- A web API event queue will now automatically be removed after 5 minutes if a client did not request the events in that queue during those 5 minutes. As a result, overall web API memory consumption will decrease considerably.
+
+- It is now possible for one web API connection to have multiple event queues. As a result, clients will be able to have multiple open WebSocket connections using the same connection ID.
+
+- Up to now, when the *remember me* auto-login cookie could not be generated (e.g. because the user entered an unusually long user name), an error would be thrown. From now on, no error will be thrown anymore. The cookie will not be generated and the user will have to manually log back in again when starting a new session.
+
+> [!IMPORTANT]
+> BREAKING CHANGE: Due to the changes made with respect to WebSocket communication, it will no longer be possible to use the following web methods:
+>
+>- LoadSpectrumPreset
+>- SaveSpectrumPreset
+>- SetMeasurementPoints
+>- SetSpectrumParameter
 
 #### Dashboards app & Low-Code Apps: New way to link components to feeds [ID_35837]
 
@@ -190,17 +202,115 @@ The way in which components are linked to feeds has been improved. Instead of us
 > [!CAUTION]
 > BREAKING CHANGE: Up to now, when you linked a script parameter to the *From* or *Till* box of a time range feed, the feed would pass a datetime value in string format to the script. That string value was not in an ISO format and did not contain any information about the time zone. From now on, the feed will send a UTC timestamp in milliseconds instead. Scripts that expect to receive a string value will need to be modified.
 
-#### Legacy reports and dashboards will no longer be prefetched if the soft-launch option 'LegacyReportsAndDashboards' is set to false [ID_35881]
+#### Clearer error will be thrown when an inter-element query failed to retrieve a parameter value of a specific element [ID_35972]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
-From now on, legacy reports and dashboards will no longer be prefetched if the soft-launch option *LegacyReportsAndDashboards* is set to false.
+When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
 #### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+
+#### Dashboards app - GQI: Clearer error message will now appear when ModelHost is not running [ID_36155]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+When the *Get parameter relations* data source is queried while the *ModelHost* DxM is not running, an error message will appear. That error message has now been made clearer.
+
+#### Web services API: Multi-value DOM fields will now list all their values [ID_36190]
+
+<!-- MR 10.4.0 - FR 10.3.6 -->
+
+Up to now, in e.g. low-code apps, multi-value DOM fields would only show a summary of the values they contained. From now on, they will list all values instead.
+
+> [!NOTE]
+> When a multi-value DOM field contains invalid values, it will no longer list them. Instead, they will be added to the error message.
+
+#### External authentication using SAML: Enhanced error handling [ID_36274]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Instead of a generic error message, a more meaningful error message will now appear when something goes wrong while authenticating a user via SAML.
+
+#### Monitoring app: Enhanced parameter controls [ID_36275]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the *Monitoring* app, the parameter controls have been enhanced. You will now be able to edit a parameter by clicking a pencil icon.
+
+#### Dashboards app & Monitoring app: Parameter page component now supports WebSockets [ID_36314]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
+
+#### Monitoring app: Enhanced performance when editing a parameter on a parameter page component [ID_36348]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when editing a parameter on a parameter page component.
+
+#### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, when you clicked the trending icon of a parameter, the parameter edit pane would expand, showing additional information about that parameter. From now on, when you click the trending icon of a parameter, the trending page will open instead.
+
+#### Dashboards app & Low-Code Apps - Table component: Selected rows will again be selected after refetching the data [ID_36372]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
+
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
+
+#### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
+
+From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
+
+`Error trapped: Elastic returned unexpected value ''.`
+
+From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
+
+Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
+
+| ​Type | ​RawValue | ​DisplayValue |
+|------|----------|--------------|
+| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
+| ​(Distinct) Count   | 0    | 0                |
+| ​Std dev/Percentile | ​null | ​​"Not applicable" |
+| ​Sum                | 0    | 0                |
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
 ### Fixes
 
@@ -302,20 +412,6 @@ Could not find argument with name '{argument.Name}'.
 
 An error could occur when feeding data from a GQI component to a query that was used in the same component.
 
-#### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
-
-- When you selected a row above a row that had been selected earlier, that row would not get fed.
-
-- When you tried to select multiple rows using SHIFT+Click, this would not work when you selected the rows bottom to top.
-
-- When you selected a single row that was already selected as part of a multiple select, the feed would not be updated.
-
-- When you exported the selected rows to a CSV file, the CSV file would incorrectly contain all rows instead of only the ones you had selected.
-
 #### Dashboards app - GQI: No element feed available after selecting a relation between two standalone parameters [ID_36003]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -343,3 +439,55 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 ```txt
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
+
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
+#### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
+
+#### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
+
+<!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
+
+In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
+
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
+#### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When the same query was used in two different GQI visualizations, one of those visualizations would display the following error:
+
+```txt
+Cannot read properties of null ('reading delete')
+```
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.

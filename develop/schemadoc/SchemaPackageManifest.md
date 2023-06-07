@@ -23,7 +23,7 @@ XML schema for defining the contents of an application package. For more informa
 				<RepoPath>Protocols\Microsoft\Platform</RepoPath>
 				<Version>
 					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.1.2.X</Range>
+						<Range rangeSelection="latestRelease">1.1.2.X</Range>
 					</Selection>
 					<SetAsProduction>false</SetAsProduction>
 				</Version>
@@ -33,7 +33,7 @@ XML schema for defining the contents of an application package. For more informa
 				<RepoPath>Protocols\Apache\Cassandra Cluster Monitor</RepoPath>
 				<Version>
 					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+						<Range rangeSelection="latestRelease">1.0.0.X</Range>
 					</Selection>
 					<SetAsProduction copyTemplates="true">true</SetAsProduction>
 				</Version>
@@ -51,7 +51,7 @@ XML schema for defining the contents of an application package. For more informa
 				<RepoPath>Protocols\Elastic\ElasticSearch Cluster Monitor</RepoPath>
 				<Version>
 					<Selection>
-						<Range triggerPackagePipelineOnChange="false" rangeSelection="latestRelease">1.0.0.X</Range>
+						<Range rangeSelection="latestRelease">1.0.0.X</Range>
 					</Selection>
 					<SetAsProduction>true</SetAsProduction>
 				</Version>

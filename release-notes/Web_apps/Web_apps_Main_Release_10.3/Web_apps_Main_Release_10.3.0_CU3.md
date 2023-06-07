@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU3
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU3 – Preview
+# DataMiner web apps Main Release 10.3.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU3](xref:General_Main_Release_10.3.0_CU3).
@@ -17,6 +17,14 @@ uid: Web_apps_Main_Release_10.3.0_CU3
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 -->
 
 When a dashboard or a low-code app is in dark mode, from now on, there will be a higher color contrast between rows that are selected or hovered over and rows that are not.
+
+#### Dashboards app & Low-Code Apps: Web component now supports hyperlinks with a target attribute [ID_36159]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+A web component now supports hyperlinks with a target attribute.
+
+Example: `<a href="http://www.skyline.be" target="_blank">Skyline Communications</a>`
 
 ### Fixes
 
@@ -59,6 +67,20 @@ When a dashboard with a state, ring or gauge component was shared, in some cases
 <!-- MR 10.3.0 [CU3] - FR 10.3.5 -->
 
 When you selected a parameter in a parameter feed component of a shared dashboard, in some cases, an error could occur.
+
+#### Dashboards app & Low-Code Apps - Table component: Selection issues [ID_35968]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When a GQI table was configured to feed the selected rows to another component, the following issues could occur:
+
+- When you selected a row above a row that had been selected earlier, that row would not get fed.
+
+- When you tried to select multiple rows using SHIFT+Click, this would not work when you selected the rows bottom to top.
+
+- When you selected a single row that was already selected as part of a multiple select, the feed would not be updated.
+
+- When you exported the selected rows to a CSV file, the CSV file would incorrectly contain all rows instead of only the ones you had selected.
 
 #### Dashboards app & Low-Code Apps - Table component: Minimum pagesize would be used when exporting to a CSV file [ID_36012]
 
@@ -116,6 +138,12 @@ From now on, a table session will immediately be closed after the last page has 
 
 An error could occur when you opened a shared dashboard that contained a *Parameter Page* component.
 
+#### Low-Code Apps: Problem when updating header titles [ID_36116]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+When, while editing a low-code app with more than one header bar option, you selected another header bar option, the label of the previously selected header bar option would incorrectly still be displayed in the side panel.
+
 #### Dashboards app & Low-Code Apps: Problem when searching elements of which the name contained special characters [ID_36128]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
@@ -129,3 +157,27 @@ When, while editing a dashboard, you opened the *ELEMENTS* section in the *DATA*
 In some cases, the popup panel showing the PDF preview of a dashboard would incorrectly have a scroll bar.
 
 From now on, a popup panel showing a PDF preview will take the full screen height and will only allow its contents to scroll.
+
+#### Dashboards app: Problem when pressing an arrow key in the 'Create dashboard' window [ID_36146]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
+
+In the *Create dashboard* window, pressing an arrow key while one of the text boxes had the focus would incorrectly cause the *OK* or *Cancel* button to become selected.
+
+#### GQI: Web services API would not be able to correctly translate a server query to a web query [ID_36173]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.5 [CU0] -->
+
+In some cases, the web services API would not be able to correctly translate a server query to a web query.
+
+#### Dashboards app: Problem when sharing a dashboard that contained an alarm table component [ID_36178]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When you shared a dashboard that contained an alarm table component, in some cases, a `Not Authorized` error could be thrown.
+
+#### Dashboards app: Order of parameters in State component of shared dashboard was incorrect [ID_36206]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+When you viewed a shared dashboard that contained a *State* component, in some cases, the order of the parameters in that *State* component would be incorrectly.

@@ -7,14 +7,14 @@ uid: Upgrading_a_DataMiner_Agent
 > [!TIP]
 > For more information on DataMiner upgrades, check out the following videos on Dojo:
 >
-> - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/)
-> - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/)
+> - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/) ![Video](~/user-guide/images/video_Duo.png)
+> - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## Before you upgrade
 
 > [!IMPORTANT]
 >
-> - Make sure your system meets the necessary [**system requirements**](https://community.dataminer.services/dataminer-compute-requirements/). Among others, upgrading to the **latest .NET version** is highly recommended.
+> - Make sure your system meets the necessary [**system requirements**](xref:DataMiner_Compute_Requirements). Among others, upgrading to the **latest .NET version** is highly recommended.
 > - To ensure a successful upgrade of your DMA, see [**Preparing to upgrade a DataMiner Agent**](xref:Preparing_to_upgrade_a_DataMiner_Agent).
 > - In case you are not upgrading to the DataMiner version that immediately follows your current version, follow the provided [**upgrade paths**](xref:Upgrade_Paths).
 > - It is strongly recommended that you **use the same version of DataMiner on all Agents in a DMS**.

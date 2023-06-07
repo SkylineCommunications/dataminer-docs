@@ -21,14 +21,6 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
 1. When the installation is complete, click *Close*.
 1. Start Microsoft Visual Studio. If it was running during the installation of the *DataMinerIntegrationStudio.vsix* file, restart it.
 1. In the DIS menu, go to *Settings > Account*, and sign in with your dataminer.services account.
-1. When you open a tool window, the following message will appear:
-
-    ```txt
-    This copy of DataMiner Integration Studio is not licensed. Please contact dataminer.licensing@skyline.be
-    ```
-
-1. Send an email to dataminer.licensing@skyline.be to request a software license.
-1. When you receive a reply from Skyline saying that your license has been activated, restart Microsoft Visual Studio.
 
 > [!NOTE]
 > The above-mentioned procedure can also be used to upgrade DataMiner Integration Studio.

@@ -49,7 +49,7 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
 ```xml
 <Session id="25" name="WebSocket Handshake">
    <Connection id="1">
-      <Request verb="GET" url="8">
+      <Request verb="GET" pid="8">
          <Headers>
             <Header key="Sec-WebSocket-Extensions" pid="9"></Header>
          </Headers>
