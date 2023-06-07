@@ -46,6 +46,6 @@ The following actions are possible in the *Workspaces* pane:
 
 > [!TIP]
 > See also:
-> - <https://community.dataminer.services/video/ruis-rapid-recap-workspaces/>
-> - <https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/>
 >
+> - [Rui’s Rapid Recap – Workspaces](https://community.dataminer.services/video/ruis-rapid-recap-workspaces/) ![Video](~/user-guide/images/video_Duo.png)
+> - [DataMiner Cube – Workspaces in DataMiner Cube](https://community.dataminer.services/video/dataminer-cube-workspaces-in-dataminer-cube/) ![Video](~/user-guide/images/video_Duo.png)

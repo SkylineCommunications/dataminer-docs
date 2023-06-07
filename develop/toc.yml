@@ -1774,11 +1774,6 @@
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
               - name: '@value'
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
-            - name: ColumnOptions
-              topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions
-              items: 
-              - name: ColumnOption
-                topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption
             - name: NamingFormat
               topicUid: Protocol.Params.Param.ArrayOptions.NamingFormat
           - name: CRC
@@ -5018,8 +5013,6 @@
               topicUid: Primary_keys1
             - name: Display keys
               topicUid: Display_keys1
-            - name: Key column description
-              topicUid: Key_column_description
             - name: Data handling
               topicUid: Data_handling
             - name: Integrity constraints
@@ -5315,8 +5308,14 @@
       topicUid: dnSpy
     - name: EBU LIST
       topicUid: EBU_Live_IP_Software_Toolkit_LIST
+    - name: Fiddler
+      topicUid: Fiddler
     - name: Interactive Automation Script Toolkit
       topicUid: Interactive_Automation_Script_Toolkit
+    - name: ManageEngine MIB Browser
+      topicUid: ManageEngine_MIB_Browser
+    - name: MySQL Workbench
+      topicUid: MySQL_Workbench
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5338,6 +5337,10 @@
             topicUid: Compilation_Time_Assembly_Binding
           - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
+    - name: Postman
+      topicUid: Postman
+    - name: RawCap
+      topicUid: RawCap
     - name: Skyline Device Simulator
       topicUid: TOOQASNMPSimulator
       items:
@@ -5407,6 +5410,8 @@
           topicUid: Updating_gitignore_and_Jenkins_file
         - name: Repository types
           topicUid: Repository_types
+    - name: SoapUI
+      topicUid: SoapUI
     - name: SourceTree
       topicUid: TOOSourceTree
       items:
@@ -5414,6 +5419,8 @@
           topicUid: Installing_SourceTree
         - name: Using SourceTree
           topicUid: Using_SourceTree
+    - name: TCPView
+      topicUid: TCPView
     - name: TortoiseSVN
       topicUid: TOOTortoiseSVN
       items:
@@ -5479,8 +5486,12 @@
           items:
             - name: StyleCop.Analyzers
               topicUid: StyleCopAnalyzers
+    - name: Visual Studio Code
+      topicUid: Visual_Studio_Code
     - name: WFetch
       topicUid: TOOWFetch
+    - name: Wireshark
+      topicUid: Wireshark
     - name: Upgrade packages
       topicUid: TOOUpgradePackageContent
       items:

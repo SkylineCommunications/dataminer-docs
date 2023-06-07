@@ -44,6 +44,18 @@ More detailed information will now be added to the `SLDBConnection.txt` log file
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
 
+#### SLLogCollector now collects more API Gateway data [ID_34967]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+SLLogCollector packages now include the following API Gateway data:
+
+- *appsettings.json*
+- DLL version
+- Health
+- Log file
+- Version
+
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -185,21 +197,61 @@ When, in the SLNetClientTest tool, you connected to a DataMiner Agent that used 
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Enhanced performance when loading service profile instances [ID_35878]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when loading service profile instances.
+
 #### SLAnalytics - Behavioral anomaly detection: Events associated with a DVE child element will no longer be linked to the DVE parent element [ID_35901]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
-
-As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
-
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
+
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
+
+#### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Up to now, alarm grouping based on parameter relationship data would only take into account relations based on change points. From now on, relations based on alarm data will also be taken into account.
+
+On systems running alarm grouping based on both parameter and alarm relationship data, the `C:\Skyline DataMiner\analytics\configuration.xml` will contain an `<item>` tag like the following. Note that `cpRelationThreshold` has been renamed to `relationThreshold` and that its value is set to 0.7 by default.
+
+Example:
+
+```xml
+<Value type="skyline::dataminer::analytics::workers::configuration::RelationVisitorConfiguration">
+   <enable>true</enable>
+   <relationThreshold>0.7</relationThreshold>
+</Value>
+```
+
+> [!CAUTION]
+> Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
+
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
 
 ### Fixes
 
@@ -283,3 +335,9 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.

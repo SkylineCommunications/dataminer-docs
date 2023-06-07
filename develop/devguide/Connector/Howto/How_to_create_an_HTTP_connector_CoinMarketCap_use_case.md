@@ -19,6 +19,7 @@ We recommend that you also read the following articles:
 
 - [Data ingest & control plane: Internal flow – HTTP](https://community.dataminer.services/documentation/data-ingest-control-plane-internal-flow-http/)
 - [How to handle XML and JSON data in QActions](xref:How_to_handle_XML_and_JSON_data_in_QActions)
+- [Fiddler](xref:Fiddler)
 
 ## About HTTP
 

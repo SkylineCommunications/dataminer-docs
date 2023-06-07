@@ -197,10 +197,7 @@ To do so
 
 ### Configuring the consistency level of Cassandra in a Cassandra Cluster database
 
-If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Customizing the consistency level of the Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#customizing-the-consistency-level-of-the-cassandra-cluster).
-
-> [!TIP]
-> See also: [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
+If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Consistency level](xref:replication_and_consistency_configuration#consistency-level).
 
 ### Example of a general database configuration
 

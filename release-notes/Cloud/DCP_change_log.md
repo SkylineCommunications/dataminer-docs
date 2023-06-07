@@ -6,6 +6,37 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
+
+A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.
+
+#### 17 May 2023 - Enhancement - CloudFeed 1.1.0 - Possibility for other processes to query the CloudFeed state [ID_35914]
+
+Other DataMiner processes can now check the state of DataMiner CloudFeed. For now, DataMiner Cube will use this to check if the Relation Learning feature is available.
+
+#### 17 May 2023 - Enhancement - CloudFeed 1.1.0 - CloudGateway as proxy for cloud connection [ID_35663]
+
+The CloudFeed process can now use CloudGateway as a proxy for the cloud connection. This way, CloudFeed can be used on systems that are not allowed to have outbound connections to the cloud.
+
+> [!NOTE]
+> For this feature to work, traffic must be allowed via port 5100 on the internal network, and DataMiner CloudGateway 2.10.0 or higher must be installed.
+
+#### 15 May 2023 - Fix - CloudGateway 2.10.11 - Reconnect in case of a canceled connection [ID_36402]
+
+In some rare cases, it could occur that when DataMiner CloudGateway encountered a canceled connection to the cloud, it did not renew the connection automatically unless the DxM was restarted manually. This issue has been resolved.
+
+#### 15 May 2023 - Enhancement - SupportAssistant 1.3.3 - Connection improvements [ID_36419]
+
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
+
+#### 15 May 2023 - Enhancement - ArtifactDeployer 1.4.6 - Connection improvements [ID_36403]
+
+A retry mechanism has been implemented to fetch the cloud endpoint. If after the retries, still no cloud endpoint can be received, the module will fall back to trying to access dataminer.services directly. If this is not possible, the module will log the failed actions.
+
+#### 11 May 2023 - Enhancement - Easier sharing of deployment records [ID_36398]
+
+When you select a deployment record on the *Deployments* page of the Admin app, the URL of the app is now updated with a query parameter referencing the ID of the deployment. This allows you to share this URL with someone to immediately show them that deployment.
+
 #### 5 May 2023 - Fix - CloudGateway 2.10.10 - Null reference exception breaking the cloud connection [ID_36346]
 
 An issue was introduced in CloudGateway 2.10.8 that could cause the cloud connection to break. This issue has now been resolved. When the issue occurred, the CloudGateway log file periodically contained the following exception:

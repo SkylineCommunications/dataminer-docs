@@ -15,10 +15,14 @@ uid: EPM_6.1.8_I-DOCSIS
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### EPM front end removed from passive logic workflow [ID_36356]
+
+To improve performance, the EPM front-end element is no longer involved in retrieving the passive data in the system.
 
 ### Fixes
 
-#### Incorrect -1 values in Nodes, Amplifier Overview, and Subscribers Overview tables [ID_36197]
+#### Huawei 5688-5800 CCAP Platform: Incorrect Percentage DS and US values [ID_36248]
 
-In the Nodes, Amplifier Overview, and Subscribers Overview tables, it could occur that the Node ID, Amplifiers ID, and Subscribers ID columns displayed the value "-1" where they were supposed to show "N/A".
+In the Interface table, it could occur that values above 100% were shown for the utilization percentage. To correct this, a new way to calculate the bitrate has been implemented, which uses the [SLC SDF Bitrate calculations library](xref:ConnectionsSnmpBitRateCalculations).
+
+With this new implementation, the following columns are no longer needed in the Interface Extended Overview and Interfaces tables: InUtilization, OutUtilization, and TotalUtilization. The latter will be renamed to Utilization.

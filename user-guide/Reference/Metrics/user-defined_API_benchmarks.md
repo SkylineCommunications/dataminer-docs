@@ -2,22 +2,22 @@
 uid: user-defined_API_benchmarks
 ---
 
-# User-defined API benchmarks
+# User-Defined APIs benchmarks
 
 ## Specifications of the test VM server
 
-- Intel Xeon E5-2620 v4
-- 8 cores
+- Intel Core Xeon E5-2620 v4
+- 8 cores (16 threads)
 - 32GB RAM
-- HDD
+- HDD (RAID)
 - Windows 10
 
 ## Specifications of the test client
 
 - Intel Core i7-12700
-- 12 cores
-- 32GB DDR-5 RAM
-- SSD
+- 12 cores (20 threads)
+- 32GB RAM
+- SSD (NVMe)
 - Windows 11
 
 ## Benchmarks

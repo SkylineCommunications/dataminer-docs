@@ -152,7 +152,7 @@ All history alarms will be deleted indiscriminately, and the Alarm Console, repo
 
 1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 
-1. Open MySQL Workbench. In the logon window, click *OK* to connect to the database using the default settings.
+1. Open [MySQL Workbench](xref:MySQL_Workbench). In the logon window, click *OK* to connect to the database using the default settings.
 
 1. Open the SLDMADB tree.
 

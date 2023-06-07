@@ -5,7 +5,7 @@ uid: Adding_a_service
 # Adding a service
 
 > [!TIP]
-> See also: <https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/>
+> See also: [Rui’s Rapid Recap – Creating a service](https://community.dataminer.services/video/ruis-rapid-recap-creating-a-service/) ![Video](~/user-guide/images/video_Duo.png)
 
 1. Right-click in the Surveyor and select *New \> Service* to add a new service.
 

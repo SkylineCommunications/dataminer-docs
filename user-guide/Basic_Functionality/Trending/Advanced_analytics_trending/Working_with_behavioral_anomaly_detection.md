@@ -12,7 +12,10 @@ uid: Working_with_behavioral_anomaly_detection
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config*.
 
 > [!TIP]
-> See also: [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
+> See also:
+>
+> - [Behavioral anomaly detection](xref:Behavioral_anomaly_detection)
+> - [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detect the changes in the behavior of a trend, also known as "change points". The following kinds of change points can be detected:
 
@@ -62,7 +65,7 @@ Please note the following regarding these icons:
 
 - If a change point is considered anomalous, the icon is displayed in red.
 
-- The selection of a particular icon is based on the change points that have occurred within a time interval specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. By default, this is set to 3600 seconds.
+- The selection of a particular icon is based on the trend data behavior and the change points that have occurred within a configurable time interval. By default, this time interval is set to 3600 seconds. Prior to DataMiner 10.0.9/10.1.0, this is specified in the *arrowWindowLength* parameter in the file *C:\\Skyline DataMiner\\Files\\SLAnalytics.config*. From DataMiner 10.0.9/10.1.0 onwards, the time interval can be configured via *System Center* > *System settings* > *analytics config*.
 
 ## Change points in trend graphs
 
