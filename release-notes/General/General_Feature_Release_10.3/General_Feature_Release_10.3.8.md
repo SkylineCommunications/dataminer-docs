@@ -19,7 +19,14 @@ uid: General_Feature_Release_10.3.8
 
 ## Other features
 
-*No other features have been added yet*
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (offline)* to manage the cloud connection of the local DataMiner Agent while it is offline.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
 ## Changes
 

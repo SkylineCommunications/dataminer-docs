@@ -527,3 +527,12 @@ Please note the following:
 Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
+
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (offline)* to manage the cloud connection of the local DataMiner Agent while it is offline.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
