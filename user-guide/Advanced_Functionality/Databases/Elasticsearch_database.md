@@ -10,8 +10,6 @@ Certain features introduced from that version of DataMiner onwards, such as the 
 
 - [Installing Elasticsearch on a DMA via DataMiner](xref:Installing_Elasticsearch_via_DataMiner)
 
-- [Installing Elasticsearch on a Linux machine](xref:Installing_Elasticsearch_on_Linux)
-
 - [Configuring Elasticsearch backups](xref:Configuring_Elasticsearch_backups)
 
 - [Configuring indexing settings in System Center](xref:Configuring_DataMiner_Indexing)

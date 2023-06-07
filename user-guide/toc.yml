@@ -1083,8 +1083,6 @@
           items:
             - name: Installing Elasticsearch on a DMA via DataMiner
               topicUid: Installing_Elasticsearch_via_DataMiner
-            - name: Installing Elasticsearch on a Linux machine
-              topicUid: Installing_Elasticsearch_on_Linux
             - name: Configuring Elasticsearch backups
               topicUid: Configuring_Elasticsearch_backups
               items:

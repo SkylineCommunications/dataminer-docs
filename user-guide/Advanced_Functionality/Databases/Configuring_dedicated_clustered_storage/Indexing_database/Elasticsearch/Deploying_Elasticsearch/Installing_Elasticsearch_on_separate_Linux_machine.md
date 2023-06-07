@@ -1,13 +1,16 @@
 ---
-uid: Installing_Elasticsearch_on_Linux
+uid: Installing_Elasticsearch_on_separate_Linux_machine
 ---
 
-# Installing Elasticsearch on a Linux machine
+# Installing Elasticsearch on a separate Linux machine
 
 If you want to use an Elasticsearch cluster for your DMS (which is required to use the [Cassandra Cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster) feature), install Elasticsearch on a Linux machine as detailed below.
 
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
+
+> [!TIP]
+> See also: [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html) in the Elasticsearch reference information.
 
 1. Install the Elasticsearch software on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) in the official Elasticsearch documentation.
 
@@ -16,7 +19,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
    - There is a default firewall on Linux, but this is disabled by default. To enable the firewall, use the following command:
 
      `$ sudo ufw enable`
-     
+
      > [!IMPORTANT]
      > If you connect to your linux server with SSH, you must immediately exclude port 22 or you will be locked out of the session.
      >
@@ -30,18 +33,18 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
         `$ sudo ufw allow from [IP node 3] to [IP node 1] proto tcp port 9200,9300`
 
-     - Commands node 2:
+      - Commands node 2:
 
        `$ sudo ufw allow from [IP node 1] to [IP node 2] proto tcp port 9200,9300`
 
        `$ sudo ufw allow from [IP node 3] to [IP node 2] proto tcp port 9200,9300`
 
-     - Commands node 3:
+      - Commands node 3:
 
        `$ sudo ufw allow from [IP node 1] to [IP node 3] proto tcp port 9200,9300`
 
        `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 9200,9300`
-       
+
    - Make sure all DMAs in the DMS can connect to port 9200,9300:
 
      - Commands DMA 1:
@@ -88,9 +91,9 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
    - To change *elasticsearch.yml* files, you can use the following command:
 
      `$ vi /etc/elasticsearch/elasticsearch.yml`
-     
-> [!TIP]
-> To know more about vi editor visit What is vi(https://www.cs.colostate.edu/helpdocs/vi.html).
+
+     > [!TIP]
+     > For more information about vi editor, see [What is vi](https://www.cs.colostate.edu/helpdocs/vi.html).
 
    - Make the following adjustments in the *elasticsearch.yml* file based on your setup:
 
@@ -100,10 +103,10 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
      - **path.data**: The location(s) where you want to store the data.
 
-     - **path.repo**: The location(s) where you want to store the Snapshots.
-     
-     > [!TIP]
-     > For information about taking and restoring snapshots, refer to Taking and Restoring Snapshots(xref:Configuring_Elasticsearch_backups_Windows_Linux)
+     - **path.repo**: The location(s) where you want to store the snapshots.
+
+       > [!TIP]
+       > For information about taking and restoring snapshots, see [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux).
 
      - **bootstrap.memory_lock**: Set this to *true*.
 
@@ -136,9 +139,8 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
 1. Set the maximum Java Heap Size under */etc/elasticsearch/jvm.options*. For more information, see [Setting the heap size](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/heap-size.html).
 
-       > [!NOTE]
-       >
-       > - Elasticsearch uses quite a bit of memory and atleat 8Gb of Heap size should be specified, more could be required depending on the system demands. 
+   > [!NOTE]
+   > Elasticsearch can use quite a bit of memory. At least 8 Gb of heap size should be specified. More could be required depending your system.
 
 1. Start Elasticsearch and evaluate if the service is up and running.
 
