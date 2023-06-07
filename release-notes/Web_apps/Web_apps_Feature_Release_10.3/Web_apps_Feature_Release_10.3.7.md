@@ -124,6 +124,8 @@ From now on, when table data is refetched with a trigger or an action, the rows 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.

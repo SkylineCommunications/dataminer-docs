@@ -279,9 +279,19 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
 ### Fixes
 

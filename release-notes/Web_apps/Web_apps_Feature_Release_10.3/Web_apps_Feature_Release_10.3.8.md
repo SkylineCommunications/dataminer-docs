@@ -40,6 +40,14 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
 
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
