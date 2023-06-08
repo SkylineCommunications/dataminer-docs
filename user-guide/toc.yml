@@ -1169,8 +1169,8 @@
                       topicUid: Moving_MySQL_data_to_another_location
                     - name: Configuring the SQL database settings
                       topicUid: Configuring_MySQL_database_in_Cube
-            - name: Configuring an indexing database per DMA
-              topicUid: Configuring_indexing_database_per_DMA
+            - name: Configuring an indexing database per DMS
+              topicUid: Configuring_indexing_database_per_DMS
               items:
                 - name: Deploying the dedicated Elasticsearch indexing database
                   topicUid: Installing_Elasticsearch_via_DataMiner
