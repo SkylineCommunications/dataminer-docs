@@ -150,6 +150,9 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 
 As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applications in Azure AD when setting up external authentication. When you create regular App registrations, certain features will not be available.
 
+> [!NOTE]
+> Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.
+
 1. In Azure AD, register DataMiner as an Enterprise Application:
 
    1. Navigate to ``portal.azure.com`` and log in.
