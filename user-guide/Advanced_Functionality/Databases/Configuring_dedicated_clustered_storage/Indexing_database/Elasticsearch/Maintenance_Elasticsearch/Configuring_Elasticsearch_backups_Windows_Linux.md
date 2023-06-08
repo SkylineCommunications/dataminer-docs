@@ -68,7 +68,7 @@ Examples:
      > [!NOTE]
      >
      > - As this setup might be more challenging, we recommend that you set it up in advance.
-     > - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup.
+     > - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup. For the machines that will act as NFS servers, make sure the firewall allows NFS traffic. You can use the following command for this: *sudo ufw allow nfs*. After this, you can for example mount the folder on the NFS Ubuntu clients referencing it using the command *sudo mount ip-address:pathofyoursharedserverfolder pathofyourclientfolder*.
      > - Make sure the Elasticsearch user has enough rights to the folder to read, write, and execute its contents.
 
      > [!TIP]
