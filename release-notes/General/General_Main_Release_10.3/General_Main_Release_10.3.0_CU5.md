@@ -49,6 +49,14 @@ Up to now, that error message would contain the ID of the parameter in octal for
 
 Up to now, the factory reset tool *SLReset.exe* would log an exception each time it had tried to delete a non-existing folder. From now on, when it has to delete a folder, it will first check whether that folder exists. If not, it will not try to delete it.
 
+#### SNMP tables can now contain columns of type 'retrieved' next to columns of type 'snmp' [ID_36559]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, problems could occur when an SNMP table also contained columns of type "retrieved" next to columns of type "snmp".
+
+From now on, an SNMP table can contain columns of both types, providing the primary key column is a column of type "snmp" and not a column of type "retrieved".
+
 ### Fixes
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
