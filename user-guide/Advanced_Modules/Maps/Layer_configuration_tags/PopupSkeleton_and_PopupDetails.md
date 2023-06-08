@@ -4,16 +4,16 @@ uid: PopupSkeleton_and_PopupDetails
 
 # PopupSkeleton and PopupDetails
 
-In the *\<PopupSkeleton>* and *\<PopupDetails>* tags, you can specify the contents of the balloon that will appear when you click a marker.
+In the `<PopupSkeleton>` and `<PopupDetails>` tags, you can specify the contents of the balloon that will appear when you click a marker.
 
 ## PopupSkeleton
 
-In the *\<PopupSkeleton>* tag, specify all fixed content, including the necessary placeholders for variable data. Use HTML syntax inside a CDATA tag and put the placeholders between square brackets.
+In the `<PopupSkeleton>` tag, specify all fixed content, including the necessary placeholders for variable data. Use HTML syntax inside a CDATA tag and put the placeholders between square brackets.
 
 > [!NOTE]
 >
 > - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
-> - From DataMiner 9.5.2 onwards, the placeholders \[latitude\], \[longitude\] and \[alarmstate\] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
+> - From DataMiner 9.5.2 onwards, the placeholders [latitude], [longitude] and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
 > - From DataMiner 9.5.4 onwards, you can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
 
 > [!TIP]
@@ -22,7 +22,7 @@ In the *\<PopupSkeleton>* tag, specify all fixed content, including the necessar
 
 ## PopupDetails
 
-In the *\<PopupDetails>* tag, add a *\<Detail>* tag for every placeholder used in the *\<PopupSkeleton>* tag.
+In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in the `<PopupSkeleton>` tag.
 
 ### Attributes of the Detail tag
 
@@ -32,14 +32,14 @@ In the *\<PopupDetails>* tag, add a *\<Detail>* tag for every placeholder used i
 | alias | The alias of an element in a service.<br>Allows detail placeholders. |
 | detailVars | A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders. See [Placeholders](#placeholders).<br>Available from DataMiner 9.5.2 onwards. |
 | element | Either an element ID (DMA ID/Element ID) or an element name.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards. |
-| elementVar | Can be used to refer to URL parameters, similar to when this attribute is used in the \<*ParametersSourceInfo>* tag, for example. See [elementVar](xref:ParametersSourceInfo#elementvar). |
+| elementVar | Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example. See [elementVar](xref:ParametersSourceInfo#elementvar). |
 | idx | The index of a table parameter.<br>Allows detail placeholders. |
-| name | The name of the corresponding placeholder in the *\<PopupSkeleton>* tag. |
+| name | The name of the corresponding placeholder in the `<PopupSkeleton>` tag. |
 | parameter | A parameter ID.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards.<br>From DataMiner 9.6.13 onwards, enhanced services parameters can be specified with this attribute. |
 | pid | A parameter ID. |
 | property | The name of a property.<br>Allows detail placeholders. |
 | service | A service ID (dmaId/serviceId) or a service name.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards. |
-| serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the \<*ParametersSourceInfo>* tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
+| serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the \<*ParametersSourceInfo>` tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
 | view | A view ID or a view name preceded by a dot (“.”).<br>Available from DataMiner 9.5.2 onwards. |
 | type | See [Type overview](#type-overview). |
 
@@ -61,21 +61,21 @@ The following table provides an overview of the different possible values for th
 
 ### Specific PopDetails configurations
 
-In each *\<Detail>* tag, the attributes that should be specified depend on what is to be retrieved:
+In each `<Detail>` tag, the attributes that should be specified depend on what is to be retrieved:
 
 - To retrieve cell values from the currently selected dynamic table row, in case of a layer of sourceType “table”, use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *parameter_samerow* |
   | pid       | The column ID |
 
-- To retrieve property values belonging to the current element, service or view, in case of a layer of sourceType “properties”, use the following configuration for the *\<PopupDetail>* tags:
+- To retrieve property values belonging to the current element, service or view, in case of a layer of sourceType “properties”, use the following configuration for the `<PopupDetail>` tags:
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *property* |
   | property  | The name of the property that is to be retrieved |
 
@@ -83,7 +83,7 @@ In each *\<Detail>* tag, the attributes that should be specified depend on what 
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *parameter* |
   | pid       | The ID of the parameter that is to be retrieved. For a table parameter, this should be the column ID. |
   | idx       | The row index, in case the parameter is a table parameter. (Optional) |
@@ -92,7 +92,7 @@ In each *\<Detail>* tag, the attributes that should be specified depend on what 
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *parameter* |
   | pid       | The ID of the parameter that is to be retrieved. For a table parameter, this should be the column ID. |
   | idx       | The row index, in case the parameter is a table parameter. (Optional) |
@@ -101,7 +101,7 @@ In each *\<Detail>* tag, the attributes that should be specified depend on what 
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *property_elementalias* |
   | alias     | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
   | property  | The name of the property that is to be retrieved |
@@ -110,14 +110,14 @@ In each *\<Detail>* tag, the attributes that should be specified depend on what 
 
   | Attribute | Value |
   |-----------|-------|
-  | name      | Name of the corresponding placeholder in the *\<PopupSkeleton>* tag |
+  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *parameter_elementalias* |
   | alias     | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
   | pid       | The ID of the parameter that is to be retrieved. |
 
 ## Placeholders
 
-The following placeholders do not need to be defined in *\<Detail>* tags. They are always available (depending on the context):
+The following placeholders do not need to be defined in `<Detail>` tags. They are always available (depending on the context):
 
 | Placeholder    | Description                  |
 |----------------|------------------------------|
@@ -153,7 +153,7 @@ To determine the detail source, the following items are checked (in this order):
 > [!NOTE]
 > It is not possible to use a URL parameter like myElement or myService as a detail placeholder in the *detailVars* attribute.
 >
-> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a *\<ViewFilter>* subtag within the *\<Details>* tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: *ViewFilter includeSubViews="true" idVar="myView"/>*. A similar *\<ViewFilter>* subtag can be used in the *\<PropertiesSourceInfo>* tag. For more information, refer to [idVar](xref:PropertiesSourceInfo#idvar).
+> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, refer to [idVar](xref:PropertiesSourceInfo#idvar).
 
 ## Examples of PopupSkeleton and PopupDetails configuration
 
@@ -236,15 +236,15 @@ An example of a marker balloon containing a map layer:
 ```
 
 > [!NOTE]
-> The layer name can also be a placeholder for a variable defined in the *\<PopupDetails>* section.
+> The layer name can also be a placeholder for a variable defined in the `<PopupDetails>` section.
 >
-> Example: *\<a href=”#” class=”showlayer”>\<small>\[Network\]\</small>\</a>*
+> Example: `<a href=”#” class=”showlayer”><small>[Network]</small></a>`
 
 ### Showing values returned by an SQL query
 
 On a layer of sourceType “sql”, you can show marker balloons containing values returned by an SQL query.
 
-The “column” attributes of the *\<Detail>* tags have to contain name of columns in the SQL query result.
+The “column” attributes of the `<Detail>` tags have to contain name of columns in the SQL query result.
 
 > [!NOTE]
 > The SQL query has to return unique PrimaryKey values.
@@ -330,7 +330,7 @@ Refer to that variable in the configuration file:
 
 #### Putting the data element in the same view as the marker element
 
-Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use *\<Detail>* tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
+Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use `<Detail>` tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
 
 ```xml
 <PopupDetails>
@@ -408,7 +408,7 @@ In the following example, the contents of columns 7002, 7005 and 7006 from table
 
 ### Navigating to EPM information from a map using JavaScript
 
-From DataMiner 9.5.1 onwards, you can configure the *\<PopupSkeleton>* tag so that a user can navigate from the pop-up balloon to the EPM interface or display particular EPM information from the pop-up balloon.
+From DataMiner 9.5.1 onwards, you can configure the `<PopupSkeleton>` tag so that a user can navigate from the pop-up balloon to the EPM interface or display particular EPM information from the pop-up balloon.
 
 To do so, you can use the following JavaScript methods:
 
