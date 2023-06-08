@@ -13,8 +13,8 @@ In the `<PopupSkeleton>` tag, specify all fixed content, including the necessary
 > [!NOTE]
 >
 > - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
-> - From DataMiner 9.5.2 onwards, the placeholders [latitude], [longitude] and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
-> - From DataMiner 9.5.4 onwards, you can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
+> - The placeholders [latitude], [longitude] and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
+> - You can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
 
 > [!TIP]
 > See also:
@@ -28,19 +28,19 @@ In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in 
 
 | Attribute | Value / Description |
 |-----------|---------------------|
-| alarmFilter | The name of a predefined DataMiner Cube alarm filter.<br>Available from DataMiner 9.5.2 onwards.<br>If you specify “alarmcount” in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g. retrieve only the number of critical alarms. |
+| alarmFilter | The name of a predefined DataMiner Cube alarm filter.<br>If you specify “alarmcount” in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g. retrieve only the number of critical alarms. |
 | alias | The alias of an element in a service.<br>Allows detail placeholders. |
-| detailVars | A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders. See [Placeholders](#placeholders).<br>Available from DataMiner 9.5.2 onwards. |
-| element | Either an element ID (DMA ID/Element ID) or an element name.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards. |
+| detailVars | A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders. See [Placeholders](#placeholders). |
+| element | Either an element ID (DMA ID/Element ID) or an element name.<br>Allows detail placeholders. |
 | elementVar | Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example. See [elementVar](xref:ParametersSourceInfo#elementvar). |
 | idx | The index of a table parameter.<br>Allows detail placeholders. |
 | name | The name of the corresponding placeholder in the `<PopupSkeleton>` tag. |
-| parameter | A parameter ID.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards.<br>From DataMiner 9.6.13 onwards, enhanced services parameters can be specified with this attribute. |
+| parameter | A parameter ID.<br>Allows detail placeholders. With this attribute, you can also specify enhanced services parameters. |
 | pid | A parameter ID. |
 | property | The name of a property.<br>Allows detail placeholders. |
-| service | A service ID (dmaId/serviceId) or a service name.<br>Allows detail placeholders.<br>Available from DataMiner 9.5.2 onwards. |
+| service | A service ID (dmaId/serviceId) or a service name.<br>Allows detail placeholders. |
 | serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the \<*ParametersSourceInfo>` tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
-| view | A view ID or a view name preceded by a dot (“.”).<br>Available from DataMiner 9.5.2 onwards. |
+| view | A view ID or a view name preceded by a dot (“.”). |
 | type | See [Type overview](#type-overview). |
 
 #### Type overview
@@ -51,11 +51,11 @@ The following table provides an overview of the different possible values for th
 |------------|-------------|
 | *element/\[element subtype\]*<br>*viewelement/\[element subtype\]*<br>*elementalias/\[element subtype\]* | Instead of *\[element subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: Element ID (format: dmaId/elementId).<br>- *name*: Element name.<br>- *parameter*/*\[parameter subtype\]*: A parameter detail. For more information on the possible details that can be retrieved, refer to the *parameter* type lower in this table.<br>- property: A property of the element.<br>- *alarmcount*: The number of alarms linked to the element.<br>- *alarmstate*: The current alarm state of the element. |
 | *marker/\[marker subtype\]* | This type can be used to retrieve element, parameter, service or view information, depending on the actual marker type. Instead of *\[marker subtype\],* depending on what should be retrieved, specify the following:<br>- *id*: The ID of the element/parameter/service/view.<br>- *name*: The name of the element/parameter/service/view.<br>- *alarmcount*: The number of alarms linked to the element/parameter/service/view.<br>- *alarmstate*: The current alarm state of the element/parameter/service/view. |
-| *parameter/\[parameter subtype\]* | When retrieving a parameter value of an element, only *parameter* needs to be specified (see [Specific PopDetails configurations](#specific-popdetails-configurations)).<br>The following can be specified instead of \[parameter subtype\]:<br>- *value*: The parameter value.<br>- *name*: The parameter name.<br>- *alarmcount*: The number of alarms linked to the parameter.<br>- *alarmstate*: The current alarm state of the parameter. |
-| *parameter_elementalias* | Used when retrieving a parameter of a child element of a service on the map (see [Specific PopDetails configurations](#specific-popdetails-configurations)). |
-| *parameter_samerow* | Used to retrieve cell values from a dynamic table row (see [Specific PopDetails configurations](#specific-popdetails-configurations)). |
-| *property* | Used when retrieving a property for a particular element, service or view (see [Specific PopDetails configurations](#specific-popdetails-configurations)). |
-| *property_elementalias* | Used when retrieving a property of a child element of a service on the map (see [Specific PopDetails configurations](#specific-popdetails-configurations)). |
+| *parameter/\[parameter subtype\]* | When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations).<br>The following can be specified instead of \[parameter subtype\]:<br>- *value*: The parameter value.<br>- *name*: The parameter name.<br>- *alarmcount*: The number of alarms linked to the parameter.<br>- *alarmstate*: The current alarm state of the parameter. |
+| *parameter_elementalias* | Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
+| *parameter_samerow* | Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
+| *property* | Used when retrieving a property for a particular element, service or view. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
+| *property_elementalias* | Used when retrieving a property of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
 | *service/\[service subtype\]* | Instead of *\[service subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: The service ID (format: dmaId/serviceId).<br>- *name*: The service name.<br>- *property*: A property of the service.<br>- *alarmcount*: The number of alarms linked to the service.<br>- *alarmstate*: The current alarm state of the service. |
 | *view/\[view subtype\]* | Instead of *\[view subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: The view ID.<br>- *name*: The view name.<br>- *property*: A property of the view.<br>- *alarmcount*: The number of alarms linked to the view.<br>- *alarmstate*: The current alarm state of the view. |
 
@@ -88,16 +88,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | pid       | The ID of the parameter that is to be retrieved. For a table parameter, this should be the column ID. |
   | idx       | The row index, in case the parameter is a table parameter. (Optional) |
 
-- Up to DataMiner 9.0.2, to retrieve parameter values belonging to an service, in case of a layer of sourceType “parameters”, use the following configuration:
-
-  | Attribute | Value |
-  |-----------|-------|
-  | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
-  | type      | *parameter* |
-  | pid       | The ID of the parameter that is to be retrieved. For a table parameter, this should be the column ID. |
-  | idx       | The row index, in case the parameter is a table parameter. (Optional) |
-
-- From DataMiner 9.0.3 onwards, to show property values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
+- To show property values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -106,7 +97,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | alias     | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
   | property  | The name of the property that is to be retrieved |
 
-- From DataMiner 9.0.3 onwards, to show parameter values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
+- To show parameter values from an element included in a service on the map, in case of a layer of sourceType “properties” or “parameters”, use the following configuration:
 
   | Attribute | Value |
   |-----------|-------|
@@ -153,7 +144,7 @@ To determine the detail source, the following items are checked (in this order):
 > [!NOTE]
 > It is not possible to use a URL parameter like myElement or myService as a detail placeholder in the *detailVars* attribute.
 >
-> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, refer to [idVar](xref:PropertiesSourceInfo#idvar).
+> To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, see [idVar](xref:PropertiesSourceInfo#idvar).
 
 ## Examples of PopupSkeleton and PopupDetails configuration
 
