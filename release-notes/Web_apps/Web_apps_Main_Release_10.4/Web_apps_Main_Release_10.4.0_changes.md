@@ -491,3 +491,9 @@ When you installed a DataMiner web upgrade for version 10.3.5 or newer on a serv
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
+
+#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
