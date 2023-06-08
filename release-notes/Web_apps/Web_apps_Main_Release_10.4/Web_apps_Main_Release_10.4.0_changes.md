@@ -497,3 +497,9 @@ When a pie chart or a bar chart on a volatile dashboard had its settings changed
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
+
+#### Dashboards app & Low-Code Apps - Generic Map component: Problem when fetching layer type settings before a map was loaded [ID_36617]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+An error would be thrown when the layer type settings of a map were fetched before the map itself had finished loading.
