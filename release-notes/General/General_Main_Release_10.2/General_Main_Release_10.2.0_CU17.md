@@ -51,13 +51,13 @@ Up to now, that error message would contain the ID of the parameter in octal for
 
 Up to now, the factory reset tool *SLReset.exe* would log an exception each time it had tried to delete a non-existing folder. From now on, when it has to delete a folder, it will first check whether that folder exists. If not, it will not try to delete it.
 
-#### SNMP tables can now contain columns of type 'retrieved' next to columns of type 'snmp' [ID_36559]
+#### SNMP tables: Columns of type 'retrieved' can now be placed in between columns of type 'snmp' [ID_36559]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
-Up to now, problems could occur when an SNMP table also contained columns of type "retrieved" next to columns of type "snmp".
+Up to now, when an SNMP table had columns of type "retrieved" in between columns of type "snmp", problems could occur. All columns of type "retrieved" had to be grouped and placed at the right of the columns of type "snmp".
 
-From now on, an SNMP table can contain columns of both types, providing the primary key column is a column of type "snmp" and not a column of type "retrieved".
+From now on, in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp", providing the primary key column is a column of type "snmp" and not a column of type "retrieved".
 
 ### Fixes
 
