@@ -480,11 +480,11 @@ For more information, refer to Skyline.DataMiner.Net.Messages.
 
 ## Implementing the IDisposable interface
 
-From DataMiner 10.2.9 onwards (RN 33965), DataMiner detects whether the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface is implemented on non-static QAction classes with a non-static entry point method. DataMiner will then call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method when the QAction instance is released (i.e. when the element is stopped, removed, or restarted).
+From DataMiner 10.2.9 onwards (RN 33965), DataMiner will call the [Dispose](https://learn.microsoft.com/en-us/dotnet/api/system.idisposable.dispose) method of the [IDisposable](https://docs.microsoft.com/en-us/dotnet/api/system.idisposable) interface when a QAction instance is released (i.e. when the element is stopped, removed, or restarted) if this interface is implemented on the QAction class.
 
 > [!NOTE]
 >
-> - DataMiner will only create an instance of the class containing the entry point method if this method is not a static method (see [Instance entry methods](xref:LogicQActions#instance-entry-methods)). Therefore, if you want to make use of the IDisposable functionality, make sure you use a non-static entry point method so that an instance gets created.
+> - DataMiner will only create an instance of a class containing an entry point method if this method is not a static method (see [Instance entry methods](xref:LogicQActions#instance-entry-methods)). Therefore, if you want to make use of the IDisposable functionality, make sure you use a non-static entry point method so that an instance gets created.
 > - This also applies to any other class the entry point may be in (see [Multiple entry methods](xref:LogicQActions#multiple-entry-methods)).
 > - This coincides with the IsActive property of the SLProtocol interface being set to false, which prevents further function calls to the object from being executed.
 > - The Dispose method is called by a separate thread than the one stopping the element. Its purpose is to release lingering resources and connections when the element is stopped.
