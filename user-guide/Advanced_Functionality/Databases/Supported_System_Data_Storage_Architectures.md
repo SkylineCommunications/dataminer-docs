@@ -4,7 +4,7 @@ uid: Supported_system_data_storage_architectures
 
 # Supported system data storage architectures
 
-Usually, DataMiner uses a Cassandra and Elasticsearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems. For more information, see [Data Storage Architecture](https://community.dataminer.services/data-storage-architecture/).
+Usually, DataMiner uses a Cassandra and Elasticsearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems. For more information, see [Data Storage Architecture](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Databases_about.html).
 
 For the system data storage, different setups are supported, as described below. In these setups, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
