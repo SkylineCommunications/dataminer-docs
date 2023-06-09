@@ -39,7 +39,7 @@ In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in 
 | pid | A parameter ID. |
 | property | The name of a property.<br>Allows detail placeholders. |
 | service | A service ID (dmaId/serviceId) or a service name.<br>Allows detail placeholders. |
-| serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the \<*ParametersSourceInfo>` tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
+| serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
 | view | A view ID or a view name preceded by a dot (“.”). |
 | type | See [Type overview](#type-overview). |
 
@@ -49,8 +49,8 @@ The following table provides an overview of the different possible values for th
 
 | Type value | Description |
 |------------|-------------|
-| *element/\[element subtype\]*<br>*viewelement/\[element subtype\]*<br>*elementalias/\[element subtype\]* | Instead of *\[element subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: Element ID (format: dmaId/elementId).<br>- *name*: Element name.<br>- *parameter*/*\[parameter subtype\]*: A parameter detail. For more information on the possible details that can be retrieved, refer to the *parameter* type lower in this table.<br>- property: A property of the element.<br>- *alarmcount*: The number of alarms linked to the element.<br>- *alarmstate*: The current alarm state of the element. |
-| *marker/\[marker subtype\]* | This type can be used to retrieve element, parameter, service or view information, depending on the actual marker type. Instead of *\[marker subtype\],* depending on what should be retrieved, specify the following:<br>- *id*: The ID of the element/parameter/service/view.<br>- *name*: The name of the element/parameter/service/view.<br>- *alarmcount*: The number of alarms linked to the element/parameter/service/view.<br>- *alarmstate*: The current alarm state of the element/parameter/service/view. |
+| *element/\[element subtype\]*<br>*viewelement/\[element subtype\]*<br>*elementalias/\[element subtype\]* | Instead of *\[element subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: Element ID (format: dmaId/elementId).<br>- *name*: Element name.<br>- *parameter*/*\[parameter subtype\]*: A parameter detail. For more information on the possible details that can be retrieved, refer to the *parameter* type lower in this table.<br>- *property*: A property of the element.<br>- *alarmcount*: The number of alarms linked to the element.<br>- *alarmstate*: The current alarm state of the element. |
+| *marker/\[marker subtype\]* | This type can be used to retrieve element, parameter, service, or view information, depending on the actual marker type. Instead of *\[marker subtype\],* depending on what should be retrieved, specify the following:<br>- *id*: The ID of the element/parameter/service/view.<br>- *name*: The name of the element/parameter/service/view.<br>- *alarmcount*: The number of alarms linked to the element/parameter/service/view.<br>- *alarmstate*: The current alarm state of the element/parameter/service/view. |
 | *parameter/\[parameter subtype\]* | When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations).<br>The following can be specified instead of \[parameter subtype\]:<br>- *value*: The parameter value.<br>- *name*: The parameter name.<br>- *alarmcount*: The number of alarms linked to the parameter.<br>- *alarmstate*: The current alarm state of the parameter. |
 | *parameter_elementalias* | Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
 | *parameter_samerow* | Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
@@ -110,17 +110,17 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
 
 The following placeholders do not need to be defined in `<Detail>` tags. They are always available (depending on the context):
 
-| Placeholder    | Description                  |
-|----------------|------------------------------|
-| \[dmaid\]      | Dataminer ID                 |
-| \[eid\]        | Element ID                   |
-| \[sid\]        | Service ID                   |
-| \[viewid\]     | View ID                      |
-| \[pid\]        | Parameter ID                 |
-| \[primarykey\] | Primary key of the parameter |
-| \[dispkey\]    | Display key of the parameter |
+| Placeholder  | Description                  |
+|--------------|------------------------------|
+| [dmaid]      | Dataminer ID                 |
+| [eid]        | Element ID                   |
+| [sid]        | Service ID                   |
+| [viewid]     | View ID                      |
+| [pid]        | Parameter ID                 |
+| [primarykey] | Primary key of the parameter |
+| [dispkey]    | Display key of the parameter |
 
-If you wish to use another detail placeholder in a suitable \<Detail> tag attribute, that detail placeholder needs to be defined and included in the *detailVars* attribute (available from DataMiner 9.5.2 onwards). See the following example:
+If you wish to use another detail placeholder in a suitable `<Detail>` tag attribute, that detail placeholder needs to be defined and included in the *detailVars* attribute. See the following example:
 
 ```xml
 <PopupDetails>
@@ -363,7 +363,7 @@ On the map, the above-mentioned code will be rendered in the following way.
 
 ### Displaying EPM tables in a marker pop-up balloon
 
-In the following example, the contents of columns 7002, 7005 and 7006 from table 7000 will be displayed in divisions #CM, #eMTA and #STB respectively, and filtered based on the content of column 7003, which will be compared against the value of the “data-cpe-type” attribute.
+In the following example, the contents of columns 7002, 7005, and 7006 from table 7000 will be displayed in divisions #CM, #eMTA, and #STB respectively, and they will be filtered based on the content of column 7003, which will be compared against the value of the “data-cpe-type” attribute.
 
 ```xml
 <PopupSkeleton>
@@ -399,7 +399,7 @@ In the following example, the contents of columns 7002, 7005 and 7006 from table
 
 ### Navigating to EPM information from a map using JavaScript
 
-From DataMiner 9.5.1 onwards, you can configure the `<PopupSkeleton>` tag so that a user can navigate from the pop-up balloon to the EPM interface or display particular EPM information from the pop-up balloon.
+It is possible to configure the `<PopupSkeleton>` tag so that a user can navigate from the pop-up balloon to the EPM interface or display particular EPM information from the pop-up balloon.
 
 To do so, you can use the following JavaScript methods:
 
