@@ -118,7 +118,7 @@ sudo rm -f *pem
 
 ##### Configure users
 
-Generate a new hash for the admin user using [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) section in the OpenSearch help. As the help indicated, remove all demo users except the *admin* user an replace the hash for admin with the generated hash.
+Generate a new hash for the admin user using [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) section in the OpenSearch help. As the help indicated, remove all demo users except the *admin* user and replace the hash for admin with the generated hash.
 
 #### TLS configuration
 
