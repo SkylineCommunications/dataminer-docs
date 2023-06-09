@@ -76,4 +76,4 @@ Processing of property updates has now been improved. `[property:]` placeholders
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
-When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, in some cases, that history tab page would load rather slowly and would be missing some alarms.
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
