@@ -4,7 +4,7 @@ uid: Supported_system_data_storage_architectures
 
 # Supported system data storage architectures
 
-Usually, DataMiner uses a Cassandra and Elasticsearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems. For more information, see [Data Storage Architecture](https://community.dataminer.services/data-storage-architecture/).
+Usually, DataMiner uses a Cassandra and Elasticsearch database for system data storage. Other data storage solutions can be added optionally, for example to offload data from the DataMiner System and to make it available for third-party systems.
 
 For the system data storage, different setups are supported, as described below. In these setups, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
@@ -145,7 +145,7 @@ Several possible setups are illustrated below.
 
 ## Separate Cassandra setup without Elasticsearch
 
-This architecture is currently still supported, though it is **not recommended**. In this case, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No Elasticsearch database is used, which means that certain DataMiner features will not be available. For more information, see [Data Storage Architecture](https://community.dataminer.services/data-storage-architecture/).
+This architecture is currently still supported, though it is **not recommended**. In this case, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). No Elasticsearch database is used, which means that certain DataMiner features will not be available.
 
 > [!TIP]
 > For information on how to migrate a legacy setup with MySQL/MSSQL database to Cassandra, see [Migrating the general database to Cassandra](xref:Migrating_the_general_database_to_Cassandra).
