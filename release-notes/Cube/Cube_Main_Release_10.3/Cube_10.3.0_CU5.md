@@ -43,3 +43,9 @@ From now on, the scope will be updated correctly whenever changes are made to th
 When you selected an agent in the *Agents* section of *System Center*, in some cases, the alarm numbers shown in the *Show agent alarms* link would not be correct.
 
 Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, in some cases, that history tab page would load rather slowly and would be missing some alarms.

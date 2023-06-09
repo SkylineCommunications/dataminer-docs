@@ -71,3 +71,9 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, in some cases, that history tab page would load rather slowly and would be missing some alarms.
