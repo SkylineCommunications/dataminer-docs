@@ -800,6 +800,16 @@ From DataMiner 9.6.8 onwards, this placeholder can be used to calculate datetime
 
 By default, datetime and time span values will be displayed in the regional date/time format. If you want such a value to be displayed in another format, then specify the format inside the placeholder, for example: *\[Subtract:23:33:15,00:03:15\|Format=HH:mm\]*
 
+Since DataMiner 10.3.8, the subtract placeholder also supports numerics as well. Just like with time spans, you can subtract consecutive numbers from the first number.
+
+- Subtracting one number from another:
+
+    \[Subtract:10,3\]
+
+- Subtracting multiple numbers from the first number:
+
+    \[Subtract:10.1,3.3, 2.6\]
+
 ### \[Sum:X,Y,Z\]
 
 Available from DataMiner 9.5.8 onwards.
