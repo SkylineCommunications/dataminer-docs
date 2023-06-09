@@ -36,7 +36,7 @@ These are the main steps of the setup:
 
 1. Install OpenSearch as detailed under [Install OpenSearch from an APT repository](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#install-opensearch-from-an-apt-repository).
 
-1. Follow [Step 2:(Optional) Test OpenSearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-2-optional-test-opensearch) from the installation guide. Remember to also **query the plugins endpoint**.
+1. Follow [Step 2: (Optional) Test OpenSearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-2-optional-test-opensearch) from the installation guide. Remember to also **query the plugins endpoint**.
 
 1. Follow [Step 3: Set up OpenSearch in your environment](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-3-set-up-opensearch-in-your-environment) and change the *JVM Heap Space*.
 
@@ -104,15 +104,18 @@ These are the main steps of the setup:
   node.roles: [ cluster_manager ]
   ```
 
-##### Configure users
+#### User configuration
 
-Generate a new hash for the admin user using [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) section in the OpenSearch help. As the help indicated, remove all demo users except the *admin* user and replace the hash for admin with the generated hash.
+Generate a new hash for the admin user as detailed under [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) in the OpenSearch documentation.
+
+You will need to remove all demo users except the *admin* user and replace the hash for the admin user with the generated hash.
 
 #### TLS configuration
 
 We highly recommend that you configure TLS in order to have a layer of security between your nodes and your DataMiner client. To do so:
 
-1. [Remove the demo certificates](#remove-the-demo-certificates), that came with the default installation
+1. [Remove the demo certificates](#remove-the-demo-certificates) that came with the default installation.
+
 1. [Generate p12 keystore and truststore p12 files](#generate-p12-keystore-and-truststore-p12-files).
 
 1. [Update the trusted root certificates with rootCA.crt](#update-the-trusted-root-certificates-with-rootcacrt).
@@ -125,9 +128,9 @@ We highly recommend that you configure TLS in order to have a layer of security 
 
 ##### Remove the demo certificates
 
-By default OpenSearch comes with .pem files with demo certificates. For security reasons it is best to remove those demo-certificates.
+By default OpenSearch comes with .pem files with demo certificates. For security reasons, it is best to remove these demo certificates.
 
-You can remove the demo certificates located in /etc/opensearch:
+You can remove the demo certificates located in `\etc\opensearch`:
 
 ```bash
 cd /etc/opensearch
@@ -245,7 +248,7 @@ indices.query.bool.max_clause_count: 2147483647
 
 ##### Restart OpenSearch
 
-1. When you have finished the TLS configuration and set a different hash for the admin user, see [Configure users](#configure-users), then restart OpenSearch. You can use the following command for this.
+1. When you have finished the TLS configuration and [set a different hash for the admin user](#user-configuration), restart OpenSearch. You can use the following command for this:
 
    ```bash
    sudo systemctl restart opensearch
@@ -285,7 +288,7 @@ Optionally, you can set up OpenSearch Dashboards, which is the equivalent of Kib
 
 You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`(example: http(s)://166.206.186.146:5601).
 
-To configure TLS, instead of using .pem certificates as recommended in the [OpenSearch documentation](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/), we recommend using .p12 files for trust and keystore. You can generate these using the [Generate TLS Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script maintained by the Skyline security team.
+To configure TLS, instead of using .pem certificates as recommended in the [OpenSearch documentation](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/), we recommend using .p12 files for trust and keystore. You can generate these using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script maintained by the Skyline security team.
 
 To configure OpenSearch Dashboards to use .p12 files, add the following to `/etc/opensearch-dashboards/opensearch_dashboards.yml`:
 
@@ -329,7 +332,7 @@ opensearch.password: pwd
 
 ## Connecting your DMS to an OpenSearch cluster
 
-To configure the connection to an OpenSearch database, configure the settings as detailed in [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+To configure the connection to an OpenSearch database, configure the settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
 
 > [!IMPORTANT]
 > An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.
