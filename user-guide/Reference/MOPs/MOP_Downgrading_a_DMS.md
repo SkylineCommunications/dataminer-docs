@@ -37,6 +37,7 @@ For remote database clusters, please follow the **in-house procedures** to roll 
 1. Download the DataMiner upgrade package for the version you want to downgrade to. Upgrade packages can be downloaded from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 1. Perform the upgrade procedure with this package as described in [Upgrading a DMA/DMS](xref:MOP_Upgrading_a_DMA_DMS).
 1. *Only* when downgrading from a Feature Release version 10.3.8 or higher to a Feature Release version 10.3.4 or higher, execute the following extra steps. This is required as the DataMiner agents will not start up after the upgrade. This action needs to be executed on each of the DataMiner agents in the cluster.
+    - Wait for the downgrade to have completed / stuck in "Starting up (xx%)"
     - [Stop the DataMiner Software](xref:Starting_or_stopping_a_DMA_using_DataMiner_Taskbar_Utility)
     - Open the Windows "Add or remove programs" window
     - Uninstall "DataMiner StorageModule"
