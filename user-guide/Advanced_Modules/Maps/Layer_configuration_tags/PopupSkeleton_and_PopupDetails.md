@@ -26,38 +26,155 @@ In the `<PopupDetails>` tag, add a `<Detail>` tag for every placeholder used in 
 
 ### Attributes of the Detail tag
 
-| Attribute | Value / Description |
-|-----------|---------------------|
-| alarmFilter | The name of a predefined DataMiner Cube alarm filter.<br>If you specify “alarmcount” in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g. retrieve only the number of critical alarms. |
-| alias | The alias of an element in a service.<br>Allows detail placeholders. |
-| detailVars | A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders. See [Placeholders](#placeholders). |
-| element | Either an element ID (DMA ID/Element ID) or an element name.<br>Allows detail placeholders. |
-| elementVar | Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example. See [elementVar](xref:ParametersSourceInfo#elementvar). |
-| idx | The index of a table parameter.<br>Allows detail placeholders. |
-| name | The name of the corresponding placeholder in the `<PopupSkeleton>` tag. |
-| parameter | A parameter ID.<br>Allows detail placeholders. With this attribute, you can also specify enhanced services parameters. |
-| pid | A parameter ID. |
-| property | The name of a property.<br>Allows detail placeholders. |
-| service | A service ID (dmaId/serviceId) or a service name.<br>Allows detail placeholders. |
-| serviceVar | Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example. See [serviceVar](xref:ParametersSourceInfo#servicevar). |
-| view | A view ID or a view name preceded by a dot (“.”). |
-| type | See [Type overview](#type-overview). |
+#### alarmFilter
 
-#### Type overview
+The name of a predefined DataMiner Cube alarm filter.
 
-The following table provides an overview of the different possible values for the type attribute.
+If you specify "alarmcount" in the *Type* attribute to retrieve the number of alarms linked to a particular item, you can use this *alarmFilter* attribute to specify a predefined alarm filter to e.g. retrieve only the number of critical alarms.
 
-| Type value | Description |
-|------------|-------------|
-| *element/\[element subtype\]*<br>*viewelement/\[element subtype\]*<br>*elementalias/\[element subtype\]* | Instead of *\[element subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: Element ID (format: dmaId/elementId).<br>- *name*: Element name.<br>- *parameter*/*\[parameter subtype\]*: A parameter detail. For more information on the possible details that can be retrieved, refer to the *parameter* type lower in this table.<br>- *property*: A property of the element.<br>- *alarmcount*: The number of alarms linked to the element.<br>- *alarmstate*: The current alarm state of the element. |
-| *marker/\[marker subtype\]* | This type can be used to retrieve element, parameter, service, or view information, depending on the actual marker type. Instead of *\[marker subtype\],* depending on what should be retrieved, specify the following:<br>- *id*: The ID of the element/parameter/service/view.<br>- *name*: The name of the element/parameter/service/view.<br>- *alarmcount*: The number of alarms linked to the element/parameter/service/view.<br>- *alarmstate*: The current alarm state of the element/parameter/service/view. |
-| *parameter/\[parameter subtype\]* | When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations).<br>The following can be specified instead of \[parameter subtype\]:<br>- *value*: The parameter value.<br>- *name*: The parameter name.<br>- *alarmcount*: The number of alarms linked to the parameter.<br>- *alarmstate*: The current alarm state of the parameter. |
-| *parameter_elementalias* | Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
-| *parameter_samerow* | Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
-| *property* | Used when retrieving a property for a particular element, service or view. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
-| *property_elementalias* | Used when retrieving a property of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations) |
-| *service/\[service subtype\]* | Instead of *\[service subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: The service ID (format: dmaId/serviceId).<br>- *name*: The service name.<br>- *property*: A property of the service.<br>- *alarmcount*: The number of alarms linked to the service.<br>- *alarmstate*: The current alarm state of the service. |
-| *view/\[view subtype\]* | Instead of *\[view subtype\]*, depending on what should be retrieved, specify the following:<br>- *id*: The view ID.<br>- *name*: The view name.<br>- *property*: A property of the view.<br>- *alarmcount*: The number of alarms linked to the view.<br>- *alarmstate*: The current alarm state of the view. |
+#### alias
+
+The alias of an element in a service.
+
+Allows detail placeholders.
+
+#### detailVars
+
+A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders.
+
+See [Placeholders](#placeholders)
+
+#### element
+
+Either an element ID (DMA ID/Element ID) or an element name.
+
+Allows detail placeholders.
+
+#### elementVar
+
+Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example.
+
+See [elementVar](xref:ParametersSourceInfo#elementvar)
+
+#### idx
+
+The index of a table parameter.
+
+Allows detail placeholders.
+
+#### name
+
+The name of the corresponding placeholder in the `<PopupSkeleton>` tag.
+
+#### parameter
+
+A parameter ID.
+
+Allows detail placeholders. With this attribute, you can also specify enhanced services parameters.
+
+#### pid
+
+A parameter ID.
+
+#### property
+
+The name of a property.
+
+Allows detail placeholders.
+
+#### service
+
+A service ID (dmaId/serviceId) or a service name.
+
+Allows detail placeholders.
+
+#### serviceVar
+
+Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example.
+
+See [serviceVar](xref:ParametersSourceInfo#servicevar)
+
+#### view
+
+A view ID or a view name preceded by a dot (".").
+
+#### type
+
+See [Type overview](#type-overview)
+
+### Type overview
+
+#### element/[element subtype] - viewelement/[element subtype] - elementalias/[element subtype]
+
+Instead of *[element subtype]*, depending on what should be retrieved, specify the following:
+
+- *id*: Element ID (format: dmaId/elementId).
+- *name*: Element name.
+- *parameter*/*[parameter subtype]*: A parameter detail.
+
+  For more information on the possible details that can be retrieved, see [parameter/[parameter subtype]](#parameterparameter-subtype) below.
+
+- *property*: A property of the element.
+- *alarmcount*: The number of alarms linked to the element.
+- *alarmstate*: The current alarm state of the element.
+
+#### marker/[marker subtype]
+
+This type can be used to retrieve element, parameter, service, or view information, depending on the actual marker type.
+
+Instead of *[marker subtype]*, depending on what should be retrieved, specify the following:
+
+- *id*: The ID of the element/parameter/service/view.
+- *name*: The name of the element/parameter/service/view.
+- *alarmcount*: The number of alarms linked to the element/parameter/service/view.
+- *alarmstate*: The current alarm state of the element/parameter/service/view.
+
+#### parameter/[parameter subtype]
+
+When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+
+The following can be specified instead of *[parameter subtype]*:
+
+- *value*: The parameter value.
+- *name*: The parameter name.
+- *alarmcount*: The number of alarms linked to the parameter.
+- *alarmstate*: The current alarm state of the parameter.
+
+#### parameter_elementalias
+
+Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+
+#### parameter_samerow
+
+Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+
+#### property
+
+Used when retrieving a property for a particular element, service or view. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+
+#### property_elementalias
+
+Used when retrieving a property of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+
+#### service/[service subtype]
+
+Instead of *[service subtype]*, depending on what should be retrieved, specify the following:
+
+- *id*: The service ID (format: dmaId/serviceId).
+- *name*: The service name.
+- *property*: A property of the service.
+- *alarmcount*: The number of alarms linked to the service.
+- *alarmstate*: The current alarm state of the service.
+
+#### view/[view subtype]
+
+Instead of *[view subtype]*, depending on what should be retrieved, specify the following:
+
+- *id*: The view ID.
+- *name*: The view name.
+- *property*: A property of the view.
+- *alarmcount*: The number of alarms linked to the view.
+- *alarmstate*: The current alarm state of the view.
 
 ### Specific PopDetails configurations
 
@@ -112,7 +229,7 @@ The following placeholders do not need to be defined in `<Detail>` tags. They ar
 
 | Placeholder  | Description                  |
 |--------------|------------------------------|
-| [dmaid]      | Dataminer ID                 |
+| [dmaid]      | DataMiner ID                 |
 | [eid]        | Element ID                   |
 | [sid]        | Service ID                   |
 | [viewid]     | View ID                      |
@@ -321,7 +438,7 @@ Refer to that variable in the configuration file:
 
 #### Putting the data element in the same view as the marker element
 
-Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use `<Detail>` tags of type “parameter_sameviewelement” or “property_sameviewelement” to fetch data from the data element:
+Create a view that contains two elements: the marker element (i.e. the element containing the marker coordinates) and the data element (i.e. the element that contains the data to be shown in the pop-up balloon). Use `<Detail>` tags of type *parameter_sameviewelement* or *property_sameviewelement* to fetch data from the data element:
 
 ```xml
 <PopupDetails>
