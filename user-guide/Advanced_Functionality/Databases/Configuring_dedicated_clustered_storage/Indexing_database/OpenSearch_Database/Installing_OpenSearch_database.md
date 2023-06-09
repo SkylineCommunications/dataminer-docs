@@ -104,18 +104,6 @@ These are the main steps of the setup:
   node.roles: [ cluster_manager ]
   ```
 
-##### Remove the demo certificates
-
-Remove the demo certificates located in /etc/opensearch:
-
-```bash
-cd /etc/opensearch
-```
-
-```bash
-sudo rm -f *pem
-```
-
 ##### Configure users
 
 Generate a new hash for the admin user using [Configure a user](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#configure-a-user) section in the OpenSearch help. As the help indicated, remove all demo users except the *admin* user and replace the hash for admin with the generated hash.
@@ -124,6 +112,7 @@ Generate a new hash for the admin user using [Configure a user](https://opensear
 
 We highly recommend that you configure TLS in order to have a layer of security between your nodes and your DataMiner client. To do so:
 
+1. [Remove the demo certificates](#remove-the-demo-certificates), that came with the default installation
 1. [Generate p12 keystore and truststore p12 files](#generate-p12-keystore-and-truststore-p12-files).
 
 1. [Update the trusted root certificates with rootCA.crt](#update-the-trusted-root-certificates-with-rootcacrt).
@@ -133,6 +122,20 @@ We highly recommend that you configure TLS in order to have a layer of security 
 1. [Set up TLS in the OpenSearch.yml file](#set-up-tls-in-the-opensearchyml-file).
 
 1. [Restart OpenSearch](#restart-opensearch).
+
+##### Remove the demo certificates
+
+By default OpenSearch comes with .pem files with demo certificates. For security reasons it is best to remove those demo-certificates.
+
+You can remove the demo certificates located in /etc/opensearch:
+
+```bash
+cd /etc/opensearch
+```
+
+```bash
+sudo rm -f *pem
+```
 
 ##### Generate p12 keystore and truststore p12 files
 
@@ -242,7 +245,7 @@ indices.query.bool.max_clause_count: 2147483647
 
 ##### Restart OpenSearch
 
-1. When you have finished the TLS configuration and set a different hash for the admin user, restart OpenSearch. You can use the following command for this.
+1. When you have finished the TLS configuration and set a different hash for the admin user, see [Configure users](#configure-users), then restart OpenSearch. You can use the following command for this.
 
    ```bash
    sudo systemctl restart opensearch
