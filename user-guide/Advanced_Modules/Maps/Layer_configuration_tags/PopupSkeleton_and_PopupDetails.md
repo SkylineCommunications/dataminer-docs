@@ -13,7 +13,7 @@ In the `<PopupSkeleton>` tag, specify all fixed content, including the necessary
 > [!NOTE]
 >
 > - Marker balloons can contain tab controls. These tab controls, which are based on a CSS class called “tabs”, have to be designed as shown in [Showing values returned by an SQL query](#showing-values-returned-by-an-sql-query): an enumeration of the tab titles, followed by the contents of each tab.
-> - The placeholders [latitude], [longitude] and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
+> - The placeholders [latitude], [longitude], and [alarmstate] can be used directly in the PopupSkeleton definition without the need to define them in a PopupDetails element. They will display the coordinates and alarm state of the actual marker, respectively.
 > - You can specify a list of EPM tables in the PopupSkeleton tag, which will be displayed in a marker pop-up balloon. For an example, see [Displaying EPM tables in a marker pop-up balloon](#displaying-epm-tables-in-a-marker-pop-up-balloon).
 
 > [!TIP]
@@ -42,7 +42,7 @@ Allows detail placeholders.
 
 A semicolon-separated list of detail names, which can then be used within attributes that support detail placeholders.
 
-See [Placeholders](#placeholders)
+See [Placeholders](#placeholders).
 
 #### element
 
@@ -54,7 +54,7 @@ Allows detail placeholders.
 
 Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example.
 
-See [elementVar](xref:ParametersSourceInfo#elementvar)
+See [elementVar](xref:ParametersSourceInfo#elementvar).
 
 #### idx
 
@@ -92,7 +92,7 @@ Allows detail placeholders.
 
 Can be used to refer to URL parameters, similar to when this attribute is used in the `<ParametersSourceInfo>` tag, for example.
 
-See [serviceVar](xref:ParametersSourceInfo#servicevar)
+See [serviceVar](xref:ParametersSourceInfo#servicevar).
 
 #### view
 
@@ -100,7 +100,7 @@ A view ID or a view name preceded by a dot (".").
 
 #### type
 
-See [Type overview](#type-overview)
+See [Type overview](#type-overview).
 
 ### Type overview
 
@@ -131,7 +131,7 @@ Instead of *[marker subtype]*, depending on what should be retrieved, specify th
 
 #### parameter/[parameter subtype]
 
-When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+When retrieving a parameter value of an element, only *parameter* needs to be specified. See [Specific PopDetails configurations](#specific-popdetails-configurations).
 
 The following can be specified instead of *[parameter subtype]*:
 
@@ -142,19 +142,19 @@ The following can be specified instead of *[parameter subtype]*:
 
 #### parameter_elementalias
 
-Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+Used when retrieving a parameter of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations).
 
 #### parameter_samerow
 
-Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+Used to retrieve cell values from a dynamic table row. See [Specific PopDetails configurations](#specific-popdetails-configurations).
 
 #### property
 
-Used when retrieving a property for a particular element, service or view. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+Used when retrieving a property for a particular element, service, or view. See [Specific PopDetails configurations](#specific-popdetails-configurations).
 
 #### property_elementalias
 
-Used when retrieving a property of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations)
+Used when retrieving a property of a child element of a service on the map. See [Specific PopDetails configurations](#specific-popdetails-configurations).
 
 #### service/[service subtype]
 
@@ -188,7 +188,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | type      | *parameter_samerow* |
   | pid       | The column ID |
 
-- To retrieve property values belonging to the current element, service or view, in case of a layer of sourceType “properties”, use the following configuration for the `<PopupDetail>` tags:
+- To retrieve property values belonging to the current element, service, or view, in case of a layer of sourceType “properties”, use the following configuration for the `<PopupDetail>` tags:
 
   | Attribute | Value |
   |-----------|-------|
@@ -221,7 +221,7 @@ In each `<Detail>` tag, the attributes that should be specified depend on what i
   | name      | Name of the corresponding placeholder in the `<PopupSkeleton>` tag |
   | type      | *parameter_elementalias* |
   | alias     | The alias of the element in the service. If no alias is configured, specify the actual name of the element instead. |
-  | pid       | The ID of the parameter that is to be retrieved. |
+  | pid       | The ID of the parameter that is to be retrieved |
 
 ## Placeholders
 
@@ -259,7 +259,7 @@ To determine the detail source, the following items are checked (in this order):
 - the actual marker context
 
 > [!NOTE]
-> It is not possible to use a URL parameter like myElement or myService as a detail placeholder in the *detailVars* attribute.
+> It is not possible to use a URL parameter like *myElement* or *myService* as a detail placeholder in the *detailVars* attribute.
 >
 > To use URL parameters, specify an *elementVar* or *serviceVar* attribute, or add a `<ViewFilter>` subtag within the `<Details>` tag, and add the parameter using the *idVar* attribute in the subtag. E.g.: `<ViewFilter includeSubViews="true" idVar="myView" />`. A similar `<ViewFilter>` subtag can be used in the `<PropertiesSourceInfo>` tag. For more information, see [idVar](xref:PropertiesSourceInfo#idvar).
 
@@ -284,7 +284,7 @@ An example where placeholders are replaced by cell values from the currently sel
 
 ### Showing property values
 
-An example where placeholders are replaced by property values retrieved from the current element, service or view:
+An example where placeholders are replaced by property values retrieved from the current element, service, or view:
 
 ```xml
 <PopupSkeleton>
@@ -417,7 +417,7 @@ It is possible to show data from another element in a pop-up balloon.
 That other element can be selected in two ways:
 
 - By specifying the other element in the URL of the map.
-- Putting the data element in the same view as the marker element.
+- By putting the data element in the same view as the marker element.
 
 #### Specifying the other element in the URL of the map
 
