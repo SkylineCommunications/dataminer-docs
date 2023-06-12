@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 19 June 2023 - Fix - Chat Integration with Microsoft Teams: Improved consistency for email inputs [ID_36643]
+
+Consistency for the Chat Integration email inputs was improved because some features were using the email input as the actual email address of the user, and some as the service principal name of the user. This is not an issue if, in your linked tenant, both have the same value. If the values would differ, some features like 'Create Team' & 'Add Team Member or Owner' would not work unless the actual service principl name was given. Since today this is no longer the case and all email inputs for all Chat Integration features behave the same as the email address set for the user in your tenant.
+
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
 A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.
