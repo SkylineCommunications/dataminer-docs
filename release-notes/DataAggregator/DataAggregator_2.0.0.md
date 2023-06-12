@@ -4,10 +4,6 @@ uid: DataAggregator_2.0.0
 
 # Data Aggregator 2.0.0
 
-## New features
-
--
-
 ## Changes
 
 ### Enhancements
