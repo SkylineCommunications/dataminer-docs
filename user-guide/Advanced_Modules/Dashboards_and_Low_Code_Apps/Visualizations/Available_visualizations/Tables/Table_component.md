@@ -63,9 +63,11 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 ## Exporting the table
 
-From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table via the ... button in the top-right corner of the component. If nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table via the ... button in the top-right corner of the component. Clicking the 'Export to CSV' button will open a popup, where you can choose whether to export the raw values or the display values from the table. Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units, while the raw values don't have any formatting applied to them. The only exception are discreet values, which will always export their corresponding display values.
 
-The export file will be named “Query XXX” (XXX being the name of the query, as configured in the data pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result. This data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
+If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+The export file will be named “Query XXX” (XXX being the name of the query, as configured in the data pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result.
 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
