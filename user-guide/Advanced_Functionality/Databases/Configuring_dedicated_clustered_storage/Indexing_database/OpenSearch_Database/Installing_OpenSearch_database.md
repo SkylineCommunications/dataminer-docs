@@ -90,6 +90,10 @@ These are the main steps of the setup:
   discovery.seed_hosts: ["166.206.186.146","166.206.186.147","166.206.186.148"]
   
   discovery.type: zen
+  
+  node.max_local_storage_nodes: 3
+  indices.query.bool.max_clause_count: 2147483647
+
   ```
 
 - If you want a node to be a **data node**, add the following configuration in *OpenSearch.yml*:
@@ -242,8 +246,6 @@ plugins.security.check_snapshot_restore_write_privileges: true
 plugins.security.restapi.roles_enabled: ["all_access", "security_rest_api_access"]
 plugins.security.system_indices.enabled: true
 plugins.security.system_indices.indices: [".plugins-ml-model", ".plugins-ml-task", ".opendistro-alerting-config", ".opendistro-alerting-alert*", ".opendistro-anomaly-results*", ".opendistro-anomaly-detector*", ".opendistro-anomaly-checkpoints", ".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store",".opendistro-anomaly-detection-state", ".opendistro-reports-*", ".opensearch-notifications-*", ".opensearch-notebooks", ".opensearch-observability", ".opendistro-asynchronous-search-response*", ".replication-metadata-store"]
-node.max_local_storage_nodes: 3
-indices.query.bool.max_clause_count: 2147483647
 ```
 
 ##### Restart OpenSearch
