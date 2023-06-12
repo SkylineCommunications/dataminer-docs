@@ -1049,6 +1049,23 @@
           topicUid: Ending_a_Failover_configuration
         - name: Frequently asked questions about DMA Failover
           topicUid: Frequently_asked_questions_about_DMA_Failover
+          items:
+            - name: What if one of the DMAs is stopped?
+              topicUid: Failover_FAQ_what_if_DMA_stopped
+            - name: What if one of the DMAs is restarted?
+              topicUid: Failover_FAQ_what_if_DMA_restarted
+            - name: What if a database server stops working?
+              topicUid: Failover_FAQ_server_stops_working
+            - name: What if a network cable is pulled out?
+              topicUid: Failover_FAQ_cable_pulled_out
+            - name: How do I upgrade a Failover pair?
+              topicUid: Failover_FAQ_upgrade
+            - name: How do I prevent DMAs from registering the same virtual IP?
+              topicUid: Failover_FAQ_avoid_registering_same_virtual_IP
+            - name: What if I have connection issues after a Failover switch?
+              topicUid: Failover_FAQ_connection_issues
+            - name: What if one of the Agents cannot be started or restarted?
+              topicUid: Failover_FAQ_cannot_start
     - name: Databases
       topicUid: Databases_about
       items:
