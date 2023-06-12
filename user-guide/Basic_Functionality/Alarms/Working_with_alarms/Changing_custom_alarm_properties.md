@@ -13,7 +13,7 @@ In this section:
 - [Editing custom alarm properties](#editing-custom-alarm-properties)
 
 > [!TIP]
-> See also: [Alarm Console – Adding extra properties on alarms](https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/) on DataMiner Dojo.
+> See also: [Alarm Console – Adding extra properties on alarms](https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Adding a custom alarm property
 

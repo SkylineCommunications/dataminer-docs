@@ -382,7 +382,7 @@ The `Clusterstate.xml` file, located in the `C:\Skyline DataMiner` folder, was o
 
 When a trend pattern was detected on a DVE child element, up to now, the suggestion event would be generated on the parent element. From now on, it will be generated on the child element instead.
 
-#### Low-code apps: Enhanced confirmation message when deleting an app [ID_35269]
+#### Low-Code Apps: Enhanced confirmation message when deleting an app [ID_35269]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -593,25 +593,25 @@ When redundancy groups were being initialized during a DataMiner startup, in som
 
 On DataMiner clusters with a Cassandra Cluster database, incorrect *db.xml* entries could cause that file to get corrupted upon synchronization.
 
-#### Dashboards app & low-code apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
+#### Dashboards app & Low-Code Apps: Loading indicator would not appear when sorting, filtering or refreshing a table [ID_35238]
 
 <!-- MR 10.3.0 - FR 10.3.2 -->
 
 When you sorted or filtered a table by clicking a table header, or when an action triggered a refresh of the table data, in some cases, no loading indicator would appear.
 
-#### Dashboards app & Low-code apps: Issues with regard to data highlighting [ID_35250]
+#### Dashboards app & Low-Code Apps: Issues with regard to data highlighting [ID_35250]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
 
 A number of issues with regard to data highlighting have been fixed.
 
-#### Dashboards app & Low-code apps: Enhanced caching of items in query column selection box [ID_35251]
+#### Dashboards app & Low-Code Apps: Enhanced caching of items in query column selection box [ID_35251]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
 When creating or editing a query, you can select the query columns from a selection box. A number of enhancements have now been made with regard to the caching of this list of query columns.
 
-#### Dashboards app & Low-code apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
+#### Dashboards app & Low-Code Apps: Selected data would incorrectly not get removed after being deleted [ID_35254]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -623,7 +623,7 @@ When data (e.g. a query) was deleted while it was selected, in some cases, it wo
 
 When, in the side bar, you right-clicked a folder or a dashboard, and then clicking the ellipsis ("...") in the tab header, two context menus could incorrectly be displayed simultaneously.
 
-#### Dashboards app & Low-code apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
+#### Dashboards app & Low-Code Apps - Node edge component: Problem with 'Set as ...' commands in component settings [ID_35256]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -631,7 +631,7 @@ When, in the settings of a node edge component, you had selected a configured ed
 
 From now on, it will only be possible to set a node as edge and vice versa.
 
-#### Dashboards app & Low-code apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
+#### Dashboards app & Low-Code Apps: Unknown components would incorrectly no longer be indicated as such [ID_35257]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -658,7 +658,7 @@ Up to now, when email addresses and hyperlinks to web pages were retrieved from 
 
 When a client application connects to a DataMiner Agent, it will first try to set up communication via eventing. If communication via eventing fails, the DataMiner Agent will fall back to communication via polling. In some rare cases, both types of communication (i.e. eventing and polling) would incorrectly be used simultaneously.
 
-#### Low-code apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
+#### Low-Code Apps: Keyboard shortcuts would not work in the dashboard editor [ID_35274]
 
 <!-- MR 10.2.0 [CU11] - FR 10.3.2 -->
 
@@ -689,7 +689,7 @@ When you enabled the *Visualize measurement points* setting of a spectrum elemen
 
 When, in the settings of a node edge graph, you had configured edge overrides, these would incorrectly no longer be applied.
 
-#### Dashboards app & Low-code apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
+#### Dashboards app & Low-Code Apps - GQI table component: 'Cannot read properties of undefined (reading 'Guid')' error [ID_35316]
 
 <!-- MR 10.4.0 - FR 10.3.2 [CU0] -->
 

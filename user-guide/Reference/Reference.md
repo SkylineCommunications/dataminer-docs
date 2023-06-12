@@ -4,6 +4,8 @@ uid: Part7Reference
 
 # Reference
 
+- [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)
+
 - [Skyline DataMiner folder](xref:SkylineDataminerFolder)
 
 - [Tools](xref:DataminerTools)
@@ -11,6 +13,8 @@ uid: Part7Reference
 - [Naming of elements, services, views, etc.](xref:NamingConventions)
 
 - [Obtaining a DataMiner license](xref:DataminerLicenses)
+
+- [Software support life cycles](xref:Software_support_life_cycles)
 
 - [Support services terms](xref:Support_services_terms)
 

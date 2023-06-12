@@ -15,5 +15,3 @@ uid: Troubleshooting_procedures
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
 
 - [Manually removing old alarms from an Elasticsearch cluster](xref:Manually_removing_old_alarms_from_ES)
-
-- [Querying MySQL vs Cassandra](xref:Querying_MySQL_vs_Cassandra)

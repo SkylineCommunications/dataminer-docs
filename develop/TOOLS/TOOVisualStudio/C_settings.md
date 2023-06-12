@@ -15,6 +15,8 @@ uid: C_settings
 
    - Select the check box *Place 'System' directives first when sorting usings*.
 
+   - Select the check box *Separate using directive groups*.
+
 1. In the list on the left, go to *Text Editor* > *C#* > *Formatting* > *General*.
 
    Make sure the following check boxes are selected:

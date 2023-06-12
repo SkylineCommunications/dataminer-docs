@@ -20,7 +20,7 @@ More information on DVEs is detailed in the following sections:
 - <xref:AdvancedDVEsExercise>
 
 > [!NOTE]
-> An example protocol "SLC SDF DVE" is available in the Protocol Development Guide Companion Files.
+> An example protocol "SLC SDF DVE" is available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/).
 
 ## See also
 
