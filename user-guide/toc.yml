@@ -3288,6 +3288,8 @@
               topicUid: DataMiner_xml
             - name: DB.xml
               topicUid: DB_xml
+            - name: DBConfiguration.xml
+              topicUid: DBConfiguration_xml
             - name: DBMaintenance.xml and DBMaintenanceDMS.xml
               topicUid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
             - name: DMS.xml
