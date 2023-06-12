@@ -9,12 +9,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 #### 12 June 2023 - Fix - CloudGateway 2.11.0 - Resolved concurrency issue [ID_36439]
 
 Cloud connection will remain active when the DMA name no longer corresponds to the server name after rename.
-Cloudgateway uses now the DMA name as defined in dataminer.xml or from DMZ options instead of the server name to verify its state.
+DataMiner CloudGateway now uses the DMA name as defined in dataminer.xml or from the DMZ options instead of the server name.
 
 #### 12 June 2023 - Fix - CoreGateway 2.13.0 - Resolved concurrency issue [ID_36453]
 
-Cloud connection will remain active when the DMA name no longer corresponds to the server name after rename.
-DMA name is taken from dataminer.xml for dmawildcard subscriptions.
+Cloud connection will remain active when the DMA name no longer corresponds to the server name after a rename.
 
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
