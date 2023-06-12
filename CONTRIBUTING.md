@@ -417,7 +417,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 1. Open a command prompt and enter the command `dotnet tool update -g docfx`
 
-1. Test whether DocFX was installed correctly by entering `docfx help`.
+1. Test whether DocFX was installed correctly by entering `docfx --version`.
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
