@@ -6,14 +6,16 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 12 June 2023 - Fix - CloudGateway 2.11.0 - Resolved concurrency issue [ID_36439]
+#### 12 June 2023 - Fix - CloudGateway 2.11.0 - Resolved connection issue [ID_36439]
 
-Cloud connection will remain active when the DMA name no longer corresponds to the server name after rename.
+A user could encounter "The DataMiner System has no active connections to the DataMiner Cloud Platform" error message when using cloud features like Remote Access, Sharing, ...
+Cloud connection will now remain active when the DMA name no longer corresponds to the server name after rename. 
 DataMiner CloudGateway now uses the DMA name as defined in dataminer.xml or from the DMZ options instead of the server name.
+ 
+#### 12 June 2023 - Fix - CoreGateway 2.13.0 - Resolved connection issue [ID_36453]
 
-#### 12 June 2023 - Fix - CoreGateway 2.13.0 - Resolved concurrency issue [ID_36453]
-
-Cloud connection will remain active when the DMA name no longer corresponds to the server name after a rename.
+A user could encounter "The DataMiner System has no active connections to the DataMiner Cloud Platform" error message when using cloud features like Remote Access, Sharing, ...
+Cloud connection will now remain active when the DMA name no longer corresponds to the server name after a rename.
 
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
