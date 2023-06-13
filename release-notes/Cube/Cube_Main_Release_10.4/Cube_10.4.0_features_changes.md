@@ -24,21 +24,21 @@ To do so, create a shape with the following shape data fields:
 
 A *BookingData* shape will show the following information:
 
-- On the left-hand side, you will find a list of all resources in the booking.
+- On the left-hand side, you will find a list of resources used by the booking.
 
   For every resource, this list shows the following information:
   
   - the resource name
   - an icon indicating the function of the resource
+  - an icon indicating whether the resource is linked to a service definition node
   - the node label or, if no node label is defined, the name of the function definition
-  - the icon of the service definition node (only if the resource to mapped to a service definition node)
 
 - On the right-hand side, you can select a node or node interface of the resource selected in the list on the left.
 
   After selecting a node or node interface, this section will show the profile data of this node or node interface:
 
   - the profile instance (if applicable), and
-  - the profile parameter values that will be used (note that these values can be overriden on several levels).
+  - the profile parameter values that will be used (note that these values can be overridden on several levels).
   
   > [!NOTE]
   > Priority of profile parameter value overrides:
