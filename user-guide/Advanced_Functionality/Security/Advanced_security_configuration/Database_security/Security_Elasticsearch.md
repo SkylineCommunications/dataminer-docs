@@ -180,19 +180,21 @@ sudo generate-certificates.sh
    echo $PATH
    ```
 
-1. In case you still run in to problems that it can't locate the keytool, try modifying the generate-certificates.sh script with the Nano editor:
+1. In case the keytool still cannot be located, try modifying the *generate-certificates.sh* script with the Nano editor:
 
-   ```bash
-   sudo nano generate-certificates.sh
-   ```
+   1. Use the following command to modify the script:
 
-   Add the following line on top of the .sh file:
+      ```bash
+      sudo nano generate-certificates.sh
+      ```
 
-   ```text
-   PATH+=:/usr/share/opensearch/jdk/bin/
-   ```
+   1. Add the following line on top of the .sh file:
 
-   Save the script, by entering CTRL+O, CTRL+X.
+      ```text
+      PATH+=:/usr/share/opensearch/jdk/bin/
+      ```
+
+   1. Save the script by entering CTRL+O, CTRL+X.
 
 The *generate-certificates.sh* script should now be able to execute without encountering the `Keytool:command not found` error.
 
