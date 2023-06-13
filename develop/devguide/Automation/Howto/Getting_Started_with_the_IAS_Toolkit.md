@@ -154,7 +154,7 @@ public class HelloWorldDialog : Dialog
 ```
 
 > [!NOTE]
-> If there is no button added to the dialog, a default one will be added on posistion 0,0
+> If you do not add a button to the dialog, a default button will be added at position 0,0.
 
 Once you have added the widgets, the dialog is done.
 
