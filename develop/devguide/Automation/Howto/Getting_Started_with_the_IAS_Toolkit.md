@@ -153,6 +153,9 @@ public class HelloWorldDialog : Dialog
 }
 ```
 
+> [!NOTE]
+> If there is no button added to the dialog, an default one will be added on posistion 0,0
+
 Once you have added the widgets, the dialog is done.
 
 ## Displaying the dialog
