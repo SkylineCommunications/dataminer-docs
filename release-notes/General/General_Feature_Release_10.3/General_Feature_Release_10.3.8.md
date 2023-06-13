@@ -85,6 +85,14 @@ Also, when processing a protocol, a DataMiner Agent will now synchronize
 - the files in the `ProtocolScripts/DllImport` folder, and
 - the files in the folders mentioned in the *QAction@dllImport* attribute.
 
+#### Cassandra: 'analytics_changepointalarmentries_v2' table renamed to 'ai_cpalarms' [ID_36503]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+In a *Cassandra Cluster* and an *Amazon Keyspaces* database, the `analytics_changepointalarmentries_v2` table has now been renamed to `ai_cpalarms`.
+
+As this new table name is quite a bit shorter, for both types of databases, keyspace prefixes can now have a maximum length of 20 characters instead of 11 characters.
+
 #### Stream Viewer will now display parameter IDs in decimal format instead of octal format [ID_36525]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
