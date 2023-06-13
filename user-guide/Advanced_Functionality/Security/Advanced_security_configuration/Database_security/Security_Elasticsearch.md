@@ -50,7 +50,7 @@ To enable authentication in Elasticsearch 6.8.X:
 
 ## Updating passwords
 
-The *elasticsearch-setup-passwords.bat* script can only *create* the passwords. 
+The *elasticsearch-setup-passwords.bat* script can only *create* the passwords.
 
 To **update** an existing password:
 
@@ -179,6 +179,20 @@ sudo generate-certificates.sh
    ```bash
    echo $PATH
    ```
+
+1. In case you still run in to problems that it can't locate the keytool, try modifying the generate-certificates.sh script with the Nano editor:
+
+   ```bash
+   sudo nano generate-certificates.sh
+   ```
+
+   Add the following line on top of the .sh file:
+
+   ```text
+   PATH+=:/usr/share/opensearch/jdk/bin/
+   ```
+
+   Save the script, by entering CTRL+O, CTRL+X.
 
 The *generate-certificates.sh* script should now be able to execute without encountering the `Keytool:command not found` error.
 
