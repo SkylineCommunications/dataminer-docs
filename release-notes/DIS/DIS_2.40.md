@@ -81,6 +81,10 @@ In the DataMiner protocol template, the region preprocessor directives have been
 
 When creating a new Automation Script, the template has now a namespace around the `Script` class. The `Engine` argument in the Run methods has been changed to `IEngine`.
 
+#### Executables are signed [ID_35879]
+
+The executables that are included in the DIS vsix extension package are now signed.
+
 ### Fixes
 
 #### Protocol Schema: Casing of calculateAlarmState attribute was incorrect [ID_34430]
