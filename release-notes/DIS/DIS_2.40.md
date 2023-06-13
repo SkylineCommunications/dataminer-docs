@@ -55,6 +55,12 @@ Up to now, the *QAction\@dllImport* attribute would only contain the name of the
 
 The minimum supported DataMiner version has been increased to 10.1.
 
+#### Snippets, Plugins and Macros: Updated the references to former Class Library [ID_35769]
+
+Class Library has been split up in smaller NuGet packages. (see [Dojo](https://community.dataminer.services/unlimited-devops-power-at-your-fingertips-code-library-nuget-packages-are-living-on-the-cloud))
+
+Every snippet, plugin and macro has been updated with the new namespaces and correct references.
+
 ### Validator
 
 #### New feature check: Usage of NuGet packages [ID_34527]
