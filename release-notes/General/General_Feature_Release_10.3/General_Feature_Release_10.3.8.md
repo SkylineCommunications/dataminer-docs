@@ -8,7 +8,7 @@ uid: General_Feature_Release_10.3.8
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!IMPORTANT]
-> When downgrading from DataMiner Feature Release 10.3.8 (or higher) to DataMiner Feature Release 10.3.4 (or higher), an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
+> When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
 
 > [!TIP]
 >
