@@ -27,6 +27,14 @@ When comparison and validation have finished, instead of one result list, you wi
 
 As from version 2.38, by default, DIS will set the language version of the C# projects to 7.3.
 
+#### Import Automation Script into Automation Script solution \[ID_33411\]
+
+When rightclicking on the Scripts folder in the solution, going to Add, you can now use 'Import DataMiner Automation Script' from the menu.
+
+You can select one or more scripts and they will be added to the solution.
+
+This option is only enabled when DIS is connected to a DataMiner.
+
 ### Validator
 
 #### New checks and error messages \[ID_33428\] \[ID_33477\] \[ID_33698\] \[ID_33732\] \[ID_33740\]
