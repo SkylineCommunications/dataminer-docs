@@ -51,6 +51,10 @@ In the *QAction\@dllImport* attribute, you can now reference a DLL file that is 
 
 Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will include the subfolders as well.
 
+#### Incremented minimum supported DataMiner version [ID_36036]
+
+The minimum supported DataMiner version has been increased to 10.1.
+
 ### Validator
 
 #### New feature check: Usage of NuGet packages [ID_34527]
