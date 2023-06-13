@@ -49,3 +49,9 @@ Also, when you clicked that *Show agent alarms* link, the alarm tab listing the 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
+
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you exported real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported, regardless of the time range you had specified.
