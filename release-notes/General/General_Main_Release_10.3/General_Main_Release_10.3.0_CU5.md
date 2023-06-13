@@ -65,6 +65,12 @@ Up to now, when an SNMP table had columns of type "retrieved" in between columns
 
 From now on, in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp", providing the primary key column is a column of type "snmp" and not a column of type "retrieved".
 
+#### Service & Resource Management: Enhanced performance [ID_36568]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Because of a number of enhancements with regard to fetching LinkerTableEntries of function resources, overall performance has increased.
+
 ### Fixes
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
