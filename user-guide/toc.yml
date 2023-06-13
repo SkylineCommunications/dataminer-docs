@@ -742,6 +742,8 @@
                 topicUid: Managing_pattern_definitions
             - name: Adding related parameters to a trend graph
               topicUid: Adding_related_parameters_to_a_trend_graph
+              - name: Adding time scoped related parameters to a trend graph
+              topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
         - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
