@@ -61,6 +61,10 @@ Class Library has been split up in smaller NuGet packages. (see [Dojo](https://c
 
 Every snippet, plugin and macro has been updated with the new namespaces and correct references.
 
+#### Support gRPC to DataMiner [ID_36035]
+
+DIS will now check via the ConnectionSettings of DataMiner to connect via RemotingConnection or gRPC. This enables DIS to connect to cloud connected agents.
+
 ### Validator
 
 #### New feature check: Usage of NuGet packages [ID_34527]
