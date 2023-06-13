@@ -422,9 +422,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.61.0+54f1a2f4f25f89435f222c93aa8aab0c0cfea2b5
-    Copyright (C) 2023 © Microsoft Corporation. All rights reserved.
-    This is open-source software under MIT License.  
+    2.67.3+f28165af43dde2ec072a79fa2479f475fcd947ad
     ...
     ```
 
