@@ -77,6 +77,10 @@ A number of enhancements have been made to the DIS diagram, especially with rega
 
 In the DataMiner protocol template, the region preprocessor directives have been removed from QAction_1.
 
+#### Automation Script Template: Added namespace and update input argument [ID_36033]
+
+When creating a new Automation Script, the template has now a namespace around the `Script` class. The `Engine` argument in the Run methods has been changed to `IEngine`.
+
 ### Fixes
 
 #### Protocol Schema: Casing of calculateAlarmState attribute was incorrect [ID_34430]
