@@ -491,9 +491,3 @@ Cannot read properties of null ('reading delete')
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
-
-#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.

@@ -107,6 +107,6 @@ When a pie chart or a bar chart on a volatile dashboard had its settings changed
 
 #### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
