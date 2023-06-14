@@ -48,6 +48,8 @@ This error code and message can have the following possible cause:
   netsh winhttp show proxy
   ```
 
+  If the result shows the proxy server used and the bypass list, a proxy server is indeed configured.
+
   **Resolution**: Add all IPs and hostnames of the DMAs to the proxy exception list. You can do so by opening a command prompt on the server and executing the following command:
 
   ```txt
