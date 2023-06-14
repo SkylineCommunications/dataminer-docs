@@ -10,6 +10,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 Consistency for the Chat Integration email inputs was improved because some features were using the email input as the actual email address of the user, and some as the service principal name of the user. This is not an issue if, in your linked tenant, both have the same value. If the values would differ, some features like 'Create Team' & 'Add Team Member or Owner' would not work unless the actual service principl name was given. Since today this is no longer the case and all email inputs for all Chat Integration features behave the same as the email address set for the user in your tenant.
 
+#### 7 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
+
+In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved by using the DMA name instead of the server name.
+
 #### 19 May 2023 - Fix - CloudGateway 2.10.12 - Resolved concurrency issue [ID_36432]
 
 A concurrency issue was introduced in CloudGateway 2.10.8 that could cause the CloudGateway to fail to respond to certain requests, such as creating a share. This issue has now been resolved.

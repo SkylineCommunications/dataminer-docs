@@ -75,6 +75,12 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 
 When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
 
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
+
 #### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -95,7 +101,7 @@ When you opened a query that was created using an older GQI version, and that qu
 
 #### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 

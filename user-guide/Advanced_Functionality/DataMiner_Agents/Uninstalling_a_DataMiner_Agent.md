@@ -7,7 +7,7 @@ uid: Uninstalling_a_DataMiner_Agent
 There are two possibilities to uninstall a DataMiner Agent:
 
 - [Using the DataMiner Installer](#uninstalling-a-dma-using-the-dataminer-installer)
-- [Using a manual procedure](#uninstalling-a-dma-using-a-manual-procedure))
+- [Using a manual procedure](#uninstalling-a-dma-using-a-manual-procedure)
 
 ## Uninstalling a DMA using the DataMiner Installer
 

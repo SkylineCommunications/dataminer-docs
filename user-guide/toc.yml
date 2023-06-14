@@ -3040,6 +3040,8 @@
           topicUid: Creating_log_file_for_x_failed
         - name: ElementID (x) Not unique y existing = z
           topicUid: ElementID_x_not_unique_y_existing_z
+        - name: Failed to get log file
+          topicUid: Failed_to_get_log_file
         - name: HTTP error 500
           topicUid: HTTP_error_500
         - name: InitializeIElement for Element x failed. y (hr = z)
@@ -3288,6 +3290,8 @@
               topicUid: DataMiner_xml
             - name: DB.xml
               topicUid: DB_xml
+            - name: DBConfiguration.xml
+              topicUid: DBConfiguration_xml
             - name: DBMaintenance.xml and DBMaintenanceDMS.xml
               topicUid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
             - name: DMS.xml

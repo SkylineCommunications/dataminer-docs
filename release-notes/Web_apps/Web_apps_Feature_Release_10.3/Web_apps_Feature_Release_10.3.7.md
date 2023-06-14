@@ -300,3 +300,9 @@ When you installed a DataMiner web upgrade for version 10.3.5 or newer on a serv
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
+
+#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.
