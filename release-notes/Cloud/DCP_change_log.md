@@ -8,7 +8,7 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 12 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
 
-In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved.
+In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved by using the DMA name instead of the server name.
 
 To prevent this, instead of the server name, DataMiner CloudGateway now uses the DMA name as defined in DataMiner.xml or in the DMZ options.
 
