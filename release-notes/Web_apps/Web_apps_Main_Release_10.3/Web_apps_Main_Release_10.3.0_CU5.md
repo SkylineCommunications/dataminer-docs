@@ -38,6 +38,12 @@ When you opened a query that was created using an older GQI version, and that qu
 
 When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
 
+#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
+
 #### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
