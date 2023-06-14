@@ -26,5 +26,7 @@ In this section:
 
 > [!TIP]
 > See also:
+>
 > - [Using the RCA slider](xref:UsingTheRCASlider)
 > - [Rui’s Rapid Recap – RCA](https://community.dataminer.services/video/ruis-rapid-recap-rca/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [General Parameters Explained](https://community.dataminer.services/video/general-parameters-explained/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
