@@ -21,7 +21,7 @@ uid: Part2BasicFunctionalities
     <a href="/user-guide/Basic_Functionality/Redundancy_Groups/RedundancyGroups.html" title="Redundancy Groups" target="_self"><img src="~/user-guide/images/Redundancy_Groups.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/user-guide/Basic_Functionality/Services/services.html" title="Services" target="_self"><img src="~/user-guide/images/Services.svg" style="width:100%"></a>
+    <a href="/user-guide/Basic_Functionality/Services/About_services.html" title="Services" target="_self"><img src="~/user-guide/images/Services.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Basic_Functionality/Views/views.html" title="Views" target="_self"><img src="~/user-guide/images/Views.svg" style="width:100%"></a>
