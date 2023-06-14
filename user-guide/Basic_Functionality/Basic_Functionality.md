@@ -42,7 +42,7 @@ uid: Part2BasicFunctionalities
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Basic_Functionality/Documents/documents.html" title="Documents" target="_self"><img src="~/user-guide/images/Documents.svg" style="width:100%"></a>
+    <a href="/user-guide/Basic_Functionality/Documents/About_the_Documents_module.html" title="Documents" target="_self"><img src="~/user-guide/images/Documents.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Basic_Functionality/Chat/chat.html" title="Chat collaboration" target="_self"><img src="~/user-guide/images/Chat_Collaboration.svg" style="width:100%"></a>
