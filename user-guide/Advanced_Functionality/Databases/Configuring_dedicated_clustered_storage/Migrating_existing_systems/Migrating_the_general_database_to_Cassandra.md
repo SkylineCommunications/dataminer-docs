@@ -26,6 +26,8 @@ The migration procedure has the following prerequisites:
 
 - A sufficiently large time window for the migration. On average, this takes 1 hour per 5 GB of the database. For large systems it can take up to 48 hours.
 
+- The DataMiner Agents did not restart in the last 48 hours.
+
 ## Before you start the migration wizard
 
 Before you start the Cassandra migration wizard, we recommend that you check the following things:
