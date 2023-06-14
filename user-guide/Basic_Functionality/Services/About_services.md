@@ -46,6 +46,6 @@ In short, when you focus on services rather than devices, if an alarm is raised,
 
 Service templates are a valuable tool that simplifies the process of creating a series of almost identical services with just a few clicks. Instead of creating numerous similar services manually, the convenience of a service template allows you to create all desired services at once.
 
-By applying a service template, the designated “input data” is gathered and processed, resulting in the automatic creation of the corresponding services.
+The designated “input data” is gathered and processed by applying a service template, resulting in the automatic creation of the corresponding services.
 
 For more information and examples, see [Service templates](xref:Service_templates).
