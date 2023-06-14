@@ -16,4 +16,4 @@ This section consists of the following topics:
 
 > [!TIP]
 > See also:
-> [Rui’s Rapid Recap – Documents](https://community.dataminer.services/video/ruis-rapid-recap-documents/) ![Video](~/user-guide/images/video_Duo.png)
+> [Make the most of DataMiner Documents](https://community.dataminer.services/video/make-the-most-of-dataminer-documents/) ![Video](~/user-guide/images/video_Duo.png)
