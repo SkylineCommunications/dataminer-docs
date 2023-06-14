@@ -265,11 +265,52 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
-#### Dashboards app & Low-Code Apps: A message will now be displayed while a component is being migrated [ID_36410]
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
+
+#### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
-Up to now, no indication would be given when a component was being migrated to the most recent GQI version. From now on, when a component is being migrated, a message showing the component icon and the text *Migrating...* will be displayed.
+When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
+
+From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
+
+`Error trapped: Elastic returned unexpected value ''.`
+
+From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
+
+Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
+
+| ​Type | ​RawValue | ​DisplayValue |
+|------|----------|--------------|
+| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
+| ​(Distinct) Count   | 0    | 0                |
+| ​Std dev/Percentile | ​null | ​​"Not applicable" |
+| ​Sum                | 0    | 0                |
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
 ### Fixes
 
@@ -399,17 +440,23 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
 
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
 #### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
-#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
 
-<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- MR 10.4.0 - FR 10.3.8 -->
 
-In a PDF report of a dashboard, in some cases, trend components would collide with other components.
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
 
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
@@ -423,6 +470,12 @@ In the Dashboards app and the Monitoring app, spectrum components would get stuc
 
 When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
 
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
 #### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -432,3 +485,9 @@ When the same query was used in two different GQI visualizations, one of those v
 ```txt
 Cannot read properties of null ('reading delete')
 ```
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.

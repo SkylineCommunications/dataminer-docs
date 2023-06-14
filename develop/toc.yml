@@ -1774,11 +1774,6 @@
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
               - name: '@value'
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
-            - name: ColumnOptions
-              topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions
-              items: 
-              - name: ColumnOption
-                topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption
             - name: NamingFormat
               topicUid: Protocol.Params.Param.ArrayOptions.NamingFormat
           - name: CRC

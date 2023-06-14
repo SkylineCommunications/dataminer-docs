@@ -4,7 +4,7 @@ uid: UD_APIs_UserDefinableApiEndpoint
 
 # DataMiner UserDefinableApiEndpoint DxM
 
-*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 5 web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
+*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core 6 web API (from DataMiner 10.3.7 onwards) or ASP.NET Core 5 web API (prior to DataMiner 10.3.7). It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
 
 > [!CAUTION]
 > There is currently no rate limiting or protection in place to prevent malicious users from spamming the endpoint. We recommend only exposing the DMA using a firewall or network protection that prevents unknown IP addresses from sending requests.
@@ -166,6 +166,10 @@ For example, this is the default configuration:
 This section contains options specific to this DxM module:
 
 - **NatsSubject**: The subject used for internal NATS messaging. This should not be changed.
+
+  > [!NOTE]
+  > From DataMiner 10.3.7 onwards, NatsSubject is an optional setting.
+
 - **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e. 1.5 minutes). If you increase the timeout value, you will also need to [increase the timeout in IIS](#changing-the-timeout).
 - **SessionConfigPath**: Optional. The path to the NATS config file. The default configuration will be used when this is not filled in.
 - **CredentialsConfigPath**: Optional. The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
@@ -175,7 +179,6 @@ For example, this is the default configuration:
 ```json
 {
   "UserDefinableAPIs": {
-    "NatsSubject": "Skyline.DataMiner.Protobuf.Apps.UserDefinableApis.Api.v1.UserDefinableApiTriggerRequest",
     "MessageBrokerTimeOutSeconds": 90
   }
 }

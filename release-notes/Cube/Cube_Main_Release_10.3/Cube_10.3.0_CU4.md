@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_CU4
 ---
 
-# DataMiner Cube Main Release 10.3.0 CU4 – Preview
+# DataMiner Cube Main Release 10.3.0 CU4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU4](xref:General_Main_Release_10.3.0_CU4).
@@ -78,8 +78,54 @@ When, in the *Automation* app, you saved an Automation script after making chang
 
 When you opened an EPM card by clicking a shape that was linked to the EPM object via the *SystemName* and *SystemType* properties, in some cases, the card would be missing certain pages.
 
+#### Visual Overview: Dynamically positioned top-level shapes would lose their connections when a child shape had 'DisableConnectivity' set [ID_36340]
+
+<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+
+When dynamically positioned shapes contained subshapes that disabled the connectivity, in some cases, no connections would be drawn.
+
+From now on, connections will be drawn when a dynamically positioned shape has at least one subshape with connectivity.
+
+When all subshapes have the `DisableConnectivity` option set, then no connections will be drawn.
+
 #### Spectrum analysis: Trace would no longer be updated when you restarted a spectrum element while its card was open [ID_36347]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
+
+#### Visual Overview: Blinking shapes would affect other components [ID_36357]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, setting a shape to blink in Visual Overview could unintentionally affect other components. For example, when the parameter table contained monitored parameters, the monitored cells would incorrectly blink along with the shape.
+
+From now on, when a shape is set to blink, other components will no longer be affected.
+
+#### Problem with 'Use credentials' selection box when creating or editing an element [ID_36362]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connection while creating or updating an element, you would incorrectly not be required to select any predefined credentials. As a result, an error would occur when the element was created or the update was applied. From now on, when you select this option, the label will turn red and the *Create* or *Apply* button will be disabled as long as no credentials have been selected.
+
+Also, when you edited an element for which credentials had been selected, the *Use credentials* selection box would be disabled and the *Get community string* and *Set community string* boxes would be enabled until you toggled the *Use credentials* option off and on again.
+
+#### Reports and heatline of a monitored parameter of a DVE child element would incorrectly show "No monitoring" [ID_36384]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you opened the card of a DVE child element, drilled down to a monitored parameter and opened the *Details* tab, the reports would incorrectly show "No monitoring". Also, "No monitoring" would be shown when you viewed the heatline of the parameter in question.
+
+#### Problem when opening the alarm template of a large matrix parameter [ID_36444]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.
+
+#### Problem when trying to export all elements to a CSV file [ID_36512]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, the following exception could be thrown when you tried to export all elements to a CSV file:
+
+`Export failed: Object reference not set to an instance of an object`

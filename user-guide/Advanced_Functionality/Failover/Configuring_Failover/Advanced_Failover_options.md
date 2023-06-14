@@ -18,7 +18,9 @@ Go to this tab to specify whether Failover should occur manually or automaticall
 - If you choose *Manual*, switching can be done with the *Switch* button at the bottom of the *Failover* dialog box.
 
   > [!NOTE]
-  > Manual switching is not possible when the backup DMA is not running. In that case the *Switch* button will be unavailable.
+  >
+  > - Manual switching is not possible when the offline DMA is not running. In that case, the *Switch* button will be unavailable.
+  > - If the online DMA becomes unavailable for some reason, you can switch by connecting to the offline DMA with DataMiner Cube. You will then get the option to bring that DMA online.
 
 ## Synchronization
 

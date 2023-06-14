@@ -419,17 +419,17 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.5)
+- DataMiner ArtifactDeployer (version 1.4.6)
 - DataMiner CoreGateway (version 2.12.2)
 - DataMiner FieldControl (version 2.8.3)
 - DataMiner Orchestrator (version 1.3.3)
-- DataMiner SupportAssistant (version 1.3.2)
+- DataMiner SupportAssistant (version 1.3.3)
 
 The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
 
@@ -527,3 +527,12 @@ Please note the following:
 Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
+
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (offline)* to manage the cloud connection of the local DataMiner Agent while it is offline.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

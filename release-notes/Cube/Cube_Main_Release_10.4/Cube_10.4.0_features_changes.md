@@ -201,6 +201,12 @@ It is now possible to either show or hide the search box in the middle of the Cu
 
 Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
 
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
+
 #### Resources app: Duplicating a resource [ID_36308]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -324,6 +330,19 @@ Also, when you click *Save* after changing any of the settings in this *Database
 > [!IMPORTANT]
 > No warning will appear to point out that the backup Agent in a Failover setup is offline.
 
+#### Alarm Console - Proactive cap detection: Enhanced suggestion event value for predicted minimum or maximum values [ID_36440]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+The proactive cap detection feature generates suggestion events for predicted data range violations. The value of these suggestion events has now been changed
+
+- from  `Predicted above range violation between ... and ...` or `Predicted below range violation between ... and ...`
+- to `Predicted maximum value [x] [unit] between ... and ...` or `Predicted minimum value [x] [unit] between ... and ...`
+
+\*[x] being the value of the maximum or minimum value of the data range for the parameter as specified in the protocol, and [unit] being the unit of the parameter as specified in the protocol.
+
+The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -350,6 +369,12 @@ When, in a Visio drawing, shapes have been positioned dynamically based on prope
 
 When you clicked a suggestion alarm, in some cases, the trend graph would be loaded but the change points and the patterns incorrectly would not.
 
+#### System Center - Database: Problem when saving a trend data offload configuration with frequency set to 'permanently' [ID_35679]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When, while configuring trend data offloads, you selected *Trend data* and *Enable data offload* in the *Offloads* section, and then set the offload frequency to "permanently", this would be saved incorrectly, causing the offload process to not work properly.
+
 #### Trending - Parameter relationships: Light bulb icon would not appear if ModelHost DxM stopped working [ID_35868]
 
 <!-- MR 10.4.0 - FR 10.3.6 Also see enhancements -->
@@ -373,3 +398,17 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
+
+#### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.
+
+#### Visual Overview: Problem when using '[property:]' placeholders in shape data fields of type 'Element' and 'View' [ID_36553]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
+
+Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
