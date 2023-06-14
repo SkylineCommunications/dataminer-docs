@@ -8,7 +8,11 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 19 June 2023 - Fix - Chat Integration with Microsoft Teams: Improved consistency for email inputs [ID_36643]
 
-Consistency for the Chat Integration email inputs was improved because some features were using the email input as the actual email address of the user, and some as the service principal name of the user. This is not an issue if, in your linked tenant, both have the same value. If the values would differ, some features like 'Create Team' & 'Add Team Member or Owner' would not work unless the actual service principl name was given. Since today this is no longer the case and all email inputs for all Chat Integration features behave the same as the email address set for the user in your tenant.
+Consistency for the Chat Integration email input has been improved.
+
+Previously, some features were using the email input as the actual email address of the user, and some were using it as the service principal name of the user. This was not an issue if both had the same value in the linked tenant. However, if the values differed, some features like "Create Team" and "Add Team Member or Owner" did not work unless the actual service principal name was given.
+
+This is now no longer the case. All email input for all Chat Integration features behaves the same as the email address set for the user in the tenant.
 
 #### 7 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
 
