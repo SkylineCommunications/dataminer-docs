@@ -99,8 +99,8 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 
 - The connector no longer uses calls to information events to pass information.
 - Parameters that are used to capture information events are no longer used.
-- Inter-app calls are now aggregated to send information to the back end.
-- Information from the back end is now processed through inter-app communication.
+- Inter-app calls are now aggregated to send information to the back-end elements.
+- Information coming from the back-end elements is now processed through inter-app communication.
 
 #### Geomarketing DB passive tables no longer displayed + new export button [ID_36449]
 
