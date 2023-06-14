@@ -19,3 +19,11 @@ This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!NOTE]
 > To query the OpenSearch database, you can use the [ElasticVue](https://elasticvue.com/) browser extension. However, note that ElasticVue was created for ElasticSearch, so not everything may work for OpenSearch.
+
+## Backup OpenSearch database
+
+To take a back-up for an Opensearch database we refer to the following guides:
+
+-[Snapshot Management](https://opensearch.org/docs/latest/dashboards/sm-dashboards/)
+-[Take and restore snapshots](https://opensearch.org/docs/2.8/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/)
+-From our own ElasticSearch guide, [Taking and restoring snapshots](xref:Configuring_Elasticsearch_backups_Windows_Linux)
