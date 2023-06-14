@@ -432,6 +432,9 @@ Follow the below steps to fix this issue:
 
 1. Restart OpenSearch gradually. First the cluster manager, then the data nodes.
 
+> [!IMPORTANT]
+> Do note that when deleting the nodes folder that this will come with data-loss. So it only should be used with new installations of OpenSearch.
+
 ### SLSearch.txt logging mentions OpenSearch version is not officially supported
 
 If the SLSearch.txt log file mentions that the OpenSearch version is not officially supported, upgrade your DMS to DataMiner 10.3.6 or higher.
