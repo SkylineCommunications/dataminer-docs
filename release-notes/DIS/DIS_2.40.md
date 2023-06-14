@@ -51,19 +51,19 @@ In the *QAction\@dllImport* attribute, you can now reference a DLL file that is 
 
 Up to now, the *QAction\@dllImport* attribute would only contain the name of the DLL file. From now on, it will include the subfolders as well.
 
-#### Incremented minimum supported DataMiner version [ID_36036]
+#### Snippets, plugins and macros: References to former Class Library updated [ID_35769]
 
-The minimum supported DataMiner version has been increased to 10.1.
+The Class Library has been split up in smaller NuGet packages. For more information, see [Unlimited DevOps power at your fingertips – Code Library NuGet packages are living on the cloud!](https://community.dataminer.services/unlimited-devops-power-at-your-fingertips-code-library-nuget-packages-are-living-on-the-cloud).
 
-#### Snippets, Plugins and Macros: Updated the references to former Class Library [ID_35769]
+Every snippet, plugin and macro has been updated with the new namespaces and the correct references.
 
-Class Library has been split up in smaller NuGet packages. (see [Dojo](https://community.dataminer.services/unlimited-devops-power-at-your-fingertips-code-library-nuget-packages-are-living-on-the-cloud))
+#### Support for connecting to DataMiner Agents via gRPC [ID_36035]
 
-Every snippet, plugin and macro has been updated with the new namespaces and correct references.
+Before connecting to a DataMiner Agent, DIS will now first check the connection settings of that Agent and connect to it via either .NET Remoting or gRPC. This will enable DIS to also connect to cloud-connected Agents.
 
-#### Support gRPC to DataMiner [ID_36035]
+#### Minimum supported DataMiner version is now 10.1.0 [ID_36036]
 
-DIS will now check via the ConnectionSettings of DataMiner to connect via RemotingConnection or gRPC. This enables DIS to connect to cloud connected agents.
+The minimum supported DataMiner version has now been incremented to version 10.1.0.
 
 ### Validator
 
@@ -91,13 +91,15 @@ A number of enhancements have been made to the DIS diagram, especially with rega
 
 In the DataMiner protocol template, the region preprocessor directives have been removed from QAction_1.
 
-#### Automation Script Template: Added namespace and update input argument [ID_36033]
+#### Executables in VSIX extension package are now signed [ID_35879]
 
-When creating a new Automation Script, the template has now a namespace around the `Script` class. The `Engine` argument in the Run methods has been changed to `IEngine`.
+The executables included in the DIS VSIX extension package are now signed.
 
-#### Executables are signed [ID_35879]
+#### Automation script template: Namespace added and input argument updated [ID_36033]
 
-The executables that are included in the DIS vsix extension package are now signed.
+The Automation script template will now put a namespace around the `Script` class.
+
+Also, the `Engine` argument in the *Run* methods has been changed to `IEngine`.
 
 ### Fixes
 

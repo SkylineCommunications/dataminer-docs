@@ -27,13 +27,19 @@ When comparison and validation have finished, instead of one result list, you wi
 
 As from version 2.38, by default, DIS will set the language version of the C# projects to 7.3.
 
-#### Import Automation Script into Automation Script solution \[ID_33411\]
+#### Automation Script solutions: New 'Import Automation Script' command \[ID_33411\]
 
-When rightclicking on the Scripts folder in the solution, going to Add, you can now use 'Import DataMiner Automation Script' from the menu.
+Apart from the *Existing DataMiner Automation Script...* option, which can be used to import locally stored Automation scripts into an Automation script solution, you can now use the *Import DataMiner Automation Script* option to import Automation scripts from the DataMiner Agent you are connected to.
 
-You can select one or more scripts and they will be added to the solution.
+1. Right-click a solution folder in the Solution Explorer.
+1. Select *Add \> Import DataMiner Automation Script*.
+1. Select a least one Automation script file.
+1. Click *Open*.
 
-This option is only enabled when DIS is connected to a DataMiner.
+> [!NOTE]
+>
+> - This new *Import DataMiner Automation Script* option will only be available if DIS is connected to a DataMiner Agent.
+> - When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 ### Validator
 

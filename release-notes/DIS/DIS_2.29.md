@@ -122,11 +122,15 @@ From now on, it will only be possible to add SlowPoll and SlowPollBase elements 
 
 #### Class Library \[ID_27161\]
 
-- Settings for base class library package are now stored by name and version, instead of the (internal) path of the package. This way we know which version was previously selected, even then the previous file doesn't exist anymore (after an update), and allows to select the newer version in the same range.
-- When a base class library package has been updated, DIS now automatically select the newest version in the same range (first three numbers of the version are the same). When a driver was using an older base class library package in the same range, no popup is shown anymore.
-- An information message is now being displayed on top of the protocol file, indicating that auto-generating the class library is currently disabled for this protocol. This happens for example if the user has rejected to update to a newer package version, or if one or more (community) packages is not available.
-- Instead of automatically updating the full class library project in the solution, a message is now displayed that indicates that the project is not up to date. The developer can then manually choose to update the project in the solution.
-- Improved decision popup when class library settings are different compared to those that were previously used in the solution.
+- Settings for base class library package are now stored by name and version, instead of the (internal) path of the package. This way, we know which version was previously selected, even when the previous file doesn't exist anymore (after an update), and it allows us to select the newer version in the same range.
+
+- When a base class library package has been updated, DIS now automatically select the newest version in the same range (first three numbers of the version are the same). When a driver was using an older base class library package in the same range, no popup will be shown anymore.
+
+- An information message will now be displayed on top of the protocol file, indicating that auto-generating the class library is currently disabled for the protocol in question. This happens for example when the user has refused to update to a newer package version, or when one or more (community) packages is not available.
+
+- Instead of automatically updating the full class library project in the solution, a message will now be displayed, indicating that the project is not up to date. The developer can then manually choose to update the project in the solution.
+
+- An improved decision popup will now appear when class library settings are different compared to those that were previously used in the solution.
 
 ### Fixes
 
