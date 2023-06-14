@@ -33,9 +33,7 @@ A *BookingData* shape will show the following information:
   - an icon indicating whether the resource is linked to a service definition node
   - the node label or, if no node label is defined, the name of the function definition
 
-- On the right-hand side, you can select a node or node interface of the resource selected in the list on the left.
-
-  After selecting a node or node interface, this section will show the profile data of this node or node interface:
+- On the right-hand side, you see the profile data of the node or node interface you selected in the list on the left:
 
   - the profile instance (if applicable), and
   - the profile parameter values that will be used (note that these values can be overridden on several levels).
@@ -43,9 +41,9 @@ A *BookingData* shape will show the following information:
   > [!NOTE]
   > Priority of profile parameter value overrides:
   >
-  > 1. Resource usage parameter overrides
-  > 1. Resource usage profile instance
-  > 1. Resource usage profile definition
+  > 1. Values defined in the parameter overrides (stored in the booking)
+  > 1. Values defined in the profile instance
+  > 1. Values defined in the profile definition
 
 To be able to use the *BookingData* component, you will need
 
