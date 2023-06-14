@@ -828,11 +828,11 @@
       items:
         - name: About the Documents module
           topicUid: About_the_Documents_module
-        - name: Consulting documents, hyperlinks or email addresses
+        - name: Consulting documents, hyperlinks, or email addresses
           topicUid: Consulting_documents_hyperlinks_or_email_addresses
         - name: Managing the document folders
           topicUid: Managing_the_document_folders
-        - name: Adding documents, hyperlinks or email addresses
+        - name: Adding documents, hyperlinks, or email addresses
           topicUid: Adding_documents_hyperlinks_or_email_addresses
     - name: Chat collaboration
       topicUid: chat

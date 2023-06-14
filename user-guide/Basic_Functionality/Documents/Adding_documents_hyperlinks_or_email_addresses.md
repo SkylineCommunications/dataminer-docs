@@ -2,9 +2,9 @@
 uid: Adding_documents_hyperlinks_or_email_addresses
 ---
 
-# Adding documents, hyperlinks or email addresses
+# Adding documents, hyperlinks, or email addresses
 
-To add a document, link or email address:
+To add a document, link, or email address:
 
 1. Right-click a folder in the tree view or right-click in the documents overview in the right pane, and select *Add document*.
 
