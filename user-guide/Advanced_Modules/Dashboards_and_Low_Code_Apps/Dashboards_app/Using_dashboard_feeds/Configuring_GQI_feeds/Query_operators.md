@@ -32,6 +32,9 @@ If you choose the *Regexmatch* method, you will need to select a column and spec
 
 For both manipulation methods, you will also need to specify the name for the new column. When the column manipulation operation is fully configured, you can further fine-tune the result by applying another operator.
 
+> [!TIP]
+> See also: [How to do Column Manipulation with GQI](https://community.dataminer.services/video/how-to-do-column-manipulation-with-gqi/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
 ## Filter
 
 Filters the data set. When you select this option, select the column to filter, specify the filter method (e.g. equals, greater than, etc.) and the value to use as a filter. The available filter methods depend on the type of data in the selected column. Once the filter has been fully configured, you can refine the results by applying another operator, e.g. an additional filter.
