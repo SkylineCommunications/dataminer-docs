@@ -24,3 +24,6 @@ The following information can be stored with the app:
 - Email addresses
 
 - Hyperlinks to web pages
+
+> [!TIP]
+> See also: [Rui’s Rapid Recap – Documents](https://community.dataminer.services/video/ruis-rapid-recap-documents/) ![Video](~/user-guide/images/video_Duo.png)
