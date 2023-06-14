@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU16
 ---
 
-# General Main Release 10.2.0 CU16 – Preview
+# General Main Release 10.2.0 CU16
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -168,6 +168,20 @@ From now on, when a shape is set to blink, other components will no longer be af
 When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connection while creating or updating an element, you would incorrectly not be required to select any predefined credentials. As a result, an error would occur when the element was created or the update was applied. From now on, when you select this option, the label will turn red and the *Create* or *Apply* button will be disabled as long as no credentials have been selected.
 
 Also, when you edited an element for which credentials had been selected, the *Use credentials* selection box would be disabled and the *Get community string* and *Set community string* boxes would be enabled until you toggled the *Use credentials* option off and on again.
+
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a single-value filter was applied to an SNMP table using the `subtable` option, in some cases, the table would no longer receive any data.
+
+Due to a filtering problem, using a single filter like "1.1" would no longer poll instances like "1.1" and "1.1.2". This has now been fixed.
+
+Also, it is now possible to use a "\*" wildcard in a filter. See the following examples:
+
+- "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+- "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+- "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
 
 #### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
 

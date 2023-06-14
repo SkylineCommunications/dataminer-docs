@@ -12,6 +12,12 @@ uid: Cube_Main_Release_10.3.0_CU5
 
 ### Enhancements
 
+#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID_36333]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, external connectivity updates for dynamically positioned shapes would not be applied in real time. To see the changes, you had to close the visual overview and open it again. From now on, any external connectivity updates for dynamically positioned shapes will immediately be visible.
+
 #### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID_36363]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
@@ -29,3 +35,23 @@ Also, because of a number of enhancements, overall performance has increased whe
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### System Center: Problem with 'Show agent alarms' link [ID_36463]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you selected an agent in the *Agents* section of *System Center*, in some cases, the alarm numbers shown in the *Show agent alarms* link would not be correct.
+
+Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
+
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.

@@ -101,6 +101,39 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
 > SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
+## Additional configuration for systems connected to dataminer.services
+
+When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
+
+1. Specify the following URLs, replacing `<dms-dns-name>` with the DNS name in the *spMetadata.xml* file and `<organization-name>` with the name of the organization:
+
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/API/`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking`
+   - `https://<dms-dns-name>-<organization-name>.on.dataminer.services/account-linking/`
+
+   > [!NOTE]
+   > Note the trailing "/".
+
+   Example of remote access URL: <https://dataminer-skyline.on.dataminer.services>
+
+   In this example, the DMS DNS name is "dataminer" and the organization name is "skyline".
+
+1. Extend the *spMetadata.xml* file with the following code:
+
+   ```xml
+   <?xml version="1.0" encoding="UTF-8"?>
+   <md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata" xmlns:ds="http://www.w3.org/2000/09/xmldsig#" entityID="[ENTITYID]" validUntil="2050-01-04T10:00:00.000Z">
+    <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+      ...
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/API/" index="1" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="true"/>
+    </md:SPSSODescriptor>
+   </md:EntityDescriptor>
+    ```
+
+1. Update your provider settings. See [Identity providers](#identity-providers).
+
 ## Identity providers
 
 DataMiner currently supports the following identity providers:
@@ -116,6 +149,9 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 #### Setting up an Azure AD Enterprise application
 
 As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applications in Azure AD when setting up external authentication. When you create regular App registrations, certain features will not be available.
+
+> [!NOTE]
+> Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.
 
 1. In Azure AD, register DataMiner as an Enterprise Application:
 
@@ -156,7 +192,8 @@ As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applicat
    - Set *Sign on URL* to the IP address or DNS name specified in the *spMetadata.xml* file, for example ``https://dataminer.example.com/``.
 
    > [!TIP]
-   > See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)
+   > - See also: [Creating a DataMiner metadata file](#creating-a-dataminer-metadata-file)  
+   > - See also: [Additional configuration for systems connected to dataminerservices](#additional-configuration-for-systems-connected-to-dataminerservices) 
 
 #### Retrieving the identity provider's metadata file on Azure AD
 
@@ -352,6 +389,9 @@ DataMiner supports Okta as identity provider as from version 10.1.11. Use Okta's
 
        > [!NOTE]
        > The indexes here should be the same as the indexes in `C:\Skyline DataMiner\okta-sp-metadata.xml`, which we will create in a further step.
+
+       > [!TIP]
+       > See also: [Additional configuration for systems connected to dataminer.services](#additional-configuration-for-systems-connected-to-dataminerservices)
 
    - **Audience URI (SP Entity ID)**: The intended audience of the SAML assertion.
 

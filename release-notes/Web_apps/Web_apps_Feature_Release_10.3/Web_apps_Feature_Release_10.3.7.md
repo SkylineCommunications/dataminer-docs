@@ -2,15 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.7
 ---
 
-# DataMiner web apps Feature Release 10.3.7 – Preview
+# DataMiner web apps Feature Release 10.3.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.7](xref:General_Feature_Release_10.3.7).
 
-## Highlights
+## New features
 
 #### Interactive Automation scripts: New DownloadButton component [ID_35869]
 
@@ -72,10 +72,6 @@ To do so, the system will proceed as follows:
 > [!NOTE]
 > Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
 
-## Other features
-
-*No other features yet*
-
 ## Changes
 
 ### Enhancements
@@ -123,6 +119,8 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
 
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
@@ -296,3 +294,15 @@ Table actions would incorrectly not be triggered when the key of the GQI data so
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
+
+#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.

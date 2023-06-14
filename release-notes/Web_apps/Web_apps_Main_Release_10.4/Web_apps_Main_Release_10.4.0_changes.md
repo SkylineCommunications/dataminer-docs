@@ -279,9 +279,38 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
+
+`Error trapped: Elastic returned unexpected value ''.`
+
+From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
+
+Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
+
+| ​Type | ​RawValue | ​DisplayValue |
+|------|----------|--------------|
+| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
+| ​(Distinct) Count   | 0    | 0                |
+| ​Std dev/Percentile | ​null | ​​"Not applicable" |
+| ​Sum                | 0    | 0                |
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
 ### Fixes
 
@@ -423,6 +452,12 @@ When an empty query was used by more than one table component, in some rare case
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
+
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
@@ -451,14 +486,14 @@ When the same query was used in two different GQI visualizations, one of those v
 Cannot read properties of null ('reading delete')
 ```
 
-#### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When you changed the name of a low-code app page, the application would incorrectly be updated each time you hit a key. From now on, the application will be updated 250 ms after the last keystroke.
-
 #### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.

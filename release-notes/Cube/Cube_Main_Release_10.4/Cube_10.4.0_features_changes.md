@@ -201,6 +201,12 @@ It is now possible to either show or hide the search box in the middle of the Cu
 
 Alternatively, you can also open the quick menu in the Cube header, and toggle the *Show search box* option.
 
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
+
 #### Resources app: Duplicating a resource [ID_36308]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -398,3 +404,11 @@ In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using g
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.
+
+#### Visual Overview: Problem when using '[property:]' placeholders in shape data fields of type 'Element' and 'View' [ID_36553]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
+
+Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.

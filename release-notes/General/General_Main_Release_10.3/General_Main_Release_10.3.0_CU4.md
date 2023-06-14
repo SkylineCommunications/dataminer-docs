@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU4
 ---
 
-# General Main Release 10.3.0 CU4 – Preview
+# General Main Release 10.3.0 CU4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -136,6 +136,20 @@ When the *SLNetClientTest* tool tried to set up a connection using gRPC, a `Miss
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When you re-uploaded a main DVE protocol with the same version as the one that was being used as production version, the exported child protocols would incorrectly no longer be set as production.
+
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a single-value filter was applied to an SNMP table using the `subtable` option, in some cases, the table would no longer receive any data.
+
+Due to a filtering problem, using a single filter like "1.1" would no longer poll instances like "1.1" and "1.1.2". This has now been fixed.
+
+Also, it is now possible to use a "\*" wildcard in a filter. See the following examples:
+
+- "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+- "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+- "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.7
 ---
 
-# General Feature Release 10.3.7 – Preview
+# General Feature Release 10.3.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -13,11 +13,7 @@ uid: General_Feature_Release_10.3.7
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.7](xref:Web_apps_Feature_Release_10.3.7).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been added to this release yet.*
-
-## Other features
+## New features
 
 #### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514]
 
@@ -215,6 +211,20 @@ When you re-uploaded a main DVE protocol with the same version as the one that w
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a single-value filter was applied to an SNMP table using the `subtable` option, in some cases, the table would no longer receive any data.
+
+Due to a filtering problem, using a single filter like "1.1" would no longer poll instances like "1.1" and "1.1.2". This has now been fixed.
+
+Also, it is now possible to use a "\*" wildcard in a filter. See the following examples:
+
+- "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+- "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+- "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 

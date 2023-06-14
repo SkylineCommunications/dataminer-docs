@@ -14,13 +14,23 @@ uid: Cube_Feature_Release_10.3.8
 
 *No highlights have been selected for this release yet*
 
-## Other features
+## Other new features
 
-*No other features have been added yet*
+#### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an element card is open, each time a new parameter is added to the element or an existing parameter is updated, the change will be applied in real time. You will no longer need to close the card and open it again to see the changes.
 
 ## Changes
 
 ### Enhancements
+
+#### Visual Overview: External connectivity updates for dynamically positioned shapes will now be applied in real time [ID_36333]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, external connectivity updates for dynamically positioned shapes would not be applied in real time. To see the changes, you had to close the visual overview and open it again. From now on, any external connectivity updates for dynamically positioned shapes will immediately be visible.
 
 #### Visual Overview: TextWrapping should now default to the correct value "Wrap" [ID_36363]
 
@@ -40,8 +50,36 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
+#### System Center: Problem with 'Show agent alarms' link [ID_36463]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you selected an agent in the *Agents* section of *System Center*, in some cases, the alarm numbers shown in the *Show agent alarms* link would not be correct.
+
+Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
+
 #### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you opened a trend graph containing related parameters, in some cases, the related parameters returned by the DataMiner Agent would incorrectly be empty.
+
+#### Visual Overview: Problem when using '[property:]' placeholders in shape data fields of type 'Element' and 'View' [ID_36553]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
+
+Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
+
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
