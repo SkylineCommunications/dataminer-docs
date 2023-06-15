@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLASPConnection_exe
 ---
 
-# Troubleshooting - Reporter - SLASPConnection.exe
+# Reporter - SLASPConnection.exe
 
 ## About Reporter
 
@@ -74,8 +74,8 @@ IssueResolved--- |Yes|End
 IssueResolved--- |No|Workaround---Other
 Other---End
 %% Define hyperlinks %%
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
-click RTE "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
+click RTE "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
 click CRASH "https://community.dataminer.services/ioc-flowchart---crash/" "Crash investigation diagram"
 click Dcom "#how-to-configure-dcom-manually"
 click ChartDirector "#error-could-not-start-the-chartdirector-object"

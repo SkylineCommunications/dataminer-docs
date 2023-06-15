@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLScheduler_exe
 ---
 
-# Troubleshooting - SLScheduler.exe
+# SLScheduler.exe
 
 ## About SLScheduler
 
@@ -55,9 +55,9 @@ Errors --- |YES|ErrorYes
 Config --- End
 ErrorYes --- End
 %% Define hyperlinks %%
-click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click SLLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click Config "#scheduled-taskevent-configuration-checklist"
 click ErrorYes "#check-the-respective-errors"
 click Win "#windows-task-scheduler"

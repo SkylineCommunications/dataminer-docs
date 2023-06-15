@@ -78,12 +78,12 @@ COLLECTLOGS --- CHECKCRASHORDISP
 CHECKCRASHORDISP --- |YES|CRASHORDISP
 CHECKCRASHORDISP --- |NO| RTE
 %% Define hyperlinks %%
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click CRASHORDISP "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
-click RTE "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html"
-click COLLECTLOGS "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click CRASHORDISP "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
+click RTE "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html"
+click COLLECTLOGS "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
 click CHECKRTE "#identifying-run-time-errors"
-click NORTE "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click NORTE "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 class START,CHECKRTE classTerminal;
 class CHECKALARM,CHECKDUMP,CHECKLOGS,CHECKACTIVE,CHECKCRASHORDISP classDecision;
 class HOME,RTE,NORTE,CRASHORDISP classExtRef;

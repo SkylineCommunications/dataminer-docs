@@ -3116,95 +3116,93 @@
         - name: Finding a root cause
           topicUid: Finding_a_Root_Cause
           items:
+            - name: Troubleshooting - startup issues
+              topicUid: Troubleshooting_Startup_Issues
+            - name: Troubleshooting - critical issues
+              topicUid: Troubleshooting_Critical_Issues_Overview
+              items:
+                - name: Critical issues - Alarm Console
+                  topicUid: Troubleshooting_Critical_Issues_Alarm_Console
+                - name: Critical issues - data not updated
+                  topicUid: Troubleshooting_Critical_Issues_Data_Not_Updated
+                - name: Critical issues - automatic restart
+                  topicUid: Troubleshooting_Critical_Issues_Automatic_Restart
+                - name: Critical issues - resources
+                  topicUid: Troubleshooting_Critical_Issues_Resources
             - name: Troubleshooting - trending
               topicUid: Troubleshooting_Trending
             - name: Troubleshooting - alarms
               topicUid: Troubleshooting_Alarms
             - name: Troubleshooting - services
               topicUid: Troubleshooting_Services
-            - name: Troubleshooting - startup issues
-              topicUid: Troubleshooting_Startup_Issues
-            - name: Troubleshooting - critical issues
-              topicUid: Troubleshooting_Critical_Issues_Overview
-              items:
-                - name: Troubleshooting - critical issues - Alarm Console
-                  topicUid: Troubleshooting_Critical_Issues_Alarm_Console
-                - name: Troubleshooting - critical issues - data not updated
-                  topicUid: Troubleshooting_Critical_Issues_Data_Not_Updated
-                - name: Troubleshooting - critical issues - automatic restart
-                  topicUid: Troubleshooting_Critical_Issues_Automatic_Restart
-                - name: Troubleshooting - critical issues - resources
-                  topicUid: Troubleshooting_Critical_Issues_Resources
             - name: Troubleshooting - databases
               topicUid: Troubleshooting_Databases_Overview
               items:
                 - name: Troubleshooting - Cassandra
                   topicUid: Troubleshooting_Cassandra
                   items:
-                    - name: Troubleshooting - Cassandra - best practice analyzer
+                    - name: Cassandra - best practice analyzer
                       topicUid: Troubleshooting_Cassandra_Best_Practice_Analyzer
-                    - name: Troubleshooting - Cassandra - nodetool status check
+                    - name: Cassandra - nodetool status check
                       topicUid: Troubleshooting_Cassandra_Nodetool_Status_Check
-                    - name: Troubleshooting - Cassandra - nodetool checks
+                    - name: Cassandra - nodetool checks
                       topicUid: Troubleshooting_Cassandra_Nodetool_Checks
                 - name: Troubleshooting - Elasticsearch
                   topicUid: Troubleshooting_Elasticsearch
-            - name: Troubleshooting - Trending
-              topicUid: Troubleshooting_Trending
             - name: Troubleshooting - process identification
               topicUid: Troubleshooting_Process_Identification
               items:
                 - name: Troubleshooting - main processes
                   items:
-                    - name: Troubleshooting - SLElement.exe
+                    - name: SLElement.exe
                       topicUid: Troubleshooting_SLElement_exe
-                    - name: Troubleshooting - SLDataMiner.exe
+                    - name: SLDataMiner.exe
                       topicUid: Troubleshooting_SLDataMiner_exe
                 - name: Troubleshooting - communication processes
                   items:
-                    - name: Troubleshooting - SLNet.exe 
+                    - name: SLNet.exe 
                       topicUid: Troubleshooting_SLNet_exe
                       items:
-                        - name: Troubleshooting - SLNet - startup issues
+                        - name: SLNet - startup issues
                           topicUid: Troubleshooting_SLNet_Startup
-                        - name: Troubleshooting - SLNet - correlation engine
+                        - name: SLNet - correlation engine
                           topicUid: Troubleshooting_SLNet_Correlation_Engine
-                        - name: Troubleshooting - SLNet - disconnects
+                        - name: SLNet - disconnects
                           topicUid: Troubleshooting_SLNet_Disconnects
-                        - name: Troubleshooting - SLNet - RTEs
+                        - name: SLNet - RTEs
                           topicUid: Troubleshooting_SLNet_RTEs
-                    - name: Troubleshooting - SLDMS.exe
+                    - name: SLDMS.exe
                       topicUid: Troubleshooting_SLDMS_exe
                       items:
-                        - name: Troubleshooting - SLDMS - frequent issues
+                        - name: SLDMS - frequent issues
                           topicUid: Troubleshooting_SLDMS_Frequent_Issues
                 - name: Troubleshooting - polling processes
                   items:
-                    - name: Troubleshooting - SLPort.exe
+                    - name: SLPort.exe
                       topicUid: Troubleshooting_SLPort_exe
-                    - name: Troubleshooting - SLSNMPManager.exe
+                    - name: SLSNMPManager.exe
                       topicUid: Troubleshooting_SLSNMPManager_exe
                 - name: Troubleshooting - logging processes
                   items:
-                    - name: Troubleshooting - SLWatchdog.exe
+                    - name: SLWatchdog.exe
                       topicUid: Troubleshooting_SLWatchdog_exe
-                    - name: Troubleshooting - SLLog.exe
+                    - name: SLLog.exe
                       topicUid: Troubleshooting_SLLog_exe
                 - name: Troubleshooting - database processes
                   items:
-                    - name: Troubleshooting - SLDataGateway.exe
+                    - name: SLDataGateway.exe
                       topicUid: Troubleshooting_SLDataGateway_exe
                 - name: Troubleshooting - other processes
                   items:
-                    - name: Troubleshooting - SLXML.exe
+                    - name: SLXML.exe
                       topicUid: Troubleshooting_SLXML_exe
-                    - name: Troubleshooting - Reporter - SLASPConnection.exe
+                    - name: Reporter - SLASPConnection.exe
                       topicUid: Troubleshooting_SLASPConnection_exe
-                    - name: Troubleshooting - SLAnalytics.exe
+                    - name: SLAnalytics.exe
                       topicUid: Troubleshooting_SLAnalytics_exe
-                    - name: Troubleshooting - SLHelper.exe
+                    - name: SLHelper.exe
                       topicUid: Troubleshooting_SLHelper_exe
-                    - name: Troubleshooting - SLScheduler.exe
+                    - name: SLScheduler.exe
                       topicUid: Troubleshooting_SLScheduler_exe
             - name: Troubleshooting - identify per module
               topicUid: Troubleshooting_Identify_per_Module

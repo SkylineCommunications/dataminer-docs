@@ -2,7 +2,7 @@
 uid: Troubleshooting_Critical_Issues_Resources
 ---
 
-# Troubleshooting - critical issues - resources
+# Critical issues: resources
 
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
@@ -34,13 +34,13 @@ Start --- MachineoutofResources
 Start --- DataNotUpdated
 Start --- ErrorAlarmConsole
 %% Define hyperlinks %%
-click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
-click DataNotUpdated "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
-click Automaticrestart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"
-click ErrorAlarmConsole "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html" "Errors In Alarm Console"
-click Start "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
+click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click SLLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click DataNotUpdated "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
+click Automaticrestart "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"
+click ErrorAlarmConsole "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html" "Errors In Alarm Console"
+click Start "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
 click MachineoutofResources "#insufficient-resources" "Machine Out Of Resources"
 %% Apply styles to blocks %%
 class Start DarkBlue;
@@ -85,7 +85,7 @@ DMProc --- |NO| Cassandra
 Cassandra --- |YES| Prunsrv
 Cassandra --- |NO| RAMup
 %% Define hyperlinks %%
-click FreeSpace "https://docs.dataminer.services/user-guide/Troubleshooting/Procedures/Keeping_a_DMA_from_running_out_of_disk_space.html"
+click FreeSpace "/user-guide/Troubleshooting/Procedures/Keeping_a_DMA_from_running_out_of_disk_space.html"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class Prunsrv,Proc,FreeSpace,RAMup LightGray;

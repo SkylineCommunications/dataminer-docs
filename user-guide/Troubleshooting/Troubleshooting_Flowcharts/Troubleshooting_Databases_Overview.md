@@ -24,10 +24,10 @@ HOME([Start page])
 Start --- Cassandra
 Start --- Elasticsearch
 %% Define hyperlinks %%
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
-click Cassandra "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
-click Elasticsearch "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Elasticsearch/Troubleshooting_Elasticsearch.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click Cassandra "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click Elasticsearch "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Elasticsearch/Troubleshooting_Elasticsearch.html"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class HOME,Investigation,Cassandra,Elasticsearch LightBlue;

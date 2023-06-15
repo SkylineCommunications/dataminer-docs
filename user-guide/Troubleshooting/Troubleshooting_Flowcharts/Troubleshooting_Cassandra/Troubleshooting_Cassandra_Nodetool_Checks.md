@@ -2,7 +2,7 @@
 uid: Troubleshooting_Cassandra_Nodetool_Checks
 ---
 
-# Troubleshooting - Cassandra: nodetool checks
+# Cassandra: nodetool checks
 
 ## About the nodetool utility
 
@@ -54,8 +54,8 @@ HOME([Start page <br/> Troubleshooting - Cassandra])
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
-click ActionClick_NodetoolStatus "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Status_Check.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click ActionClick_NodetoolStatus "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra_Nodetool_Status_Check.html"
 click ActionClick_DatastaxReference "https://cassandra.apache.org/doc/latest/tools/nodetool/nodetool.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks

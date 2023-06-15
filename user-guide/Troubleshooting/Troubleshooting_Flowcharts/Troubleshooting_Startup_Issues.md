@@ -34,7 +34,7 @@ classDef classSolution fill:#58595b,stroke:#58595b,color:#ffffff,stroke-width:0p
    CHECK1 --- failingHeartbeats
    CHECK1 --- others
 %% Define hyperlinks %%
-   click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+   click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% Apply styles to blocks %%
 class START classTerminal;
 class CHECK1 classDecision;

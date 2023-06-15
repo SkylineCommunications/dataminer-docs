@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLSNMPManager_exe
 ---
 
-# Troubleshooting - SLSNMPManager.exe
+# SLSNMPManager.exe
 
 ## About SLSNMPManager
 
@@ -35,7 +35,7 @@ J---I
 K---|Yes| Log["- Add or update the Portlog.txt file in <br/>the Skyline DataMiner folder.<br/>- Contact the connector developer to <br/>find the root cause in the protocol."]:::InfoAccNoClick
 K---|No| I["Contact software team with the <br/>information and memory dump."]:::Start
 XX([Start page]):::External
-click XX "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
+click XX "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
 linkStyle default stroke:#cccccc
 classDef ExtRef fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Decision fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;

@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLDataMiner_exe
 ---
 
-# Troubleshooting - SLDataMiner.exe
+# SLDataMiner.exe
 
 ## About SLDataMiner
 
@@ -53,8 +53,8 @@ RTE ---|Memory leak|MemoryLeak ---- LinkLeak -----|YES|ElementActive ----|YES|St
 LinkLeak ----|NO|LogCollector2
 ElementActive ----|NO|InfoEventsAlternative
 %% Define hyperlinks %%
-click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click CassandraTb "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click CassandraTb "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
 %% Apply styles to blocks %%
 class Start,Revert,LogCollector1,LogCollector2,CheckLogs,StopElement,InfoEventsAlternative DarkBlue; 
 class Watchdog,ThreadsDB,Offload,ThreadsSecondary,MemoryLeak LightGray;

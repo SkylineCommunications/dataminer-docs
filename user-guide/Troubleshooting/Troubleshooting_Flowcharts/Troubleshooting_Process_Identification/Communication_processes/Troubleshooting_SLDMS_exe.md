@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLDMS_exe
 ---
 
-# Troubleshooting - SLDMS.exe
+# SLDMS.exe
 
 ## About SLDMS
 
@@ -34,9 +34,9 @@ START --- Leak
 START --- Crash
 START --- OI
 %% Define hyperlinks %%
-click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
-click OI "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLDMS/SLDMS_Frequent_Issues.html" "Frequent Issues"
-click LogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
+click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
+click OI "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLDMS/SLDMS_Frequent_Issues.html" "Frequent Issues"
+click LogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
 click Rte "#option-1-rte-and-memory-leak"
 click Leak "#option-1-rte-and-memory-leak"
 click Crash "#option-2-process-crash"

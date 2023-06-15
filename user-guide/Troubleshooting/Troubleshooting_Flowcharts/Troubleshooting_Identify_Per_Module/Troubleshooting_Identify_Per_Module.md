@@ -31,9 +31,9 @@ ModuleDefinition --- Surveyor
 ModuleDefinition --- Apps
 ModuleDefinition --- AlarmConsole
 %% Define hyperlinks %%
-click Apps "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
-click Surveyor "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Surveyor/Troubleshooting_Surveyor.html" "Surveyor"
-click AlarmConsole "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Alarm_Console.html" "Alarm Console"
+click Apps "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Apps/Troubleshooting_Apps.html" "Apps"
+click Surveyor "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Surveyor/Troubleshooting_Surveyor.html" "Surveyor"
+click AlarmConsole "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Alarm_Console.html" "Alarm Console"
 %% Apply styles to blocks %%
 class START classTerminal;
 class AlarmConsole,Surveyor,Apps classExternalRef;

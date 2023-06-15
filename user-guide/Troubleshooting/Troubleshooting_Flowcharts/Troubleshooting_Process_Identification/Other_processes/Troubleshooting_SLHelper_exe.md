@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLHelper_exe
 ---
 
-# Troubleshooting - SLHelper.exe
+# SLHelper.exe
 
 ## About SLHelper
 
@@ -117,14 +117,14 @@ PdfErrors --- |NO output<br/>is generated| PdfTimeouts
 PdfTimeouts --- PdfOptimize
 PdfSave --- EndReportIssue
 %% Define hyperlinks %%
-click LinkRootCause "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Flowchart"
-click LinkProcessList "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Go to process identification page"
+click LinkRootCause "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Flowchart"
+click LinkProcessList "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Go to process identification page"
 click VisioKnown "#known-limitations-of-visual-overview-in-web-apps" "Known limitations"
 click VisioLogs "#logging" "More on logging"
 click GqiDevConsole "#using-the-developer-console-in-a-browser" "Using Developer Console"
 click GqiSave "#recording-a-gqi-session" "How to record a GQI session"
 click PdfLogs "#logging" "More on logging"
-click PdfReportsIssue "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLASPConnection_exe.html" "Go to Reporter flowchart"
+click PdfReportsIssue "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLASPConnection_exe.html" "Go to Reporter flowchart"
 click BpaLogs "#logging" "More on logging"
 %% Define styles %%
 linkStyle default stroke:#cccccc

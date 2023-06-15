@@ -2,7 +2,7 @@
 uid: Troubleshooting_Cassandra_Best_Practice_Analyzer
 ---
 
-# Troubleshooting - Cassandra - best practice analyzer
+# Cassandra: best practice analyzer
 
 ## About the Cassandra BPA
 
@@ -45,12 +45,12 @@ D --- |Yes|V
 E --- |No|O
 F --- |Yes|G
 %% Define hyperlinks %%
-click A "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/BPA_tests/BPA_Cassandra_DB_Size.html"
-click C "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Running_BPA_tests.html"
-click V "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/Cassandra_Cleaner.html"
+click A "/user-guide/Advanced_Functionality/DataMiner_Systems/BPA_tests/BPA_Cassandra_DB_Size.html"
+click C "/user-guide/Advanced_Functionality/DataMiner_Systems/Running_BPA_tests.html"
+click V "/user-guide/Reference/DataMiner_Tools/Cassandra_Cleaner.html"
 click E "https://community.dataminer.services/dataminer-compute-requirements/"
 click O "https://docs.datastax.com/en/dseplanning/docs/capacityPlanning.html"
-click goback "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click goback "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
 click G "#making-sure-dbxml-is-configured-correctly"
 click X "#removing-duplicate-tables-or-folders"
 </div>

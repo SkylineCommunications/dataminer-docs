@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLDataGateway_exe
 ---
 
-# Troubleshooting - SLDataGateway.exe
+# SLDataGateway.exe
 
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
@@ -51,7 +51,7 @@ Action_HighCPUUtilization([High CPU Utilization]):::classExternalRef
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click Action_HighMemory "#option-1-high-memory-consumption"
 click Action_DataMinerNotStarting "#option-2-dataminer-not-starting-up"
 click Action_DataMinerCrash "#option-3-dataminer-crash"
@@ -99,7 +99,7 @@ Action_AlarmTemplates(["Check for Alarm templates<br> with smart baselines <br>(
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% -------------------------------------------------------------------------
 </div>
 
@@ -134,7 +134,7 @@ Action_ErrorLogging(["Error logging: Check CoCreateInstance SLXML<br> failed wit
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------
@@ -213,7 +213,7 @@ Action_SLDataGatewayCrashAfterUpgrade2[Compare SLDataGateway files with a workin
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------

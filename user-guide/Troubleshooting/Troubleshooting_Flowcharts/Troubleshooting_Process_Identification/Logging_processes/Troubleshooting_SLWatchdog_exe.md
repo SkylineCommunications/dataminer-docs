@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLWatchdog_exe
 ---
 
-# Troubleshooting - SLWatchdog.exe
+# SLWatchdog.exe
 
 ## About SLWatchdog
 
@@ -87,14 +87,14 @@ flowchart TD
     togglingRTE --- CheckSlXml
     CheckSlXml --- XmlFlowchart
  %% Define hyperlinks %%
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
-click RteLink "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "Go to RTE troubleshooting page"
-click XmlFlowchart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLXML_exe.html" "Go to SLXML Flowchart"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click RteLink "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "Go to RTE troubleshooting page"
+click XmlFlowchart "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLXML_exe.html" "Go to SLXML Flowchart"
 click ConfirmLeak "#how-can-you-confirm-a-memory-leak" "How to identify a memory leak."
 click CommonIssues "#common-issues-flowchart" "Go to common issues"
-click RunLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
-click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click RunLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
+click SLLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 %% Define styles %%
 linkStyle default stroke:#cccccc
 classDef classTerminal fill:#1e5179,stroke:#1e5179,color:#ffffff,stroke-width:0px;
@@ -152,12 +152,12 @@ flowchart TD
     CrashdumpIssues---CrashRestart
     CrashRestart--- VerifyRestart
 %% Define hyperlinks %%
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click InstructionsBitness "#is-watchdog-running-as-a-64-bit-process" "Determine if Watchdog is registered as 32-bit or 64 bit process. "
 click ResolveMismatch "#how-do-you-resolve-a-bitness-mismatch-between-the-dataminer-version-and-slwatchdogexe" "Resolve mismatch between DMA and SLWatchdog bitness"
-click RunLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
-click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click RunLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
+click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Identification flow"
+click SLLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "How to use the log collector tool."
 click VerifyRestart "https://docs.dataminer.services/release-notes/General/General_Main_Release_10.0/General_Main_Release_10.0.0_CU7.html#dataminer-restart-not-triggered-after-process-generated-crashdump-id_27321" "Release Note 27321"
 %% Define styles %%
 linkStyle default stroke:#cccccc

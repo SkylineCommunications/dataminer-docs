@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLNet_Correlation_Engine
 ---
 
-# Troubleshooting - SLNet - correlation engine
+# SLNet - correlation engine
 
 <div class="mermaid">
 flowchart TD
@@ -47,10 +47,10 @@ FOUNDYES --- ENDING
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click DISC "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Disconnects.html" "Go to disconnect cases"
-click BACK "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html" "Go back to SLNet Troubleshooting"
-click GATHER "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "Go to LogCollector"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click DISC "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Disconnects.html" "Go to disconnect cases"
+click BACK "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html" "Go back to SLNet Troubleshooting"
+click GATHER "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "Go to LogCollector"
 click PRESENTYES "#slnetclienttest-tool"
 click PRESENTNO "#slnetclienttest-tool"
 %% -------------------------------------------------------------------------

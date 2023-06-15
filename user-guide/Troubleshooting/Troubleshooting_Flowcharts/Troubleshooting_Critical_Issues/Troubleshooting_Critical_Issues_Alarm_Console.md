@@ -2,7 +2,7 @@
 uid: Troubleshooting_Critical_Issues_Alarm_Console
 ---
 
-# Troubleshooting - critical issues - Alarm Console
+# Critical issues: Alarm Console
 
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may be incomplete.
@@ -34,13 +34,13 @@ Start --- Automaticrestart
 Start --- DataNotUpdated
 Start --- MachineoutofResources
 %% Define hyperlinks %%
-click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click SLLogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
-click DataNotUpdated "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
-click Automaticrestart "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"
-click Start "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
-click MachineoutofResources "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Resources.html" "Machine Out Of Resources"
+click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click SLLogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click DataNotUpdated "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
+click Automaticrestart "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"
+click Start "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Overview.html" "Critical issue suspected"
+click MachineoutofResources "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Resources.html" "Machine Out Of Resources"
 click ErrorAlarmConsole "#errors-in-alarm-console" "Errors in Alarm Console"
 %% Apply styles to blocks %%
 class Start DarkBlue;
@@ -76,7 +76,7 @@ Sticky --- |YES| StickyYes
 Sticky --- |NO| Toggling
 Toggling --- |YES| TogglingYes
 %% Define hyperlinks %%
-click RTE "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
+click RTE "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html" "How to check for RTE"
 %% Apply styles to blocks %%
 class Start DarkBlue;
 class Automaticrestart,DataNotUpdated,MachineoutofResources,ErrorAlarmConsole,RTE LightBlue;

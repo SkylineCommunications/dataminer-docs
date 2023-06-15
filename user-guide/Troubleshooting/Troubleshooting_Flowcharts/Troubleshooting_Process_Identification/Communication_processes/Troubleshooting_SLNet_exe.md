@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLNet_exe
 ---
 
-# Troubleshooting - SLNet.exe
+# SLNet.exe
 
 ## About SLNet
 
@@ -71,12 +71,12 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click STARTUP "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Startup.html"
-click CORR "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Correlation_Engine.html"
-click DISC "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Disconnects.html" "Go to disconnect cases"
-click THREAD "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_RTEs.html"
-click OTHER "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click STARTUP "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Startup.html"
+click CORR "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Correlation_Engine.html"
+click DISC "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Disconnects.html" "Go to disconnect cases"
+click THREAD "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_RTEs.html"
+click OTHER "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------

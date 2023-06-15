@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLXML_exe
 ---
 
-# Troubleshooting - SLXML.exe
+# SLXML.exe
 
 ## About SLXML
 
@@ -41,8 +41,8 @@ Crash --- CrashdumpDetected
 %% Define hyperlinks %%
 click D1 "#are-the-conditions-above-met"
 click CrashdumpDetected "#crash-dump-found-at-issue-time"
-click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
-click LogCollector "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
+click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
+click LogCollector "/user-guide/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
 click Leak "#memory-leak"
 %% Apply styles to blocks %%
 class START,N2,N1,Y2,MinidumpNo,N3,Y3 DarkBlue;

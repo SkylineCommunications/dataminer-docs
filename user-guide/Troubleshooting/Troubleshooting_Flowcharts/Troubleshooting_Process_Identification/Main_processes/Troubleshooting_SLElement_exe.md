@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLElement_exe
 ---
 
-# Troubleshooting - SLElement.exe
+# SLElement.exe
 
 ## About SLElement
 
@@ -60,10 +60,10 @@ ElementActive ------ |YES|PendingCalls
 LeakStart ----- |NO|LogCollectorSw
 ElementActive ----- |NO|LogCollectorSw
 %% Define hyperlinks %%
-click StartPage "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click RunPending "https://docs.dataminer.services/develop/devguide/Connector/Howto/How_to_retrieve_protocol_pending_calls.html"
-click CassandraTb "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
-click Delt "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Exporting_and_importing/Exporting_elements_services_etc_to_a_dmimport_file.html"
+click CassandraTb "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click Delt "/user-guide/Advanced_Functionality/DataMiner_Agents/Exporting_and_importing/Exporting_elements_services_etc_to_a_dmimport_file.html"
 %% Apply styles to blocks %%
 class Start,LogCollectorSw,DumpAlarm,DumpDb,SendSw DarkBlue;
 class Watchdog,MemoryLeak,ThreadsDB,ThreadsAlarm,Offload,PendingCalls,Delt LightGray;

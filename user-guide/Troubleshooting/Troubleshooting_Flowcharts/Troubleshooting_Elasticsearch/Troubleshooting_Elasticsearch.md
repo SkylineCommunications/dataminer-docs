@@ -2,7 +2,7 @@
 uid: Troubleshooting_Elasticsearch
 ---
 
-# Troubleshooting - Elasticsearch
+# Troubleshooting: Elasticsearch
 
 <div class="mermaid">
 flowchart TD
@@ -29,9 +29,9 @@ TaskManager --- |No| RightClick
 RightClick --- |Yes| OK
 RightClick --- |No| Guide
 %% Define hyperlinks %%
-click HOME "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click Investigation "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
-click Cassandra "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click HOME "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
+click Investigation "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
+click Cassandra "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
 click Guide "#elasticsearch-service-x64-has-stopped-working"
 %% Apply styles to blocks %%
 class Start,OK,Guide DarkBlue;

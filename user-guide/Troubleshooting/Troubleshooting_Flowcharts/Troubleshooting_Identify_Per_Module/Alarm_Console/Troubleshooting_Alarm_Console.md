@@ -37,7 +37,7 @@ flowchart TD
     START --- TimeOut
     START --- Alarms
     %% Define hyperlinks %%
-    click Rte "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html"
+    click Rte "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Identify_Per_Module/Alarm_Console/Troubleshooting_Run_Time_Errors.html"
     %% Apply styles to blocks %%
     class START classTerminal;
     class Rte,dberror,Notice,InfoEvent,TimeOut,Alarms classExternalRef;

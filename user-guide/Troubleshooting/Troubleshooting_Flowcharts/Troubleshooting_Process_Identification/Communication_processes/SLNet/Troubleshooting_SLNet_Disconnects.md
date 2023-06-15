@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLNet_Disconnects
 ---
 
-# Troubleshooting - SLNet - disconnects
+# SLNet - disconnects
 
 > [!NOTE]
 > This page is currently still being developed. The content is not yet optimized and may not yet be fully accurate.
@@ -110,17 +110,17 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
 %% -------------------------------------------------------------------------
 %% Define hyperlinks %%
 %% -------------------------------------------------------------------------
- click Home "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
- click Back "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html"
- click ConfigureConnectionStrings "https://docs.dataminer.services/user-guide/Reference/MOPs/MOP_Implementing_connection_strings_in_a_DMS.html"
+ click Home "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
+ click Back "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html"
+ click ConfigureConnectionStrings "/user-guide/Reference/MOPs/MOP_Implementing_connection_strings_in_a_DMS.html"
  click CheckCPUAndMem "#cpu-and-memory-resources"
  click LackResources "#cpu-and-memory-resources"
  click VerifyCallback "#about-callback-timeouts"
  click DebugCallback "#how-to-debug-a-callback-timeout-error"
- click RefusedState "https://docs.dataminer.services/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
+ click RefusedState "/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
  click NoMoreConnections "#cannot-set-up-new-connections"
- click StartAgent "https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Systems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.html"
- click FixMobileGatewaySettings "https://docs.dataminer.services/user-guide/Advanced_Modules/Mobile_Gateway/Configuring_Mobile_Gateway.html"
+ click StartAgent "/user-guide/Advanced_Functionality/DataMiner_Systems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.html"
+ click FixMobileGatewaySettings "/user-guide/Advanced_Modules/Mobile_Gateway/Configuring_Mobile_Gateway.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks
 %% -------------------------------------------------------------------------

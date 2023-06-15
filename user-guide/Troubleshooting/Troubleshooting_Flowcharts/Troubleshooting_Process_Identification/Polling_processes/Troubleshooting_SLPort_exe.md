@@ -2,7 +2,7 @@
 uid: Troubleshooting_SLPort_exe
 ---
 
-# Troubleshooting - SLPort.exe
+# SLPort.exe
 
 ## About SLPort
 
@@ -34,7 +34,7 @@ K---|Yes|Log["- Add or update <br>the Portlog.txt file in  <br/>the Skyline Data
 Log---|After 5 min of logging<br/> into SLPort.txt|I
 K---|No|I["Contact software team with the <br/>information and memory dump."]:::Solution
 XX([Start page]):::InfoAccClick
-click XX "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
+click XX "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
 linkStyle default stroke:#cccccc
 classDef ExtRef fill:#9DDAF5,stroke:#000070,stroke-width:0px, color:#1E5179;
 classDef Decision fill:#4BAEEA,stroke:#000070,stroke-width:0px, color:#FFFFFF;

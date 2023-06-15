@@ -25,7 +25,7 @@ START --- FNS
 START --- TSI
 START --- CI
 %% Define hyperlinks %%
-click SSP "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLDMS_exe.html" "Go to SLDMS Start Page"
+click SSP "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLDMS_exe.html" "Go to SLDMS Start Page"
 click FNS "#option-1-file-not-syncing"
 click TSI "#option-2-time-server-issues"
 click CI "#option-3-connectivity-issues"
@@ -102,7 +102,7 @@ TSI1 --- |YES| Y4
 TSI1 --- |NO| N4
 Y4 --- R
 %% Define hyperlinks %%
-click R "https://docs.dataminer.services/user-guide/Reference/faq/General_configuration.html#time-server" "DataMiner Help"
+click R "/user-guide/Reference/faq/General_configuration.html#time-server" "DataMiner Help"
 click TSI "#checking-for-time-server-issues"
 %% Apply styles to blocks %%
 class START,FNS,TSI,N4,N3,N1,N2,CI3 DarkBlue;
@@ -147,7 +147,7 @@ CI6 --- |YES| CI7
 CI6 --- |NO| CI8
 CI7 --- |POSSIBLE CAUSES| CI9
 %% Define hyperlinks %%
-click CI8 "https://docs.dataminer.services/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html"
+click CI8 "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Startup_Issues.html"
 click CI "#connectivity-issues"
 %% Apply styles to blocks %%
 class START,FNS,CI,TSI,N4,N3,N1,N2,CI3 DarkBlue;

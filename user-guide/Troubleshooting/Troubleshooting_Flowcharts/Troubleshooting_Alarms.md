@@ -2,7 +2,7 @@
 uid: Troubleshooting_Alarms
 ---
 
-# Troubleshooting - Alarms
+# Troubleshooting - alarms
 
 > [!NOTE]
 >
