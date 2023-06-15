@@ -375,6 +375,16 @@ Affected port information fields:
 - PollingIPAddress
 - PollingIPPort
 
+#### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
+
+- When alarms were requested via a query with a service filter, no alarms would be returned.
+
+- When alarms were requested via a query with a view filter, no alarms would be returned when that view or any of its subviews contained services. Also, when a view was enhanced with an element, that element would not be queried.
+
 #### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
