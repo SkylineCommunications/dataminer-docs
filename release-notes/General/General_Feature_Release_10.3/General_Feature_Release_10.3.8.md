@@ -158,6 +158,19 @@ If, in the protocol, a data range is specified for a parameters for which trend 
 
 From now on, if the trend data contains values outside of the specified data range, the trend prediction algorithm will no longer consider the data range values to be valid or reliable, and will not limit the prediction to this range.
 
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort
+
 #### Problem with protocol.SendToDisplay API call [ID_36528]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

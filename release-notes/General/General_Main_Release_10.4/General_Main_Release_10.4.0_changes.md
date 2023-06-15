@@ -347,3 +347,16 @@ In some cases, whitespace characters would incorrectly be removed from signature
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort
