@@ -105,6 +105,12 @@ When you opened a query that was created using an older GQI version, and that qu
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
+
 #### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->

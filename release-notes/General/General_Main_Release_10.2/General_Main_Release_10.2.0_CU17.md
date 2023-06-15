@@ -106,3 +106,9 @@ When the following protocol API call was used to update specific matrix crosspoi
 ```csharp
 protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 ```
+
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
