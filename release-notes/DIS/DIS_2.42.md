@@ -14,8 +14,6 @@ DIS now supports SDK-style projects in addition to the legacy-style projects.
 
 At startup, DIS will install new protocol solution and Automation script solution templates that will be used when creating a new protocol or Automation script solution in Visual Studio 2022.
 
-When a legacy-style solution is added, an SDK-style project will also automatically be created (and vice versa).
-
 ### Validator
 
 #### Validator check 'UnsupportedIDisposable' has become a feature check [ID_36455]
