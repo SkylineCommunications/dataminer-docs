@@ -122,6 +122,12 @@ Stream Viewer will display an error message when an SNMP poll group contained ei
 
 Up to now, that error message would contain the ID of the parameter in octal format. From now on, it will contain the ID of the parameter in decimal format instead.
 
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
+
 #### Factory reset tool will no longer try to delete non-existing folders [ID_36550]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

@@ -253,6 +253,12 @@ Because of a number of enhancements, overall performance has increased when crea
 
 Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
 
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
