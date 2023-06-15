@@ -1154,6 +1154,8 @@
                           topicUid: Installing_OpenSearch_database
                         - name: Configuring multiple OpenSearch clusters
                           topicUid: Configuring_multiple_OpenSearch_clusters
+                        - name: Configuring OpenSearch backups
+                          topicUid: Configuring_OpenSearch_Backups
                 - name: Configuring the general database settings
                   topicUid: Configuring_the_database_settings_in_Cube
                 - name: Migrating existing systems to dedicated clustered storage
