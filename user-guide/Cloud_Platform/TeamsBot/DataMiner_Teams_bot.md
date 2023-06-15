@@ -126,7 +126,8 @@ They support the following output:
 
 For examples, see [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
 
-> [!NOTE] Any output cannot exceed the limited size of 35KB.
+> [!NOTE]
+> The size of output is limited to a maximum of 35 KB.
 
 ### Limitations
 
