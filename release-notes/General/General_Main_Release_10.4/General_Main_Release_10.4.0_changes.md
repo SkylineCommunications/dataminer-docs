@@ -374,3 +374,9 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
+
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
