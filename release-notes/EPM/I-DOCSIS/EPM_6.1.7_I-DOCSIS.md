@@ -189,4 +189,4 @@ Up to now, the Group Delay or Reflection Status parameter was not calculated cor
 
 #### CM missing on map [ID_36448]
 
-It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML that controls the maps have been adjusted to correct this issue.
+It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML files controlling the maps (i.e. *EPM_MAPS_AMPLIFIER_CPE*, *EPM_MAPS_NODE_CPE*, *EPM_MAPS_NODE_SEGMENT_CPE*, and *EPM_MAPS_TAP_CPE*) have been adjusted to correct this issue.
