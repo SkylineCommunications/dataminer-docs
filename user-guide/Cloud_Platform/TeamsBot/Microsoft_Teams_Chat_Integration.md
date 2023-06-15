@@ -63,7 +63,7 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- Notifications cannot exceed the limited size of 35KB.
+- Notifications cannot exceed 35KB.
 
 ## Security
 
