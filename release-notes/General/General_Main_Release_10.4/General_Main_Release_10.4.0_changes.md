@@ -259,6 +259,20 @@ Because of a number of enhancements, overall accuracy of the proactive cap detec
 
 A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
 
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, manually removing an alarm from an incident could result in that alarm being regrouped with another existing or newly created incident. Also when you manually cleared an incident could all base alarms of that incident be regrouped.
+
+From now on, alarms will no longer be regrouped after a manual operation.
+
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, users will be allowed to manually clear automatic incidents.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -360,3 +374,9 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.

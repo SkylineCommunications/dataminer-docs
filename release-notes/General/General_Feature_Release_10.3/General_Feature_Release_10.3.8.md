@@ -148,6 +148,20 @@ From now on, in an SNMP table, columns of type "retrieved" can be placed in betw
 
 Because of a number of enhancements with regard to fetching LinkerTableEntries of function resources, overall performance has increased.
 
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, manually removing an alarm from an incident could result in that alarm being regrouped with another existing or newly created incident. Also when you manually cleared an incident could all base alarms of that incident be regrouped.
+
+From now on, alarms will no longer be regrouped after a manual operation.
+
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, users will be allowed to manually clear automatic incidents.
+
 ### Fixes
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
@@ -186,3 +200,9 @@ protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
