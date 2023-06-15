@@ -38,7 +38,7 @@ The protocol schema now supports the `whereAttribute` attribute on `ExportRule` 
 
 This will allow you to validate the value of an attribute when applying an export rule.
 
-See also [release note 36622]()
+See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id_36622)
 
 ## Changes
 

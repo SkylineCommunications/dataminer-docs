@@ -9,6 +9,14 @@ This section consists of the following topics:
 - [Developing DataMiner protocols as Visual Studio solutions](xref:Developing_DataMiner_protocols_as_Visual_Studio_solutions)
 - [Developing Automation scripts as Visual Studio solutions](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)
 
+## Legacy-style projects vs. SDK-style projects
+
+As from version 2.42, DIS supports SDK-style projects in addition to the legacy-style projects.
+
+At startup, DIS will install new protocol solution and Automation script solution templates that will be used when creating a new protocol or Automation script solution in Visual Studio 2022.
+
+When a legacy-style solution is added, an SDK-style project will also automatically be created (and vice versa).
+
 ## Using the DataMiner DevPacks
 
 Up to version 2.38, in QAction and EXE projects, DIS would add references to the DataMiner DLL files of the locally installed DataMiner Agent or, if no DataMiner Agent was installed on the local machine, to copies of those files shipped with the DIS installation package. From version 2.39, DIS will instead add a reference to a DataMiner DevPack, i.e. a NuGet package that contains the core DataMiner DLL files of a specific DataMiner version. As a separate DataMiner DevPack is available for every released DataMiner version, adapting a solution to a specific DataMiner version is now merely a question of making sure the solution links to the DevPack of that version.
