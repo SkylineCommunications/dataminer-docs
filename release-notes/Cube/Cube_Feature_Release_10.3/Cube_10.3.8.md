@@ -50,6 +50,12 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
+#### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+The log file of the DataMiner Cube desktop app would report false positive warnings involving a number of DLL files.
+
 #### Workspaces: Problem opening cards that showed a visual overview [ID_36438]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

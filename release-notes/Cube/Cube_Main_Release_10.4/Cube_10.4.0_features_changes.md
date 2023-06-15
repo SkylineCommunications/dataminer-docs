@@ -399,6 +399,12 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
 
+#### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+The log file of the DataMiner Cube desktop app would report false positive warnings involving a number of DLL files.
+
 #### Trending: Related parameters returned by the DMA would incorrectly be empty [ID_36511]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
