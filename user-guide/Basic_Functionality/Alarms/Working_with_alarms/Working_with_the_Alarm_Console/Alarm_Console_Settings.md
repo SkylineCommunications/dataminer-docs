@@ -8,21 +8,34 @@ To access specific settings for the Alarm Console, click the hamburger button in
 
 This will open a menu containing the settings explained below.
 
+![Alarm Console settings menu](~/user-guide/images/Alarm_Console_settings.png)<br>
+*Alarm Console settings menu in DataMiner 10.3.6*
+
 ## Automatically remove cleared alarms
 
 Select this option to remove alarms from the console automatically as soon as their severity returns to normal. To ensure alarms stay in the console until cleared by the user, clear the selection.
 
+> [!TIP]
+> See also: [Clearing alarms](xref:Clearing_alarms)
+
 ## History tracking
 
-Select this option to attach the life cycle of an alarm to the alarm. To show the alarm history as separate alarm records in the list instead, clear the selection. If this option is selected, you can expand an alarm in the Alarm Console to view all attached alarm records.
+Select this option to attach the life cycle of an alarm to the alarm. This means that all the alarms records related to the same alarm are grouped under one "alarm tree" entry in the Alarm Console. You can then expand this alarm tree to see all the underlying alarm records.
+
+To show the alarm history as separate alarm records in the list instead, clear the selection.
+
+In the active alarms tab, history tracking is enabled by default. In a history alarms tab, it is disabled by default, so that you can see the individual records more easily. When you create a filtered history tab in a fixed or sliding window, and you enable history tracking, you will be asked what should be loaded in the tab:
+
+- Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
+- Click *Filtered* to only include alarms matching the current filter settings.
+
+> [!TIP]
+>
+> - For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+> - For information on how alarm records are combined in an alarm tree, see [Alarm linking](xref:Alarm_linking).
 
 > [!NOTE]
-> When you create a filtered history tab, in a fixed or sliding window, history tracking is off by default. However, if you explicitly enable history tracking in a history tab, a dialog box appears asking if you want to load the full history:
->
-> - Click *All* to include all alarms in the specified time range in the alarm trees, regardless of the filter.
-> - Click *Filtered* to only include alarms matching the current filter settings.
->
-> For more information on creating filtered tabs, see [Manually applying an alarm filter in an Alarm Console tab](xref:ApplyingAlarmFiltersInTheAlarmConsole#manually-applying-an-alarm-filter-in-an-alarm-console-tab).
+> By default, a maximum of 20 alarms can be included in an alarm tree. This default number can be customized with the [AlarmsPerParameter tag in MaintenanceSettings.xml](xref:MaintenanceSettings_xml#alarmsettingsalarmsperparameter).
 
 ## Correlation tracking
 
