@@ -96,3 +96,9 @@ protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.

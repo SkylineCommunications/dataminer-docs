@@ -374,9 +374,3 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
-
-#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
