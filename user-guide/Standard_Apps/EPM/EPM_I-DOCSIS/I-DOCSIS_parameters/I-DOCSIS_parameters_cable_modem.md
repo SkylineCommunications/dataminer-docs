@@ -5,6 +5,7 @@ uid: I-DOCSIS_parameters_cable_modem
 # I-DOCSIS parameters – Cable Modem
 
 This page contains an overview of the Cable Modem parameters available in the I-DOCSIS branch of the EPM Solution.
+This KPI information is presented and available for the Cable Modem level on Dashboards.
 
 ## CM Info
 
