@@ -69,6 +69,12 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
+#### DataMiner Cube - Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
+
 #### DataMiner Cube - System Center: Problem with 'Show agent alarms' link [ID_36463]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
