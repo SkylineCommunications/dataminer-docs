@@ -22,13 +22,13 @@ In a service template, you have to specify
 
 ## Concept
 
-The moment you [apply a service template](xref:Applying_service_templates), it will collect all data that has been specified as “input data”, process it, and automatically create the services.
+The moment you [apply a service template](xref:Applying_service_templates), it will collect all data that has been specified as input data, process it, and automatically create the services.
 
 ![Service template concept](~/user-guide/images/ServiceTemplateConcept.jpg)
 
 ## Examples
 
-Below you will find examples of how to define a service template that will automatically create a service for every row in a dynamic table parameter of a certain type of element. The examples start from the following premise: for each of your “Microsoft Platform” elements, you want to create a service for every process of which the name starts with “SL”. Each of those services, named *\[computer model\]\_\[process\]*, has to include the CPU and the memory usage of the process in question.
+Below you will find examples of how to define a service template that will automatically create a service for every row in a dynamic table parameter of a certain type of element. The examples start from the following premise: for each of your Microsoft Platform elements, you want to create a service for every process of which the name starts with "SL". Each of those services, named *\[computer model\]\_\[process\]*, has to include the CPU and the memory usage of the process in question.
 
 - [Example of creating a service template](xref:ST_example_ST_creation)
 
