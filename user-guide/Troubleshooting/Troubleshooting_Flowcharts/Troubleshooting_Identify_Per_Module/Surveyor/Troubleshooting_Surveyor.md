@@ -82,7 +82,7 @@ class etc,Views,RedundancyGroups,Export,Sla,Elements,Services, classExternalRef;
 ### Services
 
 > [!TIP]
-> For more information on services, see [Services and service templates](xref:services).
+> For more information on services, see [About services and service templates](xref:About_services).
 
 ### Redundancy groups
 
