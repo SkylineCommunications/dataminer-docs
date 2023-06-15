@@ -336,10 +336,10 @@
           topicUid: Manually_switching_between_primary_and_backup_elements
         - name: Setting a primary or backup element in maintenance
           topicUid: Setting_a_primary_or_backup_element_in_maintenance
-    - name: Services and service templates
-      topicUid: services
+    - name: Services
+      topicUid: About_services
       items:
-        - name: About services
+        - name: About services and service templates
           topicUid: About_services
         - name: Service cards
           topicUid: Service_cards
@@ -358,8 +358,6 @@
         - name: Service templates
           topicUid: Service_templates
           items:
-            - name: About service templates
-              topicUid: About_service_templates
             - name: Creating a service template
               topicUid: Creating_a_service_template
               items:
