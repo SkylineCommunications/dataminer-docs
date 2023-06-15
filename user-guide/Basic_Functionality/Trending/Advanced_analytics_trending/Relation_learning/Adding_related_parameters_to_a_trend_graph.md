@@ -4,9 +4,7 @@ uid: Adding_related_parameters_to_a_trend_graph
 
 # Adding related parameters to a trend graph
 
-To take your insights into your data to the next level, from DataMiner 10.2.12/10.3.0 onwards, you can use the light bulb in the top-right corner of a trend graph.
-
-This allows you to add related parameters to your trend graphs to get a better understanding of your data. This way, you can uncover hidden connections in your data that you might not have noticed otherwise. This means that you do not have to spend hours sifting through your data to find connections, because DataMiner analytics will do the work for you.
+From DataMiner 10.2.12/10.3.0 onwards, you can use the light bulb in the top-right corner of a trend graph to add related parameters and get more insight into your data.
 
 ## Prerequisites
 
