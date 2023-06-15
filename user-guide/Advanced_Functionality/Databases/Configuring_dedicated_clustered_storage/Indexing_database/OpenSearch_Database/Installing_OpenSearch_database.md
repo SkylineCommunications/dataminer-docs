@@ -437,4 +437,6 @@ To fix this issue:
 
 ### SLSearch.txt logging mentions OpenSearch version is not officially supported
 
-If the *SLSearch.txt* log file mentions that the OpenSearch version is not officially supported, upgrade your DMS to DataMiner 10.3.6 or higher.
+If the *SLSearch.txt* log file mentions that the OpenSearch version is not officially supported, you can resolve this by upgrading your DMS to DataMiner 10.3.6 or higher.
+
+However, note that this has no functional impact, as the DMA will run fine even if you have not upgraded yet.
