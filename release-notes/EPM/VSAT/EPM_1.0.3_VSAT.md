@@ -22,3 +22,7 @@ uid: EPM_1.0.3_VSAT
 #### Verizon iDirect Evolution Platform Collector: BUC Table empty [ID_36640]
 
 Elements using the Verizon iDirect Evolution Platform Collector connector did not show any information in the BUC Table.
+
+#### Verizon iDirect Evolution Platform Collector: Current state not indicated in Remotes Overview tables [ID_36673]
+
+In the Remotes Overview tables of Verizon iDirect Evolution Platform Collector elements, the *Current State* column could incorrectly show "Not initialized".
