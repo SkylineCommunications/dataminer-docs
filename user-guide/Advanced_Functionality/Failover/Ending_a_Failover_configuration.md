@@ -11,7 +11,7 @@ When two DMAs are linked together in a Failover setup, it is possible to end the
 
 ## Verifying the replication factor of the Cassandra database
 
-In case you use local Cassandra it is best to verify the replication factor of your Cassandra configuration. As breaking up the Failover configuration  will revert the database to single node, you need to make sure that the data will be included on both nodes. this means that the replication factor must be set to **2**.
+In you use [Cassandra storage per DMA](xref:Databases_about), you first need to check whether the replication factor of your Cassandra configuration is correct. As breaking up the Failover configuration will revert the database to a single node, you need to make sure that the data will be included on both nodes. This means that the replication factor must be set to **2**.
 
 To verify this:
 
