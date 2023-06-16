@@ -23,6 +23,19 @@ A new parameter, *Script Name*, has been added to the *Configuration* page of th
 
 Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
+#### QAM Channels dashboard migration [ID_36684]
+
+Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *CM/02. CM DS QAM Channels*, *CM/03. CM US QAM Channels*, *NODE SEGMENT/01. DS QAM Channels*, and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
+
+For this purpose, new scripts have also been added, which retrieve the QAM Channel-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA* and *EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA*.
+
+#### Cable Modem KPIs dashboard migration [ID_36686]
+
+To improve the stability of the system, the information about Cable Modem KPIs has now been moved to dashboards (i.e. *AMPLIFIER/01. CM Overview*, *AMPLIFIER/02. Offline CM Overview*, *CM/01. CM Overview*, *NODE/01. CM Overview*, *NODE/02. Offline CM Overview*, *TAP/01. CM Overview*, and
+*TAP/02. Offline CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
+
+For this purpose, a new script has also been added, which retrieves the CM-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA*.
+
 ## Changes
 
 ### Enhancements
