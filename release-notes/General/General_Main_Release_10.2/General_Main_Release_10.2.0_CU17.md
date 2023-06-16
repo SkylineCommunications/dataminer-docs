@@ -107,6 +107,16 @@ When the following protocol API call was used to update specific matrix crosspoi
 protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 ```
 
+#### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
+
+- When alarms were requested via a query with a service filter, no alarms would be returned.
+
+- When alarms were requested via a query with a view filter, no alarms would be returned when that view or any of its subviews contained services. Also, when a view was enhanced with an element, that element would not be queried.
+
 #### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

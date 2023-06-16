@@ -197,7 +197,7 @@ protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 
 #### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
 
