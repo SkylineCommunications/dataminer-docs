@@ -66,8 +66,8 @@ setBindings="1,250"
 
 DataMiner Protocol Markup Language:
 
-- Protocol.Params.Param.SNMP.TrapOID2checkBindings
-- Protocol.Params.Param.SNMP.TrapOID@setBindings
+- [Protocol.Params.Param.SNMP.TrapOID@checkBindings](xref:Protocol.Params.Param.SNMP.TrapOID-checkBindings)
+- [Protocol.Params.Param.SNMP.TrapOID@setBindings](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings)
 
 ## Generating alarms upon receiving traps
 
