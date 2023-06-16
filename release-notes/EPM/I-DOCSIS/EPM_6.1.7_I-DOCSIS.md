@@ -25,7 +25,7 @@ Similarly, a *Script Name* parameter has been added to the *Configuration* page 
 
 #### QAM Channels dashboard migration [ID_36684]
 
-Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *CM/02. CM DS QAM Channels*, *CM/03. CM US QAM Channels*, *NODE SEGMENT/01. DS QAM Channels*, and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
+Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *NODE SEGMENT/01. DS QAM Channels* and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
 
 For this purpose, new scripts have also been added, which retrieve the QAM Channel-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA* and *EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA*.
 
