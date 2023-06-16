@@ -31,8 +31,7 @@ For this purpose, new scripts have also been added, which retrieve the QAM Chann
 
 #### Cable Modem KPIs dashboard migration [ID_36686]
 
-To improve the stability of the system, the information about Cable Modem KPIs has now been moved to dashboards (i.e. *AMPLIFIER/01. CM Overview*, *AMPLIFIER/02. Offline CM Overview*, *CM/01. CM Overview*, *NODE/01. CM Overview*, *NODE/02. Offline CM Overview*, *TAP/01. CM Overview*, and
-*TAP/02. Offline CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
+To improve the stability of the system, the information about Cable Modem KPIs has now been moved to a dashboard (i.e. *CM/01. CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
 
 For this purpose, a new script has also been added, which retrieves the CM-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA*.
 
