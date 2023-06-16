@@ -119,7 +119,7 @@ On systems with a Cassandra Cluster and an Elasticsearch database, the following
 
 #### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
 
-<!-- MR 10.2.0 [CU17] - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
 

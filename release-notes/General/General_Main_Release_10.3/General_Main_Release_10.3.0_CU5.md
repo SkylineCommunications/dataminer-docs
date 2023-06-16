@@ -107,6 +107,12 @@ On systems with a Cassandra Cluster and an Elasticsearch database, the following
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
 
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
+
 #### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
