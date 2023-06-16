@@ -102,10 +102,6 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 - Inter-app calls are now aggregated to send information to the back-end elements.
 - Information coming from the back-end elements is now processed through inter-app communication.
 
-#### Geomarketing DB passive tables no longer displayed + new export button [ID_36449]
-
-To improve performance, the Geomarketing DB passive (node, amplifier, tab, and subscriber) tables are no longer displayed. An export button has been added that allows you to export such hidden tables for debugging purposes.
-
 #### ID columns hidden on topology data pages [ID_36451]
 
 On the topology data pages, unnecessary ID columns are now hidden, so that the pages have a cleaner look.
