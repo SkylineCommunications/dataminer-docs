@@ -4,7 +4,7 @@ uid: Overview_Support_DMS_M_and_S
 
 # DataMiner Support Services
 
-In addition to the default [Standard Limited Warranty](xref:Overview_Support_warranty), you can enjoy the benefits of the **DataMiner Support Services**. These include:
+The **benefits** of the DataMiner Support Services include:
 
 - All **software updates and upgrades** for core DataMiner software and connectors.
 - **Unlimited remote technical support** during business hours.
