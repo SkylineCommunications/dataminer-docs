@@ -63,7 +63,7 @@ The I-DOCSIS EPM Solution includes the following dashboards:
 - NODE/01. CM Overview
 - NODE/02. Offline CM Overview
 - NODE SEGMENT/01. DS QAM Channels
-- NODE SEGEMNT/02. US QAM Channels
+- NODE SEGMENT/02. US QAM Channels
 - TAP/01. CM Overview
 - TAP/02. Offline CM Overview
 - SERVICE GROUP/01. DS QAM Channels
