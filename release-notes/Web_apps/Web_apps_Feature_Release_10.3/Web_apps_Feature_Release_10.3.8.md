@@ -113,6 +113,13 @@ When you opened a query that was created using an older GQI version, and that qu
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 
+#### Dashboards app & Low-Code Apps: Bar and pie chart components would display incorrect data [ID_36601]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- Not added to MR 10.4.0 -->
+
+In DataMiner feature version 10.3.7, when a dashboard or a low-code app contained bar or pie chart components that displayed GQI data, in some cases, those charts would display incorrect data due to a settings issue.
+
 #### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
