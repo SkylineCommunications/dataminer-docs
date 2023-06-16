@@ -27,6 +27,8 @@ Similarly, a *Script Name* parameter has been added to the *Configuration* page 
 
 Overview pages have been added for the passive levels (node, amplifier, and tap), which display the KPIs for the selected entry and contain links to navigate to a dashboard with all cable modems associated with the selected device.
 
+The following KPIs are included: CM MAC, IPv4 Address, DOCSIS Version, Status, Vendor, Model Number, Software Version, Last Registration Time, Uptime, US SNR Status, US Time Offset Status, US RX Power Status, US Post FEC Status, DS SNR Status, US TX Power Status, DS Post FEC Status, RTT, Jitter, Latency, Packet Loss, Memory Size, Memory Utilization, Processor Utilization, Reflection Distance, Group Delay Status, Reflection Status, DS RX Power Status, Tap Name, Amplifier Name, Node Segment Name, and Service Group Name.
+
 #### New Automation script to add CCAP/CM pair [ID_36459]
 
 A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
@@ -102,9 +104,9 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 - Inter-app calls are now aggregated to send information to the back-end elements.
 - Information coming from the back-end elements is now processed through inter-app communication.
 
-#### ID columns hidden on topology data pages [ID_36451]
+#### Unnecessary columns hidden on topology data pages [ID_36451]
 
-On the topology data pages, unnecessary ID columns are now hidden, so that the pages have a cleaner look.
+The following columns are now by default hidden on the topology data pages, so that the pages have a cleaner look: *Network ID*, *Market ID*, *Hub ID*, *View Impact*, *CCAP Core ID*, *DS Line Card ID*, *US Line Card ID*, *DS Port ID*, *US Port ID*, *Node Segment ID*, *CM ID*, *Service Group ID*, *DS Service Group ID*, *US Service Group ID*, *Number Other DOCSIS*, *Node ID*, *Amplifier ID*, and *Tap ID*.
 
 #### Exception values added for percentage, latitude, and longitude parameters [ID_36452]
 
