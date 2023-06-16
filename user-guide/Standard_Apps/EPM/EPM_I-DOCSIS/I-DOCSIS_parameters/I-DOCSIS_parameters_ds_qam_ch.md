@@ -5,7 +5,8 @@ uid: I-DOCSIS_parameters_ds_qam_ch
 # I-DOCSIS parameters – DS QAM CH
 
 This page contains an overview of the DS QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
-This information is presented and available for the Node Segment and Service Group levels on Dashboards.
+
+These parameters are displayed for the Node Segment and Service Group levels in the I-DOCSIS dashboards.
 
 - **Name \[IDX]**: Direct value. The display name of the downstream channel.
 
