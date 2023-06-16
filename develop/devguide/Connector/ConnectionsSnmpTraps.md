@@ -75,7 +75,7 @@ It is possible to specify that alarms should be generated when a trap is receive
 
 > [!NOTE]
 >
-> - For more information about alarm mapping, see mapAlarm.
+> - For more information about alarm mapping, see [mapAlarm](xref:Protocol.Params.Param.SNMP.TrapOID-mapAlarm).
 > - The trap parameter does not need to be activated in the alarm template for the alarms to be generated.
 
 Consider the following example:
