@@ -40,6 +40,18 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
+#### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, the subtract placeholder could be used to calculate datetime and time span values by subtracting one or more values from a specified value. From now on, this placeholder also supports numerics. Just like with datetime values and time spans, you can subtract consecutive numbers from the first number.
+
+Examples:
+
+- Subtracting one number from another: `[Subtract:10,3]`
+
+- Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
 ### Fixes
 
 #### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]

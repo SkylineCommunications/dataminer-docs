@@ -343,6 +343,18 @@ The proactive cap detection feature generates suggestion events for predicted da
 
 The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
 
+#### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, the subtract placeholder could be used to calculate datetime and time span values by subtracting one or more values from a specified value. From now on, this placeholder also supports numerics. Just like with datetime values and time spans, you can subtract consecutive numbers from the first number.
+
+Examples:
+
+- Subtracting one number from another: `[Subtract:10,3]`
+
+- Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
