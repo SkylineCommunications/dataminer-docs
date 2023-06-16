@@ -6,6 +6,31 @@ uid: Ending_a_Failover_configuration
 
 When two DMAs are linked together in a Failover setup, it is possible to end the Failover configuration, and thereby separate the two DMAs again.
 
+In case you use local Cassandra it's best to verify the repliciation factor of your Cassandra configurtion. As breaking up the failover will revert the database to single node, we want to make sure we have the data in both nodes.
+To see if this is correct the replication factor should be set to **2**.
+
+To do this you can use the following Steps:
+
+1. Open DataMiner
+
+1. Go to System Center
+
+1. In the left column select Tools
+
+1. You should the query executor, if not click on it in the left column
+
+1. If you are in a DMS, make sure the failover DMA is selected at the top next to "Execute query on"
+
+1. Copy and paste following query and hit Execute
+
+   `Select keyspace_name, replication from system_schema.keyspaces where keyspace_name IN('SLDMADB','system_auth');`
+
+1. You can now check if the value is set 2 for both keyspaces.
+
+In case this is set to **1**, the value has to be updated and the keyspaces needs to be repaired to make sure the data is in both databases. To do this you can check changing [Data Replication](xref:replication_and_consistency_configuration).
+
+If the replicationfactor is correct, you can continue with breaking up the failover.
+
 To do so:
 
 1. On the online DMA, open DataMiner Cube.
