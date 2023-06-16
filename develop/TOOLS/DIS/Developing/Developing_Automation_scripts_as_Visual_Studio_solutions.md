@@ -54,9 +54,9 @@ To create a new script in an Automation script solution, do the following:
 1. Enter the name of the new script.
 1. Click *OK*.
 
-## Adding an existing script to a solution
+## Importing an existing script that is stored on your local computer
 
-To add an existing Automation script to an Automation script solution, do the following:
+To import an existing Automation script stored on your local computer into an Automation script solution, do the following:
 
 1. Right-click a solution folder in the Solution Explorer.
 1. Select *Add \> Existing DataMiner Automation Script*.
@@ -65,6 +65,20 @@ To add an existing Automation script to an Automation script solution, do the fo
 
 > [!NOTE]
 > When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
+
+## Importing an existing script that is stored on the DataMiner Agent you are connected to
+
+To import an existing Automation script stored on the DMA you are connected to into an Automation script solution, do the following:
+
+1. Right-click a solution folder in the Solution Explorer.
+1. Select *Add \> Import DataMiner Automation Script*.
+1. Select a least one Automation script file.
+1. Click *Open*.
+
+> [!NOTE]
+>
+> - This new *Import DataMiner Automation Script* option will only be available if DIS is connected to a DataMiner Agent.
+> - When you add existing scripts to an Automation script solution, they are automatically converted to the correct format. For each Exe block, a C# project is created, and the code in that Exe block is transferred to the newly created C# project.
 
 ## Saving a compiled script to a file
 

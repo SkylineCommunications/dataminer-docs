@@ -54,8 +54,8 @@ In the Alarm Console, you can add extra tab pages where you can specify a custom
 > [!TIP]
 > See also:
 >
-> - [Alarm Console – Advanced filtering](https://community.dataminer.services/video/alarm-console-advanced-filtering/) on DataMiner Dojo
-> - [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo
+> - [Alarm Console – Advanced filtering](https://community.dataminer.services/video/alarm-console-advanced-filtering/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To add such a filtered tab page:
 
@@ -191,7 +191,7 @@ Please note the following regarding the alarm focus feature:
 Instead of manually applying a filter in a tab, you can also drag an item from the Cube UI onto the Alarm Console to create a tab filtered specifically for that item.
 
 > [!TIP]
-> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo.
+> See also: [Alarm Console – Alarm history](https://community.dataminer.services/video/alarm-console-alarm-history/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 To do so:
 

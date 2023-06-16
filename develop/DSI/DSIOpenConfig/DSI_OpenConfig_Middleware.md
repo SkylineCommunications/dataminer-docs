@@ -26,6 +26,9 @@ Include the NuGet package *Skyline.DataMiner.DataSources.OpenConfig.Gnmi* in you
 
 When you are developing a connector, there is an optional package when you want to use the [DataMapper](#datamapper): *Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol*
 
+> [!NOTE]
+> At present, these NuGet packages are not yet publicly available. They are currently only available for use during in-house connector development at Skyline Communications.
+
 ### Setting up the connection with the endpoint
 
 #### Creating a GnmiClient
@@ -257,7 +260,7 @@ You can find more info on the `Subscribe` RPC in the [OpenConfig introduction](x
 string subscriptionName = "interfaces";
 uint sampleIntervalMs = 10000;
 
-client.Subscribe("interfaces", sampleIntervalMs, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
+client.Subscribe(subscriptionName, sampleIntervalMs, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
 
 public void HandleIncomingResponse(IEnumerable<GnmiResponseValue> response)
 {
@@ -282,7 +285,7 @@ In case you want to do an *ON_CHANGE* subscription, you can leave out the `sampl
 ```csharp
 string subscriptionName = "interfaces";
 
-client.Subscribe("interfaces", new[] { "interfaces/interface/state" }, HandleIncomingResponse);
+client.Subscribe(subscriptionName, new[] { "interfaces/interface/state" }, HandleIncomingResponse);
 ```
 
 Now anytime a `leaf` changes, it will send out a notification with the new value.

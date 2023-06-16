@@ -8,4 +8,4 @@ uid: Date_and_time_values
 
 ## See also
 
-- [Options for measurement type “number”](xref:MeasurementTypeOptionsOverview#options-for-measurement-type-number)
+- [Options for measurement type “number”](xref:Protocol.Params.Param.Measurement.Type-options#options-for-measurement-type-number)

@@ -27,7 +27,7 @@ To specify these data in DataMiner Cube:
 
 1. Make the necessary changes:
 
-   - Select a contact in the *System contact* drop-down lists for up to three contact persons.
+   - Select a contact in the *System contact* dropdown lists for up to three contact persons.
 
      > [!NOTE]
      > Next to each of the system contacts, the envelope icon allows you to immediately send the contact in question an email message.

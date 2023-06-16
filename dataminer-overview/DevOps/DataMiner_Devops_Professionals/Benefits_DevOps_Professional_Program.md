@@ -15,8 +15,6 @@ A short overview of all benefits that can be unlocked using DevOps Points:
 
 - Access to the Evolve Support Services plan
 
-- Free personal DIS license
-
 - Free personal DataMiner licenses
 
 - Access to DIS source code
@@ -72,7 +70,13 @@ In general, the more active you are in the DataMiner Dojo community and the more
 
 - **Writing blog posts**: You can opt to write and submit a [blog post](https://community.dataminer.services/blog/) for the community, and upon acceptance, this will result in 500 up to 1000 points. Blog posts can revolve around any technology or topic relevant to the community or could, for example, describe a solution that you have designed with DataMiner.
 
+  > [!TIP]
+  > Not really sure how to get started? Take a look at our [blog post template](https://community.dataminer.services/download/blog-post-template/)!
+
 - **Submitting a use case**: You can choose to submit a [use case](https://community.dataminer.services/use-cases/) for the community, and upon acceptance, this will result in 250 up to 1000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
+
+  > [!TIP]
+  > Not really sure how to get started? Take a look at our [use case template](https://community.dataminer.services/download/use-case-template/)!
 
 - **Submitting feedback**: Your feedback is valuable. You will receive DevOps points per submission of feedback via <https://aka.dataminer.services/Feedback/>. Each submission of feedback will result in 50 DevOps points (limited to a maximum of 100 points per month).
 

@@ -23,4 +23,4 @@ This section consists of the following topics:
 - [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA)
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Agents page](https://community.dataminer.services/video/ruis-rapid-recap-agents-page/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Agents page](https://community.dataminer.services/video/ruis-rapid-recap-agents-page/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

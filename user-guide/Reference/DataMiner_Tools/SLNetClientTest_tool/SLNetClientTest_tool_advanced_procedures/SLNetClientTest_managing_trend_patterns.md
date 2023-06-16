@@ -6,6 +6,9 @@ uid: SLNetClientTest_managing_trend_patterns
 
 From DataMiner 10.1.0/10.1.2 onwards, it is possible to view and delete trend patterns that can be detected by DataMiner Analytics using the SLNetClientTest tool.
 
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards, you can also manage trend patterns directly in DataMiner Cube. See [Managing pattern definitions](xref:Managing_pattern_definitions).
+
 To do so:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).

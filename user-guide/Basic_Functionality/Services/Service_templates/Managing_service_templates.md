@@ -6,16 +6,6 @@ uid: Managing_service_templates
 
 Via the Surveyor right-click menu, or using the buttons in the [Service Templates module](#using-the-service-templates-module), you can take the following actions to manage service templates and the corresponding generated services:
 
-- [Editing a service template](#editing-a-service-template)
-
-- [Exporting a service template](#exporting-a-service-template)
-
-- [Reapplying a service template](#reapplying-a-service-template)
-
-- [Detaching a generated service from a service template](#detaching-a-generated-service-from-a-service-template)
-
-- [Duplicating a templated service](#duplicating-a-templated-service)
-
 ## Editing a service template
 
 After a service template has been created, you can change its configuration by right-clicking it in the Surveyor and selecting *Edit*. You will then have the same configuration options as during the creation of the service template.

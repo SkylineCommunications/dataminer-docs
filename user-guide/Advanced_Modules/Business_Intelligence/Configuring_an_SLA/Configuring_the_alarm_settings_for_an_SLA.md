@@ -16,6 +16,9 @@ In DataMiner Cube, you can configure the following settings on the *SLA Configur
 
 In addition, more recent versions of the *Skyline SLA Definition Basic* protocol also allow certain advanced settings on the *Advanced Configuration* page. See [Advanced SLA alarm configuration](#advanced-sla-alarm-configuration).
 
+> [!NOTE]
+> The weight of alarms that occurred prior to a change to these settings will not be recalculated retroactively. We therefore recommend resetting the SLA after changing these settings.
+
 ## Setting the violation level
 
 To define the service alarm level from which the SLA must indicate it has been violated, choose a violation level in the drop-down list under *Violation Level* and confirm your choice.

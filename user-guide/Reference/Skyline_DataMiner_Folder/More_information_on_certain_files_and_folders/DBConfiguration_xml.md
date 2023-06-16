@@ -4,7 +4,10 @@ uid: DBConfiguration_xml
 
 # DBConfiguration.xml
 
-The DBConfiguration.xml file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
+The *DBConfiguration.xml* file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
+
+> [!NOTE]
+> This file is not automatically synced between DataMiner Agents. This applies both for the midnight sync in a DMS and for the synchronization between Failover Agents.
 
 ## Configuring a size limit for file offloads
 
