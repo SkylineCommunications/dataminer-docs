@@ -6,32 +6,32 @@ uid: Ending_a_Failover_configuration
 
 When two DMAs are linked together in a Failover setup, it is possible to end the Failover configuration, and thereby separate the two DMAs again.
 
-In case you use local Cassandra it's best to verify the repliciation factor of your Cassandra configurtion. As breaking up the failover will revert the database to single node, we want to make sure we have the data in both nodes.
-To see if this is correct the replication factor should be set to **2**.
+> [!CAUTION]
+> While it is possible from DataMiner 10.2.0 [CU9]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, this will not reset the offline Agent to a clean installation. As such, you will need to make sure the offline Agent is not brought online again in the network as this would cause double polling. In addition, there could be minor data loss and inconsistencies on the database level as the database node cannot be cleanly decommissioned.
 
-To do this you can use the following Steps:
+## Verifying the replication factor of the Cassandra database
 
-1. Open DataMiner
+In case you use local Cassandra it is best to verify the replication factor of your Cassandra configuration. As breaking up the Failover configuration  will revert the database to single node, you need to make sure that the data will be included on both nodes. this means that the replication factor must be set to **2**.
 
-1. Go to System Center
+To verify this:
 
-1. In the left column select Tools
+1. On the online DMA, open DataMiner Cube.
 
-1. You should the query executor, if not click on it in the left column
+1. Go to *Apps* > *System Center* > *Tools* > *Query executor*.
 
-1. If you are in a DMS, make sure the failover DMA is selected at the top next to "Execute query on"
+1. Make sure the Failover DMA is selected in the *Execute query on* box.
 
-1. Copy and paste following query and hit Execute
+1. Copy and paste the following query and click *Execute*.
 
    `Select keyspace_name, replication from system_schema.keyspaces where keyspace_name IN('SLDMADB','system_auth');`
 
-1. You can now check if the value is set 2 for both keyspaces.
+1. Check in the result whether the value is set to 2 for both keyspaces.
 
-In case this is set to **1**, the value has to be updated and the keyspaces needs to be repaired to make sure the data is in both databases. To do this you can check changing [Data Replication](xref:replication_and_consistency_configuration).
+In case this is set to **1**, you will need to update the value and repair the keyspaces to make sure the data is in both databases. For more information, refer to [Data Replication](xref:replication_and_consistency_configuration).
 
-If the replicationfactor is correct, you can continue with breaking up the failover.
+If the replication factor is correct, you can continue ending the Failover configuration.
 
-To do so:
+## Ending the Failover configuration in System Center
 
 1. On the online DMA, open DataMiner Cube.
 
@@ -53,6 +53,3 @@ To do so:
 
 > [!NOTE]
 > In case a regular Cassandra general database is used, the Cassandra database is always reverted to a single node, regardless of whether you select to disable or delete the Failover setup. If the Cassandra cluster feature is used, the node on the backup DMA will be retained. However, the DB.xml file of the backup Agent will be adapted to no longer refer to the database.
-
-> [!CAUTION]
-> While it is possible from DataMiner 10.2.0 \[CU9\]/10.2.12 onwards to decommission a Failover setup while the server hosting the offline Agent is unavailable, this will not reset the offline Agent to a clean installation. As such, you will need to make sure the offline Agent is not brought online again in the network as this would cause double polling. In addition, there could be minor data loss and inconsistencies on the database level as the database node cannot be cleanly decommissioned.
