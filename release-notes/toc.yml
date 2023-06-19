@@ -45,14 +45,20 @@
           topicUid: General_Main_Release_10.3.0_CU1
         - name: General Main Release 10.3.0 CU2
           topicUid: General_Main_Release_10.3.0_CU2
-        - name: General Main Release 10.3.0 CU3 - Preview
+        - name: General Main Release 10.3.0 CU3
           topicUid: General_Main_Release_10.3.0_CU3
-        - name: General Main Release 10.3.0 CU4 - Preview
+        - name: General Main Release 10.3.0 CU4
           topicUid: General_Main_Release_10.3.0_CU4
+        - name: General Main Release 10.3.0 CU5 - Preview
+          topicUid: General_Main_Release_10.3.0_CU5
       - name: Feature Release
-        topicUid: General_Feature_Release_10.3.6
+        topicUid: General_Feature_Release_10.3.8
         items:
-        - name: General Feature Release 10.3.6 - Preview
+        - name: General Feature Release 10.3.8 - Preview
+          topicUid: General_Feature_Release_10.3.8
+        - name: General Feature Release 10.3.7
+          topicUid: General_Feature_Release_10.3.7
+        - name: General Feature Release 10.3.6
           topicUid: General_Feature_Release_10.3.6
         - name: General Feature Release 10.3.5
           topicUid: General_Feature_Release_10.3.5
@@ -130,8 +136,12 @@
           topicUid: General_Main_Release_10.2.0_CU13
         - name: General Main Release 10.2.0 CU14
           topicUid: General_Main_Release_10.2.0_CU14
-        - name: General Main Release 10.2.0 CU15 - Preview
+        - name: General Main Release 10.2.0 CU15
           topicUid: General_Main_Release_10.2.0_CU15
+        - name: General Main Release 10.2.0 CU16
+          topicUid: General_Main_Release_10.2.0_CU16
+        - name: General Main Release 10.2.0 CU17 - Preview
+          topicUid: General_Main_Release_10.2.0_CU17
       - name: Feature Release
         topicUid: General_Feature_Release_10.2.12
         items:
@@ -432,12 +442,20 @@
           topicUid: Cube_Main_Release_10.3.0_CU1
         - name: DataMiner Cube Main Release 10.3.0 CU2
           topicUid: Cube_Main_Release_10.3.0_CU2
-        - name: DataMiner Cube Main Release 10.3.0 CU3 - Preview
+        - name: DataMiner Cube Main Release 10.3.0 CU3
           topicUid: Cube_Main_Release_10.3.0_CU3
+        - name: DataMiner Cube Main Release 10.3.0 CU4
+          topicUid: Cube_Main_Release_10.3.0_CU4
+        - name: DataMiner Cube Main Release 10.3.0 CU5 - Preview
+          topicUid: Cube_Main_Release_10.3.0_CU5
       - name: Feature Release
-        topicUid: Cube_Feature_Release_10.3.6
+        topicUid: Cube_Feature_Release_10.3.8
         items:
-        - name: DataMiner Cube Feature Release 10.3.6 - Preview
+        - name: DataMiner Cube Feature Release 10.3.8 - Preview
+          topicUid: Cube_Feature_Release_10.3.8
+        - name: DataMiner Cube Feature Release 10.3.7
+          topicUid: Cube_Feature_Release_10.3.7
+        - name: DataMiner Cube Feature Release 10.3.6
           topicUid: Cube_Feature_Release_10.3.6
         - name: DataMiner Cube Feature Release 10.3.5
           topicUid: Cube_Feature_Release_10.3.5
@@ -501,14 +519,20 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU1
         - name: DataMiner web apps Main Release 10.3.0 CU2
           topicUid: Web_apps_Main_Release_10.3.0_CU2
-        - name: DataMiner web apps Main Release 10.3.0 CU3 - Preview
+        - name: DataMiner web apps Main Release 10.3.0 CU3
           topicUid: Web_apps_Main_Release_10.3.0_CU3
-        - name: DataMiner web apps Main Release 10.3.0 CU4 - Preview
+        - name: DataMiner web apps Main Release 10.3.0 CU4
           topicUid: Web_apps_Main_Release_10.3.0_CU4
+        - name: DataMiner web apps Main Release 10.3.0 CU5 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU5
       - name: Feature Release
-        topicUid: Web_apps_Feature_Release_10.3.6
+        topicUid: Web_apps_Feature_Release_10.3.8
         items:
-        - name: DataMiner web apps Feature Release 10.3.6 - Preview
+        - name: DataMiner web apps Feature Release 10.3.8 - Preview
+          topicUid: Web_apps_Feature_Release_10.3.8
+        - name: DataMiner web apps Feature Release 10.3.7
+          topicUid: Web_apps_Feature_Release_10.3.7
+        - name: DataMiner web apps Feature Release 10.3.6
           topicUid: Web_apps_Feature_Release_10.3.6
         - name: DataMiner web apps Feature Release 10.3.5
           topicUid: Web_apps_Feature_Release_10.3.5
@@ -531,14 +555,28 @@
       topicUid: DCP_2.2
     - name: DataMiner Cloud Pack 2.0
       topicUid: DCP_2.0
-  - name: Other release notes
-    topicUid: DataAggregator_1.0.0
-    items:
+  - name: DxM release notes
+    topicUid: DxM_RNs_index
+    items: 
     - name: Data Aggregator release notes
-      topicUid: DataAggregator_1.0.0
+      topicUid: DataAggregator_2.0.0
       items:
+      - name: Data Aggregator 2.0.0
+        topicUid: DataAggregator_2.0.0
       - name: Data Aggregator 1.0.0
         topicUid: DataAggregator_1.0.0
+    - name: Communication Gateway release notes
+      topicUid: CommunicationGateway_1.2.0
+      items:
+      - name: Communication Gateway 1.2.0
+        topicUid: CommunicationGateway_1.2.0
+      - name: Communication Gateway 1.1.0
+        topicUid: CommunicationGateway_1.1.0
+      - name: Communication Gateway 1.0.0
+        topicUid: CommunicationGateway_1.0.0
+  - name: Other release notes
+    topicUid: ClassLibrary_Range_1.4
+    items:
     - name: Class Library release notes
       topicUid: ClassLibrary_Range_1.4
       items:
@@ -553,8 +591,10 @@
       - name: Class Library Range 1.0
         topicUid: ClassLibrary_Range_1.0
     - name: DIS release notes
-      topicUid: DIS_2.41
+      topicUid: DIS_RNs_index
       items:
+      - name: DIS 2.42
+        topicUid: DIS_2.42
       - name: DIS 2.41
         topicUid: DIS_2.41
       - name: DIS 2.40
@@ -703,6 +743,13 @@
           topicUid: EPM_6.0.0_I-DOCSIS
         - name: EPM 5.0.0 I-DOCSIS 
           topicUid: EPM_5.0.0_I-DOCSIS
+      - name: VSAT
+        topicUid: EPM_1.0.3_VSAT
+        items:
+        - name: EPM 1.0.3 VSAT - Preview
+          topicUid: EPM_1.0.2_VSAT
+        - name: EPM 1.0.2 VSAT - Preview
+          topicUid: EPM_1.0.2_VSAT
     - name: IDP release notes
       topicUid: IDP_1.2.1
       items:
@@ -852,6 +899,8 @@
           topicUid: PTP_1.1.3
         - name: Addendum CU1
           topicUid: PTP_1.1.3_CU1
+        - name: Addendum CU2
+          topicUid: PTP_1.1.3_CU2
       - name: PTP 1.1.2
         topicUid: PTP_1.1.2
         items:
@@ -864,8 +913,10 @@
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
-      topicUid: SRM_1.2.30
+      topicUid: SRM_1.2.31
       items:
+      - name: SRM 1.2.31
+        topicUid: SRM_1.2.31
       - name: SRM 1.2.30
         topicUid: SRM_1.2.30
         items:

@@ -25,12 +25,12 @@ Contains on of the following predefined values.
 
 ```xml
 <SlowPollBase>
-  <DefaultValue>Number</DefaultValue>
+  <DefaultValue>number</DefaultValue>
 </SlowPollBase>
 ```
 
 ```xml
 <SlowPollBase>
-  <DefaultValue>Time</DefaultValue>
+  <DefaultValue>time</DefaultValue>
 </SlowPollBase>
 ```

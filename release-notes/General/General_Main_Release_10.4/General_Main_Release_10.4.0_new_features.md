@@ -419,22 +419,44 @@ Once the creation is finished, you will see your newly created cluster on the *A
 
 1. Restart DataMiner.
 
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
+#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085] [ID_36513] [ID_36514]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
 
-- DataMiner ArtifactDeployer (version 1.4.3)
-- DataMiner CloudFeed (version 1.0.8)
-- DataMiner CloudGateway (version 2.10.4)
-- DataMiner CoreGateway (version 2.12.1)
-- DataMiner FieldControl (version 2.8.2)
-- DataMiner Orchestrator (version 1.2.6)
-- DataMiner SupportAssistant (version 1.3.0)
+- DataMiner ArtifactDeployer (version 1.4.6)
+- DataMiner CoreGateway (version 2.12.2)
+- DataMiner FieldControl (version 2.8.3)
+- DataMiner Orchestrator (version 1.3.3)
+- DataMiner SupportAssistant (version 1.3.3)
+
+The BPA test *Firewall Configuration* has been altered to also check if TCP port 5100 is properly configured in the firewall. This port is required for communication with the cloud via the endpoint hosted in DataMiner CloudGateway.
+
+In addition, the DataMiner installer will now also add a firewall rule allowing inbound TCP port 5100 communication.
 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+### Protocols
+
+#### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+`ExportRule` elements can now have a `whereAttribute` attribute. This will allow you to validate the value of an attribute when applying an export rule.
+
+See the following example. If the `includepages` attribute of the *Protocol.SNMP* element is true, the export rule will change that value to false in the exported protocol. Without the `whereAttribute`, the `whereValue` check would be performed on the value of the *Protocol.SNMP* element itself (which is mostly set to "auto") instead of the value of the `includepages` attribute.
+
+```xml
+<ExportRule table="*" tag="Protocol/SNMP" attribute="includepages" value="false" whereTag="Protocol/SNMP" whereAttribute="includepages" whereValue="true"/>
+```
+
+In this next example, all *Column* elements of parameters that have a `level` attribute that is set to 5 will have their value set to 2 in the exported protocol.
+
+```xml
+<ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
+```
 
 ### Correlation
 
@@ -448,6 +470,16 @@ If you do not want the alarm property value to be added to the correlation alarm
 
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+### Maps
+
+#### Marker images can now also be generated dynamically in layers with sourceType set to objects [ID_36246]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Marker images can now also be generated dynamically in layers with `sourceType` set to "objects".
+
+To generate a marker image dynamically, you can use placeholders in the `url` attribute of the *\<MarkerImage\>* tag.
 
 ### Service & Resource Management
 
@@ -515,3 +547,12 @@ Please note the following:
 Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
+
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (offline)* to manage the cloud connection of the local DataMiner Agent while it is offline.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

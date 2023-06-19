@@ -4,7 +4,7 @@ uid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates
 
 # AlarmTemplates element
 
-Specifies the alarm templates to be included in the package for this protocol.
+Specifies the alarm templates to include in the package for this protocol.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies the alarm templates to be included in the package for this protocol.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Template](xref:Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template)|[1, *]|Specifies an alarm template to be included in the package for this protocol.|
+|&nbsp;&nbsp;[Template](xref:Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template)|[1, *]|Specifies an alarm template to include in the package for this protocol.|

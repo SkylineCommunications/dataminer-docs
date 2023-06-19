@@ -6,8 +6,8 @@ uid: KI_CheckVIPs_delays_activities
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.2.0 onwards.
-- Feature Release versions from DataMiner 10.1.12 onwards.
+- DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4].
+- DataMiner 10.1.12 up to 10.3.6.
 
 ## Cause
 
@@ -15,7 +15,7 @@ The CheckVIPs thread, which is responsible for checking whether a DMA holds the 
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU16], 10.3.0 [CU4], or 10.3.7
 
 ## Issue description
 

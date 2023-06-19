@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU3
 ---
 
-# General Main Release 10.3.0 CU3 – Preview
+# General Main Release 10.3.0 CU3
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -112,6 +112,12 @@ In the *ConnectionSettings.txt* file, the **type=** setting defines the default 
 
 One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
 
+#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
+
 #### Element replication is now able to use gRPC [ID_36262]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
@@ -137,7 +143,7 @@ The *SLNetClientTest* tool now supports gRPC when it needs to establish addition
 
 #### Cassandra Cluster: Every DMA would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS [ID_31923]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.3 -->
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU3] - FR 10.3.3 -->
 
 At start-up, every DataMiner Agent with a Cassandra Cluster configuration would incorrectly try to delete any possible old Cassandra compaction and repair tasks found in the entire DMS.
 
@@ -262,6 +268,14 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 
 #### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
 When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
+
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+
+For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

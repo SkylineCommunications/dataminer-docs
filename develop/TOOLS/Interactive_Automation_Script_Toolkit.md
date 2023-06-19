@@ -27,7 +27,7 @@ Main features:
 
 | Version | Description |
 |--|--|
-| 1.0.x | The first version of the toolkit that was made available as a library. Compatible with **DataMiner 10.1** and higher. |
+| 1.0.x | The first version of the toolkit that was made available as a library. Compatible with **DataMiner 10.0.13/10.1.0** and higher. |
 | 2.0.x | Adds support for TreeViews. Compatible with **DataMiner 10.1.2** and higher. |
 | 3.0.x | Fixes issues with the TreeView widget. Compatible with **DataMiner 10.1.5** and higher. |
 | 4.0.x | Adds support for uploading files using the FileSelector widget. Compatible with **DataMiner 10.1.8** and higher. |

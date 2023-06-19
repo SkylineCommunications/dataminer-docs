@@ -28,4 +28,4 @@ The following sections provide more information on working with information temp
 - [Editing the information template for one parameter](xref:Editing_the_information_template_for_one_parameter)
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Information templates](https://community.dataminer.services/video/ruis-rapid-recap-information-templates/) on DataMiner Dojo.
+> See also: [Rui’s Rapid Recap – Information templates](https://community.dataminer.services/video/ruis-rapid-recap-information-templates/) on DataMiner Dojon ![Video](~/user-guide/images/video_Duo.png)

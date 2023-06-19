@@ -6,7 +6,10 @@ uid: DataMiner_Cube_deployment_methods
 
 ## Overview
 
-Below you can find an overview of the different methods that can be used to deploy the DataMiner Cube desktop application. This information is primarily aimed at system administrators.
+Below you can find an overview of the different methods that can be used to deploy the DataMiner Cube desktop application.
+
+> [!IMPORTANT]
+> This information is primarily aimed at system administrators.
 
 |                          | Bitness   | Automatic updates | Side-by-side version support | -9.6 | 10.0           | 10.1+          |
 |--------------------------|-----------|-------------------|------------------------------|------|----------------|----------------|
@@ -37,6 +40,18 @@ Below you can find an overview of the different methods that can be used to depl
 - The application runs from `%LocalAppData%\Skyline\DataMiner\DataMinerCube`. It installs and updates automatically.
 
 - Installation does not require administrator rights.
+
+- To install the Cube desktop app, you need Modify access to the folders `%AppData%\Skyline` and `%LocalAppData%\Skyline`, as well as write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`.
+
+- To be able to run the app, you need Execute access for the files *DataMinerCube.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\` and *CefSharp.BrowserSubprocess.exe* in the folder `%LocalAppData%\Skyline\DataMiner\DataMinerCube\CefSharp\version\architecture\`.
+
+- To create a desktop shortcut, you need Modify access to the folder `%UserProfile%\Desktop`.
+
+- To create a start menu shortcut, you need Modify access to the folder `%AppData%\Microsoft\Windows\Start Menu\Programs`.
+
+- The *Start with Windows* feature requires write access to the key `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`.
+
+- The eventing communication mode will only be available if the firewall allows the application `*%LocalAppData%\Skyline\DataMiner\DataMinerCube\DataMinerCube.exe` to accept incoming connections.
 
 ## Bootstrap MSI installation
 

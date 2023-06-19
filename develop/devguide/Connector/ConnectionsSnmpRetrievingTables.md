@@ -22,7 +22,7 @@ Multiple methods are available for retrieving tables via SNMP in a protocol. The
 - Comparison
 
 > [!NOTE]
-> The Protocol Development Guide Companion Files include the following Wireshark captures to help understand the different retrieval methods:
+> The Protocol Development Guide Companion Files include the following [Wireshark](xref:Wireshark) captures to help understand the different retrieval methods:
 >
 > - GetNext.pcap
 > - GetNext+MultipleGet.pcap
@@ -231,7 +231,7 @@ Capture observation:
 
 ## Subtable
 
-A filtered set of rows can be retrieved using the "subtable" option (options=";subtable") on the SNMP.OID tag of a table parameter (i.e. a table of type "array"). Even though the result is a filtered set of rows, queries are sent to the device until the filter matches. DataMiner retrieves the instances of the table until the filtered data is retrieved. Only the filtered data will be displayed.
+A filtered set of rows can be retrieved using the [subtable](xref:Protocol.Params.Param.SNMP.OID-options#subtable) option (options=";subtable") on the SNMP.OID tag of a table parameter (i.e. a table of type "array"). Even though the result is a filtered set of rows, queries are sent to the device until the filter matches. DataMiner retrieves the instances of the table until the filtered data is retrieved. Only the filtered data will be displayed.
 
 The subtable option only works with the "GetNext+MultipleGet" method. Multiple filters can be used, separated by a comma. The filter is defined in the parameter referenced by the id attribute on the SNMP OID of the array.
 

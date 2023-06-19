@@ -13,4 +13,4 @@ This section details the basic functionality of the main DataMiner client applic
 - [The legacy Monitoring & Control app user interface](xref:The_legacy_Monitoring_Control_app_user_interface#the-legacy-monitoring--control-app-user-interface)
 
 > [!TIP]
-> See also: [DataMiner Cube – Getting started with DataMiner Cube](https://community.dataminer.services/video/dataminer-cube-getting-started-with-dataminer-cube/) on DataMiner Dojo
+> See also: [DataMiner Cube – Getting started with DataMiner Cube](https://community.dataminer.services/video/dataminer-cube-getting-started-with-dataminer-cube/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
