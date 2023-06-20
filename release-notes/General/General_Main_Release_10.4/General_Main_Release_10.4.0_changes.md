@@ -247,6 +247,32 @@ Example:
 
 Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
 
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
+
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
+
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, manually removing an alarm from an incident could result in that alarm being regrouped with another existing or newly created incident. Also when you manually cleared an incident could all base alarms of that incident be regrouped.
+
+From now on, alarms will no longer be regrouped after a manual operation.
+
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, users will be allowed to manually clear automatic incidents.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -335,3 +361,16 @@ In some cases, whitespace characters would incorrectly be removed from signature
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort

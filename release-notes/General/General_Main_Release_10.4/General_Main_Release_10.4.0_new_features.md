@@ -438,6 +438,26 @@ In addition, the DataMiner installer will now also add a firewall rule allowing 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+### Protocols
+
+#### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+`ExportRule` elements can now have a `whereAttribute` attribute. This will allow you to validate the value of an attribute when applying an export rule.
+
+See the following example. If the `includepages` attribute of the *Protocol.SNMP* element is true, the export rule will change that value to false in the exported protocol. Without the `whereAttribute`, the `whereValue` check would be performed on the value of the *Protocol.SNMP* element itself (which is mostly set to "auto") instead of the value of the `includepages` attribute.
+
+```xml
+<ExportRule table="*" tag="Protocol/SNMP" attribute="includepages" value="false" whereTag="Protocol/SNMP" whereAttribute="includepages" whereValue="true"/>
+```
+
+In this next example, all *Column* elements of parameters that have a `level` attribute that is set to 5 will have their value set to 2 in the exported protocol.
+
+```xml
+<ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
+```
+
 ### Correlation
 
 #### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
@@ -527,3 +547,12 @@ Please note the following:
 Each time the *SLLogCollector* tool is run, it will now order the *Standalone BPA Executor* tool to execute all BPA tests available in the system and store the results in the `C:\Skyline DataMiner\Logging\WatchDog\Reports\Pending Reports` folder.
 
 The names of the files containing the test results will have the following format: `<BPA Name>_<Date(yyyy-MM-dd_HH)>`
+
+#### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (offline)* to manage the cloud connection of the local DataMiner Agent while it is offline.
+
+> [!WARNING]
+> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

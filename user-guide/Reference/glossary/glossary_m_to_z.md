@@ -176,7 +176,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SDV | Switched Digital Video. Also referred to as Switched Broadcast (SWB). Method for distributing digital video via cable, where digitally encrypted channels are switched out when they are not being watched and switched in when they are needed. |
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
-| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:services#services-and-service-templates). |
+| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
 | Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
@@ -240,6 +240,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
+| STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
 | STB | Set-top box. Device connecting a TV to an external source in order to receive digital television broadcasts. |
 | Stencil | Preconfigured shapes or groups of shapes in Microsoft Visio. DataMiner supplies stencils in the DataMiner house style.<br>See [Accessing the DataMiner stencils](xref:Working_with_shape_data_in_Microsoft_Visio#accessing-the-dataminer-stencils). |

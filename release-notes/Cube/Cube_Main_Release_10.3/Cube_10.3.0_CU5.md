@@ -26,6 +26,12 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
+#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID_36653]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, when you requested the alarms of a certain time span, Cube would always send two requests to the server: one for the alarms and one for the information/suggestion events. However, in many cases, this was not necessary. From now on, Cube will only send the requests that are necessary.
+
 ### Fixes
 
 #### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
@@ -36,6 +42,12 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
+#### Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
+
 #### System Center: Problem with 'Show agent alarms' link [ID_36463]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -43,3 +55,15 @@ From now on, the scope will be updated correctly whenever changes are made to th
 When you selected an agent in the *Agents* section of *System Center*, in some cases, the alarm numbers shown in the *Show agent alarms* link would not be correct.
 
 Also, when you clicked that *Show agent alarms* link, the alarm tab listing the alarms of the selected agent would incorrectly be empty.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
+
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.

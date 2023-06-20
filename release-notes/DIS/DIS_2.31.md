@@ -175,7 +175,7 @@ Up to now, the validator would incorrectly throw an error when the values of a n
 
 #### Validator: Incorrect suggestion to replace a write parameter of type discrete by a toggle button \[ID_28367\]
 
-Up to now, when the validator found a write parameter of type discrete with only two discrete values, in some cases, it would suggest to replace the parameter by a toggle button even when the write parameter in question did not have a corresponding read parameter.
+Up to now, when the validator found a write parameter of type discrete with only two discrete values, in some cases, it would suggest replacing the parameter by a toggle button even when the write parameter in question did not have a corresponding read parameter.
 
 #### Validator: False positives when Group.Content.Param elements contained parameter ID suffixes \[ID_28368\]
 

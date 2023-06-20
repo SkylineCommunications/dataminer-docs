@@ -2,7 +2,7 @@
 uid: General_configuration
 ---
 
-# General configuration
+# Frequently asked questions about general configuration
 
 - [Which limitations should I keep in mind for the specifications of a DMA?](#which-limitations-should-i-keep-in-mind-for-the-specifications-of-a-dma)
 

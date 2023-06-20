@@ -65,10 +65,10 @@ Enables the [Low-Code Apps module](xref:Application_framework).
 
 ### BookingData
 
-Enables the “BookingData” Visual Overview component.
+Enables the *BookingData* Visual Overview component.
 
 - **Minimum version**: 10.2.7
-- **Estimated release version**: 10.3.11
+- **Release version**: 10.3.8/10.4.0 ([RN 36489](xref:Cube_Feature_Release_10.3.8#visual-overview-new-bookingdata-component-id_33215-id_36489))
 
 ### CassandraCluster
 

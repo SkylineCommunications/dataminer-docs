@@ -279,9 +279,73 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
+
+`Error trapped: Elastic returned unexpected value ''.`
+
+From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
+
+Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
+
+| ​Type | ​RawValue | ​DisplayValue |
+|------|----------|--------------|
+| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
+| ​(Distinct) Count   | 0    | 0                |
+| ​Std dev/Percentile | ​null | ​​"Not applicable" |
+| ​Sum                | 0    | 0                |
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *Monitoring* app, a new type of datetime boxes will now be used on parameter pages.
+
+**BREAKING CHANGE**: When the value of a date or datetime parameter is set using one of the following API methods, that value must now be passed as a Unix timestamp in milliseconds instead of an OLE Automation date.
+
+- SetParameter
+- SetParameterRow
+
+**BREAKING CHANGE**: When values of date or datetime parameters are retrieved using one of the following API methods, those values will now be Unix timestamps in milliseconds instead of OLE Automation dates.
+
+- GetEditParameter
+- GetEditParameterTable
+- GetMonitoredParametersForElement
+- GetMonitoredParametersForService
+- GetParameter
+- GetParameterByName
+- GetParameterForService
+- GetParameterForServiceWithDynamicUnits
+- GetParameters
+- GetParametersByPageForElement
+- GetParametersByPageForElementCached
+- GetParametersByPageForElementSorted
+- GetParametersByPageForServiceElement
+- GetParametersForElement
+- GetParametersForElementFiltered
+- GetParametersForElementSorted
+- GetParametersForService
+- GetParametersForServiceSorted
+- GetParametersSorted
+- GetParameterWithDynamicUnits
+- ObserveParameter
 
 ### Fixes
 
@@ -423,6 +487,12 @@ When an empty query was used by more than one table component, in some rare case
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
+
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
@@ -457,8 +527,8 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
-#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+#### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
+When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
