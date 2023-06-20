@@ -51,7 +51,9 @@ To change the log levels for a specific module:
 1. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
-> Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+>
+> - Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
+> - Not all log files are available in DataMiner Cube. If you want to change the log levels for a log file that is not available in Cube, you can [do so using the SLNetClientTest tool](xref:SLNetClientTest_changing_log_levels).
 
 ### [Prior to DataMiner 10.0.4](#tab/tabid-2)
 
