@@ -71,8 +71,9 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: _site
-          path: _site
+          path: release.zip
+      - name: Unzip artifact for deployment
+        run: Expand-Archive -Path release.zip -DestinationPath .
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:
