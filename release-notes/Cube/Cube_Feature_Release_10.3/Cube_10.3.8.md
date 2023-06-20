@@ -16,6 +16,55 @@ uid: Cube_Feature_Release_10.3.8
 
 ## Other new features
 
+#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+You can now create a special *BookingData* shape and make it display all data associated with a particular booking.
+
+To do so, create a shape with the following shape data fields:
+
+|Shape data field | Value |
+|-------------|---------------|
+| Component   | `BookingData` |
+| Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
+
+A *BookingData* shape will show the following information:
+
+- On the left-hand side, you will find a list of resources used by the booking.
+
+  For every resource, this list shows the following information:
+  
+  - the resource name
+  - an icon indicating the function of the resource
+  - an icon indicating whether the resource is linked to a service definition node
+  - the node label or, if no node label is defined, the name of the function definition
+
+- On the right-hand side, you see the profile data of the node or node interface you selected in the list on the left:
+
+  - the profile instance (if applicable), and
+  - the profile parameter values that will be used (note that these values can be overridden on several levels).
+  
+  > [!NOTE]
+  > Priority of profile parameter value overrides:
+  >
+  > 1. Values defined in the parameter overrides (stored in the booking)
+  > 1. Values defined in the profile instance
+  > 1. Values defined in the profile definition
+
+To be able to use the *BookingData* component, you will need
+
+- a system with an Elasticsearch database
+- a service manager license
+- a resource manager license
+- the following user permissions:
+
+  - Modules > Bookings > UI Available
+  - Modules > Functions > UI Available
+  - Modules > Profiles > UI Available
+  - Modules > Resources > UI Available
+  - Modules > Services > UI Available
+
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
