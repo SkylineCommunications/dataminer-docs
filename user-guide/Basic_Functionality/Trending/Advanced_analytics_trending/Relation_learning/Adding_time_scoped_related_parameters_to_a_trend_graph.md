@@ -6,6 +6,8 @@ uid: Adding_time_scoped_related_parameters_to_a_trend_graph
 
 From DataMiner 10.3.8/10.4.0 onwards<!--RN 36434 -->, you can use the light bulb in the top-right corner of a trend graph to add related parameters based only on the behavior of the parameters during the time range of a selected section of the trend graph.
 
+You can for instance use this in a case a parameter (e.g. the total available memory of a server) behaves oddly during a particular time range (e.g. a downward spike), in order to find out if other parameters of the same device also showed unusual behavior during the same time range.
+
 ## Prerequisites
 
 - The DataMiner System must use an indexing database (i.e. Elasticsearch or OpenSearch). See [Supported system data storage architectures](xref:Supported_system_data_storage_architectures).
