@@ -113,6 +113,12 @@ In some rare cases, an error could occur in SLElement when a timeout action of a
 
 When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
 
+#### SLAnalytics - Automatic incident tracking: Attempt to clear an alarm group that had already been cleared [ID_36654]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+In some rare cases, the system would incorrectly try to clear an alarm group that had already been cleared.
+
 #### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->

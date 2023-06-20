@@ -141,6 +141,12 @@ When there was a gap in a trend graph that showed a perfectly increasing line, i
 
 Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
 
+#### SLAnalytics - Automatic incident tracking: Attempt to clear an alarm group that had already been cleared [ID_36654]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+In some rare cases, the system would incorrectly try to clear an alarm group that had already been cleared.
+
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
