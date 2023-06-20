@@ -850,8 +850,10 @@
       - name: IDP 1.0.0 
         topicUid: IDP_1.0.0
     - name: MbgNMS release notes
-      topicUid: MbgNMS_1.2.0
+      topicUid: MbgNMS_1.2.1
       items:
+      - name: MbgNMS 1.2.1
+        topicUid: MbgNMS_1.2.1
       - name: MbgNMS 1.2.0
         topicUid: MbgNMS_1.2.0
       - name: MbgNMS 1.1.1
