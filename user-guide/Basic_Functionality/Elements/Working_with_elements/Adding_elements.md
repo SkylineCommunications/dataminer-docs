@@ -67,86 +67,15 @@ uid: Adding_elements
 
 <!--Instead of listing what to do for all different connections, create subpages under "Adding an element" for every type of connection-->
 
-   - For an **SNMPv1/v2** connection:
+   - For an **SNMPv1/v2** connection, see [SNMPv1/v2 connection](xref:SNMPv1v2_Connection).
 
-     - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv1 type protocol, you can select SNMPv1, SNMPv2 or SNMPv3. With an SNMPv2 type protocol, you can select SNMPv2 or SNMPv3.
+   - For an **SNMPv3** connection, see [SNMPv3 connection](xref:SNMPv3_Connection)
 
-       > [!NOTE]
-       > When you downgrade to a DataMiner version prior to 9.5.3, any element with an SNMPv1 protocol that has been set to SNMPv3 will need to be reconfigured with an SNMPv3 version of the protocol to work correctly.
+   - For an **HTTP(S)** connection, see [HTTP(S) connection](xref:HTTPS_Connection)
 
-     - **IP address/host**: The polling IP or URL of the destination.
+   - For a **serial** connection, see [Serial connection](xref:Serial_Connection)
 
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
-
-     - **Port number**: By default 161.
-
-     - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
-
-     - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
-
-     - **Set community string**: The community string used when setting values on the device. The default value, unless overridden in the protocol, is *private*.
-
-   - For an **SNMPv3** connection:
-
-     - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv3 type protocol, you can select SNMPv2 or SNMPv3.
-
-     - **IP address/host**: The polling IP or URL of the destination.
-
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
-
-     - **Port number**: By default 161.
-
-     - **Use credentials**: From DataMiner 9.5.5 onwards, if predefined credentials have been made available for your user account, you can select this checkbox to select a set of predefined SNMP credentials. See also: [Managing predefined sets of credentials for SNMP authentication](xref:Managing_predefined_sets_of_credentials_for_SNMP_authentication).
-
-     - **Security level and protocol**: Select one of the following three levels in the drop-down list:
-
-       - *noAuthNoPriv*: No authentication and no privacy, which is essentially the same as SNMPv2.
-
-       - *authNoPriv*: Authentication without privacy. This means that authentication is required, but data is not encrypted. If this value is chosen, an encryption password is not necessary.
-
-       - *authPriv*: Authentication with privacy. This means that both authentication is required and data is encrypted, so that both the authentication password and the encryption password must be filled in.
-
-     - **User name**: Always needs to be specified, regardless of the selected security level and protocol.
-
-     - **Authentication password**: Not required if *noAuthNoPriv* is selected.
-
-     - **Encryption password**: Only required if *authPriv* is selected.
-
-     - **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
-
-     - **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
-
-     > [!NOTE]
-     > The following combinations of authentication and encryption algorithm are not supported:
-     >
-     > - MD5/SHA-1 and AES192
-     > - MD5/SHA-1/SHA-224 and AES256
-     >
-     > We recommend that you use SHA-512 and AES-256, since this is the most secure combination. As such, this is the combination that is selected by default.
-
-   - For an **HTTP(S)** connection:
-
-     - **IP address/host**: The polling IP or URL of the destination.
-
-     - **IP port**: The IP port of the destination. This is not always required. The default port for HTTPS communication is 443. If you specify a different port, also add the *https://* prefix in the IP address field.
-
-     - **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassproxy*.
-
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
-
-   - For a **serial** connection:
-
-     - **Baud rate**: The baudrate specified in the manual of the device, e.g. *9600*.
-
-     - **Databits**: The databits specified in the manual of the device, e.g. *7*.
-
-     - **Stopbits**: The stopbits specified in the manual of the device, e.g. *1*.
-
-     - **Parity**: The parity specified in the manual of the device, e.g. *No*.
-
-     - **Flow control**: The flow control specified in the manual of the device, e.g. *No*.
-
-     - **Serial port**: The serial port of the DMA that should be used. If only one port is available, it is automatically selected.
+ 
 
    - For a **smart-serial** connection:
 

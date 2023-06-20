@@ -244,6 +244,21 @@
               topicUid: Element_cards
             - name: Adding an element
               topicUid: Adding_elements
+              items:
+                - name: SNMPv1/v2 connection
+                  topicUid: SNMPv1v2_Connection
+                - name: SNMPv3 connection
+                  topicUid: SNMPv3_Connection
+                - name: HTTP(s) connection
+                  topicUid: HTTPS_Connection
+                - name: Serial connection
+                  topicUid: Serial_Connection
+                - name: Smart-serial connection
+                  topicUid: Smart_Serial_Connection
+                - name: TCP/IP or UDP/IP connection
+                  topicUid: TCPIP_UDPIP_Connection
+                - name: WebSocket connection
+                  topicUid: WebSocket_Connection
             - name: Deleting an element
               topicUid: Deleting_elements
             - name: Duplicating an element
