@@ -110,7 +110,7 @@ The following columns are now by default hidden on the topology data pages, so t
 
 #### Exception values added for percentage, latitude, and longitude parameters [ID_36452]
 
-To prevent parameters getting an incorrect negative value, exception values have been added to the Percentage Ping OK and Percentage Ping Unreachable parameters on the node and amplifier level, as well as to the latitude and longitude parameters on amplifier and tap level.
+To prevent parameters getting an incorrect negative value, exception values have been added to the Percentage Ping OK and Percentage Ping Unreachable parameters on the node and amplifier level, as well as to the latitude and longitude parameters on amplifier and tap level. These parameters will now display "N/A" when an exception occurs.
 
 ### Fixes
 
