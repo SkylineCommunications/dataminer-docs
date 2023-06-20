@@ -4,9 +4,9 @@ uid: SRM_migrating_resources
 
 # Migrating resources
 
-To export and import resources, you can use the *SRM_DiscoverResources* Automation script.
+To migrate the complete resource configuration, you can use the *SRM_DiscoverResources* Automation script. When you export the resource configuration with this script, an Excel file will be generated that includes all resources defined in the system as well as the resources that could potentially be created. You can then import this file to adjust the configuration of resources that are already present in the system and to create new resources.
 
-## Exporting resources
+## Exporting the resource configuration
 
 1. In the Automation module, execute the *SRM_DiscoverResources* script.
 
@@ -30,7 +30,7 @@ The script will create an Excel file containing one tab per function and listing
 
 - *Resource Pools*: Comma-separated list of pools containing the resource.
 
-## Importing resources
+## Importing the resource configuration
 
 1. Create a DataMiner backup that includes *Resource Manager objects and configuration*.
 
