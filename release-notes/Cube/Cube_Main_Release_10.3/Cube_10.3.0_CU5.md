@@ -26,6 +26,12 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
+#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID_36653]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, when you requested the alarms of a certain time span, Cube would always send two requests to the server: one for the alarms and one for the information/suggestion events. However, in many cases, this was not necessary. From now on, Cube will only send the requests that are necessary.
+
 ### Fixes
 
 #### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
