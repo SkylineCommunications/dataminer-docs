@@ -8,12 +8,13 @@ Thanks to alarm threshold hysteresis, you can fine-tune the sensitivity of your 
 
 > [!TIP]
 > See also:
-> - [Configuring alarm hysteresis in an alarm template](xref:Configuring_alarm_templates#configuring-alarm-hysteresis-in-an-alarm-template)
+>
+> - [Configuring alarm hysteresis in an alarm template](xref:Configuring_alarm_hysteresis)
 > - [Polling.xml](xref:Polling_xml#pollingxml)
 
 ## Graphical representation
 
-![](~/user-guide/images/hysteresis.jpg)
+![Alarm hysteresis](~/user-guide/images/hysteresis.jpg)
 
 ## Methods
 

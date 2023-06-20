@@ -123,7 +123,7 @@ CanSimulate --- |No|ExtraInfoNotFixed
 %% Define hyperlinks %%
 click ProtocolDebug "/user-guide/Reference/DataMiner_Tools/
 Protocol_Debug_Tools.html"
-click ReduceFeatures "/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates.html"
+click ReduceFeatures "/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/About_the_alarm_template_editor.html"
 %% Apply styles to blocks %%
 class CreationIssue classTerminal;
 class AlarmConsole,Surveyor,Apps,Trending,ProtocolDebug,ReduceFeatures classExternalRef;

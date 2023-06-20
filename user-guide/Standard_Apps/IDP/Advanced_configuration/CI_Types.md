@@ -147,7 +147,7 @@ This page contains an overview of software management details for CI Types, with
 
 - **Version Parameter**: Displays the parameter name of the element where the software version is checked. This can be configured via the *Advanced* button.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified (via the *Advanced* page button). In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold).
 
 - **Advanced**: Contains a button that launches a wizard where you can specify the software update script and image file location, as well as the compliancy version and the compliancy version parameter. See [Software image management configuration](#software-image-management-configuration).
 
@@ -253,7 +253,7 @@ The software image configuration window of the CI Type Management wizard contain
 
 - **Version parameter**: The parameter name of the element where the software version is checked.
 
-- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds).
+- **Set Baseline in Alarm Template**: This option allows you to have an alarm generated if a managed element runs a different software version than expected. For this purpose, both this option and *Software Compliancy* must be enabled and the *Version Baseline* and *Version Parameter Name* must be specified. In the alarm template for the managed element, dynamic alarm thresholds should be assigned. You can do so by adding an asterisk ("\*") at the alarm threshold level for the desired alarm severity. See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold).
 
 ### Facilities configuration
 

@@ -61,7 +61,7 @@ Information events will normally be broadcast to inform users:
 The default alarm color of information events is gray.
 
 > [!NOTE]
-> You can also make DataMiner generate information events when a discrete parameter reaches a user-defined value or when an analog parameter crosses a user-defined threshold. See [Configuring an alarm template to generate information messages](xref:Configuring_alarm_templates#configuring-an-alarm-template-to-generate-information-messages).
+> You can also make DataMiner generate information events when a discrete parameter reaches a user-defined value or when an analog parameter crosses a user-defined threshold. See [Configuring an alarm template to generate information messages](xref:Configuring_alarm_template_information_message).
 
 ### Timeout alarms
 
