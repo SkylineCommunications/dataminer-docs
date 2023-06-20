@@ -172,3 +172,9 @@ When the feed data linked to a query was grouped, changes to that feed data woul
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
+
+<!-- MR 10.2.0 [CU17] - FR 10.3.8 -->
+
+Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.
