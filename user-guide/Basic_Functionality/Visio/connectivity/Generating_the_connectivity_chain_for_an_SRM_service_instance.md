@@ -31,7 +31,7 @@ To have a service instance chain drawn automatically, define the following shape
 
 - The placeholder shapes can in turn contain the following optional child shapes:
 
-  - Child shapes representing the element interfaces. So that it can be automatically determined which interfaces should be assigned to which element shape, we suggest to set the **Interface** shape data for these shapes to one of the following values:
+  - Child shapes representing the element interfaces. To make it possible to automatically determine which interfaces should be assigned to which element shape, we suggest setting the **Interface** shape data for these shapes to one of the following values:
 
     - *\[Auto\]\|Input*
 

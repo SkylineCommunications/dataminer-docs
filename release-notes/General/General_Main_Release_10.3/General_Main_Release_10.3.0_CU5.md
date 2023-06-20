@@ -91,8 +91,30 @@ When the following protocol API call was used to update specific matrix crosspoi
 protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 ```
 
+#### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
+
+- When alarms were requested via a query with a service filter, no alarms would be returned.
+
+- When alarms were requested via a query with a view filter, no alarms would be returned when that view or any of its subviews contained services. Also, when a view was enhanced with an element, that element would not be queried.
+
 #### Problem with SLElement due to timeout actions of an element being overwritten [ID_36591]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
+
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.

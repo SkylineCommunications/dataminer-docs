@@ -31,6 +31,24 @@ In the *SLNetClientTest* tool, you can now go to *Offline tools > CcaGateway (of
 > [!WARNING]
 > Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### 'ExportRule' elements can now have a 'whereAttribute' attribute [ID_36622]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+`ExportRule` elements can now have a `whereAttribute` attribute. This will allow you to validate the value of an attribute when applying an export rule.
+
+See the following example. If the `includepages` attribute of the *Protocol.SNMP* element is true, the export rule will change that value to false in the exported protocol. Without the `whereAttribute`, the `whereValue` check would be performed on the value of the *Protocol.SNMP* element itself (which is mostly set to "auto") instead of the value of the `includepages` attribute.
+
+```xml
+<ExportRule table="*" tag="Protocol/SNMP" attribute="includepages" value="false" whereTag="Protocol/SNMP" whereAttribute="includepages" whereValue="true"/>
+```
+
+In this next example, all *Column* elements of parameters that have a `level` attribute that is set to 5 will have their value set to 2 in the exported protocol.
+
+```xml
+<ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Column" value="2" whereTag="Protocol/Params/Param" whereAttribute="level" whereValue="5"/>
+```
+
 ## Changes
 
 ### Enhancements
@@ -104,6 +122,12 @@ Stream Viewer will display an error message when an SNMP poll group contained ei
 
 Up to now, that error message would contain the ID of the parameter in octal format. From now on, it will contain the ID of the parameter in decimal format instead.
 
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
+
 #### Factory reset tool will no longer try to delete non-existing folders [ID_36550]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -124,6 +148,20 @@ From now on, in an SNMP table, columns of type "retrieved" can be placed in betw
 
 Because of a number of enhancements with regard to fetching LinkerTableEntries of function resources, overall performance has increased.
 
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, manually removing an alarm from an incident could result in that alarm being regrouped with another existing or newly created incident. Also when you manually cleared an incident could all base alarms of that incident be regrouped.
+
+From now on, alarms will no longer be regrouped after a manual operation.
+
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, users will be allowed to manually clear automatic incidents.
+
 ### Fixes
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
@@ -133,6 +171,19 @@ Because of a number of enhancements with regard to fetching LinkerTableEntries o
 If, in the protocol, a data range is specified for a parameters for which trend data prediction is required, the trend prediction algorithm will cap the prediction values to the data range. For example, if a parameter has a rangeLow value equal to 0 and a rangeHigh value equal to 100, the prediction will not contain values lower than 0 or higher than 100.
 
 From now on, if the trend data contains values outside of the specified data range, the trend prediction algorithm will no longer consider the data range values to be valid or reliable, and will not limit the prediction to this range.
+
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort
 
 #### Problem with protocol.SendToDisplay API call [ID_36528]
 
@@ -144,8 +195,30 @@ When the following protocol API call was used to update specific matrix crosspoi
 protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 ```
 
+#### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
+
+- When alarms were requested via a query with a service filter, no alarms would be returned.
+
+- When alarms were requested via a query with a view filter, no alarms would be returned when that view or any of its subviews contained services. Also, when a view was enhanced with an element, that element would not be queried.
+
 #### Problem with SLElement due to timeout actions of an element being overwritten [ID_36591]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
+
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
+
+#### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.

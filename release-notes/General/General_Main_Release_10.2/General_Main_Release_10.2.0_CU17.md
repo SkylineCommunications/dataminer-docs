@@ -69,6 +69,12 @@ In some cases, when a placeholder was used in the *Element* or *View* shape data
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
 
+#### DataMiner Cube - Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
+
 #### DataMiner Cube - System Center: Problem with 'Show agent alarms' link [ID_36463]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -100,3 +106,25 @@ When the following protocol API call was used to update specific matrix crosspoi
 ```csharp
 protocol.SendToDisplay(matrixReadParameterId, changedInputs, changedOutputs);
 ```
+
+#### Problem when requesting alarms on a system with Cassandra Cluster and Elasticsearch [ID_36549]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+On systems with a Cassandra Cluster and an Elasticsearch database, the following issues could occur:
+
+- When alarms were requested via a query with a service filter, no alarms would be returned.
+
+- When alarms were requested via a query with a view filter, no alarms would be returned when that view or any of its subviews contained services. Also, when a view was enhanced with an element, that element would not be queried.
+
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
+
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.

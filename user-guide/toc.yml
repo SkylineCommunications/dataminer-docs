@@ -336,10 +336,10 @@
           topicUid: Manually_switching_between_primary_and_backup_elements
         - name: Setting a primary or backup element in maintenance
           topicUid: Setting_a_primary_or_backup_element_in_maintenance
-    - name: Services and service templates
-      topicUid: services
+    - name: Services
+      topicUid: About_services
       items:
-        - name: About services
+        - name: About services and service templates
           topicUid: About_services
         - name: Service cards
           topicUid: Service_cards
@@ -358,8 +358,6 @@
         - name: Service templates
           topicUid: Service_templates
           items:
-            - name: About service templates
-              topicUid: About_service_templates
             - name: Creating a service template
               topicUid: Creating_a_service_template
               items:
@@ -824,15 +822,15 @@
             - name: Assigning trend templates
               topicUid: Assigning_trend_templates
     - name: Documents
-      topicUid: documents
+      topicUid: About_the_Documents_module
       items:
         - name: About the Documents module
           topicUid: About_the_Documents_module
-        - name: Consulting documents, hyperlinks or email addresses
+        - name: Consulting documents, hyperlinks, or email addresses
           topicUid: Consulting_documents_hyperlinks_or_email_addresses
         - name: Managing the document folders
           topicUid: Managing_the_document_folders
-        - name: Adding documents, hyperlinks or email addresses
+        - name: Adding documents, hyperlinks, or email addresses
           topicUid: Adding_documents_hyperlinks_or_email_addresses
     - name: Chat collaboration
       topicUid: chat
@@ -3395,6 +3393,8 @@
               items:
               - name: Activating verbose Correlation logging
                 topicUid: SLNetClientTest_activating_verbose_correlation_logging
+              - name: Changing the log levels for a log file
+                topicUid: SLNetClientTest_changing_log_levels
               - name: Checking a hyperlink filter
                 topicUid: SLNetClientTest_checking_hyperlink_filter
               - name: Checking whether protocol buffer serialization is enabled

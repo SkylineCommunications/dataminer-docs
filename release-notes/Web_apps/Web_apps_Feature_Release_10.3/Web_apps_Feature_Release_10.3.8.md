@@ -16,7 +16,15 @@ uid: Web_apps_Feature_Release_10.3.8
 
 ## Other features
 
-*No other features have been added yet*
+#### Dashboards app & Low-Code Apps - Table component: Selecting whether to export raw values or display values to CSV [ID_36467]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+You can export the data displayed by a table component by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. From now on, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported.
+
+Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
+
+If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
 
 ## Changes
 
@@ -67,6 +75,41 @@ When configuring an analog or digital *Clock* component, you can now make the cl
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
+#### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *Monitoring* app, a new type of datetime boxes will now be used on parameter pages.
+
+**BREAKING CHANGE**: When the value of a date or datetime parameter is set using one of the following API methods, that value must now be passed as a Unix timestamp in milliseconds instead of an OLE Automation date.
+
+- SetParameter
+- SetParameterRow
+
+**BREAKING CHANGE**: When values of date or datetime parameters are retrieved using one of the following API methods, those values will now be Unix timestamps in milliseconds instead of OLE Automation dates.
+
+- GetEditParameter
+- GetEditParameterTable
+- GetMonitoredParametersForElement
+- GetMonitoredParametersForService
+- GetParameter
+- GetParameterByName
+- GetParameterForService
+- GetParameterForServiceWithDynamicUnits
+- GetParameters
+- GetParametersByPageForElement
+- GetParametersByPageForElementCached
+- GetParametersByPageForElementSorted
+- GetParametersByPageForServiceElement
+- GetParametersForElement
+- GetParametersForElementFiltered
+- GetParametersForElementSorted
+- GetParametersForService
+- GetParametersForServiceSorted
+- GetParametersSorted
+- GetParameterWithDynamicUnits
+- ObserveParameter
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
@@ -105,8 +148,27 @@ When you opened a query that was created using an older GQI version, and that qu
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 
+#### Dashboards app & Low-Code Apps: Bar and pie chart components would display incorrect data [ID_36601]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- Not added to MR 10.4.0 -->
+
+In DataMiner feature version 10.3.7, when a dashboard or a low-code app contained bar or pie chart components that displayed GQI data, in some cases, those charts would display incorrect data due to a settings issue.
+
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
+
 #### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
+When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
