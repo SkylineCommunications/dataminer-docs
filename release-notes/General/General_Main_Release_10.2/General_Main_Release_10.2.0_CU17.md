@@ -131,6 +131,6 @@ Pie chart components would not update properly while visualizing data from a que
 
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
 
-<!-- MR 10.2.0 [CU17] - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.
