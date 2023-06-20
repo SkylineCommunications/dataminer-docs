@@ -2,7 +2,7 @@
 uid: Duplicating_elements
 ---
 
-# Duplicating an element
+# Duplicating elements
 
 To quickly add an element that is very similar to an existing element, you can duplicate that existing element:
 

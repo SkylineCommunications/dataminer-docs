@@ -2,7 +2,7 @@
 uid: SNMPv3_Connection
 ---
 
-# SNMPv3 connection
+# SNMPv3 connections
 
 For SNMPv3 connections, specify the following connection settings:
 

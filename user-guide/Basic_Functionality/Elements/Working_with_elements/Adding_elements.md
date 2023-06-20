@@ -2,7 +2,7 @@
 uid: Adding_elements
 ---
 
-# Adding an element
+# Adding elements
 
 1. Right-click in the Surveyor, and select *New \> Element*.
 

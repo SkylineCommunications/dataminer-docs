@@ -2,7 +2,9 @@
 uid: Deleting_elements
 ---
 
-# Deleting an element
+# Deleting elements
+
+To delete an element:
 
 1. Right-click the element in the Surveyor, and select *Delete*.
 

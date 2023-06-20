@@ -242,26 +242,26 @@
           items:
             - name: Element cards
               topicUid: Element_cards
-            - name: Adding an element
+            - name: Adding elements
               topicUid: Adding_elements
               items:
-                - name: SNMPv1/v2 connection
+                - name: SNMPv1/v2 connections
                   topicUid: SNMPv1v2_Connection
-                - name: SNMPv3 connection
+                - name: SNMPv3 connections
                   topicUid: SNMPv3_Connection
-                - name: HTTP(s) connection
+                - name: HTTP(s) connections
                   topicUid: HTTPS_Connection
-                - name: Serial connection
+                - name: Serial connections
                   topicUid: Serial_Connection
-                - name: Smart-serial connection
+                - name: Smart-serial connections
                   topicUid: Smart_Serial_Connection
-                - name: TCP/IP or UDP/IP connection
+                - name: TCP/IP or UDP/IP connections
                   topicUid: TCPIP_UDPIP_Connection
-                - name: WebSocket connection
+                - name: WebSocket connections
                   topicUid: WebSocket_Connection
-            - name: Deleting an element
+            - name: Deleting elements
               topicUid: Deleting_elements
-            - name: Duplicating an element
+            - name: Duplicating elements
               topicUid: Duplicating_elements
             - name: Replicating elements
               topicUid: Replicating_elements

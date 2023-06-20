@@ -101,9 +101,9 @@ The list consists of the following columns:
 
 - *Timeout time*: Relevant for elements only. The timeout time for a single request for each of the element’s connections (in milliseconds). For multiple connections, the values are separated by commas.
 
-- *Element timeout time*: Relevant for elements only. The total timeout time for each of the element’s connections (in milliseconds). This is the timeout time that corresponds with the element setting *The element goes into timeout state when \[...\]* (see [Adding an element](xref:Adding_and_deleting_elements#adding-an-element)). For multiple connections, the values are separated by commas. Displayed from DataMiner 10.0.8 onwards.
+- *Element timeout time*: Relevant for elements only. The total timeout time for each of the element’s connections (in milliseconds). This is the timeout time that corresponds with the element setting *The element goes into timeout state when \[...\]* (see [Adding elements](xref:Adding_elements)). For multiple connections, the values are separated by commas. Displayed from DataMiner 10.0.8 onwards.
 
-- *Slow poll*: Relevant for elements only. The number of milliseconds that each of the element connections has to be in timeout before they are placed in slow poll mode. For multiple connections, the values are separated by commas. For more information on slow poll mode, see [Adding an element](xref:Adding_and_deleting_elements#adding-an-element).
+- *Slow poll*: Relevant for elements only. The number of milliseconds that each of the element connections has to be in timeout before they are placed in slow poll mode. For multiple connections, the values are separated by commas. For more information on slow poll mode, see [Adding elements](xref:Adding_elements).
 
 - *# of retries*: Relevant for elements only. The total number of times DataMiner will send the same command again in case it does not receive a response. For multiple connections, the values are separated by commas.
 

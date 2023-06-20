@@ -2,7 +2,7 @@
 uid: HTTPS_Connection
 ---
 
-# HTTP(S) connection
+# HTTP(S) connections
 
 For HTTP(S) connections, specify the following connection settings:
 

@@ -270,7 +270,7 @@ For detailed information on the `PortSettings` element, see [Protocol.PortSettin
 
 ### Step 6 – Creating a new DataMiner element
 
-In the DataMiner Cube Surveyor, navigate to the view where you want to add the element. Right-click the view and select *Create element*. For more information on element creation, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
+In the DataMiner Cube Surveyor, navigate to the view where you want to add the element. Right-click the view and select *Create element*. For more information on element creation, see [Adding elements](xref:Adding_elements).
 
 If no default port settings were specified, make sure to set Type of port to TCP/IP, and specify the correct IP address and IP port.
 

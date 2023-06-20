@@ -2,7 +2,7 @@
 uid: SNMPv1v2_Connection
 ---
 
-# SNMPv1/v2 connection
+# SNMPv1/v2 connections
 
 For SNMPv1/v2 connections, specify the following connection settings:
 

@@ -12,7 +12,7 @@ DataMiner supports both the SICL API and the VISA API. Depending on whether vers
 > On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries).
 
 > [!TIP]
-> See also: [Adding and deleting elements](xref:Adding_and_deleting_elements)
+> See also: [Adding elements](xref:Adding_elements)
 
 ## Using version M.01.01.04 of the IO libraries and SICL communication
 

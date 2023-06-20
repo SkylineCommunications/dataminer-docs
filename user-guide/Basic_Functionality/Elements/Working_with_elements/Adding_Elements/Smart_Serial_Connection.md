@@ -2,7 +2,7 @@
 uid: Smart_Serial_Connection
 ---
 
-# Smart-serial connection
+# Smart-serial connections
 
 For smart-serial connections, specify the following connection settings:
 

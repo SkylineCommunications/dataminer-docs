@@ -2,7 +2,7 @@
 uid: Serial_Connection
 ---
 
-# Serial connection
+# Serial connections
 
 For serial connections, specify the following connection settings:
 

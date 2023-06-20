@@ -2,7 +2,7 @@
 uid: WebSocket_Connection
 ---
 
-# WebSocket connection
+# WebSocket connections
 
 For a **WebSocket** connection (available from DataMiner 9.5.3 onwards), specify the following connection settings:
 
