@@ -59,6 +59,12 @@ Up to now, when an SNMP table had columns of type "retrieved" in between columns
 
 From now on, in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp", providing the primary key column is a column of type "snmp" and not a column of type "retrieved".
 
+#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID_36627]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+A number of enhancements have been made with regard to error handling while exporting trend data to a CSV file.
+
 ### Fixes
 
 #### DataMiner Cube - Visual Overview: Problem with element or view scope of Children shapes [ID_36354]

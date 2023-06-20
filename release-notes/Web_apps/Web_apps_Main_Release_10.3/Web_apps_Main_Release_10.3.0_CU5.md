@@ -18,6 +18,12 @@ uid: Web_apps_Main_Release_10.3.0_CU5
 
 In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
 
+#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID_36627]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+A number of enhancements have been made with regard to error handling while exporting trend data to a CSV file.
+
 ### Fixes
 
 #### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]

@@ -110,6 +110,12 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParameterWithDynamicUnits
 - ObserveParameter
 
+#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID_36627]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+A number of enhancements have been made with regard to error handling while exporting trend data to a CSV file.
+
 ### Fixes
 
 #### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
