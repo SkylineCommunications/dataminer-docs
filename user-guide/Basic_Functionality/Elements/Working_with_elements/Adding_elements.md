@@ -65,68 +65,21 @@ uid: Adding_elements
 
 1. Depending on the protocol you have chosen, more connection settings may need to be specified:
 
-<!--Instead of listing what to do for all different connections, create subpages under "Adding an element" for every type of connection-->
-
    - For an **SNMPv1/v2** connection, see [SNMPv1/v2 connection](xref:SNMPv1v2_Connection).
 
-   - For an **SNMPv3** connection, see [SNMPv3 connection](xref:SNMPv3_Connection)
+   - For an **SNMPv3** connection, see [SNMPv3 connection](xref:SNMPv3_Connection).
 
-   - For an **HTTP(S)** connection, see [HTTP(S) connection](xref:HTTPS_Connection)
+   - For an **HTTP(S)** connection, see [HTTP(S) connection](xref:HTTPS_Connection).
 
-   - For a **serial** connection, see [Serial connection](xref:Serial_Connection)
+   - For a **serial** connection, see [Serial connection](xref:Serial_Connection).
 
- 
+   - For a **smart-serial** connection, see [Smart-serial connection](xref:Smart_Serial_Connection).
 
-   - For a **smart-serial** connection:
-
-     - **IP address/host**: The polling IP or URL of the destination.
-
-       - In a Failover setup, instead of specifying the local IP address, use 127.0.0.1.
-
-       - If you specify “any” as the host address, DataMiner listens on all IP addresses on the specified port.
-
-     - **IP port**: The IP port of the destination. This is not always required.
-
-     - **Accepted IP address**: Available from DataMiner 9.6.13 onwards, if a smart-serial server port of type TCP is used. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
-
-       To add another accepted IP address, below the box, click *Add*.
-
-       > [!NOTE]
-       > This functionality is only available if *AllowedIPAddresses.Disabled* is set to “false” in the user settings of the smart-serial connection in the protocol.
-
-     - **Bus address**: The bus address of the device. This is not always required.
-
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
-
-   - For a **TCP/IP** or **UDP/IP** connection:
-
-     - **IP address/host**: The polling IP or URL of the destination.
-
-     - **IP port**: The IP port of the destination. This is not always required.
-
-     - **Bus address**: The bus address of the device. This is not always required.
-
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
-
-     - **SSL/TLS**: Select this checkbox to enable SSL/TLS encryption (for TCP/IP connections only).
-
-       > [!NOTE]
-       >
-       > - TLS elements and non-TLS elements sharing the same TCP/IP port is not supported.
-       > - This feature is supported from DataMiner 10.0.2 onwards for smart-serial elements acting as server. However, note that the system must be configured to support this encryption. See [Enabling TLS encryption](xref:Enabling_TLS_encryption).
-       > - From DataMiner 10.0.3 onwards, this feature is also supported in case DataMiner acts as the serial client. No further configuration is required in this case.
+   - For a **TCP/IP** or **UDP/IP** connection, see [TCP/IP and UDP/IP connections](xref:TCPIP_UDPIP_Connection).
 
    - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element).
 
-   - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards):
-
-     - **IP address/host**: The polling IP or URL of the destination.
-
-     - **IP port**: The IP port of the destination. This is not always required.
-
-     - **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassproxy*.
-
-     - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
+   - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards), see [WebSocket connection](xref:WebSocket_Connection).
 
 1. If the protocol is configured to allow you to test the connections, optionally click the button *Test connection* below any connections you want to test.
 
