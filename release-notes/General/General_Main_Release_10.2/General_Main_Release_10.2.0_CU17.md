@@ -147,6 +147,18 @@ Pie chart components would not update properly while visualizing data from a que
 
 In some rare cases, the system would incorrectly try to clear an alarm group that had already been cleared.
 
+#### DataMiner Cube - Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID_36666]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the *Settings* window, you added a suggestion tab to a group setting for the Alarm Console, users who were a member of that group would see the suggestion tab, but it would not show any suggestion alarms.
+
+#### DataMiner Cube: Problem when removing DCF connections [ID_36676]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you removed a connection between an active element and an element that was stopped/paused, the connection would be removed from the active element but not from the stopped/paused element. When you started that element again, the connection would incorrectly still be visible, and when you tried to remove the connection, the action would fail.
+
 #### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
