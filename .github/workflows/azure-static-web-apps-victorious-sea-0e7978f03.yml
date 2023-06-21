@@ -50,9 +50,6 @@ jobs:
           name: release
           path: .
       - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release.zip -DestinationPath .
-        shell: pwsh
-      - name: Unzip compressed artifact
         run: Expand-Archive -Path _site.zip -DestinationPath ./_site
         shell: pwsh
       - name: Build And Deploy
@@ -80,9 +77,6 @@ jobs:
           name: release
           path: .
       - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release.zip -DestinationPath .
-        shell: pwsh
-      - name: Unzip compressed artifact
         run: Expand-Archive -Path _site.zip -DestinationPath ./_site
         shell: pwsh
       - name: Upload the new files
