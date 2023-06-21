@@ -17,7 +17,7 @@ Follow the steps below for each DMA in the DataMiner System.
 
 1. Create a new element representing the DMA, using the *Microsoft Platform* protocol.
 
-   For more information on how to create elements, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
+   For more information on how to create elements, see [Adding elements](xref:Adding_elements).
 
 1. Make sure the *Poll Task Manager* parameter is enabled in the element and all parameters are polled.
 1. Make sure the *Auto Clear Task Manager* parameter is enabled.

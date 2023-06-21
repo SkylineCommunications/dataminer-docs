@@ -242,8 +242,29 @@
           items:
             - name: Element cards
               topicUid: Element_cards
-            - name: Adding and deleting elements
-              topicUid: Adding_and_deleting_elements
+            - name: Adding elements
+              topicUid: Adding_elements
+              items:
+                - name: SNMPv1/v2 connections
+                  topicUid: SNMPv1v2_Connection
+                - name: SNMPv3 connections
+                  topicUid: SNMPv3_Connection
+                - name: HTTP(s) connections
+                  topicUid: HTTPS_Connection
+                - name: Serial connections
+                  topicUid: Serial_Connection
+                - name: Smart-serial connections
+                  topicUid: Smart_Serial_Connection
+                - name: TCP/IP or UDP/IP connections
+                  topicUid: TCPIP_UDPIP_Connection
+                - name: GPIB connections
+                  topicUid: GPIB_Connection
+                - name: WebSocket connections
+                  topicUid: WebSocket_Connection
+            - name: Deleting elements
+              topicUid: Deleting_elements
+            - name: Duplicating elements
+              topicUid: Duplicating_elements
             - name: Replicating elements
               topicUid: Replicating_elements
             - name: Updating elements
@@ -2388,8 +2409,6 @@
               topicUid: Connecting_spectrum_analyzers_to_your_DataMiner_System
             - name: Installing the Keysight/Agilent IO Libraries
               topicUid: Installing_the_Keysight_Agilent_IO_Libraries
-            - name: Configuring the GPIB settings of a spectrum analyzer element
-              topicUid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
         - name: Working with spectrum analyzer elements
           topicUid: Working_with_spectrum_analyzer_elements
           items:
