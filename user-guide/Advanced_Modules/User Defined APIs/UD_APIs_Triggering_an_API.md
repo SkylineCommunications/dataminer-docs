@@ -80,6 +80,10 @@ The endpoint itself can also return [errors](#errors) with corresponding status 
 
 The API will always return responses encoded in UTF-8.
 
+### CORS
+
+User-defined APIs will not return any CORS headers. It is not safe to trigger user-defined APIs from a web client using e.g. AJAX calls in JavaScript, because there is no way to safely save and use the API tokens there.
+
 ### Errors
 
 The endpoint can return an error if something goes wrong. An error will be returned in the following format, with an HTTP response code indicating that something went wrong:
