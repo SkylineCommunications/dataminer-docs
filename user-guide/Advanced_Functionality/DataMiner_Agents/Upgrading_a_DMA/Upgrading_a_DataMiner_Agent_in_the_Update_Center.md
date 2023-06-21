@@ -54,9 +54,10 @@ To do so:
 
    - For Agents in a Failover setup, you can select a Failover policy in the section *Advanced Failover options*. This determines in what order the Failover DMAs are upgraded. The following options are available:
 
-     - *Default policy* (selected by default)
+     - *Default policy*
+       This option will upgrade the main and backup Agent simultaneously.
 
-     - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade, unless it is already the default policy)
+     - *Upgrade main and backup Agent simultaneously* (highly recommended; always use this option in case of a major upgrade)
 
      - *Upgrade backup Agent first, switch over and upgrade main* (legacy)
 
