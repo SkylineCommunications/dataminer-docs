@@ -31,13 +31,11 @@ jobs:
           docfx metadata
           docfx build --warningsAsErrors
         shell: powershell
-      - name: Zip artifact for deployment
-        run: Compress-Archive -Path _site -DestinationPath .\_site.zip
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
-          name: release
-          path: _site.zip
+          name: _site
+          path: _site/
           
   deploy_job:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
@@ -47,14 +45,8 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: release
-          path: .
-      - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release -DestinationPath .
-        shell: pwsh
-      - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release/_site.zip -DestinationPath .
-        shell: pwsh
+          name: _site
+          path: _site
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -77,14 +69,8 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: release
-          path: .
-      - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release -DestinationPath .
-        shell: pwsh
-      - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release/_site.zip -DestinationPath .
-        shell: pwsh
+          name: _site
+          path: _site
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:
