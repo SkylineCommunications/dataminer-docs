@@ -196,7 +196,7 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
+   ![Indication of outdated fork](~/images/Contributing_Sync_Fork.png)
 
 1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
