@@ -25,6 +25,6 @@ To do so:
    - *Failover policy*: Determines in which order the DMA in a Failover are upgraded.
 
      > [!NOTE]
-     > We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*.
+     > We highly recommend that you set this to *Upgrade main and backup Agent simultaneously*, which is also the *default policy*.
 
 1. After you have configured the options to your preferences, click the *Save* button in the lower right corner.
