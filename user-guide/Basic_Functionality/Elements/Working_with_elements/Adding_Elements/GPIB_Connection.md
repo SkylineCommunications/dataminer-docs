@@ -4,16 +4,20 @@ uid: GPIB_Connection
 
 # GPIB connections
 
-For General Purpose Interface Bus (GPIB) connections, you need to specify the connection settings of the GPIB/LAN gateway through which DataMiner will communicate with GPIB-enabled devices, such as the spectrum analyzer and matrix devices.
+For General Purpose Interface Bus (GPIB) connections, you need to specify the connection settings of the GPIB/LAN gateway through which DataMiner will communicate with GPIB-enabled devices, such as a spectrum analyzer and meaurement equipment.
 
-![GPIB](~/user-guide/images/GPIB.png)
+![GPIB](~/user-guide/images/GPIB.svg)
 
 DataMiner supports both the SICL API and the VISA API. Depending on whether version M.01.01.04 or version 17.1.20011 of the IO libraries is used, the connection settings should be configured differently.
 
 > [!NOTE]
-> On a DataMiner Agent that has to communicate through a GPIB/LAN gateway, you have to install and configure the Agilent IO Libraries. See [Installing the Keysight/Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries).
+> On a DMA that has to communicate through a GPIB/LAN gateway, you have to [install and configure the Agilent IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-keysightagilent-io-libraries).
 
-## Using version M.01.01.04 of the IO libraries and SICL communication (#tab/tabid-1)
+## [Using version M.01.01.04 of the IO libraries and SICL communication](#tab/tabid-1)
+
+Specify the following connection settings:
+
+- **I/O API**: SICL
 
 - **Device address**: gpib0,10
 
@@ -22,27 +26,29 @@ DataMiner supports both the SICL API and the VISA API. Depending on whether vers
   > [!NOTE]
   > If multiple GPIB interfaces or multiple network interfaces are being used, the device address has to be specified as follows: "lan\[machineName\]:gpib0,1".<br>"lan" is the "SICL Interface name" in the IO configuration, and "machineName" is the IP address of the network GPIB interface.
 
-- **I/O API**: SICL
+  ![GPIB Connection](~/user-guide/images/GPIB_Connection.png)
 
-![GPIB Connection](~/user-guide/images/GPIB_Connection.png)
+## [Using version M.01.01.04 of the IO libraries and VISA communication](#tab/tabid-2)
 
-## Using version M.01.01.04 of the IO libraries and VISA communication (#tab/tabid-2)
+1. In the IO configuration app, create a new *VISA LAN Client* interface, and enter the IP address of the GPIB interface.
 
-- In the IO configuration app, create a new *VISA LAN Client* interface, and enter the IP address of the GPIB interface.
+1. Specify the following connection settings:
 
-- **Device address**: GPIB10::10::INSTR
+   - **I/O API**: SICL
 
-  "GPIB10" is the *Visa Interface Name*, "10" is the GPIB bus address as set on the device, and "INSTR" is a fixed string.
+   - **Device address**: GPIB10::10::INSTR
 
-- **I/O API**: SICL
+     "GPIB10" is the *Visa Interface Name*, "10" is the GPIB bus address as set on the device, and "INSTR" is a fixed string.
 
-## Using version 17.1.20011 of the IO libraries (#tab/tabid-3)
+## [Using version 17.1.20011 of the IO libraries](#tab/tabid-3)
+
+Specify the following connection settings:
+
+- **I/O API**: Select *SICL* or *VISA*, as appropriate.
 
 - **Device address**: Set to the appropriate VISA or SICL address, which can be found by running *Keysight Connection Expert* and checking the *Instruments* list.
 
   > [!TIP]
   > See also: [Installing the IO Libraries](xref:Installing_the_Keysight_Agilent_IO_Libraries#installing-the-io-libraries)
-
-- **I/O API**: Select *SICL* or *VISA*, as appropriate.
 
 ***
