@@ -77,7 +77,10 @@ uid: Adding_elements
 
    - For a **TCP/IP** or **UDP/IP** connection, see [TCP/IP and UDP/IP connections](xref:TCPIP_UDPIP_Connection).
 
-   - For a **GPIB** connection, see [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element).
+   - For a **GPIB** connection, see [GPIB connections](xref:GPIB_Connection).
+
+     > [!TIP]
+     > See also: [Installation and configuration of a spectrum analyzer](xref:Installation_and_configuration_of_a_spectrum_analyzer)
 
    - For a **WebSocket** connection (available from DataMiner 9.5.3 onwards), see [WebSocket connection](xref:WebSocket_Connection).
 

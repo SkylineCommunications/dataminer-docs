@@ -37,7 +37,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 
     > [!TIP]
     > See also:
-    > [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element)
+    > [GPIB connections](xref:GPIB_Connection)
 
 #### On legacy systems (up to Windows XP)
 
@@ -99,7 +99,7 @@ From DataMiner version 9.0 onwards, the minimum version for the IO libraries is 
 
 2. In the *Available Interface Types* list on the left, select “\*LAN Client (LAN Instruments)”, and click *Configure*.
 
-    *SICL Interface Name* contains the unique name of the LAN Client. The name of each LAN Client starts with the word “lan”, optionally followed by a number from 0 to 99. Note that you will have to enter this interface name when configuring a Spectrum Analyzer Element on the DataMiner Agent. See [Configuring the GPIB settings of a spectrum analyzer element](xref:Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element).
+    *SICL Interface Name* contains the unique name of the LAN Client. The name of each LAN Client starts with the word “lan”, optionally followed by a number from 0 to 99. Note that you will have to enter this interface name when configuring a Spectrum Analyzer Element on the DataMiner Agent. See [GPIB connections](xref:GPIB_Connection).
 
 3. In the *Default Protocol* box, specify the default protocol.
 
