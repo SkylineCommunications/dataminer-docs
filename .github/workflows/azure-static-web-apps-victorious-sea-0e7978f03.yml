@@ -49,6 +49,7 @@ jobs:
           path: release.zip
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path release.zip -DestinationPath .
+        shell: pwsh
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -74,6 +75,7 @@ jobs:
           path: release.zip
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path release.zip -DestinationPath .
+        shell: pwsh
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:
