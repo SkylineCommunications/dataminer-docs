@@ -21,8 +21,7 @@ In the alarm range editor, you can do the following:
 - Change the type of alarm monitoring: *Normal*, *Relative*, *Absolute* or *Rate*.
 
     > [!TIP]
-    > See also:
-    > [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold)
+    > See also: [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold)
 
 - Enter different values for the alarm thresholds.
 

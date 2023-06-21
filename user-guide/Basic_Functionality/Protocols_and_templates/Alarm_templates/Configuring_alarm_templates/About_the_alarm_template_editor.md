@@ -4,7 +4,10 @@ uid: About_the_alarm_template_editor
 
 # About the alarm template editor
 
-To configure an alarm template, you need to use the template editor.
+To configure an alarm template, usually the alarm template editor in the Protocols & Templates module is used.
+
+> [!TIP]
+> It is also possible to quickly [change the alarm range for one parameter](xref:Changing_the_alarm_range_for_one_parameter) without using the Protocols & Templates module.
 
 ## Opening the alarm template editor
 
