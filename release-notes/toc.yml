@@ -913,8 +913,10 @@
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
-      topicUid: SRM_1.2.31
+      topicUid: SRM_1.2.32
       items:
+      - name: SRM 1.2.32
+        topicUid: SRM_1.2.32
       - name: SRM 1.2.31
         topicUid: SRM_1.2.31
       - name: SRM 1.2.30
