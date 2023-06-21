@@ -8,7 +8,11 @@ This section consists of the following topics:
 
 - [Element cards](xref:Element_cards)
 
-- [Adding and deleting elements](xref:Adding_and_deleting_elements)
+- [Adding elements](xref:Adding_elements)
+
+- [Deleting elements](xref:Deleting_elements)
+
+- [Duplicating elements](xref:Duplicating_elements)
 
 - [Replicating elements](xref:Replicating_elements)
 

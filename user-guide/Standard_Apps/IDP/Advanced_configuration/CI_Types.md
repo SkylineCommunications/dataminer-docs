@@ -199,7 +199,7 @@ The provisioning configuration window of the CI Type Management wizard contains 
 
 - **DMA**: The DMA where the element should be created. You can select any of the DMAs in the DMS, or select *Based on device address* to have a DMA assigned based on the discovered IP address (see [Provisioning](xref:Provisioning)).
 
-- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding an element](xref:Adding_and_deleting_elements#adding-an-element).
+- **Element Details**: Click the *Details* button to specify the protocol that should be used for the provisioned element, the protocol version, the alarm and trend template, connection settings, and other details that would otherwise be available during element creation. See [Adding elements](xref:Adding_elements).
 
 - **Password Setup**: Click the *Setup* button to specify any parameters required for authentication along with their values.
 

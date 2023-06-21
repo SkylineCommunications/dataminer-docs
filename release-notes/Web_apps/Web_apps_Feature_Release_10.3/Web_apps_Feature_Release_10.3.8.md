@@ -173,6 +173,19 @@ Pie chart components would not update properly while visualizing data from a que
 
 When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
 
+#### Authentication app: Problem with 'Keep me logged in' option [ID_36647]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- Not added to MR 10.4.0 -->
+
+When you logged in to a web app with the *Keep me logged in* option enabled, then the authentication app would log you back in automatically only once. After that, you had to log back in manually.
+
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
+
 #### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->

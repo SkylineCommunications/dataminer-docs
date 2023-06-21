@@ -12,7 +12,7 @@ To do so:
 
     Alternatively, you can also manually copy a recording into the folder “*C:\\Skyline DataMiner\\Users\\SharedUserSettings\\Spectrum Recordings\\*” and rename it to “*ProtocolName*.simulation.dat”.
 
-2. Create a new spectrum analyzer element. See [Adding and deleting elements](xref:Adding_and_deleting_elements).
+2. Create a new spectrum analyzer element. See [Adding elements](xref:Adding_elements)
 
 3. Stop the DMA. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
 

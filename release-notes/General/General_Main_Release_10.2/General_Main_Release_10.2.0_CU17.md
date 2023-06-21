@@ -164,3 +164,9 @@ When you removed a connection between an active element and an element that was 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.
+
+#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID_36687]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened an alarm tab of type "sliding window", the history alarms matching the sliding window would be retrieved from the server but DataMiner Cube would incorrectly not show them.

@@ -71,9 +71,10 @@ SLLogCollector packages now include the following API Gateway data:
 
 Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
 
-#### Security enhancements [ID_36294]
+#### Security enhancements [ID_36294] [ID_36624]
 
 <!-- 36294: MR 10.3.0 [CU5] - FR 10.3.8 -->
+<!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 
 A number of security enhancements have been made.
 

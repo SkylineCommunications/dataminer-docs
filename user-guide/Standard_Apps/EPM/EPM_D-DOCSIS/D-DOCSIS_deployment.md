@@ -52,7 +52,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
      >     - EPM BE
      >     - EPM FE
 
-1. If this is the initial deployment of the EPM Solution, **create the necessary elements** using the uploaded connectors. See [Adding and deleting elements](xref:Adding_and_deleting_elements).
+1. If this is the initial deployment of the EPM Solution, **create the necessary elements** using the uploaded connectors. See [Adding elements](xref:Adding_elements).
 
    The following elements should be created:
 

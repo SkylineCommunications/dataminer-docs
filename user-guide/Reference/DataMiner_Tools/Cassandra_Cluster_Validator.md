@@ -24,7 +24,7 @@ To install this tool:
 1. Create an element using the newly added protocol *Skyline Cassandra Validator*.
 
    > [!TIP]
-   > For more information on how to create elements, see [Adding and deleting elements](xref:Adding_and_deleting_elements).
+   > For more information on how to create elements, see [Adding elements](xref:Adding_elements).
 
 1. When the element has been created, go to its *DATA > General > Settings* page and configure the domain user and password that will be used to retrieve the Cassandra information. The specified user must have access to all DMAs in the cluster and must belong to the Administrators group.
 
