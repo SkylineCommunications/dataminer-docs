@@ -4,12 +4,12 @@ uid: Assigning_an_alarm_template
 
 # Assigning an alarm template
 
-You can either assign an alarm template to an item with the Surveyor right-click menu, or in the Protocols & Templates module.
+You can either assign an alarm template to an item with the Surveyor right-click menu or in the Protocols & Templates module.
 
 > [!NOTE]
-> By default, elements use the alarm template \<No Monitoring>, which disables the alarm thresholds on all parameters.
+> By default, elements use the alarm template `<No Monitoring>`, which disables the alarm thresholds on all parameters.
 
-In the Surveyor:
+## In the Surveyor
 
 1. Right-click the item to which you want to assign an alarm template and click *Edit*.
 
@@ -19,7 +19,7 @@ In the Surveyor:
 
 1. Click *Apply*.
 
-In the Protocols & Templates module:
+## In the Protocols & Templates module
 
 1. In the first column, select the protocol of the item to which you want to assign the alarm template.
 
@@ -27,7 +27,7 @@ In the Protocols & Templates module:
 
 1. In the *Alarm* section, select the alarm template.
 
-1. Right-click in the *Elements* section, and select *Assign template*. Alternatively, from DataMiner 9.0.5 onwards, you can also click the *Assign elements* button at the top of this section.
+1. Right-click in the *Elements* section, and select *Assign template*. Alternatively, you can also click the *Assign elements* button at the top of this section.
 
 1. In the *Assign template* window, use the *Add \>\>* and *\<\< Remove* buttons to assign the template to particular items.
 

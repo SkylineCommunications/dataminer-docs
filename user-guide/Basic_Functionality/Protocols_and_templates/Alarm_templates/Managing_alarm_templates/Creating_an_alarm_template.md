@@ -15,7 +15,7 @@ To create a new alarm template:
    > [!NOTE]
    > To create a new alarm template that is very similar to one that already exists, it can be handy to duplicate the existing template instead of creating a blank new template. To do so, instead of selecting *New*, select the template that is similar, and then select *Duplicate* in the right-click menu.
 
-1. In the *New alarm template* dialog box:
+1. In the *New alarm template* dialog:
 
    1. Keep *Alarm Template* selected.
 
@@ -24,8 +24,29 @@ To create a new alarm template:
       > [!NOTE]
       > Some characters cannot be used in template names. For more information, see [Naming of elements, services, views, etc.](xref:NamingConventions#naming-of-elements-services-views-etc).
 
-   1. Check if the protocol and protocol version are correct and adapt if necessary.
+   1. Check if the protocol and protocol version are correct and adapt them if necessary.
 
    1. Click *OK*.
 
-      The template editor now opens, where you can further configure the alarm template. For more information, see [Configuring regular alarm thresholds](xref:Configuring_alarm_thresholds).
+      The alarm template editor will now open.
+
+   1. Optionally, click *Show details* at the top and specify a description for the alarm template.
+
+      > [!NOTE]
+      > Templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
+
+   1. [Configure the alarm thresholds](xref:Configuring_alarm_thresholds). If the protocol contains a dynamic table, you can [configure alarm thresholds per row](xref:Configuring_alarm_thresholds_dynamic_table_parameters). For some matrix protocols, matrix alarm thresholds will need to be defined using the [matrix alarm level editor](xref:Configuring_alarm_thresholds_matrix).
+
+   1. Optionally, you can also:
+
+      - [Configure alarm hysteresis](xref:Configuring_alarm_hysteresis).
+      - [Configure dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold).
+      - [Make the alarm template generate information messages](xref:Configuring_alarm_template_information_message).
+      - [Configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
+      - [Configure anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+      - [Configure automatic clearing of alarms](xref:Setting_the_autoclear_option_in_alarm_template).
+      - [Schedule the alarm template](xref:Scheduling_an_alarm_template).
+
+   1. When the alarm template is fully configured, click *OK*.
+
+      A dialog will be displayed where you can link the template to one or more elements.

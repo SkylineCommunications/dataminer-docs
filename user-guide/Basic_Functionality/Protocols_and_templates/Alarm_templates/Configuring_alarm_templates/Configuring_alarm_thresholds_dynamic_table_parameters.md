@@ -23,7 +23,7 @@ By default, each column of a dynamic table that has monitoring enabled will be r
 
 1. Enter the values you want for the different alarm severities, as for a regular parameter.
 
-   > [!NOTE]
-   >
-   > - If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
-   > - If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example: <br>![Row filter in alarm template](~/user-guide/images/MonitorTableRow.png)
+> [!NOTE]
+>
+> - If an alarm template contains multiple duplicate instances of the same table column parameter, all those instances are displayed as soon as one of them is marked as being monitored, even if *Only monitored parameters* is selected in the top-right corner of the card.
+> - If you want to configure a table to have all rows monitored, except certain specific rows, add an entry with a filter for those rows above the entry for the entire table, and make sure the entry with the filter is not selected. For example: <br>![Row filter in alarm template](~/user-guide/images/MonitorTableRow.png)

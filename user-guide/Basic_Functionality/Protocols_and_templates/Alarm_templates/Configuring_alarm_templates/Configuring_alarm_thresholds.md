@@ -35,8 +35,11 @@ When multiple values are specified for one alarm severity, the existing alarm wi
 
 > [!NOTE]
 >
+> - Depending on whether you are working on a new or existing alarm template, some parameters may not be shown by default. See [The alarm template editor user interface](xref:About_the_alarm_template_editor#the-alarm-template-editor-user-interface)
 > - It is not necessary to enter a value for each severity level. See [Guidelines for assigning alarm severity levels](xref:Guidelines_for_assigning_alarm_severity_levels).
-> - It is also possible to enable or disable parameters through the template editor right-click menu.
+> - If you select the *Monitored* checkbox next to a parameter, but do not define any threshold, the parameter will be set to an undefined state.
+> - You can also enable or disable parameters through the template editor right-click menu.
+> - For DVE elements, the parent element and child element alarm templates function as if they were part of an [alarm template group](xref:Alarm_template_groups), with the child element template getting the highest priority. This means that if a parameter is monitored in the parent element template, but not in the child element template, the parameter will not be monitored in the child element.
 
 > [!TIP]
 > See also: [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters)

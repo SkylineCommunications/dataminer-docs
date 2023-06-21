@@ -13,4 +13,4 @@ To delete an existing alarm template for a particular protocol version:
 1. Right-click the alarm template under *Alarm* in the third column, and select *Delete*.
 
 > [!NOTE]
-> If any elements are using the template when you delete it, these will have the template \<No Monitoring> assigned to them instead.
+> If any elements are using the template when you delete it, these will have the template `<No Monitoring>` assigned to them instead.
