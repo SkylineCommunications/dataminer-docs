@@ -4,7 +4,7 @@ uid: TCPIP_UDPIP_Connection
 
 # TCP/IP and UDP/IP connections
 
-For **TCP/IP** or **UDP/IP** connections, specify the following connection settings:
+For **TCP/IP** or **UDP/IP** connections, you can specify the following connection settings while creating or editing an element:
 
 - **IP address/host**: The polling IP or URL of the destination.
 

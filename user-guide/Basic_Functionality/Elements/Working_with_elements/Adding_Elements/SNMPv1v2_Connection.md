@@ -4,7 +4,7 @@ uid: SNMPv1v2_Connection
 
 # SNMPv1/v2 connections
 
-For SNMPv1/v2 connections, specify the following connection settings:
+For SNMPv1/v2 connections, you can specify the following connection settings while creating or editing an element:
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv1 type protocol, you can select SNMPv1, SNMPv2 or SNMPv3. With an SNMPv2 type protocol, you can select SNMPv2 or SNMPv3.
 

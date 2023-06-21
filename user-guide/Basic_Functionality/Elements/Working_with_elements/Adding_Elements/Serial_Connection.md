@@ -4,7 +4,7 @@ uid: Serial_Connection
 
 # Serial connections
 
-For serial connections, specify the following connection settings:
+For serial connections, you can specify the following connection settings while creating or editing an element:
 
 - **Baud rate**: The baudrate specified in the manual of the device, e.g. *9600*.
 

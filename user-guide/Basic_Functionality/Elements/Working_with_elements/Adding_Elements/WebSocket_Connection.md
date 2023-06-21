@@ -4,7 +4,7 @@ uid: WebSocket_Connection
 
 # WebSocket connections
 
-For a **WebSocket** connection (available from DataMiner 9.5.3 onwards), specify the following connection settings:
+For a **WebSocket** connection, you can specify the following connection settings while creating or editing an element:
 
 - **IP address/host**: The polling IP or URL of the destination.
 

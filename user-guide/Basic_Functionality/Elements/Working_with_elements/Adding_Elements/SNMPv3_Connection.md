@@ -4,7 +4,7 @@ uid: SNMPv3_Connection
 
 # SNMPv3 connections
 
-For SNMPv3 connections, specify the following connection settings:
+For SNMPv3 connections, you can specify the following connection settings while creating or editing an element:
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv3 type protocol, you can select SNMPv2 or SNMPv3.
 
@@ -30,9 +30,9 @@ For SNMPv3 connections, specify the following connection settings:
 
 - **Encryption password**: Only required if *authPriv* is selected.
 
-- **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. Up to DataMiner 9.6.11, either *HMAC-SHA* or *HMAC-MD5*. From DataMiner 9.6.12 onwards, you can choose between *MD5*, *SHA-1*, *SHA-224*, *SHA-256*, *SHA-384* and *SHA-512*.
+- **Authentication algorithm**: Not available if *NoAuth_NoPriv* is selected. You can choose between *MD5*, *SHA-1*, *SHA-224*, *SHA-256*, *SHA-384*, and *SHA-512*.
 
-- **Encryption algorithm**: Only available if *Auth_Priv* is selected. Up to DataMiner 9.6.11, either *DES* or *AES128*. From DataMiner 9.6.12 onwards, you can choose between *AES-128*, *AES-192*, *AES-256* and *DES*.
+- **Encryption algorithm**: Only available if *Auth_Priv* is selected. You can choose between *AES-128*, *AES-192*, *AES-256*, and *DES*.
 
 > [!NOTE]
 > The following combinations of authentication and encryption algorithm are not supported:

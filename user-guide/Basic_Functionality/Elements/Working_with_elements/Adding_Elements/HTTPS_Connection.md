@@ -4,7 +4,7 @@ uid: HTTPS_Connection
 
 # HTTP(S) connections
 
-For HTTP(S) connections, specify the following connection settings:
+For HTTP(S) connections, you can specify the following connection settings while creating or editing an element:
 
 - **IP address/host**: The polling IP or URL of the destination.
 

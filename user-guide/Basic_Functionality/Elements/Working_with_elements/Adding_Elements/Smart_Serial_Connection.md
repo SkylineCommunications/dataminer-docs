@@ -4,7 +4,7 @@ uid: Smart_Serial_Connection
 
 # Smart-serial connections
 
-For smart-serial connections, specify the following connection settings:
+For smart-serial connections, you can specify the following connection settings while creating or editing an element:
 
 - **IP address/host**: The polling IP or URL of the destination.
 
@@ -14,7 +14,7 @@ For smart-serial connections, specify the following connection settings:
 
 - **IP port**: The IP port of the destination. This is not always required.
 
-- **Accepted IP address**: Available from DataMiner 9.6.13 onwards, if a smart-serial server port of type TCP is used. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
+- **Accepted IP address**: Available if a smart-serial server port of type TCP is used. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
 
   To add another accepted IP address, below the box, click *Add*.
 
