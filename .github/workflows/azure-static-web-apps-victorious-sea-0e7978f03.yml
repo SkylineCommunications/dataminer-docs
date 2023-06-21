@@ -36,7 +36,7 @@ jobs:
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
-          name: release.zip
+          name: release
           path: _site.zip
           
   deploy_job:
@@ -47,10 +47,10 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: release.zip
+          name: release
           path: .
       - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release.zip -DestinationPath .
+        run: Expand-Archive -Path release -DestinationPath .
         shell: pwsh
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path release/_site.zip -DestinationPath .
@@ -77,10 +77,10 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: release.zip
+          name: release
           path: .
       - name: Unzip artifact for deployment
-        run: Expand-Archive -Path release.zip -DestinationPath .
+        run: Expand-Archive -Path release -DestinationPath .
         shell: pwsh
       - name: Unzip artifact for deployment
         run: Expand-Archive -Path release/_site.zip -DestinationPath .
