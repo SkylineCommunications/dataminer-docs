@@ -36,7 +36,7 @@ The alarm template editor consists of two main sections:
 
   - At the bottom of the section, you can schedule when the alarm template should be applied. See [Scheduling an alarm template](xref:Scheduling_an_alarm_template).
 
-- The *Alarm template parameters* section, where you can [configure alarm thresholds](xref:Configuring_alarm_thresholds):
+- The *Alarm template parameters* section, where you can [configure alarm thresholds](xref:Configuring_absolute_alarm_thresholds):
 
   - By default, for a **new** alarm template, **general parameters are not displayed**. To configure monitoring for these, click the *Only monitored parameters* button, and select *Only protocol parameters* or *All parameters (protocol + general)*.
 
@@ -44,4 +44,4 @@ The alarm template editor consists of two main sections:
 
   - To quickly find a particular parameter, you can use the filter box in the top-right corner.
 
-  - To select all parameters at once or clear the selection for all parameters at once, right-click the column header of the list of parameters and select *Enable all parameters* or *Disable all parameters*, respectively.
+  - For some matrix parameters, alarm thresholds need to be configured in a dedicated [alarm level editor](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).

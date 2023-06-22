@@ -1,10 +1,10 @@
 ---
-uid: Configuring_alarm_template_dynamic_alarm_threshold
+uid: Configuring_dynamic_alarm_thresholds
 ---
 
-# Configuring an alarm template with dynamic alarm thresholds
+# Configuring dynamic alarm thresholds
 
-You can either define the alarm thresholds as a fixed value, or you can set them as a dynamic threshold that is compared to a certain “normal” value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
+Instead of defining alarm thresholds as a fixed value, you can set them as a dynamic threshold that is compared to a certain "normal" value. This value will automatically be determined at runtime, or via a normalization procedure for each separate element.
 
 The different types of alarm thresholds can be selected in the drop-down list in the *Type* column:
 
@@ -19,7 +19,7 @@ The different types of alarm thresholds can be selected in the drop-down list in
 > [!NOTE]
 > In case the type has been defined in the protocol, it will not be possible to modify this in DataMiner Cube.
 
-Both for “absolute” and “relative” alarm thresholds, the “normal” value has to be set to a baseline value:
+Both for "absolute" and "relative" alarm thresholds, the "normal" value has to be set to a baseline value:
 
 1. In the *Normal* column, click *\[BASELINE\]*.
 
@@ -65,7 +65,7 @@ Both for “absolute” and “relative” alarm thresholds, the “normal” va
 > [!NOTE]
 >
 > - If you want to overrule the dynamic behavior for a certain limit and specify a fixed value instead, in the template editor, select the *Fixed* option for that limit.
-> - If normalization is triggered from the protocol, rather than from the template, up to DataMiner 9.5.1, the baseline editor is disabled. From DataMiner 9.5.1 onwards, baseline values are available as a read-only list.
+> - If normalization is triggered from the protocol, rather than from the template, baseline values are available as a read-only list.
 
 > [!TIP]
 > See also: [Rui’s Rapid Recap – Smart baseline](https://community.dataminer.services/video/ruis-rapid-recap-smart-baseline/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

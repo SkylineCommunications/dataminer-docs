@@ -35,16 +35,22 @@ To create a new alarm template:
       > [!NOTE]
       > Templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
 
-   1. [Configure the alarm thresholds](xref:Configuring_alarm_thresholds). If the protocol contains a dynamic table, you can [configure alarm thresholds per row](xref:Configuring_alarm_thresholds_dynamic_table_parameters). For some matrix protocols, matrix alarm thresholds will need to be defined using the [matrix alarm level editor](xref:Configuring_alarm_thresholds_matrix).
+   1. [Configure the alarm thresholds](xref:Configuring_absolute_alarm_thresholds).
 
    1. Optionally, you can also:
 
       - [Configure alarm hysteresis](xref:Configuring_alarm_hysteresis).
-      - [Configure dynamic alarm thresholds](xref:Configuring_alarm_template_dynamic_alarm_threshold).
+
+      - [Configure dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
+
       - [Make the alarm template generate information messages](xref:Configuring_alarm_template_information_message).
+
       - [Configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
+
       - [Configure anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+
       - [Configure automatic clearing of alarms](xref:Setting_the_autoclear_option_in_alarm_template).
+
       - [Schedule the alarm template](xref:Scheduling_an_alarm_template).
 
    1. When the alarm template is fully configured, click *OK*.

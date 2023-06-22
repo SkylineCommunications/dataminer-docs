@@ -56,7 +56,7 @@ In case you have any trouble running the element, it can also be useful to go to
 
 ### Monitoring and trending
 
-In the Protocols & Templates app, you can [configure an alarm template](xref:Configuring_alarm_thresholds) and/or [configure a trend template](xref:Configuring_trend_templates) for the element in order to allow alarm monitoring and trending.
+In the Protocols & Templates app, you can [configure an alarm template](xref:Configuring_absolute_alarm_thresholds) and/or [configure a trend template](xref:Configuring_trend_templates) for the element in order to allow alarm monitoring and trending.
 
 Useful parameters for alarm monitoring and trending are for example the *Load*, the *Heap Memory* and the *Hitrate* of the Cassandra Key Cache on the *Info* page, as these can allow you to identify memory and cache issues.
 

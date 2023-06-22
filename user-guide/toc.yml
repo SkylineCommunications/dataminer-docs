@@ -840,16 +840,12 @@
               items:
                 - name: About the alarm template editor
                   topicUid: About_the_alarm_template_editor
-                - name: Configuring regular alarm thresholds
-                  topicUid: Configuring_alarm_thresholds
-                - name: Configuring alarm thresholds for matrix parameters
-                  topicUid: Configuring_alarm_thresholds_matrix
-                - name: Configuring alarm thresholds for dynamic table parameters
-                  topicUid: Configuring_alarm_thresholds_dynamic_table_parameters
-                - name: Configuring alarm hysteresis in an alarm template
+                - name: Configuring absolute alarm thresholds
+                  topicUid: Configuring_absolute_alarm_thresholds
+                - name: Configuring dynamic alarm thresholds
+                  topicUid: Configuring_dynamic_alarm_thresholds
+                - name: Configuring hysteresis in an alarm template
                   topicUid: Configuring_alarm_hysteresis
-                - name: Configuring an alarm template with dynamic alarm thresholds
-                  topicUid: Configuring_alarm_template_dynamic_alarm_threshold
                 - name: Configuring an alarm template to generate information messages
                   topicUid: Configuring_alarm_template_information_message
                 - name: Using conditions in an alarm template
