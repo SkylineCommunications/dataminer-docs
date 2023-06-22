@@ -26,7 +26,7 @@ uid: General_Feature_Release_10.3.8
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-From now on, `PaToken` objects can be created, updated and deleted in bulk using the following new messages:
+From now on, `PaToken` objects can be created, updated and deleted in bulk using the following methods provided by the `PaTokens` helper:
 
 - **CreateOrUpdate**
 
