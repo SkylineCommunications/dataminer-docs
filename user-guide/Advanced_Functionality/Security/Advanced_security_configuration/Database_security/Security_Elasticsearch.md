@@ -144,47 +144,6 @@ sudo generate-certificates.sh
 
    Once the conversion is complete, you can execute the script again.
 
-#### Keytool: command not found
-
-**Situation**: You have tried executing the *generate-certificates.sh* script.
-
-**Symptom**: `Keytool: command not found.`
-
-**Resolution**: Add the location of the keytool to the PATH system variable.
-
-1. Run the following command:
-
-   ```bash
-   sudo nano /etc/environment
-   ```
-
-1. Next, add `:/usr/share/opensearch/jdk/bin` to the end of the line.
-
-   The modified line should look like this:
-
-   ```text
-   PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/share/opensearch/jdk/bin"
-   ```
-
-1. Save the changes by pressing *Ctrl+O* in nano, then exit the editor by pressing *Ctrl+X* in nano.
-
-1. To apply the changes, either reboot your server, or reload the PATH variable by running the following command:
-
-   ```bash
-   source /etc/environment
-   ```
-
-1. Verify that the directory has been successfully added to the system PATH variable by executing:
-
-   ```bash
-   echo $PATH
-   ```
-
-The *generate-certificates.sh* script should now be able to execute without encountering the `Keytool:command not found` error.
-
-> [!TIP]
-> The example above is specific to the keytool located in `/usr/share/opensearch/jdk/bin`. For Elasticsearch, the same procedure applies.
-
 ## Inter-node TLS encryption
 
 By default inter-node communication in Elasticsearch is unencrypted.
