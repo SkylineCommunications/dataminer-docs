@@ -69,7 +69,7 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 - From DataMiner **10.1.12** onwards, in addition to Microsoft .NET Framework 4.8, Microsoft .NET **5.0** is required.
 
-- From DataMiner **10.3.0 [CU6]/10.3.4** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
+- From DataMiner **10.3.0 [CU3]/10.3.3** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
