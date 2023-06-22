@@ -201,7 +201,7 @@ From now on, users will be allowed to manually clear automatic incidents.
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved.
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
 

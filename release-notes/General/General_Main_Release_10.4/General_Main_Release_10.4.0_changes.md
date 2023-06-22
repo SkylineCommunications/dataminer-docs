@@ -367,7 +367,7 @@ When, in element settings, community credentials from the credential library wer
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved.
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
