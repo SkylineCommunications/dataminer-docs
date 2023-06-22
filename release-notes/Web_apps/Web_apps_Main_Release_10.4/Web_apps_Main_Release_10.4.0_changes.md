@@ -312,6 +312,12 @@ When configuring an analog or digital *Clock* component, you can now make the cl
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
 #### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
