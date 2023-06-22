@@ -30,29 +30,27 @@ To create a new alarm template:
 
       The alarm template editor will now open.
 
-   1. Optionally, click *Show details* at the top and specify a description for the alarm template.
+1. Optionally, click *Show details* at the top and specify a description for the alarm template.
 
-      > [!NOTE]
-      > Templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
+   > [!NOTE]
+   > Templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
 
-   1. [Configure the alarm thresholds](xref:Configuring_absolute_alarm_thresholds).
+1. Configure the alarm thresholds. You can configure [normal](xref:Configuring_normal_alarm_thresholds) or [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds.
 
-   1. Optionally, you can also:
+1. Optionally, you can also:
 
-      - [Configure alarm hysteresis](xref:Configuring_alarm_hysteresis).
+   - [Configure alarm hysteresis](xref:Configuring_alarm_hysteresis).
 
-      - [Configure dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds).
+   - [Make the alarm template generate information messages](xref:Configuring_alarm_template_information_message).
 
-      - [Make the alarm template generate information messages](xref:Configuring_alarm_template_information_message).
+   - [Configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
 
-      - [Configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
+   - [Configure anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
 
-      - [Configure anomaly detection alarms](xref:Configuring_anomaly_detection_alarms).
+   - [Configure automatic clearing of alarms](xref:Setting_the_autoclear_option_in_alarm_template).
 
-      - [Configure automatic clearing of alarms](xref:Setting_the_autoclear_option_in_alarm_template).
+   - [Schedule the alarm template](xref:Scheduling_an_alarm_template).
 
-      - [Schedule the alarm template](xref:Scheduling_an_alarm_template).
+1. When the alarm template is fully configured, click *OK*.
 
-   1. When the alarm template is fully configured, click *OK*.
-
-      A dialog will be displayed where you can link the template to one or more elements.
+   A dialog will be displayed where you can link the template to one or more elements.

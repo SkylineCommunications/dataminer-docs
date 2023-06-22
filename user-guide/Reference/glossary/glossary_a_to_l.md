@@ -28,7 +28,7 @@ uid: glossary_a_to_l
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
 | Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol.<br>See [About alarm templates](xref:About_alarm_templates). |
 | Alarm template group | Combination of different alarm templates into one grouped template.<br>See [Alarm template groups](xref:Alarm_template_groups). |
-| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Configuring alarm thresholds](xref:Configuring_absolute_alarm_thresholds). |
+| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds). |
 | Alarm tree | Series of linked alarm records, reflecting the life cycle of an alarm.<br>See [Alarm linking](xref:Alarm_linking). |
 | Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [Alerter](xref:Alerter). |
 | Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum.<br>See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |

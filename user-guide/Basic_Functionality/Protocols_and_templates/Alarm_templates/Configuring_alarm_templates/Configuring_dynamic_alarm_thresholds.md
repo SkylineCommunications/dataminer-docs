@@ -8,7 +8,7 @@ Instead of defining alarm thresholds as a fixed value, you can set them as a dyn
 
 The different types of alarm thresholds can be selected in the drop-down list in the *Type* column:
 
-- **Normal**: The normal value and the different alarm thresholds are fixed by the operator. This option is selected by default.
+- **Normal**: The normal value and the different alarm thresholds are [fixed by the operator](xref:Configuring_normal_alarm_thresholds). This option is selected by default.
 
 - **Relative**: Alarm thresholds are set as a percentage, which represents the delta with the baseline value.
 

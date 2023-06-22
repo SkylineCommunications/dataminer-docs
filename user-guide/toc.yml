@@ -840,8 +840,8 @@
               items:
                 - name: About the alarm template editor
                   topicUid: About_the_alarm_template_editor
-                - name: Configuring absolute alarm thresholds
-                  topicUid: Configuring_absolute_alarm_thresholds
+                - name: Configuring normal alarm thresholds
+                  topicUid: Configuring_normal_alarm_thresholds
                 - name: Configuring dynamic alarm thresholds
                   topicUid: Configuring_dynamic_alarm_thresholds
                 - name: Configuring hysteresis in an alarm template

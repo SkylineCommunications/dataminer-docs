@@ -50,9 +50,9 @@ The alarm template editor consists of two main sections:
 
   - The *INCLUDED* column (8) is used to configure [alarm template groups](xref:Alarm_template_groups).
 
-  - The *FILTER* column (9) is used to configure different alarm thresholds for the rows in a [dynamic table](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-dynamic-table-parameters).
+  - The *FILTER* column (9) is used to configure different alarm thresholds for the rows in a [dynamic table](xref:Configuring_normal_alarm_thresholds#configuring-alarm-thresholds-for-dynamic-table-parameters).
 
-  - The *TYPE* column (10) determines whether [absolute](xref:Configuring_absolute_alarm_thresholds) and [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds are used. These thresholds are then defined in the colored columns to the right of this.
+  - The *TYPE* column (10) determines whether [normal](xref:Configuring_normal_alarm_thresholds) or [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds are used. These thresholds are then defined in the colored columns to the right of this.
 
   - The *HYST OFF* and *HYST ON* columns (11) are used to [configure hysteresis](xref:Configuring_alarm_hysteresis).
 
@@ -60,4 +60,4 @@ The alarm template editor consists of two main sections:
 
   - The *CONDITIONS* column (not included in the example above) can be used to [configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
 
-  - For some matrix parameters, alarm thresholds need to be configured in a dedicated [matrix alarm level editor](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).
+  - For some matrix parameters, alarm thresholds need to be configured in a dedicated [matrix alarm level editor](xref:Configuring_normal_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).

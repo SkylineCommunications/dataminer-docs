@@ -1,8 +1,8 @@
 ---
-uid: Configuring_absolute_alarm_thresholds
+uid: Configuring_normal_alarm_thresholds
 ---
 
-# Configuring absolute alarm thresholds
+# Configuring normal alarm thresholds
 
 The way you can configure the alarm thresholds for a parameter in the [alarm template editor](xref:About_the_alarm_template_editor) depends on the type of parameter, as detailed below.
 
@@ -119,4 +119,4 @@ Depending on how they are configured in the protocol, for matrix parameters, ala
    - Click *None* to clear your selection.
 
 > [!NOTE]
-> For a [table-based matrix](xref:UIComponentsTableMatrix), it is not possible to use the alarm level editor. Instead, the alarm thresholds for the crosspoints depend on the thresholds configured for the outputs tables.
+> For a [table-based matrix](xref:UIComponentsTableMatrix), it is not possible to use the matrix alarm level editor. Instead, the alarm thresholds for the crosspoints depend on the thresholds configured for the outputs tables.
