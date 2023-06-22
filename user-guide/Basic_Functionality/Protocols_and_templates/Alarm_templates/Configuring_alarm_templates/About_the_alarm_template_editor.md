@@ -23,25 +23,41 @@ To configure an alarm template, usually the alarm template editor in the Protoco
 
 ## The alarm template editor user interface
 
+![Alarm template editor](~/user-guide/images/AlarmTemplateEditor.png)<br>
+*The example above shows the alarm template editor in DataMiner 10.3.6.*
+
 The alarm template editor consists of two main sections:
 
-- The *General* section at the top, which you can expand by clicking *Show details*:
+- The *General* section at the top is collapsed by default, but you can expand it by clicking *Show details*.
 
-  - At the top, you can specify a description for the template.
+  - At the top (1), you can specify a description for the template. This description is shown as a tooltip when users assign templates via the right-click menu and can help them select the correct template.
 
-    > [!NOTE]
-    > Templates can be quickly assigned via the Surveyor right-click menu. The description you enter here is shown as a tooltip in that menu, and may help users to select the correct template.
+  - On the right (2), the *General* section shows the protocol and protocol version linked to the template, and a list of elements to which it has been assigned.
 
-  - On the right, this section shows the protocol and protocol version linked to the template, and a list of elements to which it has been assigned.
+  - At the bottom of the *General* section (3), you can optionally [schedule when the alarm template should be applied](xref:Scheduling_an_alarm_template).
 
-  - At the bottom of the section, you can schedule when the alarm template should be applied. See [Scheduling an alarm template](xref:Scheduling_an_alarm_template).
+- The *Alarm template parameters* section is where you can configure alarm thresholds and more.
 
-- The *Alarm template parameters* section, where you can [configure alarm thresholds](xref:Configuring_absolute_alarm_thresholds):
+  - By default, for a **new** alarm template, **general parameters are not displayed**. To configure monitoring for these, click the *Only monitored parameters* button (4), and select *Only protocol parameters* or *All parameters (protocol + general)*.
 
-  - By default, for a **new** alarm template, **general parameters are not displayed**. To configure monitoring for these, click the *Only monitored parameters* button, and select *Only protocol parameters* or *All parameters (protocol + general)*.
+  - If you open an **existing** alarm template, **only the parameters for which thresholds have been set** are shown. To see other parameters as well, click the *Only monitored parameters* button (4) and select *Only protocol parameters* or *All parameters (protocol + general)*.
 
-  - If you open an **existing** alarm template, **only the parameters for which thresholds have been set** are shown. To see other parameters as well, click the *Only monitored parameters* button and select *Only protocol parameters* or *All parameters (protocol + general)*.
+  - The settings button (5) opens a menu where you can select whether the option to include/exclude parameters (used for [alarm template groups](xref:Alarm_template_groups)), the option to [override autoclear](xref:Setting_the_autoclear_option_in_alarm_template), and the [configuration of anomaly parameters](xref:Configuring_anomaly_detection_alarms) are displayed in the alarm template.
 
-  - To quickly find a particular parameter, you can use the filter box in the top-right corner.
+  - To quickly find a particular parameter, you can use the filter box in the top-right corner (6).
 
-  - For some matrix parameters, alarm thresholds need to be configured in a dedicated [alarm level editor](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).
+  - The checkboxes in the *MON* column (7) determine whether a parameter is monitored or not.
+
+  - The *INCLUDED* column (8) is used to configure [alarm template groups](xref:Alarm_template_groups).
+
+  - The *FILTER* column (9) is used to configure different alarm thresholds for the rows in a [dynamic table](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-dynamic-table-parameters).
+
+  - The *TYPE* column (10) determines whether [absolute](xref:Configuring_absolute_alarm_thresholds) and [dynamic](xref:Configuring_dynamic_alarm_thresholds) alarm thresholds are used. These thresholds are then defined in the colored columns to the right of this.
+
+  - The *HYST OFF* and *HYST ON* columns (11) are used to [configure hysteresis](xref:Configuring_alarm_hysteresis).
+
+  - The *INFO* column (12) is used to [configure whether information messages are generated](xref:Configuring_alarm_template_information_message) when a parameter gets a certain value.
+
+  - The *CONDITIONS* column (not included in the example above) can be used to [configure conditional alarm monitoring](xref:Using_conditions_in_an_alarm_template).
+
+  - For some matrix parameters, alarm thresholds need to be configured in a dedicated [matrix alarm level editor](xref:Configuring_absolute_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).
