@@ -238,7 +238,6 @@ Below we are talking about NFS server and NFS clients. The NFS server is respons
 
 1. Finally click on the **Add** button. You will go back to the **Snapshots** overview and a snapshot is being taken.
 
-
 ### Take snapshot via REST-API
 
 1. Execute the following PUT request in your chosen client application:
