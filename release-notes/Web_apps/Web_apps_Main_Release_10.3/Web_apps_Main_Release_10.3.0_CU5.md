@@ -53,6 +53,12 @@ As a precaution against these recordings taking too much disk space, the followi
 > - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
 > - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
+#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+For each of the columns of type "discrete" in the *Get parameters for elements where* data source (InterElementAdapter), the possible values will now be available in their columnInfo object.
+
 ### Fixes
 
 #### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
