@@ -18,6 +18,9 @@ As soon as you no longer need the `GenIf` folder for debugging, remove this fold
 
 If you do wish to keep the folder, make sure it gets cleaned up automatically using Automation or another tool.
 
+> [!NOTE]
+> As of DataMiner version 10.3.0 [CU5]/10.3.8, the size of the `GenIf` folder is kept limited. For more information, see [RN 36642](xref:Web_apps_Feature_Release_10.3.8#gqi-session-recording-time-and-disk-space-limits-id_36642).
+
 ## Issue description
 
 The `C:\Skyline DataMiner\Logging\GenIf` folder keeps on growing in size and takes up a lot of disk space.
