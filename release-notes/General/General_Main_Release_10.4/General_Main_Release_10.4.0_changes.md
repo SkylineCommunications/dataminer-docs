@@ -363,6 +363,12 @@ In some cases, whitespace characters would incorrectly be removed from signature
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
+#### NATS connection could fail due to payloads being too large [ID_36427]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved.
+
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
