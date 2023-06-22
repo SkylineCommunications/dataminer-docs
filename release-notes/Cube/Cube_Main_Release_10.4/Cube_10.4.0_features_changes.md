@@ -460,6 +460,12 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
 
+#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID_36420]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a Cube session and connected to a DataMiner System running a version from 9.6.3 onwards that had an SRM license, in some cases, the ListView column configuration data fetched from the server could incorrectly get replaced by default values on the Cube client.
+
 #### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
