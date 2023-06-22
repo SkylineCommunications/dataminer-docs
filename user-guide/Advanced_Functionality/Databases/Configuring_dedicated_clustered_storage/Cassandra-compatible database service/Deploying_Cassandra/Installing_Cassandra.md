@@ -124,7 +124,7 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
      - **hinted_handoff_throttle_in_kb**: Set this to *10240*.
 
      > [!NOTE]
-     > Since Cassandra 4.1 the setting **hinted_handoff_throttle_in_kb** has been renamed to **hinted_handoff_throttle** : Set this to *10000*
+     > Since Cassandra 4.1 the setting **hinted_handoff_throttle_in_kb** has been renamed to **hinted_handoff_throttle**: Set this to *10000*
 
      - **max_hints_delivery_threads**: Set this to *12*.
 
