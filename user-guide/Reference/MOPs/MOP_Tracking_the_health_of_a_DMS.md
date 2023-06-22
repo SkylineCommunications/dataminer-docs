@@ -23,7 +23,7 @@ Follow the steps below for each DMA in the DataMiner System.
 1. Make sure the *Auto Clear Task Manager* parameter is enabled.
 1. Assign an alarm template to the element to make sure alarm monitoring is enabled for the *Poll Task Manager* parameter.
 
-   For more information on alarm templates, see [Alarm templates](xref:Alarm_templates).
+   For more information on alarm templates, see [Alarm templates](xref:About_alarm_templates).
 
 1. Assign a trend template to the element with average trending enabled for the parameters listed below. Create the trend template if it does not exist yet. Two standard templates are available for this, which can be downloaded [below](#standard-trend-templates).
 
