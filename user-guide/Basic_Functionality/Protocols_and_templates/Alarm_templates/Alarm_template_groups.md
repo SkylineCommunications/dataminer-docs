@@ -9,8 +9,7 @@ uid: Alarm_template_groups
 Alarm templates can be combined in alarm template groups. With these, users can build alarm template hierarchies allowing alarm thresholds for one or more parameters to be overruled without having to change the base template.
 
 > [!TIP]
-> See also:
-> [Creating an alarm template group](#creating-an-alarm-template-group)
+> See also: [Creating an alarm template group](#creating-an-alarm-template-group)
 
 ### Example of an alarm template group
 
@@ -53,45 +52,45 @@ To create a new alarm template group:
 
 1. For each alarm template you want to add to the group, do the following:
 
-    1. Right-click the alarm template you want to add and select *Open*.
+   1. Right-click the alarm template you want to add and select *Open*.
 
-    1. Click the cogwheel button at the top of the alarm template editor and make sure the option *Allow include/exclude parameters* is selected.
+   1. Click the cogwheel button at the top of the alarm template editor and make sure the option *Allow include/exclude parameters* is selected.
 
-    1. In the *Included* column, check if the correct parameters are included or excluded for alarm template grouping:
+   1. In the *Included* column, check if the correct parameters are included or excluded for alarm template grouping:
 
-        - If the *Included* column is not displayed, click the settings button and select *Allow include/exclude parameters (used for alarm template grouping).*
+      - If the *Included* column is not displayed, click the settings button and select *Allow include/exclude parameters (used for alarm template grouping).*
 
-        - For each parameter, a button is displayed that shows *Included* or *Excluded*. Click this button to change a parameter from included to excluded or vice versa.
+      - For each parameter, a button is displayed that shows *Included* or *Excluded*. Click this button to change a parameter from included to excluded or vice versa.
 
-        > [!NOTE]
-        > It is also possible to include or exclude parameters through the template editor right-click menu.
+      > [!NOTE]
+      > It is also possible to include or exclude parameters through the template editor right-click menu.
 
-    1. Click *OK*.
+   1. Click *OK*.
 
 1. In the Protocols & Templates module, right-click in the third column under *Alarm*, and select *New*.
 
-    > [!NOTE]
-    > To create a new alarm template group that is very similar to one that already exists, you can instead duplicate the existing template, by selecting *Duplicate* in the right-click menu.
+   > [!NOTE]
+   > To create a new alarm template group that is very similar to one that already exists, you can instead duplicate the existing template, by selecting *Duplicate* in the right-click menu.
 
 1. In the *New alarm template* dialog box:
 
-    1. Select *Alarm Template Group*.
+   1. Select *Alarm Template Group*.
 
-    1. Enter a template group name.
+   1. Enter a template group name.
 
-    1. Check if the protocol and protocol version are correct and adapt if necessary.
+   1. Check if the protocol and protocol version are correct and adapt if necessary.
 
-    1. Click *OK*.
+   1. Click *OK*.
 
 1. In the template group editor, click *Add Alarm Template* and select a template in the drop-down list. Repeat until all the necessary alarm templates are included in the group.
 
-    > [!NOTE]
-    > Under the list with the added alarm templates, the consolidated alarm template is shown. You can use this as a reference to see the combined effect of the different alarm templates in the group.
+   > [!NOTE]
+   > Under the list with the added alarm templates, the consolidated alarm template is shown. You can use this as a reference to see the combined effect of the different alarm templates in the group.
 
 1. Hover the mouse over an alarm templates and click the small up and down arrows to change the order, if necessary.
 
-    > [!NOTE]
-    > The order of the alarm templates in a template group is very important as every alarm template in the group overrules the one below it.
+   > [!NOTE]
+   > The order of the alarm templates in a template group is very important as every alarm template in the group overrules the one below it.
 
 1. To remove an alarm template from the group, hover the mouse over the alarm template and click the *x*.
 
