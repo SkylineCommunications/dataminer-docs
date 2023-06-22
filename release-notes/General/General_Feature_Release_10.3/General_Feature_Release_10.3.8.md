@@ -229,3 +229,9 @@ In some rare cases, the system would incorrectly try to clear an alarm group tha
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+
+#### Cassandra Cluster: DVE properties would be cleared when an update was sent to the database [ID_36658]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.
