@@ -15,7 +15,7 @@ To do so:
 1. In the last column for the parameters where you want to override the autoclear parameter, select *True* or *False*.
 
    > [!NOTE]
-   > By default, the field will be set to *System Default*. This means that the parameter will inherit the AutoClear setting specified in the AlarmSettings.AutoClear tag of the file *C:\\Skyline DataMiner\\MaintenanceSettings.xml*.
+   > By default, the field will be set to *System Default*. This means that the parameter will inherit the AutoClear setting specified in the *AlarmSettings.AutoClear* tag in [MaintenanceSettings.xml](xref:MaintenanceSettings_xml).
 
 > [!TIP]
 > See also: [Clearing alarms](xref:Clearing_alarms)
