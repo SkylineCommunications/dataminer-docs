@@ -274,6 +274,12 @@ From now on, alarms will no longer be regrouped after a manual operation.
 
 From now on, users will be allowed to manually clear automatic incidents.
 
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
