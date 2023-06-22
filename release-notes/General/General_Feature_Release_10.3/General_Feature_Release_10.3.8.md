@@ -22,6 +22,38 @@ uid: General_Feature_Release_10.3.8
 
 ## Other features
 
+#### Process Automation: Support for PaToken bulk operations [ID_35685]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, `PaToken` objects can be created, updated and deleted in bulk using the following new messages:
+
+- **CreateOrUpdate**
+
+  ```csharp
+  /// <summary>
+  /// Returns the created or updated <paramref name="objects"/>.
+  /// </summary>
+  /// <param name="objects"><see cref="List{PaToken}"/> of <typeparamref name="PaToken"/> to be created or updated.</param>
+  /// <returns>The result containing a list of <paramref name="objects"/> that were successfully updated or created. And a list of <see cref="TraceData"/> per item.</returns>
+  public BulkCreateOrUpdateResult<PaToken, Guid> CreateOrUpdate(List<PaToken> objects)
+  ```
+
+  The result will contain a list of tokens that were successfully created or updated. The trace data is available per token ID. If an issue occurs when an item gets created or updated, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items. If the list contains tokens with identical keys, only the first will be considered.
+
+- **Delete**
+
+  ```csharp
+  /// <summary>
+  /// Deletes the given <paramref name="objects"/>.
+  /// </summary>
+  /// <param name="objects"><see cref="List{PaToken}"/> of <typeparamref name="PaToken"/> to be deleted.</param>
+  /// <returns>The result containing a list of IDs of <paramref name="objects"/> that were successfully deleted. And a list of <see cref="TraceData"/> per item.</returns>
+  public BulkDeleteResult<Guid> Delete(List<PaToken> objects)
+  ```
+
+  The result will contain a list of tokens that were successfully deleted. The trace data is available per token ID. If an issue occurs when an item gets deleted, no exception will be thrown (even when `ThrowExceptionsOnErrorData` is true). The trace data of the last call is available and will contain the data for all items.
+
 #### SLNetClientTest tool: New menu to manage the cloud connection of a DMA while it is offline [ID_36611]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
