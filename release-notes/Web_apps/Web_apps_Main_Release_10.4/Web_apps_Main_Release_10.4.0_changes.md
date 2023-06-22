@@ -544,3 +544,11 @@ When, in the *Monitoring* app, a parameter table received updates via polling, t
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
