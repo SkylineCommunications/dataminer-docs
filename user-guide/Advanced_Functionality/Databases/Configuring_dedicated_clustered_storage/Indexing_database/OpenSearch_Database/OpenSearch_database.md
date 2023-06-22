@@ -14,5 +14,8 @@ From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to **multiple 
 
 This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
-> [!NOTE]
+> [!TIP]
 > If you are looking to use the Amazon OpenSearch Service instead of on-premises hosted OpenSearch nodes, see [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service).
+
+> [!NOTE]
+> To query the OpenSearch database, you can use the [ElasticVue](https://elasticvue.com/) browser extension. However, note that ElasticVue was created for ElasticSearch, so not everything may work for OpenSearch.

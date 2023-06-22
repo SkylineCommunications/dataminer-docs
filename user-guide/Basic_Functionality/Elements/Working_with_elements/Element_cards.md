@@ -45,7 +45,7 @@ Element cards can look quite different depending on the element protocol. Howeve
     > [!NOTE]
     > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
 
-  - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:documents).
+  - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:About_the_Documents_module).
 
   - **NOTES**: Page where short notes can be added to elements. For more information, see [Card navigation pane](xref:Working_with_cards_in_DataMiner_Cube#card-navigation-pane).
 

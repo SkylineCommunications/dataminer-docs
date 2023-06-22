@@ -312,6 +312,41 @@ When configuring an analog or digital *Clock* component, you can now make the cl
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
 
+#### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *Monitoring* app, a new type of datetime boxes will now be used on parameter pages.
+
+**BREAKING CHANGE**: When the value of a date or datetime parameter is set using one of the following API methods, that value must now be passed as a Unix timestamp in milliseconds instead of an OLE Automation date.
+
+- SetParameter
+- SetParameterRow
+
+**BREAKING CHANGE**: When values of date or datetime parameters are retrieved using one of the following API methods, those values will now be Unix timestamps in milliseconds instead of OLE Automation dates.
+
+- GetEditParameter
+- GetEditParameterTable
+- GetMonitoredParametersForElement
+- GetMonitoredParametersForService
+- GetParameter
+- GetParameterByName
+- GetParameterForService
+- GetParameterForServiceWithDynamicUnits
+- GetParameters
+- GetParametersByPageForElement
+- GetParametersByPageForElementCached
+- GetParametersByPageForElementSorted
+- GetParametersByPageForServiceElement
+- GetParametersForElement
+- GetParametersForElementFiltered
+- GetParametersForElementSorted
+- GetParametersForService
+- GetParametersForServiceSorted
+- GetParametersSorted
+- GetParameterWithDynamicUnits
+- ObserveParameter
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -452,6 +487,12 @@ When an empty query was used by more than one table component, in some rare case
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
+
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
@@ -486,14 +527,14 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
-#### Dashboards app: Problem when a pie or bar chart was updated in the background on a volatile dashboard [ID_36576]
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
 
-#### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
+#### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
-When the feed data linked to a query was grouped, changes to that feed data would not get detected by the query. In other words, the GQI components showing the result of the query would not update when data selection changed in the feed.
+When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.

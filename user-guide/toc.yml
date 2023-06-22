@@ -242,8 +242,29 @@
           items:
             - name: Element cards
               topicUid: Element_cards
-            - name: Adding and deleting elements
-              topicUid: Adding_and_deleting_elements
+            - name: Adding elements
+              topicUid: Adding_elements
+              items:
+                - name: SNMPv1/v2 connections
+                  topicUid: SNMPv1v2_Connection
+                - name: SNMPv3 connections
+                  topicUid: SNMPv3_Connection
+                - name: HTTP(s) connections
+                  topicUid: HTTPS_Connection
+                - name: Serial connections
+                  topicUid: Serial_Connection
+                - name: Smart-serial connections
+                  topicUid: Smart_Serial_Connection
+                - name: TCP/IP or UDP/IP connections
+                  topicUid: TCPIP_UDPIP_Connection
+                - name: GPIB connections
+                  topicUid: GPIB_Connection
+                - name: WebSocket connections
+                  topicUid: WebSocket_Connection
+            - name: Deleting elements
+              topicUid: Deleting_elements
+            - name: Duplicating elements
+              topicUid: Duplicating_elements
             - name: Replicating elements
               topicUid: Replicating_elements
             - name: Updating elements
@@ -336,10 +357,10 @@
           topicUid: Manually_switching_between_primary_and_backup_elements
         - name: Setting a primary or backup element in maintenance
           topicUid: Setting_a_primary_or_backup_element_in_maintenance
-    - name: Services and service templates
-      topicUid: services
+    - name: Services
+      topicUid: About_services
       items:
-        - name: About services
+        - name: About services and service templates
           topicUid: About_services
         - name: Service cards
           topicUid: Service_cards
@@ -358,8 +379,6 @@
         - name: Service templates
           topicUid: Service_templates
           items:
-            - name: About service templates
-              topicUid: About_service_templates
             - name: Creating a service template
               topicUid: Creating_a_service_template
               items:
@@ -740,8 +759,13 @@
                 topicUid: Deleting_a_pattern_definition
               - name: Managing pattern definitions
                 topicUid: Managing_pattern_definitions
-            - name: Adding related parameters to a trend graph
-              topicUid: Adding_related_parameters_to_a_trend_graph
+            - name: Working with relation learning
+              topicUid: Working_with_relation_learning
+              items:
+              - name: Adding related parameters to a trend graph
+                topicUid: Adding_related_parameters_to_a_trend_graph
+              - name: Adding time-scoped related parameters to a trend graph
+                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
         - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
@@ -824,15 +848,15 @@
             - name: Assigning trend templates
               topicUid: Assigning_trend_templates
     - name: Documents
-      topicUid: documents
+      topicUid: About_the_Documents_module
       items:
         - name: About the Documents module
           topicUid: About_the_Documents_module
-        - name: Consulting documents, hyperlinks or email addresses
+        - name: Consulting documents, hyperlinks, or email addresses
           topicUid: Consulting_documents_hyperlinks_or_email_addresses
         - name: Managing the document folders
           topicUid: Managing_the_document_folders
-        - name: Adding documents, hyperlinks or email addresses
+        - name: Adding documents, hyperlinks, or email addresses
           topicUid: Adding_documents_hyperlinks_or_email_addresses
     - name: Chat collaboration
       topicUid: chat
@@ -1049,6 +1073,23 @@
           topicUid: Ending_a_Failover_configuration
         - name: Frequently asked questions about DMA Failover
           topicUid: Frequently_asked_questions_about_DMA_Failover
+          items:
+            - name: What if one of the DMAs is stopped?
+              topicUid: Failover_FAQ_what_if_DMA_stopped
+            - name: What if one of the DMAs is restarted?
+              topicUid: Failover_FAQ_what_if_DMA_restarted
+            - name: What if a database server stops working?
+              topicUid: Failover_FAQ_server_stops_working
+            - name: What if a network cable is pulled out?
+              topicUid: Failover_FAQ_cable_pulled_out
+            - name: How do I upgrade a Failover pair?
+              topicUid: Failover_FAQ_upgrade
+            - name: How do I prevent DMAs from registering the same virtual IP?
+              topicUid: Failover_FAQ_avoid_registering_same_virtual_IP
+            - name: What if I have connection issues after a Failover switch?
+              topicUid: Failover_FAQ_connection_issues
+            - name: What if one of the Agents cannot be started or restarted?
+              topicUid: Failover_FAQ_cannot_start
     - name: Databases
       topicUid: Databases_about
       items:
@@ -2368,8 +2409,6 @@
               topicUid: Connecting_spectrum_analyzers_to_your_DataMiner_System
             - name: Installing the Keysight/Agilent IO Libraries
               topicUid: Installing_the_Keysight_Agilent_IO_Libraries
-            - name: Configuring the GPIB settings of a spectrum analyzer element
-              topicUid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
         - name: Working with spectrum analyzer elements
           topicUid: Working_with_spectrum_analyzer_elements
           items:
@@ -3023,6 +3062,8 @@
           topicUid: Creating_log_file_for_x_failed
         - name: ElementID (x) Not unique y existing = z
           topicUid: ElementID_x_not_unique_y_existing_z
+        - name: Failed to get log file
+          topicUid: Failed_to_get_log_file
         - name: HTTP error 500
           topicUid: HTTP_error_500
         - name: InitializeIElement for Element x failed. y (hr = z)
@@ -3271,6 +3312,8 @@
               topicUid: DataMiner_xml
             - name: DB.xml
               topicUid: DB_xml
+            - name: DBConfiguration.xml
+              topicUid: DBConfiguration_xml
             - name: DBMaintenance.xml and DBMaintenanceDMS.xml
               topicUid: DBMaintenance_xml_and_DBMaintenanceDMS_xml
             - name: DMS.xml
@@ -3374,6 +3417,8 @@
               items:
               - name: Activating verbose Correlation logging
                 topicUid: SLNetClientTest_activating_verbose_correlation_logging
+              - name: Changing the log levels for a log file
+                topicUid: SLNetClientTest_changing_log_levels
               - name: Checking a hyperlink filter
                 topicUid: SLNetClientTest_checking_hyperlink_filter
               - name: Checking whether protocol buffer serialization is enabled

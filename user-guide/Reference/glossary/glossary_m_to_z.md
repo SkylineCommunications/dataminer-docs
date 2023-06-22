@@ -176,7 +176,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SDV | Switched Digital Video. Also referred to as Switched Broadcast (SWB). Method for distributing digital video via cable, where digitally encrypted channels are switched out when they are not being watched and switched in when they are needed. |
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
-| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:services#services-and-service-templates). |
+| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
 | Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |

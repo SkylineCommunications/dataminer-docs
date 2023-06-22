@@ -6,6 +6,9 @@ uid: Configuring_GQI_feeds
 
 From DataMiner 10.0.13 onwards, a special type of data feed is available, using the Generic Query Interface. This “Queries” data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System.
 
+> [!TIP]
+> See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
+
 ## Creating a query
 
 You can create a query as follows:

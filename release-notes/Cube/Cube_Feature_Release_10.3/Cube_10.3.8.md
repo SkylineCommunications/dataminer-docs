@@ -16,6 +16,55 @@ uid: Cube_Feature_Release_10.3.8
 
 ## Other new features
 
+#### Visual Overview: New BookingData component [ID_33215] [ID_36489]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+You can now create a special *BookingData* shape and make it display all data associated with a particular booking.
+
+To do so, create a shape with the following shape data fields:
+
+|Shape data field | Value |
+|-------------|---------------|
+| Component   | `BookingData` |
+| Reservation | The ID of the booking<br>Example: `[pagevar:SRMRESERVATIONS_IDOfSelection]` |
+
+A *BookingData* shape will show the following information:
+
+- On the left-hand side, you will find a list of resources used by the booking.
+
+  For every resource, this list shows the following information:
+  
+  - the resource name
+  - an icon indicating the function of the resource
+  - an icon indicating whether the resource is linked to a service definition node
+  - the node label or, if no node label is defined, the name of the function definition
+
+- On the right-hand side, you see the profile data of the node or node interface you selected in the list on the left:
+
+  - the profile instance (if applicable), and
+  - the profile parameter values that will be used (note that these values can be overridden on several levels).
+  
+  > [!NOTE]
+  > Priority of profile parameter value overrides:
+  >
+  > 1. Values defined in the parameter overrides (stored in the booking)
+  > 1. Values defined in the profile instance
+  > 1. Values defined in the profile definition
+
+To be able to use the *BookingData* component, you will need
+
+- a system with an Elasticsearch database
+- a service manager license
+- a resource manager license
+- the following user permissions:
+
+  - Modules > Bookings > UI Available
+  - Modules > Functions > UI Available
+  - Modules > Profiles > UI Available
+  - Modules > Resources > UI Available
+  - Modules > Services > UI Available
+
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -40,6 +89,24 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
+#### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, the subtract placeholder could be used to calculate datetime and time span values by subtracting one or more values from a specified value. From now on, this placeholder also supports numerics. Just like with datetime values and time spans, you can subtract consecutive numbers from the first number.
+
+Examples:
+
+- Subtracting one number from another: `[Subtract:10,3]`
+
+- Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
+#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID_36653]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, when you requested the alarms of a certain time span, Cube would always send two requests to the server: one for the alarms and one for the information/suggestion events. However, in many cases, this was not necessary. From now on, Cube will only send the requests that are necessary.
+
 ### Fixes
 
 #### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
@@ -49,6 +116,18 @@ Also, because of a number of enhancements, overall performance has increased whe
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+The log file of the DataMiner Cube desktop app would report false positive warnings involving a number of DLL files.
+
+#### Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
 
 #### System Center: Problem with 'Show agent alarms' link [ID_36463]
 
@@ -71,3 +150,33 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Alarm Console: Problem when opening a history tab [ID_36603]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the Alarm Console, you opened a history tab on a system with a large number of masked alarms and a number of active correlation rules, that history tab would load rather slowly and would be missing some alarms.
+
+#### Trending: Problem when exporting real-time trend data to a CSV file [ID_36630]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
+
+#### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID_36666]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the *Settings* window, you added a suggestion tab to a group setting for the Alarm Console, users who were a member of that group would see the suggestion tab, but it would not show any suggestion alarms.
+
+#### Problem when removing DCF connections [ID_36676]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you removed a connection between an active element and an element that was stopped/paused, the connection would be removed from the active element but not from the stopped/paused element. When you started that element again and tried to remove the connection, the action would fail.
+
+#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID_36687]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened an alarm tab of type "sliding window", the history alarms matching the sliding window would be retrieved from the server but DataMiner Cube would incorrectly not show them.
