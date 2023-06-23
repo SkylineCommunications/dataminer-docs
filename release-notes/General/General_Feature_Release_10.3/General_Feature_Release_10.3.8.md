@@ -201,6 +201,12 @@ From now on, users will be allowed to manually clear automatic incidents.
 
 A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
 
+#### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When smart baselines were configured, by default information events would be generated every 5 minutes. This information event generation has now been disabled to avoid information event floods in e.g. EPM environments.
+
 ### Fixes
 
 #### NATS connection could fail due to payloads being too large [ID_36427]

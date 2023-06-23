@@ -71,6 +71,12 @@ From now on, in an SNMP table, columns of type "retrieved" can be placed in betw
 
 Because of a number of enhancements with regard to fetching LinkerTableEntries of function resources, overall performance has increased.
 
+#### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+When smart baselines were configured, by default information events would be generated every 5 minutes. This information event generation has now been disabled to avoid information event floods in e.g. EPM environments.
+
 ### Fixes
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
