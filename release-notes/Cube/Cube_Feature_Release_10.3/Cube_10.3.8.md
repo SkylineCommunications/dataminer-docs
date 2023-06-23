@@ -12,10 +12,6 @@ uid: Cube_Feature_Release_10.3.8
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other new features
-
 #### Visual Overview: New BookingData component [ID_33215] [ID_36489]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -64,6 +60,21 @@ To be able to use the *BookingData* component, you will need
   - Modules > Profiles > UI Available
   - Modules > Resources > UI Available
   - Modules > Services > UI Available
+
+#### Trending: Time-scoped relations [ID_36434]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A light bulb icon will now be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
+
+You can for instance use this in case a parameter (e.g. the total available memory of a server) behaves oddly during a particular time range (e.g. a downward spike), in order to find out if other parameters of the same device also showed unusual behavior during the same time range.
+
+For more information, see [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph).
+
+> [!NOTE]
+> Currently, the feature only proposes parameters from the same DataMiner element.
+
+## Other new features
 
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
