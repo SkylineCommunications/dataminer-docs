@@ -73,6 +73,16 @@ Up to now, when you requested the alarms of a certain time span, Cube would alwa
 
 ### Fixes
 
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
+
 #### DataMiner Cube - Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->

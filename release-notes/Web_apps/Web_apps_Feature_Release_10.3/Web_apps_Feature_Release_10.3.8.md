@@ -246,3 +246,9 @@ From now on, users who only have permission to view dashboards will not see any 
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.

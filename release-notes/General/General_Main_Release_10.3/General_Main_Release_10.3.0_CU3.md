@@ -254,6 +254,12 @@ When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" s
 
 Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
 
+#### Problem with BPA test 'Cassandra DB Size' [ID_36138]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, the BPA test *Cassandra DB size* would spawn a number of cmd processes meant to be executed by the Cassandra nodetool utility without checking whether nodetool was running. When nodetool was not running, these cmd processes would not get cleaned up.
+
 #### DataMiner Backup: Low-code apps would incorrectly not be restored [ID_36139]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->

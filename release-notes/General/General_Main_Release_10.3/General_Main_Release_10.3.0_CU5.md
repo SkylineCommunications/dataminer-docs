@@ -87,7 +87,7 @@ When smart baselines were configured, by default information events would be gen
 
 #### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
 
-<!-- MR 10.3.0 [CU5] - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.6 -->
 
 In some rare cases, the following NATS-related error would be thrown:
 
