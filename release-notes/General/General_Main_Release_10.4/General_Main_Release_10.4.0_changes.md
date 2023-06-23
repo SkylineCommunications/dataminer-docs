@@ -329,16 +329,6 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
-#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some rare cases, the following NATS-related error would be thrown:
-
-```txt
-Failed to copy credentials from [IP address] - corrupt zip file
-```
-
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->

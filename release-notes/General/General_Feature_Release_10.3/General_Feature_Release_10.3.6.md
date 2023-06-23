@@ -241,7 +241,7 @@ When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fie
 
 #### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU5] - FR 10.3.6 -->
 
 In some rare cases, the following NATS-related error would be thrown:
 
