@@ -43,3 +43,25 @@ For detailed steps, go to [Upgrading a DataMiner Agent using DataMiner Taskbar U
 You can also start an upgrade from the Agents page in DataMiner Cube’s System Center. You will need to download the necessary upgrade package(s) from the [DataMiner Software](https://community.dataminer.services/downloads/) page to do so.
 
 For detailed steps, go to [Upgrading a DataMiner Agent in System Center](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
+
+## Other types of upgrades
+
+The DataMiner platform consists of many components (core processes, DataMiner Extension Modules (DxMs), web API, web apps, etc.). While the sections above are related to a standard DataMiner upgrade, which includes most of these components, some components can be upgraded separately.
+
+A standard DataMiner upgrade updates the core processes, DataMiner Cube, the web API, web apps, and potentially also some DxMs (depending on the DataMiner version). As this is a big upgrade, this can take some time to execute, which entails downtime of the DataMiner System. If you only want to have the latest version of a specific component, it can therefore be useful to upgrade this separately.
+
+The following other types of upgrades exist:
+
+- **DataMiner web upgrades**: These include only the web API and the web apps. This way you get access to the latest features and enhancements of the web apps, without having to do a DataMiner upgrade. DataMiner web upgrades are available from DataMiner 10.3.0/10.3.3 onwards and typically take about 1 minute to install. All other DataMiner processes remain untouched.
+
+  > [!NOTE]
+  >
+  > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
+  > - New web functionality that depends on new features in the core processes will not be available until you have also upgraded the core software. For example, GQI is part of the core DataMiner software, so new GQI features will only become available with a full DataMiner upgrade.
+
+  > [!TIP]
+  > You can download the latest web upgrade package on [DataMiner Dojo](https://community.dataminer.services/dataminer-web-upgrade-packages/).
+
+- **DxM upgrades**: [DataMiner Extension Modules (DxMs)](xref:DataMinerExtensionModules) can be updated independently in the [Admin app](https://admin.dataminer.services).
+
+- **DataMiner Cube upgrades**: DataMiner Cube can automatically update to a more recent version (see [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions)).
