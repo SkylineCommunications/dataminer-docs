@@ -10,6 +10,23 @@ uid: Upgrading_a_DataMiner_Agent
 > - [Rui's Rapid Recap – DataMiner Upgrade](https://community.dataminer.services/video/ruis-rapid-recap-dataminer-upgrade/) ![Video](~/user-guide/images/video_Duo.png)
 > - [Agents – Upgrading a DataMiner System](https://community.dataminer.services/video/agents-upgrading-a-dataminer-system/) ![Video](~/user-guide/images/video_Duo.png)
 
+## Types of upgrades
+
+DataMiner is an entire platform that consists of many components (core processes, extension modules (DxM), web API, web apps, etc.). Some of these can be upgraded separately.
+
+- DataMiner upgrades: this updates the core processes, Cube, web API, web apps, and potentially also some extension modules. As this is a big upgrade, this entails downtime on the DataMiner System and can take some time to execute.
+
+- DataMiner web upgrades: this updates only the web API and the web apps. This way you get access to the latest features and enhancements of the web apps, without having to do a DataMiner upgrade. DataMiner web upgrades are available from DataMiner 10.3 onwards and typically take about 1 minute to install. All other DataMiner processes remain untouched.
+
+    > [!NOTE]
+    >
+    > - Executing a DataMiner upgrade will override any DataMiner web upgrades that have been performed in the past.
+    > - New web functionality depending on new features in the core processes won't be available. For example, Dashboards and Low-Code Apps heavily leverage GQI. Since GQI is running in the SLHelper core process, installing a DataMiner web upgrade will not include any changes to GQI.
+
+- DataMiner Extension Modules (DxM): these can be updated independently in the [Admin app](https://admin.dataminer.services).
+
+- DataMiner Cube can automatically update to a more recent version (see [Managing client versions](xref:DMA_configuration_related_to_client_applications#managing-client-versions)).
+
 ## Before you upgrade
 
 > [!IMPORTANT]
