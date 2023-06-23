@@ -20,23 +20,23 @@ If a device has had a firmware upgrade and MbgNMS detects that the API version n
 
 #### Integration REST API V10 for Meinberg LANTIME IMS FDM [ID_36696]
 
-The REST API V10 for the Meinberg LANTIME IMS FDM has been integrated into the mbgNMS solution.
+The Meinberg LANTIME IMS FDM API V10 has been integrated into the mbgNMS solution.
 
 #### Integration REST API V10 for Meinberg LANTIME IMS PIO [ID_36697]
 
-The REST API V10 for the Meinberg LANTIME IMS PIO has been integrated into the mbgNMS solution.
+The Meinberg LANTIME IMS PIO API V10 has been integrated into the mbgNMS solution.
 
 #### Integration REST API V10 for Meinberg LANTIME IMS VSG [ID_36698]
 
-The REST API V10 for the Meinberg LANTIME IMS VSG has been integrated into the mbgNMS solution.
+The Meinberg LANTIME IMS VSG API V10 has been integrated into the mbgNMS solution.
 
 #### Integration REST API V10 for Meinberg LANTIME IMS VSI [ID_36699]
 
-The REST API V10 for the Meinberg LANTIME IMS VSI has been integrated into the mbgNMS solution.
+The Meinberg LANTIME IMS VSI API V10 has been integrated into the mbgNMS solution.
 
 #### Integration REST API V10 for Meinberg LANTIME IMS REL [ID_36700]
 
-The REST API V10 for the Meinberg LANTIME IMS REL has been integrated into the mbgNMS solution.
+The Meinberg LANTIME IMS REL API V10 has been integrated into the mbgNMS solution.
 
 ### Fixes
 
