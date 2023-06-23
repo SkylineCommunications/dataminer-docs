@@ -151,6 +151,14 @@ As a precaution against these recordings taking too much disk space, the followi
 > - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
 > - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
 
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
 #### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->

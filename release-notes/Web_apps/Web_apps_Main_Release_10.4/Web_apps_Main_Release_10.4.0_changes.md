@@ -353,6 +353,14 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParameterWithDynamicUnits
 - ObserveParameter
 
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
