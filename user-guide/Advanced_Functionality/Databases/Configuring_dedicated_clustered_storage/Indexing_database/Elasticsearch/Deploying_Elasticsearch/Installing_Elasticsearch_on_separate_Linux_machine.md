@@ -12,7 +12,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 > [!TIP]
 > See also: [Installing Elasticsearch](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/install-elasticsearch.html) in the Elasticsearch reference information.
 
-1. Install the Elasticsearch software on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html) in the official Elasticsearch documentation.
+1. Install the Elasticsearch software (version 6.8) on  the Linux machine as described under [Installing Elasticsearch with Debian Package](https://www.elastic.co/guide/en/elasticsearch/reference/6.8/deb.html) in the official Elasticsearch documentation.
 
 1. Make sure the firewall ports are open for Elasticsearch. Elasticsearch operates on TCP port 9200 and TCP port 9300.
 
