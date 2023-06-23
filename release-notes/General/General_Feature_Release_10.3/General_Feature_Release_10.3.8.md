@@ -201,6 +201,12 @@ From now on, users will be allowed to manually clear automatic incidents.
 
 A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly labelling for periodically returning behavioral changes [ID_36664]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+A behavioral change in the trend data of a parameter is considered an anomaly if there have not been similar behavioral changes that occurred regularly or frequently in the historical behavior of the parameter. This anomaly labelling has now been enhanced for periodically returning behavioral changes.
+
 #### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
