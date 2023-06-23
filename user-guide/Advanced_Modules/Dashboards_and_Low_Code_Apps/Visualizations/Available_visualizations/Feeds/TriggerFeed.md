@@ -6,15 +6,15 @@ uid: DashboardTriggerFeed
 
 This feed (available from DataMiner 10.2.0/10.1.1 onwards) allows you to trigger other components either manually or automatically.
 
-At present, this feed can only be used as a filter feed for a component using a query feed. It will function as a refresh trigger for that component.
+At present, this feed can only be used as a filter feed for a component displaying a [GQI query](xref:Configuring_GQI_feeds) result. It will function as a refresh trigger for that query.
 
-You can for example use this in a low-code app or a dashboard to refresh a table based on a timer.
+You can for example use this in a low-code app or a dashboard to refresh a [table component](xref:DashboardTable) based on a timer.
 
 To configure the trigger feed:
 
 1. Optionally, customize the following component options in the *Component* > *Settings* tab:
 
-   - *Trigger timer*: Determines whether a countdown bar will be displayed to the next time the trigger goes off.
+   - *Trigger timer*: Determines whether the trigger will automatically go off based on a timer. If this option is enabled, a countdown bar will show when the trigger will go off again.
 
    - *Time*: If *Trigger Timer* is selected, this setting determines after how many seconds the data is refreshed. By default, this is set to 60 seconds.
 
