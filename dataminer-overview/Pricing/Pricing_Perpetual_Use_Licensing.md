@@ -16,10 +16,9 @@ A DataMiner System (DMS) consists of one or more DataMiner nodes (DMAs), interco
 
 DMAs can be distributed across the operational environment to increase the overall availability and resilience. Alternatively, they can be co-located at regional or central sites in a regionalized or centralized architecture. The number of DMAs is defined by the number of objects that need to be managed and the application, and their location is a matter of preference in terms of architecture. However, in any case, and in any scenario, all DMAs combined automatically behave like a single consolidated system towards the user.
 
-Depending on the application, licensing is available as **server-based licenses**, i.e.one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
+Depending on the application, licensing is available as **server-based licenses**, i.e. one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
 
 Failover is available for server-based licenses, excluding for DataMiner Probes.
-
 
 | Application | License | Available capacity tiers |
 |--|--|--|
@@ -71,7 +70,6 @@ There are two main categories of connector licenses, i.e. Product and System Con
 
 - **Product Connectors** are typically used to interface directly with devices and other equipment.
 - **System Connectors** are used to interface with other platforms (e.g. business applications, billing or asset management platforms, Element and Network Management Systems, Operations Support Systems, etc).
-
 
 ## Special-purpose licenses
 
