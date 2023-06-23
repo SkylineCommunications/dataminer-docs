@@ -126,8 +126,8 @@ When your DataMiner System is connected to dataminer.services, the following add
     <md:SPSSODescriptor AuthnRequestsSigned="false" WantAssertionsSigned="true" protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
       ...
       <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/API/" index="1" isDefault="true"/>
-      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="true"/>
-      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="true"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking" index="2" isDefault="false"/>
+      <md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://dataminer-skyline.on.dataminer.services/account-linking/" index="3" isDefault="false"/>
     </md:SPSSODescriptor>
    </md:EntityDescriptor>
     ```
