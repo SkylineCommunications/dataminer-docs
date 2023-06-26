@@ -17,4 +17,4 @@ Information on DataMiner alarm functionality is divided over the following secti
 - [Advanced alarm functionality](xref:Advanced_alarm_functionality)
 
 > [!TIP]
-> See also: [Alarm templates](xref:Alarm_templates)
+> See also: [About alarm templates](xref:About_alarm_templates)

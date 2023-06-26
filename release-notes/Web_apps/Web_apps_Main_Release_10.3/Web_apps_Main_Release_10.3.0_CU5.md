@@ -18,6 +18,47 @@ uid: Web_apps_Main_Release_10.3.0_CU5
 
 In the action editor, the *Which scheduler?* button has now been renamed to *Which timeline?*.
 
+#### Dashboards app & Low-Code Apps: Enhanced error handling while exporting trend data to a CSV file [ID_36627]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+A number of enhancements have been made with regard to error handling while exporting trend data to a CSV file.
+
+#### GQI session recording: Time and disk space limits [ID_36642]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+GQI session recording is a debugging feature that allows you to save GQI communication and replay it in a lab environment. This feature is disabled by default.
+
+To create a recording:
+
+1. On the DataMiner Agent, create the folder `C:\Skyline DataMiner\logging\genif`.
+1. Perform the operation that needs to be recorded.
+1. Save the files written to `C:\Skyline DataMiner\logging\genif`.
+1. Delete the folder to disable recording.
+
+As a precaution against these recordings taking too much disk space, the following limits will now be enforced:
+
+- A time limit of *1 hour*
+
+  When a new recording is created, all previous recordings older than 1 hour will be deleted.
+
+- A disk space limit of *100 MB*
+
+  When a new recording is created, older recordings will be deleted until the total size of the `C:\Skyline DataMiner\logging\genif` folder is less than 100 MB. The oldest recordings will be deleted first.
+
+> [!NOTE]
+>
+> - Currently, the above-mentioned limits are hard-coded. However, in one of the following releases, they will become configurable.
+> - These enhancements will now prevent the following known issue from occurring: [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size).
+> - See also [Keeping a DMA from running out of disk space](xref:Keeping_a_DMA_from_running_out_of_disk_space)
+
+#### GQI - 'Get parameters for elements where' data source: columnInfo object of columns of type 'discrete' will now contain the possible values [ID_36702]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+For each of the columns of type "discrete" in the *Get parameters for elements where* data source (InterElementAdapter), the possible values will now be available in their columnInfo object.
+
 ### Fixes
 
 #### Low-Code Apps: Application would be updated each time you hit a key after changing a page name [ID_36479]
@@ -44,6 +85,12 @@ When a pie chart or a bar chart had its settings changed automatically, in some 
 
 When a pie chart or a bar chart on a volatile dashboard had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error.
 
+#### Dashboards app & Low-Code Apps: Pie chart components would not update properly [ID_36612]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Pie chart components would not update properly while visualizing data from a query with variable input, especially when the number of rows returned by the query changed.
+
 #### Dashboards app & Low-Code Apps: Changes in grouped feed data would not get detected [ID_36615]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
@@ -55,3 +102,9 @@ When the feed data linked to a query was grouped, changes to that feed data woul
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.
+
+#### Dashboards app & Low-Code Apps - Numeric input component: Input field would incorrectly be set to the minimum value after a refresh [ID_36677]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, when a numeric input component had a non-zero minimum value set, the input field would automatically be set to that minimum value after a refresh. From now on, the input field will remain empty after a refresh, even when a minimum value is configured.

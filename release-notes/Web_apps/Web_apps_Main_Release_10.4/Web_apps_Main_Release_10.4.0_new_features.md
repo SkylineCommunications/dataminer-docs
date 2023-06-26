@@ -547,3 +547,13 @@ You can now clear a *State* component by clicking it while holding down the CTRL
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When editing a low-code app, it is now possible to duplicate an entire page or panel via the new context menu, accessible by clicking the ellipsis icon next to the page name in the pane on the left or the panel name in the page configuration pane. This context menu also allows you to delete a page or panel, as well as hide a page from the sidebar.
+
+#### Dashboards app & Low-Code Apps - Table component: Selecting whether to export raw values or display values to CSV [ID_36467]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+You can export the data displayed by a table component by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. From now on, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported.
+
+Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
+
+If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.

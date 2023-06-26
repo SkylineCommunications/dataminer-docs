@@ -68,7 +68,7 @@ A new user permission *Email* > *Send via DataMiner System* is now available und
 
 ### DMS Protocols
 
-#### New polling scheme polls SNMP tables by row \[ID_30780\]
+#### New polling scheme polls SNMP tables by row [ID_30780]
 
 A new polling scheme can now be used to poll SNMP tables.
 

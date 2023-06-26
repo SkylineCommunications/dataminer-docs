@@ -59,4 +59,4 @@ If you set the AutoClear setting to FALSE, alarms will not be cleared automatica
 
 When editing an alarm template, you can override the AutoClear system settings for particular alarms.
 
-For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](xref:Configuring_alarm_templates#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](xref:Setting_the_autoclear_option_in_alarm_template).

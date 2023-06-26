@@ -28,3 +28,7 @@ uid: Troubleshooting_Flowcharts
   - [Process identification](xref:Troubleshooting_Process_Identification)
 
   - [Identify per module](xref:Troubleshooting_Identify_per_Module)
+
+> [!TIP]
+> See also: [Discover the DataMiner Live Flowchart Troubleshooting](https://community.dataminer.services/video/discover-the-dataminer-live-flowchart-troubleshooting/)
+

@@ -242,8 +242,29 @@
           items:
             - name: Element cards
               topicUid: Element_cards
-            - name: Adding and deleting elements
-              topicUid: Adding_and_deleting_elements
+            - name: Adding elements
+              topicUid: Adding_elements
+              items:
+                - name: SNMPv1/v2 connections
+                  topicUid: SNMPv1v2_Connection
+                - name: SNMPv3 connections
+                  topicUid: SNMPv3_Connection
+                - name: HTTP(s) connections
+                  topicUid: HTTPS_Connection
+                - name: Serial connections
+                  topicUid: Serial_Connection
+                - name: Smart-serial connections
+                  topicUid: Smart_Serial_Connection
+                - name: TCP/IP or UDP/IP connections
+                  topicUid: TCPIP_UDPIP_Connection
+                - name: GPIB connections
+                  topicUid: GPIB_Connection
+                - name: WebSocket connections
+                  topicUid: WebSocket_Connection
+            - name: Deleting elements
+              topicUid: Deleting_elements
+            - name: Duplicating elements
+              topicUid: Duplicating_elements
             - name: Replicating elements
               topicUid: Replicating_elements
             - name: Updating elements
@@ -738,8 +759,13 @@
                 topicUid: Deleting_a_pattern_definition
               - name: Managing pattern definitions
                 topicUid: Managing_pattern_definitions
-            - name: Adding related parameters to a trend graph
-              topicUid: Adding_related_parameters_to_a_trend_graph
+            - name: Working with relation learning
+              topicUid: Working_with_relation_learning
+              items:
+              - name: Adding related parameters to a trend graph
+                topicUid: Adding_related_parameters_to_a_trend_graph
+              - name: Adding time-scoped related parameters to a trend graph
+                topicUid: Adding_time_scoped_related_parameters_to_a_trend_graph
         - name: Working with histograms
           topicUid: Viewing_trend_information_in_a_histogram
           items:
@@ -794,14 +820,42 @@
             - name: Editing the information template for one parameter
               topicUid: Editing_the_information_template_for_one_parameter
         - name: Alarm templates
-          topicUid: Alarm_templates
+          topicUid: About_alarm_templates
           items:
             - name: About alarm templates
               topicUid: About_alarm_templates
             - name: Managing alarm templates
-              topicUid: Managing_alarm_templates
+              topicUid: Creating_an_alarm_template
+              items:
+                - name: Creating an alarm template
+                  topicUid: Creating_an_alarm_template
+                - name: Uploading an alarm template
+                  topicUid: Uploading_an_alarm_template
+                - name: Assigning an alarm template
+                  topicUid: Assigning_an_alarm_template
+                - name: Deleting an alarm template
+                  topicUid: Deleting_an_alarm_template
             - name: Configuring alarm templates
-              topicUid: Configuring_alarm_templates
+              topicUid: About_the_alarm_template_editor
+              items:
+                - name: About the alarm template editor
+                  topicUid: About_the_alarm_template_editor
+                - name: Configuring normal alarm thresholds
+                  topicUid: Configuring_normal_alarm_thresholds
+                - name: Configuring dynamic alarm thresholds
+                  topicUid: Configuring_dynamic_alarm_thresholds
+                - name: Configuring hysteresis in an alarm template
+                  topicUid: Configuring_alarm_hysteresis
+                - name: Configuring an alarm template to generate information messages
+                  topicUid: Configuring_alarm_template_information_message
+                - name: Using conditions in an alarm template
+                  topicUid: Using_conditions_in_an_alarm_template
+                - name: Configuring anomaly detection alarms for specific parameters
+                  topicUid: Configuring_anomaly_detection_alarms
+                - name: Setting the autoclear options for alarms in an alarm template
+                  topicUid: Setting_the_autoclear_option_in_alarm_template
+                - name: Scheduling an alarm template
+                  topicUid: Scheduling_an_alarm_template
             - name: Changing the alarm range for one parameter
               topicUid: Changing_the_alarm_range_for_one_parameter
             - name: Guidelines for assigning alarm severity levels
@@ -2383,8 +2437,6 @@
               topicUid: Connecting_spectrum_analyzers_to_your_DataMiner_System
             - name: Installing the Keysight/Agilent IO Libraries
               topicUid: Installing_the_Keysight_Agilent_IO_Libraries
-            - name: Configuring the GPIB settings of a spectrum analyzer element
-              topicUid: Configuring_the_GPIB_settings_of_a_spectrum_analyzer_element
         - name: Working with spectrum analyzer elements
           topicUid: Working_with_spectrum_analyzer_elements
           items:
@@ -3492,6 +3544,8 @@
               items:
               - name: Activating verbose Correlation logging
                 topicUid: SLNetClientTest_activating_verbose_correlation_logging
+              - name: Changing the log levels for a log file
+                topicUid: SLNetClientTest_changing_log_levels
               - name: Checking a hyperlink filter
                 topicUid: SLNetClientTest_checking_hyperlink_filter
               - name: Checking whether protocol buffer serialization is enabled

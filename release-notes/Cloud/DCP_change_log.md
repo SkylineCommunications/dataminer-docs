@@ -6,7 +6,15 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 12 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
+#### 16 June 2023 - Fix - Chat Integration with Microsoft Teams: Improved consistency for email inputs [ID_36643]
+
+Consistency for the Chat Integration email input has been improved.
+
+Previously, some features were using the email input as the actual email address of the user, and some were using it as the service principal name of the user. This was not an issue if both had the same value in the linked tenant. However, if the values differed, some features like "Create Team" and "Add Team Member or Owner" did not work unless the actual service principal name was given.
+
+This is now no longer the case. All email input for all Chat Integration features behaves the same as the email address set for the user in the tenant.
+
+#### 7 June 2023 - Fix - CloudGateway 2.11.0 / CoreGateway 2.13.0 - Resolved connection issue [ID_36439] [ID_36453]
 
 In case the DMA name no longer corresponded to the server name after a rename, when using cloud features like Remote Access or Sharing, you could encounter the error message "The DataMiner System has no active connections to the DataMiner Cloud Platform". This issue has now been resolved by using the DMA name instead of the server name.
 
