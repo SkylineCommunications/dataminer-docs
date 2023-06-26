@@ -44,7 +44,7 @@ From now on, when a parameter value is a URL starting with one of the following 
 
 #### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.8 -->
 
 Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
 
@@ -54,12 +54,12 @@ From now on, when an aggregation (min, max, average) is applied on an empty Elas
 
 Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
 
-| ​Type | ​RawValue | ​DisplayValue |
+| Type | RawValue | DisplayValue |
 |------|----------|--------------|
-| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
-| ​(Distinct) Count   | 0    | 0                |
-| ​Std dev/Percentile | ​null | ​​"Not applicable" |
-| ​Sum                | 0    | 0                |
+| Avg/Min/Max/Median | null | "Not applicable" |
+| (Distinct) Count   | 0    | 0                |
+| Std dev/Percentile | null | "Not applicable" |
+| Sum                | 0    | 0                |
 
 #### Low-Code Apps - Action editor: 'Which scheduler?' button has now been renamed to 'Which timeline?' [ID_36530]
 
