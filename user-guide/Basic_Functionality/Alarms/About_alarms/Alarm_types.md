@@ -20,6 +20,9 @@ There are four alarm levels, each indicated by a color, as well as one additiona
 
 For the different alarm levels, it is also possible to assign high and low levels. For analog parameters, a high level alarm is triggered when the parameter value exceeds the set alarm threshold, and a low level alarm is triggered when the parameter falls below the set alarm threshold.
 
+> [!NOTE]
+> If you have trouble seeing certain colors, you can configure a color filter in Windows to make it easier for you to differentiate between specific colors. To do so, in your Windows settings, go to *Accessibility* > *Color filters*.
+
 > [!TIP]
 > See also:
 >
