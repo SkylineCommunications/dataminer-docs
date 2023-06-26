@@ -3161,12 +3161,97 @@
     - name: Troubleshooting flowcharts
       topicUid: Troubleshooting_Flowcharts
       items:
-        - name: Troubleshooting - Trending
-          topicUid: Troubleshooting_Trending
-        - name: Troubleshooting - Alarms
-          topicUid: Troubleshooting_Alarms
-        - name: Troubleshooting - Services
-          topicUid: Troubleshooting_Services
+        - name: Troubleshooting - Where to start?
+          topicUid: Troubleshooting_Where_to_Start
+        - name: Finding a root cause
+          topicUid: Finding_a_Root_Cause
+          items:
+            - name: Troubleshooting - startup issues
+              topicUid: Troubleshooting_Startup_Issues
+            - name: Troubleshooting - critical issues
+              topicUid: Troubleshooting_Critical_Issues_Overview
+              items:
+                - name: Critical issues - Alarm Console
+                  topicUid: Troubleshooting_Critical_Issues_Alarm_Console
+                - name: Critical issues - data not updated
+                  topicUid: Troubleshooting_Critical_Issues_Data_Not_Updated
+                - name: Critical issues - automatic restart
+                  topicUid: Troubleshooting_Critical_Issues_Automatic_Restart
+                - name: Critical issues - resources
+                  topicUid: Troubleshooting_Critical_Issues_Resources
+            - name: Troubleshooting - alarms
+              topicUid: Troubleshooting_Alarms
+            - name: Troubleshooting - services
+              topicUid: Troubleshooting_Services
+            - name: Troubleshooting - trending
+              topicUid: Troubleshooting_Trending
+            - name: Troubleshooting - process identification
+              topicUid: Troubleshooting_Process_Identification
+              items:
+                - name: Troubleshooting - main processes
+                  items:
+                    - name: SLElement.exe
+                      topicUid: Troubleshooting_SLElement_exe
+                    - name: SLDataMiner.exe
+                      topicUid: Troubleshooting_SLDataMiner_exe
+                - name: Troubleshooting - communication processes
+                  items:
+                    - name: SLNet.exe 
+                      topicUid: Troubleshooting_SLNet_exe
+                      items:
+                        - name: SLNet - startup issues
+                          topicUid: Troubleshooting_SLNet_Startup
+                        - name: SLNet - correlation engine
+                          topicUid: Troubleshooting_SLNet_Correlation_Engine
+                        - name: SLNet - disconnects
+                          topicUid: Troubleshooting_SLNet_Disconnects
+                        - name: SLNet - RTEs
+                          topicUid: Troubleshooting_SLNet_RTEs
+                    - name: SLDMS.exe
+                      topicUid: Troubleshooting_SLDMS_exe
+                      items:
+                        - name: SLDMS - frequent issues
+                          topicUid: Troubleshooting_SLDMS_Frequent_Issues
+                - name: Troubleshooting - polling processes
+                  items:
+                    - name: SLPort.exe
+                      topicUid: Troubleshooting_SLPort_exe
+                    - name: SLSNMPManager.exe
+                      topicUid: Troubleshooting_SLSNMPManager_exe
+                - name: Troubleshooting - logging processes
+                  items:
+                    - name: SLWatchdog.exe
+                      topicUid: Troubleshooting_SLWatchdog_exe
+                    - name: SLLog.exe
+                      topicUid: Troubleshooting_SLLog_exe
+                - name: Troubleshooting - database processes
+                  items:
+                    - name: SLDataGateway.exe
+                      topicUid: Troubleshooting_SLDataGateway_exe
+                - name: Troubleshooting - other processes
+                  items:
+                    - name: SLXML.exe
+                      topicUid: Troubleshooting_SLXML_exe
+                    - name: Reporter - SLASPConnection.exe
+                      topicUid: Troubleshooting_SLASPConnection_exe
+                    - name: SLAnalytics.exe
+                      topicUid: Troubleshooting_SLAnalytics_exe
+                    - name: SLHelper.exe
+                      topicUid: Troubleshooting_SLHelper_exe
+                    - name: SLScheduler.exe
+                      topicUid: Troubleshooting_SLScheduler_exe
+            - name: Troubleshooting - identify per module
+              topicUid: Troubleshooting_Identify_per_Module
+              items:
+                - name: Troubleshooting - Surveyor
+                  topicUid: Troubleshooting_Surveyor
+                - name: Troubleshooting - Alarm Console
+                  topicUid: Troubleshooting_Alarm_Console
+                  items:
+                    - name: Run-time errors (RTEs)
+                      topicUid: Troubleshooting_Run_Time_Errors
+                - name: Troubleshooting - apps
+                  topicUid: Troubleshooting_Apps
     - name: Troubleshooting procedures
       topicUid: Troubleshooting_procedures
       items:
