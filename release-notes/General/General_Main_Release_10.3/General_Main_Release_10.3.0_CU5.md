@@ -79,7 +79,7 @@ A behavioral change in the trend data of a parameter is considered an anomaly if
 
 #### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
 
-<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When smart baselines were configured, by default information events would be generated every 5 minutes. This information event generation has now been disabled to avoid information event floods in e.g. EPM environments.
 
