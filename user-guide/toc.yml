@@ -1945,6 +1945,8 @@
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
+        - name: Frequently asked questions about Dashboards and Low-Code Apps
+          topicUid: Dashboards_and_Low_Code_Apps_FAQ
     - name: DMS Dashboards (legacy)
       topicUid: dashboards
       items:
