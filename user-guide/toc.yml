@@ -1777,17 +1777,6 @@
               items:
                 - name: Configuring feed components
                   topicUid: Configuring_feed_components
-                - name: Configuring query (GQI) data feeds
-                  topicUid: Configuring_GQI_feeds
-                  items:
-                    - name: Query data sources
-                      topicUid: Query_data_sources
-                    - name: Configuring an external data source in a query
-                      topicUid: Configuring_an_external_data_source_in_a_query
-                    - name: Query operators
-                      topicUid: Query_operators
-                    - name: Importing a query
-                      topicUid: Importing_a_query
                 - name: Specifying data input in a dashboard URL
                   topicUid: Specifying_data_input_in_a_dashboard_URL
                 - name: Configuring a dashboard to use a URL feed without a feed component
@@ -1945,6 +1934,85 @@
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
+        - name: Generic Query Interface (GQI)
+          topicUid: Configuring_GQI_feeds
+          items:
+            - name: Creating a query
+              topicUid: Creating_queries
+            - name: Query data sources
+              topicUid: Query_data_sources
+            - name: Query operators
+              topicUid: Query_operators
+              items:
+                - name: Aggregate
+                  topicUid: GQI_Aggregate
+                - name: Column manipulations
+                  topicUid: GQI_Column_manipulations
+                - name: Filter
+                  topicUid: GQI_Filter
+                - name: Join
+                  topicUid: GQI_Join
+                - name: Select
+                  topicUid: GQI_Select
+                - name: Sort
+                  topicUid: GQI_Sort
+                - name: Sort by
+                  topicUid: GQI_Sort_by
+                - name: Then sort by
+                  topicUid: GQI_Then_sort_by
+                - name: Top X
+                  topicUid: GQI_Top_X
+            - name: Extensions
+              topicUid: GQI_API_reference
+              items:
+                - name: API reference
+                  topicUid: GQI_API_reference
+                  items:
+                    - name: IGQIDataSource
+                      topicUid: IGQIDataSource
+                    - name: IGQIInputArguments
+                      topicUid: IGQIInputArguments
+                    - name: IGQIOnInit
+                      topicUid:
+                    - name: IGQIOnPrepareFetch
+                      topicUid:
+                    - name: IGQIOnDestroy
+                      topicUid:
+                    - name: GQIColumn
+                      topicUid: GQIColumn
+                    - name: GQIPage
+                      topicUid: GQIPage
+                    - name: GQIRow
+                      topicUid: GQIRow
+                    - name: GQICell
+                      topicUid: GQICell
+                    - name: GQIArgument
+                      topicUid: GQIArgument
+                    - name: GQIDMS
+                      topicUid: GQIDMS
+                      items:
+                        - name: Retrieving data by means of DMS messages
+                          topicUid: Retrieving_data_by_means_of_DMS_messages
+                - name: Ad hoc data scources
+                  topicUid: Ad_hoc_data_sources
+                  items:
+                    - name: Building blocks
+                      topicUid: Ad_hoc_Building_blocks
+                    - name: Life cycle
+                      topicUid: Ad_hoc_Life_cycle
+                    - name: Tutorials
+                      topicUid: Ad_hoc_Tutorials
+                - name: Custom operator
+                  topicUid: GQI_Custom_Operator
+                  items:
+                    - name: Building blocks
+                      topicUid: CO_Building_blocks
+                    - name: Life cycle
+                      topicUid: CO_Life_cycle
+                    - name: Tutorials
+                      topicUid: CO_Tutorials
+            - name: Importing a query
+              topicUid: Importing_a_query
         - name: Frequently asked questions about Dashboards and Low-Code Apps
           topicUid: Dashboards_and_Low_Code_Apps_FAQ
     - name: DMS Dashboards (legacy)
