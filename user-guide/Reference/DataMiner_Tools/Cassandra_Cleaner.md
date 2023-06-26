@@ -28,12 +28,12 @@ If these files are not present, generate them by running the executable with the
 
 The most important settings are the `table.name`, `delete.start.time` and `delete.end.time` fields.
 
-When generating the db.yaml file, `table.name` is generated with *timetrace* value. You can change this to *infotrace* value.
+When the *db.yaml* file is generated, `table.name` is generated with the *timetrace* value. You can change this to the *infotrace* value.
 
 > [!CAUTION]
 > All timetrace or infotrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
 
-Log levels for both file and console output can be configured with the `logging.level.file` and `logging.level.console` fields. The possible log levels are TRACE, DEBUG, INFO, WARN, ERROR and FATAL.
+Log levels for both file and console output can be configured with the `logging.level.file` and `logging.level.console` fields. The possible log levels are TRACE, DEBUG, INFO, WARN, ERROR, and FATAL.
 
 > [!NOTE]
 > Enabling TRACE logging will log all executed queries and may affect performance.
@@ -57,19 +57,19 @@ The format of all timestamps is `dd/MM/yyyy hh:mm:ss`.
 
 Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the timetrace or infotrace table.
 
-Depending of the db.yaml configuration, the arguments provided to clean the table, are configured as mentioned below when running the executable:
+Depending on the *db.yaml* configuration, the arguments provided to clean the table are configured as mentioned below when running the executable:
 
-**Timetrace table**
+- **Timetrace table**
 
-- `clean -l` or `clean --large-partition` to clean the ‘-1_-1_-1_-1’ partition.
+  - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 
-- `clean -s` or `clean --small-partition` to clean all other partitions.
+  - `clean -s` or `clean --small-partition` to clean all other partitions.
 
-To execute both steps sequentially in one run, specify both options: `clean -l -s`
+  To execute both steps sequentially in one run, specify both options: `clean -l -s`
 
-**Infotrace table**
+- **Infotrace table**
 
-- `clean -l` or `clean --large-partition` to clean the ‘-1_-1_-1_-1’ partition.
+  - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 
 When the program has finished and the data has been deleted, you still need to run compaction to actually reclaim the disk space. However, note that you need to wait `gc_grace_seconds` after the program finishes before you start the compaction.
 
@@ -91,7 +91,7 @@ You only need to run the tool on one of the Cassandra nodes. After the program h
 
 In general, all functionality regarding alarm monitoring with time ranges will no longer work for the deleted time range.
 
-Affected features:
+Affected features for the *timetrace* table:
 
 - The alarm history retrieval function in DataMiner Cube (e.g. all alarms of the last 24 hours).
 
@@ -100,5 +100,7 @@ Affected features:
 - The history slider functionality in Cube.
 
 - Migration of Cassandra alarms to Elasticsearch (timetrace is used for this, cleaned time ranges will not be available in Elasticsearch for future migrations).
+
+Affected features for the *infotrace* table:
 
 - Information events history retrieval function in Cube (e.g. all information events of the last 24 hours).
