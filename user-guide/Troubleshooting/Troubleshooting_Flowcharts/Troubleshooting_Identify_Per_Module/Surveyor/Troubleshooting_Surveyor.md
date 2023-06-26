@@ -75,7 +75,7 @@ class etc,Views,RedundancyGroups,Export,Sla,Elements,Services, classExternalRef;
 > [!TIP]
 > For more information on elements, see [Elements](xref:elements).
 
-**Issue**: Element data is not filled in, but there is a Run Time Error
+**Issue**: Element data is not filled in, but there is a run-time error
 
 **Plan of attack**: Refer to RTE Flowchart
 

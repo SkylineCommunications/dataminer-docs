@@ -3179,26 +3179,12 @@
                   topicUid: Troubleshooting_Critical_Issues_Automatic_Restart
                 - name: Critical issues - resources
                   topicUid: Troubleshooting_Critical_Issues_Resources
-            - name: Troubleshooting - trending
-              topicUid: Troubleshooting_Trending
             - name: Troubleshooting - alarms
               topicUid: Troubleshooting_Alarms
             - name: Troubleshooting - services
               topicUid: Troubleshooting_Services
-            - name: Troubleshooting - databases
-              topicUid: Troubleshooting_Databases_Overview
-              items:
-                - name: Troubleshooting - Cassandra
-                  topicUid: Troubleshooting_Cassandra
-                  items:
-                    - name: Cassandra - best practice analyzer
-                      topicUid: Troubleshooting_Cassandra_Best_Practice_Analyzer
-                    - name: Cassandra - nodetool status check
-                      topicUid: Troubleshooting_Cassandra_Nodetool_Status_Check
-                    - name: Cassandra - nodetool checks
-                      topicUid: Troubleshooting_Cassandra_Nodetool_Checks
-                - name: Troubleshooting - Elasticsearch
-                  topicUid: Troubleshooting_Elasticsearch
+            - name: Troubleshooting - trending
+              topicUid: Troubleshooting_Trending
             - name: Troubleshooting - process identification
               topicUid: Troubleshooting_Process_Identification
               items:
@@ -3262,7 +3248,7 @@
                 - name: Troubleshooting - Alarm Console
                   topicUid: Troubleshooting_Alarm_Console
                   items:
-                    - name: Troubleshooting - run-time errors (RTEs)
+                    - name: Run-time errors (RTEs)
                       topicUid: Troubleshooting_Run_Time_Errors
                 - name: Troubleshooting - apps
                   topicUid: Troubleshooting_Apps

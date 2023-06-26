@@ -54,7 +54,7 @@ LinkLeak ----|NO|LogCollector2
 ElementActive ----|NO|InfoEventsAlternative
 %% Define hyperlinks %%
 click StartPage "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click CassandraTb "/user-guide/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Cassandra/Troubleshooting_Cassandra.html"
+click CassandraTb "https://community.dataminer.services/troubleshooting-cassandra/"
 %% Apply styles to blocks %%
 class Start,Revert,LogCollector1,LogCollector2,CheckLogs,StopElement,InfoEventsAlternative DarkBlue; 
 class Watchdog,ThreadsDB,Offload,ThreadsSecondary,MemoryLeak LightGray;

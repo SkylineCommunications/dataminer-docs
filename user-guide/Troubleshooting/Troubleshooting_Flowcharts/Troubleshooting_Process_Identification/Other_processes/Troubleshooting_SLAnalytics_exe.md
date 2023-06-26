@@ -26,7 +26,7 @@ If SLAnalytics issues are suspected, proceed with the following checks:
 
 1. Run the **SLLogCollector** tool, with the Include memory dump and SLAnalytics boxes selected. For more information, see [SLLogCollector](xref:SLLogCollector).
 
-1. Check if there is an issue with the **Cassandra database**. The database should be up, running and operational. Refer to the [Cassandra troubleshooting flowchart](xref:Troubleshooting_Cassandra) and [SLDataGateway troubleshooting flowchart](xref:Troubleshooting_SLDataGateway_exe).
+1. Check if there is an issue with the **Cassandra database**. The database should be up, running and operational. Refer to the [Cassandra troubleshooting flowchart](https://community.dataminer.services/troubleshooting-cassandra/) and [SLDataGateway troubleshooting flowchart](xref:Troubleshooting_SLDataGateway_exe).
 
 1. Check if there is an issue with the **SLNet process**. The process should be up, running and operational. Refer to the [SLNet troubleshooting flowchart](xref:Troubleshooting_SLNet_exe).
 

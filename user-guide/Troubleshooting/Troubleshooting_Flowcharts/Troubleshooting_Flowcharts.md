@@ -11,17 +11,13 @@ uid: Troubleshooting_Flowcharts
 
 - [Finding a root cause](xref:Finding_a_Root_Cause)
 
-  - [Trending](xref:Troubleshooting_Trending)
-
-  - [Alarms](xref:Troubleshooting_Alarms)
-
-  - [Services](xref:Troubleshooting_Services)
-
   - [Startup issues](xref:Troubleshooting_Startup_Issues)
 
   - [Critical issues](xref:Troubleshooting_Critical_Issues_Overview)
 
-  - [Databases](xref:Troubleshooting_Databases_Overview)
+  - [Alarms](xref:Troubleshooting_Alarms)
+
+  - [Services](xref:Troubleshooting_Services)
 
   - [Trending](xref:Troubleshooting_Trending)
 
@@ -31,4 +27,3 @@ uid: Troubleshooting_Flowcharts
 
 > [!TIP]
 > See also: [Discover the DataMiner Live Flowchart Troubleshooting](https://community.dataminer.services/video/discover-the-dataminer-live-flowchart-troubleshooting/)
-
