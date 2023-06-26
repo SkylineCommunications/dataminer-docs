@@ -37,6 +37,11 @@ The I-DOCSIS EPM Solution uses the following Automation scripts:
 - **EPM_I_DOCSIS_EPMBeToFePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
 - **EPM_I_DOCSIS_EPMFeToBePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
 - **EPM_I_DOCSIS_AddNewCcapCmPair**: Allows the user to create a CCAP/CM pair from the EPM UI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA**: Used to retrieve all CM DS QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA**: Used to retrieve all CM US QAM Channel-related data in Dashboards using GQI.
 
 ## Dashboards
 
@@ -50,7 +55,19 @@ The I-DOCSIS EPM Solution includes the following dashboards:
 - I-DOCSIS Customer Diagnosis tool - CM Info
 - I-DOCSIS Customer Diagnosis Tool - Network Performance
 - I-DOCSIS Global System Counts
-- I-DOCSIS Cable Modem
+- AMPLIFIER/01. CM Overview
+- AMPLIFIER/02. Offline CM Overview
+- CM/01. CM Overview
+- CM/02. CM DS QAM Channels
+- CM/03. CM US QAM Channels
+- NODE/01. CM Overview
+- NODE/02. Offline CM Overview
+- NODE SEGMENT/01. DS QAM Channels
+- NODE SEGMENT/02. US QAM Channels
+- TAP/01. CM Overview
+- TAP/02. Offline CM Overview
+- SERVICE GROUP/01. DS QAM Channels
+- SERVICE GROUP/02. US QAM Channels
 
 ## Visuals
 
