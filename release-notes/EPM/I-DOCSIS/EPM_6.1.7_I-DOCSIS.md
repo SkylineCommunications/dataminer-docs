@@ -33,6 +33,18 @@ The following KPIs are included: CM MAC, IPv4 Address, DOCSIS Version, Status, V
 
 A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
 
+#### QAM Channels dashboard migration [ID_36684]
+
+Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *NODE SEGMENT/01. DS QAM Channels* and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
+
+For this purpose, new scripts have also been added, which retrieve the QAM Channel-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA* and *EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA*.
+
+#### Cable Modem KPIs dashboard migration [ID_36686]
+
+To improve the stability of the system, the information about Cable Modem KPIs has now been moved to a dashboard (i.e. *CM/01. CM Overview*). A Cable Modem visual overview is also available with the most important KPIs and a link to the dashboards. If you click the link, the relevant cable modem will automatically be selected in the dashboard.
+
+For this purpose, a new script has also been added, which retrieves the CM-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA*.
+
 ## Changes
 
 ### Enhancements
