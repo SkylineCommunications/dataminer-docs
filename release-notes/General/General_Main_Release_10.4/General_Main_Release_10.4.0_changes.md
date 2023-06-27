@@ -124,10 +124,11 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36624]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 
 A number of security enhancements have been made.
 
@@ -273,6 +274,12 @@ From now on, alarms will no longer be regrouped after a manual operation.
 
 From now on, users will be allowed to manually clear automatic incidents.
 
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -322,16 +329,6 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
-#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some rare cases, the following NATS-related error would be thrown:
-
-```txt
-Failed to copy credentials from [IP address] - corrupt zip file
-```
-
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -362,6 +359,12 @@ In some cases, whitespace characters would incorrectly be removed from signature
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
+#### NATS connection could fail due to payloads being too large [ID_36427]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
+
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -374,9 +377,3 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
-
-#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.

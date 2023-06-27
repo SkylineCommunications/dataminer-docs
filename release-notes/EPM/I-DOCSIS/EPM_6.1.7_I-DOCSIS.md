@@ -23,6 +23,16 @@ A new parameter, *Script Name*, has been added to the *Configuration* page of th
 
 Similarly, a *Script Name* parameter has been added to the *Configuration* page of the Skyline EPM Platform DOCSIS connector, so you can specify the Automation script responsible for notifying the CCAPs/CM collector pair of new data to be ingested.
 
+#### Passive overview pages with linked CM overview dashboards [ID_36450]
+
+Overview pages have been added for the passive levels (node, amplifier, and tap), which display the KPIs for the selected entry and contain links to navigate to a dashboard with all cable modems associated with the selected device.
+
+The following KPIs are included: CM MAC, IPv4 Address, DOCSIS Version, Status, Vendor, Model Number, Software Version, Last Registration Time, Uptime, US SNR Status, US Time Offset Status, US RX Power Status, US Post FEC Status, DS SNR Status, US TX Power Status, DS Post FEC Status, RTT, Jitter, Latency, Packet Loss, Memory Size, Memory Utilization, Processor Utilization, Reflection Distance, Group Delay Status, Reflection Status, DS RX Power Status, Tap Name, Amplifier Name, Node Segment Name, and Service Group Name.
+
+#### New Automation script to add CCAP/CM pair [ID_36459]
+
+A new Automation script, *EPM_I_DOCSIS_AddNewCcapCmPair*, is now available, which can be used to create a CCAP/CM pair from the EPM UI. The interactive script will take the user through the different steps of the configuration.
+
 #### QAM Channels dashboard migration [ID_36684]
 
 Information about QAM Channel instances has now been moved from the data pages of the EPM entities to dedicated dashboards (i.e. *NODE SEGMENT/01. DS QAM Channels* and *NODE SEGMENT/02. US QAM Channels*). A visual overview is also available containing the overview information for the EPM entities with links to new dashboards.
@@ -103,8 +113,16 @@ The following changes have been done to the Skyline EPM Platform DOCSIS WM conne
 
 - The connector no longer uses calls to information events to pass information.
 - Parameters that are used to capture information events are no longer used.
-- Inter-app calls are now aggregated to send information to the back end.
-- Information from the back end is now processed through inter-app communication.
+- Inter-app calls are now aggregated to send information to the back-end elements.
+- Information coming from the back-end elements is now processed through inter-app communication.
+
+#### Unnecessary columns hidden on topology data pages [ID_36451]
+
+The following columns are now by default hidden on the topology data pages, so that the pages have a cleaner look: *Network ID*, *Market ID*, *Hub ID*, *View Impact*, *CCAP Core ID*, *DS Line Card ID*, *US Line Card ID*, *DS Port ID*, *US Port ID*, *Node Segment ID*, *CM ID*, *Service Group ID*, *DS Service Group ID*, *US Service Group ID*, *Number Other DOCSIS*, *Node ID*, *Amplifier ID*, and *Tap ID*.
+
+#### Exception values added for percentage, latitude, and longitude parameters [ID_36452]
+
+To prevent parameters getting an incorrect negative value, exception values have been added to the Percentage Ping OK and Percentage Ping Unreachable parameters on the node and amplifier level, as well as to the latitude and longitude parameters on amplifier and tap level. These parameters will now display "N/A" when an exception occurs.
 
 ### Fixes
 
@@ -174,3 +192,7 @@ In addition, for the Skyline EPM Platform DOCSIS connector, the *SetEmptyColumns
 #### Group Delay or Reflection Status incorrectly calculated based on NMTTER threshold [ID_36344]
 
 Up to now, the Group Delay or Reflection Status parameter was not calculated correctly, because it was calculated based on the NMTTER threshold. To address this issue, new logic has been implemented: If either the Group Delay Status or the Reflection Status is marked as out of specification (OOS), the Group Delay or Reflection Status parameter will also be marked as out of specification (OOS). If both the Group Delay Status and the Reflection Status are marked as OK, the parameter will be marked as OK.
+
+#### CM missing on map [ID_36448]
+
+It could occur that CMs were missing on the maps in the EPM Solution even if geo localization was available for them. The filters of the XML files controlling the maps (i.e. *EPM_MAPS_AMPLIFIER_CPE*, *EPM_MAPS_NODE_CPE*, *EPM_MAPS_NODE_SEGMENT_CPE*, and *EPM_MAPS_TAP_CPE*) have been adjusted to correct this issue.

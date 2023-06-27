@@ -343,6 +343,18 @@ The proactive cap detection feature generates suggestion events for predicted da
 
 The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
 
+#### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, the subtract placeholder could be used to calculate datetime and time span values by subtracting one or more values from a specified value. From now on, this placeholder also supports numerics. Just like with datetime values and time spans, you can subtract consecutive numbers from the first number.
+
+Examples:
+
+- Subtracting one number from another: `[Subtract:10,3]`
+
+- Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -398,6 +410,12 @@ When, in an alarm template, a suggestion event was promoted to an alarm event, i
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, DataMiner Cube would fail to connect to a DataMiner Agent using gRPC, especially when a large number of clients were connecting to that same agent.
+
+#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID_36420]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a Cube session and connected to a DataMiner System running a version from 9.6.3 onwards that had an SRM license, in some cases, the ListView column configuration data fetched from the server could incorrectly get replaced by default values on the Cube client.
 
 #### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
 

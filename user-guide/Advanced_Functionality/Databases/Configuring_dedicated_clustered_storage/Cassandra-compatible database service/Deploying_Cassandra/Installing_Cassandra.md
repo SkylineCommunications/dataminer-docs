@@ -18,7 +18,7 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
    > [!IMPORTANT]
    >
-   > - Make sure you download a supported Cassandra version as indicated in the [Cassandra requirements](xref:Installing_Cassandra).
+   > - Make sure you download a supported Cassandra version as indicated in the [Cassandra requirements](xref:DataMiner_Compute_Requirements#cassandra-requirements).
    > - Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
@@ -121,7 +121,9 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
      - **cluster_name**: This needs to be the same for all nodes in your Cassandra cluster.
 
-     - **hinted_handoff_throttle_in_kb**: Set this to *10240*.
+     - **hinted_handoff_throttle_in_kb**: Only used prior to Cassandra 4.1. Set this to *10240*.
+
+     - **hinted_handoff_throttle**: From Cassandra 4.1 onwards, this option replaces *hinted_handoff_throttle_in_kb*. Set this to *10000*.
 
      - **max_hints_delivery_threads**: Set this to *12*.
 

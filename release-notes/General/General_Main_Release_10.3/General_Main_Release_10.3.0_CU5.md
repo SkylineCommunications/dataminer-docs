@@ -71,7 +71,29 @@ From now on, in an SNMP table, columns of type "retrieved" can be placed in betw
 
 Because of a number of enhancements with regard to fetching LinkerTableEntries of function resources, overall performance has increased.
 
+#### SLAnalytics - Behavioral anomaly detection: Enhanced anomaly labelling for periodically returning behavioral changes [ID_36664]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+A behavioral change in the trend data of a parameter is considered an anomaly if there have not been similar behavioral changes that occurred regularly or frequently in the historical behavior of the parameter. This anomaly labelling has now been enhanced for periodically returning behavioral changes.
+
+#### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When smart baselines were configured, by default information events would be generated every 5 minutes. This information event generation has now been disabled to avoid information event floods in e.g. EPM environments.
+
 ### Fixes
+
+#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.6 -->
+
+In some rare cases, the following NATS-related error would be thrown:
+
+```txt
+Failed to copy credentials from [IP address] - corrupt zip file
+```
 
 #### SLAnalytics: Incorrect trend predictions in case of incorrect data ranges set in the protocol [ID_36521]
 
@@ -107,8 +129,26 @@ On systems with a Cassandra Cluster and an Elasticsearch database, the following
 
 In some rare cases, an error could occur in SLElement when a timeout action of an element with multiple connections would overwrite another timeout action of the same element.
 
+#### SLAnalytics - Behavioral anomaly detection: False change point could be generated before a gap in a trend graph [ID_36605]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When there was a gap in a trend graph that showed a perfectly increasing line, in some cases, a false change point could be generated right before that gap.
+
+#### SLAnalytics - Automatic incident tracking: Attempt to clear an alarm group that had already been cleared [ID_36654]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+In some rare cases, the system would incorrectly try to clear an alarm group that had already been cleared.
+
 #### NATSMaxPayloadException could be thrown when a client requested large amounts of data [ID_36655]
 
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When a client requested large amounts of data, in some cases, a `NATSMaxPayloadException` could be thrown.
+
+#### Cassandra Cluster: DVE properties would be cleared when an update was sent to the database [ID_36658]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
+
+DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.

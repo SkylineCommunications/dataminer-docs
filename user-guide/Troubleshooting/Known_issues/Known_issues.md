@@ -16,7 +16,7 @@ uid: Known_issues
 | [Activities and scripts delayed because of CheckVIPs thread](xref:KI_CheckVIPs_delays_activities) | DataMiner 10.2.0 up to 10.2.0 [CU15]/10.3.0 [CU4]<br>DataMiner 10.1.12 up to 10.3.6 | April 28, 2023 |
 | [Elasticsearch not initialized when DataMiner starts up](xref:KI_Elasticsearch_not_initialized_on_DMA_startup) | Any version using Elasticsearch | April 20, 2023 |
 | [DataMiner keeps trying to restart when Elasticsearch is unavailable](xref:KI_Restart_loop_when_Elasticsearch_unavailable) | DataMiner 10.3 main and feature releases | April 11, 2023 |
-| [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size) | From DataMiner 10.1.0/10.0.13 onwards | March 15, 2023 |
+| [GenIf folder takes up too much disk space](xref:KI_GenIf_Folder_Growing_In_Size) | DataMiner 10.1.0 up to 10.3.0 [CU4]<br>DataMiner 10.0.13 up to 10.3.7 | March 15, 2023 |
 | [Problem with booking automation and function DVE deactivation](xref:KI_SRM_booking_events_issue) | SRM setups with DataMiner version below 10.3.0/10.3.2 | March 10, 2023 |
 | [SLPort deadlock when element with serial connection is restarted](xref:KI_SLPort_deadlock_after_restart_serial_connection) | DataMiner 10.1.0 [CU17] to 10.2.0 [CU11]/10.3.0.0 - 12752<br>DataMiner 10.2.8 to 10.3.3 | February 28, 2023 |
 | [Local user unable to access DMA after first reboot after installation](xref:KI_Local_user_unable_to_access_DMA_after_first_reboot_after_installation) | DataMiner 10.3.3 | February 24, 2023 |
