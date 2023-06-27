@@ -57,7 +57,7 @@ The format of all timestamps is `dd/MM/yyyy hh:mm:ss`.
 
 Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the timetrace or infotrace table.
 
-Depending on the *db.yaml* configuration, the arguments provided to clean the table are configured as mentioned below when running the executable:
+Depending on the table specified in the *db.yaml* configuration, the following arguments are supported to clean the table:
 
 - **Timetrace table**
 
