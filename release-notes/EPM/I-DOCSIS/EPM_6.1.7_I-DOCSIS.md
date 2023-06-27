@@ -45,6 +45,16 @@ To improve the stability of the system, the information about Cable Modem KPIs h
 
 For this purpose, a new script has also been added, which retrieves the CM-related data in order to display it in the dashboards: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA*.
 
+#### Tables with passives information added to key topology levels [ID_36719]
+
+On the CCAP, Line Cards, Node Segment, and Service Group topology level, a tab with passive levels tables (Node, Amplifier, Tap, and Subscriber) has been added.
+
+#### CM QAM US/DS Channels migrated to dashboards [ID_36720]
+
+The  CM QAM US Channel and CM QAM DS Channel tabs at the CM topology level have been migrated to dedicated dashboards (i.e. *CM/03. CM US QAM Channels* and *CM/02. CM DS QAM Channels*, respectively). You can access these dashboards by clicking a button in Visual Overview at the CM Overview topology level.
+
+To support this, the following new scripts have been added: *EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA*, *EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA*, *EPM_I_DOCSIS_CM_DS_QAM_CHANNEL*, and *EPM_I_DOCSIS_CM_US_QAM_CHANNEL*.
+
 ## Changes
 
 ### Enhancements
