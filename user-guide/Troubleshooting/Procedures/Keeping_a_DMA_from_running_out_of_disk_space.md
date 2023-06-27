@@ -85,4 +85,7 @@ Total estimated time of the procedure: approximately 40 minutes, depending on th
 
     - **Cleaning up of the GenIf folder – approx. 2 minutes**
 
-        When debugging GQI, the GenIf folder may have been enabled but never removed again. This is a [known issue](xref:KI_GenIf_Folder_Growing_In_Size). If your system has a `C:\Skyline DataMiner\Logging\GenIf` folder, you can remove this folder, but only if no active investigations are in progress. **Check with your Skyline contact before removing this folder** to make sure that this is the case.
+        When debugging GQI, the GenIf folder may have been enabled but never removed again. This is a [known issue](xref:KI_GenIf_Folder_Growing_In_Size) in DataMiner versions prior to  10.3.0 [CU5]/10.3.8. If your system has a `C:\Skyline DataMiner\Logging\GenIf` folder, you can remove this folder, but only if no active investigations are in progress. **Check with your Skyline contact before removing this folder** to make sure that this is the case.
+
+        > [!NOTE]
+        > As of DataMiner version 10.3.0 [CU5]/10.3.8, the size of the `GenIf` folder is automatically limited to a maximum of 100 MB<!-- RN 36642 -->.

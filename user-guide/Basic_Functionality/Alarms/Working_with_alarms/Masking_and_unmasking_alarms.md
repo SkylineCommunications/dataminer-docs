@@ -38,9 +38,10 @@ To manually mask an alarm:
 A new alarm record will be added to the life cycle of the alarm, with *Status* and *Alarm Type* set to “Mask”. The masked alarm will disappear from the *Active alarms* tab, and is added to the *Masked alarms* tab instead
 
 > [!NOTE]
+>
 > - When an alarm is masked, the masked alarm no longer influences the overall alarm status of the element.
 > - When an alarm is masked, any items linked to parameters that are consequentially masked, such as Visio items, LED bars, oscilloscopes, tables etc., will be displayed in purple.
-> - When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](xref:Configuring_alarm_templates#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+> - When a row in a monitored table is deleted and then re-added, it can occur that a masked state applied on a cell in that row is lost, even if it was not configured to be masked until cleared. To prevent this, set the *AutoClear* option to false for the alarm in question. See [Setting the autoclear options for alarms in an alarm template](xref:Setting_the_autoclear_option_in_alarm_template).
 
 ## Unmasking an alarm
 

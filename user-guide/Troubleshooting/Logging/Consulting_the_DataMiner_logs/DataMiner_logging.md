@@ -75,6 +75,8 @@ In the *Log settings* section, you can change the log levels for all modules of 
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
 
+***
+
 ## Sorting the log file list
 
 At the top of the left-hand list, next to the header, *A-Z* is displayed.

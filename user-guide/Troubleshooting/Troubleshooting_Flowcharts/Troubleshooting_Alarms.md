@@ -2,7 +2,7 @@
 uid: Troubleshooting_Alarms
 ---
 
-# Troubleshooting - Alarms
+# Troubleshooting - alarms
 
 > [!NOTE]
 >
@@ -108,7 +108,7 @@ CreationIssue([Creation issue])
 AlarmTemplate{{"Check alarm template configuration."}}
 ProtocolDebug{{"Use the protocol debug tool to simulate.\nClick the node to go the relevant docs page."}}
 CanSimulate{{"Managed to simulate?"}}
-ReduceFeatures{{"Reduce the amount of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go a relevant docs page."}}
+ReduceFeatures{{"Reduce the number of features used to\nnarrow down the issue.\n(e.g. Hysteresis, conditional monitoring...)\nClick the node to go to a relevant docs page."}}
 VerifyConfiguration{{"Verify if you have a clear issue,\nincorrect configuration or undefined behavior."}}
 NotFixedCOPS{{"Contact techsupport@skyline.be.\nInclude all gathered information and steps taken."}}
 ExtraInfoNotFixed{{"1. Check if the behavior is the same on a\nstandalone parameter, column parameter, matrix parameter...\n2. Check the element logging.\n3. Contact support.data-insights@skyline.be.\nInclude all gathered information and steps taken."}}
@@ -123,7 +123,7 @@ CanSimulate --- |No|ExtraInfoNotFixed
 %% Define hyperlinks %%
 click ProtocolDebug "/user-guide/Reference/DataMiner_Tools/
 Protocol_Debug_Tools.html"
-click ReduceFeatures "/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates.html"
+click ReduceFeatures "/user-guide/Basic_Functionality/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates/About_the_alarm_template_editor.html"
 %% Apply styles to blocks %%
 class CreationIssue classTerminal;
 class AlarmConsole,Surveyor,Apps,Trending,ProtocolDebug,ReduceFeatures classExternalRef;

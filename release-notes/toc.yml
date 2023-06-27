@@ -142,6 +142,8 @@
           topicUid: General_Main_Release_10.2.0_CU16
         - name: General Main Release 10.2.0 CU17 - Preview
           topicUid: General_Main_Release_10.2.0_CU17
+        - name: General Main Release 10.2.0 CU18 - Preview
+          topicUid: General_Main_Release_10.2.0_CU18
       - name: Feature Release
         topicUid: General_Feature_Release_10.2.12
         items:
@@ -525,6 +527,8 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU4
         - name: DataMiner web apps Main Release 10.3.0 CU5 - Preview
           topicUid: Web_apps_Main_Release_10.3.0_CU5
+        - name: DataMiner web apps Main Release 10.3.0 CU6 - Preview
+          topicUid: Web_apps_Main_Release_10.3.0_CU6
       - name: Feature Release
         topicUid: Web_apps_Feature_Release_10.3.8
         items:
@@ -913,8 +917,10 @@
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
-      topicUid: SRM_1.2.31
+      topicUid: SRM_1.2.32
       items:
+      - name: SRM 1.2.32
+        topicUid: SRM_1.2.32
       - name: SRM 1.2.31
         topicUid: SRM_1.2.31
       - name: SRM 1.2.30

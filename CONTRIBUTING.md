@@ -172,7 +172,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 > If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g. `https://github.com/MyGitHubName/dataminer-docs`).
 
 > [!TIP]
-> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork.
+> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork. However, note that if you have other editors installed as well (e.g. Notepad++), this button might display a different editor. You can change this via the *Options* link in the box containing the button.
 >
 > ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
 
@@ -196,7 +196,7 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
+   ![Indication of outdated fork](~/images/Contributing_Sync_Fork.png)
 
 1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 

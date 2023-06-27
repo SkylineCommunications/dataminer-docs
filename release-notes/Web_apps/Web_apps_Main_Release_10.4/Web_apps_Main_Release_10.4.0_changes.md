@@ -285,25 +285,6 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
-#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
-
-`Error trapped: Elastic returned unexpected value ''.`
-
-From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
-
-Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
-
-| ​Type | ​RawValue | ​DisplayValue |
-|------|----------|--------------|
-| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
-| ​(Distinct) Count   | 0    | 0                |
-| ​Std dev/Percentile | ​null | ​​"Not applicable" |
-| ​Sum                | 0    | 0                |
-
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -311,6 +292,12 @@ Because of this change, the behavior of aggregations applied on all types of emp
 When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
 #### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
 
@@ -346,6 +333,14 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParametersSorted
 - GetParameterWithDynamicUnits
 - ObserveParameter
+
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
 
 ### Fixes
 
@@ -538,3 +533,17 @@ When, in the *Monitoring* app, a parameter table received updates via polling, t
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.

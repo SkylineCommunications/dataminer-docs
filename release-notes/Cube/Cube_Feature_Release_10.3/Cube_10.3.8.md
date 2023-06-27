@@ -12,10 +12,6 @@ uid: Cube_Feature_Release_10.3.8
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
-
-## Other new features
-
 #### Visual Overview: New BookingData component [ID_33215] [ID_36489]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -64,6 +60,21 @@ To be able to use the *BookingData* component, you will need
   - Modules > Profiles > UI Available
   - Modules > Resources > UI Available
   - Modules > Services > UI Available
+
+#### Trending: Time-scoped relations [ID_36434]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A light bulb icon will now be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
+
+You can for instance use this in case a parameter (e.g. the total available memory of a server) behaves oddly during a particular time range (e.g. a downward spike), in order to find out if other parameters of the same device also showed unusual behavior during the same time range.
+
+For more information, see [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph).
+
+> [!NOTE]
+> Currently, the feature only proposes parameters from the same DataMiner element.
+
+## Other new features
 
 #### Open element cards will immediately show any changes made with regard to parameters [ID_36286]
 
@@ -116,6 +127,12 @@ Up to now, when you requested the alarms of a certain time span, Cube would alwa
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### ListView column configuration data could incorrectly get replaced by default values on the Cube client [ID_36420]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you opened a Cube session and connected to a DataMiner System running a version from 9.6.3 onwards that had an SRM license, in some cases, the ListView column configuration data fetched from the server could incorrectly get replaced by default values on the Cube client.
 
 #### DataMiner Cube desktop app: False positive warnings involving a number of DLL files [ID_36424]
 
@@ -174,3 +191,9 @@ When, in the *Settings* window, you added a suggestion tab to a group setting fo
 <!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
 
 When you removed a connection between an active element and an element that was stopped/paused, the connection would be removed from the active element but not from the stopped/paused element. When you started that element again and tried to remove the connection, the action would fail.
+
+#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID_36687]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened an alarm tab of type "sliding window", the history alarms matching the sliding window would be retrieved from the server but DataMiner Cube would incorrectly not show them.

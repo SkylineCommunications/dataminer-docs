@@ -127,6 +127,10 @@ If DataMiner CloudGateway 2.10.6 was installed, users were not automatically log
 
 Changes have been implemented in DataMiner CloudGateway to improve its general stability and to prevent generating exception logs upon shutdown.
 
+#### 7 April 2023 - Fix - CoreGateway 2.12.1 - Row by row option for GQI Join operator not correctly supported [ID_35740]
+
+Up to now, DataMiner CoreGateway did not correctly support the *Row by row* option for the GQI *Join* operator. This could cause errors when a query using this option was exported to Data Aggregator.
+
 #### 7 April 2023 - Fix - CoreGateway 2.12.1 - Long-running deployment fails [ID_36121]
 
 When a user deployed a package on a DataMiner Agent using dataminer.services, and the deployment took more than 3 minutes, it could occur that this failed. In the Admin app, an exception like the following example could be displayed:
