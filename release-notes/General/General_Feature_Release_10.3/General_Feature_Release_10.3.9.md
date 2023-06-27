@@ -28,6 +28,12 @@ uid: General_Feature_Release_10.3.9
 
 ### Enhancements
 
+#### Security enhancements [ID_36319]
+
+<!-- 36319: MR 10.4.0 - FR 10.3.9 -->
+
+A number of security enhancements have been made.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
