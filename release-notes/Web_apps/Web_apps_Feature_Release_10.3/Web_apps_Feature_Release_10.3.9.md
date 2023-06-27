@@ -26,8 +26,8 @@ uid: Web_apps_Feature_Release_10.3.9
 
 ### Fixes
 
-#### Dashboards app: Input box of selection boxes would turn black on small screens [ID_36738]
+#### Dashboards app: Black boxes on top of first and last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-When the screen size was so small that the navigation pane was hidden, the input box of the selection boxes on the screen would incorrectly turn black.
+When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.
