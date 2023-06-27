@@ -1167,7 +1167,7 @@
                     - name: Elasticsearch
                       topicUid: Elasticsearch_database
                       items:
-                        - name: Installing the Elasticsearch database
+                        - name: Installing Elasticsearch on a separate Linux machine
                           topicUid: Installing_Elasticsearch_on_separate_Linux_machine
                         - name: Manually connecting a DMA to an Elasticsearch cluster
                           topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
@@ -2013,7 +2013,7 @@
                       topicUid: CO_Tutorials
             - name: Importing a query
               topicUid: Importing_a_query
-        - name: Frequently asked questions about Dashboards and Low-Code Apps
+        - name: Frequently asked questions
           topicUid: Dashboards_and_Low_Code_Apps_FAQ
     - name: DMS Dashboards (legacy)
       topicUid: dashboards
@@ -3551,6 +3551,21 @@
               topicUid: Working_with_Alerter_pop-up_balloons
             - name: Configuring Alerter
               topicUid: Configuring_Alerter
+              items:
+                - name: Connecting Alerter to another DataMiner System
+                  topicUid: Connecting_Alerter_to_another_DMS
+                - name: Setting your startup preferences for Alerter
+                  topicUid: Setting_Alerter_startup_preferences
+                - name: Setting an alarm filter in Alerter
+                  topicUid: Setting_Alerter_alarm_filter
+                - name: Configuring alarm storm prevention in Alerter
+                  topicUid: Configuring_Alerter_alarm_storm_prevention
+                - name: Setting the notification options in Alerter
+                  topicUid: Setting_Alerter_notification_options
+                - name: Configuring Alerter pop-up balloons
+                  topicUid: Configuring_Alerter_popup_balloons
+                - name: Configuring options related to acknowledging alarms
+                  topicUid: Configuring_Alerter_acknowledging_options
         - name: Analyze startup logs
           topicUid: Analyze_Startup_Logs
         - name: Cassandra Cleaner
