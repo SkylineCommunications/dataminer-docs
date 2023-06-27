@@ -261,6 +261,28 @@ Because of a number of enhancements, overall accuracy of the proactive cap detec
 
 A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
 
+#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the *Cassandra Cleaner* tool could only be used to remove data from the *timetrace* table. From now on, it can also be used to remove data from the *infotrace* table.
+
+1. In the *db.yaml* file, set `table.name` to "infotrace".
+
+   By default, `table.name` is set to "timetrace".
+
+1. Specify a time range by setting the `delete.start.time` and `delete.end.time` fields.
+
+  > [!CAUTION]
+  > All infotrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
+
+1. Run the following command: `clean -l`
+
+   > [!NOTE]
+   > The *infotrace* table can only be cleaned using the `clean -l` command.
+
+For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
+
 #### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
