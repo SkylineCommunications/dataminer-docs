@@ -299,6 +299,12 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
+#### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
+
 #### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -548,7 +554,7 @@ From now on, users who only have permission to view dashboards will not see any 
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
 
-#### Dashboards app: Black boxes on top of first and last field of selection boxes on small screens [ID_36738]
+#### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
