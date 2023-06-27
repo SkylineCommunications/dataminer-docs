@@ -1167,7 +1167,7 @@
                     - name: Elasticsearch
                       topicUid: Elasticsearch_database
                       items:
-                        - name: Installing the Elasticsearch database
+                        - name: Installing Elasticsearch on a separate Linux machine
                           topicUid: Installing_Elasticsearch_on_separate_Linux_machine
                         - name: Manually connecting a DMA to an Elasticsearch cluster
                           topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
