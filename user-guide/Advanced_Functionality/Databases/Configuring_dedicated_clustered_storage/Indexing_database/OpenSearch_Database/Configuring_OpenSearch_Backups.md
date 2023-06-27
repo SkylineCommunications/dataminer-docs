@@ -280,6 +280,31 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 You have now finished configuring an OpenSearch backup.
 
+### Restore a snapshot using OpenSearch Dashboards
+
+1. Open OpenSearch Dashboards, and navigate to the left-hand pane. Under *Snapshot Management*, select *Snapshots* to view an overview of all snapshots.
+
+   ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_SnapshotOverviewSnapshot20230620.png)
+
+1. Select the snapshot we created earlier, and click on the **Restore** button.
+
+1. Below panel opens, select the following options:
+
+   **Specify restore option**
+
+   - Select *Restore all indices in snapshot*
+
+   **Rename restored indices**
+
+   - Select *Do not rename*
+
+   **Advanced options**
+
+   - Enable *Restore aliases*
+
+   ![OpenSearch Dashboards - Restore Snapshot](~/user-guide/images/OpenSearchDashboards_RestoreSnapshotPanel.png)
+
+
 ## Restoring the snapshot using REST API
 
 1. Ensure that the target OpenSearch cluster is empty.
