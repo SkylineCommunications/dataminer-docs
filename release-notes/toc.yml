@@ -716,7 +716,7 @@
         items:
         - name: EPM 6.1.8 I-DOCSIS - Preview
           topicUid: EPM_6.1.8_I-DOCSIS
-        - name: EPM 6.1.7 I-DOCSIS - Preview
+        - name: EPM 6.1.7 I-DOCSIS
           topicUid: EPM_6.1.7_I-DOCSIS
         - name: EPM 6.1.6 I-DOCSIS
           topicUid: EPM_6.1.6_I-DOCSIS
