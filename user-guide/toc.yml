@@ -1935,10 +1935,10 @@
               - name: Text input
                 topicUid: DashboardTextInputFeed
         - name: Generic Query Interface (GQI)
-          topicUid: Configuring_GQI_feeds
+          topicUid: Generic_Query_Interface
           items:
-            - name: Creating a query
-              topicUid: Creating_queries
+            - name: Creating a GQI query
+              topicUid: Creating_GQI_query
             - name: Query data sources
               topicUid: Query_data_sources
             - name: Query operators
@@ -1963,38 +1963,10 @@
                 - name: Top X
                   topicUid: GQI_Top_X
             - name: Extensions
-              topicUid: GQI_API_reference
+              topicUid: Configuring_an_ad_hoc_data_source_in_a_query
               items:
-                - name: API reference
-                  topicUid: GQI_API_reference
-                  items:
-                    - name: IGQIDataSource
-                      topicUid: IGQIDataSource
-                    - name: IGQIInputArguments
-                      topicUid: IGQIInputArguments
-                    - name: IGQIOnInit
-                      topicUid:
-                    - name: IGQIOnPrepareFetch
-                      topicUid:
-                    - name: IGQIOnDestroy
-                      topicUid:
-                    - name: GQIColumn
-                      topicUid: GQIColumn
-                    - name: GQIPage
-                      topicUid: GQIPage
-                    - name: GQIRow
-                      topicUid: GQIRow
-                    - name: GQICell
-                      topicUid: GQICell
-                    - name: GQIArgument
-                      topicUid: GQIArgument
-                    - name: GQIDMS
-                      topicUid: GQIDMS
-                      items:
-                        - name: Retrieving data by means of DMS messages
-                          topicUid: Retrieving_data_by_means_of_DMS_messages
-                - name: Ad hoc data scources
-                  topicUid: Ad_hoc_data_sources
+                - name: Configuring an ad hoc data source in a query
+                  topicUid: Configuring_an_ad_hoc_data_source_in_a_query
                   items:
                     - name: Building blocks
                       topicUid: Ad_hoc_Building_blocks
@@ -2011,6 +1983,34 @@
                       topicUid: CO_Life_cycle
                     - name: Tutorials
                       topicUid: CO_Tutorials
+                - name: API reference
+                  topicUid: IGQIDataSource
+                  items:
+                    - name: IGQIDataSource
+                      topicUid: IGQIDataSource
+                    - name: IGQIInputArguments
+                      topicUid: IGQIInputArguments
+                    - name: IGQIOnInit
+                      topicUid: IGQIOnInit
+                    - name: IGQIOnPrepareFetch
+                      topicUid: IGQIOnPrepareFetch
+                    - name: IGQIOnDestroy
+                      topicUid: IGQIOnDestroy
+                    - name: GQIColumn
+                      topicUid: GQIColumn
+                    - name: GQIPage
+                      topicUid: GQIPage
+                    - name: GQIRow
+                      topicUid: GQIRow
+                    - name: GQICell
+                      topicUid: GQICell
+                    - name: GQIArgument
+                      topicUid: GQIArgument
+                    - name: GQIDMS
+                      topicUid: GQIDMS
+                      items:
+                        - name: Retrieving data by means of DMS messages
+                          topicUid: Retrieving_data_by_means_of_DMS_messages
             - name: Importing a query
               topicUid: Importing_a_query
         - name: Frequently asked questions

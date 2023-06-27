@@ -1,15 +1,13 @@
 ---
-uid: Configuring_GQI_feeds
+uid: Creating_GQI_query
 ---
 
-# Configuring query (GQI) data feeds
+# Creating a GQI query
 
 From DataMiner 10.0.13 onwards, a special type of data feed is available, using the Generic Query Interface. This “Queries” data item allows you to construct a query in order to tap into the wealth of data available in your DataMiner System.
 
 > [!TIP]
 > See also: [Building Queries with DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/video/building-queries-with-dataminer-generic-query-interface-gqi/) ![Video](~/user-guide/images/video_Duo.png)
-
-## Creating a query
 
 You can create a query as follows:
 
@@ -25,7 +23,7 @@ You can create a query as follows:
 1. In the drop-down box below this, select the data source you want to use. For a detailed overview of all available data sources, see [Query data sources](xref:Query_data_sources).
 
    > [!IMPORTANT]
-   > It is also possible to configure an external data source in a query. For more information, see [Configuring an external data source in a query](xref:Configuring_an_external_data_source_in_a_query).
+   > It is also possible to configure an ad hoc data source in a query. For more information, see [Configuring an ad hoc data source in a query](xref:Configuring_an_ad_hoc_data_source_in_a_query).
 
 1. Select an operator. This step is optional; if you do not select an operator, the data set will be returned untouched. See [Query operators](xref:Query_operators).
 

@@ -6,7 +6,7 @@ uid: DashboardTriggerFeed
 
 This feed (available from DataMiner 10.2.0/10.1.1 onwards) allows you to trigger other components either manually or automatically.
 
-At present, this feed can only be used as a filter feed for a component displaying a [GQI query](xref:Configuring_GQI_feeds) result. It will function as a refresh trigger for that query.
+At present, this feed can only be used as a filter feed for a component displaying a [GQI query](xref:Creating_GQI_query) result. It will function as a refresh trigger for that query.
 
 You can for example use this in a low-code app or a dashboard to refresh a [table component](xref:DashboardTable) based on a timer.
 
