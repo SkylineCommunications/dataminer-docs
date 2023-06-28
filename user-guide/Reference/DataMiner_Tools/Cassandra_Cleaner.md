@@ -18,7 +18,7 @@ You can download this tool from [DataMiner Dojo](https://community.dataminer.ser
 
 There are two configuration files present in the root directory of the tool:
 
-- *db.yaml*: Similar to *DB.xml*. Contains information about the database.
+- *db.yaml*: Similar to *DB.xml*. Contains information about the database. See [db.yaml](#dbyaml).
 
 - *settings.yaml*: Contains application-specific settings.
 
@@ -26,7 +26,7 @@ If these files are not present, generate them by running the executable with the
 
 ### db.yaml
 
-The most important settings are the `table.name`, `delete.start.time` and `delete.end.time` fields.
+The most important settings are the `table.name`, `delete.start.time`, and `delete.end.time` fields.
 
 When the *db.yaml* file is generated, `table.name` is generated with the *timetrace* value. You can change this to the *infotrace* value.
 
@@ -38,7 +38,7 @@ Log levels for both file and console output can be configured with the `logging.
 > [!NOTE]
 > Enabling TRACE logging will log all executed queries and may affect performance.
 
-It is advised to throttle the number of concurrent deletes if the system is already under heavy load. Throttling can be achieved by reducing the `queue.max.concurrent.queries` setting. This setting should typically be kept between 10 and 100.
+We recommend throttling the number of concurrent deletes if the system is already under heavy load. Throttling can be achieved by reducing the `queue.max.concurrent.queries` setting. This setting should typically be kept between 10 and 100.
 
 Make sure that the `queue.buffer.size` setting is always at least 5 times greater than the `queue.max.concurrent.queries` setting to guarantee efficient execution.
 
@@ -55,7 +55,7 @@ The format of all timestamps is `dd/MM/yyyy hh:mm:ss`.
 
 ## Running the tool
 
-Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the timetrace or infotrace table.
+Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the *timetrace* or *infotrace* table.
 
 Depending on the table specified in the *db.yaml* configuration, the following arguments are supported to clean the table:
 
