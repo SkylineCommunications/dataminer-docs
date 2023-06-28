@@ -4,7 +4,7 @@ uid: DataMinerComparisonTool
 
 # DataMiner Comparison tool
 
-The DataMiner Comparison tool is available from DataMiner 9.5.5 onwards. It is a web application that allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+The DataMiner Comparison tool is a web application that allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
 You can access the tool via the following URL:
 
