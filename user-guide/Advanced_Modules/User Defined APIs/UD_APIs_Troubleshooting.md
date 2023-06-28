@@ -73,7 +73,7 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Access to XXX at 'XXX' from origin 'XXX' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.**
 
-  For safety reasons, user-defined APIs do not set CORS headers. It is not safe to use a user-defined API from a web client. See [Triggering an API](xref:UD_APIs_Triggering_an_API#cors).
+  For safety reasons, user-defined APIs does not set CORS headers. It is not safe to use a user-defined API from a web client. See [Triggering an API](xref:UD_APIs_Triggering_an_API#cors).
 
 ### General checks
 
