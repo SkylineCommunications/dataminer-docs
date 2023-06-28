@@ -501,6 +501,10 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
+>   - RegexReplace can also be used to remove the unit suffix of a parameter to be able to use it as a term in an operation with the sum placeholder. In the param placeholder used on a parameter that has a unit, this is needed to enable the sum operator to [parse the value into an integer](xref:\[Sum:X,Y,Z\]). A simple example, where the suffix "*Frames*" is removed to calculate a sum of parameter with id 5 and  a fixed value 17.
+>   ```txt
+>   [sum:[RegexReplace:\sFrames$,[param:*,5],],17]
+>   ```
 
 ### \[Reservation:...\]
 
