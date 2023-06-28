@@ -194,7 +194,7 @@ sudo generate-certificates.sh
       PATH+=:/usr/share/opensearch/jdk/bin/
       ```
 
-   1. Save the script by entering CTRL+O, CTRL+X.
+   1. To save your changes enter CTRL+O, followed CTRL+X to close the .sh file and to return to the terminal.
 
 The *generate-certificates.sh* script should now be able to execute without encountering the `Keytool:command not found` error.
 
