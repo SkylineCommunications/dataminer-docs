@@ -114,5 +114,5 @@ The shape will show the following information:
 
 > [!NOTE]
 >
-> - To use this component, you need to have a Resource Manager and Service Manager license, as well as the user permissions to access the UI of all [SRM modules](xref:SRM).
+> - To use this component, you need to have a Resource Manager and Service Manager license, as well as the user permissions to access the UI for the [Bookings](xref:DataMiner_user_permissions#modules--bookings--ui-available), [Resources](xref:DataMiner_user_permissions#modules--resources--ui-available), [Services](xref:DataMiner_user_permissions#modules--services--ui-available), [Profiles](xref:DataMiner_user_permissions#modules--profiles--ui-available) and [Functions](xref:DataMiner_user_permissions#modules--functions--read) modules.
 > - Prior to DataMiner 10.3.8/10.4.0, this component is available in soft launch. See [BookingData](xref:Overview_of_Soft_Launch_Options#bookingdata).
