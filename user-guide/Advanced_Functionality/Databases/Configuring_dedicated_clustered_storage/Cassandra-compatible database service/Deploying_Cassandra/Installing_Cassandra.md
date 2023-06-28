@@ -14,11 +14,11 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
 1. Install the Apache Cassandra software on a Linux machine.
 
+   Before installig, make sure you download a supported Cassandra version as indicated in the [Cassandra requirements](xref:DataMiner_Compute_Requirements#cassandra-requirements).
+   
    For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
 
    > [!IMPORTANT]
-   >
-   > - Make sure you download a supported Cassandra version as indicated in the [Cassandra requirements](xref:DataMiner_Compute_Requirements#cassandra-requirements).
    > - Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
