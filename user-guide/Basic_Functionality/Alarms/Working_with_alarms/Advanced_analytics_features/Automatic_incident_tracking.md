@@ -152,6 +152,8 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 
 - If all alarm entries within an alarm group are masked, the group is automatically masked as well. However, as soon as one of the entries is unmasked, the group is also unmasked.
 
+- [Manually clearing](xref:Clearing_alarms) alarm groups that were created automatically is supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36600 -->. For [manually created/updated alarm groups](#manually-updating-an-alarm-group), this is supported from DataMiner 10.2.6/10.3.0 onwards.
+
 ## Manually updating an alarm group
 
 From DataMiner 10.2.5/10.3.0 onwards, it is possible to manually update an alarm group or "incident". In the Alarm Console, you can add or remove alarms, create an alarm group manually, or rename an alarm group.
