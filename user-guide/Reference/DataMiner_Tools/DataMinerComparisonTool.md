@@ -12,6 +12,9 @@ You can access the tool via the following URL:
 http(s)://[DMA name]/Comparison
 ```
 
+> [!NOTE]
+> This tool supports SAML authentication from DataMiner 10.3.8/10.4.0 onwards.
+
 ## Working with the Comparison tool
 
 In the parameter selection panel at the top of the screen, select two parameters:
