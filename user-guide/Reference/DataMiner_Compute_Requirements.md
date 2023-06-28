@@ -87,9 +87,9 @@ For DataMiner Agents that make use of one or more Cassandra nodes for their [sys
 The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
 
 > [!NOTE]
-> - Cassandra 4.x does not support Windows so you will need extra Linux servers to host the Cassandra database in order to use this version.
 >
-> - Currently Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
+> - Cassandra 4.x does not support Windows so you will need extra Linux servers to host the Cassandra database in order to use this version.
+> - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
 
 ### RAM
 
