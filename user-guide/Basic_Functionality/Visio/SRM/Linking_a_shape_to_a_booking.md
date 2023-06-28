@@ -4,15 +4,22 @@ uid: Linking_a_shape_to_a_booking
 
 # Linking a shape to a booking
 
-From DataMiner 9.6.4 onwards, it is possible to link a shape to a booking.
+From DataMiner 9.6.4 onwards, it is possible to link a shape to a booking using a **Reservation** shape data field.
 
-To do so, specify a **Reservation** shape data field and set it to one of the following values:
+> [!NOTE]
+> If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
+
+## Basic shape data field configuration
+
+Specify a **Reservation** shape data field and set it to one of the following values:
 
 - The GUID of the booking
 
 - A dynamic placeholder, e.g. *\[pagevar:SelectedReservation\]*
 
 - A service name, service ID or placeholder referring to a service, e.g. *\[this service\]*. In that case, the *ReservationID* property of the service will be used.
+
+## Placeholders
 
 The following placeholders can be used in the text displayed on the *Reservation* shape:
 
@@ -70,8 +77,4 @@ The following placeholders can be used in the text displayed on the *Reservation
 
   This placeholder supports the same options as the *\[Elapsed Time\]* placeholder.
 
-> [!NOTE]
-> From DataMiner 9.6.6 onwards, additional features are supported:
->
-> - If a parent shape has *Reservation* shape data and a child shape has fields linked to the same booking (e.g. *Info* shape data, shape text placeholders), the child shape will also become a reservation shape linked to the same booking.
-> - The shape text can now contain placeholders referring to custom booking properties, in the format \[*PropertyName*\], e.g. *\[Class\]*.
+- Placeholders referring to **custom booking properties**, in the format \[*PropertyName*\], e.g. *\[Class\]*.
