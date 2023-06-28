@@ -8,14 +8,14 @@ When you create a query, you can also use an ad hoc data source (i.e. external d
 
 To use an ad hoc data source in a query:
 
-1. In the Automation app, add a script containing a new class that implements the *IGQIDatasource* interface (see [Interfaces](#interfaces-in-the-ad-hoc-data-script)).
+1. In the Automation app, add a script containing a new class that implements the [*IGQIDataSource* interface](xref:IGQIDataSource).
 
    > [!NOTE]
    > All object types needed to create an ad hoc data source can be found within *SLAnalyticsTypes.dll*, which is located in the folder *C:\Skyline DataMiner\Files*.
 
 1. Above the class, add the *GQIMetaData* attribute in order to configure the name of the data source as displayed in the Dashboards app.
 
-   For example (see [Example ad hoc data script](#example-ad-hoc-data-scripts) for a full example):
+   For example (see [Example ad hoc data script](xref:Ad_hoc_Tutorials#example-of-forwarding-dummy-data-to-the-gqi) for a full example):
 
    ```csharp
    using Skyline.DataMiner.Analytics.GenericInterface;
@@ -42,36 +42,3 @@ Depending on how the script is configured, there can be additional configuration
 
 > [!NOTE]
 > From DataMiner 10.2.5/10.3.0 onwards, you can link the arguments of an ad hoc data source to an existing feed in the Dashboards app. Depending on the linked feed, more information may need to be specified. For example, if you link to an existing query feed with a table listing elements, in the *Type* box, you will then need to select whether you want to use a specific data type (e.g. elements) or query rows. Then you will need to select the property you want to use. In most cases, you can select the property in a dropdown list, except if *Type* is set to *Query rows* or *Script output*, in which case you will have to specify the value yourself. For query rows, when you start typing the value, DataMiner will propose any matching values it can find.
-
-## Interfaces in the ad hoc data script
-
-An ad hoc data source is represented as a class that implements predefined interfaces. The interfaces you can use are:
-
-- [IGQIDataSource](xref:IGQIDataSource)
-
-  > [!IMPORTANT]
-  > This is the only required interface. It must be implemented for the class to be detected by GQI as a data source.
-
-- [IGQIInputArguments](xref:IGQIInputArguments)
-
-- [IGQIOnInit](xref:IGQIOnInit)
-
-- [IGQIOnPrepareFetch](xref:IGQIOnPrepareFetch)
-
-- [IGQIOnDestroy](xref:IGQIOnDestroy)
-
-## Objects in the ad hoc data script
-
-To build the ad hoc data source, you can use the following objects:
-
-- [GQIColumn](xref:GQIColumn)
-
-- [GQIPage](xref:GQIPage)
-
-- [GQIRow](xref:GQIRow)
-
-- [GQICell](xref:GQICell)
-
-- [GQIArgument](xref:GQIArgument)
-
-- [GQIDMS](xref:GQIDMS)

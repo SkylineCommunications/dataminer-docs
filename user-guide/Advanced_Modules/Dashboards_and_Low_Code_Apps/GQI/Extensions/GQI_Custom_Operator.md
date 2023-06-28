@@ -9,22 +9,4 @@ uid: GQI_Custom_Operator
 
 The custom operator is available in soft launch from DataMiner 10.x.x onwards, if the soft-launch option *GenericInterface* is enabled.
 
-At least **one of the following interfaces is required** for the class to be detected by GQI as a custom operator:
-
-- IGQIColumnOperator
-
-<!--more info here-->
-
-- IGQIRowOperator
-
-<!--more info here-->
-
-The following **optional interfaces** add additional functionality:
-
-- IGQIInputArguments
-
-<!--more info here-->
-
-- IGQIOptimizableOperator
-
-<!--more info here-->
+To learn more about the predefined interfaces that a custom operator implements to add the desired functionality, see [Building blocks](xref:CO_Building_blocks). We also provide a complete overview of the [life cycle of a custom operator](xref:CO_Life_cycle).

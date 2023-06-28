@@ -1965,24 +1965,22 @@
             - name: Extensions
               topicUid: Configuring_an_ad_hoc_data_source_in_a_query
               items:
-                - name: Configuring an ad hoc data source in a query
+                - name: Configuring an ad hoc data source
                   topicUid: Configuring_an_ad_hoc_data_source_in_a_query
                   items:
-                    - name: Building blocks
+                    - name: Building blocks of queries with ad hoc data
                       topicUid: Ad_hoc_Building_blocks
-                    - name: Life cycle
+                    - name: Life cycle of queries with ad hoc data
                       topicUid: Ad_hoc_Life_cycle
                     - name: Tutorials
                       topicUid: Ad_hoc_Tutorials
-                - name: Custom operator
+                - name: Configuring a custom operator
                   topicUid: GQI_Custom_Operator
                   items:
-                    - name: Building blocks
+                    - name: Building blocks of a custom operator
                       topicUid: CO_Building_blocks
-                    - name: Life cycle
+                    - name: Life cycle of a custom operator
                       topicUid: CO_Life_cycle
-                    - name: Tutorials
-                      topicUid: CO_Tutorials
                 - name: API reference
                   topicUid: IGQIDataSource
                   items:
@@ -2008,9 +2006,6 @@
                       topicUid: GQIArgument
                     - name: GQIDMS
                       topicUid: GQIDMS
-                      items:
-                        - name: Retrieving data by means of DMS messages
-                          topicUid: Retrieving_data_by_means_of_DMS_messages
             - name: Importing a query
               topicUid: Importing_a_query
         - name: Frequently asked questions
