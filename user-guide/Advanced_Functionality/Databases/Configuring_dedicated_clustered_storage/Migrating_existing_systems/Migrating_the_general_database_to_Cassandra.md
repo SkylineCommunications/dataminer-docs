@@ -190,7 +190,7 @@ After you have followed the procedure above and system requirements are met, you
 
     - To view logging information related to the Cassandra migration, including the settings used for the migration, go to *Apps* > *System Center* > *Logging* > *DataMiner*, and select the *Cassandra Migration* log file. Additional useful logging can be found in the *Database Connection* log file.
 
-After the migration is finished, the DataMiner features that depend on the use of Cassandra will start working. It is necessary to restart the DMA to prevent RTEs related to SLAnalytics process that it could cause the DataMiner features don't work.
+1. When the migration is complete, restart DataMiner. This is required to make sure that the SLAnalytics process keeps working correctly.
 
 > [!NOTE]
 >
