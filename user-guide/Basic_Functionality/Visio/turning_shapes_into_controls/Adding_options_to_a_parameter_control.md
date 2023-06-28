@@ -125,13 +125,14 @@ Example:
 IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuffix=#FF0000, bg.hover=#FFFF00,bg.hovereditor=#66FF66
 ```
 
-| Color definition | Description                                                                                     |
-| ---------------- | ----------------------------------------------------------------------------------------------- |
-| text             | The color of the default text.                                                                  |
-| text.disabled    | The color of the text when the value is "not initialized".                                      |
-| text.titlesuffix | The color of the table index suffix in the title.                                               |
-| bg.hover         | The color of the background when hovering the mouse cursor over the control.                    |
-| bg.hovereditor   | The color of the background when hovering the mouse cursor over the editor part of the control. |
+| Color definition | Description                                                                                                          |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------- |
+| text             | The color of the default text.                                                                                       |
+| text.disabled    | The color of the text when the value is "not initialized".                                                           |
+| text.titlesuffix | The color of the table index suffix in the title.                                                                    |
+| bg.hover         | The color of the background when hovering the mouse cursor over the control.                                         |
+| bg.hovereditor   | The color of the background when hovering the mouse cursor over the editor part of the control.                      |
+| bg.pressededitor | As of 10.3.9, the color of the background when pressing the left mouse button within the editor part of the control. |
 
 > [!NOTE]
 >
