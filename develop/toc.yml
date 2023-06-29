@@ -1330,6 +1330,8 @@
             topicUid: Protocol.ExportRules.ExportRule-tag
           - name: '@value'
             topicUid: Protocol.ExportRules.ExportRule-value
+          - name: '@whereAttribute'
+            topicUid: Protocol.ExportRules.ExportRule-whereAttribute
           - name: '@whereTag'
             topicUid: Protocol.ExportRules.ExportRule-whereTag
           - name: '@whereValue'
