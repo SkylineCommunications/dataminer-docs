@@ -75,3 +75,9 @@ During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 red
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When an SNMPv3 element was deleted, its SNMPv3 credentials would incorrectly not get deleted. Also, when users were deleted, their DCP credentials would not get deleted.
+
+#### SLAnalytics - Behavioral anomaly detection: Problem when processing a behavioral change point [ID_36755]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an `index out of bounds` error could occur when processing a behavioral change point.
