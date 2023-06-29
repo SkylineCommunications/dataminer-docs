@@ -61,6 +61,22 @@ To be able to use the *BookingData* component, you will need
   - Modules > Resources > UI Available
   - Modules > Services > UI Available
 
+#### Trending - Pattern matching: Multivariate trend data patterns [ID_35010] [ID_35301] [ID_36327] [ID_36454] [ID_36628] [ID_36731]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, DataMiner was able to recognize patterns in trend graphs showing trend information for one single parameter. From now on, it is also capable of recognizing patterns in trend graphs showing trend information for multiple parameters.
+
+When you open a trend graph showing trend information for multiple parameters, you can now define a so-called *multivariate trend pattern*.
+
+As with single-parameter patterns (i.e. univariate patterns), a number of options can be specified:
+
+- If you want the patterns to be available for other DataMiner functionality, e.g. to generate suggestion events or via the Generic Query Interface in dashboards or low-code apps, select *Continuously detect patterns in the background*.
+
+- If you want the patterns to be detected for all elements using the protocol instead of the current element only, next to *Apply to*, click the element name and select the protocol instead.
+
+If you are viewing a trend graph that shows trend information for multiple parameters in which multivariate patterns were detected, these will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu. Also, a special icon will indicate that this is a pattern that combines trend information from different parameters. If you click that icon, all trend graphs of all parameters that are part of the pattern will be loaded.
+
 #### Trending: Time-scoped relations [ID_36434]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
