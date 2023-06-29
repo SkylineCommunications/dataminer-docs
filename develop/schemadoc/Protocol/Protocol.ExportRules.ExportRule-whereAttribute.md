@@ -12,7 +12,7 @@ For example, this can be configured as follows:
 <ExportRule table="*" tag="Protocol/SNMP" attribute="includepages" value="false" whereTag="Protocol/SNMP" whereAttribute="includepages" whereValue="true"/>
 ```
 
-In the example above, if the `includepages` attribute of the *Protocol.SNMP* element is true, the export rule will change that value to false in the exported protocol. Without the `whereAttribute`, the `whereValue` check would be performed on the value of the *Protocol.SNMP* element itself (which is usually set to "auto") instead of the value of the `includepages` attribute.
+In the example above, if the [includepages](xref:Protocol.SNMP-includepages) attribute of the [Protocol.SNMP](xref:Protocol.SNMP) element is true, the export rule will change that value to false in the exported protocol. Without the `whereAttribute`, the `whereValue` check would be performed on the value of the *Protocol.SNMP* element itself (which is usually set to "auto") instead of the value of the `includepages` attribute.
 
 Here is another example:
 
