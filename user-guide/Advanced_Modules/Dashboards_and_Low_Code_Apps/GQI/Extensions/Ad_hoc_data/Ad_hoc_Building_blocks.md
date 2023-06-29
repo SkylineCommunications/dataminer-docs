@@ -21,24 +21,24 @@ The available interfaces are:
 
 - [IGQIInputArguments](xref:IGQIInputArguments)
 
+- [IGQIOnDestroy](xref:IGQIOnDestroy)
+
 - [IGQIOnInit](xref:IGQIOnInit)
 
 - [IGQIOnPrepareFetch](xref:IGQIOnPrepareFetch)
-
-- [IGQIOnDestroy](xref:IGQIOnDestroy)
 
 ## Objects in the ad hoc data script
 
 To build the ad hoc data source, you can use the following objects:
 
+- [GQIArgument](xref:GQIArgument)
+
+- [GQICell](xref:GQICell)
+
 - [GQIColumn](xref:GQIColumn)
+
+- [GQIDMS](xref:GQIDMS)
 
 - [GQIPage](xref:GQIPage)
 
 - [GQIRow](xref:GQIRow)
-
-- [GQICell](xref:GQICell)
-
-- [GQIArgument](xref:GQIArgument)
-
-- [GQIDMS](xref:GQIDMS)

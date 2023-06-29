@@ -2011,30 +2011,30 @@
                     - name: Life cycle of a custom operator
                       topicUid: CO_Life_cycle
                 - name: API reference
-                  topicUid: IGQIDataSource
+                  topicUid: GQIArgument
                   items:
-                    - name: IGQIDataSource
-                      topicUid: IGQIDataSource
-                    - name: IGQIInputArguments
-                      topicUid: IGQIInputArguments
-                    - name: IGQIOnInit
-                      topicUid: IGQIOnInit
-                    - name: IGQIOnPrepareFetch
-                      topicUid: IGQIOnPrepareFetch
-                    - name: IGQIOnDestroy
-                      topicUid: IGQIOnDestroy
+                    - name: GQIArgument
+                      topicUid: GQIArgument
+                    - name: GQICell
+                      topicUid: GQICell
                     - name: GQIColumn
                       topicUid: GQIColumn
+                    - name: GQIDMS
+                      topicUid: GQIDMS
                     - name: GQIPage
                       topicUid: GQIPage
                     - name: GQIRow
                       topicUid: GQIRow
-                    - name: GQICell
-                      topicUid: GQICell
-                    - name: GQIArgument
-                      topicUid: GQIArgument
-                    - name: GQIDMS
-                      topicUid: GQIDMS
+                    - name: IGQIDataSource
+                      topicUid: IGQIDataSource
+                    - name: IGQIInputArguments
+                      topicUid: IGQIInputArguments
+                    - name: IGQIOnDestroy
+                      topicUid: IGQIOnDestroy
+                    - name: IGQIOnInit
+                      topicUid: IGQIOnInit
+                    - name: IGQIOnPrepareFetch
+                      topicUid: IGQIOnPrepareFetch
             - name: Importing a query
               topicUid: Importing_a_query
         - name: Frequently asked questions
