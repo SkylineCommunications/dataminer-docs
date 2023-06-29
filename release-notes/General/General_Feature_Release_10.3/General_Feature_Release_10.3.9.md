@@ -12,8 +12,8 @@ uid: General_Feature_Release_10.3.9
 
 > [!TIP]
 >
-> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.8](xref:Cube_Feature_Release_10.3.8).
-> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.8](xref:Web_apps_Feature_Release_10.3.8).
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.3.9](xref:Cube_Feature_Release_10.3.9).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.9](xref:Web_apps_Feature_Release_10.3.9).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ## Highlights
@@ -33,6 +33,12 @@ uid: General_Feature_Release_10.3.9
 <!-- 36319: MR 10.4.0 - FR 10.3.9 -->
 
 A number of security enhancements have been made.
+
+#### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID_36475]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
 #### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
 

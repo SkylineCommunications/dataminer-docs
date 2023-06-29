@@ -12,6 +12,12 @@ uid: General_Main_Release_10.2.0_CU18
 
 ### Enhancements
 
+#### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID_36475]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
+
 #### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -31,6 +37,12 @@ During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 red
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When an SNMPv3 element was deleted, its SNMPv3 credentials would incorrectly not get deleted. Also, when users were deleted, their DCP credentials would not get deleted.
+
+#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In *Automation*, *Correlation* and *Scheduler*, you can select a report of a dashboard in an *Email*, *Upload to FTP* or *Upload to shared folder* action. When such an action was initialized, in some rare cases, the report or dashboard would not be automatically selected.
 
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 

@@ -12,6 +12,12 @@ uid: General_Main_Release_10.3.0_CU6
 
 ### Enhancements
 
+#### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID_36475]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
