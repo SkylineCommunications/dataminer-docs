@@ -122,6 +122,11 @@ To configure the connection to an [Amazon Keyspaces database](xref:Amazon_Keyspa
    - **Database prefix**: The name all indices will be prefixed with. This will be identical for all DMAs in the same cluster.
 
    - **DB Server**: The full URL of your Amazon OpenSearch Service endpoint, e.g. `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com/`
+  
+> [!IMPORTANT]
+> Starting from DataMiner 10.3.0 CU4 Main Release or 10.3.7 Feature Release the port ":443" needs to be appended to the Amazon Opensearch Service endpoint url.
+> Aforementioned endpoint would then look like this `https://search-mydomain-123456798.eu-north-1.es.amazonaws.com:443`
+> Before this version no port needs to be specified. 
 
    - **User**: The username of the master user of your domain.
 
