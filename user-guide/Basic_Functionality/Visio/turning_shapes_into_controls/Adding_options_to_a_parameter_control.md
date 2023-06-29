@@ -122,7 +122,7 @@ When you turn a shape into a parameter control of type "Lite" (see below), you c
 Example:
 
 ```txt
-IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuffix=#FF0000, bg.hover=#FFFF00,bg.hovereditor=#66FF66
+IncludeWrite|Lite|CustomColors:text=#0000FF,text.disabled=#8888FF,text.titlesuffix=#FF0000,bg.hover=#FFFF00,bg.hovereditor=#66FF66,bg.pressededitor=#4cc74c
 ```
 
 | Color definition | Description                                                                                                          |
