@@ -1954,12 +1954,8 @@
                   topicUid: GQI_Join
                 - name: Select
                   topicUid: GQI_Select
-                - name: Sort
+                - name: (Then) Sort (by)
                   topicUid: GQI_Sort
-                - name: Sort by
-                  topicUid: GQI_Sort_by
-                - name: Then sort by
-                  topicUid: GQI_Then_sort_by
                 - name: Top X
                   topicUid: GQI_Top_X
             - name: Extensions

@@ -23,10 +23,6 @@ Available operators:
 
 - [Select](xref:GQI_Select)
 
-- [Sort](xref:GQI_Sort)
-
-- [Sort by](xref:GQI_Sort_by)
-
-- [Then sort by](xref:GQI_Then_sort_by)
+- [(Then) Sort (by)](xref:GQI_Sort)
 
 - [Top X](xref:GQI_Top_X)
