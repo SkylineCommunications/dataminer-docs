@@ -4,6 +4,8 @@ uid: Working_with_pattern_matching
 
 # Working with pattern matching
 
+## Univariate patterns
+
 From DataMiner 10.0.7 onwards, on systems using a Cassandra and Elasticsearch database, DataMiner Analytics can automatically recognize recurring patterns in trend data. For this purpose, you first need to [define the patterns](xref:Defining_a_pattern) DataMiner Analytics needs to track. This pattern definition is also known as a "tag".
 
 If you are viewing a trend graph for a single parameter, and it contains patterns matching existing tags, these will be highlighted in orange when you hover the mouse pointer over the button representing a tag, or if the option *Expand tags* is selected in the right-click menu. The matches can be highlighted in bright orange or in a lighter orange. The meaning of these colors depends on the DataMiner version:
@@ -26,3 +28,15 @@ If you are viewing a trend graph for a single parameter, and it contains pattern
 
 > [!TIP]
 > See also: [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns)
+
+## Multivariate patterns
+
+From DataMiner 10.3.8/10.4.0 onwards, DataMiner Analytics can automatically recognize recurring patterns in trend graphs showing trend information of multiple parameters. <!-- RN 36454 + 36731 + 36327 -->
+
+When you open a trend graph showing trend information for multiple parameters, you have the option to define a *multivariate trend pattern*.
+
+As with single-parameter patterns (i.e. [univariate patterns](#univariate-patterns)), you can [specify a number of options](xref:Managing_pattern_definitions) in the *Pattern Overview* window. <!-- RN 35010 -->
+
+If you are viewing a trend graph for multiple parameters in which multivariate patterns have been detected, these will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
+
+The ![multivariate](~/user-guide/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern. <!-- RN 36628 -->
