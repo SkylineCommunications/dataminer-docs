@@ -3760,6 +3760,8 @@
           topicUid: Overview_of_Soft_Launch_Options
         - name: Activating SLProtocol as a 64-bit process
           topicUid: Activating_SLProtocol_as_a_64_Bit_Process
+        - name: Activating SLProtocol as a 32-bit process
+          topicUid: Activating_SLProtocol_as_a_32_Bit_Process
     - name: DataMiner Extension Modules
       topicUid: DataMinerExtensionModules
     - name: Custom branding
