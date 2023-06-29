@@ -28,6 +28,15 @@ uid: Web_apps_Feature_Release_10.3.9
 
 Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
 
+#### Dashboards app - GQI: Version column added to 'Get trend data patterns' and 'Get trend data pattern events' data sources [ID_36754]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- Not added to MR 10.4.0  -->
+
+The *Get trend data patterns* and *Get trend data pattern events* data sources now have a *Version* column containing the pattern version.
+
+Each time the time range of a pattern gets updated, a new pattern record is created with a new pattern version.
+
 ### Fixes
 
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
