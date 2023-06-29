@@ -22,5 +22,8 @@ To disable automatic NATS configuration:
 
 1. Click *OK* to close the *SLNet Options* window.
 
+> [!CAUTION]
+> When enabling the *NATSForceManualConfig* option, it is the user's responsibility to maintain the configuration of the SLCloud.xml, nas.config, and nats-server.config files, as well as ensure synchronization of the credentials in the system.
+
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
