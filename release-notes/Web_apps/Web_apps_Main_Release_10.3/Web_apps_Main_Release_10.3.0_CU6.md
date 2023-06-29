@@ -33,4 +33,8 @@ Because of this change, the behavior of aggregations applied on all types of emp
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.

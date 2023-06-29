@@ -348,6 +348,12 @@ Up to now, queries that were built upon another query that was linked to feeds w
 
 From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
 
+#### Monitoring app: A new type of text area boxes will now be used on parameter pages [ID_36693]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
