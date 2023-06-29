@@ -18,6 +18,6 @@ The `CachingSettings` can be used to define whether or not the configuration DOM
 
 For each type, you can define one of three caching policy options:
 
-- **Default** : The default option. This will be selected for any new and existing manager. Behaves the same as the 'Full' option.
-- **Disabled** : The cache will be disabled and all reads will go to the database.
-- **Full** : The cache will be enabled and all objects of this type will be loaded in the cache when the DOM manager is initialized. All reads will go to this cache.
+- **Default**: The default option. This will be selected for any new and existing managers. Behaves the same way as the "Full" option.
+- **Disabled**: The cache will be disabled and all reads will go to the database.
+- **Full**: The cache will be enabled, and all objects of this type will be loaded in the cache when the DOM manager is initialized. All reads will go to this cache.
