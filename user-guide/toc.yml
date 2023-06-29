@@ -1941,6 +1941,39 @@
               topicUid: Creating_GQI_query
             - name: Query data sources
               topicUid: Query_data_sources
+              items:
+                - name: Get alarms
+                  topicUid: Get_alarms
+                - name: Get ad hoc data
+                  topicUid: Get_ad_hoc_data
+                - name: Get trend data patterns
+                  topicUid: Get_trend_data_patterns
+                - name: Get trend data pattern events
+                  topicUid: Get_trend_data_pattern_events
+                - name: Get behavioral change events
+                  topicUid: Get_behavioral_change_events
+                - name: Get DCF connections
+                  topicUid: Get_DCF_connections
+                - name: Get elements
+                  topicUid: Get_elements
+                - name: Get parameter table by alias
+                  topicUid: Get_parameter_table_by_alias
+                - name: Get object manager instances
+                  topicUid: Get_object_manager_instances
+                - name: Get parameter table by ID
+                  topicUid: Get_parameter_table_by_ID
+                - name: Get parameter relations
+                  topicUid: Get_parameter_relations
+                - name: Get parameters for element where
+                  topicUid: Get_parameters_for_element_where
+                - name: Get services
+                  topicUid: Get_services
+                - name: Get view relations
+                  topicUid: Get_view_relations
+                - name: Get views
+                  topicUid: Get_views
+                - name: Start from
+                  topicUid: Start_from
             - name: Query operators
               topicUid: Query_operators
               items:
