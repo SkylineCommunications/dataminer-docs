@@ -13,6 +13,11 @@ When you create a query, you can use the operators listed below.
 
 Available operators:
 
+- [Custom operator](xref:GQI_Custom_Operator)
+
+  > [!NOTE]
+  > From DataMiner 10.2.7 onwards, the custom operator is available in soft launch.
+
 - [Aggregate](xref:GQI_Aggregate)
 
 - [Column manipulations](xref:GQI_Column_manipulations)
