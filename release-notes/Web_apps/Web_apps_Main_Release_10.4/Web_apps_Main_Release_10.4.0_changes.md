@@ -553,9 +553,3 @@ From now on, users who only have permission to view dashboards will not see any 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
-
-#### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.

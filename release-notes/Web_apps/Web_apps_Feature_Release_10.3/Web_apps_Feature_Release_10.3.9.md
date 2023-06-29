@@ -32,6 +32,6 @@ Up to now, the list of dashboards displayed in the navigation pane on the left w
 
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18] - FR 10.3.9 -->
 
 When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.
