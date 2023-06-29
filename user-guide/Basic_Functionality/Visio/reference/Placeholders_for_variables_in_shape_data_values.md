@@ -479,20 +479,6 @@ In this placeholder, specify three items, separated by commas:
 | y    | The input (e.g. a session variable).              |
 | z    | The string that will replace each of the matches. |
 
-Example:
-
-In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
-
-```txt
-[RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
-```
-
-The placeholder will then be replaced by the following string of text:
-
-```txt
-value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
-```
-
 > [!NOTE]
 >
 > - \[RegexReplace:x,y,z\] placeholders can be nested.
@@ -501,10 +487,26 @@ value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
 >   ```txt
 >   [RegexReplace:[Sep:,#]x#y#z]
 >   ```
->   - RegexReplace can also be used to remove the unit suffix of a parameter to be able to use it as a term in an operation with the sum placeholder. In the param placeholder used on a parameter that has a unit, this is needed to enable the sum operator to [parse the value into an integer](\[Sum:...\]). A simple example, where the suffix "*Frames*" is removed to calculate a sum of parameter with id 5 and  a fixed value 17.
->   ```txt
->   [sum:[RegexReplace:\sFrames$,[param:*,5],],17]
->   ```
+
+Examples:
+
+- In case the *sessionvar* variable contains the value “*alpha\|beta\|gamma\|delta*”, you can place the following placeholder in the value of a shape data field:
+
+  ```txt
+  [RegexReplace:(?<token>[^|]+)((?<separator>[|])|$),[var:sessionvar],value=1005 == ${token};]
+  ```
+
+  The placeholder will then be replaced by the following string of text:
+
+  ```txt
+  value=1005 == alpha;value=1005 == beta;value=1005 == gamma; value=1005 == delta;
+  ```
+
+- You can use this placeholder to remove the unit suffix of a parameter, so that it can be used within the [Sum](#sumxyz) placeholder. This is necessary if the sum uses a [param](#paramdmaidelementidparameterid) placeholder and the value of the parameter includes a unit, to make sure that value can be parsed into an integer. For example, to remove the unit "Frames" and calculate the sum of the parameter with ID 5 and a fixed value of 17, you can use this placeholder:
+
+  ```txt
+  [sum:[RegexReplace:\sFrames$,[param:*,5],],17]
+  ```
 
 ### \[Reservation:...\]
 
