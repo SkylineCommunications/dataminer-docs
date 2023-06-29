@@ -270,6 +270,12 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
    You can also add a request body to include or exclude certain indices or specify other settings. See [Take snapshots](https://opensearch.org/docs/2.8/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#take-snapshots).
 
+1. To check the status when a snapshot is being taken:
+
+   ```txt
+   GET /_snapshot/_status
+   ```
+
 1. Verify that the snapshot was created successfully by entering the following GET request:
 
    ```txt
@@ -280,36 +286,19 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 You have now finished configuring an OpenSearch backup.
 
-### Restore a snapshot using OpenSearch Dashboards
-
-1. Open OpenSearch Dashboards, and navigate to the left-hand pane. Under *Snapshot Management*, select *Snapshots* to view an overview of all snapshots.
-
-   ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_SnapshotOverviewSnapshot20230620.png)
-
-1. Select the snapshot we created earlier, and click on the **Restore** button.
-
-1. Below panel opens, select the following options:
-
-   **Specify restore option**
-
-   - Select *Restore all indices in snapshot*
-
-   **Rename restored indices**
-
-   - Select *Do not rename*
-
-   **Advanced options**
-
-   - Enable *Restore aliases*
-
-   ![OpenSearch Dashboards - Restore Snapshot](~/user-guide/images/OpenSearchDashboards_RestoreSnapshotPanel.png)
-
-
 ## Restoring the snapshot using REST API
 
 1. Ensure that the target OpenSearch cluster is empty.
 
+1. Go to *Dev Tools* under the *Management* pane.
+
 1. To see all snapshots in your repository, execute:
+
+   ```txt
+   GET /_snapshot/[repositoryname]/_all
+   ```
+
+   Example:
 
    ```txt
    GET /_snapshot/opensearchbackup/_all
@@ -318,16 +307,34 @@ You have now finished configuring an OpenSearch backup.
 1. In the target OpenSearch cluster, execute the following POST request:
 
    ```txt
-   POST /_snapshot/opensearchbackup/20230620/_restore
+   POST /_snapshot/[repositoryname]/[snapshotname]/_restore
+   {
+     "indices": "[dbprefix]*"
+   }
    ```
 
-   You can also add a request body to include or exclude certain indices or specify other settings. See [Restore snapshots](https://opensearch.org/docs/2.8/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#restore-snapshotss).
+   Example:
 
-1. Verify whether the snapshot restore worked by comparing the indices for the local OpenSearch cluster with those of the target OpenSearch cluster.
+   ```txt
+   POST /_snapshot/opensearchbackup/20230620/_restore
+   {
+     "indices": "sldmadb*"
+   }
+   ```
 
-   To do so, ...
+   > [!IMPORTANT]
+   > The dbprefix must be the one specified in the Database ElasticSearch DB tag in db.xml file of your Skyline DataMiner.
 
-   These indices should be identical and take up the same amount of space.
+   > [!CAUTION]
+   > Since we are using the Security plugin, we refer to the [Security considerations](https://opensearch.org/docs/latest/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#security-considerations). So restoring the .opendistro_security can alter the security posture of the entire cluster.
+
+1. Verify whether the snapshot restore worked by requesting the status of the snapshot restore:
+
+   To do so:
+
+   ```txt
+   GET /_snapshot/_status
+   ```
 
 ## Troubleshooting
 
