@@ -42,3 +42,7 @@ This is a soft-launch feature that can be activated from **DataMiner 10.1.8 onwa
   PS C:\> cd "C:\Skyline DataMiner\Tools\"
   PS C:\Skyline DataMiner\Tools> .\RegisterSLProtocolAsX64.bat
   ```
+
+## Rollback
+
+[Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process)
