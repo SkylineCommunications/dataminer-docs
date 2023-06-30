@@ -4,7 +4,7 @@ uid: DeviceSimulator_SNMP_Schema_Simulation_Options
 
 # Options element
 
-This element holds the options that are specific for this simulation, but are not directly related to an agent or definition.
+This element holds the options that are specific for this simulation but are not directly related to an agent or definition.
 
 ## Parent
 

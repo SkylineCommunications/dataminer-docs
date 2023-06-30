@@ -4,7 +4,7 @@ uid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
 
 # DefaultDefinitionAttributes element
 
-This element holds the shared configuration attributes for the definitions. By defining the attribute here, they do not have to be specified on every definition, only when their content would deviate.
+This element holds the shared configuration attributes for the definitions. When you define the attributes here, you no longer need to specify them on every definition. You only need to specify them on a definition if their content deviates.
 
 ## Parent
 

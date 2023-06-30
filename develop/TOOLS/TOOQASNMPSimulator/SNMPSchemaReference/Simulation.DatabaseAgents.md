@@ -4,7 +4,7 @@ uid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
 
 # DatabaseAgents element
 
-Contains the database agents that should be available when the simulation file is spun up. However, the current Device Simulator only supports one agent to be defined.
+Contains the database agents that should be available when the simulation file is spun up. However, the current Device Simulator does not support defining more than one agent.
 
 ## Parent
 
@@ -18,4 +18,4 @@ Contains the database agents that should be available when the simulation file i
 
 ## Constraints
 
-The simulator only supports one agent for the time being. To define different agents, the simulation will need to be copied and adjusted.
+The simulator only supports one agent for the time being. To define different agents, you will need to copy and adjust the simulation.

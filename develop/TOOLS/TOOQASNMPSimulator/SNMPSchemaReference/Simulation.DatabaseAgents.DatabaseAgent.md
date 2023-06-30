@@ -6,7 +6,7 @@ uid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
 
 Defines a simulation agent that uses data stored in a database to simulate a device.
 
-For more information, please follow the instructions on [realistic dynamic simulations](xref:Realistic_dynamic_simulations).
+For more information, follow the instructions on [realistic dynamic simulations](xref:Realistic_dynamic_simulations).
 
 ## Parent
 
@@ -16,13 +16,13 @@ For more information, please follow the instructions on [realistic dynamic simul
 
 ### Inherited attributes
 
-The same attributes as a basic [agent](xref:DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent#attributes) are available, but the database component adds some [additional attributes](#additional-attributes).
+The same attributes as for a basic [agent](xref:DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent#attributes) are available, but the database component adds some [additional attributes](#additional-attributes).
 
 ### Additional attributes
 
 |Name|Occurrences|Default Value|Description|
 |--- |--- |--- |--- |
-|databaseType |1 |Mandatory |*MySQL* or *Cassandra* |
+|databaseType |1 |Mandatory |*MySQL* or *Cassandra*. |
 |databaseServer |1 |Mandatory |The IP or hostname of the database endpoint. |
 |databaseName |1 |Mandatory |The name of the database schema. |
 |databaseTable |1 |Mandatory |The name of the database table. |
