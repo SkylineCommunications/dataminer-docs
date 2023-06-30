@@ -4,7 +4,10 @@ uid: SLNetClientTest_disabling_automatic_nats_config
 
 # Disabling automatic NATS configuration
 
-From DataMiner 10.2.0 \[CU6]/10.2.8, you can enable the *NATSForceManualConfig* option so that NATS is not automatically configured in your DataMiner System. When you do so, you will need to either configure a NATS cluster manually instead, or manually call the *NatsCustodianResetNatsMessage* when changes are made to the DMS (see [Try a NATS reset](xref:Investigating_NATS_Issues#try-a-nats-reset)).
+From DataMiner 10.2.0 [CU6]/10.2.8 onwards, you can enable the *NATSForceManualConfig* option so that NATS is not automatically configured in your DataMiner System. When you do so, you will need to either configure a NATS cluster manually instead, or manually call the *NatsCustodianResetNatsMessage* when changes are made to the DMS (see [Try a NATS reset](xref:Investigating_NATS_Issues#try-a-nats-reset)).
+
+> [!CAUTION]
+> If you disable automatic NATS configuration, this means you become responsible for maintaining the configuration of the *SLCloud.xml*, *nas.config*, and *nats-server.config* files as well as ensuring the synchronization of the credentials in the system.
 
 To disable automatic NATS configuration:
 
@@ -21,9 +24,6 @@ To disable automatic NATS configuration:
    1. Specify *true* and click *OK*.
 
 1. Click *OK* to close the *SLNet Options* window.
-
-> [!CAUTION]
-> When enabling the *NATSForceManualConfig* option, it is the user's responsibility to maintain the configuration of the SLCloud.xml, nas.config, and nats-server.config files, as well as ensure synchronization of the credentials in the system.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
