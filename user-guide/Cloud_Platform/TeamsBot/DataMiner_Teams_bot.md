@@ -110,7 +110,9 @@ You can use the following out-of-the-box commands to interact with the DataMiner
 To add a custom command for the Teams bot to your DMS, create an [Automation script](xref:automation) in the folder "bot" in the DMS.
 
 > [!TIP]
-> For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+>
+> - For examples of command scripts, refer to [Custom Command Examples](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/CustomCommandExamples) on GitHub.
+> - For a video guide on creating custom commands, see [Elevate your DataMiner ChatOps game](https://www.youtube.com/watch?v=Sr6EEp2DFps). ![Video](~/user-guide/images/video_Duo.png)
 
 ### Input and output of the commands
 
