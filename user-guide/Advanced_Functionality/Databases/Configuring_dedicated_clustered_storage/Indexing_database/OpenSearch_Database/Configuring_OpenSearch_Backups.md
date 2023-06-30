@@ -12,9 +12,9 @@ You will need a client application that is able to communicate with the OpenSear
 
 Examples:
 
-- OpenSearch Dashboards: [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/index/) is often used together with OpenSearch. If you are using Ubuntu or Debian as your operating system, this is the preferred client application.
+- OpenSearch Dashboards: [OpenSearch Dashboards](https://opensearch.org/docs/latest/dashboards/index/) is often used together with OpenSearch.
 
-- CURL: [Curl](https://curl.se/) is a simple command-line utility that allows messages with payload (e.g POST and PUT messages) and is useful for scripting.
+- CURL: [Curl](https://curl.se/) is a simple command-line utility that allows messages with payload (e.g. POST and PUT messages) and is useful for scripting.
 
 - [Elasticvue](https://elasticvue.com/)
 
@@ -34,7 +34,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 > [!NOTE]
 >
 > - As this setup might be more challenging, we recommend that you set it up in advance.
-> - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup. For the machines that will act as NFS servers, make sure the firewall allows NFS traffic. You can use the following command for this: *sudo ufw allow nfs*.
+> - Be wary of read, write, and execute rights, firewall configurations, and the state of the NFS server service during the setup. For the machines that will act as NFS servers, make sure the firewall allows NFS traffic. You can use the following command for this: `sudo ufw allow nfs`
 > - Make sure the OpenSearch user has enough rights to the folder to read, write, and execute its contents.
 
 1. Set up a shared folder on the source OpenSearch cluster for all nodes to contain the snapshots. This folder must be shared across all machines in the OpenSearch clusters in all directions.
@@ -87,7 +87,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 ### NFS client
 
-1. Install the NFS-client on each node:
+1. Install the NFS client on each node:
 
    ```bash
    sudo apt update
@@ -145,34 +145,9 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
    This will create a file named "test.txt" that can be accessed from any other NFS client.
 
-### Creating a snapshot repository
+### Creating the snapshot repository
 
-#### Creating a repository using OpenSearch Dashboards
-
-> [!IMPORTANT]
-> To be able to restore a snapshot later, you must go through these steps first. Without a functional repository, you will run into issues that will delay the snapshot restore.
-
-1. Access the *opensearch.yml* file on all nodes of the OpenSearch cluster. Open the file and set *path.repo* as your previously created shared folder.
-
-1. Open OpenSearch Dashboards, and navigate to the left-hand pane. Under *Snapshot Management*, select *Repositories* to view an overview of all repositories.
-
-1. Select *Create repository* in the top-right corner.
-
-   ![OpenSearch Dashboards - Repository Overview ](~/user-guide/images/OpenSearchDashboards_RepositoryOverview.png)
-
-1. Specify the following details:
-
-   - **Repository name**: The name of your repository
-
-   - **Location**: The location where your repository is saved
-
-   - **Repository type**: Set to *Shared file system*
-
-   Save all changes by clicking *Add*.
-
-1. In the overview, you should now see your newly added repository.
-
-#### Creating a repository using REST API
+#### Creating the repository using REST API
 
 1. Create a repository by executing the following PUT request in your client application (e.g. Elasticvue, Postman, etc.):
 
@@ -204,18 +179,9 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
    If the repository has been created correctly, the response will provide repository information.
 
-   Example:
+   Example, using OpenSearch Dashboards as client application:
 
-   ```txt
-   {
-     "opensearchbackup" : {
-       "type" : "fs",
-       "settings": {
-         "location": "/var/nfs/opensearch"
-       }
-     }
-   }
-   ```
+   ![Verify](~/user-guide/images/Get_Snapshot.png)
 
    - "opensearchbackup": Name of your snapshot repository
 
@@ -226,31 +192,34 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
    > [!TIP]
    > For more information, see [Get snapshot repository](https://opensearch.org/docs/latest/api-reference/snapshots/get-snapshot-repository/).
 
-## Taking the snapshot
+#### Creating the repository using OpenSearch Dashboards
 
-### Taking a snapshot using OpenSearch Dashboards
+> [!IMPORTANT]
+> To be able to restore a snapshot later, you must go through these steps first. Without a functional repository, you will run into issues that will delay the snapshot restore.
 
-1. Open OpenSearch Dashboards, and navigate to the left-hand pane. Under *Snapshot Management*, select *Snapshots* to view an overview of all snapshots.
+1. Access the *opensearch.yml* file on all nodes of the OpenSearch cluster. Open the file and set *path.repo* as your previously created shared folder.
 
-   ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_SnapshotOverview.png)
+1. Open OpenSearch Dashboards. Click the hamburger button in the top-left corner and select *Snapshot Management*. In the left-hand pane, now select *Repositories* to view an overview of all repositories.
 
-1. Select *Take snapshot* in the top-right corner.
+1. Select *Create repository* in the top-right corner.
+
+   ![OpenSearch Dashboards - Repository Overview ](~/user-guide/images/OpenSearchDashboards_RepositoryOverview.svg)
 
 1. Specify the following details:
 
-   - **Snapshot name**: The name of the snapshot
+   - **Repository name**: The name of your repository
 
-   - **Select or input source indexes or index patterns**: Enter an asterisk ("*")
+   - **Repository type**: Set to *Shared file system*
 
-   - **Select a repository for snapshots**: The repository you created in [Creating a snapshot repository](#creating-a-snapshot-repository)
-
-   ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_CreateSnapshot.png)
+   - **Location**: The location where your repository is saved
 
    Save all changes by clicking *Add*.
 
-1. In the overview, you will now see your newly taken snapshot.
+1. In the overview, you should now see your newly added repository.
 
-### Taking a snapshot using REST API
+## Taking the snapshot
+
+### Taking the snapshot using REST API
 
 1. Execute the following PUT request in your chosen client application:
 
@@ -270,7 +239,7 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
    You can also add a request body to include or exclude certain indices or specify other settings. See [Take snapshots](https://opensearch.org/docs/2.8/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#take-snapshots).
 
-1. To check the status when a snapshot is being taken:
+1. You cannot take a snapshot if another is currently in progress. To check the status, enter the following GET request:
 
    ```txt
    GET /_snapshot/_status
@@ -286,13 +255,36 @@ In this procedure, we will be using an [NFS server](#nfs-server) and [NFS client
 
 You have now finished configuring an OpenSearch backup.
 
-## Restoring the snapshot using REST API
+### Taking a snapshot using OpenSearch Dashboards
+
+1. In OpenSearch Dashboards, click the hamburger button in the top-left corner and select *Snapshot Management*. In the left-hand pane, now select *Snapshots* to view an overview of all snapshots.
+
+   ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_SnapshotOverview.png)
+
+1. Select *Take snapshot* in the top-right corner.
+
+1. Specify the following details:
+
+   - **Snapshot name**: The name of the snapshot
+
+   - **Select or input source indexes or index patterns**: Enter an asterisk ("*")
+
+   - **Select a repository for snapshots**: The repository you created in [Creating a snapshot repository](#creating-the-snapshot-repository)
+
+     ![OpenSearch Dashboards - Snapshot Overview](~/user-guide/images/OpenSearchDashboards_CreateSnapshot.png)
+
+   Save all changes by clicking *Add*.
+
+1. In the overview, you will now see your newly taken snapshot.
+
+## Restoring the snapshot
+
+> [!CAUTION]
+> Restoring the snapshot can only be accomplished using the REST API. If you have used OpenSearch Dashboards to create the repository and take the snapshot, it is essential that you transition to employing REST API for this purpose.
 
 1. Ensure that the target OpenSearch cluster is empty.
 
-1. Go to *Dev Tools* under the *Management* pane.
-
-1. To see all snapshots in your repository, execute:
+1. Open your chosen client application. To see all snapshots in your repository, execute:
 
    ```txt
    GET /_snapshot/[repositoryname]/_all
@@ -313,6 +305,12 @@ You have now finished configuring an OpenSearch backup.
    }
    ```
 
+   - "dbprefix": The prefix specified in the *DB* tag for the indexing database in the *DB.xml* file (in the folder *C:\Skyline DataMiner\\*)
+
+     > [!NOTE]
+     > To find the prefix DataMiner puts in front of an index name, enter `http://[IP address]:9200/_cat/indices` in your browser's address bar. Replace "[IP address]" with your IP address.
+     > ![prefix](~/user-guide/images/Prefix_Snapshot.png)
+
    Example:
 
    ```txt
@@ -322,15 +320,10 @@ You have now finished configuring an OpenSearch backup.
    }
    ```
 
-   > [!IMPORTANT]
-   > The dbprefix must be the one specified in the Database ElasticSearch DB tag in db.xml file of your Skyline DataMiner.
-
    > [!CAUTION]
-   > Since we are using the Security plugin, we refer to the [Security considerations](https://opensearch.org/docs/latest/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#security-considerations). So restoring the .opendistro_security can alter the security posture of the entire cluster.
+   > Because we are using the Security plugin in this procedure, make sure to carefully read [OpenSearch's security considerations](https://opensearch.org/docs/latest/tuning-your-cluster/availability-and-recovery/snapshots/snapshot-restore/#security-considerations). Note that including the `opendistro_security` index in the snapshot may cause issues.
 
 1. Verify whether the snapshot restore worked by requesting the status of the snapshot restore:
-
-   To do so:
 
    ```txt
    GET /_snapshot/_status
@@ -338,11 +331,9 @@ You have now finished configuring an OpenSearch backup.
 
 ## Troubleshooting
 
-1. Search the OpenSearch logging for exceptions.
+Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
 
-   - For Linux: `/var/log/opensearch/[cluster.name].log`
+You can find the cluster name in `/etc/opensearch/opensearch.yml`.
 
-     You can find the cluster name in `/etc/opensearch/opensearch.yml`.
-
-   > [!TIP]
-   > For more information, see [Logs](https://opensearch.org/docs/latest/monitoring-your-cluster/logs/).
+> [!TIP]
+> For more information, see [Logs](https://opensearch.org/docs/latest/monitoring-your-cluster/logs/).
