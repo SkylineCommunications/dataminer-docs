@@ -26,6 +26,18 @@ During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 red
 
 ### Fixes
 
+#### Cassandra Cluster: Table data that should not expire incorrectly had a TTL value set [ID_35263]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, in a Cassandra Cluster database, certain table data that should not expire incorrectly had a TTL value set when inserted. As a result, that data would automatically get deleted when the TTL value reached 0.
+
+The following mechanisms have now been implemented:
+
+- Table data will no longer have any TTL value configured when inserted. Moreover, as a safety measure, all Cassandra tables will now also have a `default_time_to_live` setting. This value will provide the default TTL value in case it is not possible to pass a value when inserting data.
+
+- When existing data with a TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
+
 #### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
