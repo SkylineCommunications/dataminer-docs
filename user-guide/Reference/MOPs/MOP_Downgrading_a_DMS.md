@@ -46,9 +46,17 @@ For remote database clusters, please follow the **in-house procedures** to roll 
 
    1. Open the Windows *Add or remove programs* window.
 
-   1. Uninstall *DataMiner StorageModule* (version 3.0.3 or higher).
+   1. Uninstall the following programs:
 
-   1. Go to the folder `C:\Skyline DataMiner\tools\ModuleInstallers` on the DMA and re-install *DataMiner StorageModule* (version 1.0.1 or lower).
+      1. *DataMiner StorageModule* (version 3.0.3 or higher).
+
+      1. *DataMiner UserDefinableApiEndpoint* (version 2.0.0 or higher).
+ 
+   1. Go to the folder `C:\Skyline DataMiner\tools\ModuleInstallers` on the DMA and re-install:
+
+      1. *DataMiner StorageModule* (version 1.0.1 or lower).
+
+      1. *DataMiner UserDefinableApiEndpoint* (version 1.1.1 or lower).
 
    1. Start the DataMiner software.
 
