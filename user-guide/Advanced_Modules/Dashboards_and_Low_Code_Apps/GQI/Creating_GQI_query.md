@@ -32,7 +32,7 @@ You can create a query as follows:
 > [!NOTE]
 >
 > - From DataMiner 10.1.4 onwards, you can import a query from a different dashboard in the DMS. For more information, see [Importing a query](xref:Importing_a_query)
-> - Using the Data Aggregator module, GQI queries can be scheduled to run periodically at fixed times, dates, or intervals. For more information, see [Data Aggregator](xref:Data_Aggregator_DxM).
+> - Using the Data Aggregator module, you can schedule GQI queries to run periodically at fixed times, dates, or intervals. For more information, see [Data Aggregator](xref:Data_Aggregator_DxM).
 
 ## Notes on GQI queries
 

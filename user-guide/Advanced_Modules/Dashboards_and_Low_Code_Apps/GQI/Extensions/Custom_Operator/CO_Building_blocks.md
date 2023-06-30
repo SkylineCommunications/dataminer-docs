@@ -32,7 +32,7 @@ The following **optional interfaces** can be implemented to add additional funct
 
   | **Method** | **Parameters** | **Returns** | **Description** |
   |--|--|--|--|
-  | GetInputArguments | - | GQIArgument[] | Asks the user for additional during data source configuration. |
+  | GetInputArguments | - | GQIArgument[] | Asks the user for additional information during data source configuration. |
   | OnArgumentsProcessed | OnArgumentsProcessedInputArgs | OnArgumentsProcessedOutputArgs | Indicates that the arguments have been processed. The processed arguments can be found in the *OnArgumentsProcessedInputArgs*. |
 
   > [!IMPORTANT]
@@ -55,12 +55,12 @@ The following **optional interfaces** can be implemented to add additional funct
   | Optimize | IGQIOperatorNode<br>IGQICoreOperator | IGQIQueryNode | Intercepts how subsequent operators should be handled. Given the current query node and the next operator, it should return the resulting query node. |
 
   > [!TIP]
-  > It is recommended to forward operators whenever possible as it enables the core framework to perform significant optimizations.
+  > We recommend forwarding operators whenever possible as this enables the core framework to perform significant optimizations.
 
   > [!IMPORTANT]
   >
   > - The `Optimize` method may not be called if there are no supported subsequent operators.
-  > - The `Optimize` method will be called each time there is a new next operator due to other optimizations.
+  > - The `Optimize` method will be called each time there is a new next operator because of other optimizations.
 
   > [!NOTE]
   > Currently, the `Optimize` method only triggers for filter operators (typed `IGQIFilterOperator`).

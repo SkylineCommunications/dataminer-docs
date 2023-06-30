@@ -7,6 +7,6 @@ uid: GQI_Custom_Operator
 > [!WARNING]
 > This feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-The custom operator is available in soft launch from DataMiner 10.2.7 onwards, if the soft-launch option *GenericInterface* is enabled.
+The custom operator is available in soft launch from DataMiner 10.2.7/10.3.0 onwards, if the soft-launch option *GenericInterface* is enabled.
 
-To learn more about the predefined interfaces that a custom operator implements to add the desired functionality, see [Building blocks](xref:CO_Building_blocks). We also provide a complete overview of the [life cycle of a custom operator](xref:CO_Life_cycle).
+The custom operator has a [life cycle](xref:CO_Life_cycle) of its own and implements [predefined interfaces to add the desired functionality](xref:CO_Building_blocks).

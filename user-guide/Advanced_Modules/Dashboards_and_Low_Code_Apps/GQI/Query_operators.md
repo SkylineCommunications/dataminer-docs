@@ -20,7 +20,7 @@ Available operators:
 - [Custom operator](xref:GQI_Custom_Operator)
 
   > [!NOTE]
-  > From DataMiner 10.2.7 onwards, the custom operator is available in soft launch.
+  > From DataMiner 10.2.7/10.3.0 onwards, the custom operator is available in [soft launch](xref:SoftLaunchOptions).
 
 - [Filter](xref:GQI_Filter)
 
