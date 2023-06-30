@@ -26,7 +26,7 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 
 This object is also used in the Jobs app. It is used to store a link to a `SectionDefinition` object and to define whether the use of this definition is optional or mandatory.
 
-It also has the *IsSoftDeleted* boolean. If this is set to true, `Sections` in a `DomInstance` for this `SectionDefinitionID` are not required, will no longer be validated, but are still allowed to exist on the `DomInstance`. Adding new values or updating existing values for `Sections` for this soft-deleted `SectionDefinitionID` will be blocked. The `SectionDefinition` will also no longer be shown in UI forms.
+It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).
 
 > [!NOTE]
 > From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition`. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomDefinitions` with multiple `Sections`.

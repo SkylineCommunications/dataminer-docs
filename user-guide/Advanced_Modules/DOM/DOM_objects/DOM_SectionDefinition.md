@@ -48,7 +48,7 @@ Below is an overview of all other important properties:
 | IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
 | Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
-| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. If marked as soft-deleted, fields will be hidden in UI forms, fields in a DomInstance for this `FieldDescriptorID` are no longer required, new values or updated values for fields for this `FieldDescriptorID` will be blocked but existing values can still remain. Available from DataMiner 10.3.9/10.4.0 onwards. |
+| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
