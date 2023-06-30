@@ -48,10 +48,11 @@ Below is an overview of all other important properties:
 | IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
 | Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
+| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. If marked as soft-deleted, fields will be hidden in UI forms, fields in a DomInstance for this `FieldDescriptorID` are no longer required, new values or updated values for fields for this `FieldDescriptorID` will be blocked but existing values can still remain. Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved.
+- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will not be incremented anymore, the value will remain the last value before the descriptor was marked as soft-deleted.
 
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 
@@ -154,5 +155,5 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
 | SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
 | GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |

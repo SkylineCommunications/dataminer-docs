@@ -127,12 +127,14 @@ For each status, you can configure the requirements of a specific field. This is
 |--|--|--|
 | Id | DomStatusSectionDefinitionLinkId | Contains the `SectionDefinitionID` and status ID. |
 | FieldDescriptorLinks | `List<DomStatusFieldDescriptorLink>` | Contains the links to `FieldDescriptors` that are part of the `SectionDefinition`. |
-| AllowMultipleValues | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
+| AllowMultipleSections | bool | Defines whether a `DomInstance` can have multiple `Sections` for this `SectionDefinition` in this specific status. |
+| IsSoftDeleted | bool | Defines whether this `StatusSectionDefinitionLink` is soft-deleted or not. |
 
 > [!NOTE]
 >
 > - From DataMiner version 10.3.0/10.3.3 onwards, the `DomStatusSectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition` and status. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomBehaviorDefinitions` with multiple `Sections`.
 > - Removing an existing `Section` is not allowed if that `Section` contains a field that is marked as *ReadOnly*, as you would otherwise remove a read-only value. If you want to allow this behavior, but you would like to avoid users assigning a new field value themselves, use the *ClientReadOnly* boolean, available from DataMiner 10.3.0/10.3.3 onwards (see below).
+> - From DataMiner 10.3.9/10.4.0 onwards, the `DomStatusSectionDefinitionLink` contains the *IsSoftDeleted* boolean. When set to true, the link will not be shown anymore in UI forms, no fields will be required for this link, existing values will remain on the `DomInstance` but new/updated values for fields part of this link in this section will be blocked.
 
 A `DomStatusFieldDescriptorLink` has the following properties:
 
