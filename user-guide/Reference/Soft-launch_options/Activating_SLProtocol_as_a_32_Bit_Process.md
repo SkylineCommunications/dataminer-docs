@@ -4,7 +4,7 @@ uid: Activating_SLProtocol_as_a_32_Bit_Process
 
 # Activating SLProtocol as a 32-bit process
 
-From **DataMiner 10.3.9 onwards** SLProtocol will be 64-bit by default but a fallback soft-launch has been provided.
+From DataMiner 10.3.9/10.4.0 onwards, SLProtocol is a 64-bit process by default. However, a fallback soft-launch has been provided.<!-- RN 36725 -->
 
 This is a soft-launch feature that can be activated from **DataMiner 10.3.9 onwards**. There are **two ways** to activate this soft-launch feature, depending on whether you want to combine this with an upgrade action or not.
 
