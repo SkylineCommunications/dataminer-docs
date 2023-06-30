@@ -76,6 +76,14 @@ During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 red
 
 When an SNMPv3 element was deleted, its SNMPv3 credentials would incorrectly not get deleted. Also, when users were deleted, their DCP credentials would not get deleted.
 
+#### NT Notify type NT_ADD_VIEW could be executed with an invalid parent view ID [ID_36739]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, when an `NT_ADD_VIEW` call was executed with `parentViewID` set to a non-existing view ID, the newly added view would not be visible in the Surveyor. Hence, there was no way of correcting the situation using the UI. Cube logging would include a warning that a `parentViewID` cannot be resolved.
+
+Validation has now been added to `NT_ADD_VIEW`. When a request enters to create a view with an invalid parent view ID, the view will not be created. Also, views with an invalid parent view ID will now be placed directly under the root view. This will allow you to drag the view to its correct location, updating its parent view ID to a valid ID in the process. An error will also be logged and the *View Recursion* BPA test will report the view in question.
+
 #### SLAnalytics - Behavioral anomaly detection: Problem when processing a behavioral change point [ID_36755]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
