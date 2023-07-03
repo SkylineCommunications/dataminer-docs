@@ -37,9 +37,6 @@ When you open a trend graph showing trend information for multiple parameters, y
 
 As with single-parameter patterns (i.e. [univariate patterns](#univariate-patterns)), you can [specify a number of options](xref:Managing_pattern_definitions) in the *Pattern Overview* window. <!-- RN 35010 -->
 
-If you are viewing a trend graph where all parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
-
-> [!NOTE]
-> You do not need to have multiple parameters displayed in the trend graph to see the detected pattern occurrences.
+If you are viewing a trend graph where one or more of the parameters involved in the multivariate pattern are loaded and multivariate patterns have been detected, these patterns will be highlighted in orange when you hover the mouse pointer over the button representing a pattern, or if the option *Expand tags* is selected in the right-click menu.
 
 The ![multivariate](~/user-guide/images/multivariate_icon.png) icon indicates that the pattern combines trend information from different parameters. By clicking this icon, you can load all trend graphs of the parameters that are part of the pattern. <!-- RN 36628 -->
