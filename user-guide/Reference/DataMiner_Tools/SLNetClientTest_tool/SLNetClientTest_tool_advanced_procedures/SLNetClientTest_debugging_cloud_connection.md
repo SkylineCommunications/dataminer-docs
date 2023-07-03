@@ -25,11 +25,12 @@ Below you can find an overview of the different fields in the CcaGateway window 
 > [!CAUTION]
 > The majority of these fields are only intended to be used by Skyline DevOps Engineers. Do not make any changes in this window unless you have been explicitly asked to do so by a Skyline DevOps Engineer.
 
-![CcaGateway window](~/user-guide/images/CcaGatewayWindow.png)
+![CcaGateway window](~/user-guide/images/CcaGatewayWindow.png)<br>
+*CcaGateway window in DataMiner 10.3.8*
 
 1. The *Request Info* box shows the status of the last request done using this window. This can be used to see potential errors in communication.
 
-1. The *DCP Connect Endpoint* box shows the current connection endpoint used to make the cloud connection.
+1. The *DCP Connect Endpoint* box shows the current connection endpoint used to make and maintain the cloud connection.
 
 1. The *DCP Tunnel Endpoint* box shows the current endpoint used to make the tunnel connection.
 
