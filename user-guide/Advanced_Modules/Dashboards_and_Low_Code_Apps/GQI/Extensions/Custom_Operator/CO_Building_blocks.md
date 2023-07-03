@@ -60,7 +60,7 @@ The following **optional interfaces** can be implemented to add additional funct
   > [!IMPORTANT]
   >
   > - The `Optimize` method may not be called if there are no supported subsequent operators.
-  > - The `Optimize` method will be called each time there is a new next operator because of other optimizations.
+  > - The `Optimize` method will be called each time there is a new next operator.
 
   > [!NOTE]
   > Currently, the `Optimize` method only triggers for filter operators (typed `IGQIFilterOperator`).
