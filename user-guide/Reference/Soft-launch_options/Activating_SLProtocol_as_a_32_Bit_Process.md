@@ -47,4 +47,4 @@ This is a soft-launch feature that can be activated from **DataMiner 10.3.9 onwa
 
 ## Rollback
 
-[Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process)
+See [Activating SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process).
