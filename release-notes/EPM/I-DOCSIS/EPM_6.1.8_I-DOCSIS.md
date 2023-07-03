@@ -25,7 +25,7 @@ To improve performance, the EPM front-end element is no longer involved in retri
 
 #### Improved ID assignment for cable modems [ID_36781]
 
-The EPM front-end element now no longer needs to create unique IDs for all cable modems in the system. This will improve the turnaround for new IDs, and new entities in the system will appear more quickly.
+The *Skyline EPM Platform* front-end element now no longer needs to create unique IDs for all cable modems in the system. This will improve the turnaround for new IDs, and new entities in the system will appear more quickly.
 
 #### QAM Channels and CM Trending dashboards [ID_36782]
 
@@ -41,4 +41,4 @@ With this new implementation, the following columns are no longer needed in the 
 
 #### Generic DOCSIS CM Collector: Missing CCAP Core ID info in Cable Modem Overview table [ID_36761]
 
-On the Cable Modems page of a Generic DOCSIS CM Collector element, it could occur that some rows in the Cable Modem Overview table incorrectly did not show any information in the CCAP Core ID column.
+On the Cable Modems page of elements running the connector *Generic DOCSIS CM Collector*, it could occur that some rows in the Cable Modem Overview table incorrectly did not show any information in the CCAP Core ID column.
