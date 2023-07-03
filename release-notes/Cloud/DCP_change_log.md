@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSes of each user correctly [ID_36795]
+#### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
 In the Admin App, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
 
