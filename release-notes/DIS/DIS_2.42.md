@@ -38,6 +38,10 @@ This will allow you to validate the value of an attribute when applying an expor
 
 See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id_36622)
 
+#### Protocol Schema: Default Alarm Values aren't allowed to have comma's. [ID_36807]
+
+The protocol schema will now give a warning when comma's are being used in the default alarm value tags (`CH`, `MaH`, `MiH`, ...).
+
 ## Changes
 
 ### Enhancements
