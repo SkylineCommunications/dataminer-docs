@@ -46,7 +46,7 @@ Below you can find an overview of the different fields in the CcaGateway window 
 
 1. The *Unregister DMS* button removes the connection to dataminer.services and thereby disconnects your DMS from the cloud. **Do not use this option unless you are specifically asked by a Skyline DevOps engineer. This action cannot be undone.**
 
-1. The *Renew Cloud Session* button refreshes the cloud session. However, we strongly recommend using the *Renew* button on the *Cloud* page in System Center for this instead.
+1. The *Renew Cloud Session* button refreshes the cloud session. However, we strongly recommend using the *Renew* button on the *Cloud* page in System Center for this instead (note that this is only displayed if the connection is not valid).
 
 1. The *Validate Cloud Session* button checks the status of the current dataminer.services connection. You can also see this in Cube, where it is visualized by either a green checkmark or a red x.
 
