@@ -4,7 +4,7 @@ uid: DashboardTable
 
 # Table
 
-This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds). Available from DataMiner 10.0.13 onwards.
+This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query). Available from DataMiner 10.0.13 onwards.
 
 It displays the different possible data sources of queries as follows:
 
@@ -87,7 +87,7 @@ To apply a **general filter** across the table, a search box is available:
 
 1. Specify the filter text (case-insensitive) in the search box.
 
-   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Configuring_GQI_feeds).
+   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
 
 To apply a **filter based on a specific column**:
 

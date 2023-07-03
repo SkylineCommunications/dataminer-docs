@@ -1777,17 +1777,6 @@
               items:
                 - name: Configuring feed components
                   topicUid: Configuring_feed_components
-                - name: Configuring query (GQI) data feeds
-                  topicUid: Configuring_GQI_feeds
-                  items:
-                    - name: Query data sources
-                      topicUid: Query_data_sources
-                    - name: Configuring an external data source in a query
-                      topicUid: Configuring_an_external_data_source_in_a_query
-                    - name: Query operators
-                      topicUid: Query_operators
-                    - name: Importing a query
-                      topicUid: Importing_a_query
                 - name: Specifying data input in a dashboard URL
                   topicUid: Specifying_data_input_in_a_dashboard_URL
                 - name: Configuring a dashboard to use a URL feed without a feed component
@@ -1945,6 +1934,109 @@
                 topicUid: DashboardNumericInputFeed
               - name: Text input
                 topicUid: DashboardTextInputFeed
+        - name: Generic Query Interface (GQI)
+          topicUid: Generic_Query_Interface
+          items:
+            - name: Creating a GQI query
+              topicUid: Creating_GQI_query
+            - name: Query data sources
+              topicUid: Query_data_sources
+              items:
+                - name: Get alarms
+                  topicUid: Get_alarms
+                - name: Get ad hoc data
+                  topicUid: Get_ad_hoc_data
+                - name: Get trend data patterns
+                  topicUid: Get_trend_data_patterns
+                - name: Get trend data pattern events
+                  topicUid: Get_trend_data_pattern_events
+                - name: Get behavioral change events
+                  topicUid: Get_behavioral_change_events
+                - name: Get DCF connections
+                  topicUid: Get_DCF_connections
+                - name: Get elements
+                  topicUid: Get_elements
+                - name: Get parameter table by alias
+                  topicUid: Get_parameter_table_by_alias
+                - name: Get object manager instances
+                  topicUid: Get_object_manager_instances
+                - name: Get parameter table by ID
+                  topicUid: Get_parameter_table_by_ID
+                - name: Get parameter relations
+                  topicUid: Get_parameter_relations
+                - name: Get parameters for element where
+                  topicUid: Get_parameters_for_element_where
+                - name: Get services
+                  topicUid: Get_services
+                - name: Get view relations
+                  topicUid: Get_view_relations
+                - name: Get views
+                  topicUid: Get_views
+                - name: Start from
+                  topicUid: Start_from
+            - name: Query operators
+              topicUid: Query_operators
+              items:
+                - name: Aggregate
+                  topicUid: GQI_Aggregate
+                - name: Column manipulations
+                  topicUid: GQI_Column_manipulations
+                - name: Filter
+                  topicUid: GQI_Filter
+                - name: Join
+                  topicUid: GQI_Join
+                - name: Select
+                  topicUid: GQI_Select
+                - name: (Then) Sort (by)
+                  topicUid: GQI_Sort
+                - name: Top X
+                  topicUid: GQI_Top_X
+            - name: Extensions
+              topicUid: Configuring_an_ad_hoc_data_source_in_a_query
+              items:
+                - name: Configuring an ad hoc data source
+                  topicUid: Configuring_an_ad_hoc_data_source_in_a_query
+                  items:
+                    - name: Building blocks of queries with ad hoc data
+                      topicUid: Ad_hoc_Building_blocks
+                    - name: Life cycle of queries with ad hoc data
+                      topicUid: Ad_hoc_Life_cycle
+                    - name: Tutorials
+                      topicUid: Ad_hoc_Tutorials
+                - name: Configuring a custom operator
+                  topicUid: GQI_Custom_Operator
+                  items:
+                    - name: Building blocks of a custom operator
+                      topicUid: CO_Building_blocks
+                    - name: Life cycle of a custom operator
+                      topicUid: CO_Life_cycle
+                - name: API reference
+                  topicUid: GQIArgument
+                  items:
+                    - name: GQIArgument
+                      topicUid: GQIArgument
+                    - name: GQICell
+                      topicUid: GQICell
+                    - name: GQIColumn
+                      topicUid: GQIColumn
+                    - name: GQIDMS
+                      topicUid: GQIDMS
+                    - name: GQIPage
+                      topicUid: GQIPage
+                    - name: GQIRow
+                      topicUid: GQIRow
+                    - name: IGQIDataSource
+                      topicUid: IGQIDataSource
+                    - name: IGQIInputArguments
+                      topicUid: IGQIInputArguments
+                    - name: IGQIOnDestroy
+                      topicUid: IGQIOnDestroy
+                    - name: IGQIOnInit
+                      topicUid: IGQIOnInit
+                    - name: IGQIOnPrepareFetch
+                      topicUid: IGQIOnPrepareFetch
+            - name: Importing a query
+              topicUid: Importing_a_query
         - name: Frequently asked questions
           topicUid: Dashboards_and_Low_Code_Apps_FAQ
     - name: DMS Dashboards (legacy)

@@ -159,7 +159,7 @@ Moreover, dashboards adhere to DevOps principles and can easily evolve over time
 > [!TIP]
 > See [Dashboard Share](xref:Overview_Collaboration#dashboard-share) for more information.
 
-DataMiner Dashboards offers a wide range of visualizations that can make use of various data feeds, including GQI-based query feeds. This “Queries” data item allows you to [construct queries](xref:Configuring_GQI_feeds) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
+DataMiner Dashboards offers a wide range of visualizations that can make use of various data feeds, including GQI-based query feeds. This “Queries” data item allows you to [construct queries](xref:Creating_GQI_query) to access the wealth of data available in your DataMiner System. See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi)
 
 > [!TIP]
 > For more information:
@@ -203,7 +203,7 @@ And finally, the control panels **enable true multi-tenant operations**. You can
 
 The No-Code/Low-Code Apps toolset enables you to **compose tailor-made apps** for specific audiences, from the ground up **with little to no coding experience**.
 
-**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the *[**Generic Query Interface (GQI)**](xref:Configuring_GQI_feeds), also supporting [external data sources](xref:Configuring_an_external_data_source_in_a_query).
+**Leverage your data!** Thanks to DataMiner's support for every possible category of integration, no-code apps can leverage your data lake, providing deeper insights and value. You can monitor metrics from any data source in real time, aggregate and manipulate data abstracted from hardware products, and create views tailored to the needs of each of your teams. Perform **real-time analytics** using the *[**Generic Query Interface (GQI)**](xref:Creating_GQI_query), also supporting [external data sources](xref:Configuring_an_ad_hoc_data_source_in_a_query).
 
 > [!TIP]
 > See also: [Your next step towards a data-driven operation: the brand-new DataMiner Generic Query Interface (GQI)](https://community.dataminer.services/your-next-step-towards-a-data-driven-operation-the-brand-new-dataminer-generic-query-interface-gqi/)
