@@ -19,4 +19,4 @@ If you select a pattern definition in the list on the left, you can then modify 
 You can also **delete** a pattern definition using the recycle bin icon next to it in the list on the left.
 
 > [!NOTE]
-> Currently, the *Pattern Overview* window only supports single-variate patterns. Support for multi-variate patterns will be added in a later release.
+> From DataMiner 10.3.8/10.4.0 onwards, the *Pattern Overview* window also supports [multivariate patterns](xref:Working_with_pattern_matching#multivariate-patterns)<!-- RN 35010 -->.
