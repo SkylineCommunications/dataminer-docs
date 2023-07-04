@@ -33,6 +33,8 @@ From DataMiner 10.0.0/10.0.2 onwards, the DataMiner Analytics software can detec
 
 If a change point other than an outlier or unlabeled change is unexpected, it will be considered anomalous. Level shifts that have a different direction than previous recent jumps or that jump to a previously unseen level will typically be labeled “anomalous”. Similarly, trend or variance changes will be labeled “anomalous” when no earlier trend or variance changes in the same direction were detected during the last weeks. A flatline will be considered anomalous when no recent flatline change point of approximately the same length or longer is detected.
 
+From DataMiner 10.3.8/10.4.0 onwards<!-- RN 36664 -->, a change can also be considered anomalous if it has been seen before in the historical behavior of the parameter but it does not fit in the usual periodic pattern.
+
 > [!NOTE]
 >
 > - Whenever an anomalous change point is detected, a “suggestion event” is generated, which is cleared again two hours after its creation time or its last update time. You can view these suggestion events by creating a suggestion event tab in the Alarm Console. See [Adding and removing alarm tabs in the Alarm Console](xref:ChangingTheAlarmConsoleLayout#adding-and-removing-alarm-tabs-in-the-alarm-console).
