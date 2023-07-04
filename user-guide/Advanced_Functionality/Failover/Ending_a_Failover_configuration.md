@@ -43,13 +43,20 @@ If the replication factor is correct, you can continue ending the Failover confi
 
 1. In the *Failover* window, depending on your DataMiner version, select *No Failover*, or clear the selection from the *Failover* checkbox.
 
-   A dialog box will then appear where you can choose whether the Failover setup should be deleted or disabled.
+   Prior to 10.2, a dialog box will then appear where you can choose whether the Failover setup should be deleted or disabled.
 
    - If you click *Yes* in this dialog box, the setup will be removed completely. First the offline DMA will be stopped, and its DataMiner ID and all its data will be removed. The online DMA will release its virtual IP and inform the rest of the DMS (if applicable) that it can now be reached through its actual IP.
 
    - If you click *No* in this dialog box, no data will be removed. The DataMiner ID and configuration of the backup DMA will remain present but will be inactive. The online DMA will release its virtual IP and inform the rest of the DMS (if applicable) that it can now be reached through its actual IP.
 
    In short, selecting *No* allows you to easily enable the Failover setup again, whereas selecting *Yes* means you will need to reconfigure it from scratch.
+
+   From to 10.2, it is not possible to keep the Failover configuration. The dialogbox "Disabling failover will revert the Failover Agent to a clean installation. All data currently on the FailoverAgent will be lost permanently" will appear.
+  
+     - If you click *Yes* in this dialog box, the setup will be removed completely. First the offline DMA will be stopped, and its DataMiner ID and all its data will be removed. The online DMA will release its virtual IP and inform the rest of the DMS (if applicable) that it can now be reached through its actual IP.
+
+   - If you click *No* in this dialog box, the action taken will be discarded and the configuration will remain unchanged.
+
 
 > [!NOTE]
 > In case a regular Cassandra general database is used, the Cassandra database is always reverted to a single node, regardless of whether you select to disable or delete the Failover setup. If the Cassandra cluster feature is used, the node on the backup DMA will be retained. However, the DB.xml file of the backup Agent will be adapted to no longer refer to the database.
