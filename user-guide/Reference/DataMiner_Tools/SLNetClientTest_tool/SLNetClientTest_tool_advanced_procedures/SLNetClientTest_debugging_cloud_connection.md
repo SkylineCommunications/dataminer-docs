@@ -52,7 +52,7 @@ Below you can find an overview of the different fields in the CcaGateway window 
 
 1. The *Link Accounts Session* button is used to link a DataMiner account to a dataminer.services account. However, we recommend using the procedure detailed under [Linking your DataMiner and DCP account](xref:Linking_your_DataMiner_and_DCP_account) instead.
 
-1. The *Get Node Info* button retrieves information on the CloudGateway installation and displays it in the table below.
+1. The *Get Node Info* button retrieves information on the CloudGateway installation. This button is now **deprecated**.
 
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
