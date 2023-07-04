@@ -303,6 +303,12 @@ From now on, users will be allowed to manually clear automatic incidents.
 
 A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
 
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
