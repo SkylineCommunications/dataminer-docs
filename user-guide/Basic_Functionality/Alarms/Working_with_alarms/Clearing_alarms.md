@@ -4,7 +4,7 @@ uid: Clearing_alarms
 
 # Clearing alarms
 
-By default, alarms are cleared automatically. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
+In DataMiner Cube, alarms are cleared automatically by default. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
 
 > [!NOTE]
 >

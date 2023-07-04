@@ -4,7 +4,7 @@ uid: Masking_and_unmasking_alarms
 
 # Masking and unmasking alarms
 
-Active alarms can be masked to prevent unnecessary follow-up.
+In DataMiner Cube, active alarms can be masked to prevent unnecessary follow-up.
 
 If a device is shut down for maintenance purposes, or if its settings are intentionally being changed for testing purposes, alarms raised as a result of such an action can be masked. This way, operators monitoring the DataMiner System know that these alarms do not require any intervention.
 
