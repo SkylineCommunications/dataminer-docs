@@ -14,8 +14,8 @@ As from DIS v2.31, similar to DataMiner protocols, it is also possible to develo
 
     > [!NOTE]
     > If you want an external DLL file to be placed in a specific folder instead of C:\\DataMiner\\ProtocolScripts, then specify the full path to that folder in the *DataMiner DLL Path* property of that DLL file.
-    > 
-    > As from DIS v2.42, this feature has been removed. If there is a use case that needs this, please contact [Data Acquisition](mailto:support.data-acquisition@skyline.be).
+    >
+    > As from DIS v2.42, this feature has been removed. If this is required for a particular use case, please contact [Data Acquisition](mailto:support.data-acquisition@skyline.be).
 
 - ​Up to DIS v2.40, it was only possible to refer to a library script Exe from within the same Automation script. As from DIS v2.41, in a Visual Studio solution, you can also add a reference to a project from another Automation script in the solution. DIS will then automatically add a `scriptRef`.
 
