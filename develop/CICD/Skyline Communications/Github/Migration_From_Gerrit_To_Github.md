@@ -24,7 +24,9 @@ Follow these steps to migrate your repository from Gerrit to GitHub:
 
 1. Clone the repository you want to migrate.
 
-1. In the SkylineCommunications GitHub organization, create an [empty GitHub repository](https://github.com/organizations/SkylineCommunications/repositories/new). Do not add a README or .gitignore.
+1. In the SkylineCommunications GitHub organization, create an [empty GitHub repository](https://github.com/organizations/SkylineCommunications/repositories/new).
+    > [!CAUTION] Do not initilize the repository with a README, .gitignore or license.
+    >  This will add a commit to the empty repository, causing step 4 to fail.
 
 1. Follow the naming conventions described under [our guidelines for using GitHub](xref:Using_GitHub_for_CICD).
 
