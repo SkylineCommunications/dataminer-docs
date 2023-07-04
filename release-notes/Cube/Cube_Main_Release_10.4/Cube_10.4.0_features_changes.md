@@ -343,6 +343,14 @@ The proactive cap detection feature generates suggestion events for predicted da
 
 The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
 
+#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID_36590]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, when the DataMiner System does not include an indexing engine, no run-time errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
+
+Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
+
 #### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->

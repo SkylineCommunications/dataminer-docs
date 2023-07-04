@@ -78,6 +78,18 @@ However, if necessary, it can still be run as a 32-bit process. For more informa
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
 
+#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you install or upgrade a DataMiner Agent, a number of DataMiner Extension Modules (DxMs) will automatically be installed (if not present yet). The following modules have now been updated:
+
+- DataMiner CoreGateway (version 2.13.0)
+- DataMiner SupportAssistant (version 1.4.0)
+
+> [!NOTE]
+> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+
 ### Fixes
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
