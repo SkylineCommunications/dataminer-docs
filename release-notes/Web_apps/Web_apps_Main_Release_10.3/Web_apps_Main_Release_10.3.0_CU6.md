@@ -38,3 +38,11 @@ Because of this change, the behavior of aggregations applied on all types of emp
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.
+
+#### Low-Code Apps: Creating an app with an existing name would incorrectly be possible [ID_36744]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, it would incorrectly be possible to create a low-code app with a name that was identical to that of an existing app.
+
+From now on, when you try to create an app with a name that is identical to that of an existing app, an error will be thrown.

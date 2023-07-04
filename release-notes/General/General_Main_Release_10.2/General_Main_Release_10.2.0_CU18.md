@@ -74,3 +74,11 @@ When you reduced the screen size to the point at which the navigation pane got h
 Up to now, when an `NT_ADD_VIEW` call was executed with `parentViewID` set to a non-existing view ID, the newly added view would not be visible in the Surveyor. Hence, there was no way of correcting the situation using the UI. Cube logging would include a warning that a `parentViewID` cannot be resolved.
 
 Validation has now been added to `NT_ADD_VIEW`. When a request enters to create a view with an invalid parent view ID, the view will not be created. Also, views with an invalid parent view ID will now be placed directly under the root view. This will allow you to drag the view to its correct location, updating its parent view ID to a valid ID in the process. An error will also be logged and the *View Recursion* BPA test will report the view in question.
+
+#### Low-Code Apps: Creating an app with an existing name would incorrectly be possible [ID_36744]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, it would incorrectly be possible to create a low-code app with a name that was identical to that of an existing app.
+
+From now on, when you try to create an app with a name that is identical to that of an existing app, an error will be thrown.
