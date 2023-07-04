@@ -18,6 +18,10 @@ uid: General_Main_Release_10.2.0_CU18
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
+#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
+
+SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
+
 #### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU5] - FR 10.3.8 -->
@@ -31,6 +35,19 @@ When smart baselines were configured, by default information events would be gen
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
 
 ### Fixes
+
+#### Failover: Problems when running BPA tests [ID_36445]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When the backup agent was active, certain BPA tests would incorrectly return the following error:
+
+`This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
+
+Also, the BPA Manager would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+
+- `State="Offline"`
+- `StateBeforeShutDown="Online"`
 
 #### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
 

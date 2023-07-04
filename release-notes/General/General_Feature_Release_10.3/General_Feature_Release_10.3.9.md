@@ -62,6 +62,10 @@ Up to now, the *Cassandra Cleaner* tool could only be used to remove data from t
 
 For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
+#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
+
+SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -81,6 +85,19 @@ The following mechanisms have now been implemented:
 - The affected table data will no longer have any TTL value configured when inserted. Moreover, as a safety measure, all Cassandra tables will now also have a `default_time_to_live` setting. This value will provide the default TTL value in case no value for the TTL is passed when inserting data.
 
 - When existing data with an incorrect TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
+
+#### Failover: Problems when running BPA tests [ID_36445]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When the backup agent was active, certain BPA tests would incorrectly return the following error:
+
+`This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
+
+Also, the BPA Manager would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+
+- `State="Offline"`
+- `StateBeforeShutDown="Online"`
 
 #### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
 
