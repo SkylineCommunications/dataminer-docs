@@ -64,3 +64,9 @@ A table component would show skeleton loading when it refetched data with extern
 Up to now, it would incorrectly be possible to create a low-code app with a name that was identical to that of an existing app.
 
 From now on, when you try to create an app with a name that is identical to that of an existing app, an error will be thrown.
+
+#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
