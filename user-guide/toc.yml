@@ -3722,6 +3722,8 @@
                 topicUid: SLNetClientTest_configuring_trend_caching
               - name: Creating an enhanced view
                 topicUid: SLNetClientTest_creating_enhanced_view
+              - name: Debugging the dataminer.services connection
+                topicUid: SLNetClientTest_debugging_cloud_connection
               - name: Disabling automatic NATS configuration
                 topicUid: SLNetClientTest_disabling_automatic_nats_config
               - name: Disabling replication buffering
