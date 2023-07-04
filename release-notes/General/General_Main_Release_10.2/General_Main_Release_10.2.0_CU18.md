@@ -44,7 +44,7 @@ When the backup agent was active, certain BPA tests would incorrectly return the
 
 `This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
 
-Also, the BPA Manager would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
 
 - `State="Offline"`
 - `StateBeforeShutDown="Online"`
