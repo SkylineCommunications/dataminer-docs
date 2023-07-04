@@ -8,8 +8,16 @@ From DataMiner 10.1.3/10.2.0 onwards, The DOM manager tracks the history of all 
 
 When a `DomInstance` is created or updated, a new `HistoryChange` object will be stored containing the created, updated, or deleted values. When a `DomInstance` is deleted, all history data is automatically deleted.
 
+Prior to DataMiner version 10.3.9/10.4.0, this was done synchronously during the `DomInstance` calls. This can cause these calls to take longer than expected. In case of a `DomInstance` delete, this delay could add up when there have been a lot of updates for that instance. Since that version, all DOM managers will do the history actions asynchronously on the background. This prevents the delay on the `DomInstance` calls and thus improves their performance. Do not however that the deletes could still take a while to complete on the background.
+
 > [!NOTE]
-> If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. The notice will only be generated every hour to prevent an excessive number of notices.
+>
+> - When designing a DOM manager, consider disabling the DOM history if these records are not required. This reduces the load on the DB and reduces the amount of storage required. See [the section below](#disabling-the-history-or-changing-the-storage-behavior) for more info.
+> - If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. The notice will only be generated every hour to prevent an excessive number of notices.
+
+## Disabling the history or changing the storage behavior
+
+From DataMiner 10.3.9/10.4.0 onwards, it is possible to override the default asynchronous save and delete behavior of the DOM instance history, by setting the *DomInstanceHistoryStorageBehavior* option on the `ModuleSettings`. This way you can force the history to be saved synchronously, or disable it altogether. See [the settings page](xref:DOM_DomInstanceHistorySettings) for more information on this option.
 
 ## Changes to the field values
 

@@ -2146,6 +2146,8 @@
               topicUid: DOM_ModuleBehaviorDefinition
             - name: TtlSettings
               topicUid: DOM_TtlSettings
+            - name: DomInstanceHistorySettings
+              topicUid: DOM_DomInstanceHistorySettings
         - name: DOM data storage
           topicUid: DOM_data_storage
         - name: DOM examples
