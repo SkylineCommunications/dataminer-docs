@@ -4,7 +4,7 @@ uid: Clearing_alarms
 
 # Clearing alarms
 
-In DataMiner Cube, alarms are cleared automatically by default. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
+By default, alarms are cleared automatically. However, if you set the AutoClear system setting to “false”, then all alarms will have to be cleared manually.
 
 > [!NOTE]
 >
@@ -35,7 +35,7 @@ A DataMiner alarm of which the severity returns to normal can also be kept in a 
 
 To manually clear an alarm:
 
-1. Right-click the alarm in the Alarm Console and select *Clear alarm*.
+1. In the Alarm Console in DataMiner Cube, right-click the alarm and select *Clear alarm*.
 
 1. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
 

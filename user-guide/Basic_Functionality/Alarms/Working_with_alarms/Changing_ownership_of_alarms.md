@@ -4,7 +4,7 @@ uid: Changing_ownership_of_alarms
 
 # Changing ownership of alarms
 
-The Alarm Ownership feature in DataMiner Cube allows unambiguous assignment of responsibility for individual alarm events, as well as tracking of those responsibilities.
+The Alarm Ownership feature allows unambiguous assignment of responsibility for individual alarm events, as well as tracking of those responsibilities.
 
 When the DataMiner System generates a new alarm event, the *Alarm Type* property is set to "New Alarm", the *Owner* property is set to "System", and the *User Status* property is set to "Not Assigned".
 
@@ -14,7 +14,7 @@ To indicate to other users that you are aware of an issue and working on a resol
 
 To do so:
 
-1. Right-click the alarm event in the *Active Alarms* tab of the Alarm Console, and select *Take Ownership*.
+1. In the *Active Alarms* tab of the Alarm Console in DataMiner Cube, right-click the alarm event and select *Take Ownership*.
 
 1. In the *Take Ownership* window, enter a comment explaining why you are taking ownership of the alarm event.
 
@@ -24,7 +24,6 @@ When you take ownership of an alarm event, a new alarm record is added to the li
 >
 > - If you want to query the historical database for all alarm events of which users took ownership, select all alarm events where the *Alarm Type* property is "Acknowledged".
 > - You cannot take ownership of alarm events that are owned by someone else. In that case, ownership will first need to be released.
-> - It is only possible to take ownership of clearable alarms from DataMiner version 8.5.6 onwards.
 
 ## Releasing ownership of an alarm
 
@@ -32,7 +31,7 @@ After you have taken ownership of an alarm event, it is possible to release owne
 
 To do so:
 
-- Right-click the alarm you currently own in the Alarm Console, and select *Release Ownership*.
+- In the Alarm Console in DataMiner Cube, right-click the alarm you currently own and select *Release Ownership*.
 
 > [!NOTE]
 > By default, you can only release ownership of alarm events that you currently own. However, if you have been granted the permission *Release ownership of another user*, you are also allowed to release ownership of alarms that are owned by other users.

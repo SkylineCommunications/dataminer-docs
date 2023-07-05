@@ -4,7 +4,7 @@ uid: Advanced_analytics_features_in_the_Alarm_Console
 
 # Advanced analytics features in the Alarm Console
 
-In DataMiner Cube, a number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. They can each be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
+A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. They can each be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
 
 The following advanced analytics features **assist at identifying incidents in the alarm data**:
 
