@@ -16,6 +16,8 @@ This section consists of the following topics:
 
 - [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
+- [Health assessment guidelines for DataMiner Agents](xref:Health_Assessment_Guidelines_for_DataMiner_Agent)
+
 - [Uninstalling a DataMiner Agent](xref:Uninstalling_a_DataMiner_Agent)
 
 - [DataMiner packages](xref:DataMiner_packages)

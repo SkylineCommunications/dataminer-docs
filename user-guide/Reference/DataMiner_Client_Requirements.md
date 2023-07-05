@@ -24,13 +24,17 @@ Recommended DataMiner client configuration:
 
 - Microsoft Windows 11
 
+- Windows Server 2012
+
+- Windows Server 2016
+
+- Windows Server 2019
+
+- Windows Server 2022
+
 ### Microsoft .NET Framework
 
-- Up to DataMiner 9.5.5: Microsoft .NET Framework 3.5 SP1 / Microsoft .NET Framework 4.0 (incl. fixes)
-
-- From DataMiner 9.5.6 onwards: Microsoft .NET Framework 4.5.2
-
-- From DataMiner 9.6.0 onwards: Microsoft .NET Framework 4.6.2
+Microsoft .NET Framework 4.6.2
 
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.
