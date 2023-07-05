@@ -315,7 +315,7 @@ Enables the Query Filter component in the Dashboards app.
 > - Prior to DataMiner 10.1.5, this option also enables the Node Edge component, which becomes available by default from DataMiner 10.1.5 onwards.
 
 - **Minimum version**: 10.0.4
-- **Estimated release version**: 10.3.8
+- **Estimated release version**: 10.3.9
 
 ### ReportsAndDashboardsScheduler
 
