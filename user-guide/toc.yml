@@ -138,7 +138,7 @@
   topicUid: Part2BasicFunctionalities
   items:
     - name: Alarms
-      topicUid: alarms
+      topicUid: About_alarms
       items:
         - name: About alarms
           topicUid: About_alarms
@@ -151,57 +151,54 @@
               topicUid: Alarm_linking
             - name: Alarm filters
               topicUid: Alarm_filters
-        - name: Working with alarms in DataMiner Cube
-          topicUid: Working_with_alarms_in_DataMiner_Cube
+        - name: Alarm cards
+          topicUid: Alarm_cards
+        - name: Working with the Alarm Console
+          topicUid: Working_with_the_Alarm_Console
           items:
-            - name: Alarm cards
-              topicUid: Alarm_cards
-            - name: Working with the Alarm Console
-              topicUid: Working_with_the_Alarm_Console
-              items:
-                - name: Manipulating the Alarm Console
-                  topicUid: Manipulating_the_Alarm_Console
-                - name: Changing the layout of the Alarm Console
-                  topicUid: ChangingTheAlarmConsoleLayout
-                - name: Using the collapsible side panel of the Alarm Console
-                  topicUid: UsingTheCollapsibleSidePanel
-                - name: Working with the Alarm Console history slider
-                  topicUid: WorkingWithTheAlarmConsoleHistorySlider
-                - name: Applying alarm filters in the Alarm Console
-                  topicUid: ApplyingAlarmFiltersInTheAlarmConsole
-                - name: Using the RCA slider
-                  topicUid: UsingTheRCASlider
-                - name: Configuring a custom alert sound for an alarm tab
-                  topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
-                - name: Alarm Console columns
-                  topicUid: AlarmConsoleColumns
-                - name: Alarm Console settings
-                  topicUid: AlarmConsoleSettings
-                - name: Alarm Console right-click menu
-                  topicUid: AlarmConsoleRightClickMenu
-            - name: Changing ownership of alarms
-              topicUid: Changing_ownership_of_alarms
-            - name: Masking and unmasking alarms
-              topicUid: Masking_and_unmasking_alarms
-            - name: Adding comments to an alarm
-              topicUid: Adding_comments_to_an_alarm
-            - name: Changing the read status of an alarm
-              topicUid: Changing_the_read_status_of_an_alarm
-            - name: Changing custom alarm properties
-              topicUid: Changing_custom_alarm_properties
-            - name: Clearing alarms
-              topicUid: Clearing_alarms
-            - name: Advanced analytics features in the Alarm Console
-              topicUid: Advanced_analytics_features_in_the_Alarm_Console
-              items:
-                - name: Behavioral anomaly detection
-                  topicUid: Behavioral_anomaly_detection
-                - name: Proactive cap detection
-                  topicUid: Proactive_cap_detection
-                - name: Automatic incident tracking
-                  topicUid: Automatic_incident_tracking
-                - name: Monitoring of trend patterns
-                  topicUid: Monitoring_of_trend_patterns
+            - name: Manipulating the Alarm Console
+              topicUid: Manipulating_the_Alarm_Console
+            - name: Changing the layout of the Alarm Console
+              topicUid: ChangingTheAlarmConsoleLayout
+            - name: Using the collapsible side panel of the Alarm Console
+              topicUid: UsingTheCollapsibleSidePanel
+            - name: Working with the Alarm Console history slider
+              topicUid: WorkingWithTheAlarmConsoleHistorySlider
+            - name: Applying alarm filters in the Alarm Console
+              topicUid: ApplyingAlarmFiltersInTheAlarmConsole
+            - name: Using the RCA slider
+              topicUid: UsingTheRCASlider
+            - name: Configuring a custom alert sound for an alarm tab
+              topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
+            - name: Alarm Console columns
+              topicUid: AlarmConsoleColumns
+            - name: Alarm Console settings
+              topicUid: AlarmConsoleSettings
+            - name: Alarm Console right-click menu
+              topicUid: AlarmConsoleRightClickMenu
+        - name: Changing ownership of alarms
+          topicUid: Changing_ownership_of_alarms
+        - name: Masking and unmasking alarms
+          topicUid: Masking_and_unmasking_alarms
+        - name: Adding comments to an alarm
+          topicUid: Adding_comments_to_an_alarm
+        - name: Changing the read status of an alarm
+          topicUid: Changing_the_read_status_of_an_alarm
+        - name: Changing custom alarm properties
+          topicUid: Changing_custom_alarm_properties
+        - name: Clearing alarms
+          topicUid: Clearing_alarms
+        - name: Advanced analytics features in the Alarm Console
+          topicUid: Advanced_analytics_features_in_the_Alarm_Console
+          items:
+            - name: Behavioral anomaly detection
+              topicUid: Behavioral_anomaly_detection
+            - name: Proactive cap detection
+              topicUid: Proactive_cap_detection
+            - name: Automatic incident tracking
+              topicUid: Automatic_incident_tracking
+            - name: Monitoring of trend patterns
+              topicUid: Monitoring_of_trend_patterns
         - name: Advanced alarm functionality
           topicUid: Advanced_alarm_functionality
           items:
