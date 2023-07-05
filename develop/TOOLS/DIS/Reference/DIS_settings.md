@@ -4,7 +4,7 @@ uid: DIS_settings
 
 # DIS settings
 
-In the *DIS Settings* dialog box, you can find all program settings of the DataMiner Integration Studio:
+From the menu, choose DIS > Settings to open the DIS Settings dialog box. In this dialog box, you can configure all the DIS-related settings.
 
 - [DMA](#dma)
 - [DLLs](#dlls)
@@ -14,12 +14,13 @@ In the *DIS Settings* dialog box, you can find all program settings of the DataM
 - [MIB](#mib)
 - [Account](#account)
 - [Updates](#updates)
+- [Templates](#templates)
 - [Other](#other)
 - [Info](#info)
 
 ## DMA
 
-In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to import or publish protocols or Automation scripts, or debug QActions.
+In the *DMA* tab, add a list of DMAs to which you want DataMiner Integration Studio to be able to connect when it has to e.g. import or publish connectors or Automation scripts, or debug connector QActions.
 
 To add a DMA to the list:
 
@@ -45,7 +46,7 @@ To add a DMA to the list:
 
     > [!TIP]
     > See also:
-    > [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts)
+    > [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts)
 
 1. Click *OK* to close the *Edit DMA Connection* window.
 
@@ -88,7 +89,7 @@ In the *DLLs* tab, you can specify the DLL import locations.
 
 ### DLL Import locations
 
-These are the folders that should contain files like *Interop.SLDms.dll*, *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
+These are the folders that should contain files like *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
 
 - To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis (“…”) button to the right of the text box and browse to the right folder.
 - To delete a folder, click the red X to the right of the folder.
@@ -268,6 +269,17 @@ In the *Updates* tab, you can indicate whether you want DataMiner Integration St
 
     > [!NOTE]
     > It is advised to always install official release versions.
+
+## Templates
+
+In the *Templates* tab, you can indicate whether you want DataMiner Integration Studio to automatically check for template updates when Visual Studio starts and install these when updates are available.
+
+In the *Templates Nuget package ID* text box, you can specify the ID of the NuGet package you want to use in Visual Studio. This NuGet package contains the solution and project templates you can use to create new solutions and projects.
+
+The update button allows you to manually trigger an update.
+
+> [!NOTE]
+> This tab is only available in Visual Studio 2022.
 
 ## Other
 

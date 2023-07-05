@@ -2,7 +2,7 @@
 uid: Installing_and_configuring_the_software
 ---
 
-# Installing and configuring the software
+# Installation and configuration
 
 This section consists of the following topics:
 

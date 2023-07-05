@@ -20,9 +20,9 @@ In the header of a file tab containing the C# code of a QAction or Exe code bloc
 
 ## Inside the file tab
 
-### Intellisense
+### IntelliSense
 
-When you edit the C# code of a QAction or Exe code block, all regular C# editing features (including Intellisense) are at your disposal.
+When you edit the C# code of a QAction or Exe code block, all regular C# editing features (including IntelliSense) are at your disposal.
 
 ### Copying the entire protocol to the Windows Clipboard
 

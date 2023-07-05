@@ -55,49 +55,7 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 ### Compare
 
-If you want to compare two protocols, do the following:
-
-1. At the top of an XML editor tab containing a protocol.xml file, click *Compare*.
-1. In the *DIS Comparer* tool window, select the two protocols to be compared.
-
-    To select a protocol (either on the left or on the right), do the following:
-
-    1. Click *Select protocol...*
-    1. In the Select Protocol... window, select an option:
-
-        - Select *Opened protocol*, and select one of the protocols currently opened in the XML editor.
-        - Select *File*, click *Select protocol...*, and select a protocol.xml file located in a file folder.
-        - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
-
-        > [!NOTE]
-        >
-        > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/*`.
-
-    1. Click *OK*.
-
-    After selecting the two protocols, the comparison will start automatically.
-
-1. If necessary, click *Compare* to redo the comparison or click *Export* to have the result of the comparison exported to a CSV file.
-
-When you compare two protocols, DIS will also automatically validate both these protocols. When comparison and validation have finished, you will see two tabs:
-
-- *Major Change* - The result of the protocol comparison.
-- *Validator* - The differences between the two protocol validations.
-
-When you right-click an error in the list, a shortcut menu offers you the following options:
-
-| Command | Function |
-|---------|----------|
-| Navigate | Go to the line in the protocol that triggered the error. |
-| Copy | Copy the error to the Windows Clipboard. |
-| Show Details... | Show all details of the error in a separate window. |
-| Suppress... | Suppress the error.<br> Note: Click the *Show/hide suppressed results* button to include/exclude the suppressed errors in/from the list. |
-
-> [!NOTE]
->
-> - In the DIS Comparer pane, you can select multiple items. To select more than one item, click one, and then click another while holding down the CTRL key, etc. To select a list of consecutive items, click the first one in the list and then click the last one while holding down the SHIFT key. Use this feature to e.g. copy or suppress a number of results in one go. However, note that suppressing a number of results will only work when all selected items have the same error code.
-> - Use the filter box in the top-right corner to filter the comparison results.
+Pressing the compare button opens the DIS Comparer tool window. For more information on how to work with this tool window, see [DIS Comparer](xref:DisComparerToolWindow).
 
 ### Refactor
 
@@ -412,12 +370,12 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 > - If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
 > - “Include in ...” and “Add Existing ...” lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
 
-### Intellisense and instant XML validation
+### IntelliSense and instant XML validation
 
 If the root tag of the protocol XML file or the Automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and Automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the Automation script XML file you are editing will be validated against the protocol or Automation script schema while you type.
 
 - When you type a “\<“ sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
-- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an Intellisense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is “action” or “poll action”.
+- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is “action” or “poll action”.
 
 #### DIS Validator tool window
 
@@ -437,7 +395,7 @@ To insert a snippet while working in the XML editor:
 > [!NOTE]
 > If you want to insert a particular snippet without having to go through the above-mentioned snippet folder and all its subfolders, use the following shortcut:
 >
-> - At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the Intellisense list), and press TAB.
+> - At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the IntelliSense list), and press TAB.
 
 ### Context-sensitive help in tooltips
 
