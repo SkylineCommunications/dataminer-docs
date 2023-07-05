@@ -14,5 +14,4 @@ uid: ModelHost_1.1.0
 
 #### Relation request models normalized even if not all model types are hosted [ID_36733]
 
-When you use the relation learning feature in Cube (i.e. the light bulb in a trend graph), requests are sent to Model Host to get relations.
-From now on, Model Host will always balance the relation strengths when multiple kinds of relations are asked in a request, which will lead to more accurate suggestions in Cube.
+When multiple kinds of relations are asked in a request to Model Host (e.g. when adding related parameters in a trend graph), from now on, Model Host will always balance the relation strengths, which can among others lead to more accurate suggestions in Cube.
