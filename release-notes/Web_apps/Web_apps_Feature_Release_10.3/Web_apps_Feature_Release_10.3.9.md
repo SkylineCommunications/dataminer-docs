@@ -12,7 +12,19 @@ uid: Web_apps_Feature_Release_10.3.9
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### Dashboards app & Low-Code Apps: Button panel visualization now officially released [ID_36775]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The button panel visualization has now officially been released. This component will display a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
+
+The following types of buttons can be configured:
+
+- Simple buttons used only to set parameters.
+- HTML buttons.
+- Rotate buttons, resembling a control dial, used to decrement or increment the value of a particular parameter. The buttons can be used by dragging and dropping with the mouse, by using the arrow keys on the keyboard, or by sliding on a mobile device.
+
+For more information, see [Button panel](xref:DashboardButtonPanel).
 
 ## Other features
 
