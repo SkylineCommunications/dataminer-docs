@@ -3761,6 +3761,8 @@
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
               - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
+              - name: Reinitializing ResourceManager
+                topicUid: SLNetClientTest_reinitialize_resourcemanager
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool

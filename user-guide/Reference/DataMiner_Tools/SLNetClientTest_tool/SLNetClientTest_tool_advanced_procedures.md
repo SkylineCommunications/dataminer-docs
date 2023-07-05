@@ -39,3 +39,4 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Setting the TTL for database records](xref:SLNetClientTest_setting_TTL_database)
 - [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch)
 - [Triggering and managing user-defined APIs](xref:SLNetClientTest_triggering_api)
+- [Reinitialize ResourceManager](xref:SLNetClientTest_reinitialize_resourcemanager)
