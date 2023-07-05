@@ -16,7 +16,15 @@ uid: Cube_Feature_Release_10.3.9
 
 ## Other new features
 
-*No features have been added to this release yet.*
+#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you turn a shape into a parameter control of type "Lite", you can use the *CustomColors* option to customize the colors of that parameter control.
+
+You can now define a new color called *bg.pressededitor*. This color will be used as background when the left mouse button is pressed within the editor part of the control.
+
+For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
 
 ## Changes
 
