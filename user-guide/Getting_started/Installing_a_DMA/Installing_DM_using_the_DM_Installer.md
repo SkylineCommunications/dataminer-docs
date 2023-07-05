@@ -31,7 +31,12 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 ### Default DataMiner installation
 
-1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
+1. Make sure you are logged into Windows with the correct user account.
+
+   > [!IMPORTANT]
+   >
+   > - If you are using a DataMiner installer version 10.2 or newer, during the installation process the user account you logged in with will automatically be added to a local DataMiner user group named *Administrator (installer)*.
+   > - If you are using a DataMiner installer older than version 10.2, then you must log in with the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.
 
