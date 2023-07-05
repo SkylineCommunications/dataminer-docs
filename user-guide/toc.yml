@@ -3494,6 +3494,8 @@
   items:
     - name: DataMiner Compute Requirements
       topicUid: DataMiner_Compute_Requirements
+    - name: DataMiner Client Requirements
+      topicUid: DataMiner_Client_Requirements
     - name: Skyline DataMiner folder
       topicUid: SkylineDataminerFolder
       items:
