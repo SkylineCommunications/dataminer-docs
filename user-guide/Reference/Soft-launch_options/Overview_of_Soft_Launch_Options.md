@@ -275,7 +275,7 @@ Enables the button component in the Dashboards app.
 Enables the button panel component in the Dashboards app.
 
 - **Minimum version**: 10.0.3
-- **Estimated release version**: 10.3.8
+- **Release version**: 10.3.9/10.4.0
 
 ### ReportsAndDashboardsDynamicVisuals
 
