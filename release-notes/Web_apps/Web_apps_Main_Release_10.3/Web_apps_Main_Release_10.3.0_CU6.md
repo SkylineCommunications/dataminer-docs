@@ -39,6 +39,12 @@ Because of this change, the behavior of aggregations applied on all types of emp
 
 When you reduced the screen size to the point at which the navigation pane got hidden, a black box would incorrectly appear on top of the first or last field of a selection box.
 
+#### Dashboards app & Low-Code Apps: Table component would show skeleton loading when refetching data with external column filters applied [ID_36743]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+A table component would show skeleton loading when it refetched data with external column filters applied. From now on, a table component will only show skeleton loading during the initial fetch.
+
 #### Low-Code Apps: Creating an app with an existing name would incorrectly be possible [ID_36744]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->

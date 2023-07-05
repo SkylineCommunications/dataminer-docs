@@ -560,12 +560,6 @@ From now on, users who only have permission to view dashboards will not see any 
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
 
-#### Dashboards app & Low-Code Apps: Table component would show skeleton loading when refetching data with external column filters applied [ID_36743]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-A table component would show skeleton loading when it refetched data with external column filters applied. From now on, a table component will only show skeleton loading during the initial fetch.
-
 #### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
