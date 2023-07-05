@@ -3912,6 +3912,11 @@
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
           topicUid: visual_overview_benchmarks
+    - name: Technical information
+      topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
+      items:
+        - name: Connecting devices using RS-232/RS-422/RS-485
+          topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
     - name: Frequently asked questions
       topicUid: faq
       items:

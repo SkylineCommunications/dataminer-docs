@@ -26,6 +26,8 @@ uid: Part7Reference
 
 - [DataMiner metrics](xref:dataminer_metrics)
 
+- [Technical information](xref:Connecting_devices_using_RS_232_RS_422_RS_485)
+
 - [Frequently asked questions](xref:faq)
 
 - [Methods of Procedure](xref:mops)
