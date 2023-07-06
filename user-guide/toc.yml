@@ -1090,6 +1090,8 @@
               topicUid: Failover_configuration_in_Cube
             - name: Advanced Failover options
               topicUid: Advanced_Failover_options
+            - name: DataMiner Failover on Amazon Web Services
+              topicUid: Failover_AWS
         - name: Preferred configuration using virtual IP addresses (best practice)
           topicUid: Preferred_configuration_using_virtual_IP_addresses__best_practice
         - name: Synchronizing the DMA databases
