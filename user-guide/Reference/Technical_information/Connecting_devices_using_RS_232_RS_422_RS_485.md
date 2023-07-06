@@ -4,6 +4,9 @@ uid: Connecting_devices_using_RS_232_RS_422_RS_485
 
 # Connecting devices using RS-232/RS-422/RS-485
 
+> [!CAUTION]
+> This section of the documentation is merely intended by way of information on third-party products that are often used with DataMiner. However, Skyline Communications is not responsible for this content. For more information or support, please contact the vendor of the product.
+
 One of the main functionalities of DataMiner is to monitor devices. Most modern devices can be monitored and controlled over Ethernet (RJ-45) and can immediately be connected to your network.
 
 However, there are still devices out there that do not have an Ethernet card. In most cases, those devices rely on serial communication or on IO pins. Here, we focus on devices that use serial communication, more particularly using the standards RS-232, RS-422 or RS-485.
@@ -23,6 +26,3 @@ To monitor devices in DataMiner through RS-232, RS-422, or RS-485, you will need
 
 ![NPort](~/user-guide/images/MoxaExamplepinLayout.png)<br>
 *Source: NPort 5600 Series User’s Manual, 12th edition, page 110*
-
-> [!CAUTION]
-> This section of the documentation is merely intended by way of information on third-party products that are often used with DataMiner. However, Skyline Communications is not responsible for this content. For more information or support, please contact the vendor of the product.
