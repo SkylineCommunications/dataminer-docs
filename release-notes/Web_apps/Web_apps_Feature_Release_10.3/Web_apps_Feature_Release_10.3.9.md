@@ -28,7 +28,11 @@ For more information, see [Button panel](xref:DashboardButtonPanel).
 
 ## Other features
 
-*No features have been added to this release yet.*
+#### GQI: Ad hoc data sources can now include columns of type GQITimeSpanColumn [ID_36717]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
 
 ## Changes
 

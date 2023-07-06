@@ -571,3 +571,9 @@ You can export the data displayed by a table component by clicking the ... butto
 Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
 
 If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+#### GQI: Ad hoc data sources can now include columns of type GQITimeSpanColumn [ID_36717]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
