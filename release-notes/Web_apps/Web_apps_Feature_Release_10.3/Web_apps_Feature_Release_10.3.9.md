@@ -50,6 +50,12 @@ Up to now, the list of dashboards displayed in the navigation pane on the left w
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
+#### Security enhancements [ID_36695]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of security enhancements have been made.
+
 #### Dashboards app - GQI: Version column added to 'Get trend data patterns' and 'Get trend data pattern events' data sources [ID_36754]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
