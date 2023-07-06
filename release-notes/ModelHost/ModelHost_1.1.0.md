@@ -2,10 +2,7 @@
 uid: ModelHost_1.1.0
 ---
 
-# Model Host 1.1.0 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# Model Host 1.1.0
 
 > [!NOTE]
 > For features included in older Model Host releases, refer to the [General DataMiner release notes](xref:DataMiner_General_RNs_index).
