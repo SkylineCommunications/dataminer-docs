@@ -12,6 +12,6 @@ uid: ModelHost_1.1.0
 
 ## Enhancements
 
-#### Relation request models normalized even if not all model types are hosted [ID_36733]
+#### Relation model combinations normalized [ID_36086] [ID_36733]
 
-When multiple kinds of relations are asked in a request to Model Host (e.g. when adding related parameters in a trend graph), from now on, Model Host will always balance the relation strengths, which can among others lead to more accurate suggestions in Cube.
+When a request asks for multiple kinds of relations, Model Host will now combine these relations in a better way, which can result in better suggestions (for example for related parameters in a trend graph in Cube).
