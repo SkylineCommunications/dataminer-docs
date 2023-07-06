@@ -4,16 +4,17 @@ uid: Failover_AWS
 
 # DataMiner Failover on Amazon Web Services
 
-Supported from DataMiner 10.1.3 onwards.
+When you set up a [DataMiner Failover](xref:failover) configuration, you need to assign virtual IP addresses to the corporate and acquisition networks of the active DMA. Switching from the active to the passive DMA requires that those virtual IP addresses are reassigned. This is done seamlessly by DataMiner.
 
-When you set up a [Failover](xref:failover) configuration, you need to assign virtual IP addresses to the corporate and acquisition networks of the active DMA. Switching from the active to the passive DMA requires that those virtual IP addresses are reassigned. This is done seamlessly by DataMiner.
+If you use Amazon Web Services (AWS) for your system database, you need to assign secondary private IPv4 addresses to the network interfaces of your EC2 instances. You also need to transfer those addresses between your instances whenever a switch in DataMiner occurs.
 
-To accomplish this in Amazon Web Services (AWS), you need to assign secondary private IPv4 addresses to the network interfaces of your EC2 instances. You also need to transfer those addresses between your instances whenever a switch in DataMiner occurs.
+> [!NOTE]
+> For more information on this data storage architecture, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures). However, note that we recommend using [DataMiner STaaS](xref:STaaS) instead.
 
 > [!IMPORTANT]
 > This method assumes that the EC2 instances are in the same availability zone. If your instances are in different zones, you should use Failover with DNS instead.
 
-## Set up Failover
+## Setting up Failover
 
 1. [Set up DataMiner Failover](xref:Configuring_Failover).
 
@@ -26,7 +27,7 @@ To accomplish this in Amazon Web Services (AWS), you need to assign secondary pr
 
    ![Manage IP Addresses](~/user-guide/images/Manage_IP_Addresses.png)
 
-## Install the AWS Tools
+## Installing the AWS Tools
 
 Install the AWS Tools for Windows PowerShell on both Failover DMAs.
 
@@ -34,9 +35,10 @@ Install the AWS Tools for Windows PowerShell on both Failover DMAs.
 
 1. Execute the following command: `Install-Module -Name AWSPowerShell`
 
-1. For more information, see [AWSPowerShell 4.1.7.0](https://www.powershellgallery.com/packages/AWSPowerShell/4.1.7.0).
+> [!TIP]
+> For more information, see [AWSPowerShell 4.1.7.0](https://www.powershellgallery.com/packages/AWSPowerShell/4.1.7.0).
 
-## Create an access key
+## Creating an access key
 
 In order to programmatically make changes in AWS, you need an API access key. To create one, taking into account the principle of least privilege, follow the procedure below.
 
@@ -90,7 +92,7 @@ In order to programmatically make changes in AWS, you need an API access key. To
       > [!NOTE]
       > You will not be able to copy the secret access key once you have closed this screen. If you lose the key, you will have to create a new one.
 
-## Configure DataMiner
+## Configuring DataMiner
 
 In order for DataMiner to be able to acquire the virtual IP addresses, these addresses need to be re-assigned in AWS first. To accomplish this, DataMiner can execute a script before it acquires the virtual IP.
 
