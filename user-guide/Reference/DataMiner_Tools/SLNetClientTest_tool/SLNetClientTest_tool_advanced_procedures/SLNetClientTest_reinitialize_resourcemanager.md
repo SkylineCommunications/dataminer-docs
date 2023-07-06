@@ -16,4 +16,4 @@ To do this, follow the following steps:
 
 1. In the *Advanced* menu, go to *Apps* > *SRM Surveyor*.
 
-1. On the bottom, a *Reinitialize ResourceManager* button is available, if your press it, the ResourceManager on the DataMiner agent you are connected to, will be (re)initialized.
+1. On the bottom, a *Reinitialize ResourceManager* button is available, if you press it, the ResourceManager on the DataMiner agent you are connected to, will be (re)initialized.
