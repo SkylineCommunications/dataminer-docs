@@ -11,7 +11,7 @@ uid: EPM_6.1.8_I-DOCSIS
 
 #### Root cause analysis via alarm template conditions [ID_36780]
 
-To make sure events at lower levels in the topology do not become too numerous, making it difficult to analyze the points of failure, root cause analysis has been implemented via alarm template conditions. This will suppress lower-level events when higher-level events are detected.
+To make sure events at lower levels in the topology do not become too numerous, making it difficult to analyze the points of failure, root cause analysis has been implemented via alarm template conditions. This will suppress events at Amplifier and Tap level when higher-level events are detected.
 
 The alarm template conditions have been applied on Amplifier and Tap level, and they make use of foreign key relations between the tables. This means that the Skyline EPM Platform DOCSIS connector also had to be modified to assign the Node ID for all amplifiers in the Amplifier table.
 
