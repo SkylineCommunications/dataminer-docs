@@ -22,6 +22,9 @@ uid: Cube_Feature_Release_10.3.9
 
 When you add a new alarm tab to the Alarm Console, that alarm tab will now always show the Elasticsearch search box when you are connected to a DataMiner System with a Cassandra Cluster database.
 
+> [!NOTE]
+> Currently, when you start typing in this search box, no suggestions are displayed yet.
+
 #### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
