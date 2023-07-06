@@ -136,3 +136,11 @@ Validation has now been added to `NT_ADD_VIEW`. When a request enters to create 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an `index out of bounds` error could occur when processing a behavioral change point.
+
+#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
+
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
