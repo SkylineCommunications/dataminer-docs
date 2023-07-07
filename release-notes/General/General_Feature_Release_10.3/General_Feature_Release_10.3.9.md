@@ -18,7 +18,12 @@ uid: General_Feature_Release_10.3.9
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
 
 ## Other features
 
@@ -65,12 +70,6 @@ For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
-
-#### SLProtocol is now a 64-bit process by default [ID_36725]
-
-SLProtocol is now a 64-bit process by default.
-
-However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
