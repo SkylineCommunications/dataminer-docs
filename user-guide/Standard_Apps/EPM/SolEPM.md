@@ -11,6 +11,7 @@ At present, three different versions of the solution are available:
 - [DataMiner EPM I-DOCSIS](xref:EPM_I-DOCSIS)
 - [DataMiner EPM D-DOCSIS](xref:EPM_D-DOCSIS)
 - [DataMiner EPM VSAT](xref:EPM_VSAT)
+- [DataMiner EPM GPON](xref:EPM_GPON)
 
 > [!NOTE]
 > For more information on the core EPM functionality available in DataMiner, see [Experience and Performance Management](xref:EPM)

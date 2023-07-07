@@ -2412,6 +2412,29 @@
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:
+#GPON TOC      
+        - name: DataMiner EPM GPON
+          topicUid: EPM_GPON
+          items:
+            - name: EPM GPON architecture
+              topicUid: GPON_architecture
+            - name: EPM GPON components
+              topicUid: GPON_components
+              items:
+                - name: EPM GPON supported technologies
+                  topicUid: GPON_supported_technologies
+                - name: EPM GPON ONT Json definition
+                  topicUid: GPON_ONT_Json_definition
+            - name: How to deploy a GPON EPM Solution
+              topicUid: GPON_deployment
+            - name: Parameters available in EPM GPON
+              topicUid: GPON_KPI
+              items:
+                - name: EPM GPON Parameters thresholds
+                  topicUid: GPON_parameters_thresholds
+                - name: EPM GPON ONT Parameters
+                  topicUid: GPON_ONT
+#GPON TOC END
         - name: DataMiner EPM I-DOCSIS
           topicUid: EPM_I-DOCSIS
           items:
