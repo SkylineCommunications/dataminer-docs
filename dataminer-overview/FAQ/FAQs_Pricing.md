@@ -6,7 +6,9 @@ uid: FAQs_Pricing
 
 - **Can different commercial models exist in the same organization?**
 
-  Yes. Licensing is at DataMiner System level. An organization can have a system based on the perpetual model and another based on usage.
+  No. Licensing and usage are measured at the Organization level, each Organization selects one model, either Perpetual Licensing or Usage-based. An organization with an active subscription can also buy Pay-Per-Use credits.
+  As a [Company](https://docs.dataminer.services/dataminer-overview/Pricing/Pricing_Usage_based_service.html#organization), you can have multiple Organizations and select the model that fits best a specific DataMiner System or Systems.
+
 
 - **Can I transition my perpetual licenses into subscription?**
 
