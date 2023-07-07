@@ -55,6 +55,12 @@ With the introduction of time-scoped parameter relations, two different light bu
 
 When the requirements of a light bulb are not met, an entry is added to the Cube logging. From now on, these log entries will make a clearer distinction between the "relation light bulb feature" (i.e. the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e. the icon appearing when you select a trend graph section).
 
+#### Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]

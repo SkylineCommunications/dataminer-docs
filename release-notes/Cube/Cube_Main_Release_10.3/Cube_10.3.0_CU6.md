@@ -12,7 +12,11 @@ uid: Cube_Main_Release_10.3.0_CU6
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
 ### Fixes
 

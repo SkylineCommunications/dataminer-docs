@@ -34,6 +34,12 @@ When smart baselines were configured, by default information events would be gen
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
 
+#### DataMiner Cube - Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
+
 ### Fixes
 
 #### Failover: Problems when running BPA tests [ID_36445]

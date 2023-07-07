@@ -577,9 +577,3 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
-
-#### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you clicked *Start with a blank dashboard* twice in rapid succession, two pop-up windows would open.

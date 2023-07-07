@@ -101,6 +101,6 @@ When you deleted a component from a dashboard, an `UpdateDashboard` call would i
 
 #### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When you clicked *Start with a blank dashboard* twice in rapid succession, two pop-up windows would open.
