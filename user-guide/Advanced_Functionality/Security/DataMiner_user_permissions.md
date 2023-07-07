@@ -1584,7 +1584,7 @@ Permission to access the *Tools* page in System Center. From DataMiner 10.1.0/10
 
 #### Modules \> System configuration \> Tools \> Admin tools
 
-Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, clean up unused and NATS management.
+Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, clean up unused, NATS management and (de)initializing ResourceManager.
 
 #### Modules \> System configuration \> Tools \> Control background tasks of all users
 
