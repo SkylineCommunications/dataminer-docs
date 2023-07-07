@@ -44,6 +44,15 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
 
+#### BREAKING CHANGE: GQI - 'Get alarms' data source: Format of alarm IDs has changed [ID_36621]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed:
+
+- Old format: *DmaId/RootId/AlarmId*
+- New format: *HostingDmaId/AlarmId*
+
 #### Monitoring app: A new type of text area boxes will now be used on parameter pages [ID_36693]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

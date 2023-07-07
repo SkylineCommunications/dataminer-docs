@@ -340,6 +340,15 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParameterWithDynamicUnits
 - ObserveParameter
 
+#### BREAKING CHANGE: GQI - 'Get alarms' data source: Format of alarm IDs has changed [ID_36621]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed:
+
+- Old format: *DmaId/RootId/AlarmId*
+- New format: *HostingDmaId/AlarmId*
+
 #### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
