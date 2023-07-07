@@ -4,7 +4,7 @@ uid: SLNetClientTest_triggering_DOM_midnight_sync
 
 # Triggering a midnight sync for a DOM manager
 
-From DataMiner 10.3.9/10.4.0 onwards, you can manually trigger a midnight sync for a specific DOM manager. That way, you can force any enabled DOM cache to reload its data from the database. This can be useful when there were connection issues between agents and the DOM caches got out of sync.
+From DataMiner 10.3.9/10.4.0 onwards, you can manually trigger a midnight sync for a specific DOM manager. That way, you can force any enabled [DOM cache](xref:DOM_data_storage#caching) to reload its data from the database. This can be useful when there were connection issues between agents and the DOM caches got out of sync.
 
 To do so:
 

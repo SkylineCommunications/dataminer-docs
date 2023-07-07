@@ -3568,6 +3568,8 @@
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
+              - name: Triggering a midnight sync for a DOM manager
+                topicUid: SLNetClientTest_triggering_DOM_midnight_sync
               - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
