@@ -94,3 +94,11 @@ From now on, when you try to create an app with a name that is identical to that
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
+
+#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID_36808]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, the *[this EnhancedServiceID]* placeholder would not resolve correctly when used inside another placeholder.
+
+For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the parameter of the service element with parameter ID 1 would not be displayed correctly in the shape text.
