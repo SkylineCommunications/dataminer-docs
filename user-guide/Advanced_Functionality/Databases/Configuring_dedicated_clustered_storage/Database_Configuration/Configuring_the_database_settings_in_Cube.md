@@ -56,6 +56,10 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
 
+1. From DataMiner ___ onwards, you can configure Elastic Cluster Multi Offload through Cube. For more info on Elastic Cluster Multi Offload and it's settings see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+   - **Multi cluster offload**: Checkbox to enable/disable the configuration of Elastic/Opensearch offload clusters. Unchecking this box will remove all offload clusters on pressing Save.
+   - the Add/Remove buttons add and remove configurations to a list below the normal (write) ElasticSearch configuration. The order of this list determines the priority order of the configured offload clusters. The priority order can be altered by moving a given cluster up or down in said list,         the higher the position in the list, the higher the priority. The highest priority any configuration in this list can have is 1, since the write database will always have priority 0.
+     
 1. Click *Save*.
 
    > [!NOTE]
