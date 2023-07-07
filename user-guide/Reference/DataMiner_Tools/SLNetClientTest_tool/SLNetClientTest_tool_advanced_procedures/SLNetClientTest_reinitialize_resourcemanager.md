@@ -8,7 +8,7 @@ From DataMiner 10.3.9/10.4.0 onwards, you can (re)initialize ResourceManager usi
 This can be useful if ResourceManager failed to initialize on DataMiner startup, and you want to retry initializing without restarting DataMiner.
 
 > [!NOTE]
-> You require the *'Resources > Edit > Other'* permission flag in order to do this.
+> You require the *'System configuration > Tools > Admin tools'* permission flag in order to do this.
 
 To do this, follow the following steps:
 
