@@ -56,6 +56,12 @@ In the *Monitoring* app, a new type of text area boxes will now be used on param
 
 A number of security enhancements have been made.
 
+#### Monitoring app: A new type of duration boxes will now be used on parameter pages [ID_36713]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
+
 #### Dashboards app - GQI: Version column added to 'Get trend data patterns' and 'Get trend data pattern events' data sources [ID_36754]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
