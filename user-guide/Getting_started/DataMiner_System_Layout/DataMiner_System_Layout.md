@@ -12,7 +12,7 @@ In a DMS, there is no central server and there are no dedicated client terminals
 
 ## DataMiner Agents
 
-A DataMiner Agent (DMA) is a physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system (see [DataMiner Compute Requirements](https://community.dataminer.services/dataminer-compute-requirements/)). A DMA is often also referred to as a DataMiner Node.
+A DataMiner Agent (DMA) is a physical or virtual compute instance running the DataMiner Agent software on top of a Microsoft Windows operating system (see [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)). A DMA is often also referred to as a DataMiner Node.
 
 The DataMiner Agent software is essentially a collection of services of which most names start with “SL” (e.g. SLNet, SLProtocol, SLLog, etc.).
 

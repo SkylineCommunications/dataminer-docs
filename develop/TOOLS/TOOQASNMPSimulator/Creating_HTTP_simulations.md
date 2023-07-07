@@ -6,7 +6,7 @@ uid: Creating_HTTP_simulations
 
 Creating an HTTP simulation requires a bit more work.
 
-1. While your HTTP device is being polled, use Wireshark to capture all the HTTP traffic.
+1. While your HTTP device is being polled, use [Wireshark](xref:Wireshark) to capture all the HTTP traffic.
 
 1. In Wireshark, go to *File* > *Export Packet Dissections* > *As PDML XML* to save your capture as a PDML file.
 

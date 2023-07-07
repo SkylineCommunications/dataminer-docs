@@ -16,6 +16,8 @@ Currently, the pipeline consists of the following stages:
 
 - [Prepare solution](#prepare-solution)
 
+- [Validate possible dependency NuGets](#validate-possible-dependency-nugets)
+
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
 - [Sync DIS version](#sync-dis-version)
@@ -70,6 +72,12 @@ This stage verifies whether there are C# code blocks in the Automation script(s)
 
 During this stage, the solution is configured to build against a recent version of the .NET Framework. The purpose of this is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change; it does not change anything to the solution in the Git repository hosted by Gerrit.
 
+## Validate possible dependency NuGets
+
+For solutions that consist of legacy-style projects, this stage checks whether projects use the obsolete packages.config package management format.
+
+For solutions that consist of SDK-style projects, this stage is not executed as packageReference is the only supported package management format for this type of project.
+
 ## Sync DataMiner feature release DLLs
 
 This stage ensures that the next build stage will build against the latest feature release of DataMiner. It will verify on DCP whether a new feature release has been released and, if it has, Jenkins will make sure to use that feature release to build against from that point onwards.
@@ -92,15 +100,20 @@ This stage creates a .dmapp package containing the Automation scripts.
 
 ## Scan test projects
 
-This stage scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
+This stage scans the solution for the presence of any test projects. This stage is only executed for solutions that consist of legacy-style projects. Projects with a name that ends in "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end in "Tests" will be considered unit test projects.
+
+For solutions that consist of SDK-style projects, this stage is not executed. The dotnet test command automatically detects test projects. Therefore, SDK-style test projects do not have the requirement that their name should end in "Tests". In SDK-style projects, to indicate that a tests is an integration test, use the [TestCategoryAttribute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.testcategoryattribute) and specify as value "IntegrationTest".
 
 ## Run unit tests
 
-This stage executes the unit test projects. If no unit test projects were detected, this stage is skipped.
+This stage executes the unit test projects. For solutions that consist of legacy-style projects, if no unit test projects were detected, this stage is skipped.
+
+> [!NOTE]
+> In case the tests fail, the unit tests will be executed against DataMiner 10.0.3 CU1 (if the protocol supports this version). The purpose of this is to support unit tests that were created using the SLProtocol API up to version 10.0.3 CU1. RN 27995 introduced changes to the API that could make a unit test fail if it depends on the prior implementation of the API. If unit tests using the DataMiner DLLs of 10.0.3 CU1 are re-executed, tests that are failing because of the changed API will succeed in the second execution.
 
 ## Run integration tests
 
-This stage executes the integration test projects. If no integration test projects were detected, this stage is skipped.
+This stage executes the integration test projects. For solutions that consist of legacy-style projects, if no integration test projects were detected, this stage is skipped.
 
 ## SonarQube analysis
 

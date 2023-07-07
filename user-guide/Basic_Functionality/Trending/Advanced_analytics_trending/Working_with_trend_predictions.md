@@ -11,7 +11,7 @@ uid: Working_with_trend_predictions
 > - You can enable or disable this feature via *System Center* > *System settings* > *analytics config.* However, note that the feature needs to be enabled to receive automatic notifications for predicted alarm threshold breaches by [Proactive cap detection](xref:Proactive_cap_detection).
 
 > [!TIP]
-> For a how-to video, see [Trending – Trend predictions in DataMiner](https://community.dataminer.services/video/trending-trend-predictions-in-dataminer/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> For a how-to video, see [Navigating Trending Graphs](https://community.dataminer.services/video/navigating-trending-graphs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 If the DataMiner Agent uses a Cassandra database, trend graphs can show how the value of a parameter in the graph is most likely to evolve in the future.
 

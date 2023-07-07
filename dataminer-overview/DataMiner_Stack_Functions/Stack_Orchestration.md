@@ -77,6 +77,7 @@ The Automation Engine performs all automation tasks in the ecosystem. Its pronou
 > [!TIP]
 > For more information:
 >
+> - [The Basics of DataMiner Automation Snippets](https://www.youtube.com/watch?v=i5_FLER_-tE&ab_channel=DataMinerbySkylineCommunications) ![Video](~/user-guide/images/video_Duo.png)
 > - [The Automation Engine explained](https://community.dataminer.services/automation-engine/)
 > - [Overview of the 4 SRM use cases and SRM stack](https://community.dataminer.services/service-resource-management/)
 > - Various Automation-related videos are available in the [video library](https://community.dataminer.services/videos/?_sf_s=automation), including a 60-min. [Experts & Insights webinar](https://community.dataminer.services/video/experts-insights-dataminer-automation-engine/) ![Video](~/user-guide/images/video_Duo.png)

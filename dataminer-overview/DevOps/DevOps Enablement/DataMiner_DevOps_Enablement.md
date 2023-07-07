@@ -21,4 +21,6 @@ So, there’s quite a bit that needs to be wrapped around these transformational
 But even that doesn’t suffice. Building teams and an entire organization around that composable technology stack, in line with the agile culture and mindset, is of equal, tremendous importance. In other words, we aspire to build an **entire organization that is empowered to innovate and evolve continuously in a quick and efficient manner**.
 
 > [!TIP]
-> Find out more about the [principles of DataMiner DevOps Enablement](xref:What_is_DataMiner_DevOps_Enablement) and its [connection to the DataMiner DevOps Professional Program](xref:DevOps_Enablement_and_the_DevOps_Professional_program).
+>
+> - Find out more about the [principles of DataMiner DevOps Enablement](xref:What_is_DataMiner_DevOps_Enablement) and its [connection to the DataMiner DevOps Professional Program](xref:DevOps_Enablement_and_the_DevOps_Professional_program).
+> - See also: [DataMiner DevOps Enablement Service package](https://community.dataminer.services/video/dataminer-devops-enablement-service-package/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

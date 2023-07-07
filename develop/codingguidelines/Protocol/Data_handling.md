@@ -19,13 +19,16 @@ This should be implemented as follows:
 
 - Add a PageButton "\[Table Name\] Config…" above the table that contains:
 
-  - A toggle button "\[Table Name\] Auto Clear" (On/Off, default value Off). When the table is updated, check this status and remove the row(s) if needed.
+  - A read/write parameter "\[Table Name\] Auto Removal Delay" that has an appropriate range (low and high) and a *Remove Immediately* exception value. When the table is updated:
+    - If the parameter is set to *Remove Immediately*, remove any missing entries.
+    - Otherwise, for all missing entries, compare this configuration with the *Missing Since* date and remove the row(s) if needed. If the *Missing Since* column is empty, enter the current date and time, and update the *Status* column.
 
   - A button "Remove All \[Content Type\]" to remove all missing or old entries.
 
   - Table:
-
     - A column containing buttons to remove a missing entry.
+    - A *Status* column that allows alarms for missing entries.
+    - A *Missing Since* column (saved) to display the data and time when an entry is considered missing. This column is also used for the logic regarding the removal delay.
 
 ## Infinitely growing amount of data
 

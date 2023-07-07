@@ -1330,6 +1330,8 @@
             topicUid: Protocol.ExportRules.ExportRule-tag
           - name: '@value'
             topicUid: Protocol.ExportRules.ExportRule-value
+          - name: '@whereAttribute'
+            topicUid: Protocol.ExportRules.ExportRule-whereAttribute
           - name: '@whereTag'
             topicUid: Protocol.ExportRules.ExportRule-whereTag
           - name: '@whereValue'
@@ -1774,11 +1776,6 @@
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
               - name: '@value'
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
-            - name: ColumnOptions
-              topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions
-              items: 
-              - name: ColumnOption
-                topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption
             - name: NamingFormat
               topicUid: Protocol.Params.Param.ArrayOptions.NamingFormat
           - name: CRC
@@ -5018,8 +5015,6 @@
               topicUid: Primary_keys1
             - name: Display keys
               topicUid: Display_keys1
-            - name: Key column description
-              topicUid: Key_column_description
             - name: Data handling
               topicUid: Data_handling
             - name: Integrity constraints
@@ -5315,8 +5310,14 @@
       topicUid: dnSpy
     - name: EBU LIST
       topicUid: EBU_Live_IP_Software_Toolkit_LIST
+    - name: Fiddler
+      topicUid: Fiddler
     - name: Interactive Automation Script Toolkit
       topicUid: Interactive_Automation_Script_Toolkit
+    - name: ManageEngine MIB Browser
+      topicUid: ManageEngine_MIB_Browser
+    - name: MySQL Workbench
+      topicUid: MySQL_Workbench
     - name: Nodetool
       topicUid: TOONodetool
       items:
@@ -5338,6 +5339,10 @@
             topicUid: Compilation_Time_Assembly_Binding
           - name: Run-time assembly binding
             topicUid: Run_Time_Assembly_Binding
+    - name: Postman
+      topicUid: Postman
+    - name: RawCap
+      topicUid: RawCap
     - name: Skyline Device Simulator
       topicUid: TOOQASNMPSimulator
       items:
@@ -5356,6 +5361,39 @@
               topicUid: Artificial_dynamic_simulations
             - name: Realistic dynamic simulations
               topicUid: Realistic_dynamic_simulations
+            - name: SNMP simulation schema reference
+              topicUid: DeviceSimulator_SNMP_Schema_Reference_Overview
+              items:
+              - name: Simulation
+                topicUid: DeviceSimulator_SNMP_Schema_Simulation
+                items:
+                - name: Agents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+                  items:
+                  - name: Agent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent                
+                - name: DatabaseAgents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+                  items:
+                  - name: DatabaseAgent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+                - name: ProxyAgents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+                  items:
+                  - name: ProxyAgent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+                - name: Options
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options
+                  items:
+                  - name: MaxResponseWeight
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+                - name: DefaultDefinitionAttributes
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+                - name: Definitions
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions
+                  items:
+                  - name: Definition
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
         - name: Trap sender
           topicUid: Trap_sender
           items:
@@ -5407,6 +5445,8 @@
           topicUid: Updating_gitignore_and_Jenkins_file
         - name: Repository types
           topicUid: Repository_types
+    - name: SoapUI
+      topicUid: SoapUI
     - name: SourceTree
       topicUid: TOOSourceTree
       items:
@@ -5414,6 +5454,8 @@
           topicUid: Installing_SourceTree
         - name: Using SourceTree
           topicUid: Using_SourceTree
+    - name: TCPView
+      topicUid: TCPView
     - name: TortoiseSVN
       topicUid: TOOTortoiseSVN
       items:
@@ -5479,8 +5521,12 @@
           items:
             - name: StyleCop.Analyzers
               topicUid: StyleCopAnalyzers
+    - name: Visual Studio Code
+      topicUid: Visual_Studio_Code
     - name: WFetch
       topicUid: TOOWFetch
+    - name: Wireshark
+      topicUid: Wireshark
     - name: Upgrade packages
       topicUid: TOOUpgradePackageContent
       items:

@@ -247,6 +247,12 @@ In the *Monitoring* app, the parameter controls have been enhanced. You will now
 
 The *Parameter page* component now supports the WebSocket protocol. As a result, parameter updates will now be received immediately.
 
+#### Monitoring app: Enhanced performance when editing a parameter on a parameter page component [ID_36348]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+Because of a number of enhancements, overall performance has increased when editing a parameter on a parameter page component.
+
 #### Monitoring app - Parameter control: Clicking the trending icon of a parameter will immediately open the trending page [ID_36352]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
@@ -258,6 +264,101 @@ Up to now, when you clicked the trending icon of a parameter, the parameter edit
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 From now on, when table data is refetched with a trigger or an action, the rows that were selected before the refetch will automatically be selected again.
+
+#### Monitoring app: Parameter values that are URLs will now be rendered as clickable hyperlinks [ID_36423]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, when a parameter value is a URL starting with one of the following prefixes it will be rendered as a clickable hyperlink:
+
+- file://
+- ftp://
+- http://
+- https://
+- mailto://
+
+#### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
+
+From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
+
+#### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
+
+To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
+#### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
+
+#### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *Monitoring* app, a new type of datetime boxes will now be used on parameter pages.
+
+**BREAKING CHANGE**: When the value of a date or datetime parameter is set using one of the following API methods, that value must now be passed as a Unix timestamp in milliseconds instead of an OLE Automation date.
+
+- SetParameter
+- SetParameterRow
+
+**BREAKING CHANGE**: When values of date or datetime parameters are retrieved using one of the following API methods, those values will now be Unix timestamps in milliseconds instead of OLE Automation dates.
+
+- GetEditParameter
+- GetEditParameterTable
+- GetMonitoredParametersForElement
+- GetMonitoredParametersForService
+- GetParameter
+- GetParameterByName
+- GetParameterForService
+- GetParameterForServiceWithDynamicUnits
+- GetParameters
+- GetParametersByPageForElement
+- GetParametersByPageForElementCached
+- GetParametersByPageForElementSorted
+- GetParametersByPageForServiceElement
+- GetParametersForElement
+- GetParametersForElementFiltered
+- GetParametersForElementSorted
+- GetParametersForService
+- GetParametersForServiceSorted
+- GetParametersSorted
+- GetParameterWithDynamicUnits
+- ObserveParameter
+
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
+#### Monitoring app: A new type of text area boxes will now be used on parameter pages [ID_36693]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
+
+#### Security enhancements [ID_36695]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -387,14 +488,92 @@ When editing a dashboard or a low-code app, in some cases, the following error c
 The dashboard has not been saved: Invalid revision sequence, the dashboard might have been edited by another user.
 ```
 
+#### Dashboards app & Low-Code Apps: Only one of the tables sharing an empty query would show a visual replacement [ID_36233]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When an empty query was used by more than one table component, in some rare cases, only one of those components would display a visual replacement.
+
 #### Dashboards app & Low-Code Apps - Query builder: Select nodes would incorrectly not show the selected columns [ID_36251]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 In the query builder, when a *Select* node was not in edit mode, its description would incorrectly not show the selected columns.
 
+#### Low-Code Apps: Not possible to save empty DOM fields [ID_36276]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a DOM instance was created or edited in a low-code app, empty fields would incorrectly not be sent to the server. This meant that it was not possible to clear a non-empty field.
+
 #### Dashboards app & Monitoring app: Spectrum components would get stuck when loading [ID_36364]
 
 <!-- MR 10.4.0 - FR 10.3.6 [CU0] -->
 
 In the Dashboards app and the Monitoring app, spectrum components would get stuck when loading due to a WebSocket communication problem.
+
+#### Dashboards app & Low-Code Apps: Table components sharing the same GQI query could end up containing duplicate rows [ID_36416]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When multiple table components used the same GQI query, in some rare cases, those components could end up containing duplicate rows.
+
+#### Low-Code Apps: A blank screen would appear when users without permission to access a low-code app tried to log on [ID_36422]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users without permission to access a low-code app tried to log on to that app, an error would be thrown and a blank screen would appear. From now on, when users without permission to access a low-code app try to log on to that app, an appropriate message will appear instead.
+
+#### Dashboards app & Low-Code Apps: An error would appear when two GQI visualizations used the same query [ID_36465]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When the same query was used in two different GQI visualizations, one of those visualizations would display the following error:
+
+```txt
+Cannot read properties of null ('reading delete')
+```
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
+
+#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
+
+#### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you clicked *Start with a blank dashboard* twice in rapid succession, two pop-up windows would open.

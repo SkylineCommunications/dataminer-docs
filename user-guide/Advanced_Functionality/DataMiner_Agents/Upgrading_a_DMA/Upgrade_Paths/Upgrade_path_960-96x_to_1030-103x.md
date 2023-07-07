@@ -25,7 +25,14 @@ Make sure the IP network ports 9090, 4222, 6222, and 8222 (NATS monitoring only)
 
 ## Installing the DataMiner upgrade
 
-First install DataMiner 10.0.0 [CU19], then install DataMiner 10.3.0 or 10.3.x.
+1. Install [DataMiner 10.0.0 [CU19]](https://community.dataminer.services/download/dataminer-main-release-10-0-0-0-11025-cu19/).
+
+1. Download [VerifyClusterPorts.dmupgrade from DataMiner Dojo](https://community.dataminer.services/download/verifyclusterports-dmupgrade/) and run it.
+
+   > [!IMPORTANT]
+   > If you do not run this package before executing the upgrade, the upgrade will fail. This is because DataMiner 10.3 assumes that NAS/NATS services are running, but they are not running in DataMiner 10.0.
+
+1. Install [DataMiner 10.3.0 or 10.3.x](https://community.dataminer.services/dataminer-server-upgrade-packages/).
 
 > [!IMPORTANT]
 > If your DMA contains DVE elements when upgrading from DataMiner 9.6.x to DataMiner 10.x or higher, rolling back this upgrade using an upgrade package will cause data loss in the DVE configuration. Therefore, we recommend that you first take a [VM snapshot](xref:Preparing_to_upgrade_a_DataMiner_Agent#vm-snapshot).

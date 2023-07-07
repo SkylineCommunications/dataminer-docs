@@ -6,9 +6,12 @@ uid: BPA_Cassandra_DB_Size
 
 Cassandra has some operational limits regarding the size of its files, for example to keep enough disk space free for compaction. In addition, Skyline might impose some other limits based on previous issues observed in the field.
 
-The *Cassandra DB Size* BPA test checks the size of the Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
+The *Cassandra DB Size* BPA test checks the size of the local Cassandra file system against a predefined set of rules. You can find information about this BPA test below.
 
 This BPA test is available on demand. You can [run it in System Center](xref:Running_BPA_tests) (on the *Agents > BPA* tab, available from DataMiner 9.6.0 CU23, 10.0.0 CU13, 10.1.0 CU2 and 10.1.4 onwards). From DataMiner 10.1.4 onwards, it is available by default.
+
+> [!NOTE]
+> This BPA test does not work for remote Cassandra nodes or for systems with a Cassandra Cluster setup.
 
 ## Metadata
 
@@ -66,6 +69,11 @@ Each rule violation will be described in detail in the *Detailed Result* and *Co
   - Detailed result: Duplicate folders detected for [Tablename]
   - Corrective action: Remove unused folders
 
+- Large partitions detected
+
+  - Detailed result: Large partitions detected for table [Tablename] Partitions: [Tablename:Partition_key] - size: [Partition_size]
+  - Corrective action: Reduce the amount of data in these tables/partitions
+
 ### Not Executed
 
 These are the messages that can appear when the test fails to execute for unexpected reasons and cannot provide a conclusive report because of this:
@@ -99,6 +107,12 @@ When no Cassandra database is installed on the system or the installed Cassandra
 - Duplicate folder check
 
   - Checks if the folder structure does not contain multiple folders for the same name.
+
+- Large partitions check
+
+  - Checks Cassandra logs for lines `BigTableWriter.java:197 - Writing large partition <table:key> (<size>)`.
+  - Checks the metric `Compacted partition maximum bytes` returned by the command `nodetool.bat tablestats` for every table.
+  - Generates a warning if the reported value exceeds the setting `compaction_large_partition_warning_threshold_mb` in cassandra.yaml. The default value is 100 MB.
 
 ## Limitations
 
