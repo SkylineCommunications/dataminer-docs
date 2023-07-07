@@ -12,6 +12,7 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 >
 > - A setup with multiple Elasticsearch clusters is only recommended for high latency scenarios. For low or medium latency, we strongly advise using the [standard Elasticsearch setup](xref:Configuring_Elasticsearch_Database).
 > - Contact Skyline if you are unsure about the setup that best fits your circumstances.
+> - From Cube/Dataminer Version ___ onwards, this is meant to be configured through cube instead of manually.
 
 > [!TIP]
 > For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures#failover-setups-with-geo-redundancy).
@@ -31,6 +32,8 @@ To configure this setup:
    - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+
+   - *ID*: From (above version) onwards, this attribute is added by configuring EMCO in cube, it is used to pair clusters with their encrypted passwords *Do not change this field manually*.
 
    Example:
 
