@@ -4,6 +4,8 @@ uid: Part7Reference
 
 # Reference
 
+- [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)
+
 - [Skyline DataMiner folder](xref:SkylineDataminerFolder)
 
 - [Tools](xref:DataminerTools)
@@ -23,6 +25,8 @@ uid: Part7Reference
 - [Custom branding](xref:Custom_branding)
 
 - [DataMiner metrics](xref:dataminer_metrics)
+
+- [Technical information](xref:Connecting_devices_using_RS_232_RS_422_RS_485)
 
 - [Frequently asked questions](xref:faq)
 

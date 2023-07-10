@@ -36,14 +36,6 @@ From now on, SLXML will no longer be used to read out the following files contai
 > - NT_SET_ITEM_DATA
 > - NT_SET_PARAMETER_BY_DATA
 
-#### Cassandra: gc_grace_seconds will now be set to 1 day by default and to 4 hours for records with TTL set [ID_34763]
-
-<!-- MR 10.4.0 - FR 10.3.7 -->
-
-In Cassandra databases, the table property `gc_grace_seconds` will now be set to 1 day by default.
-
-For tables containing data with TTL set, this property will be set to 4 hours.
-
 #### More detailed logging when the certificate chain is invalid while connecting to Cassandra [ID_34822]
 
 <!-- MR 10.4.0 - FR 10.3.2 -->
@@ -51,6 +43,18 @@ For tables containing data with TTL set, this property will be set to 4 hours.
 More detailed information will now be added to the `SLDBConnection.txt` log file when the certificate chain is invalid while connecting to Cassandra.
 
 Log entry syntax: `Certificate chain error: {chainStatus.Status}, details: {chainStatus.StatusInformation}`
+
+#### SLLogCollector now collects more API Gateway data [ID_34967]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+SLLogCollector packages now include the following API Gateway data:
+
+- *appsettings.json*
+- DLL version
+- Health
+- Log file
+- Version
 
 #### SLAnalytics - Proactive cap detection: Enhanced accuracy when generating alarm predictions [ID_35080]
 
@@ -120,10 +124,12 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
+<!-- 36319: MR 10.4.0 - FR 10.3.9 -->
+<!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 
 A number of security enhancements have been made.
 
@@ -205,15 +211,17 @@ Because of a number of enhancements, overall performance has increased when load
 
 Up to now, when an event associated with a DVE child element was generated, internally, that event would be linked to the DVE parent element. From now on, it will be linked to the child element instead.
 
-#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
-
-As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
-
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
 
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 Because of a number of enhancements, overall performance has increased when stopping an ongoing booking.
+
+#### SLAnalytics - Pattern matching: No automatic pattern matching anymore after creating or editing a pattern [ID_36265]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, when a trend pattern was created or edited, the system would automatically start searching for that new or updated pattern. Now, this will no longer happen. Pattern matching will only be done after explicitly sending a `getPatternMatchMessage`.
 
 #### SLAnalytics - Automatic incident tracking: Relations based on alarm data will now also be taken into account [ID_36337]
 
@@ -234,6 +242,72 @@ Example:
 
 > [!CAUTION]
 > Always be extremely careful when changing any of the settings configured in `C:\Skyline DataMiner\analytics\configuration.xml`, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Enhanced performance when creating and updating bookings [ID_36391]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall performance has increased when creating and updating bookings, especially on systems with a large number of overlapping bookings.
+
+#### SLAnalytics: Overall accuracy of the proactive cap detection function has increased [ID_36476]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Because of a number of enhancements, overall accuracy of the proactive cap detection function has increased.
+
+#### Enhancements in order to deal with situations where HTTP traffic is modified [ID_36540]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made in order to deal with situations where proxy servers, gateways, routers or firewalls modify HTTP traffic.
+
+#### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the *Cassandra Cleaner* tool could only be used to remove data from the *timetrace* table. From now on, it can also be used to remove data from the *infotrace* table.
+
+1. In the *db.yaml* file, set `table.name` to "infotrace".
+
+   By default, `table.name` is set to "timetrace".
+
+1. Specify a time range by setting the `delete.start.time` and `delete.end.time` fields.
+
+  > [!CAUTION]
+  > All infotrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
+
+1. Run the following command: `clean -l`
+
+   > [!NOTE]
+   > The *infotrace* table can only be cleaned using the `clean -l` command.
+
+For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
+
+#### SLAnalytics - Automatic incident tracking: Alarms will no longer be regrouped after a manual operation [ID_36595]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, manually removing an alarm from an incident could result in that alarm being regrouped with another existing or newly created incident. Also when you manually cleared an incident could all base alarms of that incident be regrouped.
+
+From now on, alarms will no longer be regrouped after a manual operation.
+
+#### SLAnalytics - Automatic incident tracking: Automatic incidents can now also be cleared manually [ID_36600]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+From now on, users will be allowed to manually clear automatic incidents.
+
+#### SLAnalytics - Behavioral anomaly detection & Proactive cap detection: Enhanced caching mechanism [ID_36639]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
+
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
 ### Fixes
 
@@ -284,16 +358,6 @@ When an ElementProtocol object was being created, due to a caching issue in SLNe
 
 The native message broker code could leak memory when using the request/response workflow in combination with chunking. The message handlers would not be cleaned up after the response had been received.
 
-#### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-In some rare cases, the following NATS-related error would be thrown:
-
-```txt
-Failed to copy credentials from [IP address] - corrupt zip file
-```
-
 #### Business Intelligence: Outage correction would incorrectly be increased when a history alarm affected the outage [ID_35942]
 
 <!-- MR 10.4.0 - FR 10.3.5 -->
@@ -323,3 +387,30 @@ In some cases, whitespace characters would incorrectly be removed from signature
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
+
+#### NATS connection could fail due to payloads being too large [ID_36427]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
+
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort
+
+#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
+
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.

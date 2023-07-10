@@ -138,4 +138,4 @@ Get insights based on learned relations between the numerous integrated metrics/
 > For more information:
 >
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
-> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
+> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph) and  [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)

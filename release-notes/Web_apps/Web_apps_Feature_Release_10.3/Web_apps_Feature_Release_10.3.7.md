@@ -2,15 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.7
 ---
 
-# DataMiner web apps Feature Release 10.3.7 – Preview
+# DataMiner web apps Feature Release 10.3.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.7](xref:General_Feature_Release_10.3.7).
 
-## Highlights
+## New features
 
 #### Interactive Automation scripts: New DownloadButton component [ID_35869]
 
@@ -72,10 +72,6 @@ To do so, the system will proceed as follows:
 > [!NOTE]
 > Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
 
-## Other features
-
-*No other features yet*
-
 ## Changes
 
 ### Enhancements
@@ -124,13 +120,15 @@ From now on, when table data is refetched with a trigger or an action, the rows 
 
 #### Dashboards app & Low-Code Apps: Enhanced migration message [ID_36435]
 
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
 When a dashboard or a low-code app page is being migrated, a message will appear to notify the user.
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
 #### Dashboards app & Low-Code Apps: No visual replacement will be displayed anymore when a State component feeds empty query rows [ID_36460]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Up to now, when a *State* component fed empty query rows, a visual replacement would be displayed. From now on, this will no longer be the case.
 
@@ -214,6 +212,13 @@ Table columns that had an action applied would incorrectly not show a loading in
 
 The chart legend would incorrectly show the primary key of a parameter instead of the display key.
 
+#### Dashboards app: Problem when opening a dashboard of which the URL was longer than 2048 characters [ID_36382] [ID_36510]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+<!-- Not added to MR 10.4.0 -->
+
+When you opened a dashboard of which the URL was longer than 2048 characters, the authentication app would fail to open, causing IIS to either stop operating or throw a 404 or 414 error.
+
 #### GQI: Exception thrown when grouping an empty aggregation result [ID_36392]
 
 <!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
@@ -276,3 +281,28 @@ When the same query was used in two different GQI visualizations, one of those v
 ```txt
 Cannot read properties of null ('reading delete')
 ```
+
+#### Low-Code Apps: Table actions would not get triggered when the GQI data source row key was of type string [ID_36488]
+
+<!-- MR 10.4.0 - FR 10.3.7 [CU0] -->
+<!-- Not added to 10.4.0 -->
+
+Table actions would incorrectly not be triggered when the key of the GQI data source row was of type string.
+
+#### GQI: IsChecked property would not be filled in for list and drop-down options in SLAnalyticsTypes.dll [ID_36491]
+
+<!-- MR 10.4.0 - FR 10.3.7 -->
+
+When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Dashboards app & Low-Code Apps: Problem when sending updates to the Web API when the user did not have edit rights [ID_36571]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
+
+#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.

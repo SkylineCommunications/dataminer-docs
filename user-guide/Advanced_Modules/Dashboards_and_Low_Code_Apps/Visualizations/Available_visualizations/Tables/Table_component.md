@@ -4,7 +4,7 @@ uid: DashboardTable
 
 # Table
 
-This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds). Available from DataMiner 10.0.13 onwards.
+This component is used to display the results of queries in table format. It should always be configured with *Queries* data input. See [Creating a GQI query](xref:Creating_GQI_query). Available from DataMiner 10.0.13 onwards.
 
 It displays the different possible data sources of queries as follows:
 
@@ -63,9 +63,13 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 ## Exporting the table
 
-From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table via the ... button in the top-right corner of the component. If nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:
 
-The export file will be named “Query XXX” (XXX being the name of the query, as configured in the data pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result. This data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
+- Prior to DataMiner 10.3.8/10.4.0, if nothing is selected in the table, the entire table will be exported; otherwise only the selected rows will be exported. The data will contain the display values, not the raw values. This means that units will be included for the parameter values and that discrete values will be replaced by their corresponding display values.
+
+- From DataMiner 10.3.8/10.4.0 onwards, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported. Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported. If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+The export file will be named “Query XXX” (XXX being the name of the query, as configured in the data pane). The first line of the CSV file will contain the names of the columns. The subsequent lines will contain the data, each line being a row of the query result.
 
 > [!NOTE]
 > To only export specific columns, first apply a filter by dragging the columns onto the table component before you export the component.
@@ -83,7 +87,7 @@ To apply a **general filter** across the table, a search box is available:
 
 1. Specify the filter text (case-insensitive) in the search box.
 
-   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Configuring_GQI_feeds).
+   This will apply a client-side filter only. To apply a server-side filter, you need to use a filter operator when you [configure the query data source](xref:Creating_GQI_query).
 
 To apply a **filter based on a specific column**:
 

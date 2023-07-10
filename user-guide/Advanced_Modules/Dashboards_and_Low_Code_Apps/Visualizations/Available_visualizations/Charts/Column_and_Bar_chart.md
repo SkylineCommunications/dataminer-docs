@@ -13,7 +13,7 @@ To configure the component:
 
 1. Apply a view data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
 
-   From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Configuring query (GQI) data feeds](xref:Configuring_GQI_feeds).
+   From DataMiner 10.0.13 onwards, this component also supports queries as data input. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. Optionally, you can add a parameter filter, so that the displayed data are limited to that parameter only. to do so, hover the mouse over the component, click the filter icon, and then add a filter feed from the *parameters* section of the data pane.
 
@@ -35,7 +35,10 @@ To configure the component:
 
    - *Label*: Allows you to select which data should be used as a label. Depending on how many different variables are displayed in the chart, several labels can be selected.
 
-   - *Segment size*: Allows you to select which data should determine the size of segments in the chart.
+   - *Bars*: Allows you to select which data should determine the size of the bars in the chart. Multiple bars can be selected.
+
+   > [!NOTE]
+   > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and bars will automatically be configured. <!-- RN 36229 -->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
 

@@ -74,3 +74,6 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
 > [!NOTE]
 > From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as a feed for other components, for example in a GQI query.
+
+> [!TIP]
+> See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

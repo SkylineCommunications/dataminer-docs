@@ -4,6 +4,8 @@ uid: Connect_to_dataminer_services
 
 # Connecting to dataminer.services
 
+Below you can find detailed information on how to connect your DataMiner System to dataminer.services, also known as connecting to the cloud or making a DMS cloud-connected.
+
 > [!TIP]
 > For more information about cloud connectivity and security, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
 

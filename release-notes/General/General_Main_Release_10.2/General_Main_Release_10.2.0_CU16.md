@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU16
 ---
 
-# General Main Release 10.2.0 CU16 – Preview
+# General Main Release 10.2.0 CU16
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -46,6 +46,24 @@ The following scheduled tasks will now by default return 0 instead of error code
 - Skyline DataMiner Backup (DataMinerBackup.js)
 - Skyline DataMiner Database Optimization (OptimizeDB.js)
 - Skyline DataMiner LDAP Resync (ReloadLDAP.js)
+
+#### SSH settings saved in parameters are now passed to SLPort together instead of separately [ID_36404]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you set up an SSH connection in a protocol, you can store the username, the password, the SSH options and the IP address in parameters using a `<Type options="">` element inside the `<Param>` element.
+
+| Parameter          | Option                          |
+|--------------------|---------------------------------|
+| SSH username       | `<Type options="SSH USERNAME">` |
+| SSH password       | `<Type options="SSH PWD">`      |
+| SSH options        | `<Type options="SSH OPTIONS">`  |
+| Dynamic IP address | `<Type options="DYNAMIC IP">`<br>Note: This value can also be used for other types of connections. |
+
+Up to now, when an element with an SSH connection was started, these values would each be passed separately to SLPort. From now on, they will all be passed together to SLPort.
+
+> [!NOTE]
+> A separate set will be performed whenever one of the above-mentioned values is changed at runtime.
 
 ### Fixes
 
@@ -135,6 +153,14 @@ When you re-uploaded a main DVE protocol with the same version as the one that w
 
 When you restarted a spectrum element while its card was open, the trace would no longer be updated. For the trace to get updated, you had to close the card and open it again. From now on, the trace will be updated as soon as the element has finished restarting.
 
+#### DataMiner Cube - Visual Overview: Blinking shapes would affect other components [ID_36357]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, setting a shape to blink in Visual Overview could unintentionally affect other components. For example, when the parameter table contained monitored parameters, the monitored cells would incorrectly blink along with the shape.
+
+From now on, when a shape is set to blink, other components will no longer be affected.
+
 #### DataMiner Cube: Problem with 'Use credentials' selection box when creating or editing an element [ID_36362]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
@@ -143,11 +169,31 @@ When you selected the *Use credentials* option for an SNMPv1 or SNMPv2 connectio
 
 Also, when you edited an element for which credentials had been selected, the *Use credentials* selection box would be disabled and the *Get community string* and *Set community string* boxes would be enabled until you toggled the *Use credentials* option off and on again.
 
+#### SNMP tables using the 'subtable' option no longer received any data when a single-value filter was applied [ID_36370]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When a single-value filter was applied to an SNMP table using the `subtable` option, in some cases, the table would no longer receive any data.
+
+Due to a filtering problem, using a single filter like "1.1" would no longer poll instances like "1.1" and "1.1.2". This has now been fixed.
+
+Also, it is now possible to use a "\*" wildcard in a filter. See the following examples:
+
+- "1.2" will accept values like "1.2.1" and "1.2.2", but will reject "1.3.1" and "2.2".
+- "1.*" will accept values like "1.1" and "1.2.3", but will reject "1" and "2.1.2".
+- "*.1" will accept values like "2.1" and "2.1.2", but will reject "1.1" and "1.2.1".
+
 #### Dashboards app & Low-Code Apps - Table component: Columns with an action applied would not show a loading indication [ID_36376]
 
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 Table columns that had an action applied would incorrectly not show a loading indication. Instead, they would remain empty until the data was loaded.
+
+#### DataMiner Cube : Reports and heatline of a monitored parameter of a DVE child element would incorrectly show "No monitoring" [ID_36384]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+When you opened the card of a DVE child element, drilled down to a monitored parameter and opened the *Details* tab, the reports would incorrectly show "No monitoring". Also, "No monitoring" would be shown when you viewed the heatline of the parameter in question.
 
 #### Protocols: Setting the type of an advanced port to SNMPv3 would cause the advanced port settings to get lost [ID_36400]
 
@@ -166,3 +212,17 @@ A message would incorrectly no longer be displayed when a component was being mi
 <!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
 
 When a dashboard contained a query component that was linked to a feed, the app could become unresponsive when the feed would send updates faster than the time it took to resolve the query.
+
+#### DataMiner Cube: Problem when opening the alarm template of a large matrix parameter [ID_36444]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, Cube could become unresponsive when you tried to open the alarm template of a large matrix parameter.
+
+#### Cube: Problem when trying to export all elements to a CSV file [ID_36512]
+
+<!-- MR 10.2.0 [CU16]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In some cases, the following exception could be thrown when you tried to export all elements to a CSV file:
+
+`Export failed: Object reference not set to an instance of an object`

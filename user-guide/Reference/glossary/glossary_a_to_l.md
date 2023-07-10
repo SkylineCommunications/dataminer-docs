@@ -8,7 +8,7 @@ uid: glossary_a_to_l
 
 | Term | Description |
 |------|-------------|
-| Absolute alarm threshold | Dynamic alarm threshold that is configured as an absolute value representing the delta with the baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds) |
+| Absolute alarm threshold | Dynamic alarm threshold that is configured as an absolute value representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds) |
 | Access level | The security level required to access a specific parameter. This level is assigned to the parameter in the protocol.<br>See [User rights](xref:User_rights). |
 | Acquisition network | Used in the context of DataMiner Failover. The network where the managed products reside (i.e. the technical network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
 | ACU | Antenna Control Unit. Device that allows the monitoring and control of an antenna. |
@@ -17,7 +17,7 @@ uid: glossary_a_to_l
 | AES3 | Standard for the exchange of digital audio signals between professional audio devices. Also known as AES/EBU, as it was jointly developed by the Audio Engineering Society (AES) and European Broadcasting Union (EBU). |
 | Aggregation | DataMiner module that uses aggregation rules to calculate statistical information within a DataMiner System.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
 | Aggregation rule | Rule that defines which summary statistics should be calculated for a view.<br>See [Working with aggregation rules](xref:Working_with_aggregation_rules). |
-| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration.<br>See [Alarms](xref:alarms). |
+| Alarm | Notification that a parameter value has crossed a particular threshold, or a parameter has attained a particular value. This notification has a particular severity depending on the alarm template configuration.<br>See [Alarms](xref:About_alarms). |
 | Alarm banner | Banner at the top of the DataMiner Cube UI that displays the number of new alarms, the color of the most severe among them, and service impact information.<br>See [Alarm Console settings](xref:AlarmConsoleSettings). |
 | Alarm Console | Pane in DataMiner Cube that allows you to view and manage alarms and information events.<br>See [Working with the Alarm Console](xref:Working_with_the_Alarm_Console). |
 | Alarm focus | DataMiner functionality that analyzes the short-term history and current behavior of incoming alarms in order to indicate which alarms are unexpected.<br>See [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus). |
@@ -26,9 +26,9 @@ uid: glossary_a_to_l
 | Alarm priority | Relative importance of an alarm type within the different DataMiner applications.<br>See [Alarm type priority](xref:Alarm_types#alarm-type-priority). |
 | Alarm storm | Situation where the system is flooded by a large number of alarms.<br>See [Alarm storm protection](xref:Alarm_storm_protection). |
 | Alarm tab | Tab in the Alarm Console in DataMiner Cube or the DataMiner Monitoring app. |
-| Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol.<br>See [Alarm templates](xref:Alarm_templates). |
+| Alarm template | Template that contains the alarm thresholds for all parameters in a particular protocol.<br>See [About alarm templates](xref:About_alarm_templates). |
 | Alarm template group | Combination of different alarm templates into one grouped template.<br>See [Alarm template groups](xref:Alarm_template_groups). |
-| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Alarm templates](xref:Alarm_templates). |
+| Alarm threshold | Definition of the value a particular parameter must have to trigger an alarm of a particular level.<br>See [Configuring alarm thresholds](xref:Configuring_normal_alarm_thresholds). |
 | Alarm tree | Series of linked alarm records, reflecting the life cycle of an alarm.<br>See [Alarm linking](xref:Alarm_linking). |
 | Alerter | System tray application that notifies the user of alarms in the DataMiner System.<br>See [Alerter](xref:Alerter). |
 | Analog parameter | Parameter with a value within a predefined range delimited by a minimum and a maximum.<br>See [Discrete, analog and hybrid parameters](xref:Discrete_analog_and_hybrid_parameters). |
@@ -95,7 +95,7 @@ uid: glossary_a_to_l
 | CORBA | Common Object Request Broker Architecture. Standard for communication between systems using different operating systems, programming languages and hardware. |
 | Corporate network | Used in the context of DataMiner Failover. The network where the users of the system reside (i.e. the office network).<br>See [About DMA Failover](xref:About_DMA_Failover). |
 | Corrective actions | Actions to undertake in case an alarm is generated. These can be visualized in the user interface using an information template.<br>See [Creating an information template](xref:Creating_an_information_template). |
-| Correlated alarm | Alarm generated by the DataMiner Correlation engine, based on a Correlation rule triggered by one or more other alarms.<br>See [Correlation](xref:correlation). |
+| Correlated alarm | Alarm generated by the DataMiner Correlation engine, based on a Correlation rule triggered by one or more other alarms.<br>See [Correlated alarms](xref:Alarm_types#correlated-alarms). |
 | Correlation | DataMiner module that can gather information about parameter values and alarms, and trigger specific actions, such as generating a new, correlated alarm, based on triggers defined by the user.<br>See [Correlation](xref:correlation). |
 | Correlation analyzer | Analyzer that can propose a Correlation rule based on the alarms occurring over a period of time.<br>See [Using Correlation analyzers](xref:Using_Correlation_analyzers). |
 | Correlation rule | Rule defining when DataMiner Correlation should be triggered and what should happen when it is triggered.<br>See [About DataMiner Correlation](xref:About_DMS_Correlation). |
@@ -169,7 +169,7 @@ uid: glossary_a_to_l
 | DVB | Digital Video Broadcasting. Set of internationally accepted open standards for digital television. This includes DVB-C (Digital Video Broadcasting - Cable), DVB-H (Digital Video Broadcasting - Handheld), DVB-S (Digital Video Broadcasting - Satellite) and DVB-T (Digital Video Broadcasting - Terrestrial). |
 | DVE | Dynamic Virtual Element. An element from which child elements are dynamically generated. The term DVE is used both for the parent and the child elements.<br>See [Dynamic virtual elements](xref:Dynamic_virtual_elements). |
 | DxM | DataMiner Extension Module. A DataMiner component that can be installed next to an existing DataMiner installation to enable additional functionality. A DxM can be installed and upgraded independently from the DataMiner version and without any downtime of the core DataMiner software. See [DataMiner Extension Modules](xref:DataMinerExtensionModules). |
-| Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
+| Dynamic alarm threshold | Alarm threshold that is not based on a fixed value, but defined in comparison with a baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Dynamic table parameter | Parameter that visualizes and manages a large data table (e.g. an SNMP table). Every column in the table is also considered to be a parameter.<br>See [Table parameters](xref:Table_parameters). |
 
 ## E
@@ -221,7 +221,7 @@ uid: glossary_a_to_l
 | Global constant | Fixed variable used in spectrum scripts.<br>See [Using global constants](xref:Working_with_spectrum_scripts#using-global-constants). |
 | GOTS | Government Off-The-Shelf. Term used for off-the shelf products that are created and owned by a government agency. |
 | GPIB | General Purpose Interface Bus. IEEE-488 interface used to connect sensors and programmable instruments to a computer or to other instruments. |
-| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Configuring GQI feeds](xref:Configuring_GQI_feeds). |
+| GQI | Generic Query Interface. A special type of data feed for DataMiner Dashboards and Low-Code Apps. See [Generic Query Interface (GQI)](xref:Generic_Query_Interface). |
 | Grandmaster clock | Device from which the time is retrieved in a PTP environment.<br>See [DataMiner PTP app](xref:SolPTP#dataminer-ptp-app). |
 
 ## H
@@ -254,9 +254,9 @@ uid: glossary_a_to_l
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
+| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database per DMS](xref:Configuring_indexing_database_per_DMS). |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP). |
-| Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-event). |
+| Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |
 | Input attenuation | Adjusting of the signal strength at the input of a spectrum analyzer to improve measuring accuracy.<br>See [Changing the spectrum analyzer settings](xref:Changing_the_spectrum_analyzer_settings). |
 | IntelliSense | Intelligent code completion, available within DataMiner when configuring C# code in Automation scripts.<br>See [IntelliSense](xref:Adding_CSharp_code_to_an_Automation_script#intellisense). |

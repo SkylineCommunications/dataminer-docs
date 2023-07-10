@@ -112,6 +112,12 @@ In the *ConnectionSettings.txt* file, the **type=** setting defines the default 
 
 One of its values, "RemotingConnection", is now obsolete. If you continue to use this value, we are planning to soon have DataMiner automatically switch to *GRPCConnection* when you upgrade. If you do not want to use *GRPCConnection*, use *LegacyRemotingConnection* to avoid getting automatically switched. However, note that we strongly recommend using *GRPCConnection*.
 
+#### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
+
 #### Element replication is now able to use gRPC [ID_36262]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
@@ -247,6 +253,12 @@ When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" s
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
 
 Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
+
+#### Problem with BPA test 'Cassandra DB Size' [ID_36138]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, the BPA test *Cassandra DB size* would spawn a number of cmd processes meant to be executed by the Cassandra nodetool utility without checking whether nodetool was running. When nodetool was not running, these cmd processes would not get cleaned up.
 
 #### DataMiner Backup: Low-code apps would incorrectly not be restored [ID_36139]
 

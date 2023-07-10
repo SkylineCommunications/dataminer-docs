@@ -16,6 +16,6 @@ This tab displays an overview of all elements in the system, with their associat
 
 > [!TIP]
 > See also:
-> - [Assigning an alarm template](xref:Managing_alarm_templates#assigning-an-alarm-template)
-> - [Assigning trend templates](xref:Assigning_trend_templates)
 >
+> - [Assigning an alarm template](xref:Assigning_an_alarm_template)
+> - [Assigning trend templates](xref:Assigning_trend_templates)

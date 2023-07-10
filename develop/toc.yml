@@ -1330,6 +1330,8 @@
             topicUid: Protocol.ExportRules.ExportRule-tag
           - name: '@value'
             topicUid: Protocol.ExportRules.ExportRule-value
+          - name: '@whereAttribute'
+            topicUid: Protocol.ExportRules.ExportRule-whereAttribute
           - name: '@whereTag'
             topicUid: Protocol.ExportRules.ExportRule-whereTag
           - name: '@whereValue'
@@ -1774,11 +1776,6 @@
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
               - name: '@value'
                 topicUid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
-            - name: ColumnOptions
-              topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions
-              items: 
-              - name: ColumnOption
-                topicUid: Protocol.Params.Param.ArrayOptions.ColumnOptions.ColumnOption
             - name: NamingFormat
               topicUid: Protocol.Params.Param.ArrayOptions.NamingFormat
           - name: CRC
@@ -5366,6 +5363,39 @@
               topicUid: Artificial_dynamic_simulations
             - name: Realistic dynamic simulations
               topicUid: Realistic_dynamic_simulations
+            - name: SNMP simulation schema reference
+              topicUid: DeviceSimulator_SNMP_Schema_Reference_Overview
+              items:
+              - name: Simulation
+                topicUid: DeviceSimulator_SNMP_Schema_Simulation
+                items:
+                - name: Agents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+                  items:
+                  - name: Agent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent                
+                - name: DatabaseAgents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+                  items:
+                  - name: DatabaseAgent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+                - name: ProxyAgents
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+                  items:
+                  - name: ProxyAgent
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+                - name: Options
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options
+                  items:
+                  - name: MaxResponseWeight
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+                - name: DefaultDefinitionAttributes
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+                - name: Definitions
+                  topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions
+                  items:
+                  - name: Definition
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
         - name: Trap sender
           topicUid: Trap_sender
           items:
