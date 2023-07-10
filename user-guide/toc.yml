@@ -2638,6 +2638,60 @@
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:
+        - name: DataMiner EPM D-DOCSIS
+          topicUid: EPM_D-DOCSIS
+          items:
+            - name: EPM D-DOCSIS architecture
+              topicUid: D-DOCSIS_architecture
+            - name: EPM D-DOCSIS components
+              topicUid: D-DOCSIS_components
+            - name: Supported technologies for D-DOCSIS
+              topicUid: D-DOCSIS_supported_technologies
+            - name: EPM D-DOCSIS deployment
+              topicUid: D-DOCSIS_deployment
+            - name: Available parameters in D-DOCSIS
+              topicUid: D-DOCSIS_parameters
+              items:
+                - name: Network
+                  topicUid: D-DOCSIS_parameters_network
+                - name: Market
+                  topicUid: D-DOCSIS_parameters_market
+                - name: Hub
+                  topicUid: D-DOCSIS_parameters_hub
+                - name: CCAP Core
+                  topicUid: D-DOCSIS_parameters_ccap_core
+                - name: RPD
+                  topicUid: D-DOCSIS_parameters_rpd
+                - name: CM
+                  topicUid: D-DOCSIS_parameters_cm
+                - name: DPIC
+                  topicUid: D-DOCSIS_parameters_dpic
+                - name: DPIC Interface
+                  topicUid: D-DOCSIS_parameters_dpic_interface
+                - name: US Controller
+                  topicUid: D-DOCSIS_parameters_us_controller
+                - name: DS Controller
+                  topicUid: D-DOCSIS_parameters_ds_controller
+                - name: Fiber Node
+                  topicUid: D-DOCSIS_parameters_fiber_node
+                - name: Node Segment
+                  topicUid: D-DOCSIS_parameters_node_segment
+                - name: Service Group
+                  topicUid: D-DOCSIS_parameters_service_group
+                - name: DS Service Group
+                  topicUid: D-DOCSIS_parameters_ds_service_group
+                - name: US Service Group
+                  topicUid: D-DOCSIS_parameters_us_service_group
+                - name: Core Leaf
+                  topicUid: D-DOCSIS_parameters_core_leaf
+                - name: Spine
+                  topicUid: D-DOCSIS_parameters_spine
+                - name: Node Leaf
+                  topicUid: D-DOCSIS_parameters_node_leaf
+                - name: CIN Interface
+                  topicUid: D-DOCSIS_parameters_cin_interface
+                - name: Manufacturer
+                  topicUid: D-DOCSIS_parameters_manufacturer
 #GPON TOC      
         - name: DataMiner EPM GPON
           topicUid: EPM_GPON
@@ -2724,60 +2778,6 @@
                   topicUid: I-DOCSIS_parameters_cable_modem
                 - name: Thresholds
                   topicUid: I-DOCSIS_parameters_thresholds
-        - name: DataMiner EPM D-DOCSIS
-          topicUid: EPM_D-DOCSIS
-          items:
-            - name: EPM D-DOCSIS architecture
-              topicUid: D-DOCSIS_architecture
-            - name: EPM D-DOCSIS components
-              topicUid: D-DOCSIS_components
-            - name: Supported technologies for D-DOCSIS
-              topicUid: D-DOCSIS_supported_technologies
-            - name: EPM D-DOCSIS deployment
-              topicUid: D-DOCSIS_deployment
-            - name: Available parameters in D-DOCSIS
-              topicUid: D-DOCSIS_parameters
-              items:
-                - name: Network
-                  topicUid: D-DOCSIS_parameters_network
-                - name: Market
-                  topicUid: D-DOCSIS_parameters_market
-                - name: Hub
-                  topicUid: D-DOCSIS_parameters_hub
-                - name: CCAP Core
-                  topicUid: D-DOCSIS_parameters_ccap_core
-                - name: RPD
-                  topicUid: D-DOCSIS_parameters_rpd
-                - name: CM
-                  topicUid: D-DOCSIS_parameters_cm
-                - name: DPIC
-                  topicUid: D-DOCSIS_parameters_dpic
-                - name: DPIC Interface
-                  topicUid: D-DOCSIS_parameters_dpic_interface
-                - name: US Controller
-                  topicUid: D-DOCSIS_parameters_us_controller
-                - name: DS Controller
-                  topicUid: D-DOCSIS_parameters_ds_controller
-                - name: Fiber Node
-                  topicUid: D-DOCSIS_parameters_fiber_node
-                - name: Node Segment
-                  topicUid: D-DOCSIS_parameters_node_segment
-                - name: Service Group
-                  topicUid: D-DOCSIS_parameters_service_group
-                - name: DS Service Group
-                  topicUid: D-DOCSIS_parameters_ds_service_group
-                - name: US Service Group
-                  topicUid: D-DOCSIS_parameters_us_service_group
-                - name: Core Leaf
-                  topicUid: D-DOCSIS_parameters_core_leaf
-                - name: Spine
-                  topicUid: D-DOCSIS_parameters_spine
-                - name: Node Leaf
-                  topicUid: D-DOCSIS_parameters_node_leaf
-                - name: CIN Interface
-                  topicUid: D-DOCSIS_parameters_cin_interface
-                - name: Manufacturer
-                  topicUid: D-DOCSIS_parameters_manufacturer
         - name: DataMiner EPM VSAT
           topicUid: EPM_VSAT
           items:
