@@ -54,6 +54,9 @@ To install the Skyline certificates:
 
 1. Under *DataMiner Tools*, click *Register Skyline Certificates*, and then click *Run*.
 
+> [!IMPORTANT]
+> As a security precaution, **running *SLRegCerts.exe* is optional** unless you specifically require offline functionality on Windows Server 2012 R2 servers or Windows 8 clients without internet connectivity.
+
 > [!NOTE]
 >
 > - The tool will try to install the certificates for all users of the computer. If this is not possible because of insufficient rights, it will try to install the certificates for the current user only.
@@ -73,10 +76,6 @@ If DataMiner Cube will be run as a web application instead of a desktop applicat
 
 ### Optional software
 
-- Web Services Enhancements (WSE) 2.0 SP3 for Microsoft .NET
+**Microsoft Visio (Standard or Professional, version 2013 or later)**:
 
-  Optional package, only to be installed if the client will connect to DataMiner servers using web services instead of .NET Remoting.
-
-- Microsoft Visio (Standard or Professional, version 2003 or later)
-
-  Optional software, only to be installed for users who will be creating or adapting Microsoft Visio drawings.
+Optional software, only to be installed for users who will be creating or adapting Microsoft Visio drawings.
