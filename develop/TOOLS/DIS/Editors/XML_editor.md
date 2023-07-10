@@ -24,9 +24,9 @@ Since DIS v.2.13, a next-generation Validator runs side by side with the legacy 
 
 As of DIS v2.41, when you open a main DVE protocol and click *Validate*, DIS will not only validate the main protocol but also all its exported child DVE protocols.
 
-After having validated a protocol, you can ask DIS to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc. In the *DIS Validator* pane, all errors that can be fixed automatically will be marked by a “wrench and screwdriver” icon.
+After having validated a protocol, you can ask DIS to automatically fix a number of common errors: replace all invalid characters in a parameter name with an underscore, trimming tag contents, etc. In the *DIS Validator* pane, all errors that can be fixed automatically will be marked by a "wrench and screwdriver" icon.
 
-- To fix an error marked by a “wrench and screwdriver” icon, right-click the error, and select *Fix \> This error*. If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
+- To fix an error marked by a "wrench and screwdriver" icon, right-click the error, and select *Fix \> This error*. If the error has successfully been fixed, it will be removed from the *DIS Validator* pane.
 
 To fix all errors of one particular type or severity at the same time, do the following:
 
@@ -55,11 +55,14 @@ When you right-click an error in the list, a shortcut menu offers you the follow
 
 ### Compare
 
-Pressing the compare button opens the DIS Comparer tool window. For more information on how to work with this tool window, see [DIS Comparer](xref:DisComparerToolWindow).
+Clicking the *Compare* button opens the *DIS Comparer* tool window.
+
+> [!TIP]
+> For more information on how to work with this tool window, see [DIS Comparer](xref:DisComparerToolWindow).
 
 ### Refactor
 
-If you opened a protocol XML file that has not yet been edited in DataMiner Integration Studio, click *Refactor* right after opening the file. That way, the file will be made “DIS compliant”.
+If you opened a protocol XML file that has not yet been edited in DataMiner Integration Studio, click *Refactor* right after opening the file. That way, the file will be made "DIS compliant".
 
 Changes made to the protocol XML file include:
 
@@ -141,14 +144,14 @@ When you enter words in the search box, those words will immediately be highligh
 
 #### Case sensitivity
 
-If you want to override the default case sensitivity setting in a particular file tab, you can switch between “Case sensitive” and “Ignore case” by clicking the *aA* button to the right of the search box.
+If you want to override the default case sensitivity setting in a particular file tab, you can switch between "Case sensitive" and "Ignore case" by clicking the *aA* button to the right of the search box.
 
 > [!TIP]
 > See also: [Interface](xref:DIS_settings#interface)
 
 #### Wildcard interpretation
 
-If you want to override the default wildcard interpretation setting in a particular file tab, you can switch between “Treat as literal string” and “Interpret as wildcards” by clicking the *\*?* button to the right of the search box.
+If you want to override the default wildcard interpretation setting in a particular file tab, you can switch between "Treat as literal string" and "Interpret as wildcards" by clicking the *\*?* button to the right of the search box.
 
 > [!TIP]
 > See also: [Interface](xref:DIS_settings#interface)
@@ -174,7 +177,7 @@ When you right-click inside the file tab, a shortcut menu appears. Apart from th
 If you want to automatically generate *\<Param>* tags (as well as all the necessary *\<Timer>*, *\<Group>*, *\<Trigger>* and *\<Action>* tags) based on parameter data in a MIB file, an XML file, a JSON file, a WSL file or an Ember+ file, then do the following:
 
 1. Position the mouse cursor anywhere in the XML editor, right-click, and select *Generate Parameters*.
-1. In the *Generate Parameters Wizard* window, set *Input type* to “MIB”, “XML”, “JSON”, “WSDL” or “EmberPlus”.
+1. In the *Generate Parameters Wizard* window, set *Input type* to "MIB", "XML", "JSON", "WSDL" or "EmberPlus".
 1. Depending on the choice you made in step 2, do the following:
 
     | If you selected ... | then ... |
@@ -190,10 +193,10 @@ If you want to automatically generate *\<Param>* tags (as well as all the necess
 
     | Setting | Description |
     |---------|-------------|
-    | Start PID | In this box, you can specify the ID of the first parameter that is about to be created.<br> If, for example, you enter “1000”, then the first parameter will have ID 1000, the second parameter will have ID 1001, etc.<br> Default: 1000 |
-    | Offset Read PID -><br>Write PID | If the parameter data indicates that a parameter can be updated, DataMiner Integration Studio will also generate a parameter of type “write”.<br> In this box, you can specify the offset between the ID of the parameter of type “read” and the ID of the parameter of type “write”.<br> Default: 100 |
-    | Offset Read PID -><br>SNMP Write PID| If the parameter to be created is that of a writable table column, DataMiner Integration Studio will generate a second parameter of type “write”.<br> In this box, you can specify the offset between the ID of the parameter of type “read” and the ID of the second parameter of type “write”.<br> Default: 200 |
-    | Offset Table PID -><br>Set Instance PID | If the parameter to be created is that of a table on which SET actions will be performed, then DataMiner Integration Studio will generate a so-called “instance parameter”, which will contain row instances.<br> In this box, you can specify the offset between the ID of the table parameter and the ID of the instance parameter.<br> Default: 900 |
+    | Start PID | In this box, you can specify the ID of the first parameter that is about to be created.<br> If, for example, you enter "1000", then the first parameter will have ID 1000, the second parameter will have ID 1001, etc.<br> Default: 1000 |
+    | Offset Read PID -><br>Write PID | If the parameter data indicates that a parameter can be updated, DataMiner Integration Studio will also generate a parameter of type "write".<br> In this box, you can specify the offset between the ID of the parameter of type "read" and the ID of the parameter of type "write".<br> Default: 100 |
+    | Offset Read PID -><br>SNMP Write PID| If the parameter to be created is that of a writable table column, DataMiner Integration Studio will generate a second parameter of type "write".<br> In this box, you can specify the offset between the ID of the parameter of type "read" and the ID of the second parameter of type "write".<br> Default: 200 |
+    | Offset Table PID -><br>Set Instance PID | If the parameter to be created is that of a table on which SET actions will be performed, then DataMiner Integration Studio will generate a so-called "instance parameter", which will contain row instances.<br> In this box, you can specify the offset between the ID of the table parameter and the ID of the instance parameter.<br> Default: 900 |
 
 1. If the list shows any ID conflicts between existing parameters and parameters that are about to be created, change the conflicting, new parameter IDs (which are marked in red), and click *Next*.
 1. Define the necessary timers, and click *Next*.
@@ -202,28 +205,28 @@ If you want to automatically generate *\<Param>* tags (as well as all the necess
 
 > [!NOTE]
 >
-> - When an XML/JSON node does not contain a value, a parameter of type “string” will be created, and a warning icon will appear next to the node in the XML/JSON source file.
+> - When an XML/JSON node does not contain a value, a parameter of type "string" will be created, and a warning icon will appear next to the node in the XML/JSON source file.
 > - Obsolete or deprecated MIB nodes will not be imported when you generate parameters based on MIB data.
 
 ### Generating Write parameters for Read parameters
 
-If you want to automatically generate parameters of type “write” for a number of existing parameters of type “read”, do the following:
+If you want to automatically generate parameters of type "write" for a number of existing parameters of type "read", do the following:
 
-1. In the protocol XML file, select the \<Param> tags of the parameters of type “read” for which you want to generate a parameter of type “write”, right-click, and select *Generate Write Parameters.*
+1. In the protocol XML file, select the \<Param> tags of the parameters of type "read" for which you want to generate a parameter of type "write", right-click, and select *Generate Write Parameters.*
 
     In the *Generate Write Parameters* window, each read parameter in the list has a checkbox in front of it. This checkbox will by default be selected, meaning that a write parameter will be created when you click *OK*. However, if a read parameter already has an associated write parameter, then its checkbox will by default not be selected. This will prevent you from creating duplicate write parameters.
 
 1. If, in the *Generate Write Parameters For Read Parameters* window, the list shows any ID or name conflicts between existing parameters and parameters that are about to be created, then change the conflicting, new parameter IDs and/or names (which are marked in red), and click *OK*.
 
-    - Above the list, you can change the default ID offset (default offset: 1). This way, you can change the IDs of all listed parameters of type “write” in one go.
-    - When in the *Write ID* column a suggested parameter ID is not available, you can click a “search for next available Write ID” button in the form of an arrow to replace the non-available ID by an available one.
-    - The *Setter* column allows you to enable the “setter” attribute for a particular write parameter.
+    - Above the list, you can change the default ID offset (default offset: 1). This way, you can change the IDs of all listed parameters of type "write" in one go.
+    - When in the *Write ID* column a suggested parameter ID is not available, you can click a "search for next available Write ID" button in the form of an arrow to replace the non-available ID by an available one.
+    - The *Setter* column allows you to enable the "setter" attribute for a particular write parameter.
 
-        If you want to enable this attribute for all non-SNMP parameters in the list, then you can select the “select all” checkbox in the column header. Note that, when the protocol does not contain any non-SNMP parameters, this “select all” checkbox will be disabled. As will all “setter” checkboxes for the SNMP parameters in the list.
+        If you want to enable this attribute for all non-SNMP parameters in the list, then you can select the "select all" checkbox in the column header. Note that, when the protocol does not contain any non-SNMP parameters, this "select all" checkbox will be disabled. As will all "setter" checkboxes for the SNMP parameters in the list.
 
-    - The *SNMP Set and Get* column allows you to enable the “snmpSetAndGet” attribute for a particular write parameter.
+    - The *SNMP Set and Get* column allows you to enable the "snmpSetAndGet" attribute for a particular write parameter.
 
-        If you want to enable this attribute for all SNMP parameters in the list, select the “select all” checkbox in the column header. <br>Note that when the protocol does not contain any SNMP parameters, this “select all” checkbox will be disabled, as will all “SNMP Set and Get” checkboxes for the non-SNMP parameters in the list.
+        If you want to enable this attribute for all SNMP parameters in the list, select the "select all" checkbox in the column header. <br>Note that when the protocol does not contain any SNMP parameters, this "select all" checkbox will be disabled, as will all "SNMP Set and Get" checkboxes for the non-SNMP parameters in the list.
 
 > [!NOTE]
 >
@@ -239,23 +242,23 @@ The right-click menu option *Repeat Selected Text* allows you to select a partic
 1. If you want to insert a variable (or a formula including a variable) in the text to be repeated, then do the following:
 
     - Place your cursor where you want the variable or formula to be inserted, and click *Insert placeholder*.
-    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value “x” delimited by “$” characters. You could change it to e.g. “$x+5$”.
+    - If necessary, change the default placeholder that appeared at the location where you placed your cursor: a single value "x" delimited by "$" characters. You could change it to e.g. "$x+5$".
 
 1. At the bottom of the window, select *Overwrite Selection*, if you want the text you selected to be overwritten by the text that is currently displayed in the *Preview* box.
 1. Click *OK* to have the text in the *Preview* box pasted in the editor.
 
-#### Using “$” characters inside a formula
+#### Using "$" characters inside a formula
 
-When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by “$” characters. If you want to use a “$” character inside a formula, you have to put an escape character in front of it. Example: `$(x*10)+"\$"$`.
+When you insert a variable or a formula into the text to be copied, that variable or formula is delimited by "$" characters. If you want to use a "$" character inside a formula, you have to put an escape character in front of it. Example: `$(x*10)+"\$"$`.
 
-#### Defining the range of value “x”
+#### Defining the range of value "x"
 
-The range of value “x” can be defined using the range definition boxes at the top of the window.
+The range of value "x" can be defined using the range definition boxes at the top of the window.
 
 There are two ways to define the range:
 
-- Specify a starting “x” value in *Start* and a number of iterations in *Count*.
-- Specify a starting “x” value in *Start* and an ending “x” value in *End*.
+- Specify a starting "x" value in *Start* and a number of iterations in *Count*.
+- Specify a starting "x" value in *Start* and an ending "x" value in *End*.
 
 In both cases, you can also specify a step size in *Step*.
 
@@ -269,32 +272,32 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 |---------|----------|
 | Edit Table | Open the parameter in the table editor.<br>(only for table parameters) |
 | Add New Column | Add a new column to a table parameter.<br>- The new column will automatically be assigned a default parameter ID.<br>- The name of the new column will get a prefix containing the name of the table parameter.<br>- The description of the new column will get a suffix containing the description of the table in parenthesis.<br>- When the last column of the table is a displayKey column, then the new column will be inserted before that displayKey column.<br>- When the last column of the table has a write column next to it, then the new column will be added after the write column. It will not be added in between a read and a write column. |
-| Generate Write Parameter | Create an identical parameter of type “Write”.<br> (only for read parameters) |
-| Include in Group | Include the parameter in one of the listed groups of type “poll”.<br> From now on, this command is only available for SNMP parameters (i.e. parameters with an \<SNMP> subtag). |
-| Generate New Trigger | Create a new “on change” trigger that will get activated when the parameter changes. |
+| Generate Write Parameter | Create an identical parameter of type "Write".<br> (only for read parameters) |
+| Include in Group | Include the parameter in one of the listed groups of type "poll".<br> From now on, this command is only available for SNMP parameters (i.e. parameters with an \<SNMP> subtag). |
+| Generate New Trigger | Create a new "on change" trigger that will get activated when the parameter changes. |
 | Generate New QAction | Creates a new blank QAction that will be run when the parameter changes. |
 
 #### Trigger
 
 | Command | Function |
 |---------|----------|
-| Include in Group | Include the trigger in one of the listed groups of type “trigger” or “poll trigger”. |
-| Generate New Action | Create a new action.<br> (only if the trigger is of type “action”) |
-| Add Existing Action | Add an existing action to the trigger.<br> (only if the trigger is of type “action”) |
-| Add Existing Trigger | Add an existing trigger to the trigger.<br> (only if the trigger is of type “trigger”) |
+| Include in Group | Include the trigger in one of the listed groups of type "trigger" or "poll trigger". |
+| Generate New Action | Create a new action.<br> (only if the trigger is of type "action") |
+| Add Existing Action | Add an existing action to the trigger.<br> (only if the trigger is of type "action") |
+| Add Existing Trigger | Add an existing trigger to the trigger.<br> (only if the trigger is of type "trigger") |
 
 #### Action
 
 | Command | Function |
 |---------|----------|
-| Include in Group | Include the action in one of the listed groups of type “action” or “poll action”. |
+| Include in Group | Include the action in one of the listed groups of type "action" or "poll action". |
 | Include in Trigger | Include the action in one of the listed triggers. |
 
 #### Session
 
 | Command | Function |
 |---------|----------|
-| Include in Group | Include the session in one of the listed groups of type “poll”. |
+| Include in Group | Include the session in one of the listed groups of type "poll". |
 
 #### Timer
 
@@ -307,7 +310,7 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 
 | Command | Function |
 |---------|----------|
-| Include in Group | Include the pair in one of the listed groups of type “poll”. |
+| Include in Group | Include the pair in one of the listed groups of type "poll". |
 | Generate New Command | Create a new command. |
 | Add Existing Command | Add an existing command to the pair. |
 | Generate New Response | Create a new response. |
@@ -318,11 +321,11 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Command | Function |
 |---------|----------|
 | Include in Timer | Include the group in one of the listed timers. |
-| Generate New Trigger<br>(after group) | Create a new “after group” trigger. |
-| Add Existing Trigger | Add an existing trigger to the group.<br>(only if the group is of type “trigger” or “poll trigger”) |
-| Generate New Parameter<br>Add Existing Parameter<br>Generate New Pair<br>Add Existing Pair<br>Generate New Session<br>Add Existing Session | As long as a group of type “poll” is still empty, you can use these commands to add a parameter, a pair, or a session to it.<br>However, once you added one item to a group of type “poll”, all other items you add must be of the same type. If a group already contains a pair, for example, you will no longer be allowed to add parameters or sessions to that group. |
-| Generate New Action | Create a new action.<br>(only if the group is of type “action” or “poll action”) |
-| Add Existing Action | Add an existing action to the group.<br> (only if the group is of type “action” or “poll action”) |
+| Generate New Trigger<br>(after group) | Create a new "after group" trigger. |
+| Add Existing Trigger | Add an existing trigger to the group.<br>(only if the group is of type "trigger" or "poll trigger") |
+| Generate New Parameter<br>Add Existing Parameter<br>Generate New Pair<br>Add Existing Pair<br>Generate New Session<br>Add Existing Session | As long as a group of type "poll" is still empty, you can use these commands to add a parameter, a pair, or a session to it.<br>However, once you added one item to a group of type "poll", all other items you add must be of the same type. If a group already contains a pair, for example, you will no longer be allowed to add parameters or sessions to that group. |
+| Generate New Action | Create a new action.<br>(only if the group is of type "action" or "poll action") |
+| Add Existing Action | Add an existing action to the group.<br> (only if the group is of type "action" or "poll action") |
 
 #### Command
 
@@ -346,9 +349,9 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 |---------|----------|
 | Edit QAction | Create a temporary C# project containing the code of the QAction, and open the QAction in a new C# editor tab. |
 | Edit All QActions | For each of the available QActions, create a temporary C# project containing the code of that QAction, and open each QAction in a new C# editor tab. |
-| Change ID... | Change the ID of a QAction.<br>Note that when you change the ID of a QAction, the following items will be updated:<br>- The id attribute of the \<QAction> tag<br>- The name of the C# project (“QAction_ID”)<br>- The name of the main C# file (“QAction_ID.cs”)<br>- The name of the default namespace<br>- (“QAction_ID”)<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
+| Change ID... | Change the ID of a QAction.<br>Note that when you change the ID of a QAction, the following items will be updated:<br>- The id attribute of the \<QAction> tag<br>- The name of the C# project ("QAction_ID")<br>- The name of the main C# file ("QAction_ID.cs")<br>- The name of the default namespace<br>- ("QAction_ID")<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
 | Delete QAction | Delete the entire QAction element as well as the associated C# project.<br> Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
-| DLL Imports | Insert references to pre-compiled QActions into the dllImport attribute of the \<QAction> element.<br>The submenu will list<br>- all QActions of which the options attribute contains the “precompile” option,<br>- all QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction, and<br>- all commonly used system DLL files.<br>Note:<br>- In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark.<br>- If you want to override the path associated with a DLL import, see the note below. |
+| DLL Imports | Insert references to pre-compiled QActions into the dllImport attribute of the \<QAction> element.<br>The submenu will list<br>- all QActions of which the options attribute contains the "precompile" option,<br>- all QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction, and<br>- all commonly used system DLL files.<br>Note:<br>- In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark.<br>- If you want to override the path associated with a DLL import, see the note below. |
 
 > [!NOTE]
 > To override the path associated with a DLL import, do the following:
@@ -361,21 +364,21 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 
 | Command | Function |
 |---------|----------|
-| Edit Script | Create a temporary C# project containing the code of the “Exe” C# code block, and open the code block in a new C# editor tab. |
-| Edit All Scripts | For each of the available “Exe” C# code blocks, create a temporary C# project containing the code of that block, and open each code block in a new C# editor tab. |
-| Copy Script to Clipboard | Copy the entire contents of the “Exe” C# code block (i.e. the Automation script) to the Windows Clipboard. |
+| Edit Script | Create a temporary C# project containing the code of the "Exe" C# code block, and open the code block in a new C# editor tab. |
+| Edit All Scripts | For each of the available "Exe" C# code blocks, create a temporary C# project containing the code of that block, and open each code block in a new C# editor tab. |
+| Copy Script to Clipboard | Copy the entire contents of the "Exe" C# code block (i.e. the Automation script) to the Windows Clipboard. |
 
 > [!NOTE]
 >
-> - If, in an “Include in ...” list or an “Add Existing ...” list, you select an item that is already included, then that item will be removed.
-> - “Include in ...” and “Add Existing ...” lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
+> - If, in an "Include in ..." list or an "Add Existing ..." list, you select an item that is already included, then that item will be removed.
+> - "Include in ..." and "Add Existing ..." lists do not close when you have selected an item. They will stay open to allow you to select multiple items.
 
 ### IntelliSense and instant XML validation
 
 If the root tag of the protocol XML file or the Automation script XML file you are editing contains a reference to the protocol or automation namespace, and if the protocol and Automation script schema files are in the Microsoft Visual Studio Schema folder, then the protocol XML file or the Automation script XML file you are editing will be validated against the protocol or Automation script schema while you type.
 
-- When you type a “\<“ sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
-- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is “action” or “poll action”.
+- When you type a "\<" sign between two existing tags, a selection box will appear listing all tags you are allowed to insert at that location. After you select one of the proposed tags, a list will be presented with all possible attributes for that specific tag.
+- When adding content to Commands, Responses, Pairs, Groups, Triggers, Timers, etc., an IntelliSense pop-up will appear, listing all existing items that can be added. In case of a group, the listed items will depend on the type of the group, e.g. actions are only added to the list when the type is "action" or "poll action".
 
 #### DIS Validator tool window
 
@@ -395,7 +398,7 @@ To insert a snippet while working in the XML editor:
 > [!NOTE]
 > If you want to insert a particular snippet without having to go through the above-mentioned snippet folder and all its subfolders, use the following shortcut:
 >
-> - At the location where you want to insert the snippet, enter “\<“, type the name of the XML tag (or select it from the IntelliSense list), and press TAB.
+> - At the location where you want to insert the snippet, enter "\<", type the name of the XML tag (or select it from the IntelliSense list), and press TAB.
 
 ### Context-sensitive help in tooltips
 
@@ -435,11 +438,11 @@ If you click such a button, a temporary C# project will be created, containing t
 
 ### Virtual comments
 
-When working in the XML editor, you will notice so-called “virtual comments” next to certain XML tags. They are called “virtual” because they cannot be found in the protocol XML file itself.
+When working in the XML editor, you will notice so-called "virtual comments" next to certain XML tags. They are called "virtual" because they cannot be found in the protocol XML file itself.
 
-In the following screenshot, there are three “virtual comments” next to the three parameter tags. They contain the names found in the *\<Description>* tags of those parameters.
+In the following screenshot, there are three "virtual comments" next to the three parameter tags. They contain the names found in the *\<Description>* tags of those parameters.
 
-Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains “System OR Table”.
+Next to *\<Param>30\</Param>*, for example, you can see *\<!-- System OR Table -->* because, in the parameter definition, the *\<Description>* tag contains "System OR Table".
 
 ![](~/develop/images/dis_protocol_editor_comments_group.png)
 

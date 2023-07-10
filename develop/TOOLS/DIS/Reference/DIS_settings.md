@@ -4,19 +4,7 @@ uid: DIS_settings
 
 # DIS settings
 
-From the menu, choose DIS > Settings to open the DIS Settings dialog box. In this dialog box, you can configure all the DIS-related settings.
-
-- [DMA](#dma)
-- [DLLs](#dlls)
-- [Solutions](#solutions)
-- [Class Library](#class-library) (*removed from DIS as of v2.41*)
-- [Interface](#interface)
-- [MIB](#mib)
-- [Account](#account)
-- [Updates](#updates)
-- [Templates](#templates)
-- [Other](#other)
-- [Info](#info)
+Select *DIS > Settings* in the menu to open the *DIS Settings* dialog box. In this dialog box, you can configure all the DIS-related settings.
 
 ## DMA
 
@@ -56,6 +44,7 @@ To update a DMA in the list:
 1. In the *Edit DMA Connection* window, make the necessary changes, and click *OK*.
 
     > [!NOTE]
+    >
     > - When you change the hostname, the user name and/or the password, the current connection will be closed.
     > - After having changed the hostname, the user name and/or the password, we recommend you click the *Test connection* button to check whether DIS is able to connect to the DMA.
 
@@ -72,7 +61,7 @@ To set a DMA as the default DMA:
 If you add a DMA on which DataMiner configuration switching is enabled, you may have to change the port number in the IP address you entered in the *Host* box.
 
 1. On the DMA in question, open C:\\Skyline DataMiner\\logging\\SLNet.txt.
-1. Locate the line that contains “EndPointsManager.InternalEnableRemoting”, and write down the port number specified on this line.
+1. Locate the line that contains "EndPointsManager.InternalEnableRemoting", and write down the port number specified on this line.
 
     ```txt
     07-14 08:42:04.374|4|EndPointsManager.InternalEnableRemoting|port 8004 is available!
@@ -91,7 +80,7 @@ In the *DLLs* tab, you can specify the DLL import locations.
 
 These are the folders that should contain files like *SLDatabase.dll*, *SLProtocolTools.dll* or *SLNetTypes.dll*.
 
-- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis (“…”) button to the right of the text box and browse to the right folder.
+- To add a folder, click *Add* and specify the folder in the newly added text box. Enter it manually or click the ellipsis ("…") button to the right of the text box and browse to the right folder.
 - To delete a folder, click the red X to the right of the folder.
 
 If you are working on a local DMA, you can keep the following default folders:
@@ -149,7 +138,7 @@ This means that you will be able to scroll in one section while keeping the keyb
 
 ### Smart highlighting: case sensitivity
 
-This setting controls whether or not the “smart highlighting” feature is case sensitive.
+This setting controls whether or not the "smart highlighting" feature is case sensitive.
 
 | If you select... | then... |
 |------------------|---------|
@@ -174,7 +163,7 @@ This setting controls whether or not the full-text search feature will interpret
 
 | If you select... | then, when you open a new file tab,... |
 |------------------|----------------------------------------|
-| Treat as literal string | the full-text search feature will interpret \* and ? characters in the search box as characters instead of wildcards.<br> Tip: Use this option if you want to search for strings like “\*\*\*”. |
+| Treat as literal string | the full-text search feature will interpret \* and ? characters in the search box as characters instead of wildcards.<br> Tip: Use this option if you want to search for strings like "\*\*\*". |
 | Interpret as wildcards | the full-text search feature will interpret \* and ? characters in the search box as wildcards instead of characters. |
 | Remember last used | The full-text search feature will inherit the current wildcard interpretation setting.<br> Example: If, just before opening a new file tab, you chose *Interpret as wild-cards* in an open file tab, then the full-text search feature of the newly opened file tab will be set to *Interpret as wildcards* as well. |
 
@@ -188,7 +177,7 @@ If you select the *Disable C# syntax highlighting in XML documents* option, the 
 
 Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
 
-See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as “System Name” instead of “sysName”.
+See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as "System Name" instead of "sysName".
 
 ```xml
 <Param>
@@ -222,7 +211,7 @@ Select the *Only show unresolved links* option if you only want to see the virtu
 
 In this box, you can configure the format of the task references, which, in the Version editor, you can link to protocol versions.
 
-In the format string, you can use the “{ref}” placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
+In the format string, you can use the "{ref}" placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
 > [!TIP]
 > See also:
@@ -232,7 +221,7 @@ In the format string, you can use the “{ref}” placeholder. When, in the Vers
 
 In this box, you can configure the format of the generic references, which, in the Version editor, you can link to protocol versions.
 
-In the format string, you can use the “{ref}” placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
+In the format string, you can use the "{ref}" placeholder. When, in the Version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the *Reference* column.
 
 > [!TIP]
 > See also:
@@ -289,11 +278,12 @@ If you select the *Hide warnings about UTF-8 encoding* option, no UTF-8 encoding
 
 ### Fix default XML encoding
 
-Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s “New XML file” template, which, by default, contains the UTF-8 signature header.
+Click *Fix default XML encoding* if you want DataMiner Integration Studio to change the encoding of Visual Studio’s "New XML file" template, which, by default, contains the UTF-8 signature header.
 
 > [!NOTE]
+>
 > - DIS automatically saves XML files using the following encoding:
->     - Unicode (UTF-8 with signature) - Codepage 65001
+>   - Unicode (UTF-8 with signature) - Codepage 65001
 > - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
 
 ## Info

@@ -16,7 +16,7 @@ https://*.skyline.be/*
 ```
 
 > [!NOTE]
-> If you want to use NuGet packages, you will also need to be able to connect to the required NuGet package sources, e.g. https://api.nuget.org/v3/index.json.
+> To use NuGet packages, you will need to establish a connection with the required NuGet package sources, e.g. <https://api.nuget.org/v3/index.json>
 
 ## Microsoft Visual Studio
 
@@ -30,5 +30,5 @@ https://*.skyline.be/*
 > Make sure your version of Visual Studio is up to date. If you have an outdated version, the installer may detect missing prerequisites and therefore prevent you from installing the extension.
 
 > [!IMPORTANT]
-> DIS works with Visual Studio Community, Visual Studio Professional and Visual Studio Enterprise.
+> DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise.
 > Visual Studio Code and Visual Studio for Mac are not supported.

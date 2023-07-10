@@ -9,7 +9,7 @@ This chapter consists of the following sections:
 - [Introduction](xref:Overall_concept_of_the_DataMiner_Integration_Studio)
 - [Installation and configuration](xref:Installing_and_configuring_the_software)
 - [DIS menu](xref:DIS_menu)
-- [Editor](xref:DisEditors)
+- [Editors](xref:DisEditors)
 - [Tool windows](xref:DisToolWindows)
 - [Plugins](xref:DisPlugins)
 - [Development using DIS](xref:DisVisualStudioSolutions)

@@ -10,7 +10,7 @@ Generates the driver help.
 
 ## Add After Startup
 
-Adds the after startup logic to the protocol. DIS will check whether the protocol.xml file contains an after startup trigger, and will add one if none was found. Apart from the trigger, it will also add all remaining items of the after startup flow.
+Adds the after startup logic to the protocol. DIS will check whether the *protocol.xml* file contains an after startup trigger, and will add one if none was found. Apart from the trigger, it will also add all remaining items of the after startup flow.
 
 See also [Executing a QAction after startup](xref:LogicExamples#executing-a-qaction-after-startup)
 
@@ -37,6 +37,6 @@ Adds an SNMP trap receiver and a QAction with boilerplate code to process receiv
 
 Adds a custom context menu to a table in the protocol. You can choose between the following:
 
-- Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit and delete functionality.
+- Rows Manager (User-definable Keys): A default context menu that provides add, duplicate, edit, and delete functionality.
 - Rows Manager (Auto-incremented Keys): An extension of the previous type that allows developers to work with an auto-increment key parameter.
 - Custom: Opens a wizard that allows you to specify the options.

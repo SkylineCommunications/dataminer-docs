@@ -4,7 +4,7 @@ uid: DisGridViewToolWindow
 
 # DIS Grid View
 
-If you click *Tool Windows \> DIS Grid View*, the *DIS Grid* window will appear.
+If you click *Tool Windows > DIS Grid View*, the *DIS Grid* window will appear.
 
 This tool window allows you to manage and configure all parameters in the protocol using a spreadsheet-like view.
 
@@ -17,6 +17,7 @@ By default, the *DIS Grid* window will open undocked. Dock it just as you would 
 At the top of the window, there is a filter bar that allows you to narrow down the parameters list.
 
 - To set a filter, enter a piece of text or select a preset value in one or more of the filter boxes.
+
 - To clear the filter, click *Clear filter*.
 
 ## Editing cell content
@@ -59,7 +60,7 @@ When you right-click a row, a shortcut menu appears.
 
 ## Managing discreet values
 
-When, in the list, you have selected a parameter of type “discreet”, the *Discreets* list at the bottom of the window lists all discreet values that are defined for that parameter.
+When, in the list, you have selected a parameter of type "discreet", the *Discreets* list at the bottom of the window lists all discreet values that are defined for that parameter.
 
 To edit existing data, just click inside a cell, and change its contents.
 

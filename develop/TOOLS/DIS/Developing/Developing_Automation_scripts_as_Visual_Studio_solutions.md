@@ -28,22 +28,23 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 > [!TIP]
 > For a video course on creating Visual Studio Automation script solutions, see [DataMiner Automation](https://community.dataminer.services/courses/dataminer-automation/) on DataMiner Dojo.
 
-## Creating an Automation Script solution
+## Creating an Automation script solution
 
 To create a new Automation script solution containing an initial Automation script, do the following:
 
-1. Select *File \> New \> Project...* and select *DataMiner Automation Script Solution* from the new project window.
-1. Enter the name of the solution and the location and press *Next*.
-1. Provide the name of the Automaton script and the author and press Create.
+1. Select *File \> New \> Project*.
+1. In the *Create a new project* pop-up window, select *DataMiner Automation Script Solution*.
+1. Enter the name and location of the solution, then click *Next*.
+1. Provide the name of the Automaton script and the author, and click *Create*.
 
 In Visual Studio 2019, perform the following steps:
 
-1. Select *File \> New \> DataMiner Automation Script Solution...*)
+1. Select *File \> New \> DataMiner Automation Script Solution*.
 1. Enter the name of the solution.
 1. Select the target folder.
 
-    > [!NOTE]
-    > The default protocol solution folder and the default Automation script folder can both be specified in DIS Settings \> Solutions.
+   > [!NOTE]
+   > The default protocol solution folder and the default Automation script folder can both be specified in *DIS Settings \> Solutions*.
 
 1. Select *Create initial Automation script* if you want to solution to contain a basic script with one Exe block.
 1. Click *OK*.
@@ -119,25 +120,24 @@ To upload an Automation script to a DataMiner Agent, do the following:
 
 ## Structure of an Automation script solution
 
-An Automaton script Visual Studio solution consists of the following folders:
+An Automaton script Visual Studio solution is organized into various folders, each serving a specific purpose:
 
-- *CompanionFiles*: Allows to add additional files that need to be included when the Automation script is installed as part of an installation package.
+- **CompanionFiles**: This folder allows you to add additional files that need to be installed along with the Automation script as part of an installation package.
 
-- *Dlls*: Contains the additional assemblies that are used by one of the Automation scripts  (i.e. assemblies that are not part of DataMiner but are required by one of the Automation scripts). This ensures that the required assemblies will be available in the repository next to the Automation script XML files.
+- **Dlls**: This folder contains the additional assemblies used by the Automation scripts. These assemblies are not part of DataMiner but are essential for one of the Automation scripts. Placing them in this folder ensures that the required assemblies are readily available in the repository alongside the Automation script XML files.
 
-- *Documentation*: This folder can be used to add documentation related to this solution.
+- **Documentation**: This folder allows you to add documentation related to the solution.
 
-- *Internal*: This folder contains the C# class library Visual Studio project for the class library code (AutomationScript_ClassLibrary). This is no longer available as of v2.41. This folder is hidden by default, as this code is generated automatically and therefore should not be touched.
+- **Internal**: This folder contains the C# Class Library Visual Studio project for the class library code (*AutomationScript_ClassLibrary*). Obsolete from DIS v2.41 onwards. This folder is hidden by default as the code within it is generated automatically and should not be modified.
 
-> [!NOTE]
-> As from DIS v2.41, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
-> This information bar will appear when a Class Library project (i.e. a project named "AutomationScript_ClassLibrary") is detected in an Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
+  > [!NOTE]
+  > From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "AutomationScript_ClassLibrary") is detected in an Automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
 
-- *Scripts*: This folder contains a subfolder per Automation script. The name of the subfolders corresponds with the name of the Automation script. Each subfolder contains the XML file of the Automation script and a subfolder *Actions*, which contains the C# projects for each C# Exe block in the Automation script.
+- **Scripts**: This folder contains subfolders, with each subfolder representing an individual Automation script. The name of each subfolder corresponds with the name of the Automation script. Inside each subfolder, you will find the XML file for the Automation script and a subfolder named "Actions". The *Actions* folder contains the C# projects for each C# Exe block present in the Automation script.
 
-- C# class library Visual Studio project per QAction defined in the protocol XML file. The name of each project is QAction\_\<id>, where \<id> is the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
+- **QActions**: This folder contains a C# Class Library project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
 
-- *Tests*: In this folder you can add test projects.
+- **Tests**: This folder is intended for test projects.
 
-> [!NOTE]
-> Test projects should only be integrated in protocol solutions with the purpose of testing protocol functionality (so not for system tests including certain Automation scripts, etc.).
+  > [!NOTE]
+  > Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain Automation scripts, among other things.

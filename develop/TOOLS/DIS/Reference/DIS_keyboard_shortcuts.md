@@ -22,7 +22,7 @@ If you want to assign another keyboard shortcut to one of the DIS commands liste
 
 1. From the menu, choose *Tools \> Options.*
 1. In the *Options* dialog box, go to *Environment \> Keyboard*.
-1. In the *Show commands containing* text box, type “dis.”. That way, the command list will only contain the DIS commands.
+1. In the *Show commands containing* text box, type "dis.". That way, the command list will only contain the DIS commands.
 1. In the command list, select the DIS command of which you want to change the keyboard shortcut.
 1. In the *Shortcuts for selected command* box, select the existing keyboard shortcut, and click *Remove*.
 1. Click inside the *Press short keys* box, press the key combination that you want to assign to the DIS com-mand you selected in step 4, and click *Assign*.

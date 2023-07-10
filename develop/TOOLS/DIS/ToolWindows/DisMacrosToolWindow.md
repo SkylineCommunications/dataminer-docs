@@ -4,7 +4,7 @@ uid: DisMacrosToolWindow
 
 # DIS Macros
 
-If you click *Tool Windows \> DIS Macros*, the *DIS Macros* window will appear.
+If you click *Tool Windows > DIS Macros*, the *DIS Macros* window will appear.
 
 By default, the *DIS Macros* window will open undocked. Dock it just as you would dock any other tool window in Microsoft Visual Studio.
 
@@ -15,6 +15,7 @@ In the tool window, you can set up a folder structure into which you can then st
 At the top of the tool window, you find two buttons: *Run* and *Open*.
 
 - Click *Run* to run the selected macro.
+
 - Click *Open* to edit the selected macro.
 
 ![DIS Macros tool window](~/develop/images/DisMacrosToolWindow.png)
@@ -28,22 +29,27 @@ At the top of the tool window, you find two buttons: *Run* and *Open*.
 
 In essence, a DIS macro consists of a Script class containing a Run() method that passes an Engine object. That object provides access to input data and allows you to modify the document, write log entries, etc.
 
-The following input data is available in the “engine.Input” object:
+The following input data is available in the "engine.Input" object:
 
 - File name
+
 - File content
+
 - Cursor position
+
 - Selected text blocks (start, length and contents)
-- If the macro is run on a Protocol.xml file:
+
+- If the macro is run on a *protocol.xml* file:
 
   - Parsed XML object structure
+
   - Parsed protocol model
 
-The following methods are available in the “engine” object:
+The following methods are available in the "engine" object:
 
 | Method              | Function                                                                   |
 |---------------------|----------------------------------------------------------------------------|
-| LogToOutputWindow() | Log a message to Visual Studio’s Output pane.                              |
+| LogToOutputWindow() | Log a message to Visual Studio's Output pane.                              |
 | ShowInputBox()      | Request user input.                                                        |
 | ReplaceAllText()    | Replace all text in the document.                                          |
 | ReplaceText()       | Replace a specified block of text in the document.                         |

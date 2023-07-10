@@ -39,7 +39,7 @@ Modify the data inline. Notice, for example, that the state of each *Display* ch
 
 In the *PID* column, you can click the *Edit* icon to modify all properties of the column parameter in question.
 
-In the *Foreign Key* column, you can select another table to which you want a particular table column to be linked. The table you select will be specified in the “foreignKey=” option of the \<ColumnOption> tag in question.
+In the *Foreign Key* column, you can select another table to which you want a particular table column to be linked. The table you select will be specified in the "foreignKey=" option of the \<ColumnOption> tag in question.
 
 The *Extra Options* column displays options that do not have a dedicated UI component in the table editor. When unknown options are defined, a warning will now be generated. In the protocol XML file, the options will be sorted as follows: save, foreignKey, indexColumn, header, histogram, heatmap, and then all other options. Note that these options must be separated by semicolons, and that the first character in each of these *Extra Options* boxes must be a semicolon.
 
@@ -72,9 +72,9 @@ In the nameless column between the *PID* column and the *Description* column, yo
 - Click the first icon to enable trending for this column parameter.
 - Click the second icon to enable alarm monitoring for this column parameter.
 
-If you add a monitored parameter of Interprete type “double” and measurement type “number” or “analog”, you can set three additional options:
+If you add a monitored parameter of Interprete type "double" and measurement type "number" or "analog", you can set three additional options:
 
-- In the *Header* column, you can indicate the type of aggregated information you want to have displayed in the column header: “None”, “Sum”, “Avg”, “Min” or “Max”.
+- In the *Header* column, you can indicate the type of aggregated information you want to have displayed in the column header: "None", "Sum", "Avg", "Min" or "Max".
 - In the *Histogram* column, you can disable or enable the histogram of all rows in the column header.
 - In the *Heatmap* column, you can disable or enable the heatmap in all rows in the column header.
 

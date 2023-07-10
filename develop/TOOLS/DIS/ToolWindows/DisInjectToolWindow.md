@@ -4,13 +4,13 @@ uid: DisInjectToolWindow
 
 # DIS Inject
 
-If you click *Tool Windows \> DIS Inject*, the *DIS Inject* window will appear.
+If you click *Tool Windows > DIS Inject*, the *DIS Inject* window will appear.
 
 By default, the *DIS Inject* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
-This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# exe block(s) you are editing.
+This tool window allows you to make the necessary preparations before debugging the connector QAction(s) or Automation script C# Exe block(s) you are editing.
 
-For step-by-step instructions on how to debug connector QActions and Automation script C# exe blocks, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).
+For step-by-step instructions on how to debug connector QActions and Automation script C# Exe blocks, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).
 
 ![DIS Inject tool window](~/develop/images/DisMacrosToolWindow.png)
 
@@ -21,7 +21,7 @@ When you open the *DIS Inject* window, and you have not yet set up a connection 
 See [Connect](xref:DIS_menu) and [DMA](xref:DIS_settings#dma)
 
 > [!NOTE]
-> The title of the *DIS Inject* window includes the name of the Agent to which DIS is connected (between brackets). When DIS is not connected to any Agent, the window title will include “(not connected)”.
+> The title of the *DIS Inject* window includes the name of the Agent to which DIS is connected (between brackets). When DIS is not connected to any Agent, the window title will include "(not connected)".
 
 ## Debugging a connector QAction
 
@@ -52,7 +52,7 @@ Below the element selection box you can find the element manipulation tool bar. 
 
 When you have selected an element in the element selection box, the *DIS Inject* window will list all QActions found in the protocol of the selected element, and will automatically link the temporary projects of the QActions that are being edited to the QActions in the list based on protocol name and QAction ID.
 
-When, for example, you open a QAction with ID 12, then the temporary project will be named “QAction_12”. By default, when you open the *DIS Inject* window while editing QAction 12, then the *Project* selection box in row 12 will be set to “QAction_12”. If you want to override this default linking mechanism, and you want to link a different temporary project to a particular QAction, open the *Project* selection box, and select another project.
+When, for example, you open a QAction with ID 12, then the temporary project will be named "QAction_12". By default, when you open the *DIS Inject* window while editing QAction 12, then the *Project* selection box in row 12 will be set to "QAction_12". If you want to override this default linking mechanism, and you want to link a different temporary project to a particular QAction, open the *Project* selection box, and select another project.
 
 | If you click... | then... |
 |-----------------|---------|
@@ -66,7 +66,7 @@ After injecting the necessary *QAction.dll* files, you have to attach the Debugg
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word “Running” in the title bar. |
+| Attach | all temporary QAction projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLScripting process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLScripting process. |
 
 ## Debugging an Automation script
@@ -89,7 +89,7 @@ After linking the Exe block projects, assigning values to the script parameters,
 
 | If you click... | then... |
 |-----------------|---------|
-| Attach | all temporary Exe block projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word “Running” in the title bar. |
+| Attach | all temporary Exe block projects will be built, and the Microsoft Visual Studio Debugger will be attached to the DataMiner SLAutomation process.<br> Note: The design of the Microsoft Visual Studio screen will change and you will notice the word "Running" in the title bar. |
 | Detach | the Microsoft Visual Studio Debugger will be detached from the DataMiner SLAutomation process. |
 
 ### Triggering the Automation script

@@ -19,7 +19,7 @@ If you click *Go to this version in All Versions tree*, the *All Versions* tab w
 To add a new item to the list of features, changes and fixes, do the following:
 
 1. On the right, above the list, click *Add*,
-1. Set *Type* to “Fix”, “Change” or “New Feature”, and
+1. Set *Type* to "Fix", "Change" or "New Feature", and
 1. Enter the necessary information in the *Content* box.
 
 To remove an item
@@ -36,15 +36,15 @@ In the references list at the bottom of the tab, it is possible to add two types
 To add a reference to a DataMiner Collaboration task, do the following:
 
 1. On the right, above the list, click *Add*.
-1. In the *Type* column, select “Task Id”.
+1. In the *Type* column, select "Task Id".
 1. In the *Reference* column, add the (numeric) ID of the Collaboration task.
 
 To add a generic reference, do the following:
 
 1. On the right, above the list, click Add.
-1. In the *Type* column, select “Reference”.
+1. In the *Type* column, select "Reference".
 1. In the *Reference* column, add the ID, address, etc. of the information to which you want to refer.
-1. In the *Reference type* column, add the type of information to which you referred in the *Reference* column. For example, if *Reference* contains an ID of a Jira ticket, you could set *Reference type* to “Jira”.
+1. In the *Reference type* column, add the type of information to which you referred in the *Reference* column. For example, if *Reference* contains an ID of a Jira ticket, you could set *Reference type* to "Jira".
 
 To go to the information referred to by a reference
 
@@ -59,7 +59,7 @@ To remove a reference
 > - Task URL String Format
 > - Reference URL String Format
 >
-> In both values, you can use the “{ref}” placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the Reference column.
+> In both values, you can use the "{ref}" placeholder. When, in the version editor, you click the link button of a particular reference, that placeholder will then be replaced by the contents of the Reference column.
 >
 > See also: [Interface](xref:DIS_settings#interface)
 

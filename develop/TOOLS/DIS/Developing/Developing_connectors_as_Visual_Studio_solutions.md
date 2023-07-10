@@ -8,17 +8,16 @@ uid: Developing_connectors_as_Visual_Studio_solutions
 
 To create a new connector solution, select *File \> New \> Project*.
 
-> [!NOTE]
-> In Visual Studio 2019, select *File \> New \> DataMiner Protocol Solution…*
+In Visual Studio 2019, select *File \> New \> DataMiner Protocol Solution*
 
 ## Converting an existing protocol XML file to a solution
 
-DIS supports converting an existing protocol XML file into a Visual Studio solution. To convert an existing protocol XML file to a solution, open the protocol XML file in Visual Studio and select *DIS \> Protocol \> Convert to Solution...*
+DIS supports converting an existing protocol XML file into a Visual Studio solution. To convert an existing protocol XML file to a solution, open the protocol XML file in Visual Studio and select *DIS \> Protocol \> Convert to Solution*
 
-A new solution will be created, and the existing protocol XML file will be added. However, the [QAction](xref:Protocol.QActions.QAction) tags will not contain any C# code. For each of the QActions in the original protocol XML file, a new C# class library project will be created, and any DLL imports specified in the original QActions will be converted to references on the C# projects (pointing either to other C# projects or to DLL files).
+A new solution will be created, and the existing protocol XML file will be added. However, the [QAction](xref:Protocol.QActions.QAction) tags will not contain any C# code. For each of the QActions in the original protocol XML file, a new C# Class Library project will be created, and any DLL imports specified in the original QActions will be converted to references on the C# projects (pointing either to other C# projects or to DLL files).
 
 > [!NOTE]
-> When you open a protocol, DIS will automatically detect whether the protocol is solution-based. A protocol will be considered solution-based when the solution has a “Solution Items” folder containing a “protocol.xml” file and a “QActions” folder containing at least one C# project named “QAction\_\<id>”.
+> When you open a protocol, DIS will automatically detect whether the protocol is solution-based. A protocol will be considered solution-based when the solution has a "Solution Items" folder containing a *protocol.xml* file and a "QActions" folder containing at least one C# project named "QAction\_\<id>".
 
 ## Managing QActions
 
@@ -40,11 +39,13 @@ To edit a QAction, you have two options:
 
 > [!NOTE]
 >
-> - A QAction project can contain several \*.cs files in you can organize these in differnt folders. The files will then be combined when the protocol is assembled.
-> - It is recommended to place all “using” directives inside the namespace instead of at the top of the file.
-> - When developing connectors as a Visual Studio solution, DLL imports now need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
-To introduce a reference to another QAction, select the QAction project, right-click and select *Add* > *Reference*. In the *Reference Manager* window, select *Projects* and then select the check box for the QAction project(s) you want to reference (This will be translated by DIS to “\[ProtocolName\].\[ProtocolVersion\].QAction.\<id>.dll” imports in the protocol XML when the connector is assembled).
-For custom DLLs, make sure the DLL is present in the *Dlls* folder of the solution. This will ensure that the required custom DLLs for this connector are eventually also included in the repository, next to the protocol XML. To introduce a reference to this custom DLL, select the QAction project, right-click and select *Add* > *Reference*. In the *Reference Manager* window, select *Browse* and then browse to this DLL and select the corresponding check box.
+> - A QAction project can contain several \*.cs files that you can organize in different folders. The files will then be combined when the protocol is assembled.
+> - It is recommended to place all "using" directives inside the namespace instead of at the top of the file.
+> - When developing connectors as a Visual Studio solution, DLL imports need to be configured by adding references on the C# project itself (instead of using the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute).
+
+To introduce a reference to another QAction, select the QAction project, right-click, and select *Add* > *Reference*. In the *Reference Manager* window, select *Projects*, and then select the checkbox for the desired QAction project(s) you want to reference. This will be translated by DIS to `[ProtocolName].[ProtocolVersion].QAction.<id>.dll` imports in the protocol XML when the connector is assembled.
+
+For custom DLLs, make sure the DLL is located in the *Dlls* folder of the solution. By doing so, the required custom DLLs for this connector will eventually also be included in the repository, alongside the protocol XML. To introduce a reference to this custom DLL, select the QAction project, right-click, and select *Add* > *Reference*. In the *Reference Manager* window, select *Browse*, navigate to the DLL, and select the corresponding checkbox.
 
 ### Removing a QAction
 
@@ -69,23 +70,22 @@ If you choose to save a protocol as a package, the package will contain the prot
 
 ## Structure of a connector solution
 
-A connector Visual Studio solution consists of the following folders:
+A connector Visual Studio solution is organized into various folders, each serving a specific purpose:
 
-- *Dlls*: Contains the custom DLLs that are used by this protocol (i.e. DLLs that are not part of DataMiner but are required by this protocol). When the protocol gets published on SVN by the CI/CD pipeline, the DLLs provided in this folder will automatically also be published on SVN. This ensures that the required DLLS will be available on SVN next to the protocol XML file.
+- **Dlls**: This folder contains the custom DLLs used by this protocol. These DLLs are not part of DataMiner but are essential for this protocol. When the protocol is published on SVN through the CI/CD pipeline, the DLLs provided in this folder will also be automatically published on SVN. This ensures that the required DLLs are available on SVN alongside the protocol XML file.
 
-- *Documentation*: This folder can be used to add documentation related to this solution.
+- **Documentation**: This folder allows you to add documentation related to the solution.
 
-- *Internal*: This folder contains the C# class library Visual Studio projects for the QAction helper (QAction_Helper) and the class library code (QAction_ClassLibrary). The latter is no longer available as of v2.41. This folder is hidden by default, as this code is generated automatically and therefore should not be touched.
-
-> [!NOTE]
-> As from DIS v2.41, an information bar will allow you to convert existing solutions that make use of the Class Library generation feature.
-> This information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. As soon as you click *Fix*, the Class Library project will be removed and the references to the project will be replaced by references to the automatically generated Class Library project (which, by default, will have ID 63000).
-
-- *QActions*: This folder contains a C# class library Visual Studio project per QAction defined in the protocol XML file. The name of each project is QAction\_\<id>, where \<id> is the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
-
-- *Solution items*: This folder contains the protocol XML. The main difference between a solution protocol XML file and a regular protocol XML file is that the former does not contain the QAction C# code (as this is now in the QAction projects in the Visual Studio solution).
-
-- *Tests*: In this folder you can add test projects.
+- **Internal**: This folder contains the C# Class Library Visual Studio projects for the QAction helper (QAction_Helper) and the Class Library code (QAction_ClassLibrary). Obsolete from DIS v2.41 onwards. This folder is hidden by default as the code within it is generated automatically and should not be modified.
 
 > [!NOTE]
-> Test projects should only be integrated in protocol solutions with the purpose of testing protocol functionality (so not for system tests including certain Automation scripts, etc.).
+> From DIS v2.41 onwards, an information bar will appear when a Class Library project (i.e. a project named "QAction_ClassLibrary" or "AutomationScript_ClassLibrary") is detected in a protocol or Automation script solution. This information bar provides the option to convert existing solutions that use of the Class Library generation feature. By clicking *Fix*, the Class Library project will be removed, and references to the project will be replaced with references to the automatically generated Class Library project (default ID 63000).
+
+- **QActions**: This folder contains a C# Class Library Visual Studio project for each QAction defined in the protocol XML file. These projects are named `QAction_<id>`, where \<id> represents the ID of the QAction as defined in the protocol XML file (e.g. QAction_2).
+
+- **Solution items**: This folder contains the protocol XML. The main difference between a solution protocol XML file and a regular protocol XML file is that the former does not contain the QAction C# code (as this is now in the QAction projects in the Visual Studio solution).
+
+- **Tests**: This folder is intended for test projects.
+
+> [!NOTE]
+> Test projects should only be integrated into protocol solutions for the purpose of testing protocol functionality. They should not be used for system tests that include certain Automation scripts, among other things.

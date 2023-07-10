@@ -4,9 +4,9 @@ uid: DisComparerToolWindow
 
 # DIS Comparer
 
-If you click *Tool Windows \> DIS Comparer*, the *DIS Comparer* window will appear.
+If you click *Tool Windows > DIS Comparer*, the *DIS Comparer* window will appear.
 
-This tool window allows you to compare two protocol.xml files.
+This tool window allows you to compare two *protocol.xml* files.
 
 By default, the *DIS Comparer* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
@@ -14,32 +14,37 @@ By default, the *DIS Comparer* window will open undocked. Dock it just as you wo
 
 If you want to compare two protocols, do the following:
 
-1. At the top of an XML editor tab containing a protocol.xml file, click *Compare*.
+1. At the top of an XML editor tab containing a *protocol.xml* file, click *Compare*.
+
 1. In the *DIS Comparer* tool window, select the two protocols to be compared.
 
-    To select a protocol (either on the left or on the right), do the following:
+   To select a protocol (either on the left or on the right), do the following:
 
-    1. Click *Select protocol...*
-    1. In the Select Protocol... window, select an option:
+   1. Click *Select protocol...*
 
-        - Select *Opened protocol*, and select one of the protocols currently opened in the XML editor.
-        - Select *File*, click *Select protocol...*, and select a protocol.xml file located in a file folder.
-        - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
+   1. In the Select Protocol... window, select an option:
 
-        > [!NOTE]
-        >
-        > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
-        > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/*`.
+      - Select *Opened protocol*, and select one of the protocols currently opened in the XML editor.
 
-    1. Click *OK*.
+      - Select *File*, click *Select protocol...*, and select a *protocol.xml* file located in a file folder.
 
-    After selecting the two protocols, the comparison will start automatically.
+      - Select *Previous release*, and select one of the previous versions of a protocol currently opened in the XML editor.
+
+      > [!NOTE]
+      >
+      > - If you select *File* or *Previous release* when working inside a solution, the protocol you select will not be added to the solution.
+      > - For the *Previous release* option to work, the DataMiner Integration Studio has to be able to connect to `https://api.skyline.be/*`.
+
+   1. Click *OK*.
+
+   After selecting the two protocols, the comparison will start automatically.
 
 1. If necessary, click *Compare* to redo the comparison or click *Export* to have the result of the comparison exported to a CSV file.
 
 When you compare two protocols, DIS will also automatically validate both these protocols. When comparison and validation have finished, you will see two tabs:
 
 - *Major Change* - The result of the protocol comparison.
+
 - *Validator* - The differences between the two protocol validations.
 
 When you right-click an error in the list, a shortcut menu offers you the following options:

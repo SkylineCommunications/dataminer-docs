@@ -6,6 +6,8 @@ uid: DisVisualStudioSolutions
 
 This section consists of the following topics:
 
-- [Introduction](xref:DisVisualStudioSolutionsIntroduction)
-- [Connector development](xref:Developing_connectors_as_Visual_Studio_solutions)
-- [Automation script development](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)
+- [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction)
+
+- [Developing connectors](xref:Developing_connectors_as_Visual_Studio_solutions)
+
+- [Developing Automation scripts](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)

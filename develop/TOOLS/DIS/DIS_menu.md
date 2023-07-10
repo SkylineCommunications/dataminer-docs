@@ -10,9 +10,9 @@ The following sections provide more information on the DIS menu:
 
 - [DMA](#dma)
 - [Protocol \> Generate QAction helper code](#protocol--generate-qaction-helper-code)
-- [Protocol \> Generate Class Library code](#protocol--generate-class-library-code) (removed since v2.41)
+- [Protocol \> Generate Class Library code](#protocol--generate-class-library-code) (removed from DIS v2.41 onwards)
 - [Protocol \> Convert to Solution...](#protocol--convert-to-solution)
-- [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code) (removed since v2.41)
+- [Automation script \> Generate Class Library code](#automation-script--generate-class-library-code) (removed from DIS v2.41 onwards)
 - [Plugins \> Generate driver help](xref:DisPlugins#generate-driver-help)
 - [Plugins \> Add After Startup](xref:DisPlugins#add-after-startup)
 - [Plugins \> Add matrix...](xref:DisPlugins#add-matrix)
@@ -38,12 +38,11 @@ In the *DMA* submenu, you can find the following commands:
 
 - Connect
 
-  The *Connect* submenu lists all the DMAs configured in the *DMA* tab of the *DIS Settings* window. In the list, click the DMA to which you want DataMiner Integration Studio to connect.
-  See [DMA](xref:DIS_settings#dma)
+  The *Connect* submenu lists all the DMAs configured in the *DMA* tab of the *DIS Settings* window. In the list, click the DMA to which you want DataMiner Integration Studio to connect. See [DMA](xref:DIS_settings#dma)
 
 - Disconnect
 
-  If you click *Disconnect*, DataMiner Integration Studio will disconnect from the DMA to which it was connected.     See [DMA](xref:DIS_settings#dma)
+  If you click *Disconnect*, DataMiner Integration Studio will disconnect from the DMA to which it was connected. See [DMA](xref:DIS_settings#dma)
 
 - Import Protocol
 

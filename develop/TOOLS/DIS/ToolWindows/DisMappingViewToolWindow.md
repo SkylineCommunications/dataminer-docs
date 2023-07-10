@@ -2,23 +2,27 @@
 uid: DisMappingViewToolWindow
 ---
 
-# DIS Mapping View tool window
+# DIS Mapping
 
-If you click *Tool Windows \> DIS Mapping*, the *DIS Mapping* window will appear.
+If you click *Tool Windows > DIS Mapping*, the *DIS Mapping* window will appear.
 
 This tool window allows you to visualize relationships between items in the protocol you are working on.
 
 By default, the *DIS Mapping* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
 - In the topmost selection box, select the type of items of which you want to see a list. Next to each type, you will see the number of items of that type in the current protocol.
+
 - In the list box underneath the selection box, which lists all items of the selected type, select an item by clicking its ID.
+
 - The lowest list box lists all items that have a link to the item selected in the list box above.
 
 If, for example, you select an Action, then
 
 - the *Outgoing* list will show all items to which the selected Action contains a link,
+
 - the *Incoming* list will show all items that contain a link to the selected Action, and
-- the Conditions list will show all items referred to in the Action’s \<Condition> element.
+
+- the *Conditions* list will show all items referred to in the Action’s \<Condition> element.
 
 ![DIS Mappings View tool window](~/develop/images/DisMappingsViewToolWindow.png)
 
