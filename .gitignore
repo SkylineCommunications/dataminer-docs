@@ -8,3 +8,4 @@
 /**/obj/
 _site
 /**/.vs
+.vscode/launch.json
