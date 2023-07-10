@@ -12,8 +12,8 @@ uid: Class_Library_packages
 > Note also that the class library has been split up into multiple NuGet packages and that the namespaces have been updated:
 >
 > - [Skyline.DataMiner.Core.DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common): This NuGet package allows interaction with a DataMiner System.
-> - [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation): This NuGet package contains extension methods for retrieving an IDms instance via the SLProtocol interface.
-> - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol): This NuGet package contains extension methods for accessing an IDms instance via the Engine class or IEngine interface.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Automation): This NuGet package contains extension methods for accessing an IDms instance via the Engine class or IEngine interface.
+> - [Skyline.DataMiner.Core.DataMinerSystem.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Protocol): This NuGet package contains extension methods for retrieving an IDms instance via the SLProtocol interface.
 > - [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common): This NuGet package contains the InterApp functionality.
 > - [Skyline.DataMiner.Core.Matrix.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Core.Matrix.Protocol): This NuGet package allows you to define a matrix component in a connector.
 > - [Skyline.DataMiner.Utils.SNMP](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP): This NuGet package defines types related to SNMP.
