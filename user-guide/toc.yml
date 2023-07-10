@@ -2703,16 +2703,16 @@
               items:
                 - name: EPM GPON supported technologies
                   topicUid: GPON_supported_technologies
-                - name: EPM GPON ONT Json definition
+                - name: Standard EPM GPON ONT JSON definition
                   topicUid: GPON_ONT_Json_definition
-            - name: How to deploy a GPON EPM Solution
+            - name: EPM GPON deployment
               topicUid: GPON_deployment
-            - name: Parameters available in EPM GPON
+            - name: Available parameters in EPM GPON
               topicUid: GPON_KPI
               items:
-                - name: EPM GPON Parameters thresholds
+                - name: EPM GPON parameter thresholds
                   topicUid: GPON_parameters_thresholds
-                - name: EPM GPON ONT Parameters
+                - name: EPM GPON ONT parameters
                   topicUid: GPON_ONT
 #GPON TOC END
         - name: DataMiner EPM I-DOCSIS

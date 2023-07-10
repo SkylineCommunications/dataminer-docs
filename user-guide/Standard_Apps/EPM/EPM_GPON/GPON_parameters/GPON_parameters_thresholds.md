@@ -2,15 +2,13 @@
 uid: GPON_parameters_thresholds
 ---
 
-# GPON parameters – Thresholds
+# EPM GPON parameter thresholds
 
-## Overview
+The EPM Solution is aimed to detect behavioral patterns in a network. As such, it will never generate alarms at the lower CPE level, in this case an ONT, as a massive failure would generate an alarm storm, which would make troubleshooting and follow-up difficult for the NOC operators or automatic systems receiving the notifications. For that reason, the ONT's operational levels need to be compared to a set of conditions to know if the ONT (and by aggregation) the network is behaving as expected or if there is any issue that needs to be fixed.
 
-The EPM Solution is aimed to detect behavioral patterns in a network, due to this, it will never generate alarms at the lower CPE leven - _in this case an ONT_ - as a massive failure will generate an alarm Storm that the NOC operators or automatic systems receiving the notifications will have a hard time troubleshooting and following them up. For that reason, it is necessary to compare the ONT's operational levels to a set of conditions to know if the ONT (and by aggregation) the network is behaving as expected or there is any issue that needs to be fixed.
+These conditions are called **thresholds**, and they can be configured by the GPON EPM administrator with the values that are most suited for the normal behavior of the network.
 
-Those conditions are called Thresholds, and they can be configured by the GPON EPM administrator with the values that are most suited for the normal behavior of the network.
-
-As mentioned in [GPON Architecture / ONT Data](xref:GPON_architecture#ont-data-connector) all operational data related to the ONTs is acquired from a third party stream, then parsed, and finally stored for analysis. The storage takes place in the OLT connector in which the ONT is detected. The threshold configuration needs to be done at the OLT element, in case of multiple elements using the same connector, you can use the **Multiple set feature** in dataminer to speed up your process.
+As mentioned under [GPON Architecture](xref:GPON_architecture#ont-data-connector) all operational data related to the ONTs is acquired from a third-party stream, then parsed, and finally stored for analysis. The storage takes place in the OLT connector detecting the ONT. The threshold configuration needs to be done in the OLT element. If multiple elements use the same connector, you can use the [multiple set feature](xref:Updating_elements#setting-a-parameter-value-in-multiple-elements) to speed up the process.
 
 ## Available configuration
 
@@ -44,11 +42,6 @@ As mentioned in [GPON Architecture / ONT Data](xref:GPON_architecture#ont-data-c
   "InternetGatewayDevice.WANDevice{i}WANPONInterfaceConfig.TransceiverTemperature"
   ```
 
-After the data acquisition takes place, the data is parsed, analyzed for errors in format, and adjusted to be stored in the OLT element parameters. Unless instructed otherwise, all parameters are named in the same way as its threshold counterpart.
+After the data acquisition takes place, the data is parsed, analyzed for formatting errors, and adjusted to be stored in the OLT element parameters. Unless instructed otherwise, all parameters are named the same way as the threshold counterparts.
 
-Once stored, the received value is compared with the Maximum and Minimum configured thresholds, if the value is within the accepted interval the value is calculated as OK, it the value is higher or lower, the value is calculated as OOS. This calculated value is also stored for future analysis and aggregation. The parameters in which is stored have a _state_ at the end, For instance, for Bias Current and Tx Power, the storage will take place in:
-
-|Operational Value received|Threshold compliance|
-|:--|:--|
-|Bias Current|Bias Current State|
-|Tx Power|Tx Power State|
+Once the data is stored, the received value is compared with the maximum and minimum configured thresholds. If the value is within the accepted interval, the value is calculated as OK. If the value is higher or lower, the value is calculated as *OOS*. This calculated value is also stored for future analysis and aggregation. The parameters storing this value end in *state*. For example, for the *Bias Current* and *Tx Power* values, this will be *Bias Current State* and *Tx Power State*, respectively.

@@ -4,21 +4,24 @@ uid: GPON_deployment
 
 # EPM GPON deployment
 
-## Prerequisites
+To deploy the GPON branch of the EPM Solution:
 
-- Latest [Dataminer Feature release](https://community.dataminer.services/dataminer-server-upgrade-packages/) downloaded.
-- Latest EPM package, provided by your Skyline Technical account manager.
-- Check that your Server has the latest Windows Updates installed.
-- Check that your server has the internet time configuration enabled (or it is synchronized with a local NTP provider).
-- Have access to the server with the built-in Administrator Account - Only for installation purposes.
-- Check that the CPEIntegration Soft-Launch option is enabled.
+1. Make sure the following prerequisites are met:
 
-## Steps guide
+   - The latest [DataMiner Feature Release](https://community.dataminer.services/dataminer-server-upgrade-packages/) has been deployed in the DMS.
 
-1. Make sure the **latest DataMiner feature release** version is installed.
-1. Verify that all prerequisites are met.
-1. Verify that the **CPEIntegration** Soft-Launch Option is enabled [Soft-Launch Options](xref:SoftLaunchOptions)
-1. Place the **EPM package** somewhere on the server (in a different folder than C:\Skyline DataMiner) and unzip it.
+   - You have access to the latest EPM package. This is provided by your Skyline Technical Account Manager.
+
+   - The latest Windows updates have been installed on the server.
+
+   - The internet time configuration is enabled on the server, or it is synchronized with a local NTP provider.
+
+   - You have access to the server with the built-in Administrator account. This is required to be able to install the solution.
+
+1. Make sure the **CPEIntegration** [soft-launch option](xref:SoftLaunchOptions) is enabled.
+
+1. Place the **EPM package** somewhere on the server (in a different folder than C:\\Skyline DataMiner) and unzip it.
+
 1. In DataMiner Cube, go to the Protocols & Templates module and **upload the necessary connectors** (called "protocols" in Cube) from the EPM package. See [Uploading a Protocol.xml file](xref:Adding_a_protocol_or_protocol_version_to_your_DataMiner_System#uploading-a-protocolxml-file).
 
    > [!NOTE]
@@ -45,15 +48,15 @@ uid: GPON_deployment
 
      ![GPON topology](~/user-guide/images/EPM_GPON_Topology.png)
 
-       **Service provider** is usually your company's name
+     - **Service provider** is usually your company's name
 
-       **Network** can be a geographical region, a state or a logical association.
+     - **Network** can be a geographical region, a state, or a logical association.
 
-       **Market** can be a city, a post code, an element's group.
+     - **Market** can be a city, a post code, or an element group.
 
-       **Hub** can be a neighborhood, a building, or a OLT.
+     - **Hub** can be a neighborhood, a building, or an OLT.
 
-   In addition, within the Service Provider (top level) view, add the following set of views, structured as shown below:
+   - In addition, within the Service Provider (top level) view, add the following set of views, structured as shown below:
 
      > - System
      >   - DataMiner EPM
@@ -66,17 +69,17 @@ uid: GPON_deployment
 
    - **OLT Collector elements**, as necessary. The solution expects these to be created within the hub-level views. For an overview of the supported collectors, see [Supported technologies for GPON](xref:GPON_supported_technologies).
 
-     > [!WARNING]
-     >
-     > - The DataMiner element names must match the OLT names defined in SNMP. This is required to properly link the topology visuals to the elements. To rename an OLT Platform element, first change the user-defined OLT name in SNMP to the new name, then rename the element in Surveyor to match the new name.
+     > [!IMPORTANT]
+     > The DataMiner element names must match the OLT names defined in SNMP. This is required to properly link the topology visuals to the elements. To rename an OLT Platform element, first change the user-defined OLT name in SNMP to the new name, then rename the element in DataMiner Cube to match the new name.
 
    - **Back-end EPM elements**, in the *System* > *DataMiner EPM* > *EPM BE* view.
+
    - A **front-end EPM element**, in the *System* > *DataMiner EPM* > *EPM FE* view.
-   - **System elements**, as necessary in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
+
+   - **System elements**, as necessary, in the *System* view. You can name these elements as you see fit. If you add any MS/LX Platform elements, add these in a *DMS* subview of the *System* view.
 
      > [!TIP]
-     >
-     > - Large deployments could greatly benefit from the use of DataMiner IDP, as it can automate the discovery process for large number of devices in a network. See: [DataMiner IDP](xref:SolIDP).
+     > Large deployments could greatly benefit from the use of [DataMiner IDP](xref:SolIDP), as it can automate the discovery process for large numbers of devices in a network.
 
 1. In the Automation module in DataMiner Cube, **import the Automation scripts** from the EPM package. See [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
 
@@ -85,9 +88,10 @@ uid: GPON_deployment
 1. If the EPM package contains Visio drawings (in the *Visuals* folder), **add the Visio drawings** to the DMS. To do so:
 
    - For a Visio drawing linked to a specific connector (e.g. EPM Platform), see [Assigning a custom Visio file to a protocol](xref:Managing_Visio_files_linked_to_protocols#assigning-a-custom-visio-file-to-a-protocol).
-   - For a Visio drawings linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
+
+   - For a Visio drawing linked to a view, upload the drawing to the view. See [Set as active Visio file](xref:Editing_a_visual_overview_in_DataMiner_Cube#set-as-active-visio-file).
 
 1. **Add the Correlation rules** from the EPM package to the DMS. To do so, copy the Correlation rules to the folder `C:\Skyline DataMiner\Correlation` of the target DMA and **restart** the DMA.
 
-   > [!WARNING]
+   > [!IMPORTANT]
    > As these Correlation rules require specific connectors and Automation scripts to function properly, make sure these have all been loaded properly before you add the Correlation rules. If you are deploying the EPM Solution for the first time, the necessary elements need to be created first before the Correlation rules can be deployed. We also recommend that you review the Correlation rules when you initially deploy them and after each upgrade.
