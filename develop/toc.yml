@@ -5187,6 +5187,8 @@
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
+  - name: SRM project configuration using CI/CD
+    topicUid: SRM_project_config_using_CICD
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:

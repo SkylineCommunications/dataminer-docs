@@ -2,7 +2,7 @@
 uid: Service_Orchestration_bookings_advanced
 ---
 
-# Service Orchestration bookings configuration
+# Service Orchestration: bookings configuration
 
 ## Configuring persistent services
 

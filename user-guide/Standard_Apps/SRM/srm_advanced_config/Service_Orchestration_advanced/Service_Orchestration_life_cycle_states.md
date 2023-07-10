@@ -2,7 +2,7 @@
 uid: Service_Orchestration_life_cycle_states
 ---
 
-# Service Orchestration booking life cycle states configuration
+# Service Orchestration: booking life cycle states configuration
 
 A booking is always associated with a specific booking life cycle state. The following states are supported:
 
