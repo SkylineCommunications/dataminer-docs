@@ -67,6 +67,12 @@ A more detailed entry will now be added to the Cube logging when a function reso
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
+#### Trending - Pattern matching: Pattern occurrence values will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values displayed in the Alarm Console will now appear in the language set as UI language.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
