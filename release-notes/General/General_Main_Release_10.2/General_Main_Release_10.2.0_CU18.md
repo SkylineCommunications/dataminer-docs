@@ -40,6 +40,23 @@ During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 red
 
 A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
+#### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When SLWatchdog starts, restarts or stops DataMiner, extra information will now be logged to help pinpoint certain issues that may arise:
+
+- the SLDataMiner process ID,
+- the output of the batch scripts that are being executed while DataMiner is (re)starting,
+- etc.
+
+Also, if DataMiner did not start up correctly for some reason, a retry will now be attempted in that same startup routine.
+
+In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new startup scripts:
+
+- *DataMiner Start DataMiner And SLNet.bat*
+- *DataMiner Start DataMiner.bat*
+
 ### Fixes
 
 #### Failover: Problems when running BPA tests [ID_36445]
