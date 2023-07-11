@@ -4,7 +4,7 @@ uid: Prerequisites_Cube
 
 # Prerequisites
 
-Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](https://community.dataminer.services/dataminer-client-requirements/).
+Make sure the client machine meets the minimum requirements detailed in the [DataMiner Client Requirements](xref:DataMiner_Client_Requirements).
 
 If you want to use the DataMiner Cube browser app instead of the desktop app:
 

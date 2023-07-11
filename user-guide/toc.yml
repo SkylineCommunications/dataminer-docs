@@ -977,6 +977,8 @@
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Configuring the default upgrade options
               topicUid: Configuring_the_default_upgrade_options
+        - name: Health assessment guidelines for DataMiner Agents
+          topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages
@@ -3578,6 +3580,8 @@
   items:
     - name: DataMiner Compute Requirements
       topicUid: DataMiner_Compute_Requirements
+    - name: DataMiner Client Requirements
+      topicUid: DataMiner_Client_Requirements
     - name: Skyline DataMiner folder
       topicUid: SkylineDataminerFolder
       items:
