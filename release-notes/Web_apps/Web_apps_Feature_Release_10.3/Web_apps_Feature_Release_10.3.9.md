@@ -38,6 +38,12 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 ### Enhancements
 
+#### Dashboards app: Enhanced PDF generation [ID_36461]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
+
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

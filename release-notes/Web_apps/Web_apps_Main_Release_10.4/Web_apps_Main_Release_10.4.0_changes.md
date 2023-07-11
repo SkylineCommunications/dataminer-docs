@@ -285,6 +285,12 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
+#### Dashboards app: Enhanced PDF generation [ID_36461]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
+
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
