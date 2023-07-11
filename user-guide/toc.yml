@@ -3597,10 +3597,10 @@
           topicUid: Cassandra_Cluster_Migrator
         - name: Cassandra Cluster Validator
           topicUid: Cassandra_Cluster_Validator
-        - name: Connection Check
-          topicUid: Connection_Check
         - name: Change Element States Offline
           topicUid: Change_Element_States_Offline
+        - name: Connection Check
+          topicUid: Connection_Check
         - name: Copy Element Data
           topicUid: Copy_Element_Data
         - name: DataMiner Comparison tool
