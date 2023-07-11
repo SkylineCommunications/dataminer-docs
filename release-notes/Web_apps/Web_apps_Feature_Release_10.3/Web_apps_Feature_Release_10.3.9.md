@@ -146,6 +146,12 @@ When you clicked *Start with a blank dashboard* twice in rapid succession, two p
 
 Up to now, it would incorrectly not be possible to feed a selected timeline item to a component on a panel of a low-code app.
 
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
 #### GQI: Not all DCF interface properties would be returned [ID_36840]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

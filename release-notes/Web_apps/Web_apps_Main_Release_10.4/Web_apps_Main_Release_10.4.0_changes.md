@@ -605,6 +605,12 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
 
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
 #### GQI: Not all DCF interface properties would be returned [ID_36840]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
