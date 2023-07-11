@@ -407,6 +407,12 @@ Affected port information fields:
 - PollingIPAddress
 - PollingIPPort
 
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
+
 #### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

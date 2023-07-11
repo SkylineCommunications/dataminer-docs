@@ -291,3 +291,9 @@ When a client requested large amounts of data, in some cases, a `NATSMaxPayloadE
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.
+
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
