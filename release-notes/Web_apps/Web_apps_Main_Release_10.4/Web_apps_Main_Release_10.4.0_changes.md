@@ -604,3 +604,9 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.

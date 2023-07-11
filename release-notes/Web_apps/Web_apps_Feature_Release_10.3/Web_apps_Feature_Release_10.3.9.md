@@ -145,3 +145,9 @@ When you clicked *Start with a blank dashboard* twice in rapid succession, two p
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, it would incorrectly not be possible to feed a selected timeline item to a component on a panel of a low-code app.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
