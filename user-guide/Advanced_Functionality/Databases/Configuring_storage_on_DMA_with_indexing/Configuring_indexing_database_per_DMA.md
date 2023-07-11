@@ -2,7 +2,7 @@
 uid: Configuring_indexing_database_per_DMS
 ---
 
-# Configuring an indexing database per DMS
+# Setting up an Elasticsearch database in a setup with storage per DMA
 
 If your DataMiner System uses a Cassandra database per DataMiner Agent, you can also install an Elasticsearch indexing database per DMS in order to get access to additional DataMiner features, including:
 

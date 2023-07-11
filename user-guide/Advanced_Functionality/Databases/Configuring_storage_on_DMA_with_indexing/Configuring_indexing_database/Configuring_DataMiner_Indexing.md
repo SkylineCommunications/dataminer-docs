@@ -2,7 +2,7 @@
 uid: Configuring_DataMiner_Indexing
 ---
 
-# Configuring indexing settings
+# Configuring indexing settings in DataMiner Cube
 
 The indexing settings in System Center determine which information is stored in Elasticsearch. To configure these settings, go to *System Center* > *Search & Indexing*.
 
