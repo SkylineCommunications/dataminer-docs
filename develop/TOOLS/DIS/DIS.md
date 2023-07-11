@@ -2,7 +2,7 @@
 uid: DIS
 ---
 
-# DataMiner Integration Studio
+# DataMiner Integration Studio (DIS)
 
 Version: 2.41
 

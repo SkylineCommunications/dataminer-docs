@@ -3685,8 +3685,12 @@
           topicUid: Cassandra_Cluster_Migrator
         - name: Cassandra Cluster Validator
           topicUid: Cassandra_Cluster_Validator
+        - name: Change Element States Offline
+          topicUid: Change_Element_States_Offline
         - name: Connection Check
           topicUid: Connection_Check
+        - name: Copy Element Data
+          topicUid: Copy_Element_Data
         - name: DataMiner Comparison tool
           topicUid: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3710,6 +3714,74 @@
           topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
         - name: Protocol debug tools
           topicUid: Protocol_Debug_Tools
+        - name: Skyline Device Simulator
+          topicUid: TOOQASNMPSimulator
+          items:
+            - name: Simulations
+              topicUid: Simulations
+              items:
+                - name: Creating SNMP simulations
+                  topicUid: Creating_SNMP_simulations
+                - name: Creating HTTP simulations
+                  topicUid: Creating_HTTP_simulations
+                - name: Running simulations
+                  topicUid: Running_simulations
+                - name: Static simulations
+                  topicUid: Static_simulations
+                - name: Artificial dynamic simulations
+                  topicUid: Artificial_dynamic_simulations
+                - name: Realistic dynamic simulations
+                  topicUid: Realistic_dynamic_simulations
+                - name: SNMP simulation schema reference
+                  topicUid: DeviceSimulator_SNMP_Schema_Reference_Overview
+                  items:
+                  - name: Simulation
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation
+                    items:
+                    - name: Agents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+                      items:
+                      - name: Agent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent                
+                    - name: DatabaseAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+                      items:
+                      - name: DatabaseAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+                    - name: ProxyAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+                      items:
+                      - name: ProxyAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+                    - name: Options
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options
+                      items:
+                      - name: MaxResponseWeight
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+                    - name: DefaultDefinitionAttributes
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+                    - name: Definitions
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions
+                      items:
+                      - name: Definition
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
+            - name: Trap sender
+              topicUid: Trap_sender
+              items:
+                - name: File menu
+                  topicUid: File_menu
+                - name: General configuration
+                  topicUid: General_config
+                - name: Packet interval schedule
+                  topicUid: Packet_interval_schedule
+                - name: Loaded packets
+                  topicUid: Loaded_packets
+                - name: Packet configuration and bindings
+                  topicUid: Packet_configuration_and_bindings
+                - name: Sending
+                  topicUid: Sending
+            - name: Trap receiver
+              topicUid: Trap_receiver
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
