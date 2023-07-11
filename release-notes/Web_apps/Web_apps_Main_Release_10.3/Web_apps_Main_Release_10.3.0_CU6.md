@@ -55,6 +55,6 @@ From now on, when you try to create an app with a name that is identical to that
 
 #### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you clicked *Start with a blank dashboard* twice in rapid succession, two pop-up windows would open.
