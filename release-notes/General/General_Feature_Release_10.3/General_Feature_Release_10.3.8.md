@@ -16,11 +16,7 @@ uid: General_Feature_Release_10.3.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.8](xref:Web_apps_Feature_Release_10.3.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## New features
 
 #### Process Automation: Support for PaToken bulk operations [ID_35685]
 
