@@ -561,6 +561,12 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->

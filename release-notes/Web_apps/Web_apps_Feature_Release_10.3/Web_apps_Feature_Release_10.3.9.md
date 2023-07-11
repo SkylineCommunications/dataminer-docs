@@ -88,6 +88,12 @@ Each time the time range of a pattern gets updated, a new pattern record is crea
 
 ### Fixes
 
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
