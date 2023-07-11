@@ -305,6 +305,12 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
+#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

@@ -44,6 +44,12 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
+#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
