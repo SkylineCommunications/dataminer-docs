@@ -1202,7 +1202,7 @@
                 - name: Elasticsearch
                   topicUid: Elasticsearch_database
                   items:
-                    - name: Setting up an Elasticsearch database for a dedicated clustered storage setup
+                    - name: Setting up Elasticsearch for a dedicated clustered storage setup
                       topicUid: Installing_Elasticsearch_on_separate_Linux_machine
                       items:
                         - name: Installing Elasticsearch on a separate Linux machine
@@ -1221,7 +1221,7 @@
                                   topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
                                 - name: Verifying Elasticsearch synchronization
                                   topicUid: Verifying_Elasticsearch_Synchronization
-                    - name: Setting up an Elasticsearch database in a setup with storage per DMA
+                    - name: Setting up Elasticsearch in a setup with storage per DMA
                       topicUid: Configuring_indexing_database_per_DMS
                       items:
                         - name: Installing Elasticsearch on a DMA via DataMiner
