@@ -382,6 +382,12 @@ Examples:
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
 
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
 #### Trending - Pattern matching: Pattern occurrence values will now be displayed in the language set as UI language [ID_36844]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

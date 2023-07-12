@@ -61,6 +61,12 @@ When the requirements of a light bulb are not met, an entry is added to the Cube
 
 A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
 #### Services module: Enhanced linking to help pages on docs.dataminer.services [ID_36813]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
