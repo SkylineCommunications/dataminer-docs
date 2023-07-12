@@ -307,7 +307,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | VDA | Video Distribution Amplifier. Device that amplifies a video signal and sends it to multiple outputs. |
 | VF | Virtual Function. |
 | VHF | Very High Frequency. Refers to radio frequencies between 30 MHz and 299.9 MHz. |
-| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:views). |
+| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:About_views). |
 | Violation filter | Filter configured on an SLA to give a specific weight to certain alarms or to filter out alarms.<br>See [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter). |
 | Virtual element | Element that does not communicate directly with a device. Usually, it instead connects to one or more other elements in the DMS.<br>See [Virtual elements](xref:Virtual_elements). |
 | Virtual function | Virtual DataMiner element that represents a specific virtual function resource. Abbreviated as VF.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |

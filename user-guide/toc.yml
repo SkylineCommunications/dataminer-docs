@@ -215,7 +215,7 @@
             - name: Alarm storm protection
               topicUid: Alarm_storm_protection
     - name: Elements
-      topicUid: elements
+      topicUid: About_elements
       items:
         - name: About elements
           topicUid: About_elements
@@ -288,7 +288,7 @@
       topicUid: parameters
       items:
         - name: Types of parameters
-          topicUid: Types_of_parameters
+          topicUid: Read_parameters_versus_write_parameters
           items:
             - name: Read parameters versus write parameters
               topicUid: Read_parameters_versus_write_parameters
@@ -404,7 +404,7 @@
             - name: Managing service templates
               topicUid: Managing_service_templates
     - name: Views
-      topicUid: views
+      topicUid: About_views
       items:
         - name: About views
           topicUid: About_views
