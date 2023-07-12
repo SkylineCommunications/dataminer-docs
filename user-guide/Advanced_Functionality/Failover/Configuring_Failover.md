@@ -14,6 +14,8 @@ The following sections contain more information on configuring Failover:
 
 - [Advanced Failover options](xref:Advanced_Failover_options)
 
+- [DataMiner Failover on Amazon Web Services](xref:Failover_AWS)
+
 > [!NOTE]
 > Failover is always one-to-one. A backup DMA can only have one primary DMA.
 

@@ -154,6 +154,20 @@ To do so, the system will proceed as follows:
 > [!NOTE]
 > Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
 
+#### Dashboards app & Low-Code Apps: Button panel visualization now officially released [ID_36775]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The button panel visualization has now officially been released. This component will display a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
+
+The following types of buttons can be configured:
+
+- Simple buttons used only to set parameters.
+- HTML buttons.
+- Rotate buttons, resembling a control dial, used to decrement or increment the value of a particular parameter. The buttons can be used by dragging and dropping with the mouse, by using the arrow keys on the keyboard, or by sliding on a mobile device.
+
+For more information, see [Button panel](xref:DashboardButtonPanel).
+
 ## Other new features
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
@@ -557,3 +571,9 @@ You can export the data displayed by a table component by clicking the ... butto
 Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
 
 If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+#### GQI: Ad hoc data sources can now include columns of type GQITimeSpanColumn [ID_36717]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.

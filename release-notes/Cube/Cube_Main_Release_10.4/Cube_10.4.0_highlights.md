@@ -100,9 +100,10 @@ Each time a program is launched, a start entry and an end entry will be added to
   - the name of the program that ended
   - the arguments that were passed to the program (if any)
 
-#### Trending: Time-scoped relations [ID_36434]
+#### Trending: Time-scoped relations [ID_36434] [ID_36760]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- RN 36434: MR 10.4.0 - FR 10.3.8 -->
+<!-- RN 36760: MR 10.4.0 - FR 10.3.9 -->
 
 A light bulb icon will now be displayed when you select a time range on the trend graph of a parameter. If you want to know which other parameters are related to this parameter, based purely on the behavior during the selected time range, then you can click this icon to add or view related parameters. Even if multiple curves are displayed on the same trend graph, the light bulb always shows relations with one specific parameter, whose name is mentioned in the light bulb tooltip.
 
@@ -111,4 +112,6 @@ You can for instance use this in case a parameter (e.g. the total available memo
 For more information, see [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph).
 
 > [!NOTE]
-> Currently, the feature only proposes parameters from the same DataMiner element.
+>
+> - Currently, the feature only proposes parameters from the same DataMiner element.
+> - When the requirements of a light bulb are not met, an entry is added to the Cube logging. These log entries will make a clear distinction between the "relation light bulb feature" (i.e. the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e. the icon appearing when you select a trend graph section).

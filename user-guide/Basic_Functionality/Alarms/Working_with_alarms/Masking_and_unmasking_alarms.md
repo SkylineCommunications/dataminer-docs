@@ -15,7 +15,7 @@ If a device is shut down for maintenance purposes, or if its settings are intent
 
 To manually mask an alarm:
 
-1. Right-click the alarm in the Alarm Console, and select *Mask alarm*.
+1. In the Alarm Console in DataMiner Cube, right-click the alarm and select *Mask alarm*.
 
 1. In the *Mask* dialog box, select whether to only mask the alarm, or to mask the element completely.
 
@@ -49,7 +49,7 @@ Masked alarms can be manually unmasked at any time and can also be masked again,
 
 To manually unmask an alarm:
 
-1. Right-click the alarm in the *Masked alarms* tab of the Alarm Console, and
+1. In the *Masked alarms* tab of the Alarm Console in DataMiner Cube, right-click the alarm, and
 
    - if only the select alarm has been masked, select *Unmask alarm*.
 

@@ -6,7 +6,7 @@ uid: Part2BasicFunctionalities
 
 <div class="row"> 
   <div class="column">
-    <a href="/user-guide/Basic_Functionality/Alarms/alarms.html" title="Alarms" target="_self"><img src="~/user-guide/images/Alarms.svg" style="width:100%"></a>
+    <a href="/user-guide/Basic_Functionality/Alarms/About_alarms.html" title="Alarms" target="_self"><img src="~/user-guide/images/Alarms.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/user-guide/Basic_Functionality/Elements/Elements.html" title="Elements" target="_self"><img src="~/user-guide/images/Elements.svg" style="width:100%"></a>

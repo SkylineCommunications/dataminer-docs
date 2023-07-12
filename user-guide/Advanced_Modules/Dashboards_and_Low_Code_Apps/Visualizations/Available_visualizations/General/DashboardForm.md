@@ -21,3 +21,6 @@ In a low-code app, this component will also make a number of [component actions]
 - *Save current changes*
 - *Set form to edit mode*
 - *Set form to read mode*
+
+> [!NOTE]
+> Saving an empty field value for a DOM instance is only supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36276 -->. Prior to this, you can only empty a DOM field value using an Automation script. See [Altering values of a DomInstance - examples](xref:DOM_Altering_values_of_a_DomInstance).

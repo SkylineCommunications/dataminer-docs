@@ -18,11 +18,32 @@ uid: General_Main_Release_10.3.0_CU6
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
+#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
+
+SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
+
+#### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When SLWatchdog starts, restarts or stops DataMiner, extra information will now be logged to help pinpoint certain issues that may arise:
+
+- the SLDataMiner process ID,
+- the output of the batch scripts that are being executed while DataMiner is (re)starting,
+- etc.
+
+Also, if DataMiner did not start up correctly for some reason, a retry will now be attempted in that same startup routine.
+
+In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new startup scripts:
+
+- *DataMiner Start DataMiner And SLNet.bat*
+- *DataMiner Start DataMiner.bat*
 
 ### Fixes
 
@@ -37,6 +58,19 @@ The following mechanisms have now been implemented:
 - The affected table data will no longer have any TTL value configured when inserted. Moreover, as a safety measure, all Cassandra tables will now also have a `default_time_to_live` setting. This value will provide the default TTL value in case no value for the TTL is passed when inserting data.
 
 - When existing data with an incorrect TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
+
+#### Failover: Problems when running BPA tests [ID_36445]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When the backup agent was active, certain BPA tests would incorrectly return the following error:
+
+`This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
+
+Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+
+- `State="Offline"`
+- `StateBeforeShutDown="Online"`
 
 #### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
 

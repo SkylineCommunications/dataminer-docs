@@ -144,7 +144,7 @@ The unified platform provides **highly enriched fault messages**, **out of the b
 > - Videos related to alarm and fault management in our extensive [Video Library](https://community.dataminer.services/videos?_sf_s=alarm) ![Video](~/user-guide/images/video_Duo.png)
 > - [DataMiner Alarm Console training course](https://community.dataminer.services/courses/dataminer-operator/lessons/alarm-console-3/)
 > - [Experts & Insights – End-to-end fault management](https://community.dataminer.services/video/experts-insights-end-to-end-fault-management/) ![Video](~/user-guide/images/video_Duo.png)
-> - User Guide: [Alarms](xref:alarms)
+> - User Guide: [Alarms](xref:About_alarms)
 
 ## Dashboards
 

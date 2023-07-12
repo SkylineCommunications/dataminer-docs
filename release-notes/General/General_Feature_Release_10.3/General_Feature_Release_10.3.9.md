@@ -18,7 +18,12 @@ uid: General_Feature_Release_10.3.9
 
 ## Highlights
 
-*No highlights have been selected for this release yet*
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
 
 ## Other features
 
@@ -62,11 +67,44 @@ Up to now, the *Cassandra Cleaner* tool could only be used to remove data from t
 
 For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
+#### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
+
+SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
+
+#### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you install or upgrade a DataMiner Agent, a number of DataMiner Extension Modules (DxMs) will automatically be installed (if not present yet). The following modules have now been updated:
+
+- DataMiner CoreGateway (version 2.13.0)
+- DataMiner SupportAssistant (version 1.4.0)
+
+> [!NOTE]
+> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When SLWatchdog starts, restarts or stops DataMiner, extra information will now be logged to help pinpoint certain issues that may arise:
+
+- the SLDataMiner process ID,
+- the output of the batch scripts that are being executed while DataMiner is (re)starting,
+- etc.
+
+Also, if DataMiner did not start up correctly for some reason, a retry will now be attempted in that same startup routine.
+
+In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new startup scripts:
+
+- *DataMiner Start DataMiner And SLNet.bat*
+- *DataMiner Start DataMiner.bat*
 
 ### Fixes
 
@@ -81,6 +119,19 @@ The following mechanisms have now been implemented:
 - The affected table data will no longer have any TTL value configured when inserted. Moreover, as a safety measure, all Cassandra tables will now also have a `default_time_to_live` setting. This value will provide the default TTL value in case no value for the TTL is passed when inserting data.
 
 - When existing data with an incorrect TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
+
+#### Failover: Problems when running BPA tests [ID_36445]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When the backup agent was active, certain BPA tests would incorrectly return the following error:
+
+`This BPA does not apply for this Agent: cannot run on Offline Failover Agents`
+
+Also, certain managers in SLNet (e.g. BPA Manager) would not properly initialize if the following Failover settings were configured in the *SLDMS.xml* file:
+
+- `State="Offline"`
+- `StateBeforeShutDown="Online"`
 
 #### SNMPv3 credentials would not get deleted when an SNMPv3 element was deleted [ID_36573]
 
@@ -101,3 +152,11 @@ Validation has now been added to `NT_ADD_VIEW`. When a request enters to create 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an `index out of bounds` error could occur when processing a behavioral change point.
+
+#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
+
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.

@@ -303,6 +303,12 @@ From now on, users will be allowed to manually clear automatic incidents.
 
 A number of enhancements have been made to the caching mechanism used by the *Behavioral anomaly detection* and *Proactive cap detection* features.
 
+#### SLProtocol is now a 64-bit process by default [ID_36725]
+
+SLProtocol is now a 64-bit process by default.
+
+However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -400,3 +406,17 @@ Affected port information fields:
 - Number
 - PollingIPAddress
 - PollingIPPort
+
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
+
+#### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
+
+For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.

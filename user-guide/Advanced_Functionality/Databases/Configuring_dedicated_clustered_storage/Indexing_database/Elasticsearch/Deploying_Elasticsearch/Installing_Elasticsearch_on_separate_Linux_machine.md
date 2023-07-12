@@ -126,7 +126,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
      - **node.master**: See [Configuring the master nodes](xref:Configuring_master_Elasticsearch_nodes).
 
-1. Make the following adjustments in */etc/sysconfig/elasticsearch*:
+1. Make the following adjustments in */etc/default/elasticsearch*:
 
    - **MAX_LOCKED_MEMORY**: Set this to *unlimited*.
 

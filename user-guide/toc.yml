@@ -138,7 +138,7 @@
   topicUid: Part2BasicFunctionalities
   items:
     - name: Alarms
-      topicUid: alarms
+      topicUid: About_alarms
       items:
         - name: About alarms
           topicUid: About_alarms
@@ -151,57 +151,54 @@
               topicUid: Alarm_linking
             - name: Alarm filters
               topicUid: Alarm_filters
-        - name: Working with alarms in DataMiner Cube
-          topicUid: Working_with_alarms_in_DataMiner_Cube
+        - name: Alarm cards
+          topicUid: Alarm_cards
+        - name: Working with the Alarm Console
+          topicUid: Working_with_the_Alarm_Console
           items:
-            - name: Alarm cards
-              topicUid: Alarm_cards
-            - name: Working with the Alarm Console
-              topicUid: Working_with_the_Alarm_Console
-              items:
-                - name: Manipulating the Alarm Console
-                  topicUid: Manipulating_the_Alarm_Console
-                - name: Changing the layout of the Alarm Console
-                  topicUid: ChangingTheAlarmConsoleLayout
-                - name: Using the collapsible side panel of the Alarm Console
-                  topicUid: UsingTheCollapsibleSidePanel
-                - name: Working with the Alarm Console history slider
-                  topicUid: WorkingWithTheAlarmConsoleHistorySlider
-                - name: Applying alarm filters in the Alarm Console
-                  topicUid: ApplyingAlarmFiltersInTheAlarmConsole
-                - name: Using the RCA slider
-                  topicUid: UsingTheRCASlider
-                - name: Configuring a custom alert sound for an alarm tab
-                  topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
-                - name: Alarm Console columns
-                  topicUid: AlarmConsoleColumns
-                - name: Alarm Console settings
-                  topicUid: AlarmConsoleSettings
-                - name: Alarm Console right-click menu
-                  topicUid: AlarmConsoleRightClickMenu
-            - name: Changing ownership of alarms
-              topicUid: Changing_ownership_of_alarms
-            - name: Masking and unmasking alarms
-              topicUid: Masking_and_unmasking_alarms
-            - name: Adding comments to an alarm
-              topicUid: Adding_comments_to_an_alarm
-            - name: Changing the read status of an alarm
-              topicUid: Changing_the_read_status_of_an_alarm
-            - name: Changing custom alarm properties
-              topicUid: Changing_custom_alarm_properties
-            - name: Clearing alarms
-              topicUid: Clearing_alarms
-            - name: Advanced analytics features in the Alarm Console
-              topicUid: Advanced_analytics_features_in_the_Alarm_Console
-              items:
-                - name: Behavioral anomaly detection
-                  topicUid: Behavioral_anomaly_detection
-                - name: Proactive cap detection
-                  topicUid: Proactive_cap_detection
-                - name: Automatic incident tracking
-                  topicUid: Automatic_incident_tracking
-                - name: Monitoring of trend patterns
-                  topicUid: Monitoring_of_trend_patterns
+            - name: Manipulating the Alarm Console
+              topicUid: Manipulating_the_Alarm_Console
+            - name: Changing the layout of the Alarm Console
+              topicUid: ChangingTheAlarmConsoleLayout
+            - name: Using the collapsible side panel of the Alarm Console
+              topicUid: UsingTheCollapsibleSidePanel
+            - name: Working with the Alarm Console history slider
+              topicUid: WorkingWithTheAlarmConsoleHistorySlider
+            - name: Applying alarm filters in the Alarm Console
+              topicUid: ApplyingAlarmFiltersInTheAlarmConsole
+            - name: Using the RCA slider
+              topicUid: UsingTheRCASlider
+            - name: Configuring a custom alert sound for an alarm tab
+              topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
+            - name: Alarm Console columns
+              topicUid: AlarmConsoleColumns
+            - name: Alarm Console settings
+              topicUid: AlarmConsoleSettings
+            - name: Alarm Console right-click menu
+              topicUid: AlarmConsoleRightClickMenu
+        - name: Changing ownership of alarms
+          topicUid: Changing_ownership_of_alarms
+        - name: Masking and unmasking alarms
+          topicUid: Masking_and_unmasking_alarms
+        - name: Adding comments to an alarm
+          topicUid: Adding_comments_to_an_alarm
+        - name: Changing the read status of an alarm
+          topicUid: Changing_the_read_status_of_an_alarm
+        - name: Changing custom alarm properties
+          topicUid: Changing_custom_alarm_properties
+        - name: Clearing alarms
+          topicUid: Clearing_alarms
+        - name: Advanced analytics features in the Alarm Console
+          topicUid: Advanced_analytics_features_in_the_Alarm_Console
+          items:
+            - name: Behavioral anomaly detection
+              topicUid: Behavioral_anomaly_detection
+            - name: Proactive cap detection
+              topicUid: Proactive_cap_detection
+            - name: Automatic incident tracking
+              topicUid: Automatic_incident_tracking
+            - name: Monitoring of trend patterns
+              topicUid: Monitoring_of_trend_patterns
         - name: Advanced alarm functionality
           topicUid: Advanced_alarm_functionality
           items:
@@ -980,6 +977,8 @@
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Configuring the default upgrade options
               topicUid: Configuring_the_default_upgrade_options
+        - name: Health assessment guidelines for DataMiner Agents
+          topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages
@@ -1093,6 +1092,8 @@
               topicUid: Failover_configuration_in_Cube
             - name: Advanced Failover options
               topicUid: Advanced_Failover_options
+            - name: DataMiner Failover on Amazon Web Services
+              topicUid: Failover_AWS
         - name: Preferred configuration using virtual IP addresses (best practice)
           topicUid: Preferred_configuration_using_virtual_IP_addresses__best_practice
         - name: Synchronizing the DMA databases
@@ -2639,6 +2640,83 @@
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:
+        - name: DataMiner EPM D-DOCSIS
+          topicUid: EPM_D-DOCSIS
+          items:
+            - name: EPM D-DOCSIS architecture
+              topicUid: D-DOCSIS_architecture
+            - name: EPM D-DOCSIS components
+              topicUid: D-DOCSIS_components
+            - name: Supported technologies for D-DOCSIS
+              topicUid: D-DOCSIS_supported_technologies
+            - name: EPM D-DOCSIS deployment
+              topicUid: D-DOCSIS_deployment
+            - name: Available parameters in D-DOCSIS
+              topicUid: D-DOCSIS_parameters
+              items:
+                - name: Network
+                  topicUid: D-DOCSIS_parameters_network
+                - name: Market
+                  topicUid: D-DOCSIS_parameters_market
+                - name: Hub
+                  topicUid: D-DOCSIS_parameters_hub
+                - name: CCAP Core
+                  topicUid: D-DOCSIS_parameters_ccap_core
+                - name: RPD
+                  topicUid: D-DOCSIS_parameters_rpd
+                - name: CM
+                  topicUid: D-DOCSIS_parameters_cm
+                - name: DPIC
+                  topicUid: D-DOCSIS_parameters_dpic
+                - name: DPIC Interface
+                  topicUid: D-DOCSIS_parameters_dpic_interface
+                - name: US Controller
+                  topicUid: D-DOCSIS_parameters_us_controller
+                - name: DS Controller
+                  topicUid: D-DOCSIS_parameters_ds_controller
+                - name: Fiber Node
+                  topicUid: D-DOCSIS_parameters_fiber_node
+                - name: Node Segment
+                  topicUid: D-DOCSIS_parameters_node_segment
+                - name: Service Group
+                  topicUid: D-DOCSIS_parameters_service_group
+                - name: DS Service Group
+                  topicUid: D-DOCSIS_parameters_ds_service_group
+                - name: US Service Group
+                  topicUid: D-DOCSIS_parameters_us_service_group
+                - name: Core Leaf
+                  topicUid: D-DOCSIS_parameters_core_leaf
+                - name: Spine
+                  topicUid: D-DOCSIS_parameters_spine
+                - name: Node Leaf
+                  topicUid: D-DOCSIS_parameters_node_leaf
+                - name: CIN Interface
+                  topicUid: D-DOCSIS_parameters_cin_interface
+                - name: Manufacturer
+                  topicUid: D-DOCSIS_parameters_manufacturer
+#GPON TOC      
+        - name: DataMiner EPM GPON
+          topicUid: EPM_GPON
+          items:
+            - name: EPM GPON architecture
+              topicUid: GPON_architecture
+            - name: EPM GPON components
+              topicUid: GPON_components
+              items:
+                - name: EPM GPON supported technologies
+                  topicUid: GPON_supported_technologies
+                - name: Standard EPM GPON ONT JSON definition
+                  topicUid: GPON_ONT_Json_definition
+            - name: EPM GPON deployment
+              topicUid: GPON_deployment
+            - name: Available parameters in EPM GPON
+              topicUid: GPON_KPI
+              items:
+                - name: EPM GPON parameter thresholds
+                  topicUid: GPON_parameters_thresholds
+                - name: EPM GPON ONT parameters
+                  topicUid: GPON_ONT
+#GPON TOC END
         - name: DataMiner EPM I-DOCSIS
           topicUid: EPM_I-DOCSIS
           items:
@@ -2702,60 +2780,6 @@
                   topicUid: I-DOCSIS_parameters_cable_modem
                 - name: Thresholds
                   topicUid: I-DOCSIS_parameters_thresholds
-        - name: DataMiner EPM D-DOCSIS
-          topicUid: EPM_D-DOCSIS
-          items:
-            - name: EPM D-DOCSIS architecture
-              topicUid: D-DOCSIS_architecture
-            - name: EPM D-DOCSIS components
-              topicUid: D-DOCSIS_components
-            - name: Supported technologies for D-DOCSIS
-              topicUid: D-DOCSIS_supported_technologies
-            - name: EPM D-DOCSIS deployment
-              topicUid: D-DOCSIS_deployment
-            - name: Available parameters in D-DOCSIS
-              topicUid: D-DOCSIS_parameters
-              items:
-                - name: Network
-                  topicUid: D-DOCSIS_parameters_network
-                - name: Market
-                  topicUid: D-DOCSIS_parameters_market
-                - name: Hub
-                  topicUid: D-DOCSIS_parameters_hub
-                - name: CCAP Core
-                  topicUid: D-DOCSIS_parameters_ccap_core
-                - name: RPD
-                  topicUid: D-DOCSIS_parameters_rpd
-                - name: CM
-                  topicUid: D-DOCSIS_parameters_cm
-                - name: DPIC
-                  topicUid: D-DOCSIS_parameters_dpic
-                - name: DPIC Interface
-                  topicUid: D-DOCSIS_parameters_dpic_interface
-                - name: US Controller
-                  topicUid: D-DOCSIS_parameters_us_controller
-                - name: DS Controller
-                  topicUid: D-DOCSIS_parameters_ds_controller
-                - name: Fiber Node
-                  topicUid: D-DOCSIS_parameters_fiber_node
-                - name: Node Segment
-                  topicUid: D-DOCSIS_parameters_node_segment
-                - name: Service Group
-                  topicUid: D-DOCSIS_parameters_service_group
-                - name: DS Service Group
-                  topicUid: D-DOCSIS_parameters_ds_service_group
-                - name: US Service Group
-                  topicUid: D-DOCSIS_parameters_us_service_group
-                - name: Core Leaf
-                  topicUid: D-DOCSIS_parameters_core_leaf
-                - name: Spine
-                  topicUid: D-DOCSIS_parameters_spine
-                - name: Node Leaf
-                  topicUid: D-DOCSIS_parameters_node_leaf
-                - name: CIN Interface
-                  topicUid: D-DOCSIS_parameters_cin_interface
-                - name: Manufacturer
-                  topicUid: D-DOCSIS_parameters_manufacturer
         - name: DataMiner EPM VSAT
           topicUid: EPM_VSAT
           items:
@@ -2955,7 +2979,7 @@
         - name: Additional configuration for Resource Orchestration
           topicUid: config_resource_orchestration
       - name: Booking Manager app
-        topicUid: SolSRM
+        topicUid: Booking_Manager_user_interface
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
@@ -2966,18 +2990,13 @@
                 topicUid: Booking_Manager_Config_tab
               - name: Admin tab
                 topicUid: Booking_Manager_Admin_tab
-          - name: Interacting with the Booking Manager app using custom Automation scripts
-            topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
-            items:
-              - name: Silent actions
-                topicUid: Silent_actions
-              - name: Frequently asked questions related to bookings and scripting
-                topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
-        topicUid: SRM_user_interface_customization
+        topicUid: SRM_logging_config
         items:
+          - name: Configuring SRM logging
+            topicUid: SRM_logging_config
           - name: User interface customization
             topicUid: SRM_user_interface_customization
             items:
@@ -2991,13 +3010,13 @@
                 topicUid: SRM_custom_booking_blocks
           - name: Configuring SRM alarm monitoring
             topicUid: SRM_alarm_monitoring
-          - name: Configuring SRM logging
-            topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
+              - name: Contributing bookings configuration
+                topicUid: Service_Orchestration_contrib_bookings
               - name: Resources configuration
                 topicUid: Service_Orchestration_resources_advanced
               - name: Profile instances configuration
@@ -3012,6 +3031,70 @@
                 topicUid: Service_Orchestration_life_cycle_states
               - name: Service states configuration
                 topicUid: Service_Orchestration_service_states
+              - name: LSO script configuration
+                topicUid: Service_Orchestration_LSO_script
+              - name: Data Transfer Rules configuration
+                topicUid: Service_Orchestration_DTR
+              - name: Manual Orchestration
+                topicUid: Service_Orchestration_manual_orchestration
+              - name: Configuring SLA creation
+                topicUid: Service_Orchestration_SLA_creation
+      - name: Migrating an SRM configuration
+        topicUid: SRM_migrating
+        items:
+          - name: Migrating virtual function definitions
+            topicUid: SRM_migrating_functions
+          - name: Migrating profile instances
+            topicUid: SRM_migrating_profile_instances
+          - name: Migrating resources
+            topicUid: SRM_migrating_resources
+          - name: Migrating service definitions
+            topicUid: SRM_migrating_service_definitions
+      - name: Interacting with SRM using code
+        topicUid: Interacting_with_SRM_using_code
+        items:
+          - name: Finding the reference of an object
+            topicUid: SRM_find_reference_of_object
+          - name: Silent actions
+            topicUid: Silent_actions
+            items:
+              - name: Creating a booking
+                topicUid: SRM_creating_booking_silently
+              - name: Editing a pending booking
+                topicUid: SRM_editing_pending_booking_silently
+              - name: Assigning resource, profile and parameter values
+                topicUid: SRM_assigning_resource_profile_parameter_value_silently
+              - name: Adding properties to an existing booking
+                topicUid: SRM_adding_properties_to_booking_silently
+              - name: Applying booking life cycle transitions
+                topicUid: SRM_apply_LS_transition_silently
+              - name: Applying service state transitions
+                topicUid: SRM_apply_service_state_transitions_silently
+              - name: Updating the timing of a booking
+                topicUid: SRM_update_timing_booking_silently
+              - name: Extending the timing of a booking
+                topicUid: SRM_extend_timing_booking_silently
+              - name: Renaming a booking
+                topicUid: SRM_rename_booking_silently
+              - name: Adding an extra resource
+                topicUid: SRM_adding_extra_resource_silently
+              - name: Removing a resource and node
+                topicUid: SRM_removing_resource_and_node_silently
+              - name: Creating or editing many bookings using caching
+                topicUid: SRM_creating_editing_many_bookings_with_caching
+              - name: Applying a profile to an unmapped resource
+                topicUid: SRM_apply_profile_to_unmatched_resource
+          - name: Launching default wizards from custom scripts
+            topicUid: SRM_launching_booking_wizard
+            items:
+              - name: Launching the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard
+              - name: Launching specific pages of the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard_pages
+              - name: Launching the Service Profile Booking Wizard from a custom script
+                topicUid: SRM_launching_service_profile_wizard
+          - name: Frequently asked questions related to bookings and scripting
+            topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services
@@ -3134,7 +3217,7 @@
           topicUid: Controlling_remote_access
         - name: Consulting dataminer.services audit logs
           topicUid: DCP_Auditing
-        - name: Granting admin consent for Teams actions
+        - name: Granting admin consent for Teams Chat Integration
           topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
@@ -3497,6 +3580,8 @@
   items:
     - name: DataMiner Compute Requirements
       topicUid: DataMiner_Compute_Requirements
+    - name: DataMiner Client Requirements
+      topicUid: DataMiner_Client_Requirements
     - name: Skyline DataMiner folder
       topicUid: SkylineDataminerFolder
       items:
@@ -3600,8 +3685,12 @@
           topicUid: Cassandra_Cluster_Migrator
         - name: Cassandra Cluster Validator
           topicUid: Cassandra_Cluster_Validator
+        - name: Change Element States Offline
+          topicUid: Change_Element_States_Offline
         - name: Connection Check
           topicUid: Connection_Check
+        - name: Copy Element Data
+          topicUid: Copy_Element_Data
         - name: DataMiner Comparison tool
           topicUid: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3625,6 +3714,74 @@
           topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
         - name: Protocol debug tools
           topicUid: Protocol_Debug_Tools
+        - name: Skyline Device Simulator
+          topicUid: TOOQASNMPSimulator
+          items:
+            - name: Simulations
+              topicUid: Simulations
+              items:
+                - name: Creating SNMP simulations
+                  topicUid: Creating_SNMP_simulations
+                - name: Creating HTTP simulations
+                  topicUid: Creating_HTTP_simulations
+                - name: Running simulations
+                  topicUid: Running_simulations
+                - name: Static simulations
+                  topicUid: Static_simulations
+                - name: Artificial dynamic simulations
+                  topicUid: Artificial_dynamic_simulations
+                - name: Realistic dynamic simulations
+                  topicUid: Realistic_dynamic_simulations
+                - name: SNMP simulation schema reference
+                  topicUid: DeviceSimulator_SNMP_Schema_Reference_Overview
+                  items:
+                  - name: Simulation
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation
+                    items:
+                    - name: Agents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+                      items:
+                      - name: Agent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent                
+                    - name: DatabaseAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+                      items:
+                      - name: DatabaseAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+                    - name: ProxyAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+                      items:
+                      - name: ProxyAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+                    - name: Options
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options
+                      items:
+                      - name: MaxResponseWeight
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+                    - name: DefaultDefinitionAttributes
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+                    - name: Definitions
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions
+                      items:
+                      - name: Definition
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
+            - name: Trap sender
+              topicUid: Trap_sender
+              items:
+                - name: File menu
+                  topicUid: File_menu
+                - name: General configuration
+                  topicUid: General_config
+                - name: Packet interval schedule
+                  topicUid: Packet_interval_schedule
+                - name: Loaded packets
+                  topicUid: Loaded_packets
+                - name: Packet configuration and bindings
+                  topicUid: Packet_configuration_and_bindings
+                - name: Sending
+                  topicUid: Sending
+            - name: Trap receiver
+              topicUid: Trap_receiver
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -3915,6 +4072,11 @@
           topicUid: view_benchmarks
         - name: Visual Overview benchmarks
           topicUid: visual_overview_benchmarks
+    - name: Technical information
+      topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
+      items:
+        - name: Connecting devices using RS-232/RS-422/RS-485
+          topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
     - name: Frequently asked questions
       topicUid: faq
       items:

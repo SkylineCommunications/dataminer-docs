@@ -338,7 +338,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+> From DataMiner 10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 #### General \> Annotations \> View
 

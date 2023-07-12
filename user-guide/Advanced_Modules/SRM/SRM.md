@@ -33,4 +33,4 @@ The following topics provide more information on this module:
 > - DataMiner SRM requires a general database of type Cassandra, as well as the necessary licenses depending on your SRM use case. For more information, contact the Skyline Sales department.
 > - From DataMiner 10.0.0/10.0.2 onwards, DataMiner SRM also requires an Elasticsearch database. See [Elasticsearch database](xref:Elasticsearch_database).
 > - DataMiner SRM log information can be found in the *SLResourceManager*, *SLServiceManager* and (from DataMiner 9.5.7 onwards) *SLFunctionManager* log file.
-> - A standard app is available to create and manage bookings using SRM. For more information, see [Booking Manager app](xref:SolSRM).
+> - A standard app is available to create and manage bookings using SRM. For more information, see [Booking Manager app](xref:Booking_Manager_user_interface).

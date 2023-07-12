@@ -2,7 +2,7 @@
 uid: DIS
 ---
 
-# DataMiner Integration Studio
+# DataMiner Integration Studio (DIS)
 
 This chapter consists of the following sections:
 
