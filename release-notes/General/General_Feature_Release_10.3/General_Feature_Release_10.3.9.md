@@ -45,6 +45,12 @@ A number of security enhancements have been made.
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
+#### Cassandra Cluster: Trend tables will no longer be sharded [ID_36551]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+On a Cassandra Cluster database, from now on, the trend tables will no longer be sharded. This will enhance overall performance when requesting trend data, especially on systems on which real-time trend data is stored for longer than a day.
+
 #### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

@@ -18,6 +18,12 @@ uid: General_Main_Release_10.3.0_CU6
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
 
+#### Cassandra Cluster: Trend tables will no longer be sharded [ID_36551]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+On a Cassandra Cluster database, from now on, the trend tables will no longer be sharded. This will enhance overall performance when requesting trend data, especially on systems on which real-time trend data is stored for longer than a day.
+
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
