@@ -195,13 +195,13 @@ Enables the [Jobs app](xref:jobs).
 
 ### LegacyAnnotations
 
-Shows the legacy Annotations module in Cube. By default set to false for new installations, but set to true when updating existing setups.
+Shows the legacy Annotations module in Cube.
 
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 
 ### LegacyReportsAndDashboards
 
-Shows the legacy Reports & Dashboards module in Cube. By default set to false for new installations, but set to true when updating existing setups.
+Shows the legacy Reports & Dashboards module in Cube.
 
 - **Minimum version**: 10.1.12/10.2.0 ([RN 31329](xref:General_Feature_Release_10.1.12#legacy-reports-dashboards-and-annotations-modules-will-by-default-be-hidden-in-new-installations-id_31329))
 

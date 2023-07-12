@@ -89,6 +89,23 @@ When you install or upgrade a DataMiner Agent, a number of DataMiner Extension M
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
 
+#### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When SLWatchdog starts, restarts or stops DataMiner, extra information will now be logged to help pinpoint certain issues that may arise:
+
+- the SLDataMiner process ID,
+- the output of the batch scripts that are being executed while DataMiner is (re)starting,
+- etc.
+
+Also, if DataMiner did not start up correctly for some reason, a retry will now be attempted in that same startup routine.
+
+In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new startup scripts:
+
+- *DataMiner Start DataMiner And SLNet.bat*
+- *DataMiner Start DataMiner.bat*
+
 ### Fixes
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]

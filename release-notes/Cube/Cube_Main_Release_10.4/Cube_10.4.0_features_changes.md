@@ -382,6 +382,12 @@ Examples:
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
 
+#### Trending - Pattern matching: Pattern occurrence values will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values displayed in the Alarm Console will now appear in the language set as UI language.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]

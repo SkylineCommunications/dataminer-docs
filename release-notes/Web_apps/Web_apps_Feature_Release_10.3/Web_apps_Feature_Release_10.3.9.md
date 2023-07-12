@@ -38,6 +38,18 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 ### Enhancements
 
+#### Dashboards app: Enhanced PDF generation [ID_36461]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
+
+#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -82,6 +94,12 @@ Each time the time range of a pattern gets updated, a new pattern record is crea
 
 ### Fixes
 
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -102,6 +120,14 @@ Up to now, it would incorrectly be possible to create a low-code app with a name
 
 From now on, when you try to create an app with a name that is identical to that of an existing app, an error will be thrown.
 
+#### Dashboards app: Problems with shared dashboards [ID_36752]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you viewed a shared dashboard that you were not allowed to edit, in some cases, the dashboard would incorrectly be updated in the background, causing an error to be thrown.
+
+Also, when you refreshed a shared dashboard while it was in edit mode, edit mode would incorrectly be closed.
+
 #### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -110,6 +136,24 @@ When you deleted a component from a dashboard, an `UpdateDashboard` call would i
 
 #### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you clicked *Start with a blank dashboard* twice in rapid succession, two pop-up windows would open.
+
+#### Low-Code Apps: Not possible to feed a selected timeline item to a component on a panel [ID_36820]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, it would incorrectly not be possible to feed a selected timeline item to a component on a panel of a low-code app.
+
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.

@@ -285,6 +285,12 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
+#### Dashboards app: Enhanced PDF generation [ID_36461]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
+
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -298,6 +304,12 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
+#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
 
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
@@ -555,6 +567,12 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -586,3 +604,15 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
+
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
