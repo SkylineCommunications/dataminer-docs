@@ -61,6 +61,12 @@ When you viewed a shared dashboard that you were not allowed to edit, in some ca
 
 Also, when you refreshed a shared dashboard while it was in edit mode, edit mode would incorrectly be closed.
 
+#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
+
 #### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->

@@ -599,12 +599,6 @@ From now on, users who only have permission to view dashboards will not see any 
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
 
-#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
-
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
