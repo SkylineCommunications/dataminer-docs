@@ -103,5 +103,5 @@ Errors that cause this *Warning* box to appear include:
 - ...
 
 > [!NOTE]
-> - Parameters of which the RTDisplay attribute is set to False will be ignored. This way, we avoid problems with “disappearing parameters” in protocols in which multiple parameters have been assigned identical names.
+> - Parameters of which the RTDisplay attribute is set to False will be ignored. This way, we avoid problems with "disappearing parameters" in protocols in which multiple parameters have been assigned identical names.
 > - When you place two parameters at the same location, a red box will be drawn around those parameters, and a warning icon will appear next to the page. You can then drag one of the parameters to another location to resolve the problem.

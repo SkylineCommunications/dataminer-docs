@@ -74,7 +74,7 @@ Package.zip
 
 The Manifest.xml file, which must be placed in the zip file’s root folder, describes the content of the package and lists the dependencies between the package in question and other packages.
 
-When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the Protocol.xml file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
+When DIS generates a Class Library QAction (with ID 63000) or a Class Library EXE block, it will copy the contents of the Manifest.xml file to the QActions section of the *protocol.xml* file or the top of the EXE block respectively. That way, when the Protocol file or Automation script file is opened later on, DIS will be able to determine from which Class Library packages code was copied.
 
 A Manifest.xml file could, for example, contain the following information:
 
@@ -102,7 +102,7 @@ For more information about the tags used in a Manifest.xml file, see below:
 
 > [!NOTE]
 > If you want IntelliSense support when creating a Manifest.xml file, make sure to add the correct XML namespace to the \<CodePackage> tag:
-> *\<CodePackage xmlns=”http://www.skyline.be/ClassLibrary”>*
+> *\<CodePackage xmlns="http://www.skyline.be/ClassLibrary">*
 
 ## Version numbering
 
@@ -112,7 +112,7 @@ Base packages, i.e. default packages shipped with DIS, have a version number mad
 
 | Component | Description |
 |-----------|-------------|
-| Major release | Start with “1” for the first release, and increment each time you make a new major release. |
+| Major release | Start with "1" for the first release, and increment each time you make a new major release. |
 | Minimum DataMiner version | This number indicates the minimum DataMiner version required for the package to work (e.g. 1=DM 8.5, 2=DM 9.6, etc.). |
 | Major change | Increment this number when the package contains changes that break functionality present in the previous version (e.g. API changes). |
 | Iteration | Increment this number when the package contains changes that do not break functionality present in the previous version (e.g. API additions). |
@@ -123,9 +123,9 @@ If you create a custom community package, you are free to use your own versionin
 
 ## DLL references
 
-When an external DLL file is needed to be able to execute a piece of code, a “DllImport” line has to be added above that piece of code.
+When an external DLL file is needed to be able to execute a piece of code, a "DllImport" line has to be added above that piece of code.
 
-Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a “DllImport” line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
+Whenever DIS detects at least one such line above a piece of code that is being used in a QAction, it will automatically add a DLL import statement when it generates the Class Library QAction. This means, that you do not have to add a "DllImport" line above every possible piece of code. Instead, you can just add one above a piece of code of which you know it will be included in the code that DIS will generate.
 
 In the following example, a "DllImport" line was added above a piece of code:
 
@@ -140,7 +140,7 @@ When DIS loads a package, it will combine C# code from different sources into a 
 
 The following C#/.NET features are currently not supported:
 
-- With regard to LINQ queries, “query syntax” is not supported. Only “method syntax” is supported.
+- With regard to LINQ queries, "query syntax" is not supported. Only "method syntax" is supported.
 
     > [!NOTE]
     > For more information about the difference between these two types of syntax, see<br>https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq
