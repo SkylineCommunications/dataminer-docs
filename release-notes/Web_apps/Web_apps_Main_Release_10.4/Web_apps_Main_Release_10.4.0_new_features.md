@@ -168,6 +168,58 @@ The following types of buttons can be configured:
 
 For more information, see [Button panel](xref:DashboardButtonPanel).
 
+#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_36822]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The query filter component has now officially been released. When linked to a table component, this query filter component will allow you to filter the data in the table on the fly.
+
+There are two ways in which you can link a query filter to a table:
+
+- **Feeding queries as data**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
+
+  Result: Each time you change the query filter, a new query will be fed to the table. The latter will only show the rows that match the filter set in the query filter component.
+
+- **Feeding query columns as filter**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
+
+  Result: Each time you change the query filter, the data inside the table will be filtered according to the filter settings in the query filter. No new query will be fed to the table. The latter will keep on showing all rows, but those that do not match the filter will turn gray.
+
+Settings:
+
+- **Filter assistance**: If you activate this setting, the choices the query filter offers will already be filtered according to the data that is available.
+ 
+  For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
+
+- **Allow color mode**: If you activate this setting, in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+
+
+
+
+
+
+
 ## Other new features
 
 #### Dashboards app - GQI: New data sources [ID_34747] [ID_35027] [ID_34965] [ID_35058]
