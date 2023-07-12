@@ -1829,6 +1829,15 @@
               topicUid: Specifying_data_input_in_URL
             - name: Executing actions via the app URL
               topicUid: Executing_actions_via_URL
+            - name: Tutorial
+              topicUid: Tutorial_Apps
+              items:
+                - name: Creating and publishing
+                  topicUid: Tutorial_Apps_Creating_And_Publishing
+                - name: Edit an existing app
+                  topicUid: Tutorial_Apps_Edit_Existing_App
+                - name: Manging pages
+                  topicUid: Tutorial_Apps_Managing_Pages
         - name: Available visualizations
           topicUid: Available_visualizations
           items:
