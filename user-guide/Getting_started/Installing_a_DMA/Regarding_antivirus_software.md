@@ -21,10 +21,9 @@ It is possible to install antivirus software on a DMA. However, you need to keep
 - Avoid scheduled virus scans affecting the available resources for the DataMiner software at certain moments in time.
 
 > [!NOTE]
-> These restrictions do not apply for Windows Defender.
-
-> [!NOTE]
-> Deploying antivirus software on Cassandra/ElasticSearch/OpenSearch nodes may have an effect on the perfomance. If this would be the case, we recommend excluding the data and logs directories from the antivirus scans
+>
+> - These restrictions do not apply for Windows Defender.
+> - Deploying antivirus software on Cassandra, Elasticsearch, or OpenSearch nodes may affect performance. If this is the case, we recommend excluding the data and logs directories from the antivirus scans.
 
 > [!CAUTION]
 > Failing to make these adjustments when using antivirus software may cause undesired operational problems with your DataMiner system, which are not covered under warranty or support. See [Exclusions](xref:Support_services_terms#exclusions) and [Supported products](xref:Support_services_terms#supported-products) in the *Support services terms*.
