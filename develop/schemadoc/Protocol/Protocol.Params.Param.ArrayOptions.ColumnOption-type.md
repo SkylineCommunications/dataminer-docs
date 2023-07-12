@@ -92,9 +92,7 @@ This type is used in the following situations:
 Represents an SNMP column
 
 > [!IMPORTANT]
->
-> From DataMiner 10.3.8, 10.3.0 [CU5], and 10.2.0 [CU17] onwards (RN 36559), in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp" (provided the primary key column is a column of type "snmp" and not a column of type "retrieved").
-> In earlier versions of DataMiner, all columns of type "snmp" had to be placed before any group of type "retrieved".
+> From DataMiner 10.3.8, 10.3.0 [CU5], and 10.2.0 [CU17] onwards (RN 36559), in an SNMP table, columns of type "retrieved" can be placed in between columns of type "snmp" (provided the primary key column is a column of type "snmp" and not a column of type "retrieved"). In earlier versions of DataMiner, all columns of type "snmp" have to be placed before any group of type "retrieved".
 
 ### state
 
