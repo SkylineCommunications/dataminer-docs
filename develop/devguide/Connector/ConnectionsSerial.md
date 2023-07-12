@@ -11,7 +11,6 @@ In this section:
 - <xref:ConnectionsSerialPairs>
 - <xref:ConnectionsSerialBreakSignal>
 - <xref:ConnectionsSerialDisplayingBytesAsNumbers>
-- <xref:ConnectionsSerialPingPair>
 - <xref:ConnectionsSerialSeriallyPollingDevices>
 - <xref:ConnectionsSerialSerialSingle>
 - <xref:ConnectionsSerialDynamicPolling>
@@ -21,6 +20,8 @@ In this section:
 - <xref:ConnectionsSerialExercise>
 
 ## See also
+
+- [Slow poll mode ping group](xref:ConnectionsPingGroup)
 
 DataMiner Protocol Markup Language:
 

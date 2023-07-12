@@ -303,8 +303,6 @@
           topicUid: ConnectionsSnmpAlteringATableCell
         - name: Traps
           topicUid: ConnectionsSnmpTraps
-        - name: Ping groups
-          topicUid: ConnectionsSnmpPingGroups
         - name: Bitrate calculations
           topicUid: ConnectionsSnmpBitRateCalculations
         - name: Protocol inner workings
@@ -324,8 +322,6 @@
           topicUid: ConnectionsSerialBreakSignal
         - name: Displaying bytes as numbers
           topicUid: ConnectionsSerialDisplayingBytesAsNumbers
-        - name: Ping pair
-          topicUid: ConnectionsSerialPingPair
         - name: Serially polling different devices from a single element
           topicUid: ConnectionsSerialSeriallyPollingDevices
         - name: Serial single
@@ -372,8 +368,6 @@
           topicUid: ConnectionsHttpParsingHtml
         - name: Parsing JSON
           topicUid: ConnectionsHttpParsingJson
-        - name: Ping group
-          topicUid: ConnectionsHttpPingGroup
         - name: Examples
           topicUid: ConnectionsHttpExamples
       - name: WebSockets
@@ -400,7 +394,7 @@
             topicUid: ConnectionsWebSocketsUseCase3
           - name: WebSocket connection with custom handshake and dynamic IP
             topicUid: ConnectionsWebSocketsUseCase4
-      - name: Ping group
+      - name: Slow poll mode ping group
         topicUid: ConnectionsPingGroup
       - name: Service
         topicUid: ConnectionsService
