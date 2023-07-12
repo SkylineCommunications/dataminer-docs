@@ -214,6 +214,8 @@ Settings:
 
 - **Allow color mode**: If you activate this setting, in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
 
+> [!NOTE]
+> At the top of a Query filter component, you also have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
 
 
 
