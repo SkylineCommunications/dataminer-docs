@@ -4,6 +4,9 @@ uid: Configuring_multiple_Elasticsearch_clusters
 
 # Configuring multiple Elasticsearch clusters
 
+> [!NOTE]
+> This procedure can be followed both on Linux and Windows setups. However, we highly recommend configuring this setup on Linux.
+
 From DataMiner 10.2.0/10.1.3 onwards, you can have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. Data is always read from the main cluster, but data updates are sent to all clusters.
 
 Configuring multiple Elasticsearch clusters becomes crucial when on-premises setups are considered, as Elastic strongly advises against setting up clusters across high-latency nodes. Rather than spreading Elasticsearch nodes across locations with high latency, it is preferable to offload data to multiple Elasticsearch clusters. This approach allows for geo-redundancy, ensuring that data remains accessible even if one cluster becomes temporarily unavailable. With this configuration, if inconsistencies arise between the Elasticsearch clusters, synchronization issues can be avoided.
