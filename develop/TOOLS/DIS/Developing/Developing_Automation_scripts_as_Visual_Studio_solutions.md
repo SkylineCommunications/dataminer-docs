@@ -30,7 +30,9 @@ uid: Developing_Automation_scripts_as_Visual_Studio_solutions
 
 ## Creating an Automation script solution
 
-To create a new Automation script solution containing an initial Automation script, do the following:
+To create a new Automation script solution containing an initial Automation script, follow the instructions below.
+
+In Visual Studio 2022, perform the following steps:
 
 1. Select *File \> New \> Project*.
 1. In the *Create a new project* pop-up window, select *DataMiner Automation Script Solution*.
