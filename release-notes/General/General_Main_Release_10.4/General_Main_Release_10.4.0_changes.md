@@ -319,6 +319,15 @@ From now on, the root time of an alarm group (i.e. the time of arrival of the fi
 
 Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade. As all DataMiner components using .NET 5 have been upgraded to use .NET 6 instead, .NET 5 will no longer be installed by default.
+
+> [!NOTE]
+> If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
