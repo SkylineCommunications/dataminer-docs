@@ -68,6 +68,19 @@ Like for the communication with DataMiner Cube, for the inter-DMA communication,
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
 
+## Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but for new setups or if you're looking to secure your existing setup we recommend to disable them. Currently we recommend disabling the _Annotations_ component and the _Reporter_ component. You can do so by adding the following XML in the C:\Skyline DataMiner\SoftLaunchOptions.xml file:
+
+```xml
+<SLNet>
+   <LegacyAnnotations>false</LegacyAnnotations>
+   <LegacyReportsAndDashboards>true</LegacyReportsAndDashboards>
+</SLNet>
+```
+
+To make the changes take effect, you have to run the ConfigureIIS.bat script located in the C:\Skyline DataMiner\Tools folder.
+
 ## Configure the firewall
 
 On DataMiner versions installed using the **10.0 installer** (or older), the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
