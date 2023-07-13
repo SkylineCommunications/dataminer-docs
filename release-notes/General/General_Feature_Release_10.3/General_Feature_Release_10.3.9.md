@@ -194,3 +194,9 @@ For example, when an alarm group was created with an old time of arrival, the *r
 <!-- Not added to MR 10.4.0 -->
 
 After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.

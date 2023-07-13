@@ -439,3 +439,9 @@ When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in 
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.
