@@ -20,6 +20,8 @@ During a DataMiner upgrade, from now on, all default ListView column configurati
 
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
 #### Smart baselines: Information event generation at 5-minute intervals has been disabled [ID_36691]

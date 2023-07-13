@@ -20,6 +20,8 @@ uid: General_Feature_Release_10.3.9
 
 #### SLProtocol is now a 64-bit process by default [ID_36725]
 
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
 SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
@@ -75,6 +77,8 @@ For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
@@ -94,6 +98,14 @@ When you install or upgrade a DataMiner Agent, a number of DataMiner Extension M
 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+
+Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
 
 #### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
 
