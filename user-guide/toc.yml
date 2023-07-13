@@ -3751,6 +3751,8 @@
                 topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
                 topicUid: SLNetClientTest_modifying_engine_id
+              - name: Reinitializing ResourceManager
+                topicUid: SLNetClientTest_reinitialize_resourcemanager
               - name: Removing a DOM manager
                 topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
@@ -3761,8 +3763,6 @@
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
               - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
-              - name: Reinitializing ResourceManager
-                topicUid: SLNetClientTest_reinitialize_resourcemanager
         - name: SLOffload tool
           topicUid: SLOffload_tool
         - name: SLSkipAsSourceTool
