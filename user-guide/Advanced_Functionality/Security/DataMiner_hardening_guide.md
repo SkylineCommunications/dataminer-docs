@@ -70,7 +70,7 @@ To enable gRPC for the communication between DataMiner Agents in a cluster, add 
 
 ## Disable legacy components
 
-DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but for new setups or if you're looking to secure your existing setup we recommend to disable them. Currently we recommend disabling the _Annotations_ component and the _Reporter_ component. You can do so by adding the following XML in the C:\Skyline DataMiner\SoftLaunchOptions.xml file:
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
 
 ```xml
 <SLNet>
@@ -79,7 +79,7 @@ DataMiner has some components that are considered legacy. They are still around 
 </SLNet>
 ```
 
-To make the changes take effect, you have to run the ConfigureIIS.bat script located in the C:\Skyline DataMiner\Tools folder.
+To make the changes take effect, you then need to run the *ConfigureIIS.bat* script located in the `C:\Skyline DataMiner\Tools` folder.
 
 ## Configure the firewall
 
