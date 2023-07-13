@@ -187,3 +187,10 @@ In some cases, an `index out of bounds` error could occur when processing a beha
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### SLAnalytics - Automatic incident tracking: 'relationThreshold' set to an incorrect value after a DataMiner upgrade [ID_36826]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- Not added to MR 10.4.0 -->
+
+After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
