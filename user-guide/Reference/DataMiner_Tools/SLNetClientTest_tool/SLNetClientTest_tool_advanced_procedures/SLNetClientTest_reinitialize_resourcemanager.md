@@ -4,6 +4,9 @@ uid: SLNetClientTest_reinitialize_resourcemanager
 
 # Reinitializing ResourceManager
 
+> [!CAUTION]
+> When reinitializing, ResourceManager will be deinitialized before being initialized. Pending calls might fail because of this. And new calls during the period ResourceManager is deinitialized will fail with the *ModuleNotInitialized* error.
+
 From DataMiner 10.3.9/10.4.0 onwards, you can (re)initialize ResourceManager using the SLNet Client Test Tool.<!-- RN36811 -->
 This can be useful if ResourceManager failed to initialize on DataMiner startup, and you want to retry initializing without restarting DataMiner.
 
