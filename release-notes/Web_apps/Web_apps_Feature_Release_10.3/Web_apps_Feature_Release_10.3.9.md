@@ -156,6 +156,12 @@ Each time the time range of a pattern gets updated, a new pattern record is crea
 
 When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
 
+#### Referenced DomInstances would not get updated when a DomInstance was created or updated [ID_36734]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a DomInstance was created or updated, the DomInstances that were referenced by that DomInstance would incorrectly not get updated unless the browser window was refreshed.
+
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
