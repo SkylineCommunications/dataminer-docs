@@ -37,4 +37,4 @@ uid: Part7Reference
 - [Glossary](xref:glossary_a_to_l)
 
 > [!NOTE]
-> For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Reference).
+> For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Overview_of_DataMiner_shape_data_fields).

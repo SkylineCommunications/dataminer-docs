@@ -235,7 +235,7 @@
             - name: Element properties
               topicUid: Element_properties
         - name: Working with elements in DataMiner
-          topicUid: Working_with_elements_in_DataMiner
+          topicUid: Element_cards
           items:
             - name: Element cards
               topicUid: Element_cards
@@ -416,7 +416,7 @@
       topicUid: visio
       items:
         - name: Getting started
-          topicUid: Getting_started
+          topicUid: Working_with_shape_data_in_Microsoft_Visio
           items:
             - name: Working with shape data in Microsoft Visio
               topicUid: Working_with_shape_data_in_Microsoft_Visio
@@ -701,7 +701,7 @@
             - name: Configuring a page to execute a script automatically
               topicUid: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
-          topicUid: Reference
+          topicUid: Overview_of_DataMiner_shape_data_fields
           items:
             - name: Overview of DataMiner shape data fields
               topicUid: Overview_of_DataMiner_shape_data_fields
@@ -862,7 +862,7 @@
             - name: Exporting alarm template parameter data
               topicUid: Exporting_alarm_template_parameter_data
         - name: Trend templates
-          topicUid: Trend_templates
+          topicUid: About_trend_templates
           items:
             - name: About trend templates
               topicUid: About_trend_templates

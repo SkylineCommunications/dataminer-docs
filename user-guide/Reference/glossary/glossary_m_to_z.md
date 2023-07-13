@@ -278,7 +278,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Trend group | A group of parameters for which trending is displayed.<br>See [Working with trend groups](xref:Working_with_trend_groups). |
 | Trend pattern | A tagged pattern in the trend data of a parameter.<br>See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
 | Trend prediction | Prediction of the expected trend of a parameter value in the future.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:Trend_templates). |
+| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:About_trend_templates). |
 | Trending | DataMiner functionality that allows you to visualize the trend of parameter values.<br>See [Trending](xref:trending). |
 | TS | Transport Stream. Digital container format for transmission and storage of audio, video and data of a broadcast. |
 | TSoIP | Transport Stream over IP. Transfer of transport streams over IP-based networks. |
