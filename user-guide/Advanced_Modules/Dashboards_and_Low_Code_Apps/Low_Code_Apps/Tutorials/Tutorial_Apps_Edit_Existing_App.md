@@ -1,9 +1,9 @@
 ---
 uid: Tutorial_Apps_Edit_Existing_App
 ---
-# Edit an existing app
+# Editing an existing app
 
-This tutorial lesson demonstrates how you edit an existing app.
+This tutorial shows how to edit an existing app.
 
 ## Overview
 
@@ -14,34 +14,46 @@ This tutorial lesson demonstrates how you edit an existing app.
 
 The DataMiner Low-Code Apps are available on the DataMiner landing page. To access this page, browse to the IP or hostname of a DMA or to *https://[Your DMA]/root*, depending on your configuration.
 
-1. To start editing, simply click on your user image or initials and select the option 'Edit'.
+1. Click the app on the landing page to open it.
+
+1. To start editing the app, click your user image or initials and select *Edit*.
 
    ![Edit option](~/tutorials/images/EditApp.png)
 
-1. The application editor is reopened, which was used before when making the application initially. A new draft is made where you can make the necessary changes to your app. When you're ready, you can publish the application again to make the latest version available to everyone.
+   This will open the application editor again, which was used before when creating the application. A new draft version of your app is made, to which you can make the necessary changes.
+
+1. When you have made all the changes you want, [publish the application](xref:Tutorial_Apps_Creating_And_Publishing#step-2-publish-the-app) again to make the latest version available to everyone with the rights to access DataMiner Low-Code Apps.
 
 ## Step 2: Edit a previous version of your app
 
-Occasionally, there may be a need to edit a previous version of the application. This could be to review the previous configuration of the app or to roll back to the previously published version.
+Occasionally, there may be a need to edit a previous version of an application. This could for example be to review the previous configuration of the app or to roll back to the previously published version.
 
-1. To start from a certain version, you can click on your user image or initials and select 'Versions'.
+1. Click the app on the landing page to open it.
+
+1. Click your user image or initials and select *Versions*.
 
    ![Versions option](~/tutorials/images/VersionsUser.png)
 
-1. This brings up a list of previous versions. Each previous version can be edited by clicking on the pencil.
+   This brings up a list of previous versions.
+
+1. Open the version you want to edit by hovering over it in the list and then clicking the pencil icon.
 
    ![Version history](~/tutorials/images/EditHistory.png)
 
-1. Just like editing the most recent published version, selecting this option will open up the application editor. However, this time, the chosen version serves as the foundation for the new draft.
+   This will open up the application editor. A new draft version of your app is made based on the version you selected, to which you can make changes in the same way as when you edit the latest version.
 
 ## Next tutorial
 
-Now that we can edit, let's add some additional pages to our app!
+Now that you know how to edit an app, you can start adding more pages to the app.
 
 - [Adding pages and panels](xref:Tutorial_Apps_Managing_Pages)
 
 ## Learning paths
 
-This tutorial is part of the following learning paths:
+This tutorial is part of the following learning path:
 
 - [Low-Code Apps](xref:Tutorial_Apps)
+
+## Related documentation
+
+- [Editing a low-code application](xref:Editing_custom_apps)

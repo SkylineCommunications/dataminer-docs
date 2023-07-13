@@ -1832,11 +1832,11 @@
             - name: Tutorials
               topicUid: Tutorial_Apps
               items:
-                - name: Creating and publishing
+                - name: Creating and publishing an app
                   topicUid: Tutorial_Apps_Creating_And_Publishing
                 - name: Editing an existing app
                   topicUid: Tutorial_Apps_Edit_Existing_App
-                - name: Managing pages
+                - name: Managing the pages in an app
                   topicUid: Tutorial_Apps_Managing_Pages
         - name: Available visualizations
           topicUid: Available_visualizations
