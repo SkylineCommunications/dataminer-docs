@@ -18,25 +18,25 @@ This tutorial will show you how to add, change, and remove pages in your app.
 
 1. To add pages to your app, go to the left sidebar. Look for the bottom item that says "Create page" and click on it to create a new page.
 
-    <img src="~/images/tutorials/PageAdd.png" width="300">
+   ![Create page button](~/tutorials/images/PageAdd.png)
 
 ## Step 2: Configure how pages are shown
 
 1. To rename pages, you have two options. You can select the existing text of the page in the navigation rail and set a new name, or you can choose the page and modify its name at the top of the gray detail sidebar.
 
-    <img src="~/images/tutorials/PageRename.png" width="300">
+   ![Renaming a page](~/tutorials/images/PageRename.png)
 
-2. In the gray sidebar, you will find an "Icon" section as well. In this section, you can search for and select an icon to represent your page. The chosen icon will be displayed in the navigation rail at all times, even when it is collapsed.
+1. In the gray sidebar, you will find an "Icon" section as well. In this section, you can search for and select an icon to represent your page. The chosen icon will be displayed in the navigation rail at all times, even when it is collapsed.
 
-    <img src="~/images/tutorials/PageIcon.png" width="300">
+   ![Selecting an icon](~/tutorials/images/PageIcon.png)
 
-3. To remove pages from the navigation rail, click on the three dots, which will open a context menu. From there, select "Hide from sidebar" to ensure that the page is not included in the sidebar.
+1. To remove pages from the navigation rail, click on the three dots, which will open a context menu. From there, select "Hide from sidebar" to ensure that the page is not included in the sidebar.
 
-    <img src="~/images/tutorials/PageHideFromSidebar.png" width="300">
+   ![Hiding a page](~/tutorials/images/PageHideFromSidebar.png)
 
-4. You can rearrange the order of pages in your app, including the initial page, by simply reordering them. The initial page is the one located at the top of the navigation rail. To reorder your pages, hover over a page and use the arrows that appear to move it up or down.
+1. You can rearrange the order of pages in your app, including the initial page, by simply reordering them. The initial page is the one located at the top of the navigation rail. To reorder your pages, hover over a page and use the arrows that appear to move it up or down.
 
-    <img src="~/images/tutorials/PageReorder.png" width="200">
+   ![Reordering pages](~/tutorials/images/PageReorder.png)
 
 ## Step 3: Duplicating and deleting a page
 
@@ -47,11 +47,11 @@ You can quickly create a duplicate of an existing page, resulting in a new page 
 
 1. To duplicate a page, open the context menu by clicking on the three dots. From there, select "Duplicate" to create a copy of the page. You can then customize the duplicated page to suit your requirements.
 
-    <img src="~/images/tutorials/PageDuplicate.png" width="300">
+   ![Duplicate option](~/tutorials/images/PageDuplicate.png)
 
-2. Likewise, you can also remove pages from your app by deleting them.
+1. Likewise, you can also remove pages from your app by deleting them.
 
-    <img src="~/images/tutorials/PageDelete.png" width="300">
+   ![Delete option](~/tutorials/images/PageDelete.png)
 
 ## Learning paths
 
