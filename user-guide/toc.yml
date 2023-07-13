@@ -24,7 +24,7 @@
       topicUid: DataminerApplications
       items:
         - name: Accessing DataMiner Cube
-          topicUid: Accessing_DataMiner_Cube
+          topicUid: Installing_configuring_the_DataMiner_Cube_software
           items:
             - name: Installing & configuring the DataMiner Cube software
               topicUid: Installing_configuring_the_DataMiner_Cube_software
@@ -46,7 +46,7 @@
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
-              topicUid: Opening_DataMiner_Cube
+              topicUid: Opening_the_desktop_app
               items:
               - name: Opening the desktop application
                 topicUid: Opening_the_desktop_app
