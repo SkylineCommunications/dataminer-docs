@@ -12,14 +12,14 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 > [!NOTE]
 > We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
-1. Install the Apache Cassandra software on a Linux machine.
+1. Download a supported Cassandra version and install it on a Linux machine.
 
-   For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
+   - For information on which Cassandra versions are supported, see [Cassandra requirements](xref:DataMiner_Compute_Requirements#cassandra-requirements).
+
+   - For more information on how to install the software, scroll down on the [Download Now](https://cassandra.apache.org/_/download.html) page of the Apache Cassandra website, and follow the steps of the installation process detailed under *Installation from Debian packages*.
 
    > [!IMPORTANT]
-   >
-   > - Make sure you download a supported Cassandra version as indicated in the [Cassandra requirements](xref:Installing_Cassandra).
-   > - Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
+   > Make sure that the time of all servers in the cluster is in sync. We recommend that you configure an NTP server.
 
 1. Ensure the firewall ports are open for Cassandra. See [Firewall ports used with Cassandra](xref:Cassandra_firewall).
 
@@ -121,7 +121,9 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
      - **cluster_name**: This needs to be the same for all nodes in your Cassandra cluster.
 
-     - **hinted_handoff_throttle_in_kb**: Set this to *10240*.
+     - **hinted_handoff_throttle_in_kb**: Only used prior to Cassandra 4.1. Set this to *10240*.
+
+     - **hinted_handoff_throttle**: From Cassandra 4.1 onwards, this option replaces *hinted_handoff_throttle_in_kb*. Set this to *10000*.
 
      - **max_hints_delivery_threads**: Set this to *12*.
 

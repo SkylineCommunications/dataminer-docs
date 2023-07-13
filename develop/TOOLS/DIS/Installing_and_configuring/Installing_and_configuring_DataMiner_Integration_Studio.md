@@ -15,11 +15,12 @@ To install DataMiner Integration Studio, you have to install the *DataMinerInteg
     | Visual Studio 2019 or newer | <https://community.dataminer.services/exphub-dis/> |
     | Visual Studio 2010 to 2019  | <https://community.dataminer.services/dataminer-integration-studio-other-downloads/> |
 
+1. If Microsoft Visual Studio is running, close it before continuing the installation process.
 1. Double-click *DataMinerIntegrationStudio.vsix*.
 1. If multiple versions of Microsoft Visual Studio have been installed on your computer, select the version on top of which you want to install the *DataMinerIntegrationStudio.vsix* extension.
 1. Click *Install*.
 1. When the installation is complete, click *Close*.
-1. Start Microsoft Visual Studio. If it was running during the installation of the *DataMinerIntegrationStudio.vsix* file, restart it.
+1. Start Microsoft Visual Studio.
 1. In the DIS menu, go to *Settings > Account*, and sign in with your dataminer.services account.
 
 > [!NOTE]

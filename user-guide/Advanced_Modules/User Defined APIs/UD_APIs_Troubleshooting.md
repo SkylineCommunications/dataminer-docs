@@ -71,6 +71,12 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 ## Issues when triggering user-defined APIs
 
+- **Access to XXX at 'XXX' from origin 'XXX' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.**
+
+  For safety reasons, user-defined APIs do not set CORS headers<!-- RN 36727 -->. It is not safe to use a user-defined API from a web client. See [Triggering an API](xref:UD_APIs_Triggering_an_API#cors).
+
+### General checks
+
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.
 
 1. Make sure the **IIS rewrite rule** is set correctly.

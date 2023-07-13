@@ -122,7 +122,7 @@ To configure the component:
 
 Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
 
-1. Create a query data feed. See [Configuring query data feeds](xref:Configuring_GQI_feeds).
+1. Create a query data feed. See [Creating a GQI query](xref:Creating_GQI_query).
 
 1. In the *Component* > *Settings* tab, configure the following fields in the *Dimensions* section:
 

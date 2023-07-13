@@ -11,7 +11,7 @@ Consider for example the development of a protocol. Previously, System Developer
 ![](~/develop/images/ProtocolOnSVN.jpg)<br>
 *Previous workflow: Protocol published on SVN by developer*
 
-With the introduction of the CI/CD pipeline, Visual Studio solutions are now used instead of XML files (see e.g. [Protocols as a Visual Studio solution](xref:Protocols_as_a_Visual_Studio_solution)).
+With the introduction of the CI/CD pipeline, Visual Studio solutions are now used instead of XML files (see e.g. [Developing using DIS](xref:DisVisualStudioSolutions)).
 
 Every Visual Studio solution is stored in its own Git repository. The repository has different release branches defined for the different ranges (e.g. 1.0.0.X) and each protocol version is a tag in the Git repository (e.g. 1.0.0.1, 1.0.0.2, etc.). Note that this is different from the previous approach on SVN, where every version of a protocol was provided as a separate file.
 

@@ -2,7 +2,7 @@
 uid: Service_Orchestration_resources_advanced
 ---
 
-# Service Orchestration resources configuration
+# Service Orchestration: resources configuration
 
 ## Resource filtering configuration
 
@@ -11,8 +11,6 @@ In the Booking Wizard, the candidate resources for a node in the service definit
 ### Setting up basic resource filtering
 
 1. In the Profiles module, make sure the necessary capability and capacity parameters are defined and added to the profile definition you want to use for a specific node. See [The Profiles module](xref:The_Profiles_module).
-
-<!-- TBD: May need more details - to be added later when the profile instances information is added -->
 
    > [!NOTE]
    > If capabilities or capacities are defined on an interface profile definition, having the same capability or capacity parameters on multiple interfaces of the same function is not supported.

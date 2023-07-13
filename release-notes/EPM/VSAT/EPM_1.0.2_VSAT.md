@@ -72,10 +72,6 @@ WM ticketing connectors now point to the EPM PLM Solution.
 
 In the Skyline Universal Weather connector, pagination has been added for the tables with ID 100, 300, 1000, and 1100.
 
-#### iDirect Evolution Platform Collector: MODCOD reference for hub return carriers updated [ID_36471]
-
-The MODCOD reference for hub return carriers has been updated.
-
 #### Newtec Dialog Platform VSAT: TSDB Rx technology integration + UI adjustments [ID_36473]
 
 TSDB Rx technology data has been integrated into the EPM Solution with formula updates for the Circuit Overview Table of the Newtec Dialog Platform VSAT connector. In addition, the connector user interface has been adjusted in several places: tables have been moved and the order of the pages has changed.

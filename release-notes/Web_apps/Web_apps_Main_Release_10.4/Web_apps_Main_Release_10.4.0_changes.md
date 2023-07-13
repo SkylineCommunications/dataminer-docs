@@ -285,24 +285,11 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
-#### GQI: Enhanced behavior of aggregations applied on empty Elasticsearch tables [ID_36490]
+#### Dashboards app: Enhanced PDF generation [ID_36461]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.4.0 - FR 10.3.9 -->
 
-Up to now, when an aggregation (min, max, average) was applied on an empty Elasticsearch table, the following exception would be thrown:
-
-`Error trapped: Elastic returned unexpected value ''.`
-
-From now on, when an aggregation (min, max, average) is applied on an empty Elasticsearch table, an empty cell will be returned instead.
-
-Because of this change, the behavior of aggregations applied on all types of empty tables becomes more consistent:
-
-| ​Type | ​RawValue | ​DisplayValue |
-|------|----------|--------------|
-| ​Avg/Min/Max/Median | ​null | ​"Not applicable" |
-| ​(Distinct) Count   | 0    | 0                |
-| ​Std dev/Percentile | ​null | ​​"Not applicable" |
-| ​Sum                | 0    | 0                |
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
@@ -311,6 +298,94 @@ Because of this change, the behavior of aggregations applied on all types of emp
 When configuring an analog or digital *Clock* component, you can now make the clock display the date and time in a specific time zone.
 
 To do so, select the *Custom time zone* option, and select a time zone from the *Time zone* selection box.
+
+#### DataMiner Comparison tool: Enhancements [ID_36570]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
+#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+
+#### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the list of dashboards displayed in the navigation pane on the left would be updated every 5 seconds via a polling mechanism. From now on, whenever that list is changed, all connected clients will receive an event that will update the list.
+
+#### Monitoring app: A new type of datetime boxes will now be used on parameter pages [ID_36606]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+In the *Monitoring* app, a new type of datetime boxes will now be used on parameter pages.
+
+**BREAKING CHANGE**: When the value of a date or datetime parameter is set using one of the following API methods, that value must now be passed as a Unix timestamp in milliseconds instead of an OLE Automation date.
+
+- SetParameter
+- SetParameterRow
+
+**BREAKING CHANGE**: When values of date or datetime parameters are retrieved using one of the following API methods, those values will now be Unix timestamps in milliseconds instead of OLE Automation dates.
+
+- GetEditParameter
+- GetEditParameterTable
+- GetMonitoredParametersForElement
+- GetMonitoredParametersForService
+- GetParameter
+- GetParameterByName
+- GetParameterForService
+- GetParameterForServiceWithDynamicUnits
+- GetParameters
+- GetParametersByPageForElement
+- GetParametersByPageForElementCached
+- GetParametersByPageForElementSorted
+- GetParametersByPageForServiceElement
+- GetParametersForElement
+- GetParametersForElementFiltered
+- GetParametersForElementSorted
+- GetParametersForService
+- GetParametersForServiceSorted
+- GetParametersSorted
+- GetParameterWithDynamicUnits
+- ObserveParameter
+
+#### BREAKING CHANGE: GQI - 'Get alarms' data source: Format of alarm IDs has changed [ID_36621]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed:
+
+- Old format: *DmaId/RootId/AlarmId*
+- New format: *HostingDmaId/AlarmId*
+
+#### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+Up to now, queries that were built upon another query that was linked to feeds would not get updated when one of those feeds changed its value. Neither would queries built upon a base query be updated when the base query was changed.
+
+From now on, when a base query is changed in any way, all queries that use that base query will automatically be updated as well.
+
+#### Monitoring app: A new type of text area boxes will now be used on parameter pages [ID_36693]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
+
+#### Security enhancements [ID_36695]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of security enhancements have been made.
+
+#### Monitoring app: A new type of duration boxes will now be used on parameter pages [ID_36713]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
 
 ### Fixes
 
@@ -491,3 +566,47 @@ Cannot read properties of null ('reading delete')
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
+
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
+
+#### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When a query linked to a table component returned null values, errors would be thrown when the table component tried to display those null values.
+
+#### Dashboards app: An empty menu would open when users with only 'View dashboards' permission clicked the '...' button [ID_36671]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When users who only had permission to view dashboards clicked the *...* button in the top-right corner of the navigation pane, an empty menu would open.
+
+From now on, users who only have permission to view dashboards will not see any *...* button in the top-right corner of the navigation pane.
+
+#### Dashboards app: Problem when making changes to a dashboard when having that same dashboard open in two separate windows [ID_36718]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
+
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.

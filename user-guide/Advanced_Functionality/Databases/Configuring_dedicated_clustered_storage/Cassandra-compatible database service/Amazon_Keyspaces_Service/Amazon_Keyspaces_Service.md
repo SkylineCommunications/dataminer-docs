@@ -13,6 +13,7 @@ In this section of the documentation, you can find instructions on [how to deplo
 
 > [!NOTE]
 >
+> - For information on how to use Amazon AWS with a DataMiner Failover setup, see [DataMiner Failover on Amazon Web Services](xref:Failover_AWS).
 > - Amazon Keyspaces does not support all Cassandra functionality, most notably indices on columns. As a result, some queries against logger tables (including SLAs) may be slower on Amazon Keyspaces compared to Cassandra.
 > - The only consistency level supported is `Local Quorum`. See [Supported Apache Cassandra consistency levels in Amazon Keyspaces](https://docs.aws.amazon.com/keyspaces/latest/devguide/consistency.html). No matter the configuration, the consistency level will always be overwritten to `Local Quorum`.
 > - The only replication strategy supported is the Amazon Keyspaces specific `Single-Region strategy`, which is not configurable.

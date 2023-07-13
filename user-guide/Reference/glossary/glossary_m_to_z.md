@@ -131,7 +131,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Redundancy group template | A template that contains the configuration for a redundancy group but does not have fixed elements assigned.<br>See [Creating a redundancy group template](xref:Creating_a_redundancy_group_template) and [Assigning elements to a redundancy group template](xref:Assigning_elements_to_a_redundancy_group_template). |
 | Redundancy mode | Mode that determines whether element switchover and switchback in a redundancy group happen automatically or manually, or a combination of both.<br>See [Changing the redundancy mode](xref:Changing_the_redundancy_mode). |
 | Regular expression | Sequence of characters resulting in a pattern that can be used to find and manage matching text. |
-| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
+| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
 | Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter). |
 | Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
@@ -176,7 +176,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SDV | Switched Digital Video. Also referred to as Switched Broadcast (SWB). Method for distributing digital video via cable, where digitally encrypted channels are switched out when they are not being watched and switched in when they are needed. |
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
-| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:services#services-and-service-templates). |
+| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
 | Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |

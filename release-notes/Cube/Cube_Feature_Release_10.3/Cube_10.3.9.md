@@ -1,0 +1,102 @@
+---
+uid: Cube_Feature_Release_10.3.9
+---
+
+# DataMiner Cube Feature Release 10.3.9 – Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.9](xref:General_Feature_Release_10.3.9).
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## Other new features
+
+#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you add a new alarm tab to the Alarm Console, that alarm tab will now always show the Elasticsearch search box when you are connected to a DataMiner System with a Cassandra Cluster database.
+
+> [!NOTE]
+> Currently, when you start typing in this search box, no suggestions are displayed yet.
+
+#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you turn a shape into a parameter control of type "Lite", you can use the *CustomColors* option to customize the colors of that parameter control.
+
+You can now define a new color called *bg.pressededitor*. This color will be used as background when the left mouse button is pressed within the editor part of the control.
+
+For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
+
+## Changes
+
+### Enhancements
+
+#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID_36590]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, when the DataMiner System does not include an indexing engine, no run-time errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
+
+Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
+
+#### Trending - Relation learning: Clearer log information [ID_36760]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+With the introduction of time-scoped parameter relations, two different light bulb icons can now appear in a trend graph: one in the top-right corner and another one whenever you select a section of the trend graph.
+
+When the requirements of a light bulb are not met, an entry is added to the Cube logging. From now on, these log entries will make a clearer distinction between the "relation light bulb feature" (i.e. the icon appearing in the top-right corner) and the "time-scoped relation feature" (i.e. the icon appearing when you select a trend graph section).
+
+#### Resources: Enhanced logging when function resources failed to initialize [ID_36763]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
+
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
+#### Services module: Enhanced linking to help pages on docs.dataminer.services [ID_36813]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
+
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
+
+### Fixes
+
+#### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In *Automation*, *Correlation* and *Scheduler*, you can select a report of a dashboard in an *Email*, *Upload to FTP* or *Upload to shared folder* action. When such an action was initialized, in some rare cases, the report or dashboard would not be automatically selected.
+
+#### DataMiner Cube - Trending: Panning across the graph would not work [ID_36769]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
+
+#### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID_36808]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, the *[this EnhancedServiceID]* placeholder would not resolve correctly when used inside another placeholder.
+
+For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the parameter of the service element with parameter ID 1 would not be displayed correctly in the shape text.

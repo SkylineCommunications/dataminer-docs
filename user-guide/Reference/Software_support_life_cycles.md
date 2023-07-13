@@ -7,13 +7,13 @@ uid: Software_support_life_cycles
 ## DataMiner support life cycle policy
 
 | Version | New features until | Regular updates until | Supported until | Limited support until | Not supported from |
-|---------|---------|---------|---------|---------|---------|
-| 10.3.x | 17 Nov 2023 | 15 Nov 2024 | 27 Feb 2026 | 26 Feb 2027 | 26 Feb 2027 |
-| 10.2.x | 18 Nov 2022 | 24 Nov 2023 | 28 Feb 2025 | 27 Feb 2026 | 27 Feb 2026 |
-| 10.1.x | -           | 18 Nov 2022 | 23 Feb 2024 | 28 Feb 2025 | 28 Feb 2025 |
-| 10.0.x | -           | 17 Dec 2021 | 24 Feb 2023 | 23 Feb 2024 | 23 Feb 2024 |
-| 9.6.x  | -           | -           | 25 Feb 2022 | 24 Feb 2023 | 24 Feb 2023 |
-| 9.5.x  | -           | -           | -           | -           | 25 Feb 2022 |
+|---------|--------------------|-----------------------|-----------------|-----------------------|--------------------|
+| 10.4.x  | 15 Nov 2024        | 21 Nov 2025           | 26 Feb 2027     | 25 Feb 2028           | 25 Feb 2028        |
+| 10.3.x  | 17 Nov 2023        | 15 Nov 2024           | 27 Feb 2026     | 26 Feb 2027           | 26 Feb 2027        |
+| 10.2.x  | 18 Nov 2022        | 24 Nov 2023           | 28 Feb 2025     | 27 Feb 2026           | 27 Feb 2026        |
+| 10.1.x  | -                  | 18 Nov 2022           | 23 Feb 2024     | 28 Feb 2025           | 28 Feb 2025        |
+| 10.0.x  | -                  | 17 Dec 2021           | 24 Feb 2023     | 23 Feb 2024           | 23 Feb 2024        |
+| 9.6.x   | -                  | -                     | 25 Feb 2022     | 24 Feb 2023           | 24 Feb 2023        |
 
 Legend:
 

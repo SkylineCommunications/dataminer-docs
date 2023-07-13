@@ -46,6 +46,62 @@ In a low-code app, this component will also make a number of component actions a
 - *Set form to edit mode*
 - *Set form to read mode*
 
+#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_33530] [ID_33547] [ID_34037] [ID_36822]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The *Query filter* component has now officially been released. When linked to a *Table* component or a *Node edge graph* component, this component will allow you to filter the table or the node edge graph on the fly.
+
+There are two ways in which you can link a query filter. See the following examples.
+
+- **Feeding queries as data**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
+
+  Result: Each time you change the query filter, a new query will be fed to the table. The latter will only show the rows that match the filter set in the query filter component.
+
+- **Feeding query columns as filter**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
+
+  Result: Each time you change the query filter, the data inside the table will be filtered according to the filter settings in the query filter. No new query will be fed to the table. The latter will keep on showing all rows, but those that do not match the filter will turn gray.
+
+Settings:
+
+- **Filter assistance**: If you activate this setting, the choices the query filter offers will already be filtered according to the data that is available.
+
+  For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
+
+- **Allow color mode**: If you activate this setting, in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+
+> [!NOTE]
+>
+> - At the top of a *Query filter* component, you have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
+> - In a *Query filter* component, next to each column that contains discrete values of type string or number, you will find a button that allows you to change how the possible values are displayed:
+>
+>   - Click *Toggle checklist* to have all possible values listed in the form of a checklist.
+>   - Click *Toggle free form* to display a text box in which users can type a value.
+>
+> - when you only filter a node edge graph by node, edges will be highlighted only when both source and destination are highlighted. When you only filter a node edge graph by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
+
 #### Dashboards app & Low-Code Apps: Icon component [ID_34867]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -153,6 +209,20 @@ To do so, the system will proceed as follows:
 
 > [!NOTE]
 > Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
+
+#### Dashboards app & Low-Code Apps: Button panel visualization now officially released [ID_36775]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The button panel visualization has now officially been released. This component will display a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed.
+
+The following types of buttons can be configured:
+
+- Simple buttons used only to set parameters.
+- HTML buttons.
+- Rotate buttons, resembling a control dial, used to decrement or increment the value of a particular parameter. The buttons can be used by dragging and dropping with the mouse, by using the arrow keys on the keyboard, or by sliding on a mobile device.
+
+For more information, see [Button panel](xref:DashboardButtonPanel).
 
 ## Other new features
 
@@ -547,3 +617,19 @@ You can now clear a *State* component by clicking it while holding down the CTRL
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 When editing a low-code app, it is now possible to duplicate an entire page or panel via the new context menu, accessible by clicking the ellipsis icon next to the page name in the pane on the left or the panel name in the page configuration pane. This context menu also allows you to delete a page or panel, as well as hide a page from the sidebar.
+
+#### Dashboards app & Low-Code Apps - Table component: Selecting whether to export raw values or display values to CSV [ID_36467]
+
+<!-- MR 10.4.0 - FR 10.3.8 -->
+
+You can export the data displayed by a table component by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. From now on, a pop-up window will open where you can select whether the raw values or the display values from the table should be exported.
+
+Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
+
+If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+#### GQI: Ad hoc data sources can now include columns of type GQITimeSpanColumn [ID_36717]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.

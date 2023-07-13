@@ -69,7 +69,7 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 
 - From DataMiner **10.1.12** onwards, in addition to Microsoft .NET Framework 4.8, Microsoft .NET **5.0** is required.
 
-- From DataMiner **10.3.0 [CU6]/10.3.4** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
+- From DataMiner **10.3.0 [CU3]/10.3.3** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.
@@ -84,10 +84,12 @@ For DataMiner Agents that make use of one or more Cassandra nodes for their [sys
 
 ### Cassandra software
 
-The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.0** is mandatory. If a database per Agent setup is used, Cassandra 4.0 is also supported, and it is even recommended in case there are multiple nodes per database.
+The minimum supported version for the Cassandra software is **3.11**. If a database per cluster (or "Cassandra Cluster") setup is used, 3.11 continues to be supported for existing setups, but for new setups Cassandra **4.x** is mandatory. If a database per Agent setup is used, Cassandra 4.x is also supported, and it is even recommended in case there are multiple nodes per database.
 
 > [!NOTE]
-> Cassandra 4.0 does not support Windows so you will need extra Linux servers to host the Cassandra database in order to use this version.
+>
+> - Cassandra 4.x does not support Windows so you will need extra Linux servers to host the Cassandra database in order to use this version.
+> - Currently, Cassandra versions 4.0 and 4.1 are supported in the 4.x range.
 
 ### RAM
 

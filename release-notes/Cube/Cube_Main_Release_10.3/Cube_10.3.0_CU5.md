@@ -2,10 +2,10 @@
 uid: Cube_Main_Release_10.3.0_CU5
 ---
 
-# DataMiner Cube Main Release 10.3.0 CU5 – Preview
+# DataMiner Cube Main Release 10.3.0 CU5
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU5](xref:General_Main_Release_10.3.0_CU5).
@@ -26,6 +26,12 @@ When a shape did not have a *TextStyle* shape data field, up to now, the *TextWr
 
 Also, because of a number of enhancements, overall performance has increased when rendering shapes without a *TextStyle* shape data field.
 
+#### DataMiner Cube - Alarm Console: Enhanced retrieval of history alarms [ID_36653]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+Up to now, when you requested the alarms of a certain time span, Cube would always send two requests to the server: one for the alarms and one for the information/suggestion events. However, in many cases, this was not necessary. From now on, Cube will only send the requests that are necessary.
+
 ### Fixes
 
 #### Visual Overview: Problem with element or view scope of Children shapes [ID_36354]
@@ -35,6 +41,12 @@ Also, because of a number of enhancements, overall performance has increased whe
 In some cases, when a placeholder was used in the *Element* or *View* shape data field of a *Children* shape, the scope would not be updated when changes were made to the placeholder.
 
 From now on, the scope will be updated correctly whenever changes are made to the placeholder in the *Element* or *View* shape data field.
+
+#### Workspaces: Problem opening cards that showed a visual overview [ID_36438]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened a workspace in which one or more cards showed a page with a visual overview, in some cases, the visual overview would be empty.
 
 #### System Center: Problem with 'Show agent alarms' link [ID_36463]
 
@@ -55,3 +67,21 @@ When, in the Alarm Console, you opened a history tab on a system with a large nu
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 When you exported more than a week's worth of real-time trend data to a CSV file, only the trend data of the last week (i.e. "week to date") would be exported.
+
+#### Settings: Suggestion tab added to a group setting would not show any suggestion alarms [ID_36666]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When, in the *Settings* window, you added a suggestion tab to a group setting for the Alarm Console, users who were a member of that group would see the suggestion tab, but it would not show any suggestion alarms.
+
+#### Problem when removing DCF connections [ID_36676]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you removed a connection between an active element and an element that was stopped/paused, the connection would be removed from the active element but not from the stopped/paused element. When you started that element again and tried to remove the connection, the action would fail.
+
+#### DataMiner Cube - Alarm Console: Problem with alarm tabs of type 'sliding window' [ID_36687]
+
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.8 -->
+
+When you opened an alarm tab of type "sliding window", the history alarms matching the sliding window would be retrieved from the server but DataMiner Cube would incorrectly not show them.
