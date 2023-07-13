@@ -4,7 +4,7 @@ uid: Connect_to_cloud_with_DMZ
 
 # Connecting to dataminer.services with a DMZ setup
 
-From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ. This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
+From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ. This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet. The term DMZ used here is not to be confused with the DMZ in firewall. This document refers DMZ as a server which can act as an intermediate between DMA and internet/firewall. 
 
 ![DMZ](~/user-guide/images/DMZ_CloudGateway.png)
 
@@ -12,13 +12,13 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
 1. Configure the firewall of the DMZ:
 
-   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:https://docs.dataminer.services/user-guide/Cloud_Platform/Connecting_to_cloud/Connect_to_cloud_requirements.html).
 
    - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
 
    - Make sure the DMZ can communicate with the DMS through NATS on port 4222.
 
-   - Make sure the DxMs on all servers can communicate towards dataminer.services thought the DMZ CloudGateway on port 5100.
+   - Make sure the DxMs (https://community.dataminer.services/dataminer-extension-modules/?hilite=DxMs) on all servers can communicate towards dataminer.services thought the DMZ CloudGateway on port 5100.
 
      > [!NOTE]
      > If communication through port 5100 is not possible, it is possible to configure a different port. See [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
