@@ -12,7 +12,7 @@ uid: Web_apps_Feature_Release_10.3.9
 
 ## Highlights
 
-#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_33530] [ID_33547] [ID_34037] [ID_36822]
+#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_33530] [ID_33547] [ID_34037] [ID_36822] [ID_36832]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -56,7 +56,10 @@ Settings:
 
   For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
 
-- **Allow color mode**: If you activate this setting, in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+- **Allow color mode**: If this setting is activated (which it is by default), in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+
+  > [!NOTE]
+  > When you deactivate the *Allow color mode* setting, the colors you configured will stay visible and applied.
 
 > [!NOTE]
 >
