@@ -63,7 +63,8 @@
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
-		  "develop/schemadoc/Protocol/images/**",
+          "tutorials/images/**",
+          "develop/schemadoc/Protocol/images/**",
 		  "develop/schemadoc/Automation/images/**"
         ]
       }
