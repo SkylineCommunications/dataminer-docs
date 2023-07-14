@@ -183,14 +183,7 @@ If you want to use a Cassandra cluster as the general database for your DMS (i.e
 
      If the node does note state UN (Up & Normal) in the *nodetool status* command, evaluate the logging. The logging is located at */var/log/cassandra/system.log*.
 
-1. Configure a superuser account that will be used by DataMiner to connect to the database:
-
-   1. Log in to Cassandra with *cqlsh* in Linux, or with DevCenter in Windows.
-
-   1. Execute the query `CREATE ROLE <new_super_user> WITH PASSWORD = '<STRONG PASSWORD>' AND SUPERUSER = true AND LOGIN = true;`. By default, the user is *root*.
-
-   > [!TIP]
-   > See also: [Cassandra authentication](xref:Cassandra_authentication)
+1. Configure a superuser account that will be used by DataMiner to connect to the database. See [Cassandra authentication](xref:Cassandra_authentication)
 
 1. Configure the Cassandra cluster database in System Center. See [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 
