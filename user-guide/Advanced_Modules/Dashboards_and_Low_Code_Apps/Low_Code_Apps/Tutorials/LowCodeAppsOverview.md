@@ -10,7 +10,7 @@ With the DataMiner Low-Code Apps module, you can create custom applications that
 
 - DataMiner 10.2.6 or higher
 - Low-Code Apps license
-- [App-related user permissions](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/DataMiner_user_permissions.html#modules--user-definable-apps--view-apps)
+- [App-related user permissions](xref:DataMiner_user_permissions#modules--user-definable-apps--view-apps)
 
 ## Tutorials
 
