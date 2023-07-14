@@ -72,7 +72,7 @@
       topicUid: GettingStarted
       items:
         - name: The DataMiner Cube user interface
-          topicUid: The_DataMiner_Cube_user_interface
+          topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
           items:
             - name: Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
               topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
