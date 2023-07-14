@@ -230,3 +230,9 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
+
+#### Problem when sharing a dashboard containing a Gauge component fed by a State component with indices [ID_36872]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
