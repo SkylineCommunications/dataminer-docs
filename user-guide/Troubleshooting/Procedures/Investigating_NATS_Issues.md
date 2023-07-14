@@ -90,7 +90,10 @@ Double-check the status of NAS ([NATS Account Server](https://github.com/nats-io
 
 There is no case where NAS or NATS are stopped on purpose. However, it can occur that NATS is stuck in the "stopping" state and *nats-streaming-server.exe* has to be manually killed in order for the process to be able to restore itself.
 
-If you see that NAS is running but NATS is not, the most likely cause is a **firewall issue**. When NATS is installed, entries are automatically added to the Windows Firewall, but if there is an additional firewall in between the DMAs in a DMS, the rules need to be added/modified manually. The ports that need to be opened are **4222** (NATS communication), **6222** (NATS clustering) and **9090** (NAS). These ports need to be opened between all DMAs. Port 8222 is also used, but for monitoring only, so this port does not have to be opened in the firewall.
+If you see that NAS is running but NATS is not, the most likely cause is a **firewall issue**. When NATS is installed, entries are automatically added to the Windows Firewall, but if there is an additional firewall in between the DMAs in a DMS, the rules need to be added/modified manually. The ports that need to be opened are **4222** (NATS communication), **6222** (NATS clustering), and **9090** (NAS). These ports need to be opened between all DMAs. Port 8222 is also used, but for monitoring only, so this port does not have to be opened in the firewall.
+
+> [!NOTE]
+> The mentioned ports should be opened in the firewall as an inbound rule with the "All" profile. This means that if you go to *Properties* > *Advanced* > *Profiles* for the firewall rule, all checkboxes (*Domain*, *Private*, and *Public*) should be selected.
 
 Typically, in case of a firewall issue, if you check the *nats-account-server.log* file in the folder `C:\Skyline DataMiner\NATS\nats-account-server\` of the DMA where NATS does not start, you will see a message like this near the top of the file: "*Unable to initialize from primary, will use what is on disk*".
 
