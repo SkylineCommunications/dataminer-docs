@@ -391,11 +391,11 @@ In the *Monitoring* app, a new type of duration boxes will now be used on parame
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the list.
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the overview.
 
-From now on, when you hover over each of the possible visualizations in the list, a tooltip will appear, giving more information about that visualization.
+From now on, when you hover over each of the possible visualizations in the overview, a tooltip will appear, giving more information about that visualization.
 
-Also, the component will no longer change instantly when you hover over a visualization. The component will only change when you click a certain visualization.
+Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
 
 ### Fixes
 
