@@ -28,6 +28,10 @@ In addition, the following parameters have been updated:
 - *Modulation Name*: Current modulation based on the current active composition group and carrier.
 - *Carrier Type*: The type of carrier.
 
+#### New Circuit Availability KPI [ID_36900]
+
+A new Circuit Availability KPI is now available, which shows a percentage indicating how close circuit performance tracks against the theoretical link budge expectations.
+
 ## Changes
 
 ### Enhancements
