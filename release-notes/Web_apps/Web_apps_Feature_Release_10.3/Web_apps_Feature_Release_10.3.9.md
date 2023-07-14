@@ -235,6 +235,6 @@ Up to now, when DCF interface properties were fetched, only the properties found
 
 #### Problem when sharing a dashboard containing a Gauge component fed by a State component with indices [ID_36872]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
