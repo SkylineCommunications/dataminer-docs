@@ -8,7 +8,7 @@ uid: Part7Reference
 
 - [DataMiner Client Requirements](xref:DataMiner_Client_Requirements)
 
-- [Skyline DataMiner folder](xref:SkylineDataminerFolder)
+- [Skyline DataMiner folder](xref:Overview_of_the_files_found_in_the_root_folder)
 
 - [Tools](xref:DataminerTools)
 
@@ -32,7 +32,7 @@ uid: Part7Reference
 
 - [Frequently asked questions](xref:faq)
 
-- [Methods of Procedure](xref:mops)
+- [Methods of Procedure](xref:MOP_Changing_the_default_password_for_Cassandra)
 
 - [Glossary](xref:glossary_a_to_l)
 

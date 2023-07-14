@@ -126,7 +126,7 @@ uid: glossary_a_to_l
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
-| DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
+| DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
@@ -139,7 +139,7 @@ uid: glossary_a_to_l
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
-| DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
+| DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DCL | DataMiner Class Library. |
 | DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:AboutCloudPlatform). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |

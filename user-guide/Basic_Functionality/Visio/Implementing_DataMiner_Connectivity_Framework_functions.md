@@ -8,4 +8,4 @@ The DataMiner Connectivity Framework is used to configure and visualize signal p
 
 > [!TIP]
 > See also:
-> [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework)
+> [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework)
