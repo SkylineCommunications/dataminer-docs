@@ -387,13 +387,15 @@ A number of security enhancements have been made.
 
 In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
 
-#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737]
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737] [ID_36778]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the list.
 
 From now on, when you hover over each of the possible visualizations in the list, a tooltip will appear, giving more information about that visualization.
+
+Also, the component will no longer change instantly when you hover over a visualization. The component will only change when you click a certain visualization.
 
 ### Fixes
 
