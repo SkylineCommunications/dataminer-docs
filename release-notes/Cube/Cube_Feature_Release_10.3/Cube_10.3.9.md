@@ -61,17 +61,29 @@ When the requirements of a light bulb are not met, an entry is added to the Cube
 
 A more detailed entry will now be added to the Cube logging when a function resource failed to initialize.
 
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
 #### Services module: Enhanced linking to help pages on docs.dataminer.services [ID_36813]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
-#### Trending - Pattern matching: Pattern occurrence values will now be displayed in the language set as UI language [ID_36844]
+#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID_36828] [ID_36836]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-All pattern occurrence values displayed in the Alarm Console will now appear in the language set as UI language.
+All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
+
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
 ### Fixes
 

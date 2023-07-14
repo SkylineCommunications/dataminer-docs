@@ -4,7 +4,7 @@ uid: SonarQube
 
 # SonarQube
 
-SonarQube performs C# code analysis on all QActions of a protocol or C# exe blocks of an Automation script.
+SonarQube performs C# code analysis on all QActions of a protocol or C# Exe blocks of an Automation script.
 
 ## Using SonarQube
 

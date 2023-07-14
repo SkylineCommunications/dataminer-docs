@@ -1,13 +1,13 @@
 ---
-uid: Concept_of_debugging_QActions_and_Automation_scripts
+uid: Concept_of_debugging_connectors_and_Automation_scripts
 ---
 
 # Concept of debugging QActions and Automation scripts
 
-DataMiner Integration Studio allows you to debug QActions and Automation scripts using the Microsoft Visual Studio Debugger.
+DataMiner Integration Studio allows you to debug connector QActions and Automation script C# Exe blocks using the Microsoft Visual Studio Debugger.
 
 > [!NOTE]
-> You can only debug QActions and Automation scripts that contain C# code.
+> You can only debug connector QActions that contain C# code.
 
 ## Graphical representation of the QAction debugging concept
 
@@ -28,4 +28,4 @@ The numbers in the drawing refer to the phases described in the table below.
 | 5. Inject the *QAction.dll* | In the *DIS Inject* tool window, you link the temporary QAction project to the corresponding QAction of the element, and you replace the *QAction.dll* of the element (which has been compiled in Release mode) with the *QAction.dll* of the temporary QAction project (which has been compiled in Debug mode). |
 | 6. Attach Debugger to SLScripting | In the *DIS Inject* tool window, you click *Attach* to attach the Microsoft Visual Studio Debugger to the DataMiner SLScripting process.<br> Result: From the moment the Debugger is attached to the SLScripting process, you can set breakpoints, trigger the QAction manually (or set a parameter or wait for a timer to go off), step through your code, etc. |
 
-For step-by-step instructions on how to debug QActions and Automation scripts, see [Debugging QActions and Automation scripts](xref:Debugging_QActions_and_Automation_scripts).
+For step-by-step instructions on how to debug QActions and Automation scripts, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).

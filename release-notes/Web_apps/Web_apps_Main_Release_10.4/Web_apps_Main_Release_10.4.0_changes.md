@@ -387,6 +387,14 @@ A number of security enhancements have been made.
 
 In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
 
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the list.
+
+From now on, when you hover over each of the possible visualizations in the list, a tooltip will appear, giving more information about that visualization.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -598,12 +606,6 @@ From now on, users who only have permission to view dashboards will not see any 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
-
-#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
 
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 

@@ -1,8 +1,8 @@
 ---
-uid: Debugging_a_QAction
+uid: Debugging_a_connector
 ---
 
-# Debugging a QAction
+# Debugging a connector
 
 When you have finished configuring all necessary settings, you can start debugging.
 

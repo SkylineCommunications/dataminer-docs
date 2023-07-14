@@ -9,15 +9,16 @@ uid: Prerequisites
 DataMiner Integration Studio has to be able to connect to addresses in the following ranges:
 
 ```txt
-   https://login.microsoftonline.com/*
-   https://aadcdn.msftauth.net/*
-   https://*.dataminer.services/*
-   https://*.skyline.be/*
+https://login.microsoftonline.com/*
+https://aadcdn.msftauth.net/*
+https://*.dataminer.services/*
+https://*.skyline.be/*
 ```
 
-## Microsoft Visual Studio
+> [!NOTE]
+> To use NuGet packages, you will need to establish a connection with the required NuGet package sources, e.g. <https://api.nuget.org/v3/index.json>
 
-DataMiner Integration Studio is a Microsoft Visual Studio extension.
+## Microsoft Visual Studio
 
 - DIS versions up to v2.0.3 require at least Microsoft Visual Studio 2010.
 - DIS versions as from v2.0.4 require at least Microsoft Visual Studio 2012.
@@ -26,8 +27,8 @@ DataMiner Integration Studio is a Microsoft Visual Studio extension.
 - DIS versions as from v2.41 require at least Microsoft Visual Studio 2019.
 
 > [!NOTE]
-> Make sure your version of Visual Studio is up to date. If you have an outdated version, the installer may detect missing prerequisites.
+> Make sure your version of Visual Studio is up to date. If you have an outdated version, the installer may detect missing prerequisites and therefore prevent you from installing the extension.
 
 > [!IMPORTANT]
-> DIS works with Visual Studio Enterprise, Visual Studio Professional and Visual Studio Community. Note that the latter is available as a free download.
+> DIS works with Visual Studio Community, Visual Studio Professional, and Visual Studio Enterprise.
 > Visual Studio Code and Visual Studio for Mac are not supported.
