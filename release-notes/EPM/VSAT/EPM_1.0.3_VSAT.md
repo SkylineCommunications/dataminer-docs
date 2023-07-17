@@ -30,7 +30,7 @@ In addition, the following parameters have been updated:
 
 #### New Circuit Availability KPI [ID_36900]
 
-A new Circuit Availability KPI is now available, which shows a percentage indicating how close circuit performance tracks against the theoretical link budget expectations. This KPI, which can be found in the Circuit Overview table, is aggregated by average in the Circuit level, Hub Forward level, Hub Return level, Customer level, and NMS level of the EPM topology.
+A new Circuit Availability KPI is now available in the Verizon iDirect Evolution Platform and Verizon VSAT Platform Manager connectors. This KPI, which can be found in the Circuit Overview table, shows a percentage indicating how close circuit performance tracks against the theoretical link budget expectations. The KPI is aggregated by average in the Circuit level, Hub Forward level, Hub Return level, Customer level, and NMS level of the EPM topology.
 
 ## Changes
 
