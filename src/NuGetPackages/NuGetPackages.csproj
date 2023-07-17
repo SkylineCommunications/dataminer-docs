@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net48</TargetFramework>
@@ -14,7 +14,7 @@
     <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.0.0.2" />
     <PackageReference Include="Skyline.DataMiner.Core.Matrix.Protocol" Version="1.1.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit" Version="6.1.0" />
-    <PackageReference Include="Skyline.DataMiner.Utils.Interfaces" Version="1.0.0.1" />
+    <PackageReference Include="Skyline.DataMiner.Utils.Interfaces" Version="1.0.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.Rates.Common" Version="1.0.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.Rates.Protocol" Version="1.0.0.2" />
     <PackageReference Include="Skyline.DataMiner.Utils.SafeConverters" Version="1.0.0.1" />
