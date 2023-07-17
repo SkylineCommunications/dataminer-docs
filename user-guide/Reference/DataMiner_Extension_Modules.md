@@ -4,7 +4,7 @@ uid: DataMinerExtensionModules
 
 # DataMiner Extension Modules (DxMs)
 
-A DataMiner Extension Module (DxM) is a service that can be installed, upgraded and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. To increase the 'Time to Market', the DEV teams will try hard to be backwards compatible to all supported Core DataMiner Versions. Sometimes though, this will not be possible and a minimum Core version will be indicated. 
+A DataMiner Extension Module (DxM) is a service that can be installed, upgraded, and uninstalled without the need to reboot the DataMiner Agent. These modules will expand the core DataMiner software with additional features and capabilities. In most cases, DxMs will be backwards-compatible with all supported core DataMiner versions. However, this may not be possible in some cases, and then a minimum core DataMiner version will be indicated. 
 
 ## Packs
 
