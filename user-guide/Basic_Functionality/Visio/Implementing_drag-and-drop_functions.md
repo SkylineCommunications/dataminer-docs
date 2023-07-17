@@ -7,4 +7,4 @@ uid: Implementing_drag-and-drop_functions
 Visio shapes can be configured to perform particular actions when other shapes are dropped on them, or when a user hovers the mouse pointer over them.
 
 ![Drag-and-drop functions](~/user-guide/images/Drag_and_Drop.png)
-*DataMiner 10.3.7*
+*Visual Overview example in DataMiner 10.3.7*
