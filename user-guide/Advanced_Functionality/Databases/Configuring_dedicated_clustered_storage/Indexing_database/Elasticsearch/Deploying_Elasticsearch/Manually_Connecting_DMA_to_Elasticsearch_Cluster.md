@@ -17,7 +17,7 @@ You can connect a DataMiner Agent to an existing Elasticsearch cluster by manual
 > [!NOTE]
 > This procedure is only used to connect a DMA to a single Elasticsearch cluster. For information on how to configure multiple Elasticsearch clusters, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
-1. Stop the DataMiner Agent. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
+1. Stop the DataMiner Agent. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
 1. In the *C:\\Skyline DataMiner* directory, find the *DB.xml* file and copy this to your local machine as a backup.
 
