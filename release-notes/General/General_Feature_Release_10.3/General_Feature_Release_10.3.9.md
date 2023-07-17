@@ -20,14 +20,46 @@ uid: General_Feature_Release_10.3.9
 
 #### SLProtocol is now a 64-bit process by default [ID_36725]
 
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
 SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
-
 ## Other features
 
-*No features have been added to this release yet.*
+#### DataMiner Object Models: Caching of DOM configuration data [ID_36412]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In each DOM manager,the `DomDefinition`, `DomBehaviorDefinition` and `SectionDefinition` objects will now be fully cached.
+
+These caches are enabled by default, also for existing DOM managers. When a DOM manager is initialized, all above-mentioned configuration objects will be stored into the caches. Depending on the amount of data, this could lead to the first request taking some more time.
+
+##### Disabling the caches
+
+Since the caches rely on synchronization, which requires a stable connection, an option was added to disable the caches if too many issues would arise on unstable clusters. You can configure the caching behavior per object type in the `ModuleSettings.DomManagerSettings.DomManagerSettings.StorageSettings.CachingSettings` object. Using the `DomConfigCachingPolicy` enum, you can set the caching behavior to one of the following options:
+
+- *Default*: The default caching option, which is currently equal to the *Full* option.
+- *Disabled*: Disables caching for the object type in question.
+- *Full*: Enables full caching for the object type in question.
+
+> [!IMPORTANT]
+> If you modify these settings, you need to re-initialize the DOM manager.
+
+##### Synchronization
+
+Among the agents in a DMS, the caches will stay in sync thanks to the events sent by all the DOM managers on the different agents. If, for some reason, the caching would get out of sync, this will automatically be fixed during the midnight sync, which will cause the caches to be reloaded from the database. During that cache reload, the DOM managers will remain available.
+
+If you want to ensure that the caches are in sync with the database, you can manually send a `ManagerStoreMidnightSyncCustomManagerRequest`. This will refresh all caches on all running instances of a DomManager with a given ID across the DMS. To do so, open a DomManager in the *SLNetClientTest* tool, go to the *Maintenance* tab, and click the refresh button.
+
+##### Logging
+
+In the log files, you will be able to find out which caches are enabled and when they have been refreshed (either during a midnight sync or a user-initiated sync). Also, after a refresh, a log entry will be added, mentioning the number of objects that were added, updated, ignored and removed in the cache.
+
+##### Impact on paging
+
+When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
 ## Changes
 
@@ -44,6 +76,12 @@ A number of security enhancements have been made.
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 During a DataMiner upgrade, from now on, all default ListView column configuration data left on the server will automatically be cleaned up if no more than one Cube client has taken a copy of that data.
+
+#### Cassandra Cluster: Trend tables will no longer be sharded [ID_36551]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+On a Cassandra Cluster database, from now on, the trend tables will no longer be sharded. This will enhance overall performance when requesting trend data, especially on systems on which real-time trend data is stored for longer than a day.
 
 #### Cassandra Cleaner can now also be used to clean the 'infotrace' table [ID_36592]
 
@@ -69,6 +107,8 @@ For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
@@ -88,6 +128,23 @@ When you install or upgrade a DataMiner Agent, a number of DataMiner Extension M
 
 > [!NOTE]
 > For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
+
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+
+Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
+
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade. As all DataMiner components using .NET 5 have been upgraded to use .NET 6 instead, .NET 5 will no longer be installed by default.
+
+> [!NOTE]
+> If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
 
 #### SLWatchdog: Additional logging & retry mechanism for restarts [ID_36839]
 
@@ -160,3 +217,16 @@ In some cases, an `index out of bounds` error could occur when processing a beha
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### SLAnalytics - Automatic incident tracking: 'relationThreshold' set to an incorrect value after a DataMiner upgrade [ID_36826]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- Not added to MR 10.4.0 -->
+
+After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.

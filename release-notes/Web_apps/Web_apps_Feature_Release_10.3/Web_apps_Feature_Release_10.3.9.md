@@ -12,6 +12,65 @@ uid: Web_apps_Feature_Release_10.3.9
 
 ## Highlights
 
+#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_33530] [ID_33547] [ID_34037] [ID_36822] [ID_36832]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The *Query filter* component has now officially been released. When linked to a *Table* component or a *Node edge graph* component, this component will allow you to filter the table or the node edge graph on the fly.
+
+There are two ways in which you can link a query filter. See the following examples.
+
+- **Feeding queries as data**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
+
+  Result: Each time you change the query filter, a new query will be fed to the table. The latter will only show the rows that match the filter set in the query filter component.
+
+- **Feeding query columns as filter**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
+
+  Result: Each time you change the query filter, the data inside the table will be filtered according to the filter settings in the query filter. No new query will be fed to the table. The latter will keep on showing all rows, but those that do not match the filter will turn gray.
+
+Settings:
+
+- **Filter assistance**: If you activate this setting, the choices the query filter offers will already be filtered according to the data that is available.
+
+  For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
+
+- **Allow color mode**: If this setting is activated (which it is by default), in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+
+  > [!NOTE]
+  > When you deactivate the *Allow color mode* setting, the colors you configured will stay visible and applied.
+
+> [!NOTE]
+>
+> - At the top of a *Query filter* component, you have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
+> - In a *Query filter* component, next to each column that contains discrete values of type string or number, you will find a button that allows you to change how the possible values are displayed:
+>
+>   - Click *Toggle checklist* to have all possible values listed in the form of a checklist.
+>   - Click *Toggle free form* to display a text box in which users can type a value.
+>
+> - when you only filter a node edge graph by node, edges will be highlighted only when both source and destination are highlighted. When you only filter a node edge graph by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
+
 #### Dashboards app & Low-Code Apps: Button panel visualization now officially released [ID_36775]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -83,6 +142,16 @@ A number of security enhancements have been made.
 
 In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
 
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737] [ID_36778]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the overview.
+
+From now on, when you hover over each of the possible visualizations in the overview, a tooltip will appear, giving more information about that visualization.
+
+Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
+
 #### Dashboards app - GQI: Version column added to 'Get trend data patterns' and 'Get trend data pattern events' data sources [ID_36754]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -99,6 +168,12 @@ Each time the time range of a pattern gets updated, a new pattern record is crea
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
+#### Referenced DomInstances would not get updated when a DomInstance was created or updated [ID_36734]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a DomInstance was created or updated, the DomInstances that were referenced by that DomInstance would incorrectly not get updated unless the browser window was refreshed.
 
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
@@ -130,7 +205,7 @@ Also, when you refreshed a shared dashboard while it was in edit mode, edit mode
 
 #### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
 
@@ -148,7 +223,7 @@ Up to now, it would incorrectly not be possible to feed a selected timeline item
 
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
 
@@ -157,3 +232,9 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
+
+#### Problem when sharing a dashboard containing a Gauge component fed by a State component with indices [ID_36872]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.

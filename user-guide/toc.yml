@@ -24,7 +24,7 @@
       topicUid: DataminerApplications
       items:
         - name: Accessing DataMiner Cube
-          topicUid: Accessing_DataMiner_Cube
+          topicUid: Installing_configuring_the_DataMiner_Cube_software
           items:
             - name: Installing & configuring the DataMiner Cube software
               topicUid: Installing_configuring_the_DataMiner_Cube_software
@@ -46,7 +46,7 @@
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
-              topicUid: Opening_DataMiner_Cube
+              topicUid: Opening_the_desktop_app
               items:
               - name: Opening the desktop application
                 topicUid: Opening_the_desktop_app
@@ -72,7 +72,7 @@
       topicUid: GettingStarted
       items:
         - name: The DataMiner Cube user interface
-          topicUid: The_DataMiner_Cube_user_interface
+          topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
           items:
             - name: Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
               topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
@@ -215,7 +215,7 @@
             - name: Alarm storm protection
               topicUid: Alarm_storm_protection
     - name: Elements
-      topicUid: elements
+      topicUid: About_elements
       items:
         - name: About elements
           topicUid: About_elements
@@ -235,7 +235,7 @@
             - name: Element properties
               topicUid: Element_properties
         - name: Working with elements in DataMiner
-          topicUid: Working_with_elements_in_DataMiner
+          topicUid: Element_cards
           items:
             - name: Element cards
               topicUid: Element_cards
@@ -288,7 +288,7 @@
       topicUid: parameters
       items:
         - name: Types of parameters
-          topicUid: Types_of_parameters
+          topicUid: Read_parameters_versus_write_parameters
           items:
             - name: Read parameters versus write parameters
               topicUid: Read_parameters_versus_write_parameters
@@ -404,7 +404,7 @@
             - name: Managing service templates
               topicUid: Managing_service_templates
     - name: Views
-      topicUid: views
+      topicUid: About_views
       items:
         - name: About views
           topicUid: About_views
@@ -416,7 +416,7 @@
       topicUid: visio
       items:
         - name: Getting started
-          topicUid: Getting_started
+          topicUid: Working_with_shape_data_in_Microsoft_Visio
           items:
             - name: Working with shape data in Microsoft Visio
               topicUid: Working_with_shape_data_in_Microsoft_Visio
@@ -701,7 +701,7 @@
             - name: Configuring a page to execute a script automatically
               topicUid: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
-          topicUid: Reference
+          topicUid: Overview_of_DataMiner_shape_data_fields
           items:
             - name: Overview of DataMiner shape data fields
               topicUid: Overview_of_DataMiner_shape_data_fields
@@ -862,7 +862,7 @@
             - name: Exporting alarm template parameter data
               topicUid: Exporting_alarm_template_parameter_data
         - name: Trend templates
-          topicUid: Trend_templates
+          topicUid: About_trend_templates
           items:
             - name: About trend templates
               topicUid: About_trend_templates
@@ -897,7 +897,7 @@
       topicUid: DataminerAgents
       items:
         - name: Configuring a DataMiner Agent
-          topicUid: Configuring_a_DataMiner_Agent
+          topicUid: Changing_the_DMA_ID
           items:
             - name: Changing the DataMiner ID of a DMA
               topicUid: Changing_the_DMA_ID
@@ -991,7 +991,7 @@
             - name: Importing elements, services, etc. from a .dmimport file
               topicUid: Importing_elements_services_etc_from_a_dmimport_file
     - name: DataMiner Systems
-      topicUid: DataminerSystems
+      topicUid: About_DataMiner_Systems
       items:
         - name: About DataMiner Systems
           topicUid: About_DataMiner_Systems
@@ -1009,7 +1009,7 @@
         - name: Viewing information on the DMAs in a DMS
           topicUid: Viewing_information_on_the_DMAs_in_a_DMS
         - name: Setting up a new DataMiner System
-          topicUid: Setting_up_a_new_DataMiner_System
+          topicUid: Before_you_begin_to_set_up_a_new_DMS
           items:
             - name: Before you begin to set up a new DMS
               topicUid: Before_you_begin_to_set_up_a_new_DMS
@@ -1025,7 +1025,7 @@
         - name: Removing a DataMiner Agent from a DataMiner System
           topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
         - name: Starting or stopping DataMiner Agents in your DataMiner System
-          topicUid: Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System
+          topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
           items:
             - name: Starting or stopping a DMA in DataMiner Cube
               topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
@@ -1207,6 +1207,8 @@
                           topicUid: Installing_OpenSearch_database
                         - name: Configuring multiple OpenSearch clusters
                           topicUid: Configuring_multiple_OpenSearch_clusters
+                        - name: Configuring OpenSearch backups
+                          topicUid: Configuring_OpenSearch_Backups
                 - name: Configuring the general database settings
                   topicUid: Configuring_the_database_settings_in_Cube
                 - name: Migrating existing systems to dedicated clustered storage
@@ -1289,7 +1291,7 @@
             - name: Querying a Cassandra database compared to MySQL
               topicUid: Querying_Cassandra_vs_MySQL
     - name: Security
-      topicUid: security
+      topicUid: About_DMS_Security
       items:
         - name: About DataMiner security
           topicUid: About_DMS_Security
@@ -1445,7 +1447,7 @@
             - name: Custom DataMiner notification
               topicUid: Custom_DataMiner_notification
     - name: DataMiner Connectivity Framework
-      topicUid: DCF
+      topicUid: About_the_DataMiner_Connectivity_Framework
       items:
         - name: About the DataMiner Connectivity Framework
           topicUid: About_the_DataMiner_Connectivity_Framework
@@ -1468,7 +1470,7 @@
             - name: Automatically generating service RCA chains based on connectivity
               topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
     - name: TCP-IP sockets
-      topicUid: TCPIPSockets
+      topicUid: About_TCP-IP_sockets
       items:
         - name: About TCP-IP sockets
           topicUid: About_TCP-IP_sockets
@@ -1829,6 +1831,15 @@
               topicUid: Specifying_data_input_in_URL
             - name: Executing actions via the app URL
               topicUid: Executing_actions_via_URL
+            - name: Tutorials
+              topicUid: Tutorial_Apps
+              items:
+                - name: Creating and publishing an app
+                  topicUid: Tutorial_Apps_Creating_And_Publishing
+                - name: Editing an existing app
+                  topicUid: Tutorial_Apps_Edit_Existing_App
+                - name: Managing the pages in an app
+                  topicUid: Tutorial_Apps_Managing_Pages
         - name: Available visualizations
           topicUid: Available_visualizations
           items:
@@ -3583,7 +3594,7 @@
     - name: DataMiner Client Requirements
       topicUid: DataMiner_Client_Requirements
     - name: Skyline DataMiner folder
-      topicUid: SkylineDataminerFolder
+      topicUid: Overview_of_the_files_found_in_the_root_folder
       items:
         - name: Overview of the files found in the root folder
           topicUid: Overview_of_the_files_found_in_the_root_folder
@@ -3948,7 +3959,7 @@
         - name: Verify NATS is Running
           topicUid: VerifyNatsIsRunning
     - name: Methods of Procedure
-      topicUid: mops
+      topicUid: MOP_Changing_the_default_password_for_Cassandra
       items:
         - name: Changing the default password for Cassandra
           topicUid: MOP_Changing_the_default_password_for_Cassandra

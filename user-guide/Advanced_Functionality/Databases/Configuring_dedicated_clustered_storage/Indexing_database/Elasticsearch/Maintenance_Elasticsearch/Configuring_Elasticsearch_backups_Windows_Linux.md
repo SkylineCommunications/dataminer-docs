@@ -35,7 +35,7 @@ Examples:
 
 - Kibana: [Kibana](https://www.elastic.co/guide/en/kibana/6.8/deb.html#deb-repo) is often used together with Elasticsearch. If you are using Ubuntu or Debian as your operating system, this is the preferred client application.
 
-- CURL: [Curl](https://curl.se/) is a simple command line utility that allows messages with payload (e.g POST and PUT messages) and is useful for scripting.
+- CURL: [Curl](https://curl.se/) is a simple command line utility that allows messages with payload (e.g. POST and PUT messages) and is useful for scripting.
 
 - [Elasticvue](https://elasticvue.com/)
 

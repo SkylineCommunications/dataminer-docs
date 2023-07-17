@@ -12,6 +12,8 @@ For more information on how to **install an OpenSearch database**, see [Installi
 
 From DataMiner 10.3.0/10.3.3 onwards, you can have data offloaded to **multiple OpenSearch clusters**. For more information on how to configure this setup, see [Configuring multiple OpenSearch clusters](xref:Configuring_multiple_OpenSearch_clusters).
 
+For more information on how to configure OpenSearch backups, see [Configuring OpenSearch backups](xref:Configuring_OpenSearch_Backups).
+
 This setup is supported from DataMiner 10.3.0/10.3.3 onwards.
 
 > [!TIP]

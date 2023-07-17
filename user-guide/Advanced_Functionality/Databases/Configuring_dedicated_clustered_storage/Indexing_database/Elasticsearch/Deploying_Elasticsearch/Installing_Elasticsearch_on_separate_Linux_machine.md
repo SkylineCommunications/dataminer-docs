@@ -79,7 +79,7 @@ If you want to use an Elasticsearch cluster for your DMS (which is required to u
 
    You can do this with the following command:
 
-   `$ chown -R elasticsearch:elasticsearch /directoryname_from_path.data`
+   `$ sudo chown -R elasticsearch:elasticsearch /directoryname_from_path.data`
 
 1. Configure the *elasticsearch.yml* files.
 
