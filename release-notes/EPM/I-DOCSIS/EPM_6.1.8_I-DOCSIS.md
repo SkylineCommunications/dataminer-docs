@@ -9,11 +9,22 @@ uid: EPM_6.1.8_I-DOCSIS
 
 ## New features
 
-#### Root cause analysis via alarm template conditions [ID_36780]
+#### Alarm suppression at lower levels via alarm template conditions for Amplifier and Tap level [ID_36780]
 
-To make sure events at lower levels in the topology do not become too numerous, making it difficult to analyze the points of failure, root cause analysis has been implemented via alarm template conditions. This will suppress events at Amplifier and Tap level when higher-level events are detected.
+To make sure events at lower levels in the topology do not become too numerous, making it difficult to analyze the points of failure, alarm suppression at lower levels has been implemented via alarm template conditions. This will suppress events at Amplifier and Tap level when higher-level events are detected.
 
 The alarm template conditions have been applied on Amplifier and Tap level, and they make use of foreign key relations between the tables. This means that the Skyline EPM Platform DOCSIS connector also had to be modified to assign the Node ID for all amplifiers in the Amplifier table.
+
+#### Alarm suppression at lower levels via alarm template conditions for routes, distributions, and FAT levels [ID_36784]
+
+In order to suppress alarms for routes, distributions, and FAT levels, the alarm template has been modified to include conditions for these levels. The alarm will be suppressed if the following conditions are met:
+
+- The route reports that 100% of its ONTs are offline.
+- The route has more than 3 ONTs.
+
+Both of these conditions must be met for the alarm to be suppressed.
+
+The Skyline EPM Platform GPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
 
 ## Changes
 
