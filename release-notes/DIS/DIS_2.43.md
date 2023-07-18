@@ -8,9 +8,11 @@ uid: DIS_2.43
 
 ### IDE
 
-#### Export Protocol generation - Support for 'whereAttribute' on 'ExportRule' elements [ID_36787]
+#### DIS now fully supports the 'whereAttribute' attribute of 'ExportRule' elements [ID_36787]
 
-With the release of DataMiner 10.3.8, the `whereAttribute` is now supported in DIS and will be taken in account during export protocol generation which is used for Display Editor and Validator.
+DIS now fully support the `whereAttribute` attribute of `ExportRule` elements when exporting protocols. The Display Editor and Validator have been adapted accordingly.
+
+See also [release note 36622](xref:General_Main_Release_10.4.0_new_features#exportrule-elements-can-now-have-a-whereattribute-attribute-id_36622)
 
 ### Validator
 
@@ -29,7 +31,7 @@ The following checks and error messages have been added.
 
 #### New feature check: Usage of 'whereAttribute' [ID_36787]
 
-A new feature check now verifies whether the `whereAttribute` is being used.
+A new feature check now verifies whether the `whereAttribute` attribute is being used.
 
 This check can return the following error messages:
 
@@ -43,16 +45,16 @@ This check can return the following error messages:
 
 ### Enhancements
 
-#### Connect & Publish: Improved performance [ID_36899]
+#### Enhanced performance when connecting to a DMA with a large number of Automation scripts [ID_36899]
 
-When connecting, or first time publishing, to an agent that has a lot of scripts it could take several minutes. This has been drastically been improved and takes now a couple of seconds.
+Because of a number of enhancements, overall performance has increased when connecting to a DataMiner Agent with a large number of Automation scripts.
 
-#### DIS Validator: Disable specific check for exported protocols [ID_36921]
+#### DIS Validator: 'DveColumnOptionElement' check will no longer be performed when validating an exported protocol [ID_36921]
 
-The check on the `element` option in the `options` attribute on the `ColumnOption` tag will now be ignored during the validation of the exported protocol.
+The *DveColumnOptionElement* check will no longer be performed when validating an exported protocol.
 
 ### Fixes
 
-#### Info bar: 'Outdated code analysis files' ignores now different line endings  [ID_36771]
+#### DIS would incorrectly consider code analysis files outdated when it did not have the correct line endings [ID_36771]
 
-The info bar, that checks if the code analysis files are up to date, ignores the different line endings between Unix and Windows.
+Up to now, when DIS checked whether the code analysis files were up to date, it would incorrectly consider a file outdated when it did not have the correct line endings (e.g. Unix line endings vs. Windows line endings). From now on, DIS will ignore the line endings when checking whether the code analysis files are up to date.
