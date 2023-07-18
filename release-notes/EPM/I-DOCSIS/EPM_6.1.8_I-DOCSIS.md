@@ -26,6 +26,10 @@ Both of these conditions must be met for the alarm to be suppressed.
 
 The Skyline EPM Platform GPON has been modified to calculate the percentage of ONTs that are offline. This information is used to determine if the alarm should be suppressed.
 
+#### Aggregated KPIs from Node Segment level now also available at higher levels [ID_36939]
+
+Aggregated KPIs that previously only existed at Node Segment level are now also available at all levels up to the Network Topology level. This means that the US QAM RX Power OOS, US QAM TX Power OOS, DS QAM RX Power OOS count, US QAM SNR OOS, and DS QAM SNR OOS count and percentage KPIs are now available at the US/DS Port, US/DS Linecard, CCAP Core, Hub, Market, and Network levels.
+
 ## Changes
 
 ### Enhancements
