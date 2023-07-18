@@ -407,6 +407,12 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
 
+#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID_36339]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
+
 #### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
