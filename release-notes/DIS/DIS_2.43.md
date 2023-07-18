@@ -58,3 +58,9 @@ The *DveColumnOptionElement* check will no longer be performed when validating a
 #### DIS would incorrectly consider code analysis files outdated when it did not have the correct line endings [ID_36771]
 
 Up to now, when DIS checked whether the code analysis files were up to date, it would incorrectly consider a file outdated when it did not have the correct line endings (e.g. Unix line endings vs. Windows line endings). From now on, DIS will ignore the line endings when checking whether the code analysis files are up to date.
+
+#### Snippets would not be available or would not be updated [ID_36950]
+
+When DIS was installed on top of a newly installed copy of Microsoft Visual Studio, it would incorrectly not include any snippets.
+
+Also, after DIS had been upgraded to a newer version, the snippets would incorrectly not be updated.
