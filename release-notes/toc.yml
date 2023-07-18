@@ -612,6 +612,8 @@
     - name: DIS release notes
       topicUid: DIS_RNs_index
       items:
+      - name: DIS 2.43
+        topicUid: DIS_2.43
       - name: DIS 2.42
         topicUid: DIS_2.42
       - name: DIS 2.41
