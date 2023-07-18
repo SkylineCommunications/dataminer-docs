@@ -18,8 +18,7 @@ This section consists of the following topics:
 > - Exporting/importing logger table data saved in Elasticsearch is only supported from DataMiner 10.1.4/10.2.0 onwards.
 
 > [!CAUTION]
-> - Forwards compatibility of import packages is not supported. If you import a package created with a more recent DataMiner version into a system with an older version, this may not work.
-> - Backwards compatibility of import packages is not completely guaranteed. If you import a package created with an older DataMiner version into a system with a newer version, this will work in the majority of cases.
+> - Importing a package created with a more recent DataMiner version into a system with an older version is not supported and may not work. Importing a package created with an older DataMiner version into a system with a newer version will work in most cases, but this is not guaranteed.
 > - External DLLs are not included in .dmimport packages. If you export and import an element that uses an external DLL, this external DLL will still need to be added to the DMA where you import the element, either manually, or by means of a separate install package.
 
 > [!TIP]
