@@ -8,7 +8,9 @@ A DataMiner Extension Module (DxM) is a service that can be installed, upgraded,
 
 ## Evolution
 
-From the list of DxMs, we will extract some modules that are actually core modules created with the DXM technology and call them 'DMs'. DxMs and DMs will be treated differently during upgrades. DMs will be installed (or updated if already installed) during Core upgrade/update packages, while DxMs will only be updated when they were already installed. DxMs will have a 'minimal version of the core' dependency, and that will be made transparent through the cloud admin page. When installing updates, the latest compatible update will be automatically selected.
+Some DxMs are considered core modules created using the DxM technology. These are known as "DMs". DMs are treated differently from other DxMs during upgrades. While other DxMs are only updated if they have already been installed, a DM will always be installed or updated with an upgrade.
+
+DxMs depend on a minimum version of the core software. This is indicated in the Admin app. When you install updates, the latest compatible update will be automatically selected.
 
 ## Packs
 
