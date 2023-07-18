@@ -80,4 +80,4 @@ When marked as *IsSoftDeleted* the fields linked to the soft-deleted `FieldDescr
 - Not be validated when updating the `SectionDefinition`/`DomDefinition`/`DomBehaviorDefinition`.
 - Never be required.
 - Allow values to exist on a `DomInstance` for a soft-deleted `FieldDescriptor`/`SectionDefinitionLink`/`DomStatusSectionDefinitionLink`.
-- Block updating a `DomInstance` with new/updated values for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that staus). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
+- Block updating a `DomInstance` with new/updated values for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
