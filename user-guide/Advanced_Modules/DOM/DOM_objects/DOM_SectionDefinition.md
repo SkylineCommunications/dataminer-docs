@@ -52,7 +52,7 @@ Below is an overview of all other important properties:
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will not be incremented anymore, the value will remain the last value before the descriptor was marked as soft-deleted.
+- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will no longer be incremented. The value will remain the last value before the descriptor was marked as soft-deleted.
 
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 
