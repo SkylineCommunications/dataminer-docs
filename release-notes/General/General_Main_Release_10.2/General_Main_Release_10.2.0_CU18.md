@@ -127,3 +127,9 @@ When you clicked *Start with a blank dashboard* twice in rapid succession, two p
 In some cases, the *[this EnhancedServiceID]* placeholder would not resolve correctly when used inside another placeholder.
 
 For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the parameter of the service element with parameter ID 1 would not be displayed correctly in the shape text.
+
+#### Problem with SLScripting when resolving assemblies [ID_36843]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.

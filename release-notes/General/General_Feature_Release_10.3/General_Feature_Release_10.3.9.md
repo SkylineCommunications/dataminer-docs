@@ -225,6 +225,12 @@ For example, when an alarm group was created with an old time of arrival, the *r
 
 After upgrading from DataMiner main version 10.3.0 (or older) to DataMiner feature version 10.3.7 or 10.3.8, the default `relationThreshold` value would unexpectedly be set to 0.5 instead of 0.7 (i.e. the default value).
 
+#### Problem with SLScripting when resolving assemblies [ID_36843]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
+
 #### Problem when renaming an element [ID_36855]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

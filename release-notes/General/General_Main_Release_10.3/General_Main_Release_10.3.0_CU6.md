@@ -99,3 +99,9 @@ Validation has now been added to `NT_ADD_VIEW`. When a request enters to create 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an `index out of bounds` error could occur when processing a behavioral change point.
+
+#### Problem with SLScripting when resolving assemblies [ID_36843]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
