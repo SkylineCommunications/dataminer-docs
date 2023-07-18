@@ -3751,7 +3751,7 @@
                 topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
                 topicUid: SLNetClientTest_modifying_engine_id
-              - name: Reinitializing ResourceManager
+              - name: Reinitializing Resource Manager
                 topicUid: SLNetClientTest_reinitialize_resourcemanager
               - name: Removing a DOM manager
                 topicUid: SLNetClientTest_removing_DOM_Manager
