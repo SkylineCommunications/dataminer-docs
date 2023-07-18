@@ -33,6 +33,12 @@ Because of this change, the behavior of aggregations applied on all types of emp
 
 ### Fixes
 
+#### Referenced DomInstances would not get updated when a DomInstance was created or updated [ID_36734]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a DomInstance was created or updated, the DomInstances that were referenced by that DomInstance would incorrectly not get updated unless the browser window was refreshed.
+
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -61,6 +67,12 @@ When you viewed a shared dashboard that you were not allowed to edit, in some ca
 
 Also, when you refreshed a shared dashboard while it was in edit mode, edit mode would incorrectly be closed.
 
+#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
+
 #### Dashboards app: Problem when clicking 'Start with a blank dashboard' [ID_36798]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -72,3 +84,15 @@ When you clicked *Start with a blank dashboard* twice in rapid succession, two p
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, it would incorrectly not be possible to feed a selected timeline item to a component on a panel of a low-code app.
+
+#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
+
+#### Problem when sharing a dashboard containing a Gauge component fed by a State component with indices [ID_36872]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.

@@ -5210,56 +5210,79 @@
     - name: DataMiner Integration Studio (DIS)
       topicUid: DIS
       items:
-        - name: Concepts
-          topicUid: Concepts
-          items:
-            - name: Overall concept of the DataMiner Integration Studio
-              topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
-            - name: Concept of debugging QActions and Automation scripts
-              topicUid: Concept_of_debugging_QActions_and_Automation_scripts
-        - name: Installing and configuring the software
+        - name: Introduction
+          topicUid: Overall_concept_of_the_DataMiner_Integration_Studio
+        - name: Installation and configuration
           topicUid: Installing_and_configuring_the_software
           items:
             - name: Prerequisites
               topicUid: Prerequisites
-            - name: Installing and configuring DataMiner Integration Studio
+            - name: Installing and configuring DIS
               topicUid: Installing_and_configuring_DataMiner_Integration_Studio
             - name: Configuring Microsoft Visual Studio
               topicUid: Configuring_Microsoft_Visual_Studio
-        - name: Protocols as a Visual Studio solution
-          topicUid: Protocols_as_a_Visual_Studio_solution
         - name: DIS menu
           topicUid: DIS_menu
-        - name: XML editor
-          topicUid: XML_editor
-        - name: Display editor
-          topicUid: Display_editor
-        - name: Function editor
-          topicUid: Function_editor
-        - name: Table editor
-          topicUid: Table_editor
-        - name: Version editor
-          topicUid: Version_editor
-        - name: C# editor
-          topicUid: C_editor
-        - name: Debugging QActions and Automation scripts
-          topicUid: Debugging_QActions_and_Automation_scripts
+        - name: Editors
+          topicUid: DisEditors
           items:
+          - name: XML editor
+            topicUid: XML_editor
+          - name: Display editor
+            topicUid: Display_editor
+          - name: Function editor
+            topicUid: Function_editor
+          - name: Table editor
+            topicUid: Table_editor
+          - name: Version editor
+            topicUid: Version_editor
+          - name: C# editor
+            topicUid: C_editor
+        - name: Tool windows
+          topicUid: DisToolWindows
+          items:
+            - name: DIS Tree
+              topicUid: DisTreeViewToolWindow
+            - name: DIS Mapping
+              topicUid: DisMappingViewToolWindow
+            - name: DIS Grid View
+              topicUid: DisGridViewToolWindow
+            - name: DIS Diagram
+              topicUid: DisDiagramToolWindow
+            - name: DIS Validator
+              topicUid: DisValidatorToolWindow
+            - name: DIS Comparer
+              topicUid: DisComparerToolWindow
+            - name: DIS Macros
+              topicUid: DisMacrosToolWindow
+            - name: DIS Inject
+              topicUid: DisInjectToolWindow
+            - name: DIS MIB Browser
+              topicUid: DisMibBrowserToolWindow
+        - name: Plugins
+          topicUid: DisPlugins
+        - name: Development using DIS
+          topicUid: DisVisualStudioSolutions
+          items:
+            - name: Visual Studio solutions
+              topicUid: DisVisualStudioSolutionsIntroduction
+            - name: Developing connectors
+              topicUid: Developing_connectors_as_Visual_Studio_solutions
+            - name: Developing Automation scripts
+              topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
+        - name: Debugging connectors and Automation scripts
+          topicUid: Debugging_connectors_and_Automation_scripts
+          items:
+            - name: Concept
+              topicUid: Concept_of_debugging_connectors_and_Automation_scripts
             - name: Preparing to debug on the local DataMiner Agent
               topicUid: Preparing_to_debug_on_the_local_DataMiner_Agent
             - name: Preparing to debug on a remote DataMiner Agent
               topicUid: Preparing_to_debug_on_a_remote_DataMiner_Agent
-            - name: Debugging a QAction
-              topicUid: Debugging_a_QAction
+            - name: Debugging a connector
+              topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
-        - name: Developing DataMiner protocols and Automation scripts as Visual Studio solutions
-          topicUid: Developing_DataMiner_protocols_and_Automation_scripts_as_Visual_Studio_solutions
-          items:
-            - name: Developing DataMiner protocols as Visual Studio solutions
-              topicUid: Developing_DataMiner_protocols_as_Visual_Studio_solutions
-            - name: Developing Automation scripts as Visual Studio solutions
-              topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:

@@ -13,7 +13,7 @@ From DIS 2.31 onwards, developing Automation scripts as a Visual Studio solution
 > [!TIP]
 > See also: [Developing Automation scripts as Visual Studio solutions](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)
 
-## Creating an Automation Script solution
+## Creating an Automation script solution
 
 To create a new Automation script solution containing one dummy Automation script, do the following:
 

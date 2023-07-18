@@ -305,9 +305,28 @@ A number of enhancements have been made to the caching mechanism used by the *Be
 
 #### SLProtocol is now a 64-bit process by default [ID_36725]
 
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
 SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+
+Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
+
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade. As all DataMiner components using .NET 5 have been upgraded to use .NET 6 instead, .NET 5 will no longer be installed by default.
+
+> [!NOTE]
+> If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
 
 ### Fixes
 
@@ -420,3 +439,9 @@ When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in 
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.

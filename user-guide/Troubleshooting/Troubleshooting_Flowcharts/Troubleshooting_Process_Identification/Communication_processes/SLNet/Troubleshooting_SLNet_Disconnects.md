@@ -119,7 +119,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
  click DebugCallback "#how-to-debug-a-callback-timeout-error"
  click RefusedState "/user-guide/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
  click NoMoreConnections "#cannot-set-up-new-connections"
- click StartAgent "/user-guide/Advanced_Functionality/DataMiner_Systems/Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System.html"
+ click StartAgent "/user-guide/Advanced_Functionality/DataMiner_Systems/Starting_or_stopping_DMAs/Starting_or_stopping_a_DMA_in_DataMiner_Cube.html"
  click FixMobileGatewaySettings "/user-guide/Advanced_Modules/Mobile_Gateway/Configuring_Mobile_Gateway.html"
 %% -------------------------------------------------------------------------
 %% Apply styles to blocks

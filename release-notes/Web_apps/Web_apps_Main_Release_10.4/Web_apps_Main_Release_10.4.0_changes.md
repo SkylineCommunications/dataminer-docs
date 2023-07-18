@@ -387,6 +387,16 @@ A number of security enhancements have been made.
 
 In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
 
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737] [ID_36778]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the overview.
+
+From now on, when you hover over each of the possible visualizations in the overview, a tooltip will appear, giving more information about that visualization.
+
+Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -598,18 +608,6 @@ From now on, users who only have permission to view dashboards will not see any 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
-
-#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
-
-#### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
 
 #### GQI: Not all DCF interface properties would be returned [ID_36840]
 
