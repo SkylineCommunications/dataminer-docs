@@ -117,6 +117,12 @@ SLLogCollector will now also collect the scheduled tasks configured in Microsoft
 
 During a DataMiner upgrade, from now on, the presence of the Visual C++ 2010 redistributable will no longer be checked.
 
+#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
+
 #### DataMiner installation/upgrade: Updated DataMiner Extension Modules [ID_36799]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
