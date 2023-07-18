@@ -44,6 +44,30 @@ The MODCOD reference for hub return carriers has been updated.
 
 In the Generic Sun Outage connector, the primary key of the Outages Table (parameter ID 600) now uses integer-based values instead of string values. The values consist of the ID concatenated with the epoch time of the start of the outage.
 
+#### Verizon WM Ticketing: Improved weather recheck logic and location metrics [ID_36931]
+
+The logic for weather rechecks in the Verizon WM Ticketing connector has been adjusted, so that these are now performed in batches instead of one by one. In addition, location values of circuits will now be retrieved from the circuit information in real time.
+
+#### Verizon VSAT Platform Manager: Improved logic to export location metrics of circuits [ID_36932]
+
+The logic in the Verizon VSAT Platform Manager connector to export location metrics of circuits to the topology file has been improved.
+
+#### Verizon iDirect Evolution Platform Collector: Improved logic to export location metrics of circuits [ID_36934]
+
+The logic in the Verizon iDirect Evolution Platform Collector connector to export location metrics of circuits to the exported circuit files has been improved.
+
+#### Verizon ETMS Platform: Improved weather recheck logic [ID_36935]
+
+The logic for weather rechecks in the Verizon ETMS Platform connector has been adjusted, so that these are now performed in batches instead of one by one.
+
+#### Verizon ETMS Platform: Improved description in case there are failed KPIs but no power issues [ID_36937]
+
+In the Verizon ETMS Platform connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
+
+#### Verizon WM Ticketing: Improved description in case there are failed KPIs but no power issues [ID_36937]
+
+In the Verizon WM Ticketing connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: BUC Table empty [ID_36640]
