@@ -254,7 +254,7 @@ Enables the alarm list component in the Dashboards app.
 Enables alpha components in the Dashboards app.
 
 - **Minimum version**: 9.6.6
-- **Estimated release version**: Will not be released
+- **Estimated release version**: Will not be released (deprecated from [DataMiner 10.3.9](xref:Web_apps_Feature_Release_10.3.9#dashboards-app--low-code-apps-reportsanddashboardsalpha-soft-launch-option-is-now-deprecated-id_36894) onwards)
 
 ### ReportsAndDashboardsAutomationScript
 
