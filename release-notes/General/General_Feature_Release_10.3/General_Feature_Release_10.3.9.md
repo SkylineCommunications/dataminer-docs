@@ -61,6 +61,24 @@ In the log files, you will be able to find out which caches are enabled and when
 
 When the caches are enabled, it is no longer possible to get paged results when retrieving DomDefinitions, DomBehaviorDefinitions or SectionDefinitions. Instead, the complete list of objects matching the given query will be returned, even if that list is larger than the configured page size.
 
+#### DataMiner Object Models: Soft-deletable objects [ID_36721]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The following DOM objects can now be soft-deleted:
+
+- [FieldDescriptor](xref:DOM_SectionDefinition#fielddescriptor)
+- [SectionDefinitionLink](xref:DomDefinition#sectiondefinitionlink)
+- [DomStatusSectionDefinitionLink](xref:DOM_status_system#configuring-fields)
+
+When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` are marked as *IsSoftDeleted*, the following applies:
+
+- The fields will not be shown in a UI form.
+- The fields are not validated when the `SectionDefinition`, `DomDefinition`, or `DomBehaviorDefinition` is updated.
+- The fields are never be required.
+- Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
+- Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
+
 ## Changes
 
 ### Enhancements
