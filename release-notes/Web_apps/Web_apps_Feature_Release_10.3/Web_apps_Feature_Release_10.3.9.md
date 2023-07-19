@@ -253,3 +253,11 @@ Up to now, when DCF interface properties were fetched, only the properties found
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
+
+#### Dashboards app & Low-Code Apps - GQI: Not possible to link empty feeds to ad hoc arguments [ID_36913]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when empty feeds had not yet been initialized with a value, it would not be possible to link those feeds to ad hoc arguments.
+
+From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
