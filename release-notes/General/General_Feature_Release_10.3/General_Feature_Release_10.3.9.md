@@ -79,6 +79,28 @@ When the fields linked to a soft-deleted `FieldDescriptor` or part of a soft-del
 - Values are allowed to exist in the fields on a `DomInstance` for a soft-deleted `FieldDescriptor`, `SectionDefinitionLink`, or `DomStatusSectionDefinitionLink`.
 - Updating a `DomInstance` with new/updated values will be blocked for a field that has a soft-deleted `FieldDescriptor`, or is part of a soft-deleted `SectionDefinitionLink` or `DomStatusSectionDefinitionLink` (for that status). A [ValueForSoftDeletedFieldNotAllowed error](xref:DomInstance#errors) will be returned.
 
+#### Reinitializing ResourceManager [ID_36811]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+You can now (re)initialize Resource Manager using the SLNetClientTest tool. This can be useful if Resource Manager fails to initialize on DataMiner startup, and you want to try to initialize it again without restarting DataMiner.
+
+> [!CAUTION]
+> When you reinitialize Resource Manager, it will first be deinitialized and then initialized again. This can cause pending calls to fail, and new calls that are made while Resource Manager is being deinitialized will fail with the *ModuleNotInitialized* error.
+
+> [!NOTE]
+> In order to do this, you need the user permission [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools).
+
+To (re)initialize Resource Manager:
+
+1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+
+1. In the *Advanced* menu, go to *Apps* > *SRM Surveyor*.
+
+1. At the bottom of the window, click *Reinitialize ResourceManager*.
+
+   Resource Manager will be (re)initialized on the DataMiner Agent you are connected to.
+
 ## Changes
 
 ### Enhancements
