@@ -44,6 +44,12 @@ In *Automation*, *Correlation* and *Scheduler*, you can select a report of a das
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
 
+#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+In some rare cases, an error could occur when, In Visual Overview, you opened a service chain shape linked to an SRM service while Resource Manager updates and DCF connection updates for the elements in that SRM service were being received.
+
 #### DataMiner Cube - Visual Overview: Problem with [this EnhancedServiceID] placeholder [ID_36808]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
