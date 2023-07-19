@@ -33,6 +33,12 @@ Because of this change, the behavior of aggregations applied on all types of emp
 
 ### Fixes
 
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->
+
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
+
 #### Referenced DomInstances would not get updated when a DomInstance was created or updated [ID_36734]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
@@ -69,7 +75,7 @@ Also, when you refreshed a shared dashboard while it was in edit mode, edit mode
 
 #### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
 

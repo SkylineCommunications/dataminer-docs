@@ -92,6 +92,12 @@ When an SNMPv3 element was deleted, its SNMPv3 credentials would incorrectly not
 
 In *Automation*, *Correlation* and *Scheduler*, you can select a report of a dashboard in an *Email*, *Upload to FTP* or *Upload to shared folder* action. When such an action was initialized, in some rare cases, the report or dashboard would not be automatically selected.
 
+#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->
+
+When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
+
 #### Dashboards app: Black boxes on top of first or last field of selection boxes on small screens [ID_36738]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -113,6 +119,12 @@ Validation has now been added to `NT_ADD_VIEW`. When a request enters to create 
 Up to now, it would incorrectly be possible to create a low-code app with a name that was identical to that of an existing app.
 
 From now on, when you try to create an app with a name that is identical to that of an existing app, an error will be thrown.
+
+#### Dashboards app: 'UpdateDashboard' call was sent twice when deleting a component [ID_36766]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you deleted a component from a dashboard, an `UpdateDashboard` call would incorrectly be sent twice.
 
 #### DataMiner Cube - Trending: Panning across the graph would not work [ID_36769]
 
