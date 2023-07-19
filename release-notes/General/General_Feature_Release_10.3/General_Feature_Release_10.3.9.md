@@ -237,6 +237,15 @@ In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new 
 - *DataMiner Start DataMiner And SLNet.bat*
 - *DataMiner Start DataMiner.bat*
 
+#### User-Defined APIs: ApiTriggerInput object has a new TokenId property [ID_36856]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- Not added to MR 10.4.0 -->
+
+The `ApiTriggerInput` object, which contains information about the API trigger, will now also contain a `TokenId` property.
+
+This property will contain the ID of the `ApiToken` that was used to trigger the API.
+
 ### Fixes
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
