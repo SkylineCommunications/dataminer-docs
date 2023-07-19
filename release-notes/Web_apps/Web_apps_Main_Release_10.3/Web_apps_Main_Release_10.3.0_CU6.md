@@ -33,6 +33,12 @@ Because of this change, the behavior of aggregations applied on all types of emp
 
 ### Fixes
 
+#### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you tried to open the edit mode of a low-code app that you were not allowed to edit, an incorrect error message would appear.
+
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->

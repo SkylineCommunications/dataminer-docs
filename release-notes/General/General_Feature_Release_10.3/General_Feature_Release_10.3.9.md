@@ -173,9 +173,9 @@ Using the new `DomInstanceHistoryStorageBehavior` enum on the new `DomInstanceHi
 
 The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
 
-- **EnabledAsync** (default value): The HistoryChange records will be created, updated and deleted asynchronously. Creating, updating and deleting DomInstances will not be blocked.
+- **EnabledAsync** (default value): The HistoryChange records will be created, updated and deleted asynchronously.
 
-- **EnabledSync**: The HistoryChange records will be created and deleted synchronously. Creating, updating and deleting DomInstances will be blocked until the HistoryChange object has been written to the database.
+- **EnabledSync**: The HistoryChange records will be created and deleted synchronously.
 
 - **Disabled**: No HistoryChange records will be created, updated or deleted.
 
