@@ -83,12 +83,15 @@ In most cases, a separate hard drive will be used to store database data. The da
 
 ### Initial Configuration
 
+1. Configure the Linux setting *vm.max_map_count* as explained in the section [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) of the OpenSearch documentation.
+
 1. Follow [Step 3: Set up OpenSearch in your environment](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-3-set-up-opensearch-in-your-environment) and change the *JVM Heap Space*.
 
    > [!IMPORTANT]
    > For production systems, Java heap size must be set higher than the default setting. We recommend that at least 8 GB is assigned for Java heap.
 
-1. For every node in your cluster, configure the *OpenSearch.yml* file as illustrated in the example below (the example uses three nodes). For more details on configuring an OpenSearch cluster, please see [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/) in the official documentation.
+1. Configure OpenSearch nodes and set up a cluster. See the official documentation: [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
+   Below is an example *opensearch.yml* file for a node in a three node cluster. Security in this example is disabled for the ease of testing.
 
    ```yml
    # Use a descriptive name for your cluster:
@@ -116,9 +119,9 @@ In most cases, a separate hard drive will be used to store database data. The da
    #
    # Set the bind address to a specific IP (IPv4 or IPv6), best is to use the real-ip of the node:
    #
-   network.host: 10.11.22.33
+   network.host: 166.206.186.146
    
-   network.publish_host: 10.11.22.33
+   network.publish_host: 166.206.186.146
    #
    # Set a custom port for HTTP:
    #
@@ -131,7 +134,7 @@ In most cases, a separate hard drive will be used to store database data. The da
    # Pass an initial list of hosts to perform discovery when this node is started:
    # The default list of hosts is ["127.0.0.1", "[::1]"]
    #
-   discovery.seed_hosts: ["10.11.22.31","10.11.22.32","10.11.22.33"]
+   discovery.seed_hosts: ["166.206.186.146","166.206.186.147","166.206.186.148"]
    
    discovery.type: zen
    cluster.initial_cluster_manager_nodes: ["opensearchnode1"]
@@ -164,7 +167,7 @@ In most cases, a separate hard drive will be used to store database data. The da
      # Pass an initial list of hosts to perform discovery when this node is started:
      # The default list of hosts is ["127.0.0.1", "[::1]"]
      #
-     discovery.seed_hosts: ["10.11.22.33"]
+     discovery.seed_hosts: ["166.206.186.146"]
      discovery.type: single-node  
      ```
 
@@ -182,7 +185,7 @@ Follow [Step 2: (Optional) Test OpenSearch](https://opensearch.org/docs/latest/i
 
 Optionally, you can set up OpenSearch Dashboards, which is the equivalent of Kibana for Elasticsearch. To do so, follow the instructions under [Installing OpenSearch Dashboards (Debian)](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/debian/).
 
-You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`(example: http(s)://10.11.22.33:5601).
+You can for example install this on a Ubuntu Server from an APT repository or using .deb-packages. You will then be able to connect to your server using `http(s)://ipaddress:5601`(example: http(s)://166.206.186.146:5601).
 
 To configure TLS, instead of using .pem certificates as recommended in the [OpenSearch documentation](https://opensearch.org/docs/latest/install-and-configure/install-dashboards/tls/), we recommend using .p12 files for trust and keystore. You can generate these using the [Generate-TLS-Certificates](https://github.com/SkylineCommunications/generate-tls-certificates) script maintained by the Skyline security team.
 
