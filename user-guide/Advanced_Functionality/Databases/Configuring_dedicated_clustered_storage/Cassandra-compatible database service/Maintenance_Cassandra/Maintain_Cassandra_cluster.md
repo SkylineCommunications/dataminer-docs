@@ -4,6 +4,15 @@ uid: Maintain_Cassandra_Cluster
 
 # Maintaining a Cassandra cluster
 
+## Setting the heap space
+
+To ensure that your Cassandra does not run out of memory under load, please configure the parameters **Xmx** and **Xms** to set the Cassandra Heap Space in the *jvm-server.options* file.
+Using the default "CMS" garbage collector, the heap space should ideally be between 8 and 16 Gb. 
+For more information on how to tune the resources of Cassandra's Java Virtual Machine, please see [Tuning the Java heap](https://docs.datastax.com/en/cassandra-oss/3.0/cassandra/operations/opsTuneJVM.html#opsTuneJVM__tuning-the-java-heap) .
+
+> [!WARNING]
+> Failing to adapt the heap space to the needs of your cluster will cause out of memory events which can affect availability of the DMS.
+
 ## Monitoring your database
 
 To ensure that your Cassandra database is running fine, we highly recommend that you create an element using the [Apache Cassandra Cluster Monitor](https://catalog.dataminer.services/result/driver/7500) connector.
