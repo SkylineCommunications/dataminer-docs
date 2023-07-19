@@ -311,6 +311,34 @@ SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
 
+#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a DomInstance is created or updated, a HistoryChange record is stored in the database, and when a DomInstance is deleted, all HistoryChange objects associated with that DomInstance are deleted from the database. Up to now, those HistoryChange records were always created, updated and deleted synchronously.
+
+From now on, all DOM managers will create, update and delete their HistoryChange records asynchronously, which will considerably enhance overall performance when creating, updating or deleting DomInstances.
+
+Using the new `DomInstanceHistoryStorageBehavior` enum on the new `DomInstanceHistorySettings` class, you can configure whether HistoryChange records will be stored and how they will be stored. See the following example:
+
+```csharp
+​ModuleSettings.DomManagerSettings.DomInstanceHistorySettings.StorageBehavior = DomInstanceHistoryStorageBehavior.Disabled;
+```
+
+The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
+
+- **EnabledAsync** (default value): The HistoryChange records will be created, updated and deleted asynchronously. Creating, updating and deleting DomInstances will not be blocked.
+
+- **EnabledSync**: The HistoryChange records will be created and deleted synchronously. Creating, updating and deleting DomInstances will be blocked until the HistoryChange object has been written to the database.
+
+- **Disabled**: No HistoryChange records will be created, updated or deleted.
+
+  > [!NOTE]
+  > If you set the value to "Disabled" after it had been set to one of the other options, the existing HistoryChange records in the database will be left untouched, even if the corresponding DomInstance is deleted.
+
+> [!NOTE]
+> When you delete a DomInstance with a large number of associated HistoryChange records, deleting all those HistoryChange records can take a long time, even when this is done asynchronously. Therefore, we recommend disabling the creation of HistoryChange records if you do not need them.
+
 #### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
