@@ -397,15 +397,6 @@ From now on, when you hover over each of the possible visualizations in the over
 
 Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
 
-#### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-You can now delete components by pressing the *DELETE* button on your keyboard.
-
-1. In Edit mode, select the component(s) you want to delete.
-1. Press the *DELETE* button.
-
 #### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

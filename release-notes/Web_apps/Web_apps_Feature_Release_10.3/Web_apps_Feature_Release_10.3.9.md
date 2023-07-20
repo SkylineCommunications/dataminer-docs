@@ -154,7 +154,7 @@ Also, the component will no longer change instantly when you hover over a visual
 
 #### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 You can now delete components by pressing the *DELETE* button on your keyboard.
 

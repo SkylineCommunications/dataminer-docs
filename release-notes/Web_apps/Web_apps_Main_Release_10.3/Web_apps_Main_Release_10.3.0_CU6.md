@@ -31,6 +31,15 @@ Because of this change, the behavior of aggregations applied on all types of emp
 | Std dev/Percentile | null | "Not applicable" |
 | Sum                | 0    | 0                |
 
+#### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+You can now delete components by pressing the *DELETE* button on your keyboard.
+
+1. In Edit mode, select the component(s) you want to delete.
+1. Press the *DELETE* button.
+
 ### Fixes
 
 #### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
