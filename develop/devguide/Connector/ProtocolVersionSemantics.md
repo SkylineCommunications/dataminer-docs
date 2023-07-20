@@ -23,7 +23,7 @@ For example: 1.0.0.1
 
 The combination of the first 3 numbers identifies the protocol version range.
 
-It is possible that different version ranges are maintained in parallel.
+It is possible that different version ranges are maintained in parallel but we should always try to keep this to a minimum.
 
 ### Branch
 
