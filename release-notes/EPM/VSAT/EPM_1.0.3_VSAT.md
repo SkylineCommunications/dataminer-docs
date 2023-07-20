@@ -68,6 +68,13 @@ In the Verizon ETMS Platform connector, the description when there are failed KP
 
 In the Verizon WM Ticketing connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
 
+#### Carrier performance scripts improvements [ID_36957] [ID_36958] [ID_36959] [ID_36960] [ID_36961]
+
+The *GQIO_Percentage_Double*, *GQIO_Percentage_Int*, *GQIO_MultiplyByPercentage*, *GQIO_RunningTotal_Double*, and *GQIO_RunningTotal_Int* scripts have been updated as follows:
+
+- The *Folder* XML tag has been added to each script, so that it is placed in the *CARRIER PERFORMANCE* Automation folder by default.
+- The *preCompile* and *libraryName* XML tags have also been added to each script, so that it is compiled as a library and given a library name by default, making it visible in the Dashboards app.
+
 ### Fixes
 
 #### Verizon iDirect Evolution Platform Collector: BUC Table empty [ID_36640]
