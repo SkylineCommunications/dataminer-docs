@@ -54,7 +54,7 @@ Client:
 
 Client:
 
-- Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz   3.00 GHz
+- Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz
 - 4 cores
 - 32GB RAM
 - Windows 11 Enterprise
