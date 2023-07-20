@@ -258,6 +258,33 @@ The `ApiTriggerInput` object, which contains information about the API trigger, 
 
 This property will contain the ID of the `ApiToken` that was used to trigger the API.
 
+#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID_36891]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the *DataMiner Object Model* window.
+
+- The *DataMiner Object Model* window will now only subscribe to the events of the DOM manager you selected in the *ModuleSettings* window. Up to now, it would subscribe to all events of all DOM managers.
+
+- The *DomInstances* and *History* pages will initially only load up to 500 objects. A warning message at the top of the window will indicate that only a limited list was loaded, and that you will need to click *Refresh* to load all items.
+
+- The objects listed on the *DomInstances* and *History* pages will now be sorted by the data that was last modified (descending), allowing you to quickly see the recently updated objects.
+
+- On the *History* page, the GUID of the DomInstance will no longer have a "DomInstanceId" prefix.
+
+- The *Attachments* page will no longer load all DomInstances at startup. If you want all DomInstances to be loaded, you will need to click *Load all DOM instances*.
+
+- On the *SectionDefinitions* page, the IDs of the section definitions will now be shown in the first column.
+
+- When you click *View* after selecting a section definition, the text will no longer include a *Validators* line if no validators could be found.
+
+- When no name is assigned to a *DomBehaviorDefinition* or a *DomDefinition*, the text "(no name)" will appear to indicate that no name was assigned.
+
+- If, on any of the pages, you want to select an item in a table, you can now click the item anywhere. Up to now, you had to click the cell in the first column.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
 ### Fixes
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
