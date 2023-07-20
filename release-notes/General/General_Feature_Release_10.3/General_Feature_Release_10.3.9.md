@@ -105,9 +105,9 @@ To (re)initialize Resource Manager:
 
 ### Enhancements
 
-#### Security enhancements [ID_36319]
+#### Security enhancements [ID_36319] [ID_36928]
 
-<!-- 36319: MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.4.0 - FR 10.3.9 -->
 
 A number of security enhancements have been made.
 
