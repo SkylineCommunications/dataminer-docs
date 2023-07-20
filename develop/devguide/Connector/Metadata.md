@@ -10,7 +10,7 @@ Every connector contains the following metadata:
 |---------|---------|
 |[Name](xref:Protocol.Name)     | The name of the protocol.        |
 |[Description](xref:Protocol.Description)     |A short textual description of the protocol.         |
-|[Version](xref:Protocol.Version)     |A number or text indicating the protocol version.         |
+|[Version](xref:Protocol.Version)     |A number or text indicating the protocol version. For more information, refer to [Protocol version semantics](xref:ProtocolVersionSemantics).        |
 |[Vendor](xref:Protocol.Vendor)     |The name of the vendor of the device.         |
 |[VendorOID](xref:Protocol.VendorOID)     |The OID of the vendor of the device. Typically, this OID will start with the prefix 1.3.6.1.4.1, which identifies private enterprises.         |
 |[DeviceOID](xref:Protocol.DeviceOID)     |The OID of the device.         |
