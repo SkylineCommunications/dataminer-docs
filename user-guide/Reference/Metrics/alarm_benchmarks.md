@@ -50,6 +50,15 @@ Client:
 - 16GB RAM
 - Windows 10 Enterprise
 
+### Metric 16 & 17
+
+Client:
+
+- Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz   3.00 GHz
+- 4 cores
+- 32GB RAM
+- Windows 11 Enterprise
+
 ## Benchmarks
 
 | \# | Specification | Scope | Metric | Remarks | Configuration |
@@ -69,3 +78,5 @@ Client:
 | 13 | Adding the Severity Duration column on a busy system |	DataMiner Cube | 2 s | Tested on a system with a large amount of incoming alarms ||
 | 14 | Create 1,000 alarms using addrow operations | DMA | 2.8 s | Waiting for alarm events after creating 1,000 rows | Clean DMA. |
 | 15 | Retrieve all current alarms (28,622) | DMS |	26.48 s |	Test creates 28,622 alarms spread over elements, services, DVE element, etc., and measures the time it takes to retrieve them. | DMA only contains the elements, services, DVE elements and views needed for this test. No other data on it. Also, no other tests are running. |
+| 16 | Retrieve all alarms of last 24h | DMS | 1 m | The DMS used Cassandra and the time includes the loading from the server and the processing in Cube | The DMS had about 5000 active alarms and an update each second |
+| 17 | Retrieve all alarms of last 24h | DMS | 2 m 30 s | The DMS used Cassandra Cluster and the time includes the loading from the server and the processing in Cube | The DMS had about 3000 active alarms and an update each second |
