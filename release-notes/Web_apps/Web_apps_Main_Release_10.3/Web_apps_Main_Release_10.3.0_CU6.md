@@ -108,7 +108,7 @@ Up to now, it would incorrectly not be possible to feed a selected timeline item
 
 #### Dashboards app & Low-Code Apps: User menu would not close when clicking the user icon [ID_36829]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you had opened the user menu by clicking the user icon in the top-right corner, that menu would not close when you clicked the user icon a second time.
 
