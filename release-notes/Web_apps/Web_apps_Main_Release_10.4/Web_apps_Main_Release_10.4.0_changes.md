@@ -305,11 +305,17 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
-#### Dashboards app & Low-Code Apps: Retrieving trend data asynchronously via websockets [ID_36583]
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36886] [ID_36887] [ID_36904]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-Because of a number of enhancements, dashboards and low-code apps are now fully capable of retrieving trend data asynchronously via websockets.
+Up to now, the following asynchronous operations were only supported over HTTP(s). From now on, these asynchronous operations will also be supported when using WebSockets.
+
+- Retrieving trend data
+- Retrieving alarm history
+- Generating PDF reports
+- Sending emails containing PDF reports
+- Sharing a dashboard
 
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
