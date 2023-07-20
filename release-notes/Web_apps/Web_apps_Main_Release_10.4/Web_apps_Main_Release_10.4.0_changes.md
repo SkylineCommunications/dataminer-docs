@@ -608,11 +608,3 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
-
-#### Dashboards app & Low-Code Apps - GQI: Not possible to link empty feeds to ad hoc arguments [ID_36913]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-Up to now, when empty feeds had not yet been initialized with a value, it would not be possible to link those feeds to ad hoc arguments.
-
-From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
