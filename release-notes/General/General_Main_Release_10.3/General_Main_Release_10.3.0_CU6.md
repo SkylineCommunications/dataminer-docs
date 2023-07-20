@@ -53,11 +53,11 @@ In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new 
 - *DataMiner Start DataMiner And SLNet.bat*
 - *DataMiner Start DataMiner.bat*
 
-#### Renaming objects: More clearer error message in case the name already exists [ID_36845]
+#### Renaming objects: DMA will throw a more clearer error message in case the name already exists [ID_36845]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-When you try to rename an element, a service or a redundancy group, the following error message will now be returned when the name already exists:
+When an attempt is made to rename an object, the DataMiner Agent will now throw the following error message when the name already exists:
 
 ```txt
 The name is already used by another object in the DMS.
