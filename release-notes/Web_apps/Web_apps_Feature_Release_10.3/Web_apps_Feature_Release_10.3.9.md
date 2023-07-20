@@ -170,6 +170,12 @@ The *Get trend data patterns* and *Get trend data pattern events* data sources n
 
 Each time the time range of a pattern gets updated, a new pattern record is created with a new pattern version.
 
+#### Monitoring app: A new type of buttons and toggle buttons will now be used on parameter pages [ID_36773]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
+
 #### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

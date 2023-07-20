@@ -397,6 +397,12 @@ From now on, when you hover over each of the possible visualizations in the over
 
 Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
 
+#### Monitoring app: A new type of buttons and toggle buttons will now be used on parameter pages [ID_36773]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
+
 #### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
