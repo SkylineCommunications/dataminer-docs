@@ -45,7 +45,7 @@ the data source with which the connector communicates has a new firmware version
 - Examples:
   - 1.0.0.1 = Initial version supporting device firmware 10.0.x – 10.1.x.
   - 1.1.0.1 = New range to support device firmware range 10.2.x.
-  - Both ranges are maintained in parallel.
+  - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding element to the new 1.1.0.x range.
 
 ### Major change
 
