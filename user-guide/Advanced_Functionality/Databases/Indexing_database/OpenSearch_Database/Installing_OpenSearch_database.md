@@ -12,12 +12,12 @@ OpenSearch is only supported on Linux. DataMiner is compatible with the followin
 - OpenSearch 2.X
 
 > [!NOTE]
-> - We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
+> We promote the use of Ubuntu LTS as the preferred Linux distribution. As such, the commands mentioned below will work on any Debian-based system, including Ubuntu.
 
 ## Installation and initial configuration
 
 > [!NOTE]
-> - For more information, please refer to the official [OpenSearch Documentation](https://opensearch.org/docs/latest/).
+> For more information, refer to the official [OpenSearch Documentation](https://opensearch.org/docs/latest/).
 
 ### Installation from an APT repository
 
@@ -39,49 +39,50 @@ Make sure the firewall ports are open for OpenSearch. OpenSearch operates on TCP
 - To add the correct ports to the firewall, you can for example use the following commands:
 
   - Commands node 1:
-  
+
     `$ sudo ufw allow from [IP node 2] to [IP node 1] proto tcp port 9200,9300`
-  
+
     `$ sudo ufw allow from [IP node 3] to [IP node 1] proto tcp port 9200,9300`
-  
+
   - Commands node 2:
-  
+
     `$ sudo ufw allow from [IP node 1] to [IP node 2] proto tcp port 9200,9300`
-  
+
     `$ sudo ufw allow from [IP node 3] to [IP node 2] proto tcp port 9200,9300`
   
   - Commands node 3:
-  
+
     `$ sudo ufw allow from [IP node 1] to [IP node 3] proto tcp port 9200,9300`
-  
+
     `$ sudo ufw allow from [IP node 2] to [IP node 3] proto tcp port 9200,9300`
 
 - Make sure all DMAs in the DMS can connect to port 9200 and 9300:
 
   - Connectivity for DMA 1 (with OpenSearch Dashboards connection allowed):
-  
+
     `$ sudo ufw allow from [IP node DMA 1] to [IP node 1] proto tcp port 9200,9300,5601`  
-    
+
     `$ sudo ufw allow from [IP node DMA 1] to [IP node 2] proto tcp port 9200,9300,5601`  
-    
+
     `$ sudo ufw allow from [IP node DMA 1] to [IP node 3] proto tcp port 9200,9300,5601`  
-  
+
   - Connectivity for DMA 2:
-  
+
     `$ sudo ufw allow from [IP node DMA 2] to [IP node 1] proto tcp port 9200,9300`  
-    
+
     `$ sudo ufw allow from [IP node DMA 2] to [IP node 2] proto tcp port 9200,9300`  
-    
+
     `$ sudo ufw allow from [IP node DMA 2] to [IP node 3] proto tcp port 9200,9300`  
-  
+
   - And so on.
 
 ### Mounting the data drive
 
 In most cases, a separate hard drive will be used to store database data. The data drive has to be mounted and path to the data directory has to be specified in the Openseconfiguration file (see below).
-   - The following example command mounts the drive */dev/sdb1* to the directory */media/data*: `sudo mount /dev/sdb1 /media/data`
 
-### Initial Configuration
+The following example command mounts the drive */dev/sdb1* to the directory */media/data*: `sudo mount /dev/sdb1 /media/data`
+
+### Initial configuration
 
 1. Configure the Linux setting *vm.max_map_count* as explained in the section [Important settings](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#important-settings) of the OpenSearch documentation.
 
@@ -91,7 +92,8 @@ In most cases, a separate hard drive will be used to store database data. The da
    > For production systems, Java heap size must be set higher than the default setting. We recommend that at least 8 GB is assigned for Java heap.
 
 1. Configure OpenSearch nodes and set up a cluster. See the official documentation: [Creating a cluster](https://opensearch.org/docs/latest/tuning-your-cluster/cluster/).
-   Below is an example *opensearch.yml* file for a node in a three node cluster. Security in this example is disabled for the ease of testing.
+
+   Below is an example *opensearch.yml* file for a node in a three-node cluster. Security in this example is disabled for the ease of testing.
 
    ```yml
    # Use a descriptive name for your cluster:
@@ -148,17 +150,17 @@ In most cases, a separate hard drive will be used to store database data. The da
    ```
 
    - If you want a node to be a **data node**, add the following configuration in *OpenSearch.yml*:
- 
+
      ```yml
      node.roles: [ data, ingest ]
      ```
- 
+
    - If you want a node to be the **cluster manager node** (a.k.a. the master node), add the following configuration in *OpenSearch.yml*:
- 
+
      ```yml
      node.roles: [ cluster_manager ]
      ```
- 
+
    - For a single OpenSearch node, set the *discovery.type* setting to *single-node* and remove the *cluster.initial_cluster_manager_nodes* setting:
 
      ```yml
@@ -171,13 +173,13 @@ In most cases, a separate hard drive will be used to store database data. The da
      discovery.type: single-node  
      ```
 
-1. Restart OpenSearch service to apply the changes:
+1. Restart the OpenSearch service to apply the changes:
 
    ```bash
    sudo systemctl restart opensearch
    ```
 
-## Testing OpenSearch installation
+## Testing the OpenSearch installation
 
 Follow [Step 2: (Optional) Test OpenSearch](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/#step-2-optional-test-opensearch) from the installation guide. Remember to also **query the plugins endpoint**.
 
