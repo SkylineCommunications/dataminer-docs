@@ -49,7 +49,7 @@ the data source with which the connector communicates has a new firmware version
 
 ### Major change
 
-- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user is required when a driver is upgraded to this range. For example:
+- A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a driver is upgraded to this range. For example:
   - Another connection is added, and the user needs to configure an IP address on existing elements.
   - Parameter descriptions have been changed, so that any Visio drawings and Automation scripts referencing these descriptions may need to be updated.
 - Different major change ranges are not maintained in parallel, unless this is exceptionally agreed upon.
