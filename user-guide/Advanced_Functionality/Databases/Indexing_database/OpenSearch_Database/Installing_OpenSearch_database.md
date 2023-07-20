@@ -78,7 +78,7 @@ Make sure the firewall ports are open for OpenSearch. OpenSearch operates on TCP
 
 ### Mounting the data drive
 
-In most cases, a separate hard drive will be used to store database data. The data drive has to be mounted and path to the data directory has to be specified in the Openseconfiguration file (see below).
+In most cases, a separate hard drive will be used to store database data. The data drive has to be mounted and path to the data directory has to be specified in the parameter *path.data* in *opensearch.yml* configuration file. An example of *opensearch.yml* can be found in the section [Initial configuration](#initial-configuration).
 
 The following example command mounts the drive */dev/sdb1* to the directory */media/data*: `sudo mount /dev/sdb1 /media/data`
 
