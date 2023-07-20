@@ -53,6 +53,18 @@ In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new 
 - *DataMiner Start DataMiner And SLNet.bat*
 - *DataMiner Start DataMiner.bat*
 
+#### Renaming objects: More clearer error message in case the name already exists [ID_36845]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When you try to rename an element, a service or a redundancy group, the following error message will now be returned when the name already exists:
+
+```txt
+The name is already used by another object in the DMS.
+```
+
+Also, certain false positive errors that used to occur when renaming objects will no longer be logged in *SLErrors.txt*, and a NATS exception that is generated when a message needs to be sent from SLNet to SLDataGateway, SLHelper or SLAnalytics has now been converted to a *DataMinerException* to avoid DataMiner/client disconnects due to `message not marked as serializable` errors.
+
 ### Fixes
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
