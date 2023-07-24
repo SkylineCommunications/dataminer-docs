@@ -29,7 +29,7 @@ It is possible that different version ranges are maintained in parallel but we s
 
 - A new branch number is used to support multiple versions that contain distinct differences (e.g. different protocol types, subsets of a driver, etc.).
 - Different branch ranges are maintained in parallel unless a range is explicitly marked as obsolete.
-- Range: [1 … n]
+- Range: [1 ... n]
 - Examples:
   - 1.0.0.1 = Initial branch.
   - 2.0.0.1 = New branch containing a subset of features.
@@ -41,11 +41,11 @@ It is possible that different version ranges are maintained in parallel but we s
 the data source with which the connector communicates has a new firmware version which is not backwards compatible.
 
 - Different data source ranges are maintained in parallel unless a range is explicitly marked as obsolete.
-- Range: [0 … n]
+- Range: [0 ... n]
 - Examples:
-  - 1.0.0.1 = Initial version supporting device firmware 10.0.x – 10.1.x.
+  - 1.0.0.1 = Initial version supporting device firmware 10.0.x - 10.1.x.
   - 1.1.0.1 = New range to support device firmware range 10.2.x.
-  - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding element to the new 1.1.0.x range.
+  - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding elements to the new 1.1.0.x range.
 
 ### Major change
 
@@ -53,7 +53,7 @@ the data source with which the connector communicates has a new firmware version
   - Another connection is added, and the user needs to configure an IP address on existing elements.
   - Parameter descriptions have been changed, so that any Visio drawings and Automation scripts referencing these descriptions may need to be updated.
 - Different major change ranges are not maintained in parallel, unless this is exceptionally agreed upon.
-- Range: [0…n]
+- Range: [0...n]
 - Examples:
   - 1.0.0.1 = Initial version.
   - 1.0.1.1 = New range containing an extra connection.
@@ -63,8 +63,8 @@ the data source with which the connector communicates has a new firmware version
 
 - A new minor change version number indicates an iteration in the driver range consisting of new features, fixes and/or changes.
 - This number is not included in the driver version range as previous iterations are never maintained in parallel.
-- Range:  [1 … n]
-- If the suffix _Bx is added, where x is a number in the range [1…n], this indicates a version build that is still being developed. For example: 1.0.0.5_B1.
+- Range:  [1 ... n]
+- If the suffix _Bx is added, where x is a number in the range [1...n], this indicates a version build that is still being developed. For example: 1.0.0.5_B1.
 - Examples:
   - 1.0.0.1 = Initial version.
   - 1.0.0.2 = Second iteration containing extra features.
