@@ -274,6 +274,8 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 On a DataMiner Agent, the SLWatchdog process continuously monitors all other DataMiner processes. When it detects some kind of problem with one of those processes, it takes action.
 
+It is important to note that SLWatchdog should not be manually restarted. Manually restarting SLWatchdog may lead to unintended consequences, as it serves as the primary guardian for DataMiner processes.
+
 ### When will SLWatchdog take action?
 
 In Windows Task Manager, the DataMiner processes all have names starting with “SL”. SLWatchdog will take action in either of the following cases:
