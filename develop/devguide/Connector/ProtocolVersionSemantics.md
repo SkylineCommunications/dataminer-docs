@@ -31,18 +31,19 @@ It is possible that different version ranges are maintained in parallel but we s
 - Different branch ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [1 ... n]
 - Examples:
+
   - 1.0.0.1 = Initial branch.
   - 2.0.0.1 = New branch containing a subset of features.
   - Both ranges are maintained.
 
 ### System version
 
-- A new system version number is used when a system dependency has increased, and it is not possible to keep the driver compatible with previous versions. For example,
-the data source with which the connector communicates has a new firmware version which is not backwards compatible.
+- A new system version number is used when a system dependency has increased, and it is not possible to keep the driver compatible with previous versions. For example, the data source with which the connector communicates has a new firmware version which is not backwards compatible.
 
 - Different data source ranges are maintained in parallel unless a range is explicitly marked as obsolete.
 - Range: [0 ... n]
 - Examples:
+
   - 1.0.0.1 = Initial version supporting device firmware 10.0.x - 10.1.x.
   - 1.1.0.1 = New range to support device firmware range 10.2.x.
   - Typically, we will always try to only maintain the last range. Exceptions are made when, for example, a hardware version is still commonly used (and supported by the vendor) and only supports up to firmware version 10.1.x not allowing us to migrate corresponding elements to the new 1.1.0.x range.
@@ -50,11 +51,14 @@ the data source with which the connector communicates has a new firmware version
 ### Major change
 
 - A new major change version number is used when the change may have an impact on the DMS platform and an action by the user might be required when a driver is upgraded to this range. For example:
+
   - Another connection is added, and the user needs to configure an IP address on existing elements.
   - Parameter descriptions have been changed, so that any Visio drawings and Automation scripts referencing these descriptions may need to be updated.
+
 - Different major change ranges are not maintained in parallel, unless this is exceptionally agreed upon.
 - Range: [0...n]
 - Examples:
+
   - 1.0.0.1 = Initial version.
   - 1.0.1.1 = New range containing an extra connection.
   - Range 1.0.0.x becomes obsolete by default and will not be maintained.
@@ -66,6 +70,7 @@ the data source with which the connector communicates has a new firmware version
 - Range:  [1 ... n]
 - If the suffix _Bx is added, where x is a number in the range [1...n], this indicates a version build that is still being developed. For example: 1.0.0.5_B1.
 - Examples:
+
   - 1.0.0.1 = Initial version.
   - 1.0.0.2 = Second iteration containing extra features.
   - Version 1.0.0.1 becomes obsolete.

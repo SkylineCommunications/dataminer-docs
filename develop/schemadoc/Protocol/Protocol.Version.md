@@ -19,6 +19,7 @@ Specifies the protocol version.
 Within a DataMiner System, you can maintain different versions of the same protocol and assign them to different elements. If you have to make modifications to a protocol, do not create a completely new protocol. Instead, make a new version of that same protocol.
 
 The content of the Version element can be a structured string specifying the branch, firmware, major and minor version (e.g. "1.0.0.3") or a string (e.g. "high power").
+
 For more information about the version semantics, refer to [Protocol version semantics](xref:ProtocolVersionSemantics).
 
 > [!NOTE]
