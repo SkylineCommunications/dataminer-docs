@@ -1126,6 +1126,15 @@
           topicUid: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
+          items:
+            - name: Dedicated clustered storage
+              topicUid: Dedicated_clustered_storage
+            - name: Separate Cassandra setup with Elasticsearch
+              topicUid: Separate_Cassandra_setup_with_Elasticsearch
+            - name: Separate Cassandra setup without Elasticsearch
+              topicUid: Separate_Cassandra_setup_without_Elasticsearch
+            - name: Legacy setup with MySQL or MSSQL database
+              topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
         - name: Storage as a Service
           topicUid: STaaS
         - name: Database configuration
