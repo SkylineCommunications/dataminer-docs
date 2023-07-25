@@ -17,7 +17,7 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 > - Contact Skyline if you are unsure about the setup that best fits your circumstances.
 
 > [!TIP]
-> For more information, see [Supported system data storage architectures](xref:Supported_system_data_storage_architectures#failover-setups-with-geo-redundancy).
+> For more information, see [Failover setups (with geo-redundancy)](xref:Dedicated_clustered_storage#failover-setups-with-geo-redundancy).
 
 To configure this setup:
 

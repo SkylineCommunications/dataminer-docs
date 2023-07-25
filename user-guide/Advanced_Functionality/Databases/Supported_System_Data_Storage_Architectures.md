@@ -18,4 +18,4 @@ In the images illustrating the setups, the dark-blue line indicates a cluster of
 | [Legacy setup with MySQL or MSSQL database](xref:Legacy_setup_with_MySQL_or_MSSQL_database) | Legacy |
 
 > [!NOTE]
-> If you would like to use a setup that is not described below, please contact [Skyline tech support](mailto:techsupport@skyline.be).
+> If you would like to use a setup that is not described here, please contact [Skyline tech support](mailto:techsupport@skyline.be).
