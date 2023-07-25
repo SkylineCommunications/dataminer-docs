@@ -11,6 +11,9 @@
       items:
       - name: Metadata
         topicUid: Metadata
+        items:
+        - name: Protocol version semantics
+          topicUid: ProtocolVersionSemantics
       - name: Logic
         topicUid: Logic
         items:
