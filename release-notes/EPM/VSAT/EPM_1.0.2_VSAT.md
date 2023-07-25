@@ -2,10 +2,7 @@
 uid: EPM_1.0.2_VSAT
 ---
 
-# EPM 1.0.2 VSAT - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 1.0.2 VSAT
 
 ## New features
 
