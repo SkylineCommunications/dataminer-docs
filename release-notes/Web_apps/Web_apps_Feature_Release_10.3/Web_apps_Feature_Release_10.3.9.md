@@ -189,6 +189,12 @@ Each time the time range of a pattern gets updated, a new pattern record is crea
 
 In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
 
+#### Monitoring app: Parameter control now supports dynamic units [ID_36892]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The parameter control used in the *Monitoring* app now supports dynamic units.
+
 #### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
