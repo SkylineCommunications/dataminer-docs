@@ -182,6 +182,15 @@ When you imported elements from a CSV file, new elements would only be created o
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
 
+#### Elements would no longer be able to generate alarms and information events after having been migrated [ID_36951]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When an element had been migrated from one DataMiner Agent to another, it would no longer be able to generate alarms and information events.
+
+> [!IMPORTANT]
+> The element protocol must pass the DataMiner ID of the element instead of the DataMiner ID of the DataMiner Agent.
+
 #### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->

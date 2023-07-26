@@ -147,3 +147,12 @@ When you imported elements from a CSV file, new elements would only be created o
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When a DataMiner Agent had its own single-node Cassandra database as well as its own Elasticsearch database, DataMiner would not start up when Elasticsearch was down. From now on, it will start up, but a full DataMiner restart will be required for all modules depending on Elasticsearch to work properly.
+
+#### Elements would no longer be able to generate alarms and information events after having been migrated [ID_36951]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When an element had been migrated from one DataMiner Agent to another, it would no longer be able to generate alarms and information events.
+
+> [!IMPORTANT]
+> The element protocol must pass the DataMiner ID of the element instead of the DataMiner ID of the DataMiner Agent.
