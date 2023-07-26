@@ -297,6 +297,6 @@ When a PDF file with a custom paper size was generated, the following error woul
 
 #### Dashboards app & Low-Code Apps: Problem when exporting a table with a query row feed to a CSV file [ID_36969]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, an error would be thrown when you tried to export a table with a query row feed to a CSV file.
