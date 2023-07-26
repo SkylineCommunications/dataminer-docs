@@ -79,6 +79,12 @@ The following mechanisms have now been implemented:
 
 - When existing data with an incorrect TTL value set is retrieved from the database, its TTL value will automatically be removed to prevent it from being deleted.
 
+#### SLDataGateway: Memory leak when migrating average trend data from MySQL to Cassandra Cluster [ID_36367]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+SLDataGateway would leak memory when migrating average trend data from MySQL to Cassandra Cluster.
+
 #### Failover: Problems when running BPA tests [ID_36445]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->

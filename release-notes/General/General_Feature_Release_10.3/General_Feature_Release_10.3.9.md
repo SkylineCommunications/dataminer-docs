@@ -305,6 +305,12 @@ The following mechanisms have now been implemented:
 
 When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
 
+#### SLDataGateway: Memory leak when migrating average trend data from MySQL to Cassandra Cluster [ID_36367]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+SLDataGateway would leak memory when migrating average trend data from MySQL to Cassandra Cluster.
+
 #### Failover: Problems when running BPA tests [ID_36445]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
