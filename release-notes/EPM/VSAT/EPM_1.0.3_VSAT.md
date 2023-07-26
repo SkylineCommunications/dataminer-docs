@@ -32,6 +32,20 @@ In addition, the following parameters have been updated:
 
 A new Circuit Availability KPI is now available in the Verizon iDirect Evolution Platform and Verizon VSAT Platform Manager connectors. This KPI, which can be found in the Circuit Overview table, shows a percentage indicating how close circuit performance tracks against the theoretical link budget expectations. The KPI is aggregated by average in the Circuit level, Hub Forward level, Hub Return level, Customer level, and NMS level of the EPM topology.
 
+#### Verizon iDirect Evolution Platform Collector: New 'Event Counters' page [ID_36992]
+
+A new *Event Counters* page has been added to the Verizon iDirect Evolution Platform Collector connector.
+
+On this page, you can find a number of parameters that each hold the number of rows in a particular table:
+
+| Table | Parameter |
+|-------|-----------|
+| Chassis Events Overview   | Chassis Events Count   |
+| Linecards Events Overview | Linecards Events Count |
+| PP Events Overview        | PP Events Count        |
+| Remote Events Overview    | Remote Events Count    |
+| VLAN Status Overview      | VLAN Events Count      |
+
 ## Changes
 
 ### Enhancements
@@ -68,12 +82,24 @@ In the Verizon ETMS Platform connector, the description when there are failed KP
 
 In the Verizon WM Ticketing connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
 
+#### Newtec Dialog Platform: Improved 'Hub Forward' and 'Hub Return' KPI formulas [ID_36942]
+
+The *Hub Forward* and *Hub Return* KPI formulas have been updated. They now use new TSDB data to reflect more accurate values.
+
+#### Verizon VSAT Platform Manager: Time interval between each EPM reset is now user-configurable [ID_36944]
+
+In the Verizon VSAT Platform Manager connector and visual overview, the time interval between each EPM reset is now user-configurable.
+
 #### Carrier performance scripts improvements [ID_36957] [ID_36958] [ID_36959] [ID_36960] [ID_36961]
 
 The *GQIO_Percentage_Double*, *GQIO_Percentage_Int*, *GQIO_MultiplyByPercentage*, *GQIO_RunningTotal_Double*, and *GQIO_RunningTotal_Int* scripts have been updated as follows:
 
 - The *Folder* XML tag has been added to each script, so that it is placed in the *CARRIER PERFORMANCE* Automation folder by default.
 - The *preCompile* and *libraryName* XML tags have also been added to each script, so that it is compiled as a library and given a library name by default, making it visible in the Dashboards app.
+
+#### Verizon iDirect Evolution Platform Collector: Improved performance [ID_36991]
+
+Because of a number of improvements, overall performance of the Verizon iDirect Evolution Platform Collector connector has increased.
 
 ### Fixes
 
@@ -84,3 +110,7 @@ Elements using the Verizon iDirect Evolution Platform Collector connector did no
 #### Verizon iDirect Evolution Platform Collector: Current state not indicated in Remotes Overview tables [ID_36673]
 
 In the Remotes Overview tables of Verizon iDirect Evolution Platform Collector elements, the *Current State* column could incorrectly show "Not initialized".
+
+#### Verizon VSAT Platform Manager: Set buttons on the landing page of the visual overview would not render [ID_36945]
+
+In the visual overview of the Verizon VSAT Platform Manager, buttons that set a value would not render when they were located on the landing page.
