@@ -158,6 +158,12 @@ From now on, when you hover over each of the possible visualizations in the over
 
 Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
 
+#### DataMiner Comparison tool: Redesigned header and sidebar [ID_36747]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The header and sidebar of the DataMiner Comparison tool have been redesigned.
+
 #### Dashboards app & Low-Code Apps: Deleting components by pressing the DELETE button [ID_36753]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
