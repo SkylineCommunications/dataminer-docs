@@ -158,6 +158,12 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 
 In some cases, an error could occur in SLScripting when it was resolving DLL files for a QAction or an Automation Script.
 
+#### Problem with SLProtocol when the system locale was set to Japanese [ID_36854]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+On the system locale was set to Japanese, an error could occur in SLProtocol when a QAction tried to read a parameter value containing raw bytes.
+
 #### Polling an SNMP table with MultipleGetNext could incorrectly produce two result sets [ID_36867]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
