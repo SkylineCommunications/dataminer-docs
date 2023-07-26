@@ -125,3 +125,11 @@ In some cases, an error could be thrown when you shared a dashboard that contain
 Up to now, when empty feeds had not yet been initialized with a value, it would not be possible to link those feeds to ad hoc arguments.
 
 From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
+
+#### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When a PDF file with a custom paper size was generated, the following error would be thrown:
+
+`Cannot read properties of undefined (reading 'width')'.`

@@ -181,3 +181,11 @@ When you imported elements from a CSV file, new elements would only be created o
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
+
+#### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When a PDF file with a custom paper size was generated, the following error would be thrown:
+
+`Cannot read properties of undefined (reading 'width')'.`
