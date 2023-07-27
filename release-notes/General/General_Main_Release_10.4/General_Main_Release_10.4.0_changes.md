@@ -362,13 +362,15 @@ Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade
 > [!NOTE]
 > If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
 
-#### DataMiner Object Models: All suggest indices have now been disabled [ID_36875]
+#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-Up to now, each time a new DOM manager was initialized, SLDataGateway would create a main data index and a suggest index in the Elasticsearch database for each DOM type.
+Up to now, each time a new DOM manager was initialized, SLDataGateway would create a main data index and a suggest index in the Elasticsearch database for each DOM type. As these suggest indices are not used, they have now been disabled. As a result, overall performance will increase when initializing new DOM managers.
 
-As suggest indices are not used by any of the following types, from now on, such indices will no longer be automatically created for these types. As a result, overall performance will increase when initializing new DOM managers.
+Other unused suggest indices have been disabled as well. This will have a positive impact on the hardware resources required for Elasticsearch or OpenSearch.
+
+The following suggest indices have been disabled:
 
 - ApiDefinition
 - ApiToken
