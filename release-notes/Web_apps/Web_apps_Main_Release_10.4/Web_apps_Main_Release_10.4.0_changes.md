@@ -647,3 +647,9 @@ From now on, queries will always be updated when the source (dashboard/page), se
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
+
+#### Low-Code Apps: Problem when a form component linked to a DOM instance feed was not fed an instance [ID_37000]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a form component linked to a DOM instance feed was not fed an instance, it would get stuck in a loading state.
