@@ -32,6 +32,15 @@ In addition, the following parameters have been updated:
 
 A new Circuit Availability KPI is now available in the Verizon iDirect Evolution Platform and Verizon VSAT Platform Manager connectors. This KPI, which can be found in the Circuit Overview table, shows a percentage indicating how close circuit performance tracks against the theoretical link budget expectations. The KPI is aggregated by average in the Circuit level, Hub Forward level, Hub Return level, Customer level, and NMS level of the EPM topology.
 
+#### Verizon WM Ticketing: 'Element ID' column added to 'KPI Callback Overview' table [ID_36979]
+
+In the Verizon WM Ticketing Collector connector, a new *Element ID* column was added to the *KPI Callback Overview* table.
+
+This column will contain the ID of the element to which the KPI threshold applies. If set to "All", then the KPI threshold in question will apply to all elements.
+
+> [!NOTE]
+> Thresholds that only apply to a single element have priority over thresholds that apply to all elements.
+
 #### Verizon iDirect Evolution Platform Collector: New 'Event Counters' page [ID_36992]
 
 A new *Event Counters* page has been added to the Verizon iDirect Evolution Platform Collector connector.
