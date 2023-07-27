@@ -126,6 +126,12 @@ Up to now, when empty feeds had not yet been initialized with a value, it would 
 
 From now on, it will always be possible to link feeds to ad hoc arguments, regardless of their value.
 
+#### Dashboards app & Monitoring app: Problem with parameter table component when switching from mobile view to desktop view [ID_36949]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When the Dashboards app or the Monitoring app switched from mobile view to desktop view, the parameter table component would incorrectly continue to use the mobile UI.
+
 #### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
