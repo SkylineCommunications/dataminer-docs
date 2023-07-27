@@ -242,6 +242,19 @@ You can now define a new color called *bg.pressededitor*. This color will be use
 
 For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
 
+#### Proportional card layout: Selecting a master card [ID_36912]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now promote one card to master card. To do so, click the card's hamburger menu, and select the *Master card* option.
+
+Once you have turned a card into the master card, each time you open a new card it will replace the master card.
+
+> [!NOTE]
+>
+> - At any given time, there can be only one master card.
+> - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
+
 ## Changes
 
 ### Enhancements
