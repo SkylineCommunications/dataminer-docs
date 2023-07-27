@@ -201,6 +201,14 @@ The parameter control used in the *Monitoring* app now supports dynamic units.
 
 The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
 
+#### Dashboards app & Low-Code Apps - 'Numeric input' and 'Text input' feeds: New setting to determine the position of the label [ID_36983]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, a *Numeric input* feed would display the label above the input box while a *Text input* feed would display the label in front of the input box.
+
+When, in edit mode, you select one of these feeds and open the *Layout* tab, below the *Label* box you can now find the *Label is inline* checkbox. Select this checkbox if you want the label to be displayed in front of the input box. By default, this option is disabled, meaning that the label will be displayed above the input box.
+
 ### Fixes
 
 #### Low-Code Apps: Incorrect error message would appear when you tried to edit an app that you were not allowed to edit [ID_36650]
