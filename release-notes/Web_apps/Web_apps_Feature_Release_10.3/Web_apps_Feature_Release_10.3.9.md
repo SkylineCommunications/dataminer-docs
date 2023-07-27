@@ -322,3 +322,9 @@ Up to now, an error would be thrown when you tried to export a table with a quer
 In some cases, query nodes that were linked to a feed would incorrectly not save their link when a new feed was linked with the exact same value.
 
 From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
+
+#### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
