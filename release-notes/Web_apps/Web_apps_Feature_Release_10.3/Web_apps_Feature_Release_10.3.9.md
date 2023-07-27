@@ -314,3 +314,11 @@ When a PDF file with a custom paper size was generated, the following error woul
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, an error would be thrown when you tried to export a table with a query row feed to a CSV file.
+
+#### Dashboards app & Low-Code Apps - GQI: Link to feed not saved when the feed value is identical [ID_36990]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, query nodes that were linked to a feed would incorrectly not save their link when a new feed was linked with the exact same value.
+
+From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
