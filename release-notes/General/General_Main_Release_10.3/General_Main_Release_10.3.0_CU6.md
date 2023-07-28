@@ -12,6 +12,20 @@ uid: General_Main_Release_10.3.0_CU6
 
 ### Enhancements
 
+#### NATS: Enhanced (re)configuration [ID_35246]
+
+Automatic NATS (re)configuration has been enhanced.
+
+- When the routes of the local NATS server contain the virtual IP address of a Failover setup/node, a NATS restart will be triggered.
+
+- When a DataMiner Agent is added or removed from the DMS, NATS will be reconfigured automatically.
+
+- When a DataMiner Agent cannot be reached, has an incorrect configuration or is in an incorrect state, a NATS reconfiguration will be suggested in Cube via an alarm. To trigger a reconfiguration, users with *Change IP settings* permission can then right-click the alarm, select *Actions > Reconfigure NATS*, and confirm the operation.
+
+  If no errors occur during the reconfiguration, the alarm will disappear from the Alarm Console. If, on the other hand, errors do occur, they will be displayed in a popup window and the alarm will not disappear.
+
+All logging related to a NATS reconfiguration will be added to the *SLNATSCustodian.txt* log file.
+
 #### DataMiner upgrade: New upgrade action added that will clean up default ListView column configuration data [ID_36475]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
@@ -66,6 +80,12 @@ The name is already used by another object in the DMS.
 Also, certain false positive errors that used to occur when renaming objects will no longer be logged in *SLErrors.txt*, and a NATS exception that is generated when a message needs to be sent from SLNet to SLDataGateway, SLHelper or SLAnalytics has now been converted to a *DataMinerException* to avoid DataMiner/client disconnects due to `message not marked as serializable` errors.
 
 ### Fixes
+
+#### Problem due to incorrect NATS reconfiguration [ID_35246]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, for example in a three-node DMS configuration composed of a Failover pair and another, separate DMA, one of the agents in the Failover setup went offline, after 5 minutes, the separate non-Failover agent would incorrectly shift to a two-node DMS configuration. From now on, the non-Failover agent will keep the three-node DMS configuration if one of the Failover agents goes offline.
 
 #### Cassandra: Table data that should not expire had a TTL value set [ID_35263]
 
