@@ -274,7 +274,8 @@ By default, the SLScripting process runs as a server. However, in some cases, it
 
 On a DataMiner Agent, the SLWatchdog process continuously monitors all other DataMiner processes. When it detects some kind of problem with one of those processes, it takes action.
 
-It is important to note that SLWatchdog should not be manually restarted. Manually restarting SLWatchdog may lead to unintended consequences, as it serves as the primary guardian for DataMiner processes.
+> [!CAUTION]
+> SLWatchdog must never be started or restarted manually when DataMiner is running. Doing so may have unintended consequences as it guards the DataMiner processes.
 
 ### When will SLWatchdog take action?
 
