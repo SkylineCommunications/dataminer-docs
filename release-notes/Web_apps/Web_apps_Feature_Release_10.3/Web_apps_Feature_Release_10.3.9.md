@@ -337,6 +337,6 @@ When a form component linked to a DOM instance feed was not fed an instance, it 
 
 #### Dashboards app & Low-Code Apps: Form component would not be cleared when it was no longer fed a DOM instance or a DOM definition [ID_37001]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
