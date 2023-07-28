@@ -7,7 +7,9 @@ uid: Watchdog_logging
 ## About SLWatchdog
 
 The *SLWatchdog* process monitors all other DataMiner processes and takes action when a DataMiner process disappears from the list of running processes, or when an anomaly is detected in a DataMiner process. It also keeps track of a number of key performance indicators.
-It is important to note that SLWatchdog should not be manually restarted. Manually restarting SLWatchdog may lead to unintended consequences, as it serves as the primary guardian for DataMiner processes.
+
+> [!CAUTION]
+> SLWatchdog must never be started or restarted manually when DataMiner is running. Doing so may have unintended consequences as it guards the DataMiner processes.
 
 ## Watchdog log entries
 
