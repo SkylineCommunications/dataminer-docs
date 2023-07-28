@@ -162,6 +162,22 @@ When an SNMP table was polled with *MultipleGetNext* and the response was not pr
 
 When you imported elements from a CSV file, new elements would only be created on the local agent, not on any of the remote agents, i.e. the agents other than the one the Cube client was connected to. Existing elements would be updated correctly on the local agents as well as on all remote agents.
 
+#### Incorrect error message was thrown when NATS credentials could not be retrieved from a remote DMA [ID_36906]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+In some cases, when *NATSCustodian* was trying to set up a new configuration, some nodes could get an error with the following incorrect message:
+
+`Failed to copy credentials from <ip> - corrupt zip file.`
+
+From now on, an error containing the actual reason will be thrown instead. See the following example.
+
+```txt
+Failed to copy credentials from <ip> - TraceData: (amount = 1)
+      - ErrorData: (amount = 1)
+          - Reason: ModuleNotInitialized
+```
+
 #### A DataMiner Agent with a single-node Cassandra and an Elasticsearch would not start up when Elasticsearch was down [ID_36930]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
