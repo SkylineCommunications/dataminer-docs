@@ -3464,8 +3464,10 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_Multiple_Datacenters
+          topicUid: KI_RTEs_Alarm_Template_Issue
           items:
+            - name: RTEs caused by problem when updating alarm templates
+              topicUid: KI_RTEs_Alarm_Template_Issue
             - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
               topicUid: KI_Multiple_Datacenters
             - name: Cassandra disconnects after loss of a single node
