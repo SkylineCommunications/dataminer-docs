@@ -20,9 +20,9 @@ XDocument alarmTemplate = XDocument.Load(sFilePath);
 
 string[] protocolDetails = new string[3];
 
-protocolDetails[0] = protocolName;
-protocolDetails[1] = protocolVersion;
-protocolDetails[2] = templateName;
+protocolDetails[0] = protocolName; // protocolName for alarm | templateName for trend
+protocolDetails[1] = protocolVersion; // protocolVersion for alarm | protocolName for trend
+protocolDetails[2] = templateName; // templateName for alarm | protocolVersion for trend
 
 object[] templateDetails = new object[2];
 
@@ -35,9 +35,9 @@ protocol.NotifyDataMiner(99 /*NT_ADD_FILE*/, protocolDetails, templateDetails);
 ## Parameters
 
 - protocolDetails (string[]):
-  - protocolDetails[0]: Protocol name.
-  - protocolDetails[1]: Protocol version.
-  - protocolDetails[2]: Template name.
+  - protocolDetails[0]: Represents the Protocol name for Alarm templates. For Trend templates, it denotes the Template name.
+  - protocolDetails[1]: Indicates the Protocol version for Alarm templates. For Trend templates, it corresponds to the Protocol name.
+  - protocolDetails[2]: Specifies the Template name for Alarm templates. For Trend templates, it signifies the Protocol version.
 - templateDetails (object[]):
   - templateDetails[0] (int): Type of file to add. 1 = Alarm template, 6 = Trend template.
   - templateDetails[1] (string): Template content.
