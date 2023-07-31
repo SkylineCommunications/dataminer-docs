@@ -15,7 +15,11 @@ To complete the configuration of a dedicated clustered storage setup, when a Cas
 An Elasticsearch indexing database can also be [deployed in a setup with storage per DMA](xref:Configuring_indexing_database_per_DMS) to unlock additional DataMiner features, including:
 
 - DataMiner Advanced Analytics features such as pattern matching
+
 - The Generic Query Interface in DataMiner Dashboards
+
 - DataMiner Object Models (DOM)
+
 - DataMiner Service & Resource Management
+
 - DataMiner User-Defined APIs
