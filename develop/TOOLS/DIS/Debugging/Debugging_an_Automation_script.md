@@ -26,3 +26,7 @@ When you have finished configuring all necessary settings, you can start debuggi
 > [!NOTE]
 > - Automation script debugging only works in conjunction with DataMiner Agents running at least DataMiner Main Release Version 10.1.0 or Feature Release Version 10.0.6.
 > - Automation script debugging currently does not support memory files yet.
+
+> [!TIP]
+> - Debugging is often not possible for [third-party libraries](https://docs.dataminer.services/develop/TOOLS/NuGet/TOONuGet.html).
+> - [dotPeek](xref:dotPeek#debug-3rd-party-libraries) can serve as a handy tool to overcome this.
