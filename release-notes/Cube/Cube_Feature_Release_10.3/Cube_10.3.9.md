@@ -118,7 +118,7 @@ In *Automation*, *Correlation* and *Scheduler*, you can select a report of a das
 
 When you opened a trend graph showing trend data of a parameter that only had average trending enabled, in some cases, it would not be possible to pan across the graph.
 
-#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794]
+#### DataMiner Cube - Visual Overview: Problem when opening a service chain shape while element updates were being received [ID_36794] [ID_36966]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
