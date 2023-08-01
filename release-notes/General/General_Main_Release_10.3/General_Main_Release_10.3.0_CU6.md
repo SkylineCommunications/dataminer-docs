@@ -38,6 +38,12 @@ During a DataMiner upgrade, from now on, all default ListView column configurati
 
 On a Cassandra Cluster database, from now on, the trend tables will no longer be sharded. This will enhance overall performance when requesting trend data, especially on systems on which real-time trend data is stored for longer than a day.
 
+#### SLDataGateway: Enhanced performance of the Elasticsearch health monitoring logic [ID_36554]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance of the Elasticsearch health monitoring logic has increased.
+
 #### SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler [ID_36645]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
