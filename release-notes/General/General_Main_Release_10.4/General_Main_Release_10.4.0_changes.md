@@ -561,3 +561,7 @@ For example, when an alarm group was created with an old time of arrival, the *r
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some rare cases, an error could be thrown when an element was renamed.
+
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+
+The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.

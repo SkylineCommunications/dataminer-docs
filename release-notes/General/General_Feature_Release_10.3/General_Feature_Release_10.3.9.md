@@ -500,3 +500,7 @@ When an element had been migrated from one DataMiner Agent to another, it would 
 
 > [!IMPORTANT]
 > The element protocol must pass the DataMiner ID of the element instead of the DataMiner ID of the DataMiner Agent.
+
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+
+The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
