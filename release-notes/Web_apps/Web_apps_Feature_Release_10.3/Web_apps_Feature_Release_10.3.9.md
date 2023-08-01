@@ -331,7 +331,7 @@ When you removed a query that was used by a component on the page you were viewi
 
 #### Low-Code Apps: Problem when a form component linked to a DOM instance feed was not fed an instance [ID_37000]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When a form component linked to a DOM instance feed was not fed an instance, it would get stuck in a loading state.
 

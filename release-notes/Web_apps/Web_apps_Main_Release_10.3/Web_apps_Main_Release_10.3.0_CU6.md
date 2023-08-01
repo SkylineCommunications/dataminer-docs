@@ -146,6 +146,12 @@ When a PDF file with a custom paper size was generated, the following error woul
 
 Up to now, an error would be thrown when you tried to export a table with a query row feed to a CSV file.
 
+#### Low-Code Apps: Problem when a form component linked to a DOM instance feed was not fed an instance [ID_37000]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a form component linked to a DOM instance feed was not fed an instance, it would get stuck in a loading state.
+
 #### Dashboards app & Low-Code Apps: Form component would not be cleared when it was no longer fed a DOM instance or a DOM definition [ID_37001]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
