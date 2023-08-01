@@ -302,6 +302,12 @@ From now on, it will always be possible to link feeds to ad hoc arguments, regar
 
 When the Dashboards app or the Monitoring app switched from mobile view to desktop view, the parameter table component would incorrectly continue to use the mobile UI.
 
+#### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when you selected a row of a table that used two identical queries, the query row feed would send the row twice. From now on, it will only send the row once.
+
 #### Dashboards app: Problem when generating a PDF file with a custom paper size [ID_36968]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
