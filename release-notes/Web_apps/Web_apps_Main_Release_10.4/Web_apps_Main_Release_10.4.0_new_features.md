@@ -638,3 +638,11 @@ If no rows are selected in the table, the entire table will be exported; otherwi
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
+
+#### Dashboards app & Low-Code Apps - Parameters dataset: Selecting an index/cell of a column parameter [ID_36724]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
+
+If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
