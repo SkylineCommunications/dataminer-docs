@@ -10,7 +10,7 @@ It is possible to migrate components of an SRM configuration from one DMA to ano
 - [Profile instances](xref:SRM_migrating_profile_instances)
 - [Resources](xref:SRM_migrating_resources)
 - [Service definitions](xref:SRM_migrating_service_definitions)
-- [Complete booking manager configuration](xref:SRM_migrating_booking_manager_full_configuration)
+- [Complete Booking Manager configuration](xref:SRM_migrating_booking_manager_full_configuration)
 
 If you migrate several components, it is important that you import them in the order detailed above: first the virtual function definitions, then the profile instances, etc.
 
