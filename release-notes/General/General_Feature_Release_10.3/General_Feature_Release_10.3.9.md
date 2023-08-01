@@ -269,14 +269,14 @@ The name is already used by another object in the DMS.
 
 Also, certain false positive errors that used to occur when renaming objects will no longer be logged in *SLErrors.txt*, and a NATS exception that is generated when a message needs to be sent from SLNet to SLDataGateway, SLHelper or SLAnalytics has now been converted to a *DataMinerException* to avoid DataMiner/client disconnects due to `message not marked as serializable` errors.
 
-#### User-Defined APIs: ApiTriggerInput object has a new TokenId property [ID_36856]
+#### User-Defined APIs: ApiTriggerInput object has a new TokenId property [ID_36856] [ID_37015]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 <!-- Not added to MR 10.4.0 -->
 
 The `ApiTriggerInput` object, which contains information about the API trigger, will now also contain a `TokenId` property.
 
-This property will contain the ID of the `ApiToken` that was used to trigger the API.
+This property will contain the GUID of the `ApiToken` that was used to trigger the API.
 
 #### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
 
