@@ -79,6 +79,12 @@ In the `C:\Skyline DataMiner\Tools` folder, you can also find the following new 
 - *DataMiner Start DataMiner And SLNet.bat*
 - *DataMiner Start DataMiner.bat*
 
+#### NATS firewall rule profiles set to 'All" during DataMiner upgrades [ID_36914]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will set all existing NATS firewall rule profiles to "All".
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]

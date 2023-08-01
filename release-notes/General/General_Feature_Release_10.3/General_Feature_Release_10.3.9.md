@@ -348,6 +348,12 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### NATS firewall rule profiles set to 'All" during DataMiner upgrades [ID_36914]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will set all existing NATS firewall rule profiles to "All".
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]

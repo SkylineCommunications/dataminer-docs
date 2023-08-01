@@ -79,6 +79,12 @@ The name is already used by another object in the DMS.
 
 Also, certain false positive errors that used to occur when renaming objects will no longer be logged in *SLErrors.txt*, and a NATS exception that is generated when a message needs to be sent from SLNet to SLDataGateway, SLHelper or SLAnalytics has now been converted to a *DataMinerException* to avoid DataMiner/client disconnects due to `message not marked as serializable` errors.
 
+#### NATS firewall rule profiles set to 'All" during DataMiner upgrades [ID_36914]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will set all existing NATS firewall rule profiles to "All".
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]
