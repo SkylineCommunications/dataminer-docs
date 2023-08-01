@@ -3464,8 +3464,10 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_RTEs_Alarm_Template_Issue
+          topicUid: KI_Unable_to_Connect_Net_Remoting
           items:
+            - name: Unable to connect to DMS when using .Net Remoting
+              topicUid: KI_Unable_to_Connect_Net_Remoting
             - name: RTEs caused by problem when updating alarm templates
               topicUid: KI_RTEs_Alarm_Template_Issue
             - name: Various issues with a geo-redundant Cassandra setup with multiple data centers

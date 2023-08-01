@@ -7,6 +7,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Unable to connect to DMS when using .Net Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | DataMiner Cube 10.3.7 and 10.3.8 <br>Any versions from DataMiner 10.2.0 onwards using automatic client updates | August 1, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
 | [Corrupted low-code app after concurrent editing actions](xref:KI_app_corruption_after_editing) | From DataMiner 10.2.5/10.3.0 onwards | May 26, 2023 |
@@ -43,6 +44,7 @@ uid: Known_issues
 
 | Issue | DataMiner version | Date added |
 |--|--|--|
+| [Unable to connect to DMS when using .Net Remoting](xref:KI_Unable_to_Connect_Net_Remoting) | Any versions from DataMiner 10.2.0 onwards using automatic client updates | August 1, 2023 |
 | [RTEs caused by problem when updating alarm templates](xref:KI_RTEs_Alarm_Template_Issue) | DataMiner 10.2.0 [CU15], [CU16], and [CU17] | July 31, 2023 |
 | [Various issues with a geo-redundant Cassandra setup with multiple data centers](xref:KI_Multiple_Datacenters) | Cassandra Cluster setups | June 1, 2023 |
 | [Cassandra disconnects after loss of a single node](xref:KI_Cassandra_disconnects_after_loss_of_a_single_node) | Cassandra Cluster setups | June 1, 2023 |
