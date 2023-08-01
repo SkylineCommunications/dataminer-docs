@@ -458,6 +458,12 @@ On the system locale was set to Japanese, an error could occur in SLProtocol whe
 
 In some rare cases, an error could be thrown when an element was renamed.
 
+#### Cassandra Cluster: Not all data would get offloaded when the database went down [ID_36865]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When a Cassandra Cluster database went down, not all data would get offloaded.
+
 #### Polling an SNMP table with MultipleGetNext could incorrectly produce two result sets [ID_36867]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
