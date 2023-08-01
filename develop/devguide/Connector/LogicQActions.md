@@ -119,6 +119,9 @@ In the example above, the Run method of the QAction class is defined as a static
 
 It is also possible to define static fields in the QAction class. As only one copy of a static member exists, regardless of how many instances of the class are created, static fields are also shared between all the elements executing this protocol and persist as long as the SLScripting process is running.
 
+> [!NOTE]
+> Static fields are only shared between elements with the same protocol version.
+
 Consider the following example of a protocol that defines a button (with parameter ID 100) triggering a QAction. The QAction defines a static field executionCount and a static method Run:
 
 ```xml
