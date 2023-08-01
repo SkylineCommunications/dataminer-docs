@@ -103,7 +103,7 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 
 A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
-#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36904]
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -112,6 +112,7 @@ Up to now, the following asynchronous operations were only supported over HTTP(s
 - Retrieving trend data
 - Retrieving alarm details
 - Retrieving alarm history
+- Retrieving visual overviews of elements, services and views
 - Generating PDF reports
 - Sending emails containing PDF reports
 - Sharing a dashboard
