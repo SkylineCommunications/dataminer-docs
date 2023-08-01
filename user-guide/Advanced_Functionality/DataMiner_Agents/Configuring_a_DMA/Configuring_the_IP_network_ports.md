@@ -17,7 +17,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | Protocol | Ports used | Application      |
 |----------|------------|------------------|
 | SNMP     | 161/udp<br> 162/udp | SNMP    |
-| .Net Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication ([unless gRPC is configured instead](xref:DMS_xml#redirects-subtag))<br> DataMiner Cube ([unless gRPC is configured instead](xref:ConnectionSettings_txt#connectionsettingstxt-options))<br> Alerter |
+| .NET Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication ([unless gRPC is configured instead](xref:DMS_xml#redirects-subtag))<br> DataMiner Cube ([unless gRPC is configured instead](xref:ConnectionSettings_txt#connectionsettingstxt-options))<br> Alerter |
 | HTTP(S) | 80/tcp<br> 443/tcp | Inter-DMA communication ([if gRPC is configured](xref:DMS_xml#redirects-subtag))<br>DataMiner Cube<br> Alerter<br> Web apps (e.g. Monitoring, Jobs)<br> Dashboards, Reporter |
 | HTTP(S) | 9200/tcp | Indexing Engine (server listening for client requests) |
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
@@ -46,7 +46,7 @@ Using gRPC (recommended from DataMiner 10.3.6/10.3.0 [CU3] onwards):
 
 ![DMS communication overview new](~/user-guide/images/dms_ip_communication_with_DB_updated.png)
 
-Using .Net Remoting:
+Using .NET Remoting:
 
 ![DMS communication overview](~/user-guide/images/dms_ip_communication_with_DB.png)
 

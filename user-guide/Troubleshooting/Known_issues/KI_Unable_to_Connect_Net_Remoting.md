@@ -2,7 +2,7 @@
 uid: KI_Unable_to_Connect_Net_Remoting
 ---
 
-# Unable to connect to DMS when using .Net Remoting
+# Unable to connect to DMS when using .NET Remoting
 
 ## Affected versions
 
@@ -12,7 +12,7 @@ uid: KI_Unable_to_Connect_Net_Remoting
 
 ## Cause
 
-Because of a race condition in DataMiner Cube you may be unable to connect to your DMS when using .Net Remoting.
+Because of a race condition in DataMiner Cube you may be unable to connect to your DMS when using .NET Remoting.
 
 ## Fix
 
