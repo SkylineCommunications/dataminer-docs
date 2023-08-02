@@ -137,3 +137,14 @@ For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
+
+#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When starting up, in some rare cases, Cube could fail to connect to a DataMiner Agent when using .NET Remoting. Moreover, any further connection attempts made within that same Cube session would also fail. Users were required to close Cube and restart it.
+
+Symptoms:
+
+- The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
+- The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.

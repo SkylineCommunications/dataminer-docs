@@ -494,3 +494,14 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When starting up, in some rare cases, Cube could fail to connect to a DataMiner Agent when using .NET Remoting. Moreover, any further connection attempts made within that same Cube session would also fail. Users were required to close Cube and restart it.
+
+Symptoms:
+
+- The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
+- The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
