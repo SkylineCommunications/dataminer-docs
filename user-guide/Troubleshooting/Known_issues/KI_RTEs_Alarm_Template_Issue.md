@@ -14,7 +14,7 @@ An issue was introduced in the DataMiner 10.2.0 Main release versions concerning
 
 ## Fix
 
-Install DataMiner 10.2.0 [CU18].
+Install DataMiner 10.2.0 [CU18]. <!--RN 37027-->
 
 ## Description
 
