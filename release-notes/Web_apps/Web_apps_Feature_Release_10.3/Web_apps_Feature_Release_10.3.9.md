@@ -361,3 +361,9 @@ The *Form* component would not be cleared when it was no longer fed a DOM instan
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When changes had been made to the header bar of a low-code app, those changes would incorrectly not be shown when you switched to preview mode.
+
+#### Dashboards app & Low-Code Apps: Problem when adding or configuring a node edge graph component [ID_37039]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, it would not be possible to add a node edge graph component to a dashboard or a low-code app. Also, an error could occur when trying to configure a node edge graph.
