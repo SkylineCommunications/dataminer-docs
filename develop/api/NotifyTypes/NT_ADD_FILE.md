@@ -35,9 +35,9 @@ protocol.NotifyDataMiner(99 /*NT_ADD_FILE*/, protocolDetails, templateDetails);
 ## Parameters
 
 - protocolDetails (string[]):
-  - protocolDetails[0]: Represents the Protocol name for Alarm templates. For Trend templates, it denotes the Template name.
-  - protocolDetails[1]: Indicates the Protocol version for Alarm templates. For Trend templates, it corresponds to the Protocol name.
-  - protocolDetails[2]: Specifies the Template name for Alarm templates. For Trend templates, it signifies the Protocol version.
+  - protocolDetails[0]: Protocol name for alarm templates. For trend templates, the template name.
+  - protocolDetails[1]: Protocol version for alarm templates. For trend templates, the protocol name.
+  - protocolDetails[2]: Template name for alarm templates. For trend templates, the protocol version.
 - templateDetails (object[]):
   - templateDetails[0] (int): Type of file to add. 1 = Alarm template, 6 = Trend template.
   - templateDetails[1] (string): Template content.
