@@ -14,7 +14,9 @@ To investigate NATS issues, follow the actions detailed below, in the specified 
 1. [Try a NATS reset](#try-a-nats-reset)
 1. [Check if new NATS connections can be established](#check-if-new-nats-connections-can-be-established)
 1. [Check the NAS and NATS logging](#check-the-nas-and-nats-logging)
+1. [Check ports are not in use](#check-ports-are-not-in-use)
 1. [Remaining steps](#remaining-steps)
+
 
 It may also be useful to understand the [algorithms used by DataMiner to configure NATS](#algorithms-used-by-dataminer-to-configure-nats).
 
@@ -309,6 +311,50 @@ For example, in a cluster of 4 agents, the following situation could occur:
 - Agent 4 can only reach Agents 3 and 4.
 
 This will result in Agent 2 receiving different information about the same cluster from its peers. Because Agent 2 cannot resolve this, it will shut itself down, without stating a particular reason for doing so. This makes it look like Agent 2 is the one experiencing issues because it is the only one where NATS will not start. However, it is in fact the only server where all the connections are working correctly.
+
+## Check ports are not in use
+
+NATS uses port 9090 by default. If another program uses this port you'll see the following behavior:
+
+DataMiner won't start. NAS is running. NATS is stopped. 
+Log files in NATS/nats-account-server indicate "listen tcp 0.0.0.0:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted."
+
+This will happen if your agent has elements using GPIB communication and you have the [Keysight Connection Expert software](https://docs.dataminer.services/user-guide/Advanced_Modules/Spectrum_Analysis/Installation_and_configuration/Installing_the_Keysight_Agilent_IO_Libraries.html#installing-the-keysightagilent-io-libraries) from IOLibs installed. This is commonly the case for [Spectrum Analyser elements](https://docs.dataminer.services/user-guide/Advanced_Modules/Spectrum_Analysis/Installation_and_configuration/Connecting_spectrum_analyzers_to_your_DataMiner_System.html).
+
+When NAS & NATS are stopped. Open commandline and run: netstat -aon | findstr 9090. If you see a process there, you can look for that Process PID in taskmanager and you'll find kdi-controller.exe if the cause is the Keysight Connection Expert (it could also happen for other software).
+
+To fix you'll need to manually configure NATS to use a free port, such as 9091
+ 
+- Stop DataMiner
+- Stop the NATS and NAS Services
+- Make sure SLWatchdog is stopped
+- "C:\Skyline DataMiner\NATS\nats-account-server\nas.config"
+
+  Change port from 9090 to 9091
+- "C:\Skyline DataMiner\NATS\nats-account-server\"
+
+  Using commandline from here, run: nssm edit NAS
+  
+  Then adjust any mention of 9090 to 9091:
+- "C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config"
+
+  Change port from 9090 to 9091
+- Windows Firewall, find the inbound rule for NAS.
+
+  Change port from 9090 to 9091
+- "C:\Skyline DataMiner\MaintenanceSettings.xml"
+
+  Add
+  ```xml
+  <SLNet>
+  <NATSForceManualConfig>true</NATSForceManualConfig>
+  </SLNet>
+  ```
+  
+- Start the NAS service.
+- Start the NATS service.
+- Start DataMiner
+- Repeat for every agent in the cluster
 
 ## Remaining steps
 
