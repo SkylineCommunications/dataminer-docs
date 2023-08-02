@@ -4,7 +4,7 @@ uid: ClassLibraryInterAppClasses
 
 # InterApp classes
 
-The InterApp classes, which are provided as a NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provide a C# message and response architecture that can be used:
+The InterApp classes, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provide a C# message and response architecture that can be used:
 
 - From element to element and back.
 - From Automation script to element and back.
