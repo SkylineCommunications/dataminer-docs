@@ -655,6 +655,12 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID_37002]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a folder name, cleared that same folder name, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
