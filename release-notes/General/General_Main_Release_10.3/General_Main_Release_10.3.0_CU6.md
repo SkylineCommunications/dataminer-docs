@@ -244,7 +244,7 @@ When an element had been migrated from one DataMiner Agent to another, it would 
 
 #### Dynamic IP setting for a serial connection would cause incorrect SSH errors to be logged [ID_37016]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, for a particular parameter, the `options` attribute of the `<Type>` element was set to "dynamic ip" for a serial connection, the following incorrect entry would be added to the element's log file:
 

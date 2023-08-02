@@ -272,6 +272,16 @@ The *Form* component would not be cleared when it was no longer fed a DOM instan
 
 When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.
 
+#### Dynamic IP setting for a serial connection would cause incorrect SSH errors to be logged [ID_37016]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, for a particular parameter, the `options` attribute of the `<Type>` element was set to "dynamic ip" for a serial connection, the following incorrect entry would be added to the element's log file:
+
+`An error occurred when applying SSH connection settings from parameters. Not implemented (hr = 0x80004001)`
+
+Moreover, when additional logging was activated for SLPort, an `Attempted to set SSH options on a non-SSH connection` error would be added to the same log file, followed by an unreadable value (representing the IP address), which could even cause a fatal error to occur in SLPort.
+
 #### Problem with SLElement when updating the alarm template of an element [ID_37027]
 
 <!-- MR 10.2.0 [CU18] - FR TBD -->
