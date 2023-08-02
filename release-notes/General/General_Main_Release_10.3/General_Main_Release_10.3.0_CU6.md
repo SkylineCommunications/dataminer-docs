@@ -99,6 +99,12 @@ Also, certain false positive errors that used to occur when renaming objects wil
 
 During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will set all existing NATS firewall rule profiles to "All".
 
+#### SLLogCollector: Easier selection of processes after selecting 'Include memory dump' [ID_36982]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When configuring the *SLLogCollector* tool, you can select the *Include memory dump* option, and then indicate for which process(es) memory dumps should be collected and when these should be collected. Up to now, to select a process, you had to select a checkbox. From now on, you will be able to select a process by clicking any cell in the row representing the process.
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]
