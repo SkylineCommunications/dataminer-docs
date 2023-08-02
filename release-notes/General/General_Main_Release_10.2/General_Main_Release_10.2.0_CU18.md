@@ -248,3 +248,9 @@ Up to now, an error would be thrown when you tried to export a table with a quer
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
+
+#### Monitoring app: Problem when no view properties were shown in the Surveyor [ID_37010]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.

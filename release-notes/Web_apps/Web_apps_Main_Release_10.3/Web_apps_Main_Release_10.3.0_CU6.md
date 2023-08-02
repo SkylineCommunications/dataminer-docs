@@ -163,3 +163,9 @@ The *Form* component would not be cleared when it was no longer fed a DOM instan
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When changes had been made to the header bar of a low-code app, those changes would incorrectly not be shown when you switched to preview mode.
+
+#### Monitoring app: Problem when no view properties were shown in the Surveyor [ID_37010]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.
