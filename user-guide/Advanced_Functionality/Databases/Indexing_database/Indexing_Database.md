@@ -14,7 +14,13 @@ To complete the configuration of a dedicated clustered storage setup, when a Cas
 
 An indexing database can also be [deployed in a setup with storage per DMA](xref:Configuring_indexing_database_per_DMS) to unlock additional DataMiner features, including:
 
-- DataMiner Advanced Analytics features such as pattern matching (see [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console), [Advanced analytics in trend graphs](xref:Advanced_analytics_trending))
+- DataMiner Advanced Analytics features such as pattern matching
+
+  > [!TIP]
+  > See also:
+  >
+  > - [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
+  > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
 - The [Generic Query Interface (GQI)](xref:Generic_Query_Interface) in DataMiner Dashboards
 
