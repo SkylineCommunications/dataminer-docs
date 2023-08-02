@@ -254,3 +254,9 @@ The *Form* component would not be cleared when it was no longer fed a DOM instan
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened the *Monitoring* app, an error could occur when no view properties were shown in the Surveyor.
+
+#### Problem with SLElement when updating the alarm template of an element [ID_37027]
+
+<!-- MR 10.2.0 [CU18] - FR TBD -->
+
+When the alarm template of an element was updated, a run-time error could occur in the SLElement process.
