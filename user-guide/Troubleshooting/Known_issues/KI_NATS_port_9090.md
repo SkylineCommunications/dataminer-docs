@@ -24,7 +24,7 @@ Manually configure a custom port for NATS. See [Investigating NATS issues](xref:
 
 - NATS is stopped.
 
-- 2kB worth of log files can be found in the *C:\Skyline DataMiner\NATS\nats-account-server* folder.
+- Several 2kB large log files can be found in the *C:\Skyline DataMiner\NATS\nats-account-server* folder.
 
   > [!NOTE]
   > This number can increase at a rapid pace (over 30,000 files in 12 hours).
