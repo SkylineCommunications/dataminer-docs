@@ -529,23 +529,6 @@ When, in element settings, community credentials from the credential library wer
 
 In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
-#### Problem when an SNMP connection was assigned to a separate thread [ID_36441]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When, in a protocol, an SNMP connection was assigned to a separate thread, in most cases, the polling would get stuck because the main protocol thread would get notified of the response rather than the thread that was assigned to the SNMP connection.
-
-From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e. the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
-
-Also, the following issues have been fixed:
-
-- Potential memory leaks and SLProtocol errors related to SNMP and additional protocol threads. For example, up to now, stopping an element while a forced group was being executed could cause an error to occur in SLProtocol.
-
-- Up to now, assigning the same connection ID to multiple thread elements could result in undefined behavior. From now on, connection IDs will be assigned according to what occurs first.
-
-> [!NOTE]
-> Known issue: Currently, the action to stop the current group is only capable of stopping the group on the main thread. It is not yet possible to specify a particular thread on which to stop a group.
-
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
