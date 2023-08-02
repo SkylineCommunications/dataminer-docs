@@ -12,7 +12,7 @@ This tool window allows you to make the necessary preparations before debugging 
 
 For step-by-step instructions on how to debug connector QActions and Automation script C# Exe blocks, see [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts).
 
-![DIS Inject tool window](~/develop/images/DisMacrosToolWindow.png)
+![DIS Inject tool window](~/develop/images/DisInjectToolWindow.png)
 
 ## Connecting to one of the Agents specified in the DIS settings
 
