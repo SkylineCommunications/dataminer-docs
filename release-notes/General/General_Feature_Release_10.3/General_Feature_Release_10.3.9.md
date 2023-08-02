@@ -171,6 +171,14 @@ For more information, see [Cassandra Cleaner](xref:Cassandra_Cleaner).
 
 SLLogCollector will now also collect the scheduled tasks configured in Microsoft Task Scheduler.
 
+#### Automation: DLL references on script libraries will also be loaded when an Automation script does not need to be recompiled [ID_36730]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, the DLL references defined on a script library would only be taken into account when an Automation script was recompiled. As a result, Automation scripts that relied on a script library could fail due to missing references.
+
+From now on, the DLL references on a script library will also be loaded when an Automation script does not need to be recompiled.
+
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
