@@ -12,14 +12,20 @@ To complete the configuration of a dedicated clustered storage setup, when a Cas
 
 - [OpenSearch database](xref:OpenSearch_database): Supported from DataMiner 10.3.0/10.3.3 onwards.
 
-An Elasticsearch indexing database can also be [deployed in a setup with storage per DMA](xref:Configuring_indexing_database_per_DMS) to unlock additional DataMiner features, including:
+An indexing database can also be [deployed in a setup with storage per DMA](xref:Configuring_indexing_database_per_DMS) to unlock additional DataMiner features, including:
 
 - DataMiner Advanced Analytics features such as pattern matching
 
-- The Generic Query Interface in DataMiner Dashboards
+  > [!TIP]
+  > See also:
+  >
+  > - [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
+  > - [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
-- DataMiner Object Models (DOM)
+- The [Generic Query Interface (GQI)](xref:Generic_Query_Interface) in DataMiner Dashboards
 
-- DataMiner Service & Resource Management
+- [DataMiner Object Models (DOM)](xref:DOM)
 
-- DataMiner User-Defined APIs
+- [DataMiner Service & Resource Management (SRM)](xref:SRM)
+
+- [DataMiner User-Defined APIs](xref:UD_APIs)
