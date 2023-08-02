@@ -423,7 +423,7 @@ SLDataGateway would leak memory when migrating average trend data from MySQL to 
 
 #### Problem when an SNMP connection was assigned to a separate thread [ID_36441]
 
-<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, in a protocol, an SNMP connection was assigned to a separate thread, in most cases, the polling would get stuck because the main protocol thread would get notified of the response rather than the thread that was assigned to the SNMP connection.
 

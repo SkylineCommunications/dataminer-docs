@@ -99,6 +99,23 @@ When configuring the *SLLogCollector* tool, you can select the *Include memory d
 
 When, for example in a three-node DMS configuration composed of a Failover pair and another, separate DMA, one of the agents in the Failover setup went offline, after 5 minutes, the separate non-Failover agent would incorrectly shift to a two-node DMS configuration. From now on, the non-Failover agent will keep the three-node DMS configuration if one of the Failover agents goes offline.
 
+#### Problem when an SNMP connection was assigned to a separate thread [ID_36441]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, in a protocol, an SNMP connection was assigned to a separate thread, in most cases, the polling would get stuck because the main protocol thread would get notified of the response rather than the thread that was assigned to the SNMP connection.
+
+From now on, a poll group will default to connection 0 rather than -1. As a result, when a separate thread is created for the main connection (i.e. the connection with ID 0), the groups for that connection will no longer need to have `connection="0"` specified.
+
+Also, the following issues have been fixed:
+
+- Potential memory leaks and SLProtocol errors related to SNMP and additional protocol threads. For example, up to now, stopping an element while a forced group was being executed could cause an error to occur in SLProtocol.
+
+- Up to now, assigning the same connection ID to multiple thread elements could result in undefined behavior. From now on, connection IDs will be assigned according to what occurs first.
+
+> [!NOTE]
+> Known issue: Currently, the action to stop the current group is only capable of stopping the group on the main thread. It is not yet possible to specify a particular thread on which to stop a group.
+
 #### Failover: Problems when running BPA tests [ID_36445]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
