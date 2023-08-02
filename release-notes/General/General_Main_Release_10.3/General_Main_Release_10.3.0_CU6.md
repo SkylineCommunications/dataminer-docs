@@ -54,9 +54,9 @@ SLLogCollector will now also collect the scheduled tasks configured in Microsoft
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
-Up to now, the DLL references defined on a script library would only be taken into account when an Automation script was recompiled. As a result, Automation scripts that relied on a script library could fail due to missing references.
+Up to now, when the SLAutomation service was started, the DLL references defined on an Automation script library would only be taken into account when that library needed to be recompiled. As a result, Automation scripts that relied on a script library could fail due to missing references.
 
-From now on, the DLL references on a script library will also be loaded when an Automation script does not need to be recompiled.
+From now on, when the SLAutomation service is started, the DLL references on an Automation script library will also be loaded when that library does not need to be recompiled.
 
 #### DataMiner upgrade: Presence of Visual C++ 2010 redistributable will no longer be checked [ID_36745]
 

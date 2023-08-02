@@ -331,15 +331,27 @@ When such a button is clicked in a low-code app, the UI of the interactive Autom
 > [!NOTE]
 > One button can only execute one action. So, one button can only execute one interactive Automation script.
 
-#### DataMiner Object Models: New field descriptors [ID_35278]
+#### DataMiner Object Models: New field descriptors [ID_35278] [ID_36556]
 
-<!-- MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 35278: MR 10.4.0 - FR 10.3.3 -->
+<!-- RN 36556: MR 10.4.0 - FR 10.3.9 -->
 
 Two new field descriptors have been added to the DataMiner Object Models:
 
 - GroupFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user group.
 
 - UserFieldDescriptor: Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of.
+
+The form component will render these descriptors as filterable drop-down boxes.
+
+- Fields defined as `GroupFieldDescriptor` will display the group name and use that same group name as value.
+
+- Fields defined as `UserFieldDescriptor` will display the full name of the user, but will store the user name as value.
+
+  When the field descriptor defines any group names, the drop-down box will only list the users belonging to those groups.
+
+> [!NOTE]
+> Up to now, only users with *Modules > System configuration > Security > UI available* permission were allowed to view the list of DataMiner users. From now on, even users without *Modules > System configuration > Security > UI available* permission will at least be able to view the list of DataMiner users who are a member of any of the groups they themselves are a member of.
 
 #### DataMiner upgrade: Additional prerequisite will now check for incompatible connectors [ID_35605]
 
