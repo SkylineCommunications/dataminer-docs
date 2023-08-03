@@ -111,7 +111,7 @@ If the index (i.e. cell) you need is not among the first 100 indices that are li
 
 A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
 
-#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904]
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
