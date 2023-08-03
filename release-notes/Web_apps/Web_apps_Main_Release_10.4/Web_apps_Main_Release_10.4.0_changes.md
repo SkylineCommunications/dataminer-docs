@@ -417,6 +417,18 @@ The header and sidebar of the DataMiner Comparison tool have been redesigned.
 
 In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
 
+#### Dashboards app - Line chart component: Enhanced performance [ID_36869]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across all element parameter tables. This will now be prevented when the *Hide non-trended parameters* option is disabled.
+
+> [!NOTE]
+> The *Hide non-trended parameters* setting is now disabled by default.
+
+> [!IMPORTANT]
+> Because of the enhancements that have been made, in some cases, a line chart will no longer show any data when the indices are not available in the specified table. If so, you can opt to work with cell parameters instead (see [release note 36724](xref:Web_apps_Main_Release_10.4.0_new_features#dashboards-app--low-code-apps---parameters-dataset-selecting-an-indexcell-of-a-column-parameter-id_36724)) or to enable the *Hide non-trended parameters* option.
+
 #### Monitoring app: Parameter control now supports dynamic units [ID_36892]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
