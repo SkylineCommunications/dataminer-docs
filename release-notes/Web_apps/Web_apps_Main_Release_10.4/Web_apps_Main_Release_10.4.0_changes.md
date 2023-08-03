@@ -660,3 +660,9 @@ When you removed a query that was used by a component on the page you were viewi
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### Monitoring app & Dashboards app: Cleared alarm groups would incorrectly still appear in alarm lists [ID_37045]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
