@@ -39,7 +39,7 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 > - Prior to DataMiner 10.1.0 CU10 and 10.2.1, port 8222 is also opened for NATS monitoring. In later DataMiner versions, we recommend manually opening the port in order to be able to debug NATS. With port 8222, you can extract metrics and performance indicators from the NATS message broker, which in turn may allow you to debug if required. However, for maximum security, only expose port 8222 on internal networks to prevent the leaking of sensitive information.
 
 > [!CAUTION]
-> A problem can occur where port 9090 is already used by a third-party software. For more information, see [](xref:KI_NATS_port_9090).
+> A problem can occur where port 9090 is already used by a third-party software. For more information, see [Default NATS port is already in use](xref:KI_NATS_port_9090).
 
 ## Graphical representation of IP communication within a DMS
 
