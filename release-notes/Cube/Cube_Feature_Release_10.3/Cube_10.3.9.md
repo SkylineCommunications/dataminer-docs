@@ -113,6 +113,12 @@ All alarms and suggestion events generated following the detection of behavioral
 
 All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
+#### Alarm Console: Enhanced performance when loading history alarms [ID_36929]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]

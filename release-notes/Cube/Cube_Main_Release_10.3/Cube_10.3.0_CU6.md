@@ -30,6 +30,12 @@ Up to now, embedding a visual overview assigned to a view in that same visual ov
 
 A number of enhancements have been made with regard to how help buttons in the *Services* module are linked to pages on <https://docs.dataminer.services/>.
 
+#### Alarm Console: Enhanced performance when loading history alarms [ID_36929]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
