@@ -305,7 +305,7 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
 
-#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029]
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029] [ID_37031]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
@@ -315,6 +315,7 @@ Up to now, the following asynchronous operations were only supported over HTTP(s
 - Retrieving alarm details
 - Retrieving alarm history
 - Retrieving visual overviews of elements, services and views
+- Retrieving parameter status information (serving as input for pivot table components)
 - Generating PDF reports
 - Sending emails containing PDF reports
 - Sharing a dashboard
