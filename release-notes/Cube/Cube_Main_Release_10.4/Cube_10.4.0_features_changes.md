@@ -255,6 +255,15 @@ Once you have turned a card into the master card, each time you open a new card 
 > - At any given time, there can be only one master card.
 > - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
 
+#### Proportional card layout: Marking cards as non-closable [ID_36956]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now mark cards to non-closable. To do so, click the card's hamburger menu, and select the *Hide close button* option.
+
+> [!NOTE]
+> This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Hide close button* option, the *Pin this card* option will be disabled (and vice versa).
+
 ## Changes
 
 ### Enhancements
