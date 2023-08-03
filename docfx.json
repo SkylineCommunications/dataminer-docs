@@ -53,7 +53,7 @@
         ]
       }
     ],
- 	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+ 	"xrefService": [ "https://learn.microsoft.com/api/xref/query?uid={uid}" ],
 	"xref" : [ "xref/newtonsoft.yml" ],
   "resource": [
       {
