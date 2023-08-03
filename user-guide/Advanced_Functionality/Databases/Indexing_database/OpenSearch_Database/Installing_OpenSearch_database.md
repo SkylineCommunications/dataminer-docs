@@ -11,9 +11,6 @@ Supported versions:
 - OpenSearch 1.X
 - OpenSearch 2.X
 
-> [!NOTE]
-> OpenSearch is only supported on Linux.
-
 ## Setting up the OpenSearch cluster
 
 See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
