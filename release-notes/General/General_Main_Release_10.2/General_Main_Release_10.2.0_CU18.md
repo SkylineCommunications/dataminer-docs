@@ -266,6 +266,12 @@ Up to now, an error would be thrown when you tried to export a table with a quer
 
 The *Form* component would not be cleared when it was no longer fed a DOM instance or a DOM definition.
 
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID_37002]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a folder name, cleared that same folder name, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
 #### Monitoring app: Problem when no view properties were shown in the Surveyor [ID_37010]
 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->

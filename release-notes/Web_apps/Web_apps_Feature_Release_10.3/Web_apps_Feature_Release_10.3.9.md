@@ -358,7 +358,7 @@ The *Form* component would not be cleared when it was no longer fed a DOM instan
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a nameless folder [ID_37002]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a folder name, cleared that same folder name, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
 
