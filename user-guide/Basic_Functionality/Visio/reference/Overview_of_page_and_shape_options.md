@@ -918,7 +918,7 @@ Available from DataMiner 9.5.8 onwards. See [Dynamically selecting shape templat
 
 Shape-level option.
 
-Available from DataMiner 10.0.10 onwards. Allows you to embed an Internet Explorer web browser control. However, not that this browser is **deprecated** and using this option is therefore not recommended.
+Available from DataMiner 10.0.10 onwards. Allows you to embed an Internet Explorer web browser control. However, note that this browser is **deprecated** and using this option is therefore not recommended.
 
 See [UseIE](xref:Linking_a_shape_to_a_webpage#useie).
 
