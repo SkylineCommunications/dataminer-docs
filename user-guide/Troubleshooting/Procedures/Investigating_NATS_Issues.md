@@ -2,7 +2,7 @@
 uid: Investigating_NATS_Issues
 ---
 
-# Investigating NATS Issues
+# Investigating NATS issues
 
 To investigate NATS issues, follow the actions detailed below, in the specified order:
 
@@ -14,7 +14,9 @@ To investigate NATS issues, follow the actions detailed below, in the specified 
 1. [Try a NATS reset](#try-a-nats-reset)
 1. [Check if new NATS connections can be established](#check-if-new-nats-connections-can-be-established)
 1. [Check the NAS and NATS logging](#check-the-nas-and-nats-logging)
+1. [Check if port is already in use](#check-if-port-is-already-in-use)
 1. [Remaining steps](#remaining-steps)
+
 
 It may also be useful to understand the [algorithms used by DataMiner to configure NATS](#algorithms-used-by-dataminer-to-configure-nats).
 
@@ -309,6 +311,67 @@ For example, in a cluster of 4 agents, the following situation could occur:
 - Agent 4 can only reach Agents 3 and 4.
 
 This will result in Agent 2 receiving different information about the same cluster from its peers. Because Agent 2 cannot resolve this, it will shut itself down, without stating a particular reason for doing so. This makes it look like Agent 2 is the one experiencing issues because it is the only one where NATS will not start. However, it is in fact the only server where all the connections are working correctly.
+
+## Check if port is already in use
+
+NATS uses port 9090 by default. If another program is already using this port, you will notice the following behavior:
+
+- DataMiner fails to start.
+
+- NAS is running.
+
+- NATS is stopped.
+
+- Several 2kB large log files can be found in the *C:\Skyline DataMiner\NATS\nats-account-server* folder.
+
+  > [!NOTE]
+  > The number of log files in this folder can increase rapidly (over 30,000 files in 12 hours).
+
+  The log files contain the following entry:
+
+  `listen tcp 0.0.0.0:9090: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.`
+
+The 9090 port may already be in use if your DMA has elements using [GPIB communication](xref:GPIB_Connection) and you have the [Keysight Connection Expert software](xref:Installing_the_Keysight_Agilent_IO_Libraries) from IO Libraries installed. This is commonly the case for [spectrum analyzer elements](xref:Connecting_spectrum_analyzers_to_your_DataMiner_System).
+
+Check whether Keysight Agilent IO Libraries or a different third-party software is using the 9090 port:
+
+1. Ensure that NAS and NATS are stopped.
+
+1. Run the following command in a command prompt window: `netstat -aon | findstr 9090`.
+
+1. If you identify a process using port 9090, open Windows Task Manager to find the process PID, e.g. *kdi-controller.exe*.
+
+### Manually configuring a custom port for NATS
+
+To resolve this issue, manually configure a custom port for NATS that is not yet in use, e.g. port 9091.
+
+1. Stop DataMiner and the NAS and NATS services.
+
+1. Make sure SLWatchdog is stopped.
+
+1. Open *C:\Skyline DataMiner\NATS\nats-account-server\nas.config* and change the port from 9090 to your chosen custom port, e.g. 9091.
+
+1. Run the following command in a command prompt window: `nssm edit NAS`.
+
+1. Change any mentions of 9090 to 9091.
+
+1. Open *C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config* and change the port from 9090 to 9091.
+
+1. In Windows Firewall, locate the inbound rule for NAS. Change the port from 9090 to 9091.
+
+1. Open *C:\Skyline DataMiner\MaintenanceSettings.xml* and add the following lines:
+
+   ```xml
+   <SLNet>
+   <NATSForceManualConfig>true</NATSForceManualConfig>
+   </SLNet>
+   ```
+
+1. Start the NAS and NATS services.
+
+1. Start DataMiner.
+
+1. Repeat this process for every Agent in the cluster.
 
 ## Remaining steps
 

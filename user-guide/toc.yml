@@ -3513,8 +3513,10 @@
             - name: Setting a protocol to production takes a long time
               topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
         - name: Resolved issues
-          topicUid: KI_RTEs_Alarm_Template_Issue
+          topicUid: KI_NATS_port_9090
           items:
+            - name: Default NATS port is already in use
+              topicUid: KI_NATS_port_9090
             - name: RTEs caused by problem when updating alarm templates
               topicUid: KI_RTEs_Alarm_Template_Issue
             - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
