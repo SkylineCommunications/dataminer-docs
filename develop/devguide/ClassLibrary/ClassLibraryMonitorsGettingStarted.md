@@ -11,8 +11,8 @@ The monitor methods are extension methods on the current DMS classes framework p
 
 To access these extension methods you need the following two namespaces:
 
-- `using Skyline.DataMiner.Library.Common.Subscription.Monitors;`
-- `using Skyline.DataMiner.Library.Protocol.Subscription.Monitors;`
+- `using Skyline.DataMiner.Core.DataMinerSystem.Common.Subscription.Monitors;`
+- `using Skyline.DataMiner.Core.DataMinerSystem.Protocol.Subscription.Monitors;`
 
 This will provide access to Start and Stop methods to manipulate the monitors on parameters, elements and DMS objects.
 

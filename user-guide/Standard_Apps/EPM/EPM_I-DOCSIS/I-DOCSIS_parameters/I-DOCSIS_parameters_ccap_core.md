@@ -22,7 +22,9 @@ This page contains an overview of the CCAP Core parameters available in the I-DO
 
 - **Number CM DOCSIS 3.1**
 
-- **Number CM DOCSIS Other**
+- **Number CM DOCSIS Other**: Calculated. The number of CMs associated with the given level that have an unknown DOCSIS version.
+
+  Calculated by adding up the number of CMs with an unknown DOCSIS version that are associated with the CCAP Core.
 
 - **Number CM Ping OK**
 
@@ -63,3 +65,9 @@ This page contains an overview of the CCAP Core parameters available in the I-DO
 - **Market Name**
 
 - **Hub Name**
+
+- **Uptime**
+
+- **CPU Utilization**
+
+- **Memory Utilization**

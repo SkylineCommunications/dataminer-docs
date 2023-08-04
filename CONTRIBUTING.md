@@ -8,6 +8,9 @@ Welcome to the docs.dataminer.services contributor guide!
 
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
+> [!TIP]
+> Are you a member of the DataMiner DevOps Professional Program? You can earn points by proposing changes or pointing out issues in the documentation! Find out [how many DevOps Points you can earn](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points).
+
 ## General guidelines
 
 - Use **US English** spelling when you contribute to the DataMiner documentation.
@@ -21,7 +24,7 @@ Our documentation is open to contributions from any user. Contributions are crea
 ## Doing a quick edit to a page
 
 > [!TIP]
-> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo
+> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 On every page of the documentation on docs.dataminer.services, a *Propose changes* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
 
@@ -37,22 +40,42 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
 1. Make your changes using the web editor. To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click *Propose changes*. For example:
+1. Once you have made your changes, click *Commit changes* in the top-right corner. This will open a pop-up window.
+
+   ![Commit changes](~/images/Commit_Changes.png)
+
+1. In the pop-up window, you can enter a title and description for your changes and click *Propose changes*. For example:
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
 1. A page will be displayed with a summary of your changes. At the top of the page, click *Create pull request*. A “pull request” is a request to pull changes into the repository.
 
+   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
+
 1. Double-check the title and description for the pull request, and modify them if necessary. We recommend that you select the option *Allow edits by maintainers*, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
 
 1. Click *Create pull request*.
 
-   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
-
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
-   > [!NOTE]
+   > [!IMPORTANT]
    > Do not forget to create a pull request! Otherwise, your changes may be lost.
+
+## Reporting an issue
+
+GitHub offers the possibility to report an issue. This feature can be used if you think information is missing or notice a mistake but are unsure of how to change it using the [web editor](#doing-a-quick-edit-to-a-page) or [GitHub Desktop](#making-a-larger-contribution). You can report an issue as follows:
+
+1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
+
+1. In the top-left corner, select *Issues*.
+
+1. Select *New issue*.
+
+1. Choose a title for the issue and leave a comment.
+
+1. Select *Submit new issue*.
+
+The Skyline documentation team will review the issue and provide you with feedback.
 
 ## Reviewing a contribution from someone else
 
@@ -91,9 +114,21 @@ Until a pull request is merged, everyone can review it and add comments of their
 ### Getting started
 
 > [!TIP]
-> See also: [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo
+> See also:
+>
+> - [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Making a large contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-large-contribution-to-the-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+>
+> Note that these videos are less update-friendly than the instructions below.
 
-For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software:
+For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software, in the indicated order:
+
+- [Git](https://git-scm.com/downloads)
+
+  > [!NOTE]
+  >
+  > - While it is also possible to use the tools below without Git, some features in Visual Studio Code, such as branch and repository information, will not be available.
+  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-the-main-branch).
 
 - [GitHub Desktop](https://desktop.github.com/)
 
@@ -115,7 +150,9 @@ When you install GitHub Desktop, you will also need to add the correct repositor
    ![Install GitHub 2](~/images/InstallGithub2.png)
 
    > [!IMPORTANT]
-   > Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   >
+   > - Make sure the local path you clone the repository to is relatively short. Using a long file path will lead to errors, as Windows will be unable to create certain files in the repository.
+   > - Do not clone the repository to a folder that is synced with OneDrive, as this can cause errors.
 
 1. If you do not have write access to the repository, you will find an alert in the lower left corner of the GitHub Desktop UI.
 
@@ -135,7 +172,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 > If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g. `https://github.com/MyGitHubName/dataminer-docs`).
 
 > [!TIP]
-> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork.
+> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork. However, note that if you have other editors installed as well (e.g. Notepad++), this button might display a different editor. You can change this via the *Options* link in the box containing the button.
 >
 > ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
 
@@ -159,7 +196,7 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
+   ![Indication of outdated fork](~/images/Contributing_Sync_Fork.png)
 
 1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
@@ -190,8 +227,8 @@ When you add a page to the documentation:
   For example:
 
   ```yml
-  - name: Connecting your DataMiner System to the cloud
-    topicUid: Connecting_your_DataMiner_System_to_the_cloud
+  - name: Basic concepts
+    topicUid: BasicConcepts
   ```
 
   To add the new page at a lower level in the table of contents, use the following syntax:
@@ -226,20 +263,14 @@ When your changes are ready, you can create a pull request to submit them for re
 
    ![Push origin](~/images/Contrib_PushOrigin.png)
 
-1. Go to your fork on GitHub (see [Things to watch out for](#things-to-watch-out-for) for more information on how to get to your fork), and select *Contribute* > *Open pull request*.
+1. Next click *Create Pull Request*. This will open GitHub in a browser.
 
-   ![Open pull request](~/images/Contrib_OpenPullRequest.png)
-
-   This will open another overview of the changes that will be included in the pull request.
-
-1. At the top, click *Create pull request*.
+   ![Create Pull Request](~/images/Contrib_CreatePullRequest.png)
 
    > [!NOTE]
-   > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
-   >
-   > ![Create draft pull request](~/images/Contrib_draftPR.png)
-   >
-   > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
+   > You can also select *Preview Pull Request* to get a complete overview of the changes you are about to commit and the base you are merging this to. If necessary, you can select a different base branch here as well. If all changes are OK, select *Create pull request*.
+
+1. In the browser, make sure that the base you are merging to is the main branch. If a different base branch is selected, make sure to select the correct branch. Scroll down for another overview of the changes that will be included in the pull request.
 
 1. Specify a title for the pull request, and optionally add a comment with more information about your changes.
 
@@ -250,9 +281,18 @@ When your changes are ready, you can create a pull request to submit them for re
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
+      > [!NOTE]
+      > You can also create a draft pull request, for example if you still want to have someone else make changes before the pull request can be merged. In that case, click the triangle button next to *Create pull request* and select *Create draft pull request*.
+      >
+      > ![Create draft pull request](~/images/Contrib_draftPR.png)
+      >
+      > When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
+
 ### Collaborating with others on a draft branch
 
 When you work together with several other people to add new information to the documentation, it can be useful to work together on the same draft branch without publishing your changes to the main branch yet. This way, you can add multiple changes that others can then further work on, but nothing will be published on docs.dataminer.services yet.
+
+![Create pull request to draft branch](~/images/Pull_Request_Draft_Branch.png)
 
 You can do so as follows:
 
@@ -270,7 +310,7 @@ You can do so as follows:
 
    ![Commit to the draft branch](~/images/Contrib_CommitToDraftBranch.png)
 
-1. Click *Push upstream* to push the changes to the remote.
+1. Click *Push origin* to push the changes to the remote.
 
    > [!NOTE]
    > If you get an error when you click this button, this usually means you are trying to push the changes directly to the main repository instead of to your fork. In GitHub Desktop, go to *Repository* > *Repository settings*, and make sure the specified *Primary remote repository* is your fork. To find the URL of your fork, go to <https://github.com/SkylineCommunications/dataminer-docs/network/members>, search for your GitHub username, and click the *dataminer-docs* link next to it.
@@ -285,9 +325,90 @@ You can do so as follows:
 
 1. Click *Create pull request*.
 
-The Skyline documentation team will then need to merge your pull request, so that it becomes available in the branch for other people as well. This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done. When your pull request has been merged, others can continue to work on your changes as described above.
+After you have created a pull request, the Skyline documentation team will need to merge your pull request so that it **becomes available in the branch for other people as well**.
 
-When all the necessary changes have been made and the draft branch is ready for publication, create a pull request as detailed above, but select the main branch instead of the draft branch as the base.
+> [!TIP]
+> This can take some time. We recommend that you enable notifications in your account settings so that you get a notification when the merge is done.
+
+#### Keeping the draft branch up to date in your fork
+
+When your pull request has been merged, others can continue to work on your changes. However, to see all recent changes merged to the draft branch in your own fork, you will need to make sure that **the draft branch in your fork is up to date**.
+
+![Sync Branch](~/images/Sync_Branch.png)
+
+1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
+
+1. In the top-right corner, click the triangle button next to *Fork* and select your fork.
+
+   ![Your existing forks](~/images/Your_Existing_Forks.png)
+
+1. In the top-left corner, change the branch from *main* to your draft branch.
+
+   ![Main to draft branch](~/images/Main_to_Draft.png)
+
+1. Check the top of the page. If it says the branch is a number of commits behind the draft branch located on the dataminer-docs repository, your branch is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
+
+1. To update your fork, click the triangle button next to *Synch fork* and select *Update branch*.
+
+1. In GitHub Desktop, click *Fetch origin*. If there are commits on the branch that do not yet exist on your machine, the option to *Pull origin* will become available.
+
+   ![Fetch origin](~/images/Fetch_Origin.png)
+
+Now that all commits are available on your machine, you can [continue to make changes](#collaborating-with-others-on-a-draft-branch).
+
+#### Creating the final pull request to merge the draft branch
+
+![Publish to docs](~/images/Publish_to_Docs.png)
+
+When all the necessary changes have been made and the draft branch is ready for publication:
+
+1. Go to the [dataminer-docs repository](https://github.com/SkylineCommunications/dataminer-docs) on GitHub.
+
+1. In the top-left corner, switch from the main branch to the draft branch.
+
+1. At the top of this page, click the number of commits the branch is ahead SkylineCommunications:main.
+
+   ![Draft_Branch](~/images/Draft_Branch.png)
+
+   A page will be displayed with a summary of all changes made to the draft branch.
+
+1. Make sure the base you are merging to is set to *main*.
+
+1. Click *Create pull request*.
+
+1. Double-check the title and description for the pull request, and modify them if necessary.
+
+1. Click *Create pull request*.
+
+All changes saved on the draft branch will now be published to docs.dataminer.services.
+
+### Working on an existing pull request
+
+After you have made a pull request and before it is merged into the main branch by the Skyline documentation team, it is possible to continue working on that existing pull request.
+
+You can do so as follows:
+
+1. Change the pull request from a full pull request to a draft pull request.
+
+   1. Go to your pull request on GitHub.
+
+   1. In the *Reviewers* tab in the top right, select *Convert to draft*.
+
+      ![Convert to draft](~/images/Convert_To_Draft.png)
+
+1. Open GitHub Desktop and select *Current branch*.
+
+1. In the *Pull requests* tab, select the pull request you want to continue working on. Your current branch will now have changed.
+
+   ![Pull Request](~/images/Pull_Request.png)
+
+1. Open the branch in Visual Studio Code. You can do so by clicking the *Open in Visual Studio Code* button in GitHub Desktop.
+
+1. Make your changes in Visual Studio Code and make sure they are saved. Keep the items listed under [Things to watch out for](#things-to-watch-out-for) in mind.
+
+1. In GitHub Desktop, add a short summary of your changes in the box in the lower right corner. Optionally, you can also add a description. Then click the *Commit* button. This commit will now be added to the previous pull request.
+
+1. When the pull request is ready to be merged, you can click *Ready for review* on the pull request page to change it from a draft into a full pull request.
 
 ### Making a local test build before pushing changes
 
@@ -297,44 +418,63 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Installing and configuring DocFX
 
-1. Go to <https://github.com/dotnet/docfx/releases>, and download the latest version of the `docfx.zip` package (e.g. version 2.59.4).
+1. Install .NET 6.0 SDK or higher from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
-    > [!CAUTION]
-    > We recommend that you do not use any of the beta versions.
+1. Open a command prompt and enter the command `dotnet tool update -g docfx`
 
-1. Extract `docfx.zip` to a folder of your choice (e.g. `C:\DocFX`).
-
-    > [!NOTE]
-    > Make sure the folder name and path contain no spaces, as this may cause issues. For example, instead of `C:\My docs`, use `C:\My-docs` or some other alternative without a space.
-
-1. Add the folder (e.g. `C:\DocFX`) to the environment variable **Path** (user variable or system variable).
-
-    On Windows 10 or 11 systems, do the following:
-
-    1. In your Windows search box, enter "path".
-    1. Click *Edit the system environment variables*.
-    1. In the *Advanced* tab of the *System Properties* window, click *Environment Variables*.
-    1. In the *Environment Variables* window, select the **Path** variable in either the *User variables for \<user\>* list or the *System variables* list, and click *Edit*.
-    1. In the *Edit environment variable* window, click *New*, enter e.g. `C:\DocFX`, and click *OK*.
-
-1. Test whether DocFX was installed correctly:
-
-    1. Open a command prompt.
-    1. Enter `docfx help`.
+1. Test whether DocFX was installed correctly by entering `docfx --version`.
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.58.4.0
-    Copyright (C) 2022 ¸ Microsoft Corporation. All rights reserved.
-    This is open-source software under MIT License.  
+    2.67.3+f28165af43dde2ec072a79fa2479f475fcd947ad
     ...
     ```
 
 > [!TIP]
 > Alternative ways to install DocFX can be found on the [DocFX website](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool).
 
+> [!NOTE]
+> If you use this "dotnet" command, it is no longer necessary to add the DocFX folder to the Windows Path variable as was the case in the past. If you configured this earlier, we recommend that you remove this folder from the Path variable again and reboot.
+
 #### Making a test build
+
+##### Making a test build using buildDocs.cmd
+
+1. Make sure **.NET 6.0 SDK or higher** is installed on your machine. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+
+1. Go to the root folder of the repository on your local machine, e.g. `C:\GitHub\dataminer-docs\dataminer-docs`.
+
+1. Double-click the file *buildDocs.cmd*.
+
+   This will open a command window where the following commands will run:
+
+   - `dotnet restore "src/NuGetPackages"`
+
+   - `dotnet build "src/NuGetPackages" --configuration Release`
+
+   - `docfx metadata`
+
+   - `docfx build`
+
+   - `docfx serve _site`
+
+1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+   > [!NOTE]
+   > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
+
+1. When you have finished previewing the website, close the command window.
+
+> [!NOTE]
+> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
+
+> [!IMPORTANT]
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
+
+##### Making a test build in the Visual Studio Code terminal
+
+If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can also run these commands manually in the Visual Studio Code terminal. This has the advantage that you do not need to run all of the commands every time, so your test builds can be generated more quickly.
 
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
@@ -342,29 +482,35 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `docfx metadata -f` to generate the metadata.
+   1. Enter the following commands:
+
+      - `dotnet restore "src/NuGetPackages"`
+
+      - `dotnet build "src/NuGetPackages" --configuration Release`
+
+      - `docfx metadata`
+
+      - `docfx build`
+
+      - `docfx serve _site`
 
       > [!NOTE]
       >
-      > - At this point, you may get 5 warnings mentioning "Found project reference without a matching metadata reference". These can be ignored.
-      > - At this point, if you get up to 13 warnings, of which 8 mention "Invalid cref value", follow the steps explained [here](#running-docfx-metadata--f-results-in-warnings-mentioning-an-invalid-cref-value).
-
-   1. Enter `docfx build -f` to make a test build.
-
-   1. Enter `docfx serve _site`.
+      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first build.
+      > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
       > [!TIP]
       > If you are not able to access localhost:8080, you can specify a different port by entering e.g. `docfx serve _site -p 8090`.
 
-      When you have finished previewing the website, in the Terminal pane, press ENTER to exit the preview mode.
+      When you have finished previewing the website, in the Terminal pane, press Ctrl+C to exit the preview mode.
 
       > [!NOTE]
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ## Markdown syntax
 
@@ -545,7 +691,7 @@ For more detailed info about DFM syntax, see [Docs Markdown reference](https://d
 To add a cross-reference, i.e. a link to another page in the documentation, use the same format, but specify the link in the format "xref:uid". For example:
 
 ```md
-See [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud).
+See [Basic concepts](xref:BasicConcepts).
 ```
 
 To find this UID, open the page you want to link to in the repository. Each page has a UID specified at the top. For example, for the current page, this looks like this:
@@ -680,7 +826,7 @@ Be careful when you use screenshots of the DataMiner Cube UI, as these can get o
 
 If you do add a screenshot, ideally there should be some indication of the version of the software displayed in the screenshot, so it is clear if the screenshot is outdated.
 
-## Address the reader directly
+### Address the reader directly
 
 Avoid writing about your reader as "the user", but instead use "you".
 
@@ -698,9 +844,15 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 **Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
 
-**Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
+**Resolution**: Make sure there is no hyphen in front of the topicUid line. Only the name line should be preceded by a hyphen.
 
 ![TOC](~/images/TOC.png)
+
+### No instances of MSBuild could be detected
+
+**Symptom**: When trying to create a build, you get the exception "No instances of MSBuild could be detected".
+
+**Resolution**: If you only have .NET 7 installed, and not .NET 6, adjust the .csproj file in the build folder of the repository so that it targets "net7.0" instead of "net6.0".
 
 ### Build failed because assembly or file could not be loaded
 
@@ -737,7 +889,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 ![Unsaved changes](~/images/Unsaved_Changes.png)
 
-### GitHub Desktop keeps basing branches on an outdated version of ‘main’
+### GitHub Desktop keeps basing branches on an outdated version of the main branch
 
 **Symptom**: Newly created branches indicate that they were created a longer time ago.
 
@@ -747,35 +899,45 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 - If you installed Git after you installed GitHub Desktop, remove the repository in GitHub Desktop and add it again.
 
-### Running 'docfx metadata -f' results in warnings mentioning an invalid cref value
+### GitHub Desktop throws "Author identity unknown" error
 
-**Symptom**: When you enter `docfx metadata -f` in the Terminal pane in Visual Studio Code, you get several warnings that look like this:
+**Symptom**: When you try to push a commit using GitHub Desktop, this fails with the following error:
 
 ```txt
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 309, ignored.
-[22-12-14 07:59:45.600]Warning:[ExtractMetadata]Invalid cref value "!:JsonReaderException" found in triple-slash-comments for FromJsonString defined in src/Base Class Library/Common/Skyline/DataMiner/Library/Common/Rates/RateHelper.cs Line 354, ignored.
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+    git config --global user.email "you@example.com"
+    git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit ---global to set the identity only in this repository.
+
+fatal: empty ident name (for <>) not allowed
 ```
 
 **Resolution**:
 
-1. Open Visual Studio.
+1. In GitHub Desktop, select *Repository* in the top-left corner and click *Repository settings*.
 
-1. Select to open a project or solution and open *C:\...\GitHub\dataminer-docs\src\Base Class Library\Code Library.sln*.
+1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
 
-1. In the *Solution Explorer* pane, right-click *Solution 'Code Library'* and select *Restore NuGet packages*.
+   ![Git config](~/images/Git_config.png)
 
-   You will get the following output:
+### The template does not load correctly in the test build
 
-   ```txt
-   `Restored C:\...\GitHub\dataminer-docs\src\Base Class Library\Common\Common.csproj (in 340 ms).
-   NuGet package restore finished
-   Time Elapsed: 00:00:00.7119526
-   ========== Finished ==========
-   ```
+**Symptom**: When you view your test build, it is not displayed correctly. Among others, no search box is available in the top-right corner.
 
-1. Enter `docfx metadata -f` in Visual Studio Code again.
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
 
-   You should now get no more than 5 warnings when generating the metadata.
+> [!TIP]
+> You can use the command `docfx help` to check which version is installed.
+
+> [!NOTE]
+> If you have upgraded DocFX, but this upgrade does not seem to have taken effect, check whether you have a path parameter configured that leads to an older version. Go to *Edit the system environment variables* > *Advanced* > *Environment Variables*, select the *Path* parameter, if available, and click *Edit*. If an entry is listed that goes to a DocFX folder containing an old version of DocFX, delete that entry.
 
 ## References
 

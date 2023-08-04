@@ -124,11 +124,11 @@ All files related to the obsolete *SNMP Simulation Generator* tool have been rem
 
 In the user settings (*user icon > Settings*), from now on, you will only be able to configure themes when you have permission to edit dashboards.
 
-#### Low-code apps: Header bar enhancements [ID_34264]
+#### Low-Code Apps: Header bar enhancements [ID_34264]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 
-A number of small enhancements have been made to the header bar of low-code apps:
+A number of small enhancements have been made to the header bar of Low-Code Apps:
 
 - Button text now supports both upper case and lower case.
 - Buttons no longer have lines between them.
@@ -299,7 +299,7 @@ When, on one thread, a group other than a poll group was launched while, on anot
 
 In some cases, an error could occur in SLProtocol when performing a 'replace data' action that had to replace multiple bytes.
 
-#### Low-code apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
+#### Low-Code Apps: Header bar font color would incorrectly not be aligned with the theme color of the app [ID_34267]
 
 <!-- MR 10.2.0 [CU7] - FR 10.2.10 -->
 

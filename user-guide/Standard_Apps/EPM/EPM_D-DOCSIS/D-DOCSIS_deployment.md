@@ -2,7 +2,22 @@
 uid: D-DOCSIS_deployment
 ---
 
-# EPM D-DOCSIS deployment
+# EPM D-DOCSIS Deployment
+
+### Upgrade
+
+To deploy and upgrade the D-DOCSIS branch of the EPM Solution in an automated fashion:
+
+1. Make sure the **latest DataMiner feature release** version is installed.
+
+1. Place the latest EPM D-DOCSIS upgrade installation package on the server.
+
+1. Run the installation package. This will automatically upgrade all protocols, templates, Automation scripts, assemblies, and dashboards.
+
+   > [!NOTE]
+   > Visio drawings are currently not yet supported in the upgrade package, so you will need to update these manually.
+
+### Initial Deployment
 
 To deploy the D-DOCSIS branch of the EPM Solution:
 
@@ -17,7 +32,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
 
 1. Set the latest version of the installed connectors to the **Production version**. See [Promoting a protocol version to production version](xref:Promoting_a_protocol_version_to_production_version).
 
-1. If the EPM package contains any **alarm and/or trend templates**, upload these. See [Uploading an alarm template](xref:Managing_alarm_templates#uploading-an-alarm-template) and [Uploading a trend template](xref:Adding_and_deleting_trend_templates#uploading-a-trend-template).
+1. If the EPM package contains any **alarm and/or trend templates**, upload these. See [Uploading an alarm template](xref:Uploading_an_alarm_template) and [Uploading a trend template](xref:Adding_and_deleting_trend_templates#uploading-a-trend-template).
 
 1. If this is the initial deployment of the EPM Solution, **create the necessary views**. See [Creating a view](xref:Managing_views#creating-a-view).
 
@@ -37,7 +52,7 @@ To deploy the D-DOCSIS branch of the EPM Solution:
      >     - EPM BE
      >     - EPM FE
 
-1. If this is the initial deployment of the EPM Solution, **create the necessary elements** using the uploaded connectors. See [Adding and deleting elements](xref:Adding_and_deleting_elements).
+1. If this is the initial deployment of the EPM Solution, **create the necessary elements** using the uploaded connectors. See [Adding elements](xref:Adding_elements).
 
    The following elements should be created:
 

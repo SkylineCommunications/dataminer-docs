@@ -82,7 +82,7 @@ $(function () {
   // Enable highlight.js
   function highlight() {
     $('pre code').each(function (i, block) {
-      hljs.highlightBlock(block);
+      hljs.highlightElement(block);
     });
     $('pre code[highlight-lines]').each(function (i, block) {
       if (block.innerHTML === "") return;
@@ -124,11 +124,10 @@ $(function () {
     var query;
     var relHref = $("meta[property='docfx\\:rel']").attr("content");
     if (typeof relHref === 'undefined') {
-      highlightKeywords();
       return;
     }
     try {
-      var worker = new Worker(relHref + 'styles/search-worker.js');
+      var worker = new Worker(relHref + 'styles/search-worker.min.js');
       if (!worker && !window.worker) {
         localSearch();
       } else {
@@ -1214,12 +1213,14 @@ $(function () {
 
     $(window).on('load', function () {
         // scroll to the anchor if present, offset by the header
-        scrollToCurrent();
+        // scrollToCurrent(); // Due to a race condition, Chrome is sometimes not correctly positioning anchors, move this to the ready method here below.
     });
 
     $(document).ready(function () {
         // Exclude tabbed content case
         $('a:not([data-tab])').click(function (e) { delegateAnchors(e); });
+        // scroll to the anchor if present, offset by the header
+		    scrollToCurrent();
     });
   }
   

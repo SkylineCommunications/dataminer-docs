@@ -80,6 +80,7 @@ From DataMiner 10.1.11/10.2.0 onwards, you can use Microsoft Edge (WebView2) to 
 >
 > - The WebView2 Runtime is automatically installed with Office 365 Apps and/or Windows 11. It is not included in DataMiner upgrade packages.
 > - This browser engine has the advantage that web content is rendered directly to the graphics card and proprietary codecs such as H.264 and AAC are supported. In addition, the browser engine automatically receives updates via Windows Update, regardless of the DataMiner or Cube version.
+> - From DataMiner 10.3.4/10.4.0 onwards, interactions between DataMiner web apps and Cube (e.g. a web app opening an element card in Cube) now also work when those web apps are embedded in Microsoft Edge (WebView2). Prior to DataMiner 10.3.4/10.4.0, this functionality is already supported when [Chromium](#usechrome) is used to display web apps. <!-- RN 35655 -->
 
 ### UseLoginCredentials
 
@@ -119,6 +120,7 @@ http://localhost/foo/test.php?id=123&action=save#SL_ALLOW_POPUPS#
 >
 > - \<ElementID>, \<ElementIP> and \<ElementName> are only to be used if the shape is also linked to an element.
 > - From DataMiner version 9.0.5 onwards, these placeholders can also be used inside another placeholder in the URL, e.g. `#http://www.skyline.be?MyParam=[param:<elementname>,1]`
+> - Prior to DataMiner 10.3.6/10.4.0, adding a URL fragment to a linked webpage causes the connection info to be automatically added after the fragment, rendering the URL invalid and requiring a reload of the page, which means the user may need to log in again. From DataMiner 10.3.6/10.4.0 onwards, Visual Overview can recognize if a URL fragment is added or changed and update only the necessary parts of the page, avoiding the need to recreate the browser instance. <!-- RN 36044 + 36104 -->
 
 ## Configuring a link to a DataMiner object within a webpage embedded in Visual Overview
 

@@ -12,7 +12,7 @@ By default, alarms are cleared automatically. However, if you set the AutoClear 
 > - In DataMiner 10.2.0/10.1.6, a protection mode has been added to avoid reduced performance of the system when an alarm storm happens that causes there to be a large number of clearable alarms at the same time. By default, when there are more than 1000 clearable alarm trees on a DMA, the newly generated clearable alarms will be closed instead of clearable. Once the number of clearable alarm trees has dropped to less than 100, this protection mode is lifted and newly generated alarms will be clearable again. Note that these default values can be customized in DataMiner.xml (see [DataMiner.xml](xref:DataMiner_xml#dataminerxml)).
 
 > [!TIP]
-> See also: [Alarm Console – Working with clearable alarms](https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/) on DataMiner Dojo.
+> See also: [Alarm Console – Working with clearable alarms](https://community.dataminer.services/video/alarm-console-working-with-clearable-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Automatic versus manual alarm clearing
 
@@ -35,7 +35,7 @@ A DataMiner alarm of which the severity returns to normal can also be kept in a 
 
 To manually clear an alarm:
 
-1. Right-click the alarm in the Alarm Console and select *Clear alarm*.
+1. In the Alarm Console in DataMiner Cube, right-click the alarm and select *Clear alarm*.
 
 1. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
 
@@ -59,4 +59,4 @@ If you set the AutoClear setting to FALSE, alarms will not be cleared automatica
 
 When editing an alarm template, you can override the AutoClear system settings for particular alarms.
 
-For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](xref:Configuring_alarm_templates#setting-the-autoclear-options-for-alarms-in-an-alarm-template).
+For more information on how to do this, see [Setting the autoclear options for alarms in an alarm template](xref:Setting_the_autoclear_option_in_alarm_template).

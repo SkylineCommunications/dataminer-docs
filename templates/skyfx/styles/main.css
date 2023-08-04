@@ -8,7 +8,8 @@
   --color-background-subnav: #f2f2f2;
   --color-background-dark: #00517D;
   --color-background-table-alt: #f9f9f9;
-  --color-background-quote: #69696e;
+  /* --color-background-quote: #69696e; */
+  --color-background-quote: #747474;
   --color-background-alert-note: #d7eaf8;
   --color-foreground-alert-note: #004173;
   --color-background-alert-tip: #dff6dd;
@@ -32,7 +33,8 @@ body.dark-theme {
   --color-background-subnav: #3a3a3e;
   --color-background-dark: #013c5c;
   --color-background-table-alt: #212123;
-  --color-background-quote: #69696e;
+  /* --color-background-quote: #69696e; */
+  --color-background-quote: #bbb;
   --color-background-alert-note: #02355c;
   --color-foreground-alert-note: #d7eaf8;
   --color-background-alert-tip: #043811;
@@ -343,6 +345,10 @@ code {
   top: 3px;
 }
 
+.expand-stub + a {
+  font-weight: normal;
+}
+
 .toc .nav>li.active>.expand-stub::before, .toc .nav>li.in>.expand-stub::before, .toc .nav>li.in.active>.expand-stub::before, .toc .nav>li.filtered>.expand-stub::before {
   content: "\e259"; /*"▾";*/
 }
@@ -510,6 +516,11 @@ blockquote {
 
 .sideaffix > div.contribution > ul > li > a.contribution-link:hover {
   background-color: var(--color-background);
+}
+
+/* JSP 31.03.2023 */
+.sideaffix > nav > div > ul > li > a {
+  color: var(--color-breadcrumb);
 }
 
 .switch {

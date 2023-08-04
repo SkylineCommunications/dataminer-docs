@@ -2,7 +2,7 @@
 uid: General_configuration
 ---
 
-# General configuration
+# Frequently asked questions about general configuration
 
 - [Which limitations should I keep in mind for the specifications of a DMA?](#which-limitations-should-i-keep-in-mind-for-the-specifications-of-a-dma)
 
@@ -38,7 +38,7 @@ A DataMiner Agent must be restarted in the following cases:
 > After an upgrade, the DMA will automatically be restarted.
 
 > [!TIP]
-> See also: [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System)
+> See also: [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube)
 
 ## How do I synchronize time settings within a DMS?
 
@@ -150,9 +150,9 @@ All history alarms will be deleted indiscriminately, and the Alarm Console, repo
 
 1. Connect to the DMA using Remote Desktop.
 
-1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
+1. Stop the DataMiner software. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
-1. Open MySQL Workbench. In the logon window, click *OK* to connect to the database using the default settings.
+1. Open [MySQL Workbench](xref:MySQL_Workbench). In the logon window, click *OK* to connect to the database using the default settings.
 
 1. Open the SLDMADB tree.
 
@@ -180,7 +180,7 @@ All history alarms will be deleted indiscriminately, and the Alarm Console, repo
 
 1. Close MySQL Workbench.
 
-1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System).
+1. Restart the DataMiner. See [Starting or stopping DataMiner Agents in your DataMiner System](xref:Starting_or_stopping_a_DMA_in_DataMiner_Cube).
 
     On startup, DataMiner will recreate the tables you have dropped, and the new tables will all be empty.
 

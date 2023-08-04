@@ -24,6 +24,12 @@ A number of security enhancements have been made relating, amongst others, to ex
 
 Because of a number of enhancements, overall error handling has improved.
 
+#### Dashboards: An EPM feed can now be used to feed EPM identifiers to a parameter feed [ID_33977]
+
+<!-- MR 10.3.0 - FR 10.2.11 -->
+
+An EPM feed can now be used to feed EPM identifiers to a parameter feed.
+
 #### Performance improvement to update service state more quickly [ID_34165]
 
 <!-- MR 10.1.0 [CU20]/10.2.0 [CU8] - FR 10.2.11 -->
@@ -193,7 +199,7 @@ When you configure a timer to automatically send ping requests to a device, you 
 
 When a parameter feed has an EPM identifier feed as source, from now on, the *Auto-select all* setting will no longer be available.
 
-#### Dashboards app / Low-code apps: Enhanced performance of node-edge components [ID_34517]
+#### Dashboards app & Low-Code Apps: Enhanced performance of node-edge components [ID_34517]
 
 <!-- MR 10.2.0 [CU8] - FR 10.2.11 -->
 

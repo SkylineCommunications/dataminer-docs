@@ -8,7 +8,7 @@ There are many ways in which you can make your DataMiner System share informatio
 
 ## DataMiner Sharing
 
-DataMiner Sharing allows you to share live data in the cloud. For more information, see [DataMiner Sharing](xref:Sharing).
+DataMiner Sharing allows you to share live data via dataminer.services. For more information, see [DataMiner Sharing](xref:Sharing).
 
 ## DataMiner Cube
 
@@ -20,7 +20,7 @@ DataMiner Sharing allows you to share live data in the cloud. For more informati
 > See also:
 >
 > - [Configuring client communication settings](xref:DMA_configuration_related_to_client_applications#configuring-client-communication-settings)
-> - [Security](xref:security)
+> - [Security](xref:About_DMS_Security)
 
 ## DataMiner Monitoring app
 
@@ -35,7 +35,7 @@ DataMiner Sharing allows you to share live data in the cloud. For more informati
 >
 > - [The Monitoring app user interface](xref:The_Monitoring_app_user_interface)
 > - [The legacy Monitoring & Control app user interface](xref:The_legacy_Monitoring_Control_app_user_interface#the-legacy-monitoring--control-app-user-interface)
-> - [Security](xref:security)
+> - [Security](xref:About_DMS_Security)
 
 ## DataMiner Reports
 

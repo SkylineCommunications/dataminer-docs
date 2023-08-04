@@ -54,7 +54,7 @@ If the *ExcludeNode* option was used in the TransportLink of a transport path in
 
 ### Enhancements
 
-#### Breaking change: Profile instance now mandatory if profile definition has parameters to configure \[ID_31534\]
+#### BREAKING CHANGE: Profile instance now mandatory if profile definition has parameters to configure \[ID_31534\]
 
 The Booking Wizard will now no longer allow booking creation if the used function profile definition has parameters to configure while there are no profile instances in the system for the function.
 

@@ -6,14 +6,6 @@ uid: AdvancedDataMinerDataPersistenceNoSqlCassandra
 
 DataMiner uses Cassandra as its NoSQL ("Not only SQL") database (supported since DataMiner version 9.0.0). The Apache Cassandra database is a distributed NoSQL database, designed to provide high availability, scalability and performance, allowing it to handle large amounts of data.
 
-In this section:
-
-- Cassandra architecture
-- Data model
-- Cassandra query language
-- Inner workings
-- Database structure
-
 ## Cassandra architecture
 
 The Cassandra architecture consists of a cluster of nodes that form a masterless ring. This means that all nodes in the ring are equal, i.e. there is no concept of a master node or slave nodes. Because of this architecture and data replication, there is no single point of failure. Additional nodes can easily be added for increased performance (allowing linear scale performance).
@@ -134,11 +126,12 @@ This means that the other replica nodes are requested to respond with a digest o
 
 The following sections describe the main tables of the DataMiner Cassandra general database:
 
-- Element data
-- Information events
-- Alarm data
-- Trend data
-- Ticketing data
+- [Element data](#element-data)
+- [Information events](#information-events)
+- [Alarm data](#alarm-data)
+- [Trend data](#trend-data)
+- [Ticketing data](#ticketing-data)
+- [Analytics data](#analytics-data)
 
 > [!WARNING]
 > The tables and their structure are subject to change. Therefore, it is not supported to directly communicate with the database.
@@ -182,8 +175,8 @@ The elementdata table contains the values of persisting parameters (standalone a
 
 Data for information events is kept in the following tables:
 
-- infotrace table (see infotrace table)
-- info table (see info table)
+- [infotrace table](#infotrace-table)
+- [info table](#info-table)
 
 #### infotrace table
 
@@ -290,9 +283,9 @@ An information event will appear three times in this table, allowing it to be qu
 
 Alarm data is kept in the following tables:
 
-- activealarms table (see activealarms table)
-- alarm table (see alarm table)
-- timetrace table (see timetrace table)
+- [activealarms table](#activealarms-table)
+- [alarm table](#alarm-table)
+- [timetrace table](#timetrace-table)
 
 #### activealarms table
 
@@ -467,8 +460,8 @@ An alarm will therefore appear at least three times in this table (one entry usi
 
 Trend data is kept in the following tables:
 
-- data table (see data table)
-- datapoints table (see datapoints table)
+- [data table](#data-table)
+- [datapoints table](#datapoints-table)
 
 #### data table
 
@@ -549,11 +542,11 @@ Window:
 
 Ticketing data is kept in a separate keyspace named "[config]_sldmadb_ticketing" and contains the following tables:
 
-- history (see history)
-- linkertable (see linkertable)
-- maxticketid (see maxticketid)
-- tickets (see tickets)
-- ticketstates (see ticketstates)
+- [history](#history)
+- [linkertable](#linkertable)
+- [maxticketid](#maxticketid)
+- [tickets](#tickets)
+- [ticketstates](#ticketstates)
 
 #### history
 
@@ -609,3 +602,163 @@ This table is defined as follows:
 |c|timestamp|Yes (Clustering)|Timestamp|
 |d|int|Yes (Partitioning)|DataMiner Agent ID (e.g. 337).|
 |t|int|Yes (Clustering)|Ticket ID (e.g. 10).|
+
+### Analytics data
+
+The DataMiner Analytics features store and maintain model data and extracted insights data in the following tables:
+
+- [analytics_alarmfocus](#analytics_alarmfocus)
+- [analytics_arrowwindows](#analytics_arrowwindows)
+- [analytics_changepoints](#analytics_changepoints)
+- [ai_cpalarms](#ai_cpalarms) (or *analytics_changepointalarmentries* prior to DataMiner 10.3.0 [CU5]/10.3.8)
+- [analytics_parameterinfo](#analytics_parameterinfo)
+- [analytics_trendalarms](#analytics_trendalarms)
+- [analytics_wavestream](#analytics_wavestream)
+
+#### analytics_alarmfocus
+
+This table stores one model for [alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus) for each monitored parameter or monitored table cell that has had an alarm in the past two weeks. The amount of data in the table should be more or less stable after two weeks.
+
+The table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|dn|text|No|Display key for table parameter|
+|fd|test|No|Model|
+
+#### analytics_arrowwindows
+
+This table is used by the trend icons feature in DataMiner versions prior to DataMiner 10.2.4. See [Accessing trend information from a card](xref:Accessing_trend_information_from_a_card).
+
+The table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|f|int|Yes (Clustering) DESC|Parameter partial table feature|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|dn|text|No|Display key for table parameter|
+|et|timestamp|No|Timestamp|
+|fw|int|No|Window size|
+|lp|double|No|Model data|
+|ts|int|No|Time granularity|
+|v|List of double|No|Model data|
+
+#### analytics_changepoints
+
+This table contains a one-year history of behavioral change points. See [Behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection).
+
+From DataMiner 10.2.12 onwards, the partitioning of the table is optimized into table version *analytics_changepoints_v2*. In earlier versions, large and heavily trended elements can cause larger partition sizes of the version *analytics_changepoints_v1* tables.
+
+The analytics_changepoints table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Partitioning since 10.2.12.0, Clustering in earlier versions)|Parameter ID|
+|i|text|Yes (Partitioning since 10.2.12.0, Clustering in earlier versions)|Primary key for table parameter|
+|ct|timestamp|Yes (Clustering) DESC|Creation time|
+|f|int|Yes (Clustering) DESC|Parameter partial table feature|
+|so|int|Yes (Clustering)|Change point source ID|
+|id|int|Yes (Clustering)|Change point ID|
+|a|boolean|No|Anomalous|
+|as|int|No|Alarm severity ID|
+|dn|text|No|Display key for table parameter|
+|et|timestamp|No|End change point time range|
+|ev|double|No|Change point end value|
+|ht|int|No|Change point type ID|
+|lu|timestamp|No|Last update|
+|s|double|No|Change point severity|
+|st|timestamp|No|Start change point time range|
+|sv|double|No|Change point start value|
+
+#### ai_cpalarms
+
+This table is used to keep track of the open suggestion events and alarm events created by [behavioral anomaly detection](xref:Behavioral_anomaly_detection). From DataMiner 10.3.0 [CU5]/10.3.8 onwards, the table is named *ai_cpalarms* to comply with the restrictions on table name lengths. In older versions, the name *analytics_changepointalarmentries* is used.
+
+This table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|id|int|Yes (Clustering)|Change point ID|
+|s|int|Yes (Clustering)|Change point source ID|
+|a|big int|No|Alarm ID|
+|cr|int|No|State|
+|ct|timestamp|No|Creation time|
+|dn|text|No|Display key for table parameter|
+|hs|boolean|No|History set yes/no|
+|lu|timestamp|No|Change point timestamp|
+|r|big int|No|Root alarm ID|
+
+#### analytics_parameterinfo
+
+This table contains data for each trended parameter that is tracked by one of the proactive advanced analytics features: trend icons, [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection), [proactive cap detection](xref:Proactive_cap_detection) and [monitoring of trend patterns](xref:Monitoring_of_trend_patterns). This data is required for the real-time updating of the model information stored in the other analytics tables upon incoming new data values.
+
+This table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|cr|int|No|Change rate model|
+|ct|timestamp|No|Model timestamp|
+|dn|text|No|Display key for table parameter|
+|it|boolean|No|Missing data|
+|lt|timestamp|No|Timestamp of last processed parameter value|
+|lv|double|No|Last processed parameter value|
+|pl|int|No|Polling time step (or estimation)|
+
+#### analytics_trendalarms
+
+This table is used to keep track of open suggestion events and alarm events created by [proactive cap detection](xref:Proactive_cap_detection).
+
+This table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|cs|timestamp|No|Start of confidence interval|
+|ce|timestamp|No|End of confidence interval|
+|dn|text|No|Display key for table parameter|
+|r|big int|No|Root alarm ID|
+|s|int|No|Severity ID|
+|t|timestamp|No|Timestamp|
+|ts|int|No|Time scale|
+
+#### analytics_wavestream
+
+The table stores a model per trended parameter or table cell for [proactive cap detection](xref:Proactive_cap_detection) and [behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection). The amount of data in the table is related to the number of tracked parameters.
+
+This table is defined as follows:
+
+|Name|Type|Primary Key|Description|
+|--- |--- |--- |--- |
+|di|int|Yes (Partitioning)|DataMiner Agent ID|
+|ei|int|Yes (Partitioning)|Element ID|
+|pi|int|Yes (Clustering)|Parameter ID|
+|i|text|Yes (Clustering)|Primary key for table parameter|
+|l|int|Yes (Clustering)|Modeling level (value between 0 and 10)|
+|am|text|No|Behavioral anomaly detection model|
+|aw|list of double|No|Model data|
+|dn|text|No|Display key for table parameter|
+|f|boolean|No|Model data|
+|m|text|No|Behavioral anomaly detection model|
+|s|text|No|Proactive cap detection model|
+|t|timestamp|No|Timestamp|
+|w|list of double|No|Model data|

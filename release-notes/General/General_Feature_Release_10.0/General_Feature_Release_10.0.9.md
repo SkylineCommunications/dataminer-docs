@@ -440,7 +440,7 @@ In the SLNetClientTest tool, it is now possible to configure the following param
 
 ### DMS Web Services
 
-#### Web Services API v1 - New and updated methods to manage job data \[ID_26006\]
+#### BREAKING CHANGE - Web Services API v1: New and updated methods to manage job data \[ID_26006\]
 
 In the Web Services API v1, the job management methods have all been modified to support job domains.
 

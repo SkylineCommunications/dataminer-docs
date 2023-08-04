@@ -165,7 +165,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The alias that will be used to retrieve the value entered or selected by the user from the <see cref="UIResults"/> object.</value>
 		/// <remarks>
-		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calender, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
+		/// <para>Applicable only when <see cref="Type"/> is set to either Button, Calendar, CheckBox, CheckBoxList, DropDown, TextBox, Time or TreeView.</para>
 		/// <para>Note: Unlike a variable, a DestVar alias does not have to be declared.</para>
 		/// </remarks>
 		/// <example>
@@ -600,6 +600,7 @@ namespace Skyline.DataMiner.Automation
 		/// <remarks>
 		/// <para>It is possible to set a style on some dialog box items.</para>
 		/// <para>The supported styles can be accessed through const strings on the Style class, subdivided per control type (Button, Text, etc.).<br/>
+		/// All Button styles can also be applied to a DownloadButton.<br/>
 		/// The Style class is available from DataMiner 10.3.1/10.4.0 onwards. For older DataMiner versions, you can use the StaticText styles 'Title1', 'Title2', and 'Title3'.</para>
 		/// </remarks>
 		/// <example>

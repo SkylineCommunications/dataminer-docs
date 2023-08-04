@@ -110,11 +110,11 @@ Changes that might result in anomaly alarms of a certain type being cleared:
 > [!NOTE]
 > When an alarm template that had already been assigned to an element earlier is changed in such a way that monitoring of a certain type of anomaly is started, or when it is replaced by another alarm template that causes the monitoring of a certain type of anomaly to start, then every open suggestion event for that type of anomaly associated with the element in question will be promoted to an alarm event.
 
-#### System Center: Link to online help now points to 'Connecting your DataMiner System to the cloud' on <https://docs.dataminer.services/> [ID_34683]
+#### System Center: Link to online help now points to cloud connection help on <https://docs.dataminer.services/> [ID_34683]
 
 <!-- MR 10.3.0 - FR 10.2.12 -->
 
-On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to the cloud](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
+On the *Cloud* page of *System Center*, the *online help* hyperlink now points to the [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) page on <https://docs.dataminer.services/>.
 
 #### Alarm Console: When grouped, incident alarms will now appear in the group of the highest severity found among the base alarms [ID_34754]
 

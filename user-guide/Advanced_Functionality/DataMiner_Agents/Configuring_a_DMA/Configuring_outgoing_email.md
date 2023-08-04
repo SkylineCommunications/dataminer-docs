@@ -16,7 +16,7 @@ A DMS can be configured to send out email notifications and reports via an SMTP 
 > - From DataMiner 9.6.11 onwards, OpenSSL library version v1.1.1c is used.
 
 > [!TIP]
-> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo.
+> See also: [Agents – configuring an email server](https://community.dataminer.services/video/agents-configuring-an-email-server/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## Prerequisites
 
@@ -114,17 +114,17 @@ You can specify the following advanced settings. However, these are not mandator
 - **From**: A custom “From” address that will override the default “From” address specified in the DataMiner Agent interface.
 
   Example: *\<From>address@example.com\</From>*
+  
+## Example of SMTP server configuration
 
-## Example of how to use GMail as SMTP server
-
-The example below shows how the SMTP element in DataMiner.xml should be configured to use GMail as SMTP server.
+The example below shows how the SMTP element in DataMiner.xml should be configured.
 
 ```xml
 <SMTP>
-  <Host>smtp.gmail.com</Host>
+  <Host>smtp.mail.com</Host>
   <HostPort>587-starttls</HostPort>
   <LoginMethod>AuthLoginMethod</LoginMethod>
-  <User>MyGmailName@gmail.com</User>
-  <Password>MyGmailPassword</Password>
+  <User>MyMailName@mail.com</User>
+  <Password>MyMailPassword</Password>
 </SMTP>
 ```

@@ -4,7 +4,7 @@ uid: ClassLibraryInterAppClasses
 
 # InterApp classes
 
-The InterApp classes provide a C# message and response architecture that can be used:
+The InterApp classes, available through the NuGet package [Skyline.DataMiner.Core.InterAppCalls.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.InterAppCalls.Common), provide a C# message and response architecture that can be used:
 
 - From element to element and back.
 - From Automation script to element and back.
@@ -27,10 +27,6 @@ Its main purpose is for use within large projects where inter-element or inter-a
 ### DataMiner requirements
 
 - The InterApp classes require DataMiner 9.6.3 or higher to function correctly.
-
-### DIS requirements
-
-- Because of the higher DataMiner version, the class library is present in a different branch. This must be selected in the DIS options: Class Library 1.1.0.1.
 
 ### Automation script requirements
 
@@ -101,7 +97,7 @@ Now there are 4 steps for development:
 
 ### Creating an API
 
-The first step is to create your API, with the classes that will represent your known messages. The name-space you make here needs to be present on both the source and destination of your communication channel. You can achieve this by:
+The first step is to create your API, with the classes that will represent your known messages. The namespace you make here needs to be present on both the source and destination of your communication channel. You can achieve this by:
 
 - Creating the API in a new solution and adding it as a community branch in the class library, or
 - Creating the API in a precompile QAction and copying it to where you need it.
@@ -244,7 +240,7 @@ IInterAppCall receivedCall = InterAppCallFactory.CreateFromRaw(raw, knownTypes);
 > [!IMPORTANT]
 > It is not possible to receive both single messages and InterApp calls on the same parameter. We recommend just sticking to the InterApp call.
 
-From class library versions 1.2.2.1 and 1.1.4.1 onwards, internal reflection code is removed to support the use of NuGets. This makes the use of "knownTypes" mandatory.
+Internal reflection code is removed to support the use of NuGets. This makes the use of "knownTypes" mandatory.
 
 ```csharp
 List<Type> knownTypes = new List<Type> { typeof(DeleteLineup),typeof(DeleteLineupResult)};
@@ -268,7 +264,7 @@ Pass this serializer along to all your methods that need it (see [Custom seriali
 
 ### Executor triggering
 
-From class library versions 1.2.2.1 and 1.1.4.1 onwards, internal reflection code is removed to support the use of NuGets. This makes the use of a message to executor dictionary mandatory.
+Internal reflection code is removed to support the use of NuGets. This makes the use of a message to executor dictionary mandatory.
 
 The Execute methods take a dictionary where you provide the mapping. The key of the dictionary is the message type. The value of the dictionary is the executor type.
 

@@ -3,11 +3,25 @@
     {
       "src": [
         {
-          "files": [
-            "src/**.csproj"
-          ],
+            "files": [
+                "src/**.csproj",
+                "assemblies/**.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Automation.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Common.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.DataMinerSystem.Protocol.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.Matrix.Protocol.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.InterAppCalls.Common.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Interfaces.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Common.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Rates.Protocol.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SafeConverters.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.SNMP.Traps.Protocol.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.Table.ContextMenu.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit.dll",
+                "src/NuGetPackages/bin/Release/net48/Skyline.DataMiner.Core.AppPackageCreator.dll"
+            ],
           "exclude": [
-            "**/bin/**",
             "**/obj/**",
             "_site/**"
           ]
@@ -16,7 +30,8 @@
       "dest": "develop/api/types",
       "disableDefaultFilter": false,
       "disableGitFeatures": false,
-      "filter": "filterConfig.yml"
+	  "filter": "filterConfig.yml",
+	  "memberLayout": "separatePages"
     }
   ],
   "build": {
@@ -38,9 +53,9 @@
         ]
       }
     ],
-	"xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
+ 	"xrefService": [ "https://learn.microsoft.com/api/xref/query?uid={uid}" ],
 	"xref" : [ "xref/newtonsoft.yml" ],
-    "resource": [
+  "resource": [
       {
         "files": [
           "images/**",
@@ -48,17 +63,17 @@
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
-		      "develop/schemadoc/Protocol/images/**",
-		      "develop/schemadoc/Automation/images/**"
+          "tutorials/images/**",
+          "develop/schemadoc/Protocol/images/**",
+		  "develop/schemadoc/Automation/images/**"
         ]
       }
     ],
-	"overwrite": "overwrite/*.md",
+  	"overwrite": "overwrite/*.md",
     "dest": "_site",
     "globalMetadata": {
       "_appTitle": "DataMiner Docs",
-      "_appFooter": "© Skyline Communications 2022",
-      "__global.improveThisDoc": "Propose changes",
+      "_appFooter": "© Skyline Communications 2023",
       "_enableSearch": false,
       "_enableNewTab": true
     },
@@ -66,7 +81,6 @@
     "fileMetadataFiles": [],
     "template": [
       "default",
-      "plugins/memberpage.2.59.4/content",
       "templates/skyfx"
     ],
     "markdownEngineName": "markdig",

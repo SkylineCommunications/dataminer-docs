@@ -66,8 +66,8 @@ setBindings="1,250"
 
 DataMiner Protocol Markup Language:
 
-- Protocol.Params.Param.SNMP.TrapOID2checkBindings
-- Protocol.Params.Param.SNMP.TrapOID@setBindings
+- [Protocol.Params.Param.SNMP.TrapOID@checkBindings](xref:Protocol.Params.Param.SNMP.TrapOID-checkBindings)
+- [Protocol.Params.Param.SNMP.TrapOID@setBindings](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings)
 
 ## Generating alarms upon receiving traps
 
@@ -75,7 +75,7 @@ It is possible to specify that alarms should be generated when a trap is receive
 
 > [!NOTE]
 >
-> - For more information about alarm mapping, see mapAlarm.
+> - For more information about alarm mapping, see [mapAlarm](xref:Protocol.Params.Param.SNMP.TrapOID-mapAlarm).
 > - The trap parameter does not need to be activated in the alarm template for the alarms to be generated.
 
 Consider the following example:
@@ -243,7 +243,7 @@ trapInfo (object[]):
     - binding[0] (string): Binding OID
     - binding[1] (string): Binding value
 
-Note that the TrapInfo class of the class library (see TrapInfo class) allows the creation of a TrapInfo object from the raw trap info object.
+Note that the [Skyline.DataMiner.Utils.SNMP.Traps.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.SNMP.Traps.Protocol) NuGet package can be used to parse the trap: The TrapInfo class (see TrapInfo class) allows the creation of a TrapInfo object from the raw trap info object.
 
 ```csharp
 TrapInfo trap = TrapInfo.FromTrapData(trapInfo);
@@ -262,7 +262,7 @@ string bindingValue = binding.Value;
 
 ## Creating and sending traps from a QAction
 
-A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see NT_GET_PARAMETER (73).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
+A DataMiner protocol can send SNMP traps independently from any alarms that are received. For this, the Notify method of the DMS class can be used. (For more information on this method, see DMS_SNMP_NOTIFICATION (73).) This will send a message to the SLDMS process, which in turn will instruct the SLSNMPAgent process to send the trap.
 
 Note that if you use custom traps in a protocol, you need to update the MIB for that protocol. As it is nearly impossible to auto-generate this custom MIB data, you can add a Mib tag to the protocol. The contents of that tag will then be added to the auto-generated MIB.
 

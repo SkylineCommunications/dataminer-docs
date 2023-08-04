@@ -5,7 +5,7 @@ uid: Failover_configuration_in_Cube
 # Failover configuration in Cube
 
 > [!TIP]
-> See also: [Agents – Configuring DMA Failover](https://community.dataminer.services/video/agents-configuring-dma-failover/) on DataMiner Dojo.
+> See also: [Agents – Configuring DMA Failover](https://community.dataminer.services/video/agents-configuring-dma-failover/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 ## [From DataMiner 10.1.8 onwards](#tab/tabid-1)
 
@@ -43,9 +43,9 @@ To enable Failover using DataMiner version **10.1.8 or higher**:
 
    1. On the left, specify the shared hostname that is to be used to access the Failover Agent.
 
-   1. In the box indicating the primary DMA, specify the hostname of the primary DMA.
+   1. In the box indicating the primary DMA, specify the IP address of the primary DMA. At this point, a hostname can only used for the shared hostname.
 
-   1. In the box indicating the backup DMA, specify the hostname of the backup DMA.
+   1. In the box indicating the backup DMA, specify the IP address of the backup DMA. At this point, a hostname can only used for the shared hostname.
 
    1. If necessary, click *Advanced*, and specify a number of advanced settings. See [Advanced Failover options](xref:Advanced_Failover_options).
 

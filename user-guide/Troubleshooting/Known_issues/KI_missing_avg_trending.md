@@ -6,8 +6,8 @@ uid: KI_missing_avg_trending
 
 ## Affected versions
 
-- DataMiner Main Release versions from 10.2.0 onwards
-- DataMiner Feature Release versions from 10.1.10 onwards
+- DataMiner 10.2.0 [CU0] up to 10.2.0 [CU10]
+- DataMiner 10.1.10 up to 10.3.1
 
 ## Cause
 
@@ -15,7 +15,7 @@ Day records for trending are only written into the Cassandra database if there i
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 35179 -->
 
 ## Workaround
 

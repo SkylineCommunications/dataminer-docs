@@ -28,3 +28,7 @@ Contains
 
 > [!NOTE]
 > From DataMiner 9.0.0 (RN 12883) onwards, it is no longer possible to set the default Device Address field for a GPIB connection to “false”. If you do set *DefaultValue* to “false”, this will be disregarded in that case.
+
+## See also
+
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)

@@ -6,6 +6,9 @@ uid: Standalone_Elastic_Backup_Tool
 
 From DataMiner 10.0.13 onwards, this tool allows you to back up and restore Elasticsearch database clusters. By default, it is available on a DMA in the folder `C:\Skyline DataMiner\Tools`.
 
+> [!IMPORTANT]
+> The standalone Elastic Backup tool is being **deprecated** in favor of Elasticsearch's own snapshot functionality. We therefore recommend that you take database backups using the [Elasticsearch snapshot functionality](xref:Configuring_Elasticsearch_backups_Windows_Linux) instead.
+
 ## Syntax
 
 Use the following general syntax when you run this tool:
@@ -72,7 +75,7 @@ To take a backup/snapshot, use the following arguments:
   - If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used.
   - If none is defined and none can be found, no backup will be taken.
 
-- `--snapshotname` or `-n`: The (lowercase) name of the snapshot to be taken.
+- `--SnapshotName` or `-n`: The (lowercase) name of the snapshot to be taken.
 
   Default: `DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");`
 
@@ -82,7 +85,7 @@ To restore a backup/snapshot, use the following arguments:
 
 - `--repo` or `-r`: The repository containing the backup to be restored. If none is defined and only one repository is found in the Elasticsearch cluster, then that one will be used. If none is defined and none can be found, an error will be thrown.
 
-- `--snapshotname` or `-n`: The name of the snapshot to be restored.
+- `--SnapshotName` or `-n`: The name of the snapshot to be restored.
 
 > [!NOTE]
 >

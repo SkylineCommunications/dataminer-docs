@@ -14,6 +14,8 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Resource Pool**: Deprecated. Defines the Source Resource Pool name, so that Source resources can be identified and displayed on the first page of the Booking Wizard. This setting is no longer available from SRM 1.2.12 onwards. <!-- RN 29276 -->
 
+- **Contributing Booking Type**: Determines whether standard or "lite" contributing resources are used. <!-- RN 31488 --> See [Enabling lite contributing bookings](xref:Service_Orchestration_contrib_bookings#enabling-lite-contributing-bookings).
+
 - **Custom Events**: Determines whether event customization is enabled, which allows the user to add extra events to a booking.
 
 - **Custom Properties**: Determines whether property customization is enabled, which allows the user to add predefined properties to a booking.
@@ -22,9 +24,9 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 - **Refresh Time for Next Quarantined Booking**: Allows you to configure the rate at which the parameter *Time for Next Quarantined Booking* (on the *Bookings* tab) is refreshed, which determines the delay between the current time and the start time of the next booking in quarantine. By default, this is set to 5 minutes. Minimum value: 1 minute.
 
-- **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. For more information on how to work with column configurations, see [Bookings list](xref:The_Bookings_module#bookings-list).
+- **Column Configuration**: The column configuration to be used in the list of bookings on the *Bookings* tab. See [Customizing the columns of the Bookings list](xref:SRM_custom_bookings_list).
 
-- **Booking Start Failure Script**: Determines which script will be triggered in case the start actions for a booking instance fail. An example script, *SRM_BookingStartFailureTemplate*, is included for this in the SRM package.
+- **Booking Start Failure Script**: See [Configuring a custom script in case orchestration fails](xref:Service_Orchestration_service_states#configuring-a-custom-script-in-case-orchestration-fails).
 
 - **Create Booking Script**: See [Configuring the Booking Manager app to use custom scripts](xref:SRM_custom_scripts).
 
@@ -36,7 +38,7 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### History and Logs settings
 
-- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup.
+- **Booking logging location**: The path that indicates where the booking logs will be saved. Click *Settings* to open a window where you can customize this path and configure the logging date/time format, maximum file size, minimum logging level, and logging cleanup. For more information, see [Configuring SRM logging](xref:SRM_logging_config).
 
 ### Type of Booking settings
 
@@ -56,9 +58,15 @@ This tab of the Booking Manager app provides an overview of all configuration pa
 
 ### Cluster Calibration settings
 
+When bookings and/or associated objects are created and/or manipulated in a DataMiner System consisting of multiple Agents, scripts included in the SRM framework sometimes have to wait for the DMS synchronization to happen. You can use these *Cluster Calibration* settings to define how long the scripts should wait and how often the framework should check if the synchronization has happened. <!-- RN 25610 -->
+
 - **Retry Timeout**: The retry timeout time for retrieval of SRM data in a DataMiner cluster. Default: *20 s*.
 
 - **Retry Interval**: The retry interval for retrieval of SRM data in a DataMiner cluster. Default: *15 ms*.
+
+### Monitoring settings
+
+See [Configuring SRM alarm monitoring](xref:SRM_alarm_monitoring)
 
 ## Custom Actions subtab
 
@@ -86,7 +94,7 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 - **Auto Expand Profiles**: Determines whether profile parameters are automatically expanded in the Booking Manager.
 
-- **Use Node Label as Element Alias**: If this option is enabled, a node label is used as service element alias, so that an element in a service will be displayed with the label associated with the corresponding node in the service definition. If this option is disabled, service elements will be displayed with the resource DVE names.
+- **Use Node Label as Element Alias**: If this option is enabled, when the service associated with a booking is created, DataMiner will use the label of the node in the service definition as the alias for the corresponding element in the service. If this option is disabled, service elements will be displayed with the resource DVE names. See [Configuring the element alias](xref:Service_Orchestration_bookings_advanced#configuring-the-element-alias)<!-- RN 25236 -->
 
 ### Contributing Reservations settings
 
@@ -100,9 +108,15 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
   - A main booking ends and the contributing booking for which the contributing resource was generated has also ended.
   - A contributing booking is canceled and the resource has been removed from the main booking that made use of it.
 
+  > [!TIP]
+  > See also: [Contributing booking behavior](xref:Service_Orchestration_contrib_bookings#contributing-booking-behavior)
+
 ### Default booking configurations settings
 
-- **DMA IDs to Store Reservations**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored.
+- **Hosting DMA IDs to Orchestrate Reservation**: Contains the DMA ID(s) of the DMA(s) where bookings will be stored. The SRM framework will store all bookings evenly over the DMAs specified with this setting.
+
+  > [!NOTE]
+  > Prior to SRM 1.2.29, this setting is called *DMA IDs to Store Reservations*. <!-- RN 34882 -->
 
 - **Start delay**: The default delay period before a booking starts.
 
@@ -128,41 +142,34 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ### Lifecycle colors settings
 
-- **Partial**: The color used in the Booking Manager for bookings in the “Partial” state.
+- **Partial**: The color used in the Booking Manager for bookings in the "Partial" state.
 
-- **Confirmed**: The color used in the Booking Manager for bookings in the “Confirmed” state.
+- **Confirmed**: The color used in the Booking Manager for bookings in the "Confirmed" state.
 
-- **On-Hold**: The color used in the Booking Manager for bookings in the “On hold” state.
+- **On-Hold**: The color used in the Booking Manager for bookings in the "On hold" state.
 
-- **Pre-roll**: The color used in the Booking Manager for bookings in the “Pre-roll” state.
+- **Pre-roll**: The color used in the Booking Manager for bookings in the "Pre-roll" state.
 
-- **Service Active**: The color used in the Booking Manager for bookings in the “Service active” state.
+- **Service Active**: The color used in the Booking Manager for bookings in the "Service active" state.
 
-- **Post-roll**: The color used in the Booking Manager for bookings in the “Post-roll” state.
+- **Post-roll**: The color used in the Booking Manager for bookings in the "Post-roll" state.
 
-- **Completed**: The color used in the Booking Manager for bookings in the “Completed” state.
+- **Completed**: The color used in the Booking Manager for bookings in the "Completed" state.
 
-- **Canceled**: The color used in the Booking Manager for bookings in the “Canceled” state.
+- **Canceled**: The color used in the Booking Manager for bookings in the "Canceled" state.
 
-- **Quarantined**: The color used in the Booking Manager for bookings in the “Quarantined” state.
+- **Quarantined**: The color used in the Booking Manager for bookings in the "Quarantined" state.
 
-- **Failed**: The color used in the Booking Manager for bookings in the “Failed” state.
+- **Failed**: The color used in the Booking Manager for bookings in the "Failed" state.
+
+> [!TIP]
+> See also: [Defining custom state colors](xref:Service_Orchestration_life_cycle_states#defining-custom-state-colors)
 
 ## Services and SLA subtab
 
 ### Service states settings
 
-- **Initial Service State**: Predefines the initial state of the service associated with a booking.
-
-- **Service State (Pre-roll)**: Predefines the state of the service during the pre-roll phase of a booking.
-
-- **Service State (Service Active)**: Predefines the state of the service associated with a booking immediately after the pre-roll phase ends.
-
-- **Service State (Post-roll)**: Predefines the state of the service during the post-roll phase of a booking.
-
-- **Service State (Ended)**: Predefines the state of the service associated with a booking immediately after the post-roll phase ends.
-
-- **Service State Transitions**: In this table, you can configure which transitions between service states are allowed.
+These settings can be used to customize which service state corresponds with which booking life cycle stage. In the Service State Transitions table, you can also configure which transitions between service states are allowed. For more information, see [Service Orchestration service states configuration](xref:Service_Orchestration_service_states).
 
 ### SLA settings
 
@@ -182,19 +189,9 @@ See [Adding custom scripts for additional controls](xref:SRM_custom_scripts#addi
 
 ## Timeline subtab
 
-This subtab displays a toggle button, *Custom*, which determines whether custom information is displayed in the booking blocks on the timeline.
+- **Block Height**: Determines the height of the booking blocks on the timeline (in pixels). See [Configuring a custom booking block height](xref:SRM_custom_booking_blocks#configuring-a-custom-booking-block-height).
 
-If you enable this feature, you should configure the custom information in the *Service Info* table below the toggle button. Each row in this table represents an item that will be displayed in the booking blocks.
-
-To add a row:
-
-1. Right-click the table and select *Add Block Info*.
-
-2. In the *Block Info* field, specify the block info (e.g. *\[BOOKINGNAME\]*, or a property name in the format *\[PROPERTY:**Property name**\]*).
-
-3. In the *Order* field, specify in which position on the block the item should be displayed, The lower the number (lowest = 0), the higher the position.
-
-To remove a row, right-click the row and select *Delete Selected Item(s)*. Alternatively, you can clear all items in the table at the same time by selecting *Clear Table*.
+- **Custom Block Info**: Can be set to *Default* or *Custom*. If you set this to *Custom*, you can configure custom information to display in the booking blocks on the timeline using the **Service Info** table. See [Configuring custom booking block info for the entire system](xref:SRM_custom_booking_blocks#configuring-custom-booking-block-info-for-the-entire-system).
 
 ## Properties subtab
 
@@ -230,42 +227,18 @@ Via the right-click menu of this table, you can add a property, duplicate a prop
 
 ## Events subtab
 
-This subtab displays a toggle button, *Custom events*, which determines whether event customization is enabled. This feature allows you to choose which events should be added to a booking.
+The settings on this subtab are used to configure custom events for Service Orchestration.
 
-To make use of custom events, you should configure these in the *Events* table below the toggle button.
+See [Service Orchestration custom events configuration](xref:Service_Orchestration_custom_events).
 
-Via the right-click menu of this table, you can add an event, duplicate an event, and delete one or more events from the table. In each column of the table, the configuration of an event can be edited:
+## Backup subtab
 
-- **Name**: The name of the event.
+The settings on this subtab are used to export and import the configuration for the Booking Manager. <!-- RN 31593 -->
 
-- **Time Value**: Determines how many seconds after or before (depending on the *Timing Type*) the time reference point the event will take place. If -1 is specified, the event is executed immediately.
+- **Export Settings**: Exports the settings of the Booking Manager to the *Skyline Booking Manager* > *Configurations* documents folder.
 
-- **Time Reference Point**: Determines whether this is a start or stop event.
+- **Import Settings**: Use this option to import settings **from a different DMS**. The button opens a pop-up window where you can select a file to import. The setting *DMA IDs to Store Reservations* or *Hosting DMA IDs to Orchestrate Reservation* is not included in the import.
 
-- **Timing Type**: Determines whether the event takes place before or after the time reference point.
+- **Restore Settings**: Use this option to restore settings **from the same DMS**. The button opens a pop-up window where you can select a file to restore. The setting *DMA IDs to Store Reservations* or *Hosting DMA IDs to Orchestrate Reservation* is included in the restored settings.
 
-- **Script**: Allows you to specify a script that should be executed during the event, using the same syntax as to specify a script in Visio. See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script).
-
-  > [!NOTE]
-  > The following two placeholders are supported in the script configuration: *\[RESERVATIONGUID\]* and *\[SERVICEDEFINITION:\<PropertyName>\]*.
-  >
-  > For example:
-  > *Script:Test\|Reservation=\[RESERVATIONGUID\]\|Reservation2=\[RESERVATIONGUID\]\|Virtual Platform= \[SERVICEDEFINITION:Virtual Platform\]\| DeriverFrom = \[SERVICEDEFINITION:DerivedFrom\]*
-
-- **Description**: Allows you to add a description of the event.
-
-- **Visibility**: Allows you to select one of the following values:
-
-  - **Not visible**: The event will not be displayed in the Booking Wizard.
-
-  - **Not able to change**: The event will be displayed in the Booking Wizard, in read-only mode.
-
-  - **Able to enable/disable**: The event will be displayed in the Booking Wizard, but the user will only be able to enable or disable it.
-
-  - **Able to update**: The event will be displayed and fully editable in the Booking Wizard.
-
-- **UI Row**: Determines the priority of the event in the sort order in the Booking Wizard. The lower the number (lowest = 0), the higher the position in the sort order. If nothing is specified here, the event will be sorted automatically.
-
-- **Added by Default**: If enabled, the event is added to the booking by default.
-
-- **Delete**: Allows you to remove a particular entry.
+- **Full Configuration Export**: Exports the full configuration of the Booking Manager and all associated SRM components (service definitions, custom scripts, functions, etc.) to the *Skyline Booking Manager* > *Full Configurations* documents folder. The result of the export will be displayed in a pop-up window<!--  RN 33452 -->.

@@ -4,7 +4,7 @@ uid: DOM_data_storage
 
 # DOM data storage
 
-All DOM data are stored in the Elasticsearch database. Data for each object are stored in a separate Elasticsearch index. Currently, the following indices are in use:
+All DOM data are stored in an [indexing database](xref:Indexing_Database). Data for each object are stored in a separate index. Currently, the following indices are in use:
 
 | Object name | Index name |
 |--|--|

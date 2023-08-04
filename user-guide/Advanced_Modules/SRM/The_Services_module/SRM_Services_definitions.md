@@ -67,12 +67,13 @@ To do so:
 1. In the diagram pane, drag and drop the nodes to the appropriate positions, and then click and drag from interface to interface to create connections between them.
 
    > [!NOTE]
+   >
    > - You will only be able to connect interfaces that are compatible according to the corresponding profile definitions. 
    > - From DataMiner 10.2.0/10.1.3 onwards, you can edit existing connections between node interfaces by dragging and dropping the endpoint of a selected connection to a different endpoint.
 
 1. You can then further refine the created setup if necessary:
 
-   - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a label and optionally select a default profile instance or provide parameter values. From DataMiner 10.0.9 onwards, a toggle button is also available next to the *Profile* box, which determines if the *By reference* option is selected by default during booking creation. If *By reference* is selected, users will not be able to adapt the value for the selected profile instance during booking creation.
+   - To further refine parameters for a particular node, select the node, and, in the lower right corner, specify a label and optionally specify a default profile instance, the profile instance assignment mode (from DataMiner 10.0.9 onwards), and parameter values. See [Service Orchestration profile instances configuration](xref:Service_Orchestration_profile_instances).
 
      > [!NOTE]
      > Parameter profiles are created in the *Profiles* module. See [Configuring profile parameters](xref:Configuring_profile_parameters).
@@ -93,7 +94,7 @@ To do so:
      Nodes that belong to particular groups will be displayed with colors matching these groups. The group colors are shown in a legend below the diagram.
 
      > [!NOTE]
-     > Node grouping is no longer used in recent versions of the SRM Framework. Other than the visual grouping in the Services app, it no longer serves any purpose.
+     > Node grouping is no longer used in recent versions of the SRM framework. Other than the visual grouping in the Services app, it no longer serves any purpose.
 
 ## Properties tab
 
@@ -105,13 +106,13 @@ The second tab of the service definition pane can be used to manage properties o
 
 ## Actions tab
 
-The third tab of the service definition pane allows you to specify Automation scripts that should run at a particular point during a booking. To add a script:
+The third tab of the service definition pane allows you to specify Automation scripts (i.e. [LSO scripts](xref:srm_scripting#life-cycle-service-orchestration-lso-script)) that should run when the service based on the service definition gets a specific service state:
 
 1. Click the *Add* button in the lower right corner.
 
-1. In the *Name* column, select when the script should run, e.g. *START*, *STANDBY*, *PAUSE*, *STOP* or *RETIRE*.
+1. In the *Name* column, select a service state, e.g. *START*, *STANDBY*, *PAUSE*, *STOP*, or *RETIRE*. The script will run when the service enters that state.
 
-1. In the *Script* column, select the Automation script that should be run.
+1. In the *Script* column, select the LSO script.
 
 1. In the *Description* column, specify an optional description.
 

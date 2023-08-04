@@ -45,12 +45,14 @@ Below is an overview of all other important properties:
 | Name | string | The name of the `FieldDescriptor`. |
 | IsOptional | bool | Determines whether a `FieldValue` must be present for this descriptor or if it is optional. |
 | IsHidden | bool | Determines whether this descriptor is hidden from the UI. |
-| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts and not from the UI. |
+| IsReadonly | bool | Determines whether this descriptor can only be manipulated from scripts/API and not from the UI. |
+| Tooltip | string | Short description of the field that will be available as a tooltip in the UI. |
 | DefaultValue | IValueWrapper | The default value that will be used to pre-fill the field in the UI. |
+| IsSoftDeleted | bool | Determines whether this descriptor is soft-deleted. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects). Available from DataMiner 10.3.9/10.4.0 onwards. |
 
 There are also special types of `FieldDescriptors` that are purpose-made to store a special value. These include:
 
-- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved.
+- **AutoIncrementFieldDescriptor**: Defines a field that will automatically get an incrementing value when saved. When marked as soft-deleted, these fields will no longer be incremented. The value will remain the last value before the descriptor was marked as soft-deleted.
 
 - **GenericEnumFieldDescriptor**: Defines a field that has a list of possible pre-determined values.
 
@@ -67,6 +69,10 @@ There are also special types of `FieldDescriptors` that are purpose-made to stor
 - **ElementFieldDescriptor**: Available from DataMiner 10.1.10/10.2.0 onwards. Can be used to define that a field should contain the ID of an element. The ID must be saved as a string according to the common `[DMA ID]/[ELEMENT ID]` format (e.g. "868/65874"). There is a *ViewIds* list property that can be used to define whether the elements should be in any of these views. The `FieldValues` are of type "string".
 
 - **DomInstanceValueFieldDescriptor**: Available from DataMiner 10.2.3/10.3.0 onwards. Can be used to define that a field should contain the ID of a `DomInstance`. However, compared to the `DomInstanceFieldDescriptor`, this one also references a specific value of that `DomInstance`. The configuration is the same as the other descriptor, but it adds the *FieldDescriptorId* property that references a specific `FieldValue`.
+
+- **GroupFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user group.
+
+- **UserFieldDescriptor**: Available from DataMiner 10.3.3/10.4.0 onwards. Can be used to define that a field should contain the name of a DataMiner user. There is a *GroupNames* property that can be used to define which groups the user can be a part of. 
 
 > [!NOTE]
 > From DataMiner 10.2.3/10.3.0 onwards, the following `FieldDescriptors` can have **multiple values**:
@@ -117,7 +123,6 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 |--|--|--|--|
 | ID | SectionDefinitionID | Yes | The ID of the `SectionDefinition`. |
 | Name | string | Yes | The name of the `SectionDefinition`. |
-| ReservationLinkInfo | ReservationLinkInfo | No | When a `Section` contains links to an SRM `ReservationInstance` object using the `ReservationFieldDescriptor`, this object describes more details about those links. This is currently not supported by any DOM UI. |
 
 > [!NOTE]
 > Adding and removing `FieldDescriptors` must be done using the `AddOrReplaceFieldDescriptor()` and `RemoveFieldDescriptor()` methods. You can also filter on the `FieldDescriptors` using the `FieldDescriptorIDs` or `FieldDescriptorNames` exposers (found on `SectionDefinitionExposers`).
@@ -129,8 +134,6 @@ The table below lists the properties of the `CustomSectionDefinition` object. (T
 - When you **update** a `SectionDefinition`:
 
   - You cannot remove `FieldDescriptors` from a `SectionDefinition` when a `DomInstance` already uses that definition.
-
-  - You cannot update the `BookingElementID` of the *ReservationLinkInfo* property when a `DomInstance` uses the `SectionDefinition`.
 
   - During an update, the properties of the previous and updated version of the `FieldDescriptor` are checked. The behavior of this check depends on the type of `FieldDescriptor`, but by default, the following properties can be changed freely:
 
@@ -152,5 +155,5 @@ When something goes wrong during the CRUD actions, the `TraceData` can contain o
 |--|--|
 | FieldTypeNotSupported | A type was defined on a `FieldDescriptor` that is not supported by that descriptor. Available properties: *NotSupportedType*, *SupportedTypes*. |
 | SectionDefinitionInUseByDomInstances | The `SectionDefinition` could not be updated because it is being used by at least one `DomInstance`. Available properties: *SectionDefinition*, *OriginalSectionDefinition*, *DomInstanceIds*. |
-| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
+| SectionDefinitionInUseByDomDefinitions | The `SectionDefinition` could not be deleted because it is being used by at least one `DomDefinition`. Set the *FieldDecriptor.IsSoftDeleted* boolean for the `FieldDescriptor` you want to delete instead. Available properties: *SectionDefinition*, *DomDefinitionIds*. |
 | GenericEnumEntryInUseByDomInstances | The `GenericEnumEntry` could not be deleted or updated because it is being used by at least one `DomInstance`. Available properties: *GenericEnumEntry*, *DomInstanceIds*. |

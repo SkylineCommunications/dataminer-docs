@@ -142,7 +142,7 @@ Dynamic group for parameter 1 [triggered by 1.3.6.]
 
 ### headerTrailerLink
 
-This option is only applicable for smart-serial connections. If defines a link between a header and a trailer
+This option is only applicable for smart-serial connections. It defines a link between a header and a trailer
 parameter (See [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding).
 
 With this option, it is also possible to only specify a trailer (i.e. where no corresponding header has the same value specified for the headerTrailerLink option).

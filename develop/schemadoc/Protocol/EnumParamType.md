@@ -25,6 +25,7 @@ Specifies the parameter type.
 |&nbsp;&nbsp;Enumeration|header||
 |&nbsp;&nbsp;Enumeration|ip||
 |&nbsp;&nbsp;Enumeration|length||
+|&nbsp;&nbsp;Enumeration|matrix|Represents a matrix. Feature introduced in DataMiner 10.3.1/10.4.0 (RN 34661).|
 |&nbsp;&nbsp;Enumeration|pollingip||
 |&nbsp;&nbsp;Enumeration|read||
 |&nbsp;&nbsp;Enumeration|read bit||

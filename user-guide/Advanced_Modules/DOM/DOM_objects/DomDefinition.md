@@ -19,13 +19,17 @@ The table below lists the properties of the `DomDefinition` object. It also indi
 | Name | string | Yes | The name of the `DomDefinition`. |
 | SectionDefinitionLinks | List\<[SectionDefinitionLink](#sectiondefinitionlink)> | Yes | Contains the required/allowed `SectionDefinitions`. |
 | VisualStructure | DomDefinitionVisualStructure | No | Contains settings related to the client UI. Most of these do not apply for DOM. This property should be ignored since it will be removed in the near future. |
+| DomBehaviorDefinitionId | DomBehaviorDefinitionId | Yes | ID of the `DomBehaviorDefinition` that this `DomDefinition` is linked to. See [DomBehaviorDefinition](xref:DomBehaviorDefinition). |
 | ModuleSettingsOverrides | [ModuleSettingsOverrides](#modulesettingsoverrides) | No | Used to override some `ModuleSettings`. See [DomInstanceNameDefinition](xref:DomInstanceNameDefinition). |
 
 ### SectionDefinitionLink
 
 This object is also used in the Jobs app. It is used to store a link to a `SectionDefinition` object and to define whether the use of this definition is optional or mandatory.
 
-It also has the *IsSoftDeleted* boolean. If this is set to true, `Sections` in a `DomInstance` for this `SectionDefinitionID` are not required, will no longer be validated, but are still allowed to exist on the `DomInstance`. The `SectionDefinition` will also no longer be shown in the UI.
+It also has the *IsSoftDeleted* boolean. See [soft-deletable objects](xref:DOM_objects#soft-deletable-objects).
+
+> [!NOTE]
+> From DataMiner version 10.3.0/10.3.3 onwards, the `SectionDefinitionLink` also contains the *AllowMultipleSections* boolean, which can be used to define whether a `DomInstance` can have multiple `Sections` for that specific `SectionDefinition`. In earlier DataMiner versions, it is possible to add multiple `Sections` already, but these are not checked and cannot be used in the UI. When you upgrade to DataMiner 10.3.0/10.3.3, you will need to update any existing `DomDefinitions` with multiple `Sections`.
 
 ### ModuleSettingsOverrides
 
@@ -52,4 +56,3 @@ When something goes wrong during the CRUD actions, the *TraceData* can contain o
 | DomDefinitionHasLinkedDomInstances | The `DomDefinition` you want to delete has `DomInstances` linked to it. The `DomDefinition` can be retrieved from the *DomDefinition* property. The IDs of the linked `DomInstances` can be retrieved from the *DomInstanceIds* property. |
 | SectionDefinitionLinkInUseByDomInstances | The `SectionDefinitionLink` cannot be deleted since this `DomDefinition` is in use by `DomInstances`. Set the *SectionDefinitionLink.IsSoftDeleted* boolean instead. The `DomDefinition` can be retrieved from the *DomDefinition* property. The IDs of the linked `DomInstances` can be retrieved from the *DomInstanceIds* property. The links that could not be deleted can be retrieved from the *SectionDefinitionLinks* property. |
 | DomDefinitionDoesNotContainRequiredModuleSectionDefinitions | The `DomDefinition` you want to create or update does not include all required section definition links for this module. The `DomDefinition` can be retrieved from the *DomDefinition* property. The missing `SectionDefinitionIDs` can be retrieved from the *SectionDefinitionIds* property. |
-

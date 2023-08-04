@@ -327,7 +327,7 @@ When a large number of shapes generated based on child items in a view were sort
 
 When a DELT element with more than 1,000 Elasticsearch logger table entries was being imported, in some cases, SLDataGateway would end up in an endless loop and start using a large amount of virtual memory.
 
-#### Low-code apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
+#### Low-Code Apps: 'Read mode' setting of a form would incorrectly not be available when the form only contained DOM instance data [ID_34627]
 
 <!-- MR 10.2.0 [CU9] - FR 10.2.12 -->
 

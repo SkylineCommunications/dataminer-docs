@@ -2,36 +2,21 @@
 uid: CloudPackages
 ---
 
-# DataMiner Cloud Packs
+# DataMiner Cloud Pack
 
-DataMiner Cloud Packs are packages that include the necessary DataMiner Extension Modules (DxMs) to enable DataMiner Cloud Platform capabilities.
+The DataMiner Cloud Pack is a package that includes the necessary DataMiner Extension Modules (DxMs) to enable dataminer.services capabilities.
 
-At the moment, there are two different types of Cloud Packs: packages for DMAs with internet connectivity, and packages for DMAs without internet connectivity. Depending on the type of Cloud Pack, different DataMiner Extension Modules will be installed on the DMA.
+On [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/), you can download a version of the cloud pack with or without .NET 5. Separate cloud packs are also available for a proxy or DMZ setup.
 
 > [!TIP]
 > See also: [DataMiner Extension Modules](xref:DataMinerExtensionModules)
 
-## Types of Cloud Packs
-
-### For DMAs with internet connectivity
-
-This is the standard DataMiner Cloud Pack that can be downloaded from [DataMiner Dojo](https://community.dataminer.services/downloads/). It includes all DxMs needed to use the DataMiner Cloud Services.
-
-If you install this package on a DMA with internet connectivity in your DMS, you will be able to benefit from the services offered by the DataMiner Cloud Platform.
-
-### For DMAs without internet connectivity
-
-> [!IMPORTANT]
-> This pack is not yet available.
-
-This Cloud Pack will contain the DxMs that do not need internet functionality to operate.
-
 Included modules:
 
+- [CloudGateway](xref:DataMinerExtensionModules#cloudgateway)
+- [CloudFeed](xref:DataMinerExtensionModules#cloudfeed)
+- [ArtifactDeployer](xref:DataMinerExtensionModules#artifactdeployer)
 - [CoreGateway](xref:DataMinerExtensionModules#coregateway)
 - [FieldControl](xref:DataMinerExtensionModules#fieldcontrol)
 - [Orchestrator](xref:DataMinerExtensionModules#orchestrator)
 - [SupportAssistant](xref:DataMinerExtensionModules#supportassistant)
-
-> [!NOTE]
-> You will always need to install the standard DataMiner Cloud Pack on at least one DMA with internet connectivity before you can use the services offered by the DataMiner Cloud Platform.

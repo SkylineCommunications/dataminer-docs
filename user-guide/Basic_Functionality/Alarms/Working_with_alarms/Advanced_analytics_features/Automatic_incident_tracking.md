@@ -12,7 +12,10 @@ Several factors are taken into account for the grouping:
 
 - Service information
 
-- The IDP location (only in case the IDP Solution is deployed)
+- The IDP location
+
+  > [!NOTE]
+  > The IDP location will only be taken into account if IDP is deployed and the option *Update alarms on value changed* is selected for the element properties 'Location Name', 'Location Building', 'Location Floor', 'Location Room', 'Location Aisle' and 'Location Rack'. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 - Element information
 
@@ -22,13 +25,15 @@ Several factors are taken into account for the grouping:
 
 - Time
 
-- Alarm focus information
+- Alarm focus information (see [Filtering alarms on alarm focus](xref:ApplyingAlarmFiltersInTheAlarmConsole#filtering-alarms-on-alarm-focus)).
 
 - Alarm, element, service or view properties, if these have been configured for incident tracking (see [Configuration of incident tracking based on properties](#configuration-of-incident-tracking-based-on-properties)).
 
-- Parameter relationship data, on cloud-connected DataMiner Agents that have the DataMiner Extension Module *ModelHost* installed and that have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
+- Parameter relationship data, on DataMiner Agents that are connected to dataminer.services, have the DataMiner Extension Module *ModelHost* installed, and have been configured to [offload alarm and change point events to the cloud](xref:Controlling_cloudfeed_data_offloads) (from DataMiner 10.3.1/10.4.0 onwards).
 
-If no suitable match is found, alarms will not be grouped. Also, since only alarms with a focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
+- Alarm relationship data (from DataMiner 10.3.7/10.4.0 onwards) <!-- RN 36337 -->
+
+If no suitable match is found, alarms will not be grouped. Also, since only alarms with an alarm focus score are taken into account, automatic incident tracking does not apply to information events, suggestion events or notice messages.
 
 The grouping of alarms into incidents is updated in real time whenever appropriate:
 
@@ -63,15 +68,16 @@ The following settings are available in System Center:
 
 When this feature has been enabled in System Center as detailed above, it still needs to be activated in the Alarm Console. To do so, in the Alarm Console hamburger menu, select *Automatic incident tracking*.
 
+> [!NOTE]
+> Automatic incident tracking is only shown for active alarms, not for history alarms. Consequently, from DataMiner 10.2.0 [CU12]/10.3.3 onwards, the *Automatic incident tracking* option is not available for a history tab in the Alarm Console. <!-- RN 35556 -->
+
 ## Configuration of incident tracking based on properties
 
 From DataMiner 10.2.0/10.1.4 onwards, automatic incident tracking can also take into account alarm, element, service or view properties, if these have been configured as detailed below. Alarms are grouped as soon as they have the same value for one of the configured alarm, service or view properties, the same focus value and approximately the same timestamp. For element properties, alarms are grouped depending on a threshold that must be specified in the analytics configuration detailed below. Alarms for elements with the same property value will only be grouped if the proportion of elements in alarm among all elements with that property value is greater than the configured threshold.
 
 The following basic configuration is needed in Cube:
 
-- For the alarm properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom alarm property](xref:Changing_custom_alarm_properties#adding-a-custom-alarm-property).
-
-- For the element, service and view properties that should be taken into account, the option *Make this property available for alarm filtering* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
+- For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. See [Adding a custom property to an item](xref:Managing_element_properties#adding-a-custom-property-to-an-item).
 
 In addition, the following configuration is needed in the file *C:\\Skyline DataMiner\\analytics\\configuration.xml*:
 
@@ -145,6 +151,8 @@ In the Alarm Console, alarm groups are displayed as a special kind of alarm entr
 - You can expand the group to view all alarms within it.
 
 - If all alarm entries within an alarm group are masked, the group is automatically masked as well. However, as soon as one of the entries is unmasked, the group is also unmasked.
+
+- [Manually clearing](xref:Clearing_alarms) alarm groups that were created automatically is supported from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36600 -->. For [manually created/updated alarm groups](#manually-updating-an-alarm-group), this is supported from DataMiner 10.2.6/10.3.0 onwards.
 
 ## Manually updating an alarm group
 

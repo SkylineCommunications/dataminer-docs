@@ -6,7 +6,7 @@ uid: KI_Elasticsearch_IPv6
 
 ## Affected versions
 
-Any version using an Elasticsearch cluster that runs on IPv6 addresses.
+Any version prior to DataMiner 10.2.0 [CU11]/10.3.2 using an Elasticsearch cluster that runs on IPv6 addresses.
 
 ## Cause
 
@@ -14,7 +14,7 @@ Because IPV6 addresses were parsed incorrectly, DataMiner believed that the Elas
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.2.0 [CU11] or 10.3.2. <!-- RN 34744 -->
 
 ## Issue description
 

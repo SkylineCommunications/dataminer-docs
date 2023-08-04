@@ -4,7 +4,7 @@ uid: Manifest.DeleteFiles
 
 # DeleteFiles element
 
-Specifies files to be deleted.
+Specifies files to delete.
 
 ## Parent
 
@@ -14,4 +14,4 @@ Specifies files to be deleted.
 
 |Name|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Delete](xref:Manifest.DeleteFiles.Delete)|[1, *]|Specifies a file to be deleted.|
+|&nbsp;&nbsp;[Delete](xref:Manifest.DeleteFiles.Delete)|[1, *]|Specifies a file to delete.|

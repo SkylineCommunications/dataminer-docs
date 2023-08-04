@@ -4,7 +4,10 @@ uid: Using_Mobile_Gateway_in_a_Failover_setup
 
 # Using Mobile Gateway in a Failover setup
 
-To use Mobile Gateway in a Failover setup, we advise you to install your cell phone modem(s) in one of the following ways.
+To use Mobile Gateway based on one or multiple serial cell phone modems in a Failover setup, we recommend that you install your cell phone modem(s) in one of the ways detailed below.
+
+> [!NOTE]
+> This does not apply to IP-based cell phone modems. After you [configure an IP-based cell phone modem](xref:Configuring_an_IP-based_cell_phone_modem) for both DataMiner Agents, the device is available to the active DMA in the Failover pair.
 
 1. One serial cell phone modem, connected to both the primary DMA and the backup DMA by means of a Mobile Gateway server.
 

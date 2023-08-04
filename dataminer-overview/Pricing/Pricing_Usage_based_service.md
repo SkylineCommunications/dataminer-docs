@@ -18,10 +18,10 @@ From a functional and operational perspective, the DataMiner usage-based service
 
 This includes:
 
-- All available DataMiner functions, including the DataMiner Cloud Platform functions.
+- All available DataMiner functions, including dataminer.services functions.
 - The freedom to deploy as many DataMiner nodes as required, i.e. to scale capacity up or down on demand, or to architect the overall solution in the most optimal way (e.g. considering zoning, geographical locations, continuity, etc.).
 - Using any of the existing 7000+ connectors to interface DataMiner with third-party products from over 700 different vendors, on a flexible per need basis.
-- Requesting new integrations with third-party products, at no additional cost.
+- Requesting new integrations with third-party products, at no additional cost with [Continuity or Evolve plans](https://community.dataminer.services/support-plans/).
 - Continuously benefitting from all DataMiner evolutions available, with regard to the DataMiner functions as well as with regard to the connectors to interface with third-party products.
 - Accessing our professional technical support services to support the operation.
 
@@ -49,7 +49,7 @@ An "organization" is the billing entity and the highest level in the hierarchy i
 | *Duration* | An organization can select a 12-month, 24-month, or 36-month subscription. |
 | *Renewal Date* | Subscription date + duration.<br>At the Renewal Date, subscriptions renew automatically for 12 months at the then current credit rates, unless agreed otherwise. |
 | *MUA* | Monthly Utilization Allowance.<br>A fixed number of credits available per month under the subscription. |
-| *Credit Rate* | The credit rate depends on (1) the type of plan (subscription plan or pay-per-use plan), (2) the region and (3) the hosting. As to the latter, it depends whether you opt for a Skyline-hosted solution (i.e. DataMiner as a Service) or a self-hosted infrastructure (on-premises or private Cloud).<br>The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
+| *Credit Rate* | The credit rate depends on (1) the type of plan (subscription plan or pay-per-use plan), (2) the region and (3) the hosting. As to the latter, it depends whether you opt for a Skyline-hosted solution (i.e. DataMiner as a Service) or a self-hosted infrastructure (on-premises or private cloud).<br>The price of a credit is protected for the duration of the contract, i.e. 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
 
 ### Invoicing
 
@@ -69,7 +69,7 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 |-----------|------------|------------------|
 | *Managed Object* | Endpoints directly or indirectly interfaced by DataMiner. Directly interfaced endpoints include data sources, devices, and platforms that expose an interface that allows direct interaction with those endpoints. Indirectly interfaced endpoints include those reported through a mediating data source, for example message brokers (like Apache Kafka or RabbitMQ), databases, or Element and Network Management Systems. | Maximum number of active or paused managed objects with 100+ metrics |
 | *Metric* | Each data source exposes a set of metrics per managed object. These are the managed objects' read or read-write parameters, available for either monitoring only or monitoring and control. | Sum of all metrics from all managed objects with less than 100 metrics |
-| *Cloud Data Consumption* | Traffic consumed as part of [cloud services](xref:Overview_DCP#dataminer-cloud-services). | Sum of total GB of traffic |
+| *Cloud Data Consumption* | Traffic consumed as part of [dataminer.services](xref:Overview_DCP). | Sum of total GB of traffic |
 | *Connector Services* | Use of Skyline-developed connectors (also known as DataMiner protocols or interface drivers) made available through the [catalog](https://catalog.dataminer.services/). <br>Connectors developed by the user or other third party are not counted. | Sum of used connectors delivered by Skyline |
 | *Script Runs* | Every time Automation scripts are [triggered](xref:Running_Automation_scripts). Among others, this includes Life cycle Service Orchestration (LSO) scripts, Profile-Load Scripts (PLS), Process Automation activities, DOM instance state transitions, and user-defined API calls. | Sum of script runs |
 
@@ -106,4 +106,4 @@ Initial MUA: 200 credits<br>Start Date: November 1, 2022<br>Renewal Date: Novemb
 MUA increased to 250 credits on August 1, 2023
 
 - Billing on August 1, 2023: 50 credits x original credit rate x 12 months (i.e. paid until August 1, 2024)
-- Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 4 months
+- Billing on November 1, 2023 (i.e. Renewal Date): 200 credits x current credit rate x 12 months  +  50 credits x current credit rate x 3 months

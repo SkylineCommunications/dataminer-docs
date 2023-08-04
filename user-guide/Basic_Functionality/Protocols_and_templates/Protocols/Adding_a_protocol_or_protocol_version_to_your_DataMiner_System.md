@@ -47,7 +47,7 @@ In DataMiner Cube, you can upload either *Protocol.xml* files or entire protocol
 ### Updating protocols with the Update Center
 
 > [!TIP]
-> See also: [Rui’s Rapid Recap – Protocol Update Center](https://community.dataminer.services/video/ruis-rapid-recap-protocol-update-center/) on DataMiner Dojo
+> See also: [Rui’s Rapid Recap – Protocol Update Center](https://community.dataminer.services/video/ruis-rapid-recap-protocol-update-center/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 With the Update Center, you can check if protocol updates are available and, if so, install these.
 
@@ -71,7 +71,7 @@ To do so:
 
 1. Click the *Check for updates* button.
 
-1. Enter your DCP user name and password, and click *OK*.
+1. Enter your DCP credentials, and click *OK*.
 
 1. In the list of available protocols, select the protocols you want to install or update, and click *Install*.
 
