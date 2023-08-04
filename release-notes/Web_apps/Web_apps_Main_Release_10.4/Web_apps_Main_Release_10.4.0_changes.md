@@ -422,7 +422,7 @@ In the *Monitoring* app, a new type of buttons and toggle buttons will now be us
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across all element parameter tables. This will now be prevented when the *Hide non-trended parameters* option is disabled.
+When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across the unique elements associated with the table column parameters. This will now be prevented when the *Hide non-trended parameters* option is disabled.
 
 > [!NOTE]
 > The *Hide non-trended parameters* setting is now disabled by default.
