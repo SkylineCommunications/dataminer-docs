@@ -12,7 +12,7 @@ Supported versions:
 - OpenSearch 2.X
 
 > [!NOTE]
-> OpenSearch is only supported on Linux.
+> OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
 
 ## Setting up the OpenSearch cluster
 
