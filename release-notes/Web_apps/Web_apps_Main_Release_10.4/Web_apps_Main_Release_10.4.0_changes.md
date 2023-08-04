@@ -668,6 +668,12 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
+#### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When, while in edit mode, you deleted multiple components at once, the *Data used in Dashboard* section of the edit pane would not be updated correctly. The data would be removed, but the height of the section would incorrectly not be reduced.
+
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
