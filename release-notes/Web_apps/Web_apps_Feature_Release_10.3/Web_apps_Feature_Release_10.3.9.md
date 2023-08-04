@@ -311,7 +311,7 @@ In some cases, an error could be thrown when you shared a dashboard that contain
 
 #### Web services API: Problem when fetching the next page of a GQI query [ID_36903]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 When a table visualization fetched the next page of a GQI query, GQI would throw an exception saying that the session was already closed.
 

@@ -118,6 +118,14 @@ When you had opened the user menu by clicking the user icon in the top-right cor
 
 In some cases, an error could be thrown when you shared a dashboard that contained a *Gauge* component fed by a *State* component with indices.
 
+#### Web services API: Problem when fetching the next page of a GQI query [ID_36903]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
+
+When a table visualization fetched the next page of a GQI query, GQI would throw an exception saying that the session was already closed.
+
+This was due to GQI incorrectly closing the session automatically after 5 minutes of inactivity.
+
 #### Dashboards app & Low-Code Apps - GQI: Not possible to link empty feeds to ad hoc arguments [ID_36913]
 
 <!-- MR 10.3.0 [CU6] - FR 10.3.9 -->

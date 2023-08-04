@@ -648,14 +648,6 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
 
-#### Web services API: Problem when fetching the next page of a GQI query [ID_36903]
-
-<!-- MR 10.4.0 - FR 10.3.9 -->
-
-When a table visualization fetched the next page of a GQI query, GQI would throw an exception saying that the session was already closed.
-
-This was due to GQI incorrectly closing the session automatically after 5 minutes of inactivity.
-
 #### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
