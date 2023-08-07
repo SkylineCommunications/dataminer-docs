@@ -8,7 +8,7 @@ The `StorageSettings` currently contains the configuration to define the caching
 
 ## CachingSettings
 
-From DataMiner 10.3.9/10.4.0 onwards, these settings can be used to define whether or not the configuration DOM objects should be cached. This settings object contains the following properties:
+From DataMiner 10.3.9/10.4.0 onwards<!-- RN 36412 -->, these settings can be used to define whether or not the configuration DOM objects should be cached. This settings object contains the following properties:
 
 |Property                           |Type                   |Description |
 |-----------------------------------|-----------------------|------------|
@@ -19,5 +19,5 @@ From DataMiner 10.3.9/10.4.0 onwards, these settings can be used to define wheth
 For each type, you can define one of three caching policy options:
 
 - **Default**: The default option. This will be automatically selected for new managers and for any managers that already existed before this feature was introduced. Behaves the same way as the "Full" option.
-- **Disabled**: The cache will be disabled and all reads will go to the database.
-- **Full**: The cache will be enabled, and all objects of this type will be loaded in the cache when the DOM manager is initialized. All reads will go to this cache.
+- **Disabled**: The cache will be disabled, and all read actions will use the database.
+- **Full**: The cache will be enabled, and all objects of this type will be loaded in the cache when the DOM manager is initialized. All read actions will use this cache.
