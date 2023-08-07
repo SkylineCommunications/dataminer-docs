@@ -39,4 +39,5 @@ The procedures below can be applied to troubleshoot issues. However, be very car
 - [Removing references to items that no longer exist](xref:SLNetClientTest_removing_references)
 - [Setting the TTL for database records](xref:SLNetClientTest_setting_TTL_database)
 - [Specifying credentials for a shared backup path for Elasticsearch](xref:SLNetClientTest_credentials_shared_backup_Elasticsearch)
+- [Triggering a midnight sync for a DOM manager](xref:SLNetClientTest_triggering_DOM_midnight_sync)
 - [Triggering and managing user-defined APIs](xref:SLNetClientTest_triggering_api)
