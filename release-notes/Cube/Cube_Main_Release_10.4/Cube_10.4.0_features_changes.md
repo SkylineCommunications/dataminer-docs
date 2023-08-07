@@ -223,6 +223,47 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
+#### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you add a new alarm tab to the Alarm Console, that alarm tab will now always show the Elasticsearch search box when you are connected to a DataMiner System with a Cassandra Cluster database.
+
+> [!NOTE]
+> Currently, when you start typing in this search box, no suggestions are displayed yet.
+
+#### Visual Overview: New custom color 'bg.pressededitor' for parameter controls of type 'Lite' [ID_36779]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you turn a shape into a parameter control of type "Lite", you can use the *CustomColors* option to customize the colors of that parameter control.
+
+You can now define a new color called *bg.pressededitor*. This color will be used as background when the left mouse button is pressed within the editor part of the control.
+
+For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
+
+#### Proportional card layout: Selecting a master card [ID_36912]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now promote one card to master card. To do so, click the card's hamburger menu, and select the *Master card* option.
+
+Once you have turned a card into the master card, each time you open a new card it will replace the master card.
+
+> [!NOTE]
+>
+> - At any given time, there can be only one master card.
+> - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
+
+#### Proportional card layout: Marking cards as non-closable [ID_36956]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now mark cards to non-closable. To do so, click the card's hamburger menu, and select the *Hide close button* option.
+
+> [!NOTE]
+> This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Hide close button* option, the *Pin this card* option will be disabled (and vice versa).
+
 ## Changes
 
 ### Enhancements
@@ -343,6 +384,14 @@ The proactive cap detection feature generates suggestion events for predicted da
 
 The value of the suggestion events generated for predicted (critical) alarm threshold breaches has not been changed.
 
+#### Errors or alarms will no longer be generated at startup when the DMS does not include an indexing engine [ID_36590]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, when the DataMiner System does not include an indexing engine, no run-time errors or alarms of type "Notice" will be generated for ServiceManager, TicketingManager, ResourceManager and ProfilesManager at startup.
+
+Also, when you open the *Profiles*, *Resources* or *Bookings* app in Cube, a message will now appear, saying that the DataMiner System does not include an indexing engine.
+
 #### Visual Overview: Subtract placeholder now also supports numerics [ID_36636]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -354,6 +403,24 @@ Examples:
 - Subtracting one number from another: `[Subtract:10,3]`
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
+
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
+#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID_36828] [ID_36836]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
+
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
 ### Fixes
 
@@ -436,3 +503,14 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When starting up, in some rare cases, Cube could fail to connect to a DataMiner Agent when using .NET Remoting. Moreover, any further connection attempts made within that same Cube session would also fail. Users were required to close Cube and restart it.
+
+Symptoms:
+
+- The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
+- The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.

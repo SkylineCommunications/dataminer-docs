@@ -12,7 +12,7 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
 1. When you use Visual Studio 2010, both Visual Studio and Remote Debugging Monitor (msvsmon.exe) need to run with a local Administrator account. Create a dedicated debugging user account on your local computer as well as on the remote DataMiner Agent. Make sure both user accounts have:
 
-    - the same name (e.g. “RemoteDebug”),
+    - the same name (e.g. "RemoteDebug"),
     - Administrator rights, and
     - access to the network share mentioned in step 1 (Read and Change permissions).
 
@@ -32,9 +32,9 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
         > - Make sure that the version of Remote Debugging Monitor on the remote DataMiner Agent is the version supplied with the version of Visual Studio you are using on your local computer.
         > - Always use the 32-bit version of Remote Debugging Monitor.
 
-1. On the remote DataMiner Agent, log on with the dedicated debugging account you created in step 2 (e.g. “RemoteDebug”), and start Remote Debugging Monitor as an Administrator.
+1. On the remote DataMiner Agent, log on with the dedicated debugging account you created in step 2 (e.g. "RemoteDebug"), and start Remote Debugging Monitor as an Administrator.
 
-    - Make sure Remote Debugging Monitor uses “Windows Authentication”. To check this setting, go to *Tools \> Options*.
+    - Make sure Remote Debugging Monitor uses "Windows Authentication". To check this setting, go to *Tools \> Options*.
 
     > [!NOTE]
     > It might be necessary to change certain firewall settings.
@@ -50,6 +50,6 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
     See [DMA](xref:DIS_settings#dma)
 
-1. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned “publish path”<br>(e.g. *\\\\remote-dma\\dis*) to the list of symbol file locations.
+1. Go to *Tools \> Options \> Debugging \> Symbols*, and add the above-mentioned "publish path"<br>(e.g. *\\\\remote-dma\\dis*) to the list of symbol file locations.
 
-You are now ready to start debugging. See [Debugging a QAction](xref:Debugging_a_QAction) or [Debugging an Automation script](xref:Debugging_an_Automation_script).
+You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an Automation script](xref:Debugging_an_Automation_script).

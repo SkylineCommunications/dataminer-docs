@@ -64,3 +64,4 @@ To make changes to a *Protocol.xml* file within Cube:
 > - Encrypted protocols and exported DVE protocols are read-only. They cannot be edited.
 > - When you save changes to a protocol in Cube, an automatic XML validity check is done. If the XML is invalid, you cannot save your changes until the problem has been corrected.
 > - If you make changes to a protocol version that is currently in use, a warning message will appear when you try to save your changes. If you then confirm the changes, the elements using the protocol version will be restarted.
+> - If you add a parameter to a protocol.xml file while an element card for that protocol is opened, prior to DataMiner 10.3.8/10.4.0, you will need to close and reopen the card to see your changes. This is no longer needed from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36286 -->.

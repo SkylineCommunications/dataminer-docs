@@ -285,6 +285,12 @@ When a dashboard or a low-code app page is being migrated, a message will appear
 
 From now on, when the user has edit permission, the message will only appear when the migration takes longer than 15 seconds. When the user does not have edit permission, the message will appear immediately at the start of the migration, notifying the user that the migration will not be saved and that it will be repeated every time the dashboard or low-code app page is loaded.
 
+#### Dashboards app: Enhanced PDF generation [ID_36461]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the way in which PDF files are generated from dashboards. For example, up to now, items selected on a dashboard would no longer be selected after a PDF file had been generated.
+
 #### Dashboards app & Low-Code Apps - Clock components: Custom time zone [ID_36534]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -298,6 +304,21 @@ To do so, select the *Custom time zone* option, and select a time zone from the 
 <!-- MR 10.4.0 - FR 10.3.8 -->
 
 A number of enhancements have been made to the DataMiner Comparison tool. This web application allows you to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences (additions, modifications, and deletions).
+
+#### Monitoring app, Dashboards app & Low-Code Apps: Asynchronous operations now also supported when using WebSockets [ID_36583] [ID_36884] [ID_36885] [ID_36886] [ID_36887] [ID_36896] [ID_36904] [ID_37029] [ID_37031]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, the following asynchronous operations were only supported over HTTP(s). From now on, these asynchronous operations will also be supported when using WebSockets.
+
+- Retrieving trend data
+- Retrieving alarm details
+- Retrieving alarm history
+- Retrieving visual overviews of elements, services and views
+- Retrieving parameter status information (serving as input for pivot table components)
+- Generating PDF reports
+- Sending emails containing PDF reports
+- Sharing a dashboard
 
 #### Dashboards app: Enhanced mechanism to update the list of dashboards in the navigation pane [ID_36604]
 
@@ -340,6 +361,15 @@ In the *Monitoring* app, a new type of datetime boxes will now be used on parame
 - GetParameterWithDynamicUnits
 - ObserveParameter
 
+#### BREAKING CHANGE: GQI - 'Get alarms' data source: Format of alarm IDs has changed [ID_36621]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The format of the alarm IDs listed in the *AlarmID* column of the *Get alarms* data source has been changed:
+
+- Old format: *DmaId/RootId/AlarmId*
+- New format: *HostingDmaId/AlarmId*
+
 #### Dashboards app - GQI: Change detection in 'Start from' queries [ID_36690]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -353,6 +383,64 @@ From now on, when a base query is changed in any way, all queries that use that 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
+
+#### Security enhancements [ID_36695]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of security enhancements have been made.
+
+#### Monitoring app: A new type of duration boxes will now be used on parameter pages [ID_36713]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of duration boxes will now be used on parameter pages.
+
+#### Dashboards app: Tooltips will be displayed when hovering over a visualization in a component menu [ID_36737] [ID_36778]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you want to change the visualization of a component, you can hover over the component, click the *Visualizations* icon, and then select a visualization from the overview.
+
+From now on, when you hover over each of the possible visualizations in the overview, a tooltip will appear, giving more information about that visualization.
+
+Also, the component will no longer change instantly when you hover over a visualization in the overview. A visualization preview will be shown when the mouse pointer has been hovering over a particular visualization icon for more than 400ms and will disappear when the mouse pointer leaves the visualizations overview. The component will change its visualization only when you click a certain visualization in the overview.
+
+#### DataMiner Comparison tool: Redesigned header and sidebar [ID_36747]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The header and sidebar of the DataMiner Comparison tool have been redesigned.
+
+#### Monitoring app: A new type of buttons and toggle buttons will now be used on parameter pages [ID_36773]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Monitoring* app, a new type of buttons and toggle buttons will now be used on parameter pages.
+
+#### Dashboards app - Line chart component: Enhanced performance [ID_36869]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a line chart component used element table column parameters as data and indices as filter, up to now, it would cross-match indices across the unique elements associated with the table column parameters. This will now be prevented when the *Hide non-trended parameters* option is disabled.
+
+> [!NOTE]
+> The *Hide non-trended parameters* setting is now disabled by default.
+
+> [!IMPORTANT]
+> Because of the enhancements that have been made, in some cases, a line chart will no longer show any data when the indices are not available in the specified table. If so, you can opt to work with cell parameters instead (see [release note 36724](xref:Web_apps_Main_Release_10.4.0_new_features#dashboards-app--low-code-apps---parameters-dataset-selecting-an-indexcell-of-a-column-parameter-id_36724)) or to enable the *Hide non-trended parameters* option.
+
+#### Monitoring app: Parameter control now supports dynamic units [ID_36892]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The parameter control used in the *Monitoring* app now supports dynamic units.
+
+#### Dashboards app & Low-Code Apps: 'ReportsAndDashboardsAlpha' soft-launch option is now deprecated [ID_36894]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
 
 ### Fixes
 
@@ -534,12 +622,6 @@ Cannot read properties of null ('reading delete')
 
 When you installed a DataMiner web upgrade for version 10.3.5 or newer on a server running a DataMiner version older than 10.3.5, the value of the `IsChecked` property would not be filled in for list and drop-down options in *SLAnalyticsTypes.dll*. As a result, list and drop-down options that should be selected by default, would not be selected by default.
 
-#### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
-
 #### Dashboards app & Low-Code Apps - Table component: Problem when trying to display null values returned by the query [ID_36669]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -560,8 +642,34 @@ From now on, users who only have permission to view dashboards will not see any 
 
 When you had opened the same dashboard in edit mode in two separate windows, the moment you made a change in one of the windows, a number of popup windows displaying "New version is available" would appear on top of the other window.
 
-#### Dashboards app & Low-Code Apps: Table component would show skeleton loading when refetching data with external column filters applied [ID_36743]
+#### GQI: Not all DCF interface properties would be returned [ID_36840]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
-A table component would show skeleton loading when it refetched data with external column filters applied. From now on, a table component will only show skeleton loading during the initial fetch.
+Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
+
+#### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, when you selected a row of a table that used two identical queries, the query row feed would send the row twice. From now on, it will only send the row once.
+
+#### Dashboards app & Low-Code Apps - GQI: Link to feed not saved when the feed value is identical [ID_36990]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, query nodes that were linked to a feed would incorrectly not save their link when a new feed was linked with the exact same value.
+
+From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
+
+#### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
+
+#### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.

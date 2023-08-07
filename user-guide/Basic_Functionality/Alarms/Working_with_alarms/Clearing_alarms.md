@@ -35,7 +35,7 @@ A DataMiner alarm of which the severity returns to normal can also be kept in a 
 
 To manually clear an alarm:
 
-1. Right-click the alarm in the Alarm Console and select *Clear alarm*.
+1. In the Alarm Console in DataMiner Cube, right-click the alarm and select *Clear alarm*.
 
 1. In the *Clear alarm* window, add a comment if necessary, and click the *Clear alarm* button at the bottom.
 

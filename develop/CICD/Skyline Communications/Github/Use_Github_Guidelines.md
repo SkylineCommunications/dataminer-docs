@@ -89,6 +89,7 @@ Here is a list of topics you should use (this list is to be extended):
 - dataminer-gqi-operator
 - dataminer-regression-test
 - dataminer-UI-test
+- dataminer-bot
 
 If you have code for a specific project/customer, you should add a topic with the customer's name as well, e.g. `Skyline-Communications`. Always use a hyphen ("-") as a separator.
 

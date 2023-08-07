@@ -19,7 +19,7 @@ To make sure DOM data are available, make sure the [DOMManager soft-launch optio
 
 ## Installing the SRM framework
 
-Process Automation requires the creation of a [Booking Manager element](xref:SolSRM) named *Process Automation instances*, configured with the *Process Automation* virtual platform. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
+Process Automation requires the creation of a [Booking Manager element](xref:Booking_Manager_user_interface) named *Process Automation instances*, configured with the *Process Automation* virtual platform. To allow us to create this element, we first need to install the SRM framework on the DataMiner System.
 
 > [!NOTE]
 > In case SRM is already installed on your system, the procedure below is not required to proceed.
