@@ -87,7 +87,7 @@ The logic for weather rechecks in the Verizon ETMS Platform connector has been a
 
 In the Verizon ETMS Platform connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
 
-#### Verizon WM Ticketing: Improved description in case there are failed KPIs but no power issues [ID_36937]
+#### Verizon WM Ticketing: Improved description in case there are failed KPIs but no power issues [ID_36938]
 
 In the Verizon WM Ticketing connector, the description when there are failed KPIs but no power issues has been updated to "Further Investigation Required".
 
