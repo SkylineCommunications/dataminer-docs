@@ -39,3 +39,9 @@ uid: Part3AdvancedFunctionalities
     <a href="/user-guide/Advanced_Functionality/Serial_Gateways/SerialGateways.html" title="Serial gateways" target="_self"><img src="~/user-guide/images/Serial_Gateways.svg" style="width:100%"></a>
   </div>
 </div>
+
+<div class="row"> 
+  <div class="column">
+    <a href="/user-guide/Advanced_Functionality/Swarming/Swarming.html" title="Swarming" target="_self"><img src="~/user-guide/images/Swarming.svg" style="width:100%"></a>
+  </div>
+</div>  

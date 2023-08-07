@@ -1492,6 +1492,11 @@
           topicUid: Features_of_a_DMS_Serial_Gateway
         - name: Using a DMS Serial Gateway
           topicUid: Using_a_DMS_Serial_Gateway
+    - name: Swarming
+      topicUid: Swarming
+      items:
+        - name: Switching objects
+          topicUid: SwitchingObjects
 - name: DataMiner modules
   topicUid: Part4AdvancedModules
   items:
@@ -2588,11 +2593,6 @@
               topicUid: Configuring_a_spectrum_element_to_follow_the_device_settings
             - name: Creating a simulated spectrum element
               topicUid: Creating_a_simulated_spectrum_element
-    - name: Swarming
-      topicUid: Swarming
-      items:
-        - name: Switching objects
-          topicUid: SwitchingObjects
     - name: Ticketing
       topicUid: ticketing
       items:
