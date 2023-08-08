@@ -22,7 +22,11 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Dashboards app: Security enhancements [ID_37051]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of security enhancements have been made to the Dashboards app.
 
 ### Fixes
 
