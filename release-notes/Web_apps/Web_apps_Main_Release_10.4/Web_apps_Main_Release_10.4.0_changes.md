@@ -442,6 +442,12 @@ The parameter control used in the *Monitoring* app now supports dynamic units.
 
 The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
 
+#### Dashboards app/Low-Code Apps: Removed unused legacy components [ID_36907]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
