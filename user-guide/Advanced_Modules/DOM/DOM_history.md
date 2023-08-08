@@ -13,7 +13,7 @@ Prior to DataMiner version 10.3.9/10.4.0<!-- RN 36785 -->, this is done synchron
 > [!NOTE]
 >
 > - When designing a DOM manager, consider disabling the DOM history if these records are not required. This reduces the load on the database and reduces the amount of storage required. See [Disabling the history or changing the storage behavior](#disabling-the-history-or-changing-the-storage-behavior).
-> - If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. The notice will only be generated every hour to prevent an excessive number of notices.
+> - If for some reason the history storage is not working correctly, the CRUD operations for DOM instances will still continue to work, but the history will no longer be tracked. If this happens, an error will be logged for every failed history save. A notice in the Alarm Console will only be generated every hour to prevent an excessive number of notices.
 
 ## Disabling the history or changing the storage behavior
 
