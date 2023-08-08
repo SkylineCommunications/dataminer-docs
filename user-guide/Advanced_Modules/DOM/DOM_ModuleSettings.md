@@ -59,6 +59,8 @@ The current settings structure (with regards to `DomManager`) is as follows:
 
     - [TtlSettings](xref:DOM_TtlSettings)
 
+    - [DomInstanceHistorySettings](xref:DOM_DomInstanceHistorySettings)
+
     - [StorageSettings](xref:DOM_StorageSettings)
 
 ## Notes
