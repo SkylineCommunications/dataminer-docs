@@ -163,3 +163,12 @@ Symptoms:
 
 - The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
 - The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
+
+#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In the Automation or Scheduler module, when you selected a report for the email, FTP, or shared folder action, the following issues could occur:
+
+- In some cases, the "required info" label was not shown.
+- When you switched from a different action to the email, FTP, or shared folder action, it could occur that the list of selectable reports and dashboards was not loaded in the dropdown boxes.

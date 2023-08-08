@@ -69,3 +69,12 @@ For example, when you had specified `[param: [this EnhancedServiceID], 1]`, the 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When, on the *General parameters* page of an element card, you click *Configure* next to *DataMiner Connectivity Framework*, a window with four tables is displayed. Up to now, these tables would incorrectly no longer have a filter box. From now on, they will all have a filter box again.
+
+#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In the Automation or Scheduler module, when you selected a report for the email, FTP, or shared folder action, the following issues could occur:
+
+- In some cases, the "required info" label was not shown.
+- When you switched from a different action to the email, FTP, or shared folder action, it could occur that the list of selectable reports and dashboards was not loaded in the dropdown boxes.

@@ -299,3 +299,12 @@ When the alarm template of an element was updated, a run-time error could occur 
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
+
+#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In the Automation or Scheduler module, when you selected a report for the email, FTP, or shared folder action, the following issues could occur:
+
+- In some cases, the "required info" label was not shown.
+- When you switched from a different action to the email, FTP, or shared folder action, it could occur that the list of selectable reports and dashboards was not loaded in the dropdown boxes.
