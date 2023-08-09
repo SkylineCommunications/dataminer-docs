@@ -27,5 +27,4 @@ When you have finished configuring all necessary settings, you can start debuggi
     > - When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
 
 > [!TIP]
-> - Debugging is often not possible for [third-party libraries](https://docs.dataminer.services/develop/TOOLS/NuGet/TOONuGet.html).
-> - [dotPeek](xref:dotPeek#debug-3rd-party-libraries) can serve as a handy tool to overcome this.
+> Debugging is often not possible for [third-party libraries](xref:TOONuGet). [dotPeek](xref:dotPeek) can serve as a handy tool to overcome this.
