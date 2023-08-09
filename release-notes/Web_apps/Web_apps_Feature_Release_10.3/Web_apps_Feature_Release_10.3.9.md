@@ -418,3 +418,9 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 <!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
 
 When you opened the Alarm Console in the *Monitoring* app or an alarm list in the *Dashboards* app, alarm groups that had already been cleared would incorrectly still appear in the list.
+
+#### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.

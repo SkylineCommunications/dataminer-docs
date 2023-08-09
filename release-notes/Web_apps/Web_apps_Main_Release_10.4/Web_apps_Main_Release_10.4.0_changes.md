@@ -685,3 +685,9 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.
