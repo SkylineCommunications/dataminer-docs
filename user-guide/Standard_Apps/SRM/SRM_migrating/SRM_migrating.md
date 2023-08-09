@@ -4,7 +4,7 @@ uid: SRM_migrating
 
 # Migrating an SRM configuration from one DMA to another
 
-It is possible to migrate components of an SRM configuration from one DMA to another. This includes:
+It is possible to migrate components of an SRM configuration from one DMA to another. You can migrate separate components or migrate the complete configuration of a Booking Manager:
 
 - [Virtual function definitions and associated components](xref:SRM_migrating_functions)
 - [Profile instances](xref:SRM_migrating_profile_instances)
