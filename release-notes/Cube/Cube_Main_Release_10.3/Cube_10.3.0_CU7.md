@@ -1,24 +1,14 @@
 ---
-uid: Cube_Feature_Release_10.3.10
+uid: Cube_Main_Release_10.3.0_CU7
 ---
 
-# DataMiner Cube Feature Release 10.3.10 – Preview
+# DataMiner Cube Main Release 10.3.0 CU7 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.3.10](xref:General_Feature_Release_10.3.10).
-
-## Highlights
-
-*No highlights have been added to this release yet.*
-
-## Other new features
-
-*No other features have been added to this release yet.*
-
-## Changes
+> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
 
 ### Enhancements
 
