@@ -22,6 +22,12 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ### Enhancements
 
+#### Legacy Monitoring & Control app no longer available [ID_36953]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
+
 #### Dashboards app: Security enhancements [ID_37051]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

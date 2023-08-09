@@ -448,6 +448,12 @@ The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
 
 In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
 
+#### Legacy Monitoring & Control app no longer available [ID_36953]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
