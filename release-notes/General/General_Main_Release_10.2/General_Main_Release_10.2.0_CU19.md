@@ -30,13 +30,15 @@ At the start of a DataMiner upgrade in a cluster, first the upload of the upgrad
 
 However, when the upload happened too slowly, it could occur that the connection timed out. Now, as long as the upgrade is progressing, the upload will not time out.
 
-#### Issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) [ID_36973]
+#### Issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notifications sent to SLDataMiner [ID_36973]
 
-A number of issues related to the NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notify type have been resolved:
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-- Up to now, this notify type was only able to handle one column at a time. Now it can handle multiple columns.
+A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notifications sent to SLDataMiner have been resolved:
+
+- Up to now, these notifications were only able to handle one column at a time. Now they can handle multiple columns.
 - A small memory leak could occur when a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES notification was sent to SLDataMiner with invalid data.
-- If the user sending this notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
+- If the user sending such a notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
 
 #### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
 
