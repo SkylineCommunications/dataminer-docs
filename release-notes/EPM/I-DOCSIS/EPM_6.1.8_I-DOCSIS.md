@@ -93,3 +93,7 @@ With this new implementation, the following columns are no longer needed in the 
 #### Generic DOCSIS CM Collector: Missing CCAP Core ID info in Cable Modem Overview table [ID_36761]
 
 On the Cable Modems page of elements running the connector *Generic DOCSIS CM Collector*, it could occur that some rows in the Cable Modem Overview table incorrectly did not show any information in the CCAP Core ID column.
+
+#### QAM tables not fully populated [ID_37100]
+
+In some cases, it could occur that QAM tables were not fully populated because incorrect values were being processed.
