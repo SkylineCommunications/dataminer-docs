@@ -1942,6 +1942,8 @@
                 topicUid: DashboardTreeFeed
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
+              - name: Query filter feed
+                topicUid: DashboardQueryFilterFeed
             - name: Basic controls
               topicUid: DashboardDropdownFeed
               items:
