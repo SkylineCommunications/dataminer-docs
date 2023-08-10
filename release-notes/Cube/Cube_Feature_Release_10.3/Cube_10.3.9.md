@@ -127,7 +127,7 @@ Up to now, embedding a visual overview assigned to an element in that same visua
 
 #### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 -->
 
 Up to now, embedding a visual overview assigned to a service in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a service in that same visual overview has been embedded, a warning message will be displayed.
 
