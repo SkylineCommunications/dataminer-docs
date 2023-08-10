@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 11 August 2023 - Enhancement - FieldControl 2.9.0 - Upgraded to .NET6 [ID_37109]
+
+The DataMiner FieldControl has been upgraded to .NET6 so that it doesn't depend on .NET5 anymore. Make sure that .NET6 is installed!
+
 #### 11 August 2023 - Enhancement - Orchestrator 1.4.0 - Upgrade to .NET 6 and more server and DMA data offloaded to improve user experience [ID_37105] [ID_36819]
 
 The DataMiner Orchestrator has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
