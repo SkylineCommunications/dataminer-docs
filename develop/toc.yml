@@ -5387,6 +5387,8 @@
         topicUid: DataStax_DevCenter
       - name: dnSpy
         topicUid: dnSpy
+      - name: dotPeek
+        topicUid: dotPeek
       - name: EBU LIST
         topicUid: EBU_Live_IP_Software_Toolkit_LIST
       - name: Fiddler
