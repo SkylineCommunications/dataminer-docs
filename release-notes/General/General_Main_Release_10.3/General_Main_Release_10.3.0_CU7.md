@@ -25,4 +25,8 @@ Up to now, bookings were always set to Confirmed again when they were updated, e
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, it could occur that the prerequisites check that is performed at the start of a DataMiner upgrade incorrectly marked an Agent as failed, which caused the upgrade to fail.

@@ -16,6 +16,12 @@ uid: General_Main_Release_10.2.0_CU19
 
 ### Fixes
 
+#### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, it could occur that the prerequisites check that is performed at the start of a DataMiner upgrade incorrectly marked an Agent as failed, which caused the upgrade to fail.
+
 #### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 -->
