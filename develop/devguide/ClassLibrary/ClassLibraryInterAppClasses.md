@@ -350,6 +350,8 @@ You then specify the parameter that you are expecting the return message to arri
 ```csharp
 myCommands.ReturnAddress = new ReturnAddress(152, 22, 9000001);
 ```
+> [!IMPORTANT]
+> The parameter selected with the ReturnAddress must not be on the source element (Recommended is the parameter 9000001 on the destination element). If you use a parameter on the element you are sending from then you will cause dead-locks. This is because the sending QAction waits on a response and the response cannot be set to the parameter because there is a QAction (the one waiting on response) running.
 
 Now you create messages from your API.
 
