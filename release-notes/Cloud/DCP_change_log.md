@@ -6,7 +6,7 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 11 August 2023 - Enhancement - ArtifactDeployer 1.5.0 - Upgraded to .NET6 [ID_37103]
+#### 11 August 2023 - Enhancement - ArtifactDeployer 1.5.0 - Upgrade to .NET 6 [ID_37103]
 
 The DataMiner ArtifactDeployer has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
 
