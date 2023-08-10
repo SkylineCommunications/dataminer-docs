@@ -91,6 +91,12 @@ During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will s
 
 When configuring the *SLLogCollector* tool, you can select the *Include memory dump* option, and then indicate for which process(es) memory dumps should be collected and when these should be collected. Up to now, to select a process, you had to select a checkbox. From now on, you will be able to select a process by clicking any cell in the row representing the process.
 
+#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID_37078]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to an element in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to an element in that same visual overview has been embedded, a warning message will be displayed.
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]

@@ -422,6 +422,12 @@ All alarms and suggestion events generated following the detection of behavioral
 
 All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
+#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to a service in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a service in that same visual overview has been embedded, a warning message will be displayed.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
