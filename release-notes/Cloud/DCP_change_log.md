@@ -6,9 +6,9 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
-#### 11 August 2023 - Enhancement - SupportAssistant 1.5.0 - Upgraded to .NET6 [ID_37099]
+#### 11 August 2023 - Enhancement - SupportAssistant 1.5.0 - Upgrade to .NET 6 [ID_37099]
 
-The DataMiner SupportAssistant has been upgraded to .NET6 so that it doesn't depend on .NET5 anymore. Make sure that .NET6 is installed!
+The DataMiner SupportAssistant has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
 
 #### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
