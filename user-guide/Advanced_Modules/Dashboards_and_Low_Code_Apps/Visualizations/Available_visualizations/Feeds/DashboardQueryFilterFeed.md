@@ -24,7 +24,7 @@ To configure this component:
 
    - *WebSocket settings*: Allows you to customize the polling interval for this component. To do so, clear the checkbox in this section and specify the custom polling interval.
 
-   - *Filter assistance*: Determines whether the query filter should offer choices already filtered based on available data. By default disabled.
+   - *Filter assistance*: Determines whether the column filters will assist you by providing suggestions and other information such as units, step size, etc. By default disabled.
 
      > [!NOTE]
      > Depending on the size of your data, enabling this setting may impact performance.
@@ -43,7 +43,7 @@ To configure this component:
 
 ## Filtering a table or node edge graph component
 
-When linked to a [table component](xref:DashboardTable) or a [node edge graph component](xref:DashboardNodeEdgeGraph), the query filter component allows real-time filtering of the associated table or the node edge graph.
+When linked to a component using a feed, the query filter component allows real-time filtering of that associated component.
 
 Two methods exist for linking a query filter:
 
@@ -55,7 +55,10 @@ Two methods exist for linking a query filter:
 
 Following setup and configuration of the query filter component:
 
-1. Add a table component to the dashboard.
+1. Add a table component to your dashboard.
+
+   > [!NOTE]
+   > In this example, we are using a table component. However, any component capable of receiving a query can be linked to the query filter.
 
 1. In the *Data* tab, go to *All available data > Feeds*. Expand the feed linked to the query filter and drag *Queries* onto the table component.
 
@@ -65,7 +68,10 @@ Following setup and configuration of the query filter component:
 
 Following setup and configuration of the query filter component:
 
-1. Add a table component to the dashboard.
+1. Add a table component to your dashboard.
+
+   > [!NOTE]
+   > In this example, we are using a table component. However, any component capable of receiving a query can be linked to the query filter.
 
 1. In the *Data* tab, go to *All available data > Queries*. Drag the query you created earlier onto the table component.
 
