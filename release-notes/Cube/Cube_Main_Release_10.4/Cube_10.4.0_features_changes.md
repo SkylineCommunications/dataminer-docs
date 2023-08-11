@@ -416,6 +416,12 @@ A number of enhancements have been made to the pattern matching functionality, e
 
 All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
 
+#### Trending - Pattern matching: Loading indication around light bulb icon while loading time-scoped related parameters [ID_36831]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When time-scoped related parameters are being loaded in a trend graph, now the light bulb icon will be shown with rotating ring dots to indicate the ongoing loading process. Previously, the light bulb was only shown when a response had been received from the server.
+
 #### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
