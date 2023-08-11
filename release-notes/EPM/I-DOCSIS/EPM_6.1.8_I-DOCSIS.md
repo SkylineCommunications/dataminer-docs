@@ -97,3 +97,7 @@ On the Cable Modems page of elements running the connector *Generic DOCSIS CM Co
 #### QAM tables not fully populated [ID_37100]
 
 In some cases, it could occur that QAM tables were not fully populated because incorrect values were being processed.
+
+#### 0% memory utilization incorrectly shown for CCAPs in Visual Overview [ID_37119]
+
+In Visual Overview, it could occur that CCAPs incorrectly showed 0% memory utilization.
