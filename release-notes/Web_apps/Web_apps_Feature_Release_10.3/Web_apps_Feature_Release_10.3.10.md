@@ -54,3 +54,9 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 <!-- Not added in 10.4.0: fixes a feature introduced in that version -->
 
 In a dashboard or low-code app, if sorting was applied to one or more columns of a table, it could occur that a query filter could not be correctly applied on the table, so that the unfiltered result was shown instead.
+
+#### GQI: Missing column statistics for discrete options of numeric columns [ID_37111]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When the web API fetched information for columns of a GQI query, it could occur that not all statistics were included. In the Dashboards app/Low-Code Apps, this could lead to incorrect "(0)" counters next to the discrete options of numeric columns in the query filter when the filter assistance option was enabled.

@@ -703,3 +703,9 @@ When you configured a query in a dashboard or low-code app, it could occur that 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
+
+#### GQI: Missing column statistics for discrete options of numeric columns [ID_37111]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When the web API fetched information for columns of a GQI query, it could occur that not all statistics were included. In the Dashboards app/Low-Code Apps, this could lead to incorrect "(0)" counters next to the discrete options of numeric columns in the query filter when the filter assistance option was enabled.
