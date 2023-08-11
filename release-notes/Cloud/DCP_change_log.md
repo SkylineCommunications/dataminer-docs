@@ -8,11 +8,19 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 #### 11 August 2023 - Enhancement - ArtifactDeployer 1.5.0 - Upgrade to .NET 6 [ID_37103]
 
-The DataMiner ArtifactDeployer has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+DataMiner ArtifactDeployer has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - FieldControl 2.9.0 - Upgrade to .NET 6 [ID_37109]
+
+DataMiner FieldControl has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+
+#### 11 August 2023 - Enhancement - SupportAssistant 1.5.0 - Upgrade to .NET 6 [ID_37099]
+
+DataMiner SupportAssistant has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
 
 #### 11 August 2023 - Enhancement - Orchestrator 1.4.0 - Upgrade to .NET 6 and more server and DMA data offloaded to improve user experience [ID_37105] [ID_36819]
 
-The DataMiner Orchestrator has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
+DataMiner Orchestrator has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
 
 From now on, the DxM will also offload more data about the DMA and the server to dataminer.services to improve the user experience:
 
