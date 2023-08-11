@@ -53,7 +53,7 @@ Two methods exist for linking a query filter:
 
 ### Feeding queries as data
 
-Following setup and configuration of the query filter component:
+After configuring the query filter component:
 
 1. Add a table component to your dashboard.
 
@@ -66,7 +66,7 @@ Following setup and configuration of the query filter component:
 
 ### Feeding query columns as filter
 
-Following setup and configuration of the query filter component:
+After configuring the query filter component:
 
 1. Add a table component to your dashboard.
 
