@@ -83,7 +83,7 @@ Following setup and configuration of the query filter component:
 
 If the *Allow color mode* setting is enabled, a color marker icon will be available in the top-right corner of the filter query component.
 
-Click the color marker icon unveils a color legend to the right of the filter options. For each option, you can configure a custom color (default color: green).
+Click the color marker icon to see a color legend to the right of the filter options. For each option, you can configure a custom color (default color: green).
 
 > [!NOTE]
 > When you deactivate the *Allow color mode* setting, any previously configured colors remain visible and applied.
