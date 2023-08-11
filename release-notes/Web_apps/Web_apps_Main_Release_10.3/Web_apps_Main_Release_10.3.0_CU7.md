@@ -12,7 +12,11 @@ uid: Web_apps_Main_Release_10.3.0_CU7
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Security enhancements [ID_37086]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
