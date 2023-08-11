@@ -428,6 +428,12 @@ When time-scoped related parameters are being loaded in a trend graph, now the l
 
 All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
 
+#### Tooltip added for 'Edit Visio drawing' user permission [ID_37095]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
