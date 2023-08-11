@@ -697,3 +697,9 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.
+
+#### Monitoring app: Parameter controls in Visual Overview not working correctly [ID_37079]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
