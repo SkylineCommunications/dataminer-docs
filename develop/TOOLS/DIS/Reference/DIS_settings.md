@@ -72,6 +72,19 @@ If you add a DMA on which DataMiner configuration switching is enabled, you may 
 > [!NOTE]
 > For more information on switching between DataMiner configurations, refer to the DataMiner Help.
 
+### Required permissions
+
+The following permissions on DataMiner are required for DIS to have full functionality:
+
+- Modules > Automation > UI available
+- Modules > Automation > Add
+- Modules > Automation > Edit
+- Modules > Automation > Execute
+- Modules > Protocols & Templates > Protocols > UI available
+- Modules > Protocols & Templates > Protocols > Add
+- Modules > Protocols & Templates > Protocols > Edit
+- Modules > System configuration > Agents > Install App packages
+
 ## DLLs
 
 In the *DLLs* tab, you can specify the DLL import locations.
