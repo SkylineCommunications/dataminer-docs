@@ -660,6 +660,14 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
 
+#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
+
+This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
 #### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

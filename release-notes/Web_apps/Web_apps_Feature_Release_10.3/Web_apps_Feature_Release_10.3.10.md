@@ -36,6 +36,14 @@ A number of security enhancements have been made to the Dashboards app.
 
 ### Fixes
 
+#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
+
+This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
 #### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
