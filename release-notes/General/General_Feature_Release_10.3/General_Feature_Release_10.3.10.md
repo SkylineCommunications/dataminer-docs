@@ -72,3 +72,11 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 - Up to now, these notifications were only able to handle one column at a time. Now they can handle multiple columns.
 - A small memory leak could occur when a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES notification was sent to SLDataMiner with invalid data.
 - If the user sending such a notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
+
+#### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 -->
+
+Up to now, the offline DMA in a Failover pair built its NATS configuration by fetching the nodes from the online DMA. In case the online DMA could not communicate with the rest of the cluster, this caused the offline DMA to also mark all other DMAs as unreachable. This meant that when NATS was reconfigured, even when the offline DMA was actually able to reach them, these "unreachable" DMAs were excluded from its routes. Moreover, as the offline DMA cannot generate alarms, there would be no notification of this until it was switched to online.
+
+This will now be prevented. The offline DMA will now collect all nodes locally when setting up its NATS configuration instead of fetching them from the online DMA.
