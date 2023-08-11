@@ -39,7 +39,7 @@ To configure this component:
 
   - Select the *Toggle checklist* button to list all possible values as a checklist.
 
-- When exclusively filtering a node edge graph by node, edges will only be highlighted when both the source and destination are highlighted. Alternatively, when exclusively filtering a node edge graph by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
+- When a node edge graph is exclusively filtered by node, edges will only be highlighted when both the source and destination are highlighted. Alternatively, when a node edge graph is exclusively filtered by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
 
 ## Filtering a table or node edge graph component
 
