@@ -47,3 +47,10 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
+
+#### Dashboards app/Low-Code Apps: Query filter not applied on sorted table [ID_37070]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- Not added in 10.4.0: fixes a feature introduced in that version -->
+
+In a dashboard or low-code app, if sorting was applied to one or more columns of a table, it could occur that a query filter could not be correctly applied on the table, so that the unfiltered result was shown instead.
