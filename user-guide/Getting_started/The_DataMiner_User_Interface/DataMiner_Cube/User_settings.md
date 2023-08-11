@@ -336,7 +336,7 @@ These settings allow you to specify which alarm levels and icons are shown next 
 
 On the *Regional* page, the following settings are available:
 
-- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian and Spanish. Other languages are available for demo purposes only.
+- **Language of the user interface**: Choose the language for the user interface. You must restart DataMiner Cube for this setting to take effect. Currently, the officially supported languages are Dutch, French, German, Portuguese (Portugal), Russian (up to DataMiner 10.2.6), and Spanish. Other languages are available for demo purposes only.
 
     > [!NOTE]
     > From DataMiner 9.5.2 onwards, by default, only the officially supported languages can be selected in the user settings.
