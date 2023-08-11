@@ -16,7 +16,12 @@ uid: Cube_Feature_Release_10.3.10
 
 ## Other new features
 
-*No other features have been added to this release yet.*
+#### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For fix included in same RN, see Fixes. -->
+
+When you hover the mouse pointer over the pattern labels for a trend graph, now the corresponding pattern occurrences (both univariate and multivariate) are highlighted in the graph.
 
 ## Changes
 
@@ -35,6 +40,13 @@ When time-scoped related parameters are being loaded in a trend graph, now the l
 On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
 
 ### Fixes
+
+#### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature included in same RN, refer to Other new features -->
+
+When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
 
 #### Visual Overview: Viewport variable also set in code when set by user [ID_37011]
 

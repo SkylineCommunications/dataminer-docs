@@ -242,6 +242,13 @@ You can now define a new color called *bg.pressededitor*. This color will be use
 
 For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
 
+#### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For fix included in same RN, see Fixes. -->
+
+When you hover the mouse pointer over the pattern labels for a trend graph, now the corresponding pattern occurrences (both univariate and multivariate) are highlighted in the graph.
+
 #### Proportional card layout: Selecting a master card [ID_36912]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -515,6 +522,13 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature included in same RN, refer to Other new features -->
+
+When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
 
 #### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
 
