@@ -41,7 +41,7 @@ To configure this component:
 
 - When a node edge graph is exclusively filtered by node, edges will only be highlighted when both the source and destination are highlighted. Alternatively, when a node edge graph is exclusively filtered by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
 
-## Filtering a table or node edge graph component
+## Linking a component to the query filter
 
 When linked to a component using a feed, the query filter component allows real-time filtering of that associated component.
 
