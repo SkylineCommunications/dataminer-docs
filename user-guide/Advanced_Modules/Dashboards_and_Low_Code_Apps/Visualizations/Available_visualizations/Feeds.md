@@ -20,6 +20,8 @@ The following types of feeds are available:
 
 - [Trigger](xref:DashboardTriggerFeed)
 
+- [Query filter](xref:DashboardQueryFilterFeed)
+
 > [!NOTE]
 >
 > - Feeds can be pre-configured in dashboard URLs. See [Specifying data input in a dashboard URL](xref:Specifying_data_input_in_a_dashboard_URL).
