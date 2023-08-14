@@ -8,7 +8,7 @@ Feeds can be added to a dashboard to allow a user to select a DataMiner object f
 
 The following types of feeds are available:
 
-- [CPE feed](xref:DashboardCPEFeed)
+- [EPM feed](xref:DashboardCPEFeed)
 
 - [List](xref:DashboardListFeed)
 

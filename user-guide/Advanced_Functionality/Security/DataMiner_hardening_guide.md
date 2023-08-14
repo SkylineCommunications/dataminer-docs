@@ -75,7 +75,7 @@ DataMiner has some components that are considered legacy. They are still around 
 ```xml
 <SLNet>
    <LegacyAnnotations>false</LegacyAnnotations>
-   <LegacyReportsAndDashboards>true</LegacyReportsAndDashboards>
+   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
 </SLNet>
 ```
 

@@ -1928,7 +1928,7 @@
             - name: Feeds
               topicUid: Feeds
               items:
-              - name: CPE feed
+              - name: EPM feed
                 topicUid: DashboardCPEFeed
               - name: Drop-down feed
                 topicUid: DashboardDropdownFeed

@@ -119,6 +119,18 @@ All pattern occurrence values and pattern occurrence suggestion events displayed
 
 Because of a number of enhancements, overall performance has considerably increased when loading history alarms.
 
+#### Visual Overview: Warning message when embedding visual overview assigned to element in that same visual overview [ID_37078]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to an element in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to an element in that same visual overview has been embedded, a warning message will be displayed.
+
+#### Visual Overview: Warning message when embedding visual overview assigned to service in that same visual overview [ID_37082]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+Up to now, embedding a visual overview assigned to a service in that same visual overview could cause an infinite loop, leading to the Cube client becoming unresponsive. From now on, when Cube detects that a visual overview assigned to a service in that same visual overview has been embedded, a warning message will be displayed.
+
 ### Fixes
 
 #### DataMiner Cube: Report or dashboard would not be selected after 'Email', 'Upload to FTP' or 'Upload to shared folder' action was initialized [ID_36631]
@@ -163,3 +175,12 @@ Symptoms:
 
 - The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
 - The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
+
+#### Problems when selecting report in Automation or Scheduler module [ID_37052]
+
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.9 -->
+
+In the Automation or Scheduler module, when you selected a report for the email, FTP, or shared folder action, the following issues could occur:
+
+- In some cases, the "required info" label was not shown.
+- When you switched from a different action to the email, FTP, or shared folder action, it could occur that the list of selectable reports and dashboards was not loaded in the dropdown boxes.

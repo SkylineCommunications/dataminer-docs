@@ -50,6 +50,9 @@ To apply a data feed or change the data feed of a component:
 
      - For **parameters**, you can select a specific parameter by first selecting *Element* or *Service* in the *From* box and then specifying a filter. Alternatively, you can select a parameter by first selecting *Protocol* in the *From* box and then specifying a protocol in the filter.
 
+       > [!NOTE]
+       > Prior to DataMiner 10.3.9/10.4.0, table column parameter data objects do not include indices, which means you also need to add an indices data object as a filter for this data in order to display specific cells. From DataMiner 10.3.9/10.4.0 onwards, the cells associated with a table column are included under a table column data node in the *Data* pane, so that you can add specific cells directly. By default, only the first 100 entries are displayed, but you can use a filter box to find other entries if necessary.<!-- RN 36724 -->
+
      - For **elements**, from DataMiner 10.2.5/10.3.0 onwards, you can click the filter icon next to the filter box at the top to get additional filtering options:
 
        - Specify a view in the *View* bow to only load elements in that view (and its subviews)

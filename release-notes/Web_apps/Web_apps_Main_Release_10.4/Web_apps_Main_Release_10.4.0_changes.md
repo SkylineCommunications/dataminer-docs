@@ -384,9 +384,9 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695]
+#### Security enhancements [ID_36695] [ID_37051]
 
-<!-- MR 10.4.0 - FR 10.3.9 -->
+<!-- MR 10.4.0 - FR 10.3.9/10.3.10 -->
 
 A number of security enhancements have been made.
 
@@ -441,6 +441,18 @@ The parameter control used in the *Monitoring* app now supports dynamic units.
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 The *ReportsAndDashboardsAlpha* soft-launch option is now deprecated.
+
+#### Dashboards app/Low-Code Apps: Removed unused legacy components [ID_36907]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In order to reduce the package size for the Dashboards app and Low-Code Apps, a number of legacy components, which were not used and were unavailable in the UI, have now been removed.
+
+#### Legacy Monitoring & Control app no longer available [ID_36953]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
 ### Fixes
 
@@ -648,6 +660,14 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
 
+#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
+
+This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
 #### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -668,8 +688,32 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
+#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+When you configured a query in a dashboard or low-code app, it could occur that an error in the format 'Invalid value for [node]' was displayed because capability values were parsed incorrectly.
+
+#### Monitoring app: Parameter controls in Visual Overview not working correctly [ID_37079]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
+
+#### GQI: Missing column statistics for discrete options of numeric columns [ID_37111]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When the web API fetched information for columns of a GQI query, it could occur that not all statistics were included. In the Dashboards app/Low-Code Apps, this could lead to incorrect "(0)" counters next to the discrete options of numeric columns in the query filter when the filter assistance option was enabled.
