@@ -315,9 +315,9 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
 
 ## Troubleshooting network share access in Windows
 Whether you are trigging the backup via DataMiner or using an ElasticSearch REST API client such as Kibana, you need to make sure that the backup path is accessible on all the nodes in the cluster. If the network path requires credentials, the SYSTEM user must be granted access, which can be achieved by:
-1. Following the guide [Restrictions for the backup path](exref:https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Indexing_database/Elasticsearch/Backups/Configuring_Elasticsearch_backups_Windows.html#restrictions-for-the-backup-path).
+1. Following the guide [Restrictions for the backup path](https://docs.dataminer.services/user-guide/Advanced_Functionality/Databases/Indexing_database/Elasticsearch/Backups/Configuring_Elasticsearch_backups_Windows.html#restrictions-for-the-backup-path).
 2. Using the Sysinternals PSTools:
-   1. [Download PSTools](#https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
+   1. [Download PSTools](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
    2. Open CMD as administrator and navigate to the folder containing the psexec tool.
    3. Execute `psexec -i -s cmd.exe`, this will trigger CMD to run as SYSTEM user instead of Administrator.
    4. Execute the `net use` command(E.g. `net use \\DataMiner-01\ElasticBackup`).
