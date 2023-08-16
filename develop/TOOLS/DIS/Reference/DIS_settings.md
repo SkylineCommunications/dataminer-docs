@@ -74,7 +74,7 @@ If you add a DMA on which DataMiner configuration switching is enabled, you may 
 
 ### Required permissions
 
-The following permissions on DataMiner are required for DIS to have full functionality:
+The following [user permissions](xref:DataMiner_user_permissions) on DataMiner are required for DIS to have full functionality:
 
 - Modules > Automation > UI available
 - Modules > Automation > Add
