@@ -1497,6 +1497,11 @@
           topicUid: Features_of_a_DMS_Serial_Gateway
         - name: Using a DMS Serial Gateway
           topicUid: Using_a_DMS_Serial_Gateway
+    - name: Swarming
+      topicUid: Swarming
+      items:
+        - name: Switching objects
+          topicUid: SwitchingObjects
 - name: DataMiner modules
   topicUid: Part4AdvancedModules
   items:
