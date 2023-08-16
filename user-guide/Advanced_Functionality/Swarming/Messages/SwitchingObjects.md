@@ -7,7 +7,7 @@ uid: SwitchingObjects
 With DataMiner Swarming, you can switch certain [DataMiner objects](xref:BasicConcepts#system-components) from one DataMiner Agent in a cluster to another.
 
 > [!NOTE]
-> In the first version of DataMiner Swarming, set for release in Q4 of 2023, it will only be possible to switch elements from one DMA to another. No other objects are available for Swarming yet.
+> In the first version of DataMiner Swarming, scheduled for production in Q4 of 2023, it will only be possible to switch elements from one DMA to another. No other objects are available for Swarming yet.
 
 ## Switching an element
 
