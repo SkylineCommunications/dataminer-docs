@@ -80,7 +80,7 @@ In the example below, the IP address/port combination specified in parameter 400
 
 ```xml
 <Param id="400" trending="false" save="true">
-    <Name>Dynamic polling IP</Name>
+    <Name>DynamicPollingIP</Name>
     ...
     <Type options="dynamic ip 1">read</Type>
     <Interprete>
