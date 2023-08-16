@@ -729,3 +729,9 @@ When the web API fetched information for columns of a GQI query, it could occur 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Low-Code Apps: Time range component overlay not fully displayed [ID_37118]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
