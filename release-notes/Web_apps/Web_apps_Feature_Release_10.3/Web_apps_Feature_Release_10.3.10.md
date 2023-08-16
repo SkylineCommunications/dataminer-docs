@@ -63,6 +63,12 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 
 In a dashboard or low-code app, if sorting was applied to one or more columns of a table, it could occur that a query filter could not be correctly applied on the table, so that the unfiltered result was shown instead.
 
+#### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In some cases, it could occur that the *Copy embed URL* right-click option of a dashboard component continued to be displayed when it should not have been. This specifically occurred when you moved or resized the component or when you closed and reopened edit mode while the option was displayed.
+
 #### Monitoring app: Filtered combo box control not shown correctly in Visual Overview [ID_37107]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
