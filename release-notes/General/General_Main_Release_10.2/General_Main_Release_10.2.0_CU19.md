@@ -60,6 +60,12 @@ This will now be prevented. The offline DMA will now collect all nodes locally w
 
 When, while in edit mode, you deleted multiple components at once, the *Data used in Dashboard* section of the edit pane would not be updated correctly. The data would be removed, but the height of the section would incorrectly not be reduced.
 
+#### Spectrum Analysis: Preset tab loading indefinitely if no presets defined [ID_37043]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+If no preset was available for a particular spectrum element, it could occur that the *Preset* tab for the spectrum element kept loading indefinitely.
+
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->

@@ -53,3 +53,9 @@ When you opened a trend graph for a parameter on which a specific multivariate p
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 Up to now, when a user set the *Viewport* variable on a Resource Manager timeline component in Visual Overview, DataMiner set the variable again in the code, which caused the value to change to serialized format. While this did not cause functional changes, it could potentially cause unpredictable behavior, for example in case a condition was configured based on the value of the variable. This will now be prevented.
+
+#### Spectrum Analysis: Preset tab loading indefinitely if no presets defined [ID_37043]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+If no preset was available for a particular spectrum element, it could occur that the *Preset* tab for the spectrum element kept loading indefinitely.
