@@ -4,7 +4,7 @@ uid: Advanced_analytics_features_in_the_Alarm_Console
 
 # Advanced analytics features in the Alarm Console
 
-A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. Pattern matching is only available on systems with an [Elasticsearch indexing database](xref:Elasticsearch_database). All features can be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
+A number of features in the Alarm Console make use of the artificial intelligence capabilities provided by DataMiner Analytics. These features are only available on systems with a Cassandra database. Pattern matching is only available on systems with an [indexing database](xref:Indexing_Database). All features can be activated or deactivated in System Center, via *System Center \> System settings* > *analytics config*.
 
 The following advanced analytics features **assist at identifying incidents in the alarm data**:
 
