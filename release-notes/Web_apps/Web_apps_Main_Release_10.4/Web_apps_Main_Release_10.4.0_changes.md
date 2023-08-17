@@ -726,7 +726,7 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 #### Dashboards app: Shared dashboard containing query with 'Start from' data source not loading [ID_37115]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 

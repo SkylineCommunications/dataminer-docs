@@ -430,3 +430,9 @@ When you configured a query in a dashboard or low-code app, it could occur that 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
+
+#### Dashboards app: Shared dashboard containing query with 'Start from' data source not loading [ID_37115]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
