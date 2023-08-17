@@ -65,7 +65,7 @@ In a dashboard or low-code app, if sorting was applied to one or more columns of
 
 #### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 In some cases, it could occur that the *Copy embed URL* right-click option of a dashboard component continued to be displayed when it should not have been. This specifically occurred when you moved or resized the component or when you closed and reopened edit mode while the option was displayed.
 
