@@ -32,6 +32,12 @@ When, while in edit mode, you deleted multiple components at once, the *Data use
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
 
+#### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, it could occur that the *Copy embed URL* right-click option of a dashboard component continued to be displayed when it should not have been. This specifically occurred when you moved or resized the component or when you closed and reopened edit mode while the option was displayed.
+
 #### Monitoring app: Filtered combo box control not shown correctly in Visual Overview [ID_37107]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->

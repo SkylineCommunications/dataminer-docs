@@ -712,12 +712,6 @@ When you configured a query in a dashboard or low-code app, it could occur that 
 
 In some cases, it could occur that parameter controls in Visual Overview did not work correctly in the Monitoring app.
 
-#### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-In some cases, it could occur that the *Copy embed URL* right-click option of a dashboard component continued to be displayed when it should not have been. This specifically occurred when you moved or resized the component or when you closed and reopened edit mode while the option was displayed.
-
 #### GQI: Missing column statistics for discrete options of numeric columns [ID_37111]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
