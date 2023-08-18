@@ -36,6 +36,14 @@ At the start of a DataMiner upgrade in a cluster, first the upload of the upgrad
 
 However, when the upload happened too slowly, it could occur that the connection timed out. Now, as long as the upgrade is progressing, the upload will not time out.
 
+#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
+
+<!-- MR 10.2.0 [CU19]/MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
+
+This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
 #### Issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notifications sent to SLDataMiner [ID_36973]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
