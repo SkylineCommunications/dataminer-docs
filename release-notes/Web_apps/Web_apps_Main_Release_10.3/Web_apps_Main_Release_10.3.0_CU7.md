@@ -20,6 +20,14 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
+
+This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
 #### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 -->
