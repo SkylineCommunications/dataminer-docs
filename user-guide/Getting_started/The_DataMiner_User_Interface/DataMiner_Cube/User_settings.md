@@ -243,7 +243,7 @@ On the *Cube* page, the following settings are available:
 
 - **Show the DataMiner TV section**: Obsolete. Determines whether the optional DataMiner TV section is displayed on the DataMiner Pulse welcome page in Cube. Available from DataMiner 9.5.14 up to DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1.
 
-- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four blue squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
+- **Display the workspace buttons in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether the four white squares indicating the Cube workspaces are displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
 - **Display the server time in the header**: Available from DataMiner 10.0.0/10.0.2 onwards. Determines whether server time is displayed in the header. This setting can also be enabled or disabled via the header quick menu.
 
