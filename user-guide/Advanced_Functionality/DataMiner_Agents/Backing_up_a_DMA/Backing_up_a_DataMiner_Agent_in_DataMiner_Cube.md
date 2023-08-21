@@ -21,7 +21,7 @@ The following steps can be taken to configure the backups for a DMA:
    - If you select the *Store the backups on a network path* option, you can either use one network path for all DMAs, or a different network path for each DMA.
 
      If *Use a different network path for each Agent* is selected, you can select for which Agents this applies. For the selected Agents, the backup package will be placed both in the default local folder *C:\\Skyline DataMiner\\Backup* and in the folder specified in the *Network path* box.
-     
+
      > [!NOTE]
      > Only SMB file shares are supported for network backups. It is not possible to back up to e.g. (S)FTP shares.
 
@@ -76,3 +76,56 @@ To take an immediate backup of a DMA:
 1. Click the *Execute backup* button.
 
 1. Select the DMAs to back up, and click *Start backup*.
+
+## OpenSearch service going into time-out
+
+When you get an OpenSearch service time-out when executing the following command:
+
+```bash
+sudo systemctl start opensearch
+```
+
+or
+
+```bash
+sudo systemctl restart opensearch
+```
+
+```txt
+opensearch.service: start operation timed out. Terminating.
+opensearch.service: Failed with result 'timeout'.
+Failed to start OpenSearch.
+opensearch.service: Consumed 57.702s CPU time.
+``
+
+It could be that you may need to increase the start timeout for systemd. To do this, execute below steps:
+
+1. Open the configuration using Nano editor.
+
+   ```bash
+   sudo nano /usr/lib/systemd/system/opensearch.service
+   ```
+
+1. Increase the value of TimeoutStartSec to a higher value, for example 300.
+
+   ```txt
+   TimeoutStartSec=300
+   ```
+
+1. Enable the OpenSearch service again:
+
+   ```bash
+   sudo /bin/systemctl enable opensearch.service
+   ```
+
+1. Start the OpenSearch service again:
+
+   ```bash
+   sudo systemctl start opensearch
+   ```
+
+1. Verify that it doesn't go in time-out by executing:
+
+   ```bash
+   sudo systemctl status opensearch
+   ```
