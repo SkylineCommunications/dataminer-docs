@@ -389,6 +389,21 @@ During a DataMiner upgrade, from now on, the *InstallNATS* upgrade action will s
 
 When configuring the *SLLogCollector* tool, you can select the *Include memory dump* option, and then indicate for which process(es) memory dumps should be collected and when these should be collected. Up to now, to select a process, you had to select a checkbox. From now on, you will be able to select a process by clicking any cell in the row representing the process.
 
+#### DataMiner Extension Modules: DxMs will no longer use Microsoft .NET 5 [ID_37137]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+All DataMiner Extension Modules using Microsoft .NET 5 have been upgraded to use .NET 6 instead.
+
+The following DxMs have been upgraded:
+
+- Orchestrator
+- SupportAssistant
+- FieldControl
+- ArtifactDeployer
+
+You can now also download a DataMiner Cloud Pack installer from DataMiner Dojo with Microsoft .NET 6 included.
+
 ### Fixes
 
 #### Problem due to incorrect NATS reconfiguration [ID_35246]

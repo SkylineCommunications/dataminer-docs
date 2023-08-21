@@ -438,6 +438,21 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### DataMiner Extension Modules: DxMs will no longer use Microsoft .NET 5 [ID_37137]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+All DataMiner Extension Modules using Microsoft .NET 5 have been upgraded to use .NET 6 instead.
+
+The following DxMs have been upgraded:
+
+- Orchestrator
+- SupportAssistant
+- FieldControl
+- ArtifactDeployer
+
+You can now also download a DataMiner Cloud Pack installer from DataMiner Dojo with Microsoft .NET 6 included.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
