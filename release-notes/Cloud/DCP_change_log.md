@@ -32,6 +32,10 @@ From now on, the DxM will also offload more data about the DMA and the server to
 - Installed dotnet runtimes
 - System info such as the Windows version
 
+#### 4 August 2023 - CloudFeed 1.2.0 - Allows for chunked messagebroker to be used [ID_36482]
+
+Chunked messages sent from DataMiner or other DxMs can now be processed by CloudFeed.
+
 #### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
 In the Admin App, when an organization user had more than one DMS, only the last DMS would be shown in the organization user overview and its details overlay. This issue has now been resolved.
