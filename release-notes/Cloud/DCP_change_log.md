@@ -6,6 +6,10 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 22 August 2023 - Enhancement - Admin App - Audit Record Export (CSV) [ID_37164]
+
+In the [Admin App](https://admin.dataminer.services), a new feature has been introduced on the *Audit* page, allowing users to export audit records in a CSV file. Clicking *Export* in the top-left corner will initiate the export process. A pop-up window will appear, where you can choose the separator to be used in the CSV file, as well as whether to include column titles at the top of the exported CSV file. Once the file has been generated, you will receive an email containing a link to download the CSV file. The download link included in the email will be valid for a period of 7 days.
+
 #### 22 August 2023 - Enhancement - CloudFeed 1.2.0 - Compatibility with newer DataMiner versions [ID_36482]
 
 When you upgrade DataMiner to version 10.3.8/10.4.0 or later, CloudFeed should be upgraded to version 1.2.0 or later to ensure that alarm and change points events are processed correctly.
