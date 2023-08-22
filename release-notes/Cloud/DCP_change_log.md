@@ -6,6 +6,12 @@ uid: DCP_change_log
 
 The dataminer.services platform gets updated continuously. This change log can help you trace when specific features and changes have become available.
 
+#### 22 August 2023 - Enhancement - CloudFeed 1.2.0 - Compatibility with newer DataMiner versions [ID_36482]
+
+When you upgrade DataMiner to version 10.3.8/10.4.0 or later, CloudFeed should be upgraded to version 1.2.0 or later to ensure that alarm and change points events are processed correctly.
+
+Also, a number of issues that could occur at CloudFeed startup have been fixed.
+
 #### 22 August 2023 - Enhancement - CloudGateway 2.12.0 - Upgrade to .NET 6 [ID_37151]
 
 DataMiner CloudGateway has been upgraded to .NET 6, so that it no longer depends on .NET 5. **Make sure .NET 6 is installed** before you upgrade to this version.
@@ -31,10 +37,6 @@ From now on, the DxM will also offload more data about the DMA and the server to
 - DataMiner version and version history
 - Installed dotnet runtimes
 - System info such as the Windows version
-
-#### 4 August 2023 - CloudFeed 1.2.0 - Allows for chunked messagebroker to be used [ID_36482]
-
-Chunked messages sent from DataMiner or other DxMs can now be processed by CloudFeed.
 
 #### 3 July 2023 - Fix - Admin App - Organization user overview will display all DMSs of each user correctly [ID_36795]
 
