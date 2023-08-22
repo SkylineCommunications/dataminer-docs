@@ -436,3 +436,9 @@ In some cases, it could occur that parameter controls in Visual Overview did not
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Dashboards app: Shared dashboards would not be allowed to perform a GetParameterTable API call [ID_37122]
+
+<!-- MR 10.3.0 [CU6] - FR 10.3.9 [CU0] -->
+
+In some cases, a shared dashboard was incorrectly not allowed to perform a *GetParameterTable* API call.
