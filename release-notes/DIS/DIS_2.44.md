@@ -56,3 +56,9 @@ In addition, for new installations, the following path has been added as a defau
 #### Open QAction on imported protocol throws exception [ID_37088]
 
 When opening a QAction from a protocol, that isn't a solution, it would throw an exception during a NuGet package installation.
+
+#### DIS MIB Browser - Compare didn't take in account tables [ID_37163]
+
+When comparing a protocol and MIB files in the MIB Browser, it would falsely say that the table in the protocol wasn't found in the MIB.
+
+This has now been fixed by checking the tables in the MIB as well.
