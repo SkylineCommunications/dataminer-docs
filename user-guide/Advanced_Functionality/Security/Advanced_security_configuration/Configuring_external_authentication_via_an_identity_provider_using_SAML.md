@@ -205,12 +205,9 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
 1. Gather the following information:
 
-   - **Client ID**, **Object ID**, and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+   - **Client ID** and **Tenant ID**: These GUIDs identify the application (DataMiner) in the Azure AD platform, and identify the users & groups directory on the Azure portal, respectively. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
 
      Creating an Enterprise Application will also create an app registration with the same name, but you will not find it under *owned application*.
-
-     > [!IMPORTANT]
-     > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
 
    - **Client Secret**: In the pane on the left, click *Certificates & secrets*.
 
@@ -230,9 +227,16 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
       ```xml
       <AzureAD
        tenantId="[GUID]"
-       objectId="[GUID]"
        clientId="[GUID]"
-       clientSecret="[the DataMiner application secret value]"
+       clientSecret="[the DataMiner application secret value]" />
+      ```
+
+      or
+
+      ```xml
+      <AzureAD
+       tenantId="[GUID]"
+       clientId="[GUID]"
        username="[username]"
        password="[password]" />
       ```
@@ -249,14 +253,12 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
    For delegated querying:
 
-   - Microsoft Graph \> Application.Read.All – Delegated – Read applications
    - Microsoft Graph \> GroupMember.Read.All – Delegated – Read groups memberships
    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
    - Microsoft Graph \> User.Read.All – Delegated – Read all users’ full profiles
 
    For application querying (supported from DataMiner 10.1.11/10.2.0 onwards):
 
-   - Microsoft Graph \> Application.Read.All – Application – Read applications
    - Microsoft Graph \> GroupMember.Read.All – Application – Read groups memberships
    - Microsoft Graph \> User.Read.All – Application - Read all users’ full profiles
    - Microsoft Graph \> User.Read – Delegated – Sign in and read user profile
@@ -268,6 +270,26 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
    1. When you have added the necessary users, configure their permissions. See [Configuring a user group](xref:Configuring_a_user_group).
 
    It is now possible to log in to DataMiner with any of the Azure AD user accounts you have added, using either the domain and username (DOMAIN\\user) or the email address.
+
+#### Configuring DataMiner to check if the client secret is about to expire
+
+From DataMiner 10.3/10.2.9 onwards, it is possible to configure DataMiner to check Azure Active Directory for the expiration of the client secret when authenticating (only when application querying is used). When the client secret will expire in less than a week, a warning will be shown in the alarm console.
+
+For this 2 extra configurations are required:
+
+1. On Azure's side an extra permission: Microsoft Graph \> Application.Read.All – Application – Read applications
+1. On DataMiner's side an extra guid in DataMiner.xml: the **Object ID**. This GUID can be found on the same page where the **Client ID** and **Tenant ID** are found. You can find these fields on the root page of the application: *Azure Active Directory > App registrations > [your application name]*.
+
+      ```xml
+      <AzureAD
+       tenantId="[GUID]"
+       objectId="[GUID]"
+       clientId="[GUID]"
+       clientSecret="[the DataMiner application secret value]" />
+      ```
+
+    > [!IMPORTANT]
+    > Do not use the *Object ID* under *Azure Active Directory > Enterprise applications > [your application name]*. This is a different Object ID, which will not work.
 
 #### Configuring automatic creation of users authenticated by Azure AD using SAML
 
