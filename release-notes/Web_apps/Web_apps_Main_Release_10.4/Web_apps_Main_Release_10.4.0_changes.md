@@ -208,9 +208,10 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
-#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100] [ID_36977]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36100: MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36977: MR 10.4.0 - FR 10.3.10 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
