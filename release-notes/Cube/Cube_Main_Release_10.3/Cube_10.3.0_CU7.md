@@ -16,6 +16,15 @@ uid: Cube_Main_Release_10.3.0_CU7
 
 ### Fixes
 
+#### Problems when viewing a trend graph of a parameter of type string [ID_36848]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When you viewed a trend graph of a parameter of type string, the following issues could occur:
+
+- When the trend data switched from real-time trending to average trending while you were panning, in some cases, the graph could flip.
+- The Y axis could show empty values.
+
 #### Spectrum monitoring element no longer showed all spectrum monitor parameters [ID_37009]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->

@@ -41,6 +41,15 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 ### Fixes
 
+#### Problems when viewing a trend graph of a parameter of type string [ID_36848]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When you viewed a trend graph of a parameter of type string, the following issues could occur:
+
+- When the trend data switched from real-time trending to average trending while you were panning, in some cases, the graph could flip.
+- The Y axis could show empty values.
+
 #### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
