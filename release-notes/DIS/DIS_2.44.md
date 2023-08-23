@@ -8,21 +8,17 @@ uid: DIS_2.44
 
 ### IDE
 
-#### Improved theming support in Visual Studio [ID_37025]
+#### DIS now fully supports Visual Studio themes [ID_37025]
 
-DIS now has improved theming support in Visual Studio. Several components like the Display Editor, Table Editor, ... have gotten an overhaul and can properly support other themes.
-In addition, the overall style has been modernized to match Cube.
+DIS now supports Visual Studio themes. Several components like *Display Editor*, *Table Editor*, *Function Editor*, etc. have been redesigned to fully support Visual Studio themes.
 
-#### DIS Inject - Support for multiple SLScripting processes [ID_37042]
+Also, the overall look and feel of DIS now matches that of DataMiner Cube.
 
-Up to now, when attaching to SLScripting it would only attach to the first SLScripting process found. In DataMiner, there is however an option to have multiple SLScripting processes.
+#### DIS Inject: Attaching the Visual Studio Debugger to multiple SLScripting processes [ID_37042]
 
-Now it will attach to all processes that match the process name.
+Up to now, when attaching the Visual Studio Debugger to SLScripting, DIS would only attach the Visual Studio Debugger to the first SLScripting process it found. As, in DataMiner, there is an option to have multiple SLScripting processes, DIS will now attach the Visual Studio Debugger to all processes that match the process name.
 
-> [!NOTE]
-> This change is made futureproof for Automation scripts in case there would be multiple SLAutomation processes.
-
-See [Setting the number of simultaneously running SLScripting processes](https://docs.dataminer.services/user-guide/Advanced_Functionality/DataMiner_Agents/Configuring_a_DMA/Configuration_of_DataMiner_processes.html#setting-the-number-of-simultaneously-running-slscripting-processes)
+See also: [Setting the number of simultaneously running SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes)
 
 ### Validator
 
@@ -40,25 +36,24 @@ The following checks and error messages have been added.
 
 ### Enhancements
 
-#### Enhanced performance when building the app package for big automation script solutions [ID_37013]
+#### Enhanced performance when building the app package of a large Automation script solution [ID_37013]
 
-Because of a number of enhancements, overall performance has increased when building the app package for big automation script solutions (e.g.: 80+ scripts).
+Because of a number of enhancements, overall performance has increased when building the app package of a large Automation script solution.
 
 ### Fixes
 
-#### Convert protocol XML to solution could throw NullReferenceException [ID_37087]
+#### Problem when converting a protocol.xml file to a solution [ID_37087]
 
-In specific scenario's it could be that the conversion throws a NullReferenceException.
-This should not happen anymore.
+In some cases, a NullReferenceException could be thrown when converting a protocol.xml file to a solution.
 
-In addition, for new installations, the following path has been added as a default DLL location in the settings: "C:\Skyline DataMiner\ProtocolScripts\DllImport".
+When a new DIS version is installed from scratch, the following default DLL location will now be specified in the settings: `C:\Skyline DataMiner\ProtocolScripts\DllImport`
 
-#### Open QAction on imported protocol throws exception [ID_37088]
+#### Problem when opening a QAction of a protocol that was not a solution [ID_37088]
 
-When opening a QAction from a protocol, that isn't a solution, it would throw an exception during a NuGet package installation.
+When you opened a QAction of a protocol that was not a solution, an exception would be thrown when installing a NuGet package.
 
-#### DIS MIB Browser - Compare didn't take in account tables [ID_37163]
+#### MIB Browser: Compare would not take into account tables in the MIB tree [ID_37163]
 
-When comparing a protocol and MIB files in the MIB Browser, it would falsely say that the table in the protocol wasn't found in the MIB.
+The *Compare* tab shows the differences between the OID data in the MIB tree and the parameter data in the protocol.xml file.
 
-This has now been fixed by checking the tables in the MIB as well.
+Up to now, a message could incorrectly appear, saying that a particular table in the protocol could not be found in the MIB tree. From now on, tables in the MIB tree will also be taken into account when comparing the OID data in the MIB tree with the parameter data in the protocol.xml file.
