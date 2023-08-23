@@ -717,3 +717,13 @@ When the web API fetched information for columns of a GQI query, it could occur 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
