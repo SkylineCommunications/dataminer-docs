@@ -54,6 +54,6 @@ In the Monitoring app, it could occur that Visual Overview parameter control sha
 
 #### Low-Code Apps: Time range component overlay not fully displayed [ID_37118]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
