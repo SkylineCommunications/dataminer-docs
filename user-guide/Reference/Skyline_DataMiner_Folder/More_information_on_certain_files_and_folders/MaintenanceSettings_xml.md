@@ -75,6 +75,7 @@ This is an example of a *MaintenanceSettings.xml* file:
       <SkipRTE process="SLDataMiner.exe" thread="Database cleaning" />
     </FailoverOnRTE>
   </WatchDog>
+  <Network bitRateTracking="true">
 </MaintenanceSettings>
 ```
 
@@ -357,6 +358,14 @@ See [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#con
 In this *MaxSize* tag, you can specify the maximum log file size.
 
 Default: 10 MB
+
+### Network
+
+Using the attribute *bitRateTracking*, which is *true* by default, the bitrate calculations performed by SLProtocol can be disabled. Disabling bitrate tracking means the [Communication Info] table on the General Parameters page will not be updated. This also means the bitrate related notifies such as [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA) can also no longer be used by connectors.
+
+```xml
+<Network bitRateTracking="true"/>
+```
 
 ### ProtocolSettings.DCF.CalculateAlarmState
 
