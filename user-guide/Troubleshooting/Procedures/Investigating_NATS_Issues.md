@@ -119,7 +119,28 @@ A few details to pay attention to:
 
 This is an example of **nats-server.config** in a NATS cluster of 3 or more Agents:
 
-##### [Up to DataMiner 10.2.0(CU5)/10.2.7](#tab/NATS3PlusObsolete)
+##### [From DataMiner 10.2.0(CU6)/10.2.8 onwards](#tab/tabid-1)
+
+```txt
+port: 4222 # Port for client connections
+max_payload: 30000000 # maximum number of bytes in a message payload
+http_port: 8222 # http port for server monitoring
+operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
+resolver: URL(http://0.0.0.0:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
+debug: false
+trace: false
+logtime: true
+log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
+streaming: {
+	cluster_id: "10.10.73.30" # Cluster name
+}
+cluster: {
+	routes: ["nats://10.10.73.10:6222/","nats://10.10.73.20:6222/"]
+	listen: 0.0.0.0:6222
+}
+```
+
+##### [Prior to DataMiner 10.2.0(CU6)/10.2.8](#tab/tabid-2)
 
 ```txt
 port: 4222 # Port for client connections
@@ -158,7 +179,21 @@ cluster: {
 server_name: MyServerName # Unique on each node
 ```
 
-##### [From DataMiner 10.2.0(CU6)/10.2.8](#tab/Nats3PlusValid)
+***
+
+<br/>
+
+The following values can vary in each DMS:
+
+- **streaming.cluster_id**: Based on the cluster name in DataMiner.
+- **streaming.cluster.peers** and **streaming.cluster.node_id**: Based on the IP of the local Agent.
+- **cluster.routes:** IP addresses of up to 4 other Agents in the cluster.
+
+#### Cluster of 2 DMAs
+
+This is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. In DataMiner versions prior to 10.2.0[CU17]/10.3.0[CU5]/10.3.8, this constituted a special type of configuration. From DataMiner 10.2.0[CU17]/10.3.0[CU5]/10.3.8 onwards, an identical configuration as for [a cluster of 3 or more DMAs](#cluster-of-3-or-more-dmas) is required.
+
+##### [From DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9 onwards](#tab/tabid-4)
 
 ```txt
 port: 4222 # Port for client connections
@@ -171,25 +206,36 @@ trace: false
 logtime: true
 log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
 streaming: {
-	cluster_id: "10.10.73.30" # Cluster name
+	cluster_id: "10.10.73.10" # Cluster name
+    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
 }
 cluster: {
-	routes: ["nats://10.10.73.10:6222/","nats://10.10.73.20:6222/"]
+	routes: ["nats://10.10.73.20:6222/"]
 	listen: 0.0.0.0:6222
 }
 ```
 
-The following values can vary in each DMS:
+##### [DataMiner 10.2.0 [CU6]/10.2.8 to 10.2.0 [CU17]/10.3.0 [CU5]/10.3.8](#tab/tabid-5)
 
-- **streaming.cluster_id**: Based on the cluster name in DataMiner.
-- **streaming.cluster.peers** and **streaming.cluster.node_id**: Based on the IP of the local Agent.
-- **cluster.routes:** IP addresses of up to 4 other Agents in the cluster.
+```txt
+port: 4222 # Port for client connections
+max_payload: 30000000 # maximum number of bytes in a message payload
+http_port: 8222 # http port for server monitoring
+operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
+resolver: URL(http://10.103.0.22:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
+debug: false
+trace: false
+logtime: true
+logfile_size_limit: 10MB
+log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
+streaming: {
+    cluster_id: SLUMS # Cluster name
+    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
+}
+server_name: MyServerName
+```
 
-#### Cluster of 2 DMAs
-
-The following is an example of **nats-server.config** in a NATS cluster of exactly 2 Agents. **Up to** DataMiner version **10.2.0(CU17)/10.3.0(CU5)/10.3.8** this was a special type of configuration. Any version after that uses the same logic as the config for 3+ DMAs seen above.
-
-##### [Up to DataMiner 10.2.0(CU5)/10.2.7](#tab/NATS2Obsolete1)
+##### [Prior to DataMiner 10.2.0[CU6]/10.2.8](#tab/tabid-3)
 
 ```txt
 port: 4222 # Port for client connections
@@ -217,47 +263,9 @@ streaming: {
 server_name: MyServerName
 ```
 
-##### [DataMiner 10.2.0(CU6)/10.2.8 to 10.2.0(CU17)/10.3.0(CU5)/10.3.8](#tab/NATS2Obsolete2)
+***
 
-```txt
-port: 4222 # Port for client connections
-max_payload: 30000000 # maximum number of bytes in a message payload
-http_port: 8222 # http port for server monitoring
-operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
-resolver: URL(http://10.103.0.22:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
-debug: false
-trace: false
-logtime: true
-logfile_size_limit: 10MB
-log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
-streaming: {
-    cluster_id: SLUMS # Cluster name
-    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
-}
-server_name: MyServerName
-```
-
-##### [From DataMiner 10.2.0(CU18)/10.3.0(CU6)/10.3.9](#tab/NATS2Valid)
-
-```txt
-port: 4222 # Port for client connections
-max_payload: 30000000 # maximum number of bytes in a message payload
-http_port: 8222 # http port for server monitoring
-operator: "C:\\Skyline DataMiner\\NATS\\nsc\\.nsc\\nats\\DataMinerOperator\\DataMinerOperator.jwt" # Path to operator JWT
-resolver: URL(http://0.0.0.0:9090/jwt/v1/accounts/) # URL to nats-account-server. Example: URL(http://10.11.3.201:9090/jwt/v1/accounts/)
-debug: false
-trace: false
-logtime: true
-log_file: "C:\\Skyline DataMiner\\NATS\\nats-streaming-server\\nats-server.log" # Path to the log file (nats-server.log)
-streaming: {
-	cluster_id: "10.10.73.10" # Cluster name
-    credentials: "C:\\Skyline DataMiner\\NATS\\nsc\\.nkeys\\creds\\DataMinerOperator\\DataMinerAccount\\DataMinerUser.creds" # Credentials file to connect to external NATS 2.0+ Server
-}
-cluster: {
-	routes: ["nats://10.10.73.20:6222/"]
-	listen: 0.0.0.0:6222
-}
-```
+<br/>
 
 The only difference between this config and a config of an Agent that has a standalone NATS is that the resolver is different from 0.0.0.0.
 
@@ -427,7 +435,7 @@ To resolve this issue, manually configure a custom port for NATS that is not yet
    ```
 
 > [!NOTE]
-> Enabling **NATSForceManualConfig** makes the user responsible for providing a valid NATS cluster and config. See [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config)
+> If you enable the *NATSForceManualConfig* option, this means you become responsible for providing a valid NATS cluster and maintaining its configuration. See [Disabling automatic NATS configuration](xref:SLNetClientTest_disabling_automatic_nats_config).
 
 1. Start the NAS and NATS services.
 
@@ -502,7 +510,7 @@ First, the algorithm will collect all the reachable primary IPs in the cluster (
 
 - If only 1 reachable IP is found and the local system is NOT in a Failover setup, the config will be reverted to the “standalone” config. This is the same as the default config when first installing NATS. The algorithm exits after this. Otherwise, it will sort all the nodes by IP (sortedNodes).
 
-- **(This step only happens prior to DataMiner 10.2.0(CU18)/10.3.0(CU6)/10.3.9)**  If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the alphabetically first IP address or hostname and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
+- Prior to DataMiner 10.2.0 [CU18]/10.3.0 [CU6]/10.3.9:  If only 2 nodes are found, a special algorithm will be run designed for 2 nodes only. It will first reset both nodes to the standalone configuration. Then it will select the node with the alphabetically first IP address or hostname and configure that one as “master” and the other as “guest”. The master node will be left as the default config, while the guest node will be configured to use NATS and NAS from the master node. This means that the guest node will still be running the NAS and NATS service, but the DataMiner Agent will never connect to it; it will always connect with the NATS of the master node. This is needed because a cluster of exactly 2 NATS nodes is impossible. This can be a vulnerability on systems that run a standalone Failover setup. If the master node goes down for any reason, the guest node will no longer be able to use NATS either.
 
 - If 2 or more nodes are detected, the algorithm will cluster them all together.
 
