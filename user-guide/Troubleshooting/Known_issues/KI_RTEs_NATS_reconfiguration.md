@@ -16,7 +16,7 @@ These errors occur when the NATS cluster does not have the required connections.
 
 ## Fix
 
-No fix is available yet. For geographically distributed setups, contact Skyline Communications to set up a static working NATS cluster.
+Install DataMiner 10.3.0 [CU6]/10.3.9.
 
 ## Description
 
