@@ -94,6 +94,12 @@ If no preset was available for a particular spectrum element, it could occur tha
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
 
+#### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
 #### Monitoring app: Filtered combo box control not shown correctly in Visual Overview [ID_37107]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
