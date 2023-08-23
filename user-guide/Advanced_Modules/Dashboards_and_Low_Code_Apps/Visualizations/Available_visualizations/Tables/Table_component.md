@@ -61,6 +61,8 @@ In the *Settings* tab for this component, you can customize its behavior to suit
 
 - If you want the first row to be selected by default, in the *Settings* tab, under *Initial Selection*, set the toggle button to *On* (available from DataMiner 10.3.6/10.4.0 onwards<!-- RN 35984 -->). This way, the first row will be automatically selected whenever the component is loaded or when the data in the table is refreshed.
 
+- If you want to configure the message shown when the query returns no results, In the *Settings* tab, under *Advanced* change the setting called *Empty result message*. This setting is by default filled in with 'Nothing to show.' (Available from 10.3.9/10.4.0 onwards). <!-- RN 37173 -->
+
 ## Exporting the table
 
 From DataMiner 10.2.0/10.1.3 onwards, you can export the content of the table by clicking the ... button in the top-right corner of the component and selecting *Export to CSV*. What happens next depends on your DataMiner version:

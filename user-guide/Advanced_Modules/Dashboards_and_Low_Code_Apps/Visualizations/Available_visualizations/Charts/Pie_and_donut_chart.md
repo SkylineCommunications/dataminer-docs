@@ -19,6 +19,10 @@ To configure the component:
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and segment size will automatically be configured. <!-- RN 36229 -->
 
+   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when the query returns no results. <!-- RN 37173 -->
+
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - *Chart shape*: Can be set to *Pie* or *Donut*.
