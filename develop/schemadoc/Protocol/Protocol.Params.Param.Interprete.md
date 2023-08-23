@@ -30,10 +30,10 @@ Specifies how a parameter value is processed.
 |&nbsp;&nbsp;[OffSet](xref:Protocol.Params.Param.Interprete.OffSet)|[0, 1]|In case the Sequence tag contains "OffSet " as an operation, to offset to be added can be specified using this tag.|
 |&nbsp;&nbsp;[Others](xref:Protocol.Params.Param.Interprete.Others)|[0, 1]|Groups Other child elements.|
 |&nbsp;&nbsp;[Range](xref:Protocol.Params.Param.Interprete.Range)|[0, 1]|Defines a range for the parameter values.|
-|&nbsp;&nbsp;[RawType](xref:Protocol.Params.Param.Interprete.RawType)|[0, 1]|Specifies which type of content is allowed in the parameter.|
+|&nbsp;&nbsp;[RawType](xref:Protocol.Params.Param.Interprete.RawType)|[0, 1]| Specifies how device data should be interpreted.|
 |&nbsp;&nbsp;[Rounding](xref:Protocol.Params.Param.Interprete.Rounding)|[0, 1]|Specifies how the parameter value is rounded.|
 |&nbsp;&nbsp;[Scale](xref:Protocol.Params.Param.Interprete.Scale)|[0, 1]|Specifies that you want DataMiner to re-interpret the value range of a particular parameter.|
 |&nbsp;&nbsp;[Sequence](xref:Protocol.Params.Param.Interprete.Sequence)|[0, 1]|Specifies a mathematical operation to be performed on the parameter value.|
 |&nbsp;&nbsp;[StartPosition](xref:Protocol.Params.Param.Interprete.StartPosition)|[0, 1]|Specifies the start bit in the group to which the parameter refers to in case the parameter is of type "read/write bits".|
-|&nbsp;&nbsp;[Type](xref:Protocol.Params.Param.Interprete.Type)|[0, 1]|Specifies how the parameter should be processed and saved.|
+|&nbsp;&nbsp;[Type](xref:Protocol.Params.Param.Interprete.Type)|[0, 1]| Specifies to which type the parameter value is converted.|
 |&nbsp;&nbsp;[Value](xref:Protocol.Params.Param.Interprete.Value)|[0, 1]|In case of a parameter with a fixed length and a fixed value, set Protocol.Params.Param.Interprete.LengthType to "fixed" and specify the fixed value here.|
