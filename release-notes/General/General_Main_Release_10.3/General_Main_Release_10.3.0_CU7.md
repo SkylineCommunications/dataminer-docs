@@ -44,8 +44,7 @@ In addition, a write parameter is no longer needed in this scenario. Previously,
 
 #### Security enhancements [ID_37064] [ID_37094]
 
-<!-- RN 37064: MR 10.4.0 - FR 10.3.10 -->
-<!-- RN 37094: MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
 

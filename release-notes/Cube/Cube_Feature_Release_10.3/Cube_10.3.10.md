@@ -48,6 +48,14 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
 
+#### Spectrum monitoring element no longer showed all spectrum monitor parameters [ID_37009]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you create a spectrum monitor, you can configure custom parameters. These parameters are in fact variables from the spectrum scripts, that are given more user-friendly names.
+
+Normally, when you open a spectrum monitor element, you should be able to view all custom spectrum monitor parameters that have their *Displayed on element card* setting enabled. However, due to an issue, those parameters would no longer all be listed.
+
 #### Visual Overview: Viewport variable also set in code when set by user [ID_37011]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
