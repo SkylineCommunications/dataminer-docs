@@ -32,4 +32,6 @@ A number of security enhancements have been made.
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### Verizon ETMS Platform: Message not displayed at top Activity Log [ID_37132]
+
+If a ticket with power issues needed additional investigation, the message "Further Investigation Required" could incorrectly appear at the bottom of its Activity Log, instead of at the top.
