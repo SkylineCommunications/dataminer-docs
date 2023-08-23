@@ -4,12 +4,23 @@ uid: DashboardStepper
 
 # Stepper
 
-This component can be used to display states from a stateful DOM definition or instance. 
+Available from DataMiner 10.3.10/10.4.0 onwards.
 
-To configure the component: 
+This visualization takes a stateful object manager instance or object manager definition as data input and displays their respective states. This component simplifies complex workflows by breaking them down into distinct numbered or labeled steps.
+
+To configure the component:
+
 1. Apply a data feed. See [Applying a data feed](xref:Configuring_dashboard_components#applying-a-data-feed).
-    - In case a DOM definition feed is applied, the component shows all the states on the happy path of that definition. The happy path contains all the states an instance from a certain definition would go through if it were to follow the normal flow. Applying a DOM definition feed to a Stepper component is only possible in Low-Code Apps.
-    - When a DOM instance is fed to the component, it shows the full history of every state the instance has been in until the current state. Based on that state, it calculates the rest of the happy path, which is then shown after the current state.
 
+   - When applying a DataMiner object manager (DOM) definition, the component will display states along the typical path of that definition, i.e. the happy path. This path illustrates the states an instance would undergo following the standard workflow.
 
-2. Optionally, configure the template for the component. In the *Layout* tab, the *Appearance* setting can be used to change the template of the component. Users can pick a template from a list of 13 presets.
+     > [!NOTE]
+     > DOM definitions can only be applied to the stepper component within the Low-Code Apps module.
+
+   - When applying a DOM instance, the component will display the complete history of each state the instance has traversed until its current state. Based on the current state, it calculates and displays the remaining states along the happy path.
+
+1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
+
+   - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
+
+   - *Appearance*: Allows you to select a template from the dropdown list of 13 templates.
