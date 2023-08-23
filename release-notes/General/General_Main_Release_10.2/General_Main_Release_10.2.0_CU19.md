@@ -20,7 +20,7 @@ The handling of smart baseline parameter sets in SLNet has improved in cases whe
 
 In addition, a write parameter is no longer needed in this scenario. Previously, if there was no write parameter, it was not possible to update the stored baseline value. Now if a write parameter is present, it will be used to set the values in case of single parameter sets.
 
-#### Security enhancements [ID_37094]
+#### Security enhancements [ID_37064] [ID_37094]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -60,6 +60,14 @@ A number of issues related to NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336) notif
 - A small memory leak could occur when a NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES notification was sent to SLDataMiner with invalid data.
 - If the user sending such a notification did not have sufficient rights on the element, or if the element was locked by another user, this did not cause this notification to fail. Now it will fail. This same issue has also been resolved for the NT_DELETE_ROW (156), NT_ADD_ROW (149), and NT_ADD_ROW_RETURN_KEY (240) notifications.
 
+#### DataMiner Cube: Spectrum monitoring element no longer showed all spectrum monitor parameters [ID_37009]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you create a spectrum monitor, you can configure custom parameters. These parameters are in fact variables from the spectrum scripts, that are given more user-friendly names.
+
+Normally, when you open a spectrum monitor element, you should be able to view all custom spectrum monitor parameters that have their *Displayed on element card* setting enabled. However, due to an issue, those parameters would no longer all be listed.
+
 #### NATS configuration inconsistent in Failover setup after reconfiguring NATS [ID_37023]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -85,6 +93,12 @@ If no preset was available for a particular spectrum element, it could occur tha
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
+
+#### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
 
 #### Monitoring app: Filtered combo box control not shown correctly in Visual Overview [ID_37107]
 

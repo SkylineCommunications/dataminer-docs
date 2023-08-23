@@ -41,12 +41,29 @@ On the Users/Groups page in System Center, a tooltip has been added to the *Edit
 
 ### Fixes
 
+#### Problems when viewing a trend graph of a parameter of type string [ID_36848]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When you viewed a trend graph of a parameter of type string, the following issues could occur:
+
+- When the trend data switched from real-time trending to average trending while you were panning, in some cases, the graph could flip.
+- The Y axis could show empty values.
+
 #### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 <!-- For new feature included in same RN, refer to Other new features -->
 
 When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
+
+#### Spectrum monitoring element no longer showed all spectrum monitor parameters [ID_37009]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you create a spectrum monitor, you can configure custom parameters. These parameters are in fact variables from the spectrum scripts, that are given more user-friendly names.
+
+Normally, when you open a spectrum monitor element, you should be able to view all custom spectrum monitor parameters that have their *Displayed on element card* setting enabled. However, due to an issue, those parameters would no longer all be listed.
 
 #### Visual Overview: Viewport variable also set in code when set by user [ID_37011]
 
