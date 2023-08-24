@@ -66,6 +66,12 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
 
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
+
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->

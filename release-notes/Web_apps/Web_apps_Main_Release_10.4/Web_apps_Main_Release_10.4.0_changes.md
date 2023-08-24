@@ -694,6 +694,12 @@ Up to now, if a column of a query was edited while the query was loading in a ta
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
 
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
+
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
