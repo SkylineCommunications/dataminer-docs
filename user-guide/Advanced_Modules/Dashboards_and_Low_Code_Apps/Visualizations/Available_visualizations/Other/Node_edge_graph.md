@@ -71,6 +71,10 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
+1. From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->
+  
 ## Component actions configuration
 
 If you add a node edge graph to a custom app using the [DataMiner Low-Code Apps](xref:Application_framework), you can also configure actions for the component. This feature is not available in the Dashboards app.
