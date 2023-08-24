@@ -18,6 +18,15 @@ uid: Web_apps_Main_Release_10.3.0_CU7
 
 A number of security enhancements have been made.
 
+#### Dashboard sharing: Any API call that depends on a query feed will now be allowed if the data that is fed is considered valid [ID_37091]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when data from a GQI query was fed to another component on a dashboard, some API calls would not be allowed when that dashboard was shared. From now on, any API call that depends on a query feed will be allowed if the data that is fed is considered valid.
+
+> [!NOTE]
+> When you share a dashboard that feeds GQI results to another component, a warning will still appear. The API calls may still allow more than the creator of the dashboard intended.
+
 ### Fixes
 
 #### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
