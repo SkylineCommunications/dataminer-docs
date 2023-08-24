@@ -10,7 +10,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 
 - Soon it will be possible to use **Storage as a Service** [(STaaS)](xref:STaaS) on dataminer.services for this, so you no longer have to maintain the databases yourself, and all the scaling and complexity is taken care of for you.
 
-- At present, it is possible to configure a **dedicated clustered storage setup**, using a [Cassandra-compatible database service](xref:Cassandra_database) and an [indexing database](xref:Elasticsearch_database) (i.e. a Search Cluster).
+- At present, it is possible to configure a **dedicated clustered storage setup**, using a [Cassandra-compatible database service](xref:Cassandra_database) and an [indexing database](xref:Indexing_Database) (i.e. a Search Cluster).
 
   ![dedicated clustered storage](~/user-guide/images/Dedicated_clustered_storage.svg)
 

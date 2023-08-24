@@ -2,19 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.8
 ---
 
-# DataMiner web apps Feature Release 10.3.8 – Preview
+# DataMiner web apps Feature Release 10.3.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.8](xref:General_Feature_Release_10.3.8).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## Features
 
 #### Dashboards app & Low-Code Apps - Table component: Selecting whether to export raw values or display values to CSV [ID_36467]
 
@@ -231,7 +227,7 @@ When you logged in to a web app with the *Keep me logged in* option enabled, the
 
 #### Monitoring app: Problem when receiving parameter table updates via polling [ID_36660]
 
-<!-- MR 10.4.0 - FR 10.3.8 -->
+<!-- MR 10.2.0 [CU18]/10.3.0 [CU6] - FR 10.3.8 -->
 
 When, in the *Monitoring* app, a parameter table received updates via polling, the table would display `There is no data to display`.
 

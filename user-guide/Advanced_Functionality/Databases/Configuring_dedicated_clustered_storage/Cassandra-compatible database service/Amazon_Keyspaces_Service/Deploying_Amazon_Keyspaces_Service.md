@@ -89,4 +89,4 @@ To configure the connection to an Amazon Keyspaces database, configure the setti
 > [!IMPORTANT]
 > An Amazon Keyspaces database requires a separate indexing database.
 >
-> For information on how to configure an indexing database, see [Elasticsearch database](xref:Elasticsearch_database), [Amazon OpenSearch Service](xref:Amazon_OpenSearch_Service), or [OpenSearch database](xref:OpenSearch_database).
+> For information on how to configure an indexing database, see [Configuring an indexing database](xref:Indexing_Database).

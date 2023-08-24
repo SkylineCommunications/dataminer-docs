@@ -22,3 +22,6 @@ To edit an existing low-code application:
 
    > [!NOTE]
    > Once an app has been published, it is not possible to revert it to a draft.
+
+> [!TIP]
+> See also: [Tutorials - Editing an existing app](xref:Tutorial_Apps_Edit_Existing_App)

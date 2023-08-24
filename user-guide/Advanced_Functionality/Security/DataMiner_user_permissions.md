@@ -338,7 +338,7 @@ Permission to delete workspaces.
 ### General \> Annotations
 
 > [!NOTE]
-> From DataMiner 10.1.12 onwards, annotations are no longer available by default in new DataMiner installations. To enable them, set the soft-launch option *LegacyAnnotations* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+> From DataMiner 10.1.12 onwards, annotations can be disabled using the soft-launch option *LegacyAnnotations*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 #### General \> Annotations \> View
 
@@ -1584,7 +1584,7 @@ Permission to access the *Tools* page in System Center. From DataMiner 10.1.0/10
 
 #### Modules \> System configuration \> Tools \> Admin tools
 
-Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, clean up unused and NATS management.
+Available from DataMiner 10.1.0/10.1.1 onwards. Permission to use administrator tools such as synchronization, cleaning up unused protocols, alarm filters, or Visio files, NATS management, and (de)initializing Resource Manager.
 
 #### Modules \> System configuration \> Tools \> Control background tasks of all users
 

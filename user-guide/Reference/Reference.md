@@ -6,7 +6,9 @@ uid: Part7Reference
 
 - [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements)
 
-- [Skyline DataMiner folder](xref:SkylineDataminerFolder)
+- [DataMiner Client Requirements](xref:DataMiner_Client_Requirements)
+
+- [Skyline DataMiner folder](xref:Overview_of_the_files_found_in_the_root_folder)
 
 - [Tools](xref:DataminerTools)
 
@@ -30,9 +32,9 @@ uid: Part7Reference
 
 - [Frequently asked questions](xref:faq)
 
-- [Methods of Procedure](xref:mops)
+- [Methods of Procedure](xref:MOP_Changing_the_default_password_for_Cassandra)
 
 - [Glossary](xref:glossary_a_to_l)
 
 > [!NOTE]
-> For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Reference).
+> For more information on Visio shape data fields, options, placeholders, and dynamic table filter syntax, see [Reference](xref:Overview_of_DataMiner_shape_data_fields).

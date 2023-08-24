@@ -6,6 +6,32 @@
         }
     },
     "cSpell.words": [
-        "toolset"
+        "Alerter",
+        "autoclear",
+        "CMDB",
+        "Compliancy",
+        "DataMiner",
+        "DELT",
+        "DevCenter",
+        "DMAs",
+        "dmimport",
+        "dmupgrade",
+        "DOCSIS",
+        "GPON",
+        "GQI",
+        "NATS",
+        "nodetool",
+        "Nodetool",
+        "Rui",
+        "SLAnalytics",
+        "slnet",
+        "SLDMADB",
+        "SLSNMPAgent",
+        "subtab",
+        "toolset",
+        "unvalidated",
+        "Visio",
+        "WEBP",
+        "WebSocket"
     ]
 }

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.8
 ---
 
-# General Feature Release 10.3.8 – Preview
+# General Feature Release 10.3.8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > When downgrading from DataMiner Feature Release version 10.3.8 (or higher) to DataMiner Feature Release version 10.3.4, 10.3.5, 10.3.6 or 10.3.7, an extra manual step has to be performed. For more information, see [Downgrading a DMS](xref:MOP_Downgrading_a_DMS).
@@ -16,11 +16,7 @@ uid: General_Feature_Release_10.3.8
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.3.8](xref:Web_apps_Feature_Release_10.3.8).
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
-## Highlights
-
-*No highlights have been selected for this release yet*
-
-## Other features
+## New features
 
 #### Process Automation: Support for PaToken bulk operations [ID_35685]
 
@@ -291,3 +287,9 @@ When a client requested large amounts of data, in some cases, a `NATSMaxPayloadE
 <!-- MR 10.3.0 [CU5] - FR 10.3.8 -->
 
 DVE properties would be cleared each time an update was sent to a database of type Cassandra Cluster.
+
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.

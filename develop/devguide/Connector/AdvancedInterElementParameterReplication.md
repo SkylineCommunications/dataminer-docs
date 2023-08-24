@@ -29,7 +29,7 @@ Say for example that you have a full protocol, but you would also like a subset 
 </Param>
 ```
 
-Here you would replicate parameter 350 from element 145/76951. The parameter ID does not have to match the one that you replicate from.
+Here you would replicate parameter 350 from element 41/428. The parameter ID does not have to match the one that you replicate from.
 
 This can also be made more dynamic in the following way:
 

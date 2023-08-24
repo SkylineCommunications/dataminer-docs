@@ -45,7 +45,7 @@ In addition, the disk throughput is of vital importance. The following minimum r
 
 DataMiner is very demanding in concurrency, as a lot of actions usually happen in parallel. Though typically the performed actions are not lengthy or bulky, heavy actions can occur in EPM/CPE environments where a lot of aggregation is needed.
 
-As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE environments. We recommend at least 8 cores, but 16 cores are preferable.
+As a rule of thumb, a CPU passmark of >10K is OK, but >20K is needed in EPM/CPE environments. We recommend at least 4 cores, but 16 cores are preferable.
 
 ### Network
 
@@ -70,6 +70,8 @@ If there is more than one DataMiner Agent in your cluster, the time in the clust
 - From DataMiner **10.1.12** onwards, in addition to Microsoft .NET Framework 4.8, Microsoft .NET **5.0** is required.
 
 - From DataMiner **10.3.0 [CU3]/10.3.3** onwards, in addition to Microsoft .NET Framework 4.8 and .NET 5.0, .NET **6.0** is also required.
+
+- From DataMiner **10.3.9/10.4.0** onwards, in addition to Microsoft .NET Framework 4.8, .NET **6.0** is also required.
 
 > [!NOTE]
 > We recommend always upgrading to the latest .NET Framework version.

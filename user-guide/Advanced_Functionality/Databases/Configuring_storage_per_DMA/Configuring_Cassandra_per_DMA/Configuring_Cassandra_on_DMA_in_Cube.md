@@ -51,4 +51,4 @@ In case a separate Cassandra cluster is used per DMA, configure the settings as 
    > Database configuration changes will not take effect until the Agent is restarted.
 
 > [!TIP]
-> In the *DB.xml* file, you can specify the configuration data for several databases as well. See [indexing database settings](xref:DB_xml#general-database-settings).
+> In the [*DB.xml* file](xref:DB_xml#general-database-settings), you can specify the configuration data for several databases as well.

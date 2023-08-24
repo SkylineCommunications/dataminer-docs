@@ -27,7 +27,7 @@ The following pages are available:
 - *Dashboards*: Displays the legacy dashboards app.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 - *Notes*: Allows you to add and view notes related to the element.
 

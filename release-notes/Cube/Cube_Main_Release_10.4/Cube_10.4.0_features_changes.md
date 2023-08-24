@@ -242,6 +242,35 @@ You can now define a new color called *bg.pressededitor*. This color will be use
 
 For more information, see [CustomColors](xref:Adding_options_to_a_parameter_control#customcolors).
 
+#### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For fix included in same RN, see Fixes. -->
+
+When you hover the mouse pointer over the pattern labels for a trend graph, now the corresponding pattern occurrences (both univariate and multivariate) are highlighted in the graph.
+
+#### Proportional card layout: Selecting a master card [ID_36912]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now promote one card to master card. To do so, click the card's hamburger menu, and select the *Master card* option.
+
+Once you have turned a card into the master card, each time you open a new card it will replace the master card.
+
+> [!NOTE]
+>
+> - At any given time, there can be only one master card.
+> - This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Master card* option, the *Pin this card* option will be disabled (and vice versa).
+
+#### Proportional card layout: Marking cards as non-closable [ID_36956]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When the card layout is set to "Proportional", you can now mark cards to non-closable. To do so, click the card's hamburger menu, and select the *Hide close button* option.
+
+> [!NOTE]
+> This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Hide close button* option, the *Pin this card* option will be disabled (and vice versa).
+
 ## Changes
 
 ### Enhancements
@@ -382,6 +411,36 @@ Examples:
 
 - Subtracting multiple numbers from the first number: `[Subtract:10.1,3.3,2.6]`
 
+#### Trending - Pattern matching: Enhanced error handling and performance [ID_36772]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the pattern matching functionality, especially with regard to error handling and overall performance.
+
+#### Trending - Behavioral anomaly detection: Alarms and suggestion events will now be displayed in the language set as UI language [ID_36828] [ID_36836]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All alarms and suggestion events generated following the detection of behavioral anomalies will now appear in the language set as UI language.
+
+#### Trending - Pattern matching: Loading indication around light bulb icon while loading time-scoped related parameters [ID_36831]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When time-scoped related parameters are being loaded in a trend graph, now the light bulb icon will be shown with rotating ring dots to indicate the ongoing loading process. Previously, the light bulb was only shown when a response had been received from the server.
+
+#### Trending - Pattern matching: Pattern occurrence values and suggestion events will now be displayed in the language set as UI language [ID_36844]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+All pattern occurrence values and pattern occurrence suggestion events displayed in the Alarm Console will now appear in the language set as UI language.
+
+#### Tooltip added for 'Edit Visio drawing' user permission [ID_37095]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
@@ -463,3 +522,21 @@ When you opened a trend graph containing related parameters, in some cases, the 
 Up to now, when a property was updated, `[property:]` placeholders in shape data fields of type *Element* or *View* would not always get resolved correctly. The only way to ensure a `[property:]` placeholder was resolved correctly after a property update was to close the card and open it again.
 
 Processing of property updates has now been improved. `[property:]` placeholders will now be resolved correctly without having to close the card and open it again.
+
+#### Trending - Pattern matching: Problem when loading multivariate pattern [ID_36863]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature included in same RN, refer to Other new features -->
+
+When you opened a trend graph for a parameter on which a specific multivariate pattern had not been created, and the subpatterns of the pattern were all for the same protocol, a problem could occur when loading all parameters for the multivariate pattern.
+
+#### DataMiner Cube: Failing to connect to a DataMiner Agent at startup when using .NET Remoting [37022]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When starting up, in some rare cases, Cube could fail to connect to a DataMiner Agent when using .NET Remoting. Moreover, any further connection attempts made within that same Cube session would also fail. Users were required to close Cube and restart it.
+
+Symptoms:
+
+- The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
+- The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.

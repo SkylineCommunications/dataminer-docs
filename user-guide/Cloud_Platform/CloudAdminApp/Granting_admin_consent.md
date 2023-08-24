@@ -2,11 +2,14 @@
 uid: Granting_admin_consent
 ---
 
-# Granting admin consent for Teams actions
+# Granting admin consent for Teams Chat Integration
 
-When the Microsoft Teams Chat Integration functionality is used, admin consent is required for certain actions, e.g. to create teams or channels, or to add members to a team.
+To use the Microsoft Teams Chat Integration functionality, which involves DataMiner Automation interacting with Teams without user interaction, admin consent is required. This is specifically needed for actions such as creating teams or channels, adding members to a team, etc. For more detailed information, see [Microsoft Teams Chat Integration](xref:Microsoft_Teams_Chat_Integration#using-chat-integration).
 
 After you have granted this consent, you will need to configure the Microsoft tenant for your dataminer.services organization.
+
+> [!NOTE]
+> This admin consent is only required for the Chat Integration feature. It is not needed for user interaction with the DataMiner Teams bot, even with custom commands.
 
 To grant admin consent and configure your tenant:
 
