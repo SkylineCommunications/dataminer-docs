@@ -359,9 +359,19 @@ In this *MaxSize* tag, you can specify the maximum log file size.
 
 Default: 10 MB
 
-### Network
+### Network.bitRateTracking
 
-Using the attribute *bitRateTracking*, which is *true* by default, the bitrate calculations performed by SLProtocol can be disabled. Disabling bitrate tracking means the [Communication Info] table on the General Parameters page will not be updated. This also means the bitrate related notifies such as [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA) can also no longer be used by connectors.
+With the *bitRateTracking* tag, you can enable or disable the bitrate calculations performed by SLProtocol.
+
+|Value | Description |
+|--|--|
+| true | SLProtocol's bitrate calculations are enabled. (Default setting.) |
+| false | SLProtocol's bitrate calculations are disabled. |
+
+> [!NOTE]
+> Disabling this setting will halt updates to the *Communication Info* table on the *General parameters* page. Bitrate-related notifies such as [NT_GET_BITRATE_DELTA](xref:NT_GET_BITRATE_DELTA) will not be usable by connectors.
+
+For example:
 
 ```xml
 <Network bitRateTracking="true"/>
