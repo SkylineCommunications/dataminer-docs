@@ -446,6 +446,12 @@ The ResourceManager logging (*SLResourceManager.txt*) has been improved to make 
 
 Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
 
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
