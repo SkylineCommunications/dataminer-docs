@@ -71,9 +71,9 @@ The component uses dynamic coloring, which can be adjusted according to preferen
 
    - *Arrows*: The direction is visualized by means of arrows drawn on the edges. If you select this option, you can also specify the exact position of the arrows on the edges.
 
-   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+1. From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
 
-   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when the query returns no results. <!-- RN 37173 -->
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->
   
 ## Component actions configuration
 

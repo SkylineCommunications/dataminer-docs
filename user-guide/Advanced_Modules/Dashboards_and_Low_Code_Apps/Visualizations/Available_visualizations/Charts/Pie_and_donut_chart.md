@@ -21,7 +21,7 @@ To configure the component:
 
    From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
 
-   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when the query returns no results. <!-- RN 37173 -->
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 

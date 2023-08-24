@@ -37,12 +37,12 @@ To configure the component:
 
    - *Bars*: Allows you to select which data should determine the size of the bars in the chart. Multiple bars can be selected.
 
-   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
-
-   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when the query returns no results. <!-- RN 37173 -->
-
    > [!NOTE]
    > From DataMiner 10.3.7/10.4.0 onwards, when you add a query to the component, the label and bars will automatically be configured. <!-- RN 36229 -->
+
+   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->
 
 1. Optionally, fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available if the chart is not used with queries data input:
 
