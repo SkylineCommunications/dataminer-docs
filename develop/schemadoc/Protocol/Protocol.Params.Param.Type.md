@@ -159,7 +159,7 @@ Length parameters are used to hold the length of a frame used in a communication
 To hold the correct length, the number of parameters on which the length will be calculated must be defined in the LENGTH parameter.
 
 > [!NOTE]
-> The maximimum byte length of this parameter is 4 bytes.
+> The maximimum byte length for this parameter is 4 bytes.
 
 ### matrix
 
