@@ -1878,6 +1878,9 @@
                 topicUid: DashboardImage
               - name: Stepper
                 topicUid: DashboardStepper
+                items:
+                - name: Tutorial
+                  topicUid: TutorialStepper
               - name: Text
                 topicUid: DashboardText
               - name: Web
