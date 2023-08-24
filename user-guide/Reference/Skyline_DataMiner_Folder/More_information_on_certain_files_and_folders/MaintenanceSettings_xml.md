@@ -363,7 +363,7 @@ Default: 10 MB
 
 With the *bitRateTracking* tag, you can enable or disable the bitrate calculations performed by SLProtocol.
 
-|Value | Description |
+| Value | Description |
 |--|--|
 | true | SLProtocol's bitrate calculations are enabled. (Default setting.) |
 | false | SLProtocol's bitrate calculations are disabled. |
