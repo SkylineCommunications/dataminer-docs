@@ -47,11 +47,11 @@ uid: dataminer_object_model_benchmarks
 
 - Intel i7-12700 (12 core / 20 threads)
 - 32GB DDR5 RAM (4800 MT/s)
-- NVMe SSD (850K Write IOPS)
+- SSD (NVMe) (850K Write IOPS)
 - Windows 11 Pro (10.0.22621 Build 22621)
 - Elasticsearch version 6.8.23 (8GB allocated memory)
 - DataMiner version 10.3.9
 
 ### Summary
 
-A load test was conducted using DOM models that represent 'transport stream' data. A DOM definition representing a 'service', 'PID' and 'transport stream' were made which each had about 20 fields. Using realistic data, 5,000,000 DOM instances were created one-by-one. The average create time throughout stayed fairly constant at around 90 ms. In the end, the size of the Elasticsearch index was about 45GB. Querying this data using a GQI query in a low-code app remained as smooth compared to a system with significantly less DOM instances.
+A load test was performed using DOM models representing 'transport stream' data. DOM definitions representing 'service', 'PID', and 'transport stream' were created, each containing around 20 fields. Using realistic data, 5,000,000 DOM instances were sequentially created, with a fairly constant average creation time of approximately 90 ms. The Elasticsearch index size reached about 45GB. Query performance using a GQI query in a low-code app remained consistently smooth compared to a system with significantly less DOM instances.
