@@ -12,6 +12,22 @@ uid: General_Main_Release_10.2.0_CU19
 
 ### Enhancements
 
+#### Service & Resource Management: Changing the 'IsValueCopy' property of a ProfileInstance will no longer be allowed [ID_31189]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+For each ProfileInstance, an `isValueCopy` property can be set:
+
+- When set to false, the ProfileInstance will be added to a primary index.
+- When set to true, the ProfileInstance will be added to a secondary index and will be assigned a TTL of 1 year (see note below).
+
+From now on, it will no longer be allowed to change the `IsValueCopy` property of a ProfileInstance from true to false or vice versa. If such an attempt is made, a *ProfileManagerError* will be returned in the trace data with reason *ProfileInstanceChangedType*.
+
+Also, in DataMiner Cube, the *By value/By reference* toggle button has now been removed from the *Profiles* App. Profile instances created using Cube will now always be created *by reference*.
+
+> [!NOTE]
+> When the `isValueCopy` property of a ProfileInstance is set to true, it will only be assigned a TTL of 1 year when that ProfileInstance is stored in Elasticsearch.
+
 #### Improved handling of smart baseline parameter sets [ID_36997]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
