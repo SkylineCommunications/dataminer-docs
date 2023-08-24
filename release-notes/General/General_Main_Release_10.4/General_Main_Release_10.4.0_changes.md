@@ -438,6 +438,14 @@ A number of enhancements have been made to the *DataMiner Object Model* window.
 > [!CAUTION]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
+#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The ResourceManager logging (*SLResourceManager.txt*) has been improved to make debugging easier.
+
+Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]

@@ -55,6 +55,14 @@ Up to now, bookings were always set to Confirmed again when they were updated, e
 - When the resources in the booking have changed.
 - when the enhanced service profile ID has changed.
 
+#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The ResourceManager logging (*SLResourceManager.txt*) has been improved to make debugging easier.
+
+Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
+
 #### Improved handling of smart baseline parameter sets [ID_36997]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
