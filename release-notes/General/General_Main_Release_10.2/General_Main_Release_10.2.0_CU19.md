@@ -53,6 +53,12 @@ From now on, after each DataMiner upgrade or DataMiner start-up, this folder wil
 
 A number of security enhancements have been made.
 
+#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
+
 ### Fixes
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
@@ -120,6 +126,14 @@ If no preset was available for a particular spectrum element, it could occur tha
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
+
+#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
+
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 

@@ -77,7 +77,7 @@ A number of security enhancements have been made.
 
 #### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
 
@@ -117,7 +117,7 @@ This will now be prevented. The offline DMA will now collect all nodes locally w
 
 #### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
 
