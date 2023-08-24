@@ -23,6 +23,21 @@ uid: Cube_Feature_Release_10.3.10
 
 When you hover the mouse pointer over the pattern labels for a trend graph, now the corresponding pattern occurrences (both univariate and multivariate) are highlighted in the graph.
 
+#### Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in the *Protocols & Templates* tab of the *Protocols & Templates* app, you right-click an element in the *Elements* column, the shortcut menu will now contain the following additional commands if you have been granted the necessary user permissions:
+
+- *Edit*: Opens a card that allows you to edit the selected element.
+- *Delete*: Deletes the selected element after you have clicked *Yes* in the confirmation box.
+- *Duplicate*: Opens a card that allows you to create a new element based on the configuration of the selected element.
+
+> [!NOTE]
+>
+> - DVE elements cannot be deleted or duplicated in the way described above. The parent element is responsible for creating or deleting such elements.
+> - It is no longer possible to create elements using a *Mediation Layer* protocol from within the *Protocols & Templates* app. Also, it is no longer possible to create new alarm templates or trend templates for *Mediation Layer* protocols.
+
 ## Changes
 
 ### Enhancements
