@@ -27,8 +27,8 @@ The **fully integrated out-of-the-box solution** with its **self-learning techno
 > [!TIP]
 > For more information:
 >
-> - A 60-min. webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [Experts & Insights - Augmented Operations](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/)
-> - A high-level introduction video (50 minutes) is available in our Inspire Rewind section on our Community site, at [Inspire Rewind – Augmented Operations](https://community.dataminer.services/video/inspire-rewind-augmented-operations/)
+> - A 60-min. webinar from our Experts & Insights series, showing how DataMiner leverages AI technology, is available at [Experts & Insights - Augmented Operations](https://community.dataminer.services/video/experts-insights-dataminer-augmented-operation/) ![Video](~/user-guide/images/video_Duo.png)
+> - A high-level introduction video (50 minutes) is available in our Inspire Rewind section on our Community site, at [Inspire Rewind – Augmented Operations](https://community.dataminer.services/video/inspire-rewind-augmented-operations/) ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > Are you struggling with something? Are there use cases you want us to tackle? Or do you simply have a great idea on how to improve DataMiner’s AI capabilities? Then [**let's talk AI**](https://community.dataminer.services/lets-talk-ai-automatic-detection-of-frozen-states/) and [**share your thoughts with Team AI**](https://community.dataminer.services/skylines-ai-team-wants-to-hear-from-you/).
@@ -44,7 +44,7 @@ The AI-powered forecasting functionality automatically learns the behavior and e
 >
 > - [DataMiner Forecasting use case 1](https://community.dataminer.services/use-case/dataminer-forecasting-2/)
 > - [DataMiner Forecasting use case 2](https://community.dataminer.services/use-case/dataminer-forecasting-3/)
-> - Video: [Behold DataMiner AI Trend Forecasting](https://community.dataminer.services/video/behold-dataminer-ai-trend-forecasting/)
+> - Video: [Behold DataMiner AI Trend Forecasting](https://community.dataminer.services/video/behold-dataminer-ai-trend-forecasting/) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 > - User Guide: [Working with trend predictions](xref:Working_with_trend_predictions)
 
@@ -61,7 +61,7 @@ Based on AI pattern matching algorithms, instances of tagged patterns are automa
 >
 > - [DataMiner Automated Tagging use case 1](https://community.dataminer.services/use-case/dataminer-automatic-pattern-detection/)
 > - [DataMiner Automated Tagging use case 2](https://community.dataminer.services/use-case/automatic-tag-detection/)
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Automated Tagging, among others)
+> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Automated Tagging, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Pattern Matching in DataMiner 10.1](https://community.dataminer.services/pattern-matching-10-1-update/)
 > - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 > - User Guide: [Working with pattern matching](xref:Working_with_pattern_matching)
@@ -75,7 +75,7 @@ DataMiner’s change point detection solution automatically identifies both abru
 > [!TIP]
 > For more information:
 >
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Change Point Detection, among others)
+> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Change Point Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [Advanced analytics in trend graphs](xref:Advanced_analytics_trending)
 
 ## Anomaly Detection
@@ -87,7 +87,7 @@ An anomaly significance scoring mechanism augments the change point detection so
 > [!TIP]
 > For more information:
 >
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Anomaly Detection, among others)
+> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Anomaly Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 > - User Guide: [Working with behavioral anomaly detection](xref:Working_with_behavioral_anomaly_detection)
 
@@ -100,7 +100,7 @@ The Automatic Incident Tracking feature autonomously learns about system behavio
 > [!TIP]
 > For more information:
 >
-> - Video: [Focus on the Root of Issues with Incident Analysis](https://community.dataminer.services/video/finding-the-root-of-problems-with-dataminer-incident-analysys/)
+> - Video: [Focus on the Root of Issues with Incident Analysis](https://community.dataminer.services/video/finding-the-root-of-problems-with-dataminer-incident-analysys/) ![Video](~/user-guide/images/video_Duo.png)
 > - Blog post about [Automatic Incident Detection](https://community.dataminer.services/tweak-automatically-detected-incidents-with-dataminer-10-2-5/)
 > - User Guide: [Automatic Incident Tracking](xref:Automatic_incident_tracking)
 
@@ -127,7 +127,7 @@ By continuously monitoring and modeling the trend of the metrics, proactive cap 
 > [!TIP]
 > For more information:
 >
-> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, among others)
+> - Video about [Intelligent Fault Detection](https://community.dataminer.services/video/intelligent-fault-detection-in-action) (covering Proactive Cap Detection, among others) ![Video](~/user-guide/images/video_Duo.png)
 > - User Guide: [Advanced analytics in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console)
 
 ## Relationship Learning
@@ -138,4 +138,4 @@ Get insights based on learned relations between the numerous integrated metrics/
 > For more information:
 >
 > - Blog post about [The power of insights](https://community.dataminer.services/dataminer-10-3-gives-you-the-power-of-insights/)
-> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph)
+> - User Guide: [Adding related parameters to a trend graph](xref:Adding_related_parameters_to_a_trend_graph) and  [Adding time-scoped related parameters to a trend graph](xref:Adding_time_scoped_related_parameters_to_a_trend_graph)

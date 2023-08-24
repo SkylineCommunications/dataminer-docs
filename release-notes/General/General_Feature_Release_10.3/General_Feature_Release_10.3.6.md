@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.3.6
 ---
 
-# General Feature Release 10.3.6 – Preview
+# General Feature Release 10.3.6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -15,7 +15,7 @@ uid: General_Feature_Release_10.3.6
 
 ## Highlights
 
-#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273]
+#### User-Defined APIs [ID_34910] [ID_35134] [ID_35169] [ID_35417] [ID_35743] [ID_35810] [ID_35880] [ID_35885] [ID_36118] [ID_36250] [ID_36273] [ID_36366]
 
 With the DataMiner User-Defined APIs, you can define custom API calls that will be made available on DataMiner Agents hosting the *UserDefinableApiEndpoint* DxM. This DxM is included in DataMiner upgrade packages from now on and will be automatically installed when you upgrade. The APIs can be secured using API tokens, which can be generated on the fly and linked to the API definitions.
 
@@ -108,25 +108,6 @@ If you trigger an API via the SLNetClientTest tool, this will bypass the endpoin
 > [!WARNING]
 > Always be extremely careful when using the SLNetClientTest tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-## Other features
-
-#### DataMiner installation/upgrade: Automatic installation of DataMiner Extension Modules [ID_36085]
-
-<!-- MR 10.4.0 - FR 10.3.6 -->
-
-When you install or upgrade a DataMiner Agent, the following DataMiner Extension Modules (DxMs) will now automatically be installed (if not present yet):
-
-- DataMiner ArtifactDeployer (version 1.4.3)
-- DataMiner CloudFeed (version 1.0.8)
-- DataMiner CloudGateway (version 2.10.4)
-- DataMiner CoreGateway (version 2.12.1)
-- DataMiner FieldControl (version 2.8.2)
-- DataMiner Orchestrator (version 1.2.6)
-- DataMiner SupportAssistant (version 1.3.0)
-
-> [!NOTE]
-> For detailed information on the changes included in the different versions of these DxMs, refer to the [dataminer.services change log](xref:DCP_change_log).
-
 ## Changes
 
 ### Enhancements
@@ -213,6 +194,8 @@ One of its values, "RemotingConnection", is now obsolete. If you continue to use
 
 #### API Gateway module now targets Microsoft .NET 6.0 [ID_36238]
 
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
 As Microsoft .NET 5 is being phased out, the *API Gateway* module will now use Microsoft .NET 6.0 instead.
 
 #### Service & Resource Management: Enhanced performance when stopping an ongoing booking [ID_36255]
@@ -258,7 +241,7 @@ When a Resource or ResourcePool was updated, the *CreatedAt* and *CreatedBy* fie
 
 #### NATS-related error: 'Failed to copy credentials from [IP address] - corrupt zip file' [ID_35935]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- MR 10.2.0 [CU17]/10.3.0 [CU5] - FR 10.3.6 -->
 
 In some rare cases, the following NATS-related error would be thrown:
 
@@ -373,6 +356,12 @@ When the *DataMiner.xml* file contained `<ProcessOptions protocolProcesses="5" s
 
 Although DataMiner supports all OpenSearch 1.x and 2.x versions, in some cases, errors stating that OpenSearch 2.4 and 2.5 were not officially supported would incorrectly be added to the *SLDBConnection.txt* and *SLSearch.txt* log files.
 
+#### Problem with BPA test 'Cassandra DB Size' [ID_36138]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+
+Up to now, the BPA test *Cassandra DB size* would spawn a number of cmd processes meant to be executed by the Cassandra nodetool utility without checking whether nodetool was running. When nodetool was not running, these cmd processes would not get cleaned up.
+
 #### DataMiner Backup: Low-code apps would incorrectly not be restored [ID_36139]
 
 <!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
@@ -387,7 +376,7 @@ When multiple clients had subscribed to a cell of a partial table, in some cases
 
 #### Problem when retrieving alarm events from Cassandra Cluster after an element restart [ID_36177]
 
-<!-- MR 10.3.0 [CU3] - FR 10.3.6 -->
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
 
 When an element that had more than 10,000 alarm events stored on a Cassandra cluster was restarted, those alarm events would not all get retrieved from the database. As a result, SLElement would generate additional alarm events, causing the alarm trees to become incorrect.
 
@@ -396,3 +385,11 @@ When an element that had more than 10,000 alarm events stored on a Cassandra clu
 <!-- MR 10.4.0 - FR 10.3.6 -->
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
+
+#### Inaccessible logger table data in Elasticsearch because of incorrect casing [ID_36343]
+
+<!-- MR 10.3.0 [CU3] - FR 10.3.6 [CU0] -->
+
+Since DataMiner versions 10.3.0/10.3.3, if a logger table that had `Indexing` set to true contained column names with uppercase characters, *SLDataGateway* would incorrectly change these column names to lower case. This lead to the data getting stored in a different field than expected and therefore not being retrieved when requested.
+
+For more information on this issue, see [Inaccessible logger table data in Elasticsearch because of incorrect casing](xref:KI_Inaccessible_data_Elasticsearch_casing)

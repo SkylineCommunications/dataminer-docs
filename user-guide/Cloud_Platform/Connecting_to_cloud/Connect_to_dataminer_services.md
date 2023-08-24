@@ -4,6 +4,8 @@ uid: Connect_to_dataminer_services
 
 # Connecting to dataminer.services
 
+Below you can find detailed information on how to connect your DataMiner System to dataminer.services, also known as connecting to the cloud or making a DMS cloud-connected.
+
 > [!TIP]
 > For more information about cloud connectivity and security, see [Cloud connectivity and security](xref:Cloud_connectivity_and_security#connecting-to-dataminerservices).
 
@@ -13,9 +15,9 @@ Before you connect your DMS to dataminer.services (unless you [connect with a DM
 
 1. Verify that your DataMiner System meets all [requirements](xref:Connect_to_cloud_requirements).
 
-1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/downloads/) and install it on **one or more DMAs** in the cluster.
+1. Download the latest DataMiner **Cloud Pack installer** from [DataMiner Dojo](https://community.dataminer.services/dataminer-cloud-pack/) and install it on **one or more DMAs** in the cluster.
 
-   If you are on the Feature Release track, .NET 5 is already included in DataMiner from version 10.1.12 onwards, so select the package without .NET 5. If you are on the Main Release track, .NET 5 is included from version 10.2.0 \[CU4] onwards, so for earlier 10.2.0 versions, you will need to select the package with .NET 5.
+   If you are on the Feature Release track, .NET 6 is included in DataMiner from version 10.3.9 [CU0] onwards, so select the package without .NET 6. If you are on the Main Release track, .NET 6 is included from version 10.4.0 onwards, so for earlier versions, you will need to select the package with .NET 6<!--RN 37137-->.
 
    > [!NOTE]
    >

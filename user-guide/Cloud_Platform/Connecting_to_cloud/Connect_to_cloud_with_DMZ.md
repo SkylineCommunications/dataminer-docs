@@ -4,7 +4,7 @@ uid: Connect_to_cloud_with_DMZ
 
 # Connecting to dataminer.services with a DMZ setup
 
-From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ. This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
+From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dataminer.services using a DMZ (i.e. a perimeter network acting as an intermediate between the DMS and the internet). This way, the DMS can be connected to dataminer.services without exposing the entire DMS network to the public internet.
 
 ![DMZ](~/user-guide/images/DMZ_CloudGateway.png)
 
@@ -12,18 +12,23 @@ From version 2.7.0 of the CloudGateway DxM onwards, you can connect a DMS to dat
 
 1. Configure the firewall of the DMZ:
 
-   - Make sure it allows access to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+   - Make sure outbound communication is allowed to the endpoints mentioned in [Connecting your DataMiner System to dataminer.services](xref:Connect_to_cloud_requirements).
 
-   - Make sure the DMZ can communicate with the DMS through port 80, or through port 443 for a secure connection.
+   - Make sure bidirectional communication between the DMZ and the DMS is possible over port 80, or through port 443 for a secure connection.
 
-   - Make sure the DMZ can communicate with the DMS through NATS on port 4222.
+   - Make sure bidirectional communication between the DMZ and the DMS is possible through NATS on port 4222.
 
-1. Install the DxMs that need to be in the DMZ. At present, these are *CloudGateway*, *CloudFeed*, and *Orchestrator*.
+   - Make sure bidirectional communication between the [DxMs](xref:DataMinerExtensionModules) on all servers and the DMZ is possible through NATS on port 5100.
 
-   > [!NOTE]
-   > Currently it is not yet possible to download each DxM individually. As a workaround, you can install the complete Cloud Pack in the DMZ and then uninstall the irrelevant DxMs. For the DMZ, these are *CoreGateway*, *ArtifactDeployer* and *FieldControl*. You can uninstall these like any other program in Windows.
+     > [!NOTE]
+     > If communication through port 5100 is not possible, it is possible to configure a different port. See [Customizing the dataminer.services endpoint configuration](xref:Custom_cloud_endpoint_configuration).
+
+1. Install the [DMZ Cloud Pack](https://community.dataminer.services/dataminer-cloud-pack/) on the DMZ server.
 
 1. On the DataMiner nodes, install the DxMs that need to connect with the DMA or do not require internet access. At present, these are *CoreGateway*, *FieldControl*, *SupportAssistant*, *ArtifactDeployer* and *Orchestrator*. For a Failover setup, you should install these DxMs on both Agents in the Failover pair.
+
+   > [!IMPORTANT]
+   > From DataMiner 10.3.7/10.4.0 onwards<!-- RN 36085 -->, a Cloud Pack containing these DxMs (but not DataMiner CloudGateway) is automatically installed when you upgrade or install DataMiner.
 
    > [!NOTE]
    > For all DxMs, it is advised to have multiple instances running at the same time. This will create redundancy in case something goes wrong and allows for upgrades without any downtime.

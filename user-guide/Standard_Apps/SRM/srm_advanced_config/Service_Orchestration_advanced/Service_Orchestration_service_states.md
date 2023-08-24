@@ -2,7 +2,7 @@
 uid: Service_Orchestration_service_states
 ---
 
-# Service Orchestration service states configuration
+# Service Orchestration: service states configuration
 
 The DataMiner service associated with a booking can have different service states: Start, Stop, Standby, or Pause.
 

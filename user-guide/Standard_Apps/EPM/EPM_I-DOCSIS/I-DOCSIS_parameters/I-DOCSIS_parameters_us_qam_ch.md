@@ -6,6 +6,8 @@ uid: I-DOCSIS_parameters_us_qam_ch
 
 This page contains an overview of the US QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
+These parameters are displayed for the Node Segment and Service Group level in the I-DOCSIS dashboards.
+
 - **Name \[IDX]**: Direct value. The display name of the upstream channel.
 
   Concatenation of the CMTS Name and the US Ch Name, using "/" as a separator.
@@ -128,3 +130,9 @@ This page contains an overview of the US QAM CH parameters available in the I-DO
 - **US QAM Ch PreMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The operational status of the average US QAM Ch PreMTTER according to the Non-Pre-Main-Tap to Total Energy Ratio (Pre-MTTER) Threshold.
 
 - **US QAM Ch PostMTTER Alarm Status**: Calculated. Only available for DOCSIS 3.x. The operational status of the average US QAM Ch PostMTTER according to the Post-Main-Tap to Total Energy Ratio (Post-MTTER) Threshold.
+
+- **US QAM Ch Input Bitrate**: Calculated. The average value of the DS QAM Ch Input Bitrate related to the cable modems served by the given channel.
+
+  Calculated as follows: US QAM Ch Input Bitrate = (Current Nº octets received - Nº octets received previously) / (Delta \* 1000.0).
+
+  - Nº octets received: OID 1.3.6.1.2.1.2.2.1.10

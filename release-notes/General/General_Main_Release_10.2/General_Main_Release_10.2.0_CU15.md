@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU15
 ---
 
-# General Main Release 10.2.0 CU15 – Preview
+# General Main Release 10.2.0 CU15
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -221,3 +221,11 @@ Up to now, using placeholders in shape data fields of type *ChildrenFilter* coul
 <!-- MR 10.2.0 [CU15]/10.3.0 [CU3] - FR 10.3.6 -->
 
 When you right-click an alarm and hover over *Open*, the submenu that appears will list the names of the elements, the services and the views associated with that alarm. Up to now, when those names contained underscores, the first underscore would incorrectly be omitted.
+
+#### Protocols: QAction syntax errors did not refer to the correct lines [ID_36301]
+
+<!-- MR 10.2.0 [CU15]/10.3.0 [CU4] - FR 10.3.7 -->
+
+Up to now, before a QAction was compiled, three compiler directives were added to its source code. As a result, all compilation errors would refer to incorrect line numbers.
+
+From now on, the compiler directives will no longer be added to the source code. Instead, they will be passed to the compiler directly.

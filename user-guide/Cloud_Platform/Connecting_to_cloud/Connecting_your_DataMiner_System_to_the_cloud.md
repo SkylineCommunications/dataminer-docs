@@ -4,7 +4,7 @@ uid: Connecting_your_DataMiner_System_to_the_cloud
 
 # Connecting your DataMiner System to dataminer.services
 
-You can [connect a DataMiner Agent to dataminer.services](xref:Connect_to_dataminer_services) by installing a DataMiner Cloud Gateway on that DMA. DataMiner will communicate using HTTPS via the Gateway. By default, this requires the use of the standard HTTPS port 443. The connection passes through the Windows firewall to reach the endpoint, which also uses port 443.
+You can [connect a DataMiner Agent to dataminer.services](xref:Connect_to_dataminer_services) (i.e. connect to the cloud) by installing a DataMiner Cloud Gateway on that DMA. DataMiner will communicate using HTTPS via the Gateway. By default, this requires the use of the standard HTTPS port 443. The connection passes through the Windows firewall to reach the endpoint, which also uses port 443.
 
 ![Cloud Gateway](~/user-guide/images/Cloud_Gateway.png)
 

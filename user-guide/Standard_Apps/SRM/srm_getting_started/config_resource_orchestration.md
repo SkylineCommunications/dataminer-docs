@@ -25,6 +25,7 @@ The wizard is an interactive Automation script called *SRM_ResourceManagement*. 
 - *BookingManagerElement*: The name of a Booking Manager element. This is used to generate log files in the directory specified in that element.
 - *ReservationId*: Optional. Used to edit the booking.
 - *Timing*: Optional. The timing of the booking.
+- *TimeRange*: Optional. The proposed time of the booking to be created (in string format). This is a semicolon-separated list of start and stop time in binary format, as provided by Cube when a time range is selected on the timeline component.
 
 For example: `{"BookingManagerElement":"Resource Orchestration","ReservationId":"00000000-0000-0000-0000-000000000000","ResourceIds":"e489a83d-182b-45c7-a981-615c253525b2","Timing":{"EffectiveStart":"2022-09-07T16:18:24.1242596+02:00","PreRoll":"00:00:00","StartDate":"2022-09-07T16:18:24.1242596+02:00","EffectiveEnd":"2022-09-07T17:25:27.9282596+02:00","EndDate":"2022-09-07T17:25:27.9282596+02:00","PostRoll":"00:00:00","IsSilent":false}}`
 
@@ -47,4 +48,4 @@ After they click *Confirm*, the booking will be created.
 
 The wizard can be launched from Visual Overview or from a low-code app.
 
-A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-front-end-for-the-wizard).
+A typical use case is to make use of the Resource Manager component in Visual Overview, showing resource bands on the Y-axis. This is done in the same way as for [Resource Scheduling](xref:config_resource_scheduling#creating-a-custom-front-end-for-the-resource-scheduling-wizard).
