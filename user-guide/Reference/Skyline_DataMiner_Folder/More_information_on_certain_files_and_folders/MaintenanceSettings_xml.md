@@ -75,7 +75,7 @@ This is an example of a *MaintenanceSettings.xml* file:
       <SkipRTE process="SLDataMiner.exe" thread="Database cleaning" />
     </FailoverOnRTE>
   </WatchDog>
-  <Network bitRateTracking="true">
+  <Network bitRateTracking="true"/>
 </MaintenanceSettings>
 ```
 
