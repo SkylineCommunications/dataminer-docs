@@ -15,12 +15,41 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 >
 > - A setup with multiple Elasticsearch clusters is only recommended for high latency scenarios. For low or medium latency, we strongly advise using the [standard Elasticsearch setup](xref:Configuring_Elasticsearch_Database).
 > - Contact Skyline if you are unsure about the setup that best fits your circumstances.
-> - From DataMiner Version 10.4.0/10.3.10 onwards, this is meant to be configured through cube instead of manually.
 
 > [!TIP]
 > For more information, see [Failover setups (with geo-redundancy)](xref:Dedicated_clustered_storage#failover-setups-with-geo-redundancy).
 
 To configure this setup:
+
+## [From DataMiner 10.3.10/10.4.0 onwards](#tab/tabid-1)
+
+1. Got to *Apps > System Center > Database*.
+
+1. Choose **Type**: (xxx)
+
+1. Specify the following database settings for the Elasticsearch nodes:
+
+   - **Database**: The type of database, i.e. *Elasticsearch*.
+
+   - **(xxx) prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.)
+
+      > [!NOTE]
+      > The prefix has a maximum length of 20 characters. Prior to DataMiner 10.3.0 [CU5]/10.3.8<!-- RN 36503 -->, it has a maximum length of 11 characters.
+
+   - **DB server**: The IP addresses or hostnames of the nodes, separated by commas. From DataMiner 10.3.0/10.3.3 onwards, you can specify an IP address with a custom port, e.g `10.5.100.1:5555`. If no port is provided, the default Cassandra port is used instead (see [Configuring the IP network ports](xref:Configuring_the_IP_network_ports)). <!-- RN 34590 -->
+
+   - **User**: Username with which the DMA has to log on to Elasticsearch.
+
+   - **Password**: Password with which the DMA has to log on to Elasticsearch.
+
+1. (xxx)
+
+1. Click *Save*.
+
+   > [!NOTE]
+   > Database configuration changes will not take effect until the Agent is restarted.
+
+## [Prior to DataMiner 10.3.10/10.4.0](#tab/tabid-2)
 
 1. Create and configure a file *DBConfiguration.xml* as illustrated below. For each Elasticsearch cluster, an *ElasticCluster* tag must be added with the following configuration:
 
@@ -35,8 +64,6 @@ To configure this setup:
    - *Prefix*: The prefix for the Elasticsearch indexes. This is the equivalent of the *DB* tag in *DB.xml* (see [Specifying a custom prefix for the Elasticsearch indexes](xref:DB_xml#specifying-a-custom-prefix-for-the-elasticsearch-indexes)).
 
    - *FileOffloadIdentifier*: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
-
-   - *ID*: From DataMiner 10.4.0/10.3.10 onwards, this attribute is added by configuring EMCO in cube, it is used to pair clusters with their encrypted passwords *Do not change this field manually*.
 
    Example:
 
@@ -80,3 +107,5 @@ To configure this setup:
 
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
+
+***
