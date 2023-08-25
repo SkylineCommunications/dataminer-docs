@@ -25,13 +25,17 @@ To configure this setup:
 
 1. Got to *Apps > System Center > Database*.
 
-1. Choose **Type**: (xxx)
+1. Database per cluster should already be selected. If this is not the case see [xref:Configuring database settings in cube](xref:Configuring_the_database_settings_in_Cube) to set up the basic Cassandra Cluster and Elastic configurations.
 
-1. Specify the following database settings for the Elasticsearch nodes:
+1. Enable Multi cluster offload
+   
+1. Press **Add** to add an empty Elastic offload cluster to the list. You can offload to as many clusters as needed but only the main Elastic config above this list will be used to read from.
+
+1. Specify the following database settings for each of the Elasticsearch nodes:
 
    - **Database**: The type of database, i.e. *Elasticsearch*.
 
-   - **(xxx) prefix** or **Name**: The prefix that the DataMiner System will use to create the keyspaces.)
+   - **Database prefix** (just called **Prefix** in the xml file): The prefix that the DataMiner System will use to create the keyspaces.)
 
       > [!NOTE]
       > The prefix has a maximum length of 20 characters. Prior to DataMiner 10.3.0 [CU5]/10.3.8<!-- RN 36503 -->, it has a maximum length of 11 characters.
@@ -42,7 +46,8 @@ To configure this setup:
 
    - **Password**: Password with which the DMA has to log on to Elasticsearch.
 
-1. (xxx)
+   - **FileOffloadIdentifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads. Also needs to be specified for the main Elastic database once Multi Cluster offload is enabled.
+
 
 1. Click *Save*.
 
