@@ -682,12 +682,6 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
-#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
-
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

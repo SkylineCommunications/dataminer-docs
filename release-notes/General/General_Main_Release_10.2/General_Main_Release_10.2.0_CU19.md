@@ -61,6 +61,12 @@ When the factory reset tool *SLReset.exe* was run, up to now, the generation of 
 
 ### Fixes
 
+#### Dashboards app: Problem with trend components in PDF reports [ID_36331]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU4] - FR 10.3.7 -->
+
+In a PDF report of a dashboard, in some cases, trend components would collide with other components.
+
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
