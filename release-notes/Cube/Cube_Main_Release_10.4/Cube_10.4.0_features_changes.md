@@ -286,6 +286,17 @@ When, in the *Protocols & Templates* tab of the *Protocols & Templates* app, you
 > - DVE elements cannot be deleted or duplicated in the way described above. The parent element is responsible for creating or deleting such elements.
 > - It is no longer possible to create elements using a *Mediation Layer* protocol from within the *Protocols & Templates* app. Also, it is no longer possible to create new alarm templates or trend templates for *Mediation Layer* protocols.
 
+#### Alarm Console: No 'Include masked alarms' option anymore when creating a history tab [ID_37020]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you added a new history tab in the *Alarm Console*, up to now, you could select the *Include masked alarms* option. This option has now been removed.
+
+From now on, when you select the *Include alarms* option, the masked alarms will automatically be included as well. When you select the *Include information events* option or the *Include suggestion events* option, the masked alarms will not be included.
+
+> [!NOTE]
+> When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
+
 ## Changes
 
 ### Enhancements
