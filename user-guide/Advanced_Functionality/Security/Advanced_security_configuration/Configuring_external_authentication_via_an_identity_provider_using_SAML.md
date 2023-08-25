@@ -101,6 +101,9 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
 > The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
 > SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
 
+>[!CAUTION]
+>From Dataminer version 10.3.4/10.4.0 onwards ``WantAssertionsSigned`` is *required* to be set to true.
+
 ## Additional configuration for systems connected to dataminer.services
 
 When your DataMiner System is connected to dataminer.services, the following additional configuration is required for both the *spMetadata.xml* file and the identity provider:
@@ -149,6 +152,7 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 #### Setting up an Azure AD Enterprise application
 
 As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applications in Azure AD when setting up external authentication. When you create regular App registrations, certain features will not be available.
+As of DataMiner version 10.3.4/10.4.0 onwards it is required to create Enterprise Applications. Certain security features are not available in regular App registrations that are now required. 
 
 > [!NOTE]
 > Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.
