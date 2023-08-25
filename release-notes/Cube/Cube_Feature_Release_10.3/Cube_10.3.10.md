@@ -65,6 +65,12 @@ When time-scoped related parameters are being loaded in a trend graph, now the l
 
 On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
 
+#### Alarm templates: Style of toggle buttons has been made consistent with the styles used in the Cube themes [ID_37158]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
+
 ### Fixes
 
 #### Problems when viewing a trend graph of a parameter of type string [ID_36848]

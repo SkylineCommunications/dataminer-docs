@@ -467,6 +467,12 @@ All pattern occurrence values and pattern occurrence suggestion events displayed
 
 On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
 
+#### Alarm templates: Style of toggle buttons has been made consistent with the styles used in the Cube themes [ID_37158]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
+
 ### Fixes
 
 #### Profiles app: A profile instance would incorrectly list parameters that had been removed from the profile definition [ID_34679] [ID_34771]
