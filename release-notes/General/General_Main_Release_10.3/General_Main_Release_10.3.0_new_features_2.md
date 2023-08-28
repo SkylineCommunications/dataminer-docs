@@ -270,16 +270,3 @@ In the *Authentication* section (formerly known as *User Info* section), you now
 
 > [!WARNING]
 > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-
-### Correlation
-
-#### Correlation alarms will now by default contain the value of the alarm property by which they are grouped [ID_35583]
-
-<!-- MR 10.3.0 [CU7] - FR 10.3.4 -->
-
-When a correlation rule is configured to use alarm grouping via an alarm property, from now on, the value of the alarm property by which the alarms are grouped will now by default be added to the correlated alarm.
-
-If you do not want the alarm property value to be added to the correlation alarm, then you can disable this behavior by adding the `NewAlarmOptions.DisableGroupedProperty` flag to the `NewAlarmActionDefinition.Properties` using the *SLNetClientTest* tool.
-
-> [!WARNING]
-> Always be extremely careful when using the *SLNetClientTest* tool, as it can have far-reaching consequences on the functionality of your DataMiner System.

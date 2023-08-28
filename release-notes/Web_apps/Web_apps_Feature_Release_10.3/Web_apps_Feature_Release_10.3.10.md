@@ -28,11 +28,27 @@ uid: Web_apps_Feature_Release_10.3.10
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36977]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
+
 #### Security enhancements [ID_37051] [ID_37086]
 
-<!-- MR 10.3.0 [CU7]/10.4.0 - FR 10.3.10 -->
+<!-- RN 37051: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37086: MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
+
+#### Dashboard sharing: Any API call that depends on a query feed will now be allowed if the data that is fed is considered valid [ID_37091]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when data from a GQI query was fed to another component on a dashboard, some API calls would not be allowed when that dashboard was shared. From now on, any API call that depends on a query feed will be allowed if the data that is fed is considered valid.
+
+> [!NOTE]
+> When you share a dashboard that feeds GQI results to another component, a warning will still appear. The API calls may still allow more than the creator of the dashboard intended.
 
 ### Fixes
 
@@ -46,9 +62,15 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 #### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
 
 #### Dashboards app/Low-Code Apps: Visual glitch when closing component menu [ID_37058]
 
@@ -83,6 +105,6 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 #### Low-Code Apps: Time range component overlay not fully displayed [ID_37118]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.

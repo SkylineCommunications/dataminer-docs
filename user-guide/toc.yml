@@ -1876,6 +1876,8 @@
                 topicUid: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
+              - name: Stepper
+                topicUid: DashboardStepper
               - name: Text
                 topicUid: DashboardText
               - name: Web

@@ -271,6 +271,32 @@ When the card layout is set to "Proportional", you can now mark cards to non-clo
 > [!NOTE]
 > This feature cannot be used in conjunction with pinning. When, in a card's hamburger menu, you select the *Hide close button* option, the *Pin this card* option will be disabled (and vice versa).
 
+#### Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in the *Protocols & Templates* tab of the *Protocols & Templates* app, you right-click an element in the *Elements* column, the shortcut menu will now contain the following additional commands if you have been granted the necessary user permissions:
+
+- *Edit*: Opens a card that allows you to edit the selected element.
+- *Delete*: Deletes the selected element after you have clicked *Yes* in the confirmation box.
+- *Duplicate*: Opens a card that allows you to create a new element based on the configuration of the selected element.
+
+> [!NOTE]
+>
+> - DVE elements cannot be deleted or duplicated in the way described above. The parent element is responsible for creating or deleting such elements.
+> - It is no longer possible to create elements using a *Mediation Layer* protocol from within the *Protocols & Templates* app. Also, it is no longer possible to create new alarm templates or trend templates for *Mediation Layer* protocols.
+
+#### Alarm Console: No 'Include masked alarms' option anymore when creating a history tab [ID_37020]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you added a new history tab in the *Alarm Console*, up to now, you could select the *Include masked alarms* option. This option has now been removed.
+
+From now on, when you select the *Include alarms* option, the masked alarms will automatically be included as well. When you select the *Include information events* option or the *Include suggestion events* option, the masked alarms will not be included.
+
+> [!NOTE]
+> When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
+
 ## Changes
 
 ### Enhancements
@@ -440,6 +466,12 @@ All pattern occurrence values and pattern occurrence suggestion events displayed
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 On the Users/Groups page in System Center, a tooltip has been added to the *Edit Visio drawing* user permission with the information that the *Config* right also has to be enabled for views, elements, or services for the user to be able to edit the respective assigned Visio drawing.
+
+#### Alarm templates: Style of toggle buttons has been made consistent with the styles used in the Cube themes [ID_37158]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The style of the toggle buttons in the *Included* and *Anomalies* columns of the alarm template editor as well as in the *Templates* tab of parameter drill-down pages was not consistent with the styles used in the Cube themes. This has now been rectified.
 
 ### Fixes
 

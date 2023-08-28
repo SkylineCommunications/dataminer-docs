@@ -1,3 +1,4 @@
+items:
 - name: DataMiner release notes
   items:
   - name: General DataMiner release notes
@@ -51,7 +52,7 @@
           topicUid: General_Main_Release_10.3.0_CU4
         - name: General Main Release 10.3.0 CU5
           topicUid: General_Main_Release_10.3.0_CU5
-        - name: General Main Release 10.3.0 CU6 - Preview
+        - name: General Main Release 10.3.0 CU6
           topicUid: General_Main_Release_10.3.0_CU6
         - name: General Main Release 10.3.0 CU7 - Preview
           topicUid: General_Main_Release_10.3.0_CU7
@@ -60,7 +61,7 @@
         items:
         - name: General Feature Release 10.3.10 - Preview
           topicUid: General_Feature_Release_10.3.10
-        - name: General Feature Release 10.3.9 - Preview
+        - name: General Feature Release 10.3.9
           topicUid: General_Feature_Release_10.3.9
         - name: General Feature Release 10.3.8
           topicUid: General_Feature_Release_10.3.8
@@ -150,7 +151,7 @@
           topicUid: General_Main_Release_10.2.0_CU16
         - name: General Main Release 10.2.0 CU17
           topicUid: General_Main_Release_10.2.0_CU17
-        - name: General Main Release 10.2.0 CU18 - Preview
+        - name: General Main Release 10.2.0 CU18
           topicUid: General_Main_Release_10.2.0_CU18
         - name: General Main Release 10.2.0 CU19 - Preview
           topicUid: General_Main_Release_10.2.0_CU19
@@ -460,7 +461,7 @@
           topicUid: Cube_Main_Release_10.3.0_CU4
         - name: DataMiner Cube Main Release 10.3.0 CU5
           topicUid: Cube_Main_Release_10.3.0_CU5
-        - name: DataMiner Cube Main Release 10.3.0 CU6 - Preview
+        - name: DataMiner Cube Main Release 10.3.0 CU6
           topicUid: Cube_Main_Release_10.3.0_CU6
         - name: DataMiner Cube Main Release 10.3.0 CU7 - Preview
           topicUid: Cube_Main_Release_10.3.0_CU7
@@ -469,7 +470,7 @@
         items:
         - name: DataMiner Cube Feature Release 10.3.10 - Preview
           topicUid: Cube_Feature_Release_10.3.10
-        - name: DataMiner Cube Feature Release 10.3.9 - Preview
+        - name: DataMiner Cube Feature Release 10.3.9
           topicUid: Cube_Feature_Release_10.3.9
         - name: DataMiner Cube Feature Release 10.3.8
           topicUid: Cube_Feature_Release_10.3.8
@@ -545,7 +546,7 @@
           topicUid: Web_apps_Main_Release_10.3.0_CU4
         - name: DataMiner web apps Main Release 10.3.0 CU5
           topicUid: Web_apps_Main_Release_10.3.0_CU5
-        - name: DataMiner web apps Main Release 10.3.0 CU6 - Preview
+        - name: DataMiner web apps Main Release 10.3.0 CU6
           topicUid: Web_apps_Main_Release_10.3.0_CU6
         - name: DataMiner web apps Main Release 10.3.0 CU7 - Preview
           topicUid: Web_apps_Main_Release_10.3.0_CU7
@@ -554,7 +555,7 @@
         items:
         - name: DataMiner web apps Feature Release 10.3.10 - Preview
           topicUid: Web_apps_Feature_Release_10.3.10
-        - name: DataMiner web apps Feature Release 10.3.9 - Preview
+        - name: DataMiner web apps Feature Release 10.3.9
           topicUid: Web_apps_Feature_Release_10.3.9
         - name: DataMiner web apps Feature Release 10.3.8
           topicUid: Web_apps_Feature_Release_10.3.8
@@ -626,6 +627,8 @@
     - name: DIS release notes
       topicUid: DIS_RNs_index
       items:
+      - name: DIS 2.44
+        topicUid: DIS_2.44
       - name: DIS 2.43
         topicUid: DIS_2.43
       - name: DIS 2.42

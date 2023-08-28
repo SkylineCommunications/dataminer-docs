@@ -208,9 +208,10 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
-#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100] [ID_36977]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36100: MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36977: MR 10.4.0 - FR 10.3.10 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
@@ -386,7 +387,8 @@ In the *Monitoring* app, a new type of text area boxes will now be used on param
 
 #### Security enhancements [ID_36695] [ID_37051]
 
-<!-- MR 10.4.0 - FR 10.3.9/10.3.10 -->
+<!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37051: MR 10.4.0 - FR 10.3.10 -->
 
 A number of security enhancements have been made.
 
@@ -680,17 +682,17 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
-#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
-
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
 
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
@@ -715,3 +717,13 @@ When the web API fetched information for columns of a GQI query, it could occur 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.

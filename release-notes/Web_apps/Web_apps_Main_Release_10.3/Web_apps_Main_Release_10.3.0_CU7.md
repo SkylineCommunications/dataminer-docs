@@ -18,6 +18,15 @@ uid: Web_apps_Main_Release_10.3.0_CU7
 
 A number of security enhancements have been made.
 
+#### Dashboard sharing: Any API call that depends on a query feed will now be allowed if the data that is fed is considered valid [ID_37091]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when data from a GQI query was fed to another component on a dashboard, some API calls would not be allowed when that dashboard was shared. From now on, any API call that depends on a query feed will be allowed if the data that is fed is considered valid.
+
+> [!NOTE]
+> When you share a dashboard that feeds GQI results to another component, a warning will still appear. The API calls may still allow more than the creator of the dashboard intended.
+
 ### Fixes
 
 #### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
@@ -27,6 +36,12 @@ A number of security enhancements have been made.
 Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
 
 This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
+#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
 
 #### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
 
@@ -54,6 +69,6 @@ In the Monitoring app, it could occur that Visual Overview parameter control sha
 
 #### Low-Code Apps: Time range component overlay not fully displayed [ID_37118]
 
-<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
