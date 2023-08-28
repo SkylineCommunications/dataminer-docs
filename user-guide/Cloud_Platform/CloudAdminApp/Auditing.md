@@ -31,7 +31,7 @@ To export the audit records to CSV:
 
 1. When you see a notification in the lower right corner mentioning that the audit record request has succeeded, check your email.
 
-   You should have received an email with a link to the CSV file. If you cannot see the email, check your junk mail folder.
+   You will receive an email with a link to the CSV file. Note that it can take some time before you receive this email. If the email does not seem to arrive, check your junk mail folder.
 
 1. In the email, click the download link.
 
