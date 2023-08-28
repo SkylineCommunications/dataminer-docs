@@ -30,6 +30,9 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 
 Below you can find an example of how to set up an OpenSearch cluster on premises on a Ubuntu system, in accordance with the [Debian installation guide](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/).
 
+> [!NOTE]
+> We recommend using the latest version of Ubuntu LTS as Linux distribution.
+
 #### Main steps
 
 These are the main steps of the setup:
