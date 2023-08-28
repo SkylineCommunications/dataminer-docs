@@ -12,8 +12,8 @@ This tutorial lesson demonstrates how to create your first custom API. We will c
 - [Step 2: Create the automation script](#step-2-create-the-automation-script)
 - [Step 3: Create an API token](#step-3-create-an-api-token)
 - [Step 4: Create an API Definition](#step-4-create-the-api-definition)
-- [Optional step: Test the API using the SLNet Client Test Tool](#optional-step-test-the-api-using-the-slnet-client-test-tool)
-- [Step 5: Trigger the API using Postman](#step-5-trigger-the-api-using-postman)
+- [Step 5 (optional): Test the API using the SLNet Client Test Tool](#step-5-optional-test-the-api-using-the-slnet-client-test-tool)
+- [Step 6: Trigger the API using Postman](#step-6-trigger-the-api-using-postman)
 
 ## Step 1: Create an automation script solution
 
@@ -122,11 +122,11 @@ We will now create an API using the automation script and token we made earlier.
 1. You should now see an icon as shown in the image next to your automation script, this shows that your API is live!
 ![User-defined API icon on automation script](~/user-guide/images/UDAPIS_helloworld_18.jpg)
 
-## Optional step: Test the API using the SLNet Client Test Tool
+## Step 5 (optional): Test the API using the SLNet Client Test Tool
 
 You can test your API using the SLNet Client Test Tool, how to do that is described on the [triggering and managing a user-defined API](xref:SLNetClientTest_triggering_api#triggering-a-user-defined-api) page. This approach is great for testing, but does not use an actual API call like we will use in the next step.
 
-## Step 5: Trigger the API using Postman
+## Step 6: Trigger the API using Postman
 
 We are now ready to trigger an API request! [Postman](https://www.postman.com/) is a commonly used tool to test APIs.
 
