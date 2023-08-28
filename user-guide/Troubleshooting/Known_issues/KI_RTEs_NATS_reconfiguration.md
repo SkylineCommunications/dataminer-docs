@@ -6,7 +6,7 @@ uid: KI_RTEs_NATS_reconfiguration
 
 ## Affected versions
 
-Feature release versions from DataMiner 10.3.4 up to DataMiner 10.3.8.
+Feature release versions from DataMiner 10.3.4 to DataMiner 10.3.8.
 
 ## Cause
 
