@@ -130,9 +130,9 @@ You can test your API using the SLNet Client Test Tool, how to do that is descri
 
 We are now ready to trigger an API request! [Postman](https://www.postman.com/) is a commonly used tool to test APIs.
 
-1. When this is the first time using postman, the app will ask you to create an account or sign in. you're free to do this, but you can also continue using the *try our lightweight API client* at the bottom of the screen.
+1. When this is the first time using postman, the app will ask you to create an account or sign in. you're free to do this, but you can also continue using the *try our lightweight API client* button at the bottom of the screen.
 
-1. Open Postman, and click on the *+* icon to create a new request.
+1. Open Postman, and click on the *+* icon to create a new request.  
 !['+' icon in Postman](~/user-guide/images/UDAPIS_helloworld_19.jpg)  
 
 1. Fill in the URL, this will be `https://HOSTNAME/api/custom/helloworld`. Make sure to replace HOSTNAME with the actual hostname of your DataMiner agent.  
