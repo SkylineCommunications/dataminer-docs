@@ -18,6 +18,9 @@ To export the audit records to CSV:
 
 1. Click the *Export* button at the top of the page.
 
+   > [!NOTE]
+   > Any filters that you have applied to the list will also be applied to the export.
+
 1. In the pop-up window:
 
    - Select whether a comma or semicolon should be used as separator.
