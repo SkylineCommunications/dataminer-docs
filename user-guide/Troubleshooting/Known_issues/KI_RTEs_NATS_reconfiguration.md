@@ -6,7 +6,7 @@ uid: KI_RTEs_NATS_reconfiguration
 
 ## Affected versions
 
-Feature release versions from DataMiner 10.3.4 onwards.
+Feature release versions from DataMiner 10.3.4 to DataMiner 10.3.8.
 
 ## Cause
 
@@ -16,7 +16,7 @@ These errors occur when the NATS cluster does not have the required connections.
 
 ## Fix
 
-Install DataMiner 10.3.0 [CU6]/10.3.9.
+Install DataMiner 10.3.9<!-- RN 35246 -->.
 
 ## Description
 
