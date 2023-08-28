@@ -9,7 +9,11 @@ uid: EPM_1.0.4_VSAT
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### Backup mechanism added [ID_37035]
+
+To prevent a potential issue where the entities config file gets corrupted, the entities config file will now automatically be backed up. This happens when the system is set up for the first time or when the file is read successfully. The backup is located on the front-end DMA. If a problem is detected when trying to read the entities config file, the backup will be used instead. If no backup is available for some reason, the same logic will be used as when no config file is used, which means new IDs will need to be assigned.
+
+In addition, a daily backup functionality has been added. On the new *Backup* page in the Verizon VSAT Platform Manager visual overview, you can configure how often the backup should occur and where the backup file should be located.
 
 ## Changes
 
