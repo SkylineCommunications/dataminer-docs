@@ -4,7 +4,7 @@ uid: UD_APIs_Hello_world_tutorial
 
 # Hello world tutorial
 
-This tutorial lesson demonstrates how to create your first custom API. We will create a simple API that, upon execution, will return 'Hello world'.
+This tutorial lesson demonstrates how to create your first custom API. We will create a simple API that, upon execution, will return 'Hello world'. **Make sure to look at the [prerequisites](xref:UD_APIs_tutorials) before starting this tutorial.**
 
 ## Overview
 
@@ -28,14 +28,15 @@ We could just start developing our automation script in cube, but creating an au
 
 ## Step 2: Create the automation script
 
-The logic of your API is in an automation script, the automation script processes input arguments, executes logic and returns a response. For this example we won't process any input, and no logic will be executed, we'll only return 'Hello world!' to the user.
+The logic of your API is in an automation script, this processes input arguments, executes logic and returns a response. For this example we won't process any input, and no logic will be executed, we'll only return 'Hello world!' to the user.
 
 1. Let's use 'HelloWorldAPI' as name for our automation script, fill in your name as author and click Create.
 ![Visual Studio create automation script](~/user-guide/images/UDAPIS_helloworld_3.jpg)
 
 1. First we'll have to update the NuGet references to make sure they match our DataMiner version. In the 'Solution Explorer' in Visual Studio, right click 'Dependencies' under the project named 'HelloWorldAPI_1'. Then click 'Manage NuGet packages...'. In that window, click 'Updates' in the top.  
 ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_helloworld_4.jpg)  
-![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_helloworld_5.jpg)
+  
+   ![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_helloworld_5.jpg)
 
 1. You'll see that the 'Skyline.DataMiner.Dev.Automation' package has an Update. This package contains all the DataMiner assemblies we need to develop an automation script. Click it, and on the right side, change the 'Version' to the DataMiner version you're using, and click 'Update'.  
 ![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_helloworld_6.jpg)  
@@ -92,7 +93,7 @@ To access our API, we require an [access token](xref:UD_APIs_Objects_ApiToken).
 
 1. Open DataMiner Cube, and login to your DataMiner system
 
-1. Open *System Center* > User-Defined APIs*. In this window we can manage our APIs and Tokens.
+1. Open *System Center* > *User-Defined APIs*. In this window we can manage our APIs and Tokens.
 
 1. Under *Tokens* click *Create...*
 
@@ -101,8 +102,8 @@ To access our API, we require an [access token](xref:UD_APIs_Objects_ApiToken).
 
 1. A secret will now be generated, copy it, and **make sure you save it somewhere.** We will need it later to trigger our API, **you cannot retrieve the secret again after closing this window!** You can now see our token in the list of available tokens!
 ![Create API secret](~/user-guide/images/UDAPIS_helloworld_14.jpg)
-
-![Tokens list](~/user-guide/images/UDAPIS_helloworld_15.jpg)
+  
+   ![Tokens list](~/user-guide/images/UDAPIS_helloworld_15.jpg)
 
 ## Step 4: Create the API Definition
 
@@ -129,14 +130,19 @@ You can test your API using the SLNet Client Test Tool, how to do that is descri
 
 We are now ready to trigger an API request! [Postman](https://www.postman.com/) is a commonly used tool to test APIs.
 
-1. Open Postman, and click on the *+* icon to create a new request.
+1. When this is the first time using postman, the app will ask you to create an account or sign in. you're free to do this, but you can also continue using the *try our lightweight API client* at the bottom of the screen.
 
-1. Fill in the URL, this will be `https://HOSTNAME/api/custom/helloworld`. Make sure to replace HOSTNAME with the actual hostname of your DataMiner agent.
+1. Open Postman, and click on the *+* icon to create a new request.
+!['+' icon in Postman](~/user-guide/images/UDAPIS_helloworld_19.jpg)  
+
+1. Fill in the URL, this will be `https://HOSTNAME/api/custom/helloworld`. Make sure to replace HOSTNAME with the actual hostname of your DataMiner agent.  
+![Postman UI with url filled in](~/user-guide/images/UDAPIS_helloworld_20.jpg)  
 
 1. Now go to the Authorization tab and choose 'Bearer token' as Type.
-![Add bearer token in Postman](~/user-guide/images/UDAPIS_helloworld_19.jpg)
+![Add bearer token in Postman](~/user-guide/images/UDAPIS_helloworld_21.jpg)  
 
 1. In the token section, fill in the secret of the token that we made in [step 2](#step-3-create-an-api-token).
+![Postman UI with token filled in](~/user-guide/images/UDAPIS_helloworld_22.jpg)  
 
 1. Now click the 'Send' button on the right side. You should get 'Hello world' as a response. If you get a warning about SSL verification, you can click *Disable SSL verification* to disable SSL verification and send again.
-![Api response](~/user-guide/images/UDAPIS_helloworld_20.jpg)
+![Api response](~/user-guide/images/UDAPIS_helloworld_23.jpg)  
