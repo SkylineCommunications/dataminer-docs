@@ -2661,6 +2661,13 @@
           topicUid: UD_APIs_UserDefinableApiEndpoint
         - name: Troubleshooting
           topicUid: UD_APIs_Troubleshooting
+        - name: Tutorials
+          topicUid: UD_APIs_tutorials
+          items:
+            - name: Hello world tutorial
+              topicUid: UD_APIs_Hello_world_tutorial
+            - name: Elements in alarm tutorial
+              topicUid: UD_APIs_Elements_in_alarm_tutorial
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps
   items:
