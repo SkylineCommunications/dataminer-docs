@@ -15,7 +15,7 @@ To make sure events at lower levels in the topology do not become too numerous, 
 
 The alarm template conditions have been applied on Amplifier and Tap level, and they make use of foreign key relations between the tables. This means that the Skyline EPM Platform DOCSIS connector also had to be modified to assign the Node ID for all amplifiers in the Amplifier table.
 
-#### Alarm suppression at lower levels via alarm template conditions for routes, distributions, and FAT levels [ID_36784]
+#### Alarm suppression at lower levels via alarm template conditions for routes, distributions, and FAT levels [ID_36874]
 
 In order to suppress alarms for routes, distributions, and FAT levels, the alarm template has been modified to include conditions for these levels. The alarm will be suppressed if the following conditions are met:
 
