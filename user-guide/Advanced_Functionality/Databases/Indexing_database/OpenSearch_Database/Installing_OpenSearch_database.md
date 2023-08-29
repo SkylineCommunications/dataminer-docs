@@ -14,6 +14,8 @@ Supported versions:
 > [!NOTE]
 > OpenSearch is supported on Windows from OpenSearch 2.4 onwards.
 
+We promote the use of Ubuntu LTS as the preferred Linux distribution. The procedure mentioned below will work on any Debian-based system, including Ubuntu.
+
 ## Setting up the OpenSearch cluster
 
 See the [official documentation](https://opensearch.org/docs/latest/) on how to set up your OpenSearch cluster. The configuration is almost identical to that of an Elasticsearch cluster.
@@ -29,9 +31,6 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 ### Example configuration
 
 Below you can find an example of how to set up an OpenSearch cluster on premises on a Ubuntu system, in accordance with the [Debian installation guide](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/).
-
-> [!NOTE]
-> We recommend using the latest version of Ubuntu LTS as Linux distribution.
 
 #### Main steps
 
