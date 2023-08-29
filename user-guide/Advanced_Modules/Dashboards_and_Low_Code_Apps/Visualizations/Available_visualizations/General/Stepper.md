@@ -19,7 +19,7 @@ To configure the component:
      > [!NOTE]
      > DOM definitions can only be applied to the stepper component within the Low-Code Apps module.
 
-- When a DOM instance is applied, this will be used to display the current state, preceded by the states the instance has traversed until its current state, and followed by the future states it will go through if it follows the normal flow.
+   - When a DOM instance is applied, this will be used to display the current state, preceded by the states the instance has traversed until its current state, and followed by the future states it will go through if it follows the normal flow.
 
 1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
 
