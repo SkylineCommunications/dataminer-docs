@@ -129,7 +129,7 @@ Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skylin
 
 When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
 
-From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks.
+From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
 
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
@@ -141,7 +141,7 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
-In some cases, when a query was run against an Elasticsearch database, SLDataGateway would throw an exception, causing Elasticsearch not be return any results.
+In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
 
 #### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
 
