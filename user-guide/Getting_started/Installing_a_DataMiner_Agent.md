@@ -4,6 +4,9 @@ uid: Installing_a_DataMiner_Agent
 
 # Installing a DataMiner Agent
 
+> [!TIP]
+> With DataMiner as a Service (DaaS), scheduled for **production release in Q3 of 2023**, you can deploy a DataMiner System with a single click. For more information on DaaS and its benefits, see [Sneak peek: DataMiner as a Service (DaaS) in action](https://community.dataminer.services/sneak-peek-dataminer-as-a-service-daas-in-action/) on DataMiner Dojo.
+
 - [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer)
 
 - [Unattended DataMiner installation](xref:Unattended_DM_installation)

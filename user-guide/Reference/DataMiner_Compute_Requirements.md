@@ -4,6 +4,9 @@ uid: DataMiner_Compute_Requirements
 
 # DataMiner Compute Requirements
 
+> [!IMPORTANT]
+> The compute requirements below are only relevant for older, supported storage setups. With [Storage as a Service (STaaS)](xref:STaaS), scheduled for production release in Q3 of 2023, the entire DataMiner setup is configured automatically for optimal performance.
+
 To make sure your DataMiner System performs optimally, it is important that sufficient resources are available. The overview below shows the requirements for a DataMiner setup using the latest version of DataMiner, with Cassandra and Elasticsearch. Minimum requirements are displayed in gray, default requirements in light blue, and requirements for high-end applications in dark blue. Below this, you will find more detailed information on the requirements.
 
 > [!TIP]
