@@ -12,7 +12,7 @@ uid: General_Main_Release_10.3.0_CU7
 
 ### Enhancements
 
-#### Service & Resource Management: Changing the 'IsValueCopy' property of a ProfileInstance will no longer be allowed [ID_31189]
+#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID_31189]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
