@@ -179,3 +179,9 @@ In some rare cases, queries run against an Elasticsearch database would get stuc
 In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Problem when importing an existing element [ID_37214]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
