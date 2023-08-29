@@ -109,6 +109,12 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
 
+#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+
 #### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
