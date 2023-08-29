@@ -733,3 +733,9 @@ In some cases, an error could occur when migrating a GQI component:
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
+
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
