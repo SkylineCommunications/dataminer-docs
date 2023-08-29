@@ -734,12 +734,6 @@ In some cases, an error could occur when migrating a GQI component:
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
 
-#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
-
 #### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

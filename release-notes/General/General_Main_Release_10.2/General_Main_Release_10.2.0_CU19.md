@@ -190,3 +190,9 @@ In some rare cases, queries run against an Elasticsearch database would get stuc
 In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
