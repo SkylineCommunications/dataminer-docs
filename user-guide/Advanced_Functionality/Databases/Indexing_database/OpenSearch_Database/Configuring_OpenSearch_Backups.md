@@ -329,11 +329,5 @@ You have now finished configuring an OpenSearch backup.
    GET /_snapshot/_status
    ```
 
-## Troubleshooting
-
-Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
-
-You can find the cluster name in `/etc/opensearch/opensearch.yml`.
-
 > [!TIP]
-> For more information, see [Logs](https://opensearch.org/docs/latest/monitoring-your-cluster/logs/).
+> See also the following troubleshooting guide: [Investigating OpenSearch Issues](xref:Investigating_OpenSearch_Issues)
