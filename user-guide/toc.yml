@@ -3477,8 +3477,10 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_Unable_to_Connect_Net_Remoting
+          topicUid: KI_Cassandra_backups_not_working
           items:
+            - name: Cassandra backups no longer working
+              topicUid: KI_Cassandra_backups_not_working
             - name: Unable to connect to DMS when using .NET Remoting
               topicUid: KI_Unable_to_Connect_Net_Remoting
             - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
