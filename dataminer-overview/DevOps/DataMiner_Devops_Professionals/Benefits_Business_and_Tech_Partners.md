@@ -25,4 +25,4 @@ As a business or technology partner you can accumulate DataMiner DevOps Points b
 
 - **Submitting a use case**: If you choose to [submit a use case](https://community.dataminer.services/download/use-case-template/) for the community, upon acceptance this will result in 250 up to 1000 points. Use cases could focus on a new product integration that you have completed for DataMiner, or on any other type of solution that you have implemented with DataMiner.
 
-- **Enrolling in and completing online DataMiner Sales & Business Insights**: The DataMiner Community offers complimentary Corporate Business Value Proposition training. Watching the video presentation and upon successful completion of the quizz you will be rewarded with 400 DevOps Points.
+- **Enrolling in and completing online DataMiner Sales & Business Insights**: The DataMiner Community offers complimentary Corporate Business Value Proposition training. Watch the video presentation and successfully complete the quiz to be rewarded with 400 DevOps Points.
