@@ -34,9 +34,9 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
-#### Security enhancements [ID_37051] [ID_37086]
+#### Security enhancements [ID_37047] [ID_37051] [ID_37068] [ID_37086]
 
-<!-- RN 37051: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
 <!-- RN 37086: MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
