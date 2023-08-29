@@ -155,3 +155,17 @@ From now on, *NATS Custodian* will check whether the routes list contains any vi
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
+#### Problem when running queries against Elasticsearch [ID_37138]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, when a query was run against an Elasticsearch database, SLDataGateway would throw an exception, causing Elasticsearch not be return any results.
+
+#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
+
+From now on, the status of a booking will only be set to "Ended" once all events have been run.
