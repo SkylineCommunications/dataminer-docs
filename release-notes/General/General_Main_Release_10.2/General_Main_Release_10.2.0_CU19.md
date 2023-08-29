@@ -59,6 +59,16 @@ A number of security enhancements have been made.
 
 When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
 
+#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID_37188]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you connected to a DataMiner Agent, up to now, the Alarm Console would often show the following notice:
+
+`No Notifications might be sent (Email or Sms). Init Notifications: No e-mail address found to use as sender. Defaulting to notifications@example.com`
+
+This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
+
 ### Fixes
 
 #### Dashboards app: Problem with trend components in PDF reports [ID_36331]
