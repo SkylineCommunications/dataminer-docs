@@ -46,4 +46,4 @@ The *Compare* tab shows the differences between the OID data in the MIB tree and
 
 ## See also
 
-- [DIS MIB Browser Guide](xref:DisMibBrowserGuide).
+- [DIS MIB Browser Guide](xref:DisGuides_MibBrowser).
