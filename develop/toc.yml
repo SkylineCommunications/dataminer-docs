@@ -5307,10 +5307,12 @@
             - name: Class Library packages
               topicUid: Class_Library_packages
         - name: Guides
+          topicUid: DisGuides
           items:
             - name: DIS MIB Browser
               topicUid: DisGuides_MibBrowser
         - name: Tutorials
+          topicUid: DisTutorials
           items:
             - name: DIS MIB Browser
               topicUid: DisTutorials_MibBrowser
