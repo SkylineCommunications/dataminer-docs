@@ -16,3 +16,5 @@ This chapter consists of the following sections:
 - [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts)
 - [Troubleshooting](xref:Troubleshooting)
 - [DIS reference](xref:DIS_reference)
+- [Guides](xref:DisGuides)
+- [Exercises](xref:DisExercises)

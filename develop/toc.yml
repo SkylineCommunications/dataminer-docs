@@ -5306,6 +5306,14 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
+        - name: Guides
+          items:
+            - name: DIS MIB Browser
+              topicUid: DisGuides_MibBrowser
+        - name: Tutorials
+          items:
+            - name: DIS MIB Browser
+              topicUid: DisTutorials_MibBrowser
     - name: NuGet packages
       topicUid: TOONuGet
       items:
