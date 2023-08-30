@@ -20,6 +20,10 @@ uid: EPM_6.1.9_I-DOCSIS
 
 In the CISCO CBR-8 CCAP Platform connector, a new *OFDM/OFDMA* page has been added containing parameters related to channels from the device. These channels are also linked to the associated node segments and service groups. When you view either of those entities in the topology, new KPIs are displayed with the total number of OFDM and OFDMA channels and the average utilization. There is also a link to a dashboard displaying all channels associated with the entity.
 
+#### CM overview dashboard for node segment and service group entities [ID_37203]
+
+When you navigate to the node segment or service group entities in the topology visual overview, and you click the *# CM* KPI, a link is now displayed to a dashboard that shows all cable modems associated with the entity.
+
 ## Changes
 
 ### Enhancements
