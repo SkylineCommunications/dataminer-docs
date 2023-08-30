@@ -682,6 +682,14 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
+
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->

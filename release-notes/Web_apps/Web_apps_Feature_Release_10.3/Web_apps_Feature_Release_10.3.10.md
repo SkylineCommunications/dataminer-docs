@@ -66,6 +66,14 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
 
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
+
 #### DataMiner web apps: Date/time picker issues [ID_37041]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
