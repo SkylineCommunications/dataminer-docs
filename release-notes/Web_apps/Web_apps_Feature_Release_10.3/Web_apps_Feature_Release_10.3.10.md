@@ -123,6 +123,12 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
 
+#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
 #### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
