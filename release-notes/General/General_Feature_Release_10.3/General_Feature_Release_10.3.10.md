@@ -166,6 +166,12 @@ From now on, *NATS Custodian* will check whether the routes list contains any vi
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
 
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
 #### Problem when running queries against Elasticsearch [ID_37138]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
