@@ -23,6 +23,6 @@ uid: General_Feature_Release_10.3.9_CU1
 <!-- MR 10.4.0 - FR 10.3.9 [CU1] -->
 <!-- Not added to MR 10.4.0 -->
 
-DataMiner version 10.3.9 introduced additional binding redirects in the *CassandraBackup.exe.config* file. SLDataGateway would try to load these references, but as these were not available in the `C:\Skyline DataMiner\Tools` folder, this caused exceptions.
+DataMiner version 10.3.9 introduced additional binding redirects in the *CassandraBackup.exe.config* file. SLDataGateway would try to load these references, but as these were not available in the `C:\Skyline DataMiner\Tools` folder, exceptions would be thrown and backups would fail.
 
 These references have now been removed again.
