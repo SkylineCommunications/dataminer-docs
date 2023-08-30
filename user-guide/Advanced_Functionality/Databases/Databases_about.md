@@ -10,7 +10,7 @@ Each DataMiner System requires its own system data storage. This data storage se
 
 <br/>
 
-| | on premises | off premises | all features available | scalable | easy installation | automatic backups | effortless maintenance |
+| | self-hosted | Skyline-hosted (SaaS) | all features available | scalable | easy installation | automatic backups | effortless maintenance |
 |--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Storage as a Service (STaaS)** | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
 | **Dedicated clustered storage** | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | | | |
