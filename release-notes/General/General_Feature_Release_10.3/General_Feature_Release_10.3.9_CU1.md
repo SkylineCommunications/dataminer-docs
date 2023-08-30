@@ -17,3 +17,12 @@ uid: General_Feature_Release_10.3.9_CU1
 > - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
 
 ### Fixes
+
+#### Cassandra backups would no longer work [ID_37217]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU1] -->
+<!-- Not added to MR 10.4.0 -->
+
+DataMiner version 10.3.9 introduced additional binding redirects in the *CassandraBackup.exe.config* file. SLDataGateway would try to load these references, but as these were not available in the `C:\Skyline DataMiner\Tools` folder, this caused exceptions.
+
+These references have now been removed again.
