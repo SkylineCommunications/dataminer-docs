@@ -694,6 +694,12 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 
 A number of date/time picker issues have been fixed.
 
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
@@ -739,3 +745,9 @@ In some cases, an error could occur when migrating a GQI component:
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+
+#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
