@@ -173,8 +173,9 @@ The following options are available:
 
 > [!TIP]
 > See also:
+>
 > - [Icons settings](xref:User_settings#icons-settings)
-> - <https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/>
+> - [Surveyor – Using latched and special icons](https://community.dataminer.services/video/surveyor-using-latched-and-special-icons/) ![Video](~/user-guide/images/video_Duo.png)
 
 > [!NOTE]
 > From DataMiner 10.0.0/10.0.2 onwards, these icon settings can only be used if the *Use modern icons* setting is not enabled.
@@ -231,7 +232,7 @@ The following actions are possible with this list:
 
 > [!TIP]
 > See also:
-> <https://community.dataminer.services/video/ruis-rapid-recap-recent-pinned-items/>
+> [Rui’s Rapid Recap – Recent & pinned items](https://community.dataminer.services/video/ruis-rapid-recap-recent-pinned-items/) ![Video](~/user-guide/images/video_Duo.png)
 
 ### Apps
 

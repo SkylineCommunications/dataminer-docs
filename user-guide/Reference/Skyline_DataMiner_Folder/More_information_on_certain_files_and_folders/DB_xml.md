@@ -193,13 +193,11 @@ To do so
 > - This procedure only enables TLS on the database connection. It does not enable client authentication.
 > - From DataMiner 10.1.3 onwards TLS 1.0 is supported. From DataMiner 10.2.4/10.2.0-CU1 onwards, TLS 1.0, 1.1 and 1.2 are supported.
 > - When Cassandra is hosted on the local DataMiner server, and DataMiner Failover is active, Cassandra will use TCP port 7001 for TLS encrypted inter-node communication (instead of port 7000). Make sure this port is allowed through the firewall of both Failover agents.
+> - This setting is also needed to use an [Azure Managed Instance for Apache Cassandra](xref:Azure_Managed_Instance_for_Apache_Cassandra).
 
 ### Configuring the consistency level of Cassandra in a Cassandra Cluster database
 
-If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Customizing the consistency level of the Cassandra cluster](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#customizing-the-consistency-level-of-the-cassandra-cluster).
-
-> [!TIP]
-> See also: [Data replication and consistency configuration](xref:replication_and_consistency_configuration).
+If your DMS uses the Cassandra Cluster database type (i.e. one Cassandra cluster for the entire DMS) , you can configure the **consistency level** of the Cassandra database. This is done by means of the **consistencyLevel** attribute. For detailed information, see [Consistency level](xref:replication_and_consistency_configuration#consistency-level).
 
 ### Example of a general database configuration
 
@@ -477,12 +475,13 @@ The *\<Database>* tag for an Elasticsearch database has the following attributes
 
 - **search**: If set to true, indicates that the database is an indexing database.
 
-- **type**: Currently only “Elasticsearch” is supported.
+- **type**: Currently only “Elasticsearch” is supported. This same value is used For OpenSearch and Amazon OpenSearch Service databases.
 
 > [!NOTE]
 >
-> - There can only be one active indexing database on a DMA.
-> - From DataMiner 10.2.0/10.1.1 onwards, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
+> - There can only be one active indexing database on a DMA. However, that database can consist of multiple nodes. In that case, the IP addresses for these nodes are all added in the DBServer tag, separated by commas. For example: `<DBServer>10.10.10.1,10.10.10.2,10.10.10.3</DBServer>`
+> - From DataMiner 10.2.0/10.1.1 until DataMiner 10.3.0/10.3.3, Elastic Amazon AWS can be used. In that case, the URL should be specified in the DBServer element. For example: *\<DBServer>mycompany-elastic.amazonaws.com\</DBServer>*.
+> - From DataMiner 10.3.0/10.3.3 onwards, OpenSearch and Amazon OpenSearch Services can be used.
 > - From DataMiner 10.2.0/10.1.3 onwards, a *DBConfiguration.xml* file can be configured, which overrides the settings in this section of *DB.xml*. See [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
 
 ### Defining a custom port for an Elasticsearch database

@@ -7,7 +7,7 @@ uid: Microsoft_Teams_Chat_Integration
 If your DataMiner System is connected to dataminer.services, you can integrate your DataMiner System with Microsoft Teams using [DataMiner Automation](xref:automation).
 
 > [!TIP]
-> See also: [dataminer.services](xref:Part51CloudPlatform)
+> See also: [dataminer.services](xref:AboutCloudPlatform)
 
 ## Prerequisites
 
@@ -40,17 +40,22 @@ If you want to create chat integration Automation scripts, you will need to make
 
 - [Admin consent must be granted](xref:Granting_admin_consent) in the [Admin app](https://admin.dataminer.services). You can revoke this consent at any time.
 
+> [!NOTE]
+> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).
+
 ## Using chat integration
 
 The following features are available:
 
 - Creating teams
+- Fetching all teams
 - Creating channels
+- Fetching all channels of a team
 - Adding members or owners to your teams
-- Sending notifications in the created channels in the name of the DataMiner Teams bot
+- Sending notifications in channels in the name of the DataMiner Teams bot
 - Creating a private chat between someone and the DataMiner Teams bot
 - Fetching a private chat between someone and the DataMiner Teams bot
-- Sending notifications in those private chats in the name of the DataMiner Teams bot
+- Sending notifications in private chats in the name of the DataMiner Teams bot
 
 To get started, you can find several example Automation scripts with more information on [GitHub](https://github.com/SkylineCommunications/ChatOps-Extensions/tree/main/ChatIntegrationExamples).
 
@@ -58,11 +63,13 @@ After you have made sure the above-mentioned prerequisites are in place, you can
 
 ## Limitations
 
-- Currently, it is not possible to retrieve the existing teams. You can only create a channel using chat integration if you know the ID of the team, which you will receive when you create the team with chat integration.
-- Currently, it is not possible to retrieve the existing channels. You can only send notifications in a channel using chat integration if you know the ID of the channel, which you will receive when you create the channel with chat integration.
+- Notifications cannot exceed 35 KB.
 
 ## Security
 
 By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
 
-You can revoke this access at any time. See [Granting admin consent for Teams actions](xref:Granting_admin_consent).
+You can revoke this access at any time. See [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent).
+
+> [!NOTE]
+> You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).

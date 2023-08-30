@@ -24,26 +24,24 @@ These are the required EPM connectors, which are included in the EPM Solution pa
 - [Skyline EPM Platform DOCSIS](https://catalog.dataminer.services/result/driver/7209)
 - [Skyline EPM Platform DOCSIS WM](https://catalog.dataminer.services/result/driver/7212)
 
-## Correlation rules
-
-The I-DOCSIS EPM Solution uses the following Correlation rules:
-
-- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
-- **WM to EPM BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
-- **EPM BE to EPM FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
-- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
+> [!NOTE]
+> In versions prior to I-DOCSIS 6.1.7<!-- RN 36326 -->, Correlation rules and Automation scripts are used to enable communication between the back end and the Workflow Manager. However, starting from I-DOCSIS 6.1.7, inter-app communication is used for this instead, making those Correlation rules and Automation scripts unnecessary. This change in communication methodology should be taken into consideration when developing software for recent I-DOCSIS versions.
 
 ## Automation scripts
 
 The I-DOCSIS EPM Solution uses the following Automation scripts:
 
-- **CCAP to EPM FE**: Operates within the messaging system domain taking care of simple notifications between CCAP elements and the EPM engine.
-- **EPM FE to EPM BE**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
-- **EPM BE to CCAP Pair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
-- **EPM BE to WM**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and Workflow Managers.
-- **WM to BE**: Operates within the messaging system domain taking care of simple notifications between Workflow Managers and EPM back-end elements.
-- **EPM BE to FE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
-- **EPM FE to BE Passives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
+- **EPM_I_DOCSIS_CCapToEpmFe**: Operates within the messaging system domain taking care of simple notifications between CCAP elements and the EPM engine.
+- **EPM_I_DOCSIS_EpmFeToEpmBe**: Operates within the messaging system domain taking care of simple notifications between the EPM front-end element and the back-end elements.
+- **EPM_I_DOCSIS_EpmBeToCcapPair**: Operates within the messaging system domain taking care of simple notifications between EPM back-end elements and CCAP collectors.
+- **EPM_I_DOCSIS_EPMBeToFePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM back-end elements and the front-end element.
+- **EPM_I_DOCSIS_EPMFeToBePassives**: Operates within the messaging system domain taking care of simple notifications related to the subscriber’s integration between the EPM front-end element and the back-end elements.
+- **EPM_I_DOCSIS_AddNewCcapCmPair**: Allows the user to create a CCAP/CM pair from the EPM UI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DATA**: Used to retrieve all CM-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_DS_QAM_DATA**: Used to retrieve all DS QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_US_QAM_DATA**: Used to retrieve all US QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_DS_QAM_DATA**: Used to retrieve all CM DS QAM Channel-related data in Dashboards using GQI.
+- **EPM_I_DOCSIS_GQI_GET_ALL_CM_US_QAM_DATA**: Used to retrieve all CM US QAM Channel-related data in Dashboards using GQI.
 
 ## Dashboards
 
@@ -57,7 +55,19 @@ The I-DOCSIS EPM Solution includes the following dashboards:
 - I-DOCSIS Customer Diagnosis tool - CM Info
 - I-DOCSIS Customer Diagnosis Tool - Network Performance
 - I-DOCSIS Global System Counts
-- I-DOCSIS Cable Modem
+- AMPLIFIER/01. CM Overview
+- AMPLIFIER/02. Offline CM Overview
+- CM/01. CM Overview
+- CM/02. CM DS QAM Channels
+- CM/03. CM US QAM Channels
+- NODE/01. CM Overview
+- NODE/02. Offline CM Overview
+- NODE SEGMENT/01. DS QAM Channels
+- NODE SEGMENT/02. US QAM Channels
+- TAP/01. CM Overview
+- TAP/02. Offline CM Overview
+- SERVICE GROUP/01. DS QAM Channels
+- SERVICE GROUP/02. US QAM Channels
 
 ## Visuals
 

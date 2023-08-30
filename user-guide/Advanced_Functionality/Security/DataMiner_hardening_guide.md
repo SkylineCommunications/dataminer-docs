@@ -68,6 +68,19 @@ Like for the communication with DataMiner Cube, for the inter-DMA communication,
 
 To enable gRPC for the communication between DataMiner Agents in a cluster, add [redirects in DMS.xml](xref:DMS_xml#redirects-subtag).
 
+## Disable legacy components
+
+DataMiner has some components that are considered legacy. They are still around to support existing setups that depend on them, but if you have a new setup or you want to secure your existing setup, we recommend disabling them. Currently we recommend disabling the *Annotations* component and the legacy *Reports and Dashboards* component. You can do so by adding the following code in the `C:\Skyline DataMiner\SoftLaunchOptions.xml` file:
+
+```xml
+<SLNet>
+   <LegacyAnnotations>false</LegacyAnnotations>
+   <LegacyReportsAndDashboards>false</LegacyReportsAndDashboards>
+</SLNet>
+```
+
+To make the changes take effect, you then need to run the *ConfigureIIS.bat* script located in the `C:\Skyline DataMiner\Tools` folder.
+
 ## Configure the firewall
 
 On DataMiner versions installed using the **10.0 installer** (or older), the DataMiner installation opens the following (inbound) ports and rules in the Windows firewall:
@@ -117,6 +130,9 @@ If you use the **DataMiner 10.1 installer or a more recent installer**, the port
 - The ports for NATS communication (**4222, 6222, and 9090**) can be closed when the DMA is not part of a cluster.
 
 - UDP ports **161 and 362** can be closed if the DataMiner SNMP Agent feature is disabled, which is the case by default from DataMiner 9.6.11 onwards. However, if a DMA was installed prior to DataMiner 9.6.11 and is upgraded to DataMiner 9.6.11 or higher, this functionality will remain enabled until it is manually disabled. For more information, see [Enabling DataMiner SNMP agent functionality](xref:Enabling_DataMiner_SNMP_agent_functionality).
+
+> [!NOTE]
+> From DataMiner 10.3.6/10.4.0 onwards (or in earlier versions used with DataMiner CloudGateway 2.10.0 or higher), inbound **TCP port 5100** communication should also be enabled, because this is required for communication to the cloud via the endpoint hosted in DataMiner CloudGateway. When you upgrade, the [Firewall Configuration](xref:BPA_Firewall_Configuration) BPA will run to check wether this port is correctly configured.
 
 The **Remote Administration** rule must be enabled when the DataMiner server is monitored by a remote element using the Microsoft Platform protocol. This is for example the case when two DataMiner Agents are used in a Failover setup, and both servers are monitored through the Microsoft Platform protocol.
 

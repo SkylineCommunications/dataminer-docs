@@ -6,7 +6,7 @@ uid: TOOApplicationPackages
 
 From DataMiner 10.0.11 onwards, it is possible to create, upload and install application packages. These application packages can be used to install a single app or a complete DataMiner Solution.
 
-- [Creating an application package](xref:Creating_an_app_package)
+- [Application package structure](xref:Creating_an_app_package)
 - [Installing an application package](xref:Installing_an_app_package)
 - [Creating application package scripts](xref:Creating_app_package_scripts)
 

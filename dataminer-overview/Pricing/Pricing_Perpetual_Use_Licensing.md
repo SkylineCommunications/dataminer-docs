@@ -16,7 +16,9 @@ A DataMiner System (DMS) consists of one or more DataMiner nodes (DMAs), interco
 
 DMAs can be distributed across the operational environment to increase the overall availability and resilience. Alternatively, they can be co-located at regional or central sites in a regionalized or centralized architecture. The number of DMAs is defined by the number of objects that need to be managed and the application, and their location is a matter of preference in terms of architecture. However, in any case, and in any scenario, all DMAs combined automatically behave like a single consolidated system towards the user.
 
-Depending on the application, licensing is available as **server-based licenses**, i.e.one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs need.
+Depending on the application, licensing is available as **server-based licenses**, i.e. one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
+
+Failover is available for server-based licenses, excluding for DataMiner Probes.
 
 | Application | License | Available capacity tiers |
 |--|--|--|
@@ -29,7 +31,7 @@ Depending on the application, licensing is available as **server-based licenses*
 > All volume-based licenses are cumulative undividable capacity packages. For example, to manage 17,000 objects you can either buy one 20K capacity license or one 15K and two 1K capacity licenses.
 
 > [!NOTE]
-> The license restriction on the number of Managed Objects applies to active and paused element objects (not stopped elements), including both regular element objects and virtual element objects (a.k.a. DVEs), and objects representing applications and data aggregators. It does not apply to service objects, enhanced service objects, element objects derived from redundancy groups, and SLA objects.
+> The license restriction on the number of Managed Objects applies to active and paused element objects (not stopped elements), including both standard element objects and regular virtual element objects (a.k.a. DVEs), and objects representing applications and data aggregators. It does not apply to service objects, enhanced service objects, function DVEs, element objects derived from redundancy groups, and SLA objects.
 
 ### Optional functions
 

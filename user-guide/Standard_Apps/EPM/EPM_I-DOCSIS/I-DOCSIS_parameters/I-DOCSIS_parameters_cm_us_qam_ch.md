@@ -6,6 +6,8 @@ uid: I-DOCSIS_parameters_cm_us_qam_ch
 
 This page contains an overview of the CM US QAM CH parameters available in the I-DOCSIS branch of the EPM Solution.
 
+These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboards.
+
 - **Name \[IDX]**: Direct value. The display name of the CM-channel relation.
 
   Concatenation of the CM MAC, CMTS Name, and US Ch Name, using "/" as a separator.

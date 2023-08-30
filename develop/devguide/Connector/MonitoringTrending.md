@@ -4,7 +4,7 @@ uid: MonitoringTrending
 
 # Trending
 
-DataMiner provides the possibility to show trend graphs of parameters indicating how the value of a parameter changes over time. For more information about trend templates in DataMiner, refer to [Trend templates](xref:Trend_templates).
+DataMiner provides the possibility to show trend graphs of parameters indicating how the value of a parameter changes over time. For more information about trend templates in DataMiner, refer to [Trend templates](xref:About_trend_templates).
 
 In a protocol, it is possible to define whether or not a parameter should support trending. If trending is not supported for a parameter, the parameter will not be included in the trend template.
 

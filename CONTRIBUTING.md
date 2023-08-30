@@ -9,7 +9,7 @@ Welcome to the docs.dataminer.services contributor guide!
 Our documentation is open to contributions from any user. Contributions are created, reviewed, and merged via GitHub. This page will explain how you can add and review contributions, ranging from simple changes to a single page, to larger changes where entire sections of the documentation are added or modified.
 
 > [!TIP]
-> Are you a member of the DataMiner DevOps Professional Program? Find out how you can [earn DevOps Points by contributing to the DataMiner docs](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points)!
+> Are you a member of the DataMiner DevOps Professional Program? You can earn points by proposing changes or pointing out issues in the documentation! Find out [how many DevOps Points you can earn](xref:Benefits_DevOps_Professionals_Program#accumulating-devops-points).
 
 ## General guidelines
 
@@ -24,7 +24,7 @@ Our documentation is open to contributions from any user. Contributions are crea
 ## Doing a quick edit to a page
 
 > [!TIP]
-> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo
+> See also: [Making a small contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-small-contribution-to-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
 
 On every page of the documentation on docs.dataminer.services, a *Propose changes* link is available in the top-right corner. Clicking this link will open the source of the documentation on GitHub. You can then make changes as follows:
 
@@ -40,17 +40,21 @@ On every page of the documentation on docs.dataminer.services, a *Propose change
 
 1. Make your changes using the web editor. To get a preview of the changes, go to the *Preview* tab.
 
-1. Once you have made your changes, scroll to the bottom of the page. Enter a title and description for your changes and click *Propose changes*. For example:
+1. Once you have made your changes, click *Commit changes* in the top-right corner. This will open a pop-up window.
+
+   ![Commit changes](~/images/Commit_Changes.png)
+
+1. In the pop-up window, you can enter a title and description for your changes and click *Propose changes*. For example:
 
    ![Proposing changes](~/images/Contrib_ProposeChanges.png)
 
 1. A page will be displayed with a summary of your changes. At the top of the page, click *Create pull request*. A “pull request” is a request to pull changes into the repository.
 
+   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
+
 1. Double-check the title and description for the pull request, and modify them if necessary. We recommend that you select the option *Allow edits by maintainers*, so that the documentation team will be able to correct any small issues (e.g. typos) directly.
 
 1. Click *Create pull request*.
-
-   ![Create a pull request for your changes](~/images/Contrib_CreatePullRequestForChanges.png)
 
    The documentation team will review the request and merge it if it is approved. If changes are needed before it can be merged, you will receive feedback.
 
@@ -110,7 +114,12 @@ Until a pull request is merged, everyone can review it and add comments of their
 ### Getting started
 
 > [!TIP]
-> See also: [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo
+> See also:
+>
+> - [Getting started with your Documentation Tools](https://community.dataminer.services/video/getting-started-with-your-documentation-tools/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+> - [Making a large contribution to DataMiner Docs](https://community.dataminer.services/video/making-a-large-contribution-to-the-dataminer-docs/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+>
+> Note that these videos are less update-friendly than the instructions below.
 
 For larger contributions, e.g. to add several new pages, we recommend that you install the following (free) software, in the indicated order:
 
@@ -119,7 +128,7 @@ For larger contributions, e.g. to add several new pages, we recommend that you i
   > [!NOTE]
   >
   > - While it is also possible to use the tools below without Git, some features in Visual Studio Code, such as branch and repository information, will not be available.
-  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-main).
+  > - If you install Git, it is important that you do so **before you install GitHub Desktop**, as otherwise you may experience [issues](#github-desktop-keeps-basing-branches-on-an-outdated-version-of-the-main-branch).
 
 - [GitHub Desktop](https://desktop.github.com/)
 
@@ -163,7 +172,7 @@ When you install GitHub Desktop, you will also need to add the correct repositor
 > If you have already made a fork of the repository in the past, you can also immediately add this fork as the URL when you clone the repository (e.g. `https://github.com/MyGitHubName/dataminer-docs`).
 
 > [!TIP]
-> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork.
+> Creating a fork will allow you to make changes that you can then add to a pull request. If Visual Studio Code has been installed, you can click *Open in Visual Studio Code* to immediately start working on the fork. However, note that if you have other editors installed as well (e.g. Notepad++), this button might display a different editor. You can change this via the *Options* link in the box containing the button.
 >
 > ![GitHub Desktop](~/images/Contrib_GitHubDesktop.png)
 
@@ -187,7 +196,7 @@ When you are working on your own fork, make sure you regularly **check in GitHub
 
 1. Check the top of your fork page. If it says the branch is a number of commits behind SkylineCommunications:main, your fork is no longer up to date. If there is no such indication, there is no need to continue with this procedure.
 
-   ![Indication of outdated fork](~/user-guide/images/Contributing_Sync_Fork.png)
+   ![Indication of outdated fork](~/images/Contributing_Sync_Fork.png)
 
 1. To update your fork, click the triangle button next to *Sync fork* and select *Update branch*.
 
@@ -413,14 +422,12 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 1. Open a command prompt and enter the command `dotnet tool update -g docfx`
 
-1. Test whether DocFX was installed correctly by entering `docfx help`.
+1. Test whether DocFX was installed correctly by entering `docfx --version`.
 
     If information similar to the following text is returned, DocFX was installed correctly:
 
     ```txt
-    docfx 2.61.0+54f1a2f4f25f89435f222c93aa8aab0c0cfea2b5
-    Copyright (C) 2023 © Microsoft Corporation. All rights reserved.
-    This is open-source software under MIT License.  
+    2.67.3+f28165af43dde2ec072a79fa2479f475fcd947ad
     ...
     ```
 
@@ -432,20 +439,65 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
 
 #### Making a test build
 
+##### Making a test build using buildDocs.cmd
+
+1. Make sure **.NET 6.0 SDK or higher** is installed on your machine. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
+
+1. Go to the root folder of the repository on your local machine, e.g. `C:\GitHub\dataminer-docs\dataminer-docs`.
+
+1. Double-click the file *buildDocs.cmd*.
+
+   This will open a command window where the following commands will run:
+
+   - `dotnet restore "src/NuGetPackages"`
+
+   - `dotnet build "src/NuGetPackages" --configuration Release`
+
+   - `docfx metadata`
+
+   - `docfx build`
+
+   - `docfx serve _site`
+
+1. In a browser, go to <http://localhost:8080/> to preview the website.
+
+   > [!NOTE]
+   > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
+
+1. When you have finished previewing the website, close the command window.
+
+> [!NOTE]
+> If port 8080 is not available, you will need to run *buildDocs.cmd* from a command prompt with the correct port as an argument, e.g. `buildDocs 8081`.
+
+> [!IMPORTANT]
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
+
+##### Making a test build in the Visual Studio Code terminal
+
+If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can also run these commands manually in the Visual Studio Code terminal. This has the advantage that you do not need to run all of the commands every time, so your test builds can be generated more quickly.
+
 1. If no Terminal pane is open in Visual Studio Code, go to *Terminal > New Terminal*.
 
 1. In the Terminal pane, do the following:
 
    1. Enter `clear` to clear the terminal.
 
-   1. Enter `dotnet run --project build`.
+   1. Enter the following commands:
+
+      - `dotnet restore "src/NuGetPackages"`
+
+      - `dotnet build "src/NuGetPackages" --configuration Release`
+
+      - `docfx metadata`
+
+      - `docfx build`
+
+      - `docfx serve _site`
 
       > [!NOTE]
       >
+      > - The first three commands are needed to generate the API docs. If you make repeated test builds to check changes you have made, and you are only making changes to markdown files, you can skip these three commands after your first build.
       > - This step requires that **.NET 6.0 SDK or higher** is installed on your machine. If this is not installed yet, you will get a build error. You can download the latest version from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks).
-      > - If you only have .NET 7.0 installed, it is possible that you encounter an exception when trying to make a build. See [No instances of MSBuild could be detected](#no-instances-of-msbuild-could-be-detected).
-
-   1. Enter `docfx serve _site`.
 
    1. In a browser, go to <http://localhost:8080/> to preview the website.
 
@@ -458,7 +510,7 @@ To be able to make a local test build, you need to have DocFX installed. DocFX i
       > Using the search box when viewing the test website on <http://localhost:8080/> will not return any pages from the test website. The search engine only indexes the published content on <https://docs.dataminer.services/> and will, as such, only return pages from that website.
 
 > [!IMPORTANT]
-> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. In the long run, these can pile up and take up a large amount of memory.
+> If you make test builds often, you may need to occasionally clear the files in the `\dataminer-docs\obj\.cache\build\` folder of your local version of the documentation. Depending on your DocFX version, these can pile up and take up a large amount of memory in the long run.
 
 ## Markdown syntax
 
@@ -792,7 +844,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 **Symptom**: An item shows up twice in the table of contents even though it was only entered once in the *toc.yml*.
 
-**Resolution**: Make sure there is no hyphen in front of the topicUID line. Only the name line should be preceded by a hyphen.
+**Resolution**: Make sure there is no hyphen in front of the topicUid line. Only the name line should be preceded by a hyphen.
 
 ![TOC](~/images/TOC.png)
 
@@ -837,7 +889,7 @@ The only time when "the user" is appropriate is when whoever you are writing for
 
 ![Unsaved changes](~/images/Unsaved_Changes.png)
 
-### GitHub Desktop keeps basing branches on an outdated version of ‘main’
+### GitHub Desktop keeps basing branches on an outdated version of the main branch
 
 **Symptom**: Newly created branches indicate that they were created a longer time ago.
 
@@ -874,6 +926,18 @@ fatal: empty ident name (for <>) not allowed
 1. In the *Git config* tab, select *Use my global Git config* and click *Save*.
 
    ![Git config](~/images/Git_config.png)
+
+### The template does not load correctly in the test build
+
+**Symptom**: When you view your test build, it is not displayed correctly. Among others, no search box is available in the top-right corner.
+
+**Resolution**: Install [the latest version of DocFX](#installing-and-configuring-docfx).
+
+> [!TIP]
+> You can use the command `docfx help` to check which version is installed.
+
+> [!NOTE]
+> If you have upgraded DocFX, but this upgrade does not seem to have taken effect, check whether you have a path parameter configured that leads to an older version. Go to *Edit the system environment variables* > *Advanced* > *Environment Variables*, select the *Path* parameter, if available, and click *Edit*. If an entry is listed that goes to a DocFX folder containing an old version of DocFX, delete that entry.
 
 ## References
 

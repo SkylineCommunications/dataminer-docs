@@ -29,7 +29,7 @@ The LSO script is called at the following stages of the booking:
 - When post-roll starts
 - When post-roll ends
 
-For each of these stages, a "Service State" can be defined in the Booking Manager. The LSO script will execute all PLSs with the relevant service state and update the booking to this specific state.
+For each of these stages, [a "Service State" can be defined](xref:Service_Orchestration_service_states) in the Booking Manager. The LSO script will execute all PLSs with the relevant service state and update the booking to this specific state.
 
 ## Data Transfer Rules (DTR)
 
@@ -48,7 +48,7 @@ Two types of Data Transfer Rules exist:
 
 A regular DTR script can be triggered when the following actions happen:
 
-- A profile instance is selected
+- A profile instance is initially assigned or selected (by the user or a DTR script)<!-- RN 26363 -->
 - A resource is selected
 - A parameter is updated
 
@@ -68,7 +68,7 @@ When a Service Profile DTR script is executed, this does not immediately update 
 
 Custom events are only applicable in the context of Service Orchestration.
 
-In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:SolSRM).
+In addition to the default booking orchestration events (start of pre-roll, stop of pre-roll, start of post-roll, stop of post-roll), additional custom events can be configured for bookings. This can be configured in the [Booking Manager app](xref:Booking_Manager_user_interface).
 
 These custom events are **linked to Automation scripts that can execute any action**. Specific booking information can be added in the events, such as a booking reference.
 

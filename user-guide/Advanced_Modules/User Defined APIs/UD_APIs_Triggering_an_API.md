@@ -4,15 +4,12 @@ uid: UD_APIs_Triggering_an_API
 
 # Triggering a user-defined API
 
-> [!WARNING]
-> This feature is in preview and is not fully released yet. For now, it should only be used on a staging platform. It should not be used in a production environment.
-
 To trigger an API, you can send an HTTP or HTTPS request to the *UserDefinableApiEndpoint* DxM.
 
 > [!NOTE]
 >
-> - You can also trigger a user-defined API through the [SLNetClientTest Tool](xref:SLNetClientTest_triggering_api) for testing. However, note that you should always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
-> - API triggers are handled asynchronously. To protect DataMiner, there is a limit to the number of concurrent triggers. As soon as that limit is reached, new triggers are added to a queue, to be handled as soon as another trigger is finished. It is not possible to adjust this limit, as it is automatically set based on the number of logical processors in the system (with a minimal concurrency of 4). The exact limit is logged in the file `C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt`. Apart from this limit implemented by DataMiner, IIS for Windows 10 also has a concurrency limit of 10. IIS for Windows Server has no limits.
+> - You can also trigger a user-defined API through the [SLNetClientTest Tool](xref:SLNetClientTest_triggering_api) for testing. This will bypass the endpoint DxM and go directly to the API manager in SLNet, which can be useful to efficiently test and verify API scripts without the need to send an HTTP request. However, note that you should always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+> - API triggers are handled in parallel. To protect DataMiner, there is a limit to the number of concurrent triggers. As soon as that limit is reached, new triggers are added to a queue, to be handled as soon as another trigger is finished. It is not possible to adjust this limit, as it is automatically set based on the number of logical processors in the system (with a minimal concurrency of 4). The exact limit is logged in the file `C:\Skyline DataMiner\Logging\SLUserDefinableApiManager.txt`. Apart from this limit implemented by DataMiner, IIS for Windows 10 also has a concurrency limit of 10. IIS for Windows Server has no limits.
 
 ## Building the HTTP request
 
@@ -77,11 +74,15 @@ The body is expected to be encoded in UTF-8.
 
 The API returns an HTTP status code indicating the status of the request and a body.
 
-In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API will return an HTTP status code indicating the error and a JSON body with more information.
+In case some input from the user is missing, or the user sends a request with a wrong HTTP method, the API can return an HTTP status code indicating the error and a JSON body with more information, depending on how the script is designed.
 
 The endpoint itself can also return [errors](#errors) with corresponding status code to indicate something went wrong before the script was executed.
 
 The API will always return responses encoded in UTF-8.
+
+### CORS
+
+User-defined APIs will not return any CORS headers<!-- RN 36727 -->. It will therefore not be possible to trigger a user-defined API directly from a web client. It is not safe to trigger user-defined APIs from a web client using e.g. AJAX calls in JavaScript, because there is no way to safely save and use the API tokens there.
 
 ### Errors
 
@@ -103,7 +104,7 @@ The endpoint can return an error if something goes wrong. An error will be retur
 For now, the `errors` object will always contain only one error, but this can change in the future.
 
 > [!NOTE]
-> We recommend that API maintainers return errors in the same format for the sake consistency (but without *errorCode*). To know what HTTP status code to return, take a look [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
+> We recommend that API maintainers return errors in the same format for the sake of consistency (but without *errorCode*). To know what HTTP status code to return, take a look [here](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status).
 
 #### detail
 
@@ -113,7 +114,7 @@ The *detail* field of an error contains a client-safe message explaining what we
 
 The *errorCode* field of an error contains an error code that can be used by the API maintainer to find out what went wrong:
 
-| ErrorCode | Integer value | HTTP Status Code | Explanation |
+| ErrorCode | Integer value | HTTP Status Code | Description |
 |--|--|--|--|
 | EmptyRoute | 1 | 400 | The passed request route is empty. |
 | InvalidRequestMethod | 3 | 405 | The HTTP method is not valid. For the valid methods, see [HTTP methods](#http-methods). |

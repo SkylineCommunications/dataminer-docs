@@ -11,4 +11,4 @@ By default, the inputs of a matrix parameter are displayed to the left of the ma
 For more information on how to configure matrix parameters, see [Configuring matrix parameters](xref:Configuring_matrix_parameters).
 
 > [!NOTE]
-> On a matrix parameter, like on any other parameter, you can also apply alarm thresholds. If you do so, every crosspoint representing a monitored value will bear the color of its current alarm severity level. See [Configuring alarm thresholds for matrix parameters](xref:Configuring_alarm_templates#configuring-alarm-thresholds-for-matrix-parameters).
+> On a matrix parameter, like on any other parameter, you can also apply alarm thresholds. If you do so, every crosspoint representing a monitored value will bear the color of its current alarm severity level. See [Configuring alarm thresholds for matrix parameters](xref:Configuring_normal_alarm_thresholds#configuring-alarm-thresholds-for-matrix-parameters).

@@ -1,0 +1,35 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Skyline.DataMiner.Core.AppPackageCreator" Version="1.0.0.28" />
+    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Automation" Version="1.1.0.5" />
+    <PackageReference Include="Skyline.DataMiner.Core.DataMinerSystem.Protocol" Version="1.1.0.5" />
+    <PackageReference Include="Skyline.DataMiner.Core.InterAppCalls.Common" Version="1.0.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Core.Matrix.Protocol" Version="1.1.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit" Version="6.1.0" />
+    <PackageReference Include="Skyline.DataMiner.Utils.Interfaces" Version="1.0.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.Rates.Common" Version="1.0.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.Rates.Protocol" Version="1.0.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SafeConverters" Version="1.0.0.1" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SNMP" Version="1.0.0.2" />
+    <PackageReference Include="Skyline.DataMiner.Utils.SNMP.Traps.Protocol" Version="1.0.0.1" />
+    <PackageReference Include="Skyline.DataMiner.Utils.Table.ContextMenu" Version="1.0.0.1" />
+  </ItemGroup>
+
+
+  <Target Name="CopyReferenceFiles" BeforeTargets="Build">
+    <ItemGroup>
+      <ReferenceFiles Include="%(Reference.RelativeDir)%(Reference.Filename).xml;%(Reference.RelativeDir)%(Reference.Filename).pdb" />
+    </ItemGroup>
+    
+    <Message Text="Copying reference files to $(OutputPath)" Importance="High" />
+    <Copy SourceFiles="@(ReferenceFiles)" DestinationFolder="$(OutputPath)" Condition="Exists('%(RootDir)%(Directory)%(Filename)%(Extension)')" />
+  </Target>
+</Project>

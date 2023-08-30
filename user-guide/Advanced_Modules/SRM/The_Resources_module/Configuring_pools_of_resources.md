@@ -44,11 +44,14 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 1. In the dialog box, fill in the name of the resource property you wish to define.
 
-1. If you wish to restrict the possible values for the property, there are two possibilities:
+1. To restrict the possible values for the property, there are two possibilities:
 
    - Select *Regex pattern* and specify a regular expression that the property in question must match.
 
    - Select *Value list*, and, for each possible value for the property, click the *Add value* button and specify the value.
+
+   > [!NOTE]
+   > From DataMiner 10.3.7/10.3.0[CU4] onwards, you can save a resource property without specifying a value for that property. <!-- RN 36345 -->
 
 ## Adding resources to a pool
 
@@ -168,3 +171,18 @@ From DataMiner 10.2.10/10.3.0 onwards, you can remove a resource from a pool as 
 >
 > - Removing a resource from a pool does not delete the resource from the system. It only removes it from the selected pool. If the resource is not present in any other resource pool, it will be moved to the "(uncategorized)" pool.
 > - You can only remove valid, unmodified existing resources that are not in the "(uncategorized)" pool. You also need permission to edit resources to be able to do this.
+
+### Duplicating a resource from a pool
+
+From DataMiner 10.3.7/10.3.4 onwards, you can duplicate a resource from a pool as follows: <!-- RN 36308 -->
+
+1. Select the resource pool.
+
+1. In the *Resources* tab, right-click the resource you want to duplicate and select *Duplicate*.
+
+> [!NOTE]
+>
+> - The duplicate resource will have the same name as the original resource, with the suffix `- copy` added to it.
+> - All general information, properties, and device data will be copied from the original resource to the duplicate resource.
+> - The duplicate resource will be added to all resource pools that contain the original resource.
+> - For function resources, the instance dropdown list will be left empty, and the function instance will have the same name as the original function instance, with the suffix `- copy` added to it.
