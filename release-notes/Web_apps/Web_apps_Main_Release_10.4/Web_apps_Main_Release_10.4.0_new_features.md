@@ -646,3 +646,11 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
 
 If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+
+#### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+
+For more information on how to configure this component, see [Stepper](xref:DashboardStepper).

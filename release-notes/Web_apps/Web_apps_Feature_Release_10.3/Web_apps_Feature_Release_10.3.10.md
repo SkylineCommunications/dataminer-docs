@@ -16,7 +16,13 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ## Other features
 
-*No other features have been added to this release yet.*
+#### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+
+For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
 
 ## Changes
 
