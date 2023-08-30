@@ -44,7 +44,7 @@ You can follow along with the [step-by-step video](https://skyline.be/) for this
 
 ## Review and Submission
 
-Once you've successfully navigated the steps provided, please forward your completed connector XML to [Data-Acquisition](mailto:domain.data-acquisition@skyline.be). Our team will review your submission.
+Once you've successfully navigated the steps provided, please forward your completed connector XML to [Data-Acquisition](mailto:domain.create.data-acquisition@skyline.be). Our team will review your submission.
 Upon successful validation, we'll credit your account with well-deserved DevOps points as a token of your accomplishment!
 
 ### Email Submission Template

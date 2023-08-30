@@ -17,4 +17,4 @@ This chapter consists of the following sections:
 - [Troubleshooting](xref:Troubleshooting)
 - [DIS reference](xref:DIS_reference)
 - [Guides](xref:DisGuides)
-- [Exercises](xref:DisExercises)
+- [Tutorials](xref:DisTutorials)
