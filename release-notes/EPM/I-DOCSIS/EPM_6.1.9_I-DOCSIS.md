@@ -16,6 +16,10 @@ uid: EPM_6.1.9_I-DOCSIS
 - QAM US Channels: US QAM Ch Bitrate
 - QAM DS Channels: DS QAM Ch Bitrate
 
+#### New OFDM/OFDMA information available [ID_37202]
+
+In the CISCO CBR-8 CCAP Platform connector, a new *OFDM/OFDMA* page has been added containing parameters related to channels from the device. These channels are also linked to the associated node segments and service groups. When you view either of those entities in the topology, new KPIs are displayed with the total number of OFDM and OFDMA channels and the average utilization. There is also a link to a dashboard displaying all channels associated with the entity.
+
 ## Changes
 
 ### Enhancements
