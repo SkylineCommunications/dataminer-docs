@@ -10,7 +10,7 @@ DataMiner 10.3.9 CU0.
 
 ## Cause
 
-DataMiner 10.3.9 introduced additional binding redirects in the CassandraBackup.exe.config file. SLDataGateway would try to load these references, but as these were not available in `C:\Skyline DataMiner\Tools`, this caused exceptions.
+DataMiner 10.3.9 [CU0] introduced additional binding redirects in the CassandraBackup.exe.config file. SLDataGateway would try to load these references, but as these were not available in `C:\Skyline DataMiner\Tools`, this caused exceptions.
 
 ## Workaround
 
@@ -36,7 +36,7 @@ DataMiner 10.3.9 introduced additional binding redirects in the CassandraBackup.
 
 ## Fix
 
-Install DataMiner 10.3.9 [CU1].
+Install DataMiner 10.3.9 [CU1]<!-- RN 37217 -->.
 
 ## Issue description
 
