@@ -54,7 +54,7 @@ To configure this setup:
 
    - **File Offload Identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
-   ![Configuration](~/user-guide/images/DBOffload_CubeConfig.png)
+   ![Configuration](~/user-guide/images/DBOffload_CubeConfig.png)<br/>*DataMiner 10.3.10 example configuration*
 
 1. Click *Save*.
 
