@@ -29,3 +29,5 @@ An indexing database can also be [deployed in a setup with storage per DMA](xref
 - [DataMiner Service & Resource Management (SRM)](xref:SRM)
 
 - [DataMiner User-Defined APIs](xref:UD_APIs)
+
+![indexing database per DMS](~/user-guide/images/Indexing_database_per_DMS.svg)
