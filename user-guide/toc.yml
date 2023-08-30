@@ -2666,9 +2666,9 @@
         - name: Tutorials
           topicUid: UD_APIs_tutorials
           items:
-            - name: Hello world tutorial
+            - name: 1. Hello world tutorial
               topicUid: UD_APIs_Hello_world_tutorial
-            - name: Elements in alarm tutorial
+            - name: 2. Elements in alarm tutorial
               topicUid: UD_APIs_Elements_in_alarm_tutorial
 - name: DataMiner Standard Apps, Frameworks & Solutions
   topicUid: Part5StandardApps

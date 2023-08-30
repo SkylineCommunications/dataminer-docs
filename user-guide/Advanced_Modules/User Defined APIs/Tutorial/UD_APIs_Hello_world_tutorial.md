@@ -11,7 +11,7 @@ This tutorial lesson demonstrates how to create your first custom API. We will c
 - [Step 1: Create an automation script solution](#step-1-create-an-automation-script-solution)
 - [Step 2: Create the automation script](#step-2-create-the-automation-script)
 - [Step 3: Create an API token](#step-3-create-an-api-token)
-- [Step 4: Create an API Definition](#step-4-create-the-api-definition)
+- [Step 4: Create the API Definition](#step-4-create-the-api-definition)
 - [Step 5 (optional): Test the API using the SLNet Client Test Tool](#step-5-optional-test-the-api-using-the-slnet-client-test-tool)
 - [Step 6: Trigger the API using Postman](#step-6-trigger-the-api-using-postman)
 
