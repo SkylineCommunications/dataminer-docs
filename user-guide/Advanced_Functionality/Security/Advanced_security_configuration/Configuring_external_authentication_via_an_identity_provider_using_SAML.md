@@ -98,8 +98,10 @@ To create a DataMiner metadata file (also referred to as *Service Provider Metad
    The way you configure this will depend on the identity provider you are using. See [Identity providers](#identity-providers).
 
 > [!NOTE]
-> The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false.
-> SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
+> The ``WantAssertionsSigned`` flag is supported as from DataMiner version 10.2.1/10.2.0. If you are using an older version, then set this to false. SAML responses without signatures can be freely edited to tamper with permissions on the application, leading to severe vulnerabilities. We **highly recommend** setting ``WantAssertionsSigned`` to *true* to mitigate this.
+
+> [!IMPORTANT]
+> From DataMiner 10.3.4/10.4.0 onwards, ``WantAssertionsSigned`` **must** be set to *true*.
 
 ## Additional configuration for systems connected to dataminer.services
 
@@ -148,7 +150,7 @@ DataMiner supports Azure AD as identity provider as from version 10.1.5. Azure A
 
 #### Setting up an Azure AD Enterprise application
 
-As from DataMiner 10.2.0/10.2.1, it is recommended to create Enterprise Applications in Azure AD when setting up external authentication. When you create regular App registrations, certain features will not be available.
+From DataMiner 10.3.4/10.4.0 onwards, you must create an Enterprise Application in Azure AD when setting up external authentication. In earlier DataMiner versions from DataMiner 10.2.0/10.2.1 onwards, creating an Enterprise Application is highly recommended, as otherwise not all features will be available.
 
 > [!NOTE]
 > Only a Global Administrator, Application Administrator, Cloud Application Administrator, and Application Developer have the necessary permissions to create Enterprise applications.

@@ -12,7 +12,7 @@ uid: General_Main_Release_10.3.0_CU7
 
 ### Enhancements
 
-#### Service & Resource Management: Changing the 'IsValueCopy' property of a ProfileInstance will no longer be allowed [ID_31189]
+#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID_31189]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -75,6 +75,22 @@ From now on, after each DataMiner upgrade or DataMiner start-up, this folder wil
 
 A number of security enhancements have been made.
 
+#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
+
+#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID_37188]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you connected to a DataMiner Agent, up to now, the Alarm Console would often show the following notice:
+
+`No Notifications might be sent (Email or Sms). Init Notifications: No e-mail address found to use as sender. Defaulting to notifications@example.com`
+
+This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
+
 ### Fixes
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
@@ -109,8 +125,52 @@ Up to now, the offline DMA in a Failover pair built its NATS configuration by fe
 
 This will now be prevented. The offline DMA will now collect all nodes locally when setting up its NATS configuration instead of fetching them from the online DMA.
 
+#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
+
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
+
+#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
+
+From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
+
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
+#### Problem when running queries against Elasticsearch [ID_37138]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
+
+#### Custom timeouts would not be passed to HandleMessage methods on a GRPCConnection/gRPC connection [ID_37166]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method would not receive the custom timeout and would therefore use the default 15-minute timeout instead.
+
+From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
+
+#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, the length parameter in a response would not be set to the the correct value.
+
+#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
+
+From now on, the status of a booking will only be set to "Ended" once all events have been run.

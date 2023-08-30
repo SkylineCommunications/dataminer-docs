@@ -385,10 +385,10 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695] [ID_37051]
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
 
 <!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
-<!-- RN 37051: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
 
 A number of security enhancements have been made.
 
@@ -682,11 +682,13 @@ From now on, queries will always be updated when the source (dashboard/page), se
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
-#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
 
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
@@ -699,6 +701,12 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 A number of date/time picker issues have been fixed.
+
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
 
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
@@ -724,6 +732,18 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
+#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
+#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+
 #### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
@@ -733,3 +753,15 @@ In some cases, an error could occur when migrating a GQI component:
 - When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
+
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+
+#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.

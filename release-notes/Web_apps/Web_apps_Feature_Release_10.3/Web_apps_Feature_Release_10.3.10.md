@@ -34,9 +34,9 @@ The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is 
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
-#### Security enhancements [ID_37051] [ID_37086]
+#### Security enhancements [ID_37047] [ID_37051] [ID_37068] [ID_37086]
 
-<!-- RN 37051: MR 10.4.0 - FR 10.3.10 -->
+<!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
 <!-- RN 37086: MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
@@ -62,9 +62,17 @@ This has been fixed. The display value will remain "NaN", but the raw value will
 
 #### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
 
 #### DataMiner web apps: Date/time picker issues [ID_37041]
 
@@ -77,6 +85,12 @@ A number of date/time picker issues have been fixed.
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
+
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
 
 #### Dashboards app/Low-Code Apps: Query filter not applied on sorted table [ID_37070]
 
@@ -108,3 +122,33 @@ When the web API fetched information for columns of a GQI query, it could occur 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
+
+#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
+#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
+
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+
+#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.

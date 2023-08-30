@@ -234,6 +234,7 @@
       - name: Custom table context menu
         topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
+        topicUid: UIComponentsMatrix
         items:
           - name: Standard matrix
             topicUid: UIComponentsMatrix

@@ -3489,8 +3489,6 @@
               topicUid: KI_app_corruption_after_editing
             - name: Cassandra cluster data not offloaded while database is unavailable
               topicUid: KI_Cassandra_cluster_data_not_offloaded
-            - name: RTEs caused by problem during automatic NATS reconfiguration
-              topicUid: KI_RTEs_NATS_reconfiguration
             - name: Elasticsearch not initialized when DataMiner starts up
               topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
             - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
@@ -3526,8 +3524,12 @@
             - name: Setting a protocol to production takes a long time
               topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
         - name: Resolved issues
-          topicUid: KI_NATS_port_9090
+          topicUid: KI_Cassandra_backups_not_working
           items:
+            - name: Cassandra backups no longer working
+              topicUid: KI_Cassandra_backups_not_working
+            - name: RTEs caused by problem during automatic NATS reconfiguration
+              topicUid: KI_RTEs_NATS_reconfiguration
             - name: Default NATS port is already in use
               topicUid: KI_NATS_port_9090
             - name: RTEs caused by problem when updating alarm templates

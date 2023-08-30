@@ -28,7 +28,7 @@ uid: General_Feature_Release_10.3.10
 
 ### Enhancements
 
-#### Service & Resource Management: Changing the 'IsValueCopy' property of a ProfileInstance will no longer be allowed [ID_31189]
+#### Service & Resource Management: ProfileInstances with 'IsValueCopy' set to true will be assigned a TTL of 1 year [ID_31189]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
@@ -43,6 +43,20 @@ Also, in DataMiner Cube, the *By value/By reference* toggle button has now been 
 
 > [!NOTE]
 > When the `isValueCopy` property of a ProfileInstance is set to true, it will only be assigned a TTL of 1 year when that ProfileInstance is stored in Elasticsearch.
+
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
 
 #### Updated bookings now only set to Confirmed when necessary [ID_36818]
 
@@ -71,6 +85,12 @@ The handling of smart baseline parameter sets in SLNet has improved in cases whe
 
 In addition, a write parameter is no longer needed in this scenario. Previously, if there was no write parameter, it was not possible to update the stored baseline value. Now if a write parameter is present, it will be used to set the values in case of single parameter sets.
 
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
+
 #### Automatic clean-up of C:\\Skyline DataMiner\\Upgrades\\Packages folder [ID_37033]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -87,6 +107,22 @@ From now on, after each DataMiner upgrade or DataMiner start-up, this folder wil
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 A number of security enhancements have been made.
+
+#### SLReset: Generation of NATS credentials will now also be logged in SLFactoryReset.txt [ID_37071]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the factory reset tool *SLReset.exe* was run, up to now, the generation of the NATS credentials would only be logged to the console. From now on, an entry will also be added to the *SLFactoryReset.txt* log file.
+
+#### 'No Notifications might be sent' notice will now be logged in the SLSNMPAgent.txt log file [ID_37188]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you connected to a DataMiner Agent, up to now, the Alarm Console would often show the following notice:
+
+`No Notifications might be sent (Email or Sms). Init Notifications: No e-mail address found to use as sender. Defaulting to notifications@example.com`
+
+This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
 ### Fixes
 
@@ -122,8 +158,64 @@ Up to now, the offline DMA in a Failover pair built its NATS configuration by fe
 
 This will now be prevented. The offline DMA will now collect all nodes locally when setting up its NATS configuration instead of fetching them from the online DMA.
 
+#### SLReset: Problem due to NATS being re-installed before cleaning up the 'C:\\Skyline DataMiner' folder [ID_37072]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When you perform a factory reset by running *SLReset.exe*, NATS will automatically be re-installed.
+
+Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
+
+#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
+
+From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
+
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
+#### Problem when running queries against Elasticsearch [ID_37138]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
+
+#### Custom timeouts would not be passed to HandleMessage methods on a GRPCConnection/gRPC connection [ID_37166]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method would not receive the custom timeout and would therefore use the default 15-minute timeout instead.
+
+From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
+
+#### Protocols: Length parameter in a response would not be set to the correct value [ID_37172]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, the length parameter in a response would not be set to the the correct value.
+
+#### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
+
+From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Problem when importing an existing element [ID_37214]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.

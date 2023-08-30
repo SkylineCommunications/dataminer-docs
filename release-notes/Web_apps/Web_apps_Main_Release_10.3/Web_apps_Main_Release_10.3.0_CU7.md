@@ -37,6 +37,12 @@ Up to now, when a data source contained cells with the value "NaN", an error mes
 
 This has been fixed. The display value will remain "NaN", but the raw value will now be null.
 
+#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+
 #### Dashboards app: Height of 'Data used in Dashboard' section would not be reduced when you deleted multiple components at once [ID_37032]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.9 -->
