@@ -59,7 +59,9 @@ To configure this setup:
 1. Click *Save*.
 
    > [!NOTE]
-   > Database configuration changes will not take effect until the Agent is restarted.
+   >
+   > - Database configuration changes will not take effect until the Agent is restarted.
+   > - To remove an Elasticsearch cluster, select it in the list below the main Elasticsearch configuration and click *Remove*.
 
 > [!CAUTION]
 > While it was possible to configure multiple Elasticsearch clusters in the *DBConfiguration.xml* file prior to DataMiner 10.3.10/10.4.0, this should not be done in recent DataMiner versions. Specifically, refrain from editing the *ID* tag in this file, as this could lead to a need for complete reconfiguration.
