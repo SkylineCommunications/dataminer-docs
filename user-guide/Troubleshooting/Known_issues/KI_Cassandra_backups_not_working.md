@@ -36,7 +36,7 @@ DataMiner 10.3.9 introduced additional binding redirects in the CassandraBackup.
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.3.9 [CU1].
 
 ## Issue description
 
