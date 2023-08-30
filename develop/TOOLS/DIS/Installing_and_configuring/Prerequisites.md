@@ -35,13 +35,13 @@ https://*.skyline.be/*
 
 ### Required user permissions
 
-The following [user permissions](xref:DataMiner_user_permissions) on DataMiner are required for DIS to have full functionality:
+You need the following DataMiner user permissions to have access to all DIS functionality:
 
-- Modules > Automation > UI available
-- Modules > Automation > Add
-- Modules > Automation > Edit
-- Modules > Automation > Execute
-- Modules > Protocols & Templates > Protocols > UI available
-- Modules > Protocols & Templates > Protocols > Add
-- Modules > Protocols & Templates > Protocols > Edit
-- Modules > System configuration > Agents > Install App packages
+- [Modules > Automation > UI available](xref:DataMiner_user_permissions#modules--automation--ui-available)
+- [Modules > Automation > Add](xref:DataMiner_user_permissions#modules--automation--add)
+- [Modules > Automation > Edit](xref:DataMiner_user_permissions#modules--automation--edit)
+- [Modules > Automation > Execute](xref:DataMiner_user_permissions#modules--automation--execute)
+- [Modules > Protocols & Templates > Protocols > UI available](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--ui-available)
+- [Modules > Protocols & Templates > Protocols > Add](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--add)
+- [Modules > Protocols & Templates > Protocols > Edit](xref:DataMiner_user_permissions#modules--protocols--templates--protocols--edit)
+- [Modules > System configuration > Agents > Install App packages](xref:DataMiner_user_permissions#modules--system-configuration--agents--install-app-packages)
