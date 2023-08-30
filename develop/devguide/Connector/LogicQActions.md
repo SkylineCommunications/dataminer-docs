@@ -705,7 +705,7 @@ public class QAction
 
 > [!NOTE]
 > - When an instance of the JavaScriptSerializer is created, it has a maximum length of JSON strings that are accepted. In case a device can return large JSON responses, this default size can be too small. If this is the case, be sure to set the maximum length property of the JavaScriptSerializer instance before using the instance to deserialize the response.
-> - A useful JSON editor can be found at http://jsoneditor.appspot.com/.
+> - A useful JSON editor can be found at https://jsoneditoronline.org.
 > - The online generator available at http://json2csharp.com/ can be used to convert JSON to C# classes.
 
 
