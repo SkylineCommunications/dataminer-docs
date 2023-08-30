@@ -153,6 +153,14 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 In some rare cases, queries run against an Elasticsearch database would get stuck, causing SLDataGateway to throw exceptions and Elasticsearch to not return any results.
 
+#### Custom timeouts would not be passed to HandleMessage methods on a GRPCConnection/gRPC connection [ID_37166]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When a custom timeout was passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method would not receive the custom timeout and would therefore use the default 15-minute timeout instead.
+
+From now on, when a custom timeout is passed to a `HandleMessage` method on a GRPCConnection/gRPC connection, that method will correctly use the custom timeout that was passed.
+
 #### Service & Resource Management: Booking status would be set to 'Ended' too soon [ID_37176]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
