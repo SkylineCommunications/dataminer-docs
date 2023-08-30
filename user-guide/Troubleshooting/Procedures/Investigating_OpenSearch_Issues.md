@@ -132,7 +132,7 @@ Failed to start OpenSearch.
 opensearch.service: Consumed 57.702s CPU time.
 ``
 
-It could be that you may need to increase the start timeout for systemd. To do this, execute below steps:
+It could be that you may need to increase the start timeout for systemd (see [systemd](https://systemd.io/)). To do this, execute the steps below:
 
 1. Open the configuration using Nano editor.
 
