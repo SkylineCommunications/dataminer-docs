@@ -26,6 +26,9 @@ See the [official documentation](https://opensearch.org/docs/latest/) on how to 
 > [!NOTE]
 > It is also possible to [set up OpenSearch Dashboards](#setting-up-opensearch-dashboards), which is the equivalent of Kibana for Elasticsearch. However, this is optional and not required for DataMiner to function.
 
+> [!TIP]
+> For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)
+
 ### Example configuration
 
 Below you can find an example of how to set up an OpenSearch cluster on premises on a Ubuntu system, in accordance with the [Debian installation guide](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/debian/).
@@ -338,6 +341,3 @@ To configure the connection to an OpenSearch database, configure the settings as
 
 > [!IMPORTANT]
 > An OpenSearch database requires a separate Cassandra cluster or Amazon Keyspaces.
-
-> [!TIP]
-> See also the following troubleshooting guide: [Investigating OpenSearch Issues](xref:Investigating_OpenSearch_Issues)

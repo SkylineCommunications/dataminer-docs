@@ -329,5 +329,6 @@ You have now finished configuring an OpenSearch backup.
    GET /_snapshot/_status
    ```
 
-> [!TIP]
-> See also the following troubleshooting guide: [Investigating OpenSearch Issues](xref:Investigating_OpenSearch_Issues)
+## Troubleshooting
+
+For troubleshooting information, see [Investigating OpenSearch issues](xref:Investigating_OpenSearch_Issues)

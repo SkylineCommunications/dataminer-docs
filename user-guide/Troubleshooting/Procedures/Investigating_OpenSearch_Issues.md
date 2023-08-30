@@ -2,7 +2,7 @@
 uid: Investigating_OpenSearch_Issues
 ---
 
-# Investigating OpenSearch Issues
+# Investigating OpenSearch issues
 
 Search the OpenSearch logging for exceptions: `/var/log/opensearch/[cluster.name].log`
 
@@ -111,28 +111,28 @@ If the *SLSearch.txt* log file mentions that the OpenSearch version is not offic
 
 However, note that this has no functional impact, as the DMA will run fine even if you have not upgraded yet.
 
-## OpenSearch service going into time-out
+## OpenSearch service going into timeout
 
-When you get an OpenSearch service time-out when executing the following command:
+It can occur that you get an OpenSearch service timeout when executing one of the following commands:
 
 ```bash
 sudo systemctl start opensearch
 ```
 
-or
-
 ```bash
 sudo systemctl restart opensearch
 ```
+
+For example:
 
 ```txt
 opensearch.service: start operation timed out. Terminating.
 opensearch.service: Failed with result 'timeout'.
 Failed to start OpenSearch.
 opensearch.service: Consumed 57.702s CPU time.
-``
+```
 
-It could be that you may need to increase the start timeout for systemd (see [systemd](https://systemd.io/)). To do this, execute the steps below:
+To resolve this, you may need to increase the start timeout for systemd (see [systemd](https://systemd.io/)):
 
 1. Open the configuration using Nano editor.
 
@@ -140,7 +140,7 @@ It could be that you may need to increase the start timeout for systemd (see [sy
    sudo nano /usr/lib/systemd/system/opensearch.service
    ```
 
-1. Increase the value of TimeoutStartSec to a higher value, for example 300.
+1. Increase the value of *TimeoutStartSec* to a higher value, for example 300.
 
    ```txt
    TimeoutStartSec=300
@@ -158,7 +158,7 @@ It could be that you may need to increase the start timeout for systemd (see [sy
    sudo systemctl start opensearch
    ```
 
-1. Verify that it doesn't go in time-out by executing:
+1. Execute the following command to verify that OpenSearch no longer goes into timeout:
 
    ```bash
    sudo systemctl status opensearch
