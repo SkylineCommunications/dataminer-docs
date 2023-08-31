@@ -658,6 +658,20 @@ A table visualization will now immediately show the updated values if the *Updat
 > [!NOTE]
 > Real-time updates only work when supported by the data source used in the query.
 
+#### Dashboards app & Low-Code Apps - Time range component: Presets [ID_37050]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When configuring a *Time range* component, you can now find a new *Presets* section in the *Layout* tab. This section allows you to define the presets that will be available to users who open a *Time range* feed.
+
+The list of presets will also include three new presets (each with a corresponding quick pick option):
+
+- *Starting from now*
+- *Near future*
+- *Distant future*
+
+In addition, other settings found on the *Layout* tab have been rearranged. The alignment and visibility settings have now been moved to a new *Layout* section, and the order of the quick pick options has been changed.
+
 #### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
