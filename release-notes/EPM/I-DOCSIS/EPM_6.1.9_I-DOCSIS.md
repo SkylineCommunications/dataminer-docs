@@ -32,7 +32,9 @@ On all levels of the topology, a new DOCSIS 1.X counter parameter has been added
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### EPM_I_DOCSIS_AddNewCcapCmPair script updated to allow installation of CCAP and CM collector on different DMAs [ID_37192]
+
+The deployment script that creates the CCAP-CM pair (*EPM_I_DOCSIS_AddNewCcapCmPair*) has been updated so that it is now possible to create the CM collector on a different DMA than the CCAP.
 
 ### Fixes
 
