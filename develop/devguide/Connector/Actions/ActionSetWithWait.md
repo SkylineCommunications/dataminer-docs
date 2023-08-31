@@ -6,6 +6,10 @@ uid: LogicActionSetWithWait
 
 This action can be executed on parameters and groups.
 
+> [!NOTE]
+> A 'set with wait' action should be executed from the protocol thread. If this is not the case, you will see the following message appearing in the element log:
+> `!! You are performing a SET WITH WAIT which is not issued from the protocol-thread.  This can cause a RTE.`
+
 ## On parameter
 
 This action performs an SNMP set, and will wait until the device has answered.
