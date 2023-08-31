@@ -18,7 +18,7 @@ Specifies the ID(s) of the timer(s) to stop.
 
 ```xml
 <Action id="1">
-  <On id="1">timer</On>
+   <On id="1">timer</On>
    <Type>stop</Type>
 </Action>
 ```

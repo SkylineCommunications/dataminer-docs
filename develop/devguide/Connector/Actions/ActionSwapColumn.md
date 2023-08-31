@@ -20,7 +20,7 @@ In the following example, in the table with parameter ID 2200, the contents of t
 
 ```xml
 <Action id="1">
-  <On>protocol</On>
+   <On>protocol</On>
    <Type options="swap:2200:17:20">swap column</Type>
 </Action>
 ```

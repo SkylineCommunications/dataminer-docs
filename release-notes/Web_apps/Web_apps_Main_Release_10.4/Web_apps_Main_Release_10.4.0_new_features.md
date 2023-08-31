@@ -646,3 +646,36 @@ Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These c
 In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
 
 If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+
+#### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Table visualizations now support real-time GQI query updates.
+
+A table visualization will now immediately show the updated values if the *Update data* option is enabled in the table component settings.
+
+> [!NOTE]
+> Real-time updates only work when supported by the data source used in the query.
+
+#### Dashboards app & Low-Code Apps - Time range component: Presets [ID_37050]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When configuring a *Time range* component, you can now find a new *Presets* section in the *Layout* tab. This section allows you to define the presets that will be available to users who open a *Time range* feed.
+
+The list of presets will also include three new presets (each with a corresponding quick pick option):
+
+- *Starting from now*
+- *Near future*
+- *Distant future*
+
+In addition, other settings found on the *Layout* tab have been rearranged. The alignment and visibility settings have now been moved to a new *Layout* section, and the order of the quick pick options has been changed.
+
+#### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+
+For more information on how to configure this component, see [Stepper](xref:DashboardStepper).
