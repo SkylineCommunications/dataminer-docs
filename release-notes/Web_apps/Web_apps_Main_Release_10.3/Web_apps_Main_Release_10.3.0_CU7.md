@@ -78,3 +78,9 @@ When you click a time range component in a low-code app, an overlay is displayed
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.
