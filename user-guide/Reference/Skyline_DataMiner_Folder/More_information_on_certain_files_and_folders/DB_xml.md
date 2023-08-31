@@ -174,7 +174,7 @@ From DataMiner 10.2.0/10.1.3 onwards, it is possible to enable TLS on a Cassandr
 
 - From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36399 -->, you can configure this setting in Cube. See [Cassandra cluster database](xref:Configuring_the_database_settings_in_Cube#cassandra-cluster-database).
 
-- Prior to DataMiner 10.3.10/10.4.0 onwards:
+- Prior to DataMiner 10.3.10/10.4.0:
 
   1. Enable TLS in the settings of the Cassandra database itself.
 
