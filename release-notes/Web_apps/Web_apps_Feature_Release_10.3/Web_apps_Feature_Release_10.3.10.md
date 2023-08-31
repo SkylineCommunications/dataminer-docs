@@ -85,7 +85,7 @@ In a low-code app, the form to create a new DOM instance would incorrectly displ
 
 When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
 
-From now on, sections that are not linked to the initial state will now no longer be displayed.
+From now on, sections that are not linked to the initial state will no longer be displayed.
 
 #### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
 
