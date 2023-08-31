@@ -16,6 +16,17 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ## Other features
 
+#### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Table visualizations now support real-time GQI query updates.
+
+A table visualization will now immediately show the updated values if the *Update data* option is enabled in the table component settings.
+
+> [!NOTE]
+> Real-time updates only work when supported by the data source used in the query.
+
 #### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -65,6 +76,14 @@ Up to now, when data from a GQI query was fed to another component on a dashboar
 Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
 
 This has been fixed. The display value will remain "NaN", but the raw value will now be null.
+
+#### Low-Code Apps: Problem when creating a new DOM instance [ID_36994]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a low-code app, a new DOM instance was created, in some cases, the following error would be thrown when the DOM instance was saved:
+
+`Instance contains unknown fields for the current state`
 
 #### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
 

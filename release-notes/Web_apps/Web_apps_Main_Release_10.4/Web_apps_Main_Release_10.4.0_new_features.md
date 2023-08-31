@@ -647,6 +647,17 @@ In the *Parameters* section of the edit panel's *DATA* tab, column parameters wi
 
 If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
 
+#### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Table visualizations now support real-time GQI query updates.
+
+A table visualization will now immediately show the updated values if the *Update data* option is enabled in the table component settings.
+
+> [!NOTE]
+> Real-time updates only work when supported by the data source used in the query.
+
 #### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

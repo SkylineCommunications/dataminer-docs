@@ -676,6 +676,14 @@ In some cases, query nodes that were linked to a feed would incorrectly not save
 
 From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
 
+#### Low-Code Apps: Problem when creating a new DOM instance [ID_36994]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a low-code app, a new DOM instance was created, in some cases, the following error would be thrown when the DOM instance was saved:
+
+`Instance contains unknown fields for the current state`
+
 #### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
