@@ -72,3 +72,9 @@ In the Monitoring app, it could occur that Visual Overview parameter control sha
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
+
+#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.

@@ -732,12 +732,6 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
-#### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
-
 #### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

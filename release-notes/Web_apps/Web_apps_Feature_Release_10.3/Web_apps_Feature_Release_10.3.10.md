@@ -131,7 +131,7 @@ When you click a time range component in a low-code app, an overlay is displayed
 
 #### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
 
