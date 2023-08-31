@@ -572,3 +572,11 @@ Symptoms:
 
 - The login screen would display the following error message: `Start the DataMiner software manually or contact your system administrator.`
 - The Cube logging would contain a `Login failed.` entry mentioning `Cannot accept SOAP messages (text/xml)`.
+
+#### Trending - Pattern matching: Problem when adding and highlighting curves [ID_37174]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, in a trend graph, you hovered over a pattern of which the instance of the curve was not equal to the instance of the pattern (which had its instancePartOfIdentity property set to false), the curve would incorrectly not be highlighted.
+
+Also, incorrect curves would be added when you clicked to load the linked patterns, and incorrect curves were highlighted when you hovered over a pattern that consisted of two subpatterns from different elements.
