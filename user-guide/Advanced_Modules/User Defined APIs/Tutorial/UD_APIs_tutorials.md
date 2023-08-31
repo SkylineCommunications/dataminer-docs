@@ -22,5 +22,7 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 1. [Hello world example](xref:UD_APIs_Hello_world_tutorial)
 1. [Elements in alarm example](xref:UD_APIs_Elements_in_alarm_tutorial)
 
+There are also some basic examples on the [API script examples page](xref:UD_APIs_API_script_examples).
+
 > [!TIP]
 > There is a [troubleshooting page](xref:UD_APIs_Troubleshooting) for User-Defined APIs that you can refer to in case something doesn't go right while doing one of the tutorials.
