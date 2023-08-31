@@ -124,6 +124,15 @@ When you connected to a DataMiner Agent, up to now, the Alarm Console would ofte
 
 This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
 ### Fixes
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
