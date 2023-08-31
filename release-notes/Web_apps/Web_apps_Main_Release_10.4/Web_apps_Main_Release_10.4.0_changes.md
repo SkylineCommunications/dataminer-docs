@@ -750,6 +750,13 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
+#### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature part of RN, see General/Features -->
+
+In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
+
 #### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->

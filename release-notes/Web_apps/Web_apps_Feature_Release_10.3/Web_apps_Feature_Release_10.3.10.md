@@ -172,6 +172,13 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 When you click a time range component in a low-code app, an overlay is displayed where you can select a time range. In some cases, it could occur that part of this overlay could not be displayed.
 
+#### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature part of RN, see General/Features -->
+
+In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
+
 #### Low-Code Apps: No longer possible to deny specific users access to low-code apps when using SAML authentication [ID_37125]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->

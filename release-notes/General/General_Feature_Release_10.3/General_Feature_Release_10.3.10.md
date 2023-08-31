@@ -22,7 +22,20 @@ uid: General_Feature_Release_10.3.10
 
 ## Other features
 
-*No other features have been added to this release yet.*
+#### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix added under WebApps/Fixes -->
+
+It is now possible to soft-delete *GenericEnumEntry* objects.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
 ## Changes
 
