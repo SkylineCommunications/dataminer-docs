@@ -30,15 +30,20 @@ In all EPM VSAT dashboards, the default settings have been optimized:
 
 In addition, to achieve more accurate percentages, the Carrier Performance dashboard now calculates the total remote count based on the iDirect Hub Return Carrier table instead of the Hub Return Overview table.
 
-#### Security enhancements [ID_37133]
-
-A number of security enhancements have been made.
-
 ### Fixes
 
 #### Verizon ETMS Platform: Message not displayed at top Activity Log [ID_37132]
 
 If a ticket with power issues needed additional investigation, the message "Further Investigation Required" could incorrectly appear at the bottom of its Activity Log, instead of at the top.
+
+#### Security issue related to BinaryFormatter [ID_37133]
+
+A security issue related to the use of the BinaryFormatter type has been addressed in the following connectors:
+
+- Newtec Dialog Platform VSAT
+- Verizon iDirect Evolution Platform Collector
+- Verizon WM DCAT
+- Verizon WM Ticketing
 
 #### No ticket created for circuit in alarm [ID_37215]
 
