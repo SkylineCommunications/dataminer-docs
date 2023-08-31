@@ -49,6 +49,12 @@ From now on, when you select the *Include alarms* option, the masked alarms will
 > [!NOTE]
 > When you add a new tab of type "sliding window", you will still be able to select the *Include masked alarms* option.
 
+#### Trending - Pattern matching: Pattern occurrences will now appear in real time [ID_37153]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+DataMiner Cube now supports pattern occurrence events. This means that occurrences of patterns that are already displayed on a trend graph will be added in real time when the trend window is moving towards the *Now* marker.
+
 ## Changes
 
 ### Enhancements
