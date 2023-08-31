@@ -600,6 +600,12 @@ The deprecated DMS_GET_INFO call would return unexpected data when it returned d
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
 #### Problem when importing an existing element [ID_37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
