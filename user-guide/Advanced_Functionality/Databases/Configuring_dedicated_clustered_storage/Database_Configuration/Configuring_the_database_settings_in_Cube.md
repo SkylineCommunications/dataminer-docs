@@ -54,7 +54,9 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
    - **Password**: The password with which the DMA has to log on to Elasticsearch (if applicable).
 
-   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)
+1. From DataMiner 10.3.10/10.4.0 onwards<!-- RN 36399 -->, you can enable TLS by selecting the checkbox next to *TLS Enabled*.
+
+   ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*
 
 1. Click *Save*.
 
