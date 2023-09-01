@@ -187,7 +187,7 @@ When using external user authentication via SAML, it was no longer possible to d
 
 #### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
 

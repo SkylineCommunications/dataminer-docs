@@ -757,12 +757,6 @@ If a shared dashboard contained a query that built on another query (using the "
 
 In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
 
-#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
-
 #### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
