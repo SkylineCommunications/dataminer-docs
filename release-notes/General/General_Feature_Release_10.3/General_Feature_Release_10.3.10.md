@@ -148,6 +148,12 @@ Because of a number of enhancements, overall performance has increased when usin
 
 ### Fixes
 
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
+
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
