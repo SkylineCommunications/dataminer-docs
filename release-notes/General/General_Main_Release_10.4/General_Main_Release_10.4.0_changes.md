@@ -625,4 +625,4 @@ When you imported an element that already existed in the system, in some cases, 
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible on the trend graph, even after closing the graph and opening it again.
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
