@@ -247,3 +247,9 @@ When you created or edited a linked pattern with subpatterns from elements on di
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible on the trend graph, even after closing the graph and opening it again.
