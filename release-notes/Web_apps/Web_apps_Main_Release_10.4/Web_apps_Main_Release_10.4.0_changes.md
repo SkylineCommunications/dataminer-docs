@@ -456,6 +456,14 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]

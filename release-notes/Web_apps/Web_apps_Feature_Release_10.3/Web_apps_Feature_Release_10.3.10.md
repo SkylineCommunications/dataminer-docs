@@ -81,6 +81,14 @@ Up to now, when data from a GQI query was fed to another component on a dashboar
 > [!NOTE]
 > When you share a dashboard that feeds GQI results to another component, a warning will still appear. The API calls may still allow more than the creator of the dashboard intended.
 
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
 ### Fixes
 
 #### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
