@@ -147,6 +147,14 @@ From now on, *NATS Custodian* will check whether the routes list contains any vi
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
 
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* would incorrectly not be taken into account when calculating the data replication factors. Only the *SimpleStrategy* would be taken into account.
+
+As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
+
 #### Problem when running queries against Elasticsearch [ID_37138]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
