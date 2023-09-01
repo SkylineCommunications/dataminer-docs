@@ -87,3 +87,7 @@ To configure the component:
    - *Tooltips* > *Include dimension*: Available from DataMiner 10.0.13 onwards. Determines whether the dimensions are indicated in tooltips.
 
    - *Tooltips* > *Include value*: Available from DataMiner 10.0.13 onwards. Determines whether values are indicated in tooltips.
+
+   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->

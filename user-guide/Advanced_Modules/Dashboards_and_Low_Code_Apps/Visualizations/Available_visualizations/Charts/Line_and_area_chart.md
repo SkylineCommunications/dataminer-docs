@@ -121,6 +121,10 @@ To configure the component:
 
    - *Additional lines* > *Show boundary lines*: Allows you to display one or more boundary lines. You can configure where a line should be displayed by adding a Y-axis value in the *Boundary value* box. The color of a boundary line can be customized in the *Boundary line color* box. The *Add boundary line* option below this allows you to add additional boundary lines. To remove a boundary line, click the x to the right of the line name.
 
+   From DataMiner 10.3.9/10.4.0 onwards, the following setting is available:
+
+   - *Advanced* \> *Empty Result message*: Allows you to specify a custom message that is displayed when a query returns no results. <!-- RN 37173 -->
+
 ## Configuration with query data feed
 
 Query results are supported as a data feed for this component from DataMiner 10.2.9/10.3.0 onwards. To configure the component to use a GQI query as its data feed:
