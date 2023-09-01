@@ -40,6 +40,8 @@
         "files": [
           "dataminer-overview/**.md",
           "dataminer-overview/**/toc.yml",
+		  "connector-help/**.md",
+		  "connector-help/**/toc.yml",
           "user-guide/**.md",
           "user-guide/**/toc.yml",
           "release-notes/**.md",
@@ -60,6 +62,7 @@
         "files": [
           "images/**",
           "dataminer-overview/images/**",
+		  "connector-help/images/**",
           "user-guide/images/**",
           "release-notes/images/**",
           "develop/images/**",
