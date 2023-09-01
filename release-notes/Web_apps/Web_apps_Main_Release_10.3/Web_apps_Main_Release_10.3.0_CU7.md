@@ -55,6 +55,12 @@ When, while in edit mode, you deleted multiple components at once, the *Data use
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
 
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+
 #### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->

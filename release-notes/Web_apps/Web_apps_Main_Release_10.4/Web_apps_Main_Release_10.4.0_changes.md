@@ -720,12 +720,6 @@ When, in the *Create folder* or *Create dashboard* window, you clicked inside th
 
 Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
 
-#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
-
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->

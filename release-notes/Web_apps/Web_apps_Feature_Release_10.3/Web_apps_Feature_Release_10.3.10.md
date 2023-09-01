@@ -137,7 +137,7 @@ When the menu of a component in a dashboard or low-code app was closed by moving
 
 #### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
 
