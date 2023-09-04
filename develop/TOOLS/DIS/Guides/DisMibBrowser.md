@@ -95,7 +95,7 @@ For larger projects, generating multiple parameters concurrently becomes invalua
 
 ## Comparing Connector and MIB Files
 
-The ability to swiftly identify descrepancies between your connector and MIB files is crucial. The DIS MIB Browser provides an efficient solution for this via its *Compare* tab. This tool helps ensure that your SNMP connectors are always updated in line with the most recent MIB files.
+It's crucial to ensure that your SNMP connectors are up-to-date with the latest MIB files. The DIS MIB Browser's *Compare* tab offers an effective solution to quickly identify discrepancies between your connector and the MIB fules.
 
 ### Steps to Compare
 
