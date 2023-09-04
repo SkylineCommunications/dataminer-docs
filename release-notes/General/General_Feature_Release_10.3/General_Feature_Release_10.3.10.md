@@ -194,14 +194,6 @@ When you perform a factory reset by running *SLReset.exe*, NATS will automatical
 
 Up to now, SLReset would re-install NATS **before** it cleaned up the `C:\Skyline DataMiner` folder. As, in some cases, this could cause unexpected behavior, SLReset will now re-install NATS **after** the file clean-up.
 
-#### Failover: NATS servers would incorrectly use the virtual IP address of a Failover setup to establish the route to the online agent [ID_37073]
-
-<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
-
-When the NATS server builds the route connections to the agents in a Failover setup, in some cases, when establishing the route to the online agent, it used the virtual IP address of the Failover setup instead of the primary address of the online agent.
-
-From now on, *NATS Custodian* will check whether the routes list contains any virtual IP addresses. If so, it will replace each virtual IP address with the correct primary address of the online agent when performing the NATS configuration checks. However, it will not restart NATS.
-
 #### Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables [ID_37083]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
