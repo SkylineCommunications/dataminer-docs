@@ -3465,6 +3465,8 @@
           topicUid: Cassandra_not_starting_up_after_server_restart
         - name: Collecting DataMiner Cube memory dumps
           topicUid: Collecting_DataMiner_Cube_memory_dumps
+        - name: Collecting data to report an issue to Technical Support
+          topicUid: Collecting_data_to_report_an_issue_to_TechSupport
         - name: Investigating NATS issues
           topicUid: Investigating_NATS_Issues
         - name: Keeping a DMA from running out of disk space
