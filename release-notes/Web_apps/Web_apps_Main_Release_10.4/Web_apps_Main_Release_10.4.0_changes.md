@@ -456,6 +456,14 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -676,6 +684,16 @@ In some cases, query nodes that were linked to a feed would incorrectly not save
 
 From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
 
+#### Low-Code Apps: Non-linked sections would incorrectly be displayed when creating a new DOM instance [ID_36994]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In a low-code app, the form to create a new DOM instance would incorrectly display the sections that were not linked to the initial state.
+
+When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
+
+From now on, sections that are not linked to the initial state will no longer be displayed.
+
 #### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -702,11 +720,13 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 
 A number of date/time picker issues have been fixed.
 
-#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+#### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
+
+Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
 
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
@@ -732,11 +752,12 @@ When the web API fetched information for columns of a GQI query, it could occur 
 
 If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
 
-#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+#### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature part of RN, see General/Features -->
 
-After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
 
 #### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
 
@@ -747,6 +768,12 @@ In some cases, an error could occur when migrating a GQI component:
 - When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
+
+#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
 
 #### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
 
@@ -759,3 +786,9 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.

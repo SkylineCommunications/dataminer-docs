@@ -22,7 +22,20 @@ uid: General_Feature_Release_10.3.10
 
 ## Other features
 
-*No other features have been added to this release yet.*
+#### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- Additional fix added under WebApps/Fixes -->
+
+It is now possible to soft-delete *GenericEnumEntry* objects.
+
+Soft-deleting a *GenericEnumEntry* object will have the following consequences:
+
+- The *GenericEnumEntry* will not be displayed on UI forms used to create an instance.
+- The *GenericEnumEntry* will be displayed on a UI form used to update an instance of which the value is set to the soft-deleted *GenericEnumEntry* in question.
+- It will not be possible to create an instance of which the value is set to the soft-deleted *GenericEnumEntry*.
+- It will not be possible to update the value of an instance to the soft-deleted *GenericEnumEntry*.
+- It is allowed to have instances of which the value is set to the soft-deleted *GenericEnumEntry*.
 
 ## Changes
 
@@ -124,7 +137,22 @@ When you connected to a DataMiner Agent, up to now, the Alarm Console would ofte
 
 This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
 ### Fixes
+
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
 
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
@@ -186,6 +214,14 @@ The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tab
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* would incorrectly not be taken into account when calculating the data replication factors. Only the *SimpleStrategy* would be taken into account.
+
+As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
+
 #### Problem when running queries against Elasticsearch [ID_37138]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -214,8 +250,20 @@ In some cases, events scheduled to run at the end of a booking would not be run 
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
 
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
 #### Problem when importing an existing element [ID_37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.

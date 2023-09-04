@@ -466,6 +466,15 @@ Some log entries have been rewritten to make them clearer, have been assigned an
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
+
 ### Fixes
 
 #### Problem with Resource Manager when ResourceStorageType was not specified in Resource Manager settings [ID_34981]
@@ -600,8 +609,20 @@ The deprecated DMS_GET_INFO call would return unexpected data when it returned d
 
 When DataMiner was restarted, in some rare cases, it would not start up again.
 
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
 #### Problem when importing an existing element [ID_37214]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.

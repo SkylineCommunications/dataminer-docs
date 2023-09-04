@@ -55,6 +55,12 @@ When, while in edit mode, you deleted multiple components at once, the *Data use
 
 When the menu of a component in a dashboard or low-code app was closed by moving the mouse pointer out of it at the bottom center, a visual glitch could occur where the menu appeared to rapidly open and close.
 
+#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
+
 #### Dashboards app: 'Copy embed URL' right-click option continued to be displayed [ID_37090]
 
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
@@ -78,3 +84,15 @@ When you click a time range component in a low-code app, an overlay is displayed
 <!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When using external user authentication via SAML, it was no longer possible to deny specific users access to low-code apps.
+
+#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
+
+#### Low-Code Apps: Editing a published app with an existing draft would incorrectly create a new draft [ID_37194]
+
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
+
+Up to now, when you edited a published app that had a draft, a new draft would incorrectly be created. From now on, when you edit an app that has a draft, that existing draft will be opened.

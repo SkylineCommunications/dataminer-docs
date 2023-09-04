@@ -93,6 +93,12 @@ This notice will now be logged in the *SLSNMPAgent.txt* log file instead.
 
 ### Fixes
 
+#### Cassandra Cluster: Problem when retrieving all active alarm events for an element from Elasticsearch [ID_36674]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+When, on a system with a Cassandra Cluster database, an element had more than 10000 alarm events, not all of those events would get retrieved from the Elasticsearch database. This would cause (a) SLElement to generate additional alarm events when the element was restarted and (b) alarm trees to be incorrect.
+
 #### DataMiner upgrade failed because prerequisites check incorrectly marked Agent as failed [ID_36776]
 
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
@@ -146,6 +152,14 @@ From now on, *NATS Custodian* will check whether the routes list contains any vi
 <!-- MR 10.2.0 [CU19]/10.3.0 [CU7] - FR 10.3.10 -->
 
 The Cassandra Cluster Migrator tool would incorrectly not migrate any logger tables.
+
+#### Cassandra Cluster: Incorrect calculation of replication factors [ID_37117]
+
+<!-- MR 10.3.0 [CU7] - FR 10.3.10 -->
+
+In setups including a Cassandra Cluster database, the *NetworkTopologyStrategy* would incorrectly not be taken into account when calculating the data replication factors. Only the *SimpleStrategy* would be taken into account.
+
+As a result, when only one node went down, DataMiner would erroneously go into data offload mode even though enough Cassandra Cluster nodes were online.
 
 #### Problem when running queries against Elasticsearch [ID_37138]
 
