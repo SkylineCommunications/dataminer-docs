@@ -18,7 +18,8 @@ In addition to data models, OpenConfig also defines communication protocols such
 >
 > Related articles on DataMiner Dojo:
 >
-> - Blog: [Simplify Network Operations With Streaming Telemetry Data](https://community.dataminer.services/blog/)
+> - Blog: [DataMiner now natively supports OpenConfig](https://community.dataminer.services/dataminer-now-natively-supports-openconfig)
+> - Blog: [Simplify Network Operations With Streaming Telemetry Data](https://community.dataminer.services/simplify-network-operations-with-telemetry-streaming-data)
 > - Example use case: [OpenConfig](https://community.dataminer.services/use-case/openconfig/)
 
 > [!NOTE]

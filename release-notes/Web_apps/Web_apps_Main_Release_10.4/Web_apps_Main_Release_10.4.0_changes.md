@@ -208,9 +208,10 @@ The way in which components are linked to feeds has been improved. Instead of us
 
 When an inter-element query failed to retrieve a parameter value of a specific element, up to now, a generic `Unknown element` error would be thrown. From now on, a clearer error mentioning the element that caused the issue will be thrown instead.
 
-#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100]
+#### DataMiner web apps: Angular and other dependencies have been upgraded [ID_36100] [ID_36977]
 
-<!-- MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36100: MR 10.4.0 - FR 10.3.6 -->
+<!-- RN 36977: MR 10.4.0 - FR 10.3.10 -->
 
 In all web apps (e.g. Low-Code Apps, Dashboards, Monitoring, Jobs, Ticketing, etc.), Angular and other dependencies have been upgraded.
 
@@ -384,9 +385,10 @@ From now on, when a base query is changed in any way, all queries that use that 
 
 In the *Monitoring* app, a new type of text area boxes will now be used on parameter pages.
 
-#### Security enhancements [ID_36695] [ID_37051]
+#### Security enhancements [ID_36695] [ID_37047] [ID_37051] [ID_37068]
 
-<!-- MR 10.4.0 - FR 10.3.9/10.3.10 -->
+<!-- RN 36695: MR 10.4.0 - FR 10.3.9 -->
+<!-- RN 37047/37051/37068: MR 10.4.0 - FR 10.3.10 -->
 
 A number of security enhancements have been made.
 
@@ -453,6 +455,14 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
+
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
 
 ### Fixes
 
@@ -660,14 +670,6 @@ When you had opened the same dashboard in edit mode in two separate windows, the
 
 Up to now, when DCF interface properties were fetched, only the properties found on the DataMiner Agent to which you were connected would be returned. From now on, all DCF interface properties in the entire DataMiner System will be returned instead.
 
-#### Dashboards app/Low-Code Apps: Error when data source contained cells with NaN value [ID_36923]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-Up to now, when a data source contained cells with the value "NaN", an error message was shown in the Dashboards app or Low-Code Apps.
-
-This has been fixed. The display value will remain "NaN", but the raw value will now be null.
-
 #### Dashboards app & Low-Code Apps: Query row feed would send a selected row twice when the table used two identical queries [ID_36952]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -682,23 +684,41 @@ In some cases, query nodes that were linked to a feed would incorrectly not save
 
 From now on, queries will always be updated when the source (dashboard/page), selector (component), type (datatype) or property of the link changes.
 
+#### Low-Code Apps: Non-linked sections would incorrectly be displayed when creating a new DOM instance [ID_36994]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In a low-code app, the form to create a new DOM instance would incorrectly display the sections that were not linked to the initial state.
+
+When a value was set for one of the fields in those sections, saving the new DOM instance would result in a error stating `Instance contains unknown fields for the current state`.
+
+From now on, sections that are not linked to the initial state will no longer be displayed.
+
 #### Low-Code Apps: Problem after removing a query used by a component [ID_36998]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 When you removed a query that was used by a component on the page you were viewing, the *UpdateDashboard* call and all subsequent calls would fail.
 
-#### Dashboards app/Low-Code Apps: Changing query column while it was loading made it stop loading [ID_37006]
+#### Low-Code Apps: DOM GenericEnumFieldDescriptors would not be sorted as specified in the DomDefinition [ID_37007]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
-Up to now, if a column of a query was edited while the query was loading in a table component of a dashboard or low-code app, it would stop loading, and an empty table would temporarily be shown.
+Up to now, in *Form* components, DOM GenericEnumFieldDescriptors would be sorted alphabetically. The order that was specified in the DomDefinition would be disregarded.
+
+From now on, DOM GenericEnumFieldDescriptors will always be sorted as specified in the DomDefinition.
 
 #### Dashboards app: Problem when adding or configuring a node edge graph component [ID_37039]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
 
 In some cases, it would no longer be possible to add a new node edge graph component to a dashboard. Also, an error could occur when trying to configure a node edge graph that had already been added.
+
+#### DataMiner web apps: Date/time picker issues [ID_37041]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A number of date/time picker issues have been fixed.
 
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
@@ -717,3 +737,50 @@ In some cases, it could occur that parameter controls in Visual Overview did not
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When the web API fetched information for columns of a GQI query, it could occur that not all statistics were included. In the Dashboards app/Low-Code Apps, this could lead to incorrect "(0)" counters next to the discrete options of numeric columns in the query filter when the filter assistance option was enabled.
+
+#### Dashboards app: Shared dashboard containing query with 'Start from' data source not loading [ID_37115]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+If a shared dashboard contained a query that built on another query (using the "Start from" data source), in some cases it could occur that the dashboard could not be loaded and the loading screen continued to be displayed.
+
+#### Web apps: DOM GenericEnumEntry objects marked as hidden would incorrectly still be visible [ID_37121]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- For new feature part of RN, see General/Features -->
+
+In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
+
+<!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
+
+In some cases, an error could occur when migrating a GQI component:
+
+- When the query used DOM data and contained nodes that were linked to feeds, the links to those feeds could get broken and, in some cases, exceptions could be thrown due to missing feed links.
+
+- When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
+
+#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
+
+#### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
+
+#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
+
+#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
