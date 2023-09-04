@@ -218,7 +218,10 @@ Once you have established a trust relationship between DataMiner (i.e. the servi
 
      1. In the *Client secrets* section, click *New client secret*.
      1. Enter a description and an expiration date for the application secret.
-     1. Be sure to copy the secret value for later on. Once you leave this page, you can't access the secret value anymore.
+     1. Copy the secret value for later on.
+
+        > [!IMPORTANT]
+        > Once you leave this page, you will no longer be able to access the secret value.
 
    - **Username** and **Password**: The Azure AD user account that DataMiner will use to request data from Azure AD. Technically this can be any account, but we recommend that you create an account that will be use exclusively for this purpose. Note that, depending on the method of querying, specifying this account can be optional from DataMiner 10.1.11/10.2.0 onwards (see note below).
 
