@@ -52,6 +52,11 @@ These are the main steps of the setup:
   # Use a descriptive name for your cluster:
   #
   cluster.name: NameOfYourCluster
+  #
+  # Identify initial cluster manager node:
+    # If you are using OpenSearch 2, use cluster.initial_manager_nodes.
+    # If you are use using OpenSearch 1, use cluster.initial_master_nodes.
+  #
   cluster.initial_manager_nodes: ["opensearchnode1"] 
   #
   # ------------------------------------ Node ------------------------------------
@@ -109,12 +114,12 @@ These are the main steps of the setup:
   ```yml
   node.roles: [ cluster_manager ]
   ```
-- In case you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *OpenSearch.yml*:
- 
- ```yml
+
+- If you want a data node to take the role of cluster manager in case the current cluster manager node goes down, add the following configuration in *OpenSearch.yml*:
+
+  ```yml
   node.roles: [ cluster_manager, data, ingest ]
   ```
-
 
 #### User configuration
 
