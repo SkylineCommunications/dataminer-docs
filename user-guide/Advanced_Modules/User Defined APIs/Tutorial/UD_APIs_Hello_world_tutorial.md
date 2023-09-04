@@ -4,45 +4,62 @@ uid: UD_APIs_Hello_world_tutorial
 
 # Hello world tutorial
 
-This tutorial lesson demonstrates how to create your first custom API. We will create a simple API that, upon execution, will return 'Hello world'. **Make sure to look at the [prerequisites](xref:UD_APIs_tutorials) before starting this tutorial.**
+This tutorial shows you how to create your first custom API. You will create a simple API that, upon execution, will return "Hello world".
+
+> [!IMPORTANT]
+> Before you start this tutorial, take a look at the [prerequisites](xref:UD_APIs_tutorials).
 
 ## Overview
 
-- [Step 1: Create an automation script solution](#step-1-create-an-automation-script-solution)
-- [Step 2: Create the automation script](#step-2-create-the-automation-script)
+- [Step 1: Create an Automation script solution](#step-1-create-an-automation-script-solution)
+- [Step 2: Create the Automation script](#step-2-create-the-automation-script)
 - [Step 3: Create an API token](#step-3-create-an-api-token)
 - [Step 4: Create the API Definition](#step-4-create-the-api-definition)
-- [Step 5 (optional): Test the API using the SLNet Client Test Tool](#step-5-optional-test-the-api-using-the-slnet-client-test-tool)
+- [Step 5 (optional): Test the API using the SLNetClientTest Tool](#step-5-optional-test-the-api-using-the-slnet-client-test-tool)
 - [Step 6: Trigger the API using Postman](#step-6-trigger-the-api-using-postman)
 
-## Step 1: Create an automation script solution
+## Step 1: Create an Automation script solution
 
-We could just start developing our automation script in cube, but creating an automation script solution gives us the advantage of using all the features of Visual Studio and [DIS](xref:DIS). In combination with a version control system like Git, we could also provide versioning and make collaboration possible.
+While you could develop the Automation script in Cube, creating an Automation script solution in Visual Studio will give you the advantage of having access to all the features of Visual Studio and [DIS](xref:DIS). If you also use a version control system like Git, this will also enable versioning and make collaboration possible.
 
-1. Open Visual Studio and select 'Create a new project'. Search for 'DataMiner Automation Script Solution (Skyline Communications)' in the template searchbox and click next.
-![DataMiner Automation Script Solution in Visual Studio](~/user-guide/images/UDAPIS_helloworld_1.jpg)
-1. Let's use 'DataMinerAPIs' as name for our Solution, so we can reuse this solution for any future API scripts. Choose a location to save the automation script solution and click next.
-![Visual Studio configure your project](~/user-guide/images/UDAPIS_helloworld_2.jpg)
+1. Create an Automation script solution:
 
-1. Now the name and author of your automation script are required, follow the next step to create your automation script.
+   1. In Visual Studio, select *Create a new project*.
 
-## Step 2: Create the automation script
+   1. Search for *DataMiner Automation Script Solution (Skyline Communications)* in the template search box and click *Next*.
 
-The logic of your API is in an automation script, this processes input arguments, executes logic and returns a response. For this example we won't process any input, and no logic will be executed, we'll only return 'Hello world!' to the user.
+      ![DataMiner Automation Script Solution in Visual Studio](~/user-guide/images/UDAPIS_helloworld_1.jpg)
 
-1. Let's use 'HelloWorldAPI' as name for our automation script, fill in your name as author and click Create.
-![Visual Studio create automation script](~/user-guide/images/UDAPIS_helloworld_3.jpg)
+   1. Use "DataMinerAPIs" as the name for your solution, so you can reuse this solution for any future API scripts.
 
-1. First we'll have to update the NuGet references to make sure they match our DataMiner version. In the 'Solution Explorer' in Visual Studio, right click 'Dependencies' under the project named 'HelloWorldAPI_1'. Then click 'Manage NuGet packages...'. In that window, click 'Updates' in the top.  
-![Visual Studio project dependencies](~/user-guide/images/UDAPIS_helloworld_4.jpg)  
+   1. Choose a location to save the Automation script solution and click Next.
+
+      ![Visual Studio configure your project](~/user-guide/images/UDAPIS_helloworld_2.jpg)
+
+## Step 2: Create the Automation script
+
+The logic of your API is in an Automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
+
+1. Specify *HelloWorldAPI* as the name of your Automation script, fill in your name as the author, and click *Create*.
+
+   ![Visual Studio create Automation script](~/user-guide/images/UDAPIS_helloworld_3.jpg)
+
+1. Update the NuGet references to make sure they match your DataMiner version:
+
+   1. In the *Solution Explorer* in Visual Studio, under the project named *HelloWorldAPI_1*, right-click *Dependencies*.
+
+   1. Click *Manage NuGet packages*. At the top of the window, click *Updates*.
+
+   ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_helloworld_4.jpg)  
   
    ![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_helloworld_5.jpg)
 
-1. You'll see that the 'Skyline.DataMiner.Dev.Automation' package has an Update. This package contains all the DataMiner assemblies we need to develop an automation script. Click it, and on the right side, change the 'Version' to the DataMiner version you're using, and click 'Update'.  
-![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_helloworld_6.jpg)  
+1. You will see that the *Skyline.DataMiner.Dev.Automation* package has an update. This package contains all the DataMiner assemblies we need to develop an Automation script. Click it, and on the right side, change the *Version* to the DataMiner version you are using, and click *Update*.
+
+   ![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_helloworld_6.jpg)  
 
    > [!TIP]
-   > Don't know your DataMiner version? Connect to your DataMiner system using Cube, click the user icon in the Cube header and select *About*. Under *general*, the DataMiner version can be seen.
+   > Not sure which DataMiner version you are using? Connect to your DataMiner System using Cube, click the user icon in the Cube header, and select *About*. Under *general*, you will see the DataMiner version.
 
 1. Now we can start developing our API automation script. Double-click the 'HelloWorldAPI_1.cs' file in the Solution Explorer. This will open our C# file.  
 ![Visual Studio automation script](~/user-guide/images/UDAPIS_helloworld_7.jpg)
