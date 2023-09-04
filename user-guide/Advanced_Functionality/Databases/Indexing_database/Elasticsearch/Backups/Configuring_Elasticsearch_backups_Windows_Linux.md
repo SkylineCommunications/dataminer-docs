@@ -315,20 +315,20 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
 
 ## Troubleshooting
 
-### Network share access in Windows
+### Unable to access path.repo
 
-Whether you are triggering the backup via DataMiner or using an Elasticsearch REST API client such as Kibana, you need to make sure that the backup path is accessible on all the nodes in the cluster. If the network path requires credentials, the SYSTEM user must be granted access.
+If the error "Unable to access 'path.repo' (\\[SERVER]]\FOLDER]\)" is generated in the Elasticsearch backup file, this means that the SYSTEM user does not have access to the network path.
 
-If the error "Unable to access 'path.repo' (\\[SERVER]]\FOLDER]\)" is generated in the elastic backup file, this means that the SYSTEM user does not have access to the network path. The SYSEM user can be granted access to the network path using of one the following options:
+Whether you are triggering the backup via DataMiner or using an Elasticsearch REST API client such as Kibana, you need to make sure that the backup path is accessible on all the nodes in the cluster. If the network path requires credentials, the SYSTEM user must be granted access in one of the following ways:
 
-Option 1. Follow the instructions under [Restrictions for the backup path](xref:Configuring_Elasticsearch_backups_Windows#restrictions-for-the-backup-path).
+- Following the instructions under [Restrictions for the backup path](xref:Configuring_Elasticsearch_backups_Windows#restrictions-for-the-backup-path).
 
-Option 2. Use the Sysinternals PSTools:
+- Using the Sysinternals PSTools:
 
-   1. Download [PSTools](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
-   1. Open a command prompt as administrator and navigate to the folder containing the *psexec* tool.
-   1. Execute `psexec -i -s cmd.exe`. This way you will run the command prompt as the SYSTEM user instead of Administrator.
-   1. Execute the `net use` command, e.g. `net use \\DataMiner-01\ElasticBackup`.
-   1. When prompted, enter the credentials to access the shared folder.
-   1. Restart the Elasticsearch service.
-   1. Verify whether the service indeed starts.
+  1. Download [PSTools](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
+  1. Open a command prompt as administrator and navigate to the folder containing the *psexec* tool.
+  1. Execute `psexec -i -s cmd.exe`. This way you will run the command prompt as the SYSTEM user instead of Administrator.
+  1. Execute the `net use` command, e.g. `net use \\DataMiner-01\ElasticBackup`.
+  1. When prompted, enter the credentials to access the shared folder.
+  1. Restart the Elasticsearch service.
+  1. Verify whether the service indeed starts.
