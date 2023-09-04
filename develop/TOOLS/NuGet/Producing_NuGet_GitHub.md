@@ -57,7 +57,7 @@ For Visual Studio 2022, you'll find the record under the *Windows Credentials* >
 
 #### Step 1: GitHub Workflow
 
-Instead of taking the regular Github workflow for NuGet solutions, use the one for Internal NuGet solutions. Add a secret `NUGETAPIKEY` with the PAT token as value.
+Instead of taking the regular Github workflow for NuGet solutions, use the one for Internal NuGet solutions. Add a secret `GITHUB_NUGETAPIKEY` with the PAT token as value.
 
 #### Step 2: Create a tag
 
