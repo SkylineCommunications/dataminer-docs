@@ -160,4 +160,4 @@ namespace Script
 
 The application package builder API is an API that can be used to creating application packages. The API is available as a NuGet package: [Skyline.DataMiner.Core.AppPackageCreator](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageCreator).
 
-For the API documentation, refer to [Skyline.AppInstaller.AppPackage)](xref:Skyline.AppInstaller.AppPackage).
+For the API documentation, refer to [Skyline.AppInstaller.AppPackage](xref:Skyline.AppInstaller.AppPackage).
