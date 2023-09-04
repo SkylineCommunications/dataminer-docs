@@ -160,6 +160,8 @@ items:
           topicUid: General_Main_Release_10.2.0_CU18
         - name: General Main Release 10.2.0 CU19 - Preview
           topicUid: General_Main_Release_10.2.0_CU19
+        - name: General Main Release 10.2.0 CU20 - Preview
+          topicUid: General_Main_Release_10.2.0_CU20
       - name: Feature Release
         topicUid: General_Feature_Release_10.2.12
         items:
