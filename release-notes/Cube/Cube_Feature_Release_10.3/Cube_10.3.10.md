@@ -54,7 +54,7 @@ In the top-right corner of the Alarm Console, you can now find a light bulb icon
 > [!NOTE]
 >
 > - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
-> - When an SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, the associated notification will be replaced by a link to a [docs.dataminer.services](https://docs.dataminer.services/) page where you can find more information about the feature.
+> - When at least one SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, a link to [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) will appear below the light bulb icon.
 > - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
 
 #### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
