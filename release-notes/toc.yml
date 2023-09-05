@@ -56,6 +56,8 @@ items:
           topicUid: General_Main_Release_10.3.0_CU6
         - name: General Main Release 10.3.0 CU7 - Preview
           topicUid: General_Main_Release_10.3.0_CU7
+        - name: General Main Release 10.3.0 CU8 - Preview
+          topicUid: General_Main_Release_10.3.0_CU8
       - name: Feature Release
         topicUid: General_Feature_Release_10.3.10
         items:
