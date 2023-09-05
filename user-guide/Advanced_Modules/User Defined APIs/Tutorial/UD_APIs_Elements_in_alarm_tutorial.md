@@ -14,7 +14,7 @@ In this tutorial, you will build a more realistic use case for an API. This API 
 - [Step 1: Create the automation script](#step-1-create-the-automation-script)
 - [Step 2: Create an API token](#step-2-create-an-api-token)
 - [Step 3: Create the API definition](#step-3-create-the-api-definition)
-- [Step 4: Trigger the API using Postman](#step-5-trigger-the-api-using-postman)
+- [Step 4: Trigger the API using Postman](#step-4-trigger-the-api-using-postman)
 
 ## Step 1: Create the automation script
 
@@ -98,14 +98,14 @@ We will now create an API using the automation script and token we made earlier.
 1. Open the *Automation* module in DataMiner Cube. You should see our *ElementsAPI* automation script in the left bar, click it to open it.
 
 1. At the bottom of the screen, there's a *Configure API...* button. Click it to start configuring our API.
-![Configure API... button](~/user-guide/images/UDAPIS_tutorials_configure_api.jpg)
+![Configure API button](~/user-guide/images/UDAPIS_Tutorials_Cube_Configure_API.jpg)
 
 1. Enter 'elements' for the URL part, and select the token you want to link. Leave all other settings default. Then click *Create*.  
 ![Create API window](~/user-guide/images/UDAPIS_elements_create_api_definition.png)
 
 ## Step 4: Trigger the API using Postman
 
-We are now ready to trigger our API using an API test app like Postman. If you have never used Postman, check out [step 6 of the hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-6-trigger-the-api-using-postman) for some more detailed information.
+We are now ready to trigger our API using an API test app like Postman. If you have never used Postman, check out [step 5 of the hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-5-trigger-the-api-using-postman) for some more detailed information.
 
 1. In Postman, create a new API request:
     1. Click on the '+' icon at the top.

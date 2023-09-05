@@ -7,7 +7,7 @@ uid: UD_APIs_Hello_world_tutorial
 This tutorial shows you how to create your first custom API. You will create a simple API that, upon execution, will return "Hello world". The content and screenshots for this tutorial were created in DataMiner version 10.3.9.
 
 > [!IMPORTANT]
-> Before you start this tutorial, take a look at the [prerequisites](xref:UD_APIs_tutorials).
+> Before you start this tutorial, take a look at the [prerequisites](xref:UD_APIs_Tutorials).
 
 ## Overview
 
