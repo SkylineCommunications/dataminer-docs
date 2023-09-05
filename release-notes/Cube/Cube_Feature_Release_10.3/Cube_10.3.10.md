@@ -12,9 +12,11 @@ uid: Cube_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]](#alarm-console-light-bulb-id_36777-id_36871-id_36918-id_37057-id_37136-id_37145-id_37167-id_37184)
 
-## Other new features
+- [Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]](#protocols--templates-app-editing-deleting-and-duplicating-elements-id_36971)
+
+## New features
 
 #### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
 

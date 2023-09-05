@@ -18,9 +18,9 @@ uid: General_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
 
-## Other features
+## New features
 
 #### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
 
