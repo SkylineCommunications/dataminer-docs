@@ -5206,8 +5206,6 @@
           topicUid: Pipeline_stages_for_install_packages
       - name: FAQ
         topicUid: FAQ
-  - name: SRM project configuration using CI/CD
-    topicUid: SRM_project_config_using_CICD
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
@@ -5334,40 +5332,19 @@
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
     - name: Application packages
-      topicUid: TOOApplicationPackages
+      topicUid: ApplicationPackages
       items:
-      - name: Application package structure
-        topicUid: Creating_an_app_package
+      - name: Creating application packages
+        topicUid: CreatingApplicationPackages
+        items:
+        - name: Creating application package scripts
+          topicUid: Creating_app_package_scripts
       - name: Installing an application package
         topicUid: Installing_an_app_package
-      - name: Creating application package scripts
-        topicUid: Creating_app_package_scripts
-    - name: DataMiner Application Package Builder
-      topicUid: TOODataMinerPackageBuilder
-      items:
-        - name: Installation
-          topicUid: Installation
-        - name: Use case
-          topicUid: Use_case
-        - name: Usage
-          topicUid: Usage
-          items:
-            - name: Content tab
-              topicUid: Content_tab
-            - name: DMAPP tab
-              topicUid: DMAPP_tab
-            - name: DMAPP (Legacy) tab
-              topicUid: DMAPP_Legacy_tab
-            - name: DMT tab
-              topicUid: DMT_tab
-            - name: Profiles
-              topicUid: Profiles
-            - name: DMAppBuilderConfig.xml
-              topicUid: DMAppBuilderConfig_xml
-            - name: CLI (legacy packages only)
-              topicUid: CLI_legacy_packages_only
-            - name: Logging
-              topicUid: Logging1
+      - name: Application package structure
+        topicUid: ApplicationPackageStructure
+      - name: Application packages for SRM projects
+        topicUid: SRM_project_config_using_CICD
     - name: Skyline Driver Passport Platform
       topicUid: TOODriverPassportPlatform
       items:
