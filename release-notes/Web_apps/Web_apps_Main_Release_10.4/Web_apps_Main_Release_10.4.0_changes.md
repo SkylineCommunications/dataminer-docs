@@ -456,6 +456,14 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, a column resizer would span across the entire height of the column. From now on, the height of a column resizer will be equal to the height of the column header.
+
+Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
@@ -712,20 +720,6 @@ In some cases, it would no longer be possible to add a new node edge graph compo
 
 A number of date/time picker issues have been fixed.
 
-#### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
-
-Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
-
-#### Dashboards app/Low-Code Apps - Line chart component: Viewport would change upon receiving data [ID_37065]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When a *Line chart* component received new data, it would incorrectly recalculate its viewport.
-
 #### Dashboards app/Low-Code Apps: Invalid value when configuring query because of incorrectly parsed capabilities [ID_37074]
 
 <!-- MR 10.4.0 - FR 10.3.9 [CU0] -->
@@ -756,12 +750,6 @@ If a shared dashboard contained a query that built on another query (using the "
 <!-- For new feature part of RN, see General/Features -->
 
 In web apps, *GenericEnumEntry* objects marked as hidden would incorrectly still be visible in the UI.
-
-#### Low-Code Apps: 'View published app' option still present in user menu after publishing an app [ID_37129]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-After you had published an app, the *View published app* option would still be present in the app's user menu. From now on, this option will no longer be present in the user menu of published apps.
 
 #### Dashboards app/Low-Code Apps: Problem when migrating GQI components [ID_37156]
 
