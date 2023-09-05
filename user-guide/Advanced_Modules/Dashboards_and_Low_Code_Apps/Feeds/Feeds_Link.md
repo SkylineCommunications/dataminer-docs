@@ -4,7 +4,7 @@ uid: Feed_Link
 
 # Feed linking
 
-From DataMiner 10.3.10 onwards, [Dashboards](xref:NewR_D) and [Low-Code Apps](xref:Application_framework) supports the usage of linking feeds through a textual syntax in some of the features. It allows dynamically referencing feed values from a Low-Code App or dashboard in text. Check the documentation of a feature to know wether or not it supports this new syntax.
+From DataMiner 10.3.10 onwards, [Dashboards](xref:newR_D) and [Low-Code Apps](xref:Application_framework) supports the usage of linking feeds through a textual syntax in some of the features. It allows dynamically referencing feed values from a Low-Code App or dashboard in text. Check the documentation of a feature to know wether or not it supports this new syntax.
 
 ## The syntax
 
