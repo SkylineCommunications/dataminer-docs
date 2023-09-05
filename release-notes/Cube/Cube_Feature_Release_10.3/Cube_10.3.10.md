@@ -33,6 +33,28 @@ In the *Database* section of *System Center*, you can now do the following:
 > [!IMPORTANT]
 > From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
 
+#### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
+
+<!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
+
+In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+
+| Notification | Action when clicked |
+|--------------|---------------------|
+| X alarms require your focus in the current tab | Applies a filter that makes the current tab only list the focused alarms. |
+| Also show alarms not requiring focus      | Clears the above-mentioned filter and makes the current tab list all alarms. |
+| X incidents are present on the system     | Opens a new tab listing all active incidents. |
+| X anomalies were found in your trend data | Opens a new tab listing all anomaly suggestions/alarms. |
+| X alarms are predicted in the near future | Opens a new tab listing all prediction suggestions/alarms. |
+| X recent pattern occurrence detected      | Opens a new tab listing all trend pattern suggestions. |
+
+> [!NOTE]
+>
+> - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
+> - When an SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, the associated notification will be replaced by a link to a [docs.dataminer.services](https://docs.dataminer.services/) page where you can find more information about the feature.
+> - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
+
 #### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
