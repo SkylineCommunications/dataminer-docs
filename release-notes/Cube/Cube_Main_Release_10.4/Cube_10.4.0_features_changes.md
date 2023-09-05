@@ -223,6 +223,23 @@ To do so, right-click a resource in the list, and select *Duplicate*.
 
 - If you make a duplicate of a function resource, the instance dropdown will be left empty and the name of the function instance will be the name of the original function instance with the suffix `- copy`.
 
+#### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In the *Database* section of *System Center*, you can now do the following:
+
+- Have data offloaded to multiple Elasticsearch clusters.
+
+  For detailed instructions, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
+
+- Enable TLS when configuring a Cassandra database.
+
+  See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube)
+
+> [!IMPORTANT]
+> From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
+
 #### DataMiner Cube - Alarm Console: Special Elasticsearch search box always visible on systems with a Cassandra Cluster database [ID_36735]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
