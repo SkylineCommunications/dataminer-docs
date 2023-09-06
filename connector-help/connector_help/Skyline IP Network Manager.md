@@ -246,5 +246,3 @@ The subpage **Settings** allows to change the settings of the monitoring tests c
 > > #### Type
 
 > Monitor[Discover](#Device%20Discovery)
-
-false,false,2
