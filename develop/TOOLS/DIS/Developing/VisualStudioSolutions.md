@@ -12,4 +12,4 @@ This section consists of the following topics:
 
 - [Developing Automation scripts](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)
 
-- [Using the DIS MIB Browser](xref:DisGuides_MibBrowser)
+- [Using the DIS MIB Browser](xref:DIS_MIB_Browser)

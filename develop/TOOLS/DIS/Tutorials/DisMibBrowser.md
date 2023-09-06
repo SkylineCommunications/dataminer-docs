@@ -18,7 +18,7 @@ In this tutorial, you familiarize yourself with the DIS MIB Browser's functional
 
 - [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
-- Carefully read [Using the DIS MIB Browser](xref:DisGuides_MibBrowser)
+- Carefully read [Using the DIS MIB Browser](xref:DIS_MIB_Browser)
 
 - Download the MIB Browser tutorial file [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser/tree/main/Documentation)
 

@@ -10,7 +10,7 @@ This tool window allows you to build [Param](xref:Protocol.Params.Param) tags ba
 > The MIB Browser currently supports adding parameters of type Gauge32, Integer, Integer32, TimeTicks and Unsigned32.
 
 > [!TIP]
-> See also: [Getting Started with the DIS MIB Browser](xref:DisGuides_MibBrowser)
+> See also: [Getting Started with the DIS MIB Browser](xref:DIS_MIB_Browser)
 
 ![DIS MIB browser tool window](~/develop/images/DisMibBrowserToolWindow.png)
 

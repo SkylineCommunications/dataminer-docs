@@ -1,5 +1,5 @@
 ---
-uid: DisGuides_MibBrowser
+uid: DIS_MIB_Browser
 ---
 
 # Getting Started with the DIS MIB Browser
