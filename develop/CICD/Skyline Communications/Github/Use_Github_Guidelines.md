@@ -69,6 +69,10 @@ The repository name should look like this (using "-" as separator): **{customerA
 
 It is important to add a *README.md* file to the root folder. The contents of this file should provide users with the necessary information to understand the purpose of the code and learn how to use it.
 
+## Adding a .gitignore
+
+It is important to add a *.gitignore* file to the root folder. The contents of this file will ensure that you do not commit things like assemblies from the bin folders or other user-specific configuration. Using the default suggested .gitignore should be sufficient.
+
 ## Adding topics to a repository
 
 Topics must be used to help categorize the repositories and help users find them when exploring GitHub.
