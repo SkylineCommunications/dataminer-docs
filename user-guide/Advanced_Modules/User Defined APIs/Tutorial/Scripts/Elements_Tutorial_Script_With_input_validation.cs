@@ -5,25 +5,22 @@ namespace ElementsAPI_1
     using Skyline.DataMiner.Net.Apps.UserDefinableApis;
     using Skyline.DataMiner.Net.Apps.UserDefinableApis.Actions;
 
-    /// <summary>
-    /// Represents a DataMiner Automation script.
-    /// </summary>
     public class Script
     {
-        private readonly List<string> _knownAlarmTypes 
+        private readonly List<string> _knownAlarmLevels
             = new List<string> { "Warning", "Minor", "Major", "Critical" };
 
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
         public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
         {
-            var alarmStateInput = requestData.RawBody;
+            var alarmLevel = requestData.RawBody;
 
-            if (string.IsNullOrWhiteSpace(alarmStateInput) || !_knownAlarmTypes.Contains(alarmStateInput))
+            if (string.IsNullOrWhiteSpace(alarmLevel) || !_knownAlarmLevels.Contains(alarmLevel))
             {
                 return new ApiTriggerOutput()
                 {
                     ResponseBody =
-                        $"Invalid alarmType passed, possible values are: ${string.Join(",", _knownAlarmTypes)}",
+                        $"Invalid alarm level passed, possible values are: ${string.Join(",", _knownAlarmLevels)}",
                     ResponseCode = (int)StatusCode.BadRequest,
                 };
             }

@@ -5,130 +5,225 @@ uid: UD_APIs_Elements_in_alarm_tutorial
 # Creating an API to retrieve elements in alarm
 
 > [!IMPORTANT]
-> Before you start this tutorial, we highly recommended following the [Hello world tutorial](xref:UD_APIs_Hello_world_tutorial). This tutorial continues to build on the knowledge of that first tutorial.
+> Before you start this tutorial, it is highly recommended to follow the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial) first. This tutorial continues to build on the knowledge of that first tutorial.
 
-In this tutorial, you will build a more realistic use case for an API. This API will return elements in a specific alarm state that we will pass as input. We will process and validate the input, get all the elements in a specific alarm state, and return them as a JSON response.
+In this tutorial, you will build a more realistic use case for an API. This API will allow you to retrieve a list of elements that have alarms with a specified alarm level. It will process and validate the input, get all the elements according to this input, and return them as a JSON response. The content and screenshots for this tutorial were created in DataMiner version 10.3.9.
 
 ## Overview
 
-- [Step 1: Create the automation script](#step-1-create-the-automation-script)
+- [Step 1: Create the Automation script](#step-1-create-the-automation-script)
 - [Step 2: Create an API token](#step-2-create-an-api-token)
 - [Step 3: Create the API definition](#step-3-create-the-api-definition)
 - [Step 4: Trigger the API using Postman](#step-4-trigger-the-api-using-postman)
 
-## Step 1: Create the automation script
+## Step 1: Create the Automation script
 
-We will use the same Automation script solution from the [Hello World tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution). Make sure you have the solution open in Visual Studio.
+You can re-use the same Automation script solution from the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-1-create-an-automation-script-solution) to develop this new API script. Make sure you have this solution open in Visual Studio. A new script project is needed to develop this new API.
 
-1. In Visual Studio, right-click the solution at the top of the solution explorer. Click *Add*, then *New DataMiner Automation Script...*  
-![Visual Studio add new Automation script solution](~/user-guide/images/UDAPIS_elements_1.jpg)  
+1. In Visual Studio, right-click the solution at the top of the *Solution Explorer*. Click *Add* > *New DataMiner Automation Script*  
 
-1. A pop-up will open requiring you to choose a name, let's choose *ElementsAPI*.  
-![Create new automation script solution](~/user-guide/images/UDAPIS_elements_2.jpg)  
+   ![Visual Studio add new Automation script solution](~/user-guide/images/UDAPIS_Tutorials_Elements_Add_New_Script.jpg)  
 
-1. We're now ready to start developing our API automation script. Double-click the 'ElementsAPI_1.cs' file in the Solution Explorer. This opens our C# file.  
-![Visual Studio Automation Script](~/user-guide/images/UDAPIS_elements_3.jpg)  
+1. In the pop-up, enter "ElementsAPI" for the name.  
 
-1. We now have to remove the `Run(IEngine engine)` method and add the User-Defined APIs entrypoint. Follow items 5 to 7 of [step 2 of the hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-2-create-the-automation-script) to do this.
+   ![Create new automation script solution](~/user-guide/images/UDAPIS_Tutorials_Elements_Add_New_Script_Name.jpg)  
 
-1. Now we're ready to build the logic of our automation script. Follow the tabs below:
+The new Automation project has now been created for this API script. In the next few sections, this script will be expanded step-by-step.
 
-   # [Step A](#tab/A)
+### Preparing the script
 
-   As input from the user we expect the *alarmState* the user wants to see the elements for. Anything passed in the body of the API request will be available as a string in the *RawBody* property of the *requestData* parameter of the entrypoint method. So we're going to save that to a variable that we can use further on.
+Before the API logic can be written, the API script wrapper code needs to be present. The default run method should be replaced with a special entry point method.
 
-   [!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_tutorial_script_A.cs?highlight=14)]
+1. Double-click the *ElementsAPI_1.cs* file in the *Solution Explorer*.
 
-   # [Step B](#tab/B)
+   ![Visual Studio Automation Script](~/user-guide/images/UDAPIS_Tutorials_Elements_Open_Code.jpg)  
 
-   A user could type in anything as alarmType, we have to validate the input and make sure that it is a valid alarmType and return an appropriate error to the user when the input is not valid. We can use a list of the known valid alarm types, and compare the user input with that, and also verify that it is not null or empty.
+1. In the code window, remove the default `Run(IEngine engine)` method.
 
-   [!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_tutorial_script_B.cs?highlight=13-14,21-29)]
+1. Right click the empty line between the *Script* class brackets and select *Snippet* > *Insert Snippet*.
 
-   # [Step C](#tab/C)
+   ![Insert snippet](~/user-guide/images/UDAPIS_Tutorials_Insert_Snippet.jpg)  
 
-   To avoid our API returning huge amounts of data, we want to add a limit as input parameter. This way, the user can choose how many elements are returned.
+1. In the pop-up, select *DIS* > *Automation Script* > *CreateUserDefinedAPI*.
 
-   - We already have the *alarmState* as input. To fix that, we're going to adapt our script to expect JSON as input, this way we can expect multiple input parameters.
-   - To read out JSON, we're going to use a NuGet library. In the 'Solution Explorer' in Visual Studio, right click 'Dependencies' under the project named 'ElementsAPI_1'. Then click 'Manage NuGet packages...'.  
-   ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_elements_4.jpg)  
-   - In the window that opens, click 'Browse'. Now search for JSON, and click the first package (Newtonsoft.Json). In the right window, click 'Install'.  
-   ![Visual Studio NuGet browse](~/user-guide/images/UDAPIS_elements_5.jpg)  
-   ![Install Newtonsoft.Json](~/user-guide/images/UDAPIS_elements_6.jpg)  
-   - Now we'll parse our request body to an Input class that we'll make. We'll add error handling in case something else then we expect is being passed as request body.
-       - We're adding our own classes to map the JSON to so we have more control of the object that is being deserialized.
-   - We're adding a JsonSerializerSettings object with a ContractResolver, because the naming conventions for JSON is to use camelCasing, while our C# properties are in PascalCase.
+   ![Add entrypoint](~/user-guide/images/UDAPIS_Tutorials_API_Snippet.jpg)
 
-   > [!NOTE]
-   > We could also use the built-in parameter conversion instead of using JSON deserialization. This could be a simpler approach for those less familiar with this.How to do that is documented on the [defining an API page of the docs.](xref:UD_APIs_Define_New_API#user-input-data)  
+The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code:
 
-   [!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_tutorial_script_C.cs?highlight=18-21,35-48,69-77)]
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_Default.cs)]
 
-   # [Step D](#tab/D)
+### Storing user input
 
-   In this step we're going to add the logic to our API that will get the Elements based on the alarmType passed in the request body. We'll put the logic in a separate method called `GetElements()`. We can wrap that method in a try-catch statement, and pass a user-friendly error in case something goes wrong. In the method, we'll make sure the ElementFilter is correct to only show the elements with the alarm state that the user passed.
+For this API, the input from the user should be the alarm level (minor, major, ...) where the user wants to see the elements for. Anything passed in the body of the API request will be available as a string in the *RawBody* property of the *requestData* input argument of the entrypoint method. This content of the *rawBody* can be stored in a variable.
 
-   As you can see at the bottom of the script, we have defined our own ElementInfo class which we will use to generate the JSON response. It is always recommended to define your own types as you have full control over what is included and how they will be serialized. Serializing a class from an external DLL should be avoided as there is no guarantee this will remain functional after updates.
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_Stored_user_input.cs?highlight=12)]
 
-   [!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_tutorial_script_D.cs?highlight=61-73,77,82-118,124-135)]
+### Validating user input
 
-   # [Step E](#tab/E)
+The API will currently accept any string as input, even if this is not a valid alarm level. This is why there should be a validation step. You can add a collection of valid alarm levels, which will be used to check the input. If no valid match is found, a clear error can be returned. For the response code, the integer representation of the *StatusCode.BadRequest* enum option can be assigned. This will cause the response of the API to be clearly marked as a user request error with the appropriate response code (400).
 
-   The last step is to publish the automation script to the DataMiner agent. This can be done using the built-in feature in DIS. Make sure that DIS can connect to the DataMiner system you want to upload your script to, to add your DataMiner system, [edit the DIS settings](xref:DIS_settings#dma). In the Solution Explorer, open the ElementsAPI.xml file by double-clicking it. At the top you'll see a 'Publish' button. Click the arrow next to it and click the DataMiner system you want to upload your automation script to.  
-   ![Publish to DMA](~/user-guide/images/UDAPIS_tutorials_DIS_publish.jpg)
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_input_validation.cs?highlight=10-11,18-26)]
+
+### Expanding user input with JSON
+
+On large systems, this API could potentially return a large number of records. To prevent performance issues, this should be limited to a certain number, which can also be provided by the user. The current version of the script expects only one single string value from the body, but now two will have to be sent. This is where JSON can be used to structure the input data and allow you to make APIs that expect multiple input values.
+
+To use JSON, you will need to include the Newtonsoft.Json NuGet package.
+
+1. In Visual Studio, right-click the project *ElementsAPI_1* and click *Manage NuGet packages*.
+
+   ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_Tutorials_Elements_Manage_NuGet.jpg)
+
+1. In the window that opens, click *Browse* at the top.
+
+   ![Visual Studio NuGet browse](~/user-guide/images/UDAPIS_Tutorials_Elements_Browse_NuGet.jpg)
+
+1. Now search for "Newtonsoft.Json", and click the first package.
+
+1. In the right window, click *Install*.  
+
+   ![Install Newtonsoft.Json](~/user-guide/images/UDAPIS_Tutorials_Elements_Install_NuGet.jpg)
+
+> [!NOTE]
+> We could also use the built-in parameter conversion instead of doing the JSON deserialization within this script. This could be a simpler approach for those less familiar with it. How to do that is documented on the [defining an API page.](xref:UD_APIs_Define_New_API#user-input-data)  
+
+To convert (i.e. deserialize) the input JSON to data that can be used in the script, you will have to define a class that contains all the input data that is expected. In this case, the input would look like this:
+
+```json
+{
+    "alarmLevel" : "Minor",
+    "limit" : 10
+}
+```
+
+The C# class should then looks like this:
+
+```csharp
+public class Input
+{
+    public string AlarmLevel { get; set; }
+
+    public int Limit { get; set; }
+}
+```
+
+The next step is to add the actual conversion. By calling `JsonConvert.DeserializeObject<Input>()` you can easily do so. The library will parse the input and return an instance of the input class where the values have been mapped to the values provided in that JSON input.
+
+When the input data is not correctly formatted, exceptions can be thrown. This is why a try-catch statements should be placed around this conversion. When an exception occurs, a clear error can be returned explaining this. A check can be added at the start of the script that returns an error when the body is empty. This will reduce the amount of scenarios where things can go wrong.
+
+Note that there are also `JsonSerializerSettings` defined. These ensure that the conversion will always accept and output camel-case JSON names, which is the recommended casing type for JSON. ("alarmLevel" instead of "AlarmLevel")
+
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_json_input.cs?highlight=16-20,25-32,34-47,68-76)]
+
+### Retrieving the element data
+
+After the input data is converted and validated, it can be used to retrieve the actual element data. This logic is preferably put into a separate method called `GetElements()`. This method:
+
+- Accepts the input data.
+- Converts it to a filter.
+- Requests the elements from DataMiner via IEngine.
+- Converts the element data to a specific `ElementInfo` output class.
+- Ensures the amount of records does not exceed the limit set by the input.
+
+Just like the input data conversion, exceptions could occur when retrieving data from the system. This why a try-catch statement is advisable here as well.
+Another clear error can be returned when something would go wrong.
+
+As you can see at the bottom of the script, an `ElementInfo` class has been defined, which will be used to generate the JSON response. It is always recommended to define your own types. This way you have full control over what is included and how they will be serialized. Serializing a class from an external DLL should be avoided as there is no guarantee this will remain functional after updates.
+
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_Full.cs?highlight=60-72,76,81-116,122-133)]
+
+### Publishing the script
+
+The API script is complete and needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+
+1. In the *Solution Explorer*, double-click *ElementsAPI.xml*.
+
+   ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_Elements_Open_Script_XML.png)
+
+1. At the top of the code window, click the arrow next to the *Publish* button and select the DataMiner System you want to upload the script to.
+
+   ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
 
 ## Step 2: Create an API token
 
-To access this new API, we require an [access token](xref:UD_APIs_Objects_ApiToken). You could re-use the one you created in the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial), or you can create a new one.
+To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken). You can re-use the one you created in the [hello world tutorial](xref:UD_APIs_Hello_world_tutorial), or you can create a new one.
 
-1. In DataMiner Cube, open *System Center* > *User-Defined APIs*. In this window we can manage our APIs and Tokens.
+1. Open DataMiner Cube, and log into your DataMiner System.
 
-1. Under *Tokens* click *Create...*
+1. Go to *System Center* > *User-Defined APIs*.
 
-1. Let's name this token 'ElementsToken', and click *Generate token*.
-![Create API token](~/user-guide/images/UDAPIS_elements_create_api_token_name.png)
+1. Under *Tokens*, click *Create*
 
-1. A secret will now be generated, copy it, and **make sure you save it somewhere safe.** We will need it later to trigger our API, **you cannot retrieve the secret again after closing this window!**.
-![Create API secret](~/user-guide/images/UDAPIS_elements_create_api_token_secret.png)
+1. For the *Name*, enter "ElementsToken" and click *Generate token*.
+
+   ![Create API token](~/user-guide/images/UDAPIS_Tutorials_Elements_Create_API_Token_Name.png)
+
+1. Copy the generated secret to a safe location (e.g. a password manager).
+
+   ![Create API secret](~/user-guide/images/UDAPIS_Tutorials_Elements_Create_API_Token_Secret.png)
+
+   > [!IMPORTANT]
+   > After closing this window, you will no longer be able to retrieve the secret anymore. Make sure that the secret is saved somewhere safe. If it is lost, a new token will have to be created.
 
 ## Step 3: Create the API Definition
 
-We will now create an API using the automation script and token we made earlier.
+The next step is to create an API definition that ties the token and script together.
 
-1. Open the *Automation* module in DataMiner Cube. You should see our *ElementsAPI* automation script in the left bar, click it to open it.
+1. Open the *Automation* module in DataMiner Cube.
 
-1. At the bottom of the screen, there's a *Configure API...* button. Click it to start configuring our API.
-![Configure API button](~/user-guide/images/UDAPIS_Tutorials_Cube_Configure_API.jpg)
+1. Open the *ElementsAPI* Automation script.
 
-1. Enter 'elements' for the URL part, and select the token you want to link. Leave all other settings default. Then click *Create*.  
-![Create API window](~/user-guide/images/UDAPIS_elements_create_api_definition.png)
+1. At the bottom of the screen, click the *Configure API* button.
+
+   ![Configure API button](~/user-guide/images/UDAPIS_Tutorials_Cube_Configure_API.jpg)
+
+1. Optionally enter a description for the API.
+
+1. For the *URL* enter "elements".
+
+1. In the bottom *Tokens* pane, select the *ElementsToken*, which was created in the previous step.
+
+1. Finally, click the *Create* button.
+
+   ![Create API window](~/user-guide/images/UDAPIS_Tutorials_Elements_Create_API_Definition.png)
 
 ## Step 4: Trigger the API using Postman
 
-We are now ready to trigger our API using an API test app like Postman. If you have never used Postman, check out [step 5 of the hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-5-trigger-the-api-using-postman) for some more detailed information.
+The API is now ready to be tested using an API testing app like Postman. If you have never used Postman, check out [step 5 of the hello world tutorial](xref:UD_APIs_Hello_world_tutorial#step-5-trigger-the-api-using-postman) for some more detailed information.
 
-1. In Postman, create a new API request:
-    1. Click on the '+' icon at the top.
-    2. Change the URL to: `https://HOSTNAME/api/custom/elements`.
-    3. Assign authorization type 'Bearer Token'.
-    4. Fill in the secret of the token which was selected in [step 3](#step-3-create-the-api-definition).
-![Postman UI new request](~/user-guide/images/UDAPIS_elements_postman_api_request.png)
+1. Open Postman, and click the *+* icon to create a new request.
 
-1. If we now click the 'Send' button, we'll get a 'Bad Request' status code with the validation error we added in the script. This happens because we didn't add a body to our request yet.  
-![Postman UI response error](~/user-guide/images/UDAPIS_elements_7.jpg)
+1. In the URL field, enter `https://HOSTNAME/api/custom/elements`, replacing "HOSTNAME" with the the hostname of the DataMiner Agent.
 
-1. First head to the 'Body' tab of the request, then change 'none' to 'raw'. After that change the dropdown that says 'text' to JSON. Now we can add our request body.  
-![Postman UI add request body](~/user-guide/images/UDAPIS_elements_8.jpg)  
+1. Go to the *Authorization* tab and select *Bearer Token* as *Type*.
 
-1. Always start and end your JSON with curly brackets. Add the name of the key and the value you want to pass.  
-![Postman UI request body filled in](~/user-guide/images/UDAPIS_elements_10.jpg)
+1. In the *Token* field, enter the API token secret that was copied in [step 2](#step-2-create-an-api-token).
+
+   ![Postman UI new request](~/user-guide/images/UDAPIS_Tutorials_Elements_Postman_API_Request.png)
+
+If you now click the blue *Send* button, you should get a *Bad Request* status code with the validation error that was added in the script. This happens because there was no body provided in the request. This proves the validation logic works as expected.
+
+![Postman UI response error](~/user-guide/images/UDAPIS_Tutorials_Elements_Postman_Error.jpg)
+
+1. Open the *Body* tab of the request.
+
+1. Change the body type from *none* to *raw* in the dropdown.
+
+1. Change the content type from *text* to *JSON*.
+
+   ![Postman UI add request body](~/user-guide/images/UDAPIS_Tutorials_Elements_Postman_Body_Type.jpg)  
+
+1. Enter the JSON input below the selectors.
 
     ```JSON
     {
-        "alarmType": "Minor",
+        "alarmLevel": "Minor",
         "limit": 10
     }
     ```
 
-1. Make sure your DataMiner system has some elements in an alarm state, in the example, I have two elements in a 'Minor' alarm state, and my limit is set to 10, so I'll receive my 2 elements in the 'Minor' alarm state. Feel free to play around with this, changing the limit to 1 for example. When clicking send, you should now receive a 200 OK status code and your elements in the alarm state you passed in the request body in a JSON format.  
-![Postman UI response](~/user-guide/images/UDAPIS_elements_11.jpg)
+When you click the blue *Send* button again, the API will be triggered and all elements that have minor alarms should be returned.
+  
+![Postman UI response](~/user-guide/images/UDAPIS_Tutorials_Elements_Postman_Response.jpg)
+
+This is only a simple example of what can be done using the input and output functionality of a user-defined API. For this case, a list of alarm levels could be provided in the input. Additionally, a flag (i.e. bool property) could be added to the response that would indicate whether there were more elements than the provided limit.

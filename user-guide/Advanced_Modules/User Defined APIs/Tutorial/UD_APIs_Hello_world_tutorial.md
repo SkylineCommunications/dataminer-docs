@@ -4,7 +4,7 @@ uid: UD_APIs_Hello_world_tutorial
 
 # Hello world tutorial
 
-This tutorial shows you how to create your first custom API. You will create a simple API that, upon execution, will return "Hello world". The content and screenshots for this tutorial have been created in DataMiner version 10.3.9.
+This tutorial shows you how to create your first user-defined API. You will create a simple API that, upon execution, will return "Hello world!". The content and screenshots for this tutorial have been created in DataMiner version 10.3.9.
 
 > [!IMPORTANT]
 > Before you start this tutorial, take a look at the [prerequisites](xref:UD_APIs_Tutorials).
@@ -35,42 +35,42 @@ While you could develop the Automation script in Cube, creating an Automation sc
 
       ![Visual Studio configure your project](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_SolutionSettings.jpg)
 
+   1. Specify *HelloWorldAPI* as the name of your Automation script, fill in your name as the author, and click *Create*.
+
+      ![Visual Studio create Automation script](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
+
 ## Step 2: Create the Automation script
 
 The logic of your API is in an Automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
 
 ### Preparing the project
 
-You first need to prepare the project so the dependencies are up to date. To develop API scripts, you will need the "Skyline.DataMiner.Dev.Automation" NuGet package of at least version 10.2.12.
+You first need to prepare the project so the dependencies are up to date. To develop API scripts, you will need the "Skyline.DataMiner.Dev.Automation" NuGet package of the version that matches you DataMiner System. This version should be at least 10.3.6 or higher.
 
-1. Specify *HelloWorldAPI* as the name of your Automation script, fill in your name as the author, and click *Create*.
+1. In the *Solution Explorer* in Visual Studio, under the project named *HelloWorldAPI_1*, right-click *Dependencies*.
 
-   ![Visual Studio create Automation script](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_DIS_ScriptSettings.jpg)
+1. Click *Manage NuGet packages*.
 
-1. Update the NuGet references to make sure they match your DataMiner version:
+   ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages.jpg)
 
-   1. In the *Solution Explorer* in Visual Studio, under the project named *HelloWorldAPI_1*, right-click *Dependencies*.
+1. At the top of the window, click *Updates*.
 
-   1. Click *Manage NuGet packages*.
+   ![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Updates.jpg)
 
-      ![Visual Studio project dependencies](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages.jpg)
+1. Click on the *Skyline.DataMiner.Dev.Automation* package.
 
-   1. At the top of the window, click *Updates*.
+1. On the right, select the version that matches your DMS and click *Update*.
 
-      ![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Updates.jpg)
+   ![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Automation.jpg)
 
-   1. Select the version that matches your DMS and click *Update*.
-
-      ![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Automation.jpg)
-
-      > [!TIP]
-      > Not sure which DataMiner version you are using? Connect to your DataMiner System using Cube, click the user icon in the Cube header, and select *About*. Under *general*, you will see the DataMiner version.
+   > [!TIP]
+   > Not sure which DataMiner version you are using? Connect to your DataMiner System using Cube, click the user icon in the Cube header, and select *About*. Under *general*, you will see the DataMiner version.
 
 ### Preparing the script
 
 Now that the solution is set up and the dependencies are up to date. You will need to update the default script content with the wrapper code for the API script. The default run method should be replaced with a special entry point method.
 
-1. Double-click the *HelloWorldAPI_1.cs* file in the Solution Explorer.
+1. Double-click the *HelloWorldAPI_1.cs* file in the *Solution Explorer*.
 
    ![Visual Studio automation script](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Automation_Script.jpg)
 
@@ -78,11 +78,11 @@ Now that the solution is set up and the dependencies are up to date. You will ne
 
 1. Right-click the empty line between the *Script* class brackets and select *Snippet* > *Insert Snippet*.
 
-   ![Insert snippet buttonInitial script layout](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Insert_Snippet.jpg)  
+   ![Insert snippet](~/user-guide/images/UDAPIS_Tutorials_Insert_Snippet.jpg)  
 
 1. In the pop-up, select *DIS* > *Automation Script* > *CreateUserDefinedAPI*.
 
-   ![Add entrypoint](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_API_Snippet.jpg)
+   ![Add entrypoint](~/user-guide/images/UDAPIS_Tutorials_API_Snippet.jpg)
 
 The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code:
 
@@ -139,7 +139,7 @@ namespace HelloWorldAPI_1
 
 The API script is complete and needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
-1. In the Solution Explorer, double-click *HelloWorldAPI.xml* .
+1. In the *Solution Explorer*, double-click *HelloWorldAPI.xml* .
 
    ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Script_XML.jpg)
 

@@ -1,25 +1,24 @@
 namespace ElementsAPI_1
 {
-    using Models;
     using System.Linq;
     using System.Collections.Generic;
-    using Newtonsoft.Json;
+    using Models;
     using Skyline.DataMiner.Automation;
     using Skyline.DataMiner.Net.Apps.UserDefinableApis;
     using Skyline.DataMiner.Net.Apps.UserDefinableApis.Actions;
+    using Newtonsoft.Json;
     using Newtonsoft.Json.Serialization;
 
-    /// <summary>
-    /// Represents a DataMiner Automation script.
-    /// </summary>
     public class Script
     {
-        private readonly List<string> _knownAlarmTypes
+        private readonly List<string> _knownAlarmLevels
             = new List<string> { "Warning", "Minor", "Major", "Critical" };
-        private readonly JsonSerializerSettings _serializerSettings = new JsonSerializerSettings()
-        {
-            ContractResolver = new CamelCasePropertyNamesContractResolver(),
-        };
+
+        private readonly JsonSerializerSettings _serializerSettings 
+            = new JsonSerializerSettings()
+            {
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+            };
 
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
         public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
@@ -37,7 +36,7 @@ namespace ElementsAPI_1
             try
             {
                 input = JsonConvert.DeserializeObject<Input>(
-                	requestData.RawBody ?? string.Empty, _serializerSettings);
+                    requestData.RawBody ?? string.Empty, _serializerSettings);
             }
             catch
             {
@@ -48,12 +47,12 @@ namespace ElementsAPI_1
                 };
             }
 
-            if (string.IsNullOrWhiteSpace(input.AlarmType) || !_knownAlarmTypes.Contains(input.AlarmType))
+            if (string.IsNullOrWhiteSpace(input.AlarmLevel) || !_knownAlarmLevels.Contains(input.AlarmLevel))
             {
                 return new ApiTriggerOutput()
                 {
                     ResponseBody =
-                        $"Invalid alarmType passed, possible values are: ${string.Join(",", _knownAlarmTypes)}",
+                        $"Invalid alarm level passed, possible values are: ${string.Join(",", _knownAlarmLevels)}",
                     ResponseCode = (int)StatusCode.BadRequest,
                 };
             }
@@ -61,7 +60,7 @@ namespace ElementsAPI_1
             List<ElementInfo> elements;
             try
             {
-                elements = GetElements(engine, input).Take(input.Limit).ToList();
+                elements = GetElements(engine, input);
             }
             catch
             {
@@ -82,21 +81,20 @@ namespace ElementsAPI_1
         private List<ElementInfo> GetElements(IEngine engine, Input input)
         {
             var elementFilter = new ElementFilter();
-            if (input.AlarmType.Equals("Minor"))
+            switch (input.AlarmLevel)
             {
-                elementFilter.MinorOnly = true;
-            }
-            else if (input.AlarmType.Equals("Warning"))
-            {
-                elementFilter.WarningOnly = true;
-            }
-            else if (input.AlarmType.Equals("Major"))
-            {
-                elementFilter.MajorOnly = true;
-            }
-            else if (input.AlarmType.Equals("Critical"))
-            {
-                elementFilter.CriticalOnly = true;
+                case "Minor":
+                    elementFilter.MinorOnly = true;
+                    break;
+                case "Warning":
+                    elementFilter.WarningOnly = true;
+                    break;
+                case "Major":
+                    elementFilter.MajorOnly = true;
+                    break;
+                case "Critical":
+                    elementFilter.CriticalOnly = true;
+                    break;
             }
 
             var rawElements = engine.FindElements(elementFilter);
@@ -114,7 +112,7 @@ namespace ElementsAPI_1
                 });
             }
 
-            return elements;
+            return elements.Take(input.Limit).ToList();
         }
     }
 }
@@ -136,7 +134,7 @@ namespace Models
 
     public class Input
     {
-        public string AlarmType { get; set; }
+        public string AlarmLevel { get; set; }
 
         public int Limit { get; set; }
     }
