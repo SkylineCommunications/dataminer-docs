@@ -7153,6 +7153,9 @@
     topicUid: Connector_help_Red_Bee_Media_Lawo_Powercore_RouterControl_Visio_Mapping
   - name: Red Bee Media Service Early Warning
     topicUid: Connector_help_Red_Bee_Media_Service_Early_Warning
+- name: Red Bee Media UK
+  topicUid: Connector_help_Red_Bee_Media_UK_Stargate
+  items:
   - name: Red Bee Media UK Stargate
     topicUid: Connector_help_Red_Bee_Media_UK_Stargate
 - name: Red Hat Enterprise
@@ -7828,10 +7831,16 @@
   items:
   - name: SES Astra CDN Monitor
     topicUid: Connector_help_SES_Astra_CDN_Monitor
+- name: SES Networks - USA
+  topicUid: Connector_help_SES_Networks_-_USA_CTATMS_Configuration_Manager
+  items:
   - name: SES Networks - USA CTATMS Configuration Manager
     topicUid: Connector_help_SES_Networks_-_USA_CTATMS_Configuration_Manager
   - name: SES Networks - USA Monics MuleSoft Collector
     topicUid: Connector_help_SES_Networks_-_USA_Monics_MuleSoft_Collector
+- name: SES S.A.
+  topicUid: Connector_help_SES_S.A._ABB_Y680-2_New_Skies_Satellites
+  items:
   - name: SES S.A. ABB Y680-2 New Skies Satellites
     topicUid: Connector_help_SES_S.A._ABB_Y680-2_New_Skies_Satellites
   - name: SES S.A. Antenna Position Checker Service Definition
@@ -9718,6 +9727,13 @@
   items:
   - name: Vodafone Carrier Monitoring Manager
     topicUid: Connector_help_Vodafone_Carrier_Monitoring_Manager
+  - name: Vodafone Service Definition
+    topicUid: Connector_help_Vodafone_Service_Definition
+  - name: Vodafone Service Notes
+    topicUid: Connector_help_Vodafone_Service_Notes
+- name: Vodafone Kabel Deutschland GmbH
+  topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_ABR_OTT_Service
+  items:
   - name: Vodafone Kabel Deutschland GmbH ABR OTT Service
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_ABR_OTT_Service
   - name: Vodafone Kabel Deutschland GmbH ABR Profile Manager
@@ -9760,10 +9776,6 @@
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_TS_Bitrate_Optimization_APP
   - name: Vodafone Kabel Deutschland GmbH UDP-RTP GW Service
     topicUid: Connector_help_Vodafone_Kabel_Deutschland_GmbH_UDP-RTP_GW_Service
-  - name: Vodafone Service Definition
-    topicUid: Connector_help_Vodafone_Service_Definition
-  - name: Vodafone Service Notes
-    topicUid: Connector_help_Vodafone_Service_Notes
 - name: VodafoneZiggo
   topicUid: Connector_help_VodafoneZiggo_SAM_Callback_Receiver
   items:
