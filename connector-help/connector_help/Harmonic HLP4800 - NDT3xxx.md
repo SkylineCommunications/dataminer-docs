@@ -1,0 +1,35 @@
+---
+uid: Connector_help_Harmonic_HLP4800_-_NDT3xxx
+---
+
+# Harmonic HLP4800 - NDT3xxx
+
+The NDT3xxx modules are digital return path transmitters that allow operators to build complete, two-way communication systems based on a Hybrid Fiber/Coaxial (HFC) CATV network.
+
+## About
+
+This driver uses **SNMP** polling to communicate with the corresponding device.
+
+The driver is exported by the parent element **Harmonic HLP4800** if DVE creation is enabled. In that case, a child element using this driver will be created for each row in the **Physical Entities** table of the parent element.
+
+### Supported firmware versions
+
+| **Driver Range** | **Device Firmware Version**                         |
+|------------------|-----------------------------------------------------|
+| 1.0.1.x          | Module version: unknownController version: 4.1.0.24 |
+
+## Installation and configuration
+
+### Creation
+
+This driver is used by DVE child elements that are **automatically created** by the parent driver [Harmonic HLP4800](xref:Connector_help_Harmonic_HLP4800), from version 1.0.0.1 onwards.
+
+## Usage
+
+### General
+
+This page contains module-specific hardware information.
+
+### Laser
+
+This page contains laser-specific information.
