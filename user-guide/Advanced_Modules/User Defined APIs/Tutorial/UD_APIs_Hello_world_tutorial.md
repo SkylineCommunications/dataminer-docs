@@ -59,7 +59,7 @@ You first need to prepare the project so the dependencies are up to date. To dev
 
       ![Visual Studio NuGet updates](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Updates.jpg)
 
-   1. Select the version that matches your DMS and click on *Update*.
+   1. Select the version that matches your DMS and click *Update*.
 
       ![Skyline.DataMiner.Dev.Automation NuGet update](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Manage_NuGet_Packages_Automation.jpg)
 
@@ -68,7 +68,7 @@ You first need to prepare the project so the dependencies are up to date. To dev
 
 ### Preparing the script
 
-Now that the solution is set up and the dependencies are up to date. You will need to update the default script content with the wrapper code for the API script. The default run method should be replaced with a special entry-point method.
+Now that the solution is set up and the dependencies are up to date. You will need to update the default script content with the wrapper code for the API script. The default run method should be replaced with a special entry point method.
 
 1. Double-click the *HelloWorldAPI_1.cs* file in the Solution Explorer.
 
@@ -76,7 +76,7 @@ Now that the solution is set up and the dependencies are up to date. You will ne
 
 1. In the code window, remove the default `Run(IEngine engine)` method.
 
-1. Right click the empty line between the *Script* class brackets and select *Snippet*, *Insert Snippet*.
+1. Right-click the empty line between the *Script* class brackets and select *Snippet* > *Insert Snippet*.
 
    ![Insert snippet buttonInitial script layout](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Insert_Snippet.jpg)  
 
@@ -84,7 +84,7 @@ Now that the solution is set up and the dependencies are up to date. You will ne
 
    ![Add entrypoint](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_API_Snippet.jpg)
 
-The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code.
+The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code:
 
 ```C#
 namespace HelloWorldAPI_1
@@ -111,7 +111,7 @@ namespace HelloWorldAPI_1
 
 ### Writing the API logic
 
-The goal is to return "Hello world!" when the API script is triggered. To configure this, you need to replace the default "Succeeded" string provided by the snippet with our "Hello world!" string. The resulting and final state of the script should look like this.
+The goal of this tutorial is to have "Hello world!" returned when the API script is triggered. To configure this, you need to replace the default "Succeeded" string provided by the snippet with the "Hello world!" string. The resulting and final state of the script should look like this:
 
 ```C#
 namespace HelloWorldAPI_1
@@ -137,13 +137,13 @@ namespace HelloWorldAPI_1
 
 ### Publishing the script
 
-The API script is complete and needs to be published to the DataMiner system. This can be done using the built-int publish feature of DIS. Make sure that DIS can connect to the DataMiner system you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
+The API script is complete and needs to be published to the DataMiner System. You can do so using the built-in publish feature of DIS. Make sure that DIS can connect to the DataMiner System you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
-1. Double-click on *HelloWorldAPI.xml* in the Solution Explorer.
+1. In the Solution Explorer, double-click *HelloWorldAPI.xml* .
 
-   ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Script_XML.jpg)  
+   ![Automation script XML](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Open_Script_XML.jpg)
 
-1. Click on the arrow next to the *Publish* button at the top of the code window and select the DataMiner system you want to upload the script to.
+1. At the top of the code window, click the arrow next to the *Publish* button and select the DataMiner System you want to upload the script to.
 
    ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
 
@@ -151,22 +151,22 @@ The API script is complete and needs to be published to the DataMiner system. Th
 
 To access the API, you will need an [API token](xref:UD_APIs_Objects_ApiToken).
 
-1. Open DataMiner Cube, and log into your DataMiner system.
+1. Open DataMiner Cube, and log into your DataMiner System.
 
-1. Open *System Center* > *User-Defined APIs*.
+1. Go to *System Center* > *User-Defined APIs*.
 
-1. Under *Tokens* click *Create*
+1. Under *Tokens*, click *Create*
 
 1. For the *Name*, enter "HelloWorldToken" and click *Generate token*.
 
    ![Create API Token](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Create_Token_Name.jpg)
 
-1. Copy the generated secret to a safe location. (e.g. a password manager)
+1. Copy the generated secret to a safe location (e.g. a password manager).
 
    ![Create API secret](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Create_Token_Secret.jpg)
 
    > [!IMPORTANT]
-   > After dismissing this window, you will not be able to retrieve the secret anymore. Make sure that the secret is saved somewhere safe. If lost, a new token will have to be created.
+   > After closing this window, you will no longer be able to retrieve the secret. Make sure that the secret is saved somewhere safe. If it is lost, a new token will have to be created.
 
 You should now be able to see the token in the *Tokens* table.
 
@@ -174,7 +174,7 @@ You should now be able to see the token in the *Tokens* table.
 
 ## Step 4: Create the API Definition
 
-The script and the token are now available in the DMS. The next step is to create an API definition which ties both together. This definition is also used to define the URL where this API will be available on.
+The script and the token are now available in the DMS. The next step is to create an API definition that ties both together. This definition is also used to define the URL where this API will be available.
 
 1. Open the *Automation* module in DataMiner Cube.
 
@@ -186,7 +186,7 @@ The script and the token are now available in the DMS. The next step is to creat
 
 1. Optionally enter a description for the API.
 
-1. For the *URL* enter "helloworld".
+1. For the *URL*, enter "helloworld".
 
 1. In the bottom *Tokens* pane, select the *HelloWorldToken*, which was created in the previous step.
 
@@ -200,32 +200,32 @@ The API definition has now been created. Next to the API script, you should see 
 
 ## Step 5: Trigger the API using Postman
 
-The API has now been fully configured. To ensure it functions correctly, the API can be tested using an API testing app like [Postman](https://www.postman.com/downloads/).
+The API has now been fully configured. To ensure that it functions correctly, you can test the API using an API testing app like [Postman](https://www.postman.com/downloads/).
 
 > [!NOTE]
-> When this is the first time using Postman, the app will ask you to create an account or sign in. You could create an account, but you can also continue using the *try our lightweight API client* button at the bottom of the screen.
+> If this is the first time you use Postman, the app will ask you to create an account or sign in. You can create an account, but you can also continue using the *try our lightweight API client* button at the bottom of the screen.
 
-1. Open Postman, and click on the *+* icon to create a new request.
+1. Open Postman, and click the *+* icon to create a new request.
 
-   !['+' icon in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Create_New.jpg)  
+   !['+' icon in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Create_New.jpg)
 
-1. In the URL field, enter `https://HOSTNAME/api/custom/helloworld` where "HOSTNAME" is replaced by the hostname of the DataMiner agent.
+1. In the URL field, enter `https://HOSTNAME/api/custom/helloworld`, replacing "HOSTNAME" with the hostname of the DataMiner Agent.
   
-   ![Postman UI with url filled in](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_URL.jpg)  
+   ![Postman UI with URL filled in](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_URL.jpg)
 
-1. Click on the *Authorization* tab and select *Bearer Token* as *Type*.
+1. Go to the *Authorization* tab and select *Bearer Token* as *Type*.
 
-   ![Add bearer token in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Authorization.jpg)  
+   ![Add bearer token in Postman](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Authorization.jpg)
 
-1. In the *Token* field, enter the API token secret that was copied in [step 2](#step-3-create-an-api-token).
+1. In the *Token* field, enter the API token secret that was copied in [step 3](#step-3-create-an-api-token).
 
-   ![Postman UI with token filled in](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Bearer_Token.jpg)  
+   ![Postman UI with token filled in](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Bearer_Token.jpg)
 
-1. Finally, click the blue 'Send' button on the right.
+1. Finally, click the blue *Send* button on the right.
 
-An HTTP GET request will now be sent to the API endpoint, which will trigger the API script. You should see the 'Hello world!' message in the response section.
+An HTTP GET request will now be sent to the API endpoint, which will trigger the API script. You should see the "Hello world!" message in the response section.
 
 ![API response](~/user-guide/images/UDAPIS_Tutorials_HelloWorld_Postman_Response.jpg)
 
 > [!TIP]
-> If the DMA is using SSL certificates which were not signed by an external certificate authority, you may receive a warning about SSL verification. If you trust the system, you can click *Disable SSL verification* to disable SSL verification and send the request again.
+> If the DMA is using SSL certificates that were not signed by an external certificate authority, you may receive a warning about SSL verification. If you trust the system, you can click *Disable SSL verification* to disable SSL verification and send the request again.
