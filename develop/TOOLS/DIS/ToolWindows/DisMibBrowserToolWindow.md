@@ -9,6 +9,9 @@ This tool window allows you to build [Param](xref:Protocol.Params.Param) tags ba
 > [!NOTE]
 > The MIB Browser currently supports adding parameters of type Gauge32, Integer, Integer32, TimeTicks and Unsigned32.
 
+> [!TIP]
+> See also: [Getting Started with the DIS MIB Browser](xref:DisGuides_MibBrowser)
+
 ![DIS MIB browser tool window](~/develop/images/DisMibBrowserToolWindow.png)
 
 ## MIB tree
@@ -33,7 +36,6 @@ The bottom half of the *Files* tab contains three sections:
 > [!NOTE]
 >
 > - The location of the MIB store and other MIB browser settings can be specified in the *MIB* tab of the *DIS Settings* window. See: [MIB](xref:DIS_settings#mib)
-> - The MIB browser allows you to import files with the following extensions: *mib*, *smi*, and *txt*.
 > - DIS by default contains most common IANA and IETF MIB files. These MIB files contain common definitions that are often used in MIB files supplied by equipment vendor.
 
 ## Compare
@@ -43,7 +45,3 @@ The *Compare* tab shows the differences between the OID data in the MIB tree and
 - The top pane lists the OIDs that do not have a corresponding *\<Param>* tag in the protocol XML file.
 
 - The bottom pane lists the *\<Param>* tags in the protocol XML file that do not have a corresponding OID in the MIB tree.
-
-## See also
-
-- [DIS MIB Browser Guide](xref:DisGuides_MibBrowser).

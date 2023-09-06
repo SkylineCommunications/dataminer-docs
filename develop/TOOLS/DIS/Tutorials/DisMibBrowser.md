@@ -2,59 +2,82 @@
 uid: DisTutorials_MibBrowser
 ---
 
-# Hands-on Tutorial: Explore and Modify with the DIS MIB Browser
+# Tutorial: Exploring the DIS MIB Browser
 
-## Objective
+In this tutorial, you familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them to a sample protocol.
 
-Familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them to a sample connector.
+> [!TIP]
+> You can follow along with this [step-by-step video tutorial](https://skyline.be/).
 
-You can follow along with the [step-by-step video](https://skyline.be/) for this tutorial.
+> [!NOTE]
+> This tutorial uses DataMiner Integration Studio version 2.44.
 
 ## Prerequisites
 
-- Ensure you've gone through the [DIS MIB Browser Guide](xref:DisGuides_MibBrowser).
-- You can download the tutorial files [here](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser).
-  - The MIB file can be found in the 'Documentation' folder on GitHub.
+- [Visual Studio](https://visualstudio.microsoft.com/downloads/)
 
-## Steps
+- [DataMiner Integration Studio](https://community.dataminer.services/exphub-dis/)
 
-1. **Load a MIB File**:
-   - Launch the DIS MIB Browser from Visual Studio.
-   - Navigate to *Files* > *Add* and click *Load files* to initiate the loading process.
+- Carefully read [Using the DIS MIB Browser](xref:DisGuides_MibBrowser)
 
-2. **Explore the MIB Tree**:
-   - Browse through the MIB tree. Identify the newly added parameters (1.3.6.1.4.1.9999).
+- Download the MIB Browser tutorial file [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser/tree/main/Documentation)
 
-3. **Generate a Parameter**:
-   - Find the 'cpuLoad' parameter in the MIB Tree.
-   - Drag and drop it into the sample connector. Observe how the parameter details get filled automatically.
+- Download the *protocol.xml* file [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser)
 
-4. **Bulk Parameter Generation**:
-   - Try the 'Generate Parameters...' feature by right-clicking in your connector. Select 'systemDateTime', 'moduleName' and the 'logTable' to generate in bulk and observe the process.
+## Step 1: Exploring the DIS MIB Browser functionalities
 
-5. **Comparison**:
-   - After generating parameters, navigate to the *Compare* tab.
-   - Click on *Refresh* and compare the loaded MIB file with the connector.
-   - Identify any discrepancies between the two and make a list.
+1. Load a MIB file:
 
-6. **Integration**:
-   - If there are parameters in the MIB file that aren't in the connector (from the comparison step), use the drag & drop feature to integrate them into the connector.
+   1. Launch the DIS MIB Browser from Visual Studio.
+
+   1. Go to the *Files* tab and select *Add*.
+
+   1. After selecting the MIB file, click *Load files* to start the loading process.
+
+1. Go to the *MIB Tree* tab, and explore the MIB Tree by identifying the newly added parameters (i.e. "1.3.6.1.4.1.9999").
+
+1. Generate a parameter:
+
+   1. Find the *cpuLoad* parameter in the MIB Tree.
+
+   1. Drag and drop it into the sample protocol (i.e. *protocol.xml*) to see how the parameter details are automatically filled.
+
+1. Generate parameters in bulk:
+
+   1. Right-click your protocol and select *Generate Parameters*.
+
+   1. In the second window, select *systemDateTime*, *moduleName*, and *logTable* to generate multiple parameters simultaneously, and observe the process.
+
+1. Compare the loaded MIB file with the protocol:
+
+   1. Navigate to the *Compare* tab.
+
+   1. Click *Refresh*.
+
+   1. Create a list of any discrepancies between the MIB file and the protocol.
+
+1. If there are parameters in the MIB file not in the protocol, use the *drag and drop* feature to integrate them into the protocol.
+
    > [!NOTE]
-   > Due to how we define tables, the comparison will always show the first column of a table even though it is already in the connector.
+   > Because of how we define tables, the comparison will always show the first column of a table, even if it is already included in the protocol.
 
-## Review and Submission
+## Step 2: Submitting your protocol.xml file
 
-Once you've successfully navigated the steps provided, please forward your completed connector XML to [Data-Acquisition](mailto:domain.create.data-acquisition@skyline.be). Our team will review your submission.
-Upon successful validation, we'll credit your account with well-deserved DevOps points as a token of your accomplishment!
+Once you have successfully navigated the steps under [Exploring the DIS MIB Browser](#step-1-exploring-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
 
-### Email Submission Template
+Adhere to the following email format:
 
-To streamline the review process, please adhere to the following email format:
+- **Subject**: Tutorial - DIS - MIB Browser
 
-- **Subject**: 'Tutorial - DIS - MIB Browser'
-- **Attachments**: Your completed XML file
+- **Attachment**: Add your XML file
+
 - **Body**:
-  - Clearly state your Dojo account (especially if you're using a different email address for submission).
-  - We value your feedback! Please share any thoughts or suggestions regarding the tutorial.
 
-Thank you for your dedication and commitment to continuous learning!
+  - Dojo account: Clearly mention the email address you use to sign into your Dojo account, especially if you are using a different email address to submit the XML file.
+
+    > [!IMPORTANT]
+    > Successfully submitting your updated *protocol.xml* file will earn you DevOps Points. These points can only be rewarded if you specify your Dojo account.
+
+  - Feedback (optionally): We value your feedback! Please share any thoughts or suggestions regarding the tutorial.
+
+Skyline will review your submission. Upon successful validation, you are awarded the appropriate DevOps Points as a token of your accomplishment!

@@ -5273,6 +5273,8 @@
               topicUid: Developing_connectors_as_Visual_Studio_solutions
             - name: Developing Automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
+            - name: Using the DIS MIB Browser
+              topicUid: DisGuides_MibBrowser
         - name: Debugging connectors and Automation scripts
           topicUid: Debugging_connectors_and_Automation_scripts
           items:
@@ -5286,6 +5288,11 @@
               topicUid: Debugging_a_connector
             - name: Debugging an Automation script
               topicUid: Debugging_an_Automation_script
+        - name: Tutorials
+          topicUid: DisTutorials_MibBrowser
+          items:
+            - name: Exploring the DIS MIB Browser
+              topicUid: DisTutorials_MibBrowser
         - name: Troubleshooting
           topicUid: Troubleshooting
           items:
@@ -5306,16 +5313,6 @@
               topicUid: Microsoft_Visual_Studio_keyboard_shortcuts
             - name: Class Library packages
               topicUid: Class_Library_packages
-        - name: Guides
-          topicUid: DisGuides
-          items:
-            - name: DIS MIB Browser
-              topicUid: DisGuides_MibBrowser
-        - name: Tutorials
-          topicUid: DisTutorials
-          items:
-            - name: DIS MIB Browser
-              topicUid: DisTutorials_MibBrowser
     - name: NuGet packages
       topicUid: TOONuGet
       items:
