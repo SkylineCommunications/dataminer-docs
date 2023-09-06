@@ -32,7 +32,7 @@ With this driver, you can monitor and configure the Ericsson encoder. This modul
 
 #### Serial main connection
 
-Thisis a serial driver that will send HTTP commands (default HTTP on port 80). During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial driver that will send HTTP commands (default HTTP on port 80). During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 SERIAL CONNECTION:
 
@@ -73,7 +73,7 @@ On this page, you can configure the **Pre-Processor VideoInput** table per slot.
 
 ### CE-xH4x Video Encoder
 
-On this page, you can configure the **Pre-Processor Stream Output** table and **Pre-Processor Video Encoder** table per slot. Settings such as **Resolution**, **Bitrate**, **Aspect Ratio**, etc.are available.
+On this page, you can configure the **Pre-Processor Stream Output** table and **Pre-Processor Video Encoder** table per slot. Settings such as **Resolution**, **Bitrate**, **Aspect Ratio**, etc. are available.
 
 ### CE-xH4x VBI and VANC Data
 

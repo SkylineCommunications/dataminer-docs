@@ -71,7 +71,7 @@ This page shows the protocol processor and protocol processor blades that are as
 
 ### Inroute Groups page
 
-This page displays a table with theinroute groups used in this network. The table contains the number of remotes that are currently using the inroute group, together with real-time traffic rates.
+This page displays a table with the inroute groups used in this network. The table contains the number of remotes that are currently using the inroute group, together with real-time traffic rates.
 
 #### DVB-S2 Inroute Groups subpage
 

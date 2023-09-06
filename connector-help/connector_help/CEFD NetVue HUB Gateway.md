@@ -26,9 +26,9 @@ The hub gateway elements are automatically created by the **CEFD NetVue Manager*
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                      | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | CEFD NetVue ManagerCEFD NetVue Remote GatewayCEFD HTO SNMP | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                        | **Exported Components** |
+|-----------|---------------------|-------------------------|--------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | CEFD NetVue Manager CEFD NetVue Remote Gateway CEFD HTO SNMP | \-                      |
 
 ## Configuration
 
@@ -46,7 +46,7 @@ HTTP CONNECTION:
 
 ## How to Use
 
-To be able to retrieve data, the parameters displayed on the **General**page must be filled with correct values:
+To be able to retrieve data, the parameters displayed on the **General** page must be filled with correct values:
 
 - **User Name**: The user name needed to access the NetVue system.
 - **Password**: The password needed to access the NetVue system.

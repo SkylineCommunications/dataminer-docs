@@ -27,7 +27,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General
 
-This page displays general information about the device, such as the**Name**, **Location**, **Manufacturer**, **Model**, **Channel**, **Volume**, **Connection** and **State**.
+This page displays general information about the device, such as the **Name**, **Location**, **Manufacturer**, **Model**, **Channel**, **Volume**, **Connection** and **State**.
 
 The page also contains buttons that allow you to perform different operations on the DVE device: **Refresh**, **Reboot**, **TV On**, **TV Off**, **Power On** and **Power Off**.
 

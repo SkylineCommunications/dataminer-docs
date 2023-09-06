@@ -110,7 +110,7 @@ This page contains information on the interfaces of the Arris E6000 device.
 
 The **Interface Table** shows information for each interface, such as the **Description**, **Type**, **MTU**, **Speed**, **Physical Address**, status information (**Admin Status** and **Operational Status**), information about errors and discarded packets (**Inbound Discards**, **Inbound Errors**, **Outbound Discards**, **Outbound Errors**) and interface utilization (**Utilization In** and **Utilization Out**).
 
-The page displays the **Number of Displayed Interfaces**,i.e. the number of interfaces that are currently being displayed in the table.
+The page displays the **Number of Displayed Interfaces**, i.e. the number of interfaces that are currently being displayed in the table.
 
 Via the **Interface Selection page button**, you can configure which interfaces will be displayed in the Interface Table:
 

@@ -30,7 +30,7 @@ This driver allows you to manage both the DAB transmitter devices and the excite
 
 | **Exported Protocol**                                                                                                        | **Description**    |
 |------------------------------------------------------------------------------------------------------------------------------|--------------------|
-| [Rohde Schwarz SLx8000 N+1 DAB+ - Transmitter](xref:Connector_help_Rohde_Schwarz_SLx8000_N+1_DAB+_-_Transmitter) | Transmitter module |
+| [Rohde Schwarz SLx8000 N+1 DAB+ - Transmitter](xref:Connector_help_Rohde_Schwarz_SLx8000_N%2B1_DAB%2B_-_Transmitter) | Transmitter module |
 
 ## Installation and configuration
 

@@ -38,4 +38,5 @@ This page also includes a configurable **Interval**, which determines the number
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS24/05/2018 1.0.0.1 AIG, Skyline Initial version
+DATE VERSION AUTHOR COMMENTS
+24/05/2018 1.0.0.1 AIG, Skyline Initial version

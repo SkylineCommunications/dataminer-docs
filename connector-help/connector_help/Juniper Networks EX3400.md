@@ -63,4 +63,4 @@ Several important settings can be found on the **Configuration** page, which all
 
 There is also an import/export file feature available on the **Operating States** page. **Import** makes it possible to set described data from the file into the desired table. Via **export** you can create a file that contains all the table data. Before you can execute an **import** or **export**, you first need to fill in the **file name** and the **file path**.
 
-On the **Virtual Chassis** page, beneath **Chassis**,you can find the **software version** of the device, which can be useful to know in some cases.
+On the **Virtual Chassis** page, beneath **Chassis**, you can find the **software version** of the device, which can be useful to know in some cases.

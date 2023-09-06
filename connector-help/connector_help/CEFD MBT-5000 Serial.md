@@ -60,7 +60,8 @@ This page alows the user to adjust some **redundancy** settings.
 
 This page displays events information and alows the user to mask alarms.
 
-The event log can be cleared from dataminer with the "**Clear Event Log**" button. To get all stored events on the device, reset the Events Pointer by clicking the "**Initialtize Events Pointer**" button.To clear all events on the device, click the "**Clear all Stored Events**" button.
+The event log can be cleared from dataminer with the "**Clear Event Log**" button. To get all stored events on the device, reset the Events Pointer by clicking the "**Initialtize Events Pointer**" button.
+To clear all events on the device, click the "**Clear all Stored Events**" button.
 
 ### Status - Status
 

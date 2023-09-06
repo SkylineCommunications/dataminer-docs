@@ -46,7 +46,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 This page contains an overview of information related to the network configuration. It is also possible to change some of the settings.
 
-Among the displayed parameters are for example the **MAC Address**, **Subnet Mask**, **SNMP Read Community**,etc.
+Among the displayed parameters are for example the **MAC Address**, **Subnet Mask**, **SNMP Read Community**, etc.
 
 ### Headend
 

@@ -4,7 +4,8 @@ uid: Connector_help_Emerson_Liebert_GXT
 
 # Emerson Liebert GXT
 
-This connector can be used to monitor UPS GXT platforms. It supports **GXT2,** **GXT3, GXT4**,and **GXT5** and receives information via **SNMP** communication. **SNMP traps** are received to update corresponding data. Depending on which type is used, GXT2, GXT3, GXT4, or GXT5, specific parameters will be retrieved in addition to the common parameters. When data cannot be retrieved for a particular parameter, the parameter will indicate *No Data.*
+This connector can be used to monitor UPS GXT platforms. It supports **GXT2,** **GXT3, GXT4**, and **GXT5** and receives information via **SNMP** communication. **SNMP traps** are received to update corresponding data.
+Depending on which type is used, GXT2, GXT3, GXT4, or GXT5, specific parameters will be retrieved in addition to the common parameters. When data cannot be retrieved for a particular parameter, the parameter will indicate *No Data.*
 
 ## About
 
@@ -16,9 +17,9 @@ This connector can be used to monitor UPS GXT platforms. It supports **GXT2,** *
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                    |
-|-----------|-----------------------------------------------------------|
-| 1.0.0.x   | GXT2: 3.000.0 GXT3: 5.300.0GXT4:U170D210GXT5: MCUV130/190 |
+| **Range** | **Supported Firmware**                                      |
+|-----------|-------------------------------------------------------------|
+| 1.0.0.x   | GXT2: 3.000.0 GXT3: 5.300.0 GXT4:U170D210 GXT5: MCUV130/190 |
 
 ### System Info
 
@@ -66,7 +67,8 @@ This page contains all battery-related status parameters.
 
 ### Configuration
 
-This page contains parameters related to the configuration of the device. Note that changing device settings with these parameters is not supported by all devices. (Some have hard-coded values.)
+This page contains parameters related to the configuration of the device.
+Note that changing device settings with these parameters is not supported by all devices. (Some have hard-coded values.)
 
 Available parameters are:
 
@@ -103,17 +105,26 @@ It is possible that some settings need to be configured on the device before the
 
 2.  Select the folder **SNMP** in the left section of the web interface.
 
-3.  Enable all checkboxes on this page and set the **Heartbeat Trap Interval** to 1 minute. Note: You may need to click an **Edit** button first in order to be able to change settings.Note: You may be prompted to enter administrator credentials to proceed.Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
+3.  Enable all checkboxes on this page and set the **Heartbeat Trap Interval** to 1 minute.
+    Note: You may need to click an **Edit** button first in order to be able to change settings.
+    Note: You may be prompted to enter administrator credentials to proceed.
+    Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
 
 4.  In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
 
-5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
+5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
+    Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
 
-6.  In the left section of the web interface,just below **V1 Access**, select the folder **V1 Traps**. Click **Save** when ready.
+6.  In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click **Save** when ready.
 
-7.  Add a trap entry and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.Note: Use the same **Community**as specified in the V1 Access table.Note: Also enable the **Heartbeat** for this entry.Note: The default port *162* should be correct.Click **Save** when ready. The device may notify you that a restart is required to apply the changes.
+7.  Add a trap entry and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
+    Note: Use the same **Community** as specified in the V1 Access table.
+    Note: Also enable the **Heartbeat** for this entry.
+    Note: The default port *162* should be correct.
+    Click **Save** when ready. The device may notify you that a restart is required to apply the changes.
 
 8.  If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
 
 9.  1.  Click the **Restart** folder in the left section of the web interface.
-    2.  Click the **Restart** button on this new page.Note: This should only restart the SNMP module and not the complete device.
+    2.  Click the **Restart** button on this new page.
+        Note: This should only restart the SNMP module and not the complete device.

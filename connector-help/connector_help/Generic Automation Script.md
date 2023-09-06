@@ -40,7 +40,8 @@ There is no redundancy defined.
 
 This driver allows you to launch Automation scripts and check information on those Automation scripts.
 
-To use the driver, set the parameter **Request** with a block of JSON code to start the script, for example:*{"ScriptName": "ExtractMaterials","ScriptParams": {"ContentXml": "Test"},"ScriptDummies":{"FunctionDve":{"DmaId":123,"ElementId":456}}}*
+To use the driver, set the parameter **Request** with a block of JSON code to start the script, for example:
+*{"ScriptName": "ExtractMaterials","ScriptParams": {"ContentXml": "Test"},"ScriptDummies":{"FunctionDve":{"DmaId":123,"ElementId":456}}}*
 
 ## Notes
 

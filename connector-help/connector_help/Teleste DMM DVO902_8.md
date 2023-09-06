@@ -6,7 +6,7 @@ uid: Connector_help_Teleste_DMM_DVO902_8
 
 The DVO902_8 is an optical transmitter module for the Teleste DMM.
 
-This DVE supports the **DVO902/5** and **DVO902/8**module types.
+This DVE supports the **DVO902/5** and **DVO902/8** module types.
 
 ## About
 

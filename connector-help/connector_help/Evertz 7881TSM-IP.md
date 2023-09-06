@@ -10,10 +10,10 @@ This connector displays general information about the Evertz 7881TSM-IP device a
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                    | **Based on** | **System Impact**                                                                               |
-|----------------------|---------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | \- Input and output port monitoring- Monitoring of TS syntax errors | \-           | \-                                                                                              |
-| 1.0.1.x \[SLC Main\] | \- Tree control for transport stream- Bit rate unit selector        | 1.0.0.10     | Alarm monitoring and trending of bit rate uses different parameters than in the previous range. |
+| **Range**            | **Key Features**                                                     | **Based on** | **System Impact**                                                                               |
+|----------------------|----------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | \- Input and output port monitoring - Monitoring of TS syntax errors | \-           | \-                                                                                              |
+| 1.0.1.x \[SLC Main\] | \- Tree control for transport stream - Bit rate unit selector        | 1.0.0.10     | Alarm monitoring and trending of bit rate uses different parameters than in the previous range. |
 
 ### Product Info
 

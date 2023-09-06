@@ -36,7 +36,8 @@ There are a lot of extra settings that can be configured for this driver/device.
 
 The **General** page displays most of the general information about the device. Some of the parameters that can be found on this page are for example: **Model Number**, **Software Revision**, **Part Number**, ...
 
-The **Redundancy** **Switch** **Position** is also displayed on this page. This parameter displays which converter (A or B) is currently being used.Below this parameter is a button that enables you to switch converters.
+The **Redundancy** **Switch** **Position** is also displayed on this page. This parameter displays which converter (A or B) is currently being used.
+Below this parameter is a button that enables you to switch converters.
 
 The most important alarms are also displayed on this page.
 

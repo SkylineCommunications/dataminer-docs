@@ -22,9 +22,9 @@ This virtual driver is used to process CSV files exported by the Agama FireHouse
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                    | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Manager](/Driver%20Help/Telenor%20EPM%20Manager.aspx)[Telenor EPM Collector](xref:Connector_help_Telenor_EPM_Collector) | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                     | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Manager](/Driver%20Help/Telenor%20EPM%20Manager.aspx) [Telenor EPM Collector](xref:Connector_help_Telenor_EPM_Collector) | \-                      |
 
 ## Configuration
 

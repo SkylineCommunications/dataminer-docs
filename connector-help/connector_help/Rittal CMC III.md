@@ -66,15 +66,15 @@ This page displays several statistics related to messages, as well as the **CMC 
 
 ### Power Info
 
-This page displays information such as the **Unit Frequency**, **Unit Power Active**, **Unit Energy Active**, **Phase L1**,as well as the status of each of the sockets.
+This page displays information such as the **Unit Frequency**, **Unit Power Active**, **Unit Energy Active**, **Phase L1**, as well as the status of each of the sockets.
 
 ### Temperature Info
 
-This page displays information about the temperature, such as the **Temperature Value**, **Temperature Offset**,and **Temperature Status**. It also contains a toggle button that allows you to enable or disable the polling of these parameters.
+This page displays information about the temperature, such as the **Temperature Value**, **Temperature Offset**, and **Temperature Status**. It also contains a toggle button that allows you to enable or disable the polling of these parameters.
 
 ### Humidity Info
 
-This page displays information about the humidity, such as the **Humidity Value**,**Humidity** **Offset**,and **Humidity** **Status.** It also contains a toggle button that allows you to enable or disable the polling of these parameters.
+This page displays information about the humidity, such as the **Humidity Value**, **Humidity** **Offset**, and **Humidity** **Status.** It also contains a toggle button that allows you to enable or disable the polling of these parameters.
 
 ### Web Interface
 

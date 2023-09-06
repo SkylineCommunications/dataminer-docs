@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_Media_Server
 
 # Grass Valley Media Server
 
-The **Grass Valley Media Server**driver displays information related to the **Grass Valley Media Server** device.
+The **Grass Valley Media Server** driver displays information related to the **Grass Valley Media Server** device.
 
 ## About
 

@@ -22,9 +22,12 @@ This connector uses a Simple Network Management Protocol (SNMP) connection and r
 
 SNMP Settings:
 
-- **Port number**: The default port number to connect with the devices. The default value is *161*. You can override this field per device by adding the port in the IP address column of the .csv import file.
-- **Get community string:** The community string in order to read from the device. The default value is *public*. Note: This must be the same for all elements.
-- **Set community string**: The community string in order to set to the device. The default value is *private.*Note: this must be the same for all elements.
+- **Port number**: The default port number to connect with the devices.
+  The default value is *161*. You can override this field per device by adding the port in the IP address column of the .csv import file.
+- **Get community string:** The community string in order to read from the device. The default value is *public*.
+  Note: This must be the same for all elements.
+- **Set community string**: The community string in order to set to the device. The default value is *private.*
+  Note: this must be the same for all elements.
 
 Note: It is not necessary to supply an IP address for the SNMP connection, since these addresses must be defined for each element in the .csv file.
 
@@ -33,8 +36,10 @@ Note: It is not necessary to supply an IP address for the SNMP connection, since
 In order for the connector to start polling devices, they have to be imported through a .csv file. This is done on the **Management** page, using the following steps:
 
 1.  Click the **Import...** button on the **Management** page.
-2.  Make sure the **Manager Name** is set to the same value as in the .csv file.This name is used to select only some rows in the import file, so that the same file can be used for all managers.
-3.  In the **Import File** path, select the file to import from the drop-down menu, or fill in the full path to the file.The drop-down menu contains all .csv files in the protocol document folder (prefixed with "\[P\] ") and all the files in the element protocol folder (prefixed with "\[E\] ".
+2.  Make sure the **Manager Name** is set to the same value as in the .csv file.
+    This name is used to select only some rows in the import file, so that the same file can be used for all managers.
+3.  In the **Import File** path, select the file to import from the drop-down menu, or fill in the full path to the file.
+    The drop-down menu contains all .csv files in the protocol document folder (prefixed with "\[P\] ") and all the files in the element protocol folder (prefixed with "\[E\] ".
 4.  Click the **Import** button to read the file and create the elements.
 5.  Check the **Import File State** and **Import File Error** fields to see if the import was successful, or else why it failed.
 
@@ -75,35 +80,36 @@ The following table provides more information on the different columns:
 <td><strong>Description</strong></td>
 </tr>
 <tr class="even">
-<td><strong>ID</strong><em>(optional)</em></td>
-<td><p>A number identifying the device. This number must be unique per manager.It becomes the index in the <strong>Management Table</strong> on the <strong>Management</strong> page.</p>
+<td><strong>ID</strong> <em>(optional)</em></td>
+<td><p>A number identifying the device. This number must be unique per manager. It becomes the index in the <strong>Management Table</strong> on the <strong>Management</strong> page.</p>
 <p>If empty, the line will always create a new element, of which the ID will be dynamically assigned by the manager.</p>
 <p>If the manager already contains a record with this ID, then that element will be updated (instead of deleted and recreated, possibly with another element ID).</p></td>
 </tr>
 <tr class="odd">
-<td><strong>IP</strong><em>(required)</em></td>
+<td><strong>IP</strong> <em>(required)</em></td>
 <td><p>The IP address of the Kathrein VGP device. Can be either IPv4, IPv6 or a name that can be resolved by the DNS server.</p>
 <p>It is also possible to add a port number. If you do not do so, the default port will be used that was specified in the element's port settings during creation or editing.</p>
 <p>Examples:</p>
 <p>"<em>10.1.23.251</em>" or "<em>10.2.44.245:161</em>" or "<em>fdda:5cc1:23:4::1f</em>" or "<em>[1e:223:10::234]:161</em>" or "<em>vgp.katherein.bru</em>" or "<em>vgp.kat.bru:161</em>"</p></td>
 </tr>
 <tr class="even">
-<td><strong>Manager</strong><em>(required)</em></td>
+<td><strong>Manager</strong> <em>(required)</em></td>
 <td><p>The name of the manager that should poll the device. This column may not be empty. If it is, the entire row will be ignored. The content of the line will only be parsed if the manager's name matches the <strong>Manager Name</strong> parameter.</p>
-<p>This makes it possible to add the data for all elements on all managers in one file, and let the manager filter out its own elements.Note that the <strong>Manager Name</strong> by default is the name of the (manager) element.</p></td>
+<p>This makes it possible to add the data for all elements on all managers in one file, and let the manager filter out its own elements. Note that the <strong>Manager Name</strong> by default is the name of the (manager) element.</p></td>
 </tr>
 <tr class="odd">
-<td><strong>Virtual Element Name</strong><em>(required)</em></td>
+<td><strong>Virtual Element Name</strong> <em>(required)</em></td>
 <td><p>The name of the DVE that is created for this record. This name must be unique in the DMS.</p>
 <p>During the import, the manager will check if the name is unique within its own list of elements, but not if no other element exists with this name in the DMS. If the name already exists, it will either be changed by the manager or by DataMiner to make it unique. (This can be done by adding a number to the name, or any other method in the feature. )</p></td>
 </tr>
 <tr class="even">
-<td><strong>View Name(s)</strong><em>(optional)</em></td>
+<td><strong>View Name(s)</strong> <em>(optional)</em></td>
 <td><p>The name or names of the view(s) where the element should be added. It is possible to separate several views with a pipe character ("|") or with a semicolon (";"). If you use a semicolon, and the file is not created in Excel but in a text editor such as Notepad, add quotes ('"') around the value.</p>
 <p>If no view name is specified, the element will be added to the same view as the manager.</p></td>
 </tr>
 </tbody>
 </table>
+
 
 Note: If a field is optional, this means that the column does not need to contain any data, not that all other columns shift one position to the left.
 
@@ -117,11 +123,13 @@ It is possible to add empty lines or comments to the .csv file. To do so, make s
 
 This page shows the name of the manager, which is also used to filter records from the .csv file when importing elements. The default value is the name of the element.
 
-There is also a Management table, which displays all the imported elements.The table contains:
+There is also a Management table, which displays all the imported elements.
+The table contains:
 
 - The **Management Index**, which should be used to update the record. This row is hidden but can be made visible.
 
-- The **Polling IP Address**: This can be an IPv4, an IPv6, or a name, which will be resolved to an IP address every time the device is polled.Optionally, it can also contain the port number that should be used for SNMP communication. The default port number is defined during element creation or editing (usually *161*).
+- The **Polling IP Address**: This can be an IPv4, an IPv6, or a name, which will be resolved to an IP address every time the device is polled.
+  Optionally, it can also contain the port number that should be used for SNMP communication. The default port number is defined during element creation or editing (usually *161*).
 
 - The **Manager Name:** This row is hidden but can be made visible. The row usually contains the same value as the **Manager Name** at the top of the page (unless this is changed after importing).
 
@@ -169,7 +177,9 @@ On this page, it is possible to:
 
 The **Import File Path** parameter has a drop-down list containing all .csv files in the element's protocol document folder or the element document folder. Those files are prefixed with a "*\[P\]* " and an *"\[E\]* " respectively. Any other file can also be selected but requires the full path instead of just the file name.
 
-Note: - Protocol Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]*- Element Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]\\ElementName\]*
+Note:
+- Protocol Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]*
+- Element Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]\\ElementName\]*
 
 #### About the import
 

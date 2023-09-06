@@ -4,7 +4,8 @@ uid: Connector_help_CPI_VZC-6965B4
 
 # CPI VZC-6965B4
 
-The **CPI VZC-6965B4** Traveling Wave Tube (TWT) High Power Amplifier (HPA) series is designed for satellite communication earth stations operating in the C-band frequency range.The 2.25 kW TWT HPA utilizes a 2250 Watt rated power, wideband TWT to produce radio frequency (RF) power output of up to 2000 Watts at the output waveguide of the HPA.
+The **CPI VZC-6965B4** Traveling Wave Tube (TWT) High Power Amplifier (HPA) series is designed for satellite communication earth stations operating in the C-band frequency range.
+The 2.25 kW TWT HPA utilizes a 2250 Watt rated power, wideband TWT to produce radio frequency (RF) power output of up to 2000 Watts at the output waveguide of the HPA.
 
 ## About
 

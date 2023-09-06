@@ -50,7 +50,7 @@ The following pages are available:
 
 - **Redis**: Contains the Redis Status table, which displays the last message for each Redis channel and the time when these were last received. It also contains the **Redis Settings** subpage.
 - **Interfaces**: Displays the Interfaces table, listing the interfaces from every device (in the Devices table).
-- **Senders**, **Receivers**,and **Active Flows**: The Senders and Receivers tables contain the configuration of each sender/receiver, the Source IP, Multicast IP, and Bandwidth. A sender/receiver is configured for a given device and an interface/port. Once a sender and receiver are correctly configured, a flow will be created and shown in the Active Flows Table.
+- **Senders**, **Receivers**, and **Active Flows**: The Senders and Receivers tables contain the configuration of each sender/receiver, the Source IP, Multicast IP, and Bandwidth. A sender/receiver is configured for a given device and an interface/port. Once a sender and receiver are correctly configured, a flow will be created and shown in the Active Flows Table.
 
 ## DataMiner Connectivity Framework
 
@@ -69,4 +69,5 @@ Physical dynamic interfaces:
 ## Notes
 
 - The connector contains a **hidden Debug page** with parameters for quick debugging and testing. To make this page visible, use the **Debug Page** parameter under the **General** page.
-- The Arista MCS also implements an **InterApp receiver**. This allows the connector to receive messages from external sources, such as Automation scripts or applications.Currently, the connector supports the reception of certain **Flow Engineering messages**. These messages will then make use of the connector in order to configure a flow by setting up the configuration of senders and receivers for the MCS.
+- The Arista MCS also implements an **InterApp receiver**. This allows the connector to receive messages from external sources, such as Automation scripts or applications.
+  Currently, the connector supports the reception of certain **Flow Engineering messages**. These messages will then make use of the connector in order to configure a flow by setting up the configuration of senders and receivers for the MCS.

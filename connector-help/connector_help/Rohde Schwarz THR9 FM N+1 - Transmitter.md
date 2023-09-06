@@ -68,6 +68,6 @@ This page displays a summary of the liquid cooling state for each transmitter.
 
 ## Notes
 
-When you create an **alarm template**,keep in mind that the value for the **State** columns is not the same for all rows; each row is a different parameter. The alarm template can be configured to have different alarms for different row values with the **filter** option.
+When you create an **alarm template**, keep in mind that the value for the **State** columns is not the same for all rows; each row is a different parameter. The alarm template can be configured to have different alarms for different row values with the **filter** option.
 
 For example, if there is a row with parameter *Transmitter Summary,* then it is logical that the **State** value *Ok* is a normal value. But if the row with parameter *Locally Controlled* has the value *Ok*, this could be an alarm value.

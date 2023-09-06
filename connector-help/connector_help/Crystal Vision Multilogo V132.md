@@ -91,7 +91,8 @@ The **Audio** page enables the user to view and modify the settings for **Audio 
 
 ### Audio Mixer
 
-The **Audio Mixer** page has five page buttons available that will each open a pop-up page. This pop-up page allows the user to *enable*/*disable* different channels of different groups for the specified page button. This page also allows the user to monitor and set the **Audio** **Controls** and **Audio** **Fades**.
+The **Audio Mixer** page has five page buttons available that will each open a pop-up page. This pop-up page allows the user to *enable*/*disable* different channels of different groups for the specified page button.
+This page also allows the user to monitor and set the **Audio** **Controls** and **Audio** **Fades**.
 
 ### GPIs page
 

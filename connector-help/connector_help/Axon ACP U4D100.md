@@ -18,9 +18,9 @@ The Axon ACP U4D100 driver is used to monitor status information and configure c
 
 ### Product Info
 
-| **Range** | **Supported Firmware**   |
-|-----------|--------------------------|
-| 1.0.0.x   | 101412151316141714181619 |
+| **Range** | **Supported Firmware**        |
+|-----------|-------------------------------|
+| 1.0.0.x   | 1014 1215 1316 1417 1418 1619 |
 
 ### System Info
 

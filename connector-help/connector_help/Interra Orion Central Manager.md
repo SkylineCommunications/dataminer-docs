@@ -55,6 +55,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-Make sure the **username and password** are filled in as detailed in the Initialization section above, so that the connector can poll data. If thesehave already been filled in, the connector will automatically attempt to establish a connection when the element is restarted.
+Make sure the **username and password** are filled in as detailed in the Initialization section above, so that the connector can poll data. If these have already been filled in, the connector will automatically attempt to establish a connection when the element is restarted.
 
 On the **Channel Alert** page, you can adjust the maximum number of alerts that is received in a request using the **Channel Alerts Alert Limit** parameter. The default value is 1000 alerts.

@@ -8,9 +8,9 @@ The connector is responsible for saving the Toplogy KPI Data from all the config
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### System Info
 
@@ -28,8 +28,11 @@ This connector uses a virtual connection and does not require any input during e
 
 ## How to use
 
-The connector is self-sufficient and does not require any configuration. The topology offload actions are activated by the GQI SAPIENS GPON Offload Automation Script that must be scheduled to execute through the DataMiner Scheduler Module.
+The connector is self-sufficient and does not require any configuration.
+The topology offload actions are activated by the GQI SAPIENS GPON Offload Automation Script that must be scheduled to execute through the DataMiner Scheduler Module.
 
 ## Notes
 
 Driver includes read me in General page with more information.
+
+

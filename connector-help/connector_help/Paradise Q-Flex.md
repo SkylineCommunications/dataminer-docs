@@ -85,4 +85,4 @@ The section contains the following pages:
 
 - **Redundancy**: Contains configurable one-to-one (1-1) and one-to-many (1-N) redundancy settings.
 - **Test**: Contains settings that allow you to enable testing, e.g. simulating a delay, etc.
-- **Other**:Contains a parameter to run a PUP command and additional configuration parameters.
+- **Other**: Contains a parameter to run a PUP command and additional configuration parameters.

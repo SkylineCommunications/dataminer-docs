@@ -62,13 +62,13 @@ Once the element has been created, you need to configure the following settings 
 
 - SNMP trap configuration:
 
-- On the **SNMP Trap Configuration**page, select the **IP Address Range** and the respective **IP Netmask** range and add an entry to the table.
+- On the **SNMP Trap Configuration** page, select the **IP Address Range** and the respective **IP Netmask** range and add an entry to the table.
   - Via the **Load CSV** page button, you can preload a range of values from a CSV file with the same structure as in the table. The file or files must be located in the following directory: *C:\Skyline DataMiner\Documents\Telenet BGP Trap Receiver.*
 
 - REST API:
 
 - To poll the information from the Network Inventory Management System, go to the **Network Inventory** page and click the **REST API** page button, and then define the **REST API Key**.
-  - To load the information from the Network Inventory, click the **Load NIM**button located on the same **REST API** subpage.
+  - To load the information from the Network Inventory, click the **Load NIM** button located on the same **REST API** subpage.
 
 ### Redundancy
 

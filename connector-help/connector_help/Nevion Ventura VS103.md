@@ -12,14 +12,14 @@ This driver monitors the Nevion Ventura VS103 chassis and supported cards throug
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                            |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                           |
-| 1.0.1.x              | Added DVE support for VS906 cards.                                                                                                                                                                                                                                         |
-| 2.0.0.x              | Altered DVE support so each card has a different DVE. Added VS909 card support.Added VS902 card support.                                                                                                                                                                   |
-| 2.0.1.x              | Merged configuration pending tables with current configuration tables.Implemented confirmation to immediately apply changes.DVE naming reviewed.**Because of changes, elements will have to be recreated to use this version. Older protocol versions should be deleted.** |
-| 2.0.2.x              | New firmware support                                                                                                                                                                                                                                                       |
-| 2.0.3.x \[SLC Main\] | **pollingRate** attribute and **MinimumRequiredVersion** tag introduced.                                                                                                                                                                                                   |
+| **Driver Range**     | **Description**                                                                                                                                                                                                                                                               |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                              |
+| 1.0.1.x              | Added DVE support for VS906 cards.                                                                                                                                                                                                                                            |
+| 2.0.0.x              | Altered DVE support so each card has a different DVE. Added VS909 card support. Added VS902 card support.                                                                                                                                                                     |
+| 2.0.1.x              | Merged configuration pending tables with current configuration tables. Implemented confirmation to immediately apply changes. DVE naming reviewed. **Because of changes, elements will have to be recreated to use this version. Older protocol versions should be deleted.** |
+| 2.0.2.x              | New firmware support                                                                                                                                                                                                                                                          |
+| 2.0.3.x \[SLC Main\] | **pollingRate** attribute and **MinimumRequiredVersion** tag introduced.                                                                                                                                                                                                      |
 
 Notes:
 
@@ -42,15 +42,15 @@ Notes:
 
 ### Exported drivers
 
-| **Exported Protocol**        | **Description**                                                |
-|------------------------------|----------------------------------------------------------------|
-| Nevion Ventura VS901         | *In range 1.0.0.x*HD-SDI JPEG 2000 compression over GbE        |
-| Nevion Ventura VS902         | *Before range 2.0.1.x*Video router module                      |
-| Nevion Ventura VS906         | *Before range 2.0.1.x*A/D audio transport over IP module       |
-| Nevion Ventura VS909         | *Before range 2.0.1.x*Media edge processor module              |
-| Nevion Ventura VS103 - VS902 | *From range 2.0.1.x onwards*Video router module                |
-| Nevion Ventura VS103 - VS906 | *From range 2.0.1.x onwards*A/D audio transport over IP module |
-| Nevion Ventura VS103 - VS909 | *From range 2.0.1.x onwards*Media edge processor module        |
+| **Exported Protocol**        | **Description**                                                 |
+|------------------------------|-----------------------------------------------------------------|
+| Nevion Ventura VS901         | *In range 1.0.0.x* HD-SDI JPEG 2000 compression over GbE        |
+| Nevion Ventura VS902         | *Before range 2.0.1.x* Video router module                      |
+| Nevion Ventura VS906         | *Before range 2.0.1.x* A/D audio transport over IP module       |
+| Nevion Ventura VS909         | *Before range 2.0.1.x* Media edge processor module              |
+| Nevion Ventura VS103 - VS902 | *From range 2.0.1.x onwards* Video router module                |
+| Nevion Ventura VS103 - VS906 | *From range 2.0.1.x onwards* A/D audio transport over IP module |
+| Nevion Ventura VS103 - VS909 | *From range 2.0.1.x onwards* Media edge processor module        |
 
 ## Installation and configuration
 

@@ -26,7 +26,7 @@ This connector can be used to manage the NBCS Roadkit.
 </tr>
 <tr class="even">
 <td>1.0.0.x [SLC Main]</td>
-<td><p>Initial version:- Processes CSV events through inter-app calls.- Merges CSV events with job data.- Polls job information from the Jobs app.- Allows you to approve jobs and create bookings, as well as edit bookings from the Jobs app.</p>
+<td><p>Initial version: - Processes CSV events through inter-app calls. - Merges CSV events with job data. - Polls job information from the Jobs app. - Allows you to approve jobs and create bookings, as well as edit bookings from the Jobs app.</p>
 <p>This version is still an MVP.</p></td>
 <td>-</td>
 <td>-</td>

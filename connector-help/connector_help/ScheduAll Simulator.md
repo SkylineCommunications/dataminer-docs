@@ -12,13 +12,13 @@ This driver can communicate with the ScheduAll Manager, simulating the usual com
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version                                                    | No                  | Yes                     |
-| 2.1.0.7          | Additional check on number of fields                               | No                  | Yes                     |
-| 2.1.0.8          | Added notes to edit                                                | No                  | Yes                     |
-| 2.1.0.9          | Forced time to M/DD/YYYYAdded import functionality                 | No                  | Yes                     |
-| 2.1.0.10         | Added Client_ID to simulationAdded write controls to change status | No                  | Yes                     |
+| **Driver Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.1          | Initial version                                                     | No                  | Yes                     |
+| 2.1.0.7          | Additional check on number of fields                                | No                  | Yes                     |
+| 2.1.0.8          | Added notes to edit                                                 | No                  | Yes                     |
+| 2.1.0.9          | Forced time to M/DD/YYYY Added import functionality                 | No                  | Yes                     |
+| 2.1.0.10         | Added Client_ID to simulation Added write controls to change status | No                  | Yes                     |
 
 ## Configuration
 

@@ -10,13 +10,13 @@ This connector can be used to monitor Linux Platforms with **SSH**.
 
 ### Version Info
 
-| **Range**            | **Description**                                                              | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version, continued as 2.0.0.x.                                       | No                  | No                      |
-| 1.0.1.x \[Obsolete\] | Added SNMP connection.                                                       | Yes                 | Yes                     |
-| 1.0.2.x \[SLC Main\] | Forced SNMPv2.                                                               | No                  | No                      |
-| 2.0.0.x              | Continuation of 1.0.0.x.                                                     | No                  | Yes                     |
-| 3.0.0.x              | To be used for a port different than 22.Minimum required DMA version: 9.6.0. | Yes                 | Yes                     |
+| **Range**            | **Description**                                                               | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version, continued as 2.0.0.x.                                        | No                  | No                      |
+| 1.0.1.x \[Obsolete\] | Added SNMP connection.                                                        | Yes                 | Yes                     |
+| 1.0.2.x \[SLC Main\] | Forced SNMPv2.                                                                | No                  | No                      |
+| 2.0.0.x              | Continuation of 1.0.0.x.                                                      | No                  | Yes                     |
+| 3.0.0.x              | To be used for a port different than 22. Minimum required DMA version: 9.6.0. | Yes                 | Yes                     |
 
 ### Product Info
 
@@ -51,7 +51,7 @@ Only applicable from version **1.0.1.x** onwards.
 
 ### Configuration SSH
 
-On the **General page**, click **Security**to enter the login and password. Then click the **Login** button to start the communication.
+On the **General page**, click **Security** to enter the login and password. Then click the **Login** button to start the communication.
 
 ## Usage
 

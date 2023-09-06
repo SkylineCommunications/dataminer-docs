@@ -25,7 +25,7 @@ This driver allows the monitoring and control of the Block Up Converter via seri
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><p>User configurable connection mode (serial / tcp)</p>
 <p>Monitor &amp; Control</p></td>
 <td>-</td>
@@ -64,7 +64,12 @@ Interface connection:
 
 ### Initialization
 
-By default, *Telnet* (TCP) will be selected as the **Connection Mode**. The default password (0000) will be used to log in. The **Connection Mode** can be changed in the **Connection Settings** page available via the **Connect** page button on the **General** page. It is possible to switch this mode between *Telnet* (TCP) and *Serial* (RS232/RS485). The **Polling Status** will indicate if data is being retrieved. For example: when it is not possible to log in via the Telnet, the **Polling Status** will indicate *Disabled* and no data will be retrieved until the Telnet connection could be established. An automatic log in attempt is done every hour.
+By default, *Telnet* (TCP) will be selected as the **Connection Mode**. The default password (0000) will be used to log in.
+The **Connection Mode** can be changed in the **Connection Settings** page available via the **Connect** page button on the **General** page.
+It is possible to switch this mode between *Telnet* (TCP) and *Serial* (RS232/RS485).
+
+The **Polling Status** will indicate if data is being retrieved. For example: when it is not possible to log in via the Telnet, the **Polling Status** will indicate *Disabled* and no data will be retrieved until the Telnet connection could be established.
+An automatic log in attempt is done every hour.
 
 ### Redundancy
 
@@ -72,13 +77,16 @@ There is no redundancy defined.
 
 ## How to use
 
-In case the **Connection Mode** is set to *Telnet*, the log in session must succeed before data is retrieved. This will be indicated via the **Polling Status**. When during polling via Telnet would return a Timeout or an unsupported message, a re-login attempt will be executed. This because a timeout closes the Telnet session. In case the re-login would time out the retrieval of data is stopped and the **Polling Status** set to *Disabled* until the automatic re-login or a manual log in was successful.
+In case the **Connection Mode** is set to *Telnet*, the log in session must succeed before data is retrieved. This will be indicated via the **Polling Status**.
+When during polling via Telnet would return a Timeout or an unsupported message, a re-login attempt will be executed. This because a timeout closes the Telnet session.
+In case the re-login would time out the retrieval of data is stopped and the **Polling Status** set to *Disabled* until the automatic re-login or a manual log in was successful.
 
 ## Notes
 
 When no data is being retrieved / updated, always first check the **Polling Status**. When this is indicating *Disabled* it means the Telnet session could not log in.
 
-Using a serial connection requires correct serial configuration before communication is possible. These settings are dong in the communication interface that links the data source with the network.
+Using a serial connection requires correct serial configuration before communication is possible.
+These settings are dong in the communication interface that links the data source with the network.
 
 - Serial settings:
 

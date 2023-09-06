@@ -51,7 +51,8 @@ SNMP Settings:
 
 ### General
 
-This page displays the **Firmware Version**, **GPI States**, **Output Left/Right Sources** and **Input Alarm States**. There are also page buttons for **Signal Levels** and **Silence Levels**.
+This page displays the **Firmware Version**, **GPI States**, **Output Left/Right Sources** and **Input Alarm States**.
+There are also page buttons for **Signal Levels** and **Silence Levels**.
 
 ### Configuration
 

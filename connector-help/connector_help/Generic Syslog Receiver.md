@@ -14,12 +14,12 @@ The communication method used is **smart-serial**.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                          | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version                                                                                                           | \-           | \-                |
-| 1.0.1.x              | Partial attribute added to tables: Received Raw Messages and Message Table.                                               | \-           | \-                |
-| 1.0.2.x \[Obsolete\] | Updated sort on messages table.Added Partial attribute to messages table to display 100 rows per page.                    | \-           | \-                |
-| 1.0.3.x \[SLC Main\] | Maximum Messages Range updated to 10-10000.Partial attribute added or updated in Received Raw Messages and Message Table. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                           | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Initial version                                                                                                            | \-           | \-                |
+| 1.0.1.x              | Partial attribute added to tables: Received Raw Messages and Message Table.                                                | \-           | \-                |
+| 1.0.2.x \[Obsolete\] | Updated sort on messages table. Added Partial attribute to messages table to display 100 rows per page.                    | \-           | \-                |
+| 1.0.3.x \[SLC Main\] | Maximum Messages Range updated to 10-10000. Partial attribute added or updated in Received Raw Messages and Message Table. | \-           | \-                |
 
 ### Product Info
 
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This is the default page of the driver. It contains the **Message Table**,which displays all the information of the incoming syslog messages. There are also page buttons to specific subpages for **Priority**, **Layout** and **Raw** **Messages**.
+This is the default page of the driver. It contains the **Message Table**, which displays all the information of the incoming syslog messages. There are also page buttons to specific subpages for **Priority**, **Layout** and **Raw** **Messages**.
 
 ### Alarms
 

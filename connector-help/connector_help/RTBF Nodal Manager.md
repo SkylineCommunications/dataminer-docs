@@ -46,7 +46,7 @@ You can do so via the Config pages:
 
 - **Config Events/EVN/SNG**
 
-- **Config Multiviewer**:On this data page, you can change the settings on the multiviewer connected to the nodal manager.
+- **Config Multiviewer**: On this data page, you can change the settings on the multiviewer connected to the nodal manager.
 
 - At present, you can switch between the Barco device and the Imagine Communications Platinum IP3 viewer, using the **Viewer Mode** parameter. Note: this is a level-4 restricted parameter.
   - The **Multiviewer Element Name** parameter determines from where the manager will import its layouts and monitors. The import can be triggered with the **Get Layouts** button. The element ID of the specified element will be retrieved and used to get the data to the manager. This fills the **Layouts** table. Every layout of the element can be found in the Layout column. The monitors can be found in the monitors column, separated by semicolons (";").
@@ -67,8 +67,9 @@ Multiple pages of the connector contain information about the resources. All of 
 
 For example, **SDI video resources** are configured by first selecting the **SDI** **Video** **Element** in the system. This will check the number of inputs and outputs. Once this is done, the **resource CSV** of the SDI video can be loaded to populate the **Input** and **Output** **tables** with the details. These will be the **source** and **destination** video items in the WFM. This is similar for audio resources, 34 Mbit-ASI resources and L-band resources.
 
-- **L-Band Resources**:The **L-Band Matrix Element** can be selected on this page. **Source and Destination** tables contain the **inputs** and **outputs** of the L-band matrix. The **ASI Black Input** can also be selected.
-- **IRD Resources**: The IRD and DEMOD Resource Table lists all the demodulators and IRDs available for selection to set up actions. When IRDs are selected, the IRD with the **least functionality** is selected first:DVB-S, DVB-S2, DVB-S2 - 16ASPK, NS3, NS4. IRD and DEMOD.The **IRD L-Band Ref** contains the reference to the input from the L-band matrix. This is used to select the correct **O.L. Frequency.** Only the IRDs hold the references, the demodulators do not.
+- **L-Band Resources**: The **L-Band Matrix Element** can be selected on this page. **Source and Destination** tables contain the **inputs** and **outputs** of the L-band matrix. The **ASI Black Input** can also be selected.
+- **IRD Resources**: The IRD and DEMOD Resource Table lists all the demodulators and IRDs available for selection to set up actions. When IRDs are selected, the IRD with the **least functionality** is selected first: DVB-S, DVB-S2, DVB-S2 - 16ASPK, NS3, NS4. IRD and DEMOD.
+  The **IRD L-Band Ref** contains the reference to the input from the L-band matrix. This is used to select the correct **O.L. Frequency.** Only the IRDs hold the references, the demodulators do not.
 - **Booked Resources**: This table lists all demods and IRDs that are in a booked and validated activity.
 - **34Mbit-ASI** **Resources:** The **ASI Matrix Element** can be selected on this page. The **ASI in- and outputs** are defined here, and the page shows what they are connected to. The **ASI Black Input** can also be selected.
 

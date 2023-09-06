@@ -46,7 +46,8 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-When the timeout of a single command is set to a short duration, it can occur that not all response data is received. Configure the settings below when you configure the element to allow full polling of the device response:
+When the timeout of a single command is set to a short duration, it can occur that not all response data is received.
+Configure the settings below when you configure the element to allow full polling of the device response:
 
 - **Timeout of a single command:** 5000
 - **Number of retries:** 3

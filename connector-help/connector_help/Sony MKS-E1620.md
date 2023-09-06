@@ -66,9 +66,9 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains general info from the device such as the **Protocol Name** and **Protocol Version**, as well as**Panel Info** and **Extra Panel Info**.
+This page contains general info from the device such as the **Protocol Name** and **Protocol Version**, as well as **Panel Info** and **Extra Panel Info**.
 
-On the **Change Panel Info** subpage, you can configure the**Panel Name**, **Panel User**,and **Panel Description**.
+On the **Change Panel Info** subpage, you can configure the **Panel Name**, **Panel User**, and **Panel Description**.
 
 ### Product Information
 
@@ -98,8 +98,12 @@ This page allows you to control the **Brightness Panel, Beacon**, and **Auto Fil
 
 You can also change the **Rotary Command Settings**.
 
-- In **Fast Mode**, the hardware panel will use a **buffer** **to capture commands** coming from the device.The timer for this is time-based, which means that when a certain time has passed, the buffer will be read and forwarded to the software panel. You can set the time for this with the parameter **Rotary Buffer Time**.You can set this to a very **fast pace**, in which case you can **set parameters without having to wait for feedback**, and therefore not make as many sets on the device and create less traffic in the system. However, **if the system is slow, you might need to wait too long** for the LCD to update, and you might overshoot your targeted value.
-- In **Safe Mode**, the hardware panel will **wait for the software panel to confirm** if a set or update has been done on the remote device. While processing and waiting for the confirmation of the set, the connector will block any other input from the device on that rotary knob.To ensure no permanent locks can occur, a **timeout** is possible. You can set after how long this timeout should occur using the **Software Panel Timeout Time** parameter. When a command is received, the current time is saved, and the command is sent to the software panel. If a new command is then received, while the connector is still waiting for a response, it will check if the timeout time has passed. If it has passed, the new set will be sent to the software panel, the knob will again be locked, and the current time is saved.With this mode, parameters will be set a bit more slowly, but the advantage is that it can happen with **more accuracy**. However, if you want to change values at a quick pace, you will be limited by the time in which the end device can receive, process, and send back the new value. Because of this, it can appear as if sets are happening slowly, while actually it is usually the response of the device that is slow.
+- In **Fast Mode**, the hardware panel will use a **buffer** **to capture commands** coming from the device.
+  The timer for this is time-based, which means that when a certain time has passed, the buffer will be read and forwarded to the software panel. You can set the time for this with the parameter **Rotary Buffer Time**.
+  You can set this to a very **fast pace**, in which case you can **set parameters without having to wait for feedback**, and therefore not make as many sets on the device and create less traffic in the system. However, **if the system is slow, you might need to wait too long** for the LCD to update, and you might overshoot your targeted value.
+- In **Safe Mode**, the hardware panel will **wait for the software panel to confirm** if a set or update has been done on the remote device. While processing and waiting for the confirmation of the set, the connector will block any other input from the device on that rotary knob.
+  To ensure no permanent locks can occur, a **timeout** is possible. You can set after how long this timeout should occur using the **Software Panel Timeout Time** parameter. When a command is received, the current time is saved, and the command is sent to the software panel. If a new command is then received, while the connector is still waiting for a response, it will check if the timeout time has passed. If it has passed, the new set will be sent to the software panel, the knob will again be locked, and the current time is saved.
+  With this mode, parameters will be set a bit more slowly, but the advantage is that it can happen with **more accuracy**. However, if you want to change values at a quick pace, you will be limited by the time in which the end device can receive, process, and send back the new value. Because of this, it can appear as if sets are happening slowly, while actually it is usually the response of the device that is slow.
 
 ### Alarms
 

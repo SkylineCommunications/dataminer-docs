@@ -38,27 +38,27 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 </tr>
 <tr class="odd">
 <td>2.0.0.39</td>
-<td>Driver reviewing:- Params 30958/30959 and 30965/30966 discreets reviewed;- Removing of normalize pagebuttons and parameters from pages Normalize;- Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs;- Introduction of disable conditions to parameters 30960-30963 and 30967-30970;- Qaction 301 reviewed.</td>
+<td>Driver reviewing: - Params 30958/30959 and 30965/30966 discreets reviewed; - Removing of normalize pagebuttons and parameters from pages Normalize; - Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs; - Introduction of disable conditions to parameters 30960-30963 and 30967-30970; - Qaction 301 reviewed.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
 <td>2.0.0.40</td>
-<td>Driver reviewing:- QA100 reviewed for DVE filtering based on Bus Address;- Implementation of Modules Table filtering (Param 100);- New QA3500 and tables 3500-3577 (polling instances) for implementation of subtables logic for restricted polling.</td>
+<td>Driver reviewing: - QA100 reviewed for DVE filtering based on Bus Address; - Implementation of Modules Table filtering (Param 100); - New QA3500 and tables 3500-3577 (polling instances) for implementation of subtables logic for restricted polling.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 <tr class="odd">
 <td>2.0.0.42</td>
 <td>Optical TX Laser Table (Param 2100) (subtable option doesn't work for the SNMP table):
-<p>- Add extra Optical TX Laser SNMP Table (Param 2150) without subtable option- Populate Optical TX Laser Table: use opticalTxLaserFilter to filter data from Optical TX Laser SNMP Table (QA400)Property Table (Param 2500) (subtable option doesn't work for the SNMP table):- Add extra Property SNMP Table (Param 2550) without subtable option- Populate Property Table: use propertyFilter to filter data from Property SNMP Table (QA67)Update function SetParameters (QA0)</p></td>
+<p>- Add extra Optical TX Laser SNMP Table (Param 2150) without subtable option - Populate Optical TX Laser Table: use opticalTxLaserFilter to filter data from Optical TX Laser SNMP Table (QA400) Property Table (Param 2500) (subtable option doesn't work for the SNMP table): - Add extra Property SNMP Table (Param 2550) without subtable option - Populate Property Table: use propertyFilter to filter data from Property SNMP Table (QA67)Update function SetParameters (QA0)</p></td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 <tr class="even">
 <td>2.0.0.43</td>
 <td>A DVE gets created for every SMM and CMM module in the chassis (for every row in the Shelf table)
-<p>Those DVEs contain an overview of all the modules in the chassis that are managed by this particular controller card (the rows in the Modules table that correspond with the SMM or CMM module)Add fixes that were made in version 2.0.0.39 and 2.0.0.42</p></td>
+<p>Those DVEs contain an overview of all the modules in the chassis that are managed by this particular controller card (the rows in the Modules table that correspond with the SMM or CMM module) Add fixes that were made in version 2.0.0.39 and 2.0.0.42</p></td>
 <td>No</td>
 <td>Yes</td>
 </tr>

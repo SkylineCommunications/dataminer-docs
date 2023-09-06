@@ -43,7 +43,7 @@ On this page, you can configure communication parameters for several protocols: 
 
 This page displays global system information, such as the **System Name** and **System Description**.
 
-It also contains the alarm configuration for **Tuner Input**, **ASI Input**, **IP 1000Base_T Input**, **DAB Data** and **Reference Clock***.* For example, for the Tuner Input, you can view the **RF Power State** and edit the **RF Power Value**, **RF Power Tolerance**, **RF Power T1**, **RF Power T2** and **RF Power Priority**,enable or disable **RF Power Traps**, etc.
+It also contains the alarm configuration for **Tuner Input**, **ASI Input**, **IP 1000Base_T Input**, **DAB Data** and **Reference Clock***.* For example, for the Tuner Input, you can view the **RF Power State** and edit the **RF Power Value**, **RF Power Tolerance**, **RF Power T1**, **RF Power T2** and **RF Power Priority**, enable or disable **RF Power Traps**, etc.
 
 ### Status
 

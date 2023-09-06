@@ -40,7 +40,7 @@ On this page, **System information** is displayed.
 
 ### Inputs
 
-Both of the2 inputs can be monitored on this page. Click the page buttons to see the **Services**, the **PIDs** and the **normalized values**.
+Both of the 2 inputs can be monitored on this page. Click the page buttons to see the **Services**, the **PIDs** and the **normalized values**.
 
 ### Alarms
 

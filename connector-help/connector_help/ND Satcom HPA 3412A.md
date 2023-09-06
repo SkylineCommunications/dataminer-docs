@@ -8,7 +8,7 @@ The **ND Satcom HPA 3412A** driver is a serial driver that is used to monitor an
 
 ## About
 
-The **ND Satcom HPA 3412A** driver uses serial communication to monitor and configure the connectedHPA.
+The **ND Satcom HPA 3412A** driver uses serial communication to monitor and configure the connected HPA.
 
 ## Installation and configuration
 

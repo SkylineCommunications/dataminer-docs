@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains system information parameters, such as the **Description**, **Up Time**, **Contact**, **Name**, **Location**,and **Services**.
+This page contains system information parameters, such as the **Description**, **Up Time**, **Contact**, **Name**, **Location**, and **Services**.
 
 ### Settings
 
@@ -72,7 +72,7 @@ On this page, you can manage the creation of DVEs. For each of the different car
 
 The following parameters are used for DVE management:
 
-- **Automatic DVE Deletion**: This parameter is *Disabled* by default. If it is *Enabled*,all rows in the **DVE Control Table** with the state **Delete** **Row** will be deleted automatically. This means that all templates linked to those cards will also be deleted.
+- **Automatic DVE Deletion**: This parameter is *Disabled* by default. If it is *Enabled*, all rows in the **DVE Control Table** with the state **Delete** **Row** will be deleted automatically. This means that all templates linked to those cards will also be deleted.
 
 - **DVE Actions**: Provides two options:
 
@@ -93,18 +93,18 @@ This page contains the **Physical Entity Table**. This table displays all the mo
 
 ### Module
 
-This page displays the **Model**, **Description**, **Name**, **Alias**, **Manufacturer**, **Asset ID**, **Serial** **Number**, **Hardware** **Revision**,and **Software** **Revision** of the **chassis**.
+This page displays the **Model**, **Description**, **Name**, **Alias**, **Manufacturer**, **Asset ID**, **Serial** **Number**, **Hardware** **Revision**, and **Software** **Revision** of the **chassis**.
 
 In addition, there are two page buttons:
 
 - **Fans**: Displays the Fans Unit Table, which allows you to monitor the fan status.
-- **Headend**: Displays the **Headend Information Table**,where you can monitor the **heatsink temperature**.
+- **Headend**: Displays the **Headend Information Table**, where you can monitor the **heatsink temperature**.
 
 ### Power Supply
 
 This page contains two tables:
 
-- **Power Supply Unit Table:** Includes theInput Current, Input Power, Description, and the Input Voltage.
+- **Power Supply Unit Table:** Includes the Input Current, Input Power, Description, and the Input Voltage.
 - **Power Supply Output Table:** Displays the Output Voltage, Output Current, and Output Power.
 
 ### RF Amplifier
@@ -113,15 +113,15 @@ This page displays the **RF Amplifier Output Table,** which allows you to check 
 
 ### RF Switch
 
-This page contains 3 tables: the **RF Switch Unit Table**, **RF Switch Input Table**,and **RF Switch Output Table**.
+This page contains 3 tables: the **RF Switch Unit Table**, **RF Switch Input Table**, and **RF Switch Output Table**.
 
 ### Optical Transmitter
 
-This page contains 3 tables:the **Optical Transmitter Unit Table**, **Optical Transmitter Input Table**,and **Optical Transmitter Laser Table**.
+This page contains 3 tables: the **Optical Transmitter Unit Table**, **Optical Transmitter Input Table**, and **Optical Transmitter Laser Table**.
 
 ### Optical Switch
 
-This page contains 3 tables:the **Optical Switch Unit Table**, **Optical Switch Input Table**,and **Optical Switch Output Table**.
+This page contains 3 tables: the **Optical Switch Unit Table**, **Optical Switch Input Table**, and **Optical Switch Output Table**.
 
 ### Optical Receiver
 

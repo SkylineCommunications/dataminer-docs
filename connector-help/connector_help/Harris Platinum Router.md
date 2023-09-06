@@ -66,15 +66,19 @@ You can find most of the SNMP parameters on the **Status** page, or by clicking 
 
 Below is a list of all sections which can be activated:
 
-- **General Parameters**Includes: **Device Name**, **ID**, **Product Type**, .
+- **General Parameters**
+  Includes: **Device Name**, **ID**, **Product Type**, .
 - **IP Settings**
 - **PSU Settings**
 - **Sync Settings**
 - **FAN Settings**
 - **Hardware Slots**
-- **Physical Matrix**Can be found on page **Matrix Configuration**
-- **Physical Input**Can be found on page **Matrix Configuration**
-- **Physical Output**Can be found on page **Matrix Configuration**
+- **Physical Matrix**
+  Can be found on page **Matrix Configuration**
+- **Physical Input**
+  Can be found on page **Matrix Configuration**
+- **Physical Output**
+  Can be found on page **Matrix Configuration**
 
 ### Monitoring Outputs
 

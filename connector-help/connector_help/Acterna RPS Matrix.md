@@ -58,4 +58,4 @@ On this page, you can among others configure the **Switch Mode** and the **ports
 
 On these pages, you can configure the automatic or manual switching, and select the appropriate port depending on the type of switching.
 
-Note that the **Current Port**, **Last Automatic Switch** and **Last Manual Switch** parametersare also available on the **Main View** page.
+Note that the **Current Port**, **Last Automatic Switch** and **Last Manual Switch** parameters are also available on the **Main View** page.

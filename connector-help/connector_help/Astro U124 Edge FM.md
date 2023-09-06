@@ -128,10 +128,12 @@ The following table provides more information on how to upload/download configur
 </tr>
 <tr class="even">
 <td>To download a file, click <strong>Download</strong>. The following pop-up window will be displayed:
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Download.PNG" alt="Download.PNG" /></p>
 <p>Enter the name of the file, and click <strong>OK</strong>.</p>
 <p>The file will be saved at the following location:</p>
 <p><em>C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</em></p></td>
 <td>To upload a file, click <strong>Upload</strong>. This following pop-up window will be displayed:
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Upload.PNG" alt="Upload.PNG" /></p>
 <p><strong>Module Name</strong> lists all the Astro elements of the same type in the system.</p>
 <p><strong>Upload File Name</strong> lists all the files available in the Documents folder of the selected module.</p>
 <p>The file to be uploaded is located at:</p>
@@ -143,6 +145,8 @@ The following table provides more information on how to upload/download configur
 #### Software Update
 
 The driver allows you to upload a firmware archive from the local disk of the DMA:
+
+![SoftwareUpdate.PNG](~/connector-help/images/Astro_U124_Edge_FM_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The drop-down list contains all the files present in the following directory of the DMA: *C:\Skyline DataMiner\Documents\\Protocol Name\>*.
 

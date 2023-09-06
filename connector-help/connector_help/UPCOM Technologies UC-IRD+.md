@@ -10,7 +10,8 @@ This driver uses SNMP to communicate with the UC-IRD+ Integrated Receiver Decode
 
 The driver uses the **SNMP** protocol to poll the IRD for information and to configure the IRD. The layout of the driver mirrors that of the IRD's web interface. Each page of the web interface has a corresponding page in DataMiner's data display. However, there is one additional page in the driver, the **Trap** page, which contains a table with all the received traps.
 
-By default, any trap received from OID \*.19 (signal off) creates an alarm. This alarm is cleared again when a trap is received from OID \*.20 (signal on) on the same channel (ASI-1, ASI-2, CI, IP or Tuner). Note: The IRD must be configured to send traps to the DataMiner Agent.
+By default, any trap received from OID \*.19 (signal off) creates an alarm. This alarm is cleared again when a trap is received from OID \*.20 (signal on) on the same channel (ASI-1, ASI-2, CI, IP or Tuner).
+Note: The IRD must be configured to send traps to the DataMiner Agent.
 
 There is also a web interface page. However, to use this page, the client must have access to the IP address of the IRD.
 
@@ -86,8 +87,8 @@ This page contains the configuration options for the overall system as well as b
 
 This page contains a table of all the traps received from the UC-IRD+. By default, only the last 100 traps are saved, and older traps are cleared.
 
-Click the **Auto Clear** button to change the **Auto Clear settings**. You can set traps to be cleared automatically after X days by changing the **Auto Clear Method** to *Max Duration*on the **Auto Clear** subpage. Choosing *Both* enables both the **Traps Max Duration** and the **Traps Max Number** values.
+Click the **Auto Clear** button to change the **Auto Clear settings**. You can set traps to be cleared automatically after X days by changing the **Auto Clear Method** to *Max Duration* on the **Auto Clear** subpage. Choosing *Both* enables both the **Traps Max Duration** and the **Traps Max Number** values.
 
 ### Web Interface
 
-This page contains an embedded web browser directed to the IP addressof the UC-IRD+. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page contains an embedded web browser directed to the IP address of the UC-IRD+. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

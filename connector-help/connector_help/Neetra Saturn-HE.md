@@ -21,7 +21,7 @@ This connector allows you to control the Neetra Saturn-HE via an SNMP connection
 
 | **Connector Range** | **Device Firmware Version**                                                                                                                              |
 |---------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x             | DAB Modulator = 6.17DAB Amplifier Control (transmitters with more than 1 amplifier) = 10.14DAB MPL (DAB transmitters with only 1 amplifier) = 2.18       |
+| 1.0.0.x             | DAB Modulator = 6.17 DAB Amplifier Control (transmitters with more than 1 amplifier) = 10.14 DAB MPL (DAB transmitters with only 1 amplifier) = 2.18     |
 | 1.0.1.x             | DAB Modulator = **7.12** DAB Amplifier Control (transmitters with more than 1 amplifier) = 10.14 DAB MPL (DAB transmitters with only 1 amplifier) = 2.18 |
 
 ### System Info
@@ -69,11 +69,13 @@ On this page (and its subpages), you can configure and control the DAB Modulator
 
 ### DAB Amplifier Control
 
-On this page (and its subpages), you can monitor and control the transmitters that have more than one amplifier.You can monitor up to eight slaves and change the amplifier settings, such as **Output Power**, **Frequency** and **Minimum and Maximum Thresholds**.
+On this page (and its subpages), you can monitor and control the transmitters that have more than one amplifier.
+You can monitor up to eight slaves and change the amplifier settings, such as **Output Power**, **Frequency** and **Minimum and Maximum Thresholds**.
 
 ### DAB MPL
 
-On this page (and its subpages), you can monitor and control DAB transmitters with only one amplifier.You can monitor all the **voltages** and **currents**, change the **frequency** and **mode** settings, etc.
+On this page (and its subpages), you can monitor and control DAB transmitters with only one amplifier.
+You can monitor all the **voltages** and **currents**, change the **frequency** and **mode** settings, etc.
 
 ### Web Interface
 

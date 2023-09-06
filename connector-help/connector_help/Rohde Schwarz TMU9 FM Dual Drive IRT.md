@@ -58,10 +58,10 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The **General** page displays the **Transmitter** status, **Pr‚sence RF**, **Local Mode**, **Faute** (Fault Status)and **Warning** status, etc. Use the **Refresh Table** button to trigger the immediate polling of these parameters. The information is bundled in the **Table Service**. You can also define a **Description** for the single table entry.
+The **General** page displays the **Transmitter** status, **Pr‚sence RF**, **Local Mode**, **Faute** (Fault Status) and **Warning** status, etc. Use the **Refresh Table** button to trigger the immediate polling of these parameters. The information is bundled in the **Table Service**. You can also define a **Description** for the single table entry.
 
 There is a page button that will display the **Trap** **configuration** for each of the previously mentioned parameters. As these parameters are not polled automatically, use the **Refresh Traps** button to update them.
 
 A second page button displays the **Trap Handler** subpage, which allows you to enable or disable **Trap Handling** and to set the **Trap Delta**.
 
-Note: A received trap will only trigger a parameter update if **Trap Handling** isenabled and the difference between the trap event counter and the previous trap event counter is more than the value of the **Trap Delta** parameter.
+Note: A received trap will only trigger a parameter update if **Trap Handling** is enabled and the difference between the trap event counter and the previous trap event counter is more than the value of the **Trap Delta** parameter.

@@ -14,19 +14,19 @@ LSB VSM uses a **smart-serial** connection, which means that it will register it
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                    | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|----------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version (customer-specific)                | No                  | Yes                     |
-| 2.0.0.x              | \- Based on 1.0.0.x- Generic version               | No                  | Yes                     |
-| 2.0.1.x \[SLC Main\] | \- Based on 2.0.0.x- Added DCF support for layer 1 | Yes                 | Yes                     |
+| **Driver Range**     | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version (customer-specific)                 | No                  | Yes                     |
+| 2.0.0.x              | \- Based on 1.0.0.x - Generic version               | No                  | Yes                     |
+| 2.0.1.x \[SLC Main\] | \- Based on 2.0.0.x - Added DCF support for layer 1 | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**    |
-|------------------|--------------------------------|
-| 1.0.0.x          | 16.1.2Pro-bel SW-P-08 Issue 31 |
-| 2.0.0.x          | 16.1.2Pro-bel SW-P-08 Issue 31 |
-| 2.0.1.x          | 16.1.2Pro-bel SW-P-08 Issue 31 |
+| **Driver Range** | **Device Firmware Version**     |
+|------------------|---------------------------------|
+| 1.0.0.x          | 16.1.2 Pro-bel SW-P-08 Issue 31 |
+| 2.0.0.x          | 16.1.2 Pro-bel SW-P-08 Issue 31 |
+| 2.0.1.x          | 16.1.2 Pro-bel SW-P-08 Issue 31 |
 
 ## Installation and configuration
 
@@ -94,8 +94,8 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 #### Dynamic Interfaces
 
-- Layer 1 input interfaces of type **in** are defined in the **Layer 1 Inputs Table**,corresponding to layer 1 matrix inputs.
-- Layer 1 output interfaces of type **out** are defined in the **Layer 1 Outputs Table**,corresponding to layer 1 matrix outputs.
+- Layer 1 input interfaces of type **in** are defined in the **Layer 1 Inputs Table**, corresponding to layer 1 matrix inputs.
+- Layer 1 output interfaces of type **out** are defined in the **Layer 1 Outputs Table**, corresponding to layer 1 matrix outputs.
 
 ### Connections
 

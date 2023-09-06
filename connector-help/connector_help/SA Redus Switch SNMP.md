@@ -50,6 +50,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The device information is divided over the pages **Main View**, **General**, **Settings**, **Alarm**, **Trap Destination**and **Polling**.
+The device information is divided over the pages **Main View**, **General**, **Settings**, **Alarm**, **Trap Destination** and **Polling**.
 
 On the **Polling** page, you can enable or disable the polling of the parameter groups and also set the polling frequency time.

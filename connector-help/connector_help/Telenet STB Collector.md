@@ -71,16 +71,70 @@ The STB Collector will generate tab-separated CSV files. For more information on
 
 ### Slow offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. HW Version 1.3.6.1.4.1.23423.5.1.2.07. System Description 1.3.6.1.2.1.1.1.08. Navigator Build Version 1.3.6.1.4.1.23423.5.1.1.09. Firmware Version 1.3.6.1.4.1.23423.5.1.3.010. Loader HW Version 1.3.6.1.4.1.23423.5.5.1.1.011. Loader Version 1.3.6.1.4.1.23423.5.5.1.3.012. Download Time 1.3.6.1.4.1.23423.5.5.1.5.013. Loader SW Version 1.3.6.1.4.1.23423.5.5.1.4.014. CA Serial 1.3.6.1.4.1.23423.5.5.2.2.0 (smartcard) or caCasStbId 1.3.6.1.4.1.23423.5.5.7.5.015. CA Software Version 1.3.6.1.4.1.23423.5.5.2.3.0 (smartcard) or caSSMSoftVer 1.3.6.1.4.1.23423.5.5.7.3.016. CA SmartCard Serial 1.3.6.1.4.1.23423.5.5.2.4.0 (smartcard) or caCheckCode 1.3.6.1.4.1.23423.5.5.7.4.017. CA SmartCard DNSAP Version 1.3.6.1.4.1.23423.5.5.2.5.0 (smartcard) or caGlueSoftVer 1.3.6.1.4.1.23423.5.5.7.2.018. CA SmartCard Provider 1.3.6.1.4.1.23423.5.5.2.6.019. Uptime 1.3.6.1.2.1.1.3.020. Power Mode 1.3.6.1.4.1.23423.5.4.6.021. Low Power Standby Mode 1.3.6.1.4.1.23423.5.5.8.1.022. View Info 1.3.6.1.4.1.23423.10.2.0 or 1.3.6.1.4.1.23423.10.13.023. AD Build Version 1.3.6.1.4.1.23423.10.1.024. HDMI Info 1.3.6.1.4.1.23423.5.6.2.025. Temperature 1.3.6.1.4.1.14810.2.10.10.026. DynamicOID127. DynamicOID228. DynamicOID3
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. HW Version 1.3.6.1.4.1.23423.5.1.2.0
+7. System Description 1.3.6.1.2.1.1.1.0
+8. Navigator Build Version 1.3.6.1.4.1.23423.5.1.1.0
+9. Firmware Version 1.3.6.1.4.1.23423.5.1.3.0
+10. Loader HW Version 1.3.6.1.4.1.23423.5.5.1.1.0
+11. Loader Version 1.3.6.1.4.1.23423.5.5.1.3.0
+12. Download Time 1.3.6.1.4.1.23423.5.5.1.5.0
+13. Loader SW Version 1.3.6.1.4.1.23423.5.5.1.4.0
+14. CA Serial 1.3.6.1.4.1.23423.5.5.2.2.0 (smartcard) or caCasStbId 1.3.6.1.4.1.23423.5.5.7.5.0
+15. CA Software Version 1.3.6.1.4.1.23423.5.5.2.3.0 (smartcard) or caSSMSoftVer 1.3.6.1.4.1.23423.5.5.7.3.0
+16. CA SmartCard Serial 1.3.6.1.4.1.23423.5.5.2.4.0 (smartcard) or caCheckCode 1.3.6.1.4.1.23423.5.5.7.4.0
+17. CA SmartCard DNSAP Version 1.3.6.1.4.1.23423.5.5.2.5.0 (smartcard) or caGlueSoftVer 1.3.6.1.4.1.23423.5.5.7.2.0
+18. CA SmartCard Provider 1.3.6.1.4.1.23423.5.5.2.6.0
+19. Uptime 1.3.6.1.2.1.1.3.0
+20. Power Mode 1.3.6.1.4.1.23423.5.4.6.0
+21. Low Power Standby Mode 1.3.6.1.4.1.23423.5.5.8.1.0
+22. View Info 1.3.6.1.4.1.23423.10.2.0 or 1.3.6.1.4.1.23423.10.13.0
+23. AD Build Version 1.3.6.1.4.1.23423.10.1.0
+24. HDMI Info 1.3.6.1.4.1.23423.5.6.2.0
+25. Temperature 1.3.6.1.4.1.14810.2.10.10.0
+26. DynamicOID1
+27. DynamicOID2
+28. DynamicOID3
 
 ### Fast offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. Had Restart7. Power Mode 1.3.6.1.4.1.23423.5.4.6.08. Low Power Standby Mode 1.3.6.1.4.1.23423.5.5.8.1.09. View Info 1.3.6.1.4.1.23423.10.2.0 or 1.3.6.1.4.1.23423.10.13.010. Temperature 1.3.6.1.4.1.14810.2.10.10.011. DynamicOID112. DynamicOID213. DynamicOID3
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Had Restart
+7. Power Mode 1.3.6.1.4.1.23423.5.4.6.0
+8. Low Power Standby Mode 1.3.6.1.4.1.23423.5.5.8.1.0
+9. View Info 1.3.6.1.4.1.23423.10.2.0 or 1.3.6.1.4.1.23423.10.13.0
+10. Temperature 1.3.6.1.4.1.14810.2.10.10.0
+11. DynamicOID1
+12. DynamicOID2
+13. DynamicOID3
 
 ### Fast tuner offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. Tuner Number7. Lock Status 1.3.6.1.4.1.23423.4.2.1.78. Frequency 1.3.6.1.4.1.23423.4.2.1.109. Level 1.3.6.1.4.1.23423.4.2.1.810. SNR 1.3.6.1.4.1.23423.4.2.1.511. BER 1.3.6.1.4.1.23423.4.2.1.612. Error Packets 1.3.6.1.4.1.23423.4.2.1.9
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Tuner Number
+7. Lock Status 1.3.6.1.4.1.23423.4.2.1.7
+8. Frequency 1.3.6.1.4.1.23423.4.2.1.10
+9. Level 1.3.6.1.4.1.23423.4.2.1.8
+10. SNR 1.3.6.1.4.1.23423.4.2.1.5
+11. BER 1.3.6.1.4.1.23423.4.2.1.6
+12. Error Packets 1.3.6.1.4.1.23423.4.2.1.9
 
 ### IVR offload structure
 
-1\. MAC Address2. State3. Timestamp4. SAPID5. Another Operator
+1\. MAC Address
+2. State
+3. Timestamp
+4. SAPID
+5. Another Operator

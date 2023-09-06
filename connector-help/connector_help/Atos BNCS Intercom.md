@@ -100,7 +100,7 @@ This page contains a list of the maintained rings and a list of the associated p
 
 For each **Ring**, the ID and Label can be defined. In addition, the number of associated ports is displayed. There are also parameters available to add support for a visual panel. Via the right-click menu of the table, you can add or remove a ring, or refresh the associated ports.
 
-For each **Port**,the ID, Type, Address, Input Names, Output Names, Function (General, Highway, Monitor and Monitor Highway) and Operational Area are displayed. Via the right-click menu of the table, you can refresh port details or force a synchronization of the intercom router inputs and outputs when ports have shifted or changed functionality.
+For each **Port**, the ID, Type, Address, Input Names, Output Names, Function (General, Highway, Monitor and Monitor Highway) and Operational Area are displayed. Via the right-click menu of the table, you can refresh port details or force a synchronization of the intercom router inputs and outputs when ports have shifted or changed functionality.
 
 ### Panel Areas
 
@@ -108,7 +108,7 @@ This page contains a list of the maintained panel areas and a list of the associ
 
 For each **Area**, the ID and Label can be defined. There are also parameters available to add support for a visual panel. Via the right-click menu of the table, you can add or remove an area, or refresh the associated panels.
 
-For each **Panel**,the ID, Area, Name and Type are displayed. Via the right-click menu of the table, you can refresh the panel keys or clear functionality of all keys.
+For each **Panel**, the ID, Area, Name and Type are displayed. Via the right-click menu of the table, you can refresh the panel keys or clear functionality of all keys.
 
 ### Subscription Details
 
@@ -126,7 +126,8 @@ This page contains connection information related to redundancy and automatic sw
 
 ## DataMiner Connectivity Framework
 
-The 1.0.0.1 range of the Atos BNCS Intercom protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+The 1.0.0.1 range of the Atos BNCS Intercom protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 
 ### Interfaces
 
@@ -141,4 +142,4 @@ Physical dynamic interfaces:
 
 #### Internal Connections
 
-- Between a **Router Input** and a **Router Output**,an internal connection is created when the input is connected to the output.
+- Between a **Router Input** and a **Router Output**, an internal connection is created when the input is connected to the output.

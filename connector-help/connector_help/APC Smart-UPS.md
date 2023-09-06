@@ -48,7 +48,8 @@ This page contains general information such as **software versions**, **diagnost
 
 ### Battery Status
 
-On this page, it is possible to check different parameters related to the operational state of the battery as well as the information concerning battery packs.
+On this page, it is possible to check different parameters related to the operational state of the battery as well as the information
+concerning battery packs.
 
 ### Power Status
 

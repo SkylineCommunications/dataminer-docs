@@ -54,7 +54,7 @@ Via the Device Status page button, you can view the **12V Supply \#1, 8V Supply 
 
 This page allows you to configure the device. It also displays information, such as **Remote Interface**, **External Reference** and **Auto Fault Recovery**.
 
-The**Remote Mode** parameter allows you to define whether the unit is being controlled locally or remotely. Via the **Remote Settings** page button, you can set the **Remote Baud Rate** and the **Remote Address.**
+The **Remote Mode** parameter allows you to define whether the unit is being controlled locally or remotely. Via the **Remote Settings** page button, you can set the **Remote Baud Rate** and the **Remote Address.**
 
 With the **Reference Oscillator Adjust** parameter, you can change the reference oscillator frequency.
 

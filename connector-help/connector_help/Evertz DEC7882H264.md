@@ -72,7 +72,7 @@ The element created with this driver consists of the following data pages:
 - **General**: Contains general system information.
 - **System**: Allows you to configure and monitor several system-related tables and parameters, including SysLog configuration and temperature parameters. Also includes tables with data port settings and information.
 - **Product Features**: Displays the card type, alias and product license, as well as the Product Features Supported Table.
-- **Decoder Input Control**: Contains extensive settings and information related to the decoder input port. This includes switchover controlparameters such as the User Redundancy Mode, video control, input program control, manual PID control, and more.
+- **Decoder Input Control**: Contains extensive settings and information related to the decoder input port. This includes switchover control parameters such as the User Redundancy Mode, video control, input program control, manual PID control, and more.
 - **Decoder Monitor**: Allows you to monitor the Input Bitrate and Packet Framing, as well as various video information and program data. Also includes information on video and audio continuity errors.
 - **Decoder Audio Monitor**: Contains audio information such as the Bitrate, Audio Type, Sampling Rate and Number of Channels.
 - **Decoder Output Control**: Allows you to configure video, audio and private data outputs, as well as the MPE data PID and its output.

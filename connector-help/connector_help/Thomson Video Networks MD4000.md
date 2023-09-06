@@ -72,7 +72,7 @@ This page contains a number of page buttons that provide detailed information an
 
 ### Services
 
-The **Services** page displays four tables with information and settings for the **Service Selection, Selected Services, Selected Audio**,and **Selected SCTE 35**.
+The **Services** page displays four tables with information and settings for the **Service Selection, Selected Services, Selected Audio**, and **Selected SCTE 35**.
 
 Also in the Services section, a number of other pages are available:
 
@@ -80,7 +80,7 @@ Also in the Services section, a number of other pages are available:
 - **Video & Audio**: This page provides access to video and audio information and management. Page buttons display tables with detailed information related to **Video, Video Output, Format, SD Aspect Ratio, HD Aspect Ratio, Overlay, Low Latency, Audio Service**, and **Audio Service Discrete**.
 - **ANC Decoder & Options**: This page provides access to ancillary information and management. Page buttons display tables with detailed information related to the **ANC Decoder, ANC Line Conflict, ANC Options**, and **SCTE 104** translator.
 - **GEN Lock**: This page provides access to generator locking information and management. Page buttons display tables with detailed information related to **GEN Lock, HD GEN Lock, SD GEN Lock, Video Output Gen Lock**, and **OpenGear Genlock**.
-- **SCTE 35 Services & Messages**: This page provides access to SCTE 35 broadcast standard information and management. Page buttons display tables with detailed information related to **Service, Message, ESAM,** **DPI Cue Trigger, Insertions**,and **Message Insertions**.
+- **SCTE 35 Services & Messages**: This page provides access to SCTE 35 broadcast standard information and management. Page buttons display tables with detailed information related to **Service, Message, ESAM,** **DPI Cue Trigger, Insertions**, and **Message Insertions**.
 
 ### TS Outputs
 

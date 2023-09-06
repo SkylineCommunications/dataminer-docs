@@ -48,9 +48,9 @@ This page displays general information, such as the **Name** and **Version**.
 
 Below the parameters, you can find the following buttons:
 
-- **System Reset**:Reboots the device.
+- **System Reset**: Reboots the device.
 - **Refresh Device Info**: Polls the **Name**, **Version**, **Date**, **Serial Number**, **System Date Time** and **Device Label** immediately.
-- **Set Switch Mode**:Changes the **Switch Mode** of the device to either *Manual* or *Auto*.
+- **Set Switch Mode**: Changes the **Switch Mode** of the device to either *Manual* or *Auto*.
 - **Monitor** buttons: These set the current monitoring channel to any of the 5 different channels.
 - **Force Input**: Changes the **Switch Mode** to *Manual*, and then sets the current input channel to any of the 5 different channels.
 - **Refresh All**: Polls every parameter in the driver again.
@@ -65,7 +65,7 @@ On the **Controls** pop-up page, you can access and modify the **Monitor Input**
 
 ### Traps Page
 
-The **Inactive**, **Output**, **Software Mode**, **Manual Mode** and **Bypass Trap** states can be found on this page. Each state is either *Invalid*, *Disabled*, or *Enabled*.There are also controls for the **SNTP Server**, **Timezone** and **Interval.**
+The **Inactive**, **Output**, **Software Mode**, **Manual Mode** and **Bypass Trap** states can be found on this page. Each state is either *Invalid*, *Disabled*, or *Enabled*. There are also controls for the **SNTP Server**, **Timezone** and **Interval.**
 
 The **Trap Destinations** table is displayed via a page button.
 

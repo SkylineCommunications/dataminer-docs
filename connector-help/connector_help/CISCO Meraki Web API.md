@@ -10,10 +10,10 @@ CISCO Meraki Web API is used by Kordia to monitor their Meraki devices (Cisco Me
 
 ### Version Info
 
-| **Range** | **Key Features**                                                                                       | **Based on** | **System Impact** |
-|-----------|--------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial versionPolling and Monitoring via Meraki API over HTTPS                                        | \-           | \-                |
-| 2.0.0.x   | Virtual DriverCaptures and Processes Webhook NotificationsAutomatic clearing of cleared/expired alarms | \-           | \-                |
+| **Range** | **Key Features**                                                                                         | **Based on** | **System Impact** |
+|-----------|----------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version Polling and Monitoring via Meraki API over HTTPS                                         | \-           | \-                |
+| 2.0.0.x   | Virtual Driver Captures and Processes Webhook Notifications Automatic clearing of cleared/expired alarms | \-           | \-                |
 
 ### Product Info
 
@@ -35,7 +35,10 @@ CISCO Meraki Web API is used by Kordia to monitor their Meraki devices (Cisco Me
 
 The driver in version range 1.0.0.x captures alarms through communication with the Meraki API via HTTPS requests.
 
-After filling in the connection details on the element card, the **Authorization Value** on the General page must be filled in. This is the API Key used for authorization to access the API.
+After filling in the connection details on the element card, the **Authorization Value** on the General page must be filled in.
+This is the API Key used for authorization to access the API.
+
+
 
 ## Configuration 2.0.0.X
 
@@ -53,7 +56,8 @@ The user is required to set the following parameters:
 - **Webhooks Protocol**: Select between HTTP and HTTPS protocol
 - **Webhooks Certificate**: Select certificate to be used by driver (Applicable only for HTTPS protocol)
 
-The status of the webhooks service is reflected below under the parameter **Webhooks Web Service Status**.If all parameters are configured correctly, it should display "Opened".
+The status of the webhooks service is reflected below under the parameter **Webhooks Web Service Status**. If all parameters are configured correctly, it should display "Opened".
+
 
 ## How To Use
 

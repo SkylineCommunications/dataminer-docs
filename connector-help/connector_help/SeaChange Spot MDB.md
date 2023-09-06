@@ -37,7 +37,7 @@ Note
 
 This page provides an overview of the configured **filters** used to process log files, and the **current** **alarm state** of each filter. You can add a filter by means of the **Add Filter** page button.
 
-The **Export/Import** page buttonleads to a page where the current configuration can be **exported** into a .csv file or where configurations can be **imported** from .csv files. For this to work, make sure that the **Path** is filled with a valid folder path, which ends with the name and extension of the file.
+The **Export/Import** page button leads to a page where the current configuration can be **exported** into a .csv file or where configurations can be **imported** from .csv files. For this to work, make sure that the **Path** is filled with a valid folder path, which ends with the name and extension of the file.
 
 ### Task Manager
 

@@ -10,9 +10,9 @@ The **Viavi Solutions ONMSi** product is a Remote Fiber Test System (RFTS), whic
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version. | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. | \-           | \-                |
 
 ### Product Info
 
@@ -50,4 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver acts as a monitoring platform where the user can see the relevant information retrieved from the device regarding the **OTUs** (Optical Transport Units), **Links**, **Ports** and their corresponding **Events** (Alarms).This information is organized within a tree view where it is properly related and segmented.
+This driver acts as a monitoring platform where the user can see the relevant information retrieved from the device regarding the **OTUs** (Optical Transport Units), **Links**, **Ports** and their corresponding **Events** (Alarms).
+This information is organized within a tree view where it is properly related and segmented.
+
+

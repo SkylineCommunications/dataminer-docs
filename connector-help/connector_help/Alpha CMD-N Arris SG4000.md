@@ -48,7 +48,8 @@ SNMP Settings:
 
 #### DDNS functionality
 
-The driver is capable of polling from an IP resolved via a DDNS mechanism. To enable this, when the element is created/edited, you need to specify a string that will be parsed. The DNS will translate the enclosed MAC address into the polling IP to be used. This following input must be specified during element creation/editing:
+The driver is capable of polling from an IP resolved via a DDNS mechanism. To enable this, when the element is created/edited, you need to specify a string that will be parsed. The DNS will translate the enclosed MAC address into the polling IP to be used.
+This following input must be specified during element creation/editing:
 
 - **IP address**: 0.0.0.0
 - **Device address**: \<DNS-Server-IP\>:\<Device-MAC-Address\>.alphamon
@@ -107,7 +108,7 @@ This page displays detailed status information for the **downstream** and **upst
 
 ### Event Log
 
-This page shows the **Event Log table**,which contains a log of network and device events that may be of interest in fault isolation and troubleshooting.
+This page shows the **Event Log table**, which contains a log of network and device events that may be of interest in fault isolation and troubleshooting.
 
 ### Web Interface
 

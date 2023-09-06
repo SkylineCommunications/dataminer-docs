@@ -63,6 +63,6 @@ It also allows you to view the **Opt Input**, **Input Status** and **Signal Stre
 
 ### Laser Page
 
-This page displays the **Laser**table, which contains information about optical input parameters.
+This page displays the **Laser** table, which contains information about optical input parameters.
 
 It also allows you to view the Laser **Num**, **Wavelength**, **Power** and **Type**, as well as to configure the **Config**, **Status** and **Alarms**.

@@ -53,7 +53,7 @@ GPIB CONNECTION:
 
 ## How to Use
 
-The **General** page displays the device **Application Information**, **Temperature Status**,and **Power Status.**
+The **General** page displays the device **Application Information**, **Temperature Status**, and **Power Status.**
 
 The **Matrix View** page displays the matrix.
 

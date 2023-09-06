@@ -88,7 +88,7 @@ This page contains encode configuration parameters (Stream Mode and Stream MMTFS
 
 ### Preset
 
-This page displays parameters related to presets, such as **Active Preset** and **Startup Preset**,as well as the **Preset Table**, where you can configure the different available presets.
+This page displays parameters related to presets, such as **Active Preset** and **Startup Preset**, as well as the **Preset Table**, where you can configure the different available presets.
 
 ### Network
 

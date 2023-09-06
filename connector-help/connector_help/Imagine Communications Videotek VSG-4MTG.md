@@ -98,7 +98,7 @@ GPI out parameters are found here, for example **Input Function,** and **Polarit
 
 ### Alarms
 
-Status displaying if an alarm of that type is enable/disable, along with the parameters dealing with **Priority, Trigger Time, Clear TImes,** and **Acknowledge**for **Primiray**/**Secondary** **Source**, **Time Lock, GPS, PTP, NTP, ENET, VITC** etc.
+Status displaying if an alarm of that type is enable/disable, along with the parameters dealing with **Priority, Trigger Time, Clear TImes,** and **Acknowledge** for **Primiray**/**Secondary** **Source**, **Time Lock, GPS, PTP, NTP, ENET, VITC** etc.
 
 ### Settings
 

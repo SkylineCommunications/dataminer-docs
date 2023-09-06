@@ -12,10 +12,10 @@ The connector monitors the instances, engines, models, and custom models. Among 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                           | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version                                                                                                                                                                                                                            | \-           | \-                |
-| 1.0.1.x              | \- Added Recent Session Instances Table to the Instances page.- Adjustments to sets on the Instances table.- Reworked License Status functionality of the Languages table.- Added columns to Instances, Topic Model, and Languages tables. | 1.0.0.4      | \-                |
+| **Range**            | **Key Features**                                                                                                                                                                                                                              | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version                                                                                                                                                                                                                               | \-           | \-                |
+| 1.0.1.x              | \- Added Recent Session Instances Table to the Instances page. - Adjustments to sets on the Instances table. - Reworked License Status functionality of the Languages table. - Added columns to Instances, Topic Model, and Languages tables. | 1.0.0.4      | \-                |
 
 ### Product Info
 

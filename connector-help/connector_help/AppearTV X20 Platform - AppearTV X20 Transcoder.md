@@ -4,7 +4,7 @@ uid: Connector_help_AppearTV_X20_Platform_-_AppearTV_X20_Transcoder
 
 # AppearTV X20 Platform - AppearTV X20 Transcoder
 
-This connector can be used to view information on the **transcoder** **cards** (ECx100/ECx110)connected to the AppearTV X20 chassis, including the ECx transcoder.
+This connector can be used to view information on the **transcoder** **cards** (ECx100/ECx110) connected to the AppearTV X20 chassis, including the ECx transcoder.
 
 The connector uses an **HTTP** connection. This connection uses the Descrambler API of the ECx100/ECx110 card to retrieve information from the card and configure settings on the card. The information transfer is performed using JSON.
 

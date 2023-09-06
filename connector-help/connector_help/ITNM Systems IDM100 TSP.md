@@ -12,10 +12,10 @@ The driver only polls the services from one of the transport streams of the ITNM
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                               | **Based on** | **System Impact**                                                                                   |
-|----------------------|--------------------------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------|
-| 1.1.0.7              | Initial version.                                                               | \-           | \-                                                                                                  |
-| 1.1.1.x \[SLC Main\] | Normalized parameters removed.New display key for Transport Stream PIDs table. | 1.1.0.7      | \- Loss of normalized parameters.- Loss of trend and alarm data in the Transport Stream PIDs table. |
+| **Range**            | **Key Features**                                                                | **Based on** | **System Impact**                                                                                    |
+|----------------------|---------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------|
+| 1.1.0.7              | Initial version.                                                                | \-           | \-                                                                                                   |
+| 1.1.1.x \[SLC Main\] | Normalized parameters removed. New display key for Transport Stream PIDs table. | 1.1.0.7      | \- Loss of normalized parameters. - Loss of trend and alarm data in the Transport Stream PIDs table. |
 
 ### Product Info
 

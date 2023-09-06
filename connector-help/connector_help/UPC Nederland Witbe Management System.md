@@ -8,7 +8,7 @@ The UPC Nederland Witbe Management System is a **virtual** element that does not
 
 ## About
 
-This driver was designed to work closely together with the **SmartRec App** and **Witbe Robot** drivers. Its main function is to queue tests on different **Witbe Robots** depending on **Assets** that were added from different drivers in one of five **Carousels** (tables holding assets). The results of the tests, which are run simultaneously on separate Robots,are correlated and sent to the **SmartRec App**.
+This driver was designed to work closely together with the **SmartRec App** and **Witbe Robot** drivers. Its main function is to queue tests on different **Witbe Robots** depending on **Assets** that were added from different drivers in one of five **Carousels** (tables holding assets). The results of the tests, which are run simultaneously on separate Robots, are correlated and sent to the **SmartRec App**.
 
 ## Installation and configuration
 
@@ -22,13 +22,15 @@ Go to the **Robots** page:
 
 1.  Check that all **Robots** and the **SmartRec App** have been detected in the system and added. If not, click **Retrieve Elements.**
 2.  **Enable** or **Disable** the **Robots** that need to be available to the Manager with the **In Use** column.
-3.  **Group** all **Robots** with the same tests together in a **Test Set**. Note: You always need to define a **Test Set**, as otherwise the Manager will **ignore** the Robot. A **Set ID** must always be provided, even if there is only a single Robot in a particular set.
+3.  **Group** all **Robots** with the same tests together in a **Test Set**.
+    Note: You always need to define a **Test Set**, as otherwise the Manager will **ignore** the Robot. A **Set ID** must always be provided, even if there is only a single Robot in a particular set.
 4.  Either wait a few minutes until all the **Robots** have sent back an **OK**, or force the process to go more quickly by clicking **Check Elements**, waiting a few seconds, and then clicking **Check Elements** again.
 5.  Enter the **SmartRec Return PID**. This is the parameter used on the **SmartRec** that will receive **Correlated Responses** sent by the Manager.
 
 Go to the **Tests** Page:
 
-- Click **Get Set Tests**.Note:
+- Click **Get Set Tests**.
+  Note:
 
 > - This table can only be filled in if **Robots** have been added to **Sets**.
 > - Only the **first 'OK' Robot** in a **Set Group** is asked to return its available **Tests**. Make sure all Robots in a set have the same tests.
@@ -54,7 +56,7 @@ This page displays every **Test Cycle**, with information related to it. It also
 
 ### Robots
 
-This page contains every **Detected Robot in** the system.It displays whether the element is in *Time-Out* or *Not Responding* to Keep Alives (**Element Stopped, Paused** or **Crashed**). It also contains informationabout the **SmartRec App** and shows if it is present in the system.
+This page contains every **Detected Robot in** the system. It displays whether the element is in *Time-Out* or *Not Responding* to Keep Alives (**Element Stopped, Paused** or **Crashed**). It also contains information about the **SmartRec App** and shows if it is present in the system.
 
 If **Remote ElementPolling** is *Disabled*, the **Robots** will no longer get polled with **Keep Alive Messages** and the DataMiner System will not get polled for the **SmartRec App** and **all Robot drivers**.
 
@@ -72,11 +74,12 @@ Carousel **Bravo** also contains the **Asset (B) Deletion Interval**, indicating
 
 Carousel **Delta** also contains the **Asset D Return Address**. If you fill in a string with the format "DataminerID/ElementID/ParameterID" all results coming from Delta assets will return to this address instead of the default SmartRec address.
 
-Carousel **Echo** is the only collection of assetsthat is **directly** **polled** from the **SmartRec App** and does not require commands to be filled in. It contains the complete **OTT Channel Lineup** and is used for the tests in **SET 3.** **Test 3A** is run on all OTT Channels one by one. You can force test 3C to run on an asset in Echo Carousel by clicking the **Force Test 3C button.**
+Carousel **Echo** is the only collection of assets that is **directly** **polled** from the **SmartRec App** and does not require commands to be filled in. It contains the complete **OTT Channel Lineup** and is used for the tests in **SET 3.** **Test 3A** is run on all OTT Channels one by one. You can force test 3C to run on an asset in Echo Carousel by clicking the **Force Test 3C button.**
 
 ## Notes
 
-This driver was created to communicate with multiple other elements using a special **API** containing commands that can be found in ***QA 63900.***The Valid **Commands** are:
+This driver was created to communicate with multiple other elements using a special **API** containing commands that can be found in ***QA 63900.***
+The Valid **Commands** are:
 
 - **RefreshChannels**
 - **QueueTest3B**

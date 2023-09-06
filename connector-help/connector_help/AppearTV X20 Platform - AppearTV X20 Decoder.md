@@ -4,7 +4,7 @@ uid: Connector_help_AppearTV_X20_Platform_-_AppearTV_X20_Decoder
 
 # AppearTV X20 Platform - AppearTV X20 Decoder
 
-This driver can be used to view information on and configure settings of **decoder cards** (ECx100/ECx210)connected to the AppearTV X20 chassis. This includes information and settings regarding decoder services and audio components.
+This driver can be used to view information on and configure settings of **decoder cards** (ECx100/ECx210) connected to the AppearTV X20 chassis. This includes information and settings regarding decoder services and audio components.
 
 ## About
 

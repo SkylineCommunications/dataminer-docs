@@ -43,7 +43,7 @@ This page contains parameters related to the **Laser**, such as **Laser Bias Cur
 
 ### RF
 
-This page contains parameters related to **Input 1** and **Input 2** (**State**, **Attenuator**, **Equalizer**, etc.), as well as the **Adjustment Mode** and **APC Settings**parameters**.**
+This page contains parameters related to **Input 1** and **Input 2** (**State**, **Attenuator**, **Equalizer**, etc.), as well as the **Adjustment Mode** and **APC Settings** parameters**.**
 
 ## Usage (Range 4.0.0.x)
 

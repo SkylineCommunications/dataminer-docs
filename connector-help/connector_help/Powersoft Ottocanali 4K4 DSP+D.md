@@ -4,7 +4,7 @@ uid: Connector_help_Powersoft_Ottocanali_4K4_DSP+D
 
 # Powersoft Ottocanali 4K4 DSP+D
 
-The**Ottocanali 4K4**is a flexible and reliable 8-channel power amplifiers with up to a total of 4,000 W at 4ê, ideal for multi-zone applications in small to mid-scale installs. It supports any combination of lo-Z loudspeakers, mono-bridgeable channel pairs and 70V/100V Hi-Z distributed lines with no need for output step-up transformers. It features switchable main/aux signal inputs and offers a wide range of system control, alarms, GPI/O and monitoring functions as well as sound shaping options.
+The **Ottocanali 4K4** is a flexible and reliable 8-channel power amplifiers with up to a total of 4,000 W at 4ê, ideal for multi-zone applications in small to mid-scale installs. It supports any combination of lo-Z loudspeakers, mono-bridgeable channel pairs and 70V/100V Hi-Z distributed lines with no need for output step-up transformers. It features switchable main/aux signal inputs and offers a wide range of system control, alarms, GPI/O and monitoring functions as well as sound shaping options.
 
 ## About
 

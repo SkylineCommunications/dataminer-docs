@@ -54,7 +54,7 @@ There is a **Reset** button that can be used to perform a system-wide reset.
 
 ### Device Status Page
 
-This page contains general information about the status of the device. Examples are **Device services, Temperature** and**Fan Status.**
+This page contains general information about the status of the device. Examples are **Device services, Temperature** and **Fan Status.**
 
 ### Alarms Page
 

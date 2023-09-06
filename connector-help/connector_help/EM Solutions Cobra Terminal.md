@@ -58,7 +58,7 @@ This page displays information related to the **Reference Selection Board**, as 
 
 ### Environmental
 
-Thispage provides status information related to **Temperature** and **Voltages**.
+This page provides status information related to **Temperature** and **Voltages**.
 
 ### Satellite Selection
 

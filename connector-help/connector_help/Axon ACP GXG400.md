@@ -20,7 +20,7 @@ The **Axon ACP GXG400** driver can be used to display and configure information 
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 06062426               |
+| 1.0.0.x   | 0606 2426              |
 
 ### System Info
 
@@ -88,7 +88,8 @@ The element has the following data pages:
   - **Down C**onverter**: Allows to configure and set Down Converter Presets;**
   - **Cross Converter: Allows to configure and set Cross Converter Presets;**
   - ****Transparent**: Allows to configure and set Transparent pass Presets (with ARC function);**
-  - ****Inserter**: Allows to configure and set simultaneous Vi, WSS, and AFD (S2016) insertion Presets;**
+  - ****Inserter**: Allows to configure and set simultaneous Vi, WSS, and AFD (S2016) insertion Presets;
+    **
 
 - **Audio**
 
@@ -107,6 +108,8 @@ The element has the following data pages:
 - **Network**
 
 - **Alarm** **Priority**: This page displays the event messages of the card, i.e. special messages generated asynchronously on the card.
+
+
 
 ## Dataminer Connectivity Framework
 
@@ -139,3 +142,6 @@ Depending on the state of the **Input Selection A**, the following connections a
 - **SDI-2**: Between **SDI Input 2** and **SDI Output 1.**
 - **SDI-3**: Between **SDI Input 3** and **SDI Output 1.**
 - **SDI-4**: Between **SDI Input 4** and **SDI Output 1**.
+
+
+

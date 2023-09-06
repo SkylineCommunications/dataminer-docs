@@ -20,23 +20,23 @@ The connector requires .NET Framework 4.0 or higher, as it needs System.Web.Exte
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                               | **Based on** | **System Impact**                                                                                                          |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                                                                                                | \-           | \-                                                                                                                         |
-| 1.0.1.x \[Obsolete\] | Larger matrix size, 1024x1024.                                                                                                                                                 | \-           | \-                                                                                                                         |
-| 1.0.3.x              | Larger matrix size, 2048x2048.                                                                                                                                                 | 1.0.1.8      | Saved labels can get shifted when the number of inputs changes. The output labels can appear as input labels in this case. |
-| 2.0.0.x              | Matrix with filtering capabilities.                                                                                                                                            | \-           | \-                                                                                                                         |
-| 2.0.1.x \[SLC Main\] | Adds HTTP connection to support SDNO Controller REST API.Further development on the REST API should be implemented on the **Imagine Communications Magellan SDNO Controller**. | \-           | \-                                                                                                                         |
+| **Range**            | **Key Features**                                                                                                                                                                | **Based on** | **System Impact**                                                                                                          |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                                                                                                 | \-           | \-                                                                                                                         |
+| 1.0.1.x \[Obsolete\] | Larger matrix size, 1024x1024.                                                                                                                                                  | \-           | \-                                                                                                                         |
+| 1.0.3.x              | Larger matrix size, 2048x2048.                                                                                                                                                  | 1.0.1.8      | Saved labels can get shifted when the number of inputs changes. The output labels can appear as input labels in this case. |
+| 2.0.0.x              | Matrix with filtering capabilities.                                                                                                                                             | \-           | \-                                                                                                                         |
+| 2.0.1.x \[SLC Main\] | Adds HTTP connection to support SDNO Controller REST API. Further development on the REST API should be implemented on the **Imagine Communications Magellan SDNO Controller**. | \-           | \-                                                                                                                         |
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                 |
-|-----------|--------------------------------------------------------|
-| 1.0.0.x   | LRC 1.2, 1.3 & 1.4                                     |
-| 1.0.1.x   | LRC 1.2, 1.3 & 1.4                                     |
-| 1.0.3.x   | LRC 1.2, 1.3 & 1.4                                     |
-| 2.0.0.x   | LRC 1.2, 1.3 & 1.4                                     |
-| 2.0.1.x   | LRC 1.2, 1.3 & 1.4REST API SDNO Controller version 1.3 |
+| **Range** | **Supported Firmware**                                  |
+|-----------|---------------------------------------------------------|
+| 1.0.0.x   | LRC 1.2, 1.3 & 1.4                                      |
+| 1.0.1.x   | LRC 1.2, 1.3 & 1.4                                      |
+| 1.0.3.x   | LRC 1.2, 1.3 & 1.4                                      |
+| 2.0.0.x   | LRC 1.2, 1.3 & 1.4                                      |
+| 2.0.1.x   | LRC 1.2, 1.3 & 1.4 REST API SDNO Controller version 1.3 |
 
 ### System Info
 
@@ -94,7 +94,7 @@ This page shows the parameters **Matrix Inputs Regex** and **Matrix Outputs Rege
 
 By default, the matrix size is detected automatically. You can also configure it manually by setting the **Matrix** **Resize Method** to *Manual* and specifying the **Number of Inputs Visible** and **Number of Outputs Visible**.
 
-This page also shows the **Label Policy** and **Lock Policy**. For more information on these parameters, refer to "Labels" and "Locks"below.
+This page also shows the **Label Policy** and **Lock Policy**. For more information on these parameters, refer to "Labels" and "Locks" below.
 
 The **User Identifier** is a value (integer) needed to authorize some actions. Its main use is to lock or unlock outputs with that identifier.
 

@@ -43,13 +43,15 @@ SERIAL CONNECTION:
 
 ### Configuration of the database settings
 
-On the **Database Settings** page, the **Main Database Name**, **Main Database User** and **Main Database Password** have to be configured to be able to poll the database.If a backup database is available, you can also configure this on the Database Settings page.
+On the **Database Settings** page, the **Main Database Name**, **Main Database User** and **Main Database Password** have to be configured to be able to poll the database.
+If a backup database is available, you can also configure this on the Database Settings page.
 
 ## How to Use
 
 This driver uses **stored procedure** calls to retrieve the data that is stored in **MySQL** from the Opsview platform. No traffic will be displayed in Stream Viewer for the main and child elements.
 
-- On the **Overview** page, all the hosts are displayed in an **overview table**. For each host, the creation of a DVE element can be disabled or enabled. Such an element contains all the information on the different checks performed on that host.By default, the DVE export setting is disabled, so that the DMA is not overloaded with DVE creations.
+- On the **Overview** page, all the hosts are displayed in an **overview table**. For each host, the creation of a DVE element can be disabled or enabled. Such an element contains all the information on the different checks performed on that host.
+  By default, the DVE export setting is disabled, so that the DMA is not overloaded with DVE creations.
 - On the **Hosts** page, you can find the DVE table, which contains all elements for which DVE creation is enabled. To change the DVE creation settings (e.g. to disable a DVE), you first need to change the DVE export setting in the Overview table. This will enable the reflect button. If you click that button for a specific host, the driver will try to remove the relevant DVE.
 - The **Database Settings** page is the configuration page for all database settings.
 
@@ -126,7 +128,8 @@ By changing the **State** for a specific host type, you can determine whether a 
 
 After the configuration of the host is initiated via polling, the DVE reflection algorithm is run.
 
-However, if changes have been implemented, you may want to run the DVE reflection algorithm again without waiting for the timer that controls polling.In that case, by using the **Reflect** or **Reflect All** buttons, you can run the DVE reflection algorithm for one host or for all detected hosts, respectively.
+However, if changes have been implemented, you may want to run the DVE reflection algorithm again without waiting for the timer that controls polling.
+In that case, by using the **Reflect** or **Reflect All** buttons, you can run the DVE reflection algorithm for one host or for all detected hosts, respectively.
 
 ## DataMiner Connectivity Framework
 

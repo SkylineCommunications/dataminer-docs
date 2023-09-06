@@ -24,9 +24,9 @@ The ETL Systems SRY-C2xx connector provides chassis and module status informatio
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | \- ETL Systems SRY-C2xx - SRY-TX-L1-205- ETL Systems SRY-C2xx - SRY-RX-L1-206- [ETL Systems SRY-C2xx - SRY-TX-Y-281](/Driver%20Help/ETL%20Systems%20SRY-C2xx%20-%20SRT-RX-Y-282.aspx)- [ETL Systems SRY-C2xx - SRY-DIV-Y-219](/Driver%20Help/ETL%20Systems%20SRY-C2xx%20-%20SRY-DIV-Y-219.aspx)- ETL Systems SRY-C2xx - SRY-RX-Y-282- [ETL Systems SRY-C2xx - SRY-SW-Y-220](xref:Connector_help_ETL_Systems_SRY-C2xx_-_SRT-SW-Y-220) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|-----------|---------------------|-------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \- ETL Systems SRY-C2xx - SRY-TX-L1-205 - ETL Systems SRY-C2xx - SRY-RX-L1-206 - [ETL Systems SRY-C2xx - SRY-TX-Y-281](/Driver%20Help/ETL%20Systems%20SRY-C2xx%20-%20SRT-RX-Y-282.aspx) - [ETL Systems SRY-C2xx - SRY-DIV-Y-219](/Driver%20Help/ETL%20Systems%20SRY-C2xx%20-%20SRY-DIV-Y-219.aspx) - ETL Systems SRY-C2xx - SRY-RX-Y-282 - [ETL Systems SRY-C2xx - SRY-SW-Y-220](xref:Connector_help_ETL_Systems_SRY-C2xx_-_SRT-SW-Y-220) |
 
 ## Configuration
 
@@ -66,7 +66,7 @@ The status of the chassis is displayed on this page. This includes the **Power S
 
 ### Modules
 
-The **Modules Settings** table and **Module Readings** tableare displayed on this page. These show status information for the chassis modules and allow chassis module configuration.
+The **Modules Settings** table and **Module Readings** table are displayed on this page. These show status information for the chassis modules and allow chassis module configuration.
 
 At the end of the table, you can **enable or disable the generated DVE** for each module. If a DVE no longer has valid data because it has been removed, you can use the **Remove** button to delete the DVE.
 

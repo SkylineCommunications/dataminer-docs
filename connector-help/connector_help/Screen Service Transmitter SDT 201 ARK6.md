@@ -18,9 +18,9 @@ The driver communicates with the device using **SNMP**, to change its configurat
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                        |
-|------------------|--------------------------------------------------------------------|
-| 1.0.0.x          | UC: *4.34*FPGA: *1.42*AL_BOARD: *1.4*GPS_BOARD: *8.47*SNMP: *2.15* |
+| **Driver Range** | **Device Firmware Version**                                            |
+|------------------|------------------------------------------------------------------------|
+| 1.0.0.x          | UC: *4.34* FPGA: *1.42* AL_BOARD: *1.4* GPS_BOARD: *8.47* SNMP: *2.15* |
 
 ## Installation and configuration
 
@@ -79,7 +79,7 @@ This section provides measuring results of the modulation parameters configured 
 
 ### Echo Settings
 
-On this page, you can manage the alarm thresholds, using the parameters **Signal Quality Thresholds** and **MER Threshold**."FE" and "Measure" thresholds can also be configured on this page.
+On this page, you can manage the alarm thresholds, using the parameters **Signal Quality Thresholds** and **MER Threshold**. "FE" and "Measure" thresholds can also be configured on this page.
 
 ### Echo Canceller
 
@@ -89,7 +89,7 @@ The **Clear Coefficient** button allows you to reset the Echo Correction coeffic
 
 ### Output Section
 
-On this page, you can select the **Frequency Reference**, view the **Optocouplers and Relays status**, change the **Output Power**,monitor the **Temperatures**, **FANs Speeds**, **Power Supplies (PS) Voltages** and **Currents**, and manage **Reflex Power** parameters.
+On this page, you can select the **Frequency Reference**, view the **Optocouplers and Relays status**, change the **Output Power**, monitor the **Temperatures**, **FANs Speeds**, **Power Supplies (PS) Voltages** and **Currents**, and manage **Reflex Power** parameters.
 
 You can also do **Resets** and adapt **Forward Power** and **Temperatures Alarming Thresholds** when necessary. The **Reset** button is used to reset the amplifier stage when it is switched off due to a Reflex Power High alarm.
 
@@ -99,7 +99,7 @@ This page displays information and statistics about the network interfaces of th
 
 ### Network Tx
 
-On this page, you can select the **Source Port**,enable/disable the **ARP Keep Alive** option, and modify several parameters related to the **Output Channels** (**Destination IP**, **Destination Port**, **Protocol**, **Source Clock Reference**).
+On this page, you can select the **Source Port**, enable/disable the **ARP Keep Alive** option, and modify several parameters related to the **Output Channels** (**Destination IP**, **Destination Port**, **Protocol**, **Source Clock Reference**).
 
 ### Network Rx
 
@@ -113,7 +113,7 @@ This page displays the **SNMP Management Addresses**, as well the associated **M
 
 This page displays all GPS information (**Latitude**, **Longitude**, **UTC Date**, ...).
 
-It also allows you to adjust the **GPS Frequency** and **Time Source** (for synchronization),check the **OCXO Status**, manage the **Holdover Mode** andconfigure the **NTP Server IP Address**.
+It also allows you to adjust the **GPS Frequency** and **Time Source** (for synchronization), check the **OCXO Status**, manage the **Holdover Mode** and configure the **NTP Server IP Address**.
 
 ### Alarms Section
 

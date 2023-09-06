@@ -2,6 +2,8 @@
 uid: Connector_help_Generic_Virtual_Chassis
 ---
 
+
+
 # Generic Virtual Chassis
 
 This protocol is used for the Rack Layout manager integration of module elements that don't have a parent chassis element. A virtual chassis element will be assigned a location on the rack, and the element will show a visio with the modules.
@@ -13,6 +15,8 @@ This protocol is used for the Rack Layout manager integration of module elements
 | **Range** | **Key Features** | **Based on** | **System Impact** |
 |-----------|------------------|--------------|-------------------|
 | 1.0.0.x   | Initial version  | \-           | \-                |
+
+
 
 ## Configuration
 
@@ -35,6 +39,7 @@ After choosing one or multiple elements right clicking and clicking Delete selec
 - Modifying elements
 
 Clicking on a pencil icon in the slot or width cells will allow us to modify the value. Do note that you will not be allowed to assign multiple elements to a single slot.
+
 
 Examples
 

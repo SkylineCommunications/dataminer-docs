@@ -49,7 +49,7 @@ This connector has the following pages:
 
 - **General**: Contains general information regarding the device, such as the **Version**, **Serial Number**, **Company**, etc. There is also a **reboot** button to reboot the device here.
 - **Status**: Contains subpages with temperature information and preference settings.
-- **Audio In**: Contains tables regarding the audio input and settings: **Input Audio Channels**, **MADI Input**,and **Ravenna In**.
+- **Audio In**: Contains tables regarding the audio input and settings: **Input Audio Channels**, **MADI Input**, and **Ravenna In**.
 - **Audio Out**: Contains tables regarding the audio output and settings: **Output Audio Channels**, **MADI Output**, and **Ravenna Out.**
 - **Audio Matrix**: Shows the audio matrix.
 - **Audio Interfaces**: Shows the connection output of audio input interfaces.
@@ -57,7 +57,7 @@ This connector has the following pages:
 - **Video Out**: Contains tables regarding the **video output and settings**. This includes video settings related to **Dolby**, **Insertion**, **YUV correction**, and **RGB Correction**.
 - **Video Matrix**: Shows the video matrix.
 - **Video Interfaces**: Shows the connection output of video input interfaces.
-- **Quad**: Contains the Quad table and its settings, as well as the quad audio matrix and quad video matrix. Also allows you to configure numerous settings, such as **UMD Position**, **Time Code**,and **LAMP colors**.
+- **Quad**: Contains the Quad table and its settings, as well as the quad audio matrix and quad video matrix. Also allows you to configure numerous settings, such as **UMD Position**, **Time Code**, and **LAMP colors**.
 - **RX Ethernet**: Displays the bitrates for RX Ethernet.
 - **RX Streams**: Shows information for **RX Sessions and RX Streams for video and Ravenna**.
 - **TX Ethernet**: Displays the bitrates for TX Ethernet.

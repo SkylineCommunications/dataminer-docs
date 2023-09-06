@@ -70,7 +70,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver will poll the **Power Status**, **Fan Status**, **CPU Status**,**Remote Units Status** and **GPI Units Status**.
+This driver will poll the **Power Status**, **Fan Status**, **CPU Status**, **Remote Units Status** and **GPI Units Status**.
 
 You can find the received traps in the Traps table on the Traps page. When a specific trap is received, the driver will poll the corresponding parameter(s) again to have the latest data.
 

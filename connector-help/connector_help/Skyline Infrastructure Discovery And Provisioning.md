@@ -10,17 +10,17 @@ This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP)
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                      | **Based on** | **System Impact**               |
-|----------------------|-----------------------------------------------------------------------|--------------|---------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version. Used in DataMiner IDP version 1.0.x.                 | \-           | \-                              |
-| 1.0.1.x \[Obsolete\] | Support for Unicode charactersUsed as of DataMiner IDP version 1.1.x. | 1.0.0.X      | \-                              |
-| 1.0.2.x \[SLC Main\] | Increased minimum DataMiner version to 10.0.0.0 - 9517 CU6            | 1.0.1.x      | The DMS may need to be updated. |
+| **Range**            | **Key Features**                                                       | **Based on** | **System Impact**               |
+|----------------------|------------------------------------------------------------------------|--------------|---------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version. Used in DataMiner IDP version 1.0.x.                  | \-           | \-                              |
+| 1.0.1.x \[Obsolete\] | Support for Unicode characters Used as of DataMiner IDP version 1.1.x. | 1.0.0.X      | \-                              |
+| 1.0.2.x \[SLC Main\] | Increased minimum DataMiner version to 10.0.0.0 - 9517 CU6             | 1.0.1.x      | The DMS may need to be updated. |
 
 ### System Info
 
-| **Range**      | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
-|----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
+| **Range**       | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
+|-----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x 1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
 
 ## Configuration
 

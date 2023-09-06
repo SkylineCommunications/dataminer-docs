@@ -4,7 +4,8 @@ uid: Connector_help_Evertz_7x00_General_Platform_-_7707VT4
 
 # Evertz 7x00 General Platform - 7707VT4
 
-This driver is used to monitor and control a single card TDM multiplexer for four synchronous or asynchronous 270 Mb/s SDI, SDTi or DVB-ASI video signals. About
+This driver is used to monitor and control a single card TDM multiplexer for four synchronous or asynchronous 270 Mb/s SDI, SDTi or DVB-ASI video signals.
+About
 
 An **SNMP** connection is used in order to successfully retrieve and configure the device's information. There are also different possibilities available for **alarm monitoring** and **trending**.
 

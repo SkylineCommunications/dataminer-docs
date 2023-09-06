@@ -62,7 +62,7 @@ On the right side, you can find the following parameters related to the demodula
 
 - **Type:** Allows you to select the mod type
 - **Symbol Rate**
-- **Mode:**Allows you to select the desired modulation mode and FEC code rate
+- **Mode:** Allows you to select the desired modulation mode and FEC code rate
 - **Rolloff**
 
 ### Video

@@ -80,7 +80,8 @@ The page also contains the **SNTP Servers** table, which displays the **Address,
 
 On this page, you can select the **Interface Naming format**. Many tables use this name in their display key, so that it is easy to see to which interface an alarm is related.
 
-It is possible to **import or export a CSV** with the buttons at the bottom of the page. The CSV file must have a header using the format *Index;Description;Alias*.Note that the driver only checks the key and sets the alias. The description is only there to make it more accessible for the user. When an alias is polled from the device, the device will have priority and the alias will not be set in DataMiner. Also note that the alias is only set in DataMiner and not on the device.
+It is possible to **import or export a CSV** with the buttons at the bottom of the page. The CSV file must have a header using the format *Index;Description;Alias*.
+Note that the driver only checks the key and sets the alias. The description is only there to make it more accessible for the user. When an alias is polled from the device, the device will have priority and the alias will not be set in DataMiner. Also note that the alias is only set in DataMiner and not on the device.
 
 ### Transponders
 

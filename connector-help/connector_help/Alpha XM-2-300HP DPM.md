@@ -23,7 +23,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string**: The community string in order to read from the device.
 - **Set community string**: The community string in order to set to the device.
 
-Starting from version 2.0.0.1, a DDNS functionality has been implemented.When the IP address is 0.0.0.0 then the IP address will be resolved by the DNS server using the hostname. In order to do this, the bus address must have the following syntax: dnsServerIp:hostname
+Starting from version 2.0.0.1, a DDNS functionality has been implemented.
+When the IP address is 0.0.0.0 then the IP address will be resolved by the DNS server using the hostname. In order to do this, the bus address must have the following syntax: dnsServerIp:hostname
 
 ### Configuration
 

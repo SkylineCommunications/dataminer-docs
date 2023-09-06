@@ -8,7 +8,7 @@ The Redundancy Switches from WORK Microwave are utilized to provide redundant co
 
 ## About
 
-With this driver, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller Converter** deviceswith a **serial** connection.
+With this driver, it is possible to monitor and configure **Work Microwave Redundancy Switch Controller Converter** devices with a **serial** connection.
 
 The different parameters from the device are displayed on multiple pages. Specific parameters for the converters are displayed by the converter driver.
 
@@ -16,7 +16,8 @@ The different parameters from the device are displayed on multiple pages. Specif
 
 ### Creation
 
-When creating the element the **device IP address,** the **port and** the **bus address** should be filled in. for the bus address, use the bus address of the **Redundancy Switch Controller** followed by the **unit**, separated with a dot. For example : **66.1**
+When creating the element the **device IP address,** the **port and** the **bus address** should be filled in.
+for the bus address, use the bus address of the **Redundancy Switch Controller** followed by the **unit**, separated with a dot. For example : **66.1**
 
 ## Usage
 

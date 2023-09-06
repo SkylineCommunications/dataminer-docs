@@ -69,7 +69,7 @@ On this page, you can find general information about the device, including **Lic
 
 On this page, the available input sources are listed in the **TS Input Source Table**.
 
-The page also displays the **Input Table**, which contains the selected **Primary** and **Backup Input Source**. To configure these two parameters, you must enter the **ID** of the input sources in the **Primary Source** and **Backup Source columns** of the table. (The **ID** is available in the **TS Input Source Table**). Also in theInput Table, you can make the device switch between the **Backup** or **Primary** input by pressing the **Switch** button.
+The page also displays the **Input Table**, which contains the selected **Primary** and **Backup Input Source**. To configure these two parameters, you must enter the **ID** of the input sources in the **Primary Source** and **Backup Source columns** of the table. (The **ID** is available in the **TS Input Source Table**). Also in the Input Table, you can make the device switch between the **Backup** or **Primary** input by pressing the **Switch** button.
 
 ### Conditional Access
 
@@ -91,7 +91,7 @@ This page displays the **Audio Service Table**, where you can for example config
 
 ### Baseband Output Video
 
-On this page, you can configure the **HD-SDI**, **SD-SDI**, **UHS-SDI**,and **Composite** output formats of the MRD 6000.
+On this page, you can configure the **HD-SDI**, **SD-SDI**, **UHS-SDI**, and **Composite** output formats of the MRD 6000.
 
 Note that the **composite** video output is only active if the **output video format** is **SD** (720x480i, 720x576i). For the other selected formats, there is no output from the composite video BNC jack. The video format selection determines which of the SDI output jacks is actively outputting.
 

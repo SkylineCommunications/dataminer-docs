@@ -45,7 +45,7 @@ SNMP Settings:
 
 ### General
 
-This page provides general status information, including the System Name, Device Name, Rack Name, Rack Position, Description, System Object ID and System Up time.For some of these parameters, the value can be adjusted on this page.
+This page provides general status information, including the System Name, Device Name, Rack Name, Rack Position, Description, System Object ID and System Up time. For some of these parameters, the value can be adjusted on this page.
 
 ### Power General
 
@@ -55,11 +55,12 @@ It also contains the **Voltage/Frequency Total** **by** **Module table**, with q
 
 The following page buttons lead to subpages with additional information and settings:
 
-- **Agent:** Displays the **Agent Table**,with information about Ports, Agent status and Agent IP.
+- **Agent:** Displays the **Agent Table**, with information about Ports, Agent status and Agent IP.
 - **Fuse:** Displays three different tables, i.e. the **Line**, **Line Current** and **Fuse table**, with information on the current and the status per fuse. Also allows you to set the thresholds and warnings.
 - **Scheduler:** Displays the **Scheduler Table**, which contains information about the port name, the port state and the port on and off time, and allows you to enable or disable ports by outlet.
 - **Energy:** Displays the **Energy Table**, which contains the outlets names, Port State, Active Energy, Resettable Active Energy, reset buttons, Apparent Energy and Resettable Apparent Energy. This provides an overview of the complete energy status of the device, along with the possibility to set changes to the relevant parameters.
-- **Power:** Displays the **Power Table**,with the columns Port State, Actual Power, Min Power, Max Power, Reset Values, Power Warning, Switch Off, Apparent, etc. Note that **minimum and maximum values are calculated by the driver itself**. Because of this, it is strongly recommended to **reset the values of the device when the driver starts**.
+- **Power:** Displays the **Power Table**, with the columns Port State, Actual Power, Min Power, Max Power, Reset Values, Power Warning, Switch Off, Apparent, etc.
+  Note that **minimum and maximum values are calculated by the driver itself**. Because of this, it is strongly recommended to **reset the values of the device when the driver starts**.
 - **Current:** Displays the **Current Table**, which allows you to set thresholds for the currents, view maximum and minimum values, and set the Current Off value.
 
 ### Environment

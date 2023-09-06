@@ -14,7 +14,8 @@ This virtual driver needs to be linked to multiple elements to get its data.
 
 ### Creation
 
-***Virtual connection***This driver uses a virtual connection and does not require any input during element creation.
+***Virtual connection***
+This driver uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the weather station
 

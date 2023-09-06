@@ -10,10 +10,10 @@ The Leitch Matrix Serial driver is used to control and monitor a Leitch Matrix r
 
 ### Version Info
 
-| **Range**            | **Key Features**                            | **Based on** | **System Impact**                                                                   |
-|----------------------|---------------------------------------------|--------------|-------------------------------------------------------------------------------------|
-| 1.1.0.x \[Obsolete\] | Initial version                             | \-           | \-                                                                                  |
-| 1.1.1.x              | \- Driver converted to Unicode.- DCF added. | 1.1.0.4      | Element data and trend data will be lost when moving from range 1.1.0.x to 1.1.1.x. |
+| **Range**            | **Key Features**                             | **Based on** | **System Impact**                                                                   |
+|----------------------|----------------------------------------------|--------------|-------------------------------------------------------------------------------------|
+| 1.1.0.x \[Obsolete\] | Initial version                              | \-           | \-                                                                                  |
+| 1.1.1.x              | \- Driver converted to Unicode. - DCF added. | 1.1.0.4      | Element data and trend data will be lost when moving from range 1.1.0.x to 1.1.1.x. |
 
 ### Product Info
 

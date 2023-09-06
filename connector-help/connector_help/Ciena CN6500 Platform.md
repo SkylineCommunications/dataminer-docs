@@ -63,7 +63,7 @@ The polling of the device is not enabled by default. To start the polling, you n
 On this page, you can find shelf-related data, including **shelf identification parameters** and the following tables:
 
 - **Equipment Provision table**: Contains information regarding the cards that are equipped on the device. You can configure the administrative state and check its status.
-- **Inventory Table**:Provides more detailed information for a card and allows you to send a cold or warm restart command to a given card.
+- **Inventory Table**: Provides more detailed information for a card and allows you to send a cold or warm restart command to a given card.
 
 ### Physical Entities
 

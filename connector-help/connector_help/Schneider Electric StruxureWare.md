@@ -52,7 +52,7 @@ This page contains the following parameters:
 
 - **Username/Password**: The authentication credentials must be filled in in order to successfully retrieve system information
 - **Devices DVE Table**: This table displays all monitored devices and a toggle button to create a dynamic virtual element for each specific device.
-- **Exported Devices button**: Thispage button opens a pop-up page displaying a table with all exported devices.
+- **Exported Devices button**: This page button opens a pop-up page displaying a table with all exported devices.
 
 ### System Overview
 

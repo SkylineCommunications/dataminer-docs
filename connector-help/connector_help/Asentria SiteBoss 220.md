@@ -4,7 +4,7 @@ uid: Connector_help_Asentria_SiteBoss_220
 
 # Asentria SiteBoss 220
 
-The**Asentria SiteBoss 220**driver is an SNMP driver that is used to monitor **Assentria SiteBoss 220** appliance that is a device for monitoring in remote equipment locations.
+The **Asentria SiteBoss 220** driver is an SNMP driver that is used to monitor **Assentria SiteBoss 220** appliance that is a device for monitoring in remote equipment locations.
 
 The device supports remote environmental monitoring such as temperature, humidity, water, smoke, entry, motion, and airflow within remote locations through the use of a variety of external sensors. It delivers alarms either by SNMP Traps or by polling of **Assentria SiteBoss 220's** MIB.
 
@@ -12,9 +12,9 @@ The device supports remote environmental monitoring such as temperature, humidit
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -28,6 +28,8 @@ The device supports remote environmental monitoring such as temperature, humidit
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
 
+
+
 ## Configuration
 
 ### Connections
@@ -39,12 +41,12 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **IP port**: The port of the connection device, by default*161.*
+- **IP port**: The port of the connection device, by default *161.*
 
 SNMP Settings:
 
-- **Get community string**: The community string required to read from the device. The default value is*public*.
-- **Set community string**: The community string required to set to the device. The default value is*private*.
+- **Get community string**: The community string required to read from the device. The default value is *public*.
+- **Set community string**: The community string required to set to the device. The default value is *private*.
 
 ### Initialization
 
@@ -64,7 +66,7 @@ The web interface is only accessible when the client machine has network access 
 
 On this page, you can find general system configurable informations like **Serial Number, Version, Build, Site Name, Product Name.**
 
-On this page you can also find Date configurable informationslike **Device Date, Device Time** and the option if you want to enable the **Adjust for Daylight Savings.**
+On this page you can also find Date configurable informations like **Device Date, Device Time** and the option if you want to enable the **Adjust for Daylight Savings.**
 
 ### Events Page
 
@@ -74,23 +76,35 @@ On this page you can also find all the sensors configuration pages regarding **T
 
 #### Temperature Configuration Sub-Page
 
-On this sub-page you can find the **Event Sensor Temperature Configuration,** this table organizes 3 basic attributes of temperature sensor points. The 3 point attributes organizes in this table are:1. The configuration item (e.g., enable, name, etc.).2. The Event Sensor on which this point resides.3. The Point Number (always 1 for temperature sensors).
+On this sub-page you can find the **Event Sensor Temperature Configuration,** this table organizes 3 basic attributes of temperature sensor points. The 3 point attributes organizes in this table are:
+1. The configuration item (e.g., enable, name, etc.).
+2. The Event Sensor on which this point resides.
+3. The Point Number (always 1 for temperature sensors).
 
 #### Humidity Configuration Sub-Page
 
-On this sub-page you can find the **Event Sensor Humidity Configuration,** this table organizes 3 basic attributes of humidity points. The 3 point attributes organizes in this table are:1. The configuration item (e.g., enable, name, etc.).2. The Event Sensor on which this point resides.3. The Point Number (always 1 for humidity sensors).
+On this sub-page you can find the **Event Sensor Humidity Configuration,** this table organizes 3 basic attributes of humidity points. The 3 point attributes organizes in this table are:
+1. The configuration item (e.g., enable, name, etc.).
+2. The Event Sensor on which this point resides.
+3. The Point Number (always 1 for humidity sensors).
 
 #### Analog Input Configuration Sub-Page
 
-On this sub-page you can find the **Event Sensor Analog Input Configuration Table,** this table organizes 3 basic of analog input points. The 3 point attributes organizes in this table are:1. The configuration item (e.g., enable, name, etc.).2. The Event Sensor on which this point resides.3. The Point Number.
+On this sub-page you can find the **Event Sensor Analog Input Configuration Table,** this table organizes 3 basic of analog input points. The 3 point attributes organizes in this table are:
+1. The configuration item (e.g., enable, name, etc.).
+2. The Event Sensor on which this point resides.
+3. The Point Number.
 
 #### Relay Configuration Sub-Page
 
-On this sub-page you can find the **Event Sensor Relay Configuration Table,** this table organizes 3 basic of Relay points. The 3 point attributes organizes in this table are:1. The configuration item (e.g., enable, name, etc.).2. The Event Sensor on which this point resides.3. The Point Number.
+On this sub-page you can find the **Event Sensor Relay Configuration Table,** this table organizes 3 basic of Relay points. The 3 point attributes organizes in this table are:
+1. The configuration item (e.g., enable, name, etc.).
+2. The Event Sensor on which this point resides.
+3. The Point Number.
 
 ### Networking Page
 
-On this page you can find all the information regarding network information like **IP Address, Subnet Mask,** **Router Address, SNMP Read Community** string**, SNMP Write Community** stringand **SNMP Trap Community** string**.**
+On this page you can find all the information regarding network information like **IP Address, Subnet Mask,** **Router Address, SNMP Read Community** string**, SNMP Write Community** string and **SNMP Trap Community** string**.**
 
 ### Alerts Page
 

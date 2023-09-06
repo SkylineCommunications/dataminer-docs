@@ -25,7 +25,7 @@ This driver monitors the activity of the GatesAir Maxiva XTE DVBT2 Transmitter.
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -41,11 +41,15 @@ This driver monitors the activity of the GatesAir Maxiva XTE DVBT2 Transmitter.
 |-----------|------------------------|
 | 1.0.0.x   | E.3.3.0                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

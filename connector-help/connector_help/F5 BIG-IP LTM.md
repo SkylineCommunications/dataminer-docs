@@ -18,9 +18,9 @@ The **F5 BIG-IP LTM** driver uses **SNMP** to retrieve status, configuration and
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**  |
-|------------------|------------------------------|
-| 1.0.0.x          | Version 12.1.2Build 0.93.249 |
+| **Driver Range** | **Device Firmware Version**   |
+|------------------|-------------------------------|
+| 1.0.0.x          | Version 12.1.2 Build 0.93.249 |
 
 ## Installation and configuration
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General
 
-Thispage contains the general information about the **hardware** and **software** of the device.
+This page contains the general information about the **hardware** and **software** of the device.
 
 There are 2 page buttons available:
 
@@ -53,7 +53,7 @@ There are 2 page buttons available:
 
 ### Interfaces
 
-Thispage contains 2 tables:
+This page contains 2 tables:
 
 - **Interfaces**: Contains interface information and settings.
 - **Interface Statistics**: Contains the statistics of every interface.
@@ -77,11 +77,11 @@ There are also several page buttons available:
 
 ### Redundancy
 
-Thispage contains status information about the failover configuration of the system.
+This page contains status information about the failover configuration of the system.
 
 ### Cluster
 
-Thispage contains 3 tables:
+This page contains 3 tables:
 
 - **Clusters**: Contains an entry per cluster, with configuration details.
 - **Cluster Members**: Contains all members of each cluster, with additional information about the state of those members.
@@ -89,7 +89,7 @@ Thispage contains 3 tables:
 
 ### vCMP
 
-Thispage contains 3 tables:
+This page contains 3 tables:
 
 - **vCMP Assigned Slots**: Lists the slots assigned to a virtual clustered multiprocessing (vCMP) guest.
 - **vCMP Allowed Slots**: Lists the slots that can be assigned to a vCMP guest.
@@ -99,7 +99,7 @@ You can disable the polling of these tables by means of the **vCMP Polling** tog
 
 ### LTM
 
-Thispage contains state and configuration parameters related to the **Local Traffic Manager**.
+This page contains state and configuration parameters related to the **Local Traffic Manager**.
 
 There are also 2 page buttons available:
 

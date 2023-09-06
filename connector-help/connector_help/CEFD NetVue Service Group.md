@@ -12,11 +12,11 @@ The driver contains information related to the current configuration of the NetV
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                                           | No                  | Yes                     |
-| 1.1.0.x \[SLC Main\] | Service Area name for Heights changed.ViperSat Overview and Service Area Overview tables now sorted by name instead of ID. | No                  | Yes                     |
-| 1.1.1.x              | Based on 1.1.0.7.Method of filling in the BWM Overview table updated. New VMS architecture.                                | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                                            | No                  | Yes                     |
+| 1.1.0.x \[SLC Main\] | Service Area name for Heights changed. ViperSat Overview and Service Area Overview tables now sorted by name instead of ID. | No                  | Yes                     |
+| 1.1.1.x              | Based on 1.1.0.7. Method of filling in the BWM Overview table updated. New VMS architecture.                                | No                  | Yes                     |
 
 ## Installation and configuration
 

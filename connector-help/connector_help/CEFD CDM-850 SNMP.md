@@ -53,7 +53,7 @@ The element created using this driver consists of the data pages detailed below.
 
 ### General page
 
-Thispage displays the **System** and **Service Contact Information** and the **Overall Status** of the device.
+This page displays the **System** and **Service Contact Information** and the **Overall Status** of the device.
 
 ### Admin page
 

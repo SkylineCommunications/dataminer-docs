@@ -16,9 +16,9 @@ The **GatesAir Maxiva XTE Exciter** is an exciter that powers over-the-air deliv
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                     |
-|-----------|------------------------------------------------------------|
-| 1.0.0.x   | 06.00.0034 (PCM Software Version)01.00.0685 (SNMP Version) |
+| **Range** | **Supported Firmware**                                      |
+|-----------|-------------------------------------------------------------|
+| 1.0.0.x   | 06.00.0034 (PCM Software Version) 01.00.0685 (SNMP Version) |
 
 ### System Info
 
@@ -41,7 +41,15 @@ SNMP CONNECTION:
 
 > Slot: **Exciter A Port**, **Exciter B Port**
 >
-> > Xmtr \#0 : 19617, 19873Xmtr \#1 : 21665, 21921Xmtr \#2 : 23713, 23969Xmtr \#3 : 25761, 26017Xmtr \#4 : 27809, 28065Xmtr \#5 : 29857, 30113Xmtr \#6 : 31905, 32161Xmtr \#7 : 33953, 34209Xmtr \#8 : 36001, 36257
+> > Xmtr \#0 : 19617, 19873
+> > Xmtr \#1 : 21665, 21921
+> > Xmtr \#2 : 23713, 23969
+> > Xmtr \#3 : 25761, 26017
+> > Xmtr \#4 : 27809, 28065
+> > Xmtr \#5 : 29857, 30113
+> > Xmtr \#6 : 31905, 32161
+> > Xmtr \#7 : 33953, 34209
+> > Xmtr \#8 : 36001, 36257
 
 SNMP Settings:
 

@@ -49,7 +49,7 @@ It also includes the following page buttons:
   - **Debug/Set:**
 
   - - **Generate Log File**: Enables the creation of .txt files with information about the processing results.
-    - **Log Store Time**: If log files were generated, the ones older than the Log Store Timewill be zipped and deleted or simply deleted, depending on the **Action Log Files** setting.
+    - **Log Store Time**: If log files were generated, the ones older than the Log Store Time will be zipped and deleted or simply deleted, depending on the **Action Log Files** setting.
     - **Action Log Files**: Allows you to choose beween zipping or just deleting the log files older than the Log Store Time. This is done automatically after the **Next Get Value** occurs. Click the **Execute Now** button to have the verification done immediately at the moment the button is clicked, and then automatically afterwards.
     - **Set Prev Period:** Allows you to set the previous **Next Get Value** in order to trigger previous period calculation.
     - **Average Trend Interval**: Set this value and then click the **Apply All** button in order to set the **Average Trend Interval Type** column for all the rows.
@@ -65,11 +65,12 @@ After the necessary information has been provided, it will be validated. Validat
 - The **DMA ID\Element ID\Parameter ID** is invalid (parameter ID is not correct, parameter is not being trended or parameter is a table column).
 - The parameter ID refers to a table, but you have not entered the **Column ID** and selected the **Table Indexes.**
 - The **Recurrence Range Period** is set to *Yes,* but the **Recurrence Start** **and** **End Dates** are not filled in or the selected dates do not allow the calculation of the **Next Get Value** (time when the query to the database is done).
-- The **Trending Type** is *Real Time*, butfor that parameter only average trending is activated, or vice versa. Check the logging for more information.
+- The **Trending Type** is *Real Time*, but for that parameter only average trending is activated, or vice versa. Check the logging for more information.
 
 Note:
 
-- If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*,only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added. If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually* and only one row is added in the **KPI & KQI Results** table.
+- If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*, only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added.
+  If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually* and only one row is added in the **KPI & KQI Results** table.
 - By default, if **Trending Type** is *Real Time,* the **Average Trend Interval Type** will be set to *Auto*. If *Average* is selected, two options are available: *5min* or *1h*.
 - **Range Low** and **Range High** should be defined in order to set the range of valid values that are included in the calculation. This is intended to avoid exception values that are outside the normal range of the parameter.
 

@@ -72,7 +72,8 @@ This page displays the same tables as the Setup \> **Recoders** page in The Cher
 
 ## Interfaces
 
-The **Interfaces** page also displays 2 tables. The first table is the **Interface Table**, who has an entry for every **input** and **output**. This is just a basic table that displays the interface type and name.The other table on this page is **the Mux table**. This table contains information for every mux that is connected to an interface specified in the Interface table. This table also contains a setting for redundancy slate. But here it's the "**Mux Redundancy Slate**", which means the setting will be configured on a mux level. All the programs connected to this mux, will get the same configuration when changed.
+The **Interfaces** page also displays 2 tables. The first table is the **Interface Table**, who has an entry for every **input** and **output**. This is just a basic table that displays the interface type and name.
+The other table on this page is **the Mux table**. This table contains information for every mux that is connected to an interface specified in the Interface table. This table also contains a setting for redundancy slate. But here it's the "**Mux Redundancy Slate**", which means the setting will be configured on a mux level. All the programs connected to this mux, will get the same configuration when changed.
 
 ## Program
 

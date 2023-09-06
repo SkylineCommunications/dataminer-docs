@@ -10,9 +10,9 @@ This connector can be used to manage device apps. The apps can be retrieved, lau
 
 ### Version Info
 
-| **Range**            | **Key Features**                                           | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Launch and close apps.- Get system state via WebSocket. | \-           | \-                |
+| **Range**            | **Key Features**                                            | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Launch and close apps. - Get system state via WebSocket. | \-           | \-                |
 
 ### Product Info
 

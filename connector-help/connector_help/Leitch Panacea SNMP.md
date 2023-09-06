@@ -27,7 +27,7 @@ The Panacea family of routers is available in 1RU and 2 RU frame sizes. They sha
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -43,11 +43,15 @@ The Panacea family of routers is available in 1RU and 2 RU frame sizes. They sha
 |-----------|------------------------|
 | 1.0.0.x   | Unknown                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

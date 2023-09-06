@@ -84,7 +84,8 @@ The protocol has several configuration options that will change its behavior:
 
 - **Enable/disable** the export and import feature with the **Entity Export** and **Entity Import** toggle button, respectively.
   - Specify the **path** where files will be exported and imported, with the **Entity Export Directory** and **Entity Import Directory** parameters, respectively.
-  - Switch between exporting/importing to a **local or remote location** by using the toggle button **Entity Export Directory Type** or **Entity Import Directory Type**, respectively.Note that for the remote file handling feature to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
+  - Switch between exporting/importing to a **local or remote location** by using the toggle button **Entity Export Directory Type** or **Entity Import Directory Type**, respectively.
+    Note that for the remote file handling feature to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
 
 - Perform an export or import by clicking the **Apply** button in the relevant section.
 

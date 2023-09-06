@@ -44,9 +44,9 @@ SERIAL CONNECTION:
 
 On this page, you can find the following general information and settings for the device:
 
-- **RSU Model**:The model of the Redundant Switch Unit (RSU).
-- **Configuration Version**:The configuration version of the RSU.
-- **Software Version**:The software version of the RSU.
+- **RSU Model**: The model of the Redundant Switch Unit (RSU).
+- **Configuration Version**: The configuration version of the RSU.
+- **Software Version**: The software version of the RSU.
 - **Mode**: Shows if the device is operating in *Local* or *Remote* mode.
 - **Operating Mode**: Displays whether the device is operating in *Manual*, *Automatic* or *Smart Manual* mode, and allows the user to set the mode to *Manual* or *Auto*.
 - **HPA S/B X Backup**: Shows if the standby HPA X (i.e. 1 or 2) is working as a backup.

@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 ### Spectrum Analyzer
 
-This page contains DataMiner'sdefault **Spectrum Analysis** component.
+This page contains DataMiner's default **Spectrum Analysis** component.
 
 ### General
 

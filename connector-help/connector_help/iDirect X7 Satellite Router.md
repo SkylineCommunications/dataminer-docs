@@ -25,16 +25,18 @@ The iDirect X7 Satellite Router is a multi-core hardware system that enables ser
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
-<li>Telnet connection is established with the product through Serial communicationin order to retrieve System Information.</li>
-<li>HTTP connection is used to retrieve Modem StatusInformation.</li>
+<li>Telnet connection is established with the product through Serial communication in order to retrieve System Information.</li>
+<li>HTTP connection is used to retrieve Modem Status Information.</li>
 </ul></td>
 <td>-</td>
 <td>-</td>
 </tr>
 </tbody>
 </table>
+
+
 
 ### Product Info
 
@@ -47,6 +49,8 @@ The iDirect X7 Satellite Router is a multi-core hardware system that enables ser
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 
@@ -74,7 +78,8 @@ Usage
 
 ### General
 
-This page displays **system information** parameters for the **Modem equipment**. Moreover, it also contains a sub-page to configure the **Credentials**, which must be configured in order to poll data from the referred product**.**
+This page displays **system information** parameters for the **Modem equipment**.
+Moreover, it also contains a sub-page to configure the **Credentials**, which must be configured in order to poll data from the referred product**.**
 
 ### Modem Status
 

@@ -34,7 +34,7 @@ The driver uses the HTTP API of the Astro U125 Edge FM device in order to commun
 
 #### Serial connection
 
-This driver can communicate directly with the **U125 module**,but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on whether direct communication is used or not, the **HTTP** configuration differs, as shown below.
+This driver can communicate directly with the **U125 module**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on whether direct communication is used or not, the **HTTP** configuration differs, as shown below.
 
 - #### A) Communication with U100C as proxy
 
@@ -76,7 +76,7 @@ Via the **Login** page button, you can fill in the credentials to access the dev
 
 The page also contains the following important parameters:
 
-- **Controller Name**: Displays the name of the **Astro Virtual Controller**element that manages this device. If no such element is used, *No Virtual Controller Found* will be displayed instead.
+- **Controller Name**: Displays the name of the **Astro Virtual Controller** element that manages this device. If no such element is used, *No Virtual Controller Found* will be displayed instead.
 
 - **Communication Type**: Can have the following values:
 
@@ -124,6 +124,8 @@ This page allows you to upload or download config files to or from the device. Y
 
 To download a file, click **Download**. The following pop-up window will be displayed:
 
+![Download.PNG](~/connector-help/images/Astro_U125_Edge_FM_Download.PNG)
+
 Enter the name of the file and click OK.
 
 The file will be saved in the following location: *C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>*
@@ -131,6 +133,8 @@ The file will be saved in the following location: *C:\Skyline DataMiner\Document
 #### Uploading configuration files
 
 To download a file, click **Upload**. The following pop-up window will be displayed:
+
+![Upload.PNG](~/connector-help/images/Astro_U125_Edge_FM_Upload.PNG)
 
 **Module Name** lists all the Astro elements of the same type in the system.
 
@@ -141,6 +145,8 @@ The file to be uploaded is in the following location: *C:\Skyline DataMiner\Docu
 #### Performing a software update
 
 The driver allows you to upload a firmware archive from the local disk of the DMA:
+
+![SoftwareUpdate.PNG](~/connector-help/images/Astro_U125_Edge_FM_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The drop-down box lists all the files present on the DMA hard drive in the following location: *C:\Skyline DataMiner\Documents\\Protocol Name\>*.
 

@@ -116,14 +116,14 @@ From this table, you can control if a node is **Enable**/**Disabled** for **DVE*
 
 This page displays the **Channel** **Table** and **Channel Outputs Table:**
 
-- The **Channel Table**displays information for each channel, such as the **Name**, **Node ID**, **Profile ID**, **Status**, **Elapsed**, **Buffer Average** and **Max** and **Dropped Frames**. The table also has a **Start** and **Stop** button, which can be used to start and stop channels.
+- The **Channel Table** displays information for each channel, such as the **Name**, **Node ID**, **Profile ID**, **Status**, **Elapsed**, **Buffer Average** and **Max** and **Dropped Frames**. The table also has a **Start** and **Stop** button, which can be used to start and stop channels.
 - The **Channel Output Table** shows the Channel Outputs of each channel. It lists **Video Bitrate**, **Status**, **Elapsed**, **Width**, **Height**, **Audio Level**, **FPS**, **PCT**, **PCT RT**, **PSNR**, **URI** and **Content Source ID**.
 
 The page also contains the **Channel Parameters** pagebutton, which provides access to the **Channel Parameters Table** with more information regarding the channels, such as **Encoder SDI 1/2 Input**, **ESAM**, **Service ID**, **Service Name**, **Streams URL** and **bond0.400**.
 
 ### Alerts
 
-This page lists the **active alerts**,with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable** **Type** and **ID**, **Node ID**, **Updated** **At** and **Readable Type**.
+This page lists the **active alerts**, with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable** **Type** and **ID**, **Node ID**, **Updated** **At** and **Readable Type**.
 
 ### Messages
 
@@ -147,4 +147,5 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-The API Key that is needed to log on to an authenticated system is not the same as the password. To find the API Key, use the web interface, log on with the username and password, and go to [http://\<ipaddress_Conductor_Node\>/users.xml]().If you cannot find the API Key there, check here instead: [http://\<ipaddress_Conductor_Node\>/user_profile](). Make sure that you do not copy "hidden spaces" before or after the key.
+The API Key that is needed to log on to an authenticated system is not the same as the password. To find the API Key, use the web interface, log on with the username and password, and go to [http://\<ipaddress_Conductor_Node\>/users.xml]().
+If you cannot find the API Key there, check here instead: [http://\<ipaddress_Conductor_Node\>/user_profile](). Make sure that you do not copy "hidden spaces" before or after the key.

@@ -10,9 +10,9 @@ Connector to integrate the functionalities of a modbus device. It contains the H
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 
@@ -52,6 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 The driver contains 4 different pages:
 
+
 - **Holding Registers:**
 
 The default page displays device Setpoints, which can be both read from and set by the user. To interact, click on a Setpoint to view its value, and you can modify and save changes as needed.
@@ -67,3 +68,4 @@ The "Alarms" page presents read-only Discrete Inputs, allowing you to observe ac
 - **Web Interface:**
 
 On the "Web Interface" page, you can access the device's web interface by clicking on the provided link or button.
+

@@ -34,7 +34,7 @@ The **ND Satcom RCU5000** is an SNMP driver designed to communicate with RCU 500
 </tr>
 <tr class="odd">
 <td>2.0.0.x</td>
-<td>Branch version based on 1.0.0.x.Added DVE functionality and HPA tables</td>
+<td>Branch version based on 1.0.0.x. Added DVE functionality and HPA tables</td>
 <td>No</td>
 <td>No</td>
 </tr>

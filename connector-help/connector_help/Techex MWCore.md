@@ -10,12 +10,12 @@ The Techex MWCore connector is an HTTP-based connector that can be used to monit
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                       | **Based on** | **System Impact**                                                                    |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------|
-| 1.0.0.x \[obsolete\] | Initial version (includes DCF integration).                                                                                                                                                                                            | \-           | \-                                                                                   |
-| 1.0.1.x \[obsolete\] | Reformat of the MWEdge stream keys.                                                                                                                                                                                                    | 1.0.0.2      | **Old trend and alarm data will be lost for Streams, Input Sources, and Outputs.**   |
-| 1.0.2.x \[obsolete\] | \- Single output/input is retrieved upon context menu operation instead of MwEdge polling.- MWEdges are retrieved separately instead of all at once. - Reverse foreign key relation between Streams Resources table and Streams table. | 1.0.1.19     | **Because NuGets are now used, the minimum DataMiner version is now 10.0.10.**       |
-| 1.0.3.x \[SLC Main\] | \- Statistics Connections table and "IP Connection - Statistics Interface" connection removed.- Columns added to the Servers Info table to enable the statistics interface for each server.                                            | 1.0.2.3      | **Existing elements need to be reconfigured to account for the connection changes.** |
+| **Range**            | **Key Features**                                                                                                                                                                                                                        | **Based on** | **System Impact**                                                                    |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------|
+| 1.0.0.x \[obsolete\] | Initial version (includes DCF integration).                                                                                                                                                                                             | \-           | \-                                                                                   |
+| 1.0.1.x \[obsolete\] | Reformat of the MWEdge stream keys.                                                                                                                                                                                                     | 1.0.0.2      | **Old trend and alarm data will be lost for Streams, Input Sources, and Outputs.**   |
+| 1.0.2.x \[obsolete\] | \- Single output/input is retrieved upon context menu operation instead of MwEdge polling. - MWEdges are retrieved separately instead of all at once. - Reverse foreign key relation between Streams Resources table and Streams table. | 1.0.1.19     | **Because NuGets are now used, the minimum DataMiner version is now 10.0.10.**       |
+| 1.0.3.x \[SLC Main\] | \- Statistics Connections table and "IP Connection - Statistics Interface" connection removed. - Columns added to the Servers Info table to enable the statistics interface for each server.                                            | 1.0.2.3      | **Existing elements need to be reconfigured to account for the connection changes.** |
 
 ### Product Info
 
@@ -70,7 +70,7 @@ TLS TCP IP CONNECTION:
 - **IP port**: The IP port of the destination, which is defined in the product (System \> Telemetry).
 - **SSL/TLS:** Select this check box to enable the TLS protocol (default: disabled).
 
-This connectionis used to receive incoming statistics notification event messages. It is no longer used since range 1.0.3.x.
+This connection is used to receive incoming statistics notification event messages. It is no longer used since range 1.0.3.x.
 
 ### Initialization
 
@@ -84,7 +84,7 @@ In order to initialize the connector, you need to specify the following input co
 **IP Connection - Statistics Interface**:
 
 - **IP Connection State:** State of the referred connection, which needs to be set to *Enabled* in order to receive the statistics notification event messages.
-- **Client Certificate Path:** Path to the .pfxclient certificate. Note that the .pfx certificate file contains both public and private keys.
+- **Client Certificate Path:** Path to the .pfx client certificate. Note that the .pfx certificate file contains both public and private keys.
 - **Client Certificate Password:** Password of the client certificate related to the referred path.
 - **Server DNS Names:** Introduced in range 1.0.1.x. Add a semicolon-separated list of the DNS name of each MWCore server for statistics polling.
 

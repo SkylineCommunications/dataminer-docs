@@ -52,7 +52,7 @@ This page allows you to monitor the general device parameters.
 - The **System Information** section contains information about the system parameters and the main board specifications.
 - The **System Utilization** section contains the status of the internal parameters, such as **temperature**, **memory** and other system parameters.
 
-Via the **Security Settings**page button, you can configure the username and password to communicate with the device:
+Via the **Security Settings** page button, you can configure the username and password to communicate with the device:
 
 - This subpage also displays the **HTTP Status Code**, which provides information about the HTTP response status of each command, the **Application Boot Status** and the **Login Status**, which displays the authentication status. If the **Login Status** is *Not Authorized*, the username/password combination is incorrect.
 - The **Login** button verifies the username/password combination and authenticates the user.

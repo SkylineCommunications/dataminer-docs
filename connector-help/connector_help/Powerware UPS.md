@@ -16,9 +16,9 @@ This connector is intended for the monitoring and management of UPS devices from
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                          |
-|-----------|-------------------------------------------------|
-| 1.0.1.x   | Powerware 9100 - 1.30Eaton 9PX 1000 - 1.18.4945 |
+| **Range** | **Supported Firmware**                           |
+|-----------|--------------------------------------------------|
+| 1.0.1.x   | Powerware 9100 - 1.30 Eaton 9PX 1000 - 1.18.4945 |
 
 ### System Info
 

@@ -39,7 +39,7 @@ All control and monitored parameters are available for access over the RollCall 
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial version.</li>
 </ul></td>
@@ -60,6 +60,8 @@ All control and monitored parameters are available for access over the RollCall 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
+
+
 
 ## Configuration
 
@@ -96,9 +98,9 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains info related with**Serial Number**and**Software Version**.
+This page contains info related with **Serial Number** and **Software Version**.
 
-Additional information can be displayed and set on**Logging**subpage.
+Additional information can be displayed and set on **Logging** subpage.
 
 #### Logging
 
@@ -106,23 +108,23 @@ In this subpage you can control the generation of error messages to be logged. I
 
 ### Bitrate
 
-Bitrate page display information on**Bitrate Status**,**Bitrate Current**,**Bitrate Maximum**,**Bitrate Minimum**and**Bitrate Continuous Update**. It also has a Configuration subpage tha allows you to configure the **Bitrate Minimum Threshold**, **Bitrate Maximum Threshold**, **Bitrate Enable Updates** and configure if minimum or maximum threshold are enabled.
+Bitrate page display information on **Bitrate Status**, **Bitrate Current**, **Bitrate Maximum**, **Bitrate Minimum** and **Bitrate Continuous Update**. It also has a Configuration subpage tha allows you to configure the **Bitrate Minimum Threshold**, **Bitrate Maximum Threshold**, **Bitrate Enable Updates** and configure if minimum or maximum threshold are enabled.
 
 ### Errors
 
-Errors page display information on**All Errors Status**,**Current I/P Status**,**Mon Input Status**,**RSV Status**,**Sync Status**,**ETR290 Status**and**Template Status**.
+Errors page display information on **All Errors Status**, **Current I/P Status**, **Mon Input Status**, **RSV Status**, **Sync Status**, **ETR290 Status** and **Template Status**.
 
 ### GPI
 
-GPI page display GPI 1 & 2 information, namely:**Mode**,**Output Trigger**,**Output Invert**,**Input Invert**and**Status**.
+GPI page display GPI 1 & 2 information, namely: **Mode**, **Output Trigger**, **Output Invert**, **Input Invert** and **Status**.
 
 ### Input
 
-Input page displays technical information related with**Input (D/A)**,**Input (MON)**,**Input 1**and**Input 2**.
+Input page displays technical information related with **Input (D/A)**, **Input (MON)**, **Input 1** and **Input 2**.
 
 ### Programs/Pmts
 
-Programs/Pmts page aims to load and display the List of**Available Services.**
+Programs/Pmts page aims to load and display the List of **Available Services.**
 
 ### Template
 

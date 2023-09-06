@@ -27,7 +27,7 @@ This control panel is designed for low voltage industrial diesel generator sets 
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -43,11 +43,15 @@ This control panel is designed for low voltage industrial diesel generator sets 
 |-----------|------------------------|
 | 1.0.0.x   | 1.2.0.1                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

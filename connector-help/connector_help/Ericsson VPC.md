@@ -102,7 +102,7 @@ Using Cisco elements present in the DMS, this page allows a user to monitor the 
 
 ### Base Unit
 
-This page provides the user with in-depth and detailed information concerning the Host Controller Cardpresent in the chassis.
+This page provides the user with in-depth and detailed information concerning the Host Controller Card present in the chassis.
 
 The page contains page buttons to view the following information:
 
@@ -149,7 +149,7 @@ For each of the cards that can be present in the chassis, different pages are av
 - **EN7100 Pages (Cards, Ports, Input Streams, Output Streams, Temperatures, Dolby Metadata, Video Input, Video Encode, AudioGroup):** These pages provide data on any cards of type **EN7100** present in the chassis. **Data, Video** and **Audio settings** are available on their respective pages and all **Input Streams** and **Output Streams** are displayed in separate tables.
 - **EN8190 Encoder Pages (Cards, Temperatures, Input Streams, Output Streams):** These pages display cards of type **EN8190 Encoder**. All **Input Streams** and **Output Streams** are displayed in separate tables.
 - **EN8100 Pages (Cards, Ports, Input Streams, Output Streams, Temperatures, Dolby Metadata, Video Input, Video Encode, AudioGroup):** These pages show detailed information on any cards of type **EN8100** in the chassis. **Data, Video** and **Audio settings** are available on their respective pages and all **Input Streams** and **Output Streams** are displayed in separate tables.
-- **EN7190 Encoder Pages(Cards, Ports, Dolby Metadata, Input Streams, Output Streams, Temperatures, Video Input, Video Encode, Video Format Conversion, Audio Group):**These pages display all information present in any available **EN7190 Encoder** card. **Data**, **Video** and **Audio settings** are available on their respective pages and all **Input Streams** and **Output Streams** are displayed in separate tables.
+- **EN7190 Encoder Pages(Cards, Ports, Dolby Metadata, Input Streams, Output Streams, Temperatures, Video Input, Video Encode, Video Format Conversion, Audio Group):** These pages display all information present in any available **EN7190 Encoder** card. **Data**, **Video** and **Audio settings** are available on their respective pages and all **Input Streams** and **Output Streams** are displayed in separate tables.
 
 ## Notes
 

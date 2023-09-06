@@ -58,8 +58,10 @@ uid: Connector_help_ETL_Systems_23235
 </ul>
 <h2 id="usage">Usage</h2>
 <h3 id="general-page">General Page</h3>
-<p>This page displays <strong>Temperature</strong> of the device, the <strong>Configuration</strong> and the <strong>Power Supply Status</strong> tables.</p>
-<p>The <strong>Configuration</strong> tableallows for configuration of the <strong>Boot Mode, Operating Mode, Online Path,</strong> and <strong>Standby Latch.</strong></p>
+<p>This page displays <strong>Temperature</strong> of the device, the <strong>Configuration</strong> and the <strong>Power Supply Status</strong> tables.<br />
+</p>
+<p>The <strong>Configuration</strong> table <strong></strong> allows for configuration of the <strong>Boot Mode, Operating Mode, Online Path,</strong> and <strong>Standby Latch.</strong><br />
+</p>
 <h3 id="rf-limits-page">RF Limits Page</h3>
 <p>Two tables containing information for the device RF limits are displayed on this page: the <strong>RF Limits</strong> table and the <strong>Limits Status</strong> table.</p>
 <p>Both of these tables contain information for the main and standby RF signals.</p>

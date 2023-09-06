@@ -89,7 +89,7 @@ There is also a **Reboot** button available, which can be used to reboot the dev
 
 ### Video
 
-This page displays tables with video information for the **Input**, **Encoders**,and **Decoders**.
+This page displays tables with video information for the **Input**, **Encoders**, and **Decoders**.
 
 ### Audio
 

@@ -12,9 +12,9 @@ The listed servers can be organized in custom categories. Each category element 
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                           |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Microsoft.EnterpriseManagement.Core.dll - 7.5.7487.142Microsoft.EnterpriseManagement.OperationsManager.dll - 7.2.12150.0Microsoft.EnterpriseManagement.Runtime.dll - 7.2.11719.0 |
+| **Range** | **Supported Firmware**                                                                                                                                                             |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | Microsoft.EnterpriseManagement.Core.dll - 7.5.7487.142 Microsoft.EnterpriseManagement.OperationsManager.dll - 7.2.12150.0 Microsoft.EnterpriseManagement.Runtime.dll - 7.2.11719.0 |
 
 ### System Info
 

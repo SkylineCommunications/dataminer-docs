@@ -4,7 +4,7 @@ uid: Connector_help_Specialty_Microwave_Corp_14344-50x
 
 # Specialty Microwave Corp 14344-50X
 
-The Specialty Microwave Corp 14344-50Xdriver retrieves the power supply and input statuses through a serial connection. The driver allows the user to select an active coaxial input based on two existing ones.
+The Specialty Microwave Corp 14344-50X driver retrieves the power supply and input statuses through a serial connection. The driver allows the user to select an active coaxial input based on two existing ones.
 
 ## About
 

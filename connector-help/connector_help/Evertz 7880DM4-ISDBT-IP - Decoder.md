@@ -36,7 +36,7 @@ In the sections below, you can find more information on the different data pages
 
 ### General
 
-This page contains general information about the device such as the **Alias**, **Card Type**, **Serial Number**,etc.
+This page contains general information about the device such as the **Alias**, **Card Type**, **Serial Number**, etc.
 
 ### Input
 

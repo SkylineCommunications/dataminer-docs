@@ -71,4 +71,5 @@ The page consists of two main sections and two subpages that are available via p
 
 **AGC** and **Audio Settings** subpages:
 
-- These pages allow you to further tweak tweak **advanced configuration** parameters regarding input and output audio volume, as well as commute between digital and analog communication.Since these are more advanced settings, a **Default Settings** button is available in order to reset these parameters to their original values.
+- These pages allow you to further tweak tweak **advanced configuration** parameters regarding input and output audio volume, as well as commute between digital and analog communication.
+  Since these are more advanced settings, a **Default Settings** button is available in order to reset these parameters to their original values.

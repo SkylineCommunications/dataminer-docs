@@ -26,9 +26,9 @@ The application modules include the high-performance Chromadigm DWDM transmitter
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                       |
-|-----------|---------------------|-------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | \- [ATX Networks ChromaFlex - DMTx](/Driver%20Help/ATX%20Networks%20ChromaFlex%20-%20DMTx.aspx)- [ATX Networks ChromaFlex - QRRX](xref:Connector_help_ATX_Networks_ChromaFlex_-_QRRX) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                        |
+|-----------|---------------------|-------------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \- [ATX Networks ChromaFlex - DMTx](/Driver%20Help/ATX%20Networks%20ChromaFlex%20-%20DMTx.aspx) - [ATX Networks ChromaFlex - QRRX](xref:Connector_help_ATX_Networks_ChromaFlex_-_QRRX) |
 
 ## Configuration
 
@@ -66,7 +66,7 @@ This page contains the **Modules Table**. This table displays all the modules of
 
 This page contains 2 tables: **DMTx Modules Table** and **DMTx Lasers Table**.
 
-For each module in the DMTx Modules Table,the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
+For each module in the DMTx Modules Table, the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
 
 With the **DMTx Auto Remove** parameter, you can enable or disable the automatic removal of **unequipped** DVE modules.
 
@@ -76,7 +76,7 @@ Laser entries that are no longer available for the duration of the **DMTx Lasers
 
 This page contains 2 tables: **QRRX** **Modules Table** and **QRRX Lasers Table**.
 
-For each module in QRRX Modules Table,the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
+For each module in QRRX Modules Table, the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
 
 With the **QRRX** **Auto Remove** parameter, you can enable or disable the automatic removal of **unequipped** DVE modules.
 

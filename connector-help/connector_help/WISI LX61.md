@@ -30,7 +30,9 @@ The **WISI LX61** driver is an SNMP based driver used to monitor and configure t
 
 ### General
 
-The general page gives you an overview of all the parameters.On the left side you can see all the reading parameters, on the right side, you've got the parameters that can be set.Alarming and trending is possible on the parameters.
+The general page gives you an overview of all the parameters.
+On the left side you can see all the reading parameters, on the right side, you've got the parameters that can be set.
+Alarming and trending is possible on the parameters.
 
 The device also uses traps. When the driver receives a trap, the mentioned parameter will be updated.
 

@@ -8,9 +8,9 @@ The MPX-1g is a multifunctional, modular MPX generator in a 19-inch/1U housing t
 
 ## About
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -52,4 +52,18 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-**General Page:**The General Page provides a comprehensive list of general system information and details about its interfaces.**Internet Eth Status:**Monitor the real-time status of interfaces on the Internet Eth Status table.**RDS and Stereo Encoder Pages:**Dedicated pages for in-depth information about Stereo and RDS functionalities.**Interface Settings Page:**Allows for interface settings customization on this page. Contains subpages housing DTE, GPI, and GPO tables for more control.**Network Settings Page:**Configure essential aspects on the Network Settings page. Monitors Ctrl, Data1, and Data2 Services tables. Also it's possible to configure and monitor the TCP/IP, NTP, and External APIs connections.**Alarms Page:**Access alarms related to Hardware, Networks, External Clock, Inputs, Outputs, UECP Data Sources, and UECP MECs on this dedicated page.**Device Status Page:**Comprehensive view of the device's power units and NTP status through the Device Status page.**Web Interface Page:**Directly access the Web UI environment through the Web Interface page.
+**General Page:**The General Page provides a comprehensive list of general system information and details about its interfaces.
+
+**Internet Eth Status:**Monitor the real-time status of interfaces on the Internet Eth Status table.
+
+**RDS and Stereo Encoder Pages:**Dedicated pages for in-depth information about Stereo and RDS functionalities.
+**Interface Settings Page:**Allows for interface settings customization on this page. Contains subpages housing DTE, GPI, and GPO tables for more control.
+
+**Network Settings Page:**Configure essential aspects on the Network Settings page. Monitors Ctrl, Data1, and Data2 Services tables. Also it's possible to configure and monitor the TCP/IP, NTP, and External APIs connections.
+**Alarms Page:**Access alarms related to Hardware, Networks, External Clock, Inputs, Outputs, UECP Data Sources, and UECP MECs on this dedicated page.
+
+**Device Status Page:**Comprehensive view of the device's power units and NTP status through the Device Status page.
+
+**Web Interface Page:**Directly access the Web UI environment through the Web Interface page.
+
+

@@ -62,7 +62,8 @@ Currently, the following calls are implemented:
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:**HTTP CONNECTION:**
+This driver uses an HTTP connection and needs the following user information:
+**HTTP CONNECTION:**
 
 - **IP address/host:** The polling IP of the device, eg. *10.11.12.13*
 - **IP port:** The IP port of the destination, by default *80*
@@ -154,3 +155,6 @@ An overview of the commands that can be triggered from an external source and th
 <!-- -->
 
 - Format: requestreceiveavailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
+
+
+

@@ -12,11 +12,11 @@ The driver uses an SNMP connection to retrieve the general device info and monit
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.1.x              | Initial version.                                                                                                              | No                  | No                      |
-| 2.0.0.x              | Extended previous range by adding a second connection to configure the serial interfaces over HTTP.                           | No                  | No                      |
-| 2.0.1.x \[SLC Main\] | Cassandra compliant.Added Operating Settings table, Monitor Line table, Monitor Async table and Monitor Async-Settings table. | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.1.x              | Initial version.                                                                                                               | No                  | No                      |
+| 2.0.0.x              | Extended previous range by adding a second connection to configure the serial interfaces over HTTP.                            | No                  | No                      |
+| 2.0.1.x \[SLC Main\] | Cassandra compliant. Added Operating Settings table, Monitor Line table, Monitor Async table and Monitor Async-Settings table. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -63,11 +63,13 @@ This page is used to update the **Device Name** and contains the **Bitrates** ta
 
 ### Serial Settings
 
-This page contains the **Serial Settings Table**, which provides an overview of the multiple serial interfaces on the serial gateway (ports 1-8) and allows the configuration of these interfaces.The **Save/Restart** button at the top of the page is used to commit the changes to the device.
+This page contains the **Serial Settings Table**, which provides an overview of the multiple serial interfaces on the serial gateway (ports 1-8) and allows the configuration of these interfaces.
+The **Save/Restart** button at the top of the page is used to commit the changes to the device.
 
 ### Operating Settings
 
-This page contains the **Operating** **Settings Table**, which allows you to check and modify settings of the interfaces.The **Save/Restart** button at the top of the page is used to commit the changes to the device.
+This page contains the **Operating** **Settings Table**, which allows you to check and modify settings of the interfaces.
+The **Save/Restart** button at the top of the page is used to commit the changes to the device.
 
 ### Monitor
 

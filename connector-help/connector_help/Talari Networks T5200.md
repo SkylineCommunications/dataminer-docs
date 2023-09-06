@@ -70,7 +70,7 @@ The **Appliances Info/Statistics** section shows general information on the appl
 - **Packets Received:** Number of packets received for the appliance since the last time the Talari service was started.
 - **Bytes Dropped:** Number of bytes dropped for the appliance since the last time the Talari service was started.
 - **Packets Dropped:** Number of packets dropped for the appliance since the last time the Talari service was started.
-- **State**:Indicates whether the appliance is enabled or disabled.
+- **State**: Indicates whether the appliance is enabled or disabled.
 - **HA State**: Indicates whether this is the currently active appliance or the standby appliance.
 - **Serial Number**: The serial number of the appliance.
 - **OS Version**: The OS version of the appliance.
@@ -100,7 +100,7 @@ This page contains two tables, **Routes** and **Routes V2**, which contain stati
 The page also contains the following parameters
 
 - **Polling of Routes** / **Polling of Routes V2**: Allow you to enable/disable the retrieval of data for the relevant table.
-- **Last Polling of Routes** /**Last Polling of Routes V2**:Indicates when the data in the relevant table was last updated.
+- **Last Polling of Routes** / **Last Polling of Routes V2**: Indicates when the data in the relevant table was last updated.
 - **Number of Routes V2**: Displays the total number of objects.
 
 ### Rules
@@ -138,7 +138,7 @@ The page also contains statistics for rules associated with the Internet service
 The following parameters are also available:
 
 - **Number of Internet Rules**: Displays the total number of Internet rules.
-- **Polling of** **Internet Rules**:Allows you to enable/disable the retrieval of data for the Internet Rules table.
+- **Polling of** **Internet Rules**: Allows you to enable/disable the retrieval of data for the Internet Rules table.
 - **Last Polling of** **Internet Rules**: Indicates when the data in this table was last updated.
 
 ### Intranet
@@ -148,7 +148,7 @@ This page displays statistics for the intranet services on this site in the **In
 The following parameters are also available:
 
 - **Number of Intranet Services**: Displays the total number of intranet services.
-- **Polling of** **Intranet Services**:Allows you to enable/disable the retrieval of data for the Intranet Services table.
+- **Polling of** **Intranet Services**: Allows you to enable/disable the retrieval of data for the Intranet Services table.
 - **Last Polling of** **Intranet Services**: Indicates when the data in this table was last updated.
 
 The **Rules** page button displays statistics for rules associated with the intranet service:

@@ -4,7 +4,7 @@ uid: Connector_help_DVBControl_DVBLoudness
 
 DVBControl DVBLoudness
 
-The **DVBLoudness**is part of the DVBControl software toolset which enables powerful Loudness measurements for multiple Audio services coming from multiple Transport Streams. Loudness is measured according to the ITU-R BS.1770-3 standard and EBU R.128 recommendations.
+The **DVBLoudness** is part of the DVBControl software toolset which enables powerful Loudness measurements for multiple Audio services coming from multiple Transport Streams. Loudness is measured according to the ITU-R BS.1770-3 standard and EBU R.128 recommendations.
 
 ## About
 

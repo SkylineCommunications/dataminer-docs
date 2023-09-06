@@ -22,7 +22,7 @@ This driver uses a serial connection and needs the following user information:
 
 **Authentication:**
 
-- **Username**:The username required to access the device. No communication attempts will be made until this is provided.
+- **Username**: The username required to access the device. No communication attempts will be made until this is provided.
 - **Password**: The password associated with the username.
 
 ## Usage

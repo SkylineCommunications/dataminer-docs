@@ -17,10 +17,10 @@ The Grass Valley Biometrics AP is part of GV's Media Assurance platform, using M
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                               |
-|-----------|--------------------------------------------------------------------------------------|
-| 1.0.0.x   | 2.9.2.r1.588                                                                         |
-| 1.0.1.x   | 2.9.2.r1.588Please note that the device must be able to provide the service LongStr. |
+| **Range** | **Supported Firmware**                                                                |
+|-----------|---------------------------------------------------------------------------------------|
+| 1.0.0.x   | 2.9.2.r1.588                                                                          |
+| 1.0.1.x   | 2.9.2.r1.588 Please note that the device must be able to provide the service LongStr. |
 
 ### System Info
 

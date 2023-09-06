@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General
 
-This page contains general parameters related to the device, such as its **Name**, **Location**, **Description**, **Logical ID**, **Article Number**, **Year of Manufacture**, **Serial Number**, **Hardware Revision** and **SAP Number**. The page also displays **System Information** andthe **System Status**,and allows you to execute a **System Reboot.**
+This page contains general parameters related to the device, such as its **Name**, **Location**, **Description**, **Logical ID**, **Article Number**, **Year of Manufacture**, **Serial Number**, **Hardware Revision** and **SAP Number**. The page also displays **System Information** and the **System Status**, and allows you to execute a **System Reboot.**
 
 ### Interface
 
@@ -60,7 +60,7 @@ The page also contains buttons to perform a **Device Scan** and a **Broadcast Re
 
 This page displays general network parameters such as the **Supported SNMP Versions**, **Update with TFTP**, **Update with HTTP**, **SSH Authentication Methods**, **Webserver Access** and **Webserver Password**.
 
-It also contains page buttons that provide access to **IP Settings**,the **Access Control List** and the **TFTP** options. The **Trap Configuration** subpage displays the **Traps** table, which contains the list of hosts (identified by their network address) to which the headend controller has to send the traps. The **Firmware Images** subpage allows you to check the status of the firmware images on the device. The **Firmware** subpage allows you to upgrade/downgrade an SW image to the device.
+It also contains page buttons that provide access to **IP Settings**, the **Access Control List** and the **TFTP** options. The **Trap Configuration** subpage displays the **Traps** table, which contains the list of hosts (identified by their network address) to which the headend controller has to send the traps. The **Firmware Images** subpage allows you to check the status of the firmware images on the device. The **Firmware** subpage allows you to upgrade/downgrade an SW image to the device.
 
 Note: In order for the password authentication method to work, there should be no RSA key files in the **KnownHosts + Keys Folder** directory.
 
@@ -75,7 +75,7 @@ It also contains page buttons to the following subpages:
 
 ### Alarms
 
-This page displays the **Current Alarms** table, which contains information about the parameter properties that currently have active alarms. It also displays the **Alarms Log**,which shows a list of the alarms that have been logged.
+This page displays the **Current Alarms** table, which contains information about the parameter properties that currently have active alarms. It also displays the **Alarms Log**, which shows a list of the alarms that have been logged.
 
 A page button provides access to the **Alarm Configuration** subpage, where you can find tables with information on the **Alarm Properties** and **Discrete Properties.**
 

@@ -55,7 +55,7 @@ On this page, you can view and configure network parameters. The page also conta
 
 Page buttons provide access to the following subpages:
 
-- **IP Tables Page**:Contains the **IP Route Table**,which shows routing protocol information, and the **IP Net To Media Table**.
+- **IP Tables Page**: Contains the **IP Route Table**, which shows routing protocol information, and the **IP Net To Media Table**.
 - **IP Extender Page**
 
 ### Redundancy

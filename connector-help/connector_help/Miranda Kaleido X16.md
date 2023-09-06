@@ -27,7 +27,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device. The default value is *public*.**Set community string**: The community string used when setting values on the device. The default value is *public*.
+- **Get community string**: The community string used when reading values from the device. The default value is *public*.
+  **Set community string**: The community string used when setting values on the device. The default value is *public*.
 
 #### Serial connection
 
@@ -62,7 +63,7 @@ This page displays one table with the frame's video inputs. This table contains 
 
 This page displays the **Embedded Audio Table**. This table contains all the frame's video-embedded audio.
 
-In version **1.0.0.7** of the driver, the **Config EA Table** page button was added to this page along with two **Embedded Audio Table**parameters (**EA Service Channel** and **DisplayKey (Embedded Audio) \[IDX\])**.
+In version **1.0.0.7** of the driver, the **Config EA Table** page button was added to this page along with two **Embedded Audio Table** parameters (**EA Service Channel** and **DisplayKey (Embedded Audio) \[IDX\])**.
 
 #### Config EA Table
 
@@ -98,7 +99,7 @@ This page displays the **GPI** table, which contains all frame's GPIs and their 
 
 ### Router
 
-This page displays the **Router**table, which contains router information. This includes router output number and crosspoint label and status.
+This page displays the **Router** table, which contains router information. This includes router output number and crosspoint label and status.
 
 ### Virtual Alarms
 

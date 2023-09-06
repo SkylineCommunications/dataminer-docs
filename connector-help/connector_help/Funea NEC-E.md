@@ -97,7 +97,8 @@ The following pages are available:
 - **Settings:** Allows settings of different modes and parameters (e.g. **Laser Frequency, RF gain,.**). If **Redundancy Mode** is not supported, you cannot set to this mode.
 - **Limits 1**: Allows the configuration of the alarming of all parameters from the **Parameters** page.
 - **Limits 2**: Allows the configuration of the alarming of all parameters from the **Voltages** page.
-- **Event Mask:** Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved. Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask:** Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's also a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### NECE module
@@ -112,8 +113,8 @@ The following pages are available:
 
 - **Status**: Displays whether or not there are alarms, warnings or notifications. Some of these are not available through SNMP, so there might be some differences with the statuses visible in the web interface.
 - **Server Administration**: Allows the configuration of the device's **IP Address, Netmask** and **Default Router.**
-- **SNMP Configuration**:All SNMP configurations are done here. There are 4 trap receivers, with 2 trap communities. The first community is for trap receiver No. 1 and the second community for trap receiver No. 2-4.
-- **Server Properties:** In comparison to the server properties of the main element, this page is more elaborate. There are more general information parameters and only here it's possible to configure the date and timeproperties. There is also a reset specific for this module.
+- **SNMP Configuration**: All SNMP configurations are done here. There are 4 trap receivers, with 2 trap communities. The first community is for trap receiver No. 1 and the second community for trap receiver No. 2-4.
+- **Server Properties:** In comparison to the server properties of the main element, this page is more elaborate. There are more general information parameters and only here it's possible to configure the date and time properties. There is also a reset specific for this module.
 
 #### Notes
 
@@ -133,7 +134,8 @@ The following pages are available:
 - **Parameters**: Displays the **Input Power** and the **Device Temperature.**
 - **Settings**: Allows the configuration of **Switch Mode, Position** and **Fallback Time**. The **switch position** is only configurable if the **Mode** is set to *Manual.*
 - **Limits**: Allows the configuration of alarming limits of **Input Power** (**Nominal** and **Redundant Channel**).
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### ORX1 module
@@ -150,7 +152,8 @@ The following pages are available:
 - **Parameters**: Displays **Input Power** and **+24V** supply voltage values.
 - **Settings**: Allows configuration of the parameter **Output Level Adjust.**
 - **Limits**: Allows the configuration of alarming limits of the parameters on the **Parameters** page.
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### ORX4 module
@@ -169,7 +172,8 @@ The following pages are available:
 - **Settings**: Allows the user to toggle the **Optical Power** (the laser(s)) on or off. The **Regulation Mode** can be used to switch the device mode to *Gain* or *Output Power.*
 - **Limits 1**: Allows the configuration of alarming limits of the parameters on the **Parameters** page.
 - **Limits 2**: Allows the configuration of alarming limits of the supply voltages.
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### OTX2 module
@@ -188,7 +192,8 @@ The following pages are available:
 - **Settings - Transmit 1&2**: Allows the configuration of different modes and parameters (e.g. **AGC mode, desired output power,** .).
 - **Limits - Common**: Allows the configuration of the alarming limits of the **Device Temperature** and **Input Voltage**.
 - **Limits - Transmit 1&2**: Allows the configuration of the alarming limits of **RF Input, OMI, RF Gain and Output Power**. Hysteresis of the output power is not available.
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 ### OTXD module
@@ -207,7 +212,8 @@ The following pages are available:
 - **Settings**: Allows settings of different modes and parameters (e.g. **Slope, RF Gain,.**). If **Redundancy Mode** is not supported, you cannot set to this mode. Setting **Desired Output Power** and **Laser Frequency** is not supported by the MIBs.
 - **Limits 1**: Allows the configuration of alarming limits of the parameters on the **Parameters** page.
 - **Limits 2**: Allows the configuration of the alarming of all parameters from the **Voltages** page.
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module and a toggle button to make the LED of the device blink for 10 seconds.
 
 #### Notes
@@ -224,11 +230,12 @@ These are optical amplifiers. Example devices: SVO69#.
 
 The following pages are available:
 
-- **Status**:Displays whether or not there are alarms, warnings or notifications. Some of these are not available through SNMP, so there might be some differences with the statuses visible in the web interface.
-- **Parameters**:Visualizes the **Input Power, Output Power** or the **Gain,** the supply voltages and the **Device Temperature.**
+- **Status**: Displays whether or not there are alarms, warnings or notifications. Some of these are not available through SNMP, so there might be some differences with the statuses visible in the web interface.
+- **Parameters**: Visualizes the **Input Power, Output Power** or the **Gain,** the supply voltages and the **Device Temperature.**
 - **Laser(s)**: Displays the major laser parameters (e.g. **Pump Power, Current, Temperature,** ...).
 - **Settings**: Allows the user to toggle the **Optical Power** (the laser(s)) on or off. The **Regulation Mode** can be used to switch the device mode to *Gain* or *Output Power.*
 - **Limits 1**: Allows the configuration of the alarming of all parameters from the **Parameters** page.
 - **Limits 2**: Allows the configuration of alarming limits of the supply voltages.
-- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved. Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
+- **Event Mask**: Handles the (de-)activation of alarms, warnings and notifications for both analog and discrete values. Changing these values might take some time, because some rather large table transformations are involved.
+  Note that not all alarm activation parameters are supported, as it is not possible to program these parameters so that writable and non-writable parameters are separated.
 - **Properties**: The **General Information** contains the device's **Hardware Model, Alias Name** and **Software Release.** It's possible that no **Alias Name** is available. There's a button to **Reset** the module, a toggle button to make the LED of the device blink for 10 seconds and a button to start a **SBS Evaluation.**

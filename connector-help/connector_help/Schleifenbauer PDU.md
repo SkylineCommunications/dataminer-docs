@@ -16,10 +16,10 @@ The connector polls data from the device using **SNMPv1**.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                       | **Based on** | **System Impact**                                   |
-|----------------------|------------------------------------------------------------------------------------------------------------------------|--------------|-----------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                                        | \-           | \-                                                  |
-| 1.1.0.x \[SLC Main\] | \- Added support for firmware version 270.- Added the tables Inputs Totals, Device Performance, and Reset Performance. | 1.0.0.2      | May not be compatible with older firmware versions. |
+| **Range**            | **Key Features**                                                                                                        | **Based on** | **System Impact**                                   |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------|--------------|-----------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                                         | \-           | \-                                                  |
+| 1.1.0.x \[SLC Main\] | \- Added support for firmware version 270. - Added the tables Inputs Totals, Device Performance, and Reset Performance. | 1.0.0.2      | May not be compatible with older firmware versions. |
 
 ### Product Info
 
@@ -93,7 +93,7 @@ It also displays information about the last reset in the **Reset Performance tab
 
 This page displays system information in the **Identification table**, such as the SPDM and Firmware Version, Product ID, Build Number, etc.
 
-It also displays the main device settings in the **Settings table** and configuration informationin the **Configuration table**, including the Power Saver Mode, Fixed Outlet Delay, Duration, Phases, Maximum Load, etc.
+It also displays the main device settings in the **Settings table** and configuration information in the **Configuration table**, including the Power Saver Mode, Fixed Outlet Delay, Duration, Phases, Maximum Load, etc.
 
 Finally, the **Reset table** allows you to reboot the equipment or to reset certain information, such as alerts and power consumption.
 

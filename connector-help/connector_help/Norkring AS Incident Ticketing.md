@@ -73,13 +73,14 @@ Monitor parameters:
 
 - **~ in Last Poll**: The number of **Incidents**, **PAINs** and **Rodlampelogger** tickets in the latest poll cycle to ServiceDesk.
 - **~ Count**: The number of active **Incidents**, **PAINs** and **Rodlampelogger** tickets in their respective tables.
-- **~ in Cache**: The number of **Create Incidents**, **Update Incidents**, **End Incidents**,**Create Rodlampelogger** and **CloseRodlampelogger** write requests stored in the cache tables for further processing.
+- **~ in Cache**: The number of **Create Incidents**, **Update Incidents**, **End Incidents**, **Create Rodlampelogger** and **Close** **Rodlampelogger** write requests stored in the cache tables for further processing.
 
 Page buttons for read and write requests:
 
-- **Custom Poll**: The **Custom Polling** page allows you to build a custom read request. Since only one value will be interpreted by ServiceDesk, to avoid confusion, all other values will be cleared whenever one of the values is set. This does not influence **Tickets Type**,however, as this is required to determine which table to poll.
+- **Custom Poll**: The **Custom Polling** page allows you to build a custom read request. Since only one value will be interpreted by ServiceDesk, to avoid confusion, all other values will be cleared whenever one of the values is set. This does not influence **Tickets Type**, however, as this is required to determine which table to poll.
 
-- **Create Incident**, **Create Rodlampelogger**, **Update Incident** and **End Incident**: The ticket creation/update page can be used to add a write request to the element's cache. These values are also available for Automation scripts, so it is best to use the appropriate medium, which is likely to be the hyperlinks in the Alarm Console. When the create button is clicked, the mandatory values will be presented once more for validation. If one or more mandatory values are skipped, the write request will be denied and shown in the **~ Status Message** box. The values will not be cleared until a valid request has been made.
+- **Create Incident**, **Create Rodlampelogger**, **Update Incident** and **End Incident**:
+  The ticket creation/update page can be used to add a write request to the element's cache. These values are also available for Automation scripts, so it is best to use the appropriate medium, which is likely to be the hyperlinks in the Alarm Console. When the create button is clicked, the mandatory values will be presented once more for validation. If one or more mandatory values are skipped, the write request will be denied and shown in the **~ Status Message** box. The values will not be cleared until a valid request has been made.
 
 - **Incident Creation**: Mandatory values are **Event ID**, **Station INSA**, **Event Time** and **Description**.
   - **Rodlampelogg Creation**: Mandatory values are **Event ID**, **Station**, **Event Time** and **Description**.
@@ -128,4 +129,4 @@ Once the necessary credentials have been provided, the element will periodically
 
 No inactive tickets are returned when the table is refreshed. However, when polling for updates, the tickets that have become inactive are included once. This will set the values as received in the element's table, and delete the inactive tickets when the next polling cycle starts or when their expire time is exceeded.
 
-Active **Incidents** are defined by their **Active Flag** value. For **PAINs** and **Rodlampelogger**,this depends on their **Expire Time**. If a value is provided and the current datetime exceeds this value, the ticket will be deleted from the table.
+Active **Incidents** are defined by their **Active Flag** value. For **PAINs** and **Rodlampelogger**, this depends on their **Expire Time**. If a value is provided and the current datetime exceeds this value, the ticket will be deleted from the table.

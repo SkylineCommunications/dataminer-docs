@@ -12,10 +12,10 @@ The **Andrew APC300** driver uses a **serial** connection with the device.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.1.0.16         | Smartrack enabling when using multiple satellites                                  | No                  | Yes                     |
-| 1.1.1.1          | Driver review: added tables, changed logic, ...Impact: Loss of alarm/trending data | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.1.0.16         | Smartrack enabling when using multiple satellites                                   | No                  | Yes                     |
+| 1.1.1.1          | Driver review: added tables, changed logic, ... Impact: Loss of alarm/trending data | No                  | Yes                     |
 
 ### Supported firmware versions
 

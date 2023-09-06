@@ -44,8 +44,8 @@ This page displays a table with the filtered data from the **Nodes Table**.
 
 ### Sites Page
 
-This page displays a table with the filtered datafrom the **Sites Table**.
+This page displays a table with the filtered data from the **Sites Table**.
 
 ### Circuits Page
 
-This page displays a table with the filtered datafrom the **Circuits Table**.
+This page displays a table with the filtered data from the **Circuits Table**.

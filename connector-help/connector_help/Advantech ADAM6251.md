@@ -24,6 +24,8 @@ The driver communicates through a serial connection with the device to change it
 |------------------|-----------------------------|
 | 1.0.0.x          | A1.05.B00                   |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -67,3 +69,5 @@ you can configure the **GCL** **flags** on this page, at the bottom are *2* **bu
 ### Web Interface
 
 The client machine has to be able to access the device. If not, it won't be possible to open the web interface.
+
+

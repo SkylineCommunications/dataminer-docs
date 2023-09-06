@@ -42,4 +42,5 @@ The Alarms table displays all alarms generated based on the alarms configuration
 
 ## Notes
 
-If a default configuration needs to be pushed (when no configuration is available), a custom version of this protocol must be used.It is possible to clear the configuration via a context menu or by setting parameter 2097 (in an Automation script).
+If a default configuration needs to be pushed (when no configuration is available), a custom version of this protocol must be used.
+It is possible to clear the configuration via a context menu or by setting parameter 2097 (in an Automation script).

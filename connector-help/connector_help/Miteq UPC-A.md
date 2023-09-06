@@ -29,7 +29,8 @@ No further configuration is necessary in order for this driver to work.
 
 ### General
 
-Lists general information for the device. The **Uplink Power Correction Algorithm** can be set here, as well as the **Sample Time**.In addition, this page links to pop-up pages containing alarm states for the **PSUs** and the **Channel Attenuators**.
+Lists general information for the device. The **Uplink Power Correction Algorithm** can be set here, as well as the **Sample Time**.
+In addition, this page links to pop-up pages containing alarm states for the **PSUs** and the **Channel Attenuators**.
 
 ### Channels
 

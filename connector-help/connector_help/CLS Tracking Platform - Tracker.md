@@ -36,7 +36,7 @@ With the **Read Files** button, you can download and process the files that are 
 
 ### GPS
 
-This page displays the **GPS Table**, which is a logger table for past information. It contains information such as the **Program**,the **PTT**, the **Latitude** and **Longitude**, and the **Message Date**.
+This page displays the **GPS Table**, which is a logger table for past information. It contains information such as the **Program**, the **PTT**, the **Latitude** and **Longitude**, and the **Message Date**.
 
 ### Trackers
 

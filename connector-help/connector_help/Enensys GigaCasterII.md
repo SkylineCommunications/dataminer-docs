@@ -69,7 +69,7 @@ The page also contains a set of control buttons:
 
 ### General
 
-This page contains the **Product Mode table** and several **DistriGuard** parameters,and allows monitoring and configuration of both.
+This page contains the **Product Mode table** and several **DistriGuard** parameters, and allows monitoring and configuration of both.
 
 ### IP to ASI
 

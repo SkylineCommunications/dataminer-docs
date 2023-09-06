@@ -35,7 +35,7 @@ This page displays general information about the device, e.g. **System Descripti
 The page also contains two page buttons:
 
 - **Prod. Info**: Displays general information regarding the attached transmitters.
-- **DVE Config**:Allows you to enable or disable DVE creation.
+- **DVE Config**: Allows you to enable or disable DVE creation.
 
 ### Interface Page
 

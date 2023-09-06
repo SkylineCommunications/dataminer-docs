@@ -113,7 +113,7 @@ This page can be used to configure the actual device (for example to upload a co
 
 This page displays a **summary of the device's alarms**.
 
-It is also possible to **configure** the **impact** of the alarms on the device (on the **Alarm configuration** page, accessible via **Alarms Config** pagebutton).
+It is also possible to **configure** the **impact** of the alarms on the device (on the **Alarm configuration** page, accessible via **Alarms Config** page button).
 
 ### Web Interface
 

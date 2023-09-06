@@ -8,7 +8,7 @@ The Telenet Ticket Gateway driver is part of the Telenet SAM Ticketing project. 
 
 ## About
 
-This driver will receive commands that need to be sent to a custom web service of Telenet, i.e. **OSB**. These commands will **Create**, **Update**, **Close**, and **SearchTickets** or **Edit Ninas Counters** in a custom database of Telenet. The tickets are called **'MO'** or **'PLM'** depending on the request.
+This driver will receive commands that need to be sent to a custom web service of Telenet, i.e. **OSB**. These commands will **Create**, **Update**, **Close**, and **Search** **Tickets** or **Edit Ninas Counters** in a custom database of Telenet. The tickets are called **'MO'** or **'PLM'** depending on the request.
 
 The commands will receive a response from OSB: *ACK*/*NACK* or *search* *result.* Create, Update, and Close commands will also receive an *Async* response. This is received by a custom SAMSERVICE web service created by Skyline to receive this response and put it in the correct cell in the communication table, which is a list of all requests sent to OSB. Each error returned from OSB will be logged in an Offload file, though this can be disabled if necessary*.*
 
@@ -34,7 +34,8 @@ The new feature "**makeCommandByProtocol**" will make sure that data in a "to be
 
 To reduce the logging in the element log, the driver will generate an extended log file each hour. This is done via a buffer table, from which the data is offloaded in a file every half hour.
 
-MO CleanUp:When a **CleanUp** request is received from the **MailProc**, the Gateway will execute a series of requests in order to update/close the requested case with the provided MasterData from the MailProc. All this data can be found in the CleanUp request. The following is needed to fulfill the **MO** **Cleanup**:
+MO CleanUp:
+When a **CleanUp** request is received from the **MailProc**, the Gateway will execute a series of requests in order to update/close the requested case with the provided MasterData from the MailProc. All this data can be found in the CleanUp request. The following is needed to fulfill the **MO** **Cleanup**:
 
 1.  Search the Case, in order to retrieve the current condition / networkElement / . needed for the Update.
 2.  Update of the Case with provided master data.

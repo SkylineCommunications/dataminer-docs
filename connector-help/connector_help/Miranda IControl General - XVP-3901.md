@@ -53,11 +53,11 @@ This page displays statistics for **Format Selected** and **Source Selected**.
 
 ### Audio Processing
 
-This page displays the **Groups** and **Discrete AES Detected**. There are page buttons to the **Signal Presence** subpage, the **Downmix** subpage, and **8 CH channels** subpages (each containing four different channels). Several parameters can be configured on these pages, such as the downmix **Operation Mode**, **Dialnorml**, **LFE**, etc., and the signal **Levels**, **Phase**, **Mute**, **Coarse**, **Fine**,etc.
+This page displays the **Groups** and **Discrete AES Detected**. There are page buttons to the **Signal Presence** subpage, the **Downmix** subpage, and **8 CH channels** subpages (each containing four different channels). Several parameters can be configured on these pages, such as the downmix **Operation Mode**, **Dialnorml**, **LFE**, etc., and the signal **Levels**, **Phase**, **Mute**, **Coarse**, **Fine**, etc.
 
 ### Video Input/Output
 
-This page displays information regarding the **Video Input/output**, such as **Input Select**, **Input Configuration**, **BNC configuration**, **Fiber Configuration**, **Freeze**, **Deglitcher**,and **Input 2 Mode**.
+This page displays information regarding the **Video Input/output**, such as **Input Select**, **Input Configuration**, **BNC configuration**, **Fiber Configuration**, **Freeze**, **Deglitcher**, and **Input 2 Mode**.
 
 ### Video Outputs
 

@@ -32,7 +32,7 @@ Note: Upgrading **from range 1.0.0.x to range 1.1.0.x** or higher will cause the
 | 1.1.0.x          | 2.0.16                      |
 | 1.1.2.x          | 2.0.16                      |
 | 1.1.3.x          | 2.0.16                      |
-| 1.1.4.x          | 2.0.162.8.3                 |
+| 1.1.4.x          | 2.0.16 2.8.3                |
 | 2.0.0.x          | 1.8.6                       |
 
 ### Exported drivers
@@ -98,7 +98,7 @@ In addition, a number of columns in the table indicate whether a specific alarm 
 
 This page contains information related to the PIDs. Two tables are displayed: the **PIDs** table and the **PCR PIDs** table.
 
-The PIDs table displays an overview of all PIDs, showing among others which service each PID is part of (**Ref. by service**), and the **Type**,**Rate**, **Continuity Error Counter**, etc.
+The PIDs table displays an overview of all PIDs, showing among others which service each PID is part of (**Ref. by service**), and the **Type**, **Rate**, **Continuity Error Counter**, etc.
 
 In addition, the table contains a number of columns indicating whether a specific alarm is present for a particular PID (e.g. **Unreferenced PID**, **PID Rate** **Too High**, etc.).
 
@@ -162,7 +162,7 @@ From version **1.1.4.1 onwards**, the generation of Encoder DVEs can be enabled 
 
 This page displays a (read-only) tree view related to the decoder. Note that all tables used on this page can be accessed via the **Decoder** page button.
 
-From version **1.1.4.1 onwards**, the generation of Decoder DVEs can be enabled or disabled in the**Decoder Overview Table.**
+From version **1.1.4.1 onwards**, the generation of Decoder DVEs can be enabled or disabled in the **Decoder Overview Table.**
 
 The page provides access to two ways of audio mapping, via the **Audio Table** and **Audio Mapping** page buttons.
 

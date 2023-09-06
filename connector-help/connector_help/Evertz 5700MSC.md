@@ -57,7 +57,7 @@ The element consists of the data pages detailed below.
 
 ### General
 
-Contains the general device configuration, including the **GPS State, Glonass, Leap Time**,and **GPO 1 and 2.**
+Contains the general device configuration, including the **GPS State, Glonass, Leap Time**, and **GPO 1 and 2.**
 
 ### Status
 

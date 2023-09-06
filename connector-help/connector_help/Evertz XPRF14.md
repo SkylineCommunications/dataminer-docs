@@ -76,7 +76,7 @@ This page contains the **Traps Destination Table**, **System Traps** and the **I
 
 ### IO Traps
 
-This page contains **input** and **output** **trap tables**for all inputs and outputs. The controls on this page are similar to those on the Traps page.
+This page contains **input** and **output** **trap tables** for all inputs and outputs. The controls on this page are similar to those on the Traps page.
 
 ### Web Interface
 

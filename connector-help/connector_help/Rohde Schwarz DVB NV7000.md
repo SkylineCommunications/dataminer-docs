@@ -40,7 +40,8 @@ SNMP Settings:
 
 ### Configuration of the Output Power Percentage parameter
 
-After element creation, the **Output Power Percentage** parameter will not yet be correct. To correctly compute this parameter, the **Nominal Power** parameter must be set on the **General** page.
+After element creation, the **Output Power Percentage** parameter will not yet be correct.
+To correctly compute this parameter, the **Nominal Power** parameter must be set on the **General** page.
 
 ### Configuration of the SNMP Interface parameter
 
@@ -48,7 +49,8 @@ This driver supports two different MIBs to interface with this device. These con
 
 However, once an interface has been selected (either automatically or manually) the driver will not change this setting anymore. So if the interface changes, for example because the device was replaced by another using the other SNMP interface, then a manual action will be required to change the SNMP interface. For this, you must use the parameter **SNMP Interface** on the **General** page to select the correct OIDs for the parameters for SNMP communication.
 
-Devices using MIB "rs_xx7000_dtv_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.7.x and should select "*NETCCU700 SNMP-Interface*".Devices using MIB "rs_nv7000_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.2.x and should select "*Netlink ZR700-N SNMP-Interface*".
+Devices using MIB "rs_xx7000_dtv_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.7.x and should select "*NETCCU700 SNMP-Interface*".
+Devices using MIB "rs_nv7000_dd.mib" use OIDs in range 1.3.6.1.4.2566.10.2.x and should select "*Netlink ZR700-N SNMP-Interface*".
 
 ## Usage
 
@@ -77,15 +79,18 @@ The most important configuration parameters are:
 - **Preselect Exciter A Input**
 - **Preselect Exciter B Input**
 
-There is also a **Nominal** **Power** parameter, which can be configured with the expected output power for the transmitter. Once this parameter has been set, the **Output Power Percentage** parameter will contain the **Forward Power** multiplied by *100* and then divided by the **Nominal Power**.Note: as long as this parameter has not been set, the calculated percentage will show *Infinity.*
+There is also a **Nominal** **Power** parameter, which can be configured with the expected output power for the transmitter. Once this parameter has been set, the **Output Power Percentage** parameter will contain the **Forward Power** multiplied by *100* and then divided by the **Nominal Power**.
+Note: as long as this parameter has not been set, the calculated percentage will show *Infinity.*
 
-Finally, there is one last important parameter: **SNMP Interface**. This parameter is used to select the correct OIDs for the parameters for SNMP communication.Normally there should be no need to set this parameter, because it should be automatically configured after first startup. But in some circumstances, in particular when the device is replace by another using different MIBs, it may be necessary to override this setting. Refer to the section "Configuration of the SNMP Interface parameter" above for more information.
+Finally, there is one last important parameter: **SNMP Interface**. This parameter is used to select the correct OIDs for the parameters for SNMP communication.
+Normally there should be no need to set this parameter, because it should be automatically configured after first startup. But in some circumstances, in particular when the device is replace by another using different MIBs, it may be necessary to override this setting. Refer to the section "Configuration of the SNMP Interface parameter" above for more information.
 
 ### Exciter
 
 This page displays information about the two exciters of the device, named *A* and *B*. For each exciter, you can find the active input, a parameter to select an input and the status of the two input signals. There is also a parameter that indicates which exciter is currently active and what the status of the automatic change is.
 
-This page also contains the **Exciters Table**, which should contain two records (*A* and *B*). Those records generate two virtual elements, called *\[ElementName\].Exciter A* and *\[ElementName\].Exciter B*. The last column in the table, **ET - EID**,contains the DataMiner ID and Element ID of the virtual element.
+This page also contains the **Exciters Table**, which should contain two records (*A* and *B*). Those records generate two virtual elements, called *\[ElementName\].Exciter A* and *\[ElementName\].Exciter B*.
+The last column in the table, **ET - EID**, contains the DataMiner ID and Element ID of the virtual element.
 
 ### Registers
 

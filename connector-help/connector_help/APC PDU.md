@@ -60,7 +60,7 @@ The **Load Config** page button displays the **Load Config Info** table as well 
 
 ### System Outlet Page
 
-This page displays the **Outlet Status Info** and **Status Outlet Info** tablesas well as the **Power Status** parameters.
+This page displays the **Outlet Status Info** and **Status Outlet Info** tables as well as the **Power Status** parameters.
 
 It also includes a polling toggle button for each table and a set of power parameters, as well as the following page buttons:
 
@@ -99,7 +99,7 @@ It also includes a polling toggle button for each table and a set of power param
 
 - **Max**: Displays the **Max Outlet Info** table as well as the **Poll Max Outlet Info Table At Predefined Time Interval** toggle button.
 - **Devices**: Displays device-related parameters as well as the **Poll Outlet Device Params At Predefined Time Interval** toggle button.
-- **Outlet Control**: Displays the **Outlet Control Info** table as well as the **Poll Outlet Control Table At Predefined Time Interval** toggle button, and the **Immediate Disabled**, **Immediate Enabled**,and **Reboot All** buttons.
+- **Outlet Control**: Displays the **Outlet Control Info** table as well as the **Poll Outlet Control Table At Predefined Time Interval** toggle button, and the **Immediate Disabled**, **Immediate Enabled**, and **Reboot All** buttons.
 - **Outlet Config**: Displays the **Outlet Config Info** and **Outlet Config Monitored Info** tables.
 - **Outlet Metered Properties**: Displays the outlet metered information.
 

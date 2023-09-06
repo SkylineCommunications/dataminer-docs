@@ -12,7 +12,7 @@ This driver queries a SOAP interface available on the target machine.
 
 Multiple different SOAP requests are daisy-chained to query for the list of configured workflows and jobs. Additional details are also retrieved for each **workflow** and **job** (including completion percentage and other metrics, such as the total execution time).
 
-The driver also queries the Vantage SOAP interface for the various **servers** available in the cluster and retrieves information for each of these machines,including their **service** **list**, state and metrics.
+The driver also queries the Vantage SOAP interface for the various **servers** available in the cluster and retrieves information for each of these machines, including their **service** **list**, state and metrics.
 
 ### Ranges of the driver
 
@@ -76,7 +76,7 @@ This page displays the same data as the "Domain Machines and Server" page, but t
 
 ### Workflow and Jobs
 
-This page displays a list of **workflows** that are configured on the cluster. For each retrieved **workflow**,a **list of jobs** is also retrieved, along with the **current completed percentage**. For each of these jobs, a **list of sessions** is also retrieved. This information contains a historical overview of each job with each different step.
+This page displays a list of **workflows** that are configured on the cluster. For each retrieved **workflow**, a **list of jobs** is also retrieved, along with the **current completed percentage**. For each of these jobs, a **list of sessions** is also retrieved. This information contains a historical overview of each job with each different step.
 
 This page displays its data in a **tree view** format.
 

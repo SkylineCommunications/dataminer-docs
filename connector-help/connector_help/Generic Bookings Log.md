@@ -31,7 +31,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Configuration of Path Parameter
 
-For the driver to work correctly, the **Path** parameter on the **Configuration** page must be set to an existing folder on the server or it should have **Cluster Mode** selected in order to replicate the logging files on all the DMAs in the DMS.
+For the driver to work correctly, the **Path** parameter on the **Configuration** page must be set to an existing folder on the server or it should have **Cluster Mode** selected in order to
+replicate the logging files on all the DMAs in the DMS.
 
 ## Usage
 
@@ -41,7 +42,7 @@ This page displays the **Folder Statistics** of the **path** configured for the 
 
 In addition, the page also contains the **Log Status** table, which lists the current log files in the folder. For each log file, the **File Name**, **Prefix** and **Postfix**, and the current **Status** are displayed.
 
-In each row of the table, there are two buttons to **Update** or **Remove**a log file manually.
+In each row of the table, there are two buttons to **Update** or **Remove** a log file manually.
 
 ### Configuration
 

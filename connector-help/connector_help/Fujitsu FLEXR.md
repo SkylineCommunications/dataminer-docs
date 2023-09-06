@@ -88,4 +88,6 @@ The Inventory table will generate DVE elements for each entry in the inventory C
 
 CSV example:
 
-id;typeDeviceId1;Type1DeviceId2;Type2
+id;type
+DeviceId1;Type1
+DeviceId2;Type2

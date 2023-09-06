@@ -111,7 +111,7 @@ This page provides information on each of the exciters. The available parameters
 
 ### Exciter Settings Page
 
-This page displays information on the configuration and settings of each individualexciter (A and B). There are also two page buttons available on this page:
+This page displays information on the configuration and settings of each individual exciter (A and B). There are also two page buttons available on this page:
 
 - **Exciter Pre-Corr Settings:** Displays both Exciter Pre-corrector Settings Tables. These tables provide useful information for monitoring.
 - **Trans and Multiplexing:** Displays the Transmission and Multiplexing Configuration Control Table.
@@ -153,7 +153,7 @@ There are also several page buttons:
 - **Events:** Displays the **Tx Events Table**, which lists all existing events on the device. This table is polled from the device on startup and the values are refreshed every time a trap is received. You can set the **Event Tx Mask** value for the event as well as the **Event Priority.**
 - **RF Probes:** Displays the RF Probes tables. These tables complement each other and display information on existing RF probes.
 - **OST:** Displays the **OST Commands Table**.
-- **DVE Config**:Contains the **Automatic Removal** toggle button, which determines whether DVEs are automatically removed when the corresponding module is no longer available, as well as a button to **Remove All** DVEs.
+- **DVE Config**: Contains the **Automatic Removal** toggle button, which determines whether DVEs are automatically removed when the corresponding module is no longer available, as well as a button to **Remove All** DVEs.
 - **Exciter Frequency**: Displays the **Commands Table**.
 
 ### Program Page

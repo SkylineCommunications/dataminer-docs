@@ -25,7 +25,7 @@ This driver uses a serial connection and needs the following user information:
 
 ### Statistics
 
-Thispage displays the **Statistics Table**, which has 2 fixed entries for the 2 channels that the Newtec Reflector should be configured with. The 2 fixed channels should have the following configuration:
+This page displays the **Statistics Table**, which has 2 fixed entries for the 2 channels that the Newtec Reflector should be configured with. The 2 fixed channels should have the following configuration:
 
 - Channel 1: **In Port** = 1111 and **In Address** = polling IP
 - Channel 2: **In Port** = 2222 and **In Address** = polling IP

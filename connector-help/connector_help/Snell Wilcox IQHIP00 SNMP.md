@@ -14,7 +14,7 @@ The ****Snell Wilcox IQHIP00 SNMP**** provides a monitoring interface to the ***
 
 ### Creation
 
-The ****Snell Wilcox IQHIP00 SNMP****is an SNMP driver. The IP has to be configured during creation of the element.
+The ****Snell Wilcox IQHIP00 SNMP**** is an SNMP driver. The IP has to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

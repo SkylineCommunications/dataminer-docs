@@ -24,8 +24,11 @@ On the **NetInsight Nimbra elements** that need to be taken into account by the 
 
 ## Usage
 
-General This page contains the list of NetInsight Nimbra nodes that have been detected. It also contains the **Configuration.** page button under which the location of the xml Nimbra descriptor file can be configured.
+General
+This page contains the list of NetInsight Nimbra nodes that have been detected. It also contains the **Configuration.** page button under which the location of the xml Nimbra descriptor file can be configured.
 
-DTM Links This page contains a list of the **physical** and **virtual** **DTM Links** that exist between the different **Nimbra nodes**. By right-clicking on the table, **virtual DTM Links** can be managed.
+DTM Links
+This page contains a list of the **physical** and **virtual** **DTM Links** that exist between the different **Nimbra nodes**. By right-clicking on the table, **virtual DTM Links** can be managed.
 
-Booked Services This page contains a list of booked services together with their channels. By right-clicking on the **Booked Services Table**, **virtual services** can be deleted. In order to add **virtual services**, the **VISUAL** page '**design booking**' needs to be used.
+Booked Services
+This page contains a list of booked services together with their channels. By right-clicking on the **Booked Services Table**, **virtual services** can be deleted. In order to add **virtual services**, the **VISUAL** page '**design booking**' needs to be used.

@@ -10,7 +10,8 @@ This driver collects data from the chassis controller and the available PM1004V 
 
 ## About
 
-This driver polls the general configuration parameters of an Ekinops 360 Platform, as well as data for all supported cards in the system.For each supported card, a DVE element will be created that contains detailed information about the module.
+This driver polls the general configuration parameters of an Ekinops 360 Platform, as well as data for all supported cards in the system.
+For each supported card, a DVE element will be created that contains detailed information about the module.
 
 Currently only the PM1004V module is supported. To have more modules supported, please contact your TAM, or the [Skyline sales team](mailto:sales@skyline.be).
 
@@ -50,7 +51,7 @@ On this page, you can find device information, as well as some network addresses
 
 #### Trap Configuration Page
 
-On thispage, you can enable or disable traps.
+On this page, you can enable or disable traps.
 
 #### Chassis Overview Page
 
@@ -110,21 +111,22 @@ All internal connections on the card will include interface X1 or X2. Every (int
 
 Below you can find a list of the interfaces and the connections and properties that can originate from each interface.
 
-- **X1**This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
+- **X1**
+  This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
 
 - Is connected to *ETH* name: *./X1-ETH*
 
   - - [*@Port*]() *Name =* *ETH*
 
-  - Is connected to *FE* name:*./X1-FE*
+  - Is connected to *FE* name: *./X1-FE*
 
   - - [*@Port*]() *Name =* *FE*
 
-  - Is connected to *V2 Tx*name:*./X1-V2Tx*
+  - Is connected to *V2 Tx* name: *./X1-V2Tx*
 
   - - [*@Port*]() *Name = V2*
 
-  - Is connected to *V3 Tx*name: *./X1-V3Tx*
+  - Is connected to *V3 Tx* name: *./X1-V3Tx*
 
   - - [*@Port*]() *Name = V3*
 
@@ -132,25 +134,26 @@ Below you can find a list of the interfaces and the connections and properties t
 
   - - [*@Port*]() *Name = V4*
 
-  - Is connected to *V5 Tx*name*:./X1-V5Tx*
+  - Is connected to *V5 Tx* name*:* *./X1-V5Tx*
 
   - - [*@Port*]() *Name = V5*
 
-- **X2**This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
+- **X2**
+  This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
 
 - Is connected to *ETH* name: *./X1-ETH*
 
   - - [*Port*]() *Name =* *ETH*
 
-  - Is connected to *FE* name:*./X1-FE*
+  - Is connected to *FE* name: *./X1-FE*
 
   - - [*@Port*]() *Name =* *FE*
 
-  - Is connected to *V2 Tx*name:*./X1-V2Tx*
+  - Is connected to *V2 Tx* name: *./X1-V2Tx*
 
   - - [*@Port*]() *Name = V2*
 
-  - Is connected to *V3 Tx*name: *./X1-V3Tx*
+  - Is connected to *V3 Tx* name: *./X1-V3Tx*
 
   - - [*@Port*]() *Name = V3*
 
@@ -158,11 +161,12 @@ Below you can find a list of the interfaces and the connections and properties t
 
   - - [*@Port*]() *Name = V4*
 
-  - Is connected to *V5 Tx*name*:./X1-V5Tx*
+  - Is connected to *V5 Tx* name*:* *./X1-V5Tx*
 
   - - [*@Port*]() *Name = V5*
 
-- **V2 Rx**This is an HD SDI input connector.
+- **V2 Rx**
+  This is an HD SDI input connector.
 
 - Is connected to *X1* name *./V2Rx-X1*
 
@@ -171,7 +175,8 @@ Below you can find a list of the interfaces and the connections and properties t
   - Is connected to *X2* name *./V2Rx-X2*
     - [@Port]() Name = *V2*
 
-- **V3 Rx**This is an HD SDI input connector.
+- **V3 Rx**
+  This is an HD SDI input connector.
 
 - Is connected to *X1* name *./V3Rx-X1*
 
@@ -180,7 +185,8 @@ Below you can find a list of the interfaces and the connections and properties t
   - Is connected to *X2* name *./V3Rx-X2*
     - [@Port]() Name = *V3*
 
-- **V4 Rx**This is an HD SDI input connector.
+- **V4 Rx**
+  This is an HD SDI input connector.
 
 - Is connected to *X1* name *./V4Rx-X1*
 
@@ -190,7 +196,8 @@ Below you can find a list of the interfaces and the connections and properties t
 
   - - [@Port]() Name = *V4*
 
-- **V5 Rx**This is an HD SDI input connector.
+- **V5 Rx**
+  This is an HD SDI input connector.
 
 - Is connected to *X1* name *./V5Rx-X1*
 
@@ -200,15 +207,20 @@ Below you can find a list of the interfaces and the connections and properties t
 
   - - [@Port]() Name = *V5*
 
-- **V2 Tx** This is an HD SDI output connector.
+- **V2 Tx
+  **This is an HD SDI output connector.
 
-- **V3 Tx** This is an HD SDI output connector.
+- **V3 Tx
+  **This is an HD SDI output connector.
 
-- **V4 Tx** This is an HD SDI output connector.
+- **V4 Tx
+  **This is an HD SDI output connector.
 
-- **V5 Tx** This is an HD SDI output connector.
+- **V5 Tx
+  **This is an HD SDI output connector.
 
-- **ETH**This is a standard Ethernet connector (RJ45)
+- **ETH**
+  This is a standard Ethernet connector (RJ45)
 
 - Is connected to *X1* name *./ETH-X1*
 
@@ -218,7 +230,8 @@ Below you can find a list of the interfaces and the connections and properties t
 
   - - [@Port]() Name = *ETH*
 
-- **FE**This is a Fast Ethernet connector.
+- **FE**
+  This is a Fast Ethernet connector.
 
 - Is connected to *X1* name *./FE-X1*
 

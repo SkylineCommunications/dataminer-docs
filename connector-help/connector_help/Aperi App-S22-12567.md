@@ -10,10 +10,10 @@ This driver is used to monitor and configure Aperi's APP-S22-12567 (SDI) module.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                 | **Based on** | **System Impact**                                                                                                                                                    |
-|----------------------|------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version                                                  | \-           | \-                                                                                                                                                                   |
-| 1.0.0.x \[SLC Main\] | Changed parameter descriptions of parameters with 2010 and 2013. | 1.0.0.2      | All statistical data will be lost for parameters 2010 and 2013 when upgrading from the previous version.Visio drawings for the 1.0.0.x branch might be incompatible. |
+| **Range**            | **Key Features**                                                 | **Based on** | **System Impact**                                                                                                                                                     |
+|----------------------|------------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version                                                  | \-           | \-                                                                                                                                                                    |
+| 1.0.0.x \[SLC Main\] | Changed parameter descriptions of parameters with 2010 and 2013. | 1.0.0.2      | All statistical data will be lost for parameters 2010 and 2013 when upgrading from the previous version. Visio drawings for the 1.0.0.x branch might be incompatible. |
 
 ### Product Info
 
@@ -89,7 +89,7 @@ This page contains statistical information for SMPTE-2022-6 encapsulation. The f
 
 ### RTP
 
-This page contains **RTP statistics** for both **Senders** and**Receivers**, including **packets**, **uptime**, **bit rates** and **status and error** information.
+This page contains **RTP statistics** for both **Senders** and **Receivers**, including **packets**, **uptime**, **bit rates** and **status and error** information.
 
 ### PDV
 
@@ -98,3 +98,5 @@ This page displays the **Packet Data Variation** statistics for both **Senders**
 ### FEC
 
 This page displays the **Forward Error Correction** statistics for both **Senders** and **Receivers**, including the **FEC mode** and the **dropped** and **recovered** packets.
+
+

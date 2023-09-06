@@ -70,7 +70,7 @@ In addition, the following settings are also possible:
 
 ### Video
 
-On thispage, the following information is displayed in the **Video Table:**
+On this page, the following information is displayed in the **Video Table:**
 
 - The table row identification, in the **Video Index** column
 - The **card index**
@@ -80,7 +80,7 @@ On thispage, the following information is displayed in the **Video Table:**
 
 ### Optical
 
-Thispage displays the following information in the **Optical Modules Table:**
+This page displays the following information in the **Optical Modules Table:**
 
 - The table row identification, in the **Index** column
 - The **card index**
@@ -90,7 +90,7 @@ Thispage displays the following information in the **Optical Modules Table:**
 
 ### Hardware
 
-On thispage, the following information is displayed:
+On this page, the following information is displayed:
 
 - The temperature of the cards, in the **Temperature Table**
 - The power state of the cards, in the **Power State Table**
@@ -102,7 +102,7 @@ The **Power State Table** contains the following information:
 
 - The row identification, in the **Power Index** column, which combines the card identification and the power unit in use
 - The card identification, in the **Card Index** column
-- The **Power Unit**identification
+- The **Power Unit** identification
 - The **Power State**
 
 The **Fan Table** displays the following information:
@@ -115,7 +115,7 @@ The **Fan Table** displays the following information:
 
 ### Channel Control State
 
-Thispage displays the **Channel Control State Table**, which displays the card and channel combination state and its medium type.
+This page displays the **Channel Control State Table**, which displays the card and channel combination state and its medium type.
 
 This table has the following columns:
 
@@ -129,4 +129,4 @@ With the **Settings** page button, you can configure whether a particular channe
 
 ### Custom Serial Command
 
-On thispage, you can enter any serial command to be sent to the opV9000 device in the **Custom Command** field at the top. The response, both ASCII and HEX, will be displayed below, by the **Received Response** parameter.
+On this page, you can enter any serial command to be sent to the opV9000 device in the **Custom Command** field at the top. The response, both ASCII and HEX, will be displayed below, by the **Received Response** parameter.

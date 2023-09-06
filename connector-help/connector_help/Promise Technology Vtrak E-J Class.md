@@ -61,11 +61,11 @@ There are two tables on this page: the **Battery** **Table** and the **Cooling D
 
 ### Physical drive page
 
-This page contains the **Physical** **Drive** **Table**,which displays general information about the drives, like the **Interface**, **Alias**, **Model** **Number**, **Serial** **Number**, **Firmware** and **Protocol** **Version**, **Operational** **Status**, **Condition**, **Operation** and **Configuration**. Also the **Array** **ID**, **Sequence** **Number**, **Enclosure** **ID**, **Slot** **Number** and **Block** **Size** are mentioned, as well as the **Drive** **Type** and **Capacity** (Physical, Configurable and Used).
+This page contains the **Physical** **Drive** **Table**, which displays general information about the drives, like the **Interface**, **Alias**, **Model** **Number**, **Serial** **Number**, **Firmware** and **Protocol** **Version**, **Operational** **Status**, **Condition**, **Operation** and **Configuration**. Also the **Array** **ID**, **Sequence** **Number**, **Enclosure** **ID**, **Slot** **Number** and **Block** **Size** are mentioned, as well as the **Drive** **Type** and **Capacity** (Physical, Configurable and Used).
 
 ### Disk array page
 
-This page contains the **Disk** **Array** **Table**,which displays information about the disk array, such as the **Array** **Alias**, **Operational** **Status**, **Condition**, **Operation**, **Capacity** (Physical, Configurable, Free and Max Contiguous), **Media** **Patrol** and **PDM** **Enabled**, **Number** **of** **Physical** and **Logical** **Drives**, **Number** **of** **Dedicated** **Spares**, some **IDs** (Physical and Logical Drives) and the **Array** **WWN**.
+This page contains the **Disk** **Array** **Table**, which displays information about the disk array, such as the **Array** **Alias**, **Operational** **Status**, **Condition**, **Operation**, **Capacity** (Physical, Configurable, Free and Max Contiguous), **Media** **Patrol** and **PDM** **Enabled**, **Number** **of** **Physical** and **Logical** **Drives**, **Number** **of** **Dedicated** **Spares**, some **IDs** (Physical and Logical Drives) and the **Array** **WWN**.
 
 ### Logical - Spare drive page
 

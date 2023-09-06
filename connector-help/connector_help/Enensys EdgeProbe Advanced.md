@@ -68,14 +68,15 @@ Note: This page is available from version 1.0.1.2 onwards.
 This page contains a number of buttons that allow you to perform certain operations on the device:
 
 - **Reboot**: Reboots the device.
-- **Reset Network**:Resets the network settings.
+- **Reset Network**: Resets the network settings.
 - **Reset All**: Resets the entire device.
 - **Blink LED**: Asks the device to identify itself by blinking a LED.
 
 The page also contains two page buttons, which open the following subpages:
 
 - GPS Status: Displays the status of the **GPS Satellites**.
-- Time Config: Allows you to change the time settings, e.g. **Date Time**, **Time Source**, **Time Zone**, etc.Note: The **Time Zone** can only be configured when the **Time Source** is configured as *System*.
+- Time Config: Allows you to change the time settings, e.g. **Date Time**, **Time Source**, **Time Zone**, etc.
+  Note: The **Time Zone** can only be configured when the **Time Source** is configured as *System*.
 - Network Interface: Interface table that provides an overview of **all used network interfaces**, with information about the IPv4 addresses, MAC addresses, Gateway, etc. It allows you to change the network settings of each network interface separately.
 - Device Option: Table that summarizes thetypes of devices and their current status.
 
@@ -102,10 +103,10 @@ Several subpages are available:
 
 - Channel T Configuration: DVB-T and DVB-T2 settings, such as **Frequency**, **Signal levels**, **Mer levels**, **Pre Viterbi Ber**, **Post RS (Reed Solomon) Ber** and **DC Constellation degradation** settings. A **Profile Name** can also be changed
 - Channel C Configuration: DVB-C and DVC-C2 settings, such as **Frequency**, **Signal levels**, **SNR levels, Post RSPer levels** and **Pre Viterbi Ber** settings. A **Profile Name** can also be changed.
-- Channel S2 Configuration: DVB-S2 settings, such as **Frequency**, **LNB Frequency**, **Symbol Rate**, **Band**, **Polarization**, **Isi**, **Signal levels**, **CNR levels, Eb/No levels, PER** and **Link Margin** settings. A **Profile Name** and a**Profile Description**can also be changed. (Only available on 1.0.1.8 version)
+- Channel S2 Configuration: DVB-S2 settings, such as **Frequency**, **LNB Frequency**, **Symbol Rate**, **Band**, **Polarization**, **Isi**, **Signal levels**, **CNR levels, Eb/No levels, PER** and **Link Margin** settings. A **Profile Name** and a **Profile Description** can also be changed. (Only available on 1.0.1.8 version)
 - SFN T Configuration: SFN-T, SFN-T2 and T2Mi settings, such as **Drift** **levels**, **Delays** and **Status** settings.
 - Channel IP Configuration: Channel IP settings, such as the **Mode**, **IP Address** and **Port**. A **Profile Name** can be changed and a **Description** can be added per IP channel.
-- Channel ASI Configuration: Channel ASI settings, such as the **Name**, **Profile Name**and **Description**.
+- Channel ASI Configuration: Channel ASI settings, such as the **Name**, **Profile Name** and **Description**.
 - Channel Isdb-T Configuration: Channel Isdb-T settings, such as the **Frequency**, **Signal levels**, **SNR levels**, **Post RSPer levels**, **Pre Viterbi Ber** and **Post Viterbi** settings. A **Profile Name** can also be changed.
 - Mute Configuration: Channel mute settings, such as **Mode**, **Post Vit Ber** settings and **Post Ldpc Ber** settings.
 - ETR Configuration: Contains three tables that allow you to configure **ETR1**, **ETR2** and **ETR3** respectively.
@@ -122,7 +123,7 @@ The **RF** section contains four page buttons:
 
 - DVB-T: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Mer**, **Pre** **Viterbi** **Ber** and **SNR** for the DVB-T Channel and DVB-T2 Channel.
 - DVB-C: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Post RSPer**, **Post** **Viterbi** **Ber** and **SNR** for the DVB-C Channel and DVB-C2 Channel.
-- DVB-S2: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **CNR**, **Eb/No**, **PER**, **Link Margin**for the DVB-S2 Channel. (Only available on 1.0.1.8 version)
+- DVB-S2: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **CNR**, **Eb/No**, **PER**, **Link Margin** for the DVB-S2 Channel. (Only available on 1.0.1.8 version)
 - Isdb-T: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Post RSPer**, **Pre and** **Post** **Viterbi** **Ber** and **SNR** for the Isdb-T Channel.
 - Echoes: Information about **Echoes level, Channel ID** and **Delays**.
 

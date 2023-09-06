@@ -12,10 +12,10 @@ The 1.0.0.x range of this connector uses SNMP to poll information from the Viz E
 
 ### Version Info
 
-| **Range**            | **Key Features**                            | **Based on** | **System Impact**                                                                  |
-|----------------------|---------------------------------------------|--------------|------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version (SNMP)                      | \-           | \-                                                                                 |
-| 1.1.0.x \[SLC Main\] | \- Removed SNMP support- Added HTTP support | \-           | The data shown in this branch is not the same as the data shown in branch 1.0.0.x. |
+| **Range**            | **Key Features**                             | **Based on** | **System Impact**                                                                  |
+|----------------------|----------------------------------------------|--------------|------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version (SNMP)                       | \-           | \-                                                                                 |
+| 1.1.0.x \[SLC Main\] | \- Removed SNMP support - Added HTTP support | \-           | The data shown in this branch is not the same as the data shown in branch 1.0.0.x. |
 
 ### Product Info
 
@@ -75,7 +75,7 @@ Both branches of this connector only serve monitoring purposes.
 
 System parameters are displayed on the **General** page.
 
-There is also a page for each **channel**, which displays information likethe Connection State, Database Connection, Video Input Status, Clip Status, Frame Rate, Texture Memory Free, Texture Memory Total, Texture Memory Used, etc.
+There is also a page for each **channel**, which displays information like the Connection State, Database Connection, Video Input Status, Clip Status, Frame Rate, Texture Memory Free, Texture Memory Total, Texture Memory Used, etc.
 
 This connector handles traps regarding each channel and updates the parameter values accordingly.
 

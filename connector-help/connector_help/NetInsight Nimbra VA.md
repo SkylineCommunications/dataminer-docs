@@ -12,11 +12,11 @@ The driver uses an SNMP connection to monitor **NetInsight Nimbra VA** devices. 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                            | No                  | Yes                     |
-| 1.1.0.x          | Initial version                                                                            | No                  | Yes                     |
-| 1.2.0.x          | New firmware version(NOTE: version 1.2.0.3 is considered obsolete, and should not be used) | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                             | No                  | Yes                     |
+| 1.1.0.x          | Initial version                                                                             | No                  | Yes                     |
+| 1.2.0.x          | New firmware version (NOTE: version 1.2.0.3 is considered obsolete, and should not be used) | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -215,7 +215,7 @@ The **Pull Sink Table** contains information such as:
 
 This page displays the **Push Source Table**, **Ls Table** and the **Push Sink Table**.
 
-The **Push Source Table**contains information such as:
+The **Push Source Table** contains information such as:
 
 - **Display key**: contains the **Index**, **Name** and **Filter** fields of this table separated by points
 
@@ -246,7 +246,7 @@ The **Ls Table** contains information such as:
 
 - Configuration Error
 
-The **Push Sink Table**contains information such as:
+The **Push Sink Table** contains information such as:
 
 - **Display key**: contains the **Index**, **Name** and **Filter** fields of this table separated by points
 
@@ -262,7 +262,7 @@ The **Push Sink Table**contains information such as:
 
 ### Statistics Page
 
-This page displays the **UDP Statistics** **Table**, **Transport Statistics** **Table**and the **Test Summary Table**. The tables have in common the following information:
+This page displays the **UDP Statistics** **Table**, **Transport Statistics** **Table** and the **Test Summary Table**. The tables have in common the following information:
 
 - **Display key**: contains the **Index**, **Reference Table Name**, **Reference Table Row**, **Reference Stream Name** and **Filter** fields of this table separated by points
 
@@ -283,6 +283,8 @@ This page displays the **Active Alarm Table** contain information such as:
 ### Web Page
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+
 
 ## Usage
 
@@ -381,3 +383,5 @@ Note that the client machine has to be able to access the device, as otherwise i
 ### Note
 
 When the user want to do a set in the Input From, it could change the Input **Number** or the Select Input, anyone who chooses the other one can't be on "N/A", in case it changes the **Select Input** and the **Input Number** is on "N/A" it would display a message saying "Input Number can't be N/A, please change it" and if it changes the **Input Number** and the **Select Input** is on "N/A" it would display a message saying "Select Input can't be N/A, please change it". In this way until both parts have a valid value it wont be complete the set on the **Input From**.
+
+

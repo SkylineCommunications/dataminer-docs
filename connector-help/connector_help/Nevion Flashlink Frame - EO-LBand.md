@@ -52,7 +52,7 @@ It also allows you to configure the **Upper** and **Lower Limit** and **Alarms**
 
 ### Signal Input Page
 
-This page displays the **EQ**table, which contains information about EQ parameters.
+This page displays the **EQ** table, which contains information about EQ parameters.
 
 It also allows you to view the **Num** and **Status**, as well as to configure **Config** and **Alarms**.
 

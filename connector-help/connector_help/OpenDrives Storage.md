@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-When the element has been created, fill in the **User** and **Password** parameterson the **Credentials** page. The connector will only be able to retrieve data from the device after this has been done and the **Connection Status** parameter indicates *OK*.
+When the element has been created, fill in the **User** and **Password** parameters on the **Credentials** page. The connector will only be able to retrieve data from the device after this has been done and the **Connection Status** parameter indicates *OK*.
 
 ### Redundancy
 

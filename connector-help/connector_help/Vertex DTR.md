@@ -4,7 +4,7 @@ uid: Connector_help_Vertex_DTR
 
 # Vertex DTR
 
-The **Vertex DTR** is a tracking receiver developed for satellite tracking and uplink power control applications. This driver can be used to monitor and control any Vertex DTRdevice.
+The **Vertex DTR** is a tracking receiver developed for satellite tracking and uplink power control applications. This driver can be used to monitor and control any Vertex DTR device.
 
 ## About
 

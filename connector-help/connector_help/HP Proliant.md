@@ -48,7 +48,7 @@ This page contains the **CPU Table**, with information such as the CPU **Speed**
 
 This page contains the following tables:
 
-- **Physical Drive Table**:Displays information about the physical drive, such as the **Status**, **Size**, etc.
+- **Physical Drive Table**: Displays information about the physical drive, such as the **Status**, **Size**, etc.
 - **Logical Drive Table**: Displays information about the logical drive, such as the **Fault Tolerance**, **Status**, etc.
 
 ### Disk Array/Accelerator
@@ -60,16 +60,16 @@ This page contains the following tables:
 
 ### Fan
 
-This page contains the **Fan Table**,with information such as the fan **Speed**, **Condition**, etc.
+This page contains the **Fan Table**, with information such as the fan **Speed**, **Condition**, etc.
 
 ### Memory
 
-This page contains the **Memory Table**,with information such as the memory **Module**, **Module Size**, etc.
+This page contains the **Memory Table**, with information such as the memory **Module**, **Module Size**, etc.
 
 ### Power Supply
 
-This page contains the **Power Supply Table**,with information such as the power supply **Status**, **Capacity**, etc.
+This page contains the **Power Supply Table**, with information such as the power supply **Status**, **Capacity**, etc.
 
 ### Temperature
 
-This page contains the **Temperature Table**,with information such as the temperature **Value**, **Threshold**, **Condition**, etc.
+This page contains the **Temperature Table**, with information such as the temperature **Value**, **Threshold**, **Condition**, etc.

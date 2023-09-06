@@ -79,5 +79,5 @@ The element created with this connector consists of the following data pages:
 - **Status:** Contains the Transmission Interface Codec 1, Codec 2, AoIP (SIP) and Connection Status parameters.
 - **Connections:** Contains connection statistics and connection state parameters.
 - **Coding**: Allows you to modify the Codec 1 and Codec 2 configuration, including the Bit Rate and Sample Rate.
-- **Network:** Allows you to check the Primary Network and select the Secondary Network. The **AoIP Settings** subpage displaysSIP parameters such as SIP User, Status and more. You can also reset SIP profiles and return SIP accounts to the factory settings.
+- **Network:** Allows you to check the Primary Network and select the Secondary Network. The **AoIP Settings** subpage displays SIP parameters such as SIP User, Status and more. You can also reset SIP profiles and return SIP accounts to the factory settings.
 - **Alarms:** Contains the Alarms Table and Alarm Counter.

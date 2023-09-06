@@ -6,7 +6,7 @@ uid: Connector_help_Teleste_DMM_DVO202_S
 
 The DVO202 S is an optical receiver module for the Teleste DMM.
 
-This DVE supports the **DVO202 S** and **DVO202 NL**module types.
+This DVE supports the **DVO202 S** and **DVO202 NL** module types.
 
 ## About
 

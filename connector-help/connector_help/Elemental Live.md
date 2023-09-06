@@ -6,7 +6,7 @@ uid: Connector_help_Elemental_Live
 
 This driver polls information from an **Elemental Live** server, namely the status of streamed live events and of the encoding of live events. The driver also enables the user to create new output streams on the server.
 
-An **Elemental Live**system can stream multiple video outputs through the following three input types: HD-SDI, IP or local files.
+An **Elemental Live** system can stream multiple video outputs through the following three input types: HD-SDI, IP or local files.
 
 ## About
 
@@ -22,7 +22,8 @@ The driver retrieves the following information from an **Elemental Live** system
 
 Most of these items can also be added or deleted in the driver.
 
-The driver uses **HTTP REST** commands to perform GET/POST commands based on the Elemental Live API. In addition, **SNMP** is used for the Elemental Live's traps and basic settings.Each polling request (HTTP/SNMP) command is performed every 10 seconds.
+The driver uses **HTTP REST** commands to perform GET/POST commands based on the Elemental Live API. In addition, **SNMP** is used for the Elemental Live's traps and basic settings.
+Each polling request (HTTP/SNMP) command is performed every 10 seconds.
 
 ### Ranges of the driver
 
@@ -32,9 +33,9 @@ The driver uses **HTTP REST** commands to perform GET/POST commands based on the
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                         |
-|------------------|-----------------------------------------------------|
-| 1.0.0.x          | Software version 2.7.0.30234Software version 2.12.6 |
+| **Driver Range** | **Device Firmware Version**                          |
+|------------------|------------------------------------------------------|
+| 1.0.0.x          | Software version 2.7.0.30234 Software version 2.12.6 |
 
 ## Installation and Configuration
 
@@ -72,13 +73,13 @@ Also on the **General Settings** page, **SNMP Polling** can be enabled or disabl
 
 ### Live Events
 
-On thispage, the current events of the device are displayed in a tree structure. For each event, there can be one or more nodes representing output group settings, with each output group containing a specific number of output streams.
+On this page, the current events of the device are displayed in a tree structure. For each event, there can be one or more nodes representing output group settings, with each output group containing a specific number of output streams.
 
-New events can be created with the **Create Event** page button. In addition, you can perform operations on existing events via the **Event Actions** page button,such as **Start/Stop Encoding**, **Archive/Cancel Event** and **Reset/Delete**.
+New events can be created with the **Create Event** page button. In addition, you can perform operations on existing events via the **Event Actions** page button, such as **Start/Stop Encoding**, **Archive/Cancel Event** and **Reset/Delete**.
 
 ### Event Profiles
 
-On thispage, existing predefined event profiles are displayed in a tree structure, similar to the tree structure on the **Live Events** page. These can be used to create new streaming schedules or live video output streams.
+On this page, existing predefined event profiles are displayed in a tree structure, similar to the tree structure on the **Live Events** page. These can be used to create new streaming schedules or live video output streams.
 
 It is possible to delete profiles in the tree structure, and new profiles can be created based on existing presets, via the **Create Profile** page button.
 
@@ -104,11 +105,11 @@ In addition, new categories can be created via the **Create Category** page butt
 
 ### Devices
 
-This page displays the **Devices Table**, which shows what input devices are connected to the **Elemental Live**system.
+This page displays the **Devices Table**, which shows what input devices are connected to the **Elemental Live** system.
 
 ### Routers
 
-Thispage displays any routers associated with the **Elemental Live** system. More routers can be added by means of the **Add Router** page button. Routers can also be deleted with the **Delete** button in the **Routers Table.**
+This page displays any routers associated with the **Elemental Live** system. More routers can be added by means of the **Add Router** page button. Routers can also be deleted with the **Delete** button in the **Routers Table.**
 
 ### Live Events Traps/Alerts
 

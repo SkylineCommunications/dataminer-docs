@@ -10,9 +10,9 @@ Audio Live is a multi-channel audio routing and processing solution for the IP d
 
 ### Version Info
 
-| **Range**            | **Key Features**                                         | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Audio channel shufflingAudio channel delay configuration | \-           | \-                |
+| **Range**            | **Key Features**                                          | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Audio channel shuffling Audio channel delay configuration | \-           | \-                |
 
 ### Product Info
 

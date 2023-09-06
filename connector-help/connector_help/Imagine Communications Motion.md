@@ -84,14 +84,17 @@ There is no redundancy defined.
 The element created with this driver consists of the following data pages:
 
 - **General**: Displays general information about the service, such as the name, API version, URLs, ports, etc.
-- **Jobs**: Displays the number and list of jobs. The **Total Number of Jobs** refers to the total number of jobs available in the API, but the number of items displayed in the table is limited by the Query parameters. This page contains the following page buttons:
+- **Jobs**: Displays the number and list of jobs. The **Total Number of Jobs** refers to the total number of jobs available in the API, but the number of items displayed in the table is limited by the Query parameters.
+  This page contains the following page buttons:
   - **Job Query Parameters**: Displays the list of parameters used to query jobs. As the list of jobs available in the API could grow too large, it is advisable to limit the maximum number of jobs to an acceptable amount (by default 500) that should be polled from the API; otherwise the element will go into timeout.
   - **Activities**: Displays the list of available activities under each job.
-- **Workflows**: Displays the list of workflows. This page contains the following page buttons:
+- **Workflows**: Displays the list of workflows.
+  This page contains the following page buttons:
   - **Input Parameters**: Displays the list of input parameters.
   - **Output Parameters**: Displays the list of output parameters.
 - **Tasks**: Displays the number and list of tasks.
-- **Storages**: Displays the list of storages and endpoints. This page contains the following page buttons:
+- **Storages**: Displays the list of storages and endpoints.
+  This page contains the following page buttons:
   - **Configuration**: Contains the list of parameters used to query directories and files for a specific endpoint.
   - **Directories**: Contains the directory list for a given endpoint.
   - **Files**: Contains the files list for a given endpoint.

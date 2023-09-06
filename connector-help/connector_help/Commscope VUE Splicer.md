@@ -10,9 +10,9 @@ This SNMP driver allows the user to monitor the Commscope VUE Splicer device. It
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | \-               | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \-               | \-           | \-                |
 
 ### Product Info
 
@@ -65,3 +65,5 @@ The web interface is only accessible when the client machine has network access 
 ## Notes
 
 This driver does not perform any SET.
+
+

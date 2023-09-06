@@ -26,7 +26,7 @@ The ****Pixelmetrix DVStation IP3**** provides a monitoring interface to the ***
 
 ## Creation
 
-The ****Pixelmetrix DVStation IP3****is a **SNMP** driver. The **IP** need to be configured during creation of the **element**.
+The ****Pixelmetrix DVStation IP3**** is a **SNMP** driver. The **IP** need to be configured during creation of the **element**.
 
 **SNMP CONNECTION:**
 

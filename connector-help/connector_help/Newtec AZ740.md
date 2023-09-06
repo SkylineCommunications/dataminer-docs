@@ -48,8 +48,8 @@ This page displays general information about the device, such as the **Device Se
 
 The page also contains the following page buttons:
 
-- **SNMP**:Allows you to configure the SNMP settings.
-- **Ethernet**:Allows you to configure the Ethernet settings.
+- **SNMP**: Allows you to configure the SNMP settings.
+- **Ethernet**: Allows you to configure the Ethernet settings.
 - **Display**: Allows you to configure the display settings.
 - **Power Supply**: Displays the Power Supply Status.
 

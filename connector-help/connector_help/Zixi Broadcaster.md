@@ -20,9 +20,9 @@ The Zixi Broadcaster driver uses HTTP communication to allow users to monitor an
 
 ### Supported firmware versions
 
-| **Driver Range**      | **Device Firmware Version** |
-|-----------------------|-----------------------------|
-| 1.0.0.x1.0.1.x1.0.2.x | API 1.10                    |
+| **Driver Range**        | **Device Firmware Version** |
+|-------------------------|-----------------------------|
+| 1.0.0.x 1.0.1.x 1.0.2.x | API 1.10                    |
 
 ## Installation and configuration
 
@@ -108,7 +108,8 @@ This page displays the list of the last events contained in the unit.
 
 ### Matrix
 
-This page connects to the unit web interface page, which displays preview thumbnails of the selected inputs and output to show the stream in the matrix.Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page connects to the unit web interface page, which displays preview thumbnails of the selected inputs and output to show the stream in the matrix.
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ### Device Web Interface
 
@@ -154,7 +155,7 @@ Creating and editing outputs can be done on the **Output New/Edit** page, which 
 
 **Note**:
 
-- For outputs with multiple hosts (e.g. a push output), separate the fields with commas (",")without adding spaces. For example: "*213.222.10.15,213.222.10.16,213.222.10.17*".
+- For outputs with multiple hosts (e.g. a push output), separate the fields with commas (",") without adding spaces. For example: "*213.222.10.15,213.222.10.16,213.222.10.17*".
 - For **NICs/Devices**, it is possible to specify "*Any"*. **Backup** streams can be selected by specifying *Disabled* or *Enabled*.
 - For the **Max Bitrate**, specify the desired number (in kbps) and then "*kbps*", separated by a space. You can also specify *Unlimited* for unlimited bitrates. For example, a 3-host system could be specified as follows: "*13 kbps,Unlimited,14 kbps"*.
 
@@ -192,7 +193,8 @@ This page displays the list of the last events contained in the unit.
 
 ### Matrix
 
-This page connects to the unit web interface page, which displays preview thumbnails of the selected inputs and output to show the stream in the matrix. If **HTTPS Access** is disabled, the interface will use an HTTP address.Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page connects to the unit web interface page, which displays preview thumbnails of the selected inputs and output to show the stream in the matrix. If **HTTPS Access** is disabled, the interface will use an HTTP address.
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ### Device Web Interface
 

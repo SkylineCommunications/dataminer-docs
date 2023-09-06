@@ -53,7 +53,8 @@ This page displays the **System** parameters and the **Firmware Version**. Via p
 
 ### Sensors
 
-This page displays information on the **Internal Sensors**, the **Auxiliary Sensors** and the **External Sensors**.Page buttons provide access to information on the **External Sensors ACLM**, **TAC Sensors** and **Auxiliary 2 Sensors**.
+This page displays information on the **Internal Sensors**, the **Auxiliary Sensors** and the **External Sensors**.
+Page buttons provide access to information on the **External Sensors ACLM**, **TAC Sensors** and **Auxiliary 2 Sensors**.
 
 ### Digital Inputs
 

@@ -41,9 +41,9 @@ This page displays general information: **System Name**, **System Up Time**, **S
 
 On this page, several tables provide information about capture jobs.
 
-- The **Capture Jobs** table displays the **job names**,their **status**,the associated **capture packet sizes**,etc. DVEs based on this table contain more detailed information about the capture jobs (see section "Capture Jobs").
+- The **Capture Jobs** table displays the **job names**, their **status**, the associated **capture packet sizes**, etc. DVEs based on this table contain more detailed information about the capture jobs (see section "Capture Jobs").
 - The **Profiler Configured For Export** table indicates **IP addresses** of associated profilers and their **export status**.
-- Information about exported statistics is also displayed in the **Profiler Export Statistics** table: **total exported flows over last minute**, **peak of the rejected flows the last week**,etc.
+- Information about exported statistics is also displayed in the **Profiler Export Statistics** table: **total exported flows over last minute**, **peak of the rejected flows the last week**, etc.
 - The **File System** table shows the disk resources usage by the Operating System.
 - The **Packet Storage Table** indicates the disk space used by the packet storage process.
 
@@ -61,7 +61,7 @@ Finally, the **Enclosure Disk Table** displays the **status** of disks, their **
 
 ### Interfaces
 
-This page displays the **Interfaces Table**,which containstraffic statistics for all the network interfaces of the device: **RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error**, etc.
+This page displays the **Interfaces Table**, which contains traffic statistics for all the network interfaces of the device: **RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error**, etc.
 
 ### Notifications
 

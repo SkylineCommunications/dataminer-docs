@@ -26,7 +26,7 @@ The **HP Virtual Connect Flex-10** provides a monitoring interface for the ****H
 
 ### Creation
 
-The ****HP Virtual Connect Flex-10****is an SNMP driver. The IP has to be configured during creation of the element.
+The ****HP Virtual Connect Flex-10**** is an SNMP driver. The IP has to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

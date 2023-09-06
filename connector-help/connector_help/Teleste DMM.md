@@ -52,7 +52,7 @@ This driver exports different drivers based on the retrieved data. A list can be
 </tr>
 <tr class="odd">
 <td>Teleste DMM DVO202 S</td>
-<td><p>DVO202 S (from v1.0.0.11)DVO202 NL (from v1.0.0.12)</p></td>
+<td><p>DVO202 S (from v1.0.0.11) DVO202 NL (from v1.0.0.12)</p></td>
 </tr>
 <tr class="even">
 <td>Teleste DMM DVO421</td>
@@ -68,7 +68,7 @@ This driver exports different drivers based on the retrieved data. A list can be
 </tr>
 <tr class="odd">
 <td>Teleste DMM DVO902</td>
-<td><p>DVO902/2E (from v1.0.0.11)DVO902/5E (from v1.0.0.11)DVO902/8E (from v1.0.0.15)</p></td>
+<td><p>DVO902/2E (from v1.0.0.11) DVO902/5E (from v1.0.0.11) DVO902/8E (from v1.0.0.15)</p></td>
 </tr>
 <tr class="even">
 <td>Teleste DMM DVO902_8</td>

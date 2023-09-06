@@ -50,7 +50,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-When you have created a new element with this connector, go to the **General** page, specify the **Username** and **Password**,and then click the **Login** button.
+When you have created a new element with this connector, go to the **General** page, specify the **Username** and **Password**, and then click the **Login** button.
 
 ### Redundancy
 
@@ -62,7 +62,7 @@ On the **General** page, you can login with your Youbora credentials, as mention
 
 The **Polling** page allows you to enable or disable the information polling for each table.
 
-On the **Filters** page, you can select which filter to use on the information that is polled. The information can be filtered by **Country**, **State**,or **City.**
+On the **Filters** page, you can select which filter to use on the information that is polled. The information can be filtered by **Country**, **State**, or **City.**
 
 There is also a **Dimension** page for each available information dimension. The available dimensions are:
 
@@ -80,4 +80,4 @@ There is also a **Dimension** page for each available information dimension. The
 - **Connection**
 - **ISP**
 
-Each of these pages contains three tables, **Plays**, **Errors**,and **Metrics**,with more information related to that specific dimension.
+Each of these pages contains three tables, **Plays**, **Errors**, and **Metrics**, with more information related to that specific dimension.

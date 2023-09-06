@@ -22,9 +22,9 @@ The Ovarro Kingfisher is a remote telemetry unit used to connect digital inputs,
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**    | **Exported Components**                                                                                                                                                                                                                                                                                       |
-|-----------|---------------------|-------------------------|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | Ovarro Kingfisher Sensor | \- [Ovarro Kingfisher - Analog Input](/Driver%20Help/Ovarro%20Kingfisher%20-%20Analog%20Input.aspx)- [Ovarro Kingfisher - Digital Output](/Driver%20Help/Ovarro%20Kingfisher%20-%20Digital%20Output.aspx)- [Ovarro Kingfisher - Digital Input](xref:Connector_help_Ovarro_Kingfisher_-_Digital_Input) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**    | **Exported Components**                                                                                                                                                                                                                                                                                         |
+|-----------|---------------------|-------------------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | Ovarro Kingfisher Sensor | \- [Ovarro Kingfisher - Analog Input](/Driver%20Help/Ovarro%20Kingfisher%20-%20Analog%20Input.aspx) - [Ovarro Kingfisher - Digital Output](/Driver%20Help/Ovarro%20Kingfisher%20-%20Digital%20Output.aspx) - [Ovarro Kingfisher - Digital Input](xref:Connector_help_Ovarro_Kingfisher_-_Digital_Input) |
 
 ## Configuration
 

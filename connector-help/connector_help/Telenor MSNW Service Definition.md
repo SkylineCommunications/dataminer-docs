@@ -14,7 +14,8 @@ This is a **Service Definition** for **MSNW Services**.
 
 ## Creation
 
-When creating the service using this Service Definition, you don't need to configure any specific settings.You only have to add the **Telenor MSNW Service Definition** as the Service Definition to the service.
+When creating the service using this Service Definition, you don't need to configure any specific settings.
+You only have to add the **Telenor MSNW Service Definition** as the Service Definition to the service.
 
 ## Usage
 

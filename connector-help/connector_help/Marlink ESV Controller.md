@@ -38,7 +38,7 @@ This page contains a table with all the modem data. Important columns in this ta
 
 ### ACU page
 
-This page contains a table with all the ACU data. Important columns in this table are:**Time (ACU)**, **Latitudes**, **Longitudes**, **Bandwidths** and **State**.
+This page contains a table with all the ACU data. Important columns in this table are: **Time (ACU)**, **Latitudes**, **Longitudes**, **Bandwidths** and **State**.
 
 ### Satellite Link Details page
 

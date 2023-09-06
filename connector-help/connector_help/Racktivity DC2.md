@@ -14,10 +14,10 @@ The driver uses **SNMP** to retrieve and update the data of the device. The Rack
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version                                                                  | No                  | Yes                     |
-| 1.0.1.1          | Corrected Displayed Items.Reset Max/Min Values function.Improved Polling timing. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
+|------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.1          | Initial version                                                                    | No                  | Yes                     |
+| 1.0.1.1          | Corrected Displayed Items. Reset Max/Min Values function. Improved Polling timing. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -52,7 +52,7 @@ This page displays the general overview of the **Current (A)**, **Power utilizat
 
 ### Power / Current
 
-This page displays information about the **Amperage**,including the general status of the individual transducers and their totals. You can configure warning thresholds, activate/deactivate trap notifications and keep a quick track of min/max utilization. This data can be reset.
+This page displays information about the **Amperage**, including the general status of the individual transducers and their totals. You can configure warning thresholds, activate/deactivate trap notifications and keep a quick track of min/max utilization. This data can be reset.
 
 ### Power / Power
 

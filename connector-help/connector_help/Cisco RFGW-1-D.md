@@ -85,8 +85,10 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: \[The port of the connected device, by default *161*.\]
-- **Get community string**: \[The community string used when reading values from the device(default value if not overridden in the driver: *public*).
-- **Set community string**: \[The community string used when setting values on the device(default value if not overridden in the driver: *private*).
+- **Get community string**: \[The community string used when reading values from the device
+  (default value if not overridden in the driver: *public*).
+- **Set community string**: \[The community string used when setting values on the device
+  (default value if not overridden in the driver: *private*).
 
 ## Usage
 
@@ -137,6 +139,8 @@ This page is related to the new *Cisco RF Gateway 1 Software Release 5.02.09* an
 ### Webinterface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+
 
 ## Usage (Range 3.0.0.x)
 

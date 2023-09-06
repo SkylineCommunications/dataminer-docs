@@ -79,7 +79,8 @@ The Closed Captures table will be automatically cleaned based on the cleanup con
 
 On this page, you need to configure the following settings:
 
-- **Destination Path Capture Server**: The path where the tshark process will write its file. This path is also used to do the remote copy of the captures. Make sure this path is locally available on the server and also make sure the Samba shared folder has this same name.For example, when this path is set to "*/WiresharkCaptures*", that means the local folder "/WiresharkCaptures/" needs to be available, and the shared folder (configured in Samba) should also have this path name: "*\\serverip\WiresharkCaptures\\*".
+- **Destination Path Capture Server**: The path where the tshark process will write its file. This path is also used to do the remote copy of the captures. Make sure this path is locally available on the server and also make sure the Samba shared folder has this same name.
+  For example, when this path is set to "*/WiresharkCaptures*", that means the local folder "/WiresharkCaptures/" needs to be available, and the shared folder (configured in Samba) should also have this path name: "*\\serverip\WiresharkCaptures\\*".
 - **Time to Wait Before Copying Files From Server**: To make sure the capture process is fully closed, there will be a delay of at least 15 seconds and at most 10 minutes.
 - **Amount of Closed Captures to Keep** and **Auto Delete Removed Captures** will make sure that the **Closed Captures** table will not grow endlessly. Older captures can be removed with this as well.
 - **Remote Central Server Path**: The path where the captures will be moved when they are complete and the wait delay has passed. Note that in the background, the capture will be compressed and decompressed to speed up the file move over the network.
@@ -91,6 +92,6 @@ On this page, filters can be predefined to make it easier to start captures.
 
 ### Security
 
-On this page, you can enter the SSH connection details with the **Username** and **Password** parameters. You can then test the connection with the **Connect** button. The **SSH Connection State**parameter shows the connection state.
+On this page, you can enter the SSH connection details with the **Username** and **Password** parameters. You can then test the connection with the **Connect** button. The **SSH Connection State** parameter shows the connection state.
 
 After restart, the element will automatically try to connect to the server.

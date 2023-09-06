@@ -4,7 +4,8 @@ uid: Connector_help_Anevia_ViaDemand
 
 # Anevia ViaDemand
 
-Monitors and controls what content should be played, how long and when it should be played.You can also edit the settings of the tasks.
+Monitors and controls what content should be played, how long and when it should be played.
+You can also edit the settings of the tasks.
 
 ## About
 
@@ -22,7 +23,8 @@ This driver uses a **HTTP** connection and needs following user information:
 
 \- **IP port**: the port of the destination eg *80*
 
-The credentials for authorization are set on the **General page** by clicking the pagebutton **Credentials**.There you can set the **username** and **password** wich are default *admin* and *paris*.
+The credentials for authorization are set on the **General page** by clicking the pagebutton **Credentials**.
+There you can set the **username** and **password** wich are default *admin* and *paris*.
 
 ## Usage
 
@@ -30,7 +32,10 @@ The credentials for authorization are set on the **General page** by clicking th
 
 This is the same as the Anevia Soap System driver.
 
-On this page you get an overview of some general server paramaters.You can view the **RAM memory** parameters, **API version** and CPU usage.When you press the **Credentials** button, you can set your username en password to communicate with the server.On this page, you also have the ability to reboot your server.
+On this page you get an overview of some general server paramaters.
+You can view the **RAM memory** parameters, **API version** and CPU usage.
+When you press the **Credentials** button, you can set your username en password to communicate with the server.
+On this page, you also have the ability to reboot your server.
 
 ### Configurations
 
@@ -40,7 +45,11 @@ The exported configurations are stored under the folder "C:\Skyline DataMiner\Do
 
 ### Tasks
 
-This page gives an overview of all the tasks that are scheduled to play. You can create a new task to play. In the table you can see the **task ID**, which is used to edit a task. Via the parameter **Select Task** you can choose a task and then press **Edit** to edit that task. On the **Edit** page you can fill in all the settings for the task and then choose for a new task or to edit this task. Some task parameters can't be edited like **source** and **destination**, so these will automatically become a new task.
+This page gives an overview of all the tasks that are scheduled to play.
+You can create a new task to play.
+In the table you can see the **task ID**, which is used to edit a task.
+Via the parameter **Select Task** you can choose a task and then press **Edit** to edit that task.
+On the **Edit** page you can fill in all the settings for the task and then choose for a new task or to edit this task. Some task parameters can't be edited like **source** and **destination**, so these will automatically become a new task.
 
 ### Disk Overview
 

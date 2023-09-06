@@ -30,4 +30,4 @@ On the **General** page, the following information is displayed:
 
 - General information, with the parameters **Serial Number**, **Version** and **Device Name**.
 - Status information, with the parameters **Temperature**, **Matrix Connection**, **PS Values**, and the **Voltages**.
-- Basic device information, with parameters such as the **Name, Version, Serial Number, Firmware Version, Temperature, Voltage Values**,and **all alarms** for the device.
+- Basic device information, with parameters such as the **Name, Version, Serial Number, Firmware Version, Temperature, Voltage Values**, and **all alarms** for the device.

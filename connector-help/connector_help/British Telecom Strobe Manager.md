@@ -40,7 +40,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 When the element has been created, you need to configure several things on its **Configurations** page:
 
-- **Probe Polling Interval**: Determines how frequently the Strobe Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.Note that the probe info is instantly pushed towards the Strobe Manager. This polling interval is purely intended for sync/fallback purposes.
+- **Probe Polling Interval**: Determines how frequently the Strobe Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.
+  Note that the probe info is instantly pushed towards the Strobe Manager. This polling interval is purely intended for sync/fallback purposes.
 - **Add Route Hysteresis** and **Remove Route Hysteresis**: The hysteresis time that the automatic routing/unrouting will wait before checking the current state again and adding or removing a route based on this result. This hysteresis makes it possible to ignore short outages or short temporary streams.
 
 In addition, on the **MIP** page, you need to provide the references to the primary keys of the Cisco Nexus switches in order to have cross checking on the expectations vs. the actual routes and joins being made:
@@ -89,7 +90,8 @@ The BTT X, BTT Y, CH X and CH Y Status parameters are combined status values:
 
 The main Visio page contains page buttons that can be used to perform channel actions and configure settings. However, note that you need at least access level 1 to use these buttons.
 
-Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut "CTRL+A" to select all the items in the table. When you first apply a regular filter on the table and press "CTRL+A", only the filtered items will be selected.You can also make a dynamic selection using the "CTRL" key to select multiple single channels, or using the "SHIFT" key to select a range of channels in the table. The "CTRL+A", "SHIFT" and "CTRL" actions can also be combined.
+Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut "CTRL+A" to select all the items in the table. When you first apply a regular filter on the table and press "CTRL+A", only the filtered items will be selected.
+You can also make a dynamic selection using the "CTRL" key to select multiple single channels, or using the "SHIFT" key to select a range of channels in the table. The "CTRL+A", "SHIFT" and "CTRL" actions can also be combined.
 
 - **Channel Priorities:** Opens a pop-up window where you can update the priority for all selected channels in bulk. The following priorities are available: *N/A*, *LoLo*, *Lo*, *Normal*, *Hi* and *HiHi.* A confirmation message will list the changes you've made.
 
@@ -101,7 +103,9 @@ Before opening the configuration window, you first have to make a selection in t
 
 > A confirmation message will list the changes you've made.
 
-- **Channel Actions**: Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).Once the selection has been made, you can perform the following actions:
+- **Channel Actions**: Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.
+  You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).
+  Once the selection has been made, you can perform the following actions:
 
 > - *Manual Mode*: Will allow manual routings and no automatic actions will be performed.
 > - *Auto Mode*: Will no longer allow manual override actions. Automatic actions will be performed. In case the state was *Failure (On)* or *OK (Off)*, the routings will automatically be updated.

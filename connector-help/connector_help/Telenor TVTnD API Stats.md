@@ -4,7 +4,8 @@ uid: Connector_help_Telenor_TVTnD_API_Stats
 
 # Telenor TVTnD API Stats
 
-The Telenor TVTnD API Stats is a virtual connector that displays information about how many times the "TV TD - DiagnoseCustomer" API has been called.Each time the API runs, it sends information about the request made to this connector so that it can display certain information, such as how many requests per minute/hour were made.
+The Telenor TVTnD API Stats is a virtual connector that displays information about how many times the "TV TD - DiagnoseCustomer" API has been called.
+Each time the API runs, it sends information about the request made to this connector so that it can display certain information, such as how many requests per minute/hour were made.
 
 ## About
 

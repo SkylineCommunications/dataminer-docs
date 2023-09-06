@@ -8,7 +8,8 @@ The **DataProbe iPIO** is a network-attached, web-enabled digital input and outp
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device. The **status** in the **Input** and **Relay** tables is based on **traps and SNMP polling.**The driver also allows you to access the **web interface** of the device.
+This driver uses **SNMP** to retrieve information from the device. The **status** in the **Input** and **Relay** tables is based on **traps and SNMP polling.**
+The driver also allows you to access the **web interface** of the device.
 
 ### Ranges of the driver
 

@@ -16,11 +16,11 @@ This connector allows you to monitor and manage the Newtec MDM6000 equipment. Ba
 
 ### Product Info
 
-| **Range**            | **Supported Firmware**         |
-|----------------------|--------------------------------|
-| 1.0.0.x              | MDM6000_1.3.0.461793.1.0.66732 |
-| 1.0.1.x \[SLC Main\] | MDM6000_1.3.0.461793.1.0.66732 |
-| 2.0.0.x              | N/A                            |
+| **Range**            | **Supported Firmware**          |
+|----------------------|---------------------------------|
+| 1.0.0.x              | MDM6000_1.3.0.46179 3.1.0.66732 |
+| 1.0.1.x \[SLC Main\] | MDM6000_1.3.0.46179 3.1.0.66732 |
+| 2.0.0.x              | N/A                             |
 
 ### System Info
 

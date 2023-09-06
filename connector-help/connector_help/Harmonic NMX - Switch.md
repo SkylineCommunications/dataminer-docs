@@ -12,15 +12,15 @@ The device information is retrieved via an SNMP connection and a serial connecti
 
 ### Version Info
 
-| **Range**                | **Key Features**                                                         | **Based on** | **System Impact**                                                     |
-|--------------------------|--------------------------------------------------------------------------|--------------|-----------------------------------------------------------------------|
-| 1.0.0.x                  | Initial version.                                                         | \-           | \-                                                                    |
-| 2.0.0.x                  | Initial version (SNMP).                                                  | \-           | \-                                                                    |
-| 3.0.0.x                  | Works with DVE.                                                          | \-           | \-                                                                    |
-| 4.0.0.x                  | Parsing XML with Linq, streams per device.                               | \-           | \-                                                                    |
-| 4.0.1.x                  | Smart serial.                                                            | \-           | \-                                                                    |
-| 4.1.0.x                  | REST API communication.                                                  | 4.0.1.5      | \-                                                                    |
-| 4.1.1.x **\[SLC Main\]** | REST API refactored.Enhancement of HTTP data relations and organization. | 4.1.0.3      | Primary/display keys changed.Monitoring and trending can be impacted. |
+| **Range**                | **Key Features**                                                          | **Based on** | **System Impact**                                                      |
+|--------------------------|---------------------------------------------------------------------------|--------------|------------------------------------------------------------------------|
+| 1.0.0.x                  | Initial version.                                                          | \-           | \-                                                                     |
+| 2.0.0.x                  | Initial version (SNMP).                                                   | \-           | \-                                                                     |
+| 3.0.0.x                  | Works with DVE.                                                           | \-           | \-                                                                     |
+| 4.0.0.x                  | Parsing XML with Linq, streams per device.                                | \-           | \-                                                                     |
+| 4.0.1.x                  | Smart serial.                                                             | \-           | \-                                                                     |
+| 4.1.0.x                  | REST API communication.                                                   | 4.0.1.5      | \-                                                                     |
+| 4.1.1.x **\[SLC Main\]** | REST API refactored. Enhancement of HTTP data relations and organization. | 4.1.0.3      | Primary/display keys changed. Monitoring and trending can be impacted. |
 
 ### Product Info
 

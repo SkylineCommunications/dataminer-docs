@@ -12,9 +12,9 @@ This connector allows quick monitoring of the operation states of the device's c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                   | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version:- Monitoring front panel information- Configuring switch positions | \-           | \-                |
+| **Range**            | **Key Features**                                                                     | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version: - Monitoring front panel information - Configuring switch positions | \-           | \-                |
 
 ### Product Info
 
@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 The **General** page displays all the front panel information. The properties mentioned below can be configured here as well.
 
-Note that the **Control Status** **on the device has to be set to** ***Remote***for commands from DataMiner to work.
+Note that the **Control Status** **on the device has to be set to** ***Remote*** for commands from DataMiner to work.
 
 - **Unit Mode**: Can be set to *Auto* or *Manual*. If you want to be able to manually change positions of switches, this mode must be set to *Manual*.
 

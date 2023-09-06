@@ -12,15 +12,15 @@ The driver can perform multiple ping requests at once. The IP addresses/hostname
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 3.1.2.x \[SLC Main\] | Based on 3.1.1.12.Jitter features of the Ping Table have been reworked to provide more accurate and detailed information and allow for a more intuitive user experience.                       | Yes                 | Yes                     |
-| 3.1.1.x \[Obsolete\] | Based on 3.1.0.19.Ping Table now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. **Old trend data will be lost for this table.**                 | Yes                 | Yes                     |
-| 4.0.0.X \[Obsolete\] | Based on 3.1.0.18.Temporary removal of heatmaps.                                                                                                                                               | Yes                 | No                      |
-| 3.1.0.X \[Obsolete\] | Based on 2.1.0.8.Almost fully redeveloped: Dynamic tables and multi-threaded timers.Impact of going to this range from 2.x.x.x: Loss of all trend data, reconfigure all templates, Visio, etc. | Yes                 | No                      |
-| 2.1.0.X \[Obsolete\] | Based on 2.0.0.1.Static tables and no multithreading.                                                                                                                                          | No                  | No                      |
-| 2.0.0.X \[Obsolete\] | New development.Static tables, initial version (2).                                                                                                                                            | No                  | No                      |
-| 1.0.0.X \[Obsolete\] | Static tables, initial version.                                                                                                                                                                | No                  | No                      |
+| **Driver Range**     | **Description**                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 3.1.2.x \[SLC Main\] | Based on 3.1.1.12. Jitter features of the Ping Table have been reworked to provide more accurate and detailed information and allow for a more intuitive user experience.                        | Yes                 | Yes                     |
+| 3.1.1.x \[Obsolete\] | Based on 3.1.0.19. Ping Table now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. **Old trend data will be lost for this table.**                  | Yes                 | Yes                     |
+| 4.0.0.X \[Obsolete\] | Based on 3.1.0.18. Temporary removal of heatmaps.                                                                                                                                                | Yes                 | No                      |
+| 3.1.0.X \[Obsolete\] | Based on 2.1.0.8. Almost fully redeveloped: Dynamic tables and multi-threaded timers. Impact of going to this range from 2.x.x.x: Loss of all trend data, reconfigure all templates, Visio, etc. | Yes                 | No                      |
+| 2.1.0.X \[Obsolete\] | Based on 2.0.0.1. Static tables and no multithreading.                                                                                                                                           | No                  | No                      |
+| 2.0.0.X \[Obsolete\] | New development. Static tables, initial version (2).                                                                                                                                             | No                  | No                      |
+| 1.0.0.X \[Obsolete\] | Static tables, initial version.                                                                                                                                                                  | No                  | No                      |
 
 ## Installation and configuration
 
@@ -46,7 +46,9 @@ The number of ping requests per poll cycle can be specified in the **Pings per C
 
 In the **Jitter** section of the table, you can configure the size (number of ping commands) and frequency intervals of ping bursts that will be used to measure jitter. There is also a separate **Jitter** **Admin Status** that can be used to enable or disable the measuring of jitter. This is because the measurement is done via a separate polling engine. In terms of configuration, jitter permits the modification of three key values that will modify the behavior of this separate polling engine. **Jitter Interval** and **Jitter Ping** **Interval** refer to the amount of time (in seconds and milliseconds respectively) that should pass between each burst of pings sent by the polling engine, as well as each individual ping in that burst. **Jitter Pings per Cycle** refers to the quantity of pings to be sent out as part of the jitter measurement.
 
-For example, the image below depicts a sequence of 3 ping bursts. The default settings use a **Jitter Interval** of 2 seconds, a **Jitter Ping Interval** of 15 milliseconds, and 4 **Jitter Pings per Cycle**.To calculate the jitter, the polling engine sends out a burst of pings in accordance with the **Jitter Pings per Cycle** value. The latency value of these pings is stored in a buffer, and the delta between consecutive latency values is calculated. The table will then display the minimum and maximum of these delta values, as well as the average delta value, which will represent the measured jitter of the burst of pings.
+For example, the image below depicts a sequence of 3 ping bursts. The default settings use a **Jitter Interval** of 2 seconds, a **Jitter Ping Interval** of 15 milliseconds, and 4 **Jitter Pings per Cycle**.
+![ping sequence.jpg](~/connector-help/images/Generic_Ping_ping_sequence.jpg)
+To calculate the jitter, the polling engine sends out a burst of pings in accordance with the **Jitter Pings per Cycle** value. The latency value of these pings is stored in a buffer, and the delta between consecutive latency values is calculated. The table will then display the minimum and maximum of these delta values, as well as the average delta value, which will represent the measured jitter of the burst of pings.
 
 A key aspect of the jitter features is that the calculations can arrive at more or less precise measurements based on the input values. For example, if you want highly accurate information about the jitter in the communication with a device, you can configure the number of pings in a burst to be high and the intervals between each burst and its pings to be low. Alternatively, you can reduce the number of pings in a burst and raise the intervals to derive a less precise jitter measurement but not saturate a device with frequent communication.
 
@@ -93,7 +95,7 @@ The older available operations are:
 
 - Example (underlined values are mandatory for this operation):
 
-  - 
+  -
 
 <!-- -->
 
@@ -117,4 +119,4 @@ The older available operations are:
 
   - - Example (underlined values are mandatory for this operation; configuration values must be within the specific parameter's range):
 
-    - 
+    -

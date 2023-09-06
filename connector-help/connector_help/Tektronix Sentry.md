@@ -14,15 +14,15 @@ The **Tektronix Sentry** driver will display information related to the selected
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                       | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                       | No                  | Yes                     |
-| 1.1.0.x          | New firmware based on 1.0.0.x (see below)                                                                                                             | No                  | Yes                     |
-| 1.2.0.x          | New firmware based on 1.2.0.x (see below)                                                                                                             | No                  | Yes                     |
-| 1.2.1.x          | Change to display key in Program Trap Table.                                                                                                          | No                  | Yes                     |
-| 1.3.0.x          | Supports firmware version 10.3Improved communication with Tektronix Config ManagerWorks with the latest version of Tektronix Config Manager (1.1.0.x) | No                  | Yes                     |
-| 1.4.0.x          | New range for firmware 10.6.6Add ABR parameters for program statistics                                                                                | No                  | Yes                     |
-| 1.5.0.x          | New range for firmware 10.7.3                                                                                                                         | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                         | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                                                         | No                  | Yes                     |
+| 1.1.0.x          | New firmware based on 1.0.0.x (see below)                                                                                                               | No                  | Yes                     |
+| 1.2.0.x          | New firmware based on 1.2.0.x (see below)                                                                                                               | No                  | Yes                     |
+| 1.2.1.x          | Change to display key in Program Trap Table.                                                                                                            | No                  | Yes                     |
+| 1.3.0.x          | Supports firmware version 10.3 Improved communication with Tektronix Config Manager Works with the latest version of Tektronix Config Manager (1.1.0.x) | No                  | Yes                     |
+| 1.4.0.x          | New range for firmware 10.6.6 Add ABR parameters for program statistics                                                                                 | No                  | Yes                     |
+| 1.5.0.x          | New range for firmware 10.7.3                                                                                                                           | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -187,7 +187,7 @@ This page contains an overview of the **Program Templates**. The content of this
 
 The **Program Template Table**, which displays the **Template Name and Status in Probe**, allows you to **create, edit, delete, upload and export** (JSON) program templates.
 
-The tree overview displays all the **details** of a program template: the **Description**,the **Trigger** and the details of the various **Alert Types** (Detect, Bitrate, Video, Audio, etc.).
+The tree overview displays all the **details** of a program template: the **Description**, the **Trigger** and the details of the various **Alert Types** (Detect, Bitrate, Video, Audio, etc.).
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template.**
 
@@ -200,24 +200,29 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 - To **edit** a program template:
 
 1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
+        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
 > 1.  On the **Load From File** page, select the program template file name from the files located in the Documents folder.
 > 2.  Apply one of the following two options:
 >
-> > - **Upload to Probe**Note that if the program template from the file **already exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+> > - **Upload to Probe**
+> >   Note that if the program template from the file **already exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
 > >
 > > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
 > >   - Otherwise, the existing program template will be updated.
 > >
-> > - **Load to Table**With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+> > - **Load to Table**
+> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
 1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Alerts (available from 1.2.0.9 onwards)
 
@@ -253,7 +258,8 @@ From version 1.2.0.9 of the driver onwards, the **Use Program Group** option in 
 - To **export** a program template alert:
 
 1.  1.  Right-click in the Program Template Alert Table to access the context menu.
-    2.  Select **Export**. The file will be saved in the Documents folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export**. The file will be saved in the Documents folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Web Interface
 
@@ -354,7 +360,7 @@ This page contains an overview of the **Program Templates**. The content of this
 
 The **Program Template Table**, which displays the **Template Name and Status in Probe**, allows you to **create**, **edit**, **delete**, **upload and export** (JSON) program templates.
 
-The tree overview displays all the **details** of a program template: the **Description**,the **Trigger** and the details of the various **Alert Types** (Detect, Bitrate, Video, Audio, etc.).
+The tree overview displays all the **details** of a program template: the **Description**, the **Trigger** and the details of the various **Alert Types** (Detect, Bitrate, Video, Audio, etc.).
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template.**
 
@@ -367,30 +373,35 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 - To **edit** a program template:
 
 1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
+        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
 > 1.  On the **Load From File** page, select the program template file name from the files located in the **Documents\Tektronix Sentry\Program Template\\** folder.
 > 2.  Apply one of the following two options:
 >
-> > - **Upload to Probe**Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+> > - **Upload to Probe**
+> >   Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
 > >
 > > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
 > >   - Otherwise, the existing program template will be updated.
 > >
-> > - **Load to Table**With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+> > - **Load to Table**
+> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
 1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\** folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\** folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Alerts
 
 This page contains an overview of the Program Template Alerts. The content of this page is updated every 10 minutes. You can also update it immediately by clicking the buttons **Refresh Alerts** or **Refresh Templates** (on the Program Template page).
 
-The **Program Template Alert Table**,which displays the **Alert details**, allows you to **create, edit, delete, upload and export** (JSON) program template alerts.
+The **Program Template Alert Table**, which displays the **Alert details**, allows you to **create, edit, delete, upload and export** (JSON) program template alerts.
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template alert**.
 
@@ -418,7 +429,8 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 - To **export** a program template alert:
 
 1.  1.  Right-click in the Program Template Alert Table to access the context menu.
-    2.  Select **Export**. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export**. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Program Alerts
 
@@ -426,7 +438,7 @@ This page contains an overview of the program alerts. The contents of this page 
 
 Via the **Closed Caption** page button, you can view the CC errors with more info. This subpage also allows you to create a closed caption alert.
 
-Via the **Discontinuity** page button,you can view the discontinuity errors with more info. On this subpage too, an alert can be created.
+Via the **Discontinuity** page button, you can view the discontinuity errors with more info. On this subpage too, an alert can be created.
 
 ### Web Interface
 

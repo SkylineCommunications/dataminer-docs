@@ -46,6 +46,6 @@ SNMP Settings:
 
 ## How to use
 
-The element has the following data pages: **General**, **Ports**, **Alarms**,and **Polling**.
+The element has the following data pages: **General**, **Ports**, **Alarms**, and **Polling**.
 
 On the **Polling** page, you can enable or disable the polling of the parameter groups and also set the polling frequency time.

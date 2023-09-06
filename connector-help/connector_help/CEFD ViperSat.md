@@ -4,7 +4,8 @@ uid: Connector_help_CEFD_ViperSat
 
 # CEFD ViperSat
 
-The **ViperSat Management System (VMS)** is a server- and client-based network management system that gathers and processes information it receives from the modem/routers that comprise a ViperSat satellite network.The modem's internal microprocessor-based input/output (I/O) controller measures, captures and transmits real-time network operating parameters to the VMS via either **PLDM (Path Loss Data Message)** or **SUM (Status Update Message)** packets, depending on the type of modem/router.
+The **ViperSat Management System (VMS)** is a server- and client-based network management system that gathers and processes information it receives from the modem/routers that comprise a ViperSat satellite network.
+The modem's internal microprocessor-based input/output (I/O) controller measures, captures and transmits real-time network operating parameters to the VMS via either **PLDM (Path Loss Data Message)** or **SUM (Status Update Message)** packets, depending on the type of modem/router.
 
 This connector will export different connectors based on the retrieved data (see "System Info" below).
 
@@ -25,29 +26,29 @@ This connector will export different connectors based on the retrieved data (see
 
 ### Product Info
 
-| **Range** | **Supported Firmware** |
-|-----------|------------------------|
-| 3.0.0.x   | \-                     |
-| 3.1.0.x   | \-                     |
-| 3.2.0.x   | 3.16.0.6366            |
-| 3.3.0.x   | 3.16.0.63663.16.1.6737 |
-| 3.3.1.x   | 3.16.1.6737            |
-| 3.4.0.x   | 3.16.1.6737            |
-| 3.5.0.x   | 3.16.1.6737            |
-| 3.5.1.x   | 3.16.1.6737            |
+| **Range** | **Supported Firmware**  |
+|-----------|-------------------------|
+| 3.0.0.x   | \-                      |
+| 3.1.0.x   | \-                      |
+| 3.2.0.x   | 3.16.0.6366             |
+| 3.3.0.x   | 3.16.0.6366 3.16.1.6737 |
+| 3.3.1.x   | 3.16.1.6737             |
+| 3.4.0.x   | 3.16.1.6737             |
+| 3.5.0.x   | 3.16.1.6737             |
+| 3.5.1.x   | 3.16.1.6737             |
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                       | **Exported Components**                              |
-|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------|------------------------------------------------------|
-| 3.0.0.x   | No                  | \-                      | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
-| 3.1.0.x   | No                  | \-                      | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - SatelliteCEFD ViperSat - Power Strip |
-| 3.2.0.x   | No                  | \-                      | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - SatelliteCEFD ViperSat - Power Strip |
-| 3.3.0.x   | No                  | Yes                     | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
-| 3.3.1.x   | No                  | Yes                     | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
-| 3.4.0.x   | No                  | Yes                     | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
-| 3.5.0.x   | No                  | Yes                     | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
-| 3.5.1.x   | No                  | Yes                     | SLAutomationSLElement: VisioSLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                            |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                         | **Exported Components**                               |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------|-------------------------------------------------------|
+| 3.0.0.x   | No                  | \-                      | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
+| 3.1.0.x   | No                  | \-                      | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite CEFD ViperSat - Power Strip |
+| 3.2.0.x   | No                  | \-                      | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite CEFD ViperSat - Power Strip |
+| 3.3.0.x   | No                  | Yes                     | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
+| 3.3.1.x   | No                  | Yes                     | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
+| 3.4.0.x   | No                  | Yes                     | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
+| 3.5.0.x   | No                  | Yes                     | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
+| 3.5.1.x   | No                  | Yes                     | SLAutomation SLElement: Visio SLProtocol: Data Distribution + Remote Notifies | CEFD ViperSat - Satellite                             |
 
 ## Configuration
 

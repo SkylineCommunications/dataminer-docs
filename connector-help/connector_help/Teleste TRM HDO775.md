@@ -28,7 +28,8 @@ A DVE using this driver is **automatically created** by an element using the par
 
 ### General
 
-This page contains parameters that identify this module (Type, Serial Number, Software Version, Hardware Version, etc.), as well as statistics parameters (Uptime, Number of Restarts, Temperature, etc.).You can also enable or disable the **Alarm Control Detection**.
+This page contains parameters that identify this module (Type, Serial Number, Software Version, Hardware Version, etc.), as well as statistics parameters (Uptime, Number of Restarts, Temperature, etc.).
+You can also enable or disable the **Alarm Control Detection**.
 
 ### Optical
 

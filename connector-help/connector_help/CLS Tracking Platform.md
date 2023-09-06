@@ -48,7 +48,7 @@ The **GPS Table** is a logger table with all the valid information retrieved fro
 
 ### Trackers
 
-This page contains the **Trackers Table**,which contains the most recent value from the **GPS Table**, i.e. the last known position and message timestamp for each tracker. This is an export table that generates a DVE for each of those trackers.
+This page contains the **Trackers Table**, which contains the most recent value from the **GPS Table**, i.e. the last known position and message timestamp for each tracker. This is an export table that generates a DVE for each of those trackers.
 
 Manual removal of individual DVEs or of all DVEs is possible, as well as automatic removal of deleted DVEs.
 

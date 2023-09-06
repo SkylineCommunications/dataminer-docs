@@ -22,6 +22,8 @@ This driver is intended to get and set information in the device via an Element 
 | 3.0.1.x   | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 3.0.0.16     | **Old trend data will be lost for these tables.** |
 | 4.0.0.x   | \-                                                                                                                  | \-           | \-                                                |
 
+
+
 ## Installation and configuration
 
 ### Creation

@@ -12,10 +12,10 @@ This connector retrieves and sets data via **SNMP**. If this is enabled on the d
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                                                                                                                         | **Based on** | **System Impact**                                                                                                         |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                                                                                                                                                                                                                                                                                          | \-           | \-                                                                                                                        |
-| 1.0.1.x \[SLC Main\] | Custom display key added to:- Multiplexer Alarms Overview- Multiplexer Configurations- Multiplexer Measurements- GPS Alarms Overview- Contacts Input- Contacts Output- UCA Alarms Overview- UCA N+1 Compact Alarms Overview- UCA 1+1 Alarms OverviewNew SNMP Control Address Column added to Multiplexer Measurements Table resulting in a change of order in the table. | 1.0.0.6      | DMS filters, Automation scripts, Visual Overview pages, reports, and web API implementations may need to be reconfigured. |
+| **Range**            | **Key Features**                                                                                                                                                                                                                                                                                                                                                                   | **Based on** | **System Impact**                                                                                                         |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                                                                                                                                                                                                                                                                                                    | \-           | \-                                                                                                                        |
+| 1.0.1.x \[SLC Main\] | Custom display key added to: - Multiplexer Alarms Overview - Multiplexer Configurations - Multiplexer Measurements - GPS Alarms Overview - Contacts Input - Contacts Output - UCA Alarms Overview - UCA N+1 Compact Alarms Overview - UCA 1+1 Alarms Overview New SNMP Control Address Column added to Multiplexer Measurements Table resulting in a change of order in the table. | 1.0.0.6      | DMS filters, Automation scripts, Visual Overview pages, reports, and web API implementations may need to be reconfigured. |
 
 ### Product Info
 
@@ -57,12 +57,12 @@ Because modules can be plugged into the device or removed from it, the possibili
 
 ### General
 
-This is the default page, which displays **general** information. This includes the **name**, **description**, **versions**,and **admin settings**.
+This is the default page, which displays **general** information. This includes the **name**, **description**, **versions**, and **admin settings**.
 
 The following page buttons are available:
 
 - **Servers**: Edit **web server** and **NTP server** settings.
-- **SNMP**:Edit SNMP settings and general **trap** information.
+- **SNMP**: Edit SNMP settings and general **trap** information.
 - **Network**: Edit **default network** settings and **routing table**.
 
 ### Polling Control
@@ -116,7 +116,7 @@ When a module is removed from the device, this will be indicated in the **state 
 
 This page contains information on the GPS module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor the **configuration, measurements**,and **alarm overview**for the GPS module.
+The page is used to edit and monitor the **configuration, measurements**, and **alarm overview** for the GPS module.
 
 The following page buttons are available:
 
@@ -129,13 +129,13 @@ The following page buttons are available:
 
 This page contains information on the Contacts module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor the **input/output configuration**and **general information** for the Contacts module.
+The page is used to edit and monitor the **input/output configuration** and **general information** for the Contacts module.
 
 ### UCA N+1 State
 
 This page contains information on the UCA N+1 module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor **general information**, **priorities**,and **state information** for the UCA N+1 module.
+The page is used to edit and monitor **general information**, **priorities**, and **state information** for the UCA N+1 module.
 
 The following page buttons are available:
 
@@ -145,7 +145,7 @@ The following page buttons are available:
 
 ### UCA N+1 Compact
 
-This page is used to edit and monitor the **general information**, **compact relays multiplexer parameters**, **compact relays priorities**, **compact alarm overview**,and **multiplexer mute** of the UCA N+1 module.
+This page is used to edit and monitor the **general information**, **compact relays multiplexer parameters**, **compact relays priorities**, **compact alarm overview**, and **multiplexer mute** of the UCA N+1 module.
 
 The page contains several page buttons:
 
@@ -157,19 +157,19 @@ The page contains several page buttons:
 
 This page contains information on the UCA 1+1 module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor **general information**, **multiplexer commutation**,and an **alarm overview** for the UCA 1+1 module.
+The page is used to edit and monitor **general information**, **multiplexer commutation**, and an **alarm overview** for the UCA 1+1 module.
 
 ### UCA
 
 This page contains information on the UCA module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor **general information**, check the**alarms overview**, **enable alarms**, **enable traps**,and configure the **alarm level** for the UCA module.
+The page is used to edit and monitor **general information**, check the **alarms overview**, **enable alarms**, **enable traps**, and configure the **alarm level** for the UCA module.
 
 ### DVB-S2/ASI
 
 This page contains information on the DVB-S2/ASI module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor the **redundancy configuration**, **RF input**, **ASI output**, **control configuration**,and **alarm overview** for the DVB-S2/ASI module.
+The page is used to edit and monitor the **redundancy configuration**, **RF input**, **ASI output**, **control configuration**, and **alarm overview** for the DVB-S2/ASI module.
 
 The page contains several page buttons:
 
@@ -182,7 +182,7 @@ The page contains several page buttons:
 
 This page contains information on the IP/ASI module, for which **polling** can be **enabled/disabled**.
 
-The page is used to edit and monitor the **general configuration**, **I/O configuration**,and **alarm overview** for the IP/ASI module.
+The page is used to edit and monitor the **general configuration**, **I/O configuration**, and **alarm overview** for the IP/ASI module.
 
 The following page buttons are available:
 

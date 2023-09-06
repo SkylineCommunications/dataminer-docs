@@ -92,7 +92,7 @@ This page contains a **tree view** that allows you to navigate through and effic
 
 This page contains the **Demodulator Table**, which allows you to manage and control parameters such as the **Frequency** and **Bandwidth**.
 
-It also contains the **Demodulator Control Table**,which controls the status of the DVEs.
+It also contains the **Demodulator Control Table**, which controls the status of the DVEs.
 
 ### IP Input Control
 

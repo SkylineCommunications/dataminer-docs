@@ -4,7 +4,7 @@ uid: Connector_help_SEE_Telecom_eAcsys_NMS_X_Dual_RX_US
 
 # SEE Telecom eAcsys NMS_X_eACSYS Dual RX US
 
-The **SEE Telecom eAcsys NMS_X_eACSYS Dual RX US** driver is exported by the **SEE Telecom eAcsys NMS** driver. It displays information regarding a receiver module compatible with an **SEE Telecom eAcsys**system. The driver is used in order to monitor and control Optical/RF/Switch features*.*
+The **SEE Telecom eAcsys NMS_X_eACSYS Dual RX US** driver is exported by the **SEE Telecom eAcsys NMS** driver. It displays information regarding a receiver module compatible with an **SEE Telecom eAcsys** system. The driver is used in order to monitor and control Optical/RF/Switch features*.*
 
 ## About
 
@@ -50,7 +50,7 @@ On the right-hand side of the page, the following parameters are displayed:
 
 ### Optical
 
-Thispage displays the optical measurements from the receiver module with the following parameters:
+This page displays the optical measurements from the receiver module with the following parameters:
 
 - **Rx 1&2 Status**
 - **Rx 1&2 Optical Input Power**
@@ -61,7 +61,7 @@ In addition, the **Refresh** button can be used to refresh the displayed informa
 
 ### RF
 
-Thispage displays the RF measurements from the receiver module with the following parameters:
+This page displays the RF measurements from the receiver module with the following parameters:
 
 - **Rx 1&2 Attenuator** (also user controllable)
 - **Rx 1&2 Attenuator Status**
@@ -74,7 +74,7 @@ In addition, the **Refresh** button can be used to refresh the displayed informa
 
 ### Switch
 
-Thispage displays the following information:
+This page displays the following information:
 
 - **Routing Mode (Rx 1 only)**
 - **Rx 1&2 Routing Status**

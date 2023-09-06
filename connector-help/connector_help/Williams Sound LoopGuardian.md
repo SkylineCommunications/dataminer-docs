@@ -4,6 +4,8 @@ uid: Connector_help_Williams_Sound_LoopGuardian
 
 # Williams Sound LoopGuardian
 
+
+
 The **Williams Sound LoopGuardian** is a HTTP driver developed to monitor and control Loop Amplifier through NET server.
 
 ## About
@@ -41,7 +43,7 @@ This driver uses a HTTP connection and needs the following user information:
 
 ### General Device Information
 
-In this page, general information about the devices is present. In the **Devices** table, user can find key details regarding the available devices. Some of those details include learning the device's **Communication Status**, **DVE/ID** andphysical **Location** of the devices.
+In this page, general information about the devices is present. In the **Devices** table, user can find key details regarding the available devices. Some of those details include learning the device's **Communication Status**, **DVE/ID** and physical **Location** of the devices.
 
 Use the **Device Config** pagebutton to enable **Device Automatic Removal** parameter which enables the user to remove device's whose **Communication Status** (present in **Devices** table) is ***'**Not Responding**'***. Otherwise, the user can choose to Remove all the devices from the **Devices** table at once regardless of their **Communication Status**, by simply clicking on the **Remove All** button.
 

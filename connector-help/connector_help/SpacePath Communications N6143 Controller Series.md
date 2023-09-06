@@ -42,8 +42,10 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP address of the intermediate serial gateway.**IP port**: The port specified by the intermediate serial gateway.
-  - **Bus address**: The address of the amplifier connected to the control unit. You can find this address on the physical display of the control unit, in hexadecimal value (0x30 - 0x6F). This value has to be converted to a decimal before it is entered in DataMiner. For example: 0x30 is 48, 0x6F is 111.
+- **IP address/host**: The IP address of the intermediate serial gateway.
+    **IP port**: The port specified by the intermediate serial gateway.
+  - **Bus address**: The address of the amplifier connected to the control unit.
+    You can find this address on the physical display of the control unit, in hexadecimal value (0x30 - 0x6F). This value has to be converted to a decimal before it is entered in DataMiner. For example: 0x30 is 48, 0x6F is 111.
 
 ## Usage
 
@@ -59,11 +61,11 @@ Note that some parameters will have the value ***Not Applicable***. This means t
 
 ### Configuration
 
-On thispage, you can configure multiple amplifier settings:
+On this page, you can configure multiple amplifier settings:
 
-- The most important setting is the **Current State** of the amplifier. If the state is changed from *Off*to *Standby* or *Transmit*, the amplifier will need some time to warm up its traveling wave tube. This will take 180 s.
-- The **Redundancy Mode** can be switched from *Manual*to *Automatic*mode.
-- The **Output** can be set to a *Load*or an *Antenna*.
+- The most important setting is the **Current State** of the amplifier. If the state is changed from *Off* to *Standby* or *Transmit*, the amplifier will need some time to warm up its traveling wave tube. This will take 180 s.
+- The **Redundancy Mode** can be switched from *Manual* to *Automatic* mode.
+- The **Output** can be set to a *Load* or an *Antenna*.
 - The **Attenuation** is a nominal value that depends on the connected amplifier. If this value is zero, there will be no attenuation or maximum gain.
 - The **Radio Frequency (RF) Status** can be enabled or disabled.
 - The **Remote Status** can also be enabled or disabled. Note that when it is disabled, the other configuration commands will not work.

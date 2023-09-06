@@ -58,7 +58,7 @@ On this page, you can modify the settings for **channels** **13** **to** **16**.
 
 ### Slots page
 
-Thispage displays information about all the available slots. You can also perform sets on each slot to select the preferred setting.
+This page displays information about all the available slots. You can also perform sets on each slot to select the preferred setting.
 
 ## Notes
 

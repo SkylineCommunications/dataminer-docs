@@ -65,5 +65,5 @@ The element created with this connector has several data pages:
 
 - The **General** page displays the uptime, ID, name, and location of the system.
 - The **System** page contains various tables with information and settings, including card controls. At the bottom of the page, the **Configuration Management** section allows you to download and import a configuration.
-- On the **Product Features, ACS Control, SDI Control, UPD Output, IP Input, PTP Control**,and **Monitoring Control** pages you can find various tables with information and settings related to these subjects.
-- The **Video Notify, Audio Notify, ANC Notify**,and **Notify** pages display tables where you can read and update the state and value of traps.
+- On the **Product Features, ACS Control, SDI Control, UPD Output, IP Input, PTP Control**, and **Monitoring Control** pages you can find various tables with information and settings related to these subjects.
+- The **Video Notify, Audio Notify, ANC Notify**, and **Notify** pages display tables where you can read and update the state and value of traps.

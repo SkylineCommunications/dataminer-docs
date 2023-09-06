@@ -45,9 +45,9 @@ SNMP Settings:
 
 ### General
 
-This page contains information such as the **Slot Number**, **Firmware Revision**,**Temperature** and **Serial Number**.
+This page contains information such as the **Slot Number**, **Firmware Revision**, **Temperature** and **Serial Number**.
 
-It also allows you to set the **Operation Mode** to either ***Single 4x4 Mode***or ***Dual 2x2 Mode***. In **Dual 2x2 Mode**, the two SDI signals entering a 2x2 switch must have the same data rate and frame rate. Similarly, in **Single 4x4 Mode**, clean and quiet switching can only be executed if the SDI signals going into the 4x4 switch share the same data rate and frame rate.
+It also allows you to set the **Operation Mode** to either ***Single 4x4 Mode*** or ***Dual 2x2 Mode***. In **Dual 2x2 Mode**, the two SDI signals entering a 2x2 switch must have the same data rate and frame rate. Similarly, in **Single 4x4 Mode**, clean and quiet switching can only be executed if the SDI signals going into the 4x4 switch share the same data rate and frame rate.
 
 ### Control
 
@@ -113,7 +113,7 @@ On this page, you can substitute any of the 16 mono channels of the **EMB 1-4** 
 
 ### Audio Embedding 1 - 4
 
-These pages display the **Append** and **Overwrite Status** for each group of **EMB 1-4**. They also allow you to configure the **Embedding Mode** (*Append*/*Overwrite*/*Auto*) for each of the four audio groups.
+These pages display the **Append** and **Overwrite Status** for each group of **EMB 1-4**. They also allow you to configure the **Embedding Mode** (*Append*/ *Overwrite*/ *Auto*) for each of the four audio groups.
 
 ### Clean Quiet Switch 1 - 4
 

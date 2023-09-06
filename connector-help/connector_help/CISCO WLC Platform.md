@@ -73,7 +73,7 @@ This page contains the **Interface** **Configuration** table, which can be used 
 
 ### Multicast
 
-Thispage contains the multicast configuration parameters.
+This page contains the multicast configuration parameters.
 
 ### Mobility
 

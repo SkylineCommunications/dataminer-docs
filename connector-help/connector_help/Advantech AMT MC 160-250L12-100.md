@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This page contains some general parameters of the **Control Panel**,such as the **Serial Number**, **Shroud Temperature** and the two **Power Supply** **Voltages**.
+This page contains some general parameters of the **Control Panel**, such as the **Serial Number**, **Shroud Temperature** and the two **Power Supply** **Voltages**.
 
 In addition, the page contains the **Reset Main Control Board button**, the **Switches Alarm** and the **Connection Status**, as well as the **Redundancy Status** and **Mode**.
 

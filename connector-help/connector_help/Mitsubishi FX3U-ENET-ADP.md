@@ -44,13 +44,13 @@ On this page, you can set the file path to read and fill in the respective table
 
 ### Data Register
 
-This page displays the **Data Register Table**,with values from the device. Depending on the client access (read only or read/write) of the memory address, you can set a new value to that parameter.
+This page displays the **Data Register Table**, with values from the device. Depending on the client access (read only or read/write) of the memory address, you can set a new value to that parameter.
 
 Table polling can be enabled or disabled.
 
 ### Internal Relay
 
-This page displays the **Internal Relay Table**,with values from the device. Depending on the client access (read only or read/write) of the memory address, you can set a new value to that parameter.
+This page displays the **Internal Relay Table**, with values from the device. Depending on the client access (read only or read/write) of the memory address, you can set a new value to that parameter.
 
 Table polling can be enabled or disabled.
 
@@ -61,4 +61,7 @@ On this page, the parameters **Engine Effekt Tag** and **Engine Effekt Reference
 If these parameters have the correct tags, the parameters **Effekt** and **SRW** will be calculated as follows:
 
 - Effekt = Sqrt(Engine Effekt \* Engine Effekt Reference ) \* 1.126
-- IF Engine Effekt Reference \> 0 Then SWR = Engine Effekt / Engine Effekt Reference Else SWR = 0 Endif
+- IF Engine Effekt Reference \> 0 Then SWR = Engine Effekt / Engine Effekt Reference
+  Else
+  SWR = 0
+  Endif

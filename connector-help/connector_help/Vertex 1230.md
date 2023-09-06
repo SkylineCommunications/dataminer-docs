@@ -61,7 +61,7 @@ Note: To be able to manage the configuration, you must make sure **Ambient tempe
 
 ## Installation and configuration
 
-This driver uses a virtualconnection.
+This driver uses a virtual connection.
 
 Element connections between Ethernet remote I/O devices must be configured when the element is created in order to establish the input/output relationship between channels.
 
@@ -69,7 +69,7 @@ Element connections between Ethernet remote I/O devices must be configured when 
 
 ### Main View page
 
-Thispagedisplays the following general status parameters:
+This page displays the following general status parameters:
 
 - **Power Status**
 - **Ice Detection Status**
@@ -82,7 +82,7 @@ Thispagedisplays the following general status parameters:
 
 ### General page
 
-Thispage displays the following status values, which can also be configured:
+This page displays the following status values, which can also be configured:
 
 - **Reference Stage Heaters**
 - **Feed/Sub Heat**

@@ -63,7 +63,7 @@ The web interface is only accessible when the client machine has network access 
 
 The element created with this driver consists of the following data pages:
 
-- **General**: Displays the **Status Table**, with the Channel Numbers, States, Name, and Values, as well as the **Analog Table**,with the Channel Numbers, States, Name, and Values.
+- **General**: Displays the **Status Table**, with the Channel Numbers, States, Name, and Values, as well as the **Analog Table**, with the Channel Numbers, States, Name, and Values.
 - **Debug**: Contains parameters that can be used to debug the driver.
 
 ## Notes

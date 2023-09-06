@@ -59,7 +59,8 @@ This page contains the **Last** **Week** **Graph** table. This table is used in 
 
 ### Connection Server page
 
-This page is used to configure the connection with the SFTP server that contains the files that need to be parsed. All parameters are mandatory. For instance: **SFTP Server**, **Server User Name**, **Server Password** and **File Path**. You can also upload a single file manually. (This functionality has been implemented to make the system complete again when there is a problem with the SFTP server.)
+This page is used to configure the connection with the SFTP server that contains the files that need to be parsed. All parameters are mandatory. For instance: **SFTP Server**, **Server User Name**, **Server Password** and **File Path**.
+You can also upload a single file manually. (This functionality has been implemented to make the system complete again when there is a problem with the SFTP server.)
 
 ### DVE page
 

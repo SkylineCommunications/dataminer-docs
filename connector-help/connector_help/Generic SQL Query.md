@@ -12,9 +12,9 @@ Note that this connector is different from the Generic MySQL Query connector, wh
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                            | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Initial version.- Contains Queries Table to allow the configuration of periodic queries. | \-           | \-                |
+| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Initial version. - Contains Queries Table to allow the configuration of periodic queries. | \-           | \-                |
 
 ### Product Info
 

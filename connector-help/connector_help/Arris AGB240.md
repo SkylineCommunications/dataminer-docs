@@ -61,7 +61,7 @@ The page also contains the following tables:
 
 - **Error Packet Counts and Port Overflow:** Displays various error counters as well as the port overflow status.
 - **Network Link Status:** Displays status information for the ENET1, ENET2 and GIGE network links.
-- **Event Logs**:Displays recent events.
+- **Event Logs**: Displays recent events.
 
 At the bottom of the page, the **Clear Counters** button is available, which clears the counter values in the **Error Packet Counts and Port Overflow** table.
 

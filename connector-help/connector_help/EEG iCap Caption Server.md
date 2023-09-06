@@ -61,4 +61,4 @@ The element created with this driver has several data pages:
 - On the **Encoder Permissions**, **Shared Encoders** and **Access Keys** pages, you can find numerous tables with information related to those topics.
 - On the **Logs**, **Session IDs** and **Uptime Statistics** pages you can request information by first specifying the username and time frame to retrieve the information.
 - On the **Caption Providers** page, you can find a table with the information on every provider.
-- The **System Health**page shows multiple parameters with some metrics related to the topic.
+- The **System Health** page shows multiple parameters with some metrics related to the topic.

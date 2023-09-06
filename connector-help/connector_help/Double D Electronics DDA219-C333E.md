@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 ### General Page
 
-On the general page, the user can observe some general information from the device on the left such asthe **Software Version;** the **Device** **Name**;the **Maximum** **Number of Supported Switches** and the ****Maximum** **Number of Supported Chains**.**
+On the general page, the user can observe some general information from the device on the left such as the **Software Version;** the **Device** **Name**; the **Maximum** **Number of Supported Switches** and the ****Maximum** **Number of Supported Chains**.**
 
 In addition to the previous, the user can define the device's mode (**Global Device Mode**) and its respective **Control Mode**.
 

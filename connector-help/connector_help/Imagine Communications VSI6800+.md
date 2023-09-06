@@ -32,7 +32,7 @@ SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP address of the device, e.g. *192.168.2.17.*
 - **IP port**: The IP port of the device, by default *4050.*
-- **Bus address**: This is a combination of the frame number and slot number/ID: \<frameNumber **.** slotID\>. E.g. frame 1 & slot 12 corresponds to the following bus address:*1.12*.
+- **Bus address**: This is a combination of the frame number and slot number/ID: \<frameNumber **.** slotID\>. E.g. frame 1 & slot 12 corresponds to the following bus address: *1.12*.
 
 SMART-SERIAL CONNECTION:
 
@@ -53,8 +53,8 @@ This page displays the alarm parameters: **Loss of Input Locked** and **Loss of 
 
 On this page, you can access the web interface of the Imagine Communications frame.
 
-Notethat the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ## Notes
 
-A **serial**driver with **smart-serial** connection requires a connection to a real device. If there is a change on the device, then a response will be pushed to the DMA even though no poll request is sent.
+A **serial** driver with **smart-serial** connection requires a connection to a real device. If there is a change on the device, then a response will be pushed to the DMA even though no poll request is sent.

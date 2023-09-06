@@ -36,7 +36,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about a 3GHD-EO module, including:
+This page contains general information about a 3GHD-EO module, including:
 
 - **Type:** The module type.
 - **Card Status:** The current status of this card.

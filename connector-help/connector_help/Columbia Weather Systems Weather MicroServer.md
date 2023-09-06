@@ -60,4 +60,4 @@ The element created with this driver has the following data pages:
 - **Wind**: Displays the wind information received from the sensor (if connected), including wind speed, direction, etc.
 - **Radiation**: Displays the radiation information received from the sensor (if connected), including solar radiation, Lux, UV radiation, PAR, etc.
 - **Air Quality**: Displays the air quality information received from the sensor (if connected), including CO2 concentration and particle concentration.
-- **Web Interface**: This page displays the web interfaceof the device. Note that the client machine has to be able to access to the device, as otherwise it will not be possible to open the web interface.
+- **Web Interface**: This page displays the web interface of the device. Note that the client machine has to be able to access to the device, as otherwise it will not be possible to open the web interface.

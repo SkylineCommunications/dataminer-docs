@@ -18,7 +18,7 @@ The **Axon ACP SDN08** is a single-input, eight-output distribution amplifier.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 08000900               |
+| 1.0.0.x   | 0800 0900              |
 
 ### System Info
 
@@ -68,7 +68,7 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 Physical fixed interfaces:
 
-- **SDN08 SDI Input**is a fixed interface of type **in.**
+- **SDN08 SDI Input** is a fixed interface of type **in.**
 - **SDN08 SDI Output 1** is a fixed interface of type **out.**
 - **SDN08 SDI Output 2** is a fixed interface of type **out.**
 - **SDN08 SDI Output 3** is a fixed interface of type **out.**

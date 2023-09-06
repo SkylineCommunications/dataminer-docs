@@ -51,11 +51,13 @@ This page displays the **Peer Status Table**, which lists the **Peer Name**, **C
 
 ### Overview
 
-This page displays a **tree view** with the relations between the **volumes** and the **bricks.**For each brick, you can see information such as the **State**, **TCP Port**, **File System** and **Total** and **Free Disk Space**.
+This page displays a **tree view** with the relations between the **volumes** and the **bricks.
+**For each brick, you can see information such as the **State**, **TCP Port**, **File System** and **Total** and **Free Disk Space**.
 
 ### Snapshots
 
-This page displays the **name** and **UUID of the last snapshot**, and shows whether **polling of the snapshot status** is enabled.It also displays a table with several **snapshots**, the **Volume Group**, **Brick Status**, **Brick PID**, **Data Percentage** and **Logical Volume Size**.
+This page displays the **name** and **UUID of the last snapshot**, and shows whether **polling of the snapshot status** is enabled.
+It also displays a table with several **snapshots**, the **Volume Group**, **Brick Status**, **Brick PID**, **Data Percentage** and **Logical Volume Size**.
 
 ### Settings
 

@@ -63,7 +63,7 @@ Below the table, you can change the polling speed to 30 seconds or 3 seconds.
 
 ### Module
 
-This page allows you to define the **Module Name**, the **CTR SDI Out Select**, **Fault Alarm Priority**, **IO Configuration** and **Frame Reference**.It also displays the **Reference Standard.**
+This page allows you to define the **Module Name**, the **CTR SDI Out Select**, **Fault Alarm Priority**, **IO Configuration** and **Frame Reference**. It also displays the **Reference Standard.**
 
 ### Module Status
 

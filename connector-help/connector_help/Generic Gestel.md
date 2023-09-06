@@ -6,7 +6,8 @@ uid: Connector_help_Generic_Gestel
 
 The driver implements a proprietary protocol called Gestel, which is a layered structured protocol specifically designed for communication applications between remote control and telemetry stations.
 
-Dataminer acts as the Master station initializing the communication with the Remote station. The Remote Station is made up of a maximum of 128 modules, numbered from 0 to 127. Each module can be one of the following types:
+Dataminer acts as the Master station initializing the communication with the Remote station.
+The Remote Station is made up of a maximum of 128 modules, numbered from 0 to 127. Each module can be one of the following types:
 
 - Digital inputs
 - Digital outputs
@@ -54,6 +55,8 @@ A configuration file must be imported with the node parameters to be polled. The
 - C:\Skyline DataMiner\Documents\Elements\XERT_III_RTU_GESTEL.xlsx
 - C:\Skyline DataMiner\Documents\Protocol\XERT_III_RTU_GESTEL.xlsx
 
+![](~/connector-help/images/Generic_Gestel_)![]()
+
 ### Redundancy
 
 There is no redundancy defined.
@@ -81,3 +84,5 @@ There is no redundancy defined.
 ### Web Interface
 
 No webinterface available.
+
+

@@ -10,11 +10,11 @@ IQOYA X/LINK is a 1U-rack streamlined IP audio codec designed for **live remote 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                          | **Based on** | **System Impact**                                                                          |
-|----------------------|---------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                           | \-           | \-                                                                                         |
-| 1.0.1.x              | \- Fixed Table Display keys- Fixed Discreet Priority (Receivers Priority) | 1.0.0.1      | Updates may be needed for filters, Automation scripts, visual overviews, reports, web API. |
-| 1.0.2.x \[SLC Main\] | Set Multicast address via HTTP                                            | 1.0.1.1      | New HTTP connection must be configured for existing elements.                              |
+| **Range**            | **Key Features**                                                           | **Based on** | **System Impact**                                                                          |
+|----------------------|----------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                            | \-           | \-                                                                                         |
+| 1.0.1.x              | \- Fixed Table Display keys - Fixed Discreet Priority (Receivers Priority) | 1.0.0.1      | Updates may be needed for filters, Automation scripts, visual overviews, reports, web API. |
+| 1.0.2.x \[SLC Main\] | Set Multicast address via HTTP                                             | 1.0.1.1      | New HTTP connection must be configured for existing elements.                              |
 
 ### Product Info
 
@@ -76,9 +76,12 @@ The web interface is only accessible when the client machine has network access 
 
 The element has the following data pages:
 
-- **General**: Displays general system parameters such as the **Serial Number**, **Firmware Version** and **Device Name**. The **Network** subpage displays information about the **Ethernet Interfaces** and the **VLAN Interfaces**.
-- **Encoder**: Contains **Encoder Programs** information. The **Service 1** subpage displays information about the service 1 available in the device.
-- **Decoder**: Displays information about the **Decoder Programs**. The **Receivers Priority** subpage displays information about the receivers. It allows you to filter the receiver priorities for the program index 1.
+- **General**: Displays general system parameters such as the **Serial Number**, **Firmware Version** and **Device Name**.
+  The **Network** subpage displays information about the **Ethernet Interfaces** and the **VLAN Interfaces**.
+- **Encoder**: Contains **Encoder Programs** information.
+  The **Service 1** subpage displays information about the service 1 available in the device.
+- **Decoder**: Displays information about the **Decoder Programs**.
+  The **Receivers Priority** subpage displays information about the receivers. It allows you to filter the receiver priorities for the program index 1.
 
 From range **1.0.1.x** onwards, additional pages are available that make the connector more similar to the web interface: the **Receive**, **Send** and **Audio** pages.
 

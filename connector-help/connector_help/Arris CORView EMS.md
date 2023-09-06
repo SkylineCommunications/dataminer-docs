@@ -59,7 +59,7 @@ The display key of the table is composed of the following data, which comes dire
 
 The exact format for this is: Location: **Location**/NE: **Device Name** (**IP Address**)/Chassis: **Chassis Name** (**Chassis Number**)/Module: **Module Alias** (**Slot Number**)/ **Alarm Description**, **Interface Number**.
 
-This page also contains the **CSV File Synchronization Configuration** page button. Via this button, you can enable or disable **Automatic Alarm File Synchronization**, change the (Automatic) **Polling Period** and the **File Path**, and execute a **Re-Sync**. The page button displays the **Supported MIB Object Traps Table**, listing the MIB Object **Names** and the corresponding **OIDs**,which will be used when synchronizing with the CSV file.
+This page also contains the **CSV File Synchronization Configuration** page button. Via this button, you can enable or disable **Automatic Alarm File Synchronization**, change the (Automatic) **Polling Period** and the **File Path**, and execute a **Re-Sync**. The page button displays the **Supported MIB Object Traps Table**, listing the MIB Object **Names** and the corresponding **OIDs**, which will be used when synchronizing with the CSV file.
 
 ## Notes
 
@@ -71,11 +71,17 @@ About the **Alarm Description**, **Chassis Number**, **Slot Number** and **Inter
 
 - Note: It is possible that the EntPhysicalIndex is not always in the same logOID position. Up till now, it was detected between the 15th and 17th position. However, if there is a trap for which the EntPhysicalIndex is in another position in the logOID, the driver will need to be changed in order to process this.
 
-- Trap Bindings:1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.2.11 (heCommonLogOID) = 1.3.6.1.4.1.5591.1.11.1.1.1.1.3.1.8.**101.1** - 101 is the EntPhysicalIndex and 1 is the interface number.1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.3.11 (heCommonLogValue) = 21.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.4.11 (heCommonLogState) = heCommonNominal (1) - Severity Level1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.5.11 (heCommonLogTime) = 2015/07/14 07:59:15.00 -07:001.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.6.11 (heCommonLogText) = **Transmitter Output Status Alarm**, Operational - Alarm Description
+- Trap Bindings:
+  1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.2.11 (heCommonLogOID) = 1.3.6.1.4.1.5591.1.11.1.1.1.1.3.1.8.**101.1** - 101 is the EntPhysicalIndex and 1 is the interface number.
+  1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.3.11 (heCommonLogValue) = 2
+  1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.4.11 (heCommonLogState) = heCommonNominal (1) - Severity Level
+  1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.5.11 (heCommonLogTime) = 2015/07/14 07:59:15.00 -07:00
+  1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.6.11 (heCommonLogText) = **Transmitter Output Status Alarm**, Operational - Alarm Description
 
 - The **Chassis Number** is obtained by dividing EntPhysicalIndex by 100, while the **Slot Number** is obtained by doing entPhysicalIndex MOD 100. The **Interface Number** is identified by the index that comes next to the entPhysicalIndex in the OID. For example, if the OID ends with ".103.2", the EntPhysicalIndex is 103, so the Interface Number is 2, the Chassis Number is 1 and the Slot Number is 3.
 
-- If the **Transmitter** and **Receiver** alarms have an **OID Index following the EntPhysicalIndex**, that OID Index indicates the **Interface number**. If the description (trap binding) contains a Receiver or Transmitter, it **concatenates the Alarm Description** with **Rx** or **Tx** and the Interface Number. It is possible that a trap has the Interface Number but does not have the Receiver or Transmitter in the description. In this case, the Interface Number is added to the description without adding Rx/Tx.For example:
+- If the **Transmitter** and **Receiver** alarms have an **OID Index following the EntPhysicalIndex**, that OID Index indicates the **Interface number**. If the description (trap binding) contains a Receiver or Transmitter, it **concatenates the Alarm Description** with **Rx** or **Tx** and the Interface Number. It is possible that a trap has the Interface Number but does not have the Receiver or Transmitter in the description. In this case, the Interface Number is added to the description without adding Rx/Tx.
+  For example:
 
 - A trap has the alarm description "Receiver RF Channel Status Alarm", with the last OID Indexes "101.2". The EntPhysicalIndex is 102 and the interface number is 2. As the trap has "Receiver" in the description, "Receiver RF Channel Status Alarm Rx2" will be added to the display key.
   - A trap has the description "Optical Amplifier Laser Bias Current Alarm" and interface number 1. "Optical Amplifier Laser Bias Current Alarm 1" will be added to the display key.

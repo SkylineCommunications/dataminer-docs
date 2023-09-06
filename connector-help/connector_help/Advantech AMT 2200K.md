@@ -36,7 +36,7 @@ On this page, you can find information about:
 - the device, with the **Product Information** page button.
 - the interfaces of the device, in the **Interface Type** and **Interface** **Tables.**
 
-There is also an option to **Reset Device**,choosing one of the options available in the dropbox.
+There is also an option to **Reset Device**, choosing one of the options available in the dropbox.
 
 Control Panel
 

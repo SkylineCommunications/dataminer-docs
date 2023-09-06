@@ -44,7 +44,7 @@ This driver has one page.
 
 ### General
 
-At the top of this page, information is displayed regarding the status of the device, such as the first and second power supply status (**Power Supply 1/2 Status**) and the **Communication Status**of the serial connection.
+At the top of this page, information is displayed regarding the status of the device, such as the first and second power supply status (**Power Supply 1/2 Status**) and the **Communication Status** of the serial connection.
 
 Below, the status of the switches (**Switch 23/24/25/26/27/28/29/30/31/32 Status**) is displayed, which indicates the position of each switch (**Position 1**, **Position 2**, or **NA**)
 

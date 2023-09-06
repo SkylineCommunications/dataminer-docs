@@ -32,7 +32,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 This page displays general information about the device, e.g. **System Description**, **Up Time**, **Software Version**.
 
-This page also contains a page button, **DVE Config**, whichallows you to enable or disable DVE creation.
+This page also contains a page button, **DVE Config**, which allows you to enable or disable DVE creation.
 
 ### SNMP Configuration Page
 

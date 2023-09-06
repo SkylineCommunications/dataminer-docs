@@ -14,15 +14,15 @@ The main goal of the application is to support IP troubleshooting investigations
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                                            | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.- Supported SDNC: Nevion Video iPath.- Supported switch fabric: CISCO Manager.- Supported edge devices: Any connectors that have the "**MC**" property on the physical DCF interfaces populated with a semi-colon-separated list of multicast addresses for that interface. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                                                                                                                                                               | **Based on** | **System Impact** |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. - Supported SDNC: Nevion Video iPath. - Supported switch fabric: CISCO Manager. - Supported edge devices: Any connectors that have the "**MC**" property on the physical DCF interfaces populated with a semi-colon-separated list of multicast addresses for that interface. | \-           | \-                |
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                | **Exported Components** |
-|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | Yes                 | Yes                     | [Nevion Video iPath](/Driver%20Help/Nevion%20Video%20iPath.aspx)[CISCO Manager](xref:Connector_help_CISCO_Manager) | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                 | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | Yes                 | Yes                     | [Nevion Video iPath](/Driver%20Help/Nevion%20Video%20iPath.aspx) [CISCO Manager](xref:Connector_help_CISCO_Manager) | \-                      |
 
 ## Configuration
 
@@ -43,7 +43,8 @@ On the **Device Mapping** subpage of the Configurations page, you can specify th
 - \<RegexFilter\>: This should be the regex filter to match the received interface format of the SDN controller. Using regex capturing groups (by using parentheses "(" ")"), you can define dynamic parts.
 - \<StringFormat\>: This format will be used to output the converted interface name. This converted name will be used to check if it matches the actual DCF interface name on the endpoint of the hop. The format of this stringFormat is custom text with curly braces to allow dynamic parts: "aa{0}bb{1}cc".
 
-Example of a replacement pair: **Eth(.\*) .\*&&&&Interfaces Ethernet{0}**With this example, DCF interface name "Eth1/3/1 (in)" will be translated to "Interfaces Ethernet1/3/1".
+Example of a replacement pair: **Eth(.\*) .\*&&&&Interfaces Ethernet{0}**
+With this example, DCF interface name "Eth1/3/1 (in)" will be translated to "Interfaces Ethernet1/3/1".
 
 ## How to use
 

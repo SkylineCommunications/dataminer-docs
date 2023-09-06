@@ -18,9 +18,9 @@ This driver was designed to be as generic as possible. This way, you can use it 
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                    |
-|-----------|-------------------------------------------|
-| 1.0.0.x   | JMC-048-05 (switch)JMC-338-05 (converter) |
+| **Range** | **Supported Firmware**                     |
+|-----------|--------------------------------------------|
+| 1.0.0.x   | JMC-048-05 (switch) JMC-338-05 (converter) |
 
 ### System Info
 

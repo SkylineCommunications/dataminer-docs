@@ -6,16 +6,17 @@ uid: Connector_help_WAGO_Kontakttechnik_750
 
 The **WAGO Kontakttechnik 750** can be used to monitor the WAGO 750-x **PLC** and its connected modules.
 
-The communication towards the PLC is done using **modbus**. As such, there are some restrictions on what can be requested from the PLC. More details can be found in the notes below.
+The communication towards the PLC is done using **modbus**. As such, there are some restrictions on what can be requested from the PLC.
+More details can be found in the notes below.
 
 ## About
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                               | **Based on** | **System Impact**                               |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                                                               | \-           | \-                                              |
-| 2.0.0.x \[SLC Main\] | Modules are automatically detected (in case of 750-880 or 750-881).Reviewed protocol to make sure everything can be supported. | \-           | Element data and trend/alarm info will be lost. |
+| **Range**            | **Key Features**                                                                                                                | **Based on** | **System Impact**                               |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                                                                | \-           | \-                                              |
+| 2.0.0.x \[SLC Main\] | Modules are automatically detected (in case of 750-880 or 750-881). Reviewed protocol to make sure everything can be supported. | \-           | Element data and trend/alarm info will be lost. |
 
 ### Product Info
 
@@ -52,7 +53,8 @@ SERIAL CONNECTION:
 
 #### 1.0.0.x
 
-In the initial range of the WAGO Kontakttechnik 750, you need to configure the connected modules by importing a **.csv file**. This file should contain a line starting with the IP of the controller, followed by a semicolon-separated list of the connected modules in the correct order. For example: *10.1.2.3;513;513;402;402;402;461.*
+In the initial range of the WAGO Kontakttechnik 750, you need to configure the connected modules by importing a **.csv file**. This file should contain a line starting with the IP of the controller, followed by a semicolon-separated list of the connected modules in the correct order.
+For example: *10.1.2.3;513;513;402;402;402;461.*
 
 The type and exact order of the modules is required in order to obtain a proper indexing of the digital/analog inputs and outputs.
 
@@ -75,7 +77,8 @@ The **web interface** is only accessible when the client machine has network acc
 
 ## How to Use
 
-This driver uses **modbus** and needs to request all data from the modules through the controller. To do this correctly, the element first needs to know which modules are connected to the **controller** and it is important that the number of modules and the number of interfaces (inputs/outputs) per module is correct. The element will read out all interfaces from the controller and when all modules are correctly configured in the element, it will be able to display the values and map them to the correct module. If this is not the case, input and output values could get **shifted** and displayed for the wrong module.
+This driver uses **modbus** and needs to request all data from the modules through the controller. To do this correctly, the element first needs to know which modules are connected to the **controller** and it is important that the number of modules and the number of interfaces (inputs/outputs) per module is correct.
+The element will read out all interfaces from the controller and when all modules are correctly configured in the element, it will be able to display the values and map them to the correct module. If this is not the case, input and output values could get **shifted** and displayed for the wrong module.
 
 Not all information is available through modbus, but it can be made available using a **custom program on the PLC**. More information about this is available in the Notes section below.
 

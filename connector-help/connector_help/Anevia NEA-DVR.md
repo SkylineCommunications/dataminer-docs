@@ -63,7 +63,7 @@ The element created with this driver consists of the data pages detailed below.
 
 ### General
 
-This page contains general information about the device, such as **System Description**, **Uptime**, **Contact**, **Name**, **Location**, **API** **Version**,**Failover** **Status**,etc.
+This page contains general information about the device, such as **System Description**, **Uptime**, **Contact**, **Name**, **Location**, **API** **Version**, **Failover** **Status**, etc.
 
 It also contains a page button that opens the **Authentication** page where the **HTTP credentials** can be defined.
 

@@ -8,7 +8,8 @@ The Verizon Reports and Dashboards Solution is a DataMiner connector with the go
 
 ## About
 
-The Verizon Reports and Dashboards Solution is intended for the generation of custom reports targeting different data groups within the DataMiner System, including key performance indicators (KPIs), configuration statistics, and alarm history data.In order to efficiently integrate the requirements, this solution comprises two different scopes, the connector side on the one hand and the custom report side on the other.
+The Verizon Reports and Dashboards Solution is intended for the generation of custom reports targeting different data groups within the DataMiner System, including key performance indicators (KPIs), configuration statistics, and alarm history data.
+In order to efficiently integrate the requirements, this solution comprises two different scopes, the connector side on the one hand and the custom report side on the other.
 
 ### Version Info
 
@@ -159,9 +160,9 @@ This page is divided in several sections.
 The **Update Settings** section contains the following parameters:
 
 - **Update Status**: Can be enabled or disabled in order to determine whether updates can happen at any level.
-- **Entity Cycle**: Determines how often theEntity Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
-- **KPI Cycle**: Determines how often theKPI Entry Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
-- **Config Cycle**: Determines how often theConfig Entry Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
+- **Entity Cycle**: Determines how often the Entity Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
+- **KPI Cycle**: Determines how often the KPI Entry Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
+- **Config Cycle**: Determines how often the Config Entry Subscribers update will be executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours. This information is then requested from the Profile Manager app to obtain the current profile definitions.
 
 The **Reporter Authentication** section contains the following parameters:
 
@@ -174,7 +175,7 @@ The **Import Configuration** section contains the following parameters:
 
 - **File Import**: Determines whether the import operation can be executed. By default set to disabled. If this is enabled, but the **File Handling** parameter is disabled, the import will not occur.
 - **File Import Path**: The file path for the import files.
-- **Import Processing Time**: Determines how often theimport is executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours.
+- **Import Processing Time**: Determines how often the import is executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours.
 - **Import Provisioning File**: Displays the import processing status, which can be either *Idle* or *Processing*.
 - **Apply**: Allows you to manually execute the import without taking the **File Handling** or **File Import** parameters into account.
 
@@ -182,6 +183,6 @@ The **Export Configuration** section contains the following parameters:
 
 - **File Export**: Determines whether the export operation can be executed. By default set to disabled. If this is enabled, but the **File Handling** parameter is disabled, the export will not occur.
 - **File Export Path**: The file path for the export files.
-- **Export Processing Time**: Determines how often theexport is executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours.
+- **Export Processing Time**: Determines how often the export is executed. By default, this is set to 1 hour, but it can be set to any value between 20 seconds and 24 hours.
 - **Export Provisioning File**: Displays the export processing status, which can be either *Idle* or *Processing*.
 - **Apply**: Allows you to manually execute the export without taking the **File Handling** or **File Export** parameters into account.

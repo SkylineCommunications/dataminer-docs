@@ -79,7 +79,7 @@ From version 1.0.0.6 onwards, you can also configure the IP Stream display key f
 
 ### TS Streams
 
-Similar to the IP Streams page, this page contains a tree control that can be used to visualize and modify any stream on the device. When you select a TS stream, the main parameters are displayed, such as **IP1 and IP2 bitrates**, **delay between IP1 and IP2**, **delay applied to IP1 and IP2**, **selected input**, **number of switches from IP1 to IP2** and vice versa, IP1 and IP2 **total packets**, **packets recovered**, **protocol type**, **packets lost**, **TS packets**,and **FEC matrix**. Below these parameters, there are three tabs displaying configurable information, i.e. **general**, **FEC management**, and **switching conditions**.
+Similar to the IP Streams page, this page contains a tree control that can be used to visualize and modify any stream on the device. When you select a TS stream, the main parameters are displayed, such as **IP1 and IP2 bitrates**, **delay between IP1 and IP2**, **delay applied to IP1 and IP2**, **selected input**, **number of switches from IP1 to IP2** and vice versa, IP1 and IP2 **total packets**, **packets recovered**, **protocol type**, **packets lost**, **TS packets**, and **FEC matrix**. Below these parameters, there are three tabs displaying configurable information, i.e. **general**, **FEC management**, and **switching conditions**.
 
 You can navigate through the tree control to directly access each page. Selecting the **Switching Conditions** node also displays a set of tabs, which provide a faster and more personalized access to **ETR1**, **ETR2**, **ETR3**, **MIP**, **T2MI**, **Bit Rate**, and **Advanced** configuration.
 
@@ -95,7 +95,8 @@ This page contains the **Current Alarms** table and contains two page buttons th
 
 From version 1.0.0.8 onwards, you can remove alarms with severity "No Log" from the Current Alarms table. You can do so by setting the **No Log Entries Displayed** parameter to *No*.
 
-From version 1.0.1.3 onwards, you can select the **Current Alarms table** **display key**. You can choose between the formats *Index/Name and Description* (default), *Index/Description*, *Index/Name and Description/Description*, and *Custom Description*.If you select **Custom Description**, you can define a custom description in the Alarm Table (on the Alarm Configurations subpage) that will be used as the display key for the Current Alarms table. If the **Custom Description column** is **empty** for a specific alarm, the display key will be the default **Index/Name and Description**.
+From version 1.0.1.3 onwards, you can select the **Current Alarms table** **display key**. You can choose between the formats *Index/Name and Description* (default), *Index/Description*, *Index/Name and Description/Description*, and *Custom Description*.
+If you select **Custom Description**, you can define a custom description in the Alarm Table (on the Alarm Configurations subpage) that will be used as the display key for the Current Alarms table. If the **Custom Description column** is **empty** for a specific alarm, the display key will be the default **Index/Name and Description**.
 
 ### Polling Configuration
 

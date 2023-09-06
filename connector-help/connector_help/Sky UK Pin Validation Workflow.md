@@ -44,7 +44,7 @@ Elements/Parameters:
 
 ### Alarms
 
-This page displays the **Alarm List Table** and the **Penalty Box Table**. Both tables displays the **Cause**, **Alarm State**, **Suggested Action**and **Alarm Target UI.**
+This page displays the **Alarm List Table** and the **Penalty Box Table**. Both tables displays the **Cause**, **Alarm State**, **Suggested Action** and **Alarm Target UI.**
 
 ### Device Data
 

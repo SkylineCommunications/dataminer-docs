@@ -4,16 +4,16 @@ uid: Connector_help_NBCU_Popup_Event_Manager_APP
 
 # NBCU Popup Event Manager APP
 
-The **NBCU Popup Event Manager** is the central component of the Peacock SLE (Single Live Events) solution, which collects event data from the **Popup Event Collector**.The Event Manager is also in charge of sending PIDs for monitoring to the **LEAP Collector** and activating SRM scripts to create bookings.
+The **NBCU Popup Event Manager** is the central component of the Peacock SLE (Single Live Events) solution, which collects event data from the **Popup Event Collector**. The Event Manager is also in charge of sending PIDs for monitoring to the **LEAP Collector** and activating SRM scripts to create bookings.
 
 ## About
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                           | **Based on** | **System Impact**                                             |
-|----------------------|----------------------------------------------------------------------------|--------------|---------------------------------------------------------------|
-| 1.0.0.x              | Gets info from the Popup Event Collector.Sends PIDs to the LEAP Collector. | \-           | \-                                                            |
-| 1.0.1.x \[SLC Main\] | Retrieves data from the LEM Collector.                                     | 1.0.0.x      | QActions involved in processing the received data could fail. |
+| **Range**            | **Key Features**                                                            | **Based on** | **System Impact**                                             |
+|----------------------|-----------------------------------------------------------------------------|--------------|---------------------------------------------------------------|
+| 1.0.0.x              | Gets info from the Popup Event Collector. Sends PIDs to the LEAP Collector. | \-           | \-                                                            |
+| 1.0.1.x \[SLC Main\] | Retrieves data from the LEM Collector.                                      | 1.0.0.x      | QActions involved in processing the received data could fail. |
 
 ### System Info
 

@@ -10,9 +10,9 @@ The **Paneda DAB Monitor Orchestration** connector can be used to orchestrate an
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -89,6 +89,8 @@ Context menus on the tables can be used to create or remove items. Entities can 
 
 When creating a new DAB monitor container, multiple sources can be configured in the source list by separating them with a comma, as shown in the following screenshot:
 
+![image](~/connector-help/images/Paneda_DAB_Monitor_Orchestration_image.png)
+
 UDP Proxies page
 
 The **UDP Proxies** page contains a table with all configured UDP proxies. Also here there there is the same destinction between entity and encoder.
@@ -98,3 +100,7 @@ Configuring UDP proxies works in the same way as configuring DAB Monitors. See t
 Network page
 
 The **Network** page provides a list of all available (VLAN) networks on the device. These networks can be assigned to an UDP proxy.
+
+
+
+

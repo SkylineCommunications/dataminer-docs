@@ -8,7 +8,8 @@ This device is an **SNMP** probe that can have several sensors attached to it. T
 
 ## About
 
-This driver can be used to poll an **AKCP Environmental Monitoring Unit**. Multiple sensors of different types can be attached to this unit. The value of the sensors will by default be retrieved every 30 seconds. However, note that this can be adapted using the **Timer Base** parameter.
+This driver can be used to poll an **AKCP Environmental Monitoring Unit**. Multiple sensors of different types can be attached to this unit.
+The value of the sensors will by default be retrieved every 30 seconds. However, note that this can be adapted using the **Timer Base** parameter.
 
 This driver will export different drivers based on the retrieved data. A list can be found in the section 'Exported drivers' below.
 
@@ -49,12 +50,12 @@ The suggested range for new installations is 2.0.0.x.
 
 ### Exported drivers
 
-| **Exported Protocol**                            | **Description**                                   |
-|--------------------------------------------------|---------------------------------------------------|
-| AKCP Environmental Monitoring Unit - Temperature | Temperature probesOnly supported in range 1.0.0.x |
-| AKCP Environmental Monitoring Unit - Voltage     | Voltage probesOnly supported in range 1.0.0.x     |
-| AKCP Environmental Monitoring Unit - Motion      | Motion probesOnly supported in range 1.0.0.x      |
-| AKCP Environmental Monitoring Unit - Sensor      | Any sensor probeOnly supported in range 2.0.0.x   |
+| **Exported Protocol**                            | **Description**                                    |
+|--------------------------------------------------|----------------------------------------------------|
+| AKCP Environmental Monitoring Unit - Temperature | Temperature probes Only supported in range 1.0.0.x |
+| AKCP Environmental Monitoring Unit - Voltage     | Voltage probes Only supported in range 1.0.0.x     |
+| AKCP Environmental Monitoring Unit - Motion      | Motion probes Only supported in range 1.0.0.x      |
+| AKCP Environmental Monitoring Unit - Sensor      | Any sensor probe Only supported in range 2.0.0.x   |
 
 ## Installation and configuration
 
@@ -72,7 +73,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 - **Port number**: The port of the connected device, by default *161.*
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
-- **Set community string**: The community string in order to set to the device. The default value is *private.* *(Note: sets are currently not implemented, but we nonetheless suggest to enter the correct value for possible future updates.)*
+- **Set community string**: The community string in order to set to the device. The default value is *private.*
+  *(Note: sets are currently not implemented, but we nonetheless suggest to enter the correct value for possible future updates.)*
 
 ## Usage: Range 1.0.0.x
 
@@ -121,7 +123,9 @@ To adjust a **parameter description** in the Alarm Console, use the *Parameter N
 
 ### General page on DVE
 
-All generated DVEs only have one page: **General**. This page contains the **Status** and the **Value** of the sensor. The DVE name parameter will also be available, making it possible to rename the DVE element there.
+All generated DVEs only have one page: **General**.
+This page contains the **Status** and the **Value** of the sensor.
+The DVE name parameter will also be available, making it possible to rename the DVE element there.
 
 ## Notes
 
@@ -138,12 +142,14 @@ This page contains the **Sensor Table**, which lists all active ("online") senso
 - **Unit**
 - **State** (as reported by the device.)
 
-Alarm monitoring is both possible on the unit and on the state column. (Alarm monitoring on only 1 column is suggested.)See also "Defining Alarms*"* at the end of this document.
+Alarm monitoring is both possible on the unit and on the state column. (Alarm monitoring on only 1 column is suggested.)
+See also "Defining Alarms*"* at the end of this document.
 
 Notes:
 
 - With the context menu you can force an immediate refresh.
-- The format of the alarm naming is set to: *\[TYPE\] Sensor: \[DESCRIPTION\] (#\[ID\])*where: *\[TYPE\]* is the content of the **Sensor Type** column, *\[DESCRIPTION\]* is the content of the **Sensor Description** column and *\[ID\]* is the key of the row.
+- The format of the alarm naming is set to: *\[TYPE\] Sensor: \[DESCRIPTION\] (#\[ID\])*
+  where: *\[TYPE\]* is the content of the **Sensor Type** column, *\[DESCRIPTION\]* is the content of the **Sensor Description** column and *\[ID\]* is the key of the row.
 
 #### Creating DVEs
 
@@ -162,11 +168,14 @@ The default name is the same as the naming key for the row, except that the ": "
 
 ### General page on DVE
 
-All generated DVEs only have one page: **General**. This page contains the **Status** and the **Value** of the sensor. Renaming is only possible in the main element, by means of the **Sensors Table**.
+All generated DVEs only have one page: **General**.
+This page contains the **Status** and the **Value** of the sensor.
+Renaming is only possible in the main element, by means of the **Sensors Table**.
 
 ## Notes
 
 ### Defining Alarms
 
-The advised alarm strategy is to monitor the **Sensor Value** parameter and to use filters in order to set different thresholds per sensor type.For example:
+The advised alarm strategy is to monitor the **Sensor Value** parameter and to use filters in order to set different thresholds per sensor type.
+For example:
 

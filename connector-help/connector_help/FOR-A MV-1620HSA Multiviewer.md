@@ -38,7 +38,7 @@ SNMP Settings:
 
 - **Port number**: The UDP port, by default *161.*
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string:** The community string used when setting values on the device,by default *private*.
+- **Set community string:** The community string used when setting values on the device, by default *private*.
 
 ## Usage
 

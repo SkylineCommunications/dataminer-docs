@@ -27,7 +27,7 @@ This **SNMP** driver is used to monitor and configure the **Evertz EMR-IP96-AESB
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Audio Channel Traps</li>
 </ul></td>
@@ -48,6 +48,8 @@ This **SNMP** driver is used to monitor and configure the **Evertz EMR-IP96-AESB
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

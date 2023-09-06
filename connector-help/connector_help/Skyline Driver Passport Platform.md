@@ -26,10 +26,10 @@ The Skyline Driver Passport Platform uses:
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                | **Based on** | **System Impact**                                                                                                                                                                      |
-|----------------------|-----------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                | \-           | \-                                                                                                                                                                                     |
-| 1.0.1.x \[SLC Main\] | Improved scheduling functionality.Supports dynamic simulations. | 1.0.0.9      | Tables Tests (PID 2000) and Simulations (PID 2200) were removed. Check for references to these parameters in the DMS (Visio drawings, Automation scripts, DMS filters, reports, etc.). |
+| **Range**            | **Key Features**                                                 | **Based on** | **System Impact**                                                                                                                                                                      |
+|----------------------|------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                 | \-           | \-                                                                                                                                                                                     |
+| 1.0.1.x \[SLC Main\] | Improved scheduling functionality. Supports dynamic simulations. | 1.0.0.9      | Tables Tests (PID 2000) and Simulations (PID 2200) were removed. Check for references to these parameters in the DMS (Visio drawings, Automation scripts, DMS filters, reports, etc.). |
 
 ### System Info
 
@@ -193,4 +193,56 @@ The config.xml file defines which .dmapp packages should be executed and which s
 
 The structure of the config.xml looks like this:
 
-\<?xml version="1.0" encoding="utf-8"?\>\<ConfigurationFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"\> \<Name\>driver_name\</Name\> \<Version\>driver_version\</Version\> \<Notification\>example@skyline.be\</Notification\> \<SimulationFilesInfo\> \<!-- for every connection that the element has, there needs to be a SimulationFileInfo item present that points to where the simulations can be found --\> \<SimulationFileInfo\> \<LinkedDatabaseDataFile\>shared_location_to_dynamic_simulation_file\Connection_0.txt\</LinkedDatabaseDataFile\> \<ConnectionNumber\>0\</ConnectionNumber\> \<Name\>shared_location_to_static_simulation_file\Connection_0.xml\</Name\> \<DatabaseName\>name_of_the_simulation_database\</DatabaseName\> \<Type\>SnmpV2\</Type\> \</SimulationFileInfo\> \</SimulationFilesInfo\> \<Tests\> \<!-- for every test that needs to be executed there needs to be a Test item present that points to the .dmapp package; it defines which simulations need to be started and for how long the test should be executed --\> \<Test\> \<Package\>GeneratedDPP_1.dmapp\</Package\> \<Simulator\> \<SNMP\> \<Simulation\> \<Name\>Connection_0.xml\</Name\> \<Port\>50000\</Port\> \</Simulation\> \</SNMP\> \</Simulator\> \<Time\> \<Duration\>90000\</Duration\> \<Interval\>600\</Interval\> \</Time\> \</Test\> \<Test\> \<Package\>GeneratedDPP_2.dmapp\</Package\> \<Simulator\> \<SNMP\> \<Simulation\> \<Name\>Connection_0.xml\</Name\> \<Port\>50000\</Port\> \</Simulation\> \<Simulation\> \<Name\>Connection_0.xml\</Name\> \<Port\>50001\</Port\> \</Simulation\> \</SNMP\> \</Simulator\> \<Time\> \<Duration\>90000\</Duration\> \<Interval\>600\</Interval\> \</Time\> \</Test\> \</Tests\>\</ConfigurationFile\>
+\<?xml version="1.0" encoding="utf-8"?\>
+\<ConfigurationFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"\>
+\<Name\>driver_name\</Name\>
+\<Version\>driver_version\</Version\>
+\<Notification\>example@skyline.be\</Notification\>
+\<SimulationFilesInfo\>
+\<!-- for every connection that the element has, there needs to be a SimulationFileInfo item present that points to where the simulations can be found --\>
+\<SimulationFileInfo\>
+\<LinkedDatabaseDataFile\>shared_location_to_dynamic_simulation_file\Connection_0.txt\</LinkedDatabaseDataFile\>
+\<ConnectionNumber\>0\</ConnectionNumber\>
+\<Name\>shared_location_to_static_simulation_file\Connection_0.xml\</Name\>
+\<DatabaseName\>name_of_the_simulation_database\</DatabaseName\>
+\<Type\>SnmpV2\</Type\>
+\</SimulationFileInfo\>
+\</SimulationFilesInfo\>
+\<Tests\>
+\<!-- for every test that needs to be executed there needs to be a Test item present that points to the .dmapp package; it defines which simulations need to be started and for how long the test should be executed --\>
+\<Test\>
+\<Package\>GeneratedDPP_1.dmapp\</Package\>
+\<Simulator\>
+\<SNMP\>
+\<Simulation\>
+\<Name\>Connection_0.xml\</Name\>
+\<Port\>50000\</Port\>
+\</Simulation\>
+\</SNMP\>
+\</Simulator\>
+\<Time\>
+\<Duration\>90000\</Duration\>
+\<Interval\>600\</Interval\>
+\</Time\>
+\</Test\>
+\<Test\>
+\<Package\>GeneratedDPP_2.dmapp\</Package\>
+\<Simulator\>
+\<SNMP\>
+\<Simulation\>
+\<Name\>Connection_0.xml\</Name\>
+\<Port\>50000\</Port\>
+\</Simulation\>
+\<Simulation\>
+\<Name\>Connection_0.xml\</Name\>
+\<Port\>50001\</Port\>
+\</Simulation\>
+\</SNMP\>
+\</Simulator\>
+\<Time\>
+\<Duration\>90000\</Duration\>
+\<Interval\>600\</Interval\>
+\</Time\>
+\</Test\>
+\</Tests\>
+\</ConfigurationFile\>

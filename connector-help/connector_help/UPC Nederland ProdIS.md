@@ -8,7 +8,8 @@ This driver will communicate to the UPC Nederland ADI Importer.
 
 ## About
 
-The driver will read the different messages placed in the providers folder by the Spider device and move them to another folder.These messages will be placed in a table and can be requested by the UPC Nederland ADI Importer.
+The driver will read the different messages placed in the providers folder by the Spider device and move them to another folder.
+These messages will be placed in a table and can be requested by the UPC Nederland ADI Importer.
 
 ## Installation and configuration
 
@@ -18,7 +19,9 @@ This a virtual driver so there aren't any settings when you create an element.
 
 ### General
 
-On the general page you can set the settings for the credentials.You can also set the path to the *ContentStore* folder,the number of days the messages should be stored in the table and the **Dma and Element ID** from the ADI Importer.
+On the general page you can set the settings for the credentials.
+You can also set the path to the *ContentStore* folder,
+the number of days the messages should be stored in the table and the **Dma and Element ID** from the ADI Importer.
 
 ### Assets Overview
 

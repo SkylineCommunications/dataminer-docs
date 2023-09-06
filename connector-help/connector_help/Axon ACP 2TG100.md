@@ -20,7 +20,7 @@ The **Axon ACP** **2TG100** driver can be used to display and configure informat
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 11090807               |
+| 1.0.0.x   | 1109 0807              |
 
 ### System Info
 
@@ -77,3 +77,5 @@ The element has the following data pages:
 - **Monitoring**
 - **Network**
 - **Alarm Priority**
+
+

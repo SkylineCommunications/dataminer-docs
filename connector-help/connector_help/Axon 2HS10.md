@@ -63,8 +63,8 @@ This page displays the following configurable device parameters:
 - The **Lock Mode**
 - The **Reference Input** (either the first or the second)
 - The **Reference Type** (Bi/Tri levels)
-- The Horizontal Delay **(H Delay**)in pixels
-- The Vertical Delay **(V Delay**)in pixels
+- The Horizontal Delay **(H Delay**) in pixels
+- The Vertical Delay **(V Delay**) in pixels
 - The **Delay Status**
 
 In addition, the **Alarm Priority...** page button allows you to define the priority of the:

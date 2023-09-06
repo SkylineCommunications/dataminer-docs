@@ -47,7 +47,7 @@ This page contains the **Display** parameter and the **Status Display** paramete
 Additionally, there are three buttons:
 
 - **Factory** **Default**: Resets all module settings to factory-specified default values and clears memories
-- **Default** **Settings**:Resets all module settings to factory-specified defaults but does not clear memories.
+- **Default** **Settings**: Resets all module settings to factory-specified defaults but does not clear memories.
 - **Restar**: Software restart of the module.
 
 The parameters of the output display are also displayed.

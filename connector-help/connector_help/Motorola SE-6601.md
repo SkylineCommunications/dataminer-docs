@@ -10,6 +10,8 @@ The **Motorola SE-6601** is an **Encoder**.
 
 This driver communicates using **SNMP Protocol.**
 
+
+
 Ranges of the driver
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
@@ -26,6 +28,8 @@ Ranges of the driver
 
 ### Creation
 
+
+
 SNMP CONNECTION:
 
 - **IP address/host**: \[The polling IP of the device.\]
@@ -34,10 +38,16 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: \[The port of the connected device, by default *161*.\]
-- **Get community string**: \[The community string used when reading values from the device(default value if not overridden in the driver: *public*).Note: If you have specified a default value in the driver, then specify that custom value.\]
-- **Set community string**: \[The community string used when setting values on the device(default value if not overridden in the driver: *private*).Note: If you have specified a default value in the driver, then specify that custom value.\]
+- **Get community string**: \[The community string used when reading values from the device
+  (default value if not overridden in the driver: *public*).
+  Note: If you have specified a default value in the driver, then specify that custom value.\]
+- **Set community string**: \[The community string used when setting values on the device
+  (default value if not overridden in the driver: *private*).
+  Note: If you have specified a default value in the driver, then specify that custom value.\]
 
 ## Usage
+
+
 
 ### System Monitor
 
@@ -49,6 +59,8 @@ It displays: **Encoder Version, IP Bonding Info** and **Video/Audio/Mux/Transpor
 
 It also displays the table: **Input Mpts Table.**
 
+
+
 ### Network Settings
 
 This page allows the user configure the network settings on the device.
@@ -58,6 +70,8 @@ It allows the user to set: **Host Name, NTP Server IP Address, System TTL, Backu
 It displays: **Encoder IP Address, Equipment Type, Gateway IP, Subnet Mask** and **Eth0/Eth1/Eth2/Eth3: IP Address, Subnet Mask, Gateway IP Address.**
 
 It also contains a pagebutton to: **TS and Virtual IF Tables**.
+
+
 
 ### System Configuration
 
@@ -71,6 +85,8 @@ It displays: **UTC Date and Time, Config Filename List, Current Conf Count,** an
 
 It contains a pagebutton to: **Auto Restore Config**.
 
+
+
 ### Service Provision
 
 This page contains tables which hold information about the services provisioned.
@@ -79,11 +95,16 @@ It also allows the user to set: **ASI Program Number** and **Internal Source Ima
 
 It displays: **Service Table, VBI Table, DPI Table, Stat Mux Table, Input Tuner Table, Ancillary Data Table** and **Internal Source Table.**
 
+**
+**
+
 ### Mux Provision Statistics
 
 This page contains various tables relating to Mux provision.
 
 It displays the following tables for **Stat Mux**: **Pool Table, Group Table, Encoder Table, Pid Remap Table** and **FEC Error Table.**
+
+
 
 ### Identity
 
@@ -95,6 +116,8 @@ it displays: **Serial Number, Chassis Number, IF Index, Hardware Features, Softw
 
 It contains a pagebutton to: **IF Extension**
 
+
+
 ### State
 
 This page contains information about the state of the device
@@ -105,17 +128,23 @@ It displays: **Operational State, Usage State, Alarm Status, Availability Status
 
 It contains a pagebutton to: **Alarm Page** and **Traps Page**
 
+
+
 ### Components
 
 This page contains information about the components in the device.
 
 It displays the tables: **Platform Table, Module Table, Port Table** and **Mod Channel Table.**
 
+
+
 ### Chassis
 
 This page contains information about the chassis.
 
 It displays the table: **Chassis Power Supply Table.**
+
+
 
 ### Web Interface
 

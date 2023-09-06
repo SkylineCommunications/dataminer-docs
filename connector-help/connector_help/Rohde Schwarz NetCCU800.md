@@ -58,7 +58,7 @@ These two pages display specific information for each DVB receiver, and allow yo
 
 This page displays information regarding the transmitter status, and separate summary information for **Exciter A** and **Exciter B**.
 
-The **Tx Events Table** page button displays the **Tx Events Table**,which contains a list of all existing events on the device. This table is polled from the device on startup and the values are refreshed every time a trap is received. You can set the **Event Tx Mask** value for the event as well as the **Event Priority.**
+The **Tx Events Table** page button displays the **Tx Events Table**, which contains a list of all existing events on the device. This table is polled from the device on startup and the values are refreshed every time a trap is received. You can set the **Event Tx Mask** value for the event as well as the **Event Priority.**
 
 ### Transmitter Settings Page
 

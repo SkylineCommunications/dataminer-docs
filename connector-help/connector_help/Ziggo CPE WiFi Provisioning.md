@@ -10,8 +10,10 @@ The **Ziggo CPE WiFi Provisioning** driver converts CSV files containing a list 
 
 Every day, at a configurable time, the driver retrieves CSV files from a specific folder. There are two types of CSV files, one type per footprint (**fZiggo** or **fUPC)**. The CSV file names must have the following format:
 
-- **fUPC**: *YYYYMMDD*-fUPC.csv E.g*. '20170418-fUPC.csv'*
-- **fZiggo**: *YYYY*-*MM*-*DD*-*HH*-*MM*-fZiggo.csv\[.gz\]\> E.g. *'2017-06-05-01-08-fZiggo.csv'*
+- **fUPC**: *YYYYMMDD*-fUPC.csv
+  E.g*. '20170418-fUPC.csv'*
+- **fZiggo**: *YYYY*-*MM*-*DD*-*HH*-*MM*-fZiggo.csv\[.gz\]\>
+  E.g. *'2017-06-05-01-08-fZiggo.csv'*
 
 The driver will parse the CSV files and convert them to **DSL** files.
 

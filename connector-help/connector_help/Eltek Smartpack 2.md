@@ -108,7 +108,7 @@ The page contains a number of page buttons. The **Configuration** page button pr
 
 ### Battery
 
-This page displays information about the **Battery**, such as the **Battery** **Status**,the **Energy Log**, and the **Cycle Log**.
+This page displays information about the **Battery**, such as the **Battery** **Status**, the **Energy Log**, and the **Cycle Log**.
 
 The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Bank Tables, Energy Log Tables, Cycle Log Tables** provide access to a number of tables.
 
@@ -122,6 +122,6 @@ This page displays the **Output Control Unit Tables**, with parameters such as *
 
 ### Inverters
 
-This page displays information about the **Inverters**, such as the **Energy Log**and the **Reactive** **Energy Log**.
+This page displays information about the **Inverters**, such as the **Energy Log** and the **Reactive** **Energy Log**.
 
 The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Energy Log Tables** and **Reactive Energy Log Tables** provide access to a number of tables.

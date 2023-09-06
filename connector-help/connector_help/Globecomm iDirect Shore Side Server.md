@@ -87,7 +87,7 @@ When required for the shore side server web API, specify the API username and pa
 
 The shore side server maintains the data for all remotes in the system. On this page, a table is shown with all the remotes that are managed by the shore side server. The details for each remote are available in the DVEs.
 
-There is a page button that opens the **Remotes Enable/Disable** subpage, which contains the **Remotes Table Overview**.This is a table similar to the main Remotes table, but with extra option to enable or disable each virtual element. The subpage also contains controls to enable or disable automatic removal of DVEs and to completely delete virtual elements.
+There is a page button that opens the **Remotes Enable/Disable** subpage, which contains the **Remotes Table Overview**. This is a table similar to the main Remotes table, but with extra option to enable or disable each virtual element. The subpage also contains controls to enable or disable automatic removal of DVEs and to completely delete virtual elements.
 
 ### Devices
 

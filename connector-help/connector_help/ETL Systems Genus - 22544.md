@@ -30,6 +30,6 @@ The element using this driver is automatically created by the parent element usi
 
 The element created with this driver consists of the following data pages:
 
-- **General**: Displays system information such as the **Summary Alarm** and the **Operation Time**of the board.
+- **General**: Displays system information such as the **Summary Alarm** and the **Operation Time** of the board.
 - **Control**: Allows you to set multiple control parameters of the board.
 - **Monitoring**: Displays the **Alarms Status** of the board and information like **Voltage**, **Current** and **Temperature**.

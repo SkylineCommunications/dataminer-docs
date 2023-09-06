@@ -141,7 +141,7 @@ Physical dynamic interfaces:
 
 #### External Connections
 
-- For each **Topological Link**,an external connection is created.
+- For each **Topological Link**, an external connection is created.
 
 ## Notes
 
@@ -149,7 +149,10 @@ The driver does not allow the user to configure anything on the device. Only req
 
 The driver does not support multiple management domains.
 
-**Custom Visio files** are available for the main element and the DVEs.The Visio image for the **main element** displays all managed elements and connects them with DCF.The **DVE** Visio image displays the shelf overview. **Multiple shelves** will be displayed on different pages.Currently the following types of shelves are supported:
+**Custom Visio files** are available for the main element and the DVEs.
+The Visio image for the **main element** displays all managed elements and connects them with DCF.
+The **DVE** Visio image displays the shelf overview. **Multiple shelves** will be displayed on different pages.
+Currently the following types of shelves are supported:
 
 - **OptiX OSN 8800 T32**
 - **OptiX OSN 8800 T16**

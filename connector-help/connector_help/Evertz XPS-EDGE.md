@@ -65,8 +65,8 @@ There are four different sections in this connector, which can be used for monit
 
 - **General**: Displays **product** information
 - **System**: Displays **network, management, monitoring,** and **security** information.
-- **Encoder**: Displays the encoder **input**, **output**,and **control** information.
-- **Decoder**: Displays the decoder **input**, **output**,and **control** information, as well as **monitor** data for errors and **notifications** for faults.
+- **Encoder**: Displays the encoder **input**, **output**, and **control** information.
+- **Decoder**: Displays the decoder **input**, **output**, and **control** information, as well as **monitor** data for errors and **notifications** for faults.
 
 ## Notes
 

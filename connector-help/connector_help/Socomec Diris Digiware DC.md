@@ -10,10 +10,10 @@ This connector will poll the Socomec Digiware DC. The Digiware DC is a meter wit
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                               | **Based on** | **System Impact**              |
-|----------------------|----------------------------------------------------------------------------------------------------------------|--------------|--------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial release (only supports I30-DC).                                                                        | \-           | \-                             |
-| 1.0.1.x \[SLC Main\] | \- Modules can now be given a custom name.- Display keys will now include the custom name given to the module. | 1.0.1.2      | Elements need to be recreated. |
+| **Range**            | **Key Features**                                                                                                | **Based on** | **System Impact**              |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|--------------|--------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial release (only supports I30-DC).                                                                         | \-           | \-                             |
+| 1.0.1.x \[SLC Main\] | \- Modules can now be given a custom name. - Display keys will now include the custom name given to the module. | 1.0.1.2      | Elements need to be recreated. |
 
 ### Product Info
 

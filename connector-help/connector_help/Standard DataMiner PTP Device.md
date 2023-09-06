@@ -43,9 +43,9 @@ The following connectors are currently mediated with the latest version:
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                  | **Exported Components** |
-|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- Arista Manager- Lawo HD Core Ravenna- Lawo Power Core- Meinberg Lantime M3000 - PTPv2 Module- Skyline PTP (application and scripts) | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                      | **Exported Components** |
+|-----------|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- Arista Manager - Lawo HD Core Ravenna - Lawo Power Core - Meinberg Lantime M3000 - PTPv2 Module - Skyline PTP (application and scripts) | \-                      |
 
 ## Configuration
 

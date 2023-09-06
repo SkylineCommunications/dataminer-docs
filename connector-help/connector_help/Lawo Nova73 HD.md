@@ -12,9 +12,9 @@ No DVEs are created for these modules as they can be polled individually. Curren
 
 ### Version Info
 
-| **Range** | **Key Features**                                                           | **Based on** | **System Impact** |
-|-----------|----------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial version.HD Core and Compact Core device compatible since v1.0.0.3. | \-           | \-                |
+| **Range** | **Key Features**                                                            | **Based on** | **System Impact** |
+|-----------|-----------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version. HD Core and Compact Core device compatible since v1.0.0.3. | \-           | \-                |
 
 ### Product Info
 
@@ -39,7 +39,7 @@ This driver uses the Ember+ protocol over a smart-serial connection and requires
 SMART-SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **IP port**: The IP port of the device. Required(default value: 9000)
+- **IP port**: The IP port of the device. Required (default value: 9000)
 
 #### Smart-Serial Redundant Connection
 

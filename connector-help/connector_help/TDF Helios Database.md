@@ -39,7 +39,7 @@ This connector uses Oracle.ManagedDataAcess, a .Net NuGet Managed Driver, to acc
 
 ### Initialization
 
-When the element has been created, go to the **General** page to configure the connection. You will need to define the **Server IP**, **Server Port**, **Username** and **Password**,and **SID**. Depending on your database configuration, the password can be empty. All other parameters must be filled in.
+When the element has been created, go to the **General** page to configure the connection. You will need to define the **Server IP**, **Server Port**, **Username** and **Password**, and **SID**. Depending on your database configuration, the password can be empty. All other parameters must be filled in.
 
 Note that this configuration will only be used to connect to the database when at least one query has been configured. As long as no queries have been configured, the connector will not try to connect.
 
@@ -73,7 +73,9 @@ Finally, on the different query pages, the tables with the query results are als
 
 ### Example of a Sites query file
 
-*"from* *Q_helios_publication.sio_site,* *(select distinct sio_servicet.loc_code_ig from Q_helios_publication.sio_servicet,Q_helios_publication.sio_servicec where* *sio_servicet.cfs_code=sio_servicec.cfs_code_service_client(+)* *and* *( ( cfs_date_arret_realisee is null and CFS_classe='TNT')* *OR* *(* *sio_servicec.cfs_code_service_client is null and* *rfs_statut='Actif'* *and* *rfs_item_de_catalogue like '%TNT%')))* *SERVICE* *where* *sio_site.loc_statut\<\>'ObsolŠte'* *and* *sio_site.loc_code_ig=SERVICE.loc_code_ig* *order by sio_site.loc_code_ig"*
+*"from*
+*Q_helios_publication.sio_site,* *(select distinct sio_servicet.loc_code_ig from Q_helios_publication.sio_servicet,Q_helios_publication.sio_servicec where* *sio_servicet.cfs_code=sio_servicec.cfs_code_service_client(+)* *and* *( ( cfs_date_arret_realisee is null and CFS_classe='TNT')* *OR* *(* *sio_servicec.cfs_code_service_client is null and* *rfs_statut='Actif'* *and* *rfs_item_de_catalogue like '%TNT%')))* *SERVICE* *where* *sio_site.loc_statut\<\>'ObsolŠte'* *and* *sio_site.loc_code_ig=SERVICE.loc_code_ig*
+*order by sio_site.loc_code_ig"*
 
 ## Notes
 

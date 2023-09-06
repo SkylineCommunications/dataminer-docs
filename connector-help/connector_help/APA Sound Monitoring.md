@@ -47,14 +47,14 @@ There is no redundancy defined.
 
 ### General page
 
-On the left side of thispage, the **standalone parameters** from the **RadiothekMonitor** link are shown:
+On the left side of this page, the **standalone parameters** from the **RadiothekMonitor** link are shown:
 
 - Last Streams Update
 - Last Check Duration
 - Overall Status
 - Response times
 
-On the right side of thispage, you can configure the **polling speed** of the requests.
+On the right side of this page, you can configure the **polling speed** of the requests.
 
 The device monitoring result sends two requests, one for the Android and one for the iOS results.
 

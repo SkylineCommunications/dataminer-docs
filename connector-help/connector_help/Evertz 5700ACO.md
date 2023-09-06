@@ -14,9 +14,9 @@ The changeover uses a voting system based on which source has the best signals a
 
 ### Version Info
 
-| **Range**            | **Key Features**                                     | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Manual/automatic changeover- Voting configuration | \-           | \-                |
+| **Range**            | **Key Features**                                      | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Manual/automatic changeover - Voting configuration | \-           | \-                |
 
 ### Product Info
 

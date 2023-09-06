@@ -12,10 +12,10 @@ With this manager, you will be able to track the usage of resources, change the 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                     | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version (POC).                                                                                               | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | \- User input now runs via interactive Automation scripts.- Visual Overview layer has been added to the application. | 1.0.0.1      | \-                |
+| **Range**            | **Key Features**                                                                                                      | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version (POC).                                                                                                | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | \- User input now runs via interactive Automation scripts. - Visual Overview layer has been added to the application. | 1.0.0.1      | \-                |
 
 ### System Info
 

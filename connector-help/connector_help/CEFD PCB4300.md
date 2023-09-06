@@ -18,17 +18,23 @@ The CEFD PCB-4300 demands a **serial** approach in order to communicate with it.
 |----------------------|------------------|--------------|-------------------|
 | 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
+
+
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | N/A                    |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
+
+
 
 ## Configuration
 

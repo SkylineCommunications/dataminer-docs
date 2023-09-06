@@ -20,9 +20,9 @@ HTTP requests are used to retrieve the device information.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                           |
-|------------------|-------------------------------------------------------|
-| 1.0.0.x          | Software version 2.0H264 Decoder software version 1.3 |
+| **Driver Range** | **Device Firmware Version**                            |
+|------------------|--------------------------------------------------------|
+| 1.0.0.x          | Software version 2.0 H264 Decoder software version 1.3 |
 
 ## Installation and configuration
 
@@ -50,7 +50,7 @@ This page displays status parameters of **Demod 1**, **Service 1**, **Genlock**,
 
 ### Global Settings
 
-On this page, you can view and configure the global configuration parameters: **General**,**Downconverter**, **IP**, **Streaming**, **OSD Settings** and **Genlock settings**.
+On this page, you can view and configure the global configuration parameters: **General**, **Downconverter**, **IP**, **Streaming**, **OSD Settings** and **Genlock settings**.
 
 ### Configuration
 

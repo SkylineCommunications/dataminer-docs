@@ -64,11 +64,11 @@ SNMP Settings:
 
 ### General
 
-This page displays general information about the device: **system information**, **contact information** and **device status parameters**.These parameters include the **Unit Alarms Status** and the **Device Working Mode** configuration.
+This page displays general information about the device: **system information**, **contact information** and **device status parameters**. These parameters include the **Unit Alarms Status** and the **Device Working Mode** configuration.
 
 ### Admin
 
-This page displays the state of several **device features**,such as Tx/Rx header/payload compression.
+This page displays the state of several **device features**, such as Tx/Rx header/payload compression.
 
 On the right side of the page, the **SNMP Trap Destination IP Address** and the **Auto Logout** feature can be configured.
 
@@ -112,7 +112,7 @@ The page contains several page buttons:
 This page contains the following tables:
 
 - The **ECM** **Channel Table**, which contains the configuration parameters of each ECM (**Ethernet Control Module**) channel (e.g. state, type, etc.).
-- The **ECM Remotes Table**,which displays status information regarding the remote units connected to the hub.
+- The **ECM Remotes Table**, which displays status information regarding the remote units connected to the hub.
 
 A page button at the top allows you to set the **ECM Hub configuration** parameters (e.g. ECM Multicast IP, ECM Guard Band, etc.).
 
@@ -160,7 +160,7 @@ The page also contains the **Diagnostic** page button, which displays statistica
 
 ### Utility - BERT
 
-This page displays the BERT(**Bit Error Rate Test**) **settings** and **monitoring** parameters.
+This page displays the BERT (**Bit Error Rate Test**) **settings** and **monitoring** parameters.
 
 ### Traps
 
@@ -184,7 +184,7 @@ On the right side of the page, the **SNMP Trap Destination IP Address** and the 
 
 The following two page buttons are also available:
 
-- **VMS**: Contains **configuration** (Network ID, Management Base Port and Multicast IP) and status parameters (VMS IP Address, Registration Status and VMS Version) related to the **Vipersat Management System**, which isused for dynamic bandwidth management.
+- **VMS**: Contains **configuration** (Network ID, Management Base Port and Multicast IP) and status parameters (VMS IP Address, Registration Status and VMS Version) related to the **Vipersat Management System**, which is used for dynamic bandwidth management.
 - **Firmware**: Displays **Firmware Boot configuration** parameters and a **Firmware Table**, which shows the firmware state information for the different machine slots.
 
 ### Configuration - Interface
@@ -276,7 +276,7 @@ The page also contains the following page buttons:
 
 ### Utility - BERT
 
-On this page, you can view the BERT(**Bit Error Rate Test**) **settings** and **monitoring** parameters.
+On this page, you can view the BERT (**Bit Error Rate Test**) **settings** and **monitoring** parameters.
 
 ### Traps
 

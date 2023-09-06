@@ -4,7 +4,8 @@ uid: Connector_help_Camunda_BPMN
 
 # Camunda BPMN
 
-Camunda Platform is a complete process automation tech stack with powerful execution engines for BPMN workflows and DMN decisions paired with essential applications for modeling, operations and analytics. The driver fetches and locks external tasks that can either be completed manually or with a script.
+Camunda Platform is a complete process automation tech stack with powerful execution engines for BPMN workflows and DMN decisions paired with essential applications for modeling, operations and analytics.
+The driver fetches and locks external tasks that can either be completed manually or with a script.
 
 ## About
 
@@ -65,200 +66,200 @@ The Automation script specified with the **External Tasks Handler Automation Scr
 
 Example:
 
-       
-       
-       using 
-       
-       
+
+
+       using
+
+
        System;
-    using 
-       
-       
+    using
+
+
        System.Collections.Generic;
 
-    using 
-       
-       
+    using
+
+
        Newtonsoft.Json;
-    using 
-       
-       
+    using
+
+
        Skyline.DataMiner.Automation;
 
-    public 
-       
-       
-       class 
-       
-       
+    public
+
+
+       class
+
+
        Script
     {
-        public 
-       
-       
-       static 
-       
-       
-       
-          
-          
-          void 
-       
-       
+        public
+
+
+       static
+
+
+
+
+
+          void
+
+
        Run(Engine engine)
         {
-            var workerElement 
-       
-       
+            var workerElement
+
+
        = engine.FindElement(engine.GetScriptParam("Worker Element Name").Value);
-            var tasksIdsString 
-       
-       
+            var tasksIdsString
+
+
        = engine.GetScriptParam("External Task IDs").Value;
-            engine.GenerateInformation($"{workerElement?.ElementName} - 
-          
-          
-          
-             
-             
+            engine.GenerateInformation($"{workerElement?.ElementName} -
+
+
+
+
+
              {tasksIdsString}");
 
-            if 
-       
-       
-       (workerElement 
-       
-       
-       == 
-       
-       
-       null 
-       
-       
-       || tasksIdsString 
-       
-       
-       == 
-       
-       
+            if
+
+
+       (workerElement
+
+
+       ==
+
+
+       null
+
+
+       || tasksIdsString
+
+
+       ==
+
+
        null)
             {
                 engine.ExitFail("Arguments are missing");
                 return;
             }
 
-            var externalTaskIds 
-       
-       
+            var externalTaskIds
+
+
        = tasksIdsString.Split(';');
-            var r 
-       
-       
-       = 
-       
-       
-       new 
-       
-       
+            var r
+
+
+       =
+
+
+       new
+
+
        Random();
-            foreach 
-       
-       
-       (var externalTaskId 
-       
-       
+            foreach
+
+
+       (var externalTaskId
+
+
        in externalTaskIds)
             {
-                var priority 
-       
-       
-       = r.Next(1, 
-       
-       
+                var priority
+
+
+       = r.Next(1,
+
+
        8);
-                if 
-       
-       
-       (priority 
-       
-       
-       <= 
-       
-       
+                if
+
+
+       (priority
+
+
+       <=
+
+
        2)
                 {
                     // Inform that the external task can't be handled now
-                    workerElement.SetParameterByPrimaryKey(107, externalTaskId, 
-       
-       
+                    workerElement.SetParameterByPrimaryKey(107, externalTaskId,
+
+
        "/Fail");
                     continue;
                 }
 
                 // Confirm that the task will be handled now
-                workerElement.SetParameterByPrimaryKey(107, externalTaskId, 
-       
-       
+                workerElement.SetParameterByPrimaryKey(107, externalTaskId,
+
+
        "/Confirm");
 
                 // Complete Task without variables
                 // workerElement.SetParameterByPrimaryKey(105, externalTaskId, "/Complete");
 
                 // Complete Task and pass variable `priority`
-                var completeCommand 
-       
-       
-       = 
-       
-       
-       new 
-       
-       
-       Dictionary<string, 
-          
-          
+                var completeCommand
+
+
+       =
+
+
+       new
+
+
+       Dictionary<string,
+
+
           object>
                 {
-                    { 
-       
-       
-       "action", 
-       
-       
-       "complete" 
-       
-       
+                    {
+
+
+       "action",
+
+
+       "complete"
+
+
        },
-                    { 
-       
-       
-       "variables", 
-       
-       
-       new 
-       
-       
-       Dictionary<string, 
-          
-          
-          object> 
-       
-       
-       { 
-       
-       
-       { 
-       
-       
-       "priority", priority 
-       
-       
-       } 
-       
-       
-       } 
-       
-       
+                    {
+
+
+       "variables",
+
+
+       new
+
+
+       Dictionary<string,
+
+
+          object>
+
+
+       {
+
+
+       {
+
+
+       "priority", priority
+
+
+       }
+
+
+       }
+
+
        }
                 };
 

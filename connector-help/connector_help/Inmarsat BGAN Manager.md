@@ -10,9 +10,9 @@ The Inmarsat BGAN Manager driver is used to monitor the BGAN network and execute
 
 ### Version Info
 
-| **Range**            | **Key Features**                         | **Based on** | **System Impact** |
-|----------------------|------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Poll CustomersPoll Terminals and details | \-           | \-                |
+| **Range**            | **Key Features**                          | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Poll Customers Poll Terminals and details | \-           | \-                |
 
 ### Product Info
 

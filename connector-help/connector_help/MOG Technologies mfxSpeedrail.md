@@ -42,7 +42,7 @@ The driver contains 10 pages.
 
 ### General Page
 
-This page displays general information about the system, such as the **Hostname**, the **Fully Qualified Domain Name**, the **Operating System**, the **IP Address** and the **Server Port**. This page also contains the **Servers Table** and the **MAM Servers Table**,which display information about all connected servers and all persistent MAM servers, respectively.
+This page displays general information about the system, such as the **Hostname**, the **Fully Qualified Domain Name**, the **Operating System**, the **IP Address** and the **Server Port**. This page also contains the **Servers Table** and the **MAM Servers Table**, which display information about all connected servers and all persistent MAM servers, respectively.
 
 ### Devices Page
 
@@ -64,7 +64,7 @@ The **Configuration** page button opens the **Rules Configuration** page, which 
 
 ### Notifications Page
 
-This page displays the **Notifications Table**,which shows detailed information about the current notifications.These notifications are warnings and information that the system generates when certain events occur.
+This page displays the **Notifications Table**, which shows detailed information about the current notifications. These notifications are warnings and information that the system generates when certain events occur.
 
 ### System Settings Page
 

@@ -34,10 +34,10 @@ The device needs credentials to poll data from the VMG1. Those credentials can b
 
 The default credentials are:
 
-| **Clear Value** | **Encrypted Value** |                            |
-|-----------------|---------------------|----------------------------|
-| Username        | administrator       | 674e4e4c4743585a54475e4c57 |
-| Password        | Admin               | 674e4e4c47                 |
+|          | **Clear Value** | **Encrypted Value**        |
+|----------|-----------------|----------------------------|
+| Username | administrator   | 674e4e4c4743585a54475e4c57 |
+| Password | Admin           | 674e4e4c47                 |
 
 ## Usage
 

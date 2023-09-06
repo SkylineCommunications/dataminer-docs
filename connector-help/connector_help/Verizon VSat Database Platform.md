@@ -50,27 +50,27 @@ This page displays the **Circuits Overview** table, which contains the main info
 
 - **Circuit Name**: Circuit name or circuit alias.
 - **Circuit ID**: Circuit ID.
-- **DNS Entity**:Verizon-assigned identifier for the circuit modem.
-- **NMS**:The name of the iDirect in charge of hosting a given circuit.
-- **Status**:*Active*/*Inactive* status of the circuit.
-- **NOC Status**:*Managed*/*Unmanaged*.
+- **DNS Entity**: Verizon-assigned identifier for the circuit modem.
+- **NMS**: The name of the iDirect in charge of hosting a given circuit.
+- **Status**: *Active*/*Inactive* status of the circuit.
+- **NOC Status**: *Managed*/*Unmanaged*.
 - **Service Tier**: The service tier: *0*, *1*, *2* or *3*. Only 2 and 3 are monitored for trouble ticketing.
-- **Maintenance Option**:The maintenance option for a given customer (e.g. *Next Business Day*).
-- **Service Type**:The service type *Primary*/*Secondary* for a given customer.
+- **Maintenance Option**: The maintenance option for a given customer (e.g. *Next Business Day*).
+- **Service Type**: The service type *Primary*/*Secondary* for a given customer.
 
 It also displays information about customers and contact information:
 
 - **Country Code**: The customer's country code.
 - **Customer Name**: (VRF) customer name.
-- **Location Name**:The ESP location name.
-- **ESP Customer Name**:The ESP customer name.
+- **Location Name**: The ESP location name.
+- **ESP Customer Name**: The ESP customer name.
 - **Customer Short Name**: Short for the customer name.
 - **Customer Number**: The customer number within Verizon's system.
-- **Contact Name**:Customer outage contact name used in trouble ticket.
+- **Contact Name**: Customer outage contact name used in trouble ticket.
 - **Contact Telephone**: Customer outage contact phone number to set in trouble ticket.
-- **Contact Email**:Customer outage contact email used in trouble ticket.
+- **Contact Email**: Customer outage contact email used in trouble ticket.
 - **DNS Entity Name**: Verizon-assigned identifier for the circuit modem.
-- **NMS**:The name of the iDirect NMS in charge of hosting a given circuit.
+- **NMS**: The name of the iDirect NMS in charge of hosting a given circuit.
 - **Custom Description**: Custom column. Makes it possible to write and save relevant information about each circuit.
 
 ### Devices
@@ -92,7 +92,7 @@ This page contains information about each device available per circuit and its o
 This page contains information on all interfaces available per device, as well as the **Circuits ID** and some parameters to contextualize each element.
 
 - **Type**: The interface type (e.g. *eth0*).
-- **Circuit Path**:The circuit path (e.g. *Primary*).
+- **Circuit Path**: The circuit path (e.g. *Primary*).
 - **VLAN**: The interface VLAN (e.g. *275*).
 - **IP Address**: The interface IP.
 - **Subnet**: The interface subnet.
@@ -102,9 +102,9 @@ This page contains information on all interfaces available per device, as well a
 
 This page contains information on all PIP circuits available per device, as well as the **Circuits ID**, information on interfaces, and some parameters to contextualize each element.
 
-- **PIP Circuit ID**:Private IP circuit ID.
-- **VRF**:Verizon reference to PIP circuit.
-- **Teleport:**Descriptive reference.
+- **PIP Circuit ID**: Private IP circuit ID.
+- **VRF**: Verizon reference to PIP circuit.
+- **Teleport:** Descriptive reference.
 
 ### Unavailable Circuits Overview
 
@@ -127,7 +127,7 @@ This page contains different options to set up the **Vsat Database Platform.**
 
 The Authentication section of the page contains the following parameters:
 
-- **Username**:User name to be used in the HTTP session, to establish communication with the API.
+- **Username**: User name to be used in the HTTP session, to establish communication with the API.
 - **Password**: Password of the HTTP session.
 
 The Import Configuration section contains the following parameters:

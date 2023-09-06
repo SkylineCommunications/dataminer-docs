@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### General
 
-This page displays general parameters, such as the **IP Address**, **Net Mask**, **IP Default Gateway**, **System Name**, **Reference Format**, **Reference Mode**, **Source Id State** and **Text**, and **Test Gen Format** and **Pattern**.The page also displays the **Test Gen 2 Table**.
+This page displays general parameters, such as the **IP Address**, **Net Mask**, **IP Default Gateway**, **System Name**, **Reference Format**, **Reference Mode**, **Source Id State** and **Text**, and **Test Gen Format** and **Pattern**. The page also displays the **Test Gen 2 Table**.
 
 There are 6 pages buttons that open corresponding subpages: **RGB Input**, **Button**, **AFD ARC Control**, **ANC Pass**, **SCTE 104 Control** and **GPIO**. These subpages display tables for which the polling can be enabled or disabled.
 
@@ -62,7 +62,7 @@ Two page buttons on this page provide acces to the **Flex ADCHD** and **Composit
 
 ### Component
 
-This page displays video settings. It contains configurable parameters for **Component Input 1** and **Component Output 1**, as well as tables for **Component Output 2**,**Component Input 2** and **Component** **ADCHD**.
+This page displays video settings. It contains configurable parameters for **Component Input 1** and **Component Output 1**, as well as tables for **Component Output 2**, **Component Input 2** and **Component** **ADCHD**.
 
 ### Audio
 

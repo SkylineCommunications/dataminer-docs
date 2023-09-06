@@ -98,7 +98,7 @@ The page also contains page buttons to the following pages:
 
 ### Decoding & Analyzing
 
-This page allows you to monitor the services (or SPU inputs). All tables are polled via SNMP, exceptthe **SU Inputs** table, for which information is retrieved via HTTP.
+This page allows you to monitor the services (or SPU inputs). All tables are polled via SNMP, except the **SU Inputs** table, for which information is retrieved via HTTP.
 
 The page also contains page buttons to the following pages:
 

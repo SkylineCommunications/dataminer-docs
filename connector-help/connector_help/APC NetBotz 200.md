@@ -4,7 +4,7 @@ uid: Connector_help_APC_NetBotz_200
 
 # APC NetBotz 200
 
-The American Power Conversion (APC) NetBotz Rack Monitor 200 is a central hardware appliance for an APC environmental monitoring and control system. The rack-mountable NetBotz 200 includes six sensor ports for connecting temperature and humidity sensors, door switch sensors, and third-party dry contact sensors. Using other ports on the NetBotz 200, you can connect up to eight temperature and humidity sensors with digital display. This driver uses **SNMP polling**to retrieve sensor information.
+The American Power Conversion (APC) NetBotz Rack Monitor 200 is a central hardware appliance for an APC environmental monitoring and control system. The rack-mountable NetBotz 200 includes six sensor ports for connecting temperature and humidity sensors, door switch sensors, and third-party dry contact sensors. Using other ports on the NetBotz 200, you can connect up to eight temperature and humidity sensors with digital display. This driver uses **SNMP polling** to retrieve sensor information.
 
 ## About
 
@@ -63,7 +63,7 @@ The element created with this driver consists of the data pages described below.
 
 ### General Page
 
-This page contains information such as the **Device Name, Product Number, Device Firmware Version, Device Hardware Version, Date of Manufacture** and **Device Serial Number.** Italso allows you to configure the **EMS Configuration Name.**
+This page contains information such as the **Device Name, Product Number, Device Firmware Version, Device Hardware Version, Date of Manufacture** and **Device Serial Number.** It also allows you to configure the **EMS Configuration Name.**
 
 ### Modules Page
 
@@ -84,8 +84,8 @@ This page displays information about the Environmental Management System, such a
 - **EMS Communication State**: The status of communication between the Agent and the device:
 
 - *Communication* means that communication is established.
-  - *No Communication*means that communication has never been established.
-  - *Communication Lost*means that communication was established but lost.
+  - *No Communication* means that communication has never been established.
+  - *Communication Lost* means that communication was established but lost.
 
 - **Probe Count**: The total number of temperature/humidity probes (both local and remote) supported by the device.
 
@@ -105,7 +105,7 @@ This page displays information about the Environmental Management System, such a
 
 - **System Temperature Units**
 
-- **Check Log Light:** *Light off* means there are no new log entries;*Lights on* means new log entries are present.
+- **Check Log Light:** *Light off* means there are no new log entries; *Lights on* means new log entries are present.
 
 - **Hardware Status**:
 
@@ -128,7 +128,7 @@ This page contains the Probe Configuration Table, which displays both status par
   - **ST Incr. Temp. Time**: Short-term increasing temperature time used for rate of change alarms.
   - **ST Decr. Temp. Variance**
   - **ST Decr. Temp. Time**
-  - **LT Incr. Temp. Variance**:Long-term increasing temperature variance used for rate of change alarms.
+  - **LT Incr. Temp. Variance**: Long-term increasing temperature variance used for rate of change alarms.
 
 ### Sensors Page
 
@@ -138,8 +138,8 @@ This page contains the following tables:
 
 - **EMS Sensor Status:** Displays information on individual sensors, such as:
 
-- **Sensor State:** Displays*Sensor Faulted EMS* if there is a fault in the sensor,*Sensor OK EMS* if there is no faultand*Sensor Not Installed EMS* if the sensor is not installed.
-  - **Sensor Normal State:** Displays if the normal state of the sensor is*closed*or*open**.***
+- **Sensor State:** Displays *Sensor Faulted EMS* if there is a fault in the sensor, *Sensor OK EMS* if there is no fault and *Sensor Not Installed EMS* if the sensor is not installed.
+  - **Sensor Normal State:** Displays if the normal state of the sensor is *closed* or *open**.***
   - **Sensor Alarm Delay**
 
 - **EMS Sensor Control**: Allows you to control/reset individual sensors.
@@ -151,8 +151,9 @@ This page contains the following tables:
 This page contains the following tables:
 
 - **Input Contact Configuration**: Allows you to configure the parameters **Input Contact Name** and **Input Normal State** for each probe and also displays the **Input Contact State** of each probe.
-- **Input Status**: Displays status information such as the **Input Name, Input Location, Input State, Input Analog Value, Input Alarm** and **Input Communication Status** for each probe. From version 1.0.0.4 onwards, the display key for this table can be configured as **MEM Input ID** (primary key) or the **Input Name**.
-- **Input Configuration**: Allows you to configure several parameters for each probe, such as **Input Type** (*Dry Contact*, *Digital*, *Analog mA*, *Analog Volts*), **Alarm Generation, MEM Input Normal State, Abnormal Severity** and **Number Calibration Points**.You can also configure each **Calibration Point.**
+- **Input Status**: Displays status information such as the **Input Name, Input Location, Input State, Input Analog Value, Input Alarm** and **Input Communication Status** for each probe.
+  From version 1.0.0.4 onwards, the display key for this table can be configured as **MEM Input ID** (primary key) or the **Input Name**.
+- **Input Configuration**: Allows you to configure several parameters for each probe, such as **Input Type** (*Dry Contact*, *Digital*, *Analog mA*, *Analog Volts*), **Alarm Generation, MEM Input Normal State, Abnormal Severity** and **Number Calibration Points**. You can also configure each **Calibration Point.**
 
 ### Outputs Page
 
@@ -165,5 +166,5 @@ This page contains the following tables:
 
 This page contains the following tables:
 
-- **Output Configuration**:Allows you to configure the **Outlet Conf. Name, Outlet Normal State** and **Outlet Command** for the individual outlets.
+- **Output Configuration**: Allows you to configure the **Outlet Conf. Name, Outlet Normal State** and **Outlet Command** for the individual outlets.
 - **MEM Outlet Configuration**: Displays outlet configuration information and allows you to configure the **Outlet Location, MEM Outlet Normal State** and **Outlet Action.**

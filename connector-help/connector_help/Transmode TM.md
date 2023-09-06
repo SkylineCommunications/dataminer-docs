@@ -12,10 +12,10 @@ This driver retrieves and sets data via **SNMP**.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                       | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                                       | No                  | No                      |
-| 1.0.1.x          | \- Implementation of DCF- Obsolete DisplayColumn technology replaced (for improved efficiency & Cassandra support): No access to previous trend data for some tables. | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                        | **DCF Integration** | **Cassandra Compliant** |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                                                                        | No                  | No                      |
+| 1.0.1.x          | \- Implementation of DCF - Obsolete DisplayColumn technology replaced (for improved efficiency & Cassandra support): No access to previous trend data for some tables. | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### General
 
-This page displays the **system node info**.Via page buttons, you can access the **IP**, **Options** and **Configuration** settings.
+This page displays the **system node info**. Via page buttons, you can access the **IP**, **Options** and **Configuration** settings.
 
 The page also contains buttons that can be used to show the **Board Table**, **Equipment Table**, **Module Overview**, **Ping**, **Power Table** and **Fan Table**.
 
@@ -130,7 +130,7 @@ Physical dynamic interfaces:
 
 - From **Client** to **Line**
 
-- Connections differ depending on the **Type** of the row in the **Board Table**.(Not all types are implemented. See below for a list of the implemented types.)
+- Connections differ depending on the **Type** of the row in the **Board Table**. (Not all types are implemented. See below for a list of the implemented types.)
 
   - **Types:**
 

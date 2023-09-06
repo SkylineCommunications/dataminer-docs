@@ -17,10 +17,10 @@ The Spectrum VUE-8 is a next-generation spectrum measurement and analysis unit w
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                   |
-|-----------|----------------------------------------------------------|
-| 1.0.0.x   | Firmware version: 3.1Software version: 3.1.1-6, 3.1.23-1 |
-| 1.0.1.x   | Firmware version: 3.1Software version: 3.1.1-6, 3.1.23-1 |
+| **Range** | **Supported Firmware**                                    |
+|-----------|-----------------------------------------------------------|
+| 1.0.0.x   | Firmware version: 3.1 Software version: 3.1.1-6, 3.1.23-1 |
+| 1.0.1.x   | Firmware version: 3.1 Software version: 3.1.1-6, 3.1.23-1 |
 
 ### System Info
 

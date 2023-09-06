@@ -19,7 +19,7 @@ These outputs are driven by their inputs. The standard inputs are:
 
 ## About
 
-This driver monitors only the inputs (GPS andNTP), since monitoring of the outputs is not necessary. The driver was not created to perform major configurations to the device or to log any events, as the device's web interface offers enough possibilities to do all this.
+This driver monitors only the inputs (GPS and NTP), since monitoring of the outputs is not necessary. The driver was not created to perform major configurations to the device or to log any events, as the device's web interface offers enough possibilities to do all this.
 
 ## Installation and configuration
 

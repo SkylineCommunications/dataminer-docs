@@ -12,10 +12,10 @@ With this driver, the device can be managed directly. The driver displays inform
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                                | No                  | No                      |
-| 1.0.1.x \[SLC Main\] | Based on: 1.0.0.2Names and descriptions were changed for the new range.UX improvements based on web interface. | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                                  | No                  | No                      |
+| 1.0.1.x \[SLC Main\] | Based on: 1.0.0.2 Names and descriptions were changed for the new range. UX improvements based on web interface. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -96,7 +96,7 @@ On this page, the **HD Aspect Ratio** **Table** allows you to set the **Display 
 
 ### SD
 
-This page displays the **SD Aspect Ratio** **Table**,with **Display mode** and **Auto Conversion**, similar to the **HD Aspect Ratio Table**.
+This page displays the **SD Aspect Ratio** **Table**, with **Display mode** and **Auto Conversion**, similar to the **HD Aspect Ratio Table**.
 
 The **SD SDI Table** below this is very similar to the **HD SDI Table**.
 

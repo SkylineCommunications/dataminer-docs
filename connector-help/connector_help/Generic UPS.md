@@ -10,9 +10,9 @@ This connector monitors the SNMP data retrieved from a generic UPS device. You c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                    | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version:- Reading SNMP data from the device and setting data on the device via SNMP.- SNMP trap management. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                      | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version: - Reading SNMP data from the device and setting data on the device via SNMP. - SNMP trap management. | \-           | \-                |
 
 ### Product Info
 

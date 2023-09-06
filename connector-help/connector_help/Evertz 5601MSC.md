@@ -36,11 +36,11 @@ This page contains the **GPI1**, **GPI2**, and **Synchro Link Status**. On the p
 
 ### Analog Sync Output Page
 
-This page contains the **Sync Table**,in which you can monitor and configure parameters such as **Video Standard**, **Video VITC**, **Video Jam**,etc.
+This page contains the **Sync Table**, in which you can monitor and configure parameters such as **Video Standard**, **Video VITC**, **Video Jam**, etc.
 
 ### LTC Output Page
 
-This page contains the **Output LTC Table**, in which you can monitor and configure LTC related parameters such as **LTC Power**, **LTC Rate**, **LTC Jam Time**,etc.
+This page contains the **Output LTC Table**, in which you can monitor and configure LTC related parameters such as **LTC Power**, **LTC Rate**, **LTC Jam Time**, etc.
 
 ### Output Settings Page
 

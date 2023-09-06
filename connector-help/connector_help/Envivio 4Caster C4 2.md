@@ -72,7 +72,7 @@ It also contains subpages where you can **configure** the **audio** and **video*
 
 ### Profiles
 
-This page displays the **Profile Table**,which contains the profiles found on the device. It is possible that old, removed profiles are still shown in this table, as these are not automatically deleted.
+This page displays the **Profile Table**, which contains the profiles found on the device. It is possible that old, removed profiles are still shown in this table, as these are not automatically deleted.
 
 You can start/stop **profile recording** for the available profiles.
 

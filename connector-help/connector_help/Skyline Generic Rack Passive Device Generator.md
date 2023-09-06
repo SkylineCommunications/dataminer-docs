@@ -24,7 +24,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Rack Passive Device Generator
 
-This page displays the **Equipment** table, which allows you to add or delete rows via a button, context menu or CSV file import. A row in this table represents a passive device. Each column in this table represents properties related to the passive devices that are used to dynamically position shapes in a rack overview (Visio file).The following properties are available in the **Equipment** table: **Unit Name**, **Unit Rack Position**, **Unit Height**, **Rack View Name** and Front/Rear **Position**.
+This page displays the **Equipment** table, which allows you to add or delete rows via a button, context menu or CSV file import. A row in this table represents a passive device. Each column in this table represents properties related to the passive devices that are used to dynamically position shapes in a rack overview (Visio file).
+The following properties are available in the **Equipment** table: **Unit Name**, **Unit Rack Position**, **Unit Height**, **Rack View Name** and Front/Rear **Position**.
 
 If you want to import a CSV file, it must have the following structure:
 
@@ -32,6 +33,8 @@ If you want to import a CSV file, it must have the following structure:
 >
 > Note: Instead of a semicolon, it is also possible to use a comma (,) as the separator.
 >
-> Examples:*Device Name 1;0;1;My View Name;FrontDevice Name 2;1;2;My View Name;Rear*
+> Examples:
+> *Device Name 1;0;1;My View Name;Front
+> Device Name 2;1;2;My View Name;Rear*
 
 An export to a CSV file will have the same structure as described above.

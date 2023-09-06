@@ -71,7 +71,7 @@ This page contains a number of tables related to Video:
 
 ### Audio
 
-This page contains two tables: the **Audio** **Mpeg** **Header** **Table** and the **Audio** **config** **Table**,where you can configure some audio parameters.
+This page contains two tables: the **Audio** **Mpeg** **Header** **Table** and the **Audio** **config** **Table**, where you can configure some audio parameters.
 
 ### Network
 
@@ -85,7 +85,7 @@ Here you can configure some parameters related to the **Service** **Ports**.
 
 ### Mpeg - PSI - Pat - Cat
 
-This page contains three tables related to **Mpeg2**.However, it's not possible to configure any parameters on this page.
+This page contains three tables related to **Mpeg2**. However, it's not possible to configure any parameters on this page.
 
 ### Mpeg - PSI - Pmt
 

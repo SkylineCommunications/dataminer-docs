@@ -56,7 +56,7 @@ This page provides general information on the device, as well as configuration d
 
 ### Controller
 
-This page displays the **Operation Mode Status/Remote Control Status**, the status of the **Power Supplies** and**HPAs**,and the **switch position** of the **HPAs**.
+This page displays the **Operation Mode Status/Remote Control Status**, the status of the **Power Supplies** and **HPAs**, and the **switch position** of the **HPAs**.
 
 Each HPA switch is either in the **Main** or the **Standby** position. The outputs of the HPAs are fed to either the **Antennas** or the **Loads**.
 

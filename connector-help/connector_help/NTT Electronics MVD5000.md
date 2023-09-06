@@ -50,7 +50,7 @@ This page displays general information about the device, such as the **Firmware 
 
 ### Status
 
-This page displays information about the status of the device, including the **Device Icon**,**Temperature** and **Fan Status**.
+This page displays information about the status of the device, including the **Device Icon**, **Temperature** and **Fan Status**.
 
 The page includes the following page buttons: **Alarms**, **Audio** **Decoding**, **Video** **Decoding**, **Packets** **Counter**, **Seamless** **Protection**, **Input** **Aux** and **Input** **Stream**.
 

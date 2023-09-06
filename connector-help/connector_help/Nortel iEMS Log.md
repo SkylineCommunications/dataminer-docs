@@ -29,12 +29,12 @@ This page displays general information, such as:
 
 - The connected **Switch** name and **IP**, **Connection Loss** state.
 - **Logging Fail** alarm to indicate if a write to the local disk has failed, mentioning that the Element Logging should be checked for the specific reason.
-- Mail Scheduler options such as the **Interval time**,and a notification if the last mail failed, also indicating that the user should check the Element Logging for more details.
+- Mail Scheduler options such as the **Interval time**, and a notification if the last mail failed, also indicating that the user should check the Element Logging for more details.
 
 In addition, the page also contains the following page buttons:
 
 - **File Settings**: Allows the configuration of the **log save location** and of the **auto-delete** functionality that can be executed after a file has existed for a certain time (7 days by default).
-- **Compose E-Mail**: Provides a range of settings for creating and sending e-mailswith information (**From, To, Subject, Body**). In addition, you can also enable or disable **attached** **log files**.
+- **Compose E-Mail**: Provides a range of settings for creating and sending e-mails with information (**From, To, Subject, Body**). In addition, you can also enable or disable **attached** **log files**.
 
 ### Long Duration Calls
 

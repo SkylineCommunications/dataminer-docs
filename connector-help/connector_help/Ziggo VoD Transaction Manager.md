@@ -26,7 +26,8 @@ This driver uses a virtual connection and does not need any user information.
 
 ### Configuration
 
-All TraxIS servers need to be configured in the driver. For each server a Network **file path** and the **name** of the log file should be configured.
+All TraxIS servers need to be configured in the driver.
+For each server a Network **file path** and the **name** of the log file should be configured.
 
 To be able to read the log files, **credentials** for the network share need to be configured.
 

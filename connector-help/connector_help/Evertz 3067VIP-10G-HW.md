@@ -63,7 +63,7 @@ The connector polls most of the tables using subtable functionalities to reduce 
 
 In range **1.0.0.x**, the following information should be noted related to the data pages:
 
-- Every table has a **"User Field 1" column**,which can be used to **add a description for each row.**
+- Every table has a **"User Field 1" column**, which can be used to **add a description for each row.**
 - **Input Monitor**: This page includes the Input Stream Monitor, Video Input Monitor, Input Audio Monitor, and Input ANC Monitor tables. The **Input Stream Monitor Table** is where you can **set the custom description for all input tables**.
 - **Audio Notify**: This page includes the Audio Monitoring Control 1 & 2 and Audio Channel/Group Notify tables. Each row in the **Audio Notify** table represents an input instead of an input fault, with the columns representing each of the instance types, and can be used for alarming. The **Audio Notify Trap Visibility** table is where **Audio Send** **Traps** can be triggered.
 - **Video Notify**: This page includes the Video Monitoring and Video Notify tables. Each row in the **Video Notify** table represents an input instead of an input fault, with the columns representing each of the instance types, and **can be used for alarming**. The **Video Notify Trap Visibility** table is where **Video Send** **Traps** can be triggered to enable trap support.

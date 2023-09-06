@@ -8,7 +8,8 @@ The PRORXD is a COFDM receiver decoder with dual optional receive and HD decodin
 
 ## About
 
-This protocol can monitor status parameters of a Cobham PRORXD device. It also allows the user to configure global configuration parameters and presets.HTTP requests are used to retrieve the device information.
+This protocol can monitor status parameters of a Cobham PRORXD device. It also allows the user to configure global configuration parameters and presets.
+HTTP requests are used to retrieve the device information.
 
 ### Ranges of the driver
 
@@ -54,7 +55,7 @@ This page displays the status of the Services 1 and 2. It also contains the Serv
 
 ### Global Settings
 
-On this page, you can view and configure the global configuration parameters: **General**,**Downconverter**, **IP**, **Streaming**, **OSD Settings** and **Genlock settings**.
+On this page, you can view and configure the global configuration parameters: **General**, **Downconverter**, **IP**, **Streaming**, **OSD Settings** and **Genlock settings**.
 
 ### Configuration
 

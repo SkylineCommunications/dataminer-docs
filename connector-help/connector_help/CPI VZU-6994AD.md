@@ -66,7 +66,7 @@ On this page are shown the **Fault**, **Information** and **Error** status.
 
 ## Dataminer Connectivity Framework
 
-The 1.1.1.x driver range of the CPI VZU-6994AD protocol supports the usage of DCF and can only be used on a DMA with **8.5.4**as the minimum version.
+The 1.1.1.x driver range of the CPI VZU-6994AD protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 
@@ -76,11 +76,11 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 Physical fixed interfaces:
 
-- Input(type in)
+- Input (type in)
 - Output (type out)
 
 ### Connections
 
 #### Internal Connections
 
-- **Between the input and output**,an internal connection is created when the **operating state of the CMPA** is active. The connection is interrupted when the CMPA is in Standby or Beam Off Sequence.
+- **Between the input and output**, an internal connection is created when the **operating state of the CMPA** is active. The connection is interrupted when the CMPA is in Standby or Beam Off Sequence.

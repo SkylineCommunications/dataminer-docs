@@ -30,21 +30,21 @@ To use this driver, create a service that uses it as its service definition. The
 
 This is the default service configuration:
 
-| **Driver**                             | **Description**                                                   | **Subscription Name**          |
-|----------------------------------------|-------------------------------------------------------------------|--------------------------------|
-| Axon ACP - HSI10                       | Slot Status 0                                                     | InserterSlot0Status            |
-| Axon ACP - HSI10                       | Protocol Status                                                   | InserterProtocolStatus         |
-| Axon ACP - GDR26                       | Active A                                                          | MainReserveSwitchActiveA       |
-| Imagine Multiviewer EPIC MV            | Video Teletext Missing State                                      | VideoTeletextMissingState      |
-| Sky UK SSR or Sky UK NBCU Raw Schedule | Subtitle Hearing (Current Events)OnAir Subtitles (Now Next Table) | CurrentEventSubtitleFlag       |
-| Sky UK VICC                            | Type Of Material                                                  | OnAirEventTypeOfMaterial       |
-| Sky UK VICC                            | Subtitles File ID                                                 | OnAirEventSubtitleFileId       |
-| Sky UK VICC                            | End Type                                                          | OnAirEventEndType              |
-| Sky UK VICC                            | Video Item                                                        | OnAirEventVideoItem            |
-| Cavena Subtitle Unit                   | Subtitle File ID (Event)                                          | SubtitleUnitFileId             |
-| Cavena Subtitle Unit                   | Valid (Timecode)                                                  | SubtitleUnitTimecodeValidState |
-| Cavena Subtitle Unit                   | Status (Event)                                                    | SubtitleUnitOnAir              |
-| Cavena Subtitle Unit                   | Message (Event)                                                   | SubtitleUnitMessage            |
+| **Driver**                             | **Description**                                                    | **Subscription Name**          |
+|----------------------------------------|--------------------------------------------------------------------|--------------------------------|
+| Axon ACP - HSI10                       | Slot Status 0                                                      | InserterSlot0Status            |
+| Axon ACP - HSI10                       | Protocol Status                                                    | InserterProtocolStatus         |
+| Axon ACP - GDR26                       | Active A                                                           | MainReserveSwitchActiveA       |
+| Imagine Multiviewer EPIC MV            | Video Teletext Missing State                                       | VideoTeletextMissingState      |
+| Sky UK SSR or Sky UK NBCU Raw Schedule | Subtitle Hearing (Current Events) OnAir Subtitles (Now Next Table) | CurrentEventSubtitleFlag       |
+| Sky UK VICC                            | Type Of Material                                                   | OnAirEventTypeOfMaterial       |
+| Sky UK VICC                            | Subtitles File ID                                                  | OnAirEventSubtitleFileId       |
+| Sky UK VICC                            | End Type                                                           | OnAirEventEndType              |
+| Sky UK VICC                            | Video Item                                                         | OnAirEventVideoItem            |
+| Cavena Subtitle Unit                   | Subtitle File ID (Event)                                           | SubtitleUnitFileId             |
+| Cavena Subtitle Unit                   | Valid (Timecode)                                                   | SubtitleUnitTimecodeValidState |
+| Cavena Subtitle Unit                   | Status (Event)                                                     | SubtitleUnitOnAir              |
+| Cavena Subtitle Unit                   | Message (Event)                                                    | SubtitleUnitMessage            |
 
 The driver will automatically assign a subscription name to specific parameters. This subscription name works as an alias that can be used in the Condition column of the Workflow Logic Table and Input Faults Table. Every subscription name that is used in the Workflow Logic Table should be also present in the Subscriptions Table. If this is not the case, the driver will assume that the condition is invalid and it will be considered false in the workflow. If you include a parameter that is not listed above, the driver will set a generic subscription name (e.g. S1).
 
@@ -81,7 +81,8 @@ This page contains the **Workflow Logic Table** and **Refresh Logic Values** act
 The **Workflow Logic Table** has the following columns:
 
 - **Process**: Description of the condition defined for this workflow
-- **Condition**: The logical expression that will determine the value of the condition.The logical expressions used in the Condition column need to use the following format: "\<A\>or\<B\>or\<C\>;A\|S1=12;B-\|S2=3;C\|S1=5", where A, B and C are groups, which are defined with simple logical conditions. The allowed logical operators for groups are AND, OR and NOT. For conditions, the allowed operators are: Equal: "=", Not Equal:"!=", Greater: "\>", Minor: "\<", Greater and Equal: "\>=" and Minor and Equal: "\<=". A condition can also be made based on another subscription value, e.g. "\<A\>;A\|S1=S2".
+- **Condition**: The logical expression that will determine the value of the condition.
+  The logical expressions used in the Condition column need to use the following format: "\<A\>or\<B\>or\<C\>;A\|S1=12;B-\|S2=3;C\|S1=5", where A, B and C are groups, which are defined with simple logical conditions. The allowed logical operators for groups are AND, OR and NOT. For conditions, the allowed operators are: Equal: "=", Not Equal:"!=", Greater: "\>", Minor: "\<", Greater and Equal: "\>=" and Minor and Equal: "\<=". A condition can also be made based on another subscription value, e.g. "\<A\>;A\|S1=S2".
 - **Value**: The current value of the condition (*Yes* or *No*).
 
 ### General Parameters

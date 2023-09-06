@@ -20,10 +20,10 @@ This driver is compatible with "XNA" software units (base firmware starts with X
 
 ### Supported firmware versions
 
-| **Driver Range**     | **Device Firmware Version**                                                         |
-|----------------------|-------------------------------------------------------------------------------------|
-| 1.0.0.x \[SLC Main\] | MCU Base Firmware: XNA01.65MCU Device ID: FNA00.00MCU Modulator Module ID: BBA01.25 |
-| 1.0.0.2              | MCU Base Firmware: XNA01.73                                                         |
+| **Driver Range**     | **Device Firmware Version**                                                           |
+|----------------------|---------------------------------------------------------------------------------------|
+| 1.0.0.x \[SLC Main\] | MCU Base Firmware: XNA01.65 MCU Device ID: FNA00.00 MCU Modulator Module ID: BBA01.25 |
+| 1.0.0.2              | MCU Base Firmware: XNA01.73                                                           |
 
 ## Installation and configuration
 

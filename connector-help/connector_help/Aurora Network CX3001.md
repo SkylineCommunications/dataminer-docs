@@ -74,7 +74,7 @@ The inventory page contains three subpages:
 
 This page contains a number of tables:
 
-- The **CX Status** tableshows the status of the communication modules.
+- The **CX Status** table shows the status of the communication modules.
 - The **CX Config** table contains information regarding the communication module management configuration entries.
 - The **CX Module Alarms Status** table contains detailed alarm information for the communication module.
 - The **CX Card Alarm** **Status** table contains detailed alarms regarding the environment and voltage usage.

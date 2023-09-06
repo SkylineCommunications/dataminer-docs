@@ -76,7 +76,7 @@ The **Audio** **Threshold** **Config** and **Audio** **Frame** **Config** page b
 
 ### VANC Quality
 
-This page contains two tables: **VANC** **Threshold** and **VANC** **Duration**.These enable VANC quality measurements on the inputs.
+This page contains two tables: **VANC** **Threshold** and **VANC** **Duration**. These enable VANC quality measurements on the inputs.
 
 ### PSNR
 

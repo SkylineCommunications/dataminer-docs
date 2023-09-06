@@ -54,8 +54,10 @@ In this page it is possible to check the status and the configuration of the Tun
 
 ### Decoder (Not Available in 1.1.0.x)
 
-In this page it is possible to check the statusand the configuration of the Decoder.
+In this page it is possible to check the status and the configuration of the Decoder.
 
 ### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+

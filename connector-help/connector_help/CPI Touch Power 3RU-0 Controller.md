@@ -55,7 +55,7 @@ This page displays the **System Description**, **System Up Time**, **System Type
 
 ### Static Configuration
 
-This page displays configurable parameters for the device, including **Priority Switching**, **System Installed**, **Drive Type**, **Switch on Tx Inhibit**, **Switch on Hv ON**, **Switch on Tx no Inhibit**and **Power Copy**.
+This page displays configurable parameters for the device, including **Priority Switching**, **System Installed**, **Drive Type**, **Switch on Tx Inhibit**, **Switch on Hv ON**, **Switch on Tx no Inhibit** and **Power Copy**.
 
 ### Position
 

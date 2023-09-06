@@ -84,3 +84,5 @@ This page displays a table of the faults. Note: only those found in the VistaLin
 ### Web Interface
 
 The web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+

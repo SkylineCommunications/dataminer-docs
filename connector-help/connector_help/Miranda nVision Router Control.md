@@ -12,22 +12,22 @@ This driver uses **serial** communication to configure and monitor devices suppo
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|--------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                 | No                  | Yes                     |
-| 1.0.1.x              | Bus address defines level/partition.                                                             | No                  | Yes                     |
-| 1.1.0.x              | Adaptation to NP0016 rev E protocol.                                                             | No                  | Yes                     |
-| 1.1.1.x              | Support of 2 controller boards.Bigger matrix (up to 288\*576).Impact: Element must be recreated. | Yes                 | Yes                     |
-| 1.1.2.x \[obsolete\] | Added Status String.Fixed crosspoint table.                                                      | Yes                 | Yes                     |
-| 1.1.3.x \[SLMain\]   | Fixed crosspoint table names.                                                                    | Yes                 | Yes                     |
+| **Driver Range**     | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                   | No                  | Yes                     |
+| 1.0.1.x              | Bus address defines level/partition.                                                               | No                  | Yes                     |
+| 1.1.0.x              | Adaptation to NP0016 rev E protocol.                                                               | No                  | Yes                     |
+| 1.1.1.x              | Support of 2 controller boards. Bigger matrix (up to 288\*576). Impact: Element must be recreated. | Yes                 | Yes                     |
+| 1.1.2.x \[obsolete\] | Added Status String. Fixed crosspoint table.                                                       | Yes                 | Yes                     |
+| 1.1.3.x \[SLMain\]   | Fixed crosspoint table names.                                                                      | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                          |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | CRF Version SV0877-18, Boot Version SV0770-01A0 v1.2.0.0, Application version: SV0794-07A v6.2.0.63, FPGA Version: SV0998-04A0 v4.0.0.0              |
-| 1.0.1.x          | CRF Version SV0877-18, Boot Version SV0770-01A0 v1.2.0.0, Application version: SV0794-07A v6.2.0.63, FPGA Version: SV0998-04A0 v4.0.0.0              |
-| 1.1.x.x          | CPLD SV1055-01BOOT Rom SV1038-05 EM0833ROM Jun 10 2011 11:40:33Control Card 3.8.0.3306 EM0833 Firmware - October 5, 2015IOXM-I-001 SV1110-14 Build 0 |
+| **Driver Range** | **Device Firmware Version**                                                                                                                             |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | CRF Version SV0877-18, Boot Version SV0770-01A0 v1.2.0.0, Application version: SV0794-07A v6.2.0.63, FPGA Version: SV0998-04A0 v4.0.0.0                 |
+| 1.0.1.x          | CRF Version SV0877-18, Boot Version SV0770-01A0 v1.2.0.0, Application version: SV0794-07A v6.2.0.63, FPGA Version: SV0998-04A0 v4.0.0.0                 |
+| 1.1.x.x          | CPLD SV1055-01 BOOT Rom SV1038-05 EM0833ROM Jun 10 2011 11:40:33 Control Card 3.8.0.3306 EM0833 Firmware - October 5, 2015 IOXM-I-001 SV1110-14 Build 0 |
 
 ## Installation and configuration
 

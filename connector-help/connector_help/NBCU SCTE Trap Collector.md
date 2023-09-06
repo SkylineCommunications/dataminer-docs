@@ -48,7 +48,8 @@ SNMP Settings:
 
 ## How to use
 
-Several things need to be configured in the element to make sure the driver can receive traps. On the **Filters** page, the **Trap Filtering** table describes the IPs and OIDs that are allowed to be processed from the incoming traps.Also, the SCTE Event Type table allows you to define what types of SCTE events should be monitored. If traps are received with a value of something other than a value on this list, they are ignored.
+Several things need to be configured in the element to make sure the driver can receive traps. On the **Filters** page, the **Trap Filtering** table describes the IPs and OIDs that are allowed to be processed from the incoming traps.
+Also, the SCTE Event Type table allows you to define what types of SCTE events should be monitored. If traps are received with a value of something other than a value on this list, they are ignored.
 
 After traps pass the filters above, they get processed. If all the bindings are correct, they are candidates to create a new event or update an existing one.
 

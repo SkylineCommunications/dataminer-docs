@@ -44,7 +44,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 </tr>
 <tr class="even">
 <td>10.0.1.x <strong>[Obsolete]</strong></td>
-<td>Supports the polling of multiple iDirect hubs in a single element, to cope with roaming remotes between multiple NMS systems.<strong>From version 10.0.1.76 onwards, this range should be handled in parallel with range 10.0.2.x.</strong></td>
+<td>Supports the polling of multiple iDirect hubs in a single element, to cope with roaming remotes between multiple NMS systems. <strong>From version 10.0.1.76 onwards, this range should be handled in parallel with range 10.0.2.x.</strong></td>
 <td>10.0.0.47</td>
 <td>-</td>
 </tr>
@@ -56,7 +56,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 </tr>
 <tr class="even">
 <td>10.0.3.x <strong>[Obsolete]</strong></td>
-<td><p>Made Cassandra-compliant (fixed Cassandra Compliancy tag, incorrectly set in 10.0.1.x).<strong>This range should be handled in parallel with range 10.0.4.x.</strong></p></td>
+<td><p>Made Cassandra-compliant (fixed Cassandra Compliancy tag, incorrectly set in 10.0.1.x). <strong>This range should be handled in parallel with range 10.0.4.x.</strong></p></td>
 <td>10.0.1.78</td>
 <td><p>Old trend data will be lost for the following tables:</p>
 <ul>
@@ -74,7 +74,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 </tr>
 <tr class="odd">
 <td>10.0.4.x <strong>[Obsolete]</strong></td>
-<td><p>Made Cassandra-compliant (fixed Cassandra Compliancy tag, incorrectly set in 10.0.2.x).<strong>This range should be handled in parallel with range 10.0.3.x [SLC Main].</strong></p></td>
+<td><p>Made Cassandra-compliant (fixed Cassandra Compliancy tag, incorrectly set in 10.0.2.x). <strong>This range should be handled in parallel with range 10.0.3.x [SLC Main].</strong></p></td>
 <td>10.0.2.3</td>
 <td>Old trend data will be lost for the following tables:
 <ul>
@@ -92,7 +92,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 </tr>
 <tr class="even">
 <td>10.0.5.x [SLC Main]</td>
-<td><p>Reverted changes made in 10.0.3.x.This driver requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
+<td><p>Reverted changes made in 10.0.3.x. This driver requires the display column to maintain the trend/alarm history when a replacement is done in the tables. Refer to the Notes section below for more information.</p>
 <p><strong>This range should be handled in parallel with range 10.0.6.x [SLC Main], when applicable (no DCF integration).</strong></p></td>
 <td>10.0.3.1</td>
 <td>From 10.0.3.x/10.0.4.x only - old trend data will be lost for the following tables:
@@ -166,7 +166,7 @@ The creation of DVEs can be enabled or disabled in the main element. Different p
 <td><strong>DCF Integration</strong></td>
 <td><strong>Cassandra Compliant</strong></td>
 <td><strong>Linked Components</strong></td>
-<td><strong>Exported Components</strong></td>
+<td><strong></strong> <strong>Exported Components</strong></td>
 </tr>
 <tr class="even">
 <td>Older ranges</td>

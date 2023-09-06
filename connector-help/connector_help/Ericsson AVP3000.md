@@ -44,7 +44,8 @@ HTTP CONNECTION:
 
 ### Configuration
 
-On the General Page, there is a Page Button **Credentials..**.On the Credentials page, enter the User Name and Password that are used for the HTTP Communication.
+On the General Page, there is a Page Button **Credentials..**.
+On the Credentials page, enter the User Name and Password that are used for the HTTP Communication.
 
 ## Usage
 

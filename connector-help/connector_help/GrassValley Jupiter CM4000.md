@@ -41,7 +41,8 @@ SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
 - **IP port**: The IP port of the device. Default: *420*, *UDP.*
-- **Bus address**: The bus address of the device: *\<device address\>.\<level\>*\<device address\> and \<level\> are *1-based*. A level of *1* indicates **SDI** and a level of *2* indicates **ASI**.
+- **Bus address**: The bus address of the device: *\<device address\>.\<level\>*
+  \<device address\> and \<level\> are *1-based*. A level of *1* indicates **SDI** and a level of *2* indicates **ASI**.
 
 ### Installation Procedure
 
@@ -51,7 +52,7 @@ For versions prior to 1.0.1.1, an external DLL is used by the driver to contact 
 
 Note: If you are using a redundancy setup, make sure to add or update this DLL on both DMAs.
 
-By default, the driver attempts to use commands for the **AccuSwitch** application. If the Jupiter CM4000 is using **JupiterXPress**,then the **AccuSwitch** toggle button on the **General** page needs to be toggled. Please note that JupiterXPress does not support lock ownership, so that all locks are considered to be owned by DataMiner.
+By default, the driver attempts to use commands for the **AccuSwitch** application. If the Jupiter CM4000 is using **JupiterXPress**, then the **AccuSwitch** toggle button on the **General** page needs to be toggled. Please note that JupiterXPress does not support lock ownership, so that all locks are considered to be owned by DataMiner.
 
 ### Clean Shutdown or Update Procedure
 
@@ -61,7 +62,7 @@ Because the driver uses an external DLL, it is very important to cleanly shut do
 2.  On the last active element, go to the **General** page and click **Clean ShutDown**. Wait until the Clean Shutdown parameter indicates it is ready.
 3.  Stop the last active element.
 4.  Set all elements to the newest version.
-5.  Startall elements.
+5.  Start all elements.
 
 If you notice the **DLL Object Exception** counter increasing, apply the same procedure again. However, if the issue persists, then a DataMiner restart will be necessary before the element can be used again.
 

@@ -20,9 +20,9 @@ This connector can create different elements based on the retrieved data. Whethe
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                                      |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | **ERS118:** 0801, 0901, 1001, 1201, 1601, 1801, 1901, 2001, 2201,2301**ERC108:** 1801,1901,2001,2101,2201**ERC118:** 2001, 2201**RRS08:** 1801, 3400, 3600**RRS18:** 1801, 3100, 3400, 3600 |
+| **Range** | **Supported Firmware**                                                                                                                                                                          |
+|-----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | **ERS118:** 0801, 0901, 1001, 1201, 1601, 1801, 1901, 2001, 2201,2301 **ERC108:** 1801,1901,2001,2101,2201 **ERC118:** 2001, 2201 **RRS08:** 1801, 3400, 3600 **RRS18:** 1801, 3100, 3400, 3600 |
 
 ### Linked Connectors
 
@@ -172,7 +172,8 @@ Below, you can also find an overview of the currently available cards and the fi
 
 ### Overview
 
-The **Overview** table provides an overview of the device configuration. More specifically, it indicates which device type and firmware is inserted in which slot of the frame. For each detected device, you can change the following settings:
+The **Overview** table provides an overview of the device configuration. More specifically, it indicates which device type and firmware is inserted in which slot of the frame.
+For each detected device, you can change the following settings:
 
 - **Refresh**: Refresh all data for the device type inserted in the corresponding slot, depending on the firmware.
 - **Element Name**: If you change the Element Name, the name of any corresponding child element will be changed. However, if there already is a DataMiner element that uses the inserted value, the configuration will not be executed.
@@ -194,7 +195,9 @@ On the subpages, such as **Status**, **PSU**, **FAN**, **MIB**, **Network** and 
 
 Element reflection determines how the element setup in DataMiner mirrors the actual device setup.
 
-In some cases, inconsistencies between the device setup and the DataMiner element setup can occur. For example, when a card is removed from a frame because of a hardware malfunction, if the related DataMiner element were to be removed as well, this would result in the loss of all trend and alarm information that has been stored for that element. However, if the child element is not removed, an inconsistency occurs between the device and the setup in DataMiner.
+In some cases, inconsistencies between the device setup and the DataMiner element setup can occur.
+For example, when a card is removed from a frame because of a hardware malfunction, if the related DataMiner element were to be removed as well, this would result in the loss of all trend and alarm information that has been stored for that element.
+However, if the child element is not removed, an inconsistency occurs between the device and the setup in DataMiner.
 
 Situations like this, where potential inconsistencies occur between the device setup and the element setup, are handled by element reflection based on a number of settings that can be defined by the user. The section below provides an overview of these settings and of the element reflection logic.
 
@@ -265,4 +268,5 @@ By changing the **State** for a specific device type, you can determine whether 
 
 After the configuration of the device is initiated via polling, the element reflection algorithm is run.
 
-However, if changes have been implemented, you may want to run the element reflection algorithm again without waiting for the timer that controls polling. In that case, by using the **Reflect** or **Reflect All** buttons, you can run the algorithm for one device or for all detected devices, respectively.
+However, if changes have been implemented, you may want to run the element reflection algorithm again without waiting for the timer that controls polling.
+In that case, by using the **Reflect** or **Reflect All** buttons, you can run the algorithm for one device or for all detected devices, respectively.

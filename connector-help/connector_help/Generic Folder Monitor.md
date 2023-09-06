@@ -41,7 +41,7 @@ This page displays the **Folder Table**, which contains all the files that are c
 
 - The first column is an auto-incremented **Key**. This was chosen as the key for performance reasons.
 - The second column is the **Full Path Name**, but by default the width is set to 0. This is done because this path name contains the Directory Path Name as the prefix, so that this is not useful information for the user.
-- The third column is the **Full File Name To Integer**,but by default the width is set to 0. This is done because this data is only informative for debugging purposes. See "Notes" section for more details.
+- The third column is the **Full File Name To Integer**, but by default the width is set to 0. This is done because this data is only informative for debugging purposes. See "Notes" section for more details.
 - The key that will be used in alarms is the **Stripped File Name.** This is the Full Path Name without the prefix of the Directory Path Name that was configured on the Configuration Page.
 - The **File Extension** is the suffix of the Full Path Name. This parameter is also available for alarm monitoring, so that for example an alarm can be raised if a certain file type is inserted in the directory.
 - The **Created On** parameter indicates the date and time when the file was created.

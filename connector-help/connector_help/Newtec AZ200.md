@@ -12,19 +12,19 @@ A **serial** connection is used in order to retrieve information from the device
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.1.x          | Initial version for software version 1.                                                        | No                  | Yes                     |
-| 1.2.11.x         | Based on Newtec 2185 driverSoftware version: 2.11Software ID: 6234Config ID: U1184Rx config    | No                  | Yes                     |
-| 2.2.11.x         | Based on Newtec 2185 driverSoftware version: 2.11Software ID: 6234Config ID: U9901Tx config    | No                  | Yes                     |
-| 3.2.11.3         | Based on Newtec 2185 driverSoftware version: 2.11Software ID: 6234Config ID: M9111DVB-T config | No                  | Yes                     |
-| 4.2.11.x         | Based on Newtec 2185 driverSoftware version: 2.11Software ID: 6234Config ID: U1148             | No                  | Yes                     |
-| 5.2.15.x         | Based on Newtec 2185 driverSoftware version: 2.13Software ID: 6234Config ID: M1164             | No                  | Yes                     |
-| 6.2.6.1x         | Based on Newtec 2185 driverSoftware version: 2.06Software ID: 6234Config ID: M1165             | No                  | Yes                     |
-| 7.2.13.x         | Based on Newtec 2185 driverSoftware version: 2.13Software ID: 6234Config ID: D7116             | No                  | Yes                     |
-| 8.2.14.x         | Configuration ID: U6199                                                                        | No                  | Yes                     |
-| 9.2.13.x         | Software version: 2.13software ID: 6234Config ID: N0331                                        | No                  | Yes                     |
-| 10.2.13.x        | Software version: 2.13Software ID: 6234Config ID: U9987                                        | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.1.x          | Initial version for software version 1.                                                            | No                  | Yes                     |
+| 1.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U1184 Rx config    | No                  | Yes                     |
+| 2.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U9901 Tx config    | No                  | Yes                     |
+| 3.2.11.3         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: M9111 DVB-T config | No                  | Yes                     |
+| 4.2.11.x         | Based on Newtec 2185 driver Software version: 2.11 Software ID: 6234 Config ID: U1148              | No                  | Yes                     |
+| 5.2.15.x         | Based on Newtec 2185 driver Software version: 2.13 Software ID: 6234 Config ID: M1164              | No                  | Yes                     |
+| 6.2.6.1x         | Based on Newtec 2185 driver Software version: 2.06 Software ID: 6234 Config ID: M1165              | No                  | Yes                     |
+| 7.2.13.x         | Based on Newtec 2185 driver Software version: 2.13 Software ID: 6234 Config ID: D7116              | No                  | Yes                     |
+| 8.2.14.x         | Configuration ID: U6199                                                                            | No                  | Yes                     |
+| 9.2.13.x         | Software version: 2.13 software ID: 6234 Config ID: N0331                                          | No                  | Yes                     |
+| 10.2.13.x        | Software version: 2.13 Software ID: 6234 Config ID: U9987                                          | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -83,12 +83,12 @@ The following commands can also be executed with the **Device Reset** parameter:
 
 The page also contains the following subpages:
 
-- **Power Supply**:On this subpage, power supply voltages can be monitored.
+- **Power Supply**: On this subpage, power supply voltages can be monitored.
 - **Display**: On this subpage, screensaver and display contrast can be configured.
 - **Device Info**: This subpage contains information about the device, as well as the option to **Increase Capability**.
-- **Serial**:On this subpage, **Serial Interface Type**, **Device Address** and **Baudrate** can be configured.
-- **Ethernet**:This subpage displays the Ethernet information and also allows you to change the **Ethernet Interface**.
-- **Security**:This page allows you to insert the **License Key**.
+- **Serial**: On this subpage, **Serial Interface Type**, **Device Address** and **Baudrate** can be configured.
+- **Ethernet**: This subpage displays the Ethernet information and also allows you to change the **Ethernet Interface**.
+- **Security**: This page allows you to insert the **License Key**.
 
 ### Config
 

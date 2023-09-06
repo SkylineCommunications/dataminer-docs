@@ -110,11 +110,11 @@ This page contains RTP secondary output video and audio flow information. These 
 
 Alchemist Live relies on automatic standards detection of the incoming source signal. The **Scan Type** parameter reports the detected input video format.
 
-- When Progressive inputs are detected, the *Progressive*scan type will be selected and the *Interlaced* and *Segmented Frame* types cannot be selected.
+- When Progressive inputs are detected, the *Progressive* scan type will be selected and the *Interlaced* and *Segmented Frame* types cannot be selected.
 - When an interlaced input is detected, the driver will assume that the incoming signal is true high frame rate, and the *Interlaced* type will be selected.
 - If the input is actually **psf**, the option **Segmented Frame (psf)** has to be selected.
 
-In the **Video Output** section of this page, the output video format can be defined in terms of **Resolution**, **Frame/Scan Rate** and **Scan Type**. Note that when the output is configured to be **UHD/4K**,the options *Interlaced* and *PsF* cannot be selected.
+In the **Video Output** section of this page, the output video format can be defined in terms of **Resolution**, **Frame/Scan Rate** and **Scan Type**. Note that when the output is configured to be **UHD/4K**, the options *Interlaced* and *PsF* cannot be selected.
 
 It is also possible to set the conversion mode, aperture, clean cut and other conversion parameters on this page.
 
@@ -146,7 +146,7 @@ In the Hardware Configuration section of this page, you can select the supported
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range(since version 1.0.0.2) of the **Grass Valley Alchemist Live** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** driver range (since version 1.0.0.2) of the **Grass Valley Alchemist Live** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 

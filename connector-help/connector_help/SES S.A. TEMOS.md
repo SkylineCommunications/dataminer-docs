@@ -159,7 +159,7 @@ This page contains the **Error Tube LRV Table**, which shows the tubes that have
 
 This page displays the **Channel Table**, which shows the data from the uploaded **Channel CSV** file and the telemetry data of each channel.
 
-The **Channel CSV** file is loaded automatically after the LRV file has been loaded (See "LRV" section below). The Channel CSV file should be placed in the following web location: <https://lamp.dino.astra.ses/bro-tools/chlist/start.php?page=dataminer-channel-list>. The fileis loaded automatically every 10 minutes in case there are changes. The **Import Channel File** button allows you to update the file manually. For more information on the configuration of the file, refer to the "Notes" section below.
+The **Channel CSV** file is loaded automatically after the LRV file has been loaded (See "LRV" section below). The Channel CSV file should be placed in the following web location: <https://lamp.dino.astra.ses/bro-tools/chlist/start.php?page=dataminer-channel-list>. The file is loaded automatically every 10 minutes in case there are changes. The **Import Channel File** button allows you to update the file manually. For more information on the configuration of the file, refer to the "Notes" section below.
 
 Via the **Configuration** subpage of the Channels page, you can configure the **User** and **Password** that will be used to access the **Channel CSV** file in the web location. This web location can also be edited on this subpage. In addition, the **IP address** and **Port** that will be used when creating the Probe elements can also be edited on this subpage.
 
@@ -209,7 +209,8 @@ To facilitate the process of creating alarm templates, the **Channel** table has
 
 Configuring presets in the **Alarm Preset Table** can be done by importing a CSV file. To do so:
 
-1.  Select the CSV file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.The driver looks for the CSV files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. TEMOS\Configuration Alarm Presets"*
+1.  Select the CSV file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.
+    The driver looks for the CSV files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. TEMOS\Configuration Alarm Presets"*
 2.  Click the button **Import File**.
 
 You can also add a preset in the table by selecting **Create Preset** in the table's context menu. This way, you can add the presets one by one. To delete a preset, right-click the entry in the table and select **Delete Preset**. The **Remove All** button can be used to delete all the entries from the table at once. To save an alarm preset in a CSV file, click the button **Export Alarm Preset**.

@@ -59,7 +59,8 @@ SERIAL CONNECTION:
 You can find the following information on this page:
 
 - **Switch Output:** Shows which module is the current output of the device. Can be *"A"* or *"B".* A toggle switch allows you to switch the output.
-- **Device Address:** Shows the current address of the device, and allows you to change it. The valid range for the address is *1 - 15*. NOTE: If you change the device address, you also have to change the **Bus Address** of the device in order for the driver to continue communication. You can do this by right-clicking the device in the Surveyor and selecting **Edit**. Then, under **More TCP/IP** **settings**, change the bus address to match the address you entered for the parameter. Communication will then be re-established.
+- **Device Address:** Shows the current address of the device, and allows you to change it. The valid range for the address is *1 - 15*.
+  NOTE: If you change the device address, you also have to change the **Bus Address** of the device in order for the driver to continue communication. You can do this by right-clicking the device in the Surveyor and selecting **Edit**. Then, under **More TCP/IP** **settings**, change the bus address to match the address you entered for the parameter. Communication will then be re-established.
 - **Unit Type:** Describes whether the unit is an *Up Converter* or a *Down Converter*.
 - **Frequency Conversion Type**: Describes the type of frequency conversion.
 - The **Software Version** of the unit and the **Unit Serial Number**.
@@ -74,5 +75,5 @@ This page shows the status and configuration of Module A and Module B of the dev
 - **Summary Alarm**: Indicates whether a summary alarm is triggered on the device.
 - **Switch Status**: Indicates whether the unit is *Online* or in *Standby* mode.
 - **Gain**: The configurable gain of the unit. The valid range of values is described by the **Gain Range** below this.
-- **Temperature**:The temperature measured (in degrees Celsius) by the sensor on the module.
+- **Temperature**: The temperature measured (in degrees Celsius) by the sensor on the module.
 - **Reference Status**: The current state of the reference signal. Possible values are *Internal Reference*, *External Reference* or *Alarm*.

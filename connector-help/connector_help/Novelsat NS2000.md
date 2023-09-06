@@ -42,7 +42,7 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 <td><strong>Connections</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x1.0.1.x1.0.2.x</td>
+<td>1.0.0.x 1.0.1.x 1.0.2.x</td>
 <td><h4 id="snmp-main-connection.">SNMP Main Connection.</h4>
 <p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
@@ -57,7 +57,7 @@ This driver uses **SNMP and HTTP** communication to monitor and change parameter
 </ul></td>
 </tr>
 <tr class="odd">
-<td>2.0.0.x2.0.1.x2.1.1.x</td>
+<td>2.0.0.x 2.0.1.x 2.1.1.x</td>
 <td>SNMP Main Connection.
 <p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
@@ -96,7 +96,7 @@ In the **Firmware Device** box, you can select the firmware version of the devic
 
 ### System Config
 
-On this page, you can configure the device, for example with the **DHCP** toggle button, the **Serial Port** settingsand the **Clock Source** toggle button.
+On this page, you can configure the device, for example with the **DHCP** toggle button, the **Serial Port** settings and the **Clock Source** toggle button.
 
 There is also a **page button** that allows you to modify the date and time of the device.
 

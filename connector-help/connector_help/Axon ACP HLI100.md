@@ -12,10 +12,10 @@ The **Axon ACP HLI100** driver can be used to display and configure information 
 
 ### Version Info
 
-| **Range** | **Key Features**                                                    | **Based on** | **System Impact**                                                                                                             |
-|-----------|---------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.1   | Initial version                                                     | \-           | \-                                                                                                                            |
-| 1.0.1.1   | Scheduling for logo presets added.Logo presets now shown in tables. | 1.0.0.1      | Single logo presets A and B are no longer shown as individual parameters. Trend and alarm information for these will be lost. |
+| **Range** | **Key Features**                                                     | **Based on** | **System Impact**                                                                                                             |
+|-----------|----------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.1   | Initial version                                                      | \-           | \-                                                                                                                            |
+| 1.0.1.1   | Scheduling for logo presets added. Logo presets now shown in tables. | 1.0.0.1      | Single logo presets A and B are no longer shown as individual parameters. Trend and alarm information for these will be lost. |
 
 ### Product Info
 
@@ -87,7 +87,8 @@ The setting of some parameters depends on another parameter's current value. For
 
 From the **1.0.1.x** range onwards, the **Logo Generator A** and **Logo Generator B** pages list the logo presets in a table.
 
-In the **1.0.0.x** range, changes have also been made to the **logo presets** on the Logo Settings page. These are shown as individual parameters, and only the settings of the one being edited are shown.The H-Pos and V-Pos settings need to be applied before the preset logo is updated. You can do so with the Pos Update button. Because of limitations on the device, wait a few seconds before you make another change.
+In the **1.0.0.x** range, changes have also been made to the **logo presets** on the Logo Settings page. These are shown as individual parameters, and only the settings of the one being edited are shown.
+The H-Pos and V-Pos settings need to be applied before the preset logo is updated. You can do so with the Pos Update button. Because of limitations on the device, wait a few seconds before you make another change.
 
 From version **1.0.1.x** onwards, the **Logo Scheduler A** and **Logo Scheduler B** pages allow you to schedule the logos to rotate on a round-robin based scheme.
 
@@ -113,5 +114,5 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 - Between **SDI Input** and **SDI Output 1**
 - Between **SDI Input** and **SDI Output 2**
-- Between**SDI Input**and **SDI Clean Output**
+- Between **SDI Input** and **SDI Clean Output**
 - Between **SDI Input** and **SDI Output Preview**

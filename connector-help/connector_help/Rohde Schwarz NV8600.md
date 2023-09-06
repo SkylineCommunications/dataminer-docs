@@ -8,7 +8,7 @@ The **Rohde Schwarz NV8600** is a device used as DVB-T2 transmitter, composed of
 
 ## About
 
-The driver communicates with the Rohde Schwarz equipment through **SNMP** communication using **three distinct polling timers**: one every hour for semi-staticconfiguration, one every 30 seconds for configurable input from the end user that is not strictly time-bound, and one every 10 seconds for time-sensitive displayed parameters such as event logs or fault-related parameters.
+The driver communicates with the Rohde Schwarz equipment through **SNMP** communication using **three distinct polling timers**: one every hour for semi-static configuration, one every 30 seconds for configurable input from the end user that is not strictly time-bound, and one every 10 seconds for time-sensitive displayed parameters such as event logs or fault-related parameters.
 
 SNMP traps can be retrieved, if this is enabled on the device.
 
@@ -79,7 +79,7 @@ For each category, the following pages have been configured:
 
 ### General Page
 
-On the left side of thispage, general information is displayed regarding the device, such as:
+On the left side of this page, general information is displayed regarding the device, such as:
 
 - **Serial number**
 - **SW Identification number**
@@ -111,11 +111,11 @@ Via the **Pump Commands** page button, you can access the **Commands Pump Unit T
 
 ### Pump Unit Measurements Page
 
-On thispage, you can consult all measurements related to the pump unit in the **Measure Values Table**. It displays the **temperature, pump flow** and **fan rotation** readings of the device.
+On this page, you can consult all measurements related to the pump unit in the **Measure Values Table**. It displays the **temperature, pump flow** and **fan rotation** readings of the device.
 
 ### Pump Events Display/Configuration Page
 
-On thispage, you can configure the existing trap configuration in terms of priority and masking, and check if there has been any triggered event.
+On this page, you can configure the existing trap configuration in terms of priority and masking, and check if there has been any triggered event.
 
 ### TX Unit Information Page
 
@@ -139,19 +139,19 @@ On this page, you can configure the existing trap configuration in terms of prio
 
 ### TX NetCCU Logbook Page
 
-Thispage displays the **NetCCU Logbook Table**,an ordered list of events that concern the transmitter's unit. These can be faults, warnings or information from the unit itself. The list has a limit of 255 events.
+This page displays the **NetCCU Logbook Table**, an ordered list of events that concern the transmitter's unit. These can be faults, warnings or information from the unit itself. The list has a limit of 255 events.
 
 To access the logbook configuration, click the **NetCCU **Lb** Conf** page button.
 
 ### OST Logbook Page
 
-Thispage displays the **OST Logbook Table**,an ordered list of events that concern the transmitter's output (Ost) stage. These can be faults, warnings, or information from the OST itself. The list has a limit of 255 events.
+This page displays the **OST Logbook Table**, an ordered list of events that concern the transmitter's output (Ost) stage. These can be faults, warnings, or information from the OST itself. The list has a limit of 255 events.
 
 To access the logbook configuration, click the **OST Lb Conf** page button.
 
 ### Exciter Unit Page
 
-Thispage displays three tables: the **Product Information Table,** the **Exciter Status Table** and the **Identification State Table.**
+This page displays three tables: the **Product Information Table,** the **Exciter Status Table** and the **Identification State Table.**
 
 Via the **Exciter Commands** page button, you can set commands to configure the exciter unit.
 
@@ -159,7 +159,7 @@ Via the **Exciter Commands** page button, you can set commands to configure the 
 
 On this page, you can configure several aspects of the behavior of the exciter unit. This can be done in the following tables:
 
-- **Config Table**: Allows general configurationof the exciter unit.
+- **Config Table**: Allows general configuration of the exciter unit.
 - **Identification Table:** Allows the configuration of identification aspects.
 - **Precorrection Table:** Allows the configuration of precorrection parameters.
 - **SFN Delay Table**: Allows the configuration of the SFN delay.
@@ -172,7 +172,7 @@ You can also configure a test signal on this page, in the **Test Signal Table**.
 
 ### Exciter Logbook Page
 
-Thispage displays the **Logbook Table**, an ordered list of events related to the exciter. These can be faults, warnings or information from the unit itself. The list has a limit of 255 events.
+This page displays the **Logbook Table**, an ordered list of events related to the exciter. These can be faults, warnings or information from the unit itself. The list has a limit of 255 events.
 
 To access the logbook configuration, click the **Lb Event Conf** page button.
 

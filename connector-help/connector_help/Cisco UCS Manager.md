@@ -12,12 +12,12 @@ The connector polls relevant information, statistics, and active faults from the
 
 ### Version Info
 
-| **Range**            | **Key Features**                       | **Based on** | **System Impact** |
-|----------------------|----------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version                        | \-           | \-                |
-| 2.0.0.x              | CISCO UCS XML Web API                  | \-           | \-                |
-| 2.0.1.x              | New firmware version                   | \-           | \-                |
-| 2.1.0.x              | New firmware versionWeb API connection | \-           | \-                |
+| **Range**            | **Key Features**                        | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version                         | \-           | \-                |
+| 2.0.0.x              | CISCO UCS XML Web API                   | \-           | \-                |
+| 2.0.1.x              | New firmware version                    | \-           | \-                |
+| 2.1.0.x              | New firmware version Web API connection | \-           | \-                |
 
 ### Product Info
 
@@ -96,11 +96,11 @@ It also displays the runtime **Memory** **Unit** and **Memory Unit Env** statist
 
 This page displays the following tables:
 
-- The **Chassis Table**, including the **Model, Vendor, Operability, Presence, Power, Thermal, Administration State**,etc.
+- The **Chassis Table**, including the **Model, Vendor, Operability, Presence, Power, Thermal, Administration State**, etc.
 - The **Fan Table**, including the **Model, Vendor, Operability, Presence, Performance, Power, Thermal**, etc.
-- The **PSU Table**, including the **Model, Vendor, Operability, Presence, Performance, Power, Thermal, Voltage, Wattage**,etc.
+- The **PSU Table**, including the **Model, Vendor, Operability, Presence, Performance, Power, Thermal, Voltage, Wattage**, etc.
 - The **Equipment Fan Table**, including the **Operational State, Operability, Presence**, etc.
-- The **Health LED** **Table**, including the **Color, State, Operational State**,etc.
+- The **Health LED** **Table**, including the **Color, State, Operational State**, etc.
 
 ### Storage Page
 
@@ -113,22 +113,25 @@ On this page, there are also three page buttons:
 
 - **Controller**: Displays the following tables:
 
-- The **Storage Controller Table**, whichincludes the **Operational State, Presence, Model**, etc.
-  - The **Storage Flex Flash Controller Table**, whichincludes the **Controller Health, Controller State, Operational State**,etc.
+- The **Storage Controller Table**, which includes the **Operational State, Presence, Model**, etc.
+  - The **Storage Flex Flash Controller Table**, which includes the **Controller Health, Controller State, Operational State**, etc.
 
-- **Local LUN**: Displays the **Storage Local LUN Table**, which includes the **Operability, Presence**,etc.
+- **Local LUN**: Displays the **Storage Local LUN Table**, which includes the **Operability, Presence**, etc.
 
 - **RAID Battery**: Displays the **Storage RAID Battery Table**, which includes the **Operability, Presence**, etc.
 
 ### Faults Page
 
-This page displays a table with information on the **Faults** of the device: **Severity, Description, Probable Cause**,and **Affected Object.**
+This page displays a table with information on the **Faults** of the device: **Severity, Description, Probable Cause**, and **Affected Object.**
 
 ### Compute Page
 
 This page displays the following tables:
 
-- The **Board** **Table**, including the **CMOS Voltage, Operations Power, Presence**, etc.The **Mb Power Statistics Table**, including the **Consumed Power, Input Voltage, Available Memory**, etc.The **Rack Unit Table**, including the **Admin Power, Available Memory, Admin State**, etc.The **Rack Unit Mb Temperature Statistics Table**, including the **Ambient Temperature, Front Temperature**, etc.
+- The **Board** **Table**, including the **CMOS Voltage, Operations Power, Presence**, etc.
+  The **Mb Power Statistics Table**, including the **Consumed Power, Input Voltage, Available Memory**, etc.
+  The **Rack Unit Table**, including the **Admin Power, Available Memory, Admin State**, etc.
+  The **Rack Unit Mb Temperature Statistics Table**, including the **Ambient Temperature, Front Temperature**, etc.
 
 ## Usage (Range 2.0.0.x)
 
@@ -140,17 +143,17 @@ This page displays general information related to the device: **System Name, Ser
 
 This page displays the following tables:
 
-- The **Equipment Indicator LED**, including the **ID, Name, State**,and **Color**.
+- The **Equipment Indicator LED**, including the **ID, Name, State**, and **Color**.
 - The **Equipment PSU**, including the **ID, PID, Model, Vendor, Serial Number, Voltage, Status, Power,** and **Presence.**
 - The **Equipment Fan Modules**, including the **ID, Operability, Power,** and **Presence**.
 
 ### Network
 
-This page displays the **Management Interface** table, including the **ID, Description, Type, Speed, IP Address, Extension Mask, Extension Gateway, MAC, DHCP**,and **Operation**.
+This page displays the **Management Interface** table, including the **ID, Description, Type, Speed, IP Address, Extension Mask, Extension Gateway, MAC, DHCP**, and **Operation**.
 
 ### Compute Nodes
 
-This page displays the **Compute Server Nodes**, including the **ID, Name, Model, Vendor, Serial Number, Available Cores, Threads, Memory**,and **Utilization Statistics.**
+This page displays the **Compute Server Nodes**, including the **ID, Name, Model, Vendor, Serial Number, Available Cores, Threads, Memory**, and **Utilization Statistics.**
 
 ### Firmware
 
@@ -158,7 +161,7 @@ This page displays the following tables:
 
 - The **Firmware Running**, including the **ID, Name, Description, Deployment, Type,** and **Version**.
 - The **Firmware Updatable**, including the **ID, Name, Description, Admin State, Deployment, Operational State, Version, Protocol, Remote Server, Remote Path, User, Password, Progress, Type,** and **Secure Boot.**
-- The **Firmware Boot Definition**, including the **ID, Name**,and **Type**.
+- The **Firmware Boot Definition**, including the **ID, Name**, and **Type**.
 - The **Firmware Management Interface**, including the **ID, Name, Description, V4 IP Address, MAC, Host Name, V6 Extension, V6 IP Address, V6 Prefix, V6 Extension Gateway, V6 Stateless Address Autoconfiguration IP, Subject,** and **V6 Link Local**.
 
 ### Faults

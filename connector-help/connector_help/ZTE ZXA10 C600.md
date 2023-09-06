@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 Two key parameters are included on this page:
 
-- **DisplayKey Config**: If you have write permission, this parameter allows you to select the format for the Display Key column in the following tables: Ethernet Interfaces, PON Interfaces, PON Interfaces Status and Optic Status.The available options use the information extracted from the Iftable and IfXTable (ifDescription, IfName, IfAlias) and combine these in different ways:
+- **DisplayKey Config**: If you have write permission, this parameter allows you to select the format for the Display Key column in the following tables: Ethernet Interfaces, PON Interfaces, PON Interfaces Status and Optic Status. The available options use the information extracted from the Iftable and IfXTable (ifDescription, IfName, IfAlias) and combine these in different ways:
 
 - Alias
   - Name

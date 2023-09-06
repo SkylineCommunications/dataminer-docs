@@ -10,26 +10,26 @@ This connector is used by DataMiner Infrastructure Discovery and Provisioning (I
 
 ### Version Info
 
-| **Range**            | **Key Features**                                              | **Based on** | **System Impact**                                                                                                                                 |
-|----------------------|---------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Part of DataMiner IDP.                                        | \-           | \-                                                                                                                                                |
-| 1.0.1.x \[Obsolete\] | Support for Unicode characters.                               | 1.0.0.x      | \-                                                                                                                                                |
-| 1.0.2.x \[Obsolete\] | \- Parameters in table 600 reordered.- Parameter 413 renamed. | 1.0.1.x      | \- Existing custom reports may no longer work.- Possible impact on DMS filters, Automation scripts, Visio files, reports, DMS web API usage, etc. |
-| 1.0.3.x \[Obsolete\] | Increased minimum DataMiner version to 10.0.0.0 - 9517 CU6.   | 1.0.2.x      | The DMS may need to be updated.                                                                                                                   |
-| 1.0.4.x \[Obsolete\] | 1.0.3.x                                                       |              |                                                                                                                                                   |
-| 1.0.5.x \[SLC Main\] | Parameter 658 renamed.                                        | 1.0.4.x      | Possible impact on DMS filters, Automation scripts, Visio files, reports, DMS web API usage, etc.                                                 |
+| **Range**            | **Key Features**                                               | **Based on** | **System Impact**                                                                                                                                  |
+|----------------------|----------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Part of DataMiner IDP.                                         | \-           | \-                                                                                                                                                 |
+| 1.0.1.x \[Obsolete\] | Support for Unicode characters.                                | 1.0.0.x      | \-                                                                                                                                                 |
+| 1.0.2.x \[Obsolete\] | \- Parameters in table 600 reordered. - Parameter 413 renamed. | 1.0.1.x      | \- Existing custom reports may no longer work. - Possible impact on DMS filters, Automation scripts, Visio files, reports, DMS web API usage, etc. |
+| 1.0.3.x \[Obsolete\] | Increased minimum DataMiner version to 10.0.0.0 - 9517 CU6.    | 1.0.2.x      | The DMS may need to be updated.                                                                                                                    |
+| 1.0.4.x \[Obsolete\] | 1.0.3.x                                                        |              |                                                                                                                                                    |
+| 1.0.5.x \[SLC Main\] | Parameter 658 renamed.                                         | 1.0.4.x      | Possible impact on DMS filters, Automation scripts, Visio files, reports, DMS web API usage, etc.                                                  |
 
 ### Product Info
 
-| **Range**             | **Supported Firmware** |
-|-----------------------|------------------------|
-| 1.0.0.x1.0.1.x1.0.2.x | \-                     |
+| **Range**               | **Supported Firmware** |
+|-------------------------|------------------------|
+| 1.0.0.x 1.0.1.x 1.0.2.x | \-                     |
 
 ### System Info
 
-| **Range**             | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
-|-----------------------|---------------------|-------------------------|-----------------------|-------------------------|
-| 1.0.0.x1.0.1.x1.0.2.x | No                  | Yes                     | \-                    | \-                      |
+| **Range**               | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-------------------------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x 1.0.1.x 1.0.2.x | No                  | Yes                     | \-                    | \-                      |
 
 ## Configuration
 

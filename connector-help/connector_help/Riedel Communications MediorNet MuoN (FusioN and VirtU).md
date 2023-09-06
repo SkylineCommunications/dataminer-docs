@@ -10,10 +10,10 @@ The Riedel Communications ST2110 - SDI Gateway is used to encapsulate or de-enca
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                     | **Based on** | **System Impact**             |
-|----------------------|----------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------|
-| 1.0.0.x              | Initial version.                                                                                                     | \-           | \-                            |
-| 1.0.1.x \[SLC Main\] | \- Added DCF based on Interfaces Table (PID:1200).- Added support to switch polling IP between available interfaces. | 1.0.0.2      | Increased load on the system. |
+| **Range**            | **Key Features**                                                                                                      | **Based on** | **System Impact**             |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------|
+| 1.0.0.x              | Initial version.                                                                                                      | \-           | \-                            |
+| 1.0.1.x \[SLC Main\] | \- Added DCF based on Interfaces Table (PID:1200). - Added support to switch polling IP between available interfaces. | 1.0.0.2      | Increased load on the system. |
 
 ### Product Info
 

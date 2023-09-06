@@ -99,10 +99,12 @@ This page consists of three sections:
 
 - The **Firmware** section contains the **Specification Number** and **Version** of the **System Controller** and **Display Controller**.
 
-- The **UPC Algorithm** section is used to configure the algorithm used by the UPC. Here you can choose the desired algorithm and the sample time. Please note the following:
+- The **UPC Algorithm** section is used to configure the algorithm used by the UPC. Here you can choose the desired algorithm and the sample time.
+  Please note the following:
 
 - The **Closed-Loop Feedback Attenuation Channel** and **Closed-Loop Idle Time** settings are only applicable when the *Closed-Loop* algorithm is used.
-  - The **Comparison Multiplier** and **Comparison Tolerance** settings are only applicable for the *Comparison* algorithm. Setting these values may fail if the applicable algorithm is not enabled.
+  - The **Comparison Multiplier** and **Comparison Tolerance** settings are only applicable for the *Comparison* algorithm.
+    Setting these values may fail if the applicable algorithm is not enabled.
   - The **Dual-Track Receiver Levels** and **Settings Mismatch** alarm will indicate a problem in the configuration if the *Dual-Track* algorithm is used.
   - The **Diversity Remote UPC Link** alarm will indicate a problem in the communication with the second receiver if the *Diversity Beacon* algorithm is used.
 
@@ -155,4 +157,4 @@ Finally, the **Trap Test** button will can be used to test traps. It will cause 
 
 ### System Log
 
-This page contains the **System Log Table**, which displays the latest system log entries (up to 64). Each entry has a **Timestamp**,which is the system time when the event took place, a description of the **Event** and, if applicable, the name of the **Attenuation Channel** to which the entry refers. You can refresh the System Log Table using the button at the bottom of the page.
+This page contains the **System Log Table**, which displays the latest system log entries (up to 64). Each entry has a **Timestamp**, which is the system time when the event took place, a description of the **Event** and, if applicable, the name of the **Attenuation Channel** to which the entry refers. You can refresh the System Log Table using the button at the bottom of the page.

@@ -30,7 +30,7 @@ This driver has several data display pages:
 
 ### General Page
 
-This page displays the **type**, **hardware** and **software version** of the **system, power supply**and **modules**.
+This page displays the **type**, **hardware** and **software version** of the **system, power supply** and **modules**.
 
 Some general system configuration is possible here: **SPG Input**, **Expansion Port**, **Preferred Power Supply**, **Startup Delay**, **Front Panel Timeout**, **Front Panel Display Contrast**, **LTC Channel Direction**, **Relay Path**, **Watchdog Timer**.
 
@@ -50,7 +50,7 @@ Several buttons are available with which you can reset the **Factory Defaults** 
 
 ### Power Supplies Page
 
-This page displays information regarding **Power Supply 1** and **2**.Four page buttons also provide acces to information on all **Voltages** for the four different modules that can be installed.
+This page displays information regarding **Power Supply 1** and **2**. Four page buttons also provide acces to information on all **Voltages** for the four different modules that can be installed.
 
 ### Event Reporting Page
 

@@ -40,7 +40,9 @@ This page is very similar to the Main View page but includes an **Alarm Status**
 
 On this page, you can move the antenna to different satellites or reset the antenna. This can be done in various ways, which are available through different page buttons:
 
-- **Satellite Name:** Point the antenna to a preset satellite using the defined **Satellite Name**. A **Preset table** with preconfigured satellites can also be created in the driver, which will perform a manual set of the Polarisation after automatic movement of the antenna through a satellite name. Please note that only the **Polarisation** is used as an extra set if **Preset Table Usage** is enabled, other data in the Preset table (position, azimuth, elevation) are currently only supplied by way of information, not as configuration settings.
+- **Satellite Name:** Point the antenna to a preset satellite using the defined **Satellite Name**. A **Preset table** with preconfigured satellites can also be created in the driver, which will perform a manual set of the Polarisation after automatic movement of the antenna through a satellite name.
+
+  Please note that only the **Polarisation** is used as an extra set if **Preset Table Usage** is enabled, other data in the Preset table (position, azimuth, elevation) are currently only supplied by way of information, not as configuration settings.
 
 - **Importing from an Excel** file requires the file to have a fixed structure.
 
@@ -52,7 +54,8 @@ On this page, you can move the antenna to different satellites or reset the ante
 
   - Enter the name of the sheet that contains the table with satellite data (only a single sheet can be imported, make sure all necessary data is gathered in one table). The parameter **Excel Sheetname** should hold this name.
 
-  - Enter the columns in this spreadsheet table that contain the **Azimuth, Elevation and Polarisation** (in that order) (default:*MNO*). The **Parabole Columns (Az, El, Pol)** should hold this value.For example: *MNO* means:
+  - Enter the columns in this spreadsheet table that contain the **Azimuth, Elevation and Polarisation** (in that order) (default:*MNO*). The **Parabole Columns (Az, El, Pol)** should hold this value.
+    For example: *MNO* means:
 
   - - **Column M** contains the **Azimuth.**
     - **Column N** contains the **Elevation.**

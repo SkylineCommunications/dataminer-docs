@@ -154,8 +154,8 @@ For the IP protocol, the following page buttons display additional information:
 
 For the ICMP protocol, you can find additional statistical information under the **Statistics...** page button.
 
-For the TCP protocol, you can also consult the connections with the **Connection Table...** page button andTCP segments with the **TCP segments...** page button.
+For the TCP protocol, you can also consult the connections with the **Connection Table...** page button and TCP segments with the **TCP segments...** page button.
 
-For the UDP protocol, you can consult additional information with the**Listener Info...** page button.
+For the UDP protocol, you can consult additional information with the **Listener Info...** page button.
 
 Finally, in the bottom right corner, you can view SNMP information with the **SNMP Settings ...** page button, general information from both interfaces 1 and 2 with the **Interfaces \[1-2\]...** page buttons and the current address translation with the **Address Translation...** page button.

@@ -36,7 +36,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about a UDX-HD-XMUX module, including:
+This page contains general information about a UDX-HD-XMUX module, including:
 
 - Type
 - Card Status
@@ -101,7 +101,7 @@ It also allows you to view the Reclocker **Num**, **Status** and **Bit Rate**, a
 
 ### Serial Port Page
 
-This page displays the **Serial Port** **Table**, which contains all serial port functions, such as **Mode**, **Status**, **Parity**, **Stopbits**, **Speed**,etc.
+This page displays the **Serial Port** **Table**, which contains all serial port functions, such as **Mode**, **Status**, **Parity**, **Stopbits**, **Speed**, etc.
 
 ### Signal Input Page
 
@@ -113,7 +113,7 @@ It also allows you to view the **Num** and **Status**, as well as to configure *
 
 This page displays the **Monitor** **Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Sync Source Page
 

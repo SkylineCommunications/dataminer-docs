@@ -26,7 +26,8 @@ Supported firmware versions
 
 ### Creation
 
-**SNMP Main connection**This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+**SNMP Main connection**
+This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -72,3 +73,5 @@ It also contains a counter with the number of different traps received and a pag
 **- Alarms Clean Up Amount**: The amount of oldest alarms removed from the Alarms Table when the maximum has been reached
 
 **- Max Age Alarms**: The maximum age of a alarm allowed in the Alarms Table.
+
+

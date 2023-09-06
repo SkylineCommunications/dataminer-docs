@@ -10,7 +10,7 @@ The application discovers all the recognized modules in a Selenio frame after th
 
 The name of the discovered elements is based on a user-configurable column of the **Device** table, which initially contains the IP address of the selection frames found during the network scanning process.
 
-The module-related information depends on the model of each discovered card, with an initial **Visio**view assigned.
+The module-related information depends on the model of each discovered card, with an initial **Visio** view assigned.
 
 ## About
 
@@ -34,7 +34,8 @@ The IP address that you configure during the creation of this manager is not rea
 
 1.  Open the **Imagine Communications VHE Manager** and go to the data category **Settings**.
 2.  Configure the IP address, network mask and read community string to be used for the discovery process.
-3.  Once these are configured, go to the data category **Devices** and press the button **Scan Network** to begin the discovery process over the configured IP address and network mask. Note that this process could find more than one Selenio frame in the network. In that case, the Device table will contain each of these frames, identified by their specific IP addresses.
+3.  Once these are configured, go to the data category **Devices** and press the button **Scan Network** to begin the discovery process over the configured IP address and network mask.
+    Note that this process could find more than one Selenio frame in the network. In that case, the Device table will contain each of these frames, identified by their specific IP addresses.
 
 ## Usage
 

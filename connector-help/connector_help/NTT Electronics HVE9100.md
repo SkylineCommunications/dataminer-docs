@@ -46,7 +46,7 @@ This page contains general information about the device, such as the **Encoder S
 
 ### Status
 
-This page displays information about the state of the device, including the **Video Input State**, **Audio Input State**, **System Alarm**, **System Warning, Voltage**, **Temperature** and**Fan Status.**
+This page displays information about the state of the device, including the **Video Input State**, **Audio Input State**, **System Alarm**, **System Warning, Voltage**, **Temperature** and **Fan Status.**
 
 ### Audio
 

@@ -66,7 +66,7 @@ SNMP Settings:
 
 ### Configuration of the element properties
 
-The element's custom properties **Client Id** and **MHA Identifier**need to be created as soon as the main element is created, so that the values from the provisioning file can be filled in.
+The element's custom properties **Client Id** and **MHA Identifier** need to be created as soon as the main element is created, so that the values from the provisioning file can be filled in.
 
 ### Configuration of DVEs.
 
@@ -78,7 +78,7 @@ Alternatively, you can also create all DVEs at once, using the **Create All Devi
 
 ### General
 
-This page displays general information, such as the **Description** of devices found in theNMS.
+This page displays general information, such as the **Description** of devices found in the NMS.
 
 It displays the **Connection Redundancy Status** table, which shows the current redundancy status of both element connections and gives an overview of what polling address is currently in use, in standby or unreachable.
 
@@ -126,7 +126,7 @@ This page contains the following parameters:
 - **Provisioning File Format**: Displays the format that should be followed when the structure of the CSV provisioning file is created.
 - **CSV File Name Path**: Allows you to enter a valid path for the CSV file.
 - **Import File:** Button that can be used to execute the provisioning.
-- **Import File Status**: By default, if no operation has been executed, the status is set to *Not Busy*. After the Import File button is clicked, either *Success*or *Failed*will be displayed as the final state for the provisioning operation.
+- **Import File Status**: By default, if no operation has been executed, the status is set to *Not Busy*. After the Import File button is clicked, either *Success* or *Failed* will be displayed as the final state for the provisioning operation.
 - **Import Report:** Displays how many rows are in both the Device Table and the CSV file. Also confirms how many rows have empty values for both the Client Id and MHA Identifier properties, and, in case of a mismatch in the number of rows, displays the rows that are missing in the Device Table and present in the CSV file or vice versa.
 
 ### Web Interface

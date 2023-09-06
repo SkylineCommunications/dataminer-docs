@@ -66,9 +66,9 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains general info from the device such as the **Protocol Name** and **Protocol Version**, as well as**Panel Info** and **Extra Panel Info**.
+This page contains general info from the device such as the **Protocol Name** and **Protocol Version**, as well as **Panel Info** and **Extra Panel Info**.
 
-On the **Change Panel Info** subpage, you can the**Panel Name**, **Panel User**,and **Panel Description**.
+On the **Change Panel Info** subpage, you can the **Panel Name**, **Panel User**, and **Panel Description**.
 
 ### Product Information
 

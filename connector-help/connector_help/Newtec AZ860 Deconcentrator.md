@@ -18,9 +18,9 @@ This driver is to be used as a deconcentrator.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                 |
-|------------------|---------------------------------------------|
-| 1.0.0.x          | Hardware version: 6.0Software version: 2.07 |
+| **Driver Range** | **Device Firmware Version**                  |
+|------------------|----------------------------------------------|
+| 1.0.0.x          | Hardware version: 6.0 Software version: 2.07 |
 
 ## Installation and creation
 

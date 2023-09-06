@@ -54,6 +54,6 @@ The pages **Network Interfaces**, **SNMP Settings**, **SNMP Traps**, **I/O Inter
 
 The pages **Synchronization Modules**, **PTP Slaves**, **OCXO**, **GNSS Receivers**, **GNSS Antenna Jamming**, **Constellations**, **Satellites** and **Satellites Details** all contain information about the synchronization modules.
 
-The **Switching** pageallows you to configure the settings for switching between the two synchronization modules.
+The **Switching** page allows you to configure the settings for switching between the two synchronization modules.
 
 The **Status** page contains a list of alarms used by the device itself.

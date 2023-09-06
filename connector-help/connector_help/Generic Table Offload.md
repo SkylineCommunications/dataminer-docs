@@ -45,14 +45,76 @@ Offload issues can have two main causes:
 
 There is also a **Buffer Handling** pop-up page. This page contains the following settings and button:
 
-- **Accept Commands**:Enable this parameter if you want the driver to accept commands, offload table data and send responses. By default *enabled.*
-- **Retry Interval**:When an offload fails, it is retried 3 times. After that, it will only be retried again after this interval. By default set to *30 minutes*.
-- **Delete From Buffer After Exceeding TTL**:With this toggle button, you can enable deletion of commands from the buffer when they exceed their time to live. This makes sure that the buffer does not keep growing endlessly. If you disable this setting, you can be sure that no data will be lost, but you run the risk of using a endlessly growing amount of memory to store the buffer. By default *enabled*.
+- **Accept Commands**: Enable this parameter if you want the driver to accept commands, offload table data and send responses. By default *enabled.*
+- **Retry Interval**: When an offload fails, it is retried 3 times. After that, it will only be retried again after this interval. By default set to *30 minutes*.
+- **Delete From Buffer After Exceeding TTL**: With this toggle button, you can enable deletion of commands from the buffer when they exceed their time to live. This makes sure that the buffer does not keep growing endlessly. If you disable this setting, you can be sure that no data will be lost, but you run the risk of using a endlessly growing amount of memory to store the buffer. By default *enabled*.
 - **Time To Live**: In order to avoid an endlessly growing buffer, there should be a limit to how long commands can be retried. With this parameter, you can set the maximum time that a command can stay in the buffer and be retried again. By default set to *1 day.* This parameter cannot be set if the **Delete From Buffer After Exceeding TTL** setting is *disabled*.
-- **Delete Entire Buffer**:With this button, you can delete all commands from the buffer and thereby reset the buffer to its original state, when it had not received any command. If you click this button, an extra pop-up warning will appear.
+- **Delete Entire Buffer**: With this button, you can delete all commands from the buffer and thereby reset the buffer to its original state, when it had not received any command. If you click this button, an extra pop-up warning will appear.
 
 ## Notes
 
 The offload commands need to follow the following scheme:
 
-\<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="<http://www.skyline.be/offloadcommands>" attributeFormDefault="unqualified" elementFormDefault="qualified" \> \<xs:element name="OffloadCommands"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="OffloadCommand" maxOccurs="unbounded" minOccurs="0"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="TableData" minOccurs="1" maxOccurs="1"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="Descriptions" minOccurs="1" maxOccurs="1"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="Description" maxOccurs="unbounded" minOccurs="0"\> \<xs:complexType\> \<xs:simpleContent\> \<xs:extension base="xs:string"\> \<xs:attribute type="xs:integer" name="pid" use="required"/\> \<xs:attribute type="xs:string" name="key" use="optional"/\> \</xs:extension\> \</xs:simpleContent\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \</xs:complexType\> \</xs:element\> \<xs:element name="Rows" maxOccurs="1" minOccurs="1"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="Row" maxOccurs="unbounded" minOccurs="1"\> \<xs:complexType\> \<xs:sequence\> \<xs:element name="Column" maxOccurs="unbounded" minOccurs="1"\> \<xs:complexType\> \<xs:simpleContent\> \<xs:extension base="xs:string"\> \<xs:attribute type="xs:integer" name="pid" use="required"/\> \</xs:extension\> \</xs:simpleContent\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \<xs:attribute type="xs:integer" name="tableId" use="required"/\> \<xs:attribute type="xs:string" name="tableName" use="required"/\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \<xs:attribute type="xs:string" name="type" use="required"/\> \<xs:attribute type="xs:integer" name="dmaId" use="required"/\> \<xs:attribute type="xs:integer" name="elementId" use="required"/\> \<xs:attribute type="xs:integer" name="paramIdToRespond" use="required"/\> \</xs:complexType\> \</xs:element\> \</xs:sequence\> \</xs:complexType\> \</xs:element\>\</xs:schema\>
+\<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="<http://www.skyline.be/offloadcommands>" attributeFormDefault="unqualified" elementFormDefault="qualified" \>
+\<xs:element name="OffloadCommands"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="OffloadCommand" maxOccurs="unbounded" minOccurs="0"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="TableData" minOccurs="1" maxOccurs="1"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="Descriptions" minOccurs="1" maxOccurs="1"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="Description" maxOccurs="unbounded" minOccurs="0"\>
+\<xs:complexType\>
+\<xs:simpleContent\>
+\<xs:extension base="xs:string"\>
+\<xs:attribute type="xs:integer" name="pid" use="required"/\>
+\<xs:attribute type="xs:string" name="key" use="optional"/\>
+\</xs:extension\>
+\</xs:simpleContent\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\</xs:complexType\>
+\</xs:element\>
+\<xs:element name="Rows" maxOccurs="1" minOccurs="1"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="Row" maxOccurs="unbounded" minOccurs="1"\>
+\<xs:complexType\>
+\<xs:sequence\>
+\<xs:element name="Column" maxOccurs="unbounded" minOccurs="1"\>
+\<xs:complexType\>
+\<xs:simpleContent\>
+\<xs:extension base="xs:string"\>
+\<xs:attribute type="xs:integer" name="pid" use="required"/\>
+\</xs:extension\>
+\</xs:simpleContent\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\<xs:attribute type="xs:integer" name="tableId" use="required"/\>
+\<xs:attribute type="xs:string" name="tableName" use="required"/\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\<xs:attribute type="xs:string" name="type" use="required"/\>
+\<xs:attribute type="xs:integer" name="dmaId" use="required"/\>
+\<xs:attribute type="xs:integer" name="elementId" use="required"/\>
+\<xs:attribute type="xs:integer" name="paramIdToRespond" use="required"/\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:sequence\>
+\</xs:complexType\>
+\</xs:element\>
+\</xs:schema\>

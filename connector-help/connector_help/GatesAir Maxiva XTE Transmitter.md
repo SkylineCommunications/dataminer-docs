@@ -16,9 +16,9 @@ The **GatesAir Maxiva XTE Transmitter** is a transmitter that powers over-the-ai
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                   |
-|-----------|----------------------------------------------------------|
-| 1.0.0.x   | A05 (release version)1024 (application software version) |
+| **Range** | **Supported Firmware**                                    |
+|-----------|-----------------------------------------------------------|
+| 1.0.0.x   | A05 (release version) 1024 (application software version) |
 
 ### System Info
 
@@ -41,7 +41,15 @@ SNMP CONNECTION:
 
 > Slot: **Transmitter Port**, **Exciter B Port**
 >
-> > Xmtr \#0 : 18593Xmtr \#1 : 20641Xmtr \#2 : 22689Xmtr \#3 : 24737Xmtr \#4 : 26785Xmtr \#5 : 28833Xmtr \#6 : 30881Xmtr \#7 : 32929Xmtr \#8 : 34977
+> > Xmtr \#0 : 18593
+> > Xmtr \#1 : 20641
+> > Xmtr \#2 : 22689
+> > Xmtr \#3 : 24737
+> > Xmtr \#4 : 26785
+> > Xmtr \#5 : 28833
+> > Xmtr \#6 : 30881
+> > Xmtr \#7 : 32929
+> > Xmtr \#8 : 34977
 
 SNMP Settings:
 

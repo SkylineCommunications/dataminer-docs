@@ -91,7 +91,8 @@ This SNMP connector is a **DVE manager** that will create a Dynamic Virtual Elem
 
 ## Configuration
 
-The **Nevion Flashlink Frame** is an SNMP connector. The IP needs to be configured during creation of the element.When a new element is created, the DVE child elements will be created in the same view as the main element.
+The **Nevion Flashlink Frame** is an SNMP connector. The IP needs to be configured during creation of the element.
+When a new element is created, the DVE child elements will be created in the same view as the main element.
 
 ## Usage
 
@@ -103,7 +104,7 @@ Via the **Polling Config** page button, the polling speed can be altered.
 
 ### Module Overview
 
-Thispage contains the **Module List Table** with a list of all the modules on the frame.
+This page contains the **Module List Table** with a list of all the modules on the frame.
 
 The parameter **Module Alarm Count** displays the number of alarms retrieved from the device.
 
@@ -141,7 +142,7 @@ This page also displays the **Embedder Table**, which lists all embedders for th
 
 This page displays the **Delay Table**, which contains information about delay parameters.
 
-It also allows you to configure the **Status**, **Lines**,**Samples** and **Nanosecs** delays.
+It also allows you to configure the **Status**, **Lines**, **Samples** and **Nanosecs** delays.
 
 ### DMUX Matrix
 

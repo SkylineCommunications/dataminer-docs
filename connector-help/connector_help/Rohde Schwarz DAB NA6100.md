@@ -34,7 +34,8 @@ SNMP Settings:
 
 ### Configuration of the Output Power Percentage parameter
 
-After element creation, the **Output Power Percentage** parameter will not yet be correct. To correctly compute this parameter, the **Nominal Power** parameter must be set on the **General** page.
+After element creation, the **Output Power Percentage** parameter will not yet be correct.
+To correctly compute this parameter, the **Nominal Power** parameter must be set on the **General** page.
 
 ## Usage
 
@@ -42,7 +43,8 @@ After element creation, the **Output Power Percentage** parameter will not yet b
 
 This page displays a number of status parameters, as well as two configuration parameters: **Operational Mode Tx** and **Selected Input**.
 
-There is also a **Nominal** **Power** parameter, which can be configured with the expected output power for the transmitter. Once this parameter has been set, the **Output Power Percentage** parameter will contain the **Forward Power** multiplied by *100* and then divided by the **Nominal Power**.Note: as long as this parameter has not been set, the calculated percentage will show *Infinity.*
+There is also a **Nominal** **Power** parameter, which can be configured with the expected output power for the transmitter. Once this parameter has been set, the **Output Power Percentage** parameter will contain the **Forward Power** multiplied by *100* and then divided by the **Nominal Power**.
+Note: as long as this parameter has not been set, the calculated percentage will show *Infinity.*
 
 ### Web Interface
 

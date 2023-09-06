@@ -24,7 +24,7 @@ This is an **SNMP** connector that is used to monitor and configure the **CISCO 
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | Cisco IOSCisco IOS XR  |
+| 1.0.0.x   | Cisco IOS Cisco IOS XR |
 | 1.0.1.x   | \-                     |
 | 1.0.2.x   | \-                     |
 | 1.0.3.x   | \-                     |
@@ -86,7 +86,7 @@ This page displays the **IDSN**-related information.
 
 ### BGP
 
-This page displays the **BGP Peer**table and other BGP-related information.
+This page displays the **BGP Peer** table and other BGP-related information.
 
 ### HSRP
 
@@ -134,7 +134,7 @@ This page displays the **VLAN** **Info** table.
 
 ### PIM
 
-This page displays the **Interface**, **Neighbor**,and **IP Multicast Route (PIM)**table.
+This page displays the **Interface**, **Neighbor**, and **IP Multicast Route (PIM)** table.
 
 ### ISIS
 
@@ -142,11 +142,11 @@ This page displays the **ISIS** system-related information.
 
 ### EIGRP
 
-This page displays the **VPN**, **Traffic Statistics**, **Topology**, **Peer**,and **Interface** **(EIGRP)**table.
+This page displays the **VPN**, **Traffic Statistics**, **Topology**, **Peer**, and **Interface** **(EIGRP)** table.
 
 ### VRF
 
-This page displays the **CSV VRF**, **VRF (CV)**,and **VRF Interface (CV)**table.
+This page displays the **CSV VRF**, **VRF (CV)**, and **VRF Interface (CV)** table.
 
 ### VRF Interface Tree
 
@@ -154,7 +154,7 @@ This page displays the **VRF Interface** tree view information.
 
 ### MPLS VPN
 
-This page displays the **MPLS VPN Interface Configuration**, **MPLS VPN VRF**,and **MPLS VPN VRF Route** table.
+This page displays the **MPLS VPN Interface Configuration**, **MPLS VPN VRF**, and **MPLS VPN VRF Route** table.
 
 ### VRF Tree
 

@@ -10,9 +10,9 @@ The 7882ENC-H264HD-IPASI is professional Contribution H.264 and MPEG-2 Encoder a
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 

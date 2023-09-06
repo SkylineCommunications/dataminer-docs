@@ -18,9 +18,9 @@ This connector is also compatible with the **ETL Systems 22532** combiner.
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                           |
-|-----------|------------------------------------------------------------------|
-| 1.0.0.x   | ETL Systems 22522, version 04.60ETL Systems 22532, version 04.60 |
+| **Range** | **Supported Firmware**                                            |
+|-----------|-------------------------------------------------------------------|
+| 1.0.0.x   | ETL Systems 22522, version 04.60 ETL Systems 22532, version 04.60 |
 
 ### System Info
 

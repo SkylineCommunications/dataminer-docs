@@ -56,4 +56,4 @@ This page contains all of the parameters in the driver.
 
 It displays the current **Azimuth Angle** and **Elevation Angle** and allows you to set the **Azimuth Angle**, **Rotation Direction** and **Rotation Speed.**
 
-There are also buttons available to stop the rotation (**Stop Rotation**)and to stop all actions (**All Stop**).
+There are also buttons available to stop the rotation (**Stop Rotation**) and to stop all actions (**All Stop**).

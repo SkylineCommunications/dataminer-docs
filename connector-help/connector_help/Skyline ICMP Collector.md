@@ -32,7 +32,8 @@ This connector uses a virtual connection and does not require any input during e
 
 ### Initialization
 
-This connector works together with the front-end and back-end elements of the [Skyline ICMP Platform Manager](xref:Connector_help_Skyline_ICMP_Platform_Manager). As such, you need to make sure those elements are correctly initialized.After that, on the **Configuration page**, define the **File Import Path** for the file created by the back-end element and click the **Import** button.
+This connector works together with the front-end and back-end elements of the [Skyline ICMP Platform Manager](xref:Connector_help_Skyline_ICMP_Platform_Manager). As such, you need to make sure those elements are correctly initialized.
+After that, on the **Configuration page**, define the **File Import Path** for the file created by the back-end element and click the **Import** button.
 
 ## How to use
 

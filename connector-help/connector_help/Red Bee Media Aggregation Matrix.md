@@ -10,9 +10,9 @@ This protocol works with the Generic Matrix Virtualization connector and the Gra
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                            | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Routing signals on multiple layers in 1 matrix.- Output path calculation for all layers. | \-           | \-                |
+| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Routing signals on multiple layers in 1 matrix. - Output path calculation for all layers. | \-           | \-                |
 
 ### Product Info
 

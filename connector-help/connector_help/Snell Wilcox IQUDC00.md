@@ -30,6 +30,8 @@ The communication is based on the RollCall serial protocol.
 | 2.0.0.x          | All                         |
 | 3.0.0.x          | 2.213                       |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -76,7 +78,7 @@ Here, you can find the **Information Window, Unit Status, Unit Ref Status** or *
 
 Following parameters can be found on this page: **Audio Delay Select-A Manuel, Audio Delay Select-A Rolltrack 16, Audio Delay Select-A Total Delay, Audio Delay Select-B Rolltrack 14,** ...
 
-In the **Delay Selection ...** pagebutton, following parameters are editable: **EMB Delay-1** to**EMB Delay-8**.
+In the **Delay Selection ...** pagebutton, following parameters are editable: **EMB Delay-1** to **EMB Delay-8**.
 
 ### Audio Status
 
@@ -104,7 +106,7 @@ In the **Input Information ...** pagebutton, you can find the **Input 1 Standard
 
 The **Define Inputs ...** pagebutton allows the edition of several parameters such as the **Input 1 Valid Std, Input 1 Audio Pair 6, Input 2 Audio Pair 3,** ...
 
-In the **Backup Rules ...** pagebutton, you can find parameters **Rule 1** to**Rule 5, Rule 1 Select Input** to **Rule 5 Select Input** and **Rule 1 Time Delay** to **Rule 5 Time Delay**.
+In the **Backup Rules ...** pagebutton, you can find parameters **Rule 1** to **Rule 5, Rule 1 Select Input** to **Rule 5 Select Input** and **Rule 1 Time Delay** to **Rule 5 Time Delay**.
 
 ### Output
 
@@ -280,3 +282,5 @@ This page contains various Diagnostic test controls such as Run Test (user picks
 ### Webinterface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+

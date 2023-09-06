@@ -64,7 +64,7 @@ This table displays the same information as the Alarms Table, but the alarms are
 
 The **Cleared Service Alarms** toggle button determines whether cleared events are displayed in this table or not.
 
-Note: If cleared alarms are set to ***hidden***, then the table will not store these alarms. Setting this option back to ***visible***will not show previous cleared alarms, only new cleared alarms form that point onwards.
+Note: If cleared alarms are set to ***hidden***, then the table will not store these alarms. Setting this option back to ***visible*** will not show previous cleared alarms, only new cleared alarms form that point onwards.
 
 #### Clean Up Config
 
@@ -80,11 +80,11 @@ The following settings can be configured:
   - *Alarm Age*: An alarm will be removed when it is older than the **Max Service Alarms Age.**
   - *Combo*: Both of the above methods will be used to automatically clean the service alarm table.
 
-- **Max Service Alarms:** The maximum number of alarms allowed before cleanup starts (only with *Row Count* or*Combo*).
+- **Max Service Alarms:** The maximum number of alarms allowed before cleanup starts (only with *Row Count* or *Combo*).
 
-- **Max Service Alarms Age**:The maximum age of an alarm before it is removed (only with *Alarm Age* or *Combo*).
+- **Max Service Alarms Age**: The maximum age of an alarm before it is removed (only with *Alarm Age* or *Combo*).
 
-- **Service Alarm Cleanup Amount**:The number of alarms that will be removed at once (only with *Row Count*or*Combo*).
+- **Service Alarm Cleanup Amount**: The number of alarms that will be removed at once (only with *Row Count* or *Combo*).
 
 Note**:** If cleared alarms are ***hidden***, there will be no automatic cleanup.
 

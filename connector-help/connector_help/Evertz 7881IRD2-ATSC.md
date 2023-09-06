@@ -53,7 +53,7 @@ Full functionality of this connector, with frame status parameters such as tempe
 
 The element consists of the following pages:
 
-- **General**:This page consists of parameters such as **Card Type**, **Product Features**, **Alias**, and **Proxy Mode**.
+- **General**: This page consists of parameters such as **Card Type**, **Product Features**, **Alias**, and **Proxy Mode**.
 - **Setup**: This page consists of various tables and parameters, including the **Data Port** and **Product Features Supported** tables, the **Product** **Serial Number**, and the **License File** configurable parameter.
 - **Input**: This page contains the **RF Tune** table as well as various input-related configurable parameters.
 - **TS** **Path**: This page contains the **ASI Configuration**/**TS Input Mapping and Status** tables.

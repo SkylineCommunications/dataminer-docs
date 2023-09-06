@@ -6,7 +6,7 @@ uid: Connector_help_Arris_CMTS
 
 This device manages and controls the **Arris cable modem** in HFC networks.
 
-With this connector, you can keep track of the **cable modems** that are **online**, **starting**,and **offline**. You can also monitor the basic **downstream** and **upstream** channel parameters.
+With this connector, you can keep track of the **cable modems** that are **online**, **starting**, and **offline**. You can also monitor the basic **downstream** and **upstream** channel parameters.
 
 ## About
 
@@ -83,11 +83,11 @@ On this page, you can monitor parameters such as cable model downstream channel 
 
 ### Measurement - Gigabit Interfaces
 
-On this page, you can monitor parameters such as **bitrate**, **utilization**, **capacity**, **status**,and **state** for the interfaces of type Gigabit.
+On this page, you can monitor parameters such as **bitrate**, **utilization**, **capacity**, **status**, and **state** for the interfaces of type Gigabit.
 
 ### Interfaces
 
-This page displays information about the interfaces, such as the **type**, **bandwidth**, **state**, **administrative** **status**,and **operational status**.
+This page displays information about the interfaces, such as the **type**, **bandwidth**, **state**, **administrative** **status**, and **operational status**.
 
 ### Web Interface
 

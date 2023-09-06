@@ -36,9 +36,9 @@ On this page, a number of parameters display information about the weather stati
 
 ### Configuration page
 
-On thispage, you can specify a local file directory to which the log files will be copied and where they will be stored. To do so, fill in the path in the **Local** **Workfolder** parameter.
+On this page, you can specify a local file directory to which the log files will be copied and where they will be stored. To do so, fill in the path in the **Local** **Workfolder** parameter.
 
-You can also fill in the **credentials**to enable access to the file locations specified in the **Location** **Mapping** **Table** on the **Locations** page, as described in the "Configuration" section above.
+You can also fill in the **credentials** to enable access to the file locations specified in the **Location** **Mapping** **Table** on the **Locations** page, as described in the "Configuration" section above.
 
 In addition, you can specify the interval for logging data to the database, by setting the **Logging** **Time** **Interval** **parameter** to a particular value. When no value is set for this parameter, *5 minutes* will be used by default.
 

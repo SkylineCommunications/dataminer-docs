@@ -4,7 +4,8 @@ uid: Connector_help_Crystal_Vision_Vision_3_Frame
 
 # Crystal Vision Vision 3 Frame
 
-This **SNMP** driver allows you to monitor a Crystal Vision Vision 3 Frame. Vision 3 is the rack frame for the Vision product range.3U high and holding up to 20 cards, Vision 3 is suitable for higher bandwidth signals such as IP and 4K as well as SDI video and audio.
+This **SNMP** driver allows you to monitor a Crystal Vision Vision 3 Frame. Vision 3 is the rack frame for the Vision product range.
+3U high and holding up to 20 cards, Vision 3 is suitable for higher bandwidth signals such as IP and 4K as well as SDI video and audio.
 
 This driver also automatically creates Tandem 10 VF card DVEs if they are available in the **Frame Layout Table**.
 
@@ -64,7 +65,7 @@ The element created with this driver consists of the following data pages:
 
 - **General:** Displays system information such as the **System Description**, as well as the **Frame Layout Table**, which shows an overview of the frame cards available and whether a DVE is supported for them.
 
-- **Frame Monitor:** Displays a table with status information about the frame, such as **CPU Fan Fault**, **Power Supply Faults**,etc.
+- **Frame Monitor:** Displays a table with status information about the frame, such as **CPU Fan Fault**, **Power Supply Faults**, etc.
 
 - **Up Down A VF:** Displays status information about the Up Down A VF Card.
 
@@ -72,7 +73,7 @@ The element created with this driver consists of the following data pages:
 
 - **Tandem 10 VF:**
 
-- On the left side of this page, you can find the tables that are exported to the **Tandem 10 VF** **DVEs**. This includes the **DeEmbedded Input Table** and **Discrete Inputs Table**, which allow you to enable or disable parameters such as **Invert**, **Dolby** or **ReSample** for each audio group or discrete input, and the **Delays Table** for de-embedded inputs and discrete inputs,where you can enable parameters such as **Frame Delay** and **User Delay.**
+- On the left side of this page, you can find the tables that are exported to the **Tandem 10 VF** **DVEs**. This includes the **DeEmbedded Input Table** and **Discrete Inputs Table**, which allow you to enable or disable parameters such as **Invert**, **Dolby** or **ReSample** for each audio group or discrete input, and the **Delays Table** for de-embedded inputs and discrete inputs, where you can enable parameters such as **Frame Delay** and **User Delay.**
   - On the right, you can find all other configuration tables. The columns of these tables are exported as **standalone parameters** of the **Tandem 10 VF** **DVEs**.
 
-- **DVE:** Allows you to enable or disable the **DVE Automatic Removal** feature.Also contains a table with the supported DVE cards.
+- **DVE:** Allows you to enable or disable the **DVE Automatic Removal** feature. Also contains a table with the supported DVE cards.

@@ -10,10 +10,10 @@ The Grass Valley IQMIX is a 3G/HD/SD-SDI multi-channel IP transceiver.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                  | **Based on** | **System Impact**                  |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                  | \-           | \-                                 |
-| 1.0.1.x \[SLC Main\] | \- Improved layout to match RollCall Control Panel application.- Improved communication speed.- Fixed connection stability issue. | 1.0.0.2      | A new element needs to be created. |
+| **Range**            | **Key Features**                                                                                                                    | **Based on** | **System Impact**                  |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                    | \-           | \-                                 |
+| 1.0.1.x \[SLC Main\] | \- Improved layout to match RollCall Control Panel application. - Improved communication speed. - Fixed connection stability issue. | 1.0.0.2      | A new element needs to be created. |
 
 ### Product Info
 

@@ -12,12 +12,12 @@ The Rosa EM driver is used to monitor and control a Rosa EM device and devices c
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                             | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                             | No                  | Yes                     |
-| 2.0.0.x          | SNMP implementation for a number of devices.DVE generation. | No                  | Yes                     |
-| 2.0.1.x          | Driver review                                               | No                  | Yes                     |
-| 3.0.0.x          | Cellnex Version                                             | No                  | Yes                     |
+| **Driver Range** | **Description**                                              | **DCF Integration** | **Cassandra Compliant** |
+|------------------|--------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                              | No                  | Yes                     |
+| 2.0.0.x          | SNMP implementation for a number of devices. DVE generation. | No                  | Yes                     |
+| 2.0.1.x          | Driver review                                                | No                  | Yes                     |
+| 3.0.0.x          | Cellnex Version                                              | No                  | Yes                     |
 
 ### Supported firmware versions
 

@@ -32,7 +32,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 If a **prefix** is defined on the **General** page, all the **Function** **properties** need to have this prefix on the services that need to be monitored (e.g. "DVB Encoding" for an encoding service if the prefix is set to DVB).
 
-The **services** that need to be monitored need to have the **Function**, **Service ID**, and **Stream ID**property. For the services that are located in a transmitter location, the **Location** property needs to be used to provide info on the location.
+The **services** that need to be monitored need to have the **Function**, **Service ID**, and **Stream ID** property. For the services that are located in a transmitter location, the **Location** property needs to be used to provide info on the location.
 
 ## How to Use
 

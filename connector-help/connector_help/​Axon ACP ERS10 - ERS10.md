@@ -44,7 +44,7 @@ This page contains the card's generic status information: **Feature**, **SNMP**,
 
 ### MIB
 
-This pages provides an overview of which **card type**is inserted in which slot of the chassis, along with its **firmware**.
+This pages provides an overview of which **card type** is inserted in which slot of the chassis, along with its **firmware**.
 
 ### Network
 

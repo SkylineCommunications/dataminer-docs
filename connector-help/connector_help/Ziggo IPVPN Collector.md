@@ -31,9 +31,9 @@ An outage check will be performed on a polled CPE if the following conditions ar
 
 ### Supported modems
 
-| **Driver Range** | **Device**                                                                                                                                                   |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | Ciena 3900 seriesCisco ME 3400Cisco 1941Cisco 887Cisco ASR920Cisco ISR1100 seriesHuawei AR161Huawei AR169Telco Systems T-Marc 254Juniper Networks SRX100/200 |
+| **Driver Range** | **Device**                                                                                                                                                            |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | Ciena 3900 series Cisco ME 3400 Cisco 1941 Cisco 887 Cisco ASR920 Cisco ISR1100 series Huawei AR161 Huawei AR169 Telco Systems T-Marc 254 Juniper Networks SRX100/200 |
 
 ## Installation and configuration
 
@@ -70,7 +70,8 @@ To upload an alarm configuration:
 1.  Go to the **Settings** page.
 2.  Click the **Refresh List** button to see the currently available files.
 3.  Select a file via the **Alarm Config File Name** parameter.
-4.  Click the **Import** button to load the file into the **Alarm Config** table. However, note that alarms will not necessarily immediately change when a new config is loaded. Alarm validation is only done when the modem is polled again.
+4.  Click the **Import** button to load the file into the **Alarm Config** table.
+    However, note that alarms will not necessarily immediately change when a new config is loaded. Alarm validation is only done when the modem is polled again.
 
 The current alarm configuration can also be exported using the **Export** button. The exported file can then be found in the Ziggo IPVPN Collector documents folder. The file name consists of "*AlarmConfig\_*" followed by the current timestamp.
 
@@ -78,7 +79,7 @@ The current alarm configuration can also be exported using the **Export** button
 
 The settings of the offload mechanism can be accessed via the **Settings \> Offload** pop-up page.
 
-On this subpage, you can enable the **collector's data offload** **mechanism**,using the **Offload State** toggle button (in the **General** section), and configure the folder where the **Performance** and **Enrichment** data files will be stored. If this folder does not exist, it will be created, if possible.
+On this subpage, you can enable the **collector's data offload** **mechanism**, using the **Offload State** toggle button (in the **General** section), and configure the folder where the **Performance** and **Enrichment** data files will be stored. If this folder does not exist, it will be created, if possible.
 
 Two temporary CSV files are created in the folder (one for performance and one for enrichment data types). These files can be identified by their name, which ends with *"\_current"*, and should not be opened, edited or moved, in order to assure a successful offload.
 

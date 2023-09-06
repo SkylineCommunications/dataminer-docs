@@ -127,7 +127,7 @@ The **Remotes** page displays remote configuration and information data. This da
 
 ### TCP/IP Settings
 
-The **TCP/IP Settings** page can be used to access the TCP/IP settings. The **FTP** **controls** are also displayed on this page. The **Advanced...**page button displays a separate page that can be used to change the **Terminal Logon Password**.
+The **TCP/IP Settings** page can be used to access the TCP/IP settings. The **FTP** **controls** are also displayed on this page. The **Advanced...** page button displays a separate page that can be used to change the **Terminal Logon Password**.
 
 ### Ping Function
 

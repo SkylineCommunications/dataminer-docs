@@ -73,7 +73,7 @@ The page has page buttons to the following subpages:
 
 ### Input Page
 
-This page displays a number of parameters for **Blanking** (**Left**, **Right**, **Top** and **Bottom**)and other input parameters.
+This page displays a number of parameters for **Blanking** (**Left**, **Right**, **Top** and **Bottom**) and other input parameters.
 
 The **Input Standard** page button displays a subpage where you can configure the **Input Filmtools Standard**. You can enable auto assignment or configure a custom setting for particular frequencies.
 
@@ -101,8 +101,8 @@ The following subpages are available:
 This page contains three sections with buttons and page buttons. The page buttons open the following subpages:
 
 - **Audio Output Emb A AES Out**: Displays the **AES Follows Emba** and **Embb Follows Emba** toggle buttons, which can be used to enable/disable the corresponding functionality.
-- **Audio Output Emb A Audio Pair 1-8**: These pages are used to select an input for output A. With the **Audio Pair : Output A Emb Ch 1**and**Audio Pair : Output A Emb Ch 2** parameters, the correct audio pair can be selected. The **Emb Input Pair Data Mode** toggle buttons can be used to enable/disable the corresponding functionality.
-- **Audio Output Emb B Audio Pair 1-8**: These pages are used to select an input for output B. With the **Audio Pair : Output B Emb Ch 1**and**Audio Pair : Output B Emb Ch 2** parameters, the correct audio pair can be selected. The **AES Input Pair Data Mode** toggle buttons can be used to enable/disable the corresponding functionality.
+- **Audio Output Emb A Audio Pair 1-8**: These pages are used to select an input for output A. With the **Audio Pair : Output A Emb Ch 1**and **Audio Pair : Output A Emb Ch 2** parameters, the correct audio pair can be selected. The **Emb Input Pair Data Mode** toggle buttons can be used to enable/disable the corresponding functionality.
+- **Audio Output Emb B Audio Pair 1-8**: These pages are used to select an input for output B. With the **Audio Pair : Output B Emb Ch 1**and **Audio Pair : Output B Emb Ch 2** parameters, the correct audio pair can be selected. The **AES Input Pair Data Mode** toggle buttons can be used to enable/disable the corresponding functionality.
 - **Audio Output AES Audio Pair 1-8**: These pages are used to select an input for the output AES. With the **Audio Pair : Output AES Ch 1** and **Audio Pair : Output AES Ch 2** parameters, the correct audio pair can be selected.
 
 ### Audio Source Select Page
@@ -202,9 +202,9 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 Physical fixed interfaces:
 
 - **SDI A Input**: Physical SDI interface with type **in**.
-- **SDI B Input**:Physical SDI interface with type **in.**
+- **SDI B Input**: Physical SDI interface with type **in.**
 - **A Output**: Physical SDI interface with type **out**.
-- **B Output**:Physical SDI interface with type **out.**
+- **B Output**: Physical SDI interface with type **out.**
 
 ### Connections
 

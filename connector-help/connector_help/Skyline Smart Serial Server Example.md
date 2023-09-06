@@ -26,13 +26,13 @@ SMART SERIAL CONNECTION:
 
 - **Type of port**: The type of port used for communication with the device, e.g. *TCP/IP.*
 - **IP address/host**: The polling IP of the device, e.g. *127.0.0.1.*
-- **IP Port:**The polling port of the device, e.g. *12345*.
+- **IP Port:** The polling port of the device, e.g. *12345*.
 
 Because of the way DataMiner handles smart serial communication, there are additional requirements when using a smart serial client. The following configuration should be set up in order to enable this behavior:
 
 - **Type of port**: The type of port used for the communication with the device, e.g. *TCP/IP.*
 - **IP address/host**: The polling IP of the device, e.g. *any.* Use the IP address *any* to ensure that this protocol will receive smart serial communications from the local DMA.
-- **IP Port:**The polling port of the device, e.g. *12345*.
+- **IP Port:** The polling port of the device, e.g. *12345*.
 
 Note: Make sure that the smart serial client element is configured with an IP address outside the local IP address range recognized by DataMiner. Use any address in the 127.0.0.\* range except for 127.0.0.1. This is necessary because of the way DataMiner receives and forwards smart serial data internally and is only required when both client and server are running on the same host.
 

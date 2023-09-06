@@ -113,7 +113,7 @@ You can also configure the **Embed Groups**, which join each of the followed out
 
 On this page, you can view and configure the settings related to the loudness of the audio. This includes general loudness parameters, **Block** parameters, and the two **Loudness Monitors** and their five audio channels.
 
-There are also subpages for **Multi Band AGC**,general **Multi Band**, **AGC**, **Up Mixer**, audio **Master** and the **Parametric Equalizer**.
+There are also subpages for **Multi Band AGC**, general **Multi Band**, **AGC**, **Up Mixer**, audio **Master** and the **Parametric Equalizer**.
 
 ### Dolby
 

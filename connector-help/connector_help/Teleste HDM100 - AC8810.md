@@ -69,4 +69,5 @@ This page displays Spectrum Analyzer and Ingress Overview tables.
 
 It also contains a page button that can be used to import a CSV file and send/set the spectrum/ingress points to the device:
 
-- **Import Spectrum Points**: Allows you to enter the CSV file path and perform either an **Ingress Import** or **Spectrum Import** using the two buttons **Start Ingress Import** and **Start Spectrum Import**, respectively. The CSV file must have the correct header with the correct order: ***Spectrum Freq.;Freq. Type;Low Limit;High Limit***
+- **Import Spectrum Points**: Allows you to enter the CSV file path and perform either an **Ingress Import** or **Spectrum Import** using the two buttons **Start Ingress Import** and **Start Spectrum Import**, respectively.
+  The CSV file must have the correct header with the correct order: ***Spectrum Freq.;Freq. Type;Low Limit;High Limit***

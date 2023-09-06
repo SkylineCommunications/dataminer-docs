@@ -75,5 +75,5 @@ The element created with this driver has several data pages:
 - The **General** page displays the uptime, ID, name, and location of the system.
 - The **System** page displays information about the different system configuration options.
 - On the **Network Management**, **Time Management**, and **SFP** pages, you can find numerous tables with information related to these topics.
-- On the **Module, Frame Status, Diagnostic** and **Network Diagnostic**pages, you can find various tables with information and settings related to these subjects.
+- On the **Module, Frame Status, Diagnostic** and **Network Diagnostic** pages, you can find various tables with information and settings related to these subjects.
 - The **Traps** and **Notify** pages display tables where you can read/change the state and value of traps.

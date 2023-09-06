@@ -4,7 +4,7 @@ uid: Connector_help_IMP_Telekom_DVB-T_Transmitter
 
 # IMP Telekom DVB-T Transmitter
 
-Thisdriver monitors and configures the **IMP Telekom DVB-T Transmitter** **Unit**.
+This driver monitors and configures the **IMP Telekom DVB-T Transmitter** **Unit**.
 
 ## About
 

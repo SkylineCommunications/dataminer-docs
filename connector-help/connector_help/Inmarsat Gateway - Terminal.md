@@ -37,7 +37,7 @@ For the virtual elements, the **Average Speed** and **Heading** are displayed. T
 
 ### Beams
 
-This page displays the **Beam ID** that the terminal is **currently** **connected** with. It also contains the **Beams Changes Table**,which contains all the changes of the beam ID, including the **time** when the beam ID has changed, the **new beam ID** and the **previous beam ID**.
+This page displays the **Beam ID** that the terminal is **currently** **connected** with. It also contains the **Beams Changes Table**, which contains all the changes of the beam ID, including the **time** when the beam ID has changed, the **new beam ID** and the **previous beam ID**.
 
 ### Remote Status
 

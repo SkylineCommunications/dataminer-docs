@@ -14,12 +14,12 @@ Range 2.0.0.x contains the most important or requested parameters, but not every
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version (deprecated)                                       | No                  | Yes                     |
-| 2.0.0.x          | Revised version (based on the AVP-2000 3.0.0.3)                    | Yes                 | Yes                     |
-| 2.0.1.x          | Version with **support of DVEs**.(DVEs created based on card info) | Yes                 | Yes                     |
-| 3.0.0.x          | Revised version (based on 2.0.0.x)                                 | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version (deprecated)                                        | No                  | Yes                     |
+| 2.0.0.x          | Revised version (based on the AVP-2000 3.0.0.3)                     | Yes                 | Yes                     |
+| 2.0.1.x          | Version with **support of DVEs**. (DVEs created based on card info) | Yes                 | Yes                     |
+| 3.0.0.x          | Revised version (based on 2.0.0.x)                                  | Yes                 | Yes                     |
 
 ### Supported firmware versions
 

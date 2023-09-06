@@ -78,7 +78,8 @@ When you have created an element using this driver, first make sure credentials 
 
 The following configuration options allow you to change the behavior of the driver:
 
-- **Interface Settings**: This allows you to enable or disable polling from an interface (SNMP, CLI) via a toggle button. You can also specify how frequently the interface should be polled. This section also contains the following buttons:
+- **Interface Settings**: This allows you to enable or disable polling from an interface (SNMP, CLI) via a toggle button. You can also specify how frequently the interface should be polled.
+  This section also contains the following buttons:
 
 - **Update All:** Polls from both interfaces.
   - **Update SNMP**: Polls from SNMP only.

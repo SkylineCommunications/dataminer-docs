@@ -42,6 +42,6 @@ The **Laser Output Power Status**, **Laser BIAS Current** and **Laser BIAS Curre
 
 This page displays both **Analog** **Alarm** **Limits** and **Discreet** **Alarm** **Limits Tables**.
 
-Both the threshold and the status of **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband** can be configured in here for the **analog** **parameters**.For the **discrete** parameters, the **Notification** can be changed.
+Both the threshold and the status of **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband** can be configured in here for the **analog** **parameters**. For the **discrete** parameters, the **Notification** can be changed.
 
 The alarm control detection parameters can be configured as well: **ACD**, **ACD on Delay** and **ACD off Delay**.

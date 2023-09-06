@@ -109,11 +109,11 @@ This page contains a table listing the CPE devices that are currently known to t
 
 If a CPE device was known earlier but no longer seems to be present in the **CPEs** table, you should check the **CPE DVEs** table. You can find this table by clicking the **CPE DVEs Configurations** page button at the bottom of this page.
 
-After startup, the Severity column can indicate the *Unknown*state. This is expected behavior, caused by the fact that the Severity column will only be updated when an alarm trap is received. For example, when a *Major Open* alarm comes in, *Major* will be the severity. When after a number of minutes the same alarm comes in with the *Cleared* state, the new severity will be *Normal*.
+After startup, the Severity column can indicate the *Unknown* state. This is expected behavior, caused by the fact that the Severity column will only be updated when an alarm trap is received. For example, when a *Major Open* alarm comes in, *Major* will be the severity. When after a number of minutes the same alarm comes in with the *Cleared* state, the new severity will be *Normal*.
 
 To see the **Subscriber Public IPv4 address**, make sure a valid VLAN ID is selected. The VLAN ID can be selected on the Settings page. In case the dropdown is empty, open Stream Viewer and wait until Group 906 is displayed in the column on the left. When Group 906 has been executed successfully, try again. The dropdown should now contain the available IDs. There is no need to change the other parameters located on that page.
 
-The CPEs table also contains some important reports such as **Data** **Throughput**, **Es/N0**,and **C/N0**. The mechanism used to poll these reports can produce several log lines in the element log. It can take a couple of minutes until these columns are filled in completely after an element restart. This is all expected behavior. If an entire report column indicates N/A, check the CPE report polling toggle buttons on the Settings page. When a CPE report polling toggle button is set to *Disabled*, the corresponding column will show N/A.
+The CPEs table also contains some important reports such as **Data** **Throughput**, **Es/N0**, and **C/N0**. The mechanism used to poll these reports can produce several log lines in the element log. It can take a couple of minutes until these columns are filled in completely after an element restart. This is all expected behavior. If an entire report column indicates N/A, check the CPE report polling toggle buttons on the Settings page. When a CPE report polling toggle button is set to *Disabled*, the corresponding column will show N/A.
 
 ### CPE DVE Configurations Page
 

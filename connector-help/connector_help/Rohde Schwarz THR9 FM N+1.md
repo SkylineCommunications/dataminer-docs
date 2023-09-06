@@ -26,7 +26,7 @@ This protocol can be used to monitor and perform basic configuring on the parent
 
 | **Exported Protocol**                                                                                              | **Description**    |
 |--------------------------------------------------------------------------------------------------------------------|--------------------|
-| [Rohde Schwarz THR9 FM N+1 - Transmitter](xref:Connector_help_Rohde_Schwarz_THR9_FM_N+1_-_Transmitter) | Transmitter Module |
+| [Rohde Schwarz THR9 FM N+1 - Transmitter](xref:Connector_help_Rohde_Schwarz_THR9_FM_N%2B1_-_Transmitter) | Transmitter Module |
 
 ## Installation and configuration
 
@@ -60,7 +60,7 @@ On this page, the **Transmitter Control Table** provides a summary of all availa
 
 On this page, you can configure the redundancy settings. Tooltips provide information about each parameter.
 
-In the **Program Table**,you can add or remove a transmitter from the N+1 configuration with the **Program Changeover. Program Operation Mode** is used to enable or disable a transmitter.
+In the **Program Table**, you can add or remove a transmitter from the N+1 configuration with the **Program Changeover. Program Operation Mode** is used to enable or disable a transmitter.
 
 If a transmitter has been taken over by the backup transmitter, this is shown with the **Loaded Transmitter** parameter. Enabling or disabling the N+1 configuration is done with the **Operation Mode**.
 
@@ -111,6 +111,6 @@ This page provides a summary about the liquid cooling state (for each transmitte
 
 ### Notes
 
-When creating an **alarm template**,keep in mind that the value for the **State** columns is not the same for all rows; each row is a different parameter. The alarm template can be configured to have different alarms for different row values with the **Filter** option.
+When creating an **alarm template**, keep in mind that the value for the **State** columns is not the same for all rows; each row is a different parameter. The alarm template can be configured to have different alarms for different row values with the **Filter** option.
 
 For example, if there is a row with parameter *Transmitter Summary,* then it is logical that the **State** value *Ok* is a normal value. But if the row with parameter *Locally Controlled* has the value *Ok*, this could be an alarm value.

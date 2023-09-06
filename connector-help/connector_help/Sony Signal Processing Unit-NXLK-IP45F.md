@@ -31,7 +31,7 @@ This driver is exported by the parent driver **Sony Signal Processing Unit**, fr
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -46,6 +46,8 @@ This driver is exported by the parent driver **Sony Signal Processing Unit**, fr
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | V1.00                  |
+
+
 
 ## Configuration
 
@@ -74,3 +76,5 @@ This page displays the **Error Statuses** connected to this module.
 ### NMI
 
 This page allows you to connect this IP Board to the selected **NMI**. Note: only 1 NMI element can be connected to 1 IP Board Connected to this chassi. You can check which NMI element is connected to which IP Board via the **NMI** table on the main element.
+
+

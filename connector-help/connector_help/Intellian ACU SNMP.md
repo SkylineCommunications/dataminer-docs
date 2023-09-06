@@ -4,7 +4,7 @@ uid: Connector_help_Intellian_ACU_SNMP
 
 # Intellian ACU SNMP
 
-The Intellian ACU SNMPdriver is used to monitor Intellian ACU devices with SNMP.
+The Intellian ACU SNMP driver is used to monitor Intellian ACU devices with SNMP.
 
 ## About
 
@@ -79,7 +79,7 @@ Blocking zones can be pre-configured via a page button.
 
 ### Export GPS Trace
 
-On this page, you can enable or disable the **GPS data export feature** (storing GPS locations in the database)and adjust the corresponding settings.
+On this page, you can enable or disable the **GPS data export feature** (storing GPS locations in the database) and adjust the corresponding settings.
 
 ### Web Interface
 

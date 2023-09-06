@@ -54,7 +54,7 @@ SNMP Settings:
 
 ### General
 
-On this page, **REST** polling can be enabled. Note that the**CISCO ROSA VSM license** must be "Enterprise", as otherwise only **SNMP** data will be displayed by the element. Also, the user must fill in the **Username** and **Password** in order to retrieve **Lineups**, **Configurations** and **Events**.
+On this page, **REST** polling can be enabled. Note that the **CISCO ROSA VSM license** must be "Enterprise", as otherwise only **SNMP** data will be displayed by the element. Also, the user must fill in the **Username** and **Password** in order to retrieve **Lineups**, **Configurations** and **Events**.
 
 ### Alarms
 

@@ -46,14 +46,14 @@ SNMP Settings:
 
 This page displays general information, such as the **Name** and **Version**.
 
-Note: To set the **System Date Time**, use theformat **dd/MM/yyyy HH:mm:ss.**
+Note: To set the **System Date Time**, use the format **dd/MM/yyyy HH:mm:ss.**
 
 Below the parameters, you can find the following buttons:
 
-- **System Reset**:Reboots the device.
+- **System Reset**: Reboots the device.
 - **Refresh Device Info**: Polls the **Name**, **Version**, **Date**, **Serial Number**, **System Date Time** and **Device Label** immediately.
-- **Set Main & Auto Switch**:Sets the **Active Input** to *Main*, and then sets the **Switch Mode** to *Auto*.
-- **Set Switch Mode**: Changes the **Switch Mode** of the device to either *Manual*or *Auto*.
+- **Set Main & Auto Switch**: Sets the **Active Input** to *Main*, and then sets the **Switch Mode** to *Auto*.
+- **Set Switch Mode**: Changes the **Switch Mode** of the device to either *Manual* or *Auto*.
 - **Force Active Input**: Changes the **Switch Mode** to *Manual*, and then sets the **Active Input** to either *Backup* or *Main*.
 - **Force SD**: Forces the **Switch Input** to *SD Card*, if the **SD Card** parameter is *Available*.
 - **Refresh All**: Polls every parameter in the driver again.
@@ -66,7 +66,7 @@ Via a page button, you can access the **Input Status** table.
 
 ### Traps Page
 
-The **Main Input**, **Backup Input**, **Active Physical Input**, **Active Input**, **Audio Output**, **Software Mode** and **Power 1 & 2Trap** states can be found on this page. Each state is either *Invalid*, *Disabled*, or *Enabled*.
+The **Main Input**, **Backup Input**, **Active Physical Input**, **Active Input**, **Audio Output**, **Software Mode** and **Power 1 & 2** **Trap** states can be found on this page. Each state is either *Invalid*, *Disabled*, or *Enabled*.
 
 The **Trap Destinations** table is displayed via a page button.
 

@@ -4,7 +4,7 @@ uid: Connector_help_QBit_Q806
 
 # Qbit Q806
 
-This is an SNMP driver for the **Qbit Q806 redundancy switch**.It can be used to display and configure information of this device.
+This is an SNMP driver for the **Qbit Q806 redundancy switch**. It can be used to display and configure information of this device.
 
 ## About
 

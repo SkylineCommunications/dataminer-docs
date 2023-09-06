@@ -70,7 +70,8 @@ This page allows the user to **enable/disable CID Extraction.** **Info** paramet
 
 ### Alarm
 
-This page shows the device **temperature** followed by a **Alarms - General table** and a **Alarms - Product table**. Both tables show the **alarm status value** (ON/OFF) and **alarm counter**. Both tables also allow the user to configure the **alarm settings**.Following the alarm tables the page shows the **status LEDs** and the **relay status**. It's also possible to **reset** the relays from this page.
+This page shows the device **temperature** followed by a **Alarms - General table** and a **Alarms - Product table**. Both tables show the **alarm status value** (ON/OFF) and **alarm counter**. Both tables also allow the user to configure the **alarm settings**.
+Following the alarm tables the page shows the **status LEDs** and the **relay status**. It's also possible to **reset** the relays from this page.
 
 ### WebInterface
 

@@ -57,10 +57,10 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                       | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                       | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | Added CCAP core Relations KPIs table.Removed Service Group table and its dependencies. | 1.0.0.8      | \-                |
+| **Range**            | **Key Features**                                                                        | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                        | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | Added CCAP core Relations KPIs table. Removed Service Group table and its dependencies. | 1.0.0.8      | \-                |
 
 ### Product Info
 

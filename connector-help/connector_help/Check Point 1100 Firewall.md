@@ -28,12 +28,12 @@ Range 1.0.0.x of the driver uses SNMPv1 to communicate with the device. From ran
 
 ### Exported drivers
 
-| **Exported Protocol**                      | **Description**                               |
-|--------------------------------------------|-----------------------------------------------|
-| Check Point 1100 Firewall - Virtual Switch | Virtual SwitchOnly supported in range 1.0.1.x |
-| Check Point 1100 Firewall - Virtual Router | Virtual RouterOnly supported in range 1.0.1.x |
-| Check Point 1100 Firewall - Virtual System | Virtual SystemOnly supported in range 1.0.1.x |
-| Check Point 1100 Firewall - VSX Gateway    | Main ModuleOnly supported in range 1.0.1.x    |
+| **Exported Protocol**                      | **Description**                                |
+|--------------------------------------------|------------------------------------------------|
+| Check Point 1100 Firewall - Virtual Switch | Virtual Switch Only supported in range 1.0.1.x |
+| Check Point 1100 Firewall - Virtual Router | Virtual Router Only supported in range 1.0.1.x |
+| Check Point 1100 Firewall - Virtual System | Virtual System Only supported in range 1.0.1.x |
+| Check Point 1100 Firewall - VSX Gateway    | Main Module Only supported in range 1.0.1.x    |
 
 ## Installation and configuration
 

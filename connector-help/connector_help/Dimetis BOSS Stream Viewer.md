@@ -61,14 +61,18 @@ The web interface is only accessible when the client machine has network access 
 
 This page has a **Summary** of the **Local** **Controller**.
 
+
 ### BSV Servers Page
 
 This page allows you to configure the **BSV Instances**.
+
 
 ### Services Page
 
 This page details the **Services**, its **Audio** and **Video** **Pids** and their **Status**.
 
+
 ### Configurations Page
 
 This Page contains the existing **Configurations** and their **Status**.
+

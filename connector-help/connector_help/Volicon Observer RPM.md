@@ -60,7 +60,7 @@ This page is used to **import video channels from a CSV file.** To do so, select
 
 ### Traps
 
-This page displays the **Trap Overview** table. When a **trap is received**,when necessary, an entry is added in this table for the corresponding **video channel**. For each entry, a possible alarm can be set either by a user or by a trap.
+This page displays the **Trap Overview** table. When a **trap is received**, when necessary, an entry is added in this table for the corresponding **video channel**. For each entry, a possible alarm can be set either by a user or by a trap.
 
 At the bottom of the page, you can choose one of the channels and **clear the alarms** of this channel. Alarms can also be **cleared manually** in the table (e.g. in case a 'clear alarm' trap was missed).
 

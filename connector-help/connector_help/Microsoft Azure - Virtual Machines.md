@@ -49,4 +49,4 @@ On the **General** page, you can configure the **Polling Interval** for the metr
 
 ## Notes
 
-This connector is intended to be used together with the **Microsoft Azure Cloud Platform** connector.It requires this manager connector to work, as the authentication to the Azure Cloud Platform is done via the manager connector.
+This connector is intended to be used together with the **Microsoft Azure Cloud Platform** connector. It requires this manager connector to work, as the authentication to the Azure Cloud Platform is done via the manager connector.

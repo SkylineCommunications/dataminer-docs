@@ -64,7 +64,7 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 Physical fixed interfaces:
 
-- **Unit A**is a fixed interface and the interface type is **in**.
+- **Unit A** is a fixed interface and the interface type is **in**.
 - **Unit B** is a fixed interface and the interface type is **in**.
 - **COM** is a fixed interface and the interface type is **out**.
 - **MON** is a fixed interface and the interface type is **out**.
@@ -73,5 +73,5 @@ Physical fixed interfaces:
 
 #### Internal Connections
 
-- Between **\[Unit A-\>COM\]** and **\[Unit B-\>MON\],**internal connections are created if the status of Unit A is online.
+- Between **\[Unit A-\>COM\]** and **\[Unit B-\>MON\],** internal connections are created if the status of Unit A is online.
 - Between **\[Unit B-\>COM\]** and **\[Unit A-\>MON\]**, internal connections are created if the status of Unit B is online.

@@ -25,7 +25,7 @@ This driver uses SNMP communication in order to monitor a CISCO device from the 
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -41,11 +41,15 @@ This driver uses SNMP communication in order to monitor a CISCO device from the 
 |-----------|------------------------|
 | 1.0.0.x   | N/A                    |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes/No                  | \-                    | \-                      |
+
+
 
 ## Configuration
 

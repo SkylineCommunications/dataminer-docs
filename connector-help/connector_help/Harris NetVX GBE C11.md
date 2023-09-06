@@ -17,7 +17,7 @@ The **Harris NetVX GBE C11** driver has a **SNMP** Connection:
 - **Port:** 161
 - **Bus Address:** The slot number of the **IP Streamer.**
 - **IP Address:** The IP of the Device
-- **Get community string:**public
+- **Get community string:** public
 - **Set community string:** private
 
 ## Usage

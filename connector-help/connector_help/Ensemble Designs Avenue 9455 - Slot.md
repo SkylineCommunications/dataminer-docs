@@ -24,4 +24,4 @@ The connector is **automatically generated** when a slot is created with the par
 
 ## How to use
 
-The DVE has contains one page, **Slot Information**,which shows the relevant information available for the slot represented by this DVE.
+The DVE has contains one page, **Slot Information**, which shows the relevant information available for the slot represented by this DVE.

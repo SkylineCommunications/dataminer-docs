@@ -12,23 +12,23 @@ The **Casa Systems C100G** is a chassis that has separate modules for downstream
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                                                                  | No                  | Yes                     |
-| 2.0.0.x \[Obsolete\] | Changed the "Display Column" into the Measurement Upstream and Downstream tables.                                                                | No                  | No                      |
-| 2.0.1.x              | Display key and namingFormat option in Docs If Signal Quality Table.                                                                             | No                  | No                      |
-| 2.1.0.x              | Spectrum analyzer functionality for logical and physical upstream interfaces.                                                                    | No                  | No                      |
-| 3.0.0.x \[SLC Main\] | Specific layout focusing on Edge QAM functionalities.                                                                                            | No                  | Yes                     |
-| 5.0.0.x              | Specific Lite version, focused on performance.Polling of big tables is filtered and performed by QActions.                                       | No                  | Yes                     |
-| 5.0.1.x              | DCF feature added.                                                                                                                               | Yes                 | Yes                     |
-| 6.0.0.x              | Custom version developed for Unity Media.Lite version of Casa Systems C100G version 3.0.0.x polling interfaces, QAM streams, and QAM interfaces. | No                  | Yes                     |
+| **Range**            | **Description**                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                                                                   | No                  | Yes                     |
+| 2.0.0.x \[Obsolete\] | Changed the "Display Column" into the Measurement Upstream and Downstream tables.                                                                 | No                  | No                      |
+| 2.0.1.x              | Display key and namingFormat option in Docs If Signal Quality Table.                                                                              | No                  | No                      |
+| 2.1.0.x              | Spectrum analyzer functionality for logical and physical upstream interfaces.                                                                     | No                  | No                      |
+| 3.0.0.x \[SLC Main\] | Specific layout focusing on Edge QAM functionalities.                                                                                             | No                  | Yes                     |
+| 5.0.0.x              | Specific Lite version, focused on performance. Polling of big tables is filtered and performed by QActions.                                       | No                  | Yes                     |
+| 5.0.1.x              | DCF feature added.                                                                                                                                | Yes                 | Yes                     |
+| 6.0.0.x              | Custom version developed for Unity Media. Lite version of Casa Systems C100G version 3.0.0.x polling interfaces, QAM streams, and QAM interfaces. | No                  | Yes                     |
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                                                     |
-|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0.x   | Hardware revision 1.1Software version 6.5.2                                                                                                                                                                |
-| 3.0.0.x   | Hardware revision 1.8CFE version 12.4.11Software release version 7.1.4, Ver 1, build53baSystem SSM Firmware: Major rev 1, Minor rev 8; Rel 7.1.4, Ver 1, build53ba, Thu Mar 23 21:02:10 EDT 2017, (relmgr) |
+| **Range** | **Supported Firmware**                                                                                                                                                                                        |
+|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 2.1.0.x   | Hardware revision 1.1 Software version 6.5.2                                                                                                                                                                  |
+| 3.0.0.x   | Hardware revision 1.8 CFE version 12.4.11 Software release version 7.1.4, Ver 1, build53ba System SSM Firmware: Major rev 1, Minor rev 8; Rel 7.1.4, Ver 1, build53ba, Thu Mar 23 21:02:10 EDT 2017, (relmgr) |
 
 ## Configuration
 
@@ -154,7 +154,7 @@ This page contains the **Video Downstream Channels** table, with information abo
 
 ### Physical Interfaces
 
-This page contains the **Physical Entities Table**,with information regarding the available physical entities of the device. It also contains the **Module Table**, with information on each module in the chassis.
+This page contains the **Physical Entities Table**, with information regarding the available physical entities of the device. It also contains the **Module Table**, with information on each module in the chassis.
 
 ### RF Ports
 
@@ -177,7 +177,7 @@ This page displays information about the virtual edges present on the Casa Syste
 This page contains the following tables:
 
 - The **ECMG Status** table, with all the active sessions and CW message counter.
-- The **Video SimulCrypt Connections**table, listing the simulCrypt ECMG instances.
+- The **Video SimulCrypt Connections** table, listing the simulCrypt ECMG instances.
 
 ### EIS
 

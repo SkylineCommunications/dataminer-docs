@@ -24,9 +24,9 @@ Only the connectors in use by Tata Sky India are implemented for this mediation 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                                       | **Exported Components** |
-|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | Ateme Kyrion DR5000 3.0.4.xCisco D9800 1.2.0.xCisco D9854 1.0.0.xEricsson RX8200 2.0.1.xEricsson RX8330 2.0.4.xEricsson RX8330C 1.0.0.xHarmonic Proview PVR8130 1.0.1.xMotorola DSR-4460 1.0.1.xScopus Network Technologies IRD-2900 1.1.2.xTandberg RX1290 3.0.0.xThomson Video Networks RD Series 1.0.0.x | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                                                 | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | Ateme Kyrion DR5000 3.0.4.x Cisco D9800 1.2.0.x Cisco D9854 1.0.0.x Ericsson RX8200 2.0.1.x Ericsson RX8330 2.0.4.x Ericsson RX8330C 1.0.0.x Harmonic Proview PVR8130 1.0.1.x Motorola DSR-4460 1.0.1.x Scopus Network Technologies IRD-2900 1.1.2.x Tandberg RX1290 3.0.0.x Thomson Video Networks RD Series 1.0.0.x | \-                      |
 
 ## Configuration
 

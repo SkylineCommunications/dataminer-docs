@@ -16,7 +16,8 @@ It will also be possible to **manually** specify **extraction** or **blanking**.
 
 ### Creation
 
-***Smart-Serial connections***This driver uses a 2 Smart-Serial connection and needs the following user information:
+***Smart-Serial connections***
+This driver uses a 2 Smart-Serial connection and needs the following user information:
 
 SERIAL CONNECTION (Connected for MBT A):
 
@@ -28,7 +29,8 @@ MBTB (Connected for MBT B):
 - IP address/host: \[The polling IP of the device\]
 - IP port: \[The IP port of the device\]
 
-***HTTP connection***This driver uses an HTTP connection and needs the following user information:
+***HTTP connection
+***This driver uses an HTTP connection and needs the following user information:
 
 HTTP CONNECTION (Connection for FTP server):
 
@@ -70,7 +72,7 @@ The status parameters on the right side indicate if the life messages are stil b
 
 ### IPPU
 
-The **IPPU** page displays the **IPPU** **table** **1** and **2**. The **Ippu's**also need to be added **manually** by the user before the commands received from one of the **MBT** **clients** will be processed. The **ippu's** can be added by using the **Add** **IPPU.** button. Clicking this button will open a separate page where 3 parameters need to be set: the **IPPU Name**, the **Service Number for Origin Server** and the **Service Number for Blanking DCM**. When the **Add IPPU Table 1** or **Add IPPU Table 2** button is clicked, the row in the corresponding table will be added.
+The **IPPU** page displays the **IPPU** **table** **1** and **2**. The **Ippu's** also need to be added **manually** by the user before the commands received from one of the **MBT** **clients** will be processed. The **ippu's** can be added by using the **Add** **IPPU.** button. Clicking this button will open a separate page where 3 parameters need to be set: the **IPPU Name**, the **Service Number for Origin Server** and the **Service Number for Blanking DCM**. When the **Add IPPU Table 1** or **Add IPPU Table 2** button is clicked, the row in the corresponding table will be added.
 
 ### Recording
 

@@ -12,9 +12,9 @@ This connector monitors a given router and is able to send new settings to the d
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                       | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version contains:- Network inputs- Video inputs- Video outputs | \-           | \-                |
+| **Range**            | **Key Features**                                                          | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version contains: - Network inputs - Video inputs - Video outputs | \-           | \-                |
 
 ### Product Info
 
@@ -58,7 +58,7 @@ Since the API will store all the changes under one category in one go (for examp
 2.  Make the changes in the main category and/or its subcategories.
 3.  Click the **Apply Changes** button for the item in the main category.
 
-When an item is set to **Edit**,it will be colored **blue** to indicate (along with the Mode value itself) that this data will no longer be updated via polling.
+When an item is set to **Edit**, it will be colored **blue** to indicate (along with the Mode value itself) that this data will no longer be updated via polling.
 
 Once the changes have been applied, polling will kick in again and the mode will change back to *Polling*.
 
@@ -66,7 +66,8 @@ To cancel changes, switch back to polling mode without applying the changes.
 
 For example, to change network input IP stream in 1:
 
-1.  On the **Network Inputs** page, toggle the **Mode** from *Polling* to *Edit*. This will make the columns writable and color the row blue.On the additional Network Input pages such as **Network Destinations**, the linked data row or rows will also switch to edit mode, making the columns editable and coloring the row blue.
+1.  On the **Network Inputs** page, toggle the **Mode** from *Polling* to *Edit*. This will make the columns writable and color the row blue.
+    On the additional Network Input pages such as **Network Destinations**, the linked data row or rows will also switch to edit mode, making the columns editable and coloring the row blue.
 2.  Make the necessary changes.
 3.  Go back to the **Network Inputs** page and click **Apply Changes**. This will send the changes to the router and enable polling again.
 

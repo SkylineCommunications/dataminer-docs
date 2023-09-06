@@ -41,7 +41,8 @@ All programs linked to the probe are listed in the **Programs Table**. It shows 
 
 ### Events
 
-The events tables on this page contain the alarm info per type. These tables are updated via the device L4 traps. The polled open alarms table is used to sync up these tables.The **System, Program and Transport Alarm Table** will be filtered for each probe element based on the probe link. This way you will only see relevant information in each DVE.
+The events tables on this page contain the alarm info per type. These tables are updated via the device L4 traps. The polled open alarms table is used to sync up these tables.
+The **System, Program and Transport Alarm Table** will be filtered for each probe element based on the probe link. This way you will only see relevant information in each DVE.
 
 ## Usage - Range 1.2.4.x
 

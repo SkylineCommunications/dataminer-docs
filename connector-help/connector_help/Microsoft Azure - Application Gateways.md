@@ -18,9 +18,9 @@ Application Gateway can make routing decisions based on additional attributes of
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                       |
-|-----------|----------------------------------------------------------------------------------------------|
-| 1.0.0.x   | REST-API version 2018-01-01 for MetricsREST-API version 2020-11-01 for Backend Health Status |
+| **Range** | **Supported Firmware**                                                                        |
+|-----------|-----------------------------------------------------------------------------------------------|
+| 1.0.0.x   | REST-API version 2018-01-01 for Metrics REST-API version 2020-11-01 for Backend Health Status |
 
 ### System Info
 
@@ -50,4 +50,4 @@ On the **General** page, you can configure the **Polling Interval** for the metr
 
 ## Notes
 
-This connector is intended to be used together with the **Microsoft Azure** connector.Without that manager connector, this connector will not work, as the authentication to the Azure Cloud Platform is done via the manager connector.
+This connector is intended to be used together with the **Microsoft Azure** connector. Without that manager connector, this connector will not work, as the authentication to the Azure Cloud Platform is done via the manager connector.

@@ -65,7 +65,7 @@ When you have created the element, configure the following settings:
 - **Entity Export/Import Settings**: These sections allow the exporting of the configuration files and importing of the provisioning files.
 
 - **Entity Export** and **Entity Import**: These parameters allow you to enable/disable the exporting and importing feature.
-  - **Export Directory** and **Entity Import Directory**:It is necessary to specify the pathswhere the files will be exported and imported.
+  - **Export Directory** and **Entity Import Directory**: It is necessary to specify the paths where the files will be exported and imported.
   - **Entity Export Directory Type** and **Entity Import Directory Type**: Specify whether the export/import paths are **local or remote**. Note that for the remote file handling to work, you must enter the credentials for the system in the System Credentials section and enter the path to the remote directory in the Export Directory or Import Directory parameter. The path must be shared/accessible, or this feature will not work.
 
 <!-- -->

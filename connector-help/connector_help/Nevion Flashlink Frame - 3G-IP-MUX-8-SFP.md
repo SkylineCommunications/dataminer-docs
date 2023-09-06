@@ -30,7 +30,7 @@ This connector is used by DVE child elements that are **automatically created** 
 
 ### General Page
 
-Thispage contains general information about a 3G-IP-MUX-8-SFP module, including:
+This page contains general information about a 3G-IP-MUX-8-SFP module, including:
 
 - Type
 - Card Status
@@ -57,13 +57,13 @@ It also allows you to configure certain parameters, such as **Incoming** and **O
 
 This page displays the **Delay** **Table**, which contains information about delay parameters.
 
-You can also configure the **Status**, **Lines**,**Samples**,and **Nanosecs** delays.
+You can also configure the **Status**, **Lines**, **Samples**, and **Nanosecs** delays.
 
 ### GPIO Page
 
 This page displays the **General Purpose Input Output Table**, which contains information regarding I/O blocks.
 
-It also allows you to configure the **Mode**, **Status**, **Description**,and **Alarms**.
+It also allows you to configure the **Mode**, **Status**, **Description**, and **Alarms**.
 
 ### Laser Page
 
@@ -87,7 +87,7 @@ It also allows you to view the **Sync Src**, **Type**, **Lines**, **Frame Rate**
 
 This page displays the **Monitor** **Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Temperature
 

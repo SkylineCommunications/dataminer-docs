@@ -18,7 +18,7 @@ This connector allows you to monitor and manage the Newtec MDM5010 equipment.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | MDM5010 v1.0STE/6883   |
+| 1.0.0.x   | MDM5010 v1.0 STE/6883  |
 
 ### System Info
 
@@ -90,7 +90,7 @@ The **Demodulator** **Config** subpage allows you to configure the demodulator s
 
 ### ACM
 
-This page allows you to monitor theACM controls and ACM clients.
+This page allows you to monitor the ACM controls and ACM clients.
 
 The **DVB S2 MODCOD Settings** subpage allows you to view and configure the ACM Controls MODCOD table.
 

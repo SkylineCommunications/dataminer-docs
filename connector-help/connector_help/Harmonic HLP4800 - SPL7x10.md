@@ -16,7 +16,7 @@ The driver is exported by the parent element **Harmonic HLP4800** if DVE creatio
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.0.x          | 1.081.122.04                |
+| 1.0.0.x          | 1.08 1.12 2.04              |
 
 ## Installation and configuration
 
@@ -36,7 +36,7 @@ This page displays the following information regarding the laser: **Output Power
 
 ### Operation
 
-This page displays information about **Common Temperature**, **Fan Speed**,**Fan Alarm**, and **Auto Calibration Mode**.
+This page displays information about **Common Temperature**, **Fan Speed**, **Fan Alarm**, and **Auto Calibration Mode**.
 
 ### RF
 

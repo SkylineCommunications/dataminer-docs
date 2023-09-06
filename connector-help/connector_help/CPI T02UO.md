@@ -12,9 +12,9 @@ This driver communicates with the device using serial commands as described in t
 
 ### Version Info
 
-| **Range**            | **Key Features**                                             | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Monitoring & control of amplifierControl of waveguide switch | \-           | \-                |
+| **Range**            | **Key Features**                                              | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Monitoring & control of amplifier Control of waveguide switch | \-           | \-                |
 
 ### Product Info
 

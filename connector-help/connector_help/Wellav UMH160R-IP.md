@@ -132,16 +132,16 @@ Once the driver is running:
 
 1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** --\> **SDI DECODER OUT (ID:5)**
 2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** --\> **SDI DECODER OUT (ID:5)**
-3.  If **Decoder Input** is type **IP**:**IP IN (ID:2)** **--\>** **SDI DECODER OUT (ID:5)**
+3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **SDI DECODER OUT (ID:5)**
 
 If the **ASI Bypass** is **disabled**:
 
-1.  If **Decoder Input** is type **Turner**:**TURNER** **IN (ID:1)** **--\> ASI** **OUT (ID:4)**
+1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> ASI** **OUT (ID:4)**
 2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\> ASI** **OUT (ID:4)**
-3.  If **Decoder Input** is type**IP**: **IP IN (ID:2)** **--\>** **ASI OUT (ID:4)**
+3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **ASI OUT (ID:4)**
 
 If the **IP Bypass** is **disabled**:
 
-1.  If **Decoder Input** is type **Turner**:**TURNER** **IN (ID:1)** **--\> IP** **OUT (ID:6)**
-2.  If **Decoder Input** is type**ASI**:**ASI** **IN (ID:3)** **--\>** **IP** **OUT (ID:6)**
-3.  If **Decoder Input** is type **IP**:**IP IN (ID:2)** **--\>** **IP OUT (ID:6)**
+1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> IP** **OUT (ID:6)**
+2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\>** **IP** **OUT (ID:6)**
+3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **IP OUT (ID:6)**

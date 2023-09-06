@@ -71,16 +71,16 @@ uid: Connector_help_Quantum_ActiveScale_P100
 <p>SNMP Settings:</p>
 <ul>
 <li><strong>Port number</strong>: The port of the connected device, by default <em>161</em>.</li>
-<li><strong>Get community string</strong>: The community string used when reading values from the device(default value if not overridden in the driver: <em>public</em>).</li>
-<li><strong>Set community string</strong>: [The community string used when setting values on the device(default value if not overridden in the driver: <em>private</em>).</li>
+<li><strong>Get community string</strong>: The community string used when reading values from the device (default value if not overridden in the driver: <em>public</em>).</li>
+<li><strong>Set community string</strong>: [The community string used when setting values on the device (default value if not overridden in the driver: <em>private</em>).</li>
 </ul>
 <h3 id="general">General</h3>
 <p>The <strong>General</strong> page displays the device information, capacity data, network traffic data as well as metrics data.</p>
 <p>An extra <strong>Metrics</strong> page might be displayed depending on the value of the 'Poll Metrics' togglebutton.</p>
 <h3 id="resources">Resources</h3>
-<p>The <strong>Resources</strong>page displays the CPU and Memory data in tables.</p>
+<p>The <strong>Resources</strong> <strong></strong> page displays the CPU and Memory data in tables.</p>
 <h3 id="events">Events</h3>
-<p>The <strong>Events</strong>page displays a table containing all the incoming traps.</p>
+<p>The <strong>Events</strong> <strong></strong> page displays a table containing all the incoming traps.</p>
 <h3 id="web-interface">Web Interface</h3>
 <p>The web interface is only accessible when the client machine has network access to the product.</p></td>
 </tr>

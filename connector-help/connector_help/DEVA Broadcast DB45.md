@@ -67,4 +67,5 @@ This driver can be used to measure the **signals** for **multiple frequencies**.
 
 Depending on the configured **Round Robin Interval**, every x seconds, the signals for a frequency in the Channel Measurements table will be retrieved. When a time interval has elapsed, the next frequency will be set and polled during a next interval.
 
-To add a new frequency that should be measured, simply click the **Add Channel** button and configure the **frequency** in the table. Once everything is configured, you can **enable** this channel to add it to the round-robin loop. In case you want to make sure it is **polled** **immediately**, use the **Force** button to immediately start polling the signals for that frequency.
+To add a new frequency that should be measured, simply click the **Add Channel** button and configure the **frequency** in the table. Once everything is configured, you can **enable** this channel to add it to the round-robin loop.
+In case you want to make sure it is **polled** **immediately**, use the **Force** button to immediately start polling the signals for that frequency.

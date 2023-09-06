@@ -34,7 +34,7 @@ On this page, the **Display** parameter shows status information concerning the 
 
 ### Video 1
 
-In the Video 1 Input section of this page, you can set the **Input 1 Standard, Input Analog Standard**, etc.The section has two page buttons:
+In the Video 1 Input section of this page, you can set the **Input 1 Standard, Input Analog Standard**, etc. The section has two page buttons:
 
 - With the **Valid Standards** page button, standards like **1080/50p,** **1080/59p** can be selected.
 - The **Errors** page button provides detailed error information (**CRC/ANC Errors**, etc.).
@@ -75,7 +75,7 @@ The following page buttons are available:
 
 ### Genlock/Blanking
 
-In the Genlock section of this page, you can set the **Delay Mode, Delay Frames, Horizontal Delay**, etc.With the **Dolby-E Line** page button, you can configure **Pairs 1** to **8, User Lines, Auto Align 1** to **8**, ...
+In the Genlock section of this page, you can set the **Delay Mode, Delay Frames, Horizontal Delay**, etc. With the **Dolby-E Line** page button, you can configure **Pairs 1** to **8, User Lines, Auto Align 1** to **8**, ...
 
 In the HANC/VBI Blanking section, you can configure the **Blanking: Standard** and the **Blank HANC. Blank 1** to **36** parameters are also available through the **Blank 1-18** and **Blank 19-36** page buttons.
 
@@ -92,10 +92,10 @@ Two page buttons are available:
 
 In the SMPTE 2016 section of this page, you can set the following parameters: **2016 I/P F1 Status, 2016 O/P F1 Line, 2016 Follow**.
 
-In the SD VBIsection, you can set the **WSS I/P Status, VITC I/P Status, CC608 I/P Status**, etc.There are also two page buttons in this section:
+In the SD VBI section, you can set the **WSS I/P Status, VITC I/P Status, CC608 I/P Status**, etc. There are also two page buttons in this section:
 
-- **Lines Setup**:Allows you to set **Line 7** to **Line 23** to one of the following settings: *Off*, *VITC Output*, *WST*.
-- **WST Lines**:Displays the status of **WST Line 7** to **WST Line 22**.
+- **Lines Setup**: Allows you to set **Line 7** to **Line 23** to one of the following settings: *Off*, *VITC Output*, *WST*.
+- **WST Lines**: Displays the status of **WST Line 7** to **WST Line 22**.
 
 ### Timecode
 
@@ -158,7 +158,7 @@ On this page, you can set the parameters **Bus 1 Audio Select** to **Bus 8 Audio
 
 This page contains several page buttons:
 
-- **Embed**: Allows you to configure the **Embed 1 1 Audio Select** to **Embed 8 2 Audio Select** parameters.Some of the possible values are: *Bus 3 2, Downmix 2 2, Dolby Encode 2, Tone 7.*
+- **Embed**: Allows you to configure the **Embed 1 1 Audio Select** to **Embed 8 2 Audio Select** parameters. Some of the possible values are: *Bus 3 2, Downmix 2 2, Dolby Encode 2, Tone 7.*
 - **AES:** Displays the parameters **AES1 1 Audio Select** to **AES8 2 Audio Select.**
 - **Anlg:** Displays the parameters **Analog 1 1 Audio Select** to **Analog 2 2 Audio Select.**
 - **Defaults:** Displays the parameters **Embed Output, AES Output** and **Analog Output**.
@@ -169,11 +169,11 @@ In the sections **Up Mixer Loud S1** to **Up Mixer Loud S4,** the following para
 
 ### Up Mixer Loud 5 to 8
 
-In the sections **Up Mixer Loud S5** to **Up Mixer Loud S8**,the following parameters are displayed: **Procamp Gain, Mute** and **Source.**
+In the sections **Up Mixer Loud S5** to **Up Mixer Loud S8**, the following parameters are displayed: **Procamp Gain, Mute** and **Source.**
 
 There are also 2 general parameters: **Up Mixer Hide** and **Dialog Hide**, and two page buttons:
 
-- The **Channel Name** page button displays the parameters **Channel 1 Name** to **Channel 8 Name**,and the **Channel 1 Name In** to **Channel 8 Name In.**
+- The **Channel Name** page button displays the parameters **Channel 1 Name** to **Channel 8 Name**, and the **Channel 1 Name In** to **Channel 8 Name In.**
 - Via the **Loudness** page button, the following parameters can be configured: **Preset 1/2, Master Level 1/2, Name 1/2** and **Bypass 1/2.**
 
 ### Loud Custom
@@ -210,7 +210,7 @@ The following page buttons are available:
 - **Output C5/C6:** Displays the parameters: **C5/C6 Gain**, **Mute C5/C6**, and **Stereo C**.
 - **Output D7/D8:** Displays the parameters: **D7/D8 Gain**, **Mute D7/D8**, and **Stereo D**.
 - **Output ML/MR:** Displays the parameters: **ML/MR Gain**, **Mute ML/MR**, and **Stereo M**.
-- **Dolby Decoder:** Displays several sections. The Downmix Channel section displays the **Program Select, Output Mode**, etc.The **Decoder Status** section displays the **Bitstream Format, Bitstream Status**, etc. Some general parameters are also displayed: **Detect Mode, PCM Latency, Listening Mode Dolby**, etc.
+- **Dolby Decoder:** Displays several sections. The Downmix Channel section displays the **Program Select, Output Mode**, etc. The **Decoder Status** section displays the **Bitstream Format, Bitstream Status**, etc. Some general parameters are also displayed: **Detect Mode, PCM Latency, Listening Mode Dolby**, etc.
 
 ### Dolby Encode
 
@@ -246,8 +246,8 @@ The Dolby Metadata State section displays amongst others the **Dialogue Norm, Li
 
 The Dolby Ext Prog State section contains the parameters **P1 Status** to **P8 Status**, as well as two page buttons:
 
-- The **Dolby Metadata** page button displays the **RS485 Port Config, SMPTE 2020 Embedder**, etc.The SMPTE 2020 section displays specific parameters such as **O/P Enable** and **Follow I/P Line.**
-- The **Dolby Common Status** subpage has 2 main sections: Channel Assignment(**Dolby A1, Dolby D8**, etc.) and Channel Pair Assignment (**Dolby 1/2, Dolby 3/4**, etc.). There are also some general parameters on this subpage: **Frame Rate**, **F/W Version**, **Device Name**.
+- The **Dolby Metadata** page button displays the **RS485 Port Config, SMPTE 2020 Embedder**, etc. The SMPTE 2020 section displays specific parameters such as **O/P Enable** and **Follow I/P Line.**
+- The **Dolby Common Status** subpage has 2 main sections: Channel Assignment (**Dolby A1, Dolby D8**, etc.) and Channel Pair Assignment (**Dolby 1/2, Dolby 3/4**, etc.). There are also some general parameters on this subpage: **Frame Rate**, **F/W Version**, **Device Name**.
 
 ### RollCall/Memories
 

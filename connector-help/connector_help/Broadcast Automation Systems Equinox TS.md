@@ -52,12 +52,12 @@ The EQKeepAlive function prevents a session timeout. Its frequency to keep the s
 
 This page displays the global settings configured by the administrator.
 
-The "User ID" and "Guid" are the input parameters of the function. The following parameters are returned by this function: **Global Settings ID**, **Logger Monitor Port**, **Webserver IP**, **Webserver** **MMS** **Port**, **Editor** **Server** **IP**, **Editor Server Port**, **SNMP Broadcast IP**, **Mail Server IP**,and **Mail Server Port**.
+The "User ID" and "Guid" are the input parameters of the function. The following parameters are returned by this function: **Global Settings ID**, **Logger Monitor Port**, **Webserver IP**, **Webserver** **MMS** **Port**, **Editor** **Server** **IP**, **Editor Server Port**, **SNMP Broadcast IP**, **Mail Server IP**, and **Mail Server Port**.
 
 ### Channel List
 
 On this page, the **Logger Table** displays the allowed channels for the specified user.
 
-The EQChannelList function belongs to a group of functions used for browsing the channels and their associated media clips. The following columns/parameters are present in the table: **Channel ID**, **Live URL**, **Channel Name**, **Image Name**, **Recorded URL**, **Recorded External URL**, **Network Path**, **Clone Channel Name**, **Logger Number**, **Logger Name**, **Logger IP**, **Port Name**, **Remote ID**, **Port Type,** **Record TS**,and **Port Status**.
+The EQChannelList function belongs to a group of functions used for browsing the channels and their associated media clips. The following columns/parameters are present in the table: **Channel ID**, **Live URL**, **Channel Name**, **Image Name**, **Recorded URL**, **Recorded External URL**, **Network Path**, **Clone Channel Name**, **Logger Number**, **Logger Name**, **Logger IP**, **Port Name**, **Remote ID**, **Port Type,** **Record TS**, and **Port Status**.
 
 The **Port Status** function returns the status of a specified port in a logger (*Port Started* or *Port Stopped*). You can find an extra column called "**Port Control**" in the table, which allows you to start or stop the service of a specified port in a logger. As input, the function accepts the parameters Logger IP, Port Name, Operation and Guid.

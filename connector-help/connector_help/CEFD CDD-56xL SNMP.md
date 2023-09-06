@@ -8,15 +8,18 @@ The CDD-56xL series are integrated IP demodulators that receive two or four inde
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands. To get more detailed information consult this website <http://www.comtechefdata.com/support/docs/satellitemodemdocs>
+This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+To get more detailed information consult this website <http://www.comtechefdata.com/support/docs/satellitemodemdocs>
 
 ### Version Info
 
 | **Range** | **Key Features**                                                                                                    | **Based on** | **System Impact**                                 |
 |-----------|---------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------|
 | 1.0.0.x   | Initial version                                                                                                     | \-           | \-                                                |
-| 1.0.1.x   | 1.0.0.8                                                                                                             |              |                                                   |
+| 1.0.1.x   |                                                                                                                     | 1.0.0.8      |                                                   |
 | 1.0.2.x   | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.1.3      | **Old trend data will be lost for these tables.** |
+
+
 
 ### Product Info
 
@@ -26,6 +29,8 @@ This driver is intended to get/set information from/to the device via an Element
 | 1.0.1.x   | Unknown                |
 | 1.0.2.x   | Unknown                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
@@ -33,6 +38,8 @@ This driver is intended to get/set information from/to the device via an Element
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.2.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Installation and configuration
 
@@ -79,7 +86,7 @@ Use this page to configure Mode, Access, Features, SNMP and Decryption related p
 - SNMP
 
 - **Trap IP Primary / Trap IP Secondary** - Assign the SNMP **Trap IP Primary** and **Trap IP Secondary** addresses.
-  - **Trap Version** - Use the drop-down list to set the **Trap Version** as *SNMPv1*or *SNMPv2*.
+  - **Trap Version** - Use the drop-down list to set the **Trap Version** as *SNMPv1* or *SNMPv2*.
   - **Trap Community String** - Assign the SNMP **Trap Community String**. The Community String may consist of a minimum of 0 to a maximum of 20 alphanumeric characters in length.
 
 - Decryption - *This is accessible only when the 3xDES FAST feature has been purchased and its FAST Access Code has been entered.*
@@ -103,7 +110,7 @@ Use this page on a per-demod basis to configure or review demodulator operating 
 
 - **Rx Monitor** - The following operational statistics are provided on a read-only basis and cannot be changed: **Eb/No**, **Signal Level**, **Frequency Offset**, **BER Multiplier.**
 
-- **Alarm Mask** - Set the **Rx AGC**, **Eb/No**, or **LNB** (when available) Alarm Mask by clicking *Masked*or *Active*.
+- **Alarm Mask** - Set the **Rx AGC**, **Eb/No**, or **LNB** (when available) Alarm Mask by clicking *Masked* or *Active*.
 
 ### Demod - Utilities
 
@@ -215,12 +222,13 @@ Use this page to enter static routes into the IP Module on a *per-demod* basis, 
 
 - Demod as Server - Use this page to facilitate the use of IGMP (Internet Group Management Protocol) with configured multicast routes.
 
-- **Enable IGMP** - Use the toggle-button to select *Enabled*or *Disabled*. If enabled, the IP Module responds to IGMP queries for the configured multicast routes on the transmit side and generates IGMP queries on the receive side.
+- **Enable IGMP** - Use the toggle-button to select *Enabled* or *Disabled*. If enabled, the IP Module responds to IGMP queries for the configured multicast routes on the transmit side and generates IGMP queries on the receive side.
 
-- **IGMP Query Period** - Enter a query period value - from *1*to *600*seconds - into the text box.
-  - **IGMP Maximum Response Time** - Enter a response time value that is *less than the IGMPQuery Period* *minus one*- from *1*to *598*seconds - into the text box.
-  - **Missed Responses Before Leaving IGMP Group** - Enter the number of desired missed responses - from *1*to *30*- into the text box.
-  - **IGMP Table**This *read-only* table lists the IGMP Groups that are active on the demodulator. This includes the **TTL** (Time to Live) for the entry; the **Client State** (Idle, Active, or Closing); and the **SRC** and **Group Entries**.
+- **IGMP Query Period** - Enter a query period value - from *1* to *600* seconds - into the text box.
+  - **IGMP Maximum Response Time** - Enter a response time value that is *less than the IGMPQuery Period* *minus one* ** - from *1* to *598* seconds - into the text box.
+  - **Missed Responses Before Leaving IGMP Group** - Enter the number of desired missed responses - from *1* to *30*  - into the text box.
+  - **IGMP Table**
+    This *read-only* table lists the IGMP Groups that are active on the demodulator. This includes the **TTL** (Time to Live) for the entry; the **Client State** (Idle, Active, or Closing); and the **SRC** and **Group Entries**.
 
 ### Stats - Ethernet
 

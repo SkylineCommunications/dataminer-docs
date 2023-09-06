@@ -28,7 +28,11 @@ The element uses 2 interfaces for a redundant polling: if connection is lost on 
 
 ### CreationThis driver uses a Serial connection and needs the following user information:
 
-**SERIAL CONNECTION:\* Interface connection:** **\* IP address/host:** The polling IP of the device/serial gateway (e.g. *127.0.0.1*) **\* IP port:** The IP port of the device/serial gateway (required, e.g. *7000*) **\* Bus address:** The bus address of the device/serial gateway (required, e.g. *1.1.1, \<Network Address Used For Bridging\>.\<Unit Address\>.\<Port Address\>*)
+**SERIAL CONNECTION:**
+**\* Interface connection:**
+**\* IP address/host:** The polling IP of the device/serial gateway (e.g. *127.0.0.1*)
+**\* IP port:** The IP port of the device/serial gateway (required, e.g. *7000*)
+**\* Bus address:** The bus address of the device/serial gateway (required, e.g. *1.1.1, \<Network Address Used For Bridging\>.\<Unit Address\>.\<Port Address\>*)
 
 ## Usage
 
@@ -40,7 +44,7 @@ On this page, you can find audio parameters such as **O/P 1 Source, O/P 3/4, Dig
 
 Here are displayed the convert parameters: **Input Type, Output Sense, Bias, ...**
 
-The **Free Run...** pagebuttongives the **Flag Delay**, **Reset Type**, ... and the **Video...** pagebutton the following parameters: **Video Aperture, Blur, ...**
+The **Free Run...** pagebutton gives the **Flag Delay**, **Reset Type**, ... and the **Video...** pagebutton the following parameters: **Video Aperture, Blur, ...**
 
 ### Display
 

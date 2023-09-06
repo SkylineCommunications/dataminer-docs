@@ -10,7 +10,8 @@ The DVBMosaic shows multiple services received from multiple transport streams, 
 
 This driver monitors the state of the inputs, channels and PIDs.
 
-For the 1.0.0.x driver range, the driver uses SNMP and DCF integration. For the 3.0.0.x range, the driver uses HTTP, SNMP (for traps only) and DCF integration. The 3.0.0.x range was created because of memory problems with the SNMP agent on the device itself and therefore primarily uses HTTP calls instead of SNMP requests.
+For the 1.0.0.x driver range, the driver uses SNMP and DCF integration. For the 3.0.0.x range, the driver uses HTTP, SNMP (for traps only) and DCF integration.
+The 3.0.0.x range was created because of memory problems with the SNMP agent on the device itself and therefore primarily uses HTTP calls instead of SNMP requests.
 
 ### Ranges of the driver
 
@@ -128,7 +129,8 @@ To facilitate the process of creating alarm templates, the **Input**, **Channel*
 
 Configuring presets in the **Alarm Preset Table** can be done by importing an XML file. To do so:
 
-1.  Select the XML file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update thisdrop-down list if necessary.The driver looks for the XML files in the following directory: *C:\Skyline DataMiner\Documents\DVBControl DVBMosaic\Configurations\\*
+1.  Select the XML file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update this drop-down list if necessary.
+    The driver looks for the XML files in the following directory: *C:\Skyline DataMiner\Documents\DVBControl DVBMosaic\Configurations\\*
 2.  Click the button **Import File**.
 
 You can also add a preset in the table by selecting **Create Preset** in the table's context menu. This way, you can add the presets one by one. To delete a preset, right-click the entry in the table and select **Delete Preset**. The **Remove All** button can be used to delete all the entries from the table at once. To save an alarm preset in an XML file, click the button **Export Alarm Preset**.

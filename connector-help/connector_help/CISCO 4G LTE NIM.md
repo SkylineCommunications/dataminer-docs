@@ -60,19 +60,21 @@ Here you can also find the **Measurement Configuration** and the **DCF Info** pa
 
 The first can be used to enable\disable the display and the calculation of communications KPIs, while the second contains information on the interfaces used by the Dataminer Conectivity Framework.
 
+
+
 ### WAN Configurations
 
 This page contains a two tables with **common information** to all **4G WAN** (**Wide Area Network**) **modules**.
 
 In the **first table**, you will find each **module status information** about the **modem status**, **RSSI** and **Ec/Io** measurements, **current system time** and **cellular capacities**.
 
-The **second table** contains each **module** **settings**, where it is possible to configure the thresholds to send notifications for parameters such as **Modem Temperature**,**RSSI**,**Ec/Io** or **Modem Status**. It's also possible to **reset** or **power cycle** the modules separately.
+The **second table** contains each **module** **settings**, where it is possible to configure the thresholds to send notifications for parameters such as **Modem Temperature**, **RSSI**, **Ec/Io** or **Modem Status**. It's also possible to **reset** or **power cycle** the modules separately.
 
 ### GSM
 
 This page contains information about the **GSM (**Global System for Mobile Communications**) capabilities** on the existing modules. This info is distributed by the following tables:
 
-- **GSM Identity -** In thistable it is possible to check the **IMEI**, **IMSI**, **FSN** and **ICCID** of the each installed module, while also configuring the **Roaming Preference** and **MSISDN**.
+- **GSM Identity -** In this table it is possible to check the **IMEI**, **IMSI**, **FSN** and **ICCID** of the each installed module, while also configuring the **Roaming Preference** and **MSISDN**.
 - **GSM Radio** - This table gives you access to the low level radio parameters such as **Channel Number**, **Nearby Cells**, **GSM Band**, **RSSI** and **Ec/Io**.
 - **GSM Network** - Here you will find information about the **service status**, the associated **GSM network**, **MCC**. **MNC**, **RAC** and **Cell Id**.
 - **Nearby Cells** - This table has the radiation information about the nearby cellular cells.

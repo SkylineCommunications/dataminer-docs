@@ -68,7 +68,7 @@ Once created, the element can be used immediately. Several pages are available.
 
 ### CFM
 
-This page displays the **CFM Service Server Name**, **CFM** **Service Name**, **CFM** **Version**, **CFM** **License Users**, **CFM** **Subscription Expiration**, **CFM** **License Type**, **CFM** **Operating System**and **CFM** **Service Start** **Time**, as well as the numbers for the DOCSIS and SIP.
+This page displays the **CFM Service Server Name**, **CFM** **Service Name**, **CFM** **Version**, **CFM** **License Users**, **CFM** **Subscription Expiration**, **CFM** **License Type**, **CFM** **Operating System** and **CFM** **Service Start** **Time**, as well as the numbers for the DOCSIS and SIP.
 
 ### CFM Proxy
 
@@ -113,7 +113,7 @@ On this page, you can check the IPv6 statistics:
 
 ### MPS
 
-This page contains DPC server information such as **DPC** **Service Server Name, DPC** **Service name, DPC** **Version, DPC** **License Users, DPC** **Subscription Expiration, DPC** **License Type, DPC** **Operating System**andthe **DPC** **Service Start Time**.
+This page contains DPC server information such as **DPC** **Service Server Name, DPC** **Service name, DPC** **Version, DPC** **License Users, DPC** **Subscription Expiration, DPC** **License Type, DPC** **Operating System** and the **DPC** **Service Start Time**.
 
 The page also displays the statistics of the subscriber devices:
 

@@ -17,9 +17,9 @@ This connector uses the serial-over-Ethernet **RCP router protocol** and is desi
 
 ### Product Info
 
-| **Range**      | **Supported Firmware** |
-|----------------|------------------------|
-| 1.0.0.x2.0.0.x | 1.7.4.3                |
+| **Range**       | **Supported Firmware** |
+|-----------------|------------------------|
+| 1.0.0.x 2.0.0.x | 1.7.4.3                |
 
 ### System Info
 
@@ -49,11 +49,15 @@ SERIAL CONNECTION:
 
 Before you create the element in DataMiner, you must configure an RCP client in the Encore system. To do this, you need to know the IP address of the DMA that will be communicating with the Encore controller. Until you configure the DataMiner server (DMA) as an RCP client, the Encore controller will refuse any attempts to connect, and this connector will fail. The Encore controller screen should look like the screenshots below.
 
+![Encore configuration.png](~/connector-help/images/Grass_Valley_Trinix_Encore_configuration.png)
+
+![Encore configuration flags.png](~/connector-help/images/Grass_Valley_Trinix_Encore_configuration_flags.png)
+
 ## Usage
 
 ### General
 
-The **General** page contains basic information about the router and controller, including the **System Name**,the **Software Version** of the router, the **Number of Inputs,** and the **Number of Outputs**.
+The **General** page contains basic information about the router and controller, including the **System Name**, the **Software Version** of the router, the **Number of Inputs,** and the **Number of Outputs**.
 
 **Connection Status** parameters on this page provide an overview of the state of each **IP interface** (Up/Down).
 
@@ -63,7 +67,7 @@ There is also a button that displays the **Set Commands.** This information can 
 
 #### Connection Details
 
-On the left side of this page, you can find the **Connection Status** and **Session ID** that the device gave to DataMiner. Next to that, the **All Destinations Initialized** value indicates if the destinations are already initialized. If they are, repolling the destination names from the device will update the columns of the Destinations Table, but not the Output Labels of the matrix view. If you want to re-initialize these output labels as well, click **Reset Matrix View**.This will reset this flag and will make sure the output labels are again equal to the destination names configured on the device. The same goes for the value **All Sources Initialized**. If you want to enable logging, to have an overview of the flow of the connector in the logging of the element, you can enable the **Detailed** **Logging** button. Check the notes below for more details.
+On the left side of this page, you can find the **Connection Status** and **Session ID** that the device gave to DataMiner. Next to that, the **All Destinations Initialized** value indicates if the destinations are already initialized. If they are, repolling the destination names from the device will update the columns of the Destinations Table, but not the Output Labels of the matrix view. If you want to re-initialize these output labels as well, click **Reset Matrix View**. This will reset this flag and will make sure the output labels are again equal to the destination names configured on the device. The same goes for the value **All Sources Initialized**. If you want to enable logging, to have an overview of the flow of the connector in the logging of the element, you can enable the **Detailed** **Logging** button. Check the notes below for more details.
 
 At the bottom of the page, you can find the **Reset Matrix View** button. When you click this button:
 
@@ -86,7 +90,7 @@ The table has five columns:
 - **Index**: The message ID of the command.
 - **Full Command**: A description of the command.
 - **Time Added**: The date and time when the command was added to the buffer.
-- **Status**: The status of the command, which can be*In Buffer (0), Busy (1), First Retry (2), Second Retry (3), Third Retry (4), Succeeded (5), Failed (6).*
+- **Status**: The status of the command, which can be *In Buffer (0), Busy (1), First Retry (2), Second Retry (3), Third Retry (4), Succeeded (5), Failed (6).*
 - **Status Updated**: The date and time when the status of the command was last updated. If the command was successful, the difference between the Status Updated and Time Updated indicates how long it took to apply and confirm the setting.
 
 ### Matrix
@@ -95,7 +99,7 @@ The **Matrix** page (available in the 1.0.0.x range) contains the full matrix of
 
 ### Sources
 
-The **Sources** page contains the **Sources Table**,which lists all the sources in the Trinix router, with the following columns:
+The **Sources** page contains the **Sources Table**, which lists all the sources in the Trinix router, with the following columns:
 
 1.  **Full Source Index:** A concatenation of the area index, a delimiting colon, and the source index.
 2.  **Area Index:** The index of the area to which the source belongs.

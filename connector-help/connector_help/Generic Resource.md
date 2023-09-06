@@ -27,7 +27,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### General
 
-This page displays the **Alarm Table** and the **Alarm State** (without the timeout state)together with the **Overall Alarm State** (with the timeout state).
+This page displays the **Alarm Table** and the **Alarm State** (without the timeout state) together with the **Overall Alarm State** (with the timeout state).
 
 The **DCF Interfaces** toggle button, which is disabled by default, can be enabled to allow access to the Interfaces page.
 

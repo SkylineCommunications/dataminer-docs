@@ -12,10 +12,10 @@ This driver uses **SNMP** to monitor the **Verimatrix** **Video PreProcessor** d
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|---------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                         | No                  | Yes                     |
-| 1.1.0.x          | Based on 1.0.0.1Added support for firmware version 4.1. | No                  | Yes                     |
+| **Driver Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                          | No                  | Yes                     |
+| 1.1.0.x          | Based on 1.0.0.1 Added support for firmware version 4.1. | No                  | Yes                     |
 
 ### Supported firmware versions
 

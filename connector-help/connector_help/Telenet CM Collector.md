@@ -52,7 +52,7 @@ Other threshold parameters are used to determine whether or not to offload a val
 
 ### Configuration of the home gateway parameters
 
-**Homestatistics Polling** enables the polling of the home gateway statistics. These statistics are polled once per day per modem. The client stats are polled between 7 p.m. and 9 p.m. in order to get the stats during the internet peak. With the parameter **Poll Clientstats 15 Min**,this polling interval can be changed, so that the client stats are then polled every 15 minutes. Polling of other statistics (channel loading, connected clients, client errors, connected power line, lan user, powerline network) is always spread over the entire day.
+**Homestatistics Polling** enables the polling of the home gateway statistics. These statistics are polled once per day per modem. The client stats are polled between 7 p.m. and 9 p.m. in order to get the stats during the internet peak. With the parameter **Poll Clientstats 15 Min**, this polling interval can be changed, so that the client stats are then polled every 15 minutes. Polling of other statistics (channel loading, connected clients, client errors, connected power line, lan user, powerline network) is always spread over the entire day.
 
 ### Configuration of the Adlex Nouveau parameters
 
@@ -79,48 +79,168 @@ The CM Collector will generate tab-separated CSV files. For more information on 
 
 ### Slow offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID 3. Another Operator4. Node5. Timestamp6. Chassis7. HardwareVersion 1.3.6.1.2.1.1.1.08. ModelType 1.3.6.1.2.1.1.1.09. HardwareClass 1.3.6.1.2.1.1.1.010. DocsisType 1.3.6.1.2.1.10.127.1.1.5.011. SW Version 1.3.6.1.2.1.69.1.3.5.012. Last Change Datetime Calculated out of itf last change 1.3.6.1.2.1.2.2.1.9.1 and System Uptime 1.3.6.1.2.1.1.3.013. System Uptime 1.3.6.1.2.1.1.3.014. Downstream Maxtrafficrate 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 2.0 from CMTS 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 3.0 1.3.6.1.4.1.4491.2.1.21.1.2.1.615. Upstream MaxTrafficrate 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 2.0 from CMTS 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 3.0 1.3.6.1.4.1.4491.2.1.21.1.2.1.616. Physical Address \[Media\] 1.3.6.1.2.1.4.22.1.217. System Contact 1.3.6.1.2.1.1.4.018. Homegateway RouterMAC 1.3.6.1.2.1.2.2.1.6.1 (Motorola 2.0) or 1.3.6.1.2.1.2.2.1.6.20 (Motorola 3.0) or 1.3.6.1.2.1.2.2.1.6.20 (CBN 3.0) or 1.3.6.1.2.1.2.2.1.6.20 (UBEE 3.0)19. Homegateway ChannelNumber 1.3.6.1.4.1.1166.1.19.51.1.5.1.2.0 (Motorola 2.0) or 1.3.6.1.4.1.1166.1.19.51.1.5.1.2.0 (Motorola 3.0) or 1.3.6.1.4.1.35604.1.19.51.1.5.1.2.0 (CBN 3.0) or 1.3.6.1.4.1.4684.54.1.1.4.1.32.1 (UBEE 3.0)20. Homegateway ChannelWidth 1.3.6.1.4.1.1166.1.19.51.1.5.1.19.0 (Motorola 2.0) or 1.3.6.1.4.1.1166.1.19.51.1.5.1.19.0 (Motorola 3.0) or 1.3.6.1.4.1.35604.1.19.51.1.5.1.19.0 (CBN 3.0) or 1.3.6.1.4.1.4684.54.1.1.4.1.7.1 (UBEE 3.0)21. DynamicOID122. DynamicOID223. DynamicOID3
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Chassis
+7. HardwareVersion 1.3.6.1.2.1.1.1.0
+8. ModelType 1.3.6.1.2.1.1.1.0
+9. HardwareClass 1.3.6.1.2.1.1.1.0
+10. DocsisType 1.3.6.1.2.1.10.127.1.1.5.0
+11. SW Version 1.3.6.1.2.1.69.1.3.5.0
+12. Last Change Datetime Calculated out of itf last change 1.3.6.1.2.1.2.2.1.9.1 and System Uptime 1.3.6.1.2.1.1.3.0
+13. System Uptime 1.3.6.1.2.1.1.3.0
+14. Downstream Maxtrafficrate 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 2.0 from CMTS 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 3.0 1.3.6.1.4.1.4491.2.1.21.1.2.1.6
+15. Upstream MaxTrafficrate 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 2.0 from CMTS 1.3.6.1.2.1.10.127.7.1.2.2.6, Docsis 3.0 1.3.6.1.4.1.4491.2.1.21.1.2.1.6
+16. Physical Address \[Media\] 1.3.6.1.2.1.4.22.1.2
+17. System Contact 1.3.6.1.2.1.1.4.0
+18. Homegateway RouterMAC 1.3.6.1.2.1.2.2.1.6.1 (Motorola 2.0) or 1.3.6.1.2.1.2.2.1.6.20 (Motorola 3.0) or 1.3.6.1.2.1.2.2.1.6.20 (CBN 3.0) or 1.3.6.1.2.1.2.2.1.6.20 (UBEE 3.0)
+19. Homegateway ChannelNumber 1.3.6.1.4.1.1166.1.19.51.1.5.1.2.0 (Motorola 2.0) or 1.3.6.1.4.1.1166.1.19.51.1.5.1.2.0 (Motorola 3.0) or 1.3.6.1.4.1.35604.1.19.51.1.5.1.2.0 (CBN 3.0) or 1.3.6.1.4.1.4684.54.1.1.4.1.32.1 (UBEE 3.0)
+20. Homegateway ChannelWidth 1.3.6.1.4.1.1166.1.19.51.1.5.1.19.0 (Motorola 2.0) or 1.3.6.1.4.1.1166.1.19.51.1.5.1.19.0 (Motorola 3.0) or 1.3.6.1.4.1.35604.1.19.51.1.5.1.19.0 (CBN 3.0) or 1.3.6.1.4.1.4684.54.1.1.4.1.7.1 (UBEE 3.0)
+21. DynamicOID1
+22. DynamicOID2
+23. DynamicOID3
 
 ### Fast offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. Chassis7. DynamicOID18. DynamicOID29. DynamicOID3
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Chassis
+7. DynamicOID1
+8. DynamicOID2
+9. DynamicOID3
 
 ### Fast DS tuner offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. Chassis7. Tuner ID Instance of 1.3.6.1.2.1.10.127.1.1.1.18. DS Frequency 1.3.6.1.2.1.10.127.1.1.1.1.29. DS SNR 1.3.6.1.2.1.10.127.1.1.4.1.510. DS Rx Power 1.3.6.1.2.1.10.127.1.1.1.1.611. DS Microreflections 1.3.6.1.2.1.10.127.1.1.4.1.612. Modulation Type 1.3.6.1.2.1.10.127.1.1.1.1.413. CR Calculated out of Unerroreds 1.3.6.1.2.1.10.127.1.1.4.1.2, Correcteds 1.3.6.1.2.1.10.127.1.1.4.1.3, Uncorrectables 1.3.6.1.2.1.10.127.1.1.4.1.414. UR Calculated out of Unerroreds 1.3.6.1.2.1.10.127.1.1.4.1.2, Correcteds 1.3.6.1.2.1.10.127.1.1.4.1.3, Uncorrectables 1.3.6.1.2.1.10.127.1.1.4.1.415. DS Main Frequency 1.3.6.1.4.1.4491.2.1.20.1.9.1.3
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Chassis
+7. Tuner ID Instance of 1.3.6.1.2.1.10.127.1.1.1.1
+8. DS Frequency 1.3.6.1.2.1.10.127.1.1.1.1.2
+9. DS SNR 1.3.6.1.2.1.10.127.1.1.4.1.5
+10. DS Rx Power 1.3.6.1.2.1.10.127.1.1.1.1.6
+11. DS Microreflections 1.3.6.1.2.1.10.127.1.1.4.1.6
+12. Modulation Type 1.3.6.1.2.1.10.127.1.1.1.1.4
+13. CR Calculated out of Unerroreds 1.3.6.1.2.1.10.127.1.1.4.1.2, Correcteds 1.3.6.1.2.1.10.127.1.1.4.1.3, Uncorrectables 1.3.6.1.2.1.10.127.1.1.4.1.4
+14. UR Calculated out of Unerroreds 1.3.6.1.2.1.10.127.1.1.4.1.2, Correcteds 1.3.6.1.2.1.10.127.1.1.4.1.3, Uncorrectables 1.3.6.1.2.1.10.127.1.1.4.1.4
+15. DS Main Frequency 1.3.6.1.4.1.4491.2.1.20.1.9.1.3
 
 ### Fast US tuner offload structure
 
-1\. MAC Address 1.3.6.1.2.1.2.2.1.6.22. SAPID3. Another Operator4. Node5. Timestamp6. Chassis7. Tuner ID 1.3.6.1.2.1.10.127.1.1.2.1.18. US Frequency 1.3.6.1.2.1.10.127.1.1.2.1.29. US Channel Width 1.3.6.1.2.1.10.127.1.1.2.1.310. US Channel Modulation 1.3.6.1.2.1.10.127.1.1.2.1.1511. US Tx 1.3.6.1.4.1.4491.2.1.20.1.2.1.1 or 1.3.6.1.2.1.10.127.1.2.2.1.3.2 (Docsis 2.0)12. US SNR Polled from CMTS 1.3.6.1.4.1.4491.2.1.20.1.4.1.413. CR Polled from CMTS, calculated out of Unerroreds 1.3.6.1.4.1.4491.2.1.20.1.4.1.7, Correcteds 1.3.6.1.4.1.4491.2.1.20.1.4.1.8, Uncorrectables 1.3.6.1.4.1.4491.2.1.20.1.4.1.914. UR Polled from CMTS, calculated out of Unerroreds 1.3.6.1.4.1.4491.2.1.20.1.4.1.7, Correcteds 1.3.6.1.4.1.4491.2.1.20.1.4.1.8, Uncorrectables 1.3.6.1.4.1.4491.2.1.20.1.4.1.915. CS Calculated out of Status Resets 1.3.6.1.4.1.4491.2.1.20.1.1.1.3, Lost Syncs 1.3.6.1.4.1.4491.2.1.20.1.1.1.4, T1 timeouts 1.3.6.1.4.1.4491.2.1.20.1.1.1.9, T2 timeouts 1.3.6.1.4.1.4491.2.1.20.1.1.1.10, T3 timeouts 1.3.6.1.4.1.4491.2.1.20.1.2.1.2, T4 timeouts 1.3.6.1.4.1.4491.2.1.20.1.2.1.3, Rangings aborted 1.3.6.1.4.1.4491.2.1.20.1.2.1.4
+1\. MAC Address 1.3.6.1.2.1.2.2.1.6.2
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Chassis
+7. Tuner ID 1.3.6.1.2.1.10.127.1.1.2.1.1
+8. US Frequency 1.3.6.1.2.1.10.127.1.1.2.1.2
+9. US Channel Width 1.3.6.1.2.1.10.127.1.1.2.1.3
+10. US Channel Modulation 1.3.6.1.2.1.10.127.1.1.2.1.15
+11. US Tx 1.3.6.1.4.1.4491.2.1.20.1.2.1.1 or 1.3.6.1.2.1.10.127.1.2.2.1.3.2 (Docsis 2.0)
+12. US SNR Polled from CMTS 1.3.6.1.4.1.4491.2.1.20.1.4.1.4
+13. CR Polled from CMTS, calculated out of Unerroreds 1.3.6.1.4.1.4491.2.1.20.1.4.1.7, Correcteds 1.3.6.1.4.1.4491.2.1.20.1.4.1.8, Uncorrectables 1.3.6.1.4.1.4491.2.1.20.1.4.1.9
+14. UR Polled from CMTS, calculated out of Unerroreds 1.3.6.1.4.1.4491.2.1.20.1.4.1.7, Correcteds 1.3.6.1.4.1.4491.2.1.20.1.4.1.8, Uncorrectables 1.3.6.1.4.1.4491.2.1.20.1.4.1.9
+15. CS Calculated out of Status Resets 1.3.6.1.4.1.4491.2.1.20.1.1.1.3, Lost Syncs 1.3.6.1.4.1.4491.2.1.20.1.1.1.4, T1 timeouts 1.3.6.1.4.1.4491.2.1.20.1.1.1.9, T2 timeouts 1.3.6.1.4.1.4491.2.1.20.1.1.1.10, T3 timeouts 1.3.6.1.4.1.4491.2.1.20.1.2.1.2, T4 timeouts 1.3.6.1.4.1.4491.2.1.20.1.2.1.3, Rangings aborted 1.3.6.1.4.1.4491.2.1.20.1.2.1.4
 
 ### IVR offload structure
 
-1\. MAC Address2. State3. Timestamp4. SAPID5. Another Operator
+1\. MAC Address
+2. State
+3. Timestamp
+4. SAPID
+5. Another Operator
 
 ### Clientstats offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM 4. 2.4 G or 5 G5. BSS6. MAC Address Client 1.3.6.1.4.1.35604.1.19.51.5.1.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.2 (5G) 7. RSSI 1.3.6.1.4.1.35604.1.19.51.5.1.1.5 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.5 (5G) 8. Tx 1.3.6.1.4.1.35604.1.19.51.5.1.1.6 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.6 (5G) 9. Rx 1.3.6.1.4.1.35604.1.19.51.5.1.1.7 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.7 (5G) 10. Mode 1.3.6.1.4.1.35604.1.19.51.5.1.1.8 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.8 (5G) 11. Authentication 1.3.6.1.4.1.35604.1.19.51.5.1.1.9 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.9 (5G) 12. Encryption 1.3.6.1.4.1.35604.1.19.51.5.1.1.10 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.10 (5G) 13. Another Operator
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. 2.4 G or 5 G
+5. BSS
+6. MAC Address Client 1.3.6.1.4.1.35604.1.19.51.5.1.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.2 (5G)
+7. RSSI 1.3.6.1.4.1.35604.1.19.51.5.1.1.5 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.5 (5G)
+8. Tx 1.3.6.1.4.1.35604.1.19.51.5.1.1.6 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.6 (5G)
+9. Rx 1.3.6.1.4.1.35604.1.19.51.5.1.1.7 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.7 (5G)
+10. Mode 1.3.6.1.4.1.35604.1.19.51.5.1.1.8 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.8 (5G)
+11. Authentication 1.3.6.1.4.1.35604.1.19.51.5.1.1.9 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.9 (5G)
+12. Encryption 1.3.6.1.4.1.35604.1.19.51.5.1.1.10 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.2.1.10 (5G)
+13. Another Operator
 
 ### Channeloading offload structure
 
-1\. SAPID2. Timestamp3. Mac Address CM 4. 2.4 G or 5 G5. Channel Nr6. Channel Loading 1.3.6.1.4.1.35604.1.19.51.1.7.1.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.3.3.1.1.2 (5G) 7. Channel AP Count 1.3.6.1.4.1.35604.1.19.51.1.7.1.1.3 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.3.3.1.1.3 (5G) 8. Another Operator
+1\. SAPID
+2. Timestamp
+3. Mac Address CM
+4. 2.4 G or 5 G
+5. Channel Nr
+6. Channel Loading 1.3.6.1.4.1.35604.1.19.51.1.7.1.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.3.3.1.1.2 (5G)
+7. Channel AP Count 1.3.6.1.4.1.35604.1.19.51.1.7.1.1.3 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.3.3.1.1.3 (5G)
+8. Another Operator
 
 ### Connectedclients offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM 4. 2.4 G or 5 G5. BSS6. Time Interval 1.3.6.1.4.1.35604.1.19.51.5.3.1.3 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.3 (5G) 7. Connected Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.4 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.4 (5G) 8. Max Simultaneous Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.5 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.5 (5G) 9. Max Simul Clients Timestamp 1.3.6.1.4.1.35604.1.19.51.5.3.1.6 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.6 (5G) 10. Rejected Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.7 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.7 (5G) 11. Another Operator
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. 2.4 G or 5 G
+5. BSS
+6. Time Interval 1.3.6.1.4.1.35604.1.19.51.5.3.1.3 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.3 (5G)
+7. Connected Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.4 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.4 (5G)
+8. Max Simultaneous Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.5 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.5 (5G)
+9. Max Simul Clients Timestamp 1.3.6.1.4.1.35604.1.19.51.5.3.1.6 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.6 (5G)
+10. Rejected Clients 1.3.6.1.4.1.35604.1.19.51.5.3.1.7 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.4.1.7 (5G)
+11. Another Operator
 
 ### Clienterrors offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM 4. 2.4 G or 5 G5. BSS6. Error Type 7. Rejected Clients 1.3.6.1.4.1.35604.1.19.51.5.5.2.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.6.2.1.2 (5G) 8. Another Operator
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. 2.4 G or 5 G
+5. BSS
+6. Error Type
+7. Rejected Clients 1.3.6.1.4.1.35604.1.19.51.5.5.2.1.2 (2,4G) or 1.3.6.1.4.1.35604.1.19.51.5.6.2.1.2 (5G)
+8. Another Operator
 
 ### Connectedpowerline offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM4. MAC Address Powerline 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.2 5. Location 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.3 6. Vendor 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.4 7. Firmware 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.5 8. Chipset 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.6 9. Tx 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.10 10. Rx 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.11 11. Another Operator 12.n CPE Client 1.n Mac 1.3.6.1.4.1.35604.1.19.62.1.1.7.1.2
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. MAC Address Powerline 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.2
+5. Location 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.3
+6. Vendor 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.4
+7. Firmware 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.5
+8. Chipset 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.6
+9. Tx 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.10
+10. Rx 1.3.6.1.4.1.35604.1.19.62.1.1.6.1.11
+11. Another Operator
+12.n CPE Client 1.n Mac 1.3.6.1.4.1.35604.1.19.62.1.1.7.1.2
 
 ### Lanuser offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM4. MAC Address LAN 1.3.6.1.4.1.35604.1.19.201.1.1.1.3 5. LAN Interface 1.3.6.1.4.1.35604.1.19.201.1.1.1.4 6. Another Operator
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. MAC Address LAN 1.3.6.1.4.1.35604.1.19.201.1.1.1.3
+5. LAN Interface 1.3.6.1.4.1.35604.1.19.201.1.1.1.4
+6. Another Operator
 
 ### Powerlinenetwork offload structure
 
-1\. SAPID2. Timestamp3. MAC Address CM4. Polling Interval 1.3.6.1.4.1.35604.1.19.62.1.1.2.0 5. HPAV Network 1.3.6.1.4.1.35604.1.19.62.1.1.4.0 6. HPAV CCO 1.3.6.1.4.1.35604.1.19.62.1.1.5.0 7. Another Operator
+1\. SAPID
+2. Timestamp
+3. MAC Address CM
+4. Polling Interval 1.3.6.1.4.1.35604.1.19.62.1.1.2.0
+5. HPAV Network 1.3.6.1.4.1.35604.1.19.62.1.1.4.0
+6. HPAV CCO 1.3.6.1.4.1.35604.1.19.62.1.1.5.0
+7. Another Operator

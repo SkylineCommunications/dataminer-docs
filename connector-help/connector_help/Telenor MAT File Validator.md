@@ -26,7 +26,8 @@ This driver uses a **virtual** connection and does not require any input during 
 
 However, you should follow the steps below to install the driver:
 
-- Download and install **Scilab** (32-bit version) from http://www.scilab.org/. Note: the 64-bit version will not function properly with this driver.
+- Download and install **Scilab** (32-bit version) from http://www.scilab.org/.
+  Note: the 64-bit version will not function properly with this driver.
 - On every server of the cluster, add the **DotNet-Component-Scilab.dll** to the folder *C:\Skyline DataMiner\ProtocolScripts*.
 - Create a new element and select the correct driver and version.
 

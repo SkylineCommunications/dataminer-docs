@@ -4,15 +4,16 @@ uid: Connector_help_Javit_Alarm_Monitoring
 
 # Javit Alarm Monitoring
 
-The Javit Alarm Monitoring system collects sound alarms from various monitoring computers and forwards the alarms as SNMP traps to a central monitoring application.The Javit Alarm Monitoring driver displays a list of all monitoring computers with their current alarm status and delay times.
+The Javit Alarm Monitoring system collects sound alarms from various monitoring computers and forwards the alarms as SNMP traps to a central monitoring application.
+The Javit Alarm Monitoring driver displays a list of all monitoring computers with their current alarm status and delay times.
 
 ## About
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 

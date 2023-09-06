@@ -57,7 +57,7 @@ There is no redundancy defined.
 
 ## How to use
 
-This connector can be used to do measurements on several mobile network technologies. Each technology has its own page in the element: **GSM**, **UMTS**, **LTE**,and **5G**.
+This connector can be used to do measurements on several mobile network technologies. Each technology has its own page in the element: **GSM**, **UMTS**, **LTE**, and **5G**.
 
 The table at the top of every page is used to configure the frequencies that should be measured. You can add or remove frequencies using the right-click menu. Some technologies require additional parameters such as **Duplex Mode** and **SCS**. The **Band** and **Channel Number** columns can be filled in with any numbers of your choice. Their values will be reported as part of the measurement results to make it possible to link them with the configuration.
 

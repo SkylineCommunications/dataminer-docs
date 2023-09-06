@@ -32,6 +32,8 @@ This SNMP connector is used to monitor the transmitter parameters with trap func
 
 ### Connections
 
+
+
 #### SNMP Connection
 
 This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
@@ -46,6 +48,7 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device Default value if not overridden in the connector is *public.*
 - **Set community string**: The community string used when setting values on the device. Default value if not overridden in the connector: *private.*
 
+
 ### Web Interface
 
 Web interface can be accessed using the same IP as the SNMP address. It is only accessible when the client machine has network access to the device.
@@ -56,7 +59,7 @@ Web interface can be accessed using the same IP as the SNMP address. It is only 
 
 On the **General** page of this connector, you can find the system information, product information and transmitter configuration. This page has two subpages. namely SNMP and SNMP Trap Config.
 
-\- The *SNMP* sub pagecontains basic information about the SNMP In and Out parameters.
+\- The *SNMP* sub page contains basic information about the SNMP In and Out parameters.
 
 > \- The *SNMP Trap Config* subpage contains the trap configuration info as well as a Trap Sink table which makes the remote configuration of the trap sinks easier.
 >
@@ -82,4 +85,4 @@ On the **General** page of this connector, you can find the system information, 
 >
 > \- The *Events* subpage contains all the configurable parameters for the DVB Receiver/Monitor modules and the product information about the module that are necessary when contacting Rohde and Schwarz services.
 >
-> \- The *Controls*subpage contains all the control parameters of the DVB Single Transmitter.
+> \- The *Controls* subpage contains all the control parameters of the DVB Single Transmitter.

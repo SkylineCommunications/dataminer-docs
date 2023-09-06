@@ -43,7 +43,7 @@ The **System** page displays the following tables:
 
 When a Correlation rule is triggered, the **Trigger** column in the **Correlation Rules** table will be set to *Active* for that rule. All the modems linked to that Correlation rule will have their entry in the **Trigger** column set to *Active*, and all the stations managing those modems will also have their entry in the **Trigger** column set to *Active*.
 
-In the **Stations** table, the **State column** can be *Active* or *Not Active* for a specific station.When a station is active, the corresponding spectrum preset will be applied to the spectrum analyzer.
+In the **Stations** table, the **State column** can be *Active* or *Not Active* for a specific station. When a station is active, the corresponding spectrum preset will be applied to the spectrum analyzer.
 
 At most one station can be active at any time. The **Auto Control** and **Round Robin** parameters on the **General** page are used to decide which station is active. The decision procedure works as follows:
 

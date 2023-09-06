@@ -67,7 +67,7 @@ This page contains detailed information concerning streams, including **Statisti
 
 ### Video
 
-This page displays tables containing video information about **Inputs, Outputs**,and **Decoders**.
+This page displays tables containing video information about **Inputs, Outputs**, and **Decoders**.
 
 ### Audio
 

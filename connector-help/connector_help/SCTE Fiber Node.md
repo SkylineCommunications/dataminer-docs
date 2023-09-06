@@ -20,7 +20,7 @@ This is an **SNMP**-based driver for the SCTE Fiber Node device.
 
 | **Device Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.0.x          | 1\. B2. B13. CC             |
+| 1.0.0.x          | 1\. B 2. B1 3. CC           |
 
 ## Installation and configuration
 

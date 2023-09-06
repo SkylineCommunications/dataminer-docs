@@ -52,7 +52,7 @@ This page contains basic information about the unit, as well as its **operationa
 
 ### Unit Configuration
 
-This page allows the configuration of several working parameters of the air conditioning unit, which include its **date/time**, **air filters**, **cooling capabilities**, **power**, **temperature thresholds**,**traps** and **boot configurations**.
+This page allows the configuration of several working parameters of the air conditioning unit, which include its **date/time**, **air filters**, **cooling capabilities**, **power**, **temperature thresholds**, **traps** and **boot configurations**.
 
 ### Alarms
 

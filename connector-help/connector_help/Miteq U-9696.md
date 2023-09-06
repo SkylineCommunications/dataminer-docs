@@ -24,6 +24,7 @@ SERIAL CONNECTION:
 
 ### General
 
-The General page contains the **Frequency, Attenuation** and **indicators** for **Mute or Local/Remote** operationThe page also contains two Page Buttons: **List Channels** and **Status Alarms.**
+The General page contains the **Frequency, Attenuation** and **indicators** for **Mute or Local/Remote** operation
+The page also contains two Page Buttons: **List Channels** and **Status Alarms.**
 
 **List Channels** allows a user to view and **edit all the Channels** presently configured on the U-9696. The alarms page shows the current alarms in the device.

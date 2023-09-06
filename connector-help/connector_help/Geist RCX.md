@@ -4,11 +4,11 @@ uid: Connector_help_Geist_RCX
 
 # Geist RCX
 
-The **Geist RCX** driverwas designed to monitor Geist's Power Monitoring (RCX) PDUs . These PDUs are rack-level units with circuit monitoring via a built-in web server, providing a comprehensive remote view on the power utilization of the installation. In addition to monitoring amps, volts, real power, apparent power, power factor and kWatt-hours, these units provide jacks for optional environmental monitoring.
+The **Geist RCX** driver was designed to monitor Geist's Power Monitoring (RCX) PDUs . These PDUs are rack-level units with circuit monitoring via a built-in web server, providing a comprehensive remote view on the power utilization of the installation. In addition to monitoring amps, volts, real power, apparent power, power factor and kWatt-hours, these units provide jacks for optional environmental monitoring.
 
 ## About
 
-This driver uses**SNMP**to retrieve data from the device, making it possible to fully monitor the PDUs.
+This driver uses **SNMP** to retrieve data from the device, making it possible to fully monitor the PDUs.
 
 ### Ranges of the driver
 
@@ -53,7 +53,7 @@ Additional info, such as the number of sensors of each type, can be accessed via
 
 This page contains information provided by airflow sensors. This information is displayed in a table called **Air Flow Sensor Table**.
 
-It also displays a toggle button at the top of the page called **Polling Airflow Table**, which can be usedto enable and disable the polling of this specific table.
+It also displays a toggle button at the top of the page called **Polling Airflow Table**, which can be used to enable and disable the polling of this specific table.
 
 ### Smoke Alarm Page
 

@@ -12,12 +12,12 @@ An **SNMP** connection is used to communicate with the system.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                  | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                  | \-           | \-                |
-| 1.0.1.x \[Obsolete\] | Initial version.                                                  | \-           | \-                |
-| 1.1.0.x              | Main version for 2.xx and 3.xx firmware versions.                 | \-           | \-                |
-| 1.2.0.x              | Main version for 1.xx firmware version.This version is read-only. | \-           | \-                |
+| **Range**            | **Key Features**                                                   | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                   | \-           | \-                |
+| 1.0.1.x \[Obsolete\] | Initial version.                                                   | \-           | \-                |
+| 1.1.0.x              | Main version for 2.xx and 3.xx firmware versions.                  | \-           | \-                |
+| 1.2.0.x              | Main version for 1.xx firmware version. This version is read-only. | \-           | \-                |
 
 ### Product Info
 
@@ -71,7 +71,7 @@ The **Modem** page button displays more information on the modem, including its 
 
 ### Satellite
 
-This page contains information about the satellite, including its current **threshold** value, **lock** and **transmit mute** setting, the current **search delay**, **azimuth**, **elevation**,and **cross level**. It also lists any **errors** reported by the satellite as well as its **serial number**.
+This page contains information about the satellite, including its current **threshold** value, **lock** and **transmit mute** setting, the current **search delay**, **azimuth**, **elevation**, and **cross level**. It also lists any **errors** reported by the satellite as well as its **serial number**.
 
 A number of settings can also be configured here, including the satellite's **longitude**, **frequency**, **skew**, **band**, **transmit polarity**, **search pattern**, **reflector**, **LNB** setting, **threshold auto offset** value, and **transmit mute** setting, as well as the **favorite satellite**.
 
@@ -89,4 +89,4 @@ Blocking zones can be preconfigured via a page button.
 
 ### Export GPS Trace
 
-On this page, you can enable or disable the **GPS data export feature** (storing GPS location in database)and configure the corresponding settings.
+On this page, you can enable or disable the **GPS data export feature** (storing GPS location in database) and configure the corresponding settings.

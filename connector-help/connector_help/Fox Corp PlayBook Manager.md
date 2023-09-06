@@ -59,7 +59,7 @@ HTTP CONNECTION:
 When you have created the element:
 
 - Configure the authentication parameters on the **Authentication** page. The authentication uses OAuth 2.0. You will need to specify the **URL**, **Client ID**, and **Client Secret**.
-- On the **General** page, configure the **Listen Token**, **Integration Script**, **Health Check URL**,and **Update Booking URL** parameters (see "How to Use" section below).
+- On the **General** page, configure the **Listen Token**, **Integration Script**, **Health Check URL**, and **Update Booking URL** parameters (see "How to Use" section below).
 
 ## How to Use
 

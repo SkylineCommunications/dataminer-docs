@@ -95,11 +95,30 @@ Now you can create a new DiscoveryRequest object.
 
 The code below can be used to start a discovery request. A list of **IP ranges** must be specified. They are processed in top-down manner. When you include a range, IP addresses will be added to the internal list; when you exclude a range, the IP addresses are removed from the internal list. The resulting set of IP addresses will be used to discover the devices. The **DMA and element ID** of the source element must also be specified. These will be used together with the *ResponsePid* to send back the result of the discovery. **DiscoveryTypes** must contain all the methods that must be used for the discovery.
 
-DiscoveryRequest request = new DiscoveryRequest();request.Source = new Source() { DmaId = protocol.DataMinerID, ElementId = protocol.ElementID };request.ResponsePid = 50;request.RequestId = requestKey;request.DiscoveryTypes = new string\[\] { "PING", "SNMP", "WMI" };
+DiscoveryRequest request = new DiscoveryRequest();
+request.Source = new Source() { DmaId = protocol.DataMinerID, ElementId = protocol.ElementID };
+request.ResponsePid = 50;
+request.RequestId = requestKey;
+request.DiscoveryTypes = new string\[\] { "PING", "SNMP", "WMI" };
 
 List\<IPRange\> ipranges = new List\<IPRange\>();
 
-foreach (var seed in GetSeeds(protocol).OrderBy(s =\> s.Order)){ switch (seed.Type) { case 1: // network ipranges.Add(new IPRange() { Type = IPRangeType.network, Network = seed.Network, Mask = seed.Mask }); break; case 2: // single ip ipranges.Add(new IPRange() { Type = IPRangeType.singleip , IP = seed.Network }); break; case 3: // ip range string\[\] range = seed.IPRange.Split('-'); ipranges.Add(new IPRange() { Type = IPRangeType.range, StartIP = range.First(), EndIP = range.Last() }); break; }}
+foreach (var seed in GetSeeds(protocol).OrderBy(s =\> s.Order))
+{
+switch (seed.Type)
+{
+case 1: // network
+ipranges.Add(new IPRange() { Type = IPRangeType.network, Network = seed.Network, Mask = seed.Mask });
+break;
+case 2: // single ip
+ipranges.Add(new IPRange() { Type = IPRangeType.singleip , IP = seed.Network });
+break;
+case 3: // ip range
+string\[\] range = seed.IPRange.Split('-');
+ipranges.Add(new IPRange() { Type = IPRangeType.range, StartIP = range.First(), EndIP = range.Last() });
+break;
+}
+}
 
 request.IPRanges = ipranges.ToArray();
 
@@ -109,13 +128,15 @@ SLIPNetworkDiscovery.SendRequest(protocol, 1, 2, request);
 
 ### Loading credentials and default global discovery settings
 
-On the **Configuration** page, you can specify a CSV file to load a list of credentials and add default global discovery settings. The CSV file needs to contain 3 columns: Name, Username, and Password. If username is not applicable, use the value -1.For example, SNMP Community strings: *snmp_slc;-1;envivio*
+On the **Configuration** page, you can specify a CSV file to load a list of credentials and add default global discovery settings. The CSV file needs to contain 3 columns: Name, Username, and Password. If username is not applicable, use the value -1.
+For example, SNMP Community strings: *snmp_slc;-1;envivio*
 
 The default path is "C:\Skyline DataMiner\Documents\DMA_COMMON_DOCUMENTS\Skyline IP Network Discovery.csv".
 
 ### Canceling a Discovery Request
 
-CancelRequest request = new CancelRequest();request.Source = new Source() { DmaId = protocol.DataMinerID, ElementId = protocol.ElementID };
+CancelRequest request = new CancelRequest();
+request.Source = new Source() { DmaId = protocol.DataMinerID, ElementId = protocol.ElementID };
 
 The source element and request ID must be specified.
 
@@ -129,4 +150,5 @@ To capture the response, add a QAction that triggers on that parameter.
 
 You can use the following function to parse the data into an object:
 
-string data = Convert.ToString(protocol.GetParameter(10));var response = SLIPNetworkDiscovery.SLIPNetworkDiscovery.ParseResponse(data);
+string data = Convert.ToString(protocol.GetParameter(10));
+var response = SLIPNetworkDiscovery.SLIPNetworkDiscovery.ParseResponse(data);

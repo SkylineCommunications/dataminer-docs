@@ -51,7 +51,11 @@ On the **Dataminer Agent** in the cluster that you've chosen for the communicati
     - **SNMP Version**: Select the *Inform messages* option. By selecting this option, you also need to specify the following settings:
 
     - - **Resend:** The period of time DataMiner will wait for an acknowledgement after sending an Inform.
-      - **Resend max:** The maximum number of times DataMiner will send the same inform if it doesn't receive an acknowledgement. After a DMA has tried to send an Inform message for the specified maximum number of times, a timeout will occur, which will subsequently force the DMA to switch to a so-called 'ping mode'. As soon as the DMA receives its first acknowledgement from the SNMP manager, it will stop sending ping messages and send an Inform message for every active alarm in the DMS. Once that is done, it will resume 'normal mode'. In other words, every time it receives a new alarm, it will send an Inform message to the SNMP manager. Note: A so-called ping message is an alarm with parameter ID 64622 containing the value "PING".**Note:** Select the *Send in chronological order* option if you want the inform messages to be sent in chronological order. If you select this option, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.
+      - **Resend max:** The maximum number of times DataMiner will send the same inform if it doesn't receive an acknowledgement. After a DMA has tried to send an Inform message for the specified maximum number of times, a timeout will occur, which will subsequently force the DMA to switch to a so-called 'ping mode'. As soon as the DMA receives its first acknowledgement from the SNMP manager, it will stop sending ping messages and send an Inform message for every active alarm in the DMS. Once that is done, it will resume 'normal mode'. In other words, every time it receives a new alarm, it will send an Inform message to the SNMP manager.
+
+        Note: A so-called ping message is an alarm with parameter ID 64622 containing the value "PING".
+
+        **Note:** Select the *Send in chronological order* option if you want the inform messages to be sent in chronological order. If you select this option, each time an inform message is sent to a particular SNMP manager, the latter will have to reply with ACK before the next inform message is sent.
 
 <!-- -->
 
@@ -119,7 +123,7 @@ The SNMP Port that was configured on the DataMiner Agent needs to be added to th
     - **Protocol and Ports:**
 
     - - **TCP or UDP:** Select *UDP.*
-      - **Specific local ports:**Enter the SNMP Port number that was configured (e.g. "*461*").
+      - **Specific local ports:** Enter the SNMP Port number that was configured (e.g. "*461*").
       - Click *Next*
 
     - **Action:** Make sure you select the correct connection that matches your system specified conditions (e.g., "*Allow the connection***"**) and click *Next***.**
@@ -127,6 +131,7 @@ The SNMP Port that was configured on the DataMiner Agent needs to be added to th
     - **Profile:** Select the options that apply to your system conditions and click *Next*.
 
     - **Name:** Enter a name and/or description for the specified rule and click *Finish*.
+
 
 ### Configuring the DataMiner Element
 

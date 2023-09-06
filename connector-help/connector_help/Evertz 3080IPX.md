@@ -16,16 +16,16 @@ The connector communicates via **SNMP calls**. To process alarms as quickly as p
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                                                                            | No                  | Yes                     |
-| 1.0.1.x              | Added HTTP connection.                                                                                                                                      | No                  | Yes                     |
-| 1.0.2.x              | Added port name to display key of all port-related tables.                                                                                                  | No                  | Yes                     |
-| 1.0.3.x              | Added Syslog message support.                                                                                                                               | No                  | Yes                     |
-| 1.0.5.x              | Changed Timezone Offset from number to discrete.Changed Speed from number to discrete.Changed discrete display values in Auto Routing - IGMP Routing Table. | No                  | Yes                     |
-| 1.1.0.x \[Obsolete\] | New discrete values for port configuration speed; usability enhancements.                                                                                   | No                  | Yes                     |
-| 1.1.1.x \[Obsolete\] | Adds redundant polling.                                                                                                                                     | No                  | Yes                     |
-| 1.1.3.x \[SLC Main\] | Fixed SNMP redundant polling.HTTP dynamic polling.                                                                                                          | No                  | Yes                     |
+| **Range**            | **Description**                                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                                                                              | No                  | Yes                     |
+| 1.0.1.x              | Added HTTP connection.                                                                                                                                        | No                  | Yes                     |
+| 1.0.2.x              | Added port name to display key of all port-related tables.                                                                                                    | No                  | Yes                     |
+| 1.0.3.x              | Added Syslog message support.                                                                                                                                 | No                  | Yes                     |
+| 1.0.5.x              | Changed Timezone Offset from number to discrete. Changed Speed from number to discrete. Changed discrete display values in Auto Routing - IGMP Routing Table. | No                  | Yes                     |
+| 1.1.0.x \[Obsolete\] | New discrete values for port configuration speed; usability enhancements.                                                                                     | No                  | Yes                     |
+| 1.1.1.x \[Obsolete\] | Adds redundant polling.                                                                                                                                       | No                  | Yes                     |
+| 1.1.3.x \[SLC Main\] | Fixed SNMP redundant polling. HTTP dynamic polling.                                                                                                           | No                  | Yes                     |
 
 ### Product Info
 
@@ -86,6 +86,8 @@ If the correct license is available, you can enable **IGMP polling**, **Inband C
 ### General Page
 
 This page (illustrated below) contains general information about the video switch, such as the **Product Name**, **Product Features Table**, **MAC Address of the Interfaces**, etc.
+
+![1. General.png](~/connector-help/images/Evertz_3080IPX_Evertz_3080IPX_general.png)
 
 ### Port Page
 

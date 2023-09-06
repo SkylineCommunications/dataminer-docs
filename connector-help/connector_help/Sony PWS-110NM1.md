@@ -90,9 +90,10 @@ The element created using this connector consists of the data pages detailed bel
 
 ### General
 
-This page displays system information, including the **System Time**, **System Description**, **System Location**, **System Contact**, **System Up Time**, and other general parameters.This page has page buttons that open the following subpages:
+This page displays system information, including the **System Time**, **System Description**, **System Location**, **System Contact**, **System Up Time**, and other general parameters.
+This page has page buttons that open the following subpages:
 
-- **General Status**: Displays status information concerning the **IP Live System Manager**, i.e. **Status**, **General Status Description**, **System Stat Status**,and **Module Status table**.
+- **General Status**: Displays status information concerning the **IP Live System Manager**, i.e. **Status**, **General Status Description**, **System Stat Status**, and **Module Status table**.
 - **NMI Gateway Status**: Displays the **NMI Module Gateway Status**, **NMI Module Status Description**, and **NMI Module Gateway Status Code**.
 - **Gen Lock Status**: Displays the **Gen Lock Module Status**, **Gen Lock Module Description**, and **Gen Lock Status Code**.
 - **NS-BUS Controller Status**: Displays the NS-BUS Controller table, listing the **Name**, **Status**, **Description**, and **Code**.
@@ -151,7 +152,8 @@ Via a page button, the page also provides access to the **HTTP Credentials** tha
 
 ### Device Configuration
 
-This page displays the **Device Configuration** table, containing the **Config ID**, **Number**, **Config Type**, **Device ID**, **Config Name**, **Description**, **Content Type**, and **HasValue** columns. You can recall a configuration by selecting it with the **Configuration To Set** parameter and using the **Recall** button.
+This page displays the **Device Configuration** table, containing the **Config ID**, **Number**, **Config Type**, **Device ID**, **Config Name**, **Description**, **Content Type**, and **HasValue** columns.
+You can recall a configuration by selecting it with the **Configuration To Set** parameter and using the **Recall** button.
 
 The **Parent ID**, **Parent Status**, **Parent Progress**, and **Parent Description** are also displayed on this page, as well as the **Configuration End Status** and **Status Description**.
 

@@ -20,9 +20,9 @@ The **initial range** of the connector (1.0.0.x) only displays detailed informat
 
 ### Product Info
 
-| **Range**             | **Supported Firmware** |
-|-----------------------|------------------------|
-| 1.0.0.x2.0.0.x2.0.1.x | 9.7(0.0)9.13(0.3)      |
+| **Range**               | **Supported Firmware** |
+|-------------------------|------------------------|
+| 1.0.0.x 2.0.0.x 2.0.1.x | 9.7(0.0) 9.13(0.3)     |
 
 ## Configuration
 

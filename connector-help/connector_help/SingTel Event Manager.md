@@ -38,13 +38,26 @@ There is no redundancy defined.
 
 ## How to use
 
-On the **Settings** page, you can define the **scripts** that will be launched when you click the **Approve**, **Remove** or **Booking** button in the Events table. Keep in mind that those **scripts need an input parameter called "instance"**, which will be filled in with the Events row primary key.
+On the **Settings** page, you can define the **scripts** that will be launched when you click the **Approve**, **Remove** or **Booking** button in the Events table.
+Keep in mind that those **scripts need an input parameter called "instance"**, which will be filled in with the Events row primary key.
 
 The **event managers** to be used by this connector need to have the **InterApp functionality** available on PID 9000000 and 9000001 and must reply to an Events message.
 
 The **Events namespace** definition is the following:
 
-namespace EventsInformation { using System; public class Events { public string Name { get; set; } public DateTime? StartTime { get; set; } public DateTime? StopTime { get; set; } public string Status { get; set; } public string Source { get; set; } public string ForeignKey { get; set; } } }
+namespace EventsInformation
+{
+using System;
+public class Events
+{
+public string Name { get; set; }
+public DateTime? StartTime { get; set; }
+public DateTime? StopTime { get; set; }
+public string Status { get; set; }
+public string Source { get; set; }
+public string ForeignKey { get; set; }
+}
+}
 
 It is also possible to **create event entries** in the Events table by setting **parameter 100** on the element. This parameter receives an array of events in **JSON format**. For example:
 

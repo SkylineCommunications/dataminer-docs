@@ -71,9 +71,9 @@ This page contains reference parameters.
 This page contains general device information, as well as Tx and Rx settings. It also contains the following page buttons:
 
 - **Product Information**: Displays information related to different modules in the **Product Information Table**.
-- **Trap Settings**:Displays all the trap-related parameters and the **Trap Sink Table**.
-- **RX1 Settings**:Displays the **Input 1 Settings Table**,which contains configuration parameters for Input 1.
-- **RX2 Settings**: Displays the **Input 2 Settings Table**,which contains configuration parameters for Input 2.
+- **Trap Settings**: Displays all the trap-related parameters and the **Trap Sink Table**.
+- **RX1 Settings**: Displays the **Input 1 Settings Table**, which contains configuration parameters for Input 1.
+- **RX2 Settings**: Displays the **Input 2 Settings Table**, which contains configuration parameters for Input 2.
 - **Time Scheduler**: Displays all the time scheduling parameters in the **Time Scheduler Table**.
 
 ### Web Interface Page

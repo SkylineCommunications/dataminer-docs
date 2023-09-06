@@ -12,11 +12,11 @@ The Eaton SC200 connector can be used to monitor and control an Eaton SC200 devi
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                           | **Based on** | **System Impact**                                                                                                                                                    |
-|----------------------|--------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version                                                                            | N/A          | \-                                                                                                                                                                   |
-| 1.0.1.x \[Obsolete\] | \- Added trap receiver for OID 1.3.6.1.4.1.1918.2.13.20.\*- Changed decimals in parameters | 1.0.0.x      | \- Possible loss of external sets because of description changes in parameters 5003, 5103, 30044 and 30055.- Change in parameter Interprete type for parameter 3006. |
-| 2.0.0.x \[SLC Main\] | Connector rebranded                                                                        | 1.0.1.x      | \- Possible issue with case-sensitive code that uses the connector name                                                                                              |
+| **Range**            | **Key Features**                                                                            | **Based on** | **System Impact**                                                                                                                                                     |
+|----------------------|---------------------------------------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version                                                                             | N/A          | \-                                                                                                                                                                    |
+| 1.0.1.x \[Obsolete\] | \- Added trap receiver for OID 1.3.6.1.4.1.1918.2.13.20.\* - Changed decimals in parameters | 1.0.0.x      | \- Possible loss of external sets because of description changes in parameters 5003, 5103, 30044 and 30055. - Change in parameter Interprete type for parameter 3006. |
+| 2.0.0.x \[SLC Main\] | Connector rebranded                                                                         | 1.0.1.x      | \- Possible issue with case-sensitive code that uses the connector name                                                                                               |
 
 ### Product Info
 
@@ -68,11 +68,11 @@ The element created with this connector consists of the data pages detailed belo
 
 - **System**: Displays general information about the device.
 
-- **Identity**: Also displays general information about the device, such as the **Serial Number**, **Manufacturer Name**, **MAC Address**, **System Type**, **Location**,and **Name**.
+- **Identity**: Also displays general information about the device, such as the **Serial Number**, **Manufacturer Name**, **MAC Address**, **System Type**, **Location**, and **Name**.
 
 - **Communication - Physical Ports**: Allows you to view and modify physical port parameters. In the **Serial** group box, three page buttons are available that will each open a pop-up page with additional information.
 
-- **Communication - Remote Access Protocols**: Allows you to view and modify parameters related to **S3P**, **SNMP**, **HTTP**, **Email**, **Serial** **Server**,and **Modbus**. Several page buttons provide access to additional information.
+- **Communication - Remote Access Protocols**: Allows you to view and modify parameters related to **S3P**, **SNMP**, **HTTP**, **Email**, **Serial** **Server**, and **Modbus**. Several page buttons provide access to additional information.
 
 - **Time**: Allows you to view and modify the clock and SNTP parameters.
 

@@ -12,13 +12,13 @@ This connector uses an HTTPS connection to communicate with the selected API. Th
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                        | **Based on** | **System Impact**                                                                                                  |
-|----------------------|---------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                                        | \-           | \-                                                                                                                 |
-| 1.0.1.x \[Obsolete\] | Implemented support for Unicode languages like Cyrillic script, Chinese, Arabic, etc.                   | 1.0.0.4      | All existing data will be lost. The element needs to be recreated.                                                 |
-| 1.0.2.x \[Obsolete\] | Migrated element communication to InterApp to handle ad hoc requests.                                   | 1.0.1.7      | The Weather API DLL (NuGet) needs to be deployed.Class Library DLLs version 1.2.2.4 or higher need to be deployed. |
-| 1.0.3.x              | \- Partial option added to tables 100, 300, 1000, and 1100.- WeatherApi and InterApp libraries updated. | 1.0.2.3      | The tables now have multiple pages.                                                                                |
-| 1.0.4.x \[SLC Main\] | \- Windy Api added                                                                                      | 1.0.3.1      | The driver now polls the Windy API as well as the weather API of the user's choice.                                |
+| **Range**            | **Key Features**                                                                                         | **Based on** | **System Impact**                                                                                                   |
+|----------------------|----------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                         | \-           | \-                                                                                                                  |
+| 1.0.1.x \[Obsolete\] | Implemented support for Unicode languages like Cyrillic script, Chinese, Arabic, etc.                    | 1.0.0.4      | All existing data will be lost. The element needs to be recreated.                                                  |
+| 1.0.2.x \[Obsolete\] | Migrated element communication to InterApp to handle ad hoc requests.                                    | 1.0.1.7      | The Weather API DLL (NuGet) needs to be deployed. Class Library DLLs version 1.2.2.4 or higher need to be deployed. |
+| 1.0.3.x              | \- Partial option added to tables 100, 300, 1000, and 1100. - WeatherApi and InterApp libraries updated. | 1.0.2.3      | The tables now have multiple pages.                                                                                 |
+| 1.0.4.x \[SLC Main\] | \- Windy Api added                                                                                       | 1.0.3.1      | The driver now polls the Windy API as well as the weather API of the user's choice.                                 |
 
 ### Product Info
 
@@ -172,9 +172,11 @@ This subpage contains configuration parameters specific to the **Ad-Hoc function
 This subpage contains parameters that allow you to configure the communication with the **Dark Sky API**, **OpenWeather 2.5**, and **OpenWeather 3.0**:
 
 - **API Key**: The API key that will allow the connector to communicate with the API.
-- **Max Number of Request (24 Hours)**: The maximum number of calls that can be made to the API. Note: **1000 calls daily are free**, but there will be charges after the initial 1000.
+- **Max Number of Request (24 Hours)**: The maximum number of calls that can be made to the API.
+  Note: **1000 calls daily are free**, but there will be charges after the initial 1000.
 
-Windy (Range 1.0.4.x)This subpage contains parameters to configure the communication with the **Windy Point-Forecast API v4**.
+Windy (Range 1.0.4.x)
+This subpage contains parameters to configure the communication with the **Windy Point-Forecast API v4**.
 
 - **Windy API Polling Status**: Enable/Disable polling of Windy API.
 
@@ -199,6 +201,7 @@ More details of the Windy API can be found [here](https://api.windy.com/point-fo
 
 ## Notes
 
-- **Listener PID**: 283Note: **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
+- **Listener PID**: 283
+  Note: **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
 - **APIs Integrated**: Dark Sky, OpenWeather OneCall and Windy Point-Forecast
 - Windy API url is in-built and uses the same proxy server as the Dark Sky/OpenWeather OneCall APIs.

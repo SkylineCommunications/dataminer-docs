@@ -55,7 +55,7 @@ This page is primarily used to monitor all alarms on the TVG430 device. To view 
 
 ### General
 
-This page displays general information about the device, such as the **Product Name**, **System** **Uptime**,etc. Some of these parameters can also be changed, like for example **System Contact** or **System Location**.
+This page displays general information about the device, such as the **Product Name**, **System** **Uptime**, etc. Some of these parameters can also be changed, like for example **System Contact** or **System Location**.
 
 With the **Reset Delay** parameter, the device can be reset after a period of time. This value needs to be between *1* and *6*. After this time has elapsed, the device will perform a cold restart.
 
@@ -79,7 +79,7 @@ This page can be used to access the web interface of the device. Note that the c
 
 ### HD-SDI to IP
 
-If the **Operation Mode** parameter is set to **HD-SDI to IP**, a connection will be made from the **SDI-IN**in interface to the **IP** inout interface, which will have the following connection properties:
+If the **Operation Mode** parameter is set to **HD-SDI to IP**, a connection will be made from the **SDI-IN** in interface to the **IP** inout interface, which will have the following connection properties:
 
 - 1st property -\> Name: *Service*, Type: *input*, Value: *Tx Input Name*
 - 2nd property -\> Name: *IP*, Type: *output*, Value: *Tx Destination IP:Tx Destination UDP Port*

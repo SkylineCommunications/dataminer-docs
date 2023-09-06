@@ -8,7 +8,8 @@ The protocol uses a SNMP connection to manage the CEFD CDD-56xA demodulator.
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands. To get more detailed information consult this website [http://www.comtechefdata.com/support/docs/satellitemodemdocs]()
+This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+To get more detailed information consult this website [http://www.comtechefdata.com/support/docs/satellitemodemdocs]()
 
 ### Ranges of the driver
 
@@ -52,7 +53,7 @@ Use this page to configure Mode, Features, SNMP and Header Compression related p
 
 - SNMP
   - **Trap IP Primary / Trap IP Secondary** - Assign the SNMP **Trap IP Primary** and **Trap IP Secondary** addresses.
-  - **Trap Version** - Use the drop-down list to set the **Trap Version** as *SNMPv1*or *SNMPv2*.
+  - **Trap Version** - Use the drop-down list to set the **Trap Version** as *SNMPv1* or *SNMPv2*.
   - **Trap Community String** - Assign the SNMP **Trap Community String**. The Community String may consist of a minimum of 0 to a maximum of 20 alphanumeric characters in length.
 
 <!-- -->
@@ -127,7 +128,7 @@ Use this page on a per-demod basis to configure or review demodulator operating 
 
 <!-- -->
 
-- **Alarm Mask** - Set the **Rx AGC**, **Eb/No**, or **LNB** (when available) Alarm Mask by clicking *Masked*or *Active*.
+- **Alarm Mask** - Set the **Rx AGC**, **Eb/No**, or **LNB** (when available) Alarm Mask by clicking *Masked* or *Active*.
 
 ### Config - LAN
 
@@ -209,4 +210,5 @@ FTP tool intended to upload and download files to and from device.
 
 ### Webinterface
 
-Access the device web interface.Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+Access the device web interface.
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

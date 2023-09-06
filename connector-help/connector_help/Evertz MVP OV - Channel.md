@@ -28,7 +28,9 @@ This protocol is created by the **Evertz MVP OV** driver. For each busadress(1-8
 
 ### Configuration
 
-The DVE is created by the parent driver protocol (**Evertz MVP OV**). It uses the name of the parent driver + the busadres + the busname.e.g. **ParentName.1_BusName**You can change the busname at the HardwareControl Table on the parent driver.
+The DVE is created by the parent driver protocol (**Evertz MVP OV**). It uses the name of the parent driver + the busadres + the busname.
+e.g. **ParentName.1_BusName**
+You can change the busname at the HardwareControl Table on the parent driver.
 
 ## Usage
 
@@ -78,7 +80,7 @@ On this page, you can configure the **EIA** **708** fault definition parameters.
 
 Monitor Control
 
-On this page, you can configure the **Monitor Control**parameters such as Start, Stop, Reset, ... of monitoring/reporting of faults.
+On this page, you can configure the **Monitor Control** parameters such as Start, Stop, Reset, ... of monitoring/reporting of faults.
 
 RCTL GPI
 

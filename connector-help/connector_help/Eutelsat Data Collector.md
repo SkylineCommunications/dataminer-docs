@@ -22,6 +22,7 @@ Supported firmware versions
 |------------------|-----------------------------|
 | 1.0.0.x          | DataMiner Web API V1        |
 
+
 Installation and configuration
 
 Creation

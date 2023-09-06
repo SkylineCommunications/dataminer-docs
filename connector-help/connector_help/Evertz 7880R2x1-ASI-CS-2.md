@@ -84,9 +84,12 @@ The page also contains page buttons to the **Windows Measurement**, **Switch Con
 
 The Windows Measurement subpage displays the **Windows Measurement table**, which contains the following columns:
 
-- **Windows Measurement 1**: Allows you to set the window measurement for the table repetition.NOTE: Each step is 1 ms, so the maximum range is 100,000 ms = 100 s.
-- **Windows Measurement 2**: Allows you to set the window measurement to measure PCRs.NOTE: Each step is 1 ms, so the maximum range is 100,000 ms = 100 s.
-- **Windows Measurement 3**: Allows you to set the window measurement to measure bitrate.NOTE: Each step is 1 s, so the maximum range is 100,000 s.
+- **Windows Measurement 1**: Allows you to set the window measurement for the table repetition.
+  NOTE: Each step is 1 ms, so the maximum range is 100,000 ms = 100 s.
+- **Windows Measurement 2**: Allows you to set the window measurement to measure PCRs.
+  NOTE: Each step is 1 ms, so the maximum range is 100,000 ms = 100 s.
+- **Windows Measurement 3**: Allows you to set the window measurement to measure bitrate.
+  NOTE: Each step is 1 s, so the maximum range is 100,000 s.
 
 The Switch Control subpage displays the **Template Switch Control table**, which contains the following columns:
 
@@ -117,7 +120,7 @@ The Monitoring Control subpage displays the following tables:
 
 ### Error Monitor
 
-This page contains tables that monitor the three types of priority errors: the **Priority 1 Error Monitor Table**, **Priority 2 Error Monitor Table** and **Priority 3 Error Monitor Table**,with the following parameters:
+This page contains tables that monitor the three types of priority errors: the **Priority 1 Error Monitor Table**, **Priority 2 Error Monitor Table** and **Priority 3 Error Monitor Table**, with the following parameters:
 
 - **Fault Name**: The index that is used to index different tables in this MIB.
 
@@ -131,7 +134,7 @@ This page contains tables that monitor the three types of priority errors: the *
 
 - **Monitor Enable**: Allows you to enable or disable the error test for each variable.
 - **Average Repetition**: Displays the average repetition of each error over a window.
-- **Switch Enable**: Allows you to specify how the switch should be performed when an error condition is true. If set to *Off*,there will be no switching when there is an error. If set to *Splice card*, a clean splice will be attempted; however, if no switch point is found, the card will not switch. If set to *forcedSwitch*, a clean splice will be attempted, and if no switch point is available, the card will try to do a packet splice.
+- **Switch Enable**: Allows you to specify how the switch should be performed when an error condition is true. If set to *Off*, there will be no switching when there is an error. If set to *Splice card*, a clean splice will be attempted; however, if no switch point is found, the card will not switch. If set to *forcedSwitch*, a clean splice will be attempted, and if no switch point is available, the card will try to do a packet splice.
 - **Error Persistence**: Displays the number of errors that have occurred so far in this transport stream.
 - **Max Rate**: Sets the maximum time interval between the packets. The card will send a trap when a table exceeds the limit.
 
@@ -155,16 +158,19 @@ The page also contains the **Misc Control Table**, which can be used to clear th
 
 ### PIDs
 
-This page contains the **PID Monitor table**,with the following parameters:
+This page contains the **PID Monitor table**, with the following parameters:
 
 - **PID**: Index for PIDs, ranging from 1 to 250.
 - **Program Number**: Displays the actual program number that the PID is associated with.
 - **Program Name**: Displays the program name that the PID is associated with.
-- **Actual PID Number**: Displays the actual PID number.NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by the **numOfKnownPIDs** parameter.
-- **PID Type**: Displays the type of the PID (PAT, PMT, NIT, EIT, etc.). NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by the **numOfKnownPIDs** parameter.
+- **Actual PID Number**: Displays the actual PID number.
+  NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by the **numOfKnownPIDs** parameter.
+- **PID Type**: Displays the type of the PID (PAT, PMT, NIT, EIT, etc.).
+  NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by the **numOfKnownPIDs** parameter.
 - **PID Table Version**: Displays the version number of the table. Will only return the version for appropriate PIDs, e.g. PMT, PAT or CAT.
 - **PID Info**: Displays the specific information about the PID, e.g. video resolution, frame rate, etc.
-- **Bit Rate**: Displays the bitrate for this PID. NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by **numOfKnownPIDs** parameter.
+- **Bit Rate**: Displays the bitrate for this PID.
+  NOTE: Even though this parameter is indexed by PID number, the index should be limited to the value returned by **numOfKnownPIDs** parameter.
 - **Min Bit Rate**: Displays the minimum detected bitrate for this PID.
 - **Max Bit Rate**: Displays the maximum detected bitrate for this PID.
 - **Min Bit Rate Threshold**: Allows you to set the minimum bitrate for a PID. If the bitrate for a PID is below this threshold, the card will send a trap.
@@ -176,20 +182,23 @@ Via the **Template Control** page button, you can access the following tables:
 - The **PID Template Control table**, which contains the following columns:
 
 - **Template PID**: Index for template PIDs, ranging from 1 to 100.
-  - **Expected PID Number**: Allows you to specify the PID number for the PID template check. NOTE: When the card returns a value of "8192", this means that the PID is currently not set and will not be used for the template check.
+  - **Expected PID Number**: Allows you to specify the PID number for the PID template check.
+    NOTE: When the card returns a value of "8192", this means that the PID is currently not set and will not be used for the template check.
   - **Windows Measurement Select**: Allows you to set the type of timeout to be used for the PID template check (*Disabled*, *Window Measurement 1*, *Window Measurement 2* or *Window Measurement 3*). The window measurements specify the amount of time to wait before triggering the pidTemplate fault.
-  - **PID Present**: Shows whether the selected PID (in the PID template) is present (*Disabled*, *Not Present* or *Present*). NOTE: The card will return a value of "disabled" when Expected PID Number is set to *8192*, the Window Measurement Select is set to *Disabled*, or PID Template Enable is *Disabled*.
-  - **Switch Enable**: Allows you to set how the switch will be performed when a PID template error condition is true. If set to *Disabled*,there will be no switching when there is an error. If set to *Splice*, the card will try to perform a clean splice, but if no switch point is found, the card will not switch. If set to *Forced Switch*, the card will try to do a clean splice, and if no switch point is available, the card will try to do a packet splice.
+  - **PID Present**: Shows whether the selected PID (in the PID template) is present (*Disabled*, *Not Present* or *Present*).
+    NOTE: The card will return a value of "disabled" when Expected PID Number is set to *8192*, the Window Measurement Select is set to *Disabled*, or PID Template Enable is *Disabled*.
+  - **Switch Enable**: Allows you to set how the switch will be performed when a PID template error condition is true. If set to *Disabled*, there will be no switching when there is an error. If set to *Splice*, the card will try to perform a clean splice, but if no switch point is found, the card will not switch. If set to *Forced Switch*, the card will try to do a clean splice, and if no switch point is available, the card will try to do a packet splice.
 
 - The **Misc PID Template Control table**, which contains the following columns:
 
-- **Take Snapshot** button: Allows you to capture the PIDs that are present on the input. The card will only take a snapshot if there is an input present. NOTE: This control will always return "cancel" when a get is performed on this parameter.
+- **Take Snapshot** button: Allows you to capture the PIDs that are present on the input. The card will only take a snapshot if there is an input present.
+    NOTE: This control will always return "cancel" when a get is performed on this parameter.
   - **PID Template Enable**: Allows you to disable or enable the PID template check on the card.
   - **Reset** button: Allows you to reset all the controls of the PID template to default values.
 
 ### Outputs
 
-This page contains the **Output Control Table**,with the following parameters:
+This page contains the **Output Control Table**, with the following parameters:
 
 - **Output Index**: The SNMP instance of the table. It only has one output.
 - **Destination IP Address**: Allows you to set the destination IP address where the selected stream will be sent.
@@ -198,9 +207,10 @@ This page contains the **Output Control Table**,with the following parameters:
 
 ### Redundancy Switch
 
-This page contains the **Clean Switches table**,with the following parameters:
+This page contains the **Clean Switches table**, with the following parameters:
 
-- **Clean Switch Index**: The SNMP instance of the table. This parameter is the index that is used to index Clean Switch Controls in the MIB. NOTE: 7X80R2x1-ASI-CS-2 has two clean switches.
+- **Clean Switch Index**: The SNMP instance of the table. This parameter is the index that is used to index Clean Switch Controls in the MIB.
+  NOTE: 7X80R2x1-ASI-CS-2 has two clean switches.
 
 - **Switch Mode**: Allows you to specify how the switch should behave when switching between the streams. The following settings are possible:
 
@@ -208,11 +218,13 @@ This page contains the **Clean Switches table**,with the following parameters:
   - *autoManualReturn*: The switch operates semi-automatically. It knows the input 1 as the main input, and switches to input 2 whenever input 1 is in a worse state than input 2 in terms of the switch parameters defined by the user. After switching to input 2, it does not switch back unless the user manually switches it back to input 1. Switching back will be clean, and will be done on clean switch points, unless the user set the control to manual.
   - *manual*: No automatic switching will be performed, although the switching will be performed on switch points and whenever possible, unless the user selected the method to be packet switching, in which case it will switch on packet boundaries.
 
-- **Switch Output**: Allows you to select which input will be routed to the output. This control is only available in Manual mode and in Auto-Manual return mode. NOTE: This parameter may not take effect immediately.
+- **Switch Output**: Allows you to select which input will be routed to the output. This control is only available in Manual mode and in Auto-Manual return mode.
+  NOTE: This parameter may not take effect immediately.
 
 - **Stream Delay Info**: Displays the exact delay between the two streams. Used in conjunction with stream delay. This parameter is only available when the switch method is *packetMatching*.
 
-- **Delayed Stream Info**: Displays which stream is delayed. Used in conjunction with stream delay. This parameter is only available when the switch Method is *packetMatching*. NOTE: When the Stream Delay Info is 0, this has no meaning.
+- **Delayed Stream Info**: Displays which stream is delayed. Used in conjunction with stream delay. This parameter is only available when the switch Method is *packetMatching*.
+  NOTE: When the Stream Delay Info is 0, this has no meaning.
 
 - **Switch Method**: Sets the mode of the switching depending on the type of the input streams. The following settings are possible:
 
@@ -265,7 +277,7 @@ Via the **Auto Reset** page button, you can access the **Auto Reset Criteria Tab
 
 This page contains the tables **Mgmt Fault Table**, **Trigger Fault Table**, **Switch Fault Table**, **DPI Fault Table** and **Delay** **Fault Table**. All these tables show the **Status** (*OK* or *Fail*) of each fault and allow you to determine whether a trap should be sent (by setting **Send Trap** to *Enabled* or *Disabled*).
 
-It also contains the **Trap Destination Table**,which allows up to five destinations. You can add, edit or clear an address by means of the context menu. Right-click in any row of the table to add a new address, or right-click a selected row to edit or clear an address.
+It also contains the **Trap Destination Table**, which allows up to five destinations. You can add, edit or clear an address by means of the context menu. Right-click in any row of the table to add a new address, or right-click a selected row to edit or clear an address.
 
 ### Web Interface
 
@@ -273,4 +285,5 @@ This page provides access to the web interface of the device. Note that the clie
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS20/08/2018 1.0.0.1 RBL, Skyline Initial version
+DATE VERSION AUTHOR COMMENTS
+20/08/2018 1.0.0.1 RBL, Skyline Initial version

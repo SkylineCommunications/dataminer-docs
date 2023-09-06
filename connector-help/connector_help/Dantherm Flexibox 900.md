@@ -48,7 +48,7 @@ This page contains general information on the Flexibox device, such as the netwo
 
 It is also possible to access the **SNMP Configuration** parameters via a page button, as well as **High Level Controls** such as **Cooling/Heater Set Points**.
 
-**Note:** After you configure settings related to the network information, such as **Host Name** or **DHCP State**,press the **Save Configuration** button to accept the changes. The same goes for the **SNMP Configuration** and other configuration pages.
+**Note:** After you configure settings related to the network information, such as **Host Name** or **DHCP State**, press the **Save Configuration** button to accept the changes. The same goes for the **SNMP Configuration** and other configuration pages.
 
 ### System Status
 
@@ -64,7 +64,7 @@ There are also page buttons leading to configuration parameters for the **Heater
 
 ### System Configuration
 
-This page displays system configuration parameters, such as the **Cooling Mode**,**Zone Configuration** and **System Limits**. After you perform changes on these parameters, press the **Save Configuration** button to make the device accept the changes.
+This page displays system configuration parameters, such as the **Cooling Mode**, **Zone Configuration** and **System Limits**. After you perform changes on these parameters, press the **Save Configuration** button to make the device accept the changes.
 
 The page buttons on this page display configuration parameters for **Night Mode**, **NONC** and **Xzone.** After you perform changes on these parameters, make sure to press the **Save Configuration** button on the relevant page.
 

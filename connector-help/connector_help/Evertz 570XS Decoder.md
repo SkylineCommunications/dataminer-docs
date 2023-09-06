@@ -50,4 +50,4 @@ The following pages are available:
 - **Input** and **Output**: These pages contain tables with status information for the different inputs and outputs. The Output page has 4 subpages reflecting the different kinds of outputs: **Video, Video IP, Audio IP** and **ANC IP**.
 - **Decoder Control**, **Decoder Program Monitor** and **IP Input Monitor**: These pages contain tables for multiple receivers and packets received.
 - **System Notify**, **Input Notify** and **Decoder Notify**: These pages display the faults and notifications of the device.
-- **SNMP Setup**:Allows you to add an **SNMP trap** as well as display the **current configured traps**.
+- **SNMP Setup**: Allows you to add an **SNMP trap** as well as display the **current configured traps**.

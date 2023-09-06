@@ -10,9 +10,9 @@ The **TestTree StreamProbe** driver uses **JSON** and **SNMP** to communicate wi
 
 The **TestTree StreamProbe** is an **MPEG-2 Monitoring** device. It is used to monitor probes, transport streams and its individual components (programs and PIDs). This driver allows the user to monitor the TestTree StreamProbe via DataMiner.
 
-| **Range**            | **Key Features**                                                       | **Based on**                       | **System Impact** |
-|----------------------|------------------------------------------------------------------------|------------------------------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version**Automatic Removal Delay** - \[see Usage -\> General\] | 1.0.0.24 (AJIMI TSAFT Live driver) | \-                |
+| **Range**            | **Key Features**                                                        | **Based on**                       | **System Impact** |
+|----------------------|-------------------------------------------------------------------------|------------------------------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version **Automatic Removal Delay** - \[see Usage -\> General\] | 1.0.0.24 (AJIMI TSAFT Live driver) | \-                |
 
 ### Product Info
 
@@ -57,7 +57,8 @@ This driver also uses a Simple Network Management Protocol (**SNMP**) connection
 
 This page contains general status information about the probe, such as the **Probe Name**, **Software Version**, **Total CPU Load**, **Probe Status**, **Total Bitrate**, etc.
 
-On the General page there is a '**Automatic Removal Delay**' parameter. Automatic Removal Delay is the amount of time that streams, programs and PIDs will remain in the tables after they are unavailable for a certain delay. This is needed to make sure a table never keeps growing endlessly and will prevent any memory issue. When enabled, this will also remove qualified PIDs.
+On the General page there is a '**Automatic Removal Delay**' parameter. Automatic Removal Delay is the amount of time that streams, programs and PIDs will remain in the tables after they are unavailable
+for a certain delay. This is needed to make sure a table never keeps growing endlessly and will prevent any memory issue. When enabled, this will also remove qualified PIDs.
 
 ### Streams
 
@@ -108,3 +109,5 @@ This page can be used to access the web interface of the ****TestTree StreamProb
 ## Notes
 
 Only users with **security level '1'** will be able to remove streams, programs or PIDs. It's also impossible for other users to automatically remove missing streams, programs or PIDs from the respective tables.
+
+

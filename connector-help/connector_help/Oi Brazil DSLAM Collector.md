@@ -54,11 +54,11 @@ This protocol requires the pre-provisioning of configuration data in order to fu
 
 ### General
 
-Thispage displays a summary of the collector data, including the total number of **DSLAMs, Models, Stations, Cities, States, Sub-Regions** and **Super-Regions**.
+This page displays a summary of the collector data, including the total number of **DSLAMs, Models, Stations, Cities, States, Sub-Regions** and **Super-Regions**.
 
 ### DSLAM
 
-Thispage displays the collected data for each DSLAM, including **PING** statistics and **Gigabit Ethernet Interfaces** metrics.
+This page displays the collected data for each DSLAM, including **PING** statistics and **Gigabit Ethernet Interfaces** metrics.
 
 The **Thread Statistics** subpage displays the threaded timer performance metrics, including **Thread Pool Usage, Thread Duration, Thread Pool Count** and **Threads Waiting** to be executed.
 
@@ -72,4 +72,7 @@ This page is divided in three sections: PING Settings, Polling Settings and Impo
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS20/08/2018 1.0.0.1 AIG, Skyline Initial version05/10/2018 1.0.0.2 AIG, Skyline Manual polling of row using a push button09/11/2018 1.0.0.3 RDP, Skyline Decreased multi-threaded timer & other enhancements to make polling faster
+DATE VERSION AUTHOR COMMENTS
+20/08/2018 1.0.0.1 AIG, Skyline Initial version
+05/10/2018 1.0.0.2 AIG, Skyline Manual polling of row using a push button
+09/11/2018 1.0.0.3 RDP, Skyline Decreased multi-threaded timer & other enhancements to make polling faster

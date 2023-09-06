@@ -77,8 +77,8 @@ This page displays network information about the device:
 - **MAC Address:** The physical address of the hardware ethernet interface of the unit.
 - **IPv4 Remote Address:** The IPv4 network address of the control unit in the remote network.
 - **IPv4 Remote Netmask:** The IPv4 network net mask of the control unit in the remote network.
-- **IPv4 Remote DHCP:** Displays whether theIPv4 network address and net mask are awarded via DHCP.
-- **IPv4 Remote DHCP Grant Status:** Displays whether theIPv4 network address and net mask are awarded via DHCP.
+- **IPv4 Remote DHCP:** Displays whether the IPv4 network address and net mask are awarded via DHCP.
+- **IPv4 Remote DHCP Grant Status:** Displays whether the IPv4 network address and net mask are awarded via DHCP.
 - **IPv6 Remote Link Address:** The IPv6 network address of the control unit in the remote network.
 - **IPv6 Remote Link Pfx Len:** The prefix length of the IPv6 network address of the control unit in the remote network.
 - **IPv6 Remote Global Address:** The current global IPv6 network address of the control unit in the remote network.
@@ -93,8 +93,8 @@ This page allows you to configure the following settings:
 - **IPv4 Syslog Server Address:** The IPv4 network address of the remote syslog server.
 - **IPv6 Syslog Server Address:** The IPv6 network address of the remote syslog server.
 - **TFTP Server Address Type:** The type of network address of the TFTP server.
-- **IPv4 TFTP Server Address:** TheIPv4 network address of the TFTP server.
-- **IPv6 TFTP Server Address:** TheIPv6 network address of the TFTP server.
+- **IPv4 TFTP Server Address:** The IPv4 network address of the TFTP server.
+- **IPv6 TFTP Server Address:** The IPv6 network address of the TFTP server.
 - **Time Server Address Type:** The type of network address of the SNTP time server.
 - **IPv4 Time Server Address:** The IPv4 network address of the SNTP time server.
 - **IPv6 Time Server Address:** The IPv6 network address of the SNTP time server.

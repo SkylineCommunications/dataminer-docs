@@ -32,6 +32,6 @@ Click the **Alarm Limits** page button to view or configure the analog and discr
 
 ### RF
 
-Thispage displays the **Attenuator** and **Equalizer** values.
+This page displays the **Attenuator** and **Equalizer** values.
 
 Click the **Normalized Values** page button to configure the normalized value of the Attenuator and Equalizer. With the **Normalize (All)** button, you can copy the current values to the normalized parameters.

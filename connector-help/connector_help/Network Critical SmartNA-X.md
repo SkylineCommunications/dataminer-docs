@@ -72,4 +72,5 @@ This page shows the **Maximum number of Ports** supported by the device plus two
 
 ### Web Interface
 
-This page gives access to the device Web GUI.Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page gives access to the device Web GUI.
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

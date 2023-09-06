@@ -63,12 +63,12 @@ The following subpages are available:
 - **Reference Clock**: Contains information about the reference clock.
 - **CLI/GUI/FTP:** Contains settings related to the graphical user interface, client user interface and file transfer protocol.
 - **Operator:** Contains information and settings related to the operator.
-- **Power Supply Failure**:Displays alarms related to the power supply.
-- **Redundancy**:Contains information and settings related to redundancy.
-- **Converter Alarm**:Displays alarms relating to the converter.
-- **Device NTP Peer**:Contains a table with the Device NTP Peer addresses.
-- **Device Sensors**:Contains information provided by the sensors, such as temperature and voltage.
-- **Device Options**:Displays options of the device, with the sales code and corresponding description.
+- **Power Supply Failure**: Displays alarms related to the power supply.
+- **Redundancy**: Contains information and settings related to redundancy.
+- **Converter Alarm**: Displays alarms relating to the converter.
+- **Device NTP Peer**: Contains a table with the Device NTP Peer addresses.
+- **Device Sensors**: Contains information provided by the sensors, such as temperature and voltage.
+- **Device Options**: Displays options of the device, with the sales code and corresponding description.
 
 ### TS Over IP Outputs
 

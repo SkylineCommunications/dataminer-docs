@@ -16,13 +16,13 @@ From version 1.0.1.5 onwards, the **DataMiner Connectivity Framework** has been 
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                                          | No                  | No                      |
-| 1.0.1.x              | New feature: translated table for multicast IP address and port + fixed problem with Alarm Table.                         | Yes                 | Yes                     |
-| 1.0.2.x              | \- Changed layout.- Fixed linking between tables.- Alarm monitoring on PID bit rates returns a user-friendly description. | Yes                 | Yes                     |
-| 1.0.3.x              | Table display keys changed to avoid duplicate naming.                                                                     | Yes                 | Yes                     |
-| 1.0.4.x \[SLC Main\] | Reorganized the internal linking to accommodate the different functions that use the connector.                           | Yes                 | Yes                     |
+| **Range**            | **Description**                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                                            | No                  | No                      |
+| 1.0.1.x              | New feature: translated table for multicast IP address and port + fixed problem with Alarm Table.                           | Yes                 | Yes                     |
+| 1.0.2.x              | \- Changed layout. - Fixed linking between tables. - Alarm monitoring on PID bit rates returns a user-friendly description. | Yes                 | Yes                     |
+| 1.0.3.x              | Table display keys changed to avoid duplicate naming.                                                                       | Yes                 | Yes                     |
+| 1.0.4.x \[SLC Main\] | Reorganized the internal linking to accommodate the different functions that use the connector.                             | Yes                 | Yes                     |
 
 ### Product Info
 
@@ -59,7 +59,7 @@ SNMP Settings:
 
 ### General
 
-This page contains general information, such as **Equipment Type**, **Equipment Serial Number**, **Part Number**, **Software Version**, **Configuration Version**, the total number of **Network Interfaces**,and the **Equipment Commercial Options.**
+This page contains general information, such as **Equipment Type**, **Equipment Serial Number**, **Part Number**, **Software Version**, **Configuration Version**, the total number of **Network Interfaces**, and the **Equipment Commercial Options.**
 
 The following page buttons are available:
 
@@ -91,7 +91,7 @@ The following page buttons are available:
 
 ### Overview
 
-On this page, you can find the **Network Interfaces**, the **IP Addresses Table**,and the **Element Status Table**.
+On this page, you can find the **Network Interfaces**, the **IP Addresses Table**, and the **Element Status Table**.
 
 ### Notifications
 
@@ -110,15 +110,15 @@ The following page buttons are available:
 
 ### Bit Rate
 
-This page allows you to monitor the bitrate of the equipment through the following tables: **TS Bit Rate Table**, **PID Bit Rate Table**,and **Service Bit Rate Table**.
+This page allows you to monitor the bitrate of the equipment through the following tables: **TS Bit Rate Table**, **PID Bit Rate Table**, and **Service Bit Rate Table**.
 
 ### Counters
 
-This page contains a table with information about the **IP receiver**,with several counters.
+This page contains a table with information about the **IP receiver**, with several counters.
 
 ### Front Panel Stats
 
-This page displays several parameters, each representing a **LED**, **bar graph**,or **buzzer** from the real front panel.
+This page displays several parameters, each representing a **LED**, **bar graph**, or **buzzer** from the real front panel.
 
 ### Decoding
 
@@ -130,7 +130,7 @@ This page contains the **Input Service**, **Output** and **Ancillaries VBI** tab
 
 ### Transport Translation
 
-This page includes the **Transport Translation** **Table**,with a **destination name**, **IP address**, and **Port Number**.
+This page includes the **Transport Translation** **Table**, with a **destination name**, **IP address**, and **Port Number**.
 
 ### Transport Management
 
@@ -226,7 +226,8 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 The dynamic interfaces are created based on the number of rows in **Table 600 (DCF Input Interfaces)** and **Table 700 (DCF Output Interfaces)** for both the **decoder** and the **encoder.**
 
-**Table 600** will contain all the DCF input interfaces for the **encoder** and **decoder**. The total number of rows depends on how many rows there are in **Table 6000 (Decoder Transport Table)** and **Table 19000 (Encoder TS Input Table)**.**Table 700** will contain all the DCF output interfaces for the **encoder** and **decoder**.The total number of rows depends on the rows in **Table 5000 (Decoder Output Table)** and **Table 33000 (Encoder Transport Table).**
+**Table 600** will contain all the DCF input interfaces for the **encoder** and **decoder**. The total number of rows depends on how many rows there are in **Table 6000 (Decoder Transport Table)** and **Table 19000 (Encoder TS Input Table)**.**
+Table 700** will contain all the DCF output interfaces for the **encoder** and **decoder**. The total number of rows depends on the rows in **Table 5000 (Decoder Output Table)** and **Table 33000 (Encoder Transport Table).**
 
 - **DEC_IN\_***instance value*\_*Interface Type*: Dynamic Interface with type **in**.
 - **ENC_IN\_***instance value*\_*Interface Type*: Dynamic Interface with type **in.**

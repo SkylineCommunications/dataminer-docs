@@ -24,7 +24,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Alarms
 
-This page displays the following parameters polled from the device: **Station Name, Motor Drift** and **Snittspenning**.All other single parameters are only updated via traps.
+This page displays the following parameters polled from the device: **Station Name, Motor Drift** and **Snittspenning**. All other single parameters are only updated via traps.
 
 To remove the alarms from the parameters linked to traps, click the button **Clear Alarms**. This will update all trap parameters to the value ***N/A.***
 

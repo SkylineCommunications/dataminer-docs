@@ -8,7 +8,8 @@ The **Ziggo Incident Gateway** driver will generate a SNMP trap to register an e
 
 ## About
 
-The **Ziggo Incident Gateway** receives info that is collected by the MICA interactive automation script. This script makes it possible to initiate an incident without the existence of alarms.The driver will process this information and will generate a SNMP trap to the SAM System.
+The **Ziggo Incident Gateway** receives info that is collected by the MICA interactive automation script. This script makes it possible to initiate an incident without the existence of alarms.
+The driver will process this information and will generate a SNMP trap to the SAM System.
 
 ### Ranges of the driver
 

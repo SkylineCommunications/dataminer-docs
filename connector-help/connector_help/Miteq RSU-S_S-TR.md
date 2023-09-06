@@ -43,7 +43,7 @@ SNMP CONNECTION**:**
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161.*
-- **Get community** **string**: The community string in order to read from the device. The default value is*public.*
+- **Get community** **string**: The community string in order to read from the device. The default value is *public.*
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
 ### Web Interface
@@ -56,7 +56,7 @@ The driver has several data display pages. More information about these pages ca
 
 ### General Page
 
-This page displays the **System** **Uptime**, the **System Contact**,the **System** **Name**, the **System** **Location**and the number of **System Services**.
+This page displays the **System** **Uptime**, the **System Contact**, the **System** **Name**, the **System** **Location** and the number of **System Services**.
 
 In addition, the (configurable) **System Clock** of the device is displayed, as well as the **Firmware Revision**. You can also enable or disable newer firmware on the device.
 
@@ -66,7 +66,7 @@ This page displays statistical information on the interface card of the device, 
 
 ### Device Settings/Status Page
 
-This page displays settings and status information for the device, such as the **Converters' Status** (for both the primary and the secondary converters), the **Redundancy Status** (the device's control scheme, the redundancy mode and the serial link status), the current **Gain Configuration**,the **Fault Status** of the device (both for the converters and for the unit in general)and the **Power Supply Status**.
+This page displays settings and status information for the device, such as the **Converters' Status** (for both the primary and the secondary converters), the **Redundancy Status** (the device's control scheme, the redundancy mode and the serial link status), the current **Gain Configuration**, the **Fault Status** of the device (both for the converters and for the unit in general) and the **Power Supply Status**.
 
 In addition, the page allows you to configure which converter is **Online** or in **Standby**, and to configure the **RSU Control Mode**, the **Redundancy Mode**, the **Serial Link** configuration, the current **Gain Configuration**, and the **Converter Configuration** in terms of **Frequency** and **Attenuation.**
 
@@ -78,7 +78,7 @@ This page displays the configurable IP/SNMP settings of the device.
 
 The following IP settings can be configured: the **IPv4 Address** of the device, the **Subnet Address Mask** and the **Gateway Address.**
 
-The following SNMP settings can be configured: the **SNMP System Contact**,the **SNMP System Name**,the **SNMP System Location**,the **Read** and **Write Community Strings** and the IPv4 **Trap Destination** address.
+The following SNMP settings can be configured: the **SNMP System Contact**, the **SNMP System Name**, the **SNMP System Location**, the **Read** and **Write Community Strings** and the IPv4 **Trap Destination** address.
 
 The page button **SNMP Information** displays statistical SNMP information of the device and allows you to **enable/disable authentication traps**.
 

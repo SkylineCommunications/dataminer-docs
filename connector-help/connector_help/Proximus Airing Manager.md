@@ -16,16 +16,16 @@ When a new synopsis is polled by the EBU Synopsis Web Service and retrieved by t
 
 - m is the number of **matching destinations** (= 1 if product code is UNI)
 - n is the number of **matching satellites**
-- For more information, refer to the "Filters"subsection in the "Usage" section of this page.
+- For more information, refer to the "Filters" subsection in the "Usage" section of this page.
 
 When transmissions are exported, the Proximus Airing Manager will check if they can be grouped together in **airings** (all transmissions will by default be included in an airing) and a (**Resource Manager**) **reservation** will be created for each of these airings.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|---------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                         | No                  | Yes                     |
-| 1.0.1.x          | Support multiple technicalSystems instances (in same synopsis)Primary key change in Transmissions table | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                          | No                  | Yes                     |
+| 1.0.1.x          | Support multiple technicalSystems instances (in same synopsis) Primary key change in Transmissions table | No                  | Yes                     |
 
 ## Installation and configuration
 
@@ -53,7 +53,7 @@ On this page, the **Synopses** table displays all synopses that were received (v
 
 All synopses are stored in the **Documents** folder of the DMA, and when a new synopsis is received, the **Proximus Airing Manager** will read out the **synopsis XML** to extract the necessary information.
 
-Synopses have a specific **ID**and **version**. When a synopsis is received in the Proximus Airing Manager, it will only be processed when it is a **new synopsis**, i.e. a synopsis with a new ID or an updated version.
+Synopses have a specific **ID** and **version**. When a synopsis is received in the Proximus Airing Manager, it will only be processed when it is a **new synopsis**, i.e. a synopsis with a new ID or an updated version.
 
 When a change is done to one of the filters (see "Filters" section below), this change will only be used for newly received synopses. However, if you want a synopsis to be reprocessed, click the **Reprocess** button in the **Synopses** table and the updated filters will be used.
 
@@ -73,7 +73,7 @@ The **Satellite Families** and **Satellites** tables contain all entries receive
 
 ### Configuration
 
-Thispage allows you to configure a number of additional settings.
+This page allows you to configure a number of additional settings.
 
 You can also verify the **subscription state** of the **EBU Synopsis Web Service** here and enable **Debug Logging**.
 
@@ -87,5 +87,7 @@ When upgrading from the **1.0.0.x** range to the **1.0.1.x** range, some actions
 
 To make sure that the airing manager is correctly updated, follow the following procedure:
 
-1.  Clear the current transmissions and airings, using the **Clear** button on the **Configurations** page.Note that this will not clear the configurations.
-2.  Enable Synopses Processing, via **Process Synopses** on the **Synopses** page.This will reenable the processing of synopses and the transmissions and airings will be generated again.
+1.  Clear the current transmissions and airings, using the **Clear** button on the **Configurations** page.
+    Note that this will not clear the configurations.
+2.  Enable Synopses Processing, via **Process Synopses** on the **Synopses** page.
+    This will reenable the processing of synopses and the transmissions and airings will be generated again.

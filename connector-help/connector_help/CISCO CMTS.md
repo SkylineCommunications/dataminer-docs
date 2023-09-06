@@ -58,7 +58,7 @@ SNMP Settings:
 
 ### General
 
-Thispage contains all general device information, such as the **Uptime**, **Name**, **Contact**, etc. It also includes **Cable Modems** summary information and **Upstream/Downstream** capacity summary information.
+This page contains all general device information, such as the **Uptime**, **Name**, **Contact**, etc. It also includes **Cable Modems** summary information and **Upstream/Downstream** capacity summary information.
 
 In addition, you can normalize some parameters and **enable automatic cleaning** for the tables. However, note that this is not available from version 3.0.0.1 onwards, and should then be performed by template instead.
 
@@ -155,10 +155,10 @@ Finally, you can also force an update of the device interfaces on this page.
 
 ### Detailed Interface Info page
 
-On thispage, the interface info is displayed.
+On this page, the interface info is displayed.
 
 Click **XMPL RPC** to retrieve data that is not available on the CISCO device itself, e.g. to retrieve the **IF Speed** from a server. The data will be retrieved via calls to a customized platform.
 
-Via **Measurement Configuration**,you can configure a more detailed Interface.
+Via **Measurement Configuration**, you can configure a more detailed Interface.
 
 More detailed information about the incoming and outgoing information can be found on the **Detailed Information Info - Rx** and **Detailed Information Info - Tx** pages.

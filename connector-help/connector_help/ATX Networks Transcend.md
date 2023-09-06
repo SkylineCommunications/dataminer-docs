@@ -62,6 +62,6 @@ This page contains the **Modules Table**. This table displays all the modules of
 
 This page contains the **Forward Receiver Modules Table** and **Forward Receiver Lasers Table**.
 
-For each module in the Forward Receiver Modules Table,the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
+For each module in the Forward Receiver Modules Table, the **Slot State** indicates the status of the DVE, and the **Remove Module** button allows you to delete the DVE.
 
 With the **Forward Receiver Auto Remove** parameter, you can enable or disable the automatic removal of **unequipped** DVE modules.

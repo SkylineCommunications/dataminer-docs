@@ -22,10 +22,10 @@ When an offload is started, the data will be stored in a **temporary file** and 
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                   | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                   | No                  | Yes                     |
-| 1.0.1.x \[SLC Main\] | Based on v1.0.0.15.Review of the queries: Topology DB connection. | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                    | No                  | Yes                     |
+| 1.0.1.x \[SLC Main\] | Based on v1.0.0.15. Review of the queries: Topology DB connection. | No                  | Yes                     |
 
 ## Installation and configuration
 
@@ -67,7 +67,7 @@ You can update the table either by individually adding entries via the right-cli
 
 This driver does not show any actual data from the database, because all data is immediately offloaded to **DSL** files. The **Configuration** page is the only displayed page. It is used to configure the **Offload** and **Database** connection.
 
-See the "Installation and configuration"section of this page for more info about the configuration of the element.
+See the "Installation and configuration" section of this page for more info about the configuration of the element.
 
 ## Notes
 

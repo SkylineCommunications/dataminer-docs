@@ -8,7 +8,8 @@ The **Thies Clima Sensor US** is a weather station. It can capture real-time inf
 
 ## About
 
-The **Thies Clima Sensor US** can operate with the proprietary **Thies** protocol, or with theserial **Modbus RTU** protocol**.** This driver implements the **Modbus RTU** protocol.
+The **Thies Clima Sensor US** can operate with the proprietary **Thies** protocol, or with the serial **Modbus RTU** protocol**.
+**This driver implements the **Modbus RTU** protocol.
 
 ### Ranges of the driver
 

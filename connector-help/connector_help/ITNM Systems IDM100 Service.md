@@ -8,7 +8,7 @@ The **ITNM Systems IDM100 Service** driver is used to display information about 
 
 ## About
 
-The **ITNM Systems IDM100 Service** driver sends HTTP commands to the IDM100 over a serial connection. The driver only polls the service information from one of the servicesof the **ITNM Systems IDM100**.
+The **ITNM Systems IDM100 Service** driver sends HTTP commands to the IDM100 over a serial connection. The driver only polls the service information from one of the services of the **ITNM Systems IDM100**.
 
 ## Installation and configuration
 

@@ -12,10 +12,10 @@ This driver uses SNMP to monitor and configure the Miteq UPB1-XTR.
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                                                  | No                  | Yes                     |
-| 2.0.0.x \[SLC Main\] | **Impacting changes** when moving from another range to this one.Recreated version to match the UX of the Miteq DNB1-XTR 1.0.0.X | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                                                   | No                  | Yes                     |
+| 2.0.0.x \[SLC Main\] | **Impacting changes** when moving from another range to this one. Recreated version to match the UX of the Miteq DNB1-XTR 1.0.0.X | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -68,7 +68,7 @@ This page displays information regarding the **bands**, **Minimum** and **Maximu
 
 It allows you to change **Attenuation**, configure **LNA limit values**, and set the device to **Mute/Unmute**.
 
-Finally, there is also a page button, **Frequency**,which opens a subpage where you can configure the **Frequency**, **Input/Output Switch**, and **Slope**.
+Finally, there is also a page button, **Frequency**, which opens a subpage where you can configure the **Frequency**, **Input/Output Switch**, and **Slope**.
 
 ### Log
 
@@ -76,7 +76,8 @@ This page displays a table with **Log/Error** entries, from *1* to *63* in desce
 
 There is also a **Clear Logs** button, which can be used to clear out the log table.
 
-As date and times are by default displayed in the local culture settings, an extra formatted column is added: **Date and Time (Formatted)**. This can be configured via the **Extra Time Notation**. When this value is set to *None*, no extra date and time will be displayed. Otherwise, the formats below will be applied:
+As date and times are by default displayed in the local culture settings, an extra formatted column is added: **Date and Time (Formatted)**. This can be configured via the **Extra Time Notation**.
+When this value is set to *None*, no extra date and time will be displayed. Otherwise, the formats below will be applied:
 
 - **AM/PM**: year-month-day 12-hours:minutes:seconds AM or PM
 - **24H**: year-month-day 24-hours:minutes:seconds

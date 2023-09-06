@@ -50,7 +50,7 @@ In either case, the SNMP interface collects the traps emitted by the device, so 
 When a new element is created, if the communication settings are in order, information can be polled from the device without authentication. However, to perform sets on the device, the **Username** and **Password** credentials must be configured on the **Login** page. The default credentials are:
 
 - Username: *admin*
-- Password:*astro*
+- Password: *astro*
 
 ## Usage
 
@@ -74,7 +74,7 @@ On this page, you can access the main configuration of the device. This includes
 
 ### TestGen
 
-On this page, the test generator settings can be configured (e.g. **Data Rate** and**Packet ID**).
+On this page, the test generator settings can be configured (e.g. **Data Rate** and **Packet ID**).
 
 ### IP Rx1 Status
 

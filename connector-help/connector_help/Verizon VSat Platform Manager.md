@@ -161,7 +161,8 @@ The following Key Point Indicators (**KPIs**) are calculated on the different le
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS04/12/2018 1.0.0.1 HPE Skyline Initial version
+DATE VERSION AUTHOR COMMENTS
+04/12/2018 1.0.0.1 HPE Skyline Initial version
 
 ## Notes
 

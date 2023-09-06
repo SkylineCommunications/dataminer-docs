@@ -27,7 +27,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.4.1                       |
-| 1.0.1.x          | 2.33.0.1                    |
+| 1.0.1.x          | 2.3 3.0.1                   |
 
 ### Exported drivers
 

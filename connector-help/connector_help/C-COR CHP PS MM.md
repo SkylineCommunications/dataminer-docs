@@ -32,8 +32,8 @@ This page contains general information about the card, such as the **Physical St
 
 This page displays the **Status** and **12V**, **5V**, **3.3V** and **-5V** **Voltages.**
 
-There arethree page buttons**:**
+There are three page buttons**:**
 
 - **Extra Info**: Displays the **Fan Current 1**, **Fan Current 2** and **Temperature**.
-- **Thresholds**:Displays the **Voltage 12V**, **Voltage 5V**, **Voltage 3.3V**, **Voltage -5V**, **Internal Temperature** and **Fan Current.**
+- **Thresholds**: Displays the **Voltage 12V**, **Voltage 5V**, **Voltage 3.3V**, **Voltage -5V**, **Internal Temperature** and **Fan Current.**
 - **Device Info**: Displays the **Firmware and Hardware Versions**, **Serial Number**, **Manufacturing Date**, **Module Name**, etc.

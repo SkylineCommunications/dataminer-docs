@@ -59,7 +59,7 @@ This page displays 2 tables:
 
 ### Configuration
 
-This page contains parameters that can be used to configure the element, such as the **username** and **password**. The latter need to be filled in before you can send a **SOAP**command.
+This page contains parameters that can be used to configure the element, such as the **username** and **password**. The latter need to be filled in before you can send a **SOAP** command.
 
 The page also displays the **Number of Runbook Entries Saved** and **Number of Runbook Entries Saved Date**. These parameters can be used to **limit the number runbooks** that are in the database and table. Both parameters can be used at the same time.
 

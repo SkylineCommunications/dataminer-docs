@@ -13,7 +13,8 @@ There are 2 XML files that are used by this driver to check when an announcement
 - **Real time running file**: is the prefered file to use, but is only when it has been updated within the last 10 minutes
 - **Station time table file**: is used when the real time running file was not update in the last 10 minutes
 
-Both files are the same format, but the real time running file can contain extra information about delays etc. The **Sydney Trains GPS Tracking** driver will read these files and will send an announcement request to the Sittig DVA interface when:
+Both files are the same format, but the real time running file can contain extra information about delays etc.
+The **Sydney Trains GPS Tracking** driver will read these files and will send an announcement request to the Sittig DVA interface when:
 
 - A train arrives to a station in the **next 20 minutes**
 - A train arrives to a station in the **next 10 minutes**

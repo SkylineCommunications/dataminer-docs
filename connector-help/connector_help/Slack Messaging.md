@@ -47,7 +47,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 HTTP CONNECTION:
 
-- **IP address/host**: The polling IP or URL of the destination.Must be slack.com.
+- **IP address/host**: The polling IP or URL of the destination. Must be slack.com.
 - **IP port**: The IP port of the destination, by default 443.
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
@@ -57,7 +57,7 @@ This driver uses an HTTP (web socket) connection and requires the following inpu
 
 HTTP CONNECTION:
 
-- **IP address/host**: The polling IP or URL of the destination.Must be slack.com.
+- **IP address/host**: The polling IP or URL of the destination. Must be slack.com.
 - **IP port**: The IP port of the destination. Default: 443
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
@@ -73,7 +73,8 @@ This integration works based on a Slack bot that must be preconfigured via the S
 6.  Give the bot user a name (i.e. DataMiner), and make sure that "Always Show My Bot as Online" option is turned off. The bot user will automatically be online when the driver is connected to the web socket connection.
 7.  Click "Add Bot User".
 8.  Install the application in your workspace, in order to receive the bot authentication token that can be used in the element.
-9.  Copy the "Bot User Oauth Access Token", and paste it in the "OAuth Access Token" parameter on the Authentication page of the Slack element in DataMiner.The driver will now connect to the Slack API, and shortly afterwards the bot user will come online.
+9.  Copy the "Bot User Oauth Access Token", and paste it in the "OAuth Access Token" parameter on the Authentication page of the Slack element in DataMiner.
+    The driver will now connect to the Slack API, and shortly afterwards the bot user will come online.
 
 ## Usage
 
@@ -85,13 +86,19 @@ This page displays general information on the Slack team to which the element is
 
 This page contains a table with all users that are part of the Slack team.
 
+![Users.jpg](~/connector-help/images/Slack_Messaging_Users.jpg)
+
 ### Conversations
 
 This page contains a table listing all possible conversations (public channels, private channels, instant messaging) that messages can be sent to. The "Send Message" column allows you to quickly send a message to a specific conversation. The last received message is shown in the "Last Message" column.
 
+![Conversations.jpg](~/connector-help/images/Slack_Messaging_Conversations.jpg)
+
 ### Automation Scripts
 
 This page contains a table with all existing Automation scripts in DataMiner that can be executed via commands in Slack.
+
+![Scripts.jpg](~/connector-help/images/Slack_Messaging_Scripts.jpg)
 
 To refresh the content of this table, use the **Refresh** button.
 
@@ -119,6 +126,8 @@ The number of days that messages should remain in the table can be customized.
 ### Authentication
 
 On this page, the **OAuth access token** that should be used to communicate with the Slack API must be configured. The page also contains some parameters that display the current status of the authentication.
+
+![authentication.jpg](~/connector-help/images/Slack_Messaging_authentication.jpg)
 
 ### Websocket
 

@@ -20,9 +20,9 @@ The chassis must include an **Evertz 7700-FC** card to be functional. Data about
 
 The driver should be compatible with all firmware versions. It has been tested with the following firmware versions (the version number is the value of the SNMP parameter 'Software Build'):
 
-| **Driver Range** | **Device Firmware Version**             |
-|------------------|-----------------------------------------|
-| 1.0.0.x          | v3.07 Build 2v4.02 Build 9v4.02 Build15 |
+| **Driver Range** | **Device Firmware Version**               |
+|------------------|-------------------------------------------|
+| 1.0.0.x          | v3.07 Build 2 v4.02 Build 9 v4.02 Build15 |
 
 ### Exported drivers
 
@@ -80,7 +80,7 @@ This page lists all the modules embedded in the chassis and their corresponding 
 
 ### Frame Parameters
 
-This page displays general parameters for the **Evertz 7700-FC** controller, such as the **temperature**, **power supply**,etc.
+This page displays general parameters for the **Evertz 7700-FC** controller, such as the **temperature**, **power supply**, etc.
 
 ### SNMP Config
 

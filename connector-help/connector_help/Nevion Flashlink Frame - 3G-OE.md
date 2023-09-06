@@ -32,7 +32,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about a 3G-OE module, including:
+This page contains general information about a 3G-OE module, including:
 
 - Type
 - Card Status

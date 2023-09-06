@@ -81,11 +81,11 @@ In addition, the table contains a number of columns indicating whether a specifi
 
 ### SCTE35 Page (from version 1.0.1.10)
 
-This page provides an overview of all components available for each service in the **Components List Table**.This table displays the **Stream Type** and indicates whether it is encrypted or not**.**
+This page provides an overview of all components available for each service in the **Components List Table**. This table displays the **Stream Type** and indicates whether it is encrypted or not**.**
 
-The page also contains the **Cue Message Log Table**,which shows the list of log messages for each service. For each entry in this table, information is available regarding **Status**, **Command Time**,the **Slice Command** that was requested,the **Event type** and **Time** and also the **Command Status**.
+The page also contains the **Cue Message Log Table**, which shows the list of log messages for each service. For each entry in this table, information is available regarding **Status**, **Command Time**, the **Slice Command** that was requested, the **Event type** and **Time** and also the **Command Status**.
 
-Finally, there is also the **Events Counts Table**,which shows the current events that have been logged in the **Cue Message Log Table** for the previous X hours (as defined with the parameter **Time Interval Number of Events for Service**).
+Finally, there is also the **Events Counts Table**, which shows the current events that have been logged in the **Cue Message Log Table** for the previous X hours (as defined with the parameter **Time Interval Number of Events for Service**).
 
 ### Switches (from version 2.0.0.2)
 

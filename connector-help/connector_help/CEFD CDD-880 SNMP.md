@@ -8,7 +8,8 @@ The CDM-880 Multi Receiver Router serves as the hub expansion utility component 
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands. To get more detailed information consult the website <http://www.comtechefdata.com/support/docs/advancedvsatdocs>.
+This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+To get more detailed information consult the website <http://www.comtechefdata.com/support/docs/advancedvsatdocs>.
 
 ### Version Info
 
@@ -17,6 +18,8 @@ This driver is intended to get/set information from/to the device via an Element
 | 1.0.0.x              | Initial version                                                                                                     | \-           | \-                |
 | 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.22     | \-                |
 
+
+
 ### Product Info
 
 | **Range** | **Supported Firmware** |
@@ -24,12 +27,16 @@ This driver is intended to get/set information from/to the device via an Element
 | 1.0.0.x   | Unknown                |
 | 1.0.1.x   | Unknown                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Installation and configuration
 

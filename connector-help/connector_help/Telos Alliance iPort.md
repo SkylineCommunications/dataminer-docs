@@ -72,7 +72,7 @@ This page contains the **Encoder table**, with information on the input gain, ad
 
 ### V-Mixer/V-Mode page
 
-This page contains the **VMix** and **VMode tables**,with information on the input gain, address, source name and number of channels.
+This page contains the **VMix** and **VMode tables**, with information on the input gain, address, source name and number of channels.
 
 ### Meter Data page
 

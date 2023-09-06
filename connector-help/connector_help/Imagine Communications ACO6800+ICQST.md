@@ -70,7 +70,7 @@ In Audio Input group, it is displayed 3 page buttons: **SRC** **Bypass**, **Demu
 
 - The **SRC Bypass** subpage enables bypass to specific sources.
 - The **Demux Settings** subpage enables to set the reporting behavior when there are audio errors.
-- The **Demux Status**subpage displays the audio presence and type of each channel. It also display Checksum, DBN, Parity and ECC errors.
+- The **Demux Status** subpage displays the audio presence and type of each channel. It also display Checksum, DBN, Parity and ECC errors.
 
 In Processing group, it is displayed 4 page buttons: **Bit Width**, **Phase Invert**, **Gain** and **Delay**:
 

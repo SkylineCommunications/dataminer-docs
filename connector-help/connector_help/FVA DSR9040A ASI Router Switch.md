@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 The **General** page displays the number of inputs and outputs of the device. The number of outputs can be retrieved from the device, but the number of inputs cannot be retrieved. When the element is created, the driver assumes the number of inputs is equal to the number of outputs. However, you can change these numbers manually.
 
-The matrix data is retrieved every minute. The **Refresh Matrix** buttoncan be used to force the polling of the matrix.
+The matrix data is retrieved every minute. The **Refresh Matrix** button can be used to force the polling of the matrix.
 
 The **Matrix View** page displays the matrix.
 

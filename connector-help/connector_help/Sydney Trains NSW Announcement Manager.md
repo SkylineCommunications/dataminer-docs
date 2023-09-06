@@ -10,7 +10,8 @@ The **Sydney Trains NSW Announcement Manager** is used to make **live announceme
 
 This manager driver is designed to be used in combination with the **Sydney Trains NSW Announcement Manager Visio** file. The **Visio** will be used to select the **station** to which the user wants to announce. The driver is designed to allow multiple announcements by different users at the same time.
 
-This manager driver is similar to the **Sydney Trains Announcement Manager**, but the biggest difference is, that the stations that will be announced to by this driver are **no longer available via IP**. This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This driver still interfaces with the *Delec Oratis Matrix System* driver to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
+This manager driver is similar to the **Sydney Trains Announcement Manager**, but the biggest difference is, that the stations that will be announced to by this driver are **no longer available via IP**.
+This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This driver still interfaces with the *Delec Oratis Matrix System* driver to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
 
 ### Ranges of the driver
 
@@ -34,7 +35,7 @@ To import the CSV file, click the **"Import..."** button at the bottom of the **
 
 ### Configuration of Matrices
 
-All*"Delec Oratis Matrix System"*elements will be retrieved by the **Announcement Manager** driver and added ot the **Matrices** table on the **Matrices** page. The **NMS** matrix needs to be configured so the Announcement Manager knows in which element the crosspoint(s) need to be set.
+All *"Delec Oratis Matrix System"* elements will be retrieved by the **Announcement Manager** driver and added ot the **Matrices** table on the **Matrices** page. The **NMS** matrix needs to be configured so the Announcement Manager knows in which element the crosspoint(s) need to be set.
 
 ### Configuration of Enhanced System Log
 

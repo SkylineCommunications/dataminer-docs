@@ -32,7 +32,7 @@ This page contains the **Management Fault** tables (General, SDi and AES). In ea
 
 ### Monitor
 
-This page displays the **Bank Preference**, **Firmware version**, and **Local Mode**,as well as the **SDI Tables** (**Input** and **Input Format Monitor**) and the **AES Monitor Table**.
+This page displays the **Bank Preference**, **Firmware version**, and **Local Mode**, as well as the **SDI Tables** (**Input** and **Input Format Monitor**) and the **AES Monitor Table**.
 
 ### Control
 

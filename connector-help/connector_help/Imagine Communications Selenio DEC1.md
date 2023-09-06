@@ -14,10 +14,10 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                       | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -86,7 +86,7 @@ This section contains the following pages:
 This section contains the following pages:
 
 - **VANC Processing:** All information concerning the **Vertical Ancillary Data Space** of the signal.
-- **VBI Processing:** A list ofall **Vertical Blanking Interval Processing Field** functions (per line) and statuses.
+- **VBI Processing:** A list of all **Vertical Blanking Interval Processing Field** functions (per line) and statuses.
 
 ### TS Input section
 

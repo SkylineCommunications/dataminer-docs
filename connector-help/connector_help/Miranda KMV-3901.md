@@ -25,7 +25,7 @@ Because this drivers uses SNMP and TCP (serial) communication, 2 connections nee
 
 - **IP address**: The IP address of the frame.
 
-After creating the element, it's important that you set the input parameters that are displayed on the **General** page.See section *Usage \> General Page* for more details.
+After creating the element, it's important that you set the input parameters that are displayed on the **General** page. See section *Usage \> General Page* for more details.
 
 ## Usage
 
@@ -39,9 +39,9 @@ The **Input Names.** page button is also displayed on this page. The **Input Nam
 
 ### Monitor Page
 
-The **Monitor** page displays the **Room** and **Current Layout**. These parameters are also displayed on the **UMD** page.Both parameters can be changed using the values in the drop-down menu. When the room is changed, the drop-down list for the layouts will be updated to contain all layouts for the selected room.
+The **Monitor** page displays the **Room** and **Current Layout**. These parameters are also displayed on the **UMD** page. Both parameters can be changed using the values in the drop-down menu. When the room is changed, the drop-down list for the layouts will be updated to contain all layouts for the selected room.
 
-Every time the current layout changes, the **Monitor** table will be updated. Because there is no command to get all the monitors for a certain layout, these monitors need to be added by the user. When a monitor has been added to a layout in XEdit, the monitor can be added to the monitor table for the layout in question. To do so, right-click the table and select **Add New Monitor**.A textbox will appear where you can enter the monitor name.
+Every time the current layout changes, the **Monitor** table will be updated. Because there is no command to get all the monitors for a certain layout, these monitors need to be added by the user. When a monitor has been added to a layout in XEdit, the monitor can be added to the monitor table for the layout in question. To do so, right-click the table and select **Add New Monitor**. A textbox will appear where you can enter the monitor name.
 
 When a new monitor entry is added to the table, the monitor will be added to an .xml file that is saved in the following folder:
 

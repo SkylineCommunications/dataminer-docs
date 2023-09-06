@@ -54,4 +54,4 @@ The element consists of the following data pages:
 
 - **General**: Displays information about the tracking system, including current azimuth, elevation and polarization angles, etc.
 - **Status**: Contains all device status information.
-- **Operations**: Allows you to manually control the antenna. The **Azimuth**, **Elevation**,and **Polarization** configuration is available on a subpage.
+- **Operations**: Allows you to manually control the antenna. The **Azimuth**, **Elevation**, and **Polarization** configuration is available on a subpage.

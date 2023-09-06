@@ -53,7 +53,7 @@ This page displays the **Controller** **AMC Table** and the parameter **Auto Qui
 
 ### Diagnostic
 
-This page displays the parameters **LED Test Pattern**, **Fan Test Mode**, **Relay Test Mode**, **Relay Control**, **Slot Poll Mode**, **Boot Count**, **Object Table Data**, **Reset System Time**, **Alarm Slot** and **Controller Diagnostic Table**.The latter contains a column that allows you to reset both the **success** and the **failure** values.
+This page displays the parameters **LED Test Pattern**, **Fan Test Mode**, **Relay Test Mode**, **Relay Control**, **Slot Poll Mode**, **Boot Count**, **Object Table Data**, **Reset System Time**, **Alarm Slot** and **Controller Diagnostic Table**. The latter contains a column that allows you to reset both the **success** and the **failure** values.
 
 ### Factory
 

@@ -49,7 +49,7 @@ This page displays following parameters:
 
 Settings
 
-On this page you can view and set the **gain** and **mute** settings for every band. The **Band x Volts and Currents...** page buttonwill open a pop-up page where you can view the **voltages** and **currents** for the respective band.
+On this page you can view and set the **gain** and **mute** settings for every band. The **Band x Volts and Currents...** page button will open a pop-up page where you can view the **voltages** and **currents** for the respective band.
 
 ### Alarms
 

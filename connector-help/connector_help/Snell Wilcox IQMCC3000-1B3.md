@@ -94,7 +94,7 @@ On this page, you can configure several ancillary data stores parameters related
 
 ### Rolltrack
 
-This page provides a simple command interface for sending unconnected Rolltrack commands to any Rollcall-compatible unit in the network. The following parameters are displayed:**Disable All**,**Rolltrack Index,Rolltrack Source**, **Rolltrack Address**,**Rolltrack Command**, **RolltrackSending**and**RolltrackStatus**.
+This page provides a simple command interface for sending unconnected Rolltrack commands to any Rollcall-compatible unit in the network. The following parameters are displayed: **Disable All**, **Rolltrack Index,** **Rolltrack Source**, **Rolltrack Address**, **Rolltrack Command**, **Rolltrack** **Sending** and **Rolltrack** **Status**.
 
 ### Memories
 

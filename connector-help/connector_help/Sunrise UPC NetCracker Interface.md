@@ -15,9 +15,9 @@ The communication between Netcracker and DataMiner will be done through the Java
 
 ### Version Info
 
-| **Range**           | **Key Features**    | **Based on** | **System Impact** |
-|---------------------|---------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | **Initial Version** | \-           | \-                |
+| **Range**            | **Key Features**    | **Based on** | **System Impact** |
+|----------------------|---------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | **Initial Version** | \-           | \-                |
 
 ### System Info
 
@@ -39,8 +39,18 @@ This connector uses a virtual connection and does not require any configuration 
 
 Any incoming job is registered in the Message Log table where the primary key is the Job Message Correlation ID.
 
+![Capture2.JPG](~/connector-help/images/Sunrise_UPC_NetCracker_Interface_Capture2.JPG)
+
 The possible values for the Type column are: Activate, Replace or Deactivate, whereas for the State column are: Error or OK.
+
+
 
 ### Configuration
 
 The user is able to configure the number of rows of the Message Log table by using the 'Maximum Number of Rows' or the 'Kepp Record for' parameters.
+
+![]()
+
+
+
+

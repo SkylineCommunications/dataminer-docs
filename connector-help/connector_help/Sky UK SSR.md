@@ -10,9 +10,9 @@ This driver can be used to obtain a list of "services" (e.g. TV shows, movies, e
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                        | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version**NOTE**: From version 1.0.0.5 onwards, the minimum required DataMiner version is 9.0.2. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                         | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version **NOTE**: From version 1.0.0.5 onwards, the minimum required DataMiner version is 9.0.2. | \-           | \-                |
 
 ### Product Info
 

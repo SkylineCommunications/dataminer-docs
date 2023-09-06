@@ -14,7 +14,8 @@ The CEFD CDD-890 driver is used to monitor and control a CEFD CDD-890 device. Th
 
 ### Creation
 
-***SNMP connection***This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+***SNMP connection***
+This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
 
 SNMP CONNECTION:
 
@@ -37,7 +38,7 @@ This page displays information about the **System Information**, **Service Conta
 
 The **Admin** page displays the selected configuration and options. The page shows information about the **FAST Configuration** and it is possible to set the **SNMP Configuration**, **Auto Logout Configuration**, **CTOG** and **MEO**.
 
-Also there are two pagebuttons available that will open pop-up pages which display additional information regarding the subject stated on the pagebutton. It concerns the **Firmware Configuration** and the**Vipersat Management System Configuration**.
+Also there are two pagebuttons available that will open pop-up pages which display additional information regarding the subject stated on the pagebutton. It concerns the **Firmware Configuration** and the **Vipersat Management System Configuration**.
 
 ### Configuration - Interface page
 

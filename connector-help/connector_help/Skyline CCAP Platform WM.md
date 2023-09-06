@@ -64,7 +64,8 @@ On the **Configuration** page, the following settings are available:
 
 - **Enable or disable** the exporting and importing feature with toggle buttons (**Entity Export** and **Entity Import**, respectively).
   - Specify the **file paths** where files can be exported and imported (with the **Entity Export Directory** and **Entity Import Directory**, respectively).
-  - Specify whether to export/import to/from a **local or remote** location via a toggle button (**Entity Export Directory Type** and **Entity Import Directory Type**, respectively). Note that for the remote file handling to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export** or **Import Directory** parameter. The path must be shared/accessible, or this feature will not work.
+  - Specify whether to export/import to/from a **local or remote** location via a toggle button (**Entity Export Directory Type** and **Entity Import Directory Type**, respectively).
+    Note that for the remote file handling to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export** or **Import Directory** parameter. The path must be shared/accessible, or this feature will not work.
   - Start the export or import by clicking the **Apply** button in the relevant section.
 
 ## Notes

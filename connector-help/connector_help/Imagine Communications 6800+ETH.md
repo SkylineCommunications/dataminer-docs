@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_6800+ETH
 
 # Imagine Communications 6800+ETH
 
-The **Image Communications 6800+ETH**driver uses both **serial** and **smart-serial** communication to monitor and configure the Basic Chassis from an Imagine Communications frame.
+The **Image Communications 6800+ETH** driver uses both **serial** and **smart-serial** communication to monitor and configure the Basic Chassis from an Imagine Communications frame.
 
 ## About
 
@@ -26,7 +26,7 @@ This a serial driver combined with smart-serial communication. During the creati
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: IP port of the device, fixed value: *4050.*
-- **Bus address**: This is a combination of the frame number and slot number/ID: \<frameNumber\>**.**\<slotID\>. E.g. frame 1 and slot 21 = bus address*1.21*. The ETH Module is always on slot 21.
+- **Bus address**: This is a combination of the frame number and slot number/ID: \<frameNumber\>**.**\<slotID\>. E.g. frame 1 and slot 21 = bus address *1.21*. The ETH Module is always on slot 21.
 
 #### SMART-SERIAL PORTDEV CONNECTION:
 

@@ -22,9 +22,9 @@ This is a mediation connector for redundancy switches. It links to parameters in
 
 ### Version Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                     | **Exported Components** |
-|-----------|---------------------|-------------------------|-----------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- Snell Wilcox IQHCO3193-1A- Snell Wilcox HCO51 RollCall | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                      | **Exported Components** |
+|-----------|---------------------|-------------------------|------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- Snell Wilcox IQHCO3193-1A - Snell Wilcox HCO51 RollCall | \-                      |
 
 ## Creation
 

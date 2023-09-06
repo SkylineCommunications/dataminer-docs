@@ -115,7 +115,7 @@ The dynamic interfaces are created based on **Table 3600 (Port Configuration Tab
 **Table 3600** will contain all the *DCF output interfaces*.
 
 - **ASI IN\_***instance value*\_*Interface Type*: Dynamic Interface with type **inout.**
-- **ASI OUT\_***instance value*\_*Interface Type*: Dynamic Interface with type**inout**
+- **ASI OUT\_***instance value*\_*Interface Type*: Dynamic Interface with type **inout**
 - **IP IN\_***instance value*\_*Interface Type*: Dynamic Interface with type **inout.**
 - **IP OUT\_***instance value*\_*Interface Type*: Dynamic Interface with type **inout**.
 

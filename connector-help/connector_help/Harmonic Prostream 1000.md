@@ -20,11 +20,11 @@ This driver is intended to communicate with the device using SNMP and serial com
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                      |
-|------------------|--------------------------------------------------|
-| 1.0.0.x          | Software Version: 06.07.04.004Boot Version 3.0.4 |
-| 1.0.1.x          | Software Version: 06.07.04.004Boot Version 3.0.4 |
-| 1.0.2.x          | Software Version: 06.07.04.004Boot Version 3.0.4 |
+| **Driver Range** | **Device Firmware Version**                       |
+|------------------|---------------------------------------------------|
+| 1.0.0.x          | Software Version: 06.07.04.004 Boot Version 3.0.4 |
+| 1.0.1.x          | Software Version: 06.07.04.004 Boot Version 3.0.4 |
+| 1.0.2.x          | Software Version: 06.07.04.004 Boot Version 3.0.4 |
 
 ## Installation and configuration
 

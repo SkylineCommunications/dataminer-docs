@@ -12,10 +12,10 @@ This driver uses an **SNMP** connection (and a smart-serial connection for [Embe
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                                                                                              | No                  | Yes                     |
-| 1.0.1.x          | Based on 1.0.0.1Added hotkeys and network triggers by creating a smart-serial connection for the [Ember+](https://github.com/Lawo/ember-plus/wiki) protocol.Element settings must be adjusted when updating to this version. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                                                                                                                                | No                  | Yes                     |
+| 1.0.1.x          | Based on 1.0.0.1 Added hotkeys and network triggers by creating a smart-serial connection for the [Ember+](https://github.com/Lawo/ember-plus/wiki) protocol. Element settings must be adjusted when updating to this version. | No                  | Yes                     |
 
 ### Supported firmware versions
 

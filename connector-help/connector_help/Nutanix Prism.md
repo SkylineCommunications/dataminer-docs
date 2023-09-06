@@ -4,7 +4,8 @@ uid: Connector_help_Nutanix_Prism
 
 # Nutanix Prism
 
-This driver is an HTTPS driver that communicates with the Nutanix Prism through its rest API. This allows you to manage your global Nutanix hyperconverged infrastructure (HCI) from one console.This HCI combines servers and storage into a distributed infrastructure platform with intelligent software to create flexible building blocks that replace legacy infrastructure consisting of separate servers, storage networks, and storage arrays. More specifically, it combines commodity data center server hardware with locally attached storage devices (spinning disk or flash) and is powered by a distributed software layer to eliminate common pain points associated with legacy infrastructure.
+This driver is an HTTPS driver that communicates with the Nutanix Prism through its rest API. This allows you to manage your global Nutanix hyperconverged infrastructure (HCI) from one console.
+This HCI combines servers and storage into a distributed infrastructure platform with intelligent software to create flexible building blocks that replace legacy infrastructure consisting of separate servers, storage networks, and storage arrays. More specifically, it combines commodity data center server hardware with locally attached storage devices (spinning disk or flash) and is powered by a distributed software layer to eliminate common pain points associated with legacy infrastructure.
 
 ## About
 

@@ -45,7 +45,7 @@ SNMP Settings:
 
 ### General
 
-On thispage, an overview of general device settings is displayed, e.g. **Model**, **Software Description**, etc. **Memory Usage** is only calculated when polling of **Memory Details** is enabled.
+On this page, an overview of general device settings is displayed, e.g. **Model**, **Software Description**, etc. **Memory Usage** is only calculated when polling of **Memory Details** is enabled.
 
 The **Availability** will show a percentage of the device online time. This value will decrease if the element is in timeout state or was not active. The **Availability - Last Month** shows the availability from the previous month.
 
@@ -55,7 +55,7 @@ In addition, a **Redetect Config** can be performed with the corresponding butto
 
 ### Detailed Interface Info page
 
-On thispage, the interface info is displayed. You can choose between "*IF Name:IF Custom Description*" and "*IF Custom Description*" by configuring the **Displaykey Format** toggle button. For a new element, the default displaykey is "*IF Name:IF Custom Description*".
+On this page, the interface info is displayed. You can choose between "*IF Name:IF Custom Description*" and "*IF Custom Description*" by configuring the **Displaykey Format** toggle button. For a new element, the default displaykey is "*IF Name:IF Custom Description*".
 
 Via the **Measurement Config.** page button, you can configure a more detailed interface. Setting the **MCT - Measure Port** to *Disabled* will remove the interface from all interface tables. The row is still polled by SNMP, but no calculations are executed and no trending/alarm monitoring is possible.
 

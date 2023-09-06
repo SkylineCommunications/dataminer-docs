@@ -6,7 +6,7 @@ uid: Connector_help_Telenet_BO_Manager
 
 Business Overlay (BO) presents the delivered services to Business Customers in real time. A BO customer is typically a large organization that has multiple offices/sites across Belgium (Europe). These sites are interconnected via the Telenet network.
 
-Based on the receivedalarms, the different customer types and the different types of sites, a correlated conclusion is made for a BO site. For this purpose, a correlation matrix is used that allows Telenet to configure these criteria and conclusions for each type dynamically.
+Based on the received alarms, the different customer types and the different types of sites, a correlated conclusion is made for a BO site. For this purpose, a correlation matrix is used that allows Telenet to configure these criteria and conclusions for each type dynamically.
 
 ## About
 

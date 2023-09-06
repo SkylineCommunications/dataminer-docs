@@ -48,8 +48,8 @@ To start using the element, add the necessary servers on the **Servers** page.
 The element consists of the following data pages:
 
 - **General**: Contains information about the used job folder and the communication method.
-- **Overview**: Contains a tree control with an overview of the structure of the job folder containing 3 levels: **Channels**,**Streams** and **Jobs**.
+- **Overview**: Contains a tree control with an overview of the structure of the job folder containing 3 levels: **Channels**, **Streams** and **Jobs**.
 - **Channels**: Contains a table listing the channels. A channel is related to a certain type of sport and each channel has several **streams** in it.
 - **Streams**: Contains a table listing the streams. A stream has a specific set of **jobs** that can be executed.
-- **Jobs**: Contains a table listing thejobs. A job has a **pipeline** with several stages. After each execution, a status indicates if the execution was successful.
+- **Jobs**: Contains a table listing the jobs. A job has a **pipeline** with several stages. After each execution, a status indicates if the execution was successful.
 - **Servers**: Contains a table where you can manually add servers in order to communicate with them using the driver. Each job that is run will be executed on each server in the table.

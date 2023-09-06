@@ -53,7 +53,7 @@ This page contains information about CPU usage and memory usage, as well as info
 Two extra pages are available:
 
 - **Alarm Management**: On this page, you can change the alarm settings of the CPU usage and/or the memory usage. In other words, here you can change when the device generates an alarm entry.
-- **Configuration**:On this page, you can see which modules are or are not configured.
+- **Configuration**: On this page, you can see which modules are or are not configured.
 
 ### Alarms
 

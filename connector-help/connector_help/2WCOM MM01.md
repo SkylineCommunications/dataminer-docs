@@ -82,7 +82,7 @@ This page displays the **LAN Table**.
 
 ### System Settings
 
-On this page, you can change settings for the **System Description**, **Name**and **Location**. The page also displays system information, such as the **Serial Number**, **Device Type**, **Kernel Release**, **MM01 Version**, **ACIP Version**, **FPGA Version** and **MIB Version**.
+On this page, you can change settings for the **System Description**, **Name** and **Location**. The page also displays system information, such as the **Serial Number**, **Device Type**, **Kernel Release**, **MM01 Version**, **ACIP Version**, **FPGA Version** and **MIB Version**.
 
 The page also contains 3 page buttons:
 

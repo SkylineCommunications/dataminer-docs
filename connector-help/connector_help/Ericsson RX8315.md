@@ -14,10 +14,10 @@ This driver is intended to be usable with as many variations of the product as p
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.        | No                  | Yes                     |
-| 1.1.0.x          | New firmware.Added DCF. | Yes                 | Yes                     |
+| **Driver Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|--------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.         | No                  | Yes                     |
+| 1.1.0.x          | New firmware. Added DCF. | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
@@ -63,7 +63,7 @@ Several buttons are available on the page:
 
 - The **Reboot button** allows you to restart the device.
 - With the **Configurations** page button, you can export and import configurations for your device.
-- The **Features** page button opens a table listing all the features with thelicense state.
+- The **Features** page button opens a table listing all the features with the license state.
 
 ### Input Page
 
@@ -77,8 +77,9 @@ Several buttons are available on the page:
 
 - The **VSB Card** page button shows status parameters of a VSB input board.
 - The **Input ASI** page button shows ASI parameters, such as signal strength.
-- The **Input IP** page button opens a page with all IP input related parameters, such as **Last IP address received, TS packets per UDP frame, network utilization, IP jitter, de-jitter buffer level, IP card firmware/software version, Redundancy parameters**,etc. On this subpage, there is a **Reset IP Stats** button that can be used to reset the IP statistics.
-- The **Input Sat** page button leads to a page with parameters related to satellite input: **Sat Status, Null Packet Override, Null Packet Threshold, Signal Status, Selected Input RF, Post Viterbi BER, Selected Modulation, Selected Format, Selected FEC, Selected Sense, Selected Input Symbol Rate, Pilot Symbol Status** and **Frame Length**. There are also three bar graphs, showing the **Signal Strength, C/N** and **C/N Margin.**On this subpage there is another page button called **Sat Input**. It leads to a subpage where you can define the **LNB Frequency, Satellite Frequency, L-Band Frequency, Symbol Rate, Modulation Type, Roll Off, Spectrum Sense, Search Range, LNB Power Output, LNB Power Level** and **LNB 22Khz parameters**.
+- The **Input IP** page button opens a page with all IP input related parameters, such as **Last IP address received, TS packets per UDP frame, network utilization, IP jitter, de-jitter buffer level, IP card firmware/software version, Redundancy parameters**, etc. On this subpage, there is a **Reset IP Stats** button that can be used to reset the IP statistics.
+- The **Input Sat** page button leads to a page with parameters related to satellite input: **Sat Status, Null Packet Override, Null Packet Threshold, Signal Status, Selected Input RF, Post Viterbi BER, Selected Modulation, Selected Format, Selected FEC, Selected Sense, Selected Input Symbol Rate, Pilot Symbol Status** and **Frame Length**. There are also three bar graphs, showing the **Signal Strength, C/N** and **C/N Margin.**
+  On this subpage there is another page button called **Sat Input**. It leads to a subpage where you can define the **LNB Frequency, Satellite Frequency, L-Band Frequency, Symbol Rate, Modulation Type, Roll Off, Spectrum Sense, Search Range, LNB Power Output, LNB Power Level** and **LNB 22Khz parameters**.
 - The **IP Configuration** page button leads to a page where you can see and modify parameters for the IP configuration, such as **Network Utilization, Rx Uptime, IP address, Subnet Mask, Default Gateway, VLAN Tag, VLAN enable, ICMP enable, IGMP Version, ARP Enable, Ethernet Line Mode, Ethernet Current Line Mode, Duplex Mode, MAC Address, Multicast Address, Enable Multicast, Enable Unicast, Source IP Address, UDP Port, Column** and **Row Port**.
 
 ### Output Page
@@ -87,12 +88,12 @@ This page contains all parameters for the output, such as:
 
 - **TS Feed** (with the following possible values: *Input, Transcoded to MPEG2, Descrambled* or *Unknown*).
 - **Output 1, 2 and 3** (*ASI, SD SDI, Automatic, HD SDI* and *SDI 3G*)
-- The **IP Output Ports Configuration** table,containing **Source IP, Destination IP, Destination Subnet Mask, IPO Gateway, Ethernet MAC Address, Link Status, UDP Source Port, UDP Destination Port,** and **Custom Source IP.**
+- The **IP Output Ports Configuration** table, containing **Source IP, Destination IP, Destination Subnet Mask, IPO Gateway, Ethernet MAC Address, Link Status, UDP Source Port, UDP Destination Port,** and **Custom Source IP.**
 - Router parameters, such as **Link Speed, MSM IP Address, NC State, RIP Metric Port1** and **RIP TX Interval.**
 
 ### CA Card Page
 
-This page contains all parameters for use with Conditional Access Module or CA descrambling in software.Parameters include:
+This page contains all parameters for use with Conditional Access Module or CA descrambling in software. Parameters include:
 
 - On the left side: **Over Air Control, Over Air Message, Power Carrier Mode,** and **Biss Mode**.
 - Below this, you can enter the **BISS Key, User 1** and **User 2** **keys**.

@@ -2,7 +2,8 @@
 uid: Connector_help_TrippLite_ATS_Switched_PDU_WEBCARDLX
 ---
 
-TrippLite ATS Switched PDU WEBCARDLXThe PDU line of devices from TrippLite allow for the use of multiple outlets, but does not guard against surge or line noise protection for connected equipment.
+TrippLite ATS Switched PDU WEBCARDLX
+The PDU line of devices from TrippLite allow for the use of multiple outlets, but does not guard against surge or line noise protection for connected equipment.
 
 ## About
 

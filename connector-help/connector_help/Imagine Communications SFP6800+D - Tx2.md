@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_SFP6800+D_-_Tx2
 
 Imagine Communications SFP6800+D - Tx2
 
-This driver can be used to view information and configure settings of **Tx2 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical andOpticalof the Tx2 cage.
+This driver can be used to view information and configure settings of **Tx2 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical and Optical of the Tx2 cage.
 
 ## About
 
@@ -28,16 +28,16 @@ This driver is **automatically generated** by the parent driver **Imagine Commun
 
 ### CMPST Tx2
 
-This page contains the information about CMPST parameters regarding Tx2cards.
+This page contains the information about CMPST parameters regarding Tx2 cards.
 
 ### Electrical Tx2
 
-This page contains the information about Electrical parameters regarding Tx2cards.
+This page contains the information about Electrical parameters regarding Tx2 cards.
 
 ### HDMI Tx
 
-This page contains the information about HDMI parameters regarding Txcards.
+This page contains the information about HDMI parameters regarding Tx cards.
 
 ### Optical Tx2
 
-This page contains the information about Optical parameters regarding Tx2cards.
+This page contains the information about Optical parameters regarding Tx2 cards.

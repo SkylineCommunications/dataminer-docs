@@ -10,9 +10,9 @@ The IntelSat Flex Platform VSAT functions as a virtual connector designed to str
 
 ### Version Info
 
-| **Range**           | **Key Features**      | **Based on** | **System Impact** |
-|---------------------|-----------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | KAFKA Files Injection | \-           | \-                |
+| **Range**            | **Key Features**      | **Based on** | **System Impact** |
+|----------------------|-----------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | KAFKA Files Injection | \-           | \-                |
 
 ### System Info
 
@@ -40,4 +40,7 @@ There is no redundancy defined.
 
 On the **Remotes** page of this connector, you will find the Terminals and SSPCs tables. These tables are populated with data pulled from KAFKA broker via the Generic KAFKA Consumer
 
+
 The **Topic Settings** is where you can configure specific parameters related to importing data from KAFKA files.
+
+

@@ -14,19 +14,19 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                       | No                  | Yes                     |
-| 5.5.0.x          | Based on 5.4.9.4DCF implementation.                                                                                                          | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
+| 5.5.0.x          | Based on 5.4.9.4 DCF implementation.                                                                                                          | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                  |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
-| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                      |
-| 5.5.0.x          | Requires controller firmware 5.4.9                                                                                                           |
+| **Driver Range** | **Device Firmware Version**                                                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                       |
+| 5.5.0.x          | Requires controller firmware 5.4.9                                                                                                            |
 
 ## Installation and configuration
 

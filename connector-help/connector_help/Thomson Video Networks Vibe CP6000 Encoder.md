@@ -14,12 +14,12 @@ This driver is generated automatically by the driver **Thomson Video Networks Vi
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                          | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                                                                                         | No                  | No                      |
-| 1.0.1.x          | New feature - translated table for multicast IP address and port + fixed problem with Alarm Table.                       | Yes                 | Yes                     |
-| 1.0.2.x          | \- Changed layout.- Fixed linking between tables.- Alarm monitoring on PID bitrates returns a user-friendly description. | Yes                 | Yes                     |
-| 1.0.3.x          | Table display keys changed to avoid duplicate naming.                                                                    | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                                                                                           | No                  | No                      |
+| 1.0.1.x          | New feature - translated table for multicast IP address and port + fixed problem with Alarm Table.                         | Yes                 | Yes                     |
+| 1.0.2.x          | \- Changed layout. - Fixed linking between tables. - Alarm monitoring on PID bitrates returns a user-friendly description. | Yes                 | Yes                     |
+| 1.0.3.x          | Table display keys changed to avoid duplicate naming.                                                                      | Yes                 | Yes                     |
 
 ### Supported firmware versions
 

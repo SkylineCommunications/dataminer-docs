@@ -6,7 +6,8 @@ uid: Connector_help_Aurora_Networks_Node_NC_4000_Single_DT_REV_B
 
 The Aurora Network Node NC4000 Single DT REV B driver is a DVE created by the Aurora Network CX3001 driver.
 
-It is created for each Digital Transceiver Module Revision B Type that is part of the NC 4000 chassis.The types that are defined as Type B are:
+It is created for each Digital Transceiver Module Revision B Type that is part of the NC 4000 chassis.
+The types that are defined as Type B are:
 
 - DT4012S
 

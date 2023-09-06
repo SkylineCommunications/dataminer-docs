@@ -30,7 +30,7 @@ On this page, you can find the following parameters: **Tab Clients Last Refresh,
 
 This page is similar to the Client page, but provides information regarding the Services.
 
-The **Services Table** displays the **Service Monitoring ID**, the **Service Monitoring Admin Status**,the **Service Type**,the **Service Program Id**, etc. It is this table that is responsible for the association between the CMS Services and the DataMiner Services. The **Service Monitoring Admin Status** allows the user to change the monitoring status for each of the services.
+The **Services Table** displays the **Service Monitoring ID**, the **Service Monitoring Admin Status**, the **Service Type**, the **Service Program Id**, etc. It is this table that is responsible for the association between the CMS Services and the DataMiner Services. The **Service Monitoring Admin Status** allows the user to change the monitoring status for each of the services.
 
 ### Service Line-up
 
@@ -54,6 +54,6 @@ The page also contains the **QoS Probes Table** and the **QoE Probes Table**.
 
 The **QoS Probes Table** is filled in by the user with the following information: the **QoS Protocol Name, Read QoS Filter Id, Read Normalize Service Rate Id, Read Normalize Pid Rate Id, Service Rate Coeff Factor** and **Pid Rate Coeff Factor**. This way, the driver knows which particular protocol it has to search for in the included elements in the DataMiner Services associated to the CMS Services, and which are the PIDs of the parameters to set the **QoS Filter, Normalize Service Rate** and the **Normalize Pid Rate.** The **Service Rate Coeff Factor** and **Pid Rate Coeff Factor** are used to apply a correction value to the setpoints before the sets.
 
-For the **QoE Probes Table**,the only required information is the **QoE Protocol Name** and the **QoE Filter Id.**
+For the **QoE Probes Table**, the only required information is the **QoE Protocol Name** and the **QoE Filter Id.**
 
 Buttons are present to add new rows to those tables, and the rows can be deleted one by one.

@@ -60,4 +60,4 @@ Another important parameter on this page is **IPDR Data Timeout.** This paramete
 
 ### Logging
 
-This page contains the **Logging Table**,which consists of all **IPDR Administrator Error/Log Messages.**
+This page contains the **Logging Table**, which consists of all **IPDR Administrator Error/Log Messages.**

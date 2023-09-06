@@ -10,9 +10,9 @@ This connector allows monitoring and control of the downconverter. The connector
 
 ### Version Info
 
-| **Range**            | **Key Features**                                           | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Monitoring & control- Same UX as Miteq UPB1-XTR 2.0.0.x | \-           | \-                |
+| **Range**            | **Key Features**                                            | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Monitoring & control - Same UX as Miteq UPB1-XTR 2.0.0.x | \-           | \-                |
 
 ### Product Info
 

@@ -74,7 +74,7 @@ It also contains the following page buttons:
 - **Interface Monitoring**: Displays the Modulator InterfaceTable.
 - **Interface ASI Config**: Displays the Modulator Interface ASI Table, which can be configured.
 - **Ethernet Interface Config**: Displays the Modulator Interface Ethernet Table, which can be configured.
-- **Interface Test Config**: Displays the Modulator Interface Test Table,which can be configured.
+- **Interface Test Config**: Displays the Modulator Interface Test Table, which can be configured.
 
 ### Line Settings
 
@@ -86,7 +86,7 @@ This page displays the modulator channel settings for both channel 1 and channel
 
 ### Alarms
 
-This page displays the **Monitor Alarm Table**,which shows information regarding the system alarms, including the Date and Time, Severity, Source, Event and Description.
+This page displays the **Monitor Alarm Table**, which shows information regarding the system alarms, including the Date and Time, Severity, Source, Event and Description.
 
 ### Web Interface
 

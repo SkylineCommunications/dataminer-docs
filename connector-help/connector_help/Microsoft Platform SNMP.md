@@ -8,7 +8,8 @@ With the **Microsoft Platform** driver, it is possible to monitor a Microsoft se
 
 ## About
 
-The Microsoft Platform driver retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
+The Microsoft Platform driver retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.
+On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
 
 ### Ranges of the driver
 
@@ -100,7 +101,7 @@ The following page buttons allow access to additional SuperMicro info:
 
 If the Microsoft platform is installed on a Huawei platform, you can enable **Poll Huawei Parameters** to receive specific Huawei data.
 
-Note:To poll Huawei parameters, you must **configure the specific IP address** for this action (IP address : Port).
+Note: To poll Huawei parameters, you must **configure the specific IP address** for this action (IP address : Port).
 
 The following page buttons allow access to additional Huawei info:
 

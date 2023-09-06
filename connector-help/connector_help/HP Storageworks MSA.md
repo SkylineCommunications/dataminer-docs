@@ -12,10 +12,10 @@ The **HP Storageworks MSA** driver is used to monitor and control the HP Storage
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 2.0.0.x              | Changed driver to new MIBs                                                                                                                                                                                                                                                                          | No                  | True                    |
-| 3.0.0.x \[SLC Main\] | HTTP only version, Note that this version is not compatible with the previous versions.Features Implemented: + Features General Info, Controllers, Enclosures, Fans, Power Supplies, Volumes, Disks, Hosts and Event Log.+ Implemented Physical and Logical Tree Control to resemble the device UI. | No                  | True                    |
+| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 2.0.0.x              | Changed driver to new MIBs                                                                                                                                                                                                                                                                           | No                  | True                    |
+| 3.0.0.x \[SLC Main\] | HTTP only version, Note that this version is not compatible with the previous versions.Features Implemented: + Features General Info, Controllers, Enclosures, Fans, Power Supplies, Volumes, Disks, Hosts and Event Log. + Implemented Physical and Logical Tree Control to resemble the device UI. | No                  | True                    |
 
 ### Supported firmware versions
 
@@ -74,7 +74,7 @@ The **Connection** page displays information regarding connectivity. The **Conne
 
 ### Sensor page
 
-On this page, the **Connectivity** **Unit** **Sensor** **Table**is displayed.
+On this page, the **Connectivity** **Unit** **Sensor** **Table** is displayed.
 
 ### Webpage
 

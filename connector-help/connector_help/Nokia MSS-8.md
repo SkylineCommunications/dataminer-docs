@@ -20,9 +20,9 @@ The Nokia Wavence **Microwave Service Switch** provides advanced Carrier Etherne
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                         |
-|-----------|---------------------|-------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | \- [Nokia MSS-8 - CorEvo-1G](/Driver%20Help/Nokia%20MSS-8%20-%20CorEvo-1G.aspx)- [Nokia MSS-8 - EASv2](/Driver%20Help/Nokia%20MSS-8%20-%20EASv2.aspx)- [Nokia MSS-8 - MPT-HLS](xref:Connector_help_Nokia_MSS-8_-_MPT-HLS) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                           |
+|-----------|---------------------|-------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \- [Nokia MSS-8 - CorEvo-1G](/Driver%20Help/Nokia%20MSS-8%20-%20CorEvo-1G.aspx) - [Nokia MSS-8 - EASv2](/Driver%20Help/Nokia%20MSS-8%20-%20EASv2.aspx) - [Nokia MSS-8 - MPT-HLS](xref:Connector_help_Nokia_MSS-8_-_MPT-HLS) |
 
 ## Configuration
 
@@ -44,12 +44,13 @@ SNMP Settings:
 
 ## How to use
 
-The **General page** contains generic system information as well as the Equipment overview table. To create dynamic virtual elements for the CorEvo, EAS or MPT-HLS cards, set the **DVE** parameter in the **Equipment table** to *Export*. Note: for a full list of the possible exported connectors, check the System Info table above.
+The **General page** contains generic system information as well as the Equipment overview table. To create dynamic virtual elements for the CorEvo, EAS or MPT-HLS cards, set the **DVE** parameter in the **Equipment table** to *Export*.
+Note: for a full list of the possible exported connectors, check the System Info table above.
 
 The **Active Alarms** page contains a list of all open alarms on the system.
 
-All Ethernet-related information and statistics can be found on the **Ethernet** **Interfaces**, **Ethernet** **Statistics**,and **Networking** **Configuration** pages.
+All Ethernet-related information and statistics can be found on the **Ethernet** **Interfaces**, **Ethernet** **Statistics**, and **Networking** **Configuration** pages.
 
 The redundancy settings for the CorEvo cards can be found on the **Protection** **Settings** and **Protection** **Maintenance** pages.
 
-All radio information and measurements are displayed on the **Radio** **Interfaces**, **Radio** **Analog** **Measurements**,and **Radio** **Maintenance** pages.
+All radio information and measurements are displayed on the **Radio** **Interfaces**, **Radio** **Analog** **Measurements**, and **Radio** **Maintenance** pages.

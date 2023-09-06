@@ -8,7 +8,7 @@ This protocol monitors and controls any **Snell Wilcox IQDCO-1A** equipment. It 
 
 ## About
 
-The driver works with **SNMP**,though no traps are supported.
+The driver works with **SNMP**, though no traps are supported.
 
 Two timers are used to poll information: one for short-to-medium term operations every 30 seconds, and another for long-term/static information every minute.
 
@@ -49,7 +49,7 @@ The driver contains three pages: **General, Control** and **GPI**.
 
 ### General
 
-Thispage displays general information about the device, such as:
+This page displays general information about the device, such as:
 
 - **Module Name, Status, Time, Input** and **Expected Input**
 - **Serial Number**
@@ -64,7 +64,7 @@ Via the **Logging...** page button, you can select whether logging should be ena
 
 On this page, you can control the inputs by means of two buttons: **Force A** and **Force B.**
 
-For both **Input A** and **B**,you can set up the configuration via the **Setup Input A...** and **Setup Input B...** page buttons respectively, as well as predefine rules via the page buttons **Rule 1...** to **Rule 5...**
+For both **Input A** and **B**, you can set up the configuration via the **Setup Input A...** and **Setup Input B...** page buttons respectively, as well as predefine rules via the page buttons **Rule 1...** to **Rule 5...**
 
 ### GPI
 

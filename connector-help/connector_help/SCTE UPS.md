@@ -30,6 +30,8 @@ In the sections below, you can find more information on the different data pages
 
 This page displays general information about the UPS, such as the **Name**, **Vendor**, **IP**, and **MAC**, as illustrated in the example below.
 
+![General.jpg](~/connector-help/images/SCTE_UPS_General.jpg)
+
 Some considerations regarding the parameters on this page:
 
 - **IP Address**: The value of this parameter can be either an FQDN hostname or an IP address.
@@ -59,11 +61,15 @@ This page displays relevant information regarding the UPS device, such as:
 
 The page also contains other parameters such as the **Input Voltage**, **Output Voltage**, and **Alarms**, as illustrated in the example below.
 
+![Main.jpg](~/connector-help/images/SCTE_UPS_Main_2.jpg)
+
 ### Batteries
 
 This page displays all relevant information about the batteries of the UPS device, such as **Voltages**, **Currents**, **Temperature**, and **Charger Mode**.
 
 This page also contains the **Battery String Table** and the **Batteries Table**, as illustrated below.
+
+![Batteries DVE.jpg](~/connector-help/images/SCTE_UPS_Batteries_DVE.jpg)
 
 The **Battery Age** parameter needs to be properly configured by the operator, as it is one of the key parameters to calculate the **Predicted Remaining Time**.
 
@@ -73,17 +79,27 @@ A page button provides access to the **Temperature Sensors** subpage, where you 
 
 This page displays relevant information regarding the output of the UPS device, such as the **Output Current** and the **Output Voltage**, as illustrated below.
 
+![Output DVE.jpg](~/connector-help/images/SCTE_UPS_Output_DVE.jpg)
+
 ### Modem
 
 This page displays information about the modem transponder of the UPS device, such as the **SNR Quality**, and **Rx** and **Tx Power**.
+
+![Modem.jpg](~/connector-help/images/SCTE_UPS_Modem.jpg)
 
 ### Test
 
 This page displays a summary of the last result of the tests performed by this connector. It contains parameters such as the **Predicted Remaining Time**, **Battery Quality**, **Float State**, and **Battery Temperature Variation**, as illustrated below.
 
+![Test.jpg](~/connector-help/images/SCTE_UPS_Test.jpg)
+
 About the different kinds of tests:
 
-- **Float State Test**: The float state parameter is an indication for the health of the batteries and is tested when the charger is in float mode. The individual battery voltages cannot be under a certain threshold, which depends on the temperature while the charger is in float mode. Possible values: *Investigate Battery*, *Replace Battery*, *OK*.Formula:IBthreshold = 13.2 + ( 25 - temperature ) \* 0.0168 RBthreshold = 12.8 + ( 25 - temperature ) \* 0.0168
+- **Float State Test**: The float state parameter is an indication for the health of the batteries and is tested when the charger is in float mode. The individual battery voltages cannot be under a certain threshold, which depends on the temperature while the charger is in float mode.
+  Possible values: *Investigate Battery*, *Replace Battery*, *OK*.
+  Formula:
+  IBthreshold = 13.2 + ( 25 - temperature ) \* 0.0168
+  RBthreshold = 12.8 + ( 25 - temperature ) \* 0.0168
 - **Battery Delta Test**: The individual battery voltages cannot exceed 0.5Vdc when the inverter is active because of a test. The individual battery voltages will only be checked when a test is running. Either the value "Not Tested" will be shown if no test has been performed yet, or the last value will be kept. Possible values: *OK*, *Fail*, *Not Tested*.
 - **Battery Cable Test**: This test is an indication of the status of the cable connected to the batteries. A problem with this cable might occur, resulting in invalid data retrieved from the device. This has an impact on the individual battery voltage. The value 0 Vdc will be retrieved while there is no problem with the batteries and the parameter that retrieves the number of batteries will show 0, which is invalid. The total battery voltage will still be retrieved correctly. We can conclude that there is a battery cable alarm when the number of batteries is 0, while the total battery voltage is larger than 0 Vdc.
 - **Battery Temperature Holding/Variation Test**: The temperature of the batteries is monitored, and the maximum and minimum value are stored in the parameters Batteries Temperature Max Hold and Batteries Temperature Min Hold, respectively. These parameters in turn are also monitored to calculate the Battery Temperature Variation, which is the difference between the Batteries Temperature Max Hold and Batteries Temperature Min Hold.
@@ -102,6 +118,8 @@ To do so:
 4.  Unless the test is to be executed *One Time*, define the **End Date**, which indicates until when the test will be valid.
 5.  If you want to execute the scheduled test immediately, click the button **Start Test** in the row.
 
+> ![Schedule Tests.jpg](~/connector-help/images/SCTE_UPS_Schedule_Tests.jpg)
+
 #### Create Test subpage (connector version \>= 1.0.2.21)
 
 From version 1.0.2.21 of the connector onwards, UPS tests are integrated in the DataMiner Scheduler module. To create a test, go to the **Create Test** subpage and follow the procedure below:
@@ -111,9 +129,13 @@ From version 1.0.2.21 of the connector onwards, UPS tests are integrated in the 
 3.  Set the **Duration**, **Duration Unit**, and **Maximum Voltage Difference**. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected.
 4.  Click the **Add** button. An entry will be created in the Scheduled Test table.
 
+![New test.jpg](~/connector-help/images/SCTE_UPS_New_test.jpg)
+
 #### History subpage
 
 The History subpage contains the **Battery History** table, which displays a summary of the results of the tests performed by this connector on the UPS device. Each entry in this table displays the **Status** of the test, the **Total Output**, the **Temperature**, and the **Capacity**.
+
+![History DVE.jpg](~/connector-help/images/SCTE_UPS_History_DVE.jpg)
 
 ### Input Failure
 
@@ -122,18 +144,27 @@ This page displays the tables **Input Failure Registration** and **Input Failure
 - The **Input Failure Registration** table keeps track of the input failure occurrences of the device. The table indicates when each failure started and ended, as well as the failure duration and impact on the network. A UPS device loses contact with the network when the batteries are fully depleted during an AC failure.
 - The **Input Failure Registration Summary** table contains a monthly summary of the failures of the device. The values here are aggregated based on all the occurrences during the month.
 
+![Input Failure DVE.jpg](~/connector-help/images/SCTE_UPS_Input_Failure_DVE.jpg)
+
 ### Threshold Configuration
 
 This page displays the Property Table, which contains the alarm threshold information for the parameters of the UPS device.
 
 The alarm threshold data can be configured directly in the Property Table, or in bulk using the Export and Import functionality.
 
+![Threshold DVE.png](~/connector-help/images/SCTE_UPS_Threshold_DVE.png)
+
 #### Exporting Threshold Parameters
 
 To export the content of the **Property Table**:
 
 1.  In the **Device Export File** box, specify the name of the file to export.
-2.  Click the **Export** button.The connector will proceed to export an Excel file with the following prefix: "UPSElementNameDVE\_"Once the process is finished, the **Device Export Status** will change to *Done*. The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
+2.  Click the **Export** button.
+    The connector will proceed to export an Excel file with the following prefix: "UPSElementNameDVE\_"
+    Once the process is finished, the **Device Export Status** will change to *Done*.
+    The file will be placed in the following directory: *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property*
+
+> ![Export Property DVE.jpg](~/connector-help/images/SCTE_UPS_Export_Property_DVE.jpg)
 
 #### Import Threshold Parameters
 
@@ -141,8 +172,12 @@ To update the content of the **Property Table** in bulk:
 
 1.  Export the current **Property Table**, as explained in the previous section.
 2.  Go to the directory *C:\Skyline DataMiner\Documents\SCTE UPS Collector\Property* and open the exported file. The exported file will have the name of the collector element as a prefix.
-3.  Modify the Excel file and save it. **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER**.
-4.  Select the file in the **Device Import File** dropdown box and click the **Import** button. The **Import Progress** bar will display the progress of the import, until it reaches 100. Once the import is done, you will also be able to see additional information, such as the number of **Errors** generated.
+3.  Modify the Excel file and save it.
+    **DO NOT MODIFY THE DEVICE ID, DEVICE NAME, INSTANCE OR PARAMETER**.
+4.  Select the file in the **Device Import File** dropdown box and click the **Import** button.
+    The **Import Progress** bar will display the progress of the import, until it reaches 100. Once the import is done, you will also be able to see additional information, such as the number of **Errors** generated.
+
+> ![Import Property DVE.jpg](~/connector-help/images/SCTE_UPS_Import_Property_DVE.jpg)
 
 ### Web Interface
 

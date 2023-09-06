@@ -44,7 +44,7 @@ This page consists of three sections:
 - **Status:** Synchronization, Alarm Status, Audio Mode, AES3 and Active Patch
 - **Backup Options**: Backup Threshold, Restore Time and ISDN Reserve Dial.
 
-The **ISDN Options** pagebutton displays the parameters **ISDN Audio Mode**, **Priority**, **Auto Hunt**, **ISDN G711 Receive**, **X21 Audio Mode** and **ISDN Available Channels**.
+The **ISDN Options** page button displays the parameters **ISDN Audio Mode**, **Priority**, **Auto Hunt**, **ISDN G711 Receive**, **X21 Audio Mode** and **ISDN Available Channels**.
 
 ### Control
 
@@ -61,7 +61,7 @@ This page displays the **Number**, **Country ID** and **Country Table** with the
 This page displays the following tables:
 
 - **ISDN Settings**: Shows the **Index**, **Remote Address**, **Remote Sub Address** and **Local Sub Address** for each entry.
-- **ISDN Control**:Shows the **Index**, **String**, **CLI String** and **Cause String** for each entry.
+- **ISDN Control**: Shows the **Index**, **String**, **CLI String** and **Cause String** for each entry.
 
 ### IP Config
 

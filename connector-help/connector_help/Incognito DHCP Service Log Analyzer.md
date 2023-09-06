@@ -4,15 +4,15 @@ uid: Connector_help_Incognito_DHCP_Service_Log_Analyzer
 
 # Incognito DHCP Service Log Analyzer
 
-This driver establishes a connection with a **Linux server**. It analyzes **log files** on this server and copies them to the local machine.When the files have been successfully copied, the driver will extract **IP and MAC addresses for cable modems** and place this information in a table.
+This driver establishes a connection with a **Linux server**. It analyzes **log files** on this server and copies them to the local machine. When the files have been successfully copied, the driver will extract **IP and MAC addresses for cable modems** and place this information in a table.
 
 ## About
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                  | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- SSH connection.- Copies files from server to local machine.- Analyzes and extracts information from log files. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                    | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- SSH connection. - Copies files from server to local machine. - Analyzes and extracts information from log files. | \-           | \-                |
 
 ### Product Info
 

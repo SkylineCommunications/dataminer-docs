@@ -12,7 +12,7 @@ Via the **Miranda iControl XML Gateway**, a list of devices (nodes) is retrieved
 
 The communication to the XML Gateway is done via **serial** commands, so the parameters are retrieved one by one. Based on the number of devices, an update of a parameter could take some time.
 
-In order to get the updates as fast as possible, the parameters are divided into **Timing Groups**, representing the priority of the parameter. The lower the group, the more frequently the parameter will be retrieved. When a Timing Groupis retrieved, it will also include any parameters in a lower group. For example, when Timing Group 2 is polled, all parameters in Timing Group 1 are also retrieved.
+In order to get the updates as fast as possible, the parameters are divided into **Timing Groups**, representing the priority of the parameter. The lower the group, the more frequently the parameter will be retrieved. When a Timing Group is retrieved, it will also include any parameters in a lower group. For example, when Timing Group 2 is polled, all parameters in Timing Group 1 are also retrieved.
 
 The **supported device types** are:
 

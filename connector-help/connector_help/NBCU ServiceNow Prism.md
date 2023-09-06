@@ -53,4 +53,6 @@ The driver does not have set values that we need to send to the device. It conta
 
 There is only one way to create new tickets: the parameter 150 receive the data in JSON format and just send it via API call to the device. The JSON format is the following:
 
-{ "short_description": "string", "cmdb_ci": "CI_ID (string)", "active": "string (true/false)", "description": "string", "priority": "priorityNumber (string)", "assignment_group":"assignmentGroup_ID (string)"}
+{ "short_description": "string", "cmdb_ci": "CI_ID (string)", "active": "string (true/false)", "description": "string", "priority": "priorityNumber (string)", "assignment_group":"assignmentGroup_ID (string)"
+}
+

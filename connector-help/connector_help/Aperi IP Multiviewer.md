@@ -60,7 +60,7 @@ This page contains information about the Ethernet ports. It contains two tables:
 
 This page contains information related to the 16 tiles in the multiviewer and allows you to configure their settings.
 
-For each tile, the parameters are grouped in a box. Each group box contains a page button **Advanced**,which links to advanced settings such as the **tile protocol**, **UDP ports**, **statistics**, **alarms**, **encapsulation settings**, etc.
+For each tile, the parameters are grouped in a box. Each group box contains a page button **Advanced**, which links to advanced settings such as the **tile protocol**, **UDP ports**, **statistics**, **alarms**, **encapsulation settings**, etc.
 
 ### Web Interface
 

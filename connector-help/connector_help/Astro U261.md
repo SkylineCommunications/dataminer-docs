@@ -28,7 +28,7 @@ This driver uses HTTP to monitor the Astro U261. The driver also has an SNMP int
 
 This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
-The driver is implemented to support direct **HTTP** communication with the Astro **U261** device,but it also supports proxy communication if necessary.
+The driver is implemented to support direct **HTTP** communication with the Astro **U261** device, but it also supports proxy communication if necessary.
 
 In either case, the **SNMP** interface collects the traps sent by the device, so the SNMP IP address must be the IP address of the device.
 
@@ -49,7 +49,7 @@ In either case, the **SNMP** interface collects the traps sent by the device, so
 
 When a new element is created, no further configuration is necessary to poll information from the device without authentication.
 
-However, to perform sets on the devices, you must configure the **Username** and **Password** credentials on the **Login** page of the element. The default credentials are Username: **admin** andPassword: **astro**.
+However, to perform sets on the devices, you must configure the **Username** and **Password** credentials on the **Login** page of the element. The default credentials are Username: **admin** and Password: **astro**.
 
 ## Usage
 
@@ -75,7 +75,7 @@ On this page, you can access the main configuration of the device. This configur
 
 ### TestGen
 
-On this page, the test generator settings can be configured (e.g. **Data Rate** and**Packet Id**).
+On this page, the test generator settings can be configured (e.g. **Data Rate** and **Packet Id**).
 
 ### IP RX Status
 

@@ -24,7 +24,8 @@ This driver will compare two or more Tektronix Sentry or Tektronix Sentry PVQ el
 
 This driver uses a virtual connection and does not require any input during element creation.
 
-Note: If you use a version of this driver **prior to 1.0.0.3**, create **only one element per DMA**! If there are multiple elements using this driver on the same DMA, there may be conflicting data and elements may overwrite the data of other elements. This is no longer the case from version 1.0.0.3 onwards.
+Note: If you use a version of this driver **prior to 1.0.0.3**, create **only one element per DMA**!
+If there are multiple elements using this driver on the same DMA, there may be conflicting data and elements may overwrite the data of other elements. This is no longer the case from version 1.0.0.3 onwards.
 
 ### Configuration of Probe Groups
 

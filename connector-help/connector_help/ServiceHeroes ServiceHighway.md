@@ -68,7 +68,8 @@ After the signed certificate has been received, it must be converted to 'der' fo
 
 To complete the process, the **CA certificate** and the **signed client certificate** must be **imported** back into the clients keystore. Note, however, that the same alias must be used for the signed certificate when it is imported back into the keystore.
 
-> keytool -import -v -alias \<cacertalias\> -file \<ca cert file (der)\> -keystore clientstore.jks -keypass xxx -storepass xxx keytool -import -v -alias \<clientcertalias\> -file \<signed cert file (der)\> -keystore clientstore.jks -keypass xxx -storepass xxx
+> keytool -import -v -alias \<cacertalias\> -file \<ca cert file (der)\> -keystore clientstore.jks -keypass xxx -storepass xxx
+> keytool -import -v -alias \<clientcertalias\> -file \<signed cert file (der)\> -keystore clientstore.jks -keypass xxx -storepass xxx
 
 At this point, the client keystore contains everything a client needs to create a signed request for the consumer web service. If a custom-built client is used, and it is built in java, the keystore can be used as is. However, if you implement a client in another language or tool, the client certificate and private key may need to be translated into a suitable format.
 
@@ -78,7 +79,11 @@ For the web service descriptor, both private key and public certificate are need
 
 - Convert the keystore containing the private key to pkcs12 format. This command will prompt for a number of passwords.
 
-> mbremijn:consumer-ws remijnm\$ keytool -importkeystore -srckeystore clientstore.jks -destkeystore clientstore.p12 -deststoretype PKCS12 Enter destination keystore password: Re-enter new password: Enter source keystore password: Enter key password for \<clientcert\>
+> mbremijn:consumer-ws remijnm\$ keytool -importkeystore -srckeystore clientstore.jks -destkeystore clientstore.p12 -deststoretype PKCS12
+> Enter destination keystore password:
+> Re-enter new password:
+> Enter source keystore password:
+> Enter key password for \<clientcert\>
 
 - Destination keystore password to set (twice)
   - Source keystore password
@@ -104,11 +109,11 @@ This page can be used to **add saved scripts**, which can then easily be execute
 
 ### General
 
-Thispage contains an overview of all organizations and their services.
+This page contains an overview of all organizations and their services.
 
 ### Logging
 
-Thispage contains an overview of all **responses for the 'execute' command** distributed over the different services. You can send the 'execute' command by right-clicking on a specific service.
+This page contains an overview of all **responses for the 'execute' command** distributed over the different services. You can send the 'execute' command by right-clicking on a specific service.
 
 ### Logging \[ALL\]
 

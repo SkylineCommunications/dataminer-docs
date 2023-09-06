@@ -67,6 +67,6 @@ The web interface is only accessible when the client machine has network access 
 
 The element displays information about the Wavestream BUC equipment such as inventory data, equipment status information, sensors data, configuration information, trap thresholds, and the history of the received traps.
 
-On the **Configuration**, **Stream** **Control**, **NTP & Trap Configuration**,and **Traps Thresholds** pages, you can configure parameters to set up the device.
+On the **Configuration**, **Stream** **Control**, **NTP & Trap Configuration**, and **Traps Thresholds** pages, you can configure parameters to set up the device.
 
 To activate alarm monitoring and trending, you will need to create and assign and alarm and trend templates.

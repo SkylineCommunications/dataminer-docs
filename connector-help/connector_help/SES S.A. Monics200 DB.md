@@ -34,7 +34,8 @@ A query is executed to retrieve the carrier data from the database.
 
 No data traffic will be seen in the **Stream Viewer**.
 
-On the **General** page, the **Database Connection** data must be filled in. On the **Carrier Measurements** page, the **Satellite** and **Plan Name** must be filled in. The **Carrier Polling Status** must be set to *Enabled*.
+On the **General** page, the **Database Connection** data must be filled in.
+On the **Carrier Measurements** page, the **Satellite** and **Plan Name** must be filled in. The **Carrier Polling Status** must be set to *Enabled*.
 
 You can add presets to the **Alarm Presets** table and remove presets from this table via the **Delete** button in the Delete column.
 

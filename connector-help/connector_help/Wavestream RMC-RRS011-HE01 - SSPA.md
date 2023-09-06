@@ -20,4 +20,4 @@ The driver retrieves information from the device using a **serial** connection.
 
 ### General SSPA
 
-This page displays all the parameters from the device. This includes general information like **Project ID** and **Data Structure Version**, and more specific parameters, such as **Voltages**, **Fan Speed**, **Power**,etc.
+This page displays all the parameters from the device. This includes general information like **Project ID** and **Data Structure Version**, and more specific parameters, such as **Voltages**, **Fan Speed**, **Power**, etc.

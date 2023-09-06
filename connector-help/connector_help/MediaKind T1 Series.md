@@ -12,9 +12,9 @@ This driver displays the available chassis information. It uses an SNMP and HTTP
 
 ### Version Info
 
-| **Range**            | **Key Features**                     | **Based on** | **System Impact** |
-|----------------------|--------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | SNMPv2 connectionHTTP API connection | \-           | \-                |
+| **Range**            | **Key Features**                      | **Based on** | **System Impact** |
+|----------------------|---------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | SNMPv2 connection HTTP API connection | \-           | \-                |
 
 ### Product Info
 

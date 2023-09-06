@@ -61,4 +61,4 @@ Each selector should have the following format: *selectorID-\[listen\|talk\|talk
 
 If you want to add a list of selectors, specify them in the following format: *selector_id1-\[listen\|talk\|talk/listen\], selector_id2-\[listen\|talk\|talk/listen\],.selector_idn-\[listen\|talk\|talk/listen\]*.
 
-When a selector is set in the column **Connect Selectors**,that selector will appear in the element with that ID, showing the type of connection (*Talk*, *Listen*, or *Listen/Talk*). Note that this is a connection between the customer ID and the ID that was set.
+When a selector is set in the column **Connect Selectors**, that selector will appear in the element with that ID, showing the type of connection (*Talk*, *Listen*, or *Listen/Talk*). Note that this is a connection between the customer ID and the ID that was set.

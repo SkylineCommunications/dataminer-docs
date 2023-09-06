@@ -12,9 +12,9 @@ Via a test page, you can generate an example of the formatted request.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                      | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Ingest of Telenor PLM JSON request.Generation of a test ingest request of a single trunk (FiberLink). | \-           | \-                |
+| **Range**            | **Key Features**                                                                                       | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Ingest of Telenor PLM JSON request. Generation of a test ingest request of a single trunk (FiberLink). | \-           | \-                |
 
 ### Product Info
 

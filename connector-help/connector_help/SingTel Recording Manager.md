@@ -47,10 +47,14 @@ The following actions are possible:
 | Create recording           | { "**Action**": "Create", "**Object**": "Recording", "**Guid**": "Random guid", "**Data**": { "**Id**": "int", "**Title**": "string", "**Ird**": "string", "**Recorder**": "string", "**StartTime**": "Datetime (as oadate)", "**StopTime**": "Datetime (as oadate)", "**EventId**": "int", }}          |
 | Update recording           | { "**Action**": "Update", "**Object**": "Recording", "**Guid**": "Random guide", "**Data**": { "**Id**": "int", "**Title**": "string", "**Ird**": "string", "**Recorder**": "string", "**StartTime**": "Datetime (as oadate)", "**StopTime**": "Datetime (as oadate)", "**EventId**": "int", }}         |
 | Update or Create recording | { "**Action**": " UpdateOrCreate", "**Object**": "Recording", "**Guid**": "Random guid", "**Data**": { "**Id**": "int", "**Title**": "string", "**Ird**": "string", "**Recorder**": "string", "**StartTime**": "Datetime (as oadate)", "**StopTime**": "Datetime (as oadate)", "**EventId**": "int", }} |
-| Delete recording           | { "**Action**": " Delete", "**Object**": "Recording", "**Guid**": "Random guid", "**Data**": { "**Id**": "int", }}                                                                                                                                                                                      |
+| Delete recording           | { "**Action**": " Delete", "**Object**": "Recording", "**Guid**": "Random guid", "**Data**": { "**Id**": "int", } }                                                                                                                                                                                     |
 
 The response will look like this:
 
-{ "Data" : "String", "Guid" : "request guid", "Status" : "bool"}
+{
+"Data" : "String",
+"Guid" : "request guid",
+"Status" : "bool"
+}
 
 Status can be 0 for "failed" and 1 for "succeeded".

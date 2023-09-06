@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_NGM-21
 
 # ETL Systems NGM-21
 
-The **ETL Systems NGM-21**driver displays information related to the ****ETL Systems NGM-21****device.
+The **ETL Systems NGM-21** driver displays information related to the ****ETL Systems NGM-21**** device.
 
 ## About
 

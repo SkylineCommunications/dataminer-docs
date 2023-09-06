@@ -39,7 +39,8 @@ HTTP CONNECTION:
 
 ### Initialization
 
-The driver requires an **API Key** (X-TS-ID header) and a **Bearer Key** (oauth Authorization header) in order to start the polling. These should be specified on the **General** page.When this information has been added, the **Connection State** is "OK" if the device replies with "*HTTP/1.1 200 OK"* or "Error" for other HTTP responses.
+The driver requires an **API Key** (X-TS-ID header) and a **Bearer Key** (oauth Authorization header) in order to start the polling. These should be specified on the **General** page.
+When this information has been added, the **Connection State** is "OK" if the device replies with "*HTTP/1.1 200 OK"* or "Error" for other HTTP responses.
 
 ### Web Interface
 

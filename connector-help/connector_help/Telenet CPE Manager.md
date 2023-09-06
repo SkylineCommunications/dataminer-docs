@@ -15,18 +15,18 @@ Different elements will be needed:
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 2.1.0.x \[Obsolete\] | Initial version after POC.                                                                                                                                                                                                                                                                                                                                                                                 | No                  | No                      |
-| 2.2.0.x \[Obsolete\] | Based on 2.1.0.30.Relabel for next version.                                                                                                                                                                                                                                                                                                                                                                | No                  | No                      |
-| 2.2.1.x \[Obsolete\] | Based on 2.1.0.1.Store partition VOD/UAU and Channel file for STB provisioning.                                                                                                                                                                                                                                                                                                                            | No                  | No                      |
-| 2.2.2.x \[Obsolete\] | Based on 2.2.1.3.Reporting of service changed on node and street level.                                                                                                                                                                                                                                                                                                                                    | No                  | No                      |
-| 3.0.0.x \[Obsolete\] | Based on 2.2.2.0.Feature 58 forward node name to CPE collectors.                                                                                                                                                                                                                                                                                                                                           | No                  | No                      |
-| 4.0.0.x \[Obsolete\] | Based on 3.0.0.1.Baseline changed.                                                                                                                                                                                                                                                                                                                                                                         | No                  | No                      |
-| 5.0.0.x \[Obsolete\] | Based on 4.0.0.0Added ratings and VoD check in provisioning                                                                                                                                                                                                                                                                                                                                                | No                  | No                      |
-| 6.0.0.x              | Complete redesign of the driver.In previous versions, the front end contained all topology information, including all CPE MAC addresses. This was too much for one element to handle. All tables and their provisioning needed to be changed so it was possible to shift the topology from front-end to back-end elements.Because of this redesign, this version is not compatible with previous versions. | No                  | No                      |
-| 6.0.1.x              | Based on 6.0.0.18.The SFR cluster only contains cable modems. The driver had to be adapted so the STB and eMTA were removed from the tables, the provisioning, and the collector elements.Only parameters were removed, so switching to this version with an existing element using the 6.0.0.x range is possible if necessary.                                                                            | No                  | No                      |
-| 6.0.2.x \[SLC Main\] | Based on 6.0.0.19.Removed VoD, BCQ and BO chains. Street level has been changed to Amplifier level and some KPIs have been removed from different levels.                                                                                                                                                                                                                                                  | No                  | No                      |
+| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 2.1.0.x \[Obsolete\] | Initial version after POC.                                                                                                                                                                                                                                                                                                                                                                                   | No                  | No                      |
+| 2.2.0.x \[Obsolete\] | Based on 2.1.0.30. Relabel for next version.                                                                                                                                                                                                                                                                                                                                                                 | No                  | No                      |
+| 2.2.1.x \[Obsolete\] | Based on 2.1.0.1. Store partition VOD/UAU and Channel file for STB provisioning.                                                                                                                                                                                                                                                                                                                             | No                  | No                      |
+| 2.2.2.x \[Obsolete\] | Based on 2.2.1.3. Reporting of service changed on node and street level.                                                                                                                                                                                                                                                                                                                                     | No                  | No                      |
+| 3.0.0.x \[Obsolete\] | Based on 2.2.2.0. Feature 58 forward node name to CPE collectors.                                                                                                                                                                                                                                                                                                                                            | No                  | No                      |
+| 4.0.0.x \[Obsolete\] | Based on 3.0.0.1. Baseline changed.                                                                                                                                                                                                                                                                                                                                                                          | No                  | No                      |
+| 5.0.0.x \[Obsolete\] | Based on 4.0.0.0 Added ratings and VoD check in provisioning                                                                                                                                                                                                                                                                                                                                                 | No                  | No                      |
+| 6.0.0.x              | Complete redesign of the driver. In previous versions, the front end contained all topology information, including all CPE MAC addresses. This was too much for one element to handle. All tables and their provisioning needed to be changed so it was possible to shift the topology from front-end to back-end elements. Because of this redesign, this version is not compatible with previous versions. | No                  | No                      |
+| 6.0.1.x              | Based on 6.0.0.18. The SFR cluster only contains cable modems. The driver had to be adapted so the STB and eMTA were removed from the tables, the provisioning, and the collector elements. Only parameters were removed, so switching to this version with an existing element using the 6.0.0.x range is possible if necessary.                                                                            | No                  | No                      |
+| 6.0.2.x \[SLC Main\] | Based on 6.0.0.19. Removed VoD, BCQ and BO chains. Street level has been changed to Amplifier level and some KPIs have been removed from different levels.                                                                                                                                                                                                                                                   | No                  | No                      |
 
 ### Supported firmware versions
 
@@ -127,7 +127,7 @@ The **Frontend Agent ID** parameter needs to be filled in with the DMAID/EID of 
 
 You can configure certain settings to influence the alarms.
 
-With **Minimum \# CM Monitoring Threshold**, **Minimum \# MTA Monitoring Threshold**, **Minimum \# STB Monitoring Threshold** and **Minimum \# STB VoD Monitoring Threshold**,you can configure that there will only be an alarm if the parameter represents a minimum amount of CPEs.
+With **Minimum \# CM Monitoring Threshold**, **Minimum \# MTA Monitoring Threshold**, **Minimum \# STB Monitoring Threshold** and **Minimum \# STB VoD Monitoring Threshold**, you can configure that there will only be an alarm if the parameter represents a minimum amount of CPEs.
 
 With the **Correction Factor** parameters, you can adjust the normalization value per type of CPE and per level. This way, the normalization value can be adjusted throughout the day, because the load in the morning can be different (generate no alarm with this value) from the load in the evening (generate an alarm with this value).
 
@@ -139,7 +139,16 @@ For most of the calculations, the trending database is queried. Out of these val
 
 The rows in the CSV file need to have the following format (semicolon-separated):
 
-1\. **PID**: PID of the parameter for which the normalization should be calculated. 2. **Table**: The table ID where the parameter is located. 3. **Nominal Column**: 1-based index where the nominal column is located. 4. **Total Column**: 1-based index where the total number of CPEs column is located (only used with OOS type). 5. **Multiplier/Default**: Default value when no trending found: Multiplier \* Total if OOS type or default value. 6. **Type**: Value 1 if OOS, otherwise other value. 7. **Description**: A description for this line. 8. **Pct Limit Jump**: Used in frequency calculations. 9. **Lower Limit**: Used in frequency calculations. 10. **Upper Limit**: Used in frequency calculations.
+1\. **PID**: PID of the parameter for which the normalization should be calculated.
+2. **Table**: The table ID where the parameter is located.
+3. **Nominal Column**: 1-based index where the nominal column is located.
+4. **Total Column**: 1-based index where the total number of CPEs column is located (only used with OOS type).
+5. **Multiplier/Default**: Default value when no trending found: Multiplier \* Total if OOS type or default value.
+6. **Type**: Value 1 if OOS, otherwise other value.
+7. **Description**: A description for this line.
+8. **Pct Limit Jump**: Used in frequency calculations.
+9. **Lower Limit**: Used in frequency calculations.
+10. **Upper Limit**: Used in frequency calculations.
 
 Because the frequency tables contain too much data in the database to be processed, a different approach is taken. Cumulative average values will be calculated during runtime without looking at the database. As long as the value is between "current baseline - Lower Limit" and "current baseline + Upper Limit", the average is calculated as the baseline value for the next day. If the value is outside these limits, then the baseline will increase or decrease once per day with a percentage of the upper or lower limit. Suppose, for example, that the baseline is 15, the Pct Limit Jump is 20 and the Upper Limit is 3. When the value is 19, then this is higher than 15+3, so the new baseline will increase with 20% of 3, or 0.6, which makes the new baseline value 15.6. If the next value is 20, this will have no effect on the baseline because there was already one jump this day. This way, we avoid that exceptional high values have too much influence on the average baseline calculation. When Upper Limit is not filled in, the same value as Lower Limit is taken.
 
@@ -159,27 +168,70 @@ The front-end manager needs the following files and format (semicolon-separated)
 
 ### hfc_cpe_iaa.csv
 
-1\. Node2. DS Group3. US Group4. House number5. House letter6. Letter box7. Street8. Postal9. City10. SAP ID11. Another Operator12. CM Mac13. INT line14. CM HW Type15. eMTA MAC16. eMTA lines17. \# of STB18. 18 + \# of STB; STB MAC
+1\. Node
+2. DS Group
+3. US Group
+4. House number
+5. House letter
+6. Letter box
+7. Street
+8. Postal
+9. City
+10. SAP ID
+11. Another Operator
+12. CM Mac
+13. INT line
+14. CM HW Type
+15. eMTA MAC
+16. eMTA lines
+17. \# of STB
+18. 18 + \# of STB; STB MAC
 
 ### GIGIntf.csv
 
-1\. Chassis Name2. Chassis Public IP3. Chassis Private IP
+1\. Chassis Name
+2. Chassis Public IP
+3. Chassis Private IP
 
 ### Channel.csv
 
-1\. Headend Name2. Packet3. Program4. Frequency5. Port6. Slot7. Ring
+1\. Headend Name
+2. Packet
+3. Program
+4. Frequency
+5. Port
+6. Slot
+7. Ring
 
 ### Network.csv
 
-1\. Headend Name2. Service3. Service element4. Chassis Name5. RF Card Name6. RF Port Name7. DS/US RF Channel8. DS/US RF Spectrum map9. DS/US group10. Node-ID1.Node-IDn
+1\. Headend Name
+2. Service
+3. Service element
+4. Chassis Name
+5. RF Card Name
+6. RF Port Name
+7. DS/US RF Channel
+8. DS/US RF Spectrum map
+9. DS/US group
+10. Node-ID1.Node-IDn
 
 ### UAUInfo.csv
 
-1\. Node2. Sub UAU3. Main UAU4. Packet
+1\. Node
+2. Sub UAU
+3. Main UAU
+4. Packet
 
 ### vod_buildout.csv
 
-1\. Headend Name2. Node Name3. Frequency4. Vod RF Port5. Vod RF Card6. Vod Chassis Name7. Vod SG Group
+1\. Headend Name
+2. Node Name
+3. Frequency
+4. Vod RF Port
+5. Vod RF Card
+6. Vod Chassis Name
+7. Vod SG Group
 
 ## Generated node offload csv files
 
@@ -187,19 +239,45 @@ In one file, the back-end manager will offload the node data as well as the freq
 
 ### Node data structure
 
-1\. Timestamp2. Node Name3. \#CM OOS4. \#eMTA OOS5. \#STB OOS6. %CM With DS CR \> T7. %CM With DS UR \> T 8. %CM With US CR \> T 9. %CM With US UR \> T 10. %MTA Not In Pass 11. %MTA Not In Operational 12. %STB With Restart 13. %CM With US Level \> T 14. CM Avg RTT 15. {INFO_ID++} *(fixed)*
+1\. Timestamp
+2. Node Name
+3. \#CM OOS
+4. \#eMTA OOS
+5. \#STB OOS
+6. %CM With DS CR \> T
+7. %CM With DS UR \> T
+8. %CM With US CR \> T
+9. %CM With US UR \> T
+10. %MTA Not In Pass
+11. %MTA Not In Operational
+12. %STB With Restart
+13. %CM With US Level \> T
+14. CM Avg RTT
+15. {INFO_ID++} *(fixed)*
 
 ### Node CM DS frequency data structure
 
-1\. {REF_ID++} *(fixed)*2. {INFO_ID}*(fixed)*3. 5 or 6 or 11 or 124. Frequency5. Avg Level or Avg SNR or %CM With DS CR \> T or %CM With DS UR \> T
+1\. {REF_ID++} *(fixed)
+*2. {INFO_ID} *(fixed)
+*3. 5 or 6 or 11 or 12
+4. Frequency
+5. Avg Level or Avg SNR or %CM With DS CR \> T or %CM With DS UR \> T
 
 ### Node CM US frequency data structure
 
-1\. {REF_ID++} *(fixed)*2. {INFO_ID} *(fixed)*3. 9 or 10 or 13 or 144. Frequency5. Avg Level or Avg SNR or %CM With US CR \> T or %CM With US UR \> T
+1\. {REF_ID++} *(fixed)*
+2. {INFO_ID} *(fixed)
+*3. 9 or 10 or 13 or 14
+4. Frequency
+5. Avg Level or Avg SNR or %CM With US CR \> T or %CM With US UR \> T
 
 ### Node STB frequency data structure
 
-1\. {REF_ID++} *(fixed)*2. {INFO_ID} *(fixed)*3. 1 or 2 or 3 or 74. Frequency5. Avg Level or Avg SNR or Avg BER or %STB With Errors
+1\. {REF_ID++} *(fixed)
+*2. {INFO_ID} *(fixed)
+*3. 1 or 2 or 3 or 7
+4. Frequency
+5. Avg Level or Avg SNR or Avg BER or %STB With Errors
 
 ## Generated view ratings offload CSV files
 
@@ -207,8 +285,16 @@ The front-end manager will offload the view ratings in two files. State offload 
 
 ### State offload structure
 
-1\. Timestamp2. Region3. \#STB Unknown State4. \#STB Standby State5. \#STB VOD State
+1\. Timestamp
+2. Region
+3. \#STB Unknown State
+4. \#STB Standby State
+5. \#STB VOD State
 
 ### View offload structure
 
-1\. Timestamp2. Region3. LIVE or TSB or REC4. Channel5. \#STB
+1\. Timestamp
+2. Region
+3. LIVE or TSB or REC
+4. Channel
+5. \#STB

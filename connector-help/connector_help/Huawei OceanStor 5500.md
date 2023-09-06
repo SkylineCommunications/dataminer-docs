@@ -52,7 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 All data available is retrieved using the **SNMP** interface of the Huawei OceanStor 5500.
 
-The **General** and **System** page contain all data related to the **Enclosure**, **Controller Enclosure**,and **Disk Enclosure**.
+The **General** and **System** page contain all data related to the **Enclosure**, **Controller Enclosure**, and **Disk Enclosure**.
 
 The **Performance** page contains tables with the performance-related information.
 

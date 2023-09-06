@@ -18,12 +18,12 @@ A **serial** connection is used to display the settings of the controller.
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                                             | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                                                            | No                  | No                      |
-| 1.1.0.x \[SLC Main\] | Based on 1.0.0.3.Implemented support for new firmware (cf. "Supported firmware versions" table).**UDP Broadcast** status messages (Rev. L). | No                  | Yes                     |
-| 1.1.1.x              | Third serial connection (HPA sets).                                                                                                         | No                  | Yes                     |
-| 2.0.0.x              | Initial version updated range.                                                                                                              | No                  | No                      |
+| **Driver Range**     | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                                                              | No                  | No                      |
+| 1.1.0.x \[SLC Main\] | Based on 1.0.0.3. Implemented support for new firmware (cf. "Supported firmware versions" table). **UDP Broadcast** status messages (Rev. L). | No                  | Yes                     |
+| 1.1.1.x              | Third serial connection (HPA sets).                                                                                                           | No                  | Yes                     |
+| 2.0.0.x              | Initial version updated range.                                                                                                                | No                  | No                      |
 
 ### Supported firmware versions
 

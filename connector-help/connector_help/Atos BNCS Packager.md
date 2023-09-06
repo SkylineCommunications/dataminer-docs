@@ -112,7 +112,8 @@ This page contains connection information related to redundancy and automatic sw
 
 ## DataMiner Connectivity Framework
 
-The 1.0.0.1 range of the Atos BNCS Packager protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+The 1.0.0.1 range of the Atos BNCS Packager protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 
 ### Interfaces
 
@@ -145,5 +146,5 @@ Physical dynamic interfaces:
 - Between a **Source Package HDE Input** and a **Source Package HDE Output**, an internal connection is created.
 - Between a **Source Package HDE Output** and a **Destination Package Video Input**, an internal connection is created if the destination package is linked to that source package, its level is HDE and the router input, defined as an HDE SDI input on the source package, is connected to the router SDI output defined in the destination package.
 - Between a **Router Input** and a **Source Package SD Input**, an internal connection is created if the router input is defined as an SD SDI input on the source package.
-- Between a **Source Package SD Input** and a **Source Package SD Output**,an internal connection is created.
+- Between a **Source Package SD Input** and a **Source Package SD Output**, an internal connection is created.
 - Between a **Source Package SD Output** and a **Destination Package Video Input**, an internal connection is created if the destination package is linked to that source package, its level is SD and the router input, defined as an SD SDI input on the source package, is connected to the router SDI output defined in the destination package.

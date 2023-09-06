@@ -14,11 +14,11 @@ A matrix is used in order to easily connect a destination with a source.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                    | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial range.Serial interface.                    | No                  | Yes                     |
-| 2.0.0.x          | Based on 1.0.0.1.Smart-serial interface.           | No                  | Yes                     |
-| 2.1.0.x          | Based on 2.0.0.2.Smart-serial and SNMP interfaces. | No                  | Yes                     |
+| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial range. Serial interface.                    | No                  | Yes                     |
+| 2.0.0.x          | Based on 1.0.0.1. Smart-serial interface.           | No                  | Yes                     |
+| 2.1.0.x          | Based on 2.0.0.2. Smart-serial and SNMP interfaces. | No                  | Yes                     |
 
 ## Installation and configuration
 
@@ -57,7 +57,7 @@ This page contains the **PSU** and **FAN** fault tables of the device.
 
 ### Configuration
 
-Thispage contains the following parameters:
+This page contains the following parameters:
 
 - **Router Connection:** Displays the status (*Responding* or *Not Responding*) of the router's connection.
 - **Matrix Configuration:** Displays any detected misconfigurations. The status **OK** indicates that the matrix was successfully configured.

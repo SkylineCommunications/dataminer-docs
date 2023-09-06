@@ -4,7 +4,8 @@ uid: Connector_help_Nevion_Multicon_SNMP_-_RZ3_Transmitter
 
 # Nevion Multicon SNMP - RZ3 Transmitter
 
-Nevion Multicon is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.The **Nevion Multicon SNMP - RZ3 Transmitter** DVE driver is used to monitor cards of type G3HDEO14.
+Nevion Multicon is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.
+The **Nevion Multicon SNMP - RZ3 Transmitter** DVE driver is used to monitor cards of type G3HDEO14.
 
 ## About
 

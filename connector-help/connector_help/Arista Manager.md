@@ -19,39 +19,39 @@ This connector can be used to monitor **Rx and Tx Interfaces**. Statistics are a
 
 ### Version Info
 
-| **Range** | **Description**                                                                                                                                                                                                                        | **DCF Integration** | **Cassandra Compliant** |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x   | Initial version.                                                                                                                                                                                                                       | Yes                 | Yes                     |
-| 1.0.1.x   | Extra "smart-serial" interface for SyslogMessages.                                                                                                                                                                                     | Yes                 | Yes                     |
-| 1.0.3.x   | Adapted to work with custom-made Truck Application.                                                                                                                                                                                    | Yes                 | Yes                     |
-| 2.0.2.x   | Adapted to work with custom-made Truck Application.                                                                                                                                                                                    | Yes                 | Yes                     |
-| 2.0.3.x   | Key of "Monitor IGMP Snooping" table adapted.                                                                                                                                                                                          | Yes                 | Yes                     |
-| 2.0.4.x   | Current VLAN Table replaced by VLAN Port Overview.                                                                                                                                                                                     | Yes                 | Yes                     |
-| 2.0.5.x   | Version merge.                                                                                                                                                                                                                         | Yes                 | Yes                     |
-| 2.0.6.x   | Added polling table.Reverted display keys for SRM purposes.                                                                                                                                                                            | Yes                 | Yes                     |
-| 2.0.7.x   | Fixed typos in PTP Interfaces table.                                                                                                                                                                                                   | Yes                 | Yes                     |
-| 2.0.9.x   | Credential Manager with the latest implementation.                                                                                                                                                                                     | Yes                 | Yes                     |
-| 2.0.10.x  | Changed the way the polling is executed to get a more consistent result.                                                                                                                                                               | Yes                 | Yes                     |
-| 2.0.11.x  | Changed the key of the IP multicast routing table.                                                                                                                                                                                     | Yes                 | Yes                     |
-| 2.0.12.x  | \- Removed Section Table and added SNMP polling commands to the polling table to avoid confusion.- Trunk Table has been converted to SwitchPort Table. It now shows more extended information.- Fixed various incorrect "Interpretes". | Yes                 | Yes                     |
+| **Range** | **Description**                                                                                                                                                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x   | Initial version.                                                                                                                                                                                                                         | Yes                 | Yes                     |
+| 1.0.1.x   | Extra "smart-serial" interface for SyslogMessages.                                                                                                                                                                                       | Yes                 | Yes                     |
+| 1.0.3.x   | Adapted to work with custom-made Truck Application.                                                                                                                                                                                      | Yes                 | Yes                     |
+| 2.0.2.x   | Adapted to work with custom-made Truck Application.                                                                                                                                                                                      | Yes                 | Yes                     |
+| 2.0.3.x   | Key of "Monitor IGMP Snooping" table adapted.                                                                                                                                                                                            | Yes                 | Yes                     |
+| 2.0.4.x   | Current VLAN Table replaced by VLAN Port Overview.                                                                                                                                                                                       | Yes                 | Yes                     |
+| 2.0.5.x   | Version merge.                                                                                                                                                                                                                           | Yes                 | Yes                     |
+| 2.0.6.x   | Added polling table. Reverted display keys for SRM purposes.                                                                                                                                                                             | Yes                 | Yes                     |
+| 2.0.7.x   | Fixed typos in PTP Interfaces table.                                                                                                                                                                                                     | Yes                 | Yes                     |
+| 2.0.9.x   | Credential Manager with the latest implementation.                                                                                                                                                                                       | Yes                 | Yes                     |
+| 2.0.10.x  | Changed the way the polling is executed to get a more consistent result.                                                                                                                                                                 | Yes                 | Yes                     |
+| 2.0.11.x  | Changed the key of the IP multicast routing table.                                                                                                                                                                                       | Yes                 | Yes                     |
+| 2.0.12.x  | \- Removed Section Table and added SNMP polling commands to the polling table to avoid confusion. - Trunk Table has been converted to SwitchPort Table. It now shows more extended information. - Fixed various incorrect "Interpretes". | Yes                 | Yes                     |
 
 ### Product Info
 
-| **Range**             | **Supported Firmware**       |
-|-----------------------|------------------------------|
-| 1.0.0.x               | 4.15.2F                      |
-| 1.0.1.x               | 4.15.2F                      |
-| 1.0.3.x               | 4.15.2F                      |
-| 2.0.2.x \[Obsolete\]  | 4.15.2F                      |
-| 2.0.3.x \[Obsolete\]  | 4.15.2F4.20.5F               |
-| 2.0.4.x               | 4.15.2F4.20.5F               |
-| 2.0.5.x               | 4.15.2F4.20.5F               |
-| 2.0.6.x               | 4.15.2F4.20.5F4.21.1F        |
-| 2.0.7.x               | 4.15.2F4.20.5F4.21.1F        |
-| 2.0.9.x               | 4.15.2F4.20.5F4.21.1F        |
-| 2.0.10.x              | 4.15.2F4.20.5F4.21.1F4.25.2F |
-| 2.0.11.x              | 4.15.2F4.20.5F4.21.1F4.25.2F |
-| 2.0.12.x \[SLC Main\] | 4.15.2F4.20.5F4.21.1F4.25.2F |
+| **Range**             | **Supported Firmware**          |
+|-----------------------|---------------------------------|
+| 1.0.0.x               | 4.15.2F                         |
+| 1.0.1.x               | 4.15.2F                         |
+| 1.0.3.x               | 4.15.2F                         |
+| 2.0.2.x \[Obsolete\]  | 4.15.2F                         |
+| 2.0.3.x \[Obsolete\]  | 4.15.2F 4.20.5F                 |
+| 2.0.4.x               | 4.15.2F 4.20.5F                 |
+| 2.0.5.x               | 4.15.2F 4.20.5F                 |
+| 2.0.6.x               | 4.15.2F 4.20.5F 4.21.1F         |
+| 2.0.7.x               | 4.15.2F 4.20.5F 4.21.1F         |
+| 2.0.9.x               | 4.15.2F 4.20.5F 4.21.1F         |
+| 2.0.10.x              | 4.15.2F 4.20.5F 4.21.1F 4.25.2F |
+| 2.0.11.x              | 4.15.2F 4.20.5F 4.21.1F 4.25.2F |
+| 2.0.12.x \[SLC Main\] | 4.15.2F 4.20.5F 4.21.1F 4.25.2F |
 
 ## Configuration
 
@@ -166,7 +166,7 @@ This page displays the **Flows** table, which provides an overview of the relati
 
 ### Openflow (version 2.0.4.8)
 
-This page displays the **Openflow Statistics**, **Openflow Queues**, **Openflow Ports**,and **Openflow** tables.
+This page displays the **Openflow Statistics**, **Openflow Queues**, **Openflow Ports**, and **Openflow** tables.
 
 The page button **Openflow Profile** provides access to all the details related to the Openflow Profile parameters.
 
@@ -192,7 +192,7 @@ The **Monitor IGMP** page button displays the **Monitor IGMP Snooping** table. T
 
 ### QoS
 
-This page displays the tables **Class Map**, **Class Map Match**, **Service Policy**, **QoS Statistics**, **Policy Map**, **Policy Map Class**,and **Policy Map Action**.
+This page displays the tables **Class Map**, **Class Map Match**, **Service Policy**, **QoS Statistics**, **Policy Map**, **Policy Map Class**, and **Policy Map Action**.
 
 ### ACL
 
@@ -202,9 +202,9 @@ An ACL is an ordered list of rules that defines access restrictions for entities
 
 ### Tap Aggregation
 
-Thispage contains tables with information about the **tap aggregation configuration**. Note that this information is only available if the switch is in **tap aggregation mode**.
+This page contains tables with information about the **tap aggregation configuration**. Note that this information is only available if the switch is in **tap aggregation mode**.
 
-The **tap interfaces**, **aggregation groups**,and **tool interfaces** are all displayed in a dedicated table. The other tables on this page display the **connections** between these different items.
+The **tap interfaces**, **aggregation groups**, and **tool interfaces** are all displayed in a dedicated table. The other tables on this page display the **connections** between these different items.
 
 Note that configuration of the **timestamp mode** and **truncation size** will only work correctly from software version **4.20.5F** onwards.
 
@@ -247,11 +247,13 @@ When an entry changes in the **LLDP Neighbors Detail** table (on the LLDP page),
 
 ### Traps
 
-This page displays the **Traps** table. The traps are also stored in a (hidden) traps logger table. It is possible to execute a query to request traps from that logger table. To do so, fill in a string in the format "*GUID;maximum number of results;starttime;endtime*" in the parameter **Trap Advanced Query**. The results of the query will be displayed in the **Traps Advanced Search** table.
+This page displays the **Traps** table. The traps are also stored in a (hidden) traps logger table. It is possible to execute a query to request traps from that logger table.
+To do so, fill in a string in the format "*GUID;maximum number of results;starttime;endtime*" in the parameter **Trap Advanced Query**. The results of the query will be displayed in the **Traps Advanced Search** table.
 
 ### Syslog
 
-This page displays the **Syslog Messages** table. The syslog messages are also stored in a (hidden) syslog messages logger table. It is possible to execute a query to request syslog messages from that logger table. To do so, fill in a string in the format "*GUID;maximum number of results;starttime;endtime*" in the parameter **Syslog Advanced Query**. The results of the query will be displayed in the **Syslog Advanced Search Messages** table.
+This page displays the **Syslog Messages** table. The syslog messages are also stored in a (hidden) syslog messages logger table. It is possible to execute a query to request syslog messages from that logger table.
+To do so, fill in a string in the format "*GUID;maximum number of results;starttime;endtime*" in the parameter **Syslog Advanced Query**. The results of the query will be displayed in the **Syslog Advanced Search Messages** table.
 
 ### Web Interface
 
@@ -276,6 +278,6 @@ Physical dynamic interfaces:
 
 #### Internal Connections
 
-- Between interfaces and VLANs tagged on the specific interface,an internal connection is created with the following properties:
+- Between interfaces and VLANs tagged on the specific interface, an internal connection is created with the following properties:
 
 - **VLAN ID** connection property with as its value the VLAN Filtering Database ID.

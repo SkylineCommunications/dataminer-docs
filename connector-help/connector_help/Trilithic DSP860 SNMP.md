@@ -48,15 +48,15 @@ SNMP Settings:
 
 This page includes general information about the device, such as the **Device Name** and **Application Versions**. It also contains a summary of the most important measured values, such as **Temperature**, **Main Bus Voltage**, etc.
 
-Via the **Network Info** button, you can access a subpage with all relevant network information, such as **MAC Address**, **IP Address**, **Primary DNS**,etc.
+Via the **Network Info** button, you can access a subpage with all relevant network information, such as **MAC Address**, **IP Address**, **Primary DNS**, etc.
 
 ### Inputs
 
-This page contains information about the inputs of the device. The information is listed in a table, which contains parameters such as the **Channel Plan Name**, the **Minimal Analog Video Channel Level Limit**,the **MAX BER**, etc.
+This page contains information about the inputs of the device. The information is listed in a table, which contains parameters such as the **Channel Plan Name**, the **Minimal Analog Video Channel Level Limit**, the **MAX BER**, etc.
 
 ### Channels
 
-This page includes information about the different channels that exist on the device. The information is listed in a table, which contains among others the **Audio Level**, **FM Deviation** and**C/N**.
+This page includes information about the different channels that exist on the device. The information is listed in a table, which contains among others the **Audio Level**, **FM Deviation** and **C/N**.
 
 The page also displays the **Video Frequency**, **Audio Frequency**, **Symbol Rate**, etc.
 

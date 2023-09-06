@@ -10,10 +10,10 @@ The 7880IPG-NAT-6-10GE2 is a high-density, multi-port, multi-flow hardware Netwo
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                               | **Based on** | **System Impact**                                                                     |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------|
-| 1.0.0.1              | Initial version                                                                                                                                                                                | \-           | \-                                                                                    |
-| 1.0.1.1 \[SLC Main\] | \- Changed the polling method to subtable for all cores.- Added a Visio file to display the data of the Visio Events Table when the output bitrate is greater than 5 Mbps.- Implemented traps. | 1.0.0.1      | New range approved to the re-structured protocol for the new subtable polling method. |
+| **Range**            | **Key Features**                                                                                                                                                                                 | **Based on** | **System Impact**                                                                     |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------|
+| 1.0.0.1              | Initial version                                                                                                                                                                                  | \-           | \-                                                                                    |
+| 1.0.1.1 \[SLC Main\] | \- Changed the polling method to subtable for all cores. - Added a Visio file to display the data of the Visio Events Table when the output bitrate is greater than 5 Mbps. - Implemented traps. | 1.0.0.1      | New range approved to the re-structured protocol for the new subtable polling method. |
 
 ### Product Info
 

@@ -26,6 +26,8 @@ Configuration
 
 Initally, the application will not hold any devices to manage. Therefor, it's necessary to perform a discovery before you can start using the IP Network Manager. The application has a **Discovery** **Wizard**, which is explained in in [Device Discovery](#Device%20Discovery).
 
+![IPNetworkManager_Flow.png](~/connector-help/images/Skyline_IP_Network_Manager_IPNetworkManager_Flow.png)
+
 ## Usage
 
 You should use DataMiner Cube to use the IP Network Manager Application. After launching Cube, click in the navigation on **start** and choose **Apps**. Click on **IP Network Manager** to open the application.
@@ -36,13 +38,15 @@ After opening the application for the first time, the **map** page will be empty
 
 The map page shows the network devices that the application is managing. A icon is used to represent a device.
 
-> |          |                 |
-> |----------|-----------------|
-> | **Icon** | **Device Type** |
-> | Server   |                 |
-> | Router   |                 |
-> | Switch   |                 |
-> | Unknown  |                 |
+>
+>
+> |                                                                                                                                            |                 |
+> |--------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+> | **Icon**                                                                                                                                   | **Device Type** |
+> | ![IPNetworkManager_IconServerLinked.png](~/connector-help/images/Skyline_IP_Network_Manager_IPNetworkManager_IconServerLinked.png) | Server          |
+> | Router                                                                                                                                     |                 |
+> | Switch                                                                                                                                     |                 |
+> | Unknown                                                                                                                                    |                 |
 
 Network
 
@@ -216,6 +220,8 @@ In order to enable a monitoring test for a specific device, a number of options 
 > </tr>
 > </tbody>
 > </table>
+>
+>
 
 #### Settings
 
@@ -223,7 +229,12 @@ The subpage **Settings** allows to change the settings of the monitoring tests c
 
 [Device Discovery]()
 
+
+
+
 # Topics
+
+
 
 ## About
 
@@ -237,7 +248,8 @@ The subpage **Settings** allows to change the settings of the monitoring tests c
 
 ## Usage
 
-> MapNetwork
+> Map
+> Network
 
 > > #### List
 >
@@ -246,3 +258,5 @@ The subpage **Settings** allows to change the settings of the monitoring tests c
 > > #### Type
 
 > Monitor[Discover](#Device%20Discovery)
+
+

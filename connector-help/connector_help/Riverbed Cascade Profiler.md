@@ -27,7 +27,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 - **Get community string:** The community string used when reading values from the device (e.g. *public*).
 - **Set community string:** The community string used when setting values on the device (e.g. *private*).
 - **Security level and protocol:** The security level and privacy settings (e.g. *authNoPriv* \[Authentification/No privacy\]).
-- **Username:** The SNMPv3 user name(e.g. *DataMiner*).
+- **Username:** The SNMPv3 user name (e.g. *DataMiner*).
 - **Authentification password:** Passphrase to connect to the SNMPv3 agent (e.g. *password*).
 - **Authentification algorithm:** The encryption algorithm used for authentification (e.g. *HMAC-MD5*).
 
@@ -53,7 +53,7 @@ This page provides information about the usage of the disk resources.
 
 ### Profiler Interfaces
 
-This page displays the **Interfaces Table**,which containstraffic statistics for all the network interfaces of the device **(RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error, ...)**.
+This page displays the **Interfaces Table**, which contains traffic statistics for all the network interfaces of the device **(RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error, ...)**.
 
 ### Web Interface
 

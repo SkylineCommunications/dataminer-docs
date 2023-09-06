@@ -62,7 +62,7 @@ There are buttons that can be used to make the **LED blink**, to **Reboot** the 
 The following page buttons are available:
 
 - **Options**: Displays a list of the activated options.
-- **Network interface**:Allows you to configure the network interface.
+- **Network interface**: Allows you to configure the network interface.
 - **Control:** Allows you to change the date and time.
 - **Trap receiver:** Allows you to configure the trap settings.
 

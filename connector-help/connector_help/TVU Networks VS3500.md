@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-On the **General** page, specify the **Email**, **Password**, **App Secret**,and **App Key**. When you have done so, click **Get Session**. The connector will then start the polling of information.
+On the **General** page, specify the **Email**, **Password**, **App Secret**, and **App Key**. When you have done so, click **Get Session**. The connector will then start the polling of information.
 
 ### Redundancy
 
@@ -54,6 +54,6 @@ There is no redundancy defined.
 
 When the credentials on the **General** page have been correctly configured as detailed in the "Initialization" section above, the connector will poll information to display in the element.
 
-On the **Overview** page, a tree control allows you to navigate through the **Source** and **Destination** devices and view information such as their **Name, Type, Status**,and **URL.**
+On the **Overview** page, a tree control allows you to navigate through the **Source** and **Destination** devices and view information such as their **Name, Type, Status**, and **URL.**
 
 The **Devices** page contains the same information as the Overview page but in the form of a **Source Table** and **Destination Table.**

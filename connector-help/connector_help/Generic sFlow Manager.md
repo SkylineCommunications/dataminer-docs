@@ -42,15 +42,18 @@ From version **1.0.1.1** of this connector onwards, an **HTTP** connection is us
 
 New **sFlow Collector** elements added to the DMS are **automatically** **registered** by the sFlow Manager element. The known sFlow Collectors can be found in the **Collectors** table on the Collectors page.
 
-Any Agent sending sFlow packets to these collectors also gets registered by the sFlow Manager element. The Agents sending sFlow data to the DMS can be processed on the **Agents** page.The sFlow packets sent by an Agent are not processed by the sFlow Collector as long as the sFlow Manager does not **confirm** that this Agent needs to be processed by that specific sFlow collector.
+Any Agent sending sFlow packets to these collectors also gets registered by the sFlow Manager element. The Agents sending sFlow data to the DMS can be processed on the **Agents** page.
+The sFlow packets sent by an Agent are not processed by the sFlow Collector as long as the sFlow Manager does not **confirm** that this Agent needs to be processed by that specific sFlow collector.
 
-When a new Agent is **detected**, it will be added to the **Detected** **Agents** table, along with the sFlow collector that received data from this Agent. To start processing this Agent, it needs to be **confirmed** and then the linked sFlow collector will start processing the packets.Note, however, that if an Agent sends sFlow data to multiple sFlow collectors, only one of these sFlow collectors can be used to process this data.
+When a new Agent is **detected**, it will be added to the **Detected** **Agents** table, along with the sFlow collector that received data from this Agent. To start processing this Agent, it needs to be **confirmed** and then the linked sFlow collector will start processing the packets.
+Note, however, that if an Agent sends sFlow data to multiple sFlow collectors, only one of these sFlow collectors can be used to process this data.
 
 When an Agent is confirmed, it will be removed from the **Detected Agents** table and will be available in the **Agents** table. In the **Agents** table, several **configuration** options are available for the Agent, e.g. assigning it to a different collector, **pausing** the Agent, or **decommissioning** it.
 
 ### Configuration of Filters
 
-You can assign **filter expressions** to an Agent to filter the sFlow packets received by the Agent. Any packet that does not match the filter expression will not be processed.
+You can assign **filter expressions** to an Agent to filter the sFlow packets received by the Agent.
+Any packet that does not match the filter expression will not be processed.
 
 These filters can be managed on the Filters page. The following tables are used to build the filters:
 

@@ -26,11 +26,11 @@ This protocol is intended to be used for services. When you create a service, in
 
 The following default protocols and parameters need to be included:
 
-| **Protocol**          | **Description**                                                                                                |
-|-----------------------|----------------------------------------------------------------------------------------------------------------|
-| Linux Platform SNMP   | Total Processor LoadPhysical Memory UsageTotal Physical MemoryStorage TableTask Manager\[Element Alarm State\] |
-| Generic Trap Receiver | Traps                                                                                                          |
-| plunk Enterprise      | \[Element Alarm State\]                                                                                        |
+| **Protocol**          | **Description**                                                                                                     |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------|
+| Linux Platform SNMP   | Total Processor Load Physical Memory Usage Total Physical Memory Storage Table Task Manager \[Element Alarm State\] |
+| Generic Trap Receiver | Traps                                                                                                               |
+| plunk Enterprise      | \[Element Alarm State\]                                                                                             |
 
 ### Initialization
 

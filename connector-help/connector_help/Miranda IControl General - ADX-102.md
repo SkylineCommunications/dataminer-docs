@@ -26,7 +26,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General
 
-This page displays general information about the card: **Overall Status**,**Card Configuration** and **Card LED.**
+This page displays general information about the card: **Overall Status**, **Card Configuration** and **Card LED.**
 
 ### GPI
 

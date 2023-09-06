@@ -10,9 +10,9 @@ The Service Problem Management API is used to manage service problems. Service p
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                           | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.This is a customer-specific branch with custom attributes. | \-           | \-                |
+| **Range**            | **Key Features**                                                            | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. This is a customer-specific branch with custom attributes. | \-           | \-                |
 
 ### Product Info
 

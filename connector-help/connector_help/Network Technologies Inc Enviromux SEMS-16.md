@@ -48,8 +48,8 @@ This page displays general information about the device, including the **Time** 
 
 This page contains the following tables:
 
-- **Internal Sensor Table**: For each sensor measurement, this table lists the **Type** of measurement,the **Description** (i.e. user-editable information about the items measured by the sensor), the measured **Value**, the **Unit Name** that applies for this value, and the **Status** of the sensor value.
-- **External Sensor Table**: For each sensor measurement, this table lists the **Type** of measurement,the **Description** (i.e. user-editable information about the items measured by the sensor), the **Connector**, and the**Value** measured by the sensor.
+- **Internal Sensor Table**: For each sensor measurement, this table lists the **Type** of measurement, the **Description** (i.e. user-editable information about the items measured by the sensor), the measured **Value**, the **Unit Name** that applies for this value, and the **Status** of the sensor value.
+- **External Sensor Table**: For each sensor measurement, this table lists the **Type** of measurement, the **Description** (i.e. user-editable information about the items measured by the sensor), the **Connector**, and the **Value** measured by the sensor.
 - **External Sensor ACLM Table**: This table displays the maximum **Peak Value** registered from the sensor, **Frequency** values, **Current**, **Spikes**, **Swells**, **Sags** and **Relay**.
 
 ### I/O
@@ -57,7 +57,7 @@ This page contains the following tables:
 This page contains the following tables:
 
 - **Digital Inputs Table**: In this table, the user-configurable **Description** column provides information about the items measured by the sensor. The table also displays the **Value** measured from the digital input and the **Status** of the input.
-- **Output Relays Table**: This table lists output relays with a user-editable **Group Nb** and**Description**, the **Group** in which each output relay belongs, the **Normal Value** expected from the output and the measured **Value**.
+- **Output Relays Table**: This table lists output relays with a user-editable **Group Nb** and **Description**, the **Group** in which each output relay belongs, the **Normal Value** expected from the output and the measured **Value**.
 
 ### Power Supply
 
@@ -67,7 +67,7 @@ This page contains only the **Power Supply Table**. For each power supply, this 
 
 This page contains the following tables:
 
-- **IP Devices Table**: For each IP device, this table allows you to view and configure the **Address**, the **Description**, the**Group Nb**, the **Group** in which each IP belongs,the **Timeout**,the number of **Retries**, and the **State**. In the final column of the table, the **Status** is displayed.
+- **IP Devices Table**: For each IP device, this table allows you to view and configure the **Address**, the **Description**, the **Group Nb**, the **Group** in which each IP belongs, the **Timeout**, the number of **Retries**, and the **State**. In the final column of the table, the **Status** is displayed.
 - **IP Link Table**: For each IP link, this table allows you to view and configure the **Address** and **Description.**
 
 ### Web Page

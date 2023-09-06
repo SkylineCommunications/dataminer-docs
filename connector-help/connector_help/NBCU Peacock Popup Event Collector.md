@@ -60,4 +60,4 @@ There is no redundancy defined.
 
 ## How to use
 
-On the **General** page,you can configure the ID of the spreadsheet from which information events need to be retrieved. You should also specify the access token, the client ID and the client secret.
+On the **General** page, you can configure the ID of the spreadsheet from which information events need to be retrieved. You should also specify the access token, the client ID and the client secret.

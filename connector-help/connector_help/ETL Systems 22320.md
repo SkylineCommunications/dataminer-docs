@@ -43,6 +43,8 @@ This driver requires connection to another element for the status of the pins co
 | FAIL             | 6               |             |
 | GOOD             | 7               |             |
 
+
+
 The "Fail" and "Good" pins of each power supply must be connected to another element using the Element Connections module avaiable in DataMiner.
 
 ## Usage
@@ -50,3 +52,8 @@ The "Fail" and "Good" pins of each power supply must be connected to another ele
 ### General
 
 This page displays the status of **Power Supply 1** and **Power Supply 2**.
+
+
+
+
+

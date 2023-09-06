@@ -6,13 +6,14 @@ uid: Connector_help_ETL_Systems_NGM-100
 
 This protocol monitors and controls the ETL System NGM-100 device. This NiGMa (pronounced ENIGMA) matrix is intended to operate over frequency bands IF. It can be configured as distributive (input can be connected to one or more outputs) or combining (output can be connected to one or more inputs) by the type of RF cards installed in the module.
 
+
 ## About
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 

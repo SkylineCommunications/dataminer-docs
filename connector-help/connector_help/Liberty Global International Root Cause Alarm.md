@@ -28,7 +28,7 @@ Create a new service that requires root cause alarm correlation. In the edit tab
 
 On this page you can fully configure the **Alarm Matrix** and view the parameter values from the **Root Cause Alarm** and **Matrix Validation**.
 
-Each cell of the **Alarm Matrix**, except the **Matrix ID**,is editable. The following table columns are displayed:
+Each cell of the **Alarm Matrix**, except the **Matrix ID**, is editable. The following table columns are displayed:
 
 - **Matrix ID \[IDX\]:** Specific index for the table.
 

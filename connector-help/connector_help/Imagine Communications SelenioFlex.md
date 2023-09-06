@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### Configuration
 
-The HTTP connection status can be monitored on the **General**page.
+The HTTP connection status can be monitored on the **General** page.
 
 ## Usage
 
@@ -62,7 +62,7 @@ Similarly, the **Metadata Audio Properties** page button displays four tables wi
 
 ### Transcode Settings
 
-This page allows you to configure important transcode settings. You can among others set the task priority by clicking on the **Set Transcode Task Priority** button and changing the **Transcode Task ID for Priority** and the **Priority**. If you click the **Move Snap Shot File** buttonafter you have set parameters such as **New Full Path**, **Move Physical File** etc., you can move the snap shot file.
+This page allows you to configure important transcode settings. You can among others set the task priority by clicking on the **Set Transcode Task Priority** button and changing the **Transcode Task ID for Priority** and the **Priority**. If you click the **Move Snap Shot File** button after you have set parameters such as **New Full Path**, **Move Physical File** etc., you can move the snap shot file.
 
 Via the **Submit Transcode Task** page button you can add video and audio sources to the respective tables. With the buttons **Add Video Source**, **Add Audio Source** and **Submit Transcode Task**, the task can be submitted to the device. In addition to this, various other parameters such as **Transcode Asset ID**, **Transcode Metadata Type** and **Asset Piece ID** can be set on this page.
 
@@ -80,7 +80,7 @@ Via the **Group Settings** page button, you can create a group by setting parame
 
 ### Asset
 
-This page contains **Asset** **Properties** setup information, including settings such as **Delete Asset ID**, **Asset Properties Metadata Value**, **Add Asset**, **Modify Asset**, **Export Asset**,etc.
+This page contains **Asset** **Properties** setup information, including settings such as **Delete Asset ID**, **Asset Properties Metadata Value**, **Add Asset**, **Modify Asset**, **Export Asset**, etc.
 
 ## Notes
 

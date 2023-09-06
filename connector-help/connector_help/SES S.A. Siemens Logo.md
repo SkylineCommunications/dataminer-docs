@@ -46,14 +46,22 @@ SERIAL CONNECTION:
 
 There are 2 ways to configure the device:
 
-1.  By importing an existing configuration. This is done via the **Import/Export** page. This is useful if you have already configured a different device and want to have an identical configuration on this device. It will overwrite existing configuration for all tables and standalone parameters.Fill in the **Import CSV File Path** and the **Import CSV Filename**, and click the **Import CSV button**. The different tables will then be filled in and will be polled in the next polling cycle.
+1.  By importing an existing configuration.
+    This is done via the **Import/Export** page. This is useful if you have already configured a different device and want to have an identical configuration on this device. It will overwrite existing configuration for all tables and standalone parameters.
+    Fill in the **Import CSV File Path** and the **Import CSV Filename**, and click the **Import CSV button**. The different tables will then be filled in and will be polled in the next polling cycle.
 
-2.  By manually configuring the tables.To do so:
+2.  By manually configuring the tables.
+    To do so:
 
-3.  - On the **Relays and Inputs** page, right-click the **Relays Table** or the **Discrete InputsTable** to add or delete rows in the tables.Fill in the requested parameters, including a **Name** and a **Register Address**, which should be unique within the table, and choose the **Signal Mode** (*Equal* or *Inverted*).The latter determines whether the **Raw Value** from the device is the same as the **Logic Value**, or the inverted value.
-    - On the **Schneider PM 8000** page, right-click the **Voltages Table** or the **Currents Table**, to add or delete rows in the tables.Fill in a **Name** and a **Register Address**, which should be unique within the table.
-    - In order to define the Modbus registers that correspond to the **Power in kW**, **Power in kVA**, **Power in kVAR**, **Frequency** and **Power Factor**, click the **Register Addresses** page button on the **Schneider PM 8000** page.Those parameters are called **Power in kW Modbus Register**, **Power in kVA Modbus Register**, **Power in kVAR Modbus Register**, **Frequency Modbus Register** and **Power Factor Modbus Register**.
-    - Once you have completed the configuration, you can export it to a file in order to reuse it on a different device, or to keep a backup of the current configuration. This is done via the **Import/Export** page. Fill in the **Export CSV File Path** and the **Export CSV Filename**, and click the **Export CSV button** to export your current configuration.
+3.  - On the **Relays and Inputs** page, right-click the **Relays Table** or the **Discrete InputsTable** to add or delete rows in the tables.
+      Fill in the requested parameters, including a **Name** and a **Register Address**, which should be unique within the table, and choose the **Signal Mode** (*Equal* or *Inverted*).
+      The latter determines whether the **Raw Value** from the device is the same as the **Logic Value**, or the inverted value.
+    - On the **Schneider PM 8000** page, right-click the **Voltages Table** or the **Currents Table**, to add or delete rows in the tables.
+      Fill in a **Name** and a **Register Address**, which should be unique within the table.
+    - In order to define the Modbus registers that correspond to the **Power in kW**, **Power in kVA**, **Power in kVAR**, **Frequency** and **Power Factor**, click the **Register Addresses** page button on the **Schneider PM 8000** page.
+      Those parameters are called **Power in kW Modbus Register**, **Power in kVA Modbus Register**, **Power in kVAR Modbus Register**, **Frequency Modbus Register** and **Power Factor Modbus Register**.
+    - Once you have completed the configuration, you can export it to a file in order to reuse it on a different device, or to keep a backup of the current configuration. This is done via the **Import/Export** page.
+      Fill in the **Export CSV File Path** and the **Export CSV Filename**, and click the **Export CSV button** to export your current configuration.
 
 ### Redundancy
 

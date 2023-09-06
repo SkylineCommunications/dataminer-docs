@@ -6,7 +6,8 @@ uid: Connector_help_Teracom_Element_Control_Manager
 
 This protocol is used to automatically set and retrieve data from different elements in a cluster.
 
-It scans the different views in the cluster for the technologies "FM", "DTTV" and "DAB". When these views are found, the physical sites they contain are listed up, as well as the various elements they contain.Finally, automation data that is mapped according to technology and linked to a specific element is retrieved. In Visual Overview, adding commands for an element contained in a "technology" and "site" view is facilitated.
+It scans the different views in the cluster for the technologies "FM", "DTTV" and "DAB". When these views are found, the physical sites they contain are listed up, as well as the various elements they contain.
+Finally, automation data that is mapped according to technology and linked to a specific element is retrieved. In Visual Overview, adding commands for an element contained in a "technology" and "site" view is facilitated.
 
 The protocol only communicates with the DMS in order to be able to retrieve/configure data from a central element.
 

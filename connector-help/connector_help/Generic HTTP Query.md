@@ -36,7 +36,7 @@ This connector uses a virtual connection and does not require any input during e
 
 ### General
 
-The General page displays a table, **HTTP Queries**, where you can **define multiple HTTP queries** and monitorresponsiveness by **measuring max, min and average reply times** as well as the **status code** and **response content** of the remote server response. Each line represents an HTTP call that will be executed every time the interval value is checked.
+The General page displays a table, **HTTP Queries**, where you can **define multiple HTTP queries** and monitor responsiveness by **measuring max, min and average reply times** as well as the **status code** and **response content** of the remote server response. Each line represents an HTTP call that will be executed every time the interval value is checked.
 
 Note: **if the Interval is Disabled**, the query is **not automatically triggered** but can only be executed using the **Execute** button.
 
@@ -45,7 +45,7 @@ You can add data to the table **HTTP Queries** by:
 - Adding data row by row via the right-click menu of the table:
 
 - 1.  Right-click the **HTTP Queries** table, and select the VERB, e.g. Add GET, or add a new header to the query.
-  2.  Fill in the **URI**, **Interval**,and **Timeout** values. The URI has to have the following structure: *http://\<address\>*.
+  2.  Fill in the **URI**, **Interval**, and **Timeout** values. The URI has to have the following structure: *http://\<address\>*.
   3.  After you have successfully added a row, you can define a **User Name**, a **Password**, and a **Request Body**. You can also edit the **URI**, **Verb**, **Interval**, and **Timeout**.
 
 <!-- -->
@@ -58,7 +58,8 @@ You can add data to the table **HTTP Queries** by:
 
 #### CSV file structure
 
-To import a CSV file, the file **must have the same headers** as displayed in the **HTTP Queries Table**, and each row must have the same number of columns with meaningful data. All imported data is validated. If **no** **index** is found in a row or there is an **invalid or non-existing URI**, that specific row will **not be added**.
+To import a CSV file, the file **must have the same headers** as displayed in the **HTTP Queries Table**, and each row must have the same number of columns with meaningful data.
+All imported data is validated. If **no** **index** is found in a row or there is an **invalid or non-existing URI**, that specific row will **not be added**.
 
 CSV file example:
 

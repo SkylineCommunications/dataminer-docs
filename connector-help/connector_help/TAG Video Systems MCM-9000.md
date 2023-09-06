@@ -18,16 +18,17 @@ Range **1.1.5.x** of the connector is based on the 1.1.4.7 version. It changes t
 
 ### Product Info
 
-| **Range**                                       | **Supported Firmware**              |
-|-------------------------------------------------|-------------------------------------|
-| 1.0.0.x1.0.0.111.0.0.13-141.0.0.15-221.0.0.23\* | 2.3.32.4.62.5.22.5.32.5.42.6.74.1.1 |
-| 1.1.0.x1.1.1.x                                  | 3.3.54.1.14.1.74.2.3                |
-| 1.1.2.x                                         | 4.1.14.1.74.2.34.2.84.4.44.5.7      |
-| 1.1.3.x                                         | 4.1.14.1.74.2.34.2.84.4.44.5.75.2.3 |
-| 1.1.4.x \[SLC Main\]                            | 4.1.14.1.74.2.34.2.84.4.44.5.75.2.3 |
-| 1.1.5.x                                         | 4.1.14.1.74.2.34.2.84.4.44.5.75.2.3 |
+| **Range**                                           | **Supported Firmware**                    |
+|-----------------------------------------------------|-------------------------------------------|
+| 1.0.0.x 1.0.0.11 1.0.0.13-14 1.0.0.15-22 1.0.0.23\* | 2.3.3 2.4.6 2.5.2 2.5.3 2.5.4 2.6.7 4.1.1 |
+| 1.1.0.x 1.1.1.x                                     | 3.3.5 4.1.1 4.1.7 4.2.3                   |
+| 1.1.2.x                                             | 4.1.1 4.1.7 4.2.3 4.2.8 4.4.4 4.5.7       |
+| 1.1.3.x                                             | 4.1.1 4.1.7 4.2.3 4.2.8 4.4.4 4.5.7 5.2.3 |
+| 1.1.4.x \[SLC Main\]                                | 4.1.1 4.1.7 4.2.3 4.2.8 4.4.4 4.5.7 5.2.3 |
+| 1.1.5.x                                             | 4.1.1 4.1.7 4.2.3 4.2.8 4.4.4 4.5.7 5.2.3 |
 
-Firmware versions 2.5.2 and higher support HTTP Live Streaming (HLS). A Visio file is available to display the mosaic stream in DataMiner.To display the HTTP Live Stream, VLC Media Player is required on the client computer.
+Firmware versions 2.5.2 and higher support HTTP Live Streaming (HLS). A Visio file is available to display the mosaic stream in DataMiner.
+To display the HTTP Live Stream, VLC Media Player is required on the client computer.
 
 ## Configuration
 
@@ -138,7 +139,7 @@ On this page, you can modify and run the **Scanner Tasks** that will scan IPs an
 
 ### Channel Status
 
-A table with the **Channel Status** is displayed on this page, with important information such as the **Channel Service Minimum Bitrate**, **Channel Service Maximum Bitrate**,and **Channel Service Average Bitrate.**
+A table with the **Channel Status** is displayed on this page, with important information such as the **Channel Service Minimum Bitrate**, **Channel Service Maximum Bitrate**, and **Channel Service Average Bitrate.**
 
 With the **Channel Events to Keep** toggle button at the top of the page, you can choose to either keep all channel events or keep only active events with minor/major/critical severity.
 
@@ -162,7 +163,7 @@ Note: A Visio file is available to display the mosaic stream in DataMiner. Manip
 
 ### Layouts
 
-On this page, you can manipulate the individual **layouts**. You can add or remove channels from a layout by selecting a layout and then changing the selected channel in the **Layout Channels Table**.You can also use the **Add Layout** and **Delete Layout** page buttons to add or delete a layout, respectively.
+On this page, you can manipulate the individual **layouts**. You can add or remove channels from a layout by selecting a layout and then changing the selected channel in the **Layout Channels Table**. You can also use the **Add Layout** and **Delete Layout** page buttons to add or delete a layout, respectively.
 
 ### Alarm Presets
 

@@ -18,6 +18,8 @@ It uses the Redfish REST API to get all the associated parameters for this type 
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
+
+
 ### Product Info
 
 | **Driver Range** | **Device Firmware Version** |
@@ -41,11 +43,11 @@ HTTP CONNECTION:
 
 General
 
-Thispage displays the device generic information, which contains the following parameters: **Product Name**, **Manufacturer**, **Server Name**, **UUID**, **Server Serial Number**, **Product ID** and **System ROM.**
+This page displays the device generic information, which contains the following parameters: **Product Name**, **Manufacturer**, **Server Name**, **UUID**, **Server Serial Number**, **Product ID** and **System ROM.**
 
 ### Active Sessions
 
-This page displays a table where the info related to Active Sessions are being shown up. The table contains the following columns: **Index**, **Name**, **Username,**and **Session Type**.
+This page displays a table where the info related to Active Sessions are being shown up. The table contains the following columns: **Index**, **Name**, **Username,** and **Session Type**.
 
 ### Connection Setup
 
@@ -77,3 +79,5 @@ This table provides some configuration options to manage the table:
 ### Web Interface
 
 This page displays the Web Interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+

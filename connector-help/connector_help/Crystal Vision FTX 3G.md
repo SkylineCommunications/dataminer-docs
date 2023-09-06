@@ -10,7 +10,8 @@ This driver monitores some parameters of the FTX 3G, a HD or SD to fibre optic t
 
 ### Creation
 
-***SNMP connection***This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+***SNMP connection***
+This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
 
 SNMP CONNECTION:
 
@@ -20,7 +21,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - Port number: 161
-- Get community string: publicSet community string: private
+- Get community string: public
+  Set community string: private
 
 ## Usage
 

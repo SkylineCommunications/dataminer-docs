@@ -12,19 +12,19 @@ The Atlassian Jira driver uses the official JSON REST API to create and update t
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                    | No                  | Yes                     |
-| 1.0.1.x          | Driver review.                                      | No                  | Yes                     |
-| 3.0.0.x          | Based on 1.0.0.x.Dedicated branch for costumer VOO. | No                  | Yes                     |
+| **Driver Range** | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
+|------------------|------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                     | No                  | Yes                     |
+| 1.0.1.x          | Driver review.                                       | No                  | Yes                     |
+| 3.0.0.x          | Based on 1.0.0.x. Dedicated branch for costumer VOO. | No                  | Yes                     |
 
 ### Supported firmware versions
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.2.11                      |
-| 1.0.1.x          | 5.2.117.3.6                 |
-| 3.0.0.x          | 5.2.117.2.7                 |
+| 1.0.1.x          | 5.2.11 7.3.6                |
+| 3.0.0.x          | 5.2.11 7.2.7                |
 
 ## Installation and configuration
 
@@ -42,7 +42,8 @@ HTTP CONNECTION:
 
 ### Configuration of authentication
 
-This driver uses **HTTPS** and needs credentials to create and update tickets. These credentials can be set on the **Advanced** page, which can be accessed via a page button on the **Configuration** page.You can either configure **Username** and **Password**, or configure the **Authorization Key**.
+This driver uses **HTTPS** and needs credentials to create and update tickets. These credentials can be set on the **Advanced** page, which can be accessed via a page button on the **Configuration** page.
+You can either configure **Username** and **Password**, or configure the **Authorization Key**.
 
 ## Usage
 

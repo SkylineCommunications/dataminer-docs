@@ -45,7 +45,7 @@ SNMP Settings:
 
 ### Main View Page
 
-This page contains general status information, such as the **Video Status**,**Audio 1 Status** and **Selected Service Name**.
+This page contains general status information, such as the **Video Status**, **Audio 1 Status** and **Selected Service Name**.
 
 There are also two bar graphs that show the **Eb/N0 Margin** and **RF Level.**
 
@@ -60,7 +60,7 @@ There are four page buttons, which lead to the following subpages:
 - **License Table**: Displays the features that need a separate license, and shows whether the **license status** is disabled or enabled.
 - **Board List**: Displays the hardware boards in the system, with some more information such as the **Software version** and the **Hardware Version**.
 - **Configurations**: Allows you to upload and download configurations to and from your device.
-- **Upgrade**:Allows you to upgrade the firmware of the device, with parameters such as **Path, Local Filename, FTP Username**, etc.
+- **Upgrade**: Allows you to upgrade the firmware of the device, with parameters such as **Path, Local Filename, FTP Username**, etc.
 
 ### Input Page
 
@@ -70,7 +70,7 @@ It also displays the **Input Bit Error Rate, Input Bit Rate** and **Input Status
 
 ### Input IP Page
 
-This page contains information about the input IP option, and allows you to change IP-related parameters.It contains parameters such as **Encapsulation**, **Last IP Received, Multicast UDP Port**, etc.
+This page contains information about the input IP option, and allows you to change IP-related parameters. It contains parameters such as **Encapsulation**, **Last IP Received, Multicast UDP Port**, etc.
 
 ### Input IP Dual NIC Page
 

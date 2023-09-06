@@ -24,6 +24,6 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 This element created with this driver consists of the following data pages:
 
-- **General**: Displays general information such as the **number of remotes** in the network, **C/N of stations and controllers**,and **Rx and Tx traffic rates.**
+- **General**: Displays general information such as the **number of remotes** in the network, **C/N of stations and controllers**, and **Rx and Tx traffic rates.**
 - **Controllers**: Displays the controllers that belong to this specific network with their state, type, IP address, position, and number of packets and faults.
 - **Stations**: Displays the stations that belong to this specific network as well as information such as state, serial number, location, IP address, etc.

@@ -77,5 +77,6 @@ On this page, the **Table Fuel Tank** is used to add new types of fuel tanks con
 
 The following estimated info is available:
 
-- **Running Time Left**: Engine run time left based on how much fuel is left in the fuel tanks. Calculated by retrieving power engine consumption from the data table (based on the **Running Time Left Power Engine Tag** or the **Running Time Left Power Grid Tag** when the generator is not running) and the **Running Time Left Power Engine Factor**.
+- **Running Time Left**: Engine run time left based on how much fuel is left in the fuel tanks.
+  Calculated by retrieving power engine consumption from the data table (based on the **Running Time Left Power Engine Tag** or the **Running Time Left Power Grid Tag** when the generator is not running) and the **Running Time Left Power Engine Factor**.
 - **Total Remaining Fuel Left**: The total fuel remaining in all the tanks (in liters).

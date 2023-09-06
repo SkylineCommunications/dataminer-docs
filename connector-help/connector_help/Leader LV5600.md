@@ -10,10 +10,10 @@ On this driver, the customer checks the information provided from the Leader LV5
 
 ### Version Info
 
-| **Range**           | **Key Features**             | **Based on** | **System Impact**    |
-|---------------------|------------------------------|--------------|----------------------|
-| 1.0.0.x\[SLC Main\] | Initial version              | \-           | \-                   |
-| 1.1.0.x             | New Parameters and Discreets | 1.0.0.2      | Support Firmware 5.3 |
+| **Range**            | **Key Features**             | **Based on** | **System Impact**    |
+|----------------------|------------------------------|--------------|----------------------|
+| 1.0.0.x \[SLC Main\] | Initial version              | \-           | \-                   |
+| 1.1.0.x              | New Parameters and Discreets | 1.0.0.2      | Support Firmware 5.3 |
 
 ### Product Info
 
@@ -46,8 +46,13 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device(default value if not overridden in the driver: *public*).
-- **Set community string**: The community string used when setting values on the device(default value if not overridden in the driver: *private*).
+- **Get community string**: The community string used when reading values from the device
+  (default value if not overridden in the driver: *public*).
+- **Set community string**: The community string used when setting values on the device
+  (default value if not overridden in the driver: *private*).
+
+*
+*
 
 ### Initialization
 

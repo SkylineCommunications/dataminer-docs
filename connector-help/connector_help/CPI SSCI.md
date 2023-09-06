@@ -83,4 +83,4 @@ Connections
 
 Internal Connections
 
-- Between **Input** and **Output**,an internal connection is created with no properties.
+- Between **Input** and **Output**, an internal connection is created with no properties.

@@ -58,3 +58,5 @@ This page displays various alarms for the main board. Those parameters are not p
 ### Web Interface
 
 The native web interface of the device. The client machine has to be able to access the device. If not, it will not be possible to open the web interface.
+
+

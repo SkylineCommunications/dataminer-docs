@@ -70,8 +70,9 @@ If a slot is no longer available, the information about the slot is automaticall
 
 ### Configuring parameters
 
-When you configure a parameter, the **Lock Status**in the **Embedder Controls** table must be set to *Remote Access Locked*.
+When you configure a parameter, the **Lock Status** in the **Embedder Controls** table must be set to *Remote Access Locked*.
 
 If the Lock Status is set to something else, the driver will automatically set it to *Remote Access Locked* when a set needs to be performed. After a change is made to a parameter, the Lock Status will be set to *Disabled.* This forces the change to be saved on device's SD card.
 
-Note that when a change is applied, a **transition time** may be required for the change to take place on the device. If a change is applied and **nothing changes** after the configured polling period time, this means that the device did not accept the change because of an **invalid configuration**.
+Note that when a change is applied, a **transition time** may be required for the change to take place on the device.
+If a change is applied and **nothing changes** after the configured polling period time, this means that the device did not accept the change because of an **invalid configuration**.

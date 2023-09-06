@@ -47,7 +47,7 @@ The driver contains 3 pages.
 This page displays two blocks of parameters:
 
 - **Status**: Summary status, including the **Source Selected**, **Main**, **Standy**, **Amp 1** to **5**, **PSU 1** and **2**, **PSU Bus**, and **Temperature Status**.
-- **Chassis Status**:Current status of the system.
+- **Chassis Status**: Current status of the system.
 
 ### Configuration
 

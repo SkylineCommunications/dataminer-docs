@@ -15,7 +15,7 @@ Current version: **1.0.0.21**
 Note:
 
 - **Cisco RFGW-1-D** elements are only supported in this driver from version **1.0.0.6** onwards.
-- **Arris E6000**elements are only supported in this driver from version **1.0.0.7** onwards.
+- **Arris E6000** elements are only supported in this driver from version **1.0.0.7** onwards.
 - **Casa Systems C100G** elements are only supported in this driver from version **1.0.0.8** onwards.
 - **Cisco CBR-8** elements are only supported in this driver from version **1.0.0.16** onwards.
 
@@ -106,7 +106,8 @@ Since this driver works with XLS files, the package "2007 Office System Driver: 
 
 ### General
 
-Select the CSV file in **File** by selecting a file name from the drop-down list. If the file you are looking for is not in the list, make sure you upload the CSV file to the Documents folder of the element (see Configuration section above). Additionally, you can click the **Update File List** button to refresh the drop-down list.
+Select the CSV file in **File** by selecting a file name from the drop-down list. If the file you are looking for is not in the list, make sure you upload the CSV file to the Documents folder of the element (see Configuration section above).
+Additionally, you can click the **Update File List** button to refresh the drop-down list.
 
 To import the CSV file, click the **Read File** button.
 
@@ -120,7 +121,8 @@ The parameter **File Read Status** shows the status of the current import:
 
 A **File Progress Bar** is also displayed.
 
-As soon as the **Configure Reports** button is pressed, a CSV file with the format *Export_ReportData_dd_MM_yyyy.csv* is generated.This file is placed in the folder "**C:\Skyline DataMiner\Documents\UPC Nederland Subscriber Provisioner\KPI and KQI Editor**" and is automatically imported by a Skyline KPI & KQI element.
+As soon as the **Configure Reports** button is pressed, a CSV file with the format *Export_ReportData_dd_MM_yyyy.csv* is generated.
+This file is placed in the folder "**C:\Skyline DataMiner\Documents\UPC Nederland Subscriber Provisioner\KPI and KQI Editor**" and is automatically imported by a Skyline KPI & KQI element.
 
 ### Topology Converter
 

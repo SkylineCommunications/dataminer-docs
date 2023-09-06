@@ -14,7 +14,8 @@ This driver uses the **command parameter** (ID: 101, not displayed) to send the 
 
 ### Creation
 
-***Virtual connection***This driver uses a virtual connection and does not require any input during element creation.
+***Virtual connection***
+This driver uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 

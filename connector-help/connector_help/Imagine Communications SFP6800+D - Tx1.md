@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_SFP6800+D_-_Tx1
 
 Imagine Communications SFP6800+D - Tx1
 
-This driver can be used to view information and configure settings of **Tx1 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical andOpticalof the Tx1 cage.
+This driver can be used to view information and configure settings of **Tx1 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical and Optical of the Tx1 cage.
 
 ## About
 
@@ -28,16 +28,16 @@ This driver is **automatically generated** by the parent driver **Imagine Commun
 
 ### CMPST Tx1
 
-This page contains the information about CMPST parameters regarding Tx1cards.
+This page contains the information about CMPST parameters regarding Tx1 cards.
 
 ### Electrical Tx1
 
-This page contains the information about Electrical parameters regarding Tx1cards.
+This page contains the information about Electrical parameters regarding Tx1 cards.
 
 ### HDMI Tx
 
-This page contains the information about HDMI parameters regarding Txcards.
+This page contains the information about HDMI parameters regarding Tx cards.
 
 ### Optical Tx1
 
-This page contains the information about Optical parameters regarding Tx1cards.
+This page contains the information about Optical parameters regarding Tx1 cards.

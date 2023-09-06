@@ -46,6 +46,6 @@ On the **SCTE Events** page, check the configuration of the **SCTE Mode**. By de
 
 Once the element has been created, the received VMA SCTE events will be added to the **VMA Event Table** on the General page. This table will list up to 1000 events, depending on the maximum number of events configured (range: 10 to 1000).
 
-The received events will be mapped based on the selected **SCTE Mode**.The **SCTE Events** table will contain the mapped events and log these in Elasticsearch for additional processing (PID 8000000).
+The received events will be mapped based on the selected **SCTE Mode**. The **SCTE Events** table will contain the mapped events and log these in Elasticsearch for additional processing (PID 8000000).
 
 The element will listen for HTTP messages of type POST with route /Message. A reply will be sent to Crystal VMA. On the **Debug** page, you can check a received message and its response. Errors in the processing will be reported to Crystal VMA and logged.

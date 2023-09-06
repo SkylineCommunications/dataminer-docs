@@ -41,7 +41,7 @@ This driver also uses a serial connection and needs the following user informati
 
 ### General
 
-On this page, you can find recording information such as the **Recording Status, Source Bitrate, Source IP Port**, etc.You can start or stop recording with buttons.
+On this page, you can find recording information such as the **Recording Status, Source Bitrate, Source IP Port**, etc. You can start or stop recording with buttons.
 
 Playback information is also available through the parameters **Playback Status, Playback Bitrate**, etc.
 

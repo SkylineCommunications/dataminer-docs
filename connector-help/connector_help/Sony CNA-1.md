@@ -22,9 +22,9 @@ The CNA-1 camera control network adaptor allows third-party system products to c
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**          |
-|-----------|---------------------|-------------------------|-----------------------|----------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | Sony CNA-1 - RCPSony CNA-1 - CCU |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**           |
+|-----------|---------------------|-------------------------|-----------------------|-----------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | Sony CNA-1 - RCP Sony CNA-1 - CCU |
 
 ## Configuration
 

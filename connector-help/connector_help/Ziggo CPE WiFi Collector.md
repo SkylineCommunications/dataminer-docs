@@ -51,7 +51,7 @@ This page contains the **CM Table** and some information parameters about the pr
 
 ### Provisioning
 
-This page shows all provisioning information. The **Last Provisioning Date**, **Last Provisioning Request** and **Last Provisioning Response** show information about the last provisioning. The **Net Provisioning Result** is the result of **Modems Provisioned** - (Previous number of provisioned modems + **New Modems** -**Deleted Modems**). For the **Provisioning Type** you can choose for **Full** or **Incremental** provisioning. If you enable **Automatic Provision**,the driver will provision on the specified **Provision Time** (24H:mm). You can always force the driver to start provisioning with the **Provision** button.
+This page shows all provisioning information. The **Last Provisioning Date**, **Last Provisioning Request** and **Last Provisioning Response** show information about the last provisioning. The **Net Provisioning Result** is the result of **Modems Provisioned** - (Previous number of provisioned modems + **New Modems** -**Deleted Modems**). For the **Provisioning Type** you can choose for **Full** or **Incremental** provisioning. If you enable **Automatic Provision**, the driver will provision on the specified **Provision Time** (24H:mm). You can always force the driver to start provisioning with the **Provision** button.
 
 ### Thread Pool Info
 
@@ -61,6 +61,6 @@ This page displays the thread information.
 
 On this page, you can configure the parameters **Server**, **Database**, **Username** and **Password** to connect to the IAMDB database.
 
-With the **Data Offload Folder**,you can configure where you want to offload the .csv files.
+With the **Data Offload Folder**, you can configure where you want to offload the .csv files.
 
 **Log Mac** is used to show the logging from a certain MAC address assigned to the collector. **Force Execute MAC** can be used to immediately execute the device with the MAC address configured in the Log MAC parameter.

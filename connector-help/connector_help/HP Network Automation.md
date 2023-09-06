@@ -10,10 +10,10 @@ This connector polls the HP Network Automation API for device configuration info
 
 ### Version Info
 
-| **Range**            | **Key Features**      | **Based on** | **System Impact**                                                                     |
-|----------------------|-----------------------|--------------|---------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version       | \-           | \-                                                                                    |
-| 1.0.1.x \[SLC Main\] | Supports EPM solution | 1.0.0.x      | \- Layout updates.- Polling functionality changed from Automation to importing files. |
+| **Range**            | **Key Features**      | **Based on** | **System Impact**                                                                      |
+|----------------------|-----------------------|--------------|----------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version       | \-           | \-                                                                                     |
+| 1.0.1.x \[SLC Main\] | Supports EPM solution | 1.0.0.x      | \- Layout updates. - Polling functionality changed from Automation to importing files. |
 
 ### Product Info
 

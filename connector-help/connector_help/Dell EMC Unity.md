@@ -10,9 +10,9 @@ uid: Connector_help_Dell_EMC_Unity
 
 ### Version Info
 
-| **Range**            | **Key Features**                          | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.Only includes monitoring. | \-           | \-                |
+| **Range**            | **Key Features**                           | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. Only includes monitoring. | \-           | \-                |
 
 ### Product Info
 
@@ -60,7 +60,7 @@ When the credentials have been specified on the Communication page as detailed a
 
 Every time a request is being sent, the **Request Status** column will be set to *Sending* and the **HTTP State** parameter will change from *Idle* to *Busy.*
 
-After a response is received, the **HTTP State** parameter changes to *Idle*,and if the response is processed successfully, the **Request Status** for that particular call will change to *Success.* If any error is found when processing the response, the **Request Status** will change to *Fail.*
+After a response is received, the **HTTP State** parameter changes to *Idle*, and if the response is processed successfully, the **Request Status** for that particular call will change to *Success.* If any error is found when processing the response, the **Request Status** will change to *Fail.*
 
 ## Notes
 

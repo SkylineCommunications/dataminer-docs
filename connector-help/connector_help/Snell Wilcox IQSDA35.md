@@ -31,7 +31,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ### General page
 
-Thispage displays two groups of parameters:
+This page displays two groups of parameters:
 
 - **Unit Stats**: An overview of the two inputs and the four outputs.
 - **Product**: General information about the product

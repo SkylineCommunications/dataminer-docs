@@ -4,7 +4,8 @@ uid: Connector_help_Evertz_7x00_General_Platform_-_7707VT4HS
 
 # Evertz 7x00 General Platform - 7707VT4HS
 
-Single card TDM multiplexer for two HD-SDI signals, or one HD-SDI signal and three SDI/DVB-ASI signals, or four SDI/DVB-ASI signals.About
+Single card TDM multiplexer for two HD-SDI signals, or one HD-SDI signal and three SDI/DVB-ASI signals, or four SDI/DVB-ASI signals.
+About
 
 An **SNMP** connection is used in order to successfully retrieve and configure the device's information. There are also different possibilities available for **alarm monitoring** and **trending**.
 

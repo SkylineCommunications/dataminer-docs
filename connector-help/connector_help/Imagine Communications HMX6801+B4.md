@@ -71,7 +71,7 @@ The web interface is only accessible when the client machine has network access 
 
 The element created with this driver consists of the following data pages:
 
-- **Alarms**: Contains all alarm parameters. The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available for these parameters. With the buttons **Enable** and**Disable** you can change the monitoring state of the device card.
+- **Alarms**: Contains all alarm parameters. The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available for these parameters. With the buttons **Enable** and **Disable** you can change the monitoring state of the device card.
 - **Input**: Contains page buttons to the **AudioProc**, **Multiplex**, **EDH** and **Other** subpages, where you can view input status information and configure related settings.
 - **Other**: Contains the **Factory Recall** parameter.
 - **Output**: Contains page buttons to the AudioProc and Multiplex subpages. On the **Multiplex** subpage, you can configure the eight output sources. The **AudioProc** subpage contains the format Fb and status parameters for all outputs. The **Output Format** can also be configured for all outputs.

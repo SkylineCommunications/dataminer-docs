@@ -8,7 +8,12 @@ This protocol is used to request alarms and populate an Alarms table so alarms a
 
 ## About
 
-This protocol requests the alarms and contacts from an Oracle database. It is important that the Database Configuration parameters are filled in on the correspondig page.The first time the element starts up, all alarms will be requested, processed and populated in the **Alarms** table. This can take a while.Also the contacts are requested and a **Service Contacts** table is populated.New alarms are requested and processed every minute. The timers to request the new alarms and contacts are activated after a time that is specified in the parameter **Time Before Starting Timers**.After a restart of the element, the active alarms are populated in the Alarms table (like it was at the moment before restarting).
+This protocol requests the alarms and contacts from an Oracle database. It is important that the Database Configuration parameters are filled in on the correspondig page.
+The first time the element starts up, all alarms will be requested, processed and populated in the **Alarms** table. This can take a while.
+Also the contacts are requested and a **Service Contacts** table is populated.
+New alarms are requested and processed every minute.
+The timers to request the new alarms and contacts are activated after a time that is specified in the parameter **Time Before Starting Timers**.
+After a restart of the element, the active alarms are populated in the Alarms table (like it was at the moment before restarting).
 
 ### Ranges of the driver
 
@@ -38,4 +43,6 @@ With the popup button **IM Ref Configurations...** you can configure the IM Ref 
 
 On this page there is also a **Service Contacts** table that contains the contacts. Above the Service Contacts table, there is a **Load Contacts** button to retrieve the contacts immediately.
 
-Database ConfigurationOn this page, there are the parameters that are needed to connect with the Oracle database. The **Time Before Starting Timers** parameter is the timespan after startup of the element before the new alarms and contacts are requested from the database and the corresponding tables are populated.
+Database Configuration
+On this page, there are the parameters that are needed to connect with the Oracle database.
+The **Time Before Starting Timers** parameter is the timespan after startup of the element before the new alarms and contacts are requested from the database and the corresponding tables are populated.

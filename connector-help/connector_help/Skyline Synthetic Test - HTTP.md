@@ -10,9 +10,9 @@ This driver is used in the Synthetic Test Solution and is intended to be the cen
 
 ### Version Info
 
-| **Range** | **Key Features**                                                                                | **Based on** | **System Impact** |
-|-----------|-------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | \- Part of the Synthetic Test Solution.- Ability to perform HTTP tests with Process Automation. | \-           | \-                |
+| **Range** | **Key Features**                                                                                 | **Based on** | **System Impact** |
+|-----------|--------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | \- Part of the Synthetic Test Solution. - Ability to perform HTTP tests with Process Automation. | \-           | \-                |
 
 ### Product Info
 

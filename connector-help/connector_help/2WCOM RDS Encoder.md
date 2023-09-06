@@ -8,7 +8,8 @@ This driver monitors the **2WCOM RDS Encoder**, a professional, fully featured d
 
 ## About
 
-The C02 RDS Encoder matches up with almost any transmitter system. The integrated TCP/IP-interface makes it easy to install, monitor and control the encoder remotely via TCP or SNMP.The device can be configured and operated via control software ARCOS Config. The 2WCOM RDS Encoder C02 is meant for use by TMC service providers such as NAVTEC or other RDS broadcasters.
+The C02 RDS Encoder matches up with almost any transmitter system. The integrated TCP/IP-interface makes it easy to install, monitor and control the encoder remotely via TCP or SNMP.
+The device can be configured and operated via control software ARCOS Config. The 2WCOM RDS Encoder C02 is meant for use by TMC service providers such as NAVTEC or other RDS broadcasters.
 
 ## Installation and configuration
 

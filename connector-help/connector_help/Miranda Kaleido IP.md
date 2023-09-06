@@ -42,7 +42,7 @@ SNMP Settings:
 
 ### Serial connection
 
-There is also a serial connection named **connectionSerialKaleido**,which requires the following input during element creation:
+There is also a serial connection named **connectionSerialKaleido**, which requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -80,7 +80,7 @@ It also displays the card health information, which is read from the alarm table
 
 ### Alarm Table
 
-This page contains the alarm values used to fill the **Transport stream**, **Services**, **Teletext**,and **Card Health** tables. This is a filtered set from the actual table to reduce polling time.
+This page contains the alarm values used to fill the **Transport stream**, **Services**, **Teletext**, and **Card Health** tables. This is a filtered set from the actual table to reduce polling time.
 
 If you click the **Restart OIDs** button, the full table is polled again (available on the **Configure Polling** pop-up page), and the filter is recalculated.
 

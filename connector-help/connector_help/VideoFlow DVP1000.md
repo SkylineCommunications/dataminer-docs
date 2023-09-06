@@ -12,11 +12,11 @@ This connector allows you to access various information on the device. There are
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                                              | **Based on** | **System Impact**                                                                                            |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                                              | \-           | \-                                                                                                           |
-| 1.0.1.x              | \- Improved table display keys.- New streams and interfaces commands added.                                                                                                                                                                                                                   | \-           | Moving from the 1.0.0.x to the 1.0.1.x range will cause a **loss of trend data**, since indexes are updated. |
-| 1.0.2.x \[SLC Main\] | \- Many different kinds of things can now be created in the device, such as new inputs and outputs for streams or new codec presets.- Syslog and traps polling and logging is now possible.- More data can be polled from the device, such as transport stream services, codecs, and demuxes. | \-           | \-                                                                                                           |
+| **Range**            | **Key Features**                                                                                                                                                                                                                                                                                | **Based on** | **System Impact**                                                                                            |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                                                | \-           | \-                                                                                                           |
+| 1.0.1.x              | \- Improved table display keys. - New streams and interfaces commands added.                                                                                                                                                                                                                    | \-           | Moving from the 1.0.0.x to the 1.0.1.x range will cause a **loss of trend data**, since indexes are updated. |
+| 1.0.2.x \[SLC Main\] | \- Many different kinds of things can now be created in the device, such as new inputs and outputs for streams or new codec presets. - Syslog and traps polling and logging is now possible. - More data can be polled from the device, such as transport stream services, codecs, and demuxes. | \-           | \-                                                                                                           |
 
 ### Product Info
 
@@ -99,7 +99,7 @@ You can also execute some **System Actions** (e.g. **Reset**, **Shutdown**, **Da
 
 This page displays the **Firewall Status** (*enabled* or *disabled*), as well as the **Allowed List Interfaces**, **Rules** and **User Defined Rules** tables.
 
-To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface**and specify an **Interface Name**.
+To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface** and specify an **Interface Name**.
 
 To create a new user-defined rule, right-click the **User Defined Rules** table, select **Add Rules** and specify an **Interface Name**, **Rule Name**, **Rule Status**, **Source IP** and **Destination IP**.
 
@@ -119,13 +119,13 @@ To add a stream, right-click the Streams table, select **Add Stream** and specif
 
 This page contains the **Primary Inputs** and **Additional Inputs** table for each stream. It is possible to enable/disable the existing **Additional Inputs**.
 
-It is also possible to create a new **Additional Input**. To do so, right-click the table, select the **Add Input** option and specify a**Name**, **Stream**, **Interface**, **Listen IP** and **Listen** **Port**.
+It is also possible to create a new **Additional Input**. To do so, right-click the table, select the **Add Input** option and specify a **Name**, **Stream**, **Interface**, **Listen IP** and **Listen** **Port**.
 
 ### Outputs
 
 This page contains the **Primary Outputs** and **Additional Outputs** table for each stream. It is possible to enable/disable the existing **Additional Outputs**.
 
-It is also possible to create a new **Additional Output**. To do so, right-click the table, select the **Add Output**option and specify a **Name**, **Stream** and **Interface.**
+It is also possible to create a new **Additional Output**. To do so, right-click the table, select the **Add Output** option and specify a **Name**, **Stream** and **Interface.**
 
 ### Web interface
 
@@ -135,7 +135,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ### General
 
-This page displays general information on the device, such as the **Unit Name**, **System Type**,**Version Information**,the unit's **Date and Time**, information regarding **DNS** and **NTP**, and **ports used for HTTP and HTTPS**.
+This page displays general information on the device, such as the **Unit Name**, **System Type**, **Version Information**, the unit's **Date and Time**, information regarding **DNS** and **NTP**, and **ports used for HTTP and HTTPS**.
 
 To make sure the connector can poll data from the device, you need to first fill in the **Username** and **Password** and then click the **Log in** button. This step is **mandatory** in order to poll data from the device. After entering or changing the required credentials, please restart the DataMiner element.
 
@@ -145,7 +145,7 @@ You can also execute some **System Actions** (e.g. **Reset**, **Shutdown**, **Da
 
 This page displays the **Firewall Status** (*enabled* or *disabled*), as well as the **Allowed List Interfaces**, **Rules** and **User Defined Rules** tables. You can enable or disable **Interfaces** by clicking the toggle button, and you can also modify **User Defined Rule** parameters.
 
-To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface**and specify an **Interface Name**.
+To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface** and specify an **Interface Name**.
 
 To create a new user-defined rule, click the **Add** **User Defined Rule** button and specify the values for this new rule in the creation window.
 

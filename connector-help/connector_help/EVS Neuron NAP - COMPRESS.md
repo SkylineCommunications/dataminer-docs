@@ -51,6 +51,7 @@ After element startup, the connector can also receive events (unsolicited messag
 
 This page contains Card information parameters, such as **Card Name, Product Version,** and **Card Description.**
 
+
 ### General Settings
 
 This page includes the **Gen Lock Settings, Input Stream Configuration** and **De-Embedders** parameters as well as buttons for popup pages.
@@ -98,3 +99,5 @@ This page contains **Ethernet** and **DNS** related parameters.
 ### Network interface Modules
 
 This page contains **SQFP** and **SFP** tables.
+
+

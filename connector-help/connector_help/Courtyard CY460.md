@@ -8,7 +8,8 @@ The Courtyard CY460 is a **Universal SPG (Sync Pulse Generator)** designed accor
 
 ## About
 
-The **Courtyard CY460** driver is used to monitor the device of the same name.This driver uses an SNMPv1 interface to communicate with a **Courtyard CY460** device.
+The **Courtyard CY460** driver is used to monitor the device of the same name.
+This driver uses an SNMPv1 interface to communicate with a **Courtyard CY460** device.
 
 ### Ranges of the driver
 

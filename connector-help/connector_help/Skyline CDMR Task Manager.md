@@ -22,9 +22,9 @@ The driver can be used to display and control data on the Skyline Collaboration 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                 | **Exported Components** |
-|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | Automation: CDMR Task ControllerCDMR Task Manager - Refresh ProjectsCDMR Task Manager - Refresh Tasks | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                   | **Exported Components** |
+|-----------|---------------------|-------------------------|---------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | Automation: CDMR Task Controller CDMR Task Manager - Refresh Projects CDMR Task Manager - Refresh Tasks | \-                      |
 
 ## Configuration
 
@@ -42,7 +42,8 @@ HTTP CONNECTION:
 
 #### Credentials
 
-The HTTP communication will not be up and running until the necessary HTTP credentials have been provided.On the **General** page, the **user name** and **password** must be configured.
+The HTTP communication will not be up and running until the necessary HTTP credentials have been provided.
+On the **General** page, the **user name** and **password** must be configured.
 
 ### Web Interface
 

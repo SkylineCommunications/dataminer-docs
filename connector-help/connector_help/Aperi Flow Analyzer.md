@@ -39,7 +39,7 @@ This driver uses an HTTP connection and requires the following input during elem
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP.
-- **IP port**: The IP port of the destination. Make sure this is set to *443*,as the device uses HTTPS.
+- **IP port**: The IP port of the destination. Make sure this is set to *443*, as the device uses HTTPS.
 - **Device address**: Use the correct bus address. This depends on where the flow analyzer is activated.
 
 ### Initialization
@@ -51,4 +51,4 @@ To make sure the device can access the flows, you need to log in on the **Securi
 The element created with this driver consists of the following data pages:
 
 - **General**: Contains information about all the **detected and missing flows**. You can also enable or disable the function to **automatically remove missing flows.** The last update parameter shows when the last successful poll happened.
-- **Security Settings**: Containsinformation on the **current network connection.** It also allows you to **log in.**
+- **Security Settings**: Contains information on the **current network connection.** It also allows you to **log in.**

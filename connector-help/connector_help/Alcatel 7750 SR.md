@@ -34,7 +34,7 @@ This section lists the pages of the Alcatel 7750 SR driver and explains what inf
 
 ### System page
 
-Thispage displays all basic information about the device: **System Up Time**, **System CPU Usage**, **System Memory Used**, ...
+This page displays all basic information about the device: **System Up Time**, **System CPU Usage**, **System Memory Used**, ...
 
 A lot of the basic information about the system can be found on separate pages, which you can access by clicking the page buttons available on this page.
 
@@ -44,7 +44,7 @@ This page displays all BGP information for the router. The **BGP Peer table** ha
 
 ### Hardware Overview
 
-Thispage displays a tree view with information about the hardware of the Alcatel 7750 SR. This tree view contains the following levels:
+This page displays a tree view with information about the hardware of the Alcatel 7750 SR. This tree view contains the following levels:
 
 - Level 1: **Chassis Table**
 
@@ -61,18 +61,18 @@ Thispage displays a tree view with information about the hardware of the Alcatel
 
 ### Hardware-Chassis page
 
-Thispage displays tables with information about the hardware of the chassis:
+This page displays tables with information about the hardware of the chassis:
 
 - **Chassis Table:** Contains an entry for each chassis in the system.
 - **Chassis Fan Table:** Displays information about the fans in the system.
 - **Chassis Power Supply Table:** Displays information about the power supplies in the system.
 - **Hardware Table:** Contains an entry for each managed hardware component in the Alcatel-Lucent SROS series system's chassis.
 
-With the **Chassis Types** page button, you can access the **Chassis Type Table**,which contains extra information about the different types of chassis that are supported.
+With the **Chassis Types** page button, you can access the **Chassis Type Table**, which contains extra information about the different types of chassis that are supported.
 
 ### Hardware-Card page
 
-Thispage displays tables with information about the cards in the chassis.
+This page displays tables with information about the cards in the chassis.
 
 - **Card Table:** Contains an entry for each IOM card slot in each chassis in the system.
 - **Cpm Card Table:** Contains an entry for each CPM card slot in each chassis in the system.
@@ -82,13 +82,13 @@ With the different page buttons on this page, you can access tables with extra i
 
 ### Hardware-MDA page
 
-Thispage displays the **MDA Table**,which contains an entry for each MDA slotin each card in the system.
+This page displays the **MDA Table**, which contains an entry for each MDA slot in each card in the system.
 
 With the **MDA Types** page button, you can access the **MDA Types Table**, which contains information about the different MDA slots.
 
 ### Hardware-Port page
 
-Thispage displays the **Port Table**,which contains an entry for each port in each card in the system.
+This page displays the **Port Table**, which contains an entry for each port in each card in the system.
 
 With the page buttons on this page, you can access numerous additional tables with information related to the ports.
 
@@ -101,14 +101,14 @@ This page displays the following tables with ICMP information:
 
 ### Interfaces Overview
 
-Thispage displays a tree view with information about the interfaces of the Alcatel 7750 SR. This tree view contains the following levels:
+This page displays a tree view with information about the interfaces of the Alcatel 7750 SR. This tree view contains the following levels:
 
 - Level 1: **Interface Table**
 - Level 2: **IP Address Table**
 
 ### Interfaces page
 
-Thispage displays tables with information about the interfaces in the system:
+This page displays tables with information about the interfaces in the system:
 
 - **IF Table:** Information for every interface in the system.
 - **IF XTable:** Additional information for every interface in the system.
@@ -116,7 +116,7 @@ Thispage displays tables with information about the interfaces in the system:
 
 ### IP page
 
-Thispage displays tables with IP information. You can also change some basic IP settings here, like **IP Forwarding**, **IP Default TTL**, ...
+This page displays tables with IP information. You can also change some basic IP settings here, like **IP Forwarding**, **IP Default TTL**, ...
 
 The following tables are available:
 
@@ -146,13 +146,13 @@ This page displays tables with link aggregation information for this system:
 
 ### LLDP page
 
-Thispage displays information about the **Link Layer Discovery Protocol**.
+This page displays information about the **Link Layer Discovery Protocol**.
 
 - **LLDP Local Management Address Table:** Contains management address information on the local system known to this agent.
 
 ### MPLS LDP page
 
-Thispage contains MPLS (Multiprotocol Label Switching) Label Distribution Protocol information.
+This page contains MPLS (Multiprotocol Label Switching) Label Distribution Protocol information.
 
 The following tables are available:
 
@@ -163,7 +163,7 @@ The following tables are available:
 
 ### MPLS LSR page
 
-Thispage contains MPLS (Multiprotocol Label Switching) Label Switch Router information.
+This page contains MPLS (Multiprotocol Label Switching) Label Switch Router information.
 
 The following tables are available:
 
@@ -175,7 +175,7 @@ The following tables are available:
 
 ### MPLS TE page
 
-Thispage contains information about MPLS (Multiprotocol Label Switching) Traffic Engineering.
+This page contains information about MPLS (Multiprotocol Label Switching) Traffic Engineering.
 
 The following tables are available:
 
@@ -185,7 +185,7 @@ The following tables are available:
 
 ### OSPF page
 
-Thispage contains OSPF (Open Shortest Path First) version 2 protocol information. Numerous settings related to OSPF can also be changed.
+This page contains OSPF (Open Shortest Path First) version 2 protocol information. Numerous settings related to OSPF can also be changed.
 
 The following tables are available:
 
@@ -198,7 +198,7 @@ The following tables are available:
 
 ### RIP2 page
 
-Thispage displays information related to RIP2 (Routing Information Protocol).
+This page displays information related to RIP2 (Routing Information Protocol).
 
 The following tables are available:
 
@@ -218,7 +218,7 @@ The following tables are available:
 
 ### RSVP page
 
-Thispage displays RSVP (Resource Reservation Protocol) information.
+This page displays RSVP (Resource Reservation Protocol) information.
 
 The following tables are available:
 
@@ -227,7 +227,7 @@ The following tables are available:
 
 ### SNMP page
 
-Thispage displays basic information about SNMP (Simple Network Management Protocol). It also provides the possibility to enable or disable **SNMP traps**.
+This page displays basic information about SNMP (Simple Network Management Protocol). It also provides the possibility to enable or disable **SNMP traps**.
 
 ### TCP page
 
@@ -239,7 +239,7 @@ The following table is available:
 
 ### Transmission page
 
-Thispage displays information about SONET linear APS groups.
+This page displays information about SONET linear APS groups.
 
 The following tables are available:
 
@@ -251,7 +251,7 @@ The following tables are available:
 
 ### VRRP page
 
-Thispage displays the VRRP (Virtual Router Redundancy Protocol) information.
+This page displays the VRRP (Virtual Router Redundancy Protocol) information.
 
 The following tables are available:
 
@@ -261,11 +261,11 @@ The following tables are available:
 
 ### SAP page
 
-Thispage contains the **SAP Base Info Table** which displays basicSAP (Service Access Point) information.
+This page contains the **SAP Base Info Table** which displays basic SAP (Service Access Point) information.
 
 ### SDP page
 
-Thispage contains SDP (Service Discovery Protocol) information.
+This page contains SDP (Service Discovery Protocol) information.
 
 The following tables are available:
 
@@ -274,7 +274,7 @@ The following tables are available:
 
 ### Services Overview
 
-Thispage displays a tree view with information about the services of the Alcatel 7750 SR. This tree view contains the following levels:
+This page displays a tree view with information about the services of the Alcatel 7750 SR. This tree view contains the following levels:
 
 - Level 1: **SVC Base Info Table**
 - Level 2: **SAP Base Info Table** and **SDP Bind Table**
@@ -292,7 +292,7 @@ The page buttons on this page provide access to numerous additional tables with 
 
 ### Services-Cust page
 
-Thispage displays the customer information for this device.
+This page displays the customer information for this device.
 
 The following tables are available:
 
@@ -313,8 +313,8 @@ For existing elements (**using versions prior to 1.0.0.4**), the table polling w
 
 When page polling is changed, the tables on that page will inherit the new polling setting from the page. Changing the polling for a table, however, will not have any impact on the page polling or on the polling of any other tables on that page. The following example shows how this works for the **SDP** page in the driver:
 
-The **SDP** page displays two tables: **SDP Info Table** and **SDP Bind Table**. When an element with the Alcatel 7750 SR driver is created, the SDP Polling is disabledon this page and both tables inherit this setting.
+The **SDP** page displays two tables: **SDP Info Table** and **SDP Bind Table**. When an element with the Alcatel 7750 SR driver is created, the SDP Polling is disabled on this page and both tables inherit this setting.
 
 - When **SDP Polling** is enabled for this page, the **SDP Info Polling** table and **SDP Bind Polling** table will be enabled as well, and the data for these tables will be retrieved from the device.
-- When **SDP Info Polling** is disabled again, the **SDP Info Polling** tablewill no longer be polled, but the **SDP Bind Table** will still be polled, because enabling or disabling polling on a table has no influence on the page or any other tables.
+- When **SDP Info Polling** is disabled again, the **SDP Info Polling** table will no longer be polled, but the **SDP Bind Table** will still be polled, because enabling or disabling polling on a table has no influence on the page or any other tables.
 - When **SDP Polling** is disabled again, the **SDP Bind Table** polling will also be stopped, because it inherits this setting from the **SDP Polling**.

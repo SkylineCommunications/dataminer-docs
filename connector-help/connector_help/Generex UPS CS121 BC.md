@@ -8,7 +8,7 @@ The **Generex UPS CS121 BC** driver is an SNMP-based driver used for the managem
 
 ## About
 
-This driverprovides a monitoring interface to the **Generex UPS CS121 BC** device. It is based on the standard UPS MIB RFC 1628 MIB. The driver reacts to the 4 different traps that this device can send.
+This driver provides a monitoring interface to the **Generex UPS CS121 BC** device. It is based on the standard UPS MIB RFC 1628 MIB. The driver reacts to the 4 different traps that this device can send.
 
 For more detailed information, see: <http://www.generex.de/generex/download/manuals/manual_CS121_en.pdf>
 
@@ -38,7 +38,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ### Main View
 
-Thispage displays general information on the device, for example **System Name**, **System** **Uptime**,.
+This page displays general information on the device, for example **System Name**, **System** **Uptime**, .
 
 ### General
 

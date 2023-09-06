@@ -12,10 +12,10 @@ This driver uses an **SNMP** interface to communicate with the Spectracom Epsilo
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                         | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                         | Yes                 | Yes                     |
-| 1.0.1.x \[SLC Main\] | Based on 1.0.0.6.HTTP connection support implemented to support polling of data not available via SNMP. | Yes                 | Yes                     |
+| **Driver Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                          | Yes                 | Yes                     |
+| 1.0.1.x \[SLC Main\] | Based on 1.0.0.6. HTTP connection support implemented to support polling of data not available via SNMP. | Yes                 | Yes                     |
 
 ## Installation and configuration
 

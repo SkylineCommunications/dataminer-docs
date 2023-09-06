@@ -46,7 +46,7 @@ This driver is able to poll up to 24 modulator cards. Information for each card 
 
 ### General
 
-The General page displays information related to the unit itself such as **System Summary**, **Serial Number ID**and **System Information Faults**.
+The General page displays information related to the unit itself such as **System Summary**, **Serial Number ID** and **System Information Faults**.
 
 Via the **Overview Config** page button, you can view an overview of the polling of all cards.
 

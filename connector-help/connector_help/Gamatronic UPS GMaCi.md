@@ -42,7 +42,8 @@ This page contains the following parameter groups:
 
 ### Control
 
-With the **UPS Control** group, the device can be configured to reboot after it was shut down on request or after a power failure. This is done by changing the parameter **Auto Restart**.Furthermore, the device can be forced to stop or restart with different types of delays.
+With the **UPS Control** group, the device can be configured to reboot after it was shut down on request or after a power failure. This is done by changing the parameter **Auto Restart**.
+Furthermore, the device can be forced to stop or restart with different types of delays.
 
 The **UPS Test** group shows the latest test results and indicates whether a test is currently running.
 

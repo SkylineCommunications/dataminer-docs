@@ -51,7 +51,7 @@ This page contains general information, such as **Software Revision**, **Hardwar
 
 There are also several page buttons, which open the following subpages:
 
-- **Faults**: Contains **Faults Status Information**, such as **Temperature**, **PLL**, **Track**, **Autophase Status**,etc.
+- **Faults**: Contains **Faults Status Information**, such as **Temperature**, **PLL**, **Track**, **Autophase Status**, etc.
 - **Spurs**: Contains the **Spurs Table**, which contains parameters such as **Spur Start Frequency**, **Correction Frequency**, etc. This table allows you to correct spurious signals.
 - **Bands**: Contains the **Bands Table**, which is used to operate the **RF Chain**, as well as parameters such as **Band Start Frequency**, **Local Oscillator Frequency**, etc.
 
@@ -67,7 +67,7 @@ In order to properly configure the **Serial** parameters or the **Sum ADC** para
 
 This page shows information and allows you to change settings that relate to **Monopulse-only** tracking receivers. It contains parameters such as **Scanning Mode**, **XEL Axis Tracking Slope**, **XEL Axis Phase Shifter**, etc.
 
-It also contains buttons to **Clear the Track Fault**and to start the **XEL Autophase** or **EL Autophase** process.
+It also contains buttons to **Clear the Track Fault** and to start the **XEL Autophase** or **EL Autophase** process.
 
 ### I/O Status Page
 

@@ -26,9 +26,9 @@ This connector uses SNMP to retrieve a list of cards of the **Riedel Communicati
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                          | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- Riedel Communications MediorNet - Link Module- Riedel Communications MediorNet - Video Module- Riedel Communications MediorNet - GPI Module | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                            | **Exported Components** |
+|-----------|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- Riedel Communications MediorNet - Link Module - Riedel Communications MediorNet - Video Module - Riedel Communications MediorNet - GPI Module | \-                      |
 
 ## Configuration
 

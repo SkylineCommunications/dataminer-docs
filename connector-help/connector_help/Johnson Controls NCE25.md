@@ -46,7 +46,8 @@ SNMP Settings:
 
 ### Initialization
 
-Via the **Import** page button on the **IO Readings** page, you can configure the path and select the file that should be used as the configuration for the element.On this subpage, **Import Overwrite** will clean all rows from the table that are not listed in the import file. **Import Add/Update** will only append and update entries and never remove items.
+Via the **Import** page button on the **IO Readings** page, you can configure the path and select the file that should be used as the configuration for the element.
+On this subpage, **Import Overwrite** will clean all rows from the table that are not listed in the import file. **Import Add/Update** will only append and update entries and never remove items.
 
 The polling state for existing items always remains untouched when an import is executed.
 

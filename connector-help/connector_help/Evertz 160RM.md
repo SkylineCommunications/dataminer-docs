@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_160RM
 
 # Evertz 160RM
 
-The **Evertz 160RM**device can interface with a consumer STB using standard connectors and an IR interface to replicate the "remote" control of the STB.
+The **Evertz 160RM** device can interface with a consumer STB using standard connectors and an IR interface to replicate the "remote" control of the STB.
 
 ## About
 

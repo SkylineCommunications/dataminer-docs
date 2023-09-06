@@ -18,9 +18,9 @@ This driver uses SNMP in order to monitor a cluster and its nodes.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                      |
-|------------------|--------------------------------------------------|
-| 1.0.0.x          | MIB Version: 2Cluster Configuration Version: 133 |
+| **Driver Range** | **Device Firmware Version**                       |
+|------------------|---------------------------------------------------|
+| 1.0.0.x          | MIB Version: 2 Cluster Configuration Version: 133 |
 
 ## Installation and creation
 

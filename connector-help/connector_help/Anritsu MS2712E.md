@@ -49,7 +49,7 @@ This page displays the **Spectrum Analyzer pane** and its related parameters, su
 
 This page shows information such as **Manufacturer**, **Model Number/Options**, **Serial Number**, **Firmware Number**, **Selected Mode**, **Operation Status** and **Installed Options.**
 
-There is also a **Reset**,**Preset** and **Copy All Measurements** button. With the **DMS Spectrum Measurements** toggle button, you can put the spectrum analyzer in automatic sweep mode.
+There is also a **Reset**, **Preset** and **Copy All Measurements** button. With the **DMS Spectrum Measurements** toggle button, you can put the spectrum analyzer in automatic sweep mode.
 
 Finally, there is also a parameter to show the **Storage Location**, and a **Copy Destination** parameter.
 

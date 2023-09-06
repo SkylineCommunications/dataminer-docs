@@ -45,7 +45,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General** page contains the overview of the active stream states per site.The **Alarms** page contains a toggle button to retrieve and display all active alarms for the included services and elements.The **Elements** page contains a toggle button to enable any debug logging related to the elements or retrieval of the data.
+The **General** page contains the overview of the active stream states per site.
+The **Alarms** page contains a toggle button to retrieve and display all active alarms for the included services and elements.
+The **Elements** page contains a toggle button to enable any debug logging related to the elements or retrieval of the data.
 
 ## Notes
 

@@ -46,7 +46,9 @@ Connectivity for this protocol is managed by the parent protocol **Huawei iManag
 
 ## Notes
 
-A **Custom Visio file** is available. The Visio image displays the shelf overview. **Multiple shelves** will be displayed on different pages.Currently the following types of shelves are supported:
+A **Custom Visio file** is available.
+The Visio image displays the shelf overview. **Multiple shelves** will be displayed on different pages.
+Currently the following types of shelves are supported:
 
 - **OptiX OSN 8800 T32**
 - **OptiX OSN 8800 T16**

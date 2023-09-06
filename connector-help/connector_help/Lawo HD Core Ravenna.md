@@ -37,7 +37,7 @@ This driver uses the Ember+ protocol over a smart-serial connection and requires
 SMART-SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **IP port**: The IP port of the device. Required(default value: 9000)
+- **IP port**: The IP port of the device. Required (default value: 9000)
 
 ### Initialization
 

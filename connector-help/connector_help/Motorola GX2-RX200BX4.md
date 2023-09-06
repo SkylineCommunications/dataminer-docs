@@ -34,7 +34,7 @@ This page displays general information about the card. **Unit Name**, **Module T
 
 This page displays the **Optical Power** 1, 2, 3, and 4, **Fan Current**, **Analog 12V Current**, **Digital Revert Time**, **Module Configuration**, **Digital Test Point** and **Default Reset**.
 
-It also contains a page button, **Settings**,which displays a table where you can configure all the digital parameters: **Mode**, **Wavelength**, **Attenuation** and **Switch Threshold**.
+It also contains a page button, **Settings**, which displays a table where you can configure all the digital parameters: **Mode**, **Wavelength**, **Attenuation** and **Switch Threshold**.
 
 ### Alarms
 

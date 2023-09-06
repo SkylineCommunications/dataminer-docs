@@ -14,7 +14,8 @@ The driver allows the Assigning of Video **Channels** to **Engines**.
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:HTTP CONNECTION:
+This driver uses an HTTP connection and needs the following user information:
+HTTP CONNECTION:
 
 - **IP address/host**: \[The polling IP or URL of the destination\]
 - **IP port:** \[The IP port of the destination\]
@@ -24,7 +25,8 @@ This driver uses an HTTP connection and needs the following user information:HTT
 
 ### General
 
-Provides a list with all **Client Hosts** and **Engine Hosts** that can be selected. This parameter must be configured, it is not polled.A togglebutton **Debug Logging** allows a user to dynamically enable or disable extra logging in the Element Log File.
+Provides a list with all **Client Hosts** and **Engine Hosts** that can be selected. This parameter must be configured, it is not polled.
+A togglebutton **Debug Logging** allows a user to dynamically enable or disable extra logging in the Element Log File.
 
 ### Channel Assignment
 

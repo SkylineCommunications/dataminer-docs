@@ -61,7 +61,7 @@ You can also assign labels to the interfaces to use them as keys in alarm templa
 This page contains two tables:
 
 - The **trunk settings table**, with the E1's framing method, administrative status, line code, etc.
-- The **trunk status table**,a read-only table showing the LED color and status on the device panel.
+- The **trunk status table**, a read-only table showing the LED color and status on the device panel.
 
 ### Trunk Utilization
 

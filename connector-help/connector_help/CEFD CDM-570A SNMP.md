@@ -17,6 +17,8 @@ Ranges of the driver
 | 1.0.0.x          | Initial version     | No                  | No                      |
 | 1.0.1.x          | Cassandra compliant | No                  | Yes                     |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -45,10 +47,10 @@ Use this page to configure the modem operating (Tx/Rx) parameters, including the
 
 With AUPC, a local modem is permitted to adjust its own output power level in order to attempt to maintain the Eb/N0 at the remote modem.
 
-- **AUPC:** Use the toggle button to select AUPC operation as either *Off*or *On*.
-- **Rem Demod Target Eb/N0:** Type in a value, in dB, from *0.0*to *14.9*.
-- **Tx Power Max Increase:** Use the drop-down menu to select a value, in dB, from *0*to *9*.
-- **Max Pwr Reached Action:** Use the drop-down menu to set the action as *No Action*or *Generate Tx Alarm*.
+- **AUPC:** Use the toggle button to select AUPC operation as either *Off* or *On*.
+- **Rem Demod Target Eb/N0:** Type in a value, in dB, from *0.0* to *14.9*.
+- **Tx Power Max Increase:** Use the drop-down menu to select a value, in dB, from *0* to *9*.
+- **Max Pwr Reached Action:** Use the drop-down menu to set the action as *No Action* or *Generate Tx Alarm*.
 - **Rem Demod Unlock Action:** Use the drop-down menu to set the action as *Go to Nominal Power* or *Go to Maximum Power*.
 
 ### Modem - Utilities
@@ -56,17 +58,17 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as Date and Time and Circuit ID, and to Load or Store Configuration presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** to toggle the Unit Fail relay to the "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online*unit, this forces a switchover so the unit is then placed in *standby*mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
-- Load/Store Configuration:To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0*through *9*.
-- Date and Time:Use the format *MM/DD/YY* to enter the **date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*).
+- **Force 1:1 Switch:** to toggle the Unit Fail relay to the "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+- Load/Store Configuration: To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
+- Date and Time: Use the format *MM/DD/YY* to enter the **date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*).
 
 Use the international format *HH:MM:SS* to enter the **time** (where *HH = hour \[00 to 23\]*, *MM = minutes \[00 to 59\]*, and *SS = seconds \[00 to 59\]*).
 
 Use **Time Sync** page button to set the Time Synchronization related parameters.
 
-- Circuit ID Configuration:Create a **Circuit ID** string of up to *24 alphanumeric characters*.
+- Circuit ID Configuration: Create a **Circuit ID** string of up to *24 alphanumeric characters*.
 
-- Clocks:Configure **Tx Clock Sources**, **Rx Buffer Size**, **Modem Frequency Reference**, **G.703 Clock Extended Mode**, and **G.703 Clock Extend Interface**.
+- Clocks: Configure **Tx Clock Sources**, **Rx Buffer Size**, **Modem Frequency Reference**, **G.703 Clock Extended Mode**, and **G.703 Clock Extend Interface**.
 
 - Internal Reference:
 
@@ -75,7 +77,8 @@ Use **Time Sync** page button to set the Time Synchronization related parameters
 
 ### Modem - Status
 
-Use this read-only page to view information about the modem's general operating status and configuration parameters.**Installed Options:** This read-onlysection provides information for additional installed options.
+Use this read-only page to view information about the modem's general operating status and configuration parameters.
+**Installed Options:** This read-only section provides information for additional installed options.
 
 ### Modem - Logs
 
@@ -90,29 +93,30 @@ Use this page to configure Block Up Converter parameters, and to display the BUC
 
 BUC Configuration
 
-- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** *Enabled*or *Disabled*.
+- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** *Enabled* or *Disabled*.
 
 <!-- -->
 
-- **BUC Low** and **High Current Limit** value ranging from *0*to *4000*mA.
-- **BUC Lockout Frequency** from *3000* to *65000* MHzand designate the value as a *HIGH (+)*or *LOW (-)*limit.
+- **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
+- **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
 <!-- -->
 
-- **BUC Address** from *0*to *15*.
+- **BUC Address** from *0* to *15*.
 
-BUC StatusThe values displayed in this section are read-onlyand cannot be changed.
+BUC Status
+The values displayed in this section are read-only **** and cannot be changed.
 
 LNB Control
 
-- **DC Supply Voltage:***Off* or On with*13*, *18* or *24* V
-- **LNB 10MHz Reference:** Enableoperations *Disabled*or *Enabled*.
-- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10*to *600* mA.
+- **DC Supply Voltage:***Off* or On with *13*, *18* or *24* V
+- **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
+- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a **HIGH (+)** or **LOW (**-**)** limit.
 
 LNB Status
 
-The **LNB Current** and **LNB Voltage** values displayed in this section are read-onlyand cannot be changed.
+The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### IP - Interface
 
@@ -197,7 +201,8 @@ Save Packet Processor parameters to flash
 
 ### PaP - Config - LAN
 
-Use this page to configure LAN IP related parameters. Network Configuration
+Use this page to configure LAN IP related parameters.
+Network Configuration
 
 - **IP Address/Mask -** Use this field to configure the modem's Management IP Address.
 - **Managed Switch Gateway IP -** Use this field to configure this IP Address.
@@ -217,7 +222,7 @@ VLAN Brouter Configuration
 - **VLAN** **Remote** **Mode -** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Remote** **Mode**.
 - **VLAN** **Filtering** **-** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Filtering**
 
-In this page it is also available the pagebutton **VLAN IDs ...** where it is possible to assign up to *10* **VLAN** **ID** addresses within the range from *1* to *4095*.In this page it is also possible to find a **VLAN** **table**. For the **VLAN** **table** the user can create new entries by clicking on the **Create New Entry...** pagebutton and fill in the required fields on the pop-up page. It is also possible to delete a VLAN entry from **VLAN table** by pressing the button **Delete**.
+In this page it is also available the pagebutton **VLAN IDs ...** where it is possible to assign up to *10* **VLAN** **ID** addresses within the range from *1* to *4095*. In this page it is also possible to find a **VLAN** **table**. For the **VLAN** **table** the user can create new entries by clicking on the **Create New Entry...** pagebutton and fill in the required fields on the pop-up page. It is also possible to delete a VLAN entry from **VLAN table** by pressing the button **Delete**.
 
 ## PaP - Config - ARP
 
@@ -307,10 +312,10 @@ Use this page to configure the modem operating (Tx/Rx) parameters. Enter a prefe
 With AUPC, a local modem is permitted to adjust its own output power level in order to attempt to maintain the Eb/N0 at the remote modem.
 
 - **Framing:** Use the drop-down menu to select a value: *Unframed, EDMAC* and *EDMAC 2.*
-- **AUPC:** Use the toggle button to select AUPC operation as either *Off*or *On*.
-- **Rem Demod Target Eb/N0:** Type in a value, in dB, from *0.0*to *14.9*.
-- **Tx Power Max Increase:** Use the drop-down menu to select a value, in dB, from *0*to *9*.
-- **Max Pwr Reached Action:** Use the drop-down menu to set the action as *No Action*or *Generate Tx Alarm*.
+- **AUPC:** Use the toggle button to select AUPC operation as either *Off* or *On*.
+- **Rem Demod Target Eb/N0:** Type in a value, in dB, from *0.0* to *14.9*.
+- **Tx Power Max Increase:** Use the drop-down menu to select a value, in dB, from *0* to *9*.
+- **Max Pwr Reached Action:** Use the drop-down menu to set the action as *No Action* or *Generate Tx Alarm*.
 - **Rem Demod Unlock Action:** Use the drop-down menu to set the action as *Go to Nominal Power* or *Go to Maximum Power*.
 
 ### Modem - Utilities
@@ -318,15 +323,15 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as **Date** and **Time** and **Circuit ID**, and to **Load** or **Store Configuration** presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online*unit, this forces a switchover so the unit is then placed in *standby*mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
-- **Load/Store Configuration:** To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0*through *9*.
-- Date & Time:Use the format *MM/DD/YY* to enter the **Date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*). Use the international format *HH:MM:SS* to enter the **Time** (where *HH = hour \[00 to 23\]*, *MM = minutes \[00 to 59\]*, and *SS = seconds \[00 to 59\]*).
+- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+- **Load/Store Configuration:** To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
+- Date & Time: Use the format *MM/DD/YY* to enter the **Date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*). Use the international format *HH:MM:SS* to enter the **Time** (where *HH = hour \[00 to 23\]*, *MM = minutes \[00 to 59\]*, and *SS = seconds \[00 to 59\]*).
 
 > Use **Time Sync** page button to set the Time Synchronization related parameters.
 
-- Circuit ID Configuration:Create a **Circuit ID** string of up to *24 alphanumeric characters*.
+- Circuit ID Configuration: Create a **Circuit ID** string of up to *24 alphanumeric characters*.
 
-- Clocks:Configure **Tx Clock Source**, **Rx Buffer Size**, **Modem Frequency Reference**, **G.703 Clock Extended Mode**, and **G.703 Clock Extend Interface**.
+- Clocks: Configure **Tx Clock Source**, **Rx Buffer Size**, **Modem Frequency Reference**, **G.703 Clock Extended Mode**, and **G.703 Clock Extend Interface**.
 
 - Internal Reference:
 
@@ -335,7 +340,7 @@ Use this page to set utilities such as **Date** and **Time** and **Circuit ID**,
 
 - Terrestrial Interface:
 
-- **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232*is selected, the menu also indicates the operation of RTS/CTS.
+- **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
   - **RTS**: Defines how RTS/CTS will operate at the main data interface.
   - **Line Build Out**: Valid only for T1 interface.
 
@@ -343,7 +348,7 @@ Use this page to set utilities such as **Date** and **Time** and **Circuit ID**,
 
 Use this read-only page to view information about the modem's general operating status and configuration parameters.
 
-> Installed Options: This read-onlysection provides information for additional installed options.
+> Installed Options: This read-only section provides information for additional installed options.
 
 ### Modem - Logs
 
@@ -358,28 +363,28 @@ Use this page to view Faults and Alarms (i.e., Modem Events) as logged by the un
 
 Use this page to configure Block Up Converter/Low-Noise Block Down Converter parameters and to display the BUC/LNB status for L-Band operation.
 
-- **BUC/LNB Enabled** used to *Enabled*or *Disabled* polling the BUC and LNB values.
+- **BUC/LNB Enabled** used to *Enabled* or *Disabled* polling the BUC and LNB values.
 
 > BUC Configuration
 
-- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled*or *Disabled*.
+- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled* or *Disabled*.
 
 <!-- -->
 
-- **BUC Low** and **High Current Limit** value ranging from *0*to *4000*mA.
-- **BUC Lockout Frequency** from *3000* to *65000* MHzand designate the value as a *HIGH (+)*or *LOW (-)*limit.
-- **BUC Address** from *0*to *15*.
+- **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
+- **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
+- **BUC Address** from *0* to *15*.
 
-> BUC Status: The values displayed in this section are read-onlyand cannot be changed.
+> BUC Status: The values displayed in this section are read-only **** and cannot be changed.
 >
 > LNB Control
 
 - **DC Supply Voltage:***Off* or On with *13*, *18* or *24* V.
-- **LNB 10MHz Reference:** Enableoperations *Disabled*or *Enabled*.
-- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10*to *600*mA.
-- Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)*or *LOW (-)*limit.
+- **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
+- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
+- Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-onlyand cannot be changed.
+> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### FTP
 

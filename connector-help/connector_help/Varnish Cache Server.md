@@ -65,8 +65,12 @@ In the 1.0.0.x version of the driver, the **Service Status** is not yet function
 
 #### Simulation
 
-After you upload a new version, always verify if new data is coming in (i.e. verify when a parameter changes if the **x Per Time Period** parameter is not 0). If this is not the case, it may be because *\#define SIMULATE*is activated in the driver. You can disable this in the driver by prefixing it with two forward slashes (*//#define SIMULATE*).In this case, contact the TAM or System Developer.
+After you upload a new version, always verify if new data is coming in (i.e. verify when a parameter changes if the **x Per Time Period** parameter is not 0).
+If this is not the case, it may be because *\#define SIMULATE* is activated in the driver. You can disable this in the driver by prefixing it with two forward slashes (*//#define SIMULATE*).
+In this case, contact the TAM or System Developer.
 
 #### All parameters are not initialized (after a new element is created)
 
-This driver uses an external DLL: *System.Web.Extensions.dll*. In most systems, this DLL will be pre-installed. If it is not, most parameters will remain empty and the log file will contain compiler errors stating that a file/DLL is missing. In this case, contact Skyline Communication to request this DLL. (Note that this DLL is provided by Microsoft, so it is also possible to download it from the internet or from another server.) When you have received the DLL, place it in the folder *C:/Skyline DataMiner/ProtocolScripts/* and restart the element.
+This driver uses an external DLL: *System.Web.Extensions.dll*. In most systems, this DLL will be pre-installed. If it is not, most parameters will remain empty and the log file will contain compiler errors stating that a file/DLL is missing.
+In this case, contact Skyline Communication to request this DLL. (Note that this DLL is provided by Microsoft, so it is also possible to download it from the internet or from another server.)
+When you have received the DLL, place it in the folder *C:/Skyline DataMiner/ProtocolScripts/* and restart the element.

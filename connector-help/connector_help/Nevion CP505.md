@@ -56,11 +56,11 @@ This page displays the **Current Alarms** on the device, along with information 
 
 ### Product Info
 
-This page displays generalinformation concerning the device.
+This page displays general information concerning the device.
 
 ### Alarms
 
-On this page, you can get more information about the **Alarms Global Configuration**,and also configure the **Relays LED** and the **Log Settings**.
+On this page, you can get more information about the **Alarms Global Configuration**, and also configure the **Relays LED** and the **Log Settings**.
 
 ### Time Settings
 

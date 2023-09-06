@@ -63,4 +63,5 @@ It is also possible to discard parameters from the log entries. To improve perfo
 
 ## Note
 
-Be careful when enabling this driver on elements for large log servers: this could cause a large number of messages to be sent to DataMiner (especially during element startup; this can even go up to over half a million messages). This can lead to increased memory usage and slow behavior of the DataMiner system. A correct configuration of the **Parameters to Discard Table** is essential to avoid this.
+Be careful when enabling this driver on elements for large log servers: this could cause a large number of messages to be sent to DataMiner (especially during element startup; this can even go up to over half a million messages).
+This can lead to increased memory usage and slow behavior of the DataMiner system. A correct configuration of the **Parameters to Discard Table** is essential to avoid this.

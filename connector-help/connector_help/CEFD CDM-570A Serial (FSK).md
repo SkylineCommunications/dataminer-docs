@@ -22,7 +22,8 @@ Supported firmware versions
 
 ### Creation
 
-***Serial Main connection***This driver uses a Serial connection and needs the following user information:
+***Serial Main connection***
+This driver uses a Serial connection and needs the following user information:
 
 SERIAL CONNECTION:
 

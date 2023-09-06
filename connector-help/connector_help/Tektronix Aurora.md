@@ -10,7 +10,7 @@ The Tektronix Aurora is a high volume automated, no reference, file-based QC wit
 
 ## About
 
-This driver makes it possible to interact with the Auroraweb service. Users monitor the status of jobs.
+This driver makes it possible to interact with the Aurora web service. Users monitor the status of jobs.
 
 The driver also retrieves information from the templates, machines, processors and the VUCoreMode.
 
@@ -50,11 +50,13 @@ It is important that this is done before sending jobs to the web service, otherw
 
 On the Windows Login pop-up page, you must fill in the User Name and Password to make sure the information of the server can be retrieved.
 
+
+
 ## Usage
 
 ### General
 
-On the General page, the User Name and Password for the Auroraweb service can be filled in, as described in the Configuration for Aurora web service section above. The **Job Time to Live** and **Maximum Job Entries Allowed** refer to the **Job Contract Completed Table** so that the user can limite the presence of jobs inside the Job Contract Completed Table.
+On the General page, the User Name and Password for the Aurora web service can be filled in, as described in the Configuration for Aurora web service section above. The **Job Time to Live** and **Maximum Job Entries Allowed** refer to the **Job Contract Completed Table** so that the user can limite the presence of jobs inside the Job Contract Completed Table.
 
 On the right-hand side, buttons are available that allow the user to manually refresh the **Default Container Path**, **Job Contracts,** Machines, Templates and Processors.
 
@@ -76,7 +78,7 @@ A **remove all Jobs** button is also present to make it possible to delete all j
 
 ### Machines
 
-The Machines page displays a table with all the machines of the Auroraweb service.
+The Machines page displays a table with all the machines of the Aurora web service.
 
 This table will be refreshed every 60 minutes.
 

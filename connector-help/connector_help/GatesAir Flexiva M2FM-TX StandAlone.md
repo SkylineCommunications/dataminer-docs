@@ -49,7 +49,7 @@ This page displays basic SNMP information, such as **System Description**, **Sys
 
 ### System Page
 
-Thispage displays basic **System Information** about the transmitter, i.e. the **Device Name**, **Model Number** and measured **Transmitter Temperature**.
+This page displays basic **System Information** about the transmitter, i.e. the **Device Name**, **Model Number** and measured **Transmitter Temperature**.
 
 In the **Transmitter Controls** section, you can increase or decrease the transmitter power by first setting **Transmitter Control** to *Total Power Raise* or *Total Power Lower* respectively, and entering a value in mW for **Transmitter Control Value**. Also in this section, the **Transmitter Frequency** can be set.
 
@@ -61,7 +61,7 @@ The **Version Information** button shows the **Mib Revision** and **Software Rev
 
 ### Drive Chain Page
 
-Thispage displays alarms related to the drive chain. In addition, some controls are available, such as the **Exciter Switch**, the **Exciter Switch Mode**, the **IPA Switch** and the **IPA Switch Mode**.
+This page displays alarms related to the drive chain. In addition, some controls are available, such as the **Exciter Switch**, the **Exciter Switch Mode**, the **IPA Switch** and the **IPA Switch Mode**.
 
 ### Power Page
 

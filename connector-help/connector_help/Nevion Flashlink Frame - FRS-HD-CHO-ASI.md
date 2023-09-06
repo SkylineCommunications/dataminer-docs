@@ -95,7 +95,7 @@ It also allows you to view the **Num** and **Status**, as well as to configure *
 
 This page displays the **Monitor** **Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Sync Source Page
 

@@ -56,7 +56,7 @@ In addition, the **Video Stream Configuration** page button provides access to t
 
 The transport stream is MPEG. Between symbol rate and data rate, a strict relation exists, which depends on the type of MODCOD, pilots insertion mode and input frame length. The device automatically provides the required cross calculations by enabling and disabling forbidden configuration. Null packet insertion is always enabled if the transmit clock is set to *Internal*. In this configuration, the symbol rate is only referenced to the internal reference clock.
 
-**DVB-S2 FEC Frame Length** is only relevant if one of the DVB-S2 modulation types is selected. *SHORT* is not allowed if the selected modulation is of type DVB-S2 and the FEC rate is 9/10. **Short BCH Code** is only relevant if one of the DVB-S2 modulation types is selected and the DVB-S2 FEC length is selected as *SHORT*. **Pilots** and **PL Scrambling**are only relevant if one of the DVB-S2 modulation types is selected.
+**DVB-S2 FEC Frame Length** is only relevant if one of the DVB-S2 modulation types is selected. *SHORT* is not allowed if the selected modulation is of type DVB-S2 and the FEC rate is 9/10. **Short BCH Code** is only relevant if one of the DVB-S2 modulation types is selected and the DVB-S2 FEC length is selected as *SHORT*. **Pilots** and **PL Scrambling** are only relevant if one of the DVB-S2 modulation types is selected.
 
 ### Monitor
 

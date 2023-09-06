@@ -94,7 +94,7 @@ This page is also where you can specify the credentials to poll data from the de
 
 This page displays the **Firewall Status** (*enabled* or *disabled*), as well as the **Allowed List Interfaces**, **Rules** and **User Defined Rules** tables. You can enable or disable **interfaces** by clicking a toggle button. **User-defined rule** parameters can be modified as well.
 
-To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface**and specify an interface name.
+To create a new allowed list interface, right-click the **Allowed List Interface** table, select **Add Allowed Interface** and specify an interface name.
 
 To create a new user-defined rule, click the **Add** **User Defined Rule** button and specify the values for this new rule in the creation window.
 
@@ -108,7 +108,7 @@ For each **UDP VPN Client**, the **Connect** action can be executed in order to 
 
 This page displays the current streams created in the device with their respective **statistics** and **ETR290 events**. It is possible to **create** and **delete** streams.
 
-To add a stream, right-click the Streams table, select **Add Stream**,and specify a **Stream Name**, **Operational Mode** (*Protector*, *Sentinel* or *Fortress*) and **Status** (*enabled/disabled*).
+To add a stream, right-click the Streams table, select **Add Stream**, and specify a **Stream Name**, **Operational Mode** (*Protector*, *Sentinel* or *Fortress*) and **Status** (*enabled/disabled*).
 
 This page features several tables and subpages with additional information about streams, such as their **Alarms**, **Statistics**, **Peer Statistics**, and **Transport Stream Services**.
 

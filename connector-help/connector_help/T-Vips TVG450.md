@@ -16,7 +16,7 @@ This driver works with firmware versions 3.4.4 and 3.8.24.
 
 ### Creation
 
-The **T-VIPS TVG450**is an SNMP driver. The IP needs to be configured during creation of the element.
+The **T-VIPS TVG450** is an SNMP driver. The IP needs to be configured during creation of the element.
 
 **SNMP CONNECTION:**
 

@@ -69,7 +69,7 @@ This page displays a table with an **overview** of the **cluster indices**, cont
 
 ### Node Stats - General
 
-This page displays **general node information**,such as the name and IP addresses.
+This page displays **general node information**, such as the name and IP addresses.
 
 ### Node Stats - Indices
 

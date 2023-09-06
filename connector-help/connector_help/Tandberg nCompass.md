@@ -101,7 +101,7 @@ The element created with this driver consists of the data pages detailed below.
 
 This page contains an overview of all the devices and an alarm table. For every row in the **Device** **Table**, a DVE is created. For each DVE, an element can be viewed with just one available page, **Main** **View**. On this page, general information is displayed on the left-hand side, and an **Alarm Table** is shown on the right-hand side.
 
-Above the Device Table,two parameters are available. The first, **Enable** **Device** **Type**,will enable all the devices with the selected types, after which their DVE will be created. The second, **Disable** **Device** **Type**,will delete all DVEs with the selected device type.
+Above the Device Table, two parameters are available. The first, **Enable** **Device** **Type**, will enable all the devices with the selected types, after which their DVE will be created. The second, **Disable** **Device** **Type**, will delete all DVEs with the selected device type.
 
 You can also manually enable or disable the **DVE** **State** of each entry in the **Device Table**.
 
@@ -137,7 +137,7 @@ There are also two page buttons available that allow you to activate certain pro
 
 ### Stream page
 
-Thispage displays six different tables that contain information about the streams.
+This page displays six different tables that contain information about the streams.
 
 ### Redundancy page
 

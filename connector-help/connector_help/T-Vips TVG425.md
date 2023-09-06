@@ -22,11 +22,11 @@ The TVG425 provides gateway functionality to encapsulate MPEG-2 transport stream
 
 ### Supported firmware versions
 
-| **Driver Range**      | **Device Firmware Version** |
-|-----------------------|-----------------------------|
-| 1.0.0.x               | 1.4.x to 2.6.x              |
-| 1.0.1.x               |                             |
-| 2.0.0.x2.0.1.x2.0.2.x | 3.4.x                       |
+| **Driver Range**        | **Device Firmware Version** |
+|-------------------------|-----------------------------|
+| 1.0.0.x                 | 1.4.x to 2.6.x              |
+| 1.0.1.x                 |                             |
+| 2.0.0.x 2.0.1.x 2.0.2.x | 3.4.x                       |
 
 ## Installation and configuration
 
@@ -96,7 +96,7 @@ At the bottom of this page, the **History Table** page button provides access to
 
 ### Interfaces (Range 1.0.1.x)
 
-This page contains the **Interface Table**,which contains information about every interface of the device. This includes the **Bandwidth**, **Type of Interface**, **Number of Packets** sent and received, **Bitrates**, etc.
+This page contains the **Interface Table**, which contains information about every interface of the device. This includes the **Bandwidth**, **Type of Interface**, **Number of Packets** sent and received, **Bitrates**, etc.
 
 ### Web Interface
 
@@ -162,6 +162,8 @@ This page shows a **Traps table**. It also has a page button that opens a page w
 ### Web Interface
 
 This page can be used to access the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+
+
 
 ## DCF Implementation (Range 2.0.0.x, 2.0.1.x, 2.0.2.x)
 

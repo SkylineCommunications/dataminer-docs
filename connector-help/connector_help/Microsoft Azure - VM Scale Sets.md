@@ -48,4 +48,4 @@ On the **General** page, you can configure the **Polling Interval** for the metr
 
 ## Notes
 
-This driver is intended to be used together with the **Microsoft Azure Cloud Platform** driver.Without this manager driver, the driver will not work, as the authentication to the Azure Cloud Platform is done via the manager driver.
+This driver is intended to be used together with the **Microsoft Azure Cloud Platform** driver. Without this manager driver, the driver will not work, as the authentication to the Azure Cloud Platform is done via the manager driver.

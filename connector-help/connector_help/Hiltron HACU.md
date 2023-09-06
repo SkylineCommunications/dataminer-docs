@@ -10,11 +10,11 @@ The Hiltron HACU is a complete high-precision motorized satellite antenna contro
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                            | **Based on** | **System Impact**                                              |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                                                                                                             | \-           | \-                                                             |
-| 1.0.1.x              | Connector review: spelling corrections, discrete updates, etc.                                                                                                                              | \-           | \-                                                             |
-| 1.0.2.x \[SLC Main\] | \- Added Power Supply Table and renamed existing table to "Heater Power Supply".- Improved reset functionality (reset alarms is now similar to the web interface) and improved positioning. | \-           | \- Change to parameter name and descriptions.- Layout changes. |
+| **Range**            | **Key Features**                                                                                                                                                                             | **Based on** | **System Impact**                                               |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-----------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                                                                                                              | \-           | \-                                                              |
+| 1.0.1.x              | Connector review: spelling corrections, discrete updates, etc.                                                                                                                               | \-           | \-                                                              |
+| 1.0.2.x \[SLC Main\] | \- Added Power Supply Table and renamed existing table to "Heater Power Supply". - Improved reset functionality (reset alarms is now similar to the web interface) and improved positioning. | \-           | \- Change to parameter name and descriptions. - Layout changes. |
 
 ### Product Info
 

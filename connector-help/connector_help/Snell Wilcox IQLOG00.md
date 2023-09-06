@@ -122,7 +122,7 @@ This page displays **Miscellaneous/System** information, as well as controls to 
 
 ### Logo Logging
 
-This page displays **Logo**information, as well as controls to enable or disable the logging of this information.
+This page displays **Logo** information, as well as controls to enable or disable the logging of this information.
 
 ### Log Server
 

@@ -64,9 +64,9 @@ This connector will manage the test tasks that are scheduled for the robot, coll
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                              | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------|-------------------------|
-| 1.2.0.x   | No                  | Yes                     | \- *WitBe Robot Manager* connector- *Schedule WitBe Maintenance* Automation script | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                               | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------|-------------------------|
+| 1.2.0.x   | No                  | Yes                     | \- *WitBe Robot Manager* connector - *Schedule WitBe Maintenance* Automation script | \-                      |
 
 ## Configuration
 
@@ -124,17 +124,18 @@ Tests can be scheduled for the robot in different ways.
 You can **manually** schedule a test by adding it via the **Add Test page**:
 
 1.  On the **Tests** page, click the **Add Test** button.
-2.  Specify a name for the test, select the script to run and set the input test parameters. The input test parameters must have the following format: *param1:value1,param2:value2, ... ,paramN:valueN*
+2.  Specify a name for the test, select the script to run and set the input test parameters.
+    The input test parameters must have the following format: *param1:value1,param2:value2, ... ,paramN:valueN*
 
 Tests can also be **automatically** scheduled by an element with the **WitBe Robot Manager connector**. Refer to the connector help page of the WitBe Robot Manager for more information.
 
 ### Queued Tests table
 
-On the Tests page, the Queued Tests table**lists the scheduled tests**. The table not only keeps a record of all queued tests but also shows the current running test and all tests that have finished running.
+On the Tests page, the Queued Tests table **lists the scheduled tests**. The table not only keeps a record of all queued tests but also shows the current running test and all tests that have finished running.
 
 You can cancel a queued test by clicking the **cancel button** or the **Cancel All Tests button**.
 
-The Queued Tests tablewill store the status of up to 100 finished tests. You can change this default with the **Maximum Finished Tests parameter** on the **Configuration page**.
+The Queued Tests table will store the status of up to 100 finished tests. You can change this default with the **Maximum Finished Tests parameter** on the **Configuration page**.
 
 ## Notes
 

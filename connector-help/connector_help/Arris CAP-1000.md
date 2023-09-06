@@ -26,7 +26,7 @@ There are multiple ways to monitor and configure the settings for the Arris CAP-
 | **Driver Range** | **Device Firmware Version**         |
 |------------------|-------------------------------------|
 | 1.0.0.x          | **v4.1** with **XML protocol 4.0**. |
-| 1.0.1.x          | **v4.1** with**XML protocol 4.0**.  |
+| 1.0.1.x          | **v4.1** with **XML protocol 4.0**. |
 
 ## Installation and configuration
 

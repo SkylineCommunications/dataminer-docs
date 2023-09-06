@@ -18,9 +18,9 @@ The protocol uses **SNMP** to retrieve data from the **load balancer** and confi
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                              |
-|------------------|----------------------------------------------------------|
-| 1.0.0.x          | 1.2.28-201805012049E4.x86_641.2.59a-201806191849N4x86_64 |
+| **Driver Range** | **Device Firmware Version**                               |
+|------------------|-----------------------------------------------------------|
+| 1.0.0.x          | 1.2.28-201805012049E4.x86_64 1.2.59a-201806191849N4x86_64 |
 
 ## Installation and configuration
 
@@ -108,7 +108,7 @@ This page contains a summary of redundancy settings of the device. It includes t
 
 ### Operations
 
-Thispage contains controls to reset or clear some of the device settings.
+This page contains controls to reset or clear some of the device settings.
 
 It includes a set of buttons that allow you to perform the following operations: **Reset HX Load Balancer Hardware**, **Restart Load Balancing Service**, **Reset Flow Assignments**, **Clear Load Balancing Statistics** and **Reset the Device Configuration** to the fabric default values.
 

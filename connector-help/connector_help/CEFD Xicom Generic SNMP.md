@@ -38,7 +38,7 @@ This page displays some general parameters from the **CEFD Xicom Generic SNMP** 
 - **Amplifier Gain Balance** (configurable)
 - **Amplifier Date and Time** (configurable)
 - **Com1 Serial Port Settings (RS-232)** (configurable)
-- **Com1 Serial Port Settings (RS-232)**(configurable)
+- **Com1 Serial Port Settings (RS-232)** (configurable)
 - **RS-485 Serial Port Settings** (configurable)
 - **Amplifier ID/Version**
 - **Amplifier Sum Status**

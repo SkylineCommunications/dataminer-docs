@@ -88,7 +88,7 @@ This page displays information on all the relays available in the system, includ
 
 ### Logging
 
-This page contains information for both the **loggers** and the **appenders**. There are four different appenders present in the system: **File**, **Rolling File**,**ODBC** (database) and **Console**.
+This page contains information for both the **loggers** and the **appenders**. There are four different appenders present in the system: **File**, **Rolling File**, **ODBC** (database) and **Console**.
 
 ### Web page
 

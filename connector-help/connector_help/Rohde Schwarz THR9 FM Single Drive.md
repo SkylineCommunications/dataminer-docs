@@ -80,7 +80,8 @@ This page displays the **N+1 Notification Table**. This table contains informati
 
 ### Tx - Transmitters
 
-This page displays the **Transmitter Notification Table** , which contains information about the **Name** of the **Transmitter Notification**.This page also displays the **Tx Transmitter State Table**, which contains information about the **Forward and Reflected Power, Power Amplifier Efficiency**, etc.
+This page displays the **Transmitter Notification Table** , which contains information about the **Name** of the **Transmitter Notification**.
+This page also displays the **Tx Transmitter State Table**, which contains information about the **Forward and Reflected Power, Power Amplifier Efficiency**, etc.
 
 ### Tx - Exciter
 

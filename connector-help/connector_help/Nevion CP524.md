@@ -17,13 +17,13 @@ This driver displays information that is polled from the device with **SNMP**. T
 | **Driver Range**     | **Description**                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x              | Added soft switches and updated DCF accordingly. Updated all display keys, fixed some issues and cleaned protocol. | Yes                 | Yes                     |
-| \[SLC Main\] 2.0.0.x | Initial version using HTTP communicationAdded outgoing services and PIDs                                           | Yes                 | Yes                     |
+| \[SLC Main\] 2.0.0.x | Initial version using HTTP communication Added outgoing services and PIDs                                          | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.1.x          | 2.0.162.4.6                 |
+| 1.0.1.x          | 2.0.16 2.4.6                |
 | 2.0.0.x          | 2.4.6                       |
 
 ## Installation and configuration
@@ -144,7 +144,7 @@ This page contains information about alarms on the device. The maximum number of
 
 Using the **Config Table...** page button, you can change the desired display key format of the table.
 
-There is also a page button that displays the **Event History**subpage with the **Unit Event History Table**, and a page button that displays the **ASI1 ASI2 Alarms** subpage.
+There is also a page button that displays the **Event History** subpage with the **Unit Event History Table**, and a page button that displays the **ASI1 ASI2 Alarms** subpage.
 
 ### TS Input Overview Page
 
@@ -206,7 +206,7 @@ There is also a page button that displays the **Alarm/Event Table**.
 
 This page displays the interface information in the **Interfaces** and **Unit VLAN Table**.
 
-> **Note**:You can add and delete VLANs on an interface via the context menu of the **Unit VLAN Table**.
+> **Note**: You can add and delete VLANs on an interface via the context menu of the **Unit VLAN Table**.
 
 ### Alarms Page
 
@@ -214,7 +214,7 @@ This page contains information about the current alarms on the device. The maxim
 
 Using the **Config Table...** page button, you can change the desired display key format of the **Alarm Table**.
 
-There is also a page button that displays the **Event History**subpage with the **Unit Event History Table**.
+There is also a page button that displays the **Event History** subpage with the **Unit Event History Table**.
 
 ### TS Input Overview Page
 

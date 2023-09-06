@@ -87,7 +87,7 @@ The page also contains the following page buttons:
 
 In the **General** section, this page contains general parameters such as **Optimization Enabled**, **Optimized TCP Connections** (with history trending data), **Use Compression**, **Packet** **Overhead**, etc.
 
-In the **Compression** section, you can find the **HTTP Compression**, **XiPix**, **JPEG Quality**,etc.
+In the **Compression** section, you can find the **HTTP Compression**, **XiPix**, **JPEG Quality**, etc.
 
 - **TTCP**: Displays the **TTCP** **Ports** table, with an option to enable it.
 - **SCPS-TP**: Displays the **Selective Negative ACKs**, **PPA**, etc.
@@ -110,7 +110,7 @@ The page also contains the following page buttons:
 
 ### Product Alarms
 
-On this page, you will find the**Faults Overview** table and the **Trap Notifications** table, which display incoming traps from the device.
+On this page, you will find the **Faults Overview** table and the **Trap Notifications** table, which display incoming traps from the device.
 
 There is one page button, **Auto Clear**, which displays a page with options that specify whether traps should be processed, how many traps should be displayed in the Trap Notifications table, and for how long the notifications should be displayed.
 

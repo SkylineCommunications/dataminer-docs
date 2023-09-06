@@ -10,11 +10,11 @@ The DVB Stream Monitor is a solution for DVB-C and/or IPTV monitoring for unicas
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                           | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version                                                                                            | \-           | \-                |
-| 1.1.0.x \[Obsolete\] | New firmware version with different enterprise OID.Some parameters were no longer available on the new MIB | 1.0.0.2      |                   |
-| 1.1.1.x \[SLC Main\] | Removed EPG table and refresh mechanism.Improved buffering system.                                         | 1.0.1.1      |                   |
+| **Range**            | **Key Features**                                                                                            | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Initial version                                                                                             | \-           | \-                |
+| 1.1.0.x \[Obsolete\] | New firmware version with different enterprise OID. Some parameters were no longer available on the new MIB | 1.0.0.2      |                   |
+| 1.1.1.x \[SLC Main\] | Removed EPG table and refresh mechanism. Improved buffering system.                                         | 1.0.1.1      |                   |
 
 ### Product Info
 
@@ -88,3 +88,5 @@ The element has the following data pages:
 - **Commands**
 - **Rx**
 - **Tx**
+
+

@@ -72,7 +72,7 @@ The credentials of the device must be filled-in behind the **Login...** pagebutt
 
 Some important parameters are available at the end of the first column :
 
-- **Controller Name** : this parameter shows the name of the **Astro Virtual Controller**element which manages this device. If no shuc element is used, the parameter will show the exception value *No Virtual Controller Found*.
+- **Controller Name** : this parameter shows the name of the **Astro Virtual Controller** element which manages this device. If no shuc element is used, the parameter will show the exception value *No Virtual Controller Found*.
 
 - **Communication Type** :
 
@@ -156,9 +156,11 @@ The following table allows the user to upload/download configuration files to th
 </tr>
 <tr class="even">
 <td><p>To download a file, click on `Download'. This pop-up will be shown:</p>
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Download.PNG" alt="Download.PNG" /></p>
 <p>Enter the name of the file then click on `OK'. The file will be saved at this location:</p>
 <p>C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</p></td>
 <td><p>To upload a file, click on `Upload. This pop-up will be shown:</p>
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Upload.PNG" alt="Upload.PNG" /><img src="" /></p>
 <p><strong>Module Name</strong> lists all the Astro elements of the same type in the system.</p>
 <p><strong>Upload File Name</strong> lists all the files available in Documents folder of the selected module.</p>
 The file to be uploaded is located at: C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</td>
@@ -169,6 +171,8 @@ The file to be uploaded is located at: C:\Skyline DataMiner\Documents\&lt;protoc
 2\. Software Update
 
 The driver allows the user to upload a firmware archive from the local disk of the DMA:
+
+![SoftwareUpdate.PNG](~/connector-help/images/Astro_U116_Edge_PAL_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The dropdown lists all the files present in the DMA hard drive at the location: C:\Skyline DataMiner\Documents\\Protocol Name\>.
 

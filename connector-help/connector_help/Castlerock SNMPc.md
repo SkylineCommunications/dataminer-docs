@@ -11,8 +11,10 @@ The Castlerock SNMPc is a device that monitors and catches events from connected
 
 ## About
 
-- Regarding **range 1.0.x.x**:This driver makes an SQL connection with the SNMPc database of the device. It reads the **Node Table** and **EventLog Table** in the SNMPc database, processes the information, and displays the processed information on three pages. The **Devices page** shows the available information concerning the connected devices, the **Events** **page** shows the events captured by the device, and the **Info Events page** shows the information events. With the settings on the **Configuration page**, you can clean the database to e.g. only keep records that are less than one year old.
-- Regarding **range 2.0.0.x**:This driver makes a simple SNMP connection with the device, collects traps originating from trap OID 1.3.6.1.4.1.56.12.1.7.0.1.0.1, and displays these on the **Traps page**. In addition, information concerning the devices connected to the Castlerock SNMPc can be imported and displayed on the **Known IP Addresses page.** With the settings on the **Configuration page**, you can configure how traps should be processed and limited, and manage the creation of DVEs.
+- Regarding **range 1.0.x.x**:
+  This driver makes an SQL connection with the SNMPc database of the device. It reads the **Node Table** and **EventLog Table** in the SNMPc database, processes the information, and displays the processed information on three pages. The **Devices page** shows the available information concerning the connected devices, the **Events** **page** shows the events captured by the device, and the **Info Events page** shows the information events. With the settings on the **Configuration page**, you can clean the database to e.g. only keep records that are less than one year old.
+- Regarding **range 2.0.0.x**:
+  This driver makes a simple SNMP connection with the device, collects traps originating from trap OID 1.3.6.1.4.1.56.12.1.7.0.1.0.1, and displays these on the **Traps page**. In addition, information concerning the devices connected to the Castlerock SNMPc can be imported and displayed on the **Known IP Addresses page.** With the settings on the **Configuration page**, you can configure how traps should be processed and limited, and manage the creation of DVEs.
 
 This driver can export different drivers based on the retrieved data. A list can be found in the section 'Exported Drivers'.
 
@@ -21,7 +23,7 @@ This driver can export different drivers based on the retrieved data. A list can
 | **Driver Range** | **Description**                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version with connection to SQL Database.                                                          | No                  | No                      |
-| 1.0.1.x          | New alarm clearing system implemented.Update tables reviewed.                                             | No                  | Yes                     |
+| 1.0.1.x          | New alarm clearing system implemented. Update tables reviewed.                                            | No                  | Yes                     |
 | 2.0.0.x          | New driver range retrieving information from traps and from the import of rules and IP addresses via CSV. | No                  | No                      |
 
 ### Supported firmware versions
@@ -34,9 +36,9 @@ This driver can export different drivers based on the retrieved data. A list can
 
 ### Exported drivers
 
-| **Exported Protocol**                                                                 | **Description**                                                                                                                                     |
-|---------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Castlerock SNMPc Node (in 1.0.0.x and 2.0.0.x)Castlerock SNMPc - Node (since 1.0.1.x) | A separate driver showing only the database or traps information for that specific node, connected to the Castlerock SNMPc.Supported in all ranges. |
+| **Exported Protocol**                                                                  | **Description**                                                                                                                                      |
+|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Castlerock SNMPc Node (in 1.0.0.x and 2.0.0.x) Castlerock SNMPc - Node (since 1.0.1.x) | A separate driver showing only the database or traps information for that specific node, connected to the Castlerock SNMPc. Supported in all ranges. |
 
 ## Installation and configuration
 
@@ -124,7 +126,7 @@ The **Events Filter Table** contains the following columns:
 
 - **Trap OID**: The trap OID of the event this filter row applies to. Use an asterisk wildcard ('\*') to match 0 or more characters, or a question mark wildcard ('?') to match one character. Use *Any* if the row should be applied to all traps. The trap OID will not be considered when filtering events.
 
-- **Message Filter**: Regular expression to filter an ID from the message in the events table.Example:
+- **Message Filter**: Regular expression to filter an ID from the message in the events table. Example:
 
 - Input: "OSPF - 1.2.3.4 5.6.7.8 0 5 ospfTraps"
 
@@ -168,8 +170,8 @@ This page consists of three main sections (detailed below), as well as the **Max
 This section determines the limitations for events stored in the Events table:
 
 - **Maximum Number of Events**: Indicates the maximum number of events that can be stored in the Events table before events are automatically removed.
-- **Maximum Age of Events**:Indicates the maximum age events can have in the Events table before they are automatically removed.
-- **Event Types That Can Be Cleared**: Indicates which types of events can automatically be removed from the table.If this is set to '*Only normals*' or '*Only normals and minors*', it could occur that the table contains more events than indicated in the Maximum Number of Events parameter. If this happens, a message will be logged in the logging for the element.
+- **Maximum Age of Events**: Indicates the maximum age events can have in the Events table before they are automatically removed.
+- **Event Types That Can Be Cleared**: Indicates which types of events can automatically be removed from the table. If this is set to '*Only normals*' or '*Only normals and minors*', it could occur that the table contains more events than indicated in the Maximum Number of Events parameter. If this happens, a message will be logged in the logging for the element.
 - **Remove Normal or Cleared Traps**: Determines whether cleared alarms are automatically deleted from the Events Table or if this should be done manually.
 - **Also Delete Alarm Events in Database:** Can be used to synchronize the automatic cleaning of the Events Table with the EventLog Table of the device in the background. If this is enabled, queries of type DELETE are sent to the database. Note that this setting also takes into account if the driver is up to date with the device. This check is done to make sure that events that were not yet processed by the driver (more recent than the Datetime of the Youngest Processed Event) are not deleted from the SNMPc database before they are processed by the driver. When this setting is toggled to enabled, the synchronization is immediately executed in the background. While it remains enabled, the driver synchronizes once every minute.
 
@@ -180,8 +182,8 @@ The checks on the number of events and the age of the events in the table are do
 This section determines the limitations for info events stored in the Info Events table:
 
 - **Maximum Number of Info Events**: Determines the maximum numbers of info events that can be stored in the Info Events table before info events are automatically removed.
-- **Maximum Age of Info Events**:Determines the maximum age info events can have in the Info Events table before they are automatically removed.
-- **Also Delete Info Events in Database**:Can be used to synchronize the automatic cleaning of the Info Events Table with the EventLog Table of the device in the background. If this is enabled, queries of type DELETE are sent to the database, filtered on priority level 7.
+- **Maximum Age of Info Events**: Determines the maximum age info events can have in the Info Events table before they are automatically removed.
+- **Also Delete Info Events in Database**: Can be used to synchronize the automatic cleaning of the Info Events Table with the EventLog Table of the device in the background. If this is enabled, queries of type DELETE are sent to the database, filtered on priority level 7.
 
 The checks on the number of info events and the age of the info events in the table are done whenever the Maximum Number of Info Events or Maximum Age of Info Events parameters are updated, whenever the Info Events table is updated, and during startup. No further configuration or check on the priority is done, as all priorities are level 7 in this table.
 
@@ -191,7 +193,7 @@ As mentioned above, these credentials are needed to set up a connection with the
 
 - **Database Name:** The name of the database of the device, by default '*SNMPc*'.
 - **Server IP:** The IP address where the device can be found.
-- **User Name** and **Password**:The credentials to log in to the database.
+- **User Name** and **Password**: The credentials to log in to the database.
 - **Credential** **Check:** Indicates if the credentials are filled in and is used as a flag to allow the driver to connect and send queries.
 
 ## Notes: Range 1.0.0.x/1.0.1.x
@@ -203,13 +205,13 @@ The decision to see if an event can overwrite an existing event in the Events Ta
 The normal hash key consists of four parts, delimited by semicolons:
 
 1.  **Map ID** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events coming from the same node can overwrite each other.
-2.  **From_address**This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events with the same from_addres can overwrite each other.
-3.  **IP addresses in the Event Message**Through the use of a regular expression, the IP addresses (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the IP addresses included in the message.
-4.  **Slot:port-combinations in the Event Message**Through the use of a regular expression, the Slot:Port combinations (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the Slot:Port combinations in the message.
+2.  **From_address** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events with the same from_addres can overwrite each other.
+3.  **IP addresses in the Event Message** Through the use of a regular expression, the IP addresses (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the IP addresses included in the message.
+4.  **Slot:port-combinations in the Event Message** Through the use of a regular expression, the Slot:Port combinations (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the Slot:Port combinations in the message.
 
 #### Examples of calculated hash keys:
 
-eska-\[ER\];192.168.3.242;192.168.7.234;cn-go-wp1-cr90;192.168.255.61;192.168.255.61\*0.0.0.0\*192.168.255.65\*192.168.255.65;eska-\[ER\];192.168.3.242;192.168.6.82;2:12dtv-nawij-is-dcm71;192.168.23.151;;
+eska-\[ER\];192.168.3.242;192.168.7.234; cn-go-wp1-cr90;192.168.255.61;192.168.255.61\*0.0.0.0\*192.168.255.65\*192.168.255.65; eska-\[ER\];192.168.3.242;192.168.6.82;2:12 dtv-nawij-is-dcm71;192.168.23.151;;
 
 In version 1.0.1.x, the hash key consists of the following parts, delimited by semicolons, if an **Events Filter** is applied:
 
@@ -245,7 +247,7 @@ You can limit the number of traps in two ways: based on the **Maximum Number of 
 
 For example, if the maximum number of traps limitation is enabled and set to 1000, and a new trap is received while the current number of traps is 1000, the oldest trap in the table will be removed. As another example, if the maximum age of traps limitation is enabled and set to 14 days, and a trap was received 14 days ago, it will be deleted tomorrow. This check is done daily and whenever the element starts up.
 
-Finally, this section also contains buttons to manually **Delete All Traps** at once, or to **Delete Normal Traps**,which deletes all traps with severity Normal.
+Finally, this section also contains buttons to manually **Delete All Traps** at once, or to **Delete Normal Traps**, which deletes all traps with severity Normal.
 
 #### Traps Processing
 
@@ -324,9 +326,9 @@ Trim Rules are useful in case you want to trim trap messages before storing them
 
 The fields of an imported trim rule detail the following information:
 
-- IP Address:You can specify to which source IPs the trim rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
-- RegEX Incoming Trap:You can specify to which words of the trap message the trim rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the trap. If so, the matching part is trimmed off the trap message.
-- Severity Incoming Trap:You can specify to which severities the trim rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by the corresponding number (1:Critical, 2:Severe, 3:Major, 4:Minor, 5:Warning, 6:Normal, 7:Info).
+- IP Address: You can specify to which source IPs the trim rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
+- RegEX Incoming Trap: You can specify to which words of the trap message the trim rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the trap. If so, the matching part is trimmed off the trap message.
+- Severity Incoming Trap: You can specify to which severities the trim rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by the corresponding number (1:Critical, 2:Severe, 3:Major, 4:Minor, 5:Warning, 6:Normal, 7:Info).
 
 #### Example of Trim Rule Mechanism
 
@@ -360,11 +362,11 @@ Update rules are useful to make sure that traps that are related to each other u
 
 The fields of an imported update rule detail the following information:
 
-- IP Address:You can specify to which source IPs the update rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
-- RegEX Updated Trap:You can specify to which words of the older trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the older trap. If so, the matching part is trimmed off the older trap message before it is compared to the new trap. Note that this trimming is temporary and only done to compare if the trap messages are equal after applying both this regular expression and that for the new trap (see below).
-- Severity Updated Trap:You can specify to which severities of the older trap the rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only be updated via this update rule if the severity of the older trap matches this check.
-- RegEX Updating Trap:You can specify to which words of the new trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the new trap. If so, the matching part is trimmed off the new trap message before it is compared to the older trap. Note that this trimming is temporary and only done to compare if trap messages are equal after applying both this regular expression and that for the older trap (see above).
-- <u>Severity Updating Trap:</u>You can specify to which severities of the new trap the rule should be applied. ft it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only update other traps via this update rule if the severity of the new trap matches this check.
+- IP Address: You can specify to which source IPs the update rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
+- RegEX Updated Trap: You can specify to which words of the older trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the older trap. If so, the matching part is trimmed off the older trap message before it is compared to the new trap. Note that this trimming is temporary and only done to compare if the trap messages are equal after applying both this regular expression and that for the new trap (see below).
+- Severity Updated Trap: You can specify to which severities of the older trap the rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only be updated via this update rule if the severity of the older trap matches this check.
+- RegEX Updating Trap: You can specify to which words of the new trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the new trap. If so, the matching part is trimmed off the new trap message before it is compared to the older trap. Note that this trimming is temporary and only done to compare if trap messages are equal after applying both this regular expression and that for the older trap (see above).
+- <u>Severity Updating Trap:</u> You can specify to which severities of the new trap the rule should be applied. ft it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only update other traps via this update rule if the severity of the new trap matches this check.
 
 Additional remarks:
 
@@ -422,11 +424,11 @@ Imagine the following two traps, arriving in this order:
 
 Importing the following .csv file for the rules would be enough to make sure that the incoming trap updates the correct old trap, because the regular expression trims the first word from the updated and updating trap:
 
-*TRIM RULESUPDATE RULES10.237.150.41;^\s+\[^\s\]+;1;^\s+\[^\s\]+;6*
+*TRIM RULES* *UPDATE RULES* *10.237.150.41;^\s+\[^\s\]+;1;^\s+\[^\s\]+;6*
 
 This more specific .csv file would also do the job:
 
-*TRIM RULESUPDATE RULES10.237.150.41;alarmSetTrap//sc//;1;alarmClearTrap//sc//;6*
+*TRIM RULES* *UPDATE RULES* *10.237.150.41;alarmSetTrap//sc//;1;alarmClearTrap//sc//;6*
 
 #### Example 2 of Choosing an Update Rule
 
@@ -439,7 +441,7 @@ Imagine the following two traps, arriving in this order:
 
 Importing the following .csv file for the rules would be enough to make sure that the incoming trap updates the correct old trap and is stored without the timestamp at the beginning:
 
-*TRIM RULES\*;^(?:\b\[0-9\]{4})-(?:0\*\[1-9\]\|1\[0-2\])-(?:3\[0-1\]\|\[1-2\]\[0-9\]\|0\*\[1-9\]),(?:2\[0-3\]\|1\[0-9\]\|0\*\[1-9\]):(?:\[0-5\]\*\[0-9\]):(?:\[0-5\]\*\[0-9\])\b;0UPDATE RULES\*;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;1;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;6*
+*TRIM RULES* *\*;^(?:\b\[0-9\]{4})-(?:0\*\[1-9\]\|1\[0-2\])-(?:3\[0-1\]\|\[1-2\]\[0-9\]\|0\*\[1-9\]),(?:2\[0-3\]\|1\[0-9\]\|0\*\[1-9\]):(?:\[0-5\]\*\[0-9\]):(?:\[0-5\]\*\[0-9\])\b;0* *UPDATE RULES* *\*;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;1;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;6*
 
 Note that the trim rule used a wildcard for the severity and IP address and will therefore be applied to ALL incoming traps starting with a datetime, regardless of their severity and IP address.
 
@@ -447,7 +449,7 @@ Note that the trim rule used a wildcard for the severity and IP address and will
 
 You can even add the general case of traps updating older traps if the trap message is exactly the same as an update rule, because the regular expression can also have a wildcard value. In that case, there is no temporary trimming and the raw messages (after applying the trim rules) will be compared. Importing this file would add the required rule:
 
-*TRIM RULESUPDATE RULES* *\*;\*;0;\*;0*
+*TRIM RULES* *UPDATE RULES* *\*;\*;0;\*;0*
 
 | **IP Address**        | **Trap Message** | **Severity**            |            |
 |-----------------------|------------------|-------------------------|------------|
@@ -460,5 +462,5 @@ Imagine there is a certain range of devices that all have a source IP belonging 
 
 Importing this file would add the required rule:
 
-*TRIM RULESUPDATE RULES* *192.16.5.x;.\*;7;.\*;7*
+*TRIM RULES* *UPDATE RULES* *192.16.5.x;.\*;7;.\*;7*
 

@@ -46,7 +46,8 @@ SNMP Settings:
 
 ### Initialization
 
-To use this element, you need to configure the matrix level monitored by the element and the primary and secondary polling IPs.The matrix level default value is "1.1" and the default polling IP is the one configured while creating/editing the element.
+To use this element, you need to configure the matrix level monitored by the element and the primary and secondary polling IPs.
+The matrix level default value is "1.1" and the default polling IP is the one configured while creating/editing the element.
 
 ### Redundancy
 
@@ -56,7 +57,8 @@ There is no redundancy defined.
 
 The element created with this driver consists of the following data pages:
 
-- **General**: Contains general status parameters and a table with all available matrix levels. Via the **Configurations** page button, you can configure driver polling settings such as the matrix level and the active polling IP.
+- **General**: Contains general status parameters and a table with all available matrix levels.
+  Via the **Configurations** page button, you can configure driver polling settings such as the matrix level and the active polling IP.
 - **Matrix**: Displays the matrix.
 - **Router Control**: Displays the tables used by the driver to communicate with the Router Control application.
 - **Routing**: Displays the **Inputs** and **Outputs** tables of the matrix.

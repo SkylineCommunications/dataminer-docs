@@ -54,7 +54,7 @@ On this page, you can find an overview of the profiling information in the **Pro
 
 ### Profile Status Page
 
-On this page, you can find an overview of the profiling status in the **Profile Status Table**,the **On Air Clients Table** and the**Profile Device Status Table.**
+On this page, you can find an overview of the profiling status in the **Profile Status Table**, the **On Air Clients Table** and the **Profile Device Status Table.**
 
 ### Profile Settings Page
 
@@ -70,11 +70,11 @@ On this page, you can find an overview of the renderer status in the **Renderer 
 
 ### NVIDIA Page
 
-On this page, you can find an overview of the NVIDIA status and properties in the **NVIDIA Status Table**and the **NVIDIA Properties Table**.
+On this page, you can find an overview of the NVIDIA status and properties in the **NVIDIA Status Table** and the **NVIDIA Properties Table**.
 
 ### Multivalue File Page
 
-This page displays the multivalue files for the monitored device in the **Multivalue File Table**.The values of the files are displayed in the **Monitorable Value Table.**
+This page displays the multivalue files for the monitored device in the **Multivalue File Table**. The values of the files are displayed in the **Monitorable Value Table.**
 
 ### License Info Page
 

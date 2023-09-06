@@ -84,7 +84,7 @@ In range **1.1.1.x**, the following pages are available in the element:
 - **ANC** **Input** **Control**: Includes the ANC Input Control table.
 - **Input** **Properties** **Control**: Includes the Input Properties control table.
 - **System** **Notify**: Includes the Data Port and System Notify tables, as well as CPU configurables.
-- **Video** **Notify**: Includes the Video Monitoring Control and Video Notify tables.As of 1.1.1.x, each row in the Video Notify table represents an input instead of an input fault. The **individual fault statuses** can be found in the **columns**.
+- **Video** **Notify**: Includes the Video Monitoring Control and Video Notify tables. As of 1.1.1.x, each row in the Video Notify table represents an input instead of an input fault. The **individual fault statuses** can be found in the **columns**.
 - **Audio Notify**: Includes the Audio Monitoring Control and Audio Channel/Group Notify tables. As of 1.1.1.x, each row in the Audio Notify table represents an input instead of an input fault. The original table is also split into the Channel and Group tables based on the fault types. The **individual fault statuses** can be found in the **columns**.
 - **System** **Monitor**: Includes the various system monitoring parameters.
 - **Output** **Control**: Includes the Output Control, Output Video IP Control, Output Audio, and Layout Control tables.

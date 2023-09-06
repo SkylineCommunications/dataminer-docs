@@ -64,4 +64,4 @@ On the **Diagnostics** page, you can run tests on the device. Three kinds of tes
 
 The **Alarms** page lists all the alarms active on the device.
 
-The **Traps** page contains the **Traps Table**,which lists the most recent traps received by the device.
+The **Traps** page contains the **Traps Table**, which lists the most recent traps received by the device.

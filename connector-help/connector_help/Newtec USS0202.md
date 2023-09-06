@@ -25,7 +25,7 @@ Short paragraph (style: Paragraph) in which you describe the **function of the p
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><p>Initial Version of driver</p>
 <p>SNMP parameters and trap processing</p></td>
 <td>-</td>
@@ -84,3 +84,5 @@ The web interface is only accessible when the client machine has network access 
 In this section, you can provide additional information about the driver. If, for example, custom Visio files are needed, mention it here.
 
 Provide detailed information on the impact of a specific Driver Range.
+
+

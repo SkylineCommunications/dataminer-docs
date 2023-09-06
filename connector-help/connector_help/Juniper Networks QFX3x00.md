@@ -31,7 +31,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### Configuration of Conditional Monitoring
 
-Conditional monitoring settings can be found on the page **Conditional Monitoring**.In an extra column in the monitored tables of the driver, you can set which rows should or should not be monitored.
+Conditional monitoring settings can be found on the page **Conditional Monitoring**. In an extra column in the monitored tables of the driver, you can set which rows should or should not be monitored.
 
 These settings can be imported or exported. To import, first set the **Import/Export Folder** and **Select File**, then click **Import File**. To export, click **Export File**, and a new file will be created automatically in the selected folder. Click **Refresh** to add the files available in the **Import/Export Folder** to the **Select File** drop-down options.
 
@@ -39,7 +39,8 @@ These settings can be imported or exported. To import, first set the **Import/Ex
 
 ### Chassis
 
-This page displays information about the chassis, such as box information: **Box Class**, **Box Description**, **Box Serial Number**, **Box Revision**,etc.You can also find more important information here, such as the **Containers** table and **Contents** table.
+This page displays information about the chassis, such as box information: **Box Class**, **Box Description**, **Box Serial Number**, **Box Revision**, etc.
+You can also find more important information here, such as the **Containers** table and **Contents** table.
 
 The page contains four page buttons that link to other pop-up pages:
 

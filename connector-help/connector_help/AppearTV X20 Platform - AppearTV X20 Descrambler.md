@@ -4,7 +4,7 @@ uid: Connector_help_AppearTV_X20_Platform_-_AppearTV_X20_Descrambler
 
 # AppearTV X20 Platform - AppearTV X20 Descrambler
 
-This connector can be used to view information of **descrambler** **cards** (DSx100/DSx110)connected to the AppearTV X20 chassis.
+This connector can be used to view information of **descrambler** **cards** (DSx100/DSx110) connected to the AppearTV X20 chassis.
 
 The connector uses an **HTTP** connection. This connection uses the Descrambler API of the DSx100/DSx110 card to retrieve information from the card and configure settings on the card. The information transfer is performed using JSON.
 

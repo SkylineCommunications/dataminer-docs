@@ -10,9 +10,9 @@ The Keysight FieldFox Handheld Analyzer can be used for monitoring and supports 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                           | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Support for spectrum analyzer.- Support for built-in power meter mode with multiple measurement points. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                            | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Support for spectrum analyzer. - Support for built-in power meter mode with multiple measurement points. | \-           | \-                |
 
 ### Product Info
 

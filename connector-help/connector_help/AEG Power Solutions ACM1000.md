@@ -64,4 +64,5 @@ On the **Configuration** page, thresholds and limits can be defined.
 
 ## Notes
 
-To prevent improper use, some of the settings require a **group security level of 4**. If a user with a lower security level accesses the element, they will only be able to read the values, but they will not be able to make any changes.This applies to the following parameters: **Battery Capacity**, **Discharge Test Mode**, **Discharge Test Current**, **Battery Low Voltage Alarm Threshold**, **Battery Low Voltage Disconnect Threshold**, **Load LVDNE 1 Disconnect Threshold** and **Load LVDNE 2 Disconnect Threshold.**
+To prevent improper use, some of the settings require a **group security level of 4**. If a user with a lower security level accesses the element, they will only be able to read the values, but they will not be able to make any changes.
+This applies to the following parameters: **Battery Capacity**, **Discharge Test Mode**, **Discharge Test Current**, **Battery Low Voltage Alarm Threshold**, **Battery Low Voltage Disconnect Threshold**, **Load LVDNE 1 Disconnect Threshold** and **Load LVDNE 2 Disconnect Threshold.**

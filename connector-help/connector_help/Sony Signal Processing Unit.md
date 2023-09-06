@@ -12,11 +12,11 @@ The **Sony NXL-FR16** and **Sony NXL-FR318** are processing units (chassis), to 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                       | **Based on** | **System Impact**                                                                                                                                                                                            |
-|----------------------|--------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                       | \-           | \-                                                                                                                                                                                                           |
-| 1.0.1.x              | Support for monitoring of Sony 2110 Device Interfaces. | 1.0.0.14     | NMI logic made generic to support other types of interfaces.NMI table renamed to ipAvInterfaces.Columns of Device table referring to NMI now have more generic naming/description.Export rules were adapted. |
-| 1.0.2.x \[SLC Main\] | Added DCF support.                                     | 1.0.1.9      | \-                                                                                                                                                                                                           |
+| **Range**            | **Key Features**                                       | **Based on** | **System Impact**                                                                                                                                                                                               |
+|----------------------|--------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                       | \-           | \-                                                                                                                                                                                                              |
+| 1.0.1.x              | Support for monitoring of Sony 2110 Device Interfaces. | 1.0.0.14     | NMI logic made generic to support other types of interfaces. NMI table renamed to ipAvInterfaces. Columns of Device table referring to NMI now have more generic naming/description. Export rules were adapted. |
+| 1.0.2.x \[SLC Main\] | Added DCF support.                                     | 1.0.1.9      | \-                                                                                                                                                                                                              |
 
 ### Product Info
 
@@ -28,11 +28,11 @@ The **Sony NXL-FR16** and **Sony NXL-FR318** are processing units (chassis), to 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                  |
-|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41FSony Signal Processing Unit - NXLK-IP42FSony Signal Processing Unit - NXLK-IP40FSony Signal Processing Unit - NXLK-IP50YSony Signal Processing Unit - NXLK-IP45F |
-| 1.0.1.x   | No                  | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41FSony Signal Processing Unit - NXLK-IP42FSony Signal Processing Unit - NXLK-IP40FSony Signal Processing Unit - NXLK-IP50YSony Signal Processing Unit - NXLK-IP45F |
-| 1.0.2.x   | Yes                 | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41FSony Signal Processing Unit - NXLK-IP42FSony Signal Processing Unit - NXLK-IP40FSony Signal Processing Unit - NXLK-IP50YSony Signal Processing Unit - NXLK-IP45F |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                      |
+|-----------|---------------------|-------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41F Sony Signal Processing Unit - NXLK-IP42F Sony Signal Processing Unit - NXLK-IP40F Sony Signal Processing Unit - NXLK-IP50Y Sony Signal Processing Unit - NXLK-IP45F |
+| 1.0.1.x   | No                  | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41F Sony Signal Processing Unit - NXLK-IP42F Sony Signal Processing Unit - NXLK-IP40F Sony Signal Processing Unit - NXLK-IP50Y Sony Signal Processing Unit - NXLK-IP45F |
+| 1.0.2.x   | Yes                 | Yes                     | \-                    | Sony Signal Processing Unit - NXLK-IP41F Sony Signal Processing Unit - NXLK-IP42F Sony Signal Processing Unit - NXLK-IP40F Sony Signal Processing Unit - NXLK-IP50Y Sony Signal Processing Unit - NXLK-IP45F |
 
 ## Configuration
 
@@ -76,7 +76,8 @@ The element created with this connector has the following data pages:
 - **Traps**: This page displays the **Traps Destination** table.
 - **Alarms**: This page displays the **Error Status** table. This table is both polled and updated based on traps. The table is cleared when a "Coldstart" trap is received.
 - **DVE**: This page displays the **DVE** tables and the setting to automatically delete DVEs.
-- **NMI**: On this page, the **NMI** table allows you to check which interface element is connected to which card. The **Resubscribe** button can be used to reset all the created subscriptions.In this range, the only supported IP IV interface is the **Sony NMI** device.
+- **NMI**: On this page, the **NMI** table allows you to check which interface element is connected to which card. The **Resubscribe** button can be used to reset all the created subscriptions.
+  In this range, the only supported IP IV interface is the **Sony NMI** device.
 
 ### Range 1.0.1.x
 
@@ -88,12 +89,17 @@ The element created with this connector has the following data pages:
 - **Traps**: This page displays the **Traps Destination** table.
 - **Alarms**: This page displays the **Error Status** table. This table is both polled and updated based on traps. The table is cleared when a "Coldstart" trap is received.
 - **DVE**: This page displays the **DVE** tables and the setting to automatically delete DVEs.
-- **IP IV Interface**: On this page, the **IP IV Interfaces** table allows you to check which interface element is connected to which card. The **Resubscribe** button can be used to reset all the created subscriptions.In this range, the supported IP IV interfaces are the **Sony NMI** device and **Sony 2110** device.
+- **IP IV Interface**: On this page, the **IP IV Interfaces** table allows you to check which interface element is connected to which card. The **Resubscribe** button can be used to reset all the created subscriptions.
+  In this range, the supported IP IV interfaces are the **Sony NMI** device and **Sony 2110** device.
 
 ## Notes
 
-**IMPORTANT NOTE:** The index of the Product Information Table and the Device table has a difference of -1 with the DVE element names. DVEs have an element name of the format **MainElementName-Module_Slot No**, with "Slot No" being **PK Product Information Table** **- 1**.
+**IMPORTANT NOTE:
+**The index of the Product Information Table and the Device table has a difference of -1 with the DVE element names. DVEs have an element name of the format **MainElementName-Module_Slot No**, with "Slot No" being **PK Product Information Table** **- 1**.
 
-**Example:** Main Element: Sony NXL-FR316
+**Example:**
+Main Element: Sony NXL-FR316
 
-Product Information table:Key Module DVE Element Name2 NXLK-IP40F Sony NXL-FR316-NXLK-IP40F_1
+Product Information table:
+Key Module DVE Element Name
+2 NXLK-IP40F Sony NXL-FR316-NXLK-IP40F_1

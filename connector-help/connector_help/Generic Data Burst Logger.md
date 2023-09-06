@@ -53,7 +53,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### Configuration
 
-Go to the **Port** **Status** page, and add the different switches you want to monitor. For each device, enter the **Label**, choose the **Type** of switch from the predefined types, the **Polling** **IP** and the **Polling Instance.**
+Go to the **Port** **Status** page, and add the different switches you want to monitor.
+For each device, enter the **Label**, choose the **Type** of switch from the predefined types, the **Polling** **IP** and the **Polling Instance.**
 
 ## How to Use
 

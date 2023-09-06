@@ -10,10 +10,10 @@ The purpose of this driver is to monitor the health of the different channels wi
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact**               |
-|----------------------|----------------------------------------------------------------------------------------------|--------------|---------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                             | \-           | \-                              |
-| 1.0.1.x \[SLC Main\] | \- Endpoint Channel Error table added.- Stream Key, Poll Delta Time and Error columns added. | 1.0.0.1      | Changed displayed column order. |
+| **Range**            | **Key Features**                                                                              | **Based on** | **System Impact**               |
+|----------------------|-----------------------------------------------------------------------------------------------|--------------|---------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                              | \-           | \-                              |
+| 1.0.1.x \[SLC Main\] | \- Endpoint Channel Error table added. - Stream Key, Poll Delta Time and Error columns added. | 1.0.0.1      | Changed displayed column order. |
 
 ### Product Info
 
@@ -47,7 +47,8 @@ HTTP CONNECTION:
 
 To start polling channel data, right-click the **Endpoint Configuration** table, and select one of the following options in the context menu to specify the channels to poll:
 
-- **Add new row**: If you select this option, you will be able to define the **Channel Name** you intend to poll data from, the **Polling Speed**, the **Channel State** and the **Multiple HTTP Requests** option.If you specify "***all***" as the Channel Name, every channel at the defined HTTP page will be polled.
+- **Add new row**: If you select this option, you will be able to define the **Channel Name** you intend to poll data from, the **Polling Speed**, the **Channel State** and the **Multiple HTTP Requests** option.
+  If you specify "***all***" as the Channel Name, every channel at the defined HTTP page will be polled.
 - **Import CSV File**: If you select this option, you will be able to import a table from an existing CSV file. To do so, specify the **File Path** where the CSV file is located.
 
 ### Redundancy
@@ -67,7 +68,7 @@ This driver has four different tables:
 
 The **Row State** column in the **Endpoint Health** table indicates the current state of the associated stream. A stream can have one of the following types of **Row State**:
 
-- **New**:This type indicates that the stream was added to the table
+- **New**: This type indicates that the stream was added to the table
 - **Updated**: This type indicates that the current stream state in the **State** column is different from the previous one.
 - **Equal**: This type indicates that the previous state in the **State** column and the current state are the same.
 - **Deleted**: This type indicates that the channel from which the stream comes in the **Endpoint Configuration** table is disabled or deleted, and no longer polled.

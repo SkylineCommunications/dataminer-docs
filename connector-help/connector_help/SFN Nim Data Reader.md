@@ -28,6 +28,6 @@ In the **Directory Path** parameter, you should fill in the directory where the 
 
 ### Output Data Page
 
-On this page, you can fill in the **Site Name** that should be used to create the desired output string, by setting the**Query Site Name** parameter. The **Query GUID Session var** also needs to be set before the output string can be calculated. This GUID value will be used as primary key for the row added to the **Output Data** table. This row will contain the generated output stream.
+On this page, you can fill in the **Site Name** that should be used to create the desired output string, by setting the **Query Site Name** parameter. The **Query GUID Session var** also needs to be set before the output string can be calculated. This GUID value will be used as primary key for the row added to the **Output Data** table. This row will contain the generated output stream.
 
 Press the **Load** button to generate the output string and add the generated row to the Output Data Table.

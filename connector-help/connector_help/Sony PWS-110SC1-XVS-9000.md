@@ -19,10 +19,10 @@ This driver is exported by the parent driver **Sony PWS-110SC1**, from version 1
 
 ### Version Info
 
-| **Range**            | **Key Features**                             | **Based on** | **System Impact**                                                                         |
-|----------------------|----------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                             | \-           | \-                                                                                        |
-| 1.0.1.x \[SLC Main\] | Support for monitoring of Sony 2110 devices. | 1.0.0.24     | Pages renamed.NMI table renamed to IP IV Interface table.Columns of Device table renamed. |
+| **Range**            | **Key Features**                             | **Based on** | **System Impact**                                                                           |
+|----------------------|----------------------------------------------|--------------|---------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                             | \-           | \-                                                                                          |
+| 1.0.1.x \[SLC Main\] | Support for monitoring of Sony 2110 devices. | 1.0.0.24     | Pages renamed. NMI table renamed to IP IV Interface table. Columns of Device table renamed. |
 
 ### Product Info
 
@@ -53,7 +53,8 @@ The element created using this range of the driver has the following data pages:
 
 - **Status**: This page displays detailed status information on the module, including the **Device ID**, **Manufacturer**, **Model**, **Destination**, **Serial Number**, **Category**, **Version**, **Model Suffix** and **Version Suffix**.
 - **Alarms**: This page displays the **Error Statuses** connected to this module.
-- **NMI**: This page allows you to connect this Vision Mixer Processor to the selected **NMI Interface**. Note: Only 1 NMI element can be connected to 1 slot on the device. You can check which NMI element is connected to which slot via the NMI table on the main element.
+- **NMI**: This page allows you to connect this Vision Mixer Processor to the selected **NMI Interface**.
+  Note: Only 1 NMI element can be connected to 1 slot on the device. You can check which NMI element is connected to which slot via the NMI table on the main element.
 - **Product Info**: This page displays the **Module** table. This table contains the modules for this slot
 
 ### Range 1.0.1.x
@@ -62,5 +63,6 @@ The element created using this range of the driver has the following data pages:
 
 - **Status**: This page displays detailed status information on the module, including the **Device ID**, **Manufacturer**, **Model**, **Destination**, **Serial Number**, **Category**, **Version**, **Model Suffix** and **Version Suffix**.
 - **Alarms**: This page displays the **Error Statuses** connected to this module.
-- **IP IV Interfaces**: This page allows you to connect this Vision Mixer Processor to the selected **NMI or Sony 2110 Interface**. Note: Only 1 NMI element can be connected to 1 slot on the device. You can check which NMI element is connected to which slot via the NMI table on the main element.
+- **IP IV Interfaces**: This page allows you to connect this Vision Mixer Processor to the selected **NMI or Sony 2110 Interface**.
+  Note: Only 1 NMI element can be connected to 1 slot on the device. You can check which NMI element is connected to which slot via the NMI table on the main element.
 - **Product Info**: This page displays the **Module** table. This table contains the modules for this slot

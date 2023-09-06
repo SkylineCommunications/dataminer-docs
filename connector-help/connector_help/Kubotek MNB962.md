@@ -4,7 +4,7 @@ uid: Connector_help_Kubotek_MNB962
 
 # Kubotek MNB962
 
-The Kubotek MNB960 is a **Encoder / Decoder**device.
+The Kubotek MNB960 is a **Encoder / Decoder** device.
 
 ## About
 
@@ -24,13 +24,14 @@ This will list the firmware versions that are fully compatible with the driver p
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.0.x          | MNB962ENCMNB962DEC          |
+| 1.0.0.x          | MNB962ENC MNB962DEC         |
 
 ## Installation and configuration
 
 ### Creation
 
-***SNMP connection***This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+***SNMP connection***
+This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
 
 SNMP CONNECTION:
 
@@ -81,3 +82,5 @@ It has a **Decoder Network** pagebutton with **network configurations settings**
 Displays the web interface of the device.
 
 The client machine has to be able to access the device. If not, it won't be possible to open the web interface.
+
+

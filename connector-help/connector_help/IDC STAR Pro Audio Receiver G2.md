@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### General
 
-This page allows you to manage the following general parameters of the device: **Name**, **Location**, **Serial Number**, **NCC Address** and**Device Manual Link**
+This page allows you to manage the following general parameters of the device: **Name**, **Location**, **Serial Number**, **NCC Address** and **Device Manual Link**
 
 ### Input
 

@@ -16,11 +16,11 @@ This driver uses **SNMP** to monitor and control **Verimatrix CSM** device.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|---------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                         | No                  | Yes                     |
-| 1.3.6.x          | Based on 1.0.0.1Added support for firmware version 3.6. | No                  | Yes                     |
-| 1.4.0.x          | Based on 1.3.6.1Added support for firmware version 4.1. | No                  | Yes                     |
+| **Driver Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                          | No                  | Yes                     |
+| 1.3.6.x          | Based on 1.0.0.1 Added support for firmware version 3.6. | No                  | Yes                     |
+| 1.4.0.x          | Based on 1.3.6.1 Added support for firmware version 4.1. | No                  | Yes                     |
 
 ### Supported firmware versions
 

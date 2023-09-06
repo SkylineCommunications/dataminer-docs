@@ -96,7 +96,7 @@ The following pages contain tables concerning additional settings and informatio
 
 - **Channels**: Channel Names Table, Alarm Status Table and Operational Status Table.
 - **Input Configuration**: Input Mpts Status Table, Input UDP Table, Input Source Table and Input Internal Source Table.
-- **Audio**:Audio Table.
+- **Audio**: Audio Table.
 - **Video**: Video Avc Table.
 - **Output**: Output Destination Table and Stat Mux Table.
 - **Transport**: Transport Table.
@@ -197,7 +197,7 @@ This page displays general information about the device.
 
 ### Alarms
 
-On this page, the **Current Alarms table**lists all the active alarms of the device.
+On this page, the **Current Alarms table** lists all the active alarms of the device.
 
 ### Traps
 
@@ -212,7 +212,7 @@ The following pages contain tables with additional settings and information abou
 - **Transport**: **FEC Info** table and transport-related parameters.
 - **DVB**: DVB-related parameters and **TOT Descriptor** table (available via page button).
 - **Input Configuration**: **Input Mpts Status Info** table and **Input Internal Source Info** table.
-- **Audio**:Audio test tone parameters as well as **Audio Info** and **Proxy Audio Info** tables.
+- **Audio**: Audio test tone parameters as well as **Audio Info** and **Proxy Audio Info** tables.
 - **Video**: **Video AVC Info** and **Input Tuner Info** tables.
 - **Output**: **Stat Mux Info** table.
 - **Ancillary Data**: **Anc Data Info** table.

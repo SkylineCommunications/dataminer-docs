@@ -46,7 +46,7 @@ At the top, you will find a button to create resources, the status of the script
 
 Note that when resources are created, an extra property will be added: "DiscoveryCreationReference". The value of this property will be \[the element name of the Resource Discovery Rules element\]/\[the GUID of the record responsible for the creation of the resources\]. This is used for the Remove Related Resources button in the Discovery table, which allows you to delete all the resources that were originally created by this rule.
 
-In the **Discovery Table**,you can add rows via the right-click menu. You will need to specify the following information:
+In the **Discovery Table**, you can add rows via the right-click menu. You will need to specify the following information:
 
 - **Name**: This is used to recognize the rows.
 - **Admin State**: If this is disabled, this rule will not be taken into account when creating resources.
@@ -55,7 +55,8 @@ In the **Discovery Table**,you can add rows via the right-click menu. You will n
 - **Element Ref**: The name of the element that will be used to create resources.
 - **Table ID**: The PID of the table that will be used to create resources.
 - **Column ID Resource Name**: The PID of the column that will be used to create the new resource name, which will have the format "ELEMENT NAME -" + column content.
-- **Filtering rule**: A filter to include or exclude indices. At present, only specific values are supported:*All* or *None*, or a semicolon-separated string used to only display certain input entries in the Source Input Table. Expected format: *A;C-E;G;K-W*.
+- **Filtering rule**: A filter to include or exclude indices. At present, only specific values are supported:
+  *All* or *None*, or a semicolon-separated string used to only display certain input entries in the Source Input Table. Expected format: *A;C-E;G;K-W*.
 - **Resource Pool**: The pool where the resources will be created. (If the pool does not exist, the script will create it).
 
 Via the context menu of the **Properties** table, you can add properties to resources that will be created. You will need to specify the following information:

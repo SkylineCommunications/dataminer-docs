@@ -23,7 +23,7 @@ Traps can be received by the driver for asynchronous status updates from the dev
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.0.x1.0.1.x   | 07                          |
+| 1.0.0.x 1.0.1.x  | 07                          |
 
 ## Installation and configuration
 

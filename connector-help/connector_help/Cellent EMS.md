@@ -8,7 +8,9 @@ The cellent EMS makes it possible to send text messages with an automation scrip
 
 ## About
 
-With an automation script the number and message separated by an '\|' can be given to this driver. After which the driver will process this information together with the information set on the driver itself like the username, password, etc. to make the http request. Statistics of the request and responses are kept next to a history table of the last messages.
+With an automation script the number and message separated by an '\|' can be given to this driver.
+After which the driver will process this information together with the information set on the driver itself like the username, password, etc. to make the http request.
+Statistics of the request and responses are kept next to a history table of the last messages.
 
 Ranges of the driver
 
@@ -46,4 +48,5 @@ On this page a **History Table** is shown with the last 100 messages. The amount
 
 ## Notes
 
-Special characters like '\[', '\]', '{', '}', 'æ', etc. can cause problems in the message. Http response gives an acknowledgment that text message has been send, but text message never arrives at cellphone.Best to check if the API of Cellent supports special characters.
+Special characters like '\[', '\]', '{', '}', 'æ', etc. can cause problems in the message. Http response gives an acknowledgment that text message has been send, but text message never arrives at cellphone.
+Best to check if the API of Cellent supports special characters.

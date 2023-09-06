@@ -19,7 +19,7 @@ The TSL MDU12-PM driver is used to monitor and control a TSL MDU12-PM device. It
 
 ### Supported Firmware Versions
 
-Features in this driver are added by request. As it is possible to disable features in the poll manager so that they are not available, the driver is backwards compatible with older firmware.Very few features are no longer supported in newer firmware versions, so the driver is generally also forwards compatible.
+Features in this driver are added by request. As it is possible to disable features in the poll manager so that they are not available, the driver is backwards compatible with older firmware. Very few features are no longer supported in newer firmware versions, so the driver is generally also forwards compatible.
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
@@ -48,16 +48,19 @@ SNMP Settings:
 
 ### General page
 
-This page displays the **Unit Identification** and **Location**, the **Total Number of Alarms**, the **Equipment Temperature**, the **Power-on Output Sequence**, the **Sequential Mode Delay between Outputs** and the **Status of Power Inlets**. In addition, on the right side of the page you can find the **Voltage Floor**, the **Voltage Limit**, the **Voltage Calibration** and the **Voltage**. Below this, the **Total Current** and the **Current Limit** are shown.
+This page displays the **Unit Identification** and **Location**, the **Total Number of Alarms**, the **Equipment Temperature**, the **Power-on Output Sequence**, the **Sequential Mode Delay between Outputs** and the **Status of Power Inlets**.
+In addition, on the right side of the page you can find the **Voltage Floor**, the **Voltage Limit**, the **Voltage Calibration** and the **Voltage**. Below this, the **Total Current** and the **Current Limit** are shown.
 
-It is possible to set the **Location**, the **Sequential Mode Delay between Outputs**, the **Voltage** and **Current** parameters, and the **Power-on Output Sequence**. For the latter, three possible values are available: *Immediate*, *Sequential* and *Delay*.
+It is possible to set the **Location**, the **Sequential Mode Delay between Outputs**, the **Voltage** and **Current** parameters, and the **Power-on Output Sequence**.
+For the latter, three possible values are available: *Immediate*, *Sequential* and *Delay*.
 
 ### I/O page
 
 This page displays the following tables:
 
 - **Input Table:** Contains information about the **Input Name**, the **Input Alarm** and the **Active Polarity**. Both the **Input Name** and the **Active Polarity** can be edited.
-- **Output Table**: Displays the **Output Name**, the **Fuse**, the **Output Status**, the **Locked** status, the **Delay**, the **Lower and Over Current**, the **VA**, the **Watts**, the **Current**, the **Power Factor** and the **Output Calibration**.It is possible to set the **Output Name**, the **Delay**, the **Lower and Over Current** and the **Output Calibration**, as well as the **Output Status.**
+- **Output Table**: Displays the **Output Name**, the **Fuse**, the **Output Status**, the **Locked** status, the **Delay**, the **Lower and Over Current**, the **VA**, the **Watts**, the **Current**, the **Power Factor** and the **Output Calibration**.
+  It is possible to set the **Output Name**, the **Delay**, the **Lower and Over Current** and the **Output Calibration**, as well as the **Output Status.**
 
 ### Web Interface page
 

@@ -52,7 +52,7 @@ General Page contains general information about the device connected like the **
 This page contains three tables:
 
 - The **Input Control Table** displays general information about each input: the **IP Mode, the IP Address, the Port Number,** different **Bit Rates, ...**
-- **Input Monitor Table** shows data for parameterssuch as the **Input state, Number of Programs, Number of know PIDs, TS ID, Network ID, ...**
+- **Input Monitor Table** shows data for parameters such as the **Input state, Number of Programs, Number of know PIDs, TS ID, Network ID, ...**
 - The **MDI Monitor Table** displays data regarding the MDI. The table has nine columns and displays the **Delay Factor, Media Loss Rate,** their limites, maximums and ideals.
 
 ### Output
@@ -78,11 +78,12 @@ The four tables on this page, the **MGMT Faults Table**, **Trigger Faults Table*
 - **Send Trap** (used to decide if a trap must be sent)
 - **Fault Present**
 
-The first three tables each have a togglebutton to enable or disable the polling of the table.A pop-up page with the **Priority Error Monitor Table** will be displayed after the user presses the '**Alarm Configuration..**' button.
+The first three tables each have a togglebutton to enable or disable the polling of the table.
+A pop-up page with the **Priority Error Monitor Table** will be displayed after the user presses the '**Alarm Configuration..**' button.
 
 ### Error Monitoring
 
-The **Error Monitor Table** shows the **Input Status, IP Layer Status, Syntrax Error Status** and the **User Defined Error Status.**This table also had a parameter to disable the table polling.
+The **Error Monitor Table** shows the **Input Status, IP Layer Status, Syntrax Error Status** and the **User Defined Error Status.** This table also had a parameter to disable the table polling.
 
 ### CCA and DPI Monitoring Control
 
@@ -104,7 +105,7 @@ The last table again has a togglebutton to enable or disable the polling of the 
 This page also contains two tables:
 
 - The **VLAN Config Table** allow the user to configure the **VLAN IP Address, VLAN Net Mask, VLAN ID** and **VLAN Name**.
-- The **Network Stats Table** displays the following data about the network: the **Port ID** and **Status**,**Port BW in Use** and information regarding **Input Packets**.
+- The **Network Stats Table** displays the following data about the network: the **Port ID** and **Status**, **Port BW in Use** and information regarding **Input Packets**.
 
 ### Web Interface
 

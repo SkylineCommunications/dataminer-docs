@@ -21,10 +21,10 @@ The driver communicates with the device via **SNMP** to retrieve parameter value
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                         |
-|------------------|-----------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | UPS software version: SWM022-02-21/Agent software version: AppVer. 01.04.000Firmware version: S14-1 |
-| 1.1.0.x          | Firmware version: S16-1                                                                             |
+| **Driver Range** | **Device Firmware Version**                                                                           |
+|------------------|-------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | UPS software version: SWM022-02-21/ Agent software version: AppVer. 01.04.000 Firmware version: S14-1 |
+| 1.1.0.x          | Firmware version: S16-1                                                                               |
 
 ## Installation and configuration
 
@@ -112,8 +112,8 @@ Virtual fixed interfaces:
 
 #### Internal Connections
 
-- Between **Normal** and **Output**,an internal connection is created.
-- Between **Bypass** and **Output**,an internal connection is created.
-- Between **Battery** and **Output**,an internal connection is created.
-- Between **Booster** and **Output**,an internal connection is created.
-- Between **Reducer** and **Output**,an internal connection is created.
+- Between **Normal** and **Output**, an internal connection is created.
+- Between **Bypass** and **Output**, an internal connection is created.
+- Between **Battery** and **Output**, an internal connection is created.
+- Between **Booster** and **Output**, an internal connection is created.
+- Between **Reducer** and **Output**, an internal connection is created.

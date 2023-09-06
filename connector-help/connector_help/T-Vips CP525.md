@@ -58,6 +58,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The connector contains parameters for monitoring **alarms**, **input**, **outputs**,and **transport streams** on the corresponding (sub)pages.
+The connector contains parameters for monitoring **alarms**, **input**, **outputs**, and **transport streams** on the corresponding (sub)pages.
 
 On the **Configuration** page, configuration files can be both uploaded and downloaded.

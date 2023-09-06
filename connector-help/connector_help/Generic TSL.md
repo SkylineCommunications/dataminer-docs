@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 To adjust the behavior of the element:
 
 - **Periodic Update**: When this is enabled, all UMDs with **Admin State** *Up* are sent to the device every minute.
-- **Exclusive Update**: A bulk set will set the **Admin State** of all other UMDs to*Down*.
+- **Exclusive Update**: A bulk set will set the **Admin State** of all other UMDs to *Down*.
 - **Default** values are used to fill in missing values for new UMD objects in a bulk set. They are also used to initialize the UMD values on the Create UMDs page.
 - **Active Interface** is a reflection of the chosen communication type in the element setup and alters the message format. When the value is *Unavailable*, something went wrong during initialization. In that case, the best solution is to restart the element.
 
@@ -63,14 +63,16 @@ The **UMDs** table is a collection of all the UMDs added through single adds and
 
 To edit UMDs, you can either set individual cells, or edit the entire row on the **Update UMD Row** subpage.
 
-- After you click **load**in the table row, its values will be loaded in the parameters on the **Update UMD Row** page, which is accessed via the page button **Update Row**below the **UMDs** table. Edit the desired values and click **Send Row CMD**.
+- After you click **load** in the table row, its values will be loaded in the parameters on the **Update UMD Row** page, which is accessed via the page button **Update Row** below the **UMDs** table. Edit the desired values and click **Send Row CMD**.
 - Use the **UMD Row Identifier** to load a specific row, instead of using the **Edit Row** column. There is a drop-down list, but typing is also possible to speed up access. Setting an incorrect identifier will not result in any change of parameters.
 
 To delete UMDs, use the context menu (by right-clicking in the table).
 
-- **Delete UMDs older than ...** will ask for the maximum age, which is the amount of time measured from the moment **OK** is clicked. All UMDs (even those with **Admin State** equal to *Up*) of which the **Last Update** value is before this maximum age are deleted.Example values: *10 seconds*, *10 minutes*, *10 hours*, *10 days*, *10 weeks* (these are suggested by DataMiner while you type).If only a number is entered, this is interpreted as a number of hours.
-- **Delete UMDs in Admin Down state**will delete all UMDs of which the **Admin State** is *Down*.
-- **Delete Selected UMDs**will delete all selected rows. Select multiple rows using the Shift or Ctrl key as usual in Windows.
+- **Delete UMDs older than ...** will ask for the maximum age, which is the amount of time measured from the moment **OK** is clicked. All UMDs (even those with **Admin State** equal to *Up*) of which the **Last Update** value is before this maximum age are deleted.
+  Example values: *10 seconds*, *10 minutes*, *10 hours*, *10 days*, *10 weeks* (these are suggested by DataMiner while you type).
+  If only a number is entered, this is interpreted as a number of hours.
+- **Delete UMDs in Admin Down state** will delete all UMDs of which the **Admin State** is *Down*.
+- **Delete Selected UMDs** will delete all selected rows. Select multiple rows using the Shift or Ctrl key as usual in Windows.
 
 ### Create UMDs
 
@@ -88,7 +90,8 @@ The format is JSON and can be a single object or an array of objects containing 
 
 - **"AdminUp"**: bool, Default or current if null
 
-- **"Control"**: controlObject (dictionary), Default or current if nullcontrolObject contains:
+- **"Control"**: controlObject (dictionary), Default or current if null
+  controlObject contains:
 
 - **"RHT"**: Byte (Range \[0-3\]), the right-hand tally
   - **"LHT"**: Byte (Range \[0-3\]), the left-hand tally

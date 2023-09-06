@@ -25,7 +25,7 @@ Monitoring and control of the Antenna control system for models in the 100 range
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Key Params (RF / Config)</li>
 <li>Point Modes</li>
@@ -49,6 +49,8 @@ Monitoring and control of the Antenna control system for models in the 100 range
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 
@@ -101,11 +103,15 @@ How to make a message supported:
 >
 > > \<Value\>MY MESSAGE\</Value\>
 
-> \</Discreet\>Please replace "MY MESSAGE" by the message you have logged earlier.
+> \</Discreet\>
+>
+> Please replace "MY MESSAGE" by the message you have logged earlier.
 
 - Adjust QAction_153.cs
 
-> Add a new MessageData object in the GetAllSupportedUndocumentedMessages property of the BinaryMessageParser class.For default messages: the byte and bit numbers are set to -1 as they are not part of the vendors documentation:new MessageData{
+> Add a new MessageData object in the GetAllSupportedUndocumentedMessages property of the BinaryMessageParser class.
+>
+> For default messages: the byte and bit numbers are set to -1 as they are not part of the vendors documentation:new MessageData{
 
 > > ByteNumber = -1,
 >
@@ -125,9 +131,13 @@ How to make a message supported:
 
 > }
 
-> For detailed messages: set the byte and bit number to the value that is printed and provide a Message that you want to see when this bit is returned by the ACU:new MessageData{
 >
-> > ByteNumber = 5,BitNumber = 0,MessageDetail = new\[\]{
+> For detailed messages: set the byte and bit number to the value that is printed and provide a Message that you want to see when this bit is returned by the ACU:
+> new MessageData
+> {
+>
+> > ByteNumber = 5,BitNumber = 0,
+> > MessageDetail = new\[\]{
 >
 > > > new MessageDetail { Model = MessageModel.Any, Message = "MY MESSAGE", Type = MessageType.Fault },
 > >
@@ -138,8 +148,12 @@ How to make a message supported:
 > > }
 >
 > }
+>
 
-When in doubt to make modifications to the code, please contact squad.deploy-sphinx@skyline.beNote that the parameters **Unsupported Fault Messages** and **Unsupported Status Messages** will show N/A when the Detailed Display Mode is selected. Since these messages are unsupported and thus not listed in the protocol, we cannot distinguish if an unsupported detailed message is a status message or a fault.
+When in doubt to make modifications to the code, please contact squad.deploy-sphinx@skyline.be
+
+Note that the parameters **Unsupported Fault Messages** and **Unsupported Status Messages** will show N/A when the Detailed Display Mode is selected. Since these messages are unsupported and thus not listed in the protocol, we cannot distinguish if an unsupported detailed message is a status message or a fault.
+
 
 ### Point Mode - Intelsat
 

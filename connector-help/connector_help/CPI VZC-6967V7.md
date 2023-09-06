@@ -26,7 +26,7 @@ This driver uses a serial connection and needs the following user information:
 
 ### Main View Page
 
-Thispage displays the general information about the device, e.g. the **Helix Voltage, Helix Current, RF Output Power...**
+This page displays the general information about the device, e.g. the **Helix Voltage, Helix Current, RF Output Power...**
 
 ### General Control Page
 

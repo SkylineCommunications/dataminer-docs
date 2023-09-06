@@ -16,12 +16,12 @@ From range 2.0.1.x onwards, the information is retrieved via **WebSocket** subsc
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.**It is not advised to use this range, except in case it was agreed to use Ember+ instead of the vendor-advised method.** | No                  | Yes                     |
-| 1.1.0.x              | Ember 1.8 system support.Some parameters are no longer supported in this range.                                                           | No                  | Yes                     |
-| 2.0.0.x              | WebSocket implementation.                                                                                                                 | No                  | Yes                     |
-| 2.0.1.x \[SLC Main\] | DCF connections added.                                                                                                                    | Yes                 | Yes                     |
+| **Range**            | **Description**                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version. **It is not advised to use this range, except in case it was agreed to use Ember+ instead of the vendor-advised method.** | No                  | Yes                     |
+| 1.1.0.x              | Ember 1.8 system support. Some parameters are no longer supported in this range.                                                           | No                  | Yes                     |
+| 2.0.0.x              | WebSocket implementation.                                                                                                                  | No                  | Yes                     |
+| 2.0.1.x \[SLC Main\] | DCF connections added.                                                                                                                     | Yes                 | Yes                     |
 
 ### Product Info
 
@@ -62,7 +62,7 @@ From range 2.0.1.x onwards, the information is retrieved via **WebSocket** subsc
 <li>Interface connection:</li>
 <li><ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
-<li><strong>IP port</strong>: The IP port of the device. This is required. The default value is <em>9000</em>,the range is <em>0</em>to <em>65535</em>.</li>
+<li><strong>IP port</strong>: The IP port of the device. This is required. The default value is <em>9000</em>, <strong></strong> the range is <em>0</em> <strong></strong> to <em>65535</em>.</li>
 </ul></li>
 </ul></td>
 </tr>
@@ -101,17 +101,17 @@ This page contains information about the PTP of the device, such as **PTP Clock 
 This page contains information about the RTP receiver of the device, such as **Legacy SDP Format** and **Generated SDP Format**, as well as the following tables:
 
 - **RTP Sessions Table**: Contains information about the RTP sessions, such as Switch Type, Active Command, SDP A Command, etc.
-- **Audio Receiver Table**: Contains information about theaudio receivers, such as Audio Receiver Mode, Audio Receiver State, Blocked By, etc.
-- **Video** **Receiver Table**: Contains information about thevideo receivers, such as Video Receiver Mode, Video Receiver State, Blocked By, etc.
-- **Packet Stream Pairs** **Table**: Contains information about thepacket stream pairs, such as Primary Drift, Primary M Packets Received, Secondary Drift Resolution, etc.
+- **Audio Receiver Table**: Contains information about the audio receivers, such as Audio Receiver Mode, Audio Receiver State, Blocked By, etc.
+- **Video** **Receiver Table**: Contains information about the video receivers, such as Video Receiver Mode, Video Receiver State, Blocked By, etc.
+- **Packet Stream Pairs** **Table**: Contains information about the packet stream pairs, such as Primary Drift, Primary M Packets Received, Secondary Drift Resolution, etc.
 
 ### RTP Receiver (range 1.1.0.x)
 
 This page contains information about the RTP receiver of the device, such as **Legacy SDP Format**, as well as the following tables:
 
 - **RTP Sessions Table**: Contains information about the RTP sessions, such as Switch Type, Active Command, SDP A Command, etc.
-- **Audio Receiver Table**: Contains information about theaudio receivers, such as Audio Receiver State and Command Preparation Time.
-- **Video** **Receiver Table**: Contains information about thevideo receivers, such as Video Receiver State and Command Preparation Time.
+- **Audio Receiver Table**: Contains information about the audio receivers, such as Audio Receiver State and Command Preparation Time.
+- **Video** **Receiver Table**: Contains information about the video receivers, such as Video Receiver State and Command Preparation Time.
 
 ### Video Transmitter Overview
 
@@ -119,15 +119,15 @@ This page displays a tree view that provides an overview of the video transmitte
 
 This tree structure shows the **video transmitter pools**, with underneath each pool the video transmitter pool **output pools**:
 
-- Click a specific **video transmitter pool** to view the name of thatvideo transmitter, its **Status Standard** and a table with the **Output Pools** for that device. The table includes information such as the Port Command Type, Generator, Lane, etc.
-- Click a specific **output pool**, linked to a particular **video transmitter pool**, to view parameters related to this particularoutput pool/video transmitter pool combination, such asVideo Transmitter, Port Command Type, Generator, etc.
+- Click a specific **video transmitter pool** to view the name of that video transmitter, its **Status Standard** and a table with the **Output Pools** for that device. The table includes information such as the Port Command Type, Generator, Lane, etc.
+- Click a specific **output pool**, linked to a particular **video transmitter pool**, to view parameters related to this particular output pool/video transmitter pool combination, such as Video Transmitter, Port Command Type, Generator, etc.
 
 The **RTP Sessions Table** contains information about the **RTP Sessions**, such as **Switch Type**, **Active Command**, **SDP A Command**, etc.
 
 This page also contains a page button that provides access to the **Video Transmitter subpage**, which shows the information from the Video Transmitter Overview page in table format, in the following tables:
 
 - **Video Transmitter Pool:** Displays the video transmitter name and **Status Standard**.
-- **Video Transmitter Output:** Contains information about output pools linked to a particular video transmitter. In range 1.0.0.x, It contains information such asVideo Transmitter, Port Command Type, Generator, etc. In range 1.1.0.x, it contains information such asVLAN ID, Port SDP A and Payload Type Command.
+- **Video Transmitter Output:** Contains information about output pools linked to a particular video transmitter. In range 1.0.0.x, It contains information such as Video Transmitter, Port Command Type, Generator, etc. In range 1.1.0.x, it contains information such as VLAN ID, Port SDP A and Payload Type Command.
 
 ### I/O Ports
 
@@ -139,7 +139,7 @@ This page displays a tree view that provides an overview of the **Network Interf
 
 The tree structure shows the **network ports**, with underneath each port the linked **FGPA Lanes**:
 
-- Click a specific **network port** to view the name of thatnetwork port, its Device Name, Total Multicast bytes, etc. A table with information about the **FGPA Statistics** is also displayed, with information such as the Maximum Throughput, TX Total Packets, TX Bytes per Second, etc.
+- Click a specific **network port** to view the name of that network port, its Device Name, Total Multicast bytes, etc. A table with information about the **FGPA Statistics** is also displayed, with information such as the Maximum Throughput, TX Total Packets, TX Bytes per Second, etc.
 - Click a specific **FPGA lane**, linked to a **network port**, to view parameters for that particular lane, such as Port Brief, Maximum Throughput, TX Total Bytes, etc.
 
 This page also contains a page button that provides access to the **Network Interfaces subpage**, where you can find the information of the Network Interfaces Overview page in a table format, in the following tables:

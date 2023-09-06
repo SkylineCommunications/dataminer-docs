@@ -47,6 +47,6 @@ SNMP Settings:
 This page consists of the following sections:
 
 - **General**: Displays the system information of the device, such as the **System Name,** **System Description,** **System Up Time** and **System Contact**
-- **Picture Settings**: Allows you to set the screen information, with the parameters **Input Select, Aspect Ratio, Contrast, Brightness, Color, Tint, Sharpness** and**Color Temperature**
+- **Picture Settings**: Allows you to set the screen information, with the parameters **Input Select, Aspect Ratio, Contrast, Brightness, Color, Tint, Sharpness** and **Color Temperature**
 - **Sound Settings**: Allows you to set the sound information, with the parameters **Balance, Screen Mute, Volume Mute** and **Volume Control**
 - **Management**: Allows you to set the **Power, Energy Saving, OSD Select, Remote Control Lock Mode, ISM Method** and **Auto Configuration.**

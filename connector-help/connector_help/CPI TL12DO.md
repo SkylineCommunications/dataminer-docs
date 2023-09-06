@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 This page contains general information on the device.
 
-Via the **Log** page button, you can retrieve log entries for the device. To do so, set the **Log Entry RF Units** and then the **Log Entry Number to Get**.Retrieving the same entry number with a different unit will overwrite the row with the same entry number.
+Via the **Log** page button, you can retrieve log entries for the device. To do so, set the **Log Entry RF Units** and then the **Log Entry Number to Get**. Retrieving the same entry number with a different unit will overwrite the row with the same entry number.
 
 ### Measurements
 

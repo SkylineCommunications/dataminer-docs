@@ -12,10 +12,10 @@ For each satellite available, one element must be created using an IP address an
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version (obsolete)                                              | No                  | Yes                     |
-| 1.0.1.x          | \- Added RF Out Column to the Telemetry Table- Auto clear functionality | No                  | Yes                     |
+| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version (obsolete)                                               | No                  | Yes                     |
+| 1.0.1.x          | \- Added RF Out Column to the Telemetry Table - Auto clear functionality | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 The General page displays the **Telemetry** table, which contains the telemetry data of a single satellite.
 
-Thistable contains the following columns:
+This table contains the following columns:
 
 - **Channel**: Concatenation of the satellite, transponder and tube name.
 

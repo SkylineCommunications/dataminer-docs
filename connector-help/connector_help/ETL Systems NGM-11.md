@@ -62,7 +62,7 @@ SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (default: *4000*).
-  - **Bus address**: The bus address of the device. (default: *65*) (range: *32* - *122*). Use the decimal ASCII value of the **matrix address** configured in the device, e.g. A = *65*, P= *80*.
+  - **Bus address**: The bus address of the device. (default: *65*) (range: *32* - *122*). Use the decimal ASCII value of the **matrix address** configured in the device, e.g. A = *65*, P = *80*.
 
 ### Initialization
 
@@ -97,7 +97,8 @@ Via the **Import-Export Matrix** page button, you can export or import the setti
   - *Importing labels from file*: Label polling is disabled, the matrix of the element is updated and sent to the device.
   - *Sending labels to device*: Label polling is disabled, the element is updated, but labels are still sent to the device.
 
-The following export format is used (square brackets indicate the optional column): **Index;Label;Locked\[;Connections\]** For example: *Input 9;Label In 9;False;\[001,003,112\]*
+The following export format is used (square brackets indicate the optional column): **Index;Label;Locked\[;Connections\]**
+For example: *Input 9;Label In 9;False;\[001,003,112\]*
 
 Note: Although both the *Normal* and *With Crosspoint* export types can be imported, no crosspoint settings are imported in case you import the latter.
 

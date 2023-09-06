@@ -64,8 +64,10 @@ The **Stream** page contains the primary stream and quickview stream mode.
 
 This page has multiple subpages with basic information about each mode that can be edited.
 
-- **RTMP**: RTMP mode allows T-RAX encoders to stream to other video platforms, CDNs, and streaming servers that are not natively integrated. RTMP is supported by most video streaming platforms. You will need to obtain a URL and stream key/name from the service you choose to stream to.
-- **MPEG Transport Stream**: In MPEG Transport Stream mode, the encoder card sends video via UDP or TCP to a specified unicast or multicast address. To enable MPEG Transport Stream, select MPEG Transport Stream as the primary stream mode, choose the streaming protocol, destination IP address, port, and other relevant settings on the subpage, and select Apply.
+- **RTMP**: RTMP mode allows T-RAX encoders to stream to other video platforms, CDNs, and streaming servers that are not natively integrated. RTMP is supported by most video streaming platforms.
+  You will need to obtain a URL and stream key/name from the service you choose to stream to.
+- **MPEG Transport Stream**: In MPEG Transport Stream mode, the encoder card sends video via UDP or TCP to a specified unicast or multicast address.
+  To enable MPEG Transport Stream, select MPEG Transport Stream as the primary stream mode, choose the streaming protocol, destination IP address, port, and other relevant settings on the subpage, and select Apply.
 - **Teradek Streaming**: TDS is specifically optimized for local streaming with minimum latency between Teradek devices.
 - **Wowza**
 - **Zixi**
@@ -73,7 +75,8 @@ This page has multiple subpages with basic information about each mode that can 
 - **RTP Push**
 - **RTSP Announce**
 - **Live Internet Streaming**: T-RAX features native integration with some of the most popular streaming platforms, i.e. Facebook, Twitch, Ustream, New Livestream, YouTube Live, and Livestream (Original).
-- **Live:Air**: Live:Air is a video production suite that can receive feeds from any of T-RAX's encoder cards for real-time video mixing, switching, and even transitions. Once you've configured an encoder card to stream to Live:Air, you can manage it from the Live:Air app.
+- **Live:Air**: Live:Air is a video production suite that can receive feeds from any of T-RAX's encoder cards for real-time video mixing, switching, and even transitions.
+  Once you've configured an encoder card to stream to Live:Air, you can manage it from the Live:Air app.
 
 ### Encoder
 

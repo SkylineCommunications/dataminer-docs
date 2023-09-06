@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ## How to use
 
-When the element is activated, the connector retrieves all basic information about the schedulers available in the API. This information is then available on the **General** page in the **Scheduler table**.It is updated every time a scheduler changes.
+When the element is activated, the connector retrieves all basic information about the schedulers available in the API. This information is then available on the **General** page in the **Scheduler table**. It is updated every time a scheduler changes.
 
 All schedulers are processed and analyzed to see if they are valid. If they are, two tasks are created in the **Scheduler app**, one for the start of the event and the other for the end.
 

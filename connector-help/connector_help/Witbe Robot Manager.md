@@ -74,10 +74,10 @@ The manager is accompanied by an Automation script that makes it easier for the 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                               | **Exported Components** |
-|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- *WitBe Robot* connector- *Skyline SmartRec Application* connector- *Ericsson Redbee EPG* connector- *WitBe Manager Wizard* Automation script- *End of Program* Automation script                                                 | \-                      |
-| 1.1.0.x   | No                  | Yes                     | \- *WitBe Robot* connector- *Skyline SmartRec Application* connector- *Ericsson Redbee EPG* connector- *WitBe Manager Wizard* Automation script- *End of Program* Automation script- *Schedule WitBe Maintenance* Automation script | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                    | **Exported Components** |
+|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- *WitBe Robot* connector - *Skyline SmartRec Application* connector - *Ericsson Redbee EPG* connector - *WitBe Manager Wizard* Automation script - *End of Program* Automation script                                                  | \-                      |
+| 1.1.0.x   | No                  | Yes                     | \- *WitBe Robot* connector - *Skyline SmartRec Application* connector - *Ericsson Redbee EPG* connector - *WitBe Manager Wizard* Automation script - *End of Program* Automation script - *Schedule WitBe Maintenance* Automation script | \-                      |
 
 ## Configuration
 

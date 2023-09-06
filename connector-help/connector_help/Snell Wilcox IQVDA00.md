@@ -31,7 +31,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### General Page
 
-This page displays some general information (e.g. **Slot Number**, **Serial Number**,.).
+This page displays some general information (e.g. **Slot Number**, **Serial Number**, .).
 
 On this page, you can also **Restart the Unit** or reset it to the **Default Settings**.
 
@@ -47,7 +47,7 @@ This page allows the user to set some general **Video Settings**.
 
 ### Roll Track Page
 
-This pageallows information to be sent via the RollCall network to other compatible units connected on the same network.
+This page allows information to be sent via the RollCall network to other compatible units connected on the same network.
 
 ### Webpage
 

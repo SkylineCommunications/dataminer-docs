@@ -4,7 +4,7 @@ uid: Connector_help_DEVA_Broadcast_DB44
 
 # DEVA Broadcast DB44
 
-The **DEVA Broadcast DB44**driver displays information related to the **DEVA Broadcast DB44** Receiver device.
+The **DEVA Broadcast DB44** driver displays information related to the **DEVA Broadcast DB44** Receiver device.
 
 ## About
 

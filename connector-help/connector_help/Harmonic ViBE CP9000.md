@@ -10,10 +10,10 @@ The Harmonic ViBe CP9000 is a contribution encoder that preserves video quality 
 
 ### Version Info
 
-| **Range**            | **Key Features**                             | **Based on** | **System Impact**                                                    |
-|----------------------|----------------------------------------------|--------------|----------------------------------------------------------------------|
-| 1.0.0.x              | \- Monitoring.- Configuration of the device. | \-           | \-                                                                   |
-| 1.0.1.x \[SLC Main\] | \- Monitoring.- Configuration of the device. | 1.0.0.2      | \- Changed display key of 'Alarms' table and 'Sub System Info' table |
+| **Range**            | **Key Features**                              | **Based on** | **System Impact**                                                    |
+|----------------------|-----------------------------------------------|--------------|----------------------------------------------------------------------|
+| 1.0.0.x              | \- Monitoring. - Configuration of the device. | \-           | \-                                                                   |
+| 1.0.1.x \[SLC Main\] | \- Monitoring. - Configuration of the device. | 1.0.0.2      | \- Changed display key of 'Alarms' table and 'Sub System Info' table |
 
 ### Product Info
 

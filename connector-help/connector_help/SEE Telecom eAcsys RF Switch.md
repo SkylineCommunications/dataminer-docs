@@ -22,6 +22,8 @@ The driver uses 2 connections. The main connection (*SNMPv2*) is used for normal
 |------------------|-----------------------------|
 | 1.0.0.x          | E_2.4.3                     |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -40,6 +42,7 @@ SNMP Settings:
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device (e.g. *public*).
 - **Set community string**: The community string used when setting values on the device (e.g. *private*).
+
 
 #### HTTP Control connection
 

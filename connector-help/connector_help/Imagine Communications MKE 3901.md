@@ -49,7 +49,7 @@ This page contains information such as the **Slot Number**, **Unit Name**, **Sof
 
 ### Source
 
-On this page, you can configure the source for the **Preset** and **Program**. **Transitions** can be also configured: **Speed**, **Shape** and **Breakaway**. If the **Take** parameter is set to *Enabled*, thenext transition will start immediately.
+On this page, you can configure the source for the **Preset** and **Program**. **Transitions** can be also configured: **Speed**, **Shape** and **Breakaway**. If the **Take** parameter is set to *Enabled*, the next transition will start immediately.
 
 ### Status
 

@@ -12,9 +12,9 @@ Each of these resources will represent the fiber link with a mapping to the corr
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                         | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Reads out fiber link info from a CSV file.- Looks up matching EPM object per fiber link ID.- Creates or updates fiber link resources. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                           | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Reads out fiber link info from a CSV file. - Looks up matching EPM object per fiber link ID. - Creates or updates fiber link resources. | \-           | \-                |
 
 ### Product Info
 
@@ -54,4 +54,5 @@ The resources will be stored under the **Telenor FiberLink pool** and can be acc
 
 This connector must be used in combination with the **Telenor EPM Manager**.
 
-The provisioning file must be a CSV (comma-separated) containing the following header:*Fiberlink_ID,Type,Address_1,ConPoint1,Address_2,ConPoint2*
+The provisioning file must be a CSV (comma-separated) containing the following header:
+*Fiberlink_ID,Type,Address_1,ConPoint1,Address_2,ConPoint2*

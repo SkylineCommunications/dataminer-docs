@@ -68,7 +68,7 @@ On this page, you can monitor and configure the BISS-E Key Distribution.
 
 ### DVB-S/S2 Rx 1
 
-On this page, you can monitor and configure the **SAT 1 interface**. This includes the configuration of the **LNB Mode**, **LNB Frequency**, **LNB ADV** and **Demodulator**,as well as general monitoring of the demodulator.
+On this page, you can monitor and configure the **SAT 1 interface**. This includes the configuration of the **LNB Mode**, **LNB Frequency**, **LNB ADV** and **Demodulator**, as well as general monitoring of the demodulator.
 
 ### DVB-S/S2 Rx 2
 

@@ -20,7 +20,7 @@ The types that are defined as Type A are:
 The Dynamic Virtual Element has five pages:
 
 - The **General** page contains a list of the nodes currently used by the transceiver, as well as general information about this particular module.
-- The **Transceiver** page contains information regarding the **status** and **primary** channelof the transceiver module.
+- The **Transceiver** page contains information regarding the **status** and **primary** channel of the transceiver module.
 - The **Node Monitor** page contains information regarding the power supplies and power supplies alarm monitoring of the device.
 - The **Converters** page contains information related to the **Slot D Converters** and **Slot E Converters**.
 - The **Modules** page contains a table with information related to the module nodes.

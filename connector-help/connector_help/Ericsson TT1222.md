@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### General
 
-This page displays general information about the device, such as the **Device Info**, **IP Address**, **Current Status**, **Current Time**,**Input Status**, **Video Status**, **Audio 1 Status** and **Audio 2 Status**.
+This page displays general information about the device, such as the **Device Info**, **IP Address**, **Current Status**, **Current Time**, **Input Status**, **Video Status**, **Audio 1 Status** and **Audio 2 Status**.
 
 ### Alarms
 
@@ -72,7 +72,7 @@ This page displays the **PSI Mode**, **System Delay**, **Data Parameters** and *
 
 This page displays the **TV service ID**, as well as **Video** and **Audio 1** related parameters.
 
-It also includes the page buttons **Teletext - Subtitles**, **DVB - Subtitles**, **TV Service PIDs**,**Service Cycling**, **Video Advanced** and **Audio 1 Advanced**.
+It also includes the page buttons **Teletext - Subtitles**, **DVB - Subtitles**, **TV Service PIDs**, **Service Cycling**, **Video Advanced** and **Audio 1 Advanced**.
 
 ### Service - Audio 2
 
@@ -84,7 +84,7 @@ This page contains CA-related parameters.
 
 ### Output
 
-Thispage displays parameters related to the output streaming.
+This page displays parameters related to the output streaming.
 
 The **GPO** or **General Purposes Output** page button displays the triggering information coming from events **No Input Lock**, **Video Error**, **Audio 1 Error**, **Audio 2 Error**, **Data Error** and **BER Exceeded**.
 

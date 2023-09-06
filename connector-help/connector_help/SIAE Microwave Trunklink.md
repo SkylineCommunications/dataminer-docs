@@ -81,7 +81,7 @@ Physical fixed interfaces:
 
 Virtual dynamic interfaces:
 
-- **GbE**: For all GbE cards that are available in the **Inventory Table**on the **Hardware Inventory Page**,an interface is made. All these interfaces are of type **inout**.
+- **GbE**: For all GbE cards that are available in the **Inventory Table** on the **Hardware Inventory Page**, an interface is made. All these interfaces are of type **inout**.
 - **STM-1-in**: For all STM-1 cards that are available in the **Inventory Table** on the **Hardware Inventory Page**, an interface is made. All these interfaces are of type **in**.
 - **STM-1-out:** For all STM-1 cards that are available in the **Inventory Table** on the **Hardware Inventory Page**, an interface is made. All these interfaces are of type **out.**
 

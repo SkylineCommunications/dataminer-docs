@@ -15,10 +15,10 @@ This driver imports an excel file and fills the tables with the correct informat
 
 ### Version Info
 
-| **Range**            | **Key Features**    | **Based on** | **System Impact**                      |
-|----------------------|---------------------|--------------|----------------------------------------|
-| 1.0.0.22\[Obsolete\] |                     |              |                                        |
-| 1.0.1.x\[SLC Main\]  | Cassandra Complaint | 1.0.0.22     | Lost Saved data, trending and alarming |
+| **Range**             | **Key Features**    | **Based on** | **System Impact**                      |
+|-----------------------|---------------------|--------------|----------------------------------------|
+| 1.0.0.22 \[Obsolete\] |                     |              |                                        |
+| 1.0.1.x \[SLC Main\]  | Cassandra Complaint | 1.0.0.22     | Lost Saved data, trending and alarming |
 
 Installation and configuration
 
@@ -70,4 +70,12 @@ This Spectrum functionality will be used by a custom automation script that will
 ## Version 1.0.1.1
 
 Tables changed:
+
+| Parameter ID | Table Name                      | Display Key              |
+|--------------|---------------------------------|--------------------------|
+| 20000        | Work Order Overview             | options=";naming=/20002" |
+| 22000        | Work Order Overview - Completed | options=";naming=/22002" |
+
+
+
 

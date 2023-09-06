@@ -57,7 +57,8 @@ This page shows the information about the streams, such as **CDN Name, Resolutio
 
 ### Monitoring Points
 
-On this page it is possible to see the list of monitoring points by asset. It is possible to check for example its **Location,** **Number of Alarms and **Number of Streams****.It is also possible to add or remove locations to a desired asset (if it is not being monitored).
+On this page it is possible to see the list of monitoring points by asset. It is possible to check for example its **Location,** **Number of Alarms and **Number of Streams****.
+It is also possible to add or remove locations to a desired asset (if it is not being monitored).
 
 ### Monitoring Streams
 
@@ -81,7 +82,8 @@ This page shows the metrics parameters related to Monitoring, such as **Minimum 
 
 ### Alarms
 
-This page shows a list of all active alarms. It is possible to see for example the **Name, Description and Severity**.
+This page shows a list of all active alarms. It is possible to see for example the **Name, Description and Severity**.**
+**
 
 ### Locations
 

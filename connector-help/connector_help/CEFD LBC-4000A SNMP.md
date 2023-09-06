@@ -18,7 +18,7 @@ This connector is based on the obsolete CEFD LBC-4000 connector. It can be used 
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 1.2.21.2.5             |
+| 1.0.0.x   | 1.2.2 1.2.5            |
 
 ## Configuration
 

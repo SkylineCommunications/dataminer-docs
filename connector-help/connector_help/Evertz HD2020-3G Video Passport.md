@@ -65,15 +65,17 @@ This page contains DVI format parameters, as well as the **DVI Output Info** tab
 
 This page contains various converter-related tables:
 
-- **Video I/O Info**:Contains various configurable columns related to video input/output, including the standards, the read/write select and the FS Bypass.
-- **Video Processing Configuration**: Contains columns related to video processing, including gains, offsets and gamma control. Note: **Gains/Offsets do not have units** because that is how they are presented in VistaLink.
+- **Video I/O Info**: Contains various configurable columns related to video input/output, including the standards, the read/write select and the FS Bypass.
+- **Video Processing Configuration**: Contains columns related to video processing, including gains, offsets and gamma control.
+  Note: **Gains/Offsets do not have units** because that is how they are presented in VistaLink.
 - **Audio Monitor Info**: Contains status information for the Audio Monitor.
 - **Caption Configuration**: Contains various caption controls, such as the service controls and the CC timeout.
 - **Timing Configuration**: Contains 3 timing controls: the reference and both the vertical and horizontal offsets.
 - **De-interlacer Configuration**: Contains 3 de-interlacer controls: Type, IFMD Mode and Film Detection Mode.
 - **Noise Reduction Info**: Contains the noise reduction General Level controls for each converter path.
 - **AFD Configuration**: Contains AFD configuration columns for each converter, including the Stamp Source, SD Aspect Ratio, output enabling and more.
-- **Video Monitor Info**: Contains video monitor-related controls. Note: These column values (apart from the video delay) are received by the DMA as hex, and have to be converted to their ASCII equivalents.
+- **Video Monitor Info**: Contains video monitor-related controls.
+  Note: These column values (apart from the video delay) are received by the DMA as hex, and have to be converted to their ASCII equivalents.
 
 Note: Each row in all of these tables is linked to 1 of the 4 paths, a path being synonymous with the converter \# in the VistaLink.
 

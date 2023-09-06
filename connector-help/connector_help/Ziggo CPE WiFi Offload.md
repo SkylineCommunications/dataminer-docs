@@ -41,4 +41,5 @@ This page displays only four parameters:
 - *ZIP*
   - *GZIP:* If this option is selected, the **ZIP Filename Suffix** (see below) will not be taken into account, as the output file will have the exact same name as the original one.
 
-- **ZIP Filename Suffix:** The last part of the zip filename - only applicable if **Archive Format** is set to *ZIP*. The name of the zip file will consist of the date and time of its creation, the DataMiner ID of the Agent where it was processed and the specified filename suffix, combined as follows: *\[datetime\]\_\[dmaId\]\_\[suffix\].zip*
+- **ZIP Filename Suffix:** The last part of the zip filename - only applicable if **Archive Format** is set to *ZIP*.
+  The name of the zip file will consist of the date and time of its creation, the DataMiner ID of the Agent where it was processed and the specified filename suffix, combined as follows: *\[datetime\]\_\[dmaId\]\_\[suffix\].zip*

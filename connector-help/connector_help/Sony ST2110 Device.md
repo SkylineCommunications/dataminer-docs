@@ -10,10 +10,10 @@ The NXLK-IP50Y SDI-IP Converter Board has eight 1.5/3G-SDI bi-directional ports 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                      | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Supports monitoring of standard Sony MIBsSupports monitoring of Sony Pro IP Live MIBs | \-           | \-                |
-| 1.0.2.x \[SLC Main\] | Added DCF support                                                                     | 1.0.1.3      | \-                |
+| **Range**            | **Key Features**                                                                       | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Supports monitoring of standard Sony MIBs Supports monitoring of Sony Pro IP Live MIBs | \-           | \-                |
+| 1.0.2.x \[SLC Main\] | Added DCF support                                                                      | 1.0.1.3      | \-                |
 
 ### Product Info
 
@@ -83,4 +83,5 @@ The element created with this connector has the following data pages:
 
 ## Notes
 
-In the Sony LEO solution, all the elements running this connector can be monitored by the other elements that run the connectors Sony Signal Processing Unit, Sony PWS-4500, and Sony PWS-110SC1.This is done using the monitors class library.
+In the Sony LEO solution, all the elements running this connector can be monitored by the other elements that run the connectors Sony Signal Processing Unit, Sony PWS-4500, and Sony PWS-110SC1.
+This is done using the monitors class library.

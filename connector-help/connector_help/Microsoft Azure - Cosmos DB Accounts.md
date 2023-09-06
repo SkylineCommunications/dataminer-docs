@@ -50,4 +50,4 @@ In order to monitor performance and resource usage, metrics have been implemente
 
 ## Notes
 
-This connector is intended to be used together with the **Microsoft Azure** connector.Without that manager connector, this connector will not work, as the authentication to the Azure Cloud Platform is done via the manager connector.
+This connector is intended to be used together with the **Microsoft Azure** connector. Without that manager connector, this connector will not work, as the authentication to the Azure Cloud Platform is done via the manager connector.

@@ -78,6 +78,8 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 #### Fixed interfaces
 
+
+
 Physical fixed interfaces:
 
 2 SDI Inputs

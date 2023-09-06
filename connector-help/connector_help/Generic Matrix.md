@@ -10,10 +10,10 @@ This connector is a simple matrix connector. It does not communicate with a devi
 
 ### Version Info
 
-| **Range**           | **Key Features**                                                                         | **Based on** | **System Impact** |
-|---------------------|------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x             | Initial version                                                                          | \-           | \-                |
-| 9001.0.0.x \[Demo\] | Inputs and Outputs tables for resource creation.InterApp and FlowInfo messages receiver. | 1.0.0.2      | \-                |
+| **Range**           | **Key Features**                                                                          | **Based on** | **System Impact** |
+|---------------------|-------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x             | Initial version                                                                           | \-           | \-                |
+| 9001.0.0.x \[Demo\] | Inputs and Outputs tables for resource creation. InterApp and FlowInfo messages receiver. | 1.0.0.2      | \-                |
 
 ### System Info
 

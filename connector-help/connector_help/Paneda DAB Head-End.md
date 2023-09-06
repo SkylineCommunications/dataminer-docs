@@ -6,7 +6,8 @@ uid: Connector_help_Paneda_DAB_Head-End
 
 This connector retrieves the status information from four URLs (General System, Devices, Audio Services, and Data Services) for each provider configured in the system.
 
-The data returned by the calls for each provider consists of data specific for that provider as well as general data on the overall system, which is identical for all the providers.The connector only displays the general data once, separately from the data that is unique for each provider. As such, if no provider is mentioned, this means the data relates to the overall system.
+The data returned by the calls for each provider consists of data specific for that provider as well as general data on the overall system, which is identical for all the providers.
+The connector only displays the general data once, separately from the data that is unique for each provider. As such, if no provider is mentioned, this means the data relates to the overall system.
 
 ## About
 

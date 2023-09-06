@@ -49,15 +49,15 @@ This page displays a table with all the **transport streams** and additional inf
 
 ### Services
 
-Thispage displays a table with all the **services** and additional information related to them.
+This page displays a table with all the **services** and additional information related to them.
 
 ### PIDs
 
-Thispage displays a table with all the **PIDs** and additional information related to them.
+This page displays a table with all the **PIDs** and additional information related to them.
 
 ### Alarms
 
-Thispage displays a table with all the **alarms** and additional information related to them.
+This page displays a table with all the **alarms** and additional information related to them.
 
 ### Errors Status
 
@@ -69,4 +69,4 @@ This page contains **PIDs** that are shared per service on each transport stream
 
 ### Web Interface
 
-Thispage contains the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page contains the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

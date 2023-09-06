@@ -19,10 +19,10 @@ Incorporates three IP Interfaces that can be used for streaming and management.
 
 ### Product Info
 
-| **Range** | **Supported Firmware**       |
-|-----------|------------------------------|
-| 1.0.0.x   | \-                           |
-| 1.1.0.x   | Software V3.2.0Firmware V2.6 |
+| **Range** | **Supported Firmware**        |
+|-----------|-------------------------------|
+| 1.0.0.x   | \-                            |
+| 1.1.0.x   | Software V3.2.0 Firmware V2.6 |
 
 ### System Info
 

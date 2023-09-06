@@ -31,7 +31,7 @@ The element using this driver is **automatically exported** from the Globecomm i
 
 ### General
 
-This page contains generic information about the remote, such as the **Name**,the **Communication State** between the shore side server and the remote, and an indication whether the remote still exists on the shore side server.
+This page contains generic information about the remote, such as the **Name**, the **Communication State** between the shore side server and the remote, and an indication whether the remote still exists on the shore side server.
 
 It is also possible to enable or disable the polling of all devices of the remote.
 
@@ -89,4 +89,4 @@ This page displays all data of the **NIMBUS** device.
 
 ### ACCESS GSM
 
-This page displays all data of the **ACCESS GSM**device.
+This page displays all data of the **ACCESS GSM** device.

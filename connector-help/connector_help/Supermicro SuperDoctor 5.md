@@ -74,7 +74,7 @@ This page displays the **RAID** tables, including **Adapter**, **BBU**, **Virtua
 
 ### Logs
 
-This page displays the **Log** tables, including **CECC**, **UECC**, **Post**and **CPU**. Each table can be enabled or disabled with the corresponding toggle button.
+This page displays the **Log** tables, including **CECC**, **UECC**, **Post** and **CPU**. Each table can be enabled or disabled with the corresponding toggle button.
 
 ### Web Interface
 

@@ -26,9 +26,9 @@ All data in the element is read-only. It is not possible to configure the UHP Ne
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                            |
-|-----------|---------------------|-------------------------|-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | [UHP Networks NMS - Controller](/Driver%20Help/UHP%20Networks%20NMS%20-%20Controller.aspx)[UHP Networks NMS - Station](/Driver%20Help/UHP%20Networks%20NMS%20-%20Station.aspx)[UHP Networks NMS - Network](xref:Connector_help_UHP_Networks_NMS_-_Network) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                              |
+|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | [UHP Networks NMS - Controller](/Driver%20Help/UHP%20Networks%20NMS%20-%20Controller.aspx) [UHP Networks NMS - Station](/Driver%20Help/UHP%20Networks%20NMS%20-%20Station.aspx) [UHP Networks NMS - Network](xref:Connector_help_UHP_Networks_NMS_-_Network) |
 
 ## Configuration
 
@@ -64,7 +64,8 @@ The element created with this driver consists of the data pages described below.
 
 This page displays all **Networks** that are defined in the NMS, with the **number of remotes** in the network, **C/N of stations and controllers**, and **Rx and Tx traffic** **rates**.
 
-Via the Networks page button, you can access the **Networks Enable/Disable** subpage, where you can enable or disable DVEs for the available networks in the NMS.It also features a toggle button that allows you to enable or disable the automatic creation of DVEs.
+Via the Networks page button, you can access the **Networks Enable/Disable** subpage, where you can enable or disable DVEs for the available networks in the NMS.
+It also features a toggle button that allows you to enable or disable the automatic creation of DVEs.
 
 ### Controllers
 

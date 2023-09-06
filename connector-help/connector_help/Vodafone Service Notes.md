@@ -29,7 +29,7 @@ Enhanced Services require a DataMiner version of **9.0.3.0** or higher.
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial version</li>
 </ul></td>
@@ -39,17 +39,23 @@ Enhanced Services require a DataMiner version of **9.0.3.0** or higher.
 </tbody>
 </table>
 
+
+
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | 2.9.2.r1.588           |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 
@@ -85,8 +91,10 @@ This driver has a Visio available to allow more user friendly interactions. The 
 
 Visio Icons reference:
 
-Opens Note visualizer
+![notes.png](~/connector-help/images/Vodafone_Service_Notes_notes.png) Opens Note visualizer
 
-Opens a dialog that prompts the Title and the Note the user wishes to add
+![add.png](~/connector-help/images/Vodafone_Service_Notes_add.png)Opens a dialog that prompts the Title and the Note the user wishes to add
 
-Opens a dialog that allows a user to edit the Title and Content
+![edit.png](~/connector-help/images/Vodafone_Service_Notes_edit.png)Opens a dialog that allows a user to edit the Title and Content
+
+

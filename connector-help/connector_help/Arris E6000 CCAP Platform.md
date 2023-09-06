@@ -110,7 +110,7 @@ In range **1.0.1.x**:
 
 In range **1.0.3.x**:
 
-- **Script Name**:Specify the Automation script to be executed.
+- **Script Name**: Specify the Automation script to be executed.
 
 ## Notes
 

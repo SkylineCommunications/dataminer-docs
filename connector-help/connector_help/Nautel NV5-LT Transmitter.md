@@ -61,7 +61,7 @@ This page displays general parameters related to the FM transmitter:
 
 ### Controller Meter
 
-This page contains the **controller meter information**, as well as page buttons linking to the **Controller Power Amplifier**and **Controller Power Supply**pages. These subpages display metrics such as DC Input Power, PWB Temperature, and Average Voltage.
+This page contains the **controller meter information**, as well as page buttons linking to the **Controller Power Amplifier** and **Controller Power Supply** pages. These subpages display metrics such as DC Input Power, PWB Temperature, and Average Voltage.
 
 ### Alarms
 

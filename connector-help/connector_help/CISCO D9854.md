@@ -98,7 +98,7 @@ On this page, you can among others configure the **ASI Output** and **MOIP Outpu
 
 ### DPM Details
 
-This page contains the **DPM Program Entry Configuration** table. For every **DPM Channel**,the corresponding **Output Channel** and **Action** (Drop, Pass, or Map) can be configured.
+This page contains the **DPM Program Entry Configuration** table. For every **DPM Channel**, the corresponding **Output Channel** and **Action** (Drop, Pass, or Map) can be configured.
 
 ### DPM ASI Options
 
@@ -114,7 +114,7 @@ On this page, you can configure the different **alarms** available on the device
 
 ### IP Input
 
-On this page, you can configure the **IP Input Dejitter Algorithm**, **Flow FEC Mode**,and **Redundancy Mode**
+On this page, you can configure the **IP Input Dejitter Algorithm**, **Flow FEC Mode**, and **Redundancy Mode**
 
 ## DataMiner Connectivity Framework
 
@@ -133,10 +133,17 @@ Physical dynamic interfaces:
 
 When you set the demodulator Rx Frequency (on the Demodulator page) and the active Local Oscillator inputs (on the Inputs page), the absolute difference (\|Rx Frequency - LO\|) of both must result in a L-band frequency between 950 and 2150 Mhz. If the difference is not within the mentioned range, a message will be displayed (see image below) and the previous value will be used instead.
 
+![2020-12-17 16_02_44-DataMiner - Internet Explorer.png](~/connector-help/images/CISCO_D9854_2020-12-17_16_02_44-DataMiner_-_Internet_Explorer.png)
+
 If you want to change the value of both Rx Frequency and Local Oscillator, you can do so as follows:
 
 1.  Set the active Local Oscillator to 0.
 2.  Set the Rx Frequency to the desired value.
+    ![2020-12-17 16_18_44-DataMiner - Internet Explorer.png](~/connector-help/images/CISCO_D9854_2020-12-17_16_18_44-DataMiner_-_Internet_Explorer.png)
 3.  Set the active Local Oscillator to the desired value.
 
-In case both Local Oscillator 1 and 2 are in use, you need to set both to 0. Note also that the procedure above only applies when you want to change both values while keeping a valid range, e.g. changing RX Frequency from 3 GHz to 7 GHz while also changing the Local Oscillator from 5 GHz to 8 GHz. You can also configure an alternative RF Input to the desired values and then switch the active input over to the new configuration, as depicted below. When you select a different RF Input and the new L-band is out of the mentioned range, an information message will be displayed similar to the one displayed above. However, the value will be set even though the resulting L-band will be invalid. It is then up to you to properly define this.
+In case both Local Oscillator 1 and 2 are in use, you need to set both to 0. Note also that the procedure above only applies when you want to change both values while keeping a valid range, e.g. changing RX Frequency from 3 GHz to 7 GHz while also changing the Local Oscillator from 5 GHz to 8 GHz.
+You can also configure an alternative RF Input to the desired values and then switch the active input over to the new configuration, as depicted below.
+![2020-12-17 16_15_29-DataMiner - Internet Explorer.png](~/connector-help/images/CISCO_D9854_2020-12-17_16_15_29-DataMiner_-_Internet_Explorer.png)
+
+When you select a different RF Input and the new L-band is out of the mentioned range, an information message will be displayed similar to the one displayed above. However, the value will be set even though the resulting L-band will be invalid. It is then up to you to properly define this.

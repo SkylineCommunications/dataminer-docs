@@ -2,7 +2,8 @@
 uid: Connector_help_Bard_MC4000_Series
 ---
 
-Bard MC4000 SeriesThe MC4002 Air conditioner unit is for use with units with or without economizers, can be configured for use with heat pumps, and has a dehumidification control feature if an optional humidity controller is connected. Dehumidification control cannot be used with heat pump.
+Bard MC4000 Series
+The MC4002 Air conditioner unit is for use with units with or without economizers, can be configured for use with heat pumps, and has a dehumidification control feature if an optional humidity controller is connected. Dehumidification control cannot be used with heat pump.
 
 ## About
 

@@ -12,9 +12,9 @@ Flexible I/O options include AES, analog, 3G SDI, MADI, Danter Audio over IP and
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                       | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.Minimum required DataMiner version: 10.1.11.0 - 11105. | \-           | \-                |
+| **Range**            | **Key Features**                                                        | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. Minimum required DataMiner version: 10.1.11.0 - 11105. | \-           | \-                |
 
 ### Product Info
 

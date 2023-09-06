@@ -16,10 +16,10 @@ The driver also allows access to the **Web Interface** of the device.
 
 ### Ranges of the driver
 
-| **Driver Range**    | **Description**                                                | **DCF Integration** | **Cassandra Compliant** |
-|---------------------|----------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x             | Initial Version                                                | No                  | No                      |
-| 1.1.0.x\[SLC Main\] | Based on version 1.0.0.7Support for RF Dual and Baseband Cards | No                  | No                      |
+| **Driver Range**    | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
+|---------------------|-----------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x             | Initial Version                                                 | No                  | No                      |
+| 1.1.0.x\[SLC Main\] | Based on version 1.0.0.7 Support for RF Dual and Baseband Cards | No                  | No                      |
 
 ### Supported firmware versions
 
@@ -211,17 +211,21 @@ Use this page to configure the input related parameters.
   - **ASI Output Port:** If **ASI Output Source Type** is *OutputChannel*, this is the port of the Marv card in the specified slot which will be used as an input stream. This can be set to a different port without hanging source type, slot or channel number. If **ASI Output Source Type** is *ASI*, this is the ASI port which will be used as an input stream. This can be set to a different port without changing source type. If the ASI output source type is *Unset* or *Unavailable*, this cannot be set and will be 0.
   - **ASI Output Channel:** If **ASI Output Source Type** is *OutputChannel*, this is the channel of the specified port for the Marv card in the specified slot which will be used as an input stream. This can be set to a different slot without changing source type, port or channel number. If the **ASI Output Source Type** is *ASI*, *Unset*, or *Unavailable*, this cannot be set and will be 0.
 
+
+
 ### Output
 
 This page provides a table of Identity Information items for a CableVista Output Card within a chassis.
 
 Furthermore, each type of card has a Status, Port and Channel pages.
 
-For the Status pages of the three cards you can find a card status table where the **Temperature** information is available, the **Backup State** value can be set and it's possible to **Reboot** the output card affecting all ports and channels on the respective card and on the RF Dual and RF Quad you also set a correction factor to precisely calibrate the actual power output in units of 0.1 dBmV with the parameter **Block Power Offset**. A table with the card alarm state is also available.Also for the three cards a table of status items for ports/connectors on a baseband output card were you can enable or disable the output and for the RF Dual and RF Quad cards you can set the **Automatic Level Correction**, **Target Power** and **Carrier Wave Mode**. Finally, every card has a Channel page which holds Video and Audio alarms and a table of status items for channels on an output card port.
+For the Status pages of the three cards you can find a card status table where the **Temperature** information is available, the **Backup State** value can be set and it's possible to **Reboot** the output card affecting all ports and channels on the respective card and on the RF Dual and RF Quad you also set a correction factor to precisely calibrate the actual power output in units of 0.1 dBmV with the parameter **Block Power Offset**. A table with the card alarm state is also available.
+Also for the three cards a table of status items for ports/connectors on a baseband output card were you can enable or disable the output and for the RF Dual and RF Quad cards you can set the **Automatic Level Correction**, **Target Power** and **Carrier Wave Mode**.
+Finally, every card has a Channel page which holds Video and Audio alarms and a table of status items for channels on an output card port.
 
 ### Mapping
 
-View and edit the **Input Map Table** thatcontains the mappings of InputStreams to output ports.
+View and edit the **Input Map Table** that contains the mappings of InputStreams to output ports.
 
 You can also add two types of mappings: Program bases and PID based configuring the options in **Add Program-based Mapping** or in **Add PID Based Mapping** respectively. Delete mappings is also available.
 

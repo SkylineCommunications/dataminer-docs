@@ -44,7 +44,7 @@ SNMP Settings:
 The ETL Systems SRY-C1xx protocol contains the following pages:
 
 - **General**: Information related to the chassis (Communication Status, Software, Temperature, etc.).
-- **Chassis**: The different **Voltage**and **Fan Speed** values of the chassis.
+- **Chassis**: The different **Voltage** and **Fan Speed** values of the chassis.
 - **Modules**: Overview of all the modules attached to the chassis with the related information (Voltage, Current, Status, etc.).
 - **Alarm Status**: Alarm information for the different **Fan Speeds***.*
 - **Web Interface**: The web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

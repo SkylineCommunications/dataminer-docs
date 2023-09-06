@@ -58,4 +58,5 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The connector will work immedialty after startup.It's possible to change the settings for the trap table to clean up so that the table can not became to large.
+The connector will work immedialty after startup.
+It's possible to change the settings for the trap table to clean up so that the table can not became to large.

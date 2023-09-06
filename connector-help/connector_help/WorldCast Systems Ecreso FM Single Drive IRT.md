@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The **General** page displays the **Transmitter** status, **RF**, **Local Mode**, **Faute** (Fault Status),and **Warning** status. Use the **Refresh Table** button to trigger the immediate polling of these parameters. You can also define a **Description** for the single table entry.
+The **General** page displays the **Transmitter** status, **RF**, **Local Mode**, **Faute** (Fault Status), and **Warning** status. Use the **Refresh Table** button to trigger the immediate polling of these parameters. You can also define a **Description** for the single table entry.
 
 There is a page button that will display the **Trap** **configuration** for each of the previously mentioned parameters. As these parameters are not polled automatically, use the **Refresh Traps** button to update them.
 

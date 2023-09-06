@@ -88,4 +88,4 @@ This section contains the following pages:
 
 ### Web Interface Page
 
-This page displays theweb interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

@@ -95,15 +95,17 @@ SERIAL CONNECTION:
 
 ### General Page (Main View - v1.1.1.x)
 
-This page displays general information, such as the **Model Number**,**Firmware Versions**, and **Control, Operating and Configuration Mode**
+This page displays general information, such as the **Model Number**, **Firmware Versions**, and **Control, Operating and Configuration Mode**
 
 In all driver ranges **except v1.1.1x**, a page button allows you to set up the communication settings and amplifier addresses:
 
 - **Port Baudrate, Parity, Stop Bits, Data Bits**
 
-- **Amplifier 1 (A) Address, Amplifier 2 (B) Address, Amplifier 3 (C) Address** Note that these addresses must be filled in to enable the controller to poll generic individual HPA settings (see "HPA 1-3 Alarms Pages").
+- **Amplifier 1 (A) Address, Amplifier 2 (B) Address, Amplifier 3 (C) Address**
+  Note that these addresses must be filled in to enable the controller to poll generic individual HPA settings (see "HPA 1-3 Alarms Pages").
 
-  The amplifier addresses range from 64 to 255 where 64 = @, 65 = A, 66 = B, etc. Each character is referred to by the DEC value. For more information, refer to <http://www.asciitable.com/>.
+  The amplifier addresses range from 64 to 255 where 64 = @, 65 = A, 66 = B, etc.
+  Each character is referred to by the DEC value. For more information, refer to <http://www.asciitable.com/>.
 
 In range **v1.1.1.x**, the page also contains the **HPA-A Status**, **HPA-B Status**, **Waveguide Switch Status**, **PSU 1 Status**, **PSU 2 Status** and **Reset Faults button**.
 
@@ -117,7 +119,7 @@ This page displays the general **Status** of all 3 HPAs, the current **Waveguide
 
 ### HPA 1 -3 Alarms Pages (not in v1.1.1.x)
 
-These are 3 pages that each represent the main faults and alarmsfor their respective HPA.
+These are 3 pages that each represent the main faults and alarms for their respective HPA.
 
 Polling for these 3 pages is disabled by default. Polling will only occur if you toggle the **Poll HPA X Alarms** parameter to *Enabled* AND you have provided the amplifier addresses (see "General Page").
 

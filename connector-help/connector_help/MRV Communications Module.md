@@ -10,9 +10,9 @@ This driver is exported by the MRV Communications Chassis driver and represents 
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                       |
-|-----------|--------------------------------------------------------------|
-| 1.0.0.x   | 2081383-001R2081546-004R2081343-005R2081152-012R2081313-012R |
+| **Range** | **Supported Firmware**                                           |
+|-----------|------------------------------------------------------------------|
+| 1.0.0.x   | 2081383-001R 2081546-004R 2081343-005R 2081152-012R 2081313-012R |
 
 ### System Info
 

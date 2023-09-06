@@ -17,7 +17,7 @@ Depending on the range of this driver, incoming data might be **filtered** and *
 | 1.0.0.x              | Initial version.                                                                                                                            | \-           | \-                                                                                  |
 | 1.1.0.x              | Some of the logic has been moved to a separate **Generic sFlow Agent** driver.                                                              | 1.0.0.1      | An additional Generic sFlow Agent element will need to be created.                  |
 | 2.0.0.x \[SLC Main\] | \- New branch supporting a different way of handling sFlow packets. - This branch works together with the **Generic sFlow Manager** driver. | \-           | \-                                                                                  |
-| 3.0.0.x              | \- Offloads aggregated sFlow data to the **Elasticsearch** database.- This branch does not support the latest Elasticsearch changes yet.    | 2.0.0.x      | DataMiner Indexing needs to be installed on the DataMiner Agent to use this branch. |
+| 3.0.0.x              | \- Offloads aggregated sFlow data to the **Elasticsearch** database. - This branch does not support the latest Elasticsearch changes yet.   | 2.0.0.x      | DataMiner Indexing needs to be installed on the DataMiner Agent to use this branch. |
 
 ### Product Info
 

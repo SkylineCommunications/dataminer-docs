@@ -130,7 +130,7 @@ The tables containing the polled data are added on separate pages. The following
 
 ### Alarms
 
-On this page, an **Alarm Table** is displayed with general and detailed information, e.g.**Description**, **State**, **Threshold Value**, etc.
+On this page, an **Alarm Table** is displayed with general and detailed information, e.g. **Description**, **State**, **Threshold Value**, etc.
 
 To refresh the table, click the **Refresh** button. This will clear the table and query all the alarms again.
 

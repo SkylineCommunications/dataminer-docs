@@ -58,7 +58,7 @@ The **General** page displays a table containing all network elements managed by
 
 On the **Network Elements DVEs** subpage, you can **enable or disable a DVE** for each network element in the Network Elements DVEs Management table.
 
-On the **Racks**, **Cards**, **Frames**, **Slots**, **Ports**,and **ONUs** pages, you can find tables with information related to these subjects.
+On the **Racks**, **Cards**, **Frames**, **Slots**, **Ports**, and **ONUs** pages, you can find tables with information related to these subjects.
 
 The **Alarms** page shows a table listing all alarms. You can configure if cleared alarms should be displayed in this table or not. There are also two subpages:
 

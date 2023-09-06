@@ -64,8 +64,8 @@ This page displays information about the decoder, including the decoder status, 
 
 There are also page buttons that lead to the following subpages:
 
-- **Outputs:**Contains information about decoder video/audio output, such as Initial Output Format, Concealment Time, etc.
-- **DVB-ASI:** Displays DVB-ASI information, such asInput TS Packets, Received TS Packets, Video Decode Errors, etc.
+- **Outputs:** Contains information about decoder video/audio output, such as Initial Output Format, Concealment Time, etc.
+- **DVB-ASI:** Displays DVB-ASI information, such as Input TS Packets, Received TS Packets, Video Decode Errors, etc.
 - **Port Settings:** Displays information regarding decoder ports, such as Stream Local Port, Unicast Request Local Port, etc.
 - **IP Settings:** Allows you to configure IP settings, such as Streaming Mode, Unicast ID, etc.
 - **Audio:** Displays a table with specific audio information, such as codecs, rate, etc.

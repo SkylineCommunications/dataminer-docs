@@ -55,7 +55,7 @@ This page is similar to the **audio delay** page in the control software, but pa
 
 ### Embedder Router
 
-Thispage has the same functionality as the **embedder router** page in the control software. The **input** can be selected for each output. When the inputs have been changed, press the **Take** button in order for the changes to be saved. There are also two page buttons to either **mute the outputs** or to see which **outputs** **are** **present**.
+This page has the same functionality as the **embedder router** page in the control software. The **input** can be selected for each output. When the inputs have been changed, press the **Take** button in order for the changes to be saved. There are also two page buttons to either **mute the outputs** or to see which **outputs** **are** **present**.
 
 ### AES Router
 

@@ -118,7 +118,7 @@ This page displays the **Disk Attachments Table**.
 
 ### Disks
 
-This page displays tables with disk information for **Drives**, **Paths**, and **Partitions**. A pop-up page displays additional information, such as the **Number of Disks, Disk Kbytes per Sec, Disk Array ID**,etc.
+This page displays tables with disk information for **Drives**, **Paths**, and **Partitions**. A pop-up page displays additional information, such as the **Number of Disks, Disk Kbytes per Sec, Disk Array ID**, etc.
 
 ### Environmental Status Page
 

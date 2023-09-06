@@ -48,4 +48,17 @@ The DLL **ProcessAutomation.dll** must be available in the system.
 
 In order to update the Assets table available in the system, the message used by this element needs to be like this:
 
-namespace ContentInfo{ public class Content { public string Id { get; set; } public string Name { get; set; } public string AssetId { get; set; } public string Genre { get; set; } public string Provider { get; set; } public DateTime StartTime { get; set; } public DateTime EndTime { get; set; } public string Poster { get; set; } }}
+namespace ContentInfo
+{
+public class Content
+{
+public string Id { get; set; }
+public string Name { get; set; }
+public string AssetId { get; set; }
+public string Genre { get; set; }
+public string Provider { get; set; }
+public DateTime StartTime { get; set; }
+public DateTime EndTime { get; set; }
+public string Poster { get; set; }
+}
+}

@@ -10,7 +10,8 @@ This is a virtual protocol that will maintain the reservations and resource book
 
 ## About
 
-The Globo MCR Manager driver is used in conjunction with a Visio file, which is the Visual Overview layer of the corresponding element.Commands are sent between the Visio file and the manager element in order to execute actions.
+The Globo MCR Manager driver is used in conjunction with a Visio file, which is the Visual Overview layer of the corresponding element.
+Commands are sent between the Visio file and the manager element in order to execute actions.
 
 ### Ranges of the driver
 
@@ -40,7 +41,8 @@ On this page, there are two tables with all the event information, and a **Users
 
 ### Configuration
 
-On this page, you can configure default parameters such as **Pre-Roll Duration**, **Post-Roll Duration**, **On Air Default Duration**, **On Air Default Start Delay**, and **Extension Time**. These configuration parameters are taken into account when an new event is created.This information will then be stored in the Events table.
+On this page, you can configure default parameters such as **Pre-Roll Duration**, **Post-Roll Duration**, **On Air Default Duration**, **On Air Default Start Delay**, and **Extension Time**. These configuration parameters are taken into account when an new event is created.
+This information will then be stored in the Events table.
 
 The configuration parameter **Disconnect Time** is used to determine after how many minutes of inactivity a user should be disconnected. If a user is disconnected, they are removed from the Users table. The Visual Overview UI will not longer display the selected actions and connections for that user. This prevents endlessly growing tables.
 

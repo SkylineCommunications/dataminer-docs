@@ -78,7 +78,8 @@ This page displays the default WCF help page that describes the available method
 
 ## Notes
 
-Specific information about every request or response is displayed on the API Help page of the driver.To create or update a task, specific guidelines for the request body must be followed. Below, you can find these guidelines, as well as two examples (in JSON and XML).
+Specific information about every request or response is displayed on the API Help page of the driver.
+To create or update a task, specific guidelines for the request body must be followed. Below, you can find these guidelines, as well as two examples (in JSON and XML).
 
 ### Guidelines
 
@@ -121,8 +122,59 @@ Specific information about every request or response is displayed on the API Hel
 
 ### Example of /createScheduledTask Request Body in JSON
 
-{"Task":{"Name":"Example1","Description":"Sts","StartDate":"2020-05-07","StartTime":"10:00:00","RepeatType":"Monthly","RepeatInterval":"1,2,102,107","RepeatIntervalInMin":"50","Enabled":"True","DmaId":"512","Script":{"Name":"ExampleScriptName1", "Dummies":\[{"ID":"1","ElementName":"Example Element Name"}\],"Params":\[{"ID":"1","Value":"param1_value"}\] }}}
+{
+"Task":{
+"Name":"Example1",
+"Description":"Sts",
+"StartDate":"2020-05-07",
+"StartTime":"10:00:00",
+"RepeatType":"Monthly",
+"RepeatInterval":"1,2,102,107",
+"RepeatIntervalInMin":"50",
+"Enabled":"True",
+"DmaId":"512",
+"Script":{
+"Name":"ExampleScriptName1",
+"Dummies":\[{
+"ID":"1",
+"ElementName":"Example Element Name"
+}\],
+"Params":\[{
+"ID":"1",
+"Value":"param1_value"
+}\]
+}
+}
+}
 
 ### Example of /createScheduledTask Request Body in XML
 
-\<CreateTaskRequest\> \<Task\> \<Name\>Example2\</Name\> \<StartDate\>2020-05-08\</StartDate\> \<StartTime\>10:00:00\</StartTime\> \<Enabled\>True\</Enabled\> \<RepeatType\>Weekly\</RepeatType\> \<RepeatInterval\>1,2,3\</RepeatInterval\> \<Script\> \<Name\>ExampleScriptName2\</Name\> \<Dummies\> \<Dummy\> \<ID\>1\</ID\> \<ElementName\>Example Element Name\</ElementName\> \</Dummy\> \</Dummies\> \<Params\> \<Param\> \<ID\>2\</ID\> \<Value\>param2_value\</Value\> \</Param\> \<Param\> \<ID\>3\</ID\> \<Value\>param3_value\</Value\> \</Param\> \</Params\> \</Script\> \</Task\>\</CreateTaskRequest\>
+\<CreateTaskRequest\>
+\<Task\>
+\<Name\>Example2\</Name\>
+\<StartDate\>2020-05-08\</StartDate\>
+\<StartTime\>10:00:00\</StartTime\>
+\<Enabled\>True\</Enabled\>
+\<RepeatType\>Weekly\</RepeatType\>
+\<RepeatInterval\>1,2,3\</RepeatInterval\>
+\<Script\>
+\<Name\>ExampleScriptName2\</Name\>
+\<Dummies\>
+\<Dummy\>
+\<ID\>1\</ID\>
+\<ElementName\>Example Element Name\</ElementName\>
+\</Dummy\>
+\</Dummies\>
+\<Params\>
+\<Param\>
+\<ID\>2\</ID\>
+\<Value\>param2_value\</Value\>
+\</Param\>
+\<Param\>
+\<ID\>3\</ID\>
+\<Value\>param3_value\</Value\>
+\</Param\>
+\</Params\>
+\</Script\>
+\</Task\>
+\</CreateTaskRequest\>

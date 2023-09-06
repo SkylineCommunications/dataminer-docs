@@ -10,9 +10,9 @@ This driver will allow the monitoring and configuration of the AirCo through SNM
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -61,3 +61,5 @@ The web interface is only accessible when the client machine has network access 
 On the **General** page you can find an overview of all the KPI's of the Airco such as the current temperatures as well as the possibility to configure them.
 
 An overview of the alarms can be found on the **Alarm** page.
+
+

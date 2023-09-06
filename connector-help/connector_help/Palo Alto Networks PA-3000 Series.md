@@ -44,7 +44,7 @@ SNMP Settings:
 - **Security level**: The SNMPv3 security level, e.g. *authPriv*.
 - **Authentication type**: The SNMPv3 authentication type, e.g. *HMAC-SHA*.
 - **Authentication password**: The SNMPv3 authentication password.
-- **Privacy type**: The SNMPv3 privacy type,e.g. *AES-128*.
+- **Privacy type**: The SNMPv3 privacy type, e.g. *AES-128*.
 - **Privacy password**: The SNMPv3 privacy password.
 
 ## Usage

@@ -40,7 +40,7 @@ Azimuth and Elevation:
 
 - **Slow Coefficient:** The distance that the antenna coasts after turning off the slow motor.
 - **Fast Coefficient:** Allows the antenna to slow down before the slow coefficient is required.
-- **Calibration Factor**:This factor is added to un-calibrate resolver units.
+- **Calibration Factor**: This factor is added to un-calibrate resolver units.
 - **High Speed Time Out Value**: The time before the power is turned off when running too fast.
 - **Low Speed Time Out Value**: The time before the power is turned off when running too slow.
 - **Low Limit**: The low limit of the azimuth or elevation can be set by degrees or units.

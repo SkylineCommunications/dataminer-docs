@@ -41,7 +41,8 @@ To configure the demodulator elements:
 
 2.  Click the **Refresh** button to find all the demodulator elements in the DMS.
 
-3.  Select an element in the **Add Element** parameter. This will add a new row to the **Element Table**. A DVE will also be created.
+3.  Select an element in the **Add Element** parameter.
+    This will add a new row to the **Element Table**. A DVE will also be created.
 
 4.  In this table, the following parameters should be configured:
 

@@ -20,7 +20,7 @@ The Axon ACP HLD120 driver is used to monitor and configure **HLD120** cards.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 151519202019           |
+| 1.0.0.x   | 1515 1920 2019         |
 
 ### System Info
 

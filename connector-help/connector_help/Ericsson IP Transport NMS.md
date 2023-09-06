@@ -8,7 +8,7 @@ The Ericsson IP Transport NMS/Ericsson ServiceOn Element Management System (SO-E
 
 ## About
 
-The driver polls information from the **Ericsson SO-EM**(EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The driver handles parameters such as network element information, alarm event details, and all system reference catalogs.
+The driver polls information from the **Ericsson SO-EM** (EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The driver handles parameters such as network element information, alarm event details, and all system reference catalogs.
 
 ### Ranges of the driver
 
@@ -57,7 +57,7 @@ This page displays the main parameters related to the creation and deletion of D
 - **Device Action** buttons: **Enable All** will execute the creation of all DVEs that are currently in the state "*Disabled*". These elements will be created under the view specified under **View Name** in the Device Table, or in the parent element view if no view name is specified. **Disable All** will execute the deletion of all elements that are currently in the state "*Enabled*" in the Device table.
 - **Automatic Removal**: If "*Enabled*", all Network Elements that become unavailable will automatically be removed from the system. When this happens, all information related to the corresponding DVEs will be also deleted. If "*Disabled*", when a Network Element becomes unavailable, the records of this element and associated DVEs will not be deleted, and a manual option for removal will become available in the column "Remove".
 - **Delete All Removed Devices**: As mentioned above, when Automatic Removal is "*Disabled*", no elements will be deleted from the Device Table regardless of their presence in the network. When Delete All Removed Devices is executed, elements with content "*Not Available*" will be deleted, together with all data for their DVEs.
-- **Device Table**: This table contains information related to the management of DVEs for the different Network Elements. This table includes the parameters **Network Element ID (NE ID)** and **Name**. The table allows the dynamic editing of some DVE features. If you edit **Custom DVE Name**,the corresponding exported DVE will be updated to the new name. If you edit **View Name**, DVE creation will happen in the specified view. If no view is specified, the DVE will be created in the parent element view.
+- **Device Table**: This table contains information related to the management of DVEs for the different Network Elements. This table includes the parameters **Network Element ID (NE ID)** and **Name**. The table allows the dynamic editing of some DVE features. If you edit **Custom DVE Name**, the corresponding exported DVE will be updated to the new name. If you edit **View Name**, DVE creation will happen in the specified view. If no view is specified, the DVE will be created in the parent element view.
 
 ### Network Elements
 
@@ -84,13 +84,13 @@ The main feature of this page is the **Core Table**, which displays information 
 
 This page contains information about the service ID, if defined, for a given Network Element.
 
-The **Service ID Table** displays information that is obtained via CSV provisioning (see Provisioning section for details). This includes the **Network Element Unique Name (NE Unique Name)**, **Alarm Source**, **Alarm Field 1**and **Service ID**. The service ID provided here is used in the description shown in the Alarm Table, and therefore also in the DVE that is created for each Network Element.
+The **Service ID Table** displays information that is obtained via CSV provisioning (see Provisioning section for details). This includes the **Network Element Unique Name (NE Unique Name)**, **Alarm Source**, **Alarm Field 1** and **Service ID**. The service ID provided here is used in the description shown in the Alarm Table, and therefore also in the DVE that is created for each Network Element.
 
 ### Element Properties
 
 This page displays predefined information about the currently managed Network Elements.
 
-Much of the information displayed in the **Element Properties Table** is obtained via CSV provisioning (see Provisioning section for details). This table includes the **Network Element Name**, **Site Name**and **Property 1 to 10 for each element**. In DataMiner, a set of custom properties can be configured and defined by the user for any DataMiner element. These properties can be specified in this table, so that they will be filled in automatically when a DVE is created. Also, if a Site Name (View) has been specified, the DVE will be placed in this view. Otherwise, by default, DVEs are created in the parent element's view.
+Much of the information displayed in the **Element Properties Table** is obtained via CSV provisioning (see Provisioning section for details). This table includes the **Network Element Name**, **Site Name** and **Property 1 to 10 for each element**. In DataMiner, a set of custom properties can be configured and defined by the user for any DataMiner element. These properties can be specified in this table, so that they will be filled in automatically when a DVE is created. Also, if a Site Name (View) has been specified, the DVE will be placed in this view. Otherwise, by default, DVEs are created in the parent element's view.
 
 ### Provisioning
 
@@ -121,7 +121,8 @@ This page displays reference information on the different Network Element (NE) t
 This page contains reference information on the different cards that can be encountered.
 
 - **Poll Catalog Card Table** button: Performs the polling of the Catalog Card Table when clicked.
-- **Catalog Card Table**: Contains information about the different cards, including the **Card ID**, **Card Type** and **NE Type**. **Note**: Because of the size of this table, it can take several minutes before the driver has polled all data from the NMS. Therefore, SNMP polling can only be triggered manually, using the Poll Catalog Card Table button, and it is entirely your choice when it is most convenient for the information in this table to be updated.
+- **Catalog Card Table**: Contains information about the different cards, including the **Card ID**, **Card Type** and **NE Type**.
+  **Note**: Because of the size of this table, it can take several minutes before the driver has polled all data from the NMS. Therefore, SNMP polling can only be triggered manually, using the Poll Catalog Card Table button, and it is entirely your choice when it is most convenient for the information in this table to be updated.
 
 ### Catalog Source
 
@@ -142,7 +143,8 @@ This page contains reference information on the different shelves that can be en
 This page contains reference information on the different alarm events that can be triggered by the system.
 
 - **Poll Catalog Alarm Table** button: Performs the polling of the Catalog Shelf Table when clicked.
-- **Catalog Alarm Table**: Alarm Type, NE Basic Type, and Alarm Description are some of the parameters that can be found in this table. **Note**: As this is a very large table, containing details about every type of alarm that could possibly be triggered within the system, it can take the driver a long time to poll all the information to fully populate this table (up to 30 minutes). As such, SNMP polling is only done when the **Poll Catalog Alarm Table** button is clicked, and it is entirely your choice when it is most convenient for the information in this table to be updated.
+- **Catalog Alarm Table**: Alarm Type, NE Basic Type, and Alarm Description are some of the parameters that can be found in this table.
+  **Note**: As this is a very large table, containing details about every type of alarm that could possibly be triggered within the system, it can take the driver a long time to poll all the information to fully populate this table (up to 30 minutes). As such, SNMP polling is only done when the **Poll Catalog Alarm Table** button is clicked, and it is entirely your choice when it is most convenient for the information in this table to be updated.
 
 ### Catalog Signal
 
@@ -177,14 +179,16 @@ This page displays information on the different probable causes that could be in
 This page contains information about the different filters that can be applied to the retrieval of information about Network Elements.
 
 - **Poll NE Filter Table** button: Performs the polling of the NE Filter Table when clicked.
-- **NE Filter Table**: Includes the **Basic Type** and **Row Status**.**Note**: If this table is empty, all Network Elements are listed in the Network Elements Table, and so all Network Element notifications are sent to the NMS. If this table is not empty, the Network Element Table contains only the Network Element basic types listed in this table, and so only Network Element traps related to these NEs are sent to the NMS.
+- **NE Filter Table**: Includes the **Basic Type** and **Row Status**.**
+  Note**: If this table is empty, all Network Elements are listed in the Network Elements Table, and so all Network Element notifications are sent to the NMS. If this table is not empty, the Network Element Table contains only the Network Element basic types listed in this table, and so only Network Element traps related to these NEs are sent to the NMS.
 
 ### Alarm Filter
 
 This page contains information about the different alarm filters that could be applied to the system.
 
 - **Poll Alarm Filter Table** button: Performs the polling of the Alarm Filter Table when clicked.
-- **Alarm Filter Table**: Includes the **Element Manager ID**, **Network Element ID** and **Network Element Basic Type**. **Note**: if this table is empty, the manager is notified of all alarms related to the Network Elements listed in the Network Elements Table, and these are all listed in the alarm tables. If this table is not empty, the manager is only notified of the alarms related to the Network Elements listed in the Network Elements Table that match the conditions of a filter, and only those alarms are listed in the alarm tables.
+- **Alarm Filter Table**: Includes the **Element Manager ID**, **Network Element ID** and **Network Element Basic Type**.
+  **Note**: if this table is empty, the manager is notified of all alarms related to the Network Elements listed in the Network Elements Table, and these are all listed in the alarm tables. If this table is not empty, the manager is only notified of the alarms related to the Network Elements listed in the Network Elements Table that match the conditions of a filter, and only those alarms are listed in the alarm tables.
 
 ### System DVE
 

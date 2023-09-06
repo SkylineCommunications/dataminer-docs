@@ -72,6 +72,6 @@ This page displays the **Model Number.**
 
 This page displays the **Local/Remote** **Mode**, **Switch** **Summary** and **Power Supply Summary**, and finally also the **Switch 1, Switch 2, Switch 3, and Switch 4 settings.**
 
-The **Switch 1, Switch 2, Switch 3 and Switch 4**can be configured by clicking the **Togglebutton** under each position.
+The **Switch 1, Switch 2, Switch 3 and Switch 4** can be configured by clicking the **Togglebutton** under each position.
 
 There are two possible positions for each switch: **Position 1 and Position 2.**

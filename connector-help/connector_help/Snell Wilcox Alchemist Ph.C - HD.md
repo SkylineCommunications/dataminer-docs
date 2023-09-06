@@ -60,7 +60,7 @@ The element consists of the data pages detailed below.
 
 Contains input and output configuration parameters, as well as Noise Reduction, Audio AES and Embedded Input Status, Ph.C and Loss Mode.
 
-Page buttons provide access the **Input,** **Output A Standard**,and **Memory** subpages.
+Page buttons provide access the **Input,** **Output A Standard**, and **Memory** subpages.
 
 ### General Page
 
@@ -134,7 +134,7 @@ Contains parameters related to time code and synchronization. You can among othe
 
 ### Alarm Page
 
-Displays the status of the input and outputparameters.
+Displays the status of the input and output parameters.
 
 ## DataMiner Connectivity Framework
 
@@ -149,9 +149,9 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 Physical fixed interfaces:
 
 - **SDI A Input**: Physical SDI interface with type **in**.
-- **SDI B Input**:Physical SDI interface with type **in.**
+- **SDI B Input**: Physical SDI interface with type **in.**
 - **A Output**: Physical SDI interface with type **out**.
-- **B Output**:Physical SDI interface with type **out**.
+- **B Output**: Physical SDI interface with type **out**.
 
 ## Notes
 

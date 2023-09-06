@@ -77,7 +77,8 @@ This page displays general information about the device, such as the **Software 
 
 This page displays the **Preset Table** and **Channel Action** parameters.
 
-From version 3.0.2.2 onwards, there is an **Export/Import** page button. This allows you to export the active configuration of the device in XML format or to import it from a specified location.If the export file path field does not end with the *.xml* extension, the driver assumes that only the directory is specified, and the exported file is named as *configuration_active\_\<date\>\_\<time\>*. Otherwise, the exported file path is exactly the one specified in the field.
+From version 3.0.2.2 onwards, there is an **Export/Import** page button. This allows you to export the active configuration of the device in XML format or to import it from a specified location.
+If the export file path field does not end with the *.xml* extension, the driver assumes that only the directory is specified, and the exported file is named as *configuration_active\_\<date\>\_\<time\>*. Otherwise, the exported file path is exactly the one specified in the field.
 
 ### RF Input Page
 
@@ -101,7 +102,8 @@ It also contains a **buffer mechanism** for services that need to be set. This m
 
 There is a **Program Stream Table** page button that displays all the input program streams configured in the device. This button opens the page **Stream Status**. The table that displays the streams is a static table, and can take a long time to be polled.
 
-From **version** **3.0.0.22** **onwards**, you can adjust the amount of stream data polled from the device using the sliders **Programs in Table** and **Streams in Table**. This adjustment polls data from the device using the **subtable** option. If too much data is being polled from the device, this can cause RTEs, or a very long delay updating the remaining parameters that need to be polled from the device. Note: If you want to view all programs and streams, do not use the "all" option. Instead, manually enter the total number of programs/streams.
+From **version** **3.0.0.22** **onwards**, you can adjust the amount of stream data polled from the device using the sliders **Programs in Table** and **Streams in Table**. This adjustment polls data from the device using the **subtable** option. If too much data is being polled from the device, this can cause RTEs, or a very long delay updating the remaining parameters that need to be polled from the device.
+Note: If you want to view all programs and streams, do not use the "all" option. Instead, manually enter the total number of programs/streams.
 
 ### Audio/Video Page
 
@@ -205,7 +207,7 @@ Physical fixed interfaces:
 #### Internal Connections
 
 - Between **ASI Input 1** and **all outputs**
-- Between**ASI Input 2** and **all outputs**
+- Between **ASI Input 2** and **all outputs**
 - Between **VPSC Clock** and **ASI Output 2**
 - Between **RF Input 1** and **all outputs**
 - Between **RF Input 2** and **all outputs**

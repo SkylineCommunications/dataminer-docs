@@ -22,7 +22,7 @@ The connector retrieves and sets information on the device through HTTP and SNMP
 | 1.3.0.x              | Supports firmware 5.50 and possibility to switch between SS (Single-Stream) and MS (Multi-Stream) functionality depending on the device. | No                  | Yes                     |
 | 1.3.1.x \[Obsolete\] | Supports firmware 6.80.                                                                                                                  | No                  | Yes                     |
 | 1.4.0.x \[Obsolete\] | Supports firmware 6.52.                                                                                                                  | No                  | Yes                     |
-| 1.5.0.x \[SLC Main\] | Supports firmware 7.0.SNMP connection removed.                                                                                           | No                  | Yes                     |
+| 1.5.0.x \[SLC Main\] | Supports firmware 7.0. SNMP connection removed.                                                                                          | No                  | Yes                     |
 
 ### Product Info
 
@@ -74,7 +74,8 @@ This page displays information on the satellite-communicating antennas of the de
 
 This page contains all the information on the inputs managed by the device:
 
-- **RF Inputs**: Includes Port, Downlink Frequency, Symbol Rate, FEC, Modulation, Roll Off, I/1, AFC Limit, 22KHz, Power, LO1, LO2, Crossover, Polarization, Orbital Position, East/West Flag, and SAT Input Lock. The page also displays **RF Settings** such as Active Input, Downlink Frequency, Symbol Rate, FEC, Modulation, Roll Off, I/1, AFC Limit, 22KHz, Power, LO1, LO2, Crossover, Polarization, Orbital Polarization, East/West Flag, and SAT Input Lock for the 4 ports of the device.
+- **RF Inputs**: Includes Port, Downlink Frequency, Symbol Rate, FEC, Modulation, Roll Off, I/1, AFC Limit, 22KHz, Power, LO1, LO2, Crossover, Polarization, Orbital Position, East/West Flag, and SAT Input Lock.
+  The page also displays **RF Settings** such as Active Input, Downlink Frequency, Symbol Rate, FEC, Modulation, Roll Off, I/1, AFC Limit, 22KHz, Power, LO1, LO2, Crossover, Polarization, Orbital Polarization, East/West Flag, and SAT Input Lock for the 4 ports of the device.
 - **ASI Inputs**: Includes Port, Active Input, Lock, Input Rate, Scramble Mode, Packet Size, and Link.
 - **IP Inputs**: Includes MOIP Port, Interface, MOIP Active Input, Source IP Selection Mode, Enable Multicast, Multicast Address, FEC Mode, TS Destination Port, FEC Columns Port, FEC Rows Port, Source Filtering, De-Jitter Configuration Algorithm, De-Jitter Configuration Latency, Data Source 1, Data Source 2, Data 1 Transport Type, Data 2 Transport Type, and the Source Filter List Configuration.
 

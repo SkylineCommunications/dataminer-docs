@@ -95,8 +95,8 @@ The page contains the following page buttons:
 
 In version 2.0.0.x the following additional page buttons are available:
 
-- **Receiver Status**:Displays the **Receiver Frequency**, **Receiver Attenuation**, **RF Input Source** and **Control**.
-- **Set Cycle Time**:Allows you to configure the cycle time using **Cycle Hour**, **Cycle Minute** and **Cycle Second** parameters. Use the **Set** button to apply the configuration.
+- **Receiver Status**: Displays the **Receiver Frequency**, **Receiver Attenuation**, **RF Input Source** and **Control**.
+- **Set Cycle Time**: Allows you to configure the cycle time using **Cycle Hour**, **Cycle Minute** and **Cycle Second** parameters. Use the **Set** button to apply the configuration.
 - **Satellite**: Displays the **Satellite Table**, where you can create a new target and configure its Tracking Mode and Look Angles. You can also delete targets with the **Clear Target** button in each row.
 
 ### Settings
@@ -123,8 +123,11 @@ For the 1.1.0.x branch, CRC is required. However, for the 1.2.0.x branch, CRC is
 
 The device contains two ports from which set commands can be done: the front panel and remote. A remote (e.g. DataMiner element) cannot execute any successful set commands while the remote security level is set to "Monitor". You first need to update the Security Level to Operator or Supervisor to make the appropriate sets (this set action can be done remotely).
 
-- Note: Only one of the ports can have the Supervisor state at a time. This means that if the front panel is configured as Supervisor, the remote connection will not be able to take on the role of Supervisor and make the necessary sets.For security reasons, the remote will not be able to change the Security Level of the front panel.
+- Note: Only one of the ports can have the Supervisor state at a time. This means that if the front panel is configured as Supervisor, the remote connection will not be able to take on the role of Supervisor and make the necessary sets.
+  For security reasons, the remote will not be able to change the Security Level of the front panel.
 
 #### Passwords
 
-On the device, there is a setting to disable passwords. The device documentation details the following information: "*Passwords are a one to nine digit number. Setting a password to 0 disables protection for that security level. To completely disable passwords, set both Operator and Supervisor passwords to 0.*"In case passwords are disabled, in the driver, the password should be set to "0" instead of "" (empty string). Otherwise, the driver would still try to calculate CRC on the password, but it would not find any value and take the following byte, resulting in a bad CRC. This would result in not being able to change the security level from "Monitor" to "Operator" or "Supervisor".Version range 1.1.0.x, version 1.1.0.22 and up will have the functionality to work with this implemented.
+On the device, there is a setting to disable passwords. The device documentation details the following information: "*Passwords are a one to nine digit number. Setting a password to 0 disables protection for that security level. To completely disable passwords, set both Operator and Supervisor passwords to 0.*"
+In case passwords are disabled, in the driver, the password should be set to "0" instead of "" (empty string). Otherwise, the driver would still try to calculate CRC on the password, but it would not find any value and take the following byte, resulting in a bad CRC. This would result in not being able to change the security level from "Monitor" to "Operator" or "Supervisor".
+Version range 1.1.0.x, version 1.1.0.22 and up will have the functionality to work with this implemented.

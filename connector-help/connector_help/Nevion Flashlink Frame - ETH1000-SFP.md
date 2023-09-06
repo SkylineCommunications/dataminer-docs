@@ -32,7 +32,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about an ETH1000-SFP module, including:
+This page contains general information about an ETH1000-SFP module, including:
 
 - Type
 - Card Status

@@ -6,7 +6,7 @@ uid: Connector_help_Generic_JMS_Consumer
 
 WebLogic Java Message Service (JMS) is an enterprise-level messaging system. It allows applications to create, send, receive, and read messages. The JMS API defines a common set of interfaces and associated semantics that allow programs written in the Java programming language to communicate with other messaging implementations.
 
-The **Generic JMS Consumer** is the WebLogic JMS .NET client application that subscribes to the JMS API and reads messages (asynchronously) from the queue. The **Generic JMS** **Producer** will publish (i.e. write) events/messages to the JMS AP. The producer and consumerfunction fully independently.
+The **Generic JMS Consumer** is the WebLogic JMS .NET client application that subscribes to the JMS API and reads messages (asynchronously) from the queue. The **Generic JMS** **Producer** will publish (i.e. write) events/messages to the JMS AP. The producer and consumer function fully independently.
 
 ## About
 

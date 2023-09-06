@@ -27,3 +27,5 @@ There are **five buttons** which once pressed, **starts the measurement** on the
 ### Currents
 
 This page shows the **status** of the **Amplifers**, **Spare Amplifiers**, **Ground Fault Measurements**, **Line Currents** and **Routing Relays** for the **Blocks from A to D**.
+
+

@@ -114,7 +114,7 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 - Between **REF Input 2** and **SDI Output 1.**
   - Between **REF Input 2** and **SDI Output 2.**
 
-Depending on the state of the**Input Selection A,** the following connections are established:
+Depending on the state of the **Input Selection A,** the following connections are established:
 
 - **SDI-1**:
 

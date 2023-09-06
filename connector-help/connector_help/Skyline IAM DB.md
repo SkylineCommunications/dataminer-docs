@@ -61,7 +61,7 @@ To decrease the fetch time of the queries, you can increase the innodb_buffer_po
 
 The provisioning of the DataMiner system is done on a scheduled basis. You can also trigger it manually by checking the DM IAM DB element system (**Check DSL files button**) for available updates. The current status of the DM IAM DB element is displayed by the **DM IAM DB Status** (*Available*, *Busy*, *Error* or *Normal*) parameter. You can also find information related to the data status (*Normal* or *Invalid*) here, as well parameters related to the last sync, such as **Time Start**, **Time** **Finished** and **Time** **Duration**.
 
-Finally, two extra parameters are displayed: **Total Number of DSL Files**,displaying the number of DSL files present in the *C:\Skyline_data\IAM\To Be Processed* folder, and **Current List of DSL Files**,displaying a list of the DSL files in the *To Be Processed* folder.
+Finally, two extra parameters are displayed: **Total Number of DSL Files**, displaying the number of DSL files present in the *C:\Skyline_data\IAM\To Be Processed* folder, and **Current List of DSL Files**, displaying a list of the DSL files in the *To Be Processed* folder.
 
 ### IAM DB Information Page
 
@@ -88,19 +88,25 @@ The **Log Table** records all the changes to the DMS provisioning data, data val
 
 For the following **common issues**, you can find the **probable cause in the Log Table:**
 
-- DMA accessIf the connection to a specific DMA failed, an exception is thrown, e.g. "*\|Unable to retrieved data from the following DMA: ...* ".In addition, the following message is logged: "*The connection has failed ... Last Error: ... Please recheck all network fields.*".
+- DMA access
+  If the connection to a specific DMA failed, an exception is thrown, e.g. "*\|Unable to retrieved data from the following DMA: ...* ".
+  In addition, the following message is logged: "*The connection has failed ... Last Error: ... Please recheck all network fields.*".
 
 <!-- -->
 
-- Naming convention of DSL fileThe following DSL file format must be respected, as otherwise the file is not processed and it is moved to the *Faulty Files* folder:*StoredProcedureName_DataMinerID_ElementID_DAY_MONTH_YEAR_HOUR_MINUTES_SECONDS.CSV*
+- Naming convention of DSL file
+  The following DSL file format must be respected, as otherwise the file is not processed and it is moved to the *Faulty Files* folder:
+  *StoredProcedureName_DataMinerID_ElementID_DAY_MONTH_YEAR_HOUR_MINUTES_SECONDS.CSV*
 
 <!-- -->
 
-- DSL ProcessingIf the DSL file contains no data or the EOF marker is not present in the file, an exception is thrown, the file is not processed and it is moved to the *Faulty Files* folder.
+- DSL Processing
+  If the DSL file contains no data or the EOF marker is not present in the file, an exception is thrown, the file is not processed and it is moved to the *Faulty Files* folder.
 
 <!-- -->
 
-- StoredProcedureWhen inserting data into the DB, the input parameters of storedProcedure must be respected, as otherwise an exception is thrown and the processing of the file is stopped. E.g. "*Incorrect number of arguments for PROCEDURE iam.IngestAMPData; expected 8, got 9*". The DSL file is then also moved to the *Faulty Files* folder.
+- StoredProcedure
+  When inserting data into the DB, the input parameters of storedProcedure must be respected, as otherwise an exception is thrown and the processing of the file is stopped. E.g. "*Incorrect number of arguments for PROCEDURE iam.IngestAMPData; expected 8, got 9*". The DSL file is then also moved to the *Faulty Files* folder.
 
 This information will be updated and logged each polling cycle.
 

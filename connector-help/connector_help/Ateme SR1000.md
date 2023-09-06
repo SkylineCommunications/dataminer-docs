@@ -61,11 +61,12 @@ channel 1 will be configured with the following information:
 - **Fallback Bitrate:** *300000bps*
 - **Quality:** *50%*
 
-**New Configuration Status** informs you about the success or failing of the operation.
+**New Configuration Status** informs you about the success or failing of the operation.**
+**
 
 ### Network
 
-This page contains two tables that display information about the **Ethernet** (**DHCP**, **Address**, **Netmask**, **MTU**, **VLAN**, ...)and **Route** configuration (**Type, VLAN ID, Address, Netmask, Gateway,** ...). All the parameters on this page can be configured.
+This page contains two tables that display information about the **Ethernet** (**DHCP**, **Address**, **Netmask**, **MTU**, **VLAN**, ...) and **Route** configuration (**Type, VLAN ID, Address, Netmask, Gateway,** ...). All the parameters on this page can be configured.
 
 ### Status
 

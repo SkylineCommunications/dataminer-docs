@@ -12,13 +12,13 @@ This connector collects information from the device using an HTTP connection. It
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                 | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.DCF is implemented from version 1.0.0.2 onwards. | \-           | \-                |
-| 1.0.1.x \[Obsolete\] | Support for firmware 1.6.12.Complete cleanup of the connector.   | \-           | \-                |
-| 1.0.2.x \[Obsolete\] | Streamlined all Aperi connectors.                                | \-           | \-                |
-| 1.0.3.x \[Obsolete\] | Flow Management Tx Table cleaned up.                             | \-           | \-                |
-| 1.1.0.x \[SLC Main\] | Support for firmware 1.7.17.                                     | 1.0.3.8.     | \-                |
+| **Range**            | **Key Features**                                                  | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version. DCF is implemented from version 1.0.0.2 onwards. | \-           | \-                |
+| 1.0.1.x \[Obsolete\] | Support for firmware 1.6.12. Complete cleanup of the connector.   | \-           | \-                |
+| 1.0.2.x \[Obsolete\] | Streamlined all Aperi connectors.                                 | \-           | \-                |
+| 1.0.3.x \[Obsolete\] | Flow Management Tx Table cleaned up.                              | \-           | \-                |
+| 1.1.0.x \[SLC Main\] | Support for firmware 1.7.17.                                      | 1.0.3.8.     | \-                |
 
 ### Product Info
 

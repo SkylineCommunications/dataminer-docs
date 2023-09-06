@@ -59,9 +59,11 @@ This page contains the device **Time** and **Date** parameter.
 
 This page displays the configurable parameters the **Low SIgnal Level** and **High Temperature Limit**.
 
+
 ### Beacon
 
 This page displays the configurable parameters **Store Beacon** and **Restore Beacon** paramters.
+
 
 ### Alarms
 
@@ -78,3 +80,5 @@ This page displays the parameters from **General**, **Rxer Operation**, **Interf
 ### Web Interface
 
 This page displays the web interface of the device. However, the web interface is only accessible when the client machine has network access to the product.
+
+

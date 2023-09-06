@@ -6,7 +6,8 @@ uid: Connector_help_Romantis_NMS_-_Controller
 
 **This driver is deprecated as the vendor name has changed. It is now available under the name [UHP Networks NMS - Controller](xref:Connector_help_UHP_Networks_NMS_-_Controller).**
 
-The Romantis NMS - Controller is a fully featured, software-defined VSAT System Platform. The platform is a solution for WiFi and mobile (3G and 4G) backhaul as well as branch office connectivity for remote applications such as mine sites, oil rigs and gas pipeline monitoring. The system is especially suited for maritime connectivity.
+The Romantis NMS - Controller is a fully featured, software-defined VSAT System Platform.
+The platform is a solution for WiFi and mobile (3G and 4G) backhaul as well as branch office connectivity for remote applications such as mine sites, oil rigs and gas pipeline monitoring. The system is especially suited for maritime connectivity.
 
 ## About
 

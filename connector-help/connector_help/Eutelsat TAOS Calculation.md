@@ -36,7 +36,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 ## Usage
 
-GeneralIn this page the driver displays the following parameters:
+General
+In this page the driver displays the following parameters:
 
 - **Element:** Allows the user to select the element where is going to take the values.
 - **Parameter:** Allows the user to select the table from the element.

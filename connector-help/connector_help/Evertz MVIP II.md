@@ -12,11 +12,11 @@ This connector retrieves all data using a single SNMP connection. SNMP traps can
 
 ### Version Info
 
-| **Range** | **Key Features**                                                    | **Based on** | **System Impact** |
-|-----------|---------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial version                                                     | \-           | \-                |
-| 1.0.1.x   | \- Layout changed. - multipleGetBulk is now used.                   | \-           | \-                |
-| 1.0.2.x   | \- Added minimum required version.- Removed multipleGetBulk option. | \-           | \-                |
+| **Range** | **Key Features**                                                     | **Based on** | **System Impact** |
+|-----------|----------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version                                                      | \-           | \-                |
+| 1.0.1.x   | \- Layout changed. - multipleGetBulk is now used.                    | \-           | \-                |
+| 1.0.2.x   | \- Added minimum required version. - Removed multipleGetBulk option. | \-           | \-                |
 
 ### Product Info
 
@@ -66,7 +66,7 @@ In addition, two tables are displayed: **Monitor Control** and **Layout Definiti
 
 ### Input & Output
 
-Four tables are available on this page: **Source Definition**, **Source Programs Definition**, **Source Management Fault**,and **Output Definition**.
+Four tables are available on this page: **Source Definition**, **Source Programs Definition**, **Source Management Fault**, and **Output Definition**.
 
 ### Video
 
@@ -74,7 +74,7 @@ This page displays two tables: **Video Stream Management Fault** and **Video Str
 
 ### Audio
 
-This page displays three tables: **Audio Stream Management Fault**, **Audio Stream Channel Management Fault**,and **Audio Stream Channel Definition**.
+This page displays three tables: **Audio Stream Management Fault**, **Audio Stream Channel Management Fault**, and **Audio Stream Channel Definition**.
 
 ### Traps Notification
 

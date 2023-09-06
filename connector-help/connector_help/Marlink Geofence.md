@@ -8,7 +8,7 @@ This driver can be used to subscribe to two parameters of any element in the DMS
 
 ## About
 
-The driver allows the user to create entries in a **Remote Elements Configuration Table**. For the creation of an entry, the user can choose one of the available protocols in the DMS, a protocol version and an element using that protocol. Lastly, the user can select two parameters from this element of which the current values are to be monitored. For each entry in the **Remote Elements Configuration Table**,one or more rows can be created in the **Remote Status Table**.
+The driver allows the user to create entries in a **Remote Elements Configuration Table**. For the creation of an entry, the user can choose one of the available protocols in the DMS, a protocol version and an element using that protocol. Lastly, the user can select two parameters from this element of which the current values are to be monitored. For each entry in the **Remote Elements Configuration Table**, one or more rows can be created in the **Remote Status Table**.
 
 An entry in the **Remote Status Table** shows the current values of the two parameters, but also allows the user to select a KML file. If the two parameter values represent latitude and longitude values, the KML file can be used to check whether the current latitude/longitude combination is inside or outside of the boundaries defined in the KML file. Based on the Inside/Outside setting in the table, an alarm is generated if the values are not inside or outside of the boundaries.
 
@@ -43,7 +43,8 @@ You can add multiple elements at once using "\*" and "?" wildcards. Except for t
 
 #### Remote Elements Status Table
 
-For each element in the configuration table, one row is automatically created in this table.In order to create a new row in this table, right-click a row in the table and select **Duplicate** in the context menu.
+For each element in the configuration table, one row is automatically created in this table.
+In order to create a new row in this table, right-click a row in the table and select **Duplicate** in the context menu.
 
 If changes need to be made to the rows after creation, this can also be done in this table.
 

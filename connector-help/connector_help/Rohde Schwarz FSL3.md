@@ -4,15 +4,15 @@ uid: Connector_help_Rohde_Schwarz_FSL3
 
 # Rohde Schwarz FSL3
 
-The Rohde Schwarz FSL3 is alightweight and compact spectrum analyzer with the functionality of high-end instruments. It features a tracking generator up to 18 GHz and can analyze signals with a bandwidth of 28 MHz., operating at frequencies up to 18 GHz, and supporting applications in the microwave range. This driver communicates with the spectrum analyzer using serial communication (TCP/IP).
+The Rohde Schwarz FSL3 is a lightweight and compact spectrum analyzer with the functionality of high-end instruments. It features a tracking generator up to 18 GHz and can analyze signals with a bandwidth of 28 MHz., operating at frequencies up to 18 GHz, and supporting applications in the microwave range. This driver communicates with the spectrum analyzer using serial communication (TCP/IP).
 
 ## About
 
 ### Version Info
 
-| **Range** | **Key Features**                                                            | **Based on** | **System Impact** |
-|-----------|-----------------------------------------------------------------------------|--------------|-------------------|
-| 1.1.0.x   | Initial version.Version **1.1.0.8** supports a maximum frequency of 18 GHz. | \-           | \-                |
+| **Range** | **Key Features**                                                             | **Based on** | **System Impact** |
+|-----------|------------------------------------------------------------------------------|--------------|-------------------|
+| 1.1.0.x   | Initial version. Version **1.1.0.8** supports a maximum frequency of 18 GHz. | \-           | \-                |
 
 ### Product Info
 

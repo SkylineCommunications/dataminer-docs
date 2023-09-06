@@ -85,7 +85,7 @@ This page displays the following page buttons, which open a new page with inform
 
 ### Server
 
-This page displays the following page buttons, whichopen a new page withinformation regarding the running state of each server's parameter group.
+This page displays the following page buttons, which open a new page with information regarding the running state of each server's parameter group.
 
 - Media Request Service
 - Query Service
@@ -97,7 +97,7 @@ This page displays the following page buttons, whichopen a new page withinformat
 
 ### Watchdog
 
-This page displays the following page buttons, whichopen a new page withinformation regarding the running state of each watchdog's parameter group.
+This page displays the following page buttons, which open a new page with information regarding the running state of each watchdog's parameter group.
 
 - Essence Balancer
 - XML Import Balancer

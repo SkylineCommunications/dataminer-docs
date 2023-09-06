@@ -30,7 +30,7 @@ The **PositionInfo from BK9000** needs to be configured with a virtual connectio
 
 ### General
 
-This page displays the values of two relays, **Relay 1** and **Relay 2**. You can also edit these values. Both relays can be either *Active* or*Not Active*.
+This page displays the values of two relays, **Relay 1** and **Relay 2**. You can also edit these values. Both relays can be either *Active* or *Not Active*.
 
 ## Notes
 

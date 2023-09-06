@@ -24,7 +24,7 @@ On this page, you can find general information about the unit.
 
 ### General Page
 
-On thispage, you can find more detailed information about the unit, along with a large number of statuses.
+On this page, you can find more detailed information about the unit, along with a large number of statuses.
 
 ### Positions Page
 

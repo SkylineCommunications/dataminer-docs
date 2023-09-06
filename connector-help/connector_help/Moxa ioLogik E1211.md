@@ -62,4 +62,6 @@ Both tables allow you configure a custom name for each channel. Greyed out entri
 
 ### Traps
 
+
+
 On this page, you can find the **Trap Table**. This trap table holds all the incoming traps from the device.

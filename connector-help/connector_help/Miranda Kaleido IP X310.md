@@ -10,12 +10,12 @@ This connector supports the Miranda Kaleido IP X310. This is an IP video multivi
 
 ### Version Info
 
-| **Range**            | **Based on** | **Description**                                                                                            |
-|----------------------|--------------|------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | \-           | Initial version.                                                                                           |
-| 1.0.1.x              | 1.0.0.4      | Different display key for virtual alarm table.Changes in import file and mandatory value in service table. |
-| 1.0.2.x \[Obsolete\] | 1.0.1.2      | Audio alarms were separated from the service table.                                                        |
-| 1.0.3.x \[SLC Main\] | 1.0.2.3      | Changes to Health Information Table to allow trending and alarm monitoring.                                |
+| **Range**            | **Based on** | **Description**                                                                                             |
+|----------------------|--------------|-------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | \-           | Initial version.                                                                                            |
+| 1.0.1.x              | 1.0.0.4      | Different display key for virtual alarm table. Changes in import file and mandatory value in service table. |
+| 1.0.2.x \[Obsolete\] | 1.0.1.2      | Audio alarms were separated from the service table.                                                         |
+| 1.0.3.x \[SLC Main\] | 1.0.2.3      | Changes to Health Information Table to allow trending and alarm monitoring.                                 |
 
 ### Product Info
 
@@ -116,6 +116,8 @@ The page also contains two page buttons:
 > - **Output Service name:** Take this from the Kaleido configuration. If you cannot find this information, leave this the same as the Input Service Name.
 > - **Source Friendly Name**: Take this from the Stream Name. Replace each whitespace by a "+". Range 1.0.1.x only.
 >
+> ![2022-07-05 15_26_05-Clipboard.png](~/connector-help/images/Miranda_Kaleido_IP_X310_2022-07-05_15_26_05-Clipboard.png)![Clipboard](~/connector-help/images/Miranda_Kaleido_IP_X310_2022-07-05_15_26_05-Clipboard.png)
+>
 > Finally, go to the **Alarm Table** page and enable the alarm table polling if necessary. By default, the connector should enable alarm monitoring for the necessary parameters.
 >
 > **Note:** The Transport Stream, Services, Teletext, and Card Health tables are filled in based on the imported Excel file, located in the folder indicated by the File Path parameter or in the element document folder. After these are filled in, the data is polled.
@@ -204,7 +206,8 @@ Note: For the **Virtual Alarm Table** to function properly, make sure the device
 
 On this page, you can send RCP Commands.
 
-The commands are property of Kaleido. They target specific fields on the device, for instance:*\<setKDynamicText\>set address='Address' text='NewText' \</setKDynamicText\>*, where "Address" is the configured text address of the UMD or text label component and "NewText" is the text to display.
+The commands are property of Kaleido. They target specific fields on the device, for instance:
+*\<setKDynamicText\>set address='Address' text='NewText' \</setKDynamicText\>*, where "Address" is the configured text address of the UMD or text label component and "NewText" is the text to display.
 
 In the connector, you can define up to four text strings to be displayed: Text1, Text2, Text3, and Text4, which will replace the "NewText" string.
 
@@ -222,7 +225,8 @@ You can add the GSM SNMP support to the device by enabling the global action edi
 
 1.  Download XEdit.
 2.  Modify the *.medit.ini* file, present under the Windows user folder (usually "*C:\Users\\user name\>*").
-3.  Add the following line to *.medit.ini* while XEdit is closed:*enableGlobalActionsEdition=true*.
+3.  Add the following line to *.medit.ini* while XEdit is closed:
+    *enableGlobalActionsEdition=true*.
 4.  Open *XEdit* and connect to the device.
 5.  In the *Tools* menu, select *Edit global actions*.
 6.  Click *Add global*, enter the name, the community string, and port *2161,* and click *OK*.

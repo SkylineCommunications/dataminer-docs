@@ -85,7 +85,7 @@ This page displays the **Satellite Info Table** and the **Satellite List Counter
 
 ### Stow
 
-This page contains all stow-related readings and settings, both for the Az Stow and the El Stow, such as the **Stow Pin**, **Stow Aligned**, **Brake**,some **Alarms**, etc.
+This page contains all stow-related readings and settings, both for the Az Stow and the El Stow, such as the **Stow Pin**, **Stow Aligned**, **Brake**, some **Alarms**, etc.
 
 Two buttons on this page allow you to **Stow** or **Unstow**.
 

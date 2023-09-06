@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_Panorama_CL
 
 # Cisco Panorama CL
 
-Thisdriver is used to display information related to the **Cisco Panorama CL**device.
+This driver is used to display information related to the **Cisco Panorama CL** device.
 
 ## About
 

@@ -54,6 +54,6 @@ There is no redundancy defined.
 
 The element created with this driver consists of the following data pages:
 
-- **General**: Allows you to define the matrix size using the **Number of Inputs** and **Number of Outputs** parameters. Also displays the **Last KeepAlive Timestamp**,which shows the last keep alive timestamp sent by the matrix.
+- **General**: Allows you to define the matrix size using the **Number of Inputs** and **Number of Outputs** parameters. Also displays the **Last KeepAlive Timestamp**, which shows the last keep alive timestamp sent by the matrix.
 - **Matrix**: Displays the **Matrix**.
 - **Labels**: Displays the **Inputs** and **Outputs** tables of the matrix.

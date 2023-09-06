@@ -73,7 +73,7 @@ This page displays the **Monitor** **Table**, which contains information about m
 
 This page displays the **Delay** **Table**, which contains information about delay parameters.
 
-It also allows you to configure the **Status**, **Lines**,**Samples** and **Nanosecs** delays.
+It also allows you to configure the **Status**, **Lines**, **Samples** and **Nanosecs** delays.
 
 ### Audio Processing - Embedder Page
 

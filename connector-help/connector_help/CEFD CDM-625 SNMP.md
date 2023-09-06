@@ -8,7 +8,8 @@ The CDM-625 is an advanced satellite modem that provides the combination of adva
 
 ## About
 
-This driver uses SNMP to display information from the device and to set device settings. More detailed information can be found on the following website:<http://www.comtechefdata.com/support/docs/satellitemodemdocs>
+This driver uses SNMP to display information from the device and to set device settings. More detailed information can be found on the following website:
+<http://www.comtechefdata.com/support/docs/satellitemodemdocs>
 
 ### Version Info
 
@@ -77,7 +78,7 @@ These options are only available when the device is working in *Local* mode (see
 - SNMP:
 
 - **Trap IP 1 / Trap IP 2:** Allow you to assign up to two SNMP trap IP addresses.
-  - **Trap Version:** Allows you to set the trap versionto *SNMPv1*or *SNMPv2* using the drop-down list.
+  - **Trap Version:** Allows you to set the trap version to *SNMPv1* or *SNMPv2* using the drop-down list.
   - **Trap Community String:** Allows you to assign the SNMP trap community string. The community string must consist of a minimum of 0 to a maximum of 20 alphanumeric characters.
 
 ### Admin - FAST
@@ -94,7 +95,7 @@ Use this page to configure modem operating (Tx/Rx) parameters:
 - Tx/Rx Interfaces and Framing: The **Tx**/**Rx** **Interface Types** and **Framing Modes** have **higher priority** over the other parameters. They should be configured before other parameters are set.
 - Tx/Rx operating parameters: Remaining parameters for configuration.
 - Carrier-in-Carrier (CnC) parameters: Click the **CnC** page button to access CnC configurable parameters.
-- ACM parameters:Click the **ACM** page button to access ACM configurable parameters.
+- ACM parameters: Click the **ACM** page button to access ACM configurable parameters.
 
 ### Config - LAN - IP
 
@@ -105,7 +106,7 @@ The **Network Configuration** section consists of the following parameters:
 - **IP Gateway**: The IP address of the default gateway. Applicable only if Working Mode is set to *Managed Switch*.
 - **Traffic/Mgmt IP Address** (and subnet mask): Can be used to configure the modem's IP addresses.
 - **MAC Address:** The MAC address of the Ethernet port. This parameter is read-only and cannot be changed.
-- **MAC Learning:** Applicable only if Working Mode is set to *Managed Switch*. Use the drop-down menu to set MAC Learning to *On*or *Off*.
+- **MAC Learning:** Applicable only if Working Mode is set to *Managed Switch*. Use the drop-down menu to set MAC Learning to *On* or *Off*.
 - **WAN Buffer Length:** Enter a value between *20 ms* and *400 ms*, in *20 ms* increments.
 - **L2 QoS** (Layer 2 QoS): Use the drop-down menu to set this feature to *Off*, *VLAN Only*, *Port Only*, or *VLAN & Port*.
 - **L3 QoS** (Layer 3 QoS): This feature is only operational when the optional IP Packet Processor card is installed and enabled. Use the drop-down menu to set the L3 (Advanced) QoS to *Off*, *Max/Priority*, *Min Max*, or *DiffServ*.
@@ -116,15 +117,15 @@ The **Network Configuration** section consists of the following parameters:
 In the **Per Port Configuration Table**, you can set parameters for each port (**Port 1** to **Port 4**):
 
 - **Port Speed:** Use the drop-down menu to select the speed for each selected port: *Auto*, *100 Full-Duplex*, *100 Half-Duplex*, *10 Full-Duplex* or *10 Half-Duplex*.
-- **Pause Flow Control:** Set Pause Flow Control for the port to *Off*or *On*.
-- **Native Mode:** Set Native Mode for the port to *Disabled*or *Enabled*.
+- **Pause Flow Control:** Set Pause Flow Control for the port to *Off* or *On*.
+- **Native Mode:** Set Native Mode for the port to *Disabled* or *Enabled*.
 - **PVID:** When Native Mode is *Enabled*, a PVID (Native VLAN ID) may be assigned to the selected port using a value range of *0001-4095*.
-- **Priority:** Use the drop-down menu to set the operational priority of the selected port, in the order of preference (from *1*to *4*).
+- **Priority:** Use the drop-down menu to set the operational priority of the selected port, in the order of preference (from *1* to *4*).
 - **Actual Negotiated Port Speed:** This is the status of the current actual operating speed and duplex. If the port is not connected, "*Link Down*" is displayed.
 
 VLAN Mode: This mode is supported if Working Mode is set to *Managed Switch*, with or without the optional IP Packet Processor enabled. The **VLAN Mode** section contains the following parameters:
 
-- **VLAN Mode:** Set the mode to *Disabled*or *Enabled*.
+- **VLAN Mode:** Set the mode to *Disabled* or *Enabled*.
 - **Management VLAN ID:** A management VLAN ID can be assigned to the selected port using a value range of *0001-4095*.
 
 Below this, you can find the **VLAN Table**, which contains the following parameters:
@@ -158,7 +159,7 @@ Use this page to configure a number of the utility functions of the device.
 
 - **Circuit ID String**: Enter a Circuit ID string of up to 40 characters. The Circuit ID, as created here, appears in the title bar of compatible web browsers for easy unit identification.
 
-- **BERT Config**: Use this section to configure the **Tx** and **Rx** **Bit Error Rate Test**as *On*or *Off,* to configure the pattern for **Tx** and **Rx**, and to set **Error Insertion** to either *Off* or *10E-3*.
+- **BERT Config**: Use this section to configure the **Tx** and **Rx** **Bit Error Rate Test** as *On* or *Off,* to configure the pattern for **Tx** and **Rx**, and to set **Error Insertion** to either *Off* or *10E-3*.
 
 - Date and Time:
 
@@ -168,7 +169,7 @@ Use this page to configure a number of the utility functions of the device.
 
 - Warm-Up:
 
-- **Warm Up Delay**:Warm-up delay for internal frequency reference (OCXO). Can be set to *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature).
+- **Warm Up Delay**: Warm-up delay for internal frequency reference (OCXO). Can be set to *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature).
   - **Warm Up Countdown**: The remaining warm-up delay countdown in seconds.
   - **Truncate Delay**: Used to truncate the warm-up delay period to *zero*, forcing the unit into "*instant-on*" mode.
 
@@ -176,7 +177,7 @@ Use this page to configure a number of the utility functions of the device.
 
 - **Save** / **Load** (save takes precedence over load):
 
-- **Configuration Save / Configuration Load:** Use the drop-down menus to save or load up to 10 different modem configurations - *0*through *9*.
+- **Configuration Save / Configuration Load:** Use the drop-down menus to save or load up to 10 different modem configurations - *0* through *9*.
 
 ### Config - Drop and Insert
 
@@ -189,18 +190,18 @@ When a Block Up Converter (BUC) and a Low Noise Block Down Converter (LNB) are i
 In the **BUC Configuration** section, you can configure the following parameters:
 
 - **BUC Power Enable, 10 MHz Ref Enable**, and **Output Power Enable**: Use the toggle buttons to turn these functions *On* or *Off*.
-- **BUC Low** and **High Current Limit**:Assign a value (in mA) ranging from *0* to *4000*.
-- **Tx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Tx LO frequency, and then use the toggle button to designate the value as a *HIGH (+)*or *LOW (-)*limit.
-- **BUC Address**:Assign a value for the BUC Address from *1*to *15*.
+- **BUC Low** and **High Current Limit**: Assign a value (in mA) ranging from *0* to *4000*.
+- **Tx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Tx LO frequency, and then use the toggle button to designate the value as a *HIGH (+)* or *LOW (-)* limit.
+- **BUC Address**: Assign a value for the BUC Address from *1* to *15*.
 
 Below this, the **BUC Status** parameter shows the status of the BUC. Some status values are only available when the device is working in *Local* mode (see "Config - Utilities" section above).
 
 In the **LNB Control** section, you can configure the following parameters:
 
 - **LNB DC Power**: Use the drop-down menu to set to *Off* or to choose the appropriate voltage.
-- **LNB Reference Enable**:Use the toggle button to turn the function *On* or *Off*.
-- **LNB Low** and **High Current Threshold**:Assign a value (in mA) ranging from *0* to *500*.
-- **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO frequency, and then use the drop-down menu to designate the value as a *HIGH (+)*or *LOW (-)*limit.
+- **LNB Reference Enable**: Use the toggle button to turn the function *On* or *Off*.
+- **LNB Low** and **High Current Threshold**: Assign a value (in mA) ranging from *0* to *500*.
+- **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO frequency, and then use the drop-down menu to designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
 Below this, the **LNB Status** parameter shows the status of the LNB.
 
@@ -225,7 +226,7 @@ Use this page to configure PTP operating parameters and to view PTP operating st
 
 ### Status - Modem Status
 
-Use this page to view read-onlystatus information pertaining to **Alarms**, **Rx Parameters**, **AUPC**, **CnC**, **ACM**, **General Status** and **Fractional CnC Counters**.
+Use this page to view read-only status information pertaining to **Alarms**, **Rx Parameters**, **AUPC**, **CnC**, **ACM**, **General Status** and **Fractional CnC Counters**.
 
 ### Status - Modem Logs
 
@@ -248,7 +249,7 @@ Finally, the **Alarm Masking** page button opens a subpage where you can use the
 
 Use this page to get information about the statistics provided by the device.
 
-- **Interfaces** table:Information about status and speed rates provided by the device's interfaces.
+- **Interfaces** table: Information about status and speed rates provided by the device's interfaces.
 - **Ethernet Statistics** table: Ethernet ingress/egress statistics for each port.
 - **WAN Statistics** page button: Opens a page with cumulative WAN traffic information. These status values are only available when the device is working in *Local* mode (see "Config - Utilities" section above).
 - **PTP Statistics** page button: Opens a page with data intended to troubleshoot PTP operational issues. These status values are only available when the device is working in *Local* mode (see "Config - Utilities" section above).
@@ -257,13 +258,13 @@ Use this page to get information about the statistics provided by the device.
 
 Use this page to enable or disable communication with CSAT/KST ODUs for 70/140 MHz operation or LPOD BUCs for L-band operation, and to set up redundancy.
 
-In the ODU section, you can use the **ODU Comms** parameter to set the ODU operation to *Disabled*or *Enabled*.
+In the ODU section, you can use the **ODU Comms** parameter to set the ODU operation to *Disabled* or *Enabled*.
 
 In the **Redundancy** section, you can configure the following parameters:
 
 - **Redundancy Traffic IP Address** and **Network Prefix**: Enter the IP address and subnet mask in the format XXX.XXX.XXX.XXX and YY.
-- **Redundancy 1:N mode (use with caution)**: Set 1:N Redundancy mode to *Disabled*or *Enabled*.
-- **Packet Processor Redundancy**: When the optional IP Packet Processor card is installedand enabledin a 1:1 redundancy configuration, this toggle button does not have to be used, as Packet Processor Redundancy is enabled automatically.
+- **Redundancy 1:N mode (use with caution)**: Set 1:N Redundancy mode to *Disabled* or *Enabled*.
+- **Packet Processor Redundancy**: When the optional IP Packet Processor card is installed and enabled in a 1:1 redundancy configuration, this toggle button does not have to be used, as Packet Processor Redundancy is enabled automatically.
 
 When redundant modems are used and the selected unit is currently the online unit, click **Force 1:1 Switch** to force a switchover so the unit will then be in offline (standby) mode. This command is only valid for the online unit in a 1:1 pair.
 

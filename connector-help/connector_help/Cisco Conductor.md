@@ -44,4 +44,4 @@ This page displays the **Hr Storage Table**, which lists the logical storage are
 
 ### TCP
 
-This page displays the **Tcp Conn Table**,which contains information related to the TCP connection.
+This page displays the **Tcp Conn Table**, which contains information related to the TCP connection.

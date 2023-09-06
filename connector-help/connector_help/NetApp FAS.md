@@ -4,7 +4,8 @@ uid: Connector_help_NetApp_FAS
 
 # NetApp FAS
 
-NetApp Fabric-Attached Storage (FAS) can serve storage over a network using file-based protocols such as NFS, CIFS, FTP, TFTP and HTTP. NetApp Filers can also serve data over block-based protocols such as Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and iSCSI.NetApp Filers implement their physical storage in large disk arrays.
+NetApp Fabric-Attached Storage (FAS) can serve storage over a network using file-based protocols such as NFS, CIFS, FTP, TFTP and HTTP. NetApp Filers can also serve data over block-based protocols such as Fibre Channel (FC), Fibre Channel over Ethernet (FCoE) and iSCSI.
+NetApp Filers implement their physical storage in large disk arrays.
 
 This driver allows you to monitor this device via SOAP calls. SNMP traps can also be retrieved if this is enabled on the device.
 
@@ -42,7 +43,7 @@ SNMP CONNECTION:
 
 SNMP Settings:
 
-- **Port number**: The port of the connected device, by default*161*.
+- **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
 - **Set community string**: The community string used when setting values on the device, by default *private*.
 

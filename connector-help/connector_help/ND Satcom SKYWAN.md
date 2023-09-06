@@ -108,7 +108,7 @@ This page contains information about the **Base Slot Time**, **Frame Time** and 
 
 ### ODU
 
-This page contains data about the **BUC** and **LNB**,including the **Local Oscillator Frequency**, the **Power Supply State** and reference signals.
+This page contains data about the **BUC** and **LNB**, including the **Local Oscillator Frequency**, the **Power Supply State** and reference signals.
 
 ### Web Interface
 

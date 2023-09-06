@@ -23,9 +23,9 @@ It performs manual or automatic switches to backup for the system's high power a
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                            |
-|-----------|---------------------------------------------------|
-| 1.0.0.x   | Configuration Version: 1.00Software Version: 2.23 |
+| **Range** | **Supported Firmware**                             |
+|-----------|----------------------------------------------------|
+| 1.0.0.x   | Configuration Version: 1.00 Software Version: 2.23 |
 
 ### System Info
 

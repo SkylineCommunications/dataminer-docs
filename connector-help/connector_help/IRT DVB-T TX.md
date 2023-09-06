@@ -47,7 +47,7 @@ SNMP Settings:
 
 ## How to use
 
-This connector has the following main pages: **Single Transmitter (SD)**, **Active Reserve (AR)**, **Passive Reserve (1+1)**, **Dual Drive (DD)**,and **N Plus 1 (1+1 R&S).**
+This connector has the following main pages: **Single Transmitter (SD)**, **Active Reserve (AR)**, **Passive Reserve (1+1)**, **Dual Drive (DD)**, and **N Plus 1 (1+1 R&S).**
 
 On each of these pages, monitoring parameters are available. Some pages also have subpages for the A and B exciters, transmitters, and amplifiers.
 

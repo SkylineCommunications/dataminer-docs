@@ -129,11 +129,12 @@ This page contains the **SRM Resource Type** table. You can perform the followin
 This page allows you to add resources to the **SRM Resource-Subscriber Relation** table via standalone parameters. To do so:
 
 1.  Fill in **all parameters.**
-2.  Click **Apply**.If you made a mistake in one of the fields, click **Reset** to replace the values with default values.
+2.  Click **Apply**.
+    If you made a mistake in one of the fields, click **Reset** to replace the values with default values.
 
 ### Resource Relations
 
-This page contains the**SRM Resource-Subscriber Relation** table. Only one action can be performed directly on this table:
+This page contains the **SRM Resource-Subscriber Relation** table. Only one action can be performed directly on this table:
 
 - Delete:
 

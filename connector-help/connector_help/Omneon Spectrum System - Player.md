@@ -27,4 +27,4 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### Main View
 
-This page displays the general information about this player with the following parameters: **PlayerName**, **Status, Director Name,** **Info** **Event**, **Warning Events**, **Error Events**, and **Critical Events**.
+This page displays the general information about this player with the following parameters: **Player** **Name**, **Status, Director Name,** **Info** **Event**, **Warning Events**, **Error Events**, and **Critical Events**.

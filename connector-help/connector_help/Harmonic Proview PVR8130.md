@@ -21,7 +21,7 @@ The driver is used to control and monitor the Harmonic Proview PVR8000.
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.0.0.x1.0.1.x   | Unknown                     |
+| 1.0.0.x 1.0.1.x  | Unknown                     |
 
 ## Installation and configuration
 

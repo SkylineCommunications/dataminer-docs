@@ -4,7 +4,7 @@ uid: Connector_help_ASC_Signal_NGC-IDU
 
 # ASC Signal NGC-IDU
 
-Thisdriver is used to control and monitor an NGC antenna control system. This is an advanced-level antenna control system intended for applications with high tracking requirements, complex geometries, and dynamic conditions.
+This driver is used to control and monitor an NGC antenna control system. This is an advanced-level antenna control system intended for applications with high tracking requirements, complex geometries, and dynamic conditions.
 
 An **SNMPv1** connection is used in order to retrieve information and configure the device. There are also different possibilities for **alarm monitoring** and **trending**.
 

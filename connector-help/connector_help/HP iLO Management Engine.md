@@ -12,6 +12,8 @@ This driver is used to retrieve the required data from the HP iLO Management Eng
 
 It uses the REST API to get and set all the associated parameters for this type of device.
 
+
+
 ### Ranges of the driver
 
 | **Driver Range**                                                                | **Description**                                 | **DCF Integration** | **Cassandra Compliant** |
@@ -59,7 +61,7 @@ SNMP CONNECTION:
 
 General
 
-Thispage displays the device generic information, which contains the following parameters: **Server Name**, **Product Name**, **UUID**, **Serial Number**, **Product Id**, **System ROM**, **System ROM Date**, **Backup ROM Date**, **System Health**, **Power**, **UID Indicator**, **Date**, **ILO Name**, **License**, **ILO FW Version**, **IP Address** and **IPV6 Link Local**.
+This page displays the device generic information, which contains the following parameters: **Server Name**, **Product Name**, **UUID**, **Serial Number**, **Product Id**, **System ROM**, **System ROM Date**, **Backup ROM Date**, **System Health**, **Power**, **UID Indicator**, **Date**, **ILO Name**, **License**, **ILO FW Version**, **IP Address** and **IPV6 Link Local**.
 
 ### Active Sessions
 
@@ -75,7 +77,8 @@ By default, **SNMP polling** is disabled, but can be enabled by toggling the **S
 
 This page displays contains 9 subpages pages which can be accessed by clicking the following buttons:
 
-- **Software**: Displays the **Software Inventory** which contains the following columns: **ID**, **Name**, **Description,** and **Version**. This Table is only pollable if the device has License type "**Advanced**". A Polling Configuration toogle button is created so that a user can enable or disable polling of this table.Note that the **Software Inventory** function will only work if the **Agentless Management Service** is in state **Running** (available on the **General** page in the 1.1.0.1 range.)
+- **Software**: Displays the **Software Inventory** which contains the following columns: **ID**, **Name**, **Description,** and **Version**. This Table is only pollable if the device has License type "**Advanced**". A Polling Configuration toogle button is created so that a user can enable or disable polling of this table.
+  Note that the **Software Inventory** function will only work if the **Agentless Management Service** is in state **Running** (available on the **General** page in the 1.1.0.1 range.)
 - **Firmware:** Displays the **Firmware Version Info Table** which contains the following columns: **Index**, **Firmware Name**, **Firmware Version**, and where it is located (**Location**).
 - **Processors:** Displays the **Processors Table** which contains the following columns: **Index**, **Name**, **Status**, **Speed**, **Execution Technology**, **Memory Technology**, **Internal L1 Cache**, **Internal L2 Cache** and **Internal L3 Cache**.
 - **Storage:** Displays in a Tree structure the **Controllers**, **Enclosures**, **Physical Drives** and **Logical Drives**.

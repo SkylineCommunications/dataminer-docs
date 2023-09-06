@@ -103,4 +103,4 @@ This page contains the alarm status of the various functions of the driver. You 
 
 ### Web Interface
 
-This page contains an embedded web browser directed to the IP addressof the UC-IRD+. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page contains an embedded web browser directed to the IP address of the UC-IRD+. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

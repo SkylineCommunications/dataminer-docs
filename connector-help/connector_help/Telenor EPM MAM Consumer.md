@@ -8,7 +8,7 @@ This driver is used to collect messages stored in a RabbitMQ queue and forward t
 
 The messages are transferred from the MAM consumer to the collectors using multi-threaded serial communication.
 
-To be aware of the collector elements available in the system, the driver will read provision files created by the **Telenor EPM Manager**element.
+To be aware of the collector elements available in the system, the driver will read provision files created by the **Telenor EPM Manager** element.
 
 ## About
 
@@ -26,9 +26,9 @@ To be aware of the collector elements available in the system, the driver will r
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                    | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx)[Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager) | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                     | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) [Telenor EPM Manager](xref:Connector_help_Telenor_EPM_Manager) | \-                      |
 
 ## Configuration
 

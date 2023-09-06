@@ -81,8 +81,8 @@ This page can be used to access the web interface of the device. Note that the c
 
 If the **Current Relay Position** parameter (on the **General** page) is set to **Input A**, the following connections will be made:
 
-- From the **ASI Input A**in interface to the **ASI Out Main** out interface.
-- From the **ASI Input B**in interface to the **ASI Out Alternate** out interface.
+- From the **ASI Input A** in interface to the **ASI Out Main** out interface.
+- From the **ASI Input B** in interface to the **ASI Out Alternate** out interface.
 
 ### Input B
 

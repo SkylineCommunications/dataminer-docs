@@ -36,7 +36,7 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 </tr>
 <tr class="odd">
 <td>2.0.0.x</td>
-<td><p>The driver was made for version 10.13.3.0.0 (xmlVersion attribute on the XML config file of the device).Contains the config XML as one large tree view.Focuses on the following cards:</p>
+<td><p>The driver was made for version 10.13.3.0.0 (xmlVersion attribute on the XML config file of the device). Contains the config XML as one large tree view. Focuses on the following cards:</p>
 <ul>
 <li>CE-x Analogue</li>
 <li>CE-x Encoder</li>
@@ -46,7 +46,7 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 </tr>
 <tr class="even">
 <td>3.0.0.x</td>
-<td>The default range.Polling and parameters have been completely redesigned based on knowledge from previous ranges.</td>
+<td>The default range. Polling and parameters have been completely redesigned based on knowledge from previous ranges.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
@@ -67,12 +67,12 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**      |
-|------------------|----------------------------------|
-| 1.0.0.x          | Prior to 10.13.3.0.0             |
-| 2.0.0.x          | 10.13.3.0.0                      |
-| 3.0.0.x          | 10.3.0.0.010.10.1.0.010.13.3.0.0 |
-| 3.1.0.x          | 10.30.4.0.0                      |
+| **Driver Range** | **Device Firmware Version**        |
+|------------------|------------------------------------|
+| 1.0.0.x          | Prior to 10.13.3.0.0               |
+| 2.0.0.x          | 10.13.3.0.0                        |
+| 3.0.0.x          | 10.3.0.0.0 10.10.1.0.0 10.13.3.0.0 |
+| 3.1.0.x          | 10.30.4.0.0                        |
 
 ## Installation and configuration
 
@@ -92,14 +92,16 @@ This driver uses an HTTP connection and requires the following input during elem
 
 Alarms on tables are named "\[ \[KEY\] \] \[UFNAME\]", where:
 
-- \[KEY\] is the key of the table (first column) or **XXX : Key** column.The key refers to exactly one tag in the config file. The XPath to this tag can be retrieved from the **Keys In Use** table on the page **Driver (Internal)**.
+- \[KEY\] is the key of the table (first column) or **XXX : Key** column.
+  The key refers to exactly one tag in the config file. The XPath to this tag can be retrieved from the **Keys In Use** table on the page **Driver (Internal)**.
 - \[UFNAME\] is the value of the **XXX : UF Name** column.
 
 Example: *\[22354\] SNMP*
 
 There are two exceptions to this rule.
 
-1.  The **Alarm Table (AT)**. Here the naming is formatted as "\[ \[ALARMID\] \] \[UFNAME\] (\[SOURCE\]: \[TYPE\])", where
+1.  The **Alarm Table (AT)**.
+    Here the naming is formatted as "\[ \[ALARMID\] \] \[UFNAME\] (\[SOURCE\]: \[TYPE\])", where
 
 2.  - \[ALARMID\] is the value of column **AT - Alarm ID.**
     - \[UFNAME\] is the value of column **AT : UF Name.**
@@ -108,7 +110,8 @@ There are two exceptions to this rule.
 
 > Example: *\[411\] Data Interface Group 3-4: Data Network Lost (Base Unit: output)*
 
-1.  The **License Table (LT)**.Here the naming is formatted as "\[ \[FEATUREID\] \] \[CODE\] (\[DESCRIPTION\])", where
+1.  The **License Table (LT)**.
+    Here the naming is formatted as "\[ \[FEATUREID\] \] \[CODE\] (\[DESCRIPTION\])", where
 
 2.  - \[FEATUREID\] is the value of column **LT - Feature ID.**
     - \[CODE\] is the value of column **LT - Code.**
@@ -118,21 +121,26 @@ There are two exceptions to this rule.
 
 ### Device Tree Page
 
-This page contains a tree view that shows all parameters. The tree view follows the structure of the config file and is similar to the Advanced Setup of the web interface ("Device Configuration" \> "Advanced Setup").
+This page contains a tree view that shows all parameters.
+The tree view follows the structure of the config file and is similar to the Advanced Setup of the web interface ("Device Configuration" \> "Advanced Setup").
 
 ### Alarms Page
 
-This page provides an overview of all alarms.Note that this includes all possible alarms, and not only the active alarms.
+This page provides an overview of all alarms.
+Note that this includes all possible alarms, and not only the active alarms.
 
-When an entire row is grayed out, it means that the alarm cannot currently occur.Other alarms can occur, but are only active if the column **AT - Active** contains the value *true.*
+When an entire row is grayed out, it means that the alarm cannot currently occur.
+Other alarms can occur, but are only active if the column **AT - Active** contains the value *true.*
 
 To display only active alarms, specify the filter below:
 
 > *"AT : Visible":yes "AT - Active":true*
 
-Note that it is also possible to only trigger alarms on active parameters by using conditional monitoring.To do so, use:
+Note that it is also possible to only trigger alarms on active parameters by using conditional monitoring.
+To do so, use:
 
-> *Is**Alarm Table (AT).AT : Visible**ValueNot equal to**Yes**Or**Alarm Table (AT).AT - Active**ValueNot equal to**true***
+> *Is**Alarm Table (AT).AT : Visible**ValueNot equal to**Yes***
+> *Or**Alarm Table (AT).AT - Active**ValueNot equal to**true***
 
 ### Licenses Page
 
@@ -146,7 +154,8 @@ To do so:
 
 1.  Configure the folder where the config should be located and indicate the name of the config file.
 2.  Specify whether the management IP configuration should be included in the download.
-3.  Click the **Upload** or **Download** button.This will result in an update of the **Upload Status** and **Download Status** parameters.
+3.  Click the **Upload** or **Download** button.
+    This will result in an update of the **Upload Status** and **Download Status** parameters.
 
 ### Table Data Page
 
@@ -158,8 +167,11 @@ This page contains parameters that are required by DataMiner or are necessary to
 
 It contains:
 
-- A parameter **HTTP Status Code**, which indicates the status code of the last message (or response) sent to the device.This should be *200 OK*. Other values may indicate a problem.
-- A table that maps all the keys used in the tables on **Table Data** to an XPath that selects exactly one node in the configuration file.This is used internally to make sure that the keys of the rows do not change every time the device is polled. This is a requirement for the correct functioning of trending and alarm monitoring.However, note that there inevitably remains a small chance that this does become corrupted if parameters are deleted from the config file.
+- A parameter **HTTP Status Code**, which indicates the status code of the last message (or response) sent to the device.
+  This should be *200 OK*. Other values may indicate a problem.
+- A table that maps all the keys used in the tables on **Table Data** to an XPath that selects exactly one node in the configuration file.
+  This is used internally to make sure that the keys of the rows do not change every time the device is polled. This is a requirement for the correct functioning of trending and alarm monitoring.
+  However, note that there inevitably remains a small chance that this does become corrupted if parameters are deleted from the config file.
 - A page button **HTTP Comm.** that shows commands and responses from messages sent to/from the device. This is only used for debugging purposes.
 - A page button **Junction Tables**, containing information required for the tree view control in order to link different tables to one parent node. This information is normally not of use for the user.
 

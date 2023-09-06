@@ -43,7 +43,7 @@ A service created using this driver will have the data pages detailed below.
 
 ### Alarms
 
-This page displays the **Early Warning List Table**,with an entry for each current and future event with their PIN due status. The table displays the Cause, Alarm State, Channel, Alarm Time and Target UI.
+This page displays the **Early Warning List Table**, with an entry for each current and future event with their PIN due status. The table displays the Cause, Alarm State, Channel, Alarm Time and Target UI.
 
 ### Device Data
 

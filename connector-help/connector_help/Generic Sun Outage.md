@@ -34,7 +34,7 @@ This connector uses a virtual connection and does not require any input during e
 
 ### General
 
-This page displays an overview of the earth stations and satellites monitored by this connector, with the parameters **Monitored Stations**, **Active Outages**,and **Satellites.**
+This page displays an overview of the earth stations and satellites monitored by this connector, with the parameters **Monitored Stations**, **Active Outages**, and **Satellites.**
 
 ### Earth Stations
 
@@ -43,7 +43,8 @@ This page displays an overview of all the configured earth stations, with their 
 Via the **New Earth Station** page button, you can add a new earth station. To do so:
 
 - Specify an **identifiable description** and **location**, as well as the **frequency band** and **dish size**.
-- For fixed earth stations, fill in the **latitude and longitude** of the earth station and the **longitude for the satellite**. For steerable earth stations, configure the **latitude and longitude** of the earth station and the **protocol** and **element** that will be subscribed to for orientation changes.
+- For fixed earth stations, fill in the **latitude and longitude** of the earth station and the **longitude for the satellite**.
+  For steerable earth stations, configure the **latitude and longitude** of the earth station and the **protocol** and **element** that will be subscribed to for orientation changes.
 
 Via the **Outage Overview** column in the Earth Station table, you can **add or remove** earth stations in the tree control on the **Outage Overview** page. Refer to the **Tree Control Config section** for more information.
 
@@ -51,7 +52,7 @@ Note: **Latitude and longitude** are determined **based on the compass direction
 
 ### ES Subscribers
 
-This page displays an overview of all the configured earth station subscribers. It shows the protocol **Name**, the **Version**, and the parameter IDs used to calculate the sun outage, such as the **Azimuth**, **Elevation**,and **Satellite** parameters. The subscribers are used to retrieve the orientation changes for steerable earth stations.
+This page displays an overview of all the configured earth station subscribers. It shows the protocol **Name**, the **Version**, and the parameter IDs used to calculate the sun outage, such as the **Azimuth**, **Elevation**, and **Satellite** parameters. The subscribers are used to retrieve the orientation changes for steerable earth stations.
 
 Via the **New ES Subscriber** page button at the bottom of the page, you can add a new earth station subscriber.
 
@@ -86,15 +87,15 @@ This page contains all the configuration parameters that are related to the func
 
 #### General Settings
 
-In this section, you can enable or disable three different pages: **Earth Stations Config**, **Satellites Config**,and **Tree Overview Info**. The page also includes the page button for **Outage Config.**
+In this section, you can enable or disable three different pages: **Earth Stations Config**, **Satellites Config**, and **Tree Overview Info**. The page also includes the page button for **Outage Config.**
 
 - **Earth Stations Config:** This subpage consists of two main sections:
 
-- **Earth Stations Config**: Contains the parameters that allow you to configure **automatic polling** of**earth stations** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the Earth Station table will be updated via the CSV file. This section also displays the status of the earth station retrieval process. With the **Apply** button, you can manually poll the earth stations from the CSV at any time.
+- **Earth Stations Config**: Contains the parameters that allow you to configure **automatic polling** of **earth stations** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the Earth Station table will be updated via the CSV file. This section also displays the status of the earth station retrieval process. With the **Apply** button, you can manually poll the earth stations from the CSV at any time.
 
-- **Earth Stations Options**:This section includes a number of configuration parameters that make the protocol more robust:
+- **Earth Stations Options**: This section includes a number of configuration parameters that make the protocol more robust:
 
-  - - **Reflection Mode**:This parameter determines how the table will be updated. There are three modes:
+  - - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
 
 - - *Manual*: This mode does not override the data in the table with that from the CSV file and does not update the CSV file with manually added entries from the table. This means that all data is kept in the table, but there is no sync operation.
       - *Auto Delete*: This mode overrides the Earth Stations Overview table with the data from the CSV file every time the import logic is applied. **This is the default mode**.
@@ -102,7 +103,7 @@ In this section, you can enable or disable three different pages: **Earth Statio
 
     - **Auto Delete Delay**: This parameter is associated with the "Auto Delete" reflection mode. This allows you to delay the time when a record in the table is removed after it is no longer present in the CSV file. ***Real-time* is the default value**.
 
-    - **Delete All Removed**:Performs a one-time sweep through the Earth Stations Overview table and deletes all earth stations that are not present in the CSV file.
+    - **Delete All Removed**: Performs a one-time sweep through the Earth Stations Overview table and deletes all earth stations that are not present in the CSV file.
 
     - **Sync All Data**: Performs a one-time sweep through the Earth Stations Overview table and the CSV file and syncs all the data so that the file and the table mirror each other.
 
@@ -112,7 +113,7 @@ In this section, you can enable or disable three different pages: **Earth Statio
 
 - **Satellites Config**: Contains the parameters that allow you to configure **automatic polling** of **satellites** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the satellites table will be updated via the CSV file. This section also displays the status of the satellite retrieval process. With the **Apply** button, you can manually poll the satellites from the CSV at any time.
 
-  - **Satellites Options**:This section includes a number of configuration parameters that make the protocol more robust:
+  - **Satellites Options**: This section includes a number of configuration parameters that make the protocol more robust:
 
   - - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
 

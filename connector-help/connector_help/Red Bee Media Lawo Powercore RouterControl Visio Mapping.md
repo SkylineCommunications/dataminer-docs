@@ -10,9 +10,9 @@ This protocol is to be used with the 'Lawo Powercore RouterControl' visio to hav
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### System Info
 
@@ -40,8 +40,12 @@ There is no redundancy defined.
 
 On startup or via the refresh button, 3 files will be generated in the "C:\Skyline DataMiner\Documents\Red Bee Media Lawo Powercore RouterControl Visio Mapping" folder. These files (DSP, MonoMix and StereoMix) will be empty with the csv headers already available.
 
+
+
 When changes are made to the CSV files, you can use the Refresh button on the UI to read out the files and fill in the tables.
 
 ## Notes
 
 This is to be used specifically with the 'Lawo Powercore RouterControl' visio for Red Bee Media.
+
+

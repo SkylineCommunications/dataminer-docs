@@ -60,4 +60,4 @@ On the **General** page of this driver, you can find the following parameters:
 - **Code Point de Service**: If this is set to *Normal*, then **?tat Operationnel** will be the same as *Marche/Arrˆt*. If this is set to is *Invers‚,* it will be its inverse.
 - **?metteur S‚lectionn‚**: Determines which transmitter information is displayed in the table.
 - **Table ?metteur:** Displays the information for the selected transmitter.
-- **Refresh Table** button:Updates the displayed values.
+- **Refresh Table** button: Updates the displayed values.

@@ -60,8 +60,8 @@ Clicking the **update** button will perform a **full update of the system**. It 
 
 The following functionalities are available within this section:
 
-- **Suffix Removal**:Allows you to remove the **tier identifier pattern (-#)** at the end of the Remote name if applicable.
+- **Suffix Removal**: Allows you to remove the **tier identifier pattern (-#)** at the end of the Remote name if applicable.
 - **File Handling**: Allows you to control the file **importing/exporting** for the **Verizon Reports and Dashboards Solutions** driver.
-- **File Path**: Contains the **path** where thefile is **imported/exported.**
+- **File Path**: Contains the **path** where the file is **imported/exported.**
 - **Processing Time**: Allows you to control how **frequently** the system will gather new data to be exported.
 - **Apply**: Allows you to do a **manual update** of the **import/export** logic.

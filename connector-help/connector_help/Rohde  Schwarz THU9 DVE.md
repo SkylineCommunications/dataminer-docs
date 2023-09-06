@@ -101,7 +101,7 @@ This page contains the DVE Table, which is used to create the corresponding tran
 
 This page contains general information about the transmitter.
 
-Here you can set the **Amplifier Mode** and **Operation Mode**,and set the transmitter's **Forward Power Threshold**.
+Here you can set the **Amplifier Mode** and **Operation Mode**, and set the transmitter's **Forward Power Threshold**.
 
 ### Transmitter Information
 

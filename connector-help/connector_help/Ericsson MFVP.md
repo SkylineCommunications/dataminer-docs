@@ -21,21 +21,21 @@ The connector is capable of fully monitoring the Ericsson MediaFirst Video Proce
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                       | **Based on** | **System Impact**                                                                                                                        |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                                                                                                                                                                                        | \-           | \-                                                                                                                                       |
-| 1.1.0.x              | \- Support for **HTTP** for general APIs (Alarms, Servers, Failover and Services API)- SRM integration- Major UI revision- Major data retrieval revision- POD deployment wizard                                                                                        | \-           | \-                                                                                                                                       |
-| 1.2.0.x \[SLC Main\] | \- Support for **HTTPS** **(via bearer token authentication)** for general APIs (Alarms, Servers, Failover and Services API)- Support for basic authentication for MDT API (optional)- General bug fix on data presentation- Replaced counter data by rate calculation | \-           | DO NOT USE VERSION 1.2.0.30 AND ABOVE FOR THE 1.2.0.x RANGE. THIS WILL CONTAIN A MAJOR CHANGE, WHICH WILL REQUIRE ELEMENT CONFIGURATION. |
-| 1.2.1.x              | \- Changes from the 1.2.0.x range up to version 1.2.0.33 - Uses extra connections to execute queries more efficiently.                                                                                                                                                 | 1.2.0.33     | \-                                                                                                                                       |
+| **Range**            | **Key Features**                                                                                                                                                                                                                                                          | **Based on** | **System Impact**                                                                                                                        |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                                                                                                                                                                                           | \-           | \-                                                                                                                                       |
+| 1.1.0.x              | \- Support for **HTTP** for general APIs (Alarms, Servers, Failover and Services API) - SRM integration - Major UI revision - Major data retrieval revision - POD deployment wizard                                                                                       | \-           | \-                                                                                                                                       |
+| 1.2.0.x \[SLC Main\] | \- Support for **HTTPS** **(via bearer token authentication)** for general APIs (Alarms, Servers, Failover and Services API) - Support for basic authentication for MDT API (optional) - General bug fix on data presentation - Replaced counter data by rate calculation | \-           | DO NOT USE VERSION 1.2.0.30 AND ABOVE FOR THE 1.2.0.x RANGE. THIS WILL CONTAIN A MAJOR CHANGE, WHICH WILL REQUIRE ELEMENT CONFIGURATION. |
+| 1.2.1.x              | \- Changes from the 1.2.0.x range up to version 1.2.0.33 - Uses extra connections to execute queries more efficiently.                                                                                                                                                    | 1.2.0.33     | \-                                                                                                                                       |
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                  |
-|-----------|-------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | \-                                                                                                                      |
-| 1.1.0.x   | Alarms API 2.1Servers API 1.1Failover API 1.0**Services API 1.3 up to 1.6**MDT API 0.1.4.dev54547                       |
-| 1.2.0.x   | Product version support for v11 and v12Alarms API 2.2Servers API 1.2Failover API 1.1**Services API 1.6+**MDT API 0.1.42 |
-| 1.2.1.x   | Product version support for v11 and v12Alarms API 2.2Servers API 1.2Failover API 1.1**Services API 1.6+**MDT API 0.1.42 |
+| **Range** | **Supported Firmware**                                                                                                       |
+|-----------|------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | \-                                                                                                                           |
+| 1.1.0.x   | Alarms API 2.1 Servers API 1.1 Failover API 1.0 **Services API 1.3 up to 1.6** MDT API 0.1.4.dev54547                        |
+| 1.2.0.x   | Product version support for v11 and v12 Alarms API 2.2 Servers API 1.2 Failover API 1.1 **Services API 1.6+** MDT API 0.1.42 |
+| 1.2.1.x   | Product version support for v11 and v12 Alarms API 2.2 Servers API 1.2 Failover API 1.1 **Services API 1.6+** MDT API 0.1.42 |
 
 ### System Info
 
@@ -218,8 +218,8 @@ This page contains statistics for all services. In the **Input Monitoring** tabl
 
 The page also contains page buttons to the following subpages:
 
-- **Media Info**:Contains tables regarding video and audio input statistics.
-- **Outputs Statistics**:Contains the Output Statistics table, which displays the bitrate of each output generated by each service.
+- **Media Info**: Contains tables regarding video and audio input statistics.
+- **Outputs Statistics**: Contains the Output Statistics table, which displays the bitrate of each output generated by each service.
 
 ### Live Packaging Dvrs
 
@@ -261,10 +261,10 @@ This page displays a tree control that provides a structured overview of the ser
 
 This page displays the following tables:
 
-- **Servers**: Liststhe server nodes in the system.
+- **Servers**: Lists the server nodes in the system.
 - **Software**: Lists the software installed and running on each server.
 - **Connectors**: Lists all connectors installed and running on the controller server.
-- **Deployment Packages**: Lists the available deployment packages to be used on the **Server Deployment Subpage** (only available if the controller supportsthe MediaKind subproduct **MDT** and the **MDT API Credentials are set up** properly on theFeatures page)
+- **Deployment Packages**: Lists the available deployment packages to be used on the **Server Deployment Subpage** (only available if the controller supports the MediaKind subproduct **MDT** and the **MDT API Credentials are set up** properly on the Features page)
 
 It also contains page buttons to the following subpages:
 

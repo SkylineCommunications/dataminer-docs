@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_Selenio_J2K1_ENC
 
 # Imagine Communications Selenio J2K1 ENC
 
-Thisdriver can be used to monitor and control the **encoder** functionality of the **Imagine Communications Selenio JPEG2000**.
+This driver can be used to monitor and control the **encoder** functionality of the **Imagine Communications Selenio JPEG2000**.
 
 The Imagine Communications Selenio JPEG2000 is a is a multichannel encoder/decoder solution, offering real-time, high-quality JPEG2000 compression over IP.
 
@@ -77,7 +77,7 @@ This page allows you to enable/disable **DVE creation** for each of the 4 encode
 
 ### Alarming
 
-Contains the **Alarm Table**,with all the possible alarms that the card can generate and their current state (*Active priority 0-\>10* or *Inactive*).
+Contains the **Alarm Table**, with all the possible alarms that the card can generate and their current state (*Active priority 0-\>10* or *Inactive*).
 
 **Alarm polling** can be toggled to *30 seconds* or *3 seconds*.
 

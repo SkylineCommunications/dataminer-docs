@@ -20,13 +20,13 @@ After a file being processed it will be moved to a subfolder named "Succeeded" o
 
 ## Creation
 
-The **UPC Nederland VOD Schedule Importer**is a **Virtual** driver.
+The **UPC Nederland VOD Schedule Importer** is a **Virtual** driver.
 
 First the **XML** and **CSV** mapping have to be defined.
 
 To configure a new **XML** mapping on the **Mappings page** set the parameter **XML Mapping Command** to
 
-\#addAsset TitleTagAsset Movie IDTagAsset Title IDTagProvider IDTagMovie FileTagMovie LengthTagFormatTagCategoriesTagStart DateTagEnd DateTagLicense Start TagLicense End TagActionTag
+\#addAsset Title TagAsset Movie ID TagAsset Title ID TagProvider ID TagMovie File TagMovie Length TagFormat TagCategories TagStart Date TagEnd Date TagLicense Start TagLicense End TagAction Tag
 
 To configure a new **CSV** mapping on the **Mappings page** set the parameter **CSV Mapping Command** to
 
@@ -36,7 +36,7 @@ Currently the Asset Title ID and Movie File tags are not used in **CSV** files, 
 
 On the **Settings page** the following configurations have to be made:
 
-- Set the **VOD Workflow Manager DMAI/EId** parameter with the**DMA_ID**/**Element_ID** for the **VOD Workflow Application**.
+- Set the **VOD Workflow Manager DMAI/EId** parameter with the **DMA_ID**/**Element_ID** for the **VOD Workflow Application**.
 - Set the **Timer Frequency** to the desired value
 - Set the **Username**, **Password** and **Domain** needed to access the directories to be read by the protocol.
 
@@ -55,7 +55,7 @@ In this page it is shown a table with the directories to import from. The files 
 - **Directory \[IDX\]** - The index of the row
 - **Path** - The path to the folder with the "Received" folder containing the files to be imported
 - **XML Mapping Id** - The row Id from the XML Mapping table to be used to map the **XML** elements to schedules
-- **CSV Mapping Id**- The row Id from the CSV Mapping table to be used to map the**CSV**rows to schedules
+- **CSV Mapping Id** - The row Id from the CSV Mapping table to be used to map the **CSV** rows to schedules
 
 It is also possible to edit the table by right clicking it to use the context menu to add a row, delete selected rows or clear the table.
 
@@ -84,7 +84,7 @@ In this page it is possible to configure the **XML** and **CSV** mappings using 
 - \#editIDX*data...*
 - \#deleteIDX
 
-With *data...* being: Asset TitleTagAsset Movie IDTagAsset Title IDTagProvider IDTagMovie FileTagMovie LengthTagFormatTagCategoriesTagStart DateTagEnd DateTagLicense Start TagLicense End TagActionTag
+With *data...* being: Asset Title TagAsset Movie ID TagAsset Title ID TagProvider ID TagMovie File TagMovie Length TagFormat TagCategories TagStart Date TagEnd Date TagLicense Start TagLicense End TagAction Tag
 
 In this page it is also possible to configure which directories will be read with the **Directory Command** parameter using the following commands:
 

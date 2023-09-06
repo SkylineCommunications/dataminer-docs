@@ -4,7 +4,8 @@ uid: Connector_help_Skyline_Enhanced_Service
 
 # Skyline Enhanced Service
 
-This driver allows you to detect and monitor the root cause of alarms found in a service. To do so, you need to indicate which alarms have which root cause. You can also combine multiple alarms, by configuring which alarms are required and which are forbidden for a certain root cause.
+This driver allows you to detect and monitor the root cause of alarms found in a service. To do so, you need to indicate which alarms have which root cause.
+You can also combine multiple alarms, by configuring which alarms are required and which are forbidden for a certain root cause.
 
 ## About
 

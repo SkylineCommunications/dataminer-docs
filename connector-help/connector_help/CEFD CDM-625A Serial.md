@@ -49,7 +49,7 @@ This page provides an overview of the most important parameters of the device, d
 The **System Information** section contains the following parameters:
 
 - **Model Number**
-- **Hardware Revision**: The modem hardware revision, in the format *xx.y*,where *xx* indicates the main (bottom) card, and *y* indicates the top (modem) card.
+- **Hardware Revision**: The modem hardware revision, in the format *xx.y*, where *xx* indicates the main (bottom) card, and *y* indicates the top (modem) card.
 - **Software Revision**
 - **Serial Number**
 
@@ -77,7 +77,7 @@ This page provides three sections with parameters related to this:
 
 - **Equipment ID**: This **read-only** section displays the operational status for a number of FAST-enabled features.
 - **Hardware**: This list displays the **installed** and presently operational FAST-enabled features as well as **non-installed** FAST-enabled features that are available for purchase and activation from Comtech EF Data. Slot 1 and 2 have been replaced by future expansions and slot 5 (RAN Optimizer card) is no longer in the MIB. Three extra options are also displayed: Carrier ID, Audio Chips and CnC Activation. Note that some information about options is only available in the SNMP version of this driver.
-- **Demo**:Displays whether **Demo Mode** is enabled, and the **Demo Time** remaining.
+- **Demo**: Displays whether **Demo Mode** is enabled, and the **Demo Time** remaining.
 
 ### Config - Modem
 
@@ -92,10 +92,10 @@ Use this page to configure LAN IP-related parameters.
 
 The **Network Configuration** section consists of the following parameters:
 
-- **IP Gateway**:The IP address of the default gateway. Applicable only if Working Mode is set to *Managed Switch*.
+- **IP Gateway**: The IP address of the default gateway. Applicable only if Working Mode is set to *Managed Switch*.
 - **Traffic/Mgmt IP Address** (and subnet mask): Can be used to configure the modem's IP addresses.
 - **MAC Address**: The MAC address of the Ethernet port. This parameter is read-only and cannot be changed.
-- **MAC Learning**:Applicable only if Working Mode is set to *Managed Switch*. Use the drop-down menu to set MAC Learning to *On*or *Off*.
+- **MAC Learning**: Applicable only if Working Mode is set to *Managed Switch*. Use the drop-down menu to set MAC Learning to *On* or *Off*.
 - **WAN Buffer Length**: Enter a value between *20 ms* and *400 ms*, in *20 ms* increments.
 - **L2 QoS** (Layer 2 QoS): Use the drop-down menu to set this feature to *Off*, *VLAN* *only*, *Port only*, or *VLAN & Port*.
 - **L3 QoS** (Layer 3 QoS): This feature is only operational when the optional IP Packet Processor card is installed and enabled. Use the drop-down menu to set the L3 (Advanced) QoS to *Off*, *Max/Priority*, *Min Max*, or *DiffServ*.
@@ -106,15 +106,15 @@ The **Network Configuration** section consists of the following parameters:
 In the **Per Port Configuration** section, you can set parameters for each port (**Port 1** to **Port 4**):
 
 - **Port Speed:** Use the drop-down menu to select the speed for each selected port: *Auto*, *100 Full-Duplex*, *100 Half-Duplex*, *10 Full-Duplex*, or *10 Half-Duplex*.
-- **Pause Flow Control:** Set Pause Flow Control for the port to *Off*or *On*.
-- **Port Mode:** Set the Native Mode for the port to *Trunk*or *Access*.
+- **Pause Flow Control:** Set Pause Flow Control for the port to *Off* or *On*.
+- **Port Mode:** Set the Native Mode for the port to *Trunk* or *Access*.
 - **PVID**: When **Native Mode** is *Enabled*, a PVID (*Native* VLAN ID) may be assigned to the selected port using a value range of *0001-4095*.
-- **Priority:** Use the drop-down menu to set the operational priority of the selected port, in the order of preference (from *1*to *4*).
+- **Priority:** Use the drop-down menu to set the operational priority of the selected port, in the order of preference (from *1* to *4*).
 - **Actual Negotiated Port Speed:** This is the status of the currently operating actual speed and duplex. If the port is not connected, "*Link Down*" is displayed.
 
 VLAN Mode: This mode is supported if Working Mode is set to *Managed Switch*, with or without the optional IP Packet Processor *enabled*. The **VLAN Mode** section contains the following parameters:
 
-- **VLAN Mode:** Set the mode to *Disabled*or *Enabled*.
+- **VLAN Mode:** Set the mode to *Disabled* or *Enabled*.
 - **Management VLAN ID:** A management VLAN ID can be assigned to the selected port using a value range of *0001-4095*.
 
 Below this, you can find the **VLAN Table**, which contains the following parameters:
@@ -148,7 +148,7 @@ Use this page to configure a number of the utility functions of the device:
 
 - **Circuit ID**: Enter a Circuit ID string of up to 40 characters. The Circuit ID, as created here, appears in the title bar of compatible web browsers for easy unit identification. A carrier ID can also be enabled or disabled.
 
-- **BERT Config**: Use the drop-down menus provided in this section to set the **Bit Error Rate Test**for **Tx** or **Rx** to *On*or *Off*, configure the pattern for **Tx** or **Rx**, and set **Error Insertion** to either *Off* or *10E-3*.
+- **BERT Config**: Use the drop-down menus provided in this section to set the **Bit Error Rate Test** for **Tx** or **Rx** to *On* or *Off*, configure the pattern for **Tx** or **Rx**, and set **Error Insertion** to either *Off* or *10E-3*.
 
 - Date and Time:
 
@@ -166,12 +166,12 @@ Use this page to configure a number of the utility functions of the device:
 
 - **Save** / **Load** (save takes precedence over load):
 
-- **Configuration Save / Configuration Load:** Use the drop-down menus to save or load up to 10 different modem configurations, *0*through *9*.
-  - In the serial version of the driver, the page button **Configuration slots**,which shows the available configuration slots, is not available.
+- **Configuration Save / Configuration Load:** Use the drop-down menus to save or load up to 10 different modem configurations, *0* through *9*.
+  - In the serial version of the driver, the page button **Configuration slots**, which shows the available configuration slots, is not available.
 
 ### Config - Drop and Insert
 
-On this page, you can configure the Drop and Insertfunctionality. The appropriate parameters should be set according to the framing mode selected on the **Config - Modem** page. Note that this page is different from the equivalent page in the SNMP version of the driver.
+On this page, you can configure the Drop and Insert functionality. The appropriate parameters should be set according to the framing mode selected on the **Config - Modem** page. Note that this page is different from the equivalent page in the SNMP version of the driver.
 
 ### Config - BUC / LNB
 
@@ -181,17 +181,17 @@ In the **BUC Configuration** section, you can configure the following parameters
 
 - **BUC Power Enable**, **10 MHz Ref Enable**, and **Output Power Enable**: Use the drop-down menus to turn these functions *On* or *Off*.
 - **BUC Low** and **High Current Limit:** Assign a value (in mA) ranging from *0* to *4000*.
-- **Tx LO (Low Oscillator) Frequency:** Assign a value (in MHz) to the Tx LO frequency, and then use the toggle button to designate the value as a *HIGH (+)*or *LOW (-)*limit.
-- **BUC Address:** Assign a value for the BUC address, from *1*to *15*.
+- **Tx LO (Low Oscillator) Frequency:** Assign a value (in MHz) to the Tx LO frequency, and then use the toggle button to designate the value as a *HIGH (+)* or *LOW (-)* limit.
+- **BUC Address:** Assign a value for the BUC address, from *1* to *15*.
 
 Below this, the **BUC Status** parameter shows the status of the BUC.
 
 In the **LNB Control** section, you can configure the following parameters:
 
 - **LNB DC Power**: Use the drop-down menu to either set this to *Off* or choose the appropriate voltage.
-- **LNB Reference Enable**:Use the toggle button to turn this function *On* or *Off*.
-- **LNB Low** and **High Current Threshold**:Assign a value (in mA) ranging from *0* to *500*.
-- **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO frequency, and then use the drop-down menu to designate the value as a *HIGH (+)*or *LOW (-)*limit.
+- **LNB Reference Enable**: Use the toggle button to turn this function *On* or *Off*.
+- **LNB Low** and **High Current Threshold**: Assign a value (in mA) ranging from *0* to *500*.
+- **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO frequency, and then use the drop-down menu to designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
 Below this, the **LNB Status** parameter shows the status of the LNB.
 
@@ -232,18 +232,18 @@ The **Statistics Log** section contains the following parameters:
 - **Statistics Interval**: The interval at which the statistics are logged.
 - **Statistics Overview**: The table showing the statistics.
 
-Finally, the **Alarm Masking** page button opens a subpage where you can use the available option buttons to define an alarm as *Masked*or *Active***.**
+Finally, the **Alarm Masking** page button opens a subpage where you can use the available option buttons to define an alarm as *Masked* or *Active***.**
 
 ### ODU / Redundancy
 
 Use this page to enable or disable communication with CSAT/KST ODUs for 70/140 MHz operation or LPOD BUCs for L-band operation, and to set up redundancy.
 
-In the ODU section, you can use the **ODU Comms** parameter to set the ODU operation to *Disabled*or *Enabled*.
+In the ODU section, you can use the **ODU Comms** parameter to set the ODU operation to *Disabled* or *Enabled*.
 
 In the **Redundancy** section, you can configure the following parameters:
 
 - **Redundancy Traffic IP Address and Network Prefix**: Enter the IP address and subnet mask in the format XXX.XXX.XXX.XXX and YY.
-- **Redundancy 1:N Mode (Use with Caution)**: Use the drop-down menu to set 1:N Redundancy mode to *Disabled*or *Enabled*.
+- **Redundancy 1:N Mode (Use with Caution)**: Use the drop-down menu to set 1:N Redundancy mode to *Disabled* or *Enabled*.
 - **Packet Processor Redundancy**: When the optional IP Packet Processor card is installed and enabled in a 1:1 redundancy configuration, there is no need to use the toggle button here, as Packet Processor Redundancy is then enabled automatically.
 
 When redundant modems are used and the selected unit is currently the online unit, click **Force 1:1 Switch** to force a switchover so the unit will then be in offline (standby) mode. This command is only valid for the online unit in a 1:1 pair.

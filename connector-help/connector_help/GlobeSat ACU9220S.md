@@ -26,7 +26,8 @@ This driver is intended to communicate with 9220S Antenna Control System devices
 
 ### Creation
 
-***Serial Main connection***This driver uses a Serial connection and needs the following user information:
+***Serial Main connection***
+This driver uses a Serial connection and needs the following user information:
 
 SERIAL CONNECTION:
 

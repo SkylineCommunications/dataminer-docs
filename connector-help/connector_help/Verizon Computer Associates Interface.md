@@ -12,7 +12,7 @@ The Verizon Computer Associates Interface collects trending data from the collec
 
 | **Range**            | **Key Features**                                   | **Based on** | **System Impact** |
 |----------------------|----------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | \- SLNet GetTrendMessage- SCP                      | \-           | \-                |
+| 1.0.0.x              | \- SLNet GetTrendMessage - SCP                     | \-           | \-                |
 | 1.0.1.x              | Data retrieval from central database implemented.  | 1.0.0.1      | \-                |
 | 1.0.2.x \[SLC Main\] | Data retrieval from CSV offload files implemented. | 1.0.1.6      | \-                |
 
@@ -42,7 +42,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-The **Process Overview** table is initialized with static values after the element is created. Two processes, *CA_PERF_DATA* and *CA_SUN_OUTAGE_DATA*,are defined in this version.
+The **Process Overview** table is initialized with static values after the element is created. Two processes, *CA_PERF_DATA* and *CA_SUN_OUTAGE_DATA*, are defined in this version.
 
 ### Redundancy
 
@@ -117,13 +117,14 @@ On the Debug page, a number of parameters are available that can be of use to tr
 
 - **Debug**: Determines whether the Debug Information page is displayed.
 
-- **Debug State**:Can be enabled to add extra log messages in the Element Log console. By default, this is disabled.
+- **Debug State**: Can be enabled to add extra log messages in the Element Log console. By default, this is disabled.
 
 - **Entity Export/Import Settings:** These settings handle the **export of** **configuration files** and **import of provisioning files**. You can:
 
 - **Enable/disable** the export and import feature with the **Entity Export** and **Entity Import** toggle button, respectively.
   - Specify the **path** where files will be exported and imported, with the **Entity Export Directory** and **Entity Import Directory** parameters, respectively.
-  - Switch between exporting/importing to a **local or remote location** by using the toggle button **Entity Export Directory Type** or **Entity Import Directory Type**, respectively.Note that for the remote file handling feature to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
+  - Switch between exporting/importing to a **local or remote location** by using the toggle button **Entity Export Directory Type** or **Entity Import Directory Type**, respectively.
+    Note that for the remote file handling feature to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
   - Perform an export or import by clicking the **Apply** button in the relevant section.
 
 ## Notes

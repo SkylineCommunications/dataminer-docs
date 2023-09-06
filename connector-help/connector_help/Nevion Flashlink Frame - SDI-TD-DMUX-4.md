@@ -34,7 +34,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about an SDI-TD-DMUX4 module, including:
+This page contains general information about an SDI-TD-DMUX4 module, including:
 
 - Type
 - Card Status
@@ -69,7 +69,7 @@ It also allows you to view the **Opt Input**, **Input Status** and **Signal Stre
 
 This page displays the **Monitor** **Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error Delta** and **Error Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Signal Input Page
 

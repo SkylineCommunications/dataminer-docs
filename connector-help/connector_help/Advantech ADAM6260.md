@@ -24,6 +24,8 @@ The driver communicates through a serial connection with the device to change it
 |------------------|-----------------------------|
 | 1.0.0.x          | A1.05.B00                   |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -63,3 +65,5 @@ On this page you can change the **IP** **addresses** of the **stream**, on the r
 ### Flags
 
 you can configure the **GCL** **flags** on this page, at the bottom are *2* **buttons** that change all of them.
+
+

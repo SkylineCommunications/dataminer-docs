@@ -75,7 +75,7 @@ This element has the following data pages:
 - **I/O:** Allows you to configure the inputs and outputs of the card, as well as the GPI Control.
 - **Audio 1/4**: Allows you to configure gain, phase and delay for channels 1-4.
 - **Audio 5/8**: Allows you to configure gain, phase and delay for channels 5-8.
-- **Add-On:** The drop-down boxes on this page allow you to fill theQuad speed audio bus with the appropriate outputs for slots 1-32.
+- **Add-On:** The drop-down boxes on this page allow you to fill the Quad speed audio bus with the appropriate outputs for slots 1-32.
 - **Preset**
 - **Mixer**
 - **Metadata:** Displays the status of the metadata parameters.

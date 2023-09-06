@@ -30,7 +30,8 @@ This driver uses an HTTP connection and requires the following input during elem
 
 This page contains all the information concerning the SFTP connection and the HTTP response.
 
-The **SFTP Connection Status** parameter indicates the current status of the SFTP connection. You can specify the credentials with the parameters **Login** and **Password**, and then click the **Connect** button to establish the connection to the device.
+The **SFTP Connection Status** parameter indicates the current status of the SFTP connection.
+You can specify the credentials with the parameters **Login** and **Password**, and then click the **Connect** button to establish the connection to the device.
 
 To display the fetching status for the different logging files, click the **Files Status** page button.
 
@@ -50,27 +51,27 @@ The **Last Update** parameter displays the time when the file was last updated. 
 
 ### RE System Out
 
-On this page, RE System Out errors and warnings are shown in the **RE System Out Error Table** (only filled in in the Application Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, RE System Out errors and warnings are shown in the **RE System Out Error Table** (only filled in in the Application Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### REMON System Out
 
-On this page, REMON System Out errors and warnings are shown in the **REMON System Out Error Table** (only filled in in the Application Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, REMON System Out errors and warnings are shown in the **REMON System Out Error Table** (only filled in in the Application Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### Server
 
-On this page, server errors and warnings are shown in the **Server Error Table** (only filled in in the Application Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, server errors and warnings are shown in the **Server Error Table** (only filled in in the Application Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### Central
 
-On this page, central errors are shown in the **Central Error Table** (only filled in in the Application Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, central errors are shown in the **Central Error Table** (only filled in in the Application Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### Host
 
-On this page, host errors are shown in the **Host Error Table** (only filled in in the Application Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, host errors are shown in the **Host Error Table** (only filled in in the Application Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### REP ETL System Out
 
-On this page, REP ETL System Out errors and successes are shown in the **REP ETL System Out Error Table** (only filled in in the Reporting Mode)with the associated **Time, Job Name, Status** and **Error Description.**
+On this page, REP ETL System Out errors and successes are shown in the **REP ETL System Out Error Table** (only filled in in the Reporting Mode) with the associated **Time, Job Name, Status** and **Error Description.**
 
 ### Web Interface
 

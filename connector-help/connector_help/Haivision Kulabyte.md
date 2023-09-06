@@ -112,16 +112,32 @@ The **Remove All** button will delete all the presets from the **Presets** table
 
 This page displays a tree control with the following structure:
 
-> 1\. Channel 2a. Input 1b. Input 2
+> 1\. Channel 2
+> a. Input 1
+> b. Input 2
 >
-> 2\. Channel 2a. Input 1b. Input 2
+> 2\. Channel 2
+> a. Input 1
+> b. Input 2
 
 ### Outputs page
 
 This page displays a tree control with the following structure:
 
-1.  1.  Channel 1a. Output 1 i. Stream 1 ii. Stream 2b. Output 2 i. Stream 1 ii. Stream 2
-    2.  Channel 2a. Output 1 i. Stream 1 ii. Stream 2b. Output 2 i. Stream 1 ii. Stream 2
+1.  1.  Channel 1
+        a. Output 1
+        i. Stream 1
+        ii. Stream 2
+        b. Output 2
+        i. Stream 1
+        ii. Stream 2
+    2.  Channel 2
+        a. Output 1
+        i. Stream 1
+        ii. Stream 2
+        b. Output 2
+        i. Stream 1
+        ii. Stream 2
 
 ### Events page
 

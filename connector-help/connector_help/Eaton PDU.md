@@ -10,9 +10,9 @@ The Eaton PDU driver is used to monitor the **Eaton Power Distribution Unit**
 
 ### Version Info
 
-| **Range**            | **Key Features**                               | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.Monitors the EATON PDU system. | \-           | \-                |
+| **Range**            | **Key Features**                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. Monitors the EATON PDU system. | \-           | \-                |
 
 ### Product Info
 

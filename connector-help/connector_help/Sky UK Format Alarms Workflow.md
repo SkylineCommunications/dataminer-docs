@@ -49,7 +49,7 @@ This page displays the **ALPB Table** with the alarms from each element that was
 
 ### Device Data
 
-This page contains the state of the workflow decision nodes. It displays thevalues of the subscribed parameters.
+This page contains the state of the workflow decision nodes. It displays the values of the subscribed parameters.
 
 ### Subscriptions Active
 

@@ -47,7 +47,8 @@ More region information is available at <https://docs.aws.amazon.com/general/lat
 
 HTTP CONNECTION:
 
-- **IP address/host**: [https://ec2.**\#REGION#**.amazonaws.com](https://ec2./#REGION%23.amazonaws.com)For example, for Europe (Frankfurt): [https://ec2.**eu-central-1**.amazonaws.com](https://ec2.eu-central-1.amazonaws.com/)
+- **IP address/host**: [https://ec2.**\#REGION#**.amazonaws.com](https://ec2./#REGION%23.amazonaws.com)
+  For example, for Europe (Frankfurt): [https://ec2.**eu-central-1**.amazonaws.com](https://ec2.eu-central-1.amazonaws.com/)
 - **IP port**: The IP port of the destination (default: *443*).
 
 #### Virtual connection (range 1.0.1.x)
@@ -65,7 +66,8 @@ We recommend that you create a dedicated IAM account user to use with DataMiner.
 3.  Create a user with a name of your choosing. We recommend the name *DataminerEc2Protocol*.
 4.  Make sure to grant Programmatic Access to the user account.
 5.  Make sure to grant policies for accessing the EC2 API.
-6.  Copy the **Access Key** and the **Secret Key** and paste them on the **General page** of the element. Note that these keys are only **generated once**, so you will not be able to recover them if you lose them. Make sure to store them in a safe location, as Skyline or Amazon cannot trace them back.
+6.  Copy the **Access Key** and the **Secret Key** and paste them on the **General page** of the element.
+    Note that these keys are only **generated once**, so you will not be able to recover them if you lose them. Make sure to store them in a safe location, as Skyline or Amazon cannot trace them back.
 
 ## How to Use
 

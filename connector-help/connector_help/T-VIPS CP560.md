@@ -27,7 +27,7 @@ This driver uses an SNMP connection and needs the following user information:
 
 The following pages display general information about the device:
 
-- **General:** This page contains general information about the device, such as the **Product Name, Device Name, Serial Number, Temperature**,etc. You can also perform a delayed reset on the device here.
+- **General:** This page contains general information about the device, such as the **Product Name, Device Name, Serial Number, Temperature**, etc. You can also perform a delayed reset on the device here.
 - **Alarm Log:** This page contains all the information related to the event history of the device.
 - **Alarms:** This page contains all the information about the current alarms present on the device.
 - **Port Mappings:** On this page, you can configure the device's ports as input/output, and configure the format of the output data.
@@ -37,7 +37,7 @@ The following pages display general information about the device:
 The following pages display information related to the input:
 
 - **Tree View:** This page displays a cascading tree view with the inputs of the device, its services and the PIDs of these services. You can also configure all parameters here, in the same way as on regular pages.
-- **Inputs:** On this page, you can view all information related to the inputs, such as the **Label, Total Bitrate, Effective Bitrate**, etc.You can also configure the ports' **label**, **maximum bitrate** and **status** here.
+- **Inputs:** On this page, you can view all information related to the inputs, such as the **Label, Total Bitrate, Effective Bitrate**, etc. You can also configure the ports' **label**, **maximum bitrate** and **status** here.
 - **Input Alarms:** On this page, you can view all information related to input-related alarms.
 - **Services:** On this page, you can view the services present on each input, with parameters such as the **Service name, Bitrate, Alarm Status, Description**, etc.
 - **PIDs:** On this page, you can view all the information on the processes that belong to each service, such as the **Bitrate, Errors, Average Bitrate**, etc.

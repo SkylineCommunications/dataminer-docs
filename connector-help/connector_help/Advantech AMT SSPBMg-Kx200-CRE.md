@@ -23,9 +23,9 @@ This driver is divided into four sections:
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.DCF integration featured from version 1.0.0.2 onwards. | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version. DCF integration featured from version 1.0.0.2 onwards. | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
@@ -55,7 +55,7 @@ SNMP Settings:
 
 ### General
 
-Thispage contains identification information about the device, including the System Description, System Up Time, System Contact, System Name, System Location, Serial Number, Software Version, Power Class (dBm), Power Class (W), Frequency Shift, PA Present, HPA availability and switch position (Antenna or Load).
+This page contains identification information about the device, including the System Description, System Up Time, System Contact, System Name, System Location, Serial Number, Software Version, Power Class (dBm), Power Class (W), Frequency Shift, PA Present, HPA availability and switch position (Antenna or Load).
 
 The page also contains three page buttons; **Security**, **Redundancy** and **Environmental**.
 
@@ -65,11 +65,11 @@ The page also contains three page buttons; **Security**, **Redundancy** and **En
 
 ### Interfaces
 
-Thispage contains the **Interfaces Table.**
+This page contains the **Interfaces Table.**
 
 ### Amplifier
 
-Thispage contains readings of the **RF status** parameters. In most cases, it is also possible to set the parameters to different values or states, some within a given range and others to any range. For example, the values of the **Gains** (Gain A and Gain B) are read and can also be set to any value between 53.0 dB and 74.0 dB, and the values of **ALC power** and **ILP power** are read and and can be set without range constrictions.
+This page contains readings of the **RF status** parameters. In most cases, it is also possible to set the parameters to different values or states, some within a given range and others to any range. For example, the values of the **Gains** (Gain A and Gain B) are read and can also be set to any value between 53.0 dB and 74.0 dB, and the values of **ALC power** and **ILP power** are read and and can be set without range constrictions.
 
 The parameters are grouped together into groups. For example, the gain-related parameters are grouped in one group called **Gain**, the frequency-related parameters are grouped into one group called **Frequencies**, the power-related parameters are grouped into one group called **Power**, and so on.
 
@@ -79,7 +79,7 @@ The total elapsed time since the unit has been produced is also included on this
 
 ### Alarms
 
-Thispage contains all the parameters that poll alarms read from the different components of the device. All the parameters are read-only, except for the **Fault Reset** button.
+This page contains all the parameters that poll alarms read from the different components of the device. All the parameters are read-only, except for the **Fault Reset** button.
 
 As on the Amplifiers page, the parameters are grouped together logically. In addition, some alarms combine two alarms in one. For example, the **Wave Guide (WG) Switch** alarm and **WG connectivity** alarm are grouped into one alarm, with an output as follows: Alarm - No Alarm - Disconnected. The **Redundancy Switch-**related alarms are also gathered into one group called **Redundancy Switch**, and the three alarms are named as follows: **Short** - **Disconnect** - **Position Error**.
 
@@ -106,4 +106,4 @@ Virtual fixed interfaces:
 
 Internal Connections
 
-- Between **Input** and **Output** interfaces,an internal connection is created if the **RF Status** parameter is **On**.
+- Between **Input** and **Output** interfaces, an internal connection is created if the **RF Status** parameter is **On**.

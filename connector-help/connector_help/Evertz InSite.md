@@ -60,11 +60,13 @@ The web interface is only accessible when the client machine has network access 
 
 The connector displays the retrieved information on the following data pages:
 
-- **General**: Displays status parameters as reported by the API. The Host Presence information is calculated based on the reported system information. This is also where you can specify the **credentials** to be used by the element. However, note that these are currently not verified by the API.
+- **General**: Displays status parameters as reported by the API. The Host Presence information is calculated based on the reported system information.
+  This is also where you can specify the **credentials** to be used by the element. However, note that these are currently not verified by the API.
 
 - **Host Tree**: Contains a tree structure with the information retrieved from the API structured as hosts. When you select a host, you will be able to check its information, including CPU, memory usage, and notifications.
 
-- **Hosts**: Contains a table with the detected hosts and their status (i.e. *Present*/*Missing*). You can also define an IP address for each host. This will be used to relate the notifications to a specific host. If no IP is defined, the notifications will be linked to a \[Missing\] placeholder.
+- **Hosts**: Contains a table with the detected hosts and their status (i.e. *Present*/*Missing*).
+  You can also define an IP address for each host. This will be used to relate the notifications to a specific host. If no IP is defined, the notifications will be linked to a \[Missing\] placeholder.
 
 - **System information**: Contains page buttons to the following subpages:
 
@@ -74,4 +76,5 @@ The connector displays the retrieved information on the following data pages:
   - **Memory**: Shows a table with memory information, i.e. the host name, memory usage information, and swap memory usage information.
   - **Process**: Shows a table with process information retrieved, i.e. the process name and PID, host name, state, CPU, and memory.
 
-- **Notifications**: Displays a table with notification information. The information is retrieved from notifications based on the IPs specified on the Hosts page.You can configure the maximum number of notifications to keep and the number of days a notification should be kept.
+- **Notifications**: Displays a table with notification information. The information is retrieved from notifications based on the IPs specified on the Hosts page.
+  You can configure the maximum number of notifications to keep and the number of days a notification should be kept.

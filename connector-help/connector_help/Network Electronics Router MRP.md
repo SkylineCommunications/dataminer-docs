@@ -103,7 +103,7 @@ Version 3.0.0.8 and higher:
 <li>Interface connection:
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
-<li><strong>IP port</strong>: The IP port of the device, by default <em>4381</em>.</li>
+<li><strong>IP port</strong>: The IP port of the device, by default <em></em> <em>4381</em>.</li>
 <li><strong>Bus address</strong>: The bus address of the device, by default <em>1</em>.</li>
 </ul></li>
 </ul></td>
@@ -225,19 +225,19 @@ The table on this page is similar to the **Fans** table, but does not contain an
 - **Config**: The current configuration.
 - **Status**: The status of the signal detector.
 
-Use the **Refresh Cable EQ Table**button to poll the table once immediately.
+Use the **Refresh Cable EQ Table** button to poll the table once immediately.
 
 ### Reclockers
 
 The table on this page is similar to the **Fans** and **EQ** table, with the addition of loop-bandwidth and bitrate values.
 
-Use the **Refresh Reclocker Table**button to poll the table once immediately.
+Use the **Refresh Reclocker Table** button to poll the table once immediately.
 
 ### Cable Driver
 
 This page contains a table showing the **Number**, **Configuration**, and **Slew Rate** of the cable drivers.
 
-Use the **Refresh Cable Driver Table**button to poll the table once immediately.
+Use the **Refresh Cable Driver Table** button to poll the table once immediately.
 
 ### Monitor
 

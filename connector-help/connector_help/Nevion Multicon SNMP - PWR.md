@@ -4,7 +4,8 @@ uid: Connector_help_Nevion_Multicon_SNMP_-_PWR
 
 # Nevion Multicon SNMP - PWR
 
-Nevion Multicon is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.The **Nevion Multicon SNMP - PWR** DVE driver is used to monitor cards of type FLPSU.
+Nevion Multicon is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.
+The **Nevion Multicon SNMP - PWR** DVE driver is used to monitor cards of type FLPSU.
 
 ## About
 

@@ -18,7 +18,8 @@ Ranges of the driver
 
 Creation
 
-***HTTP connection*** This driver uses an HTTP connection and needs the following user information:
+***HTTP connection
+***This driver uses an HTTP connection and needs the following user information:
 
 HTTP CONNECTION (Connection to Ditto Server):
 

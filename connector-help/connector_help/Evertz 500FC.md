@@ -59,8 +59,8 @@ This page displays several tables with information concerning the inserted modul
 
 #### On this page, a number of additional tables are displayed:
 
-- The **DA2Q MGMT Fault Table** shows the trap information for the insertedDA2Q modules.
+- The **DA2Q MGMT Fault Table** shows the trap information for the inserted DA2Q modules.
 - The **DA2Q-HD** **MGMT Fault Table** shows the trap information for the DA2Q-HD modules**.**
 - The **DA2Q-3G MGMT Fault Table** shows the trap information for the DA2Q-3G modules*.*
-- The **DA-3G** **MGMT Fault Table** shows the trap information for theDA-3G modules**.**
+- The **DA-3G** **MGMT Fault Table** shows the trap information for the DA-3G modules**.**
 - The **ACO2-HD** **MGMT Fault Table** shows the trap information for the ACO2-HD modules.

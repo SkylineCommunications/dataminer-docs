@@ -84,7 +84,7 @@ This page contains the **Hub Forward Overview** table, with specific data for th
 
 This page contains the following tables:
 
-- **Hub Return Carriers**:Contains configuration and statistical data related to each return carrier.
+- **Hub Return Carriers**: Contains configuration and statistical data related to each return carrier.
 - **Hub Return Overview**: Contains the same type of information for the Hub Return entities (also referred to as *Inroute Groups*). The table also includes fault information and the **Event Suppression** column, which allows you to set the percent of circuits for each hub that, if they contain alarms of the same type, will generate the corresponding infrastructure alarm for the hub.
 
 ### Line cards

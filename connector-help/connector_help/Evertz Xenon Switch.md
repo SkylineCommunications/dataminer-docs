@@ -60,7 +60,7 @@ SERIAL CONNECTION (**TCP/IP**):
 
 - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device (port *23*).
-  - **Bus address**: The bus address of the device (range: *16 - 1*). The bus addressis used as the **Matrix Level**:
+  - **Bus address**: The bus address of the device (range: *16 - 1*). The bus address is used as the **Matrix Level**:
 
 > > |                        |                  |
 > > |------------------------|------------------|

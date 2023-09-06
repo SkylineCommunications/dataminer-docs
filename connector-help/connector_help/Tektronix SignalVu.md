@@ -39,7 +39,10 @@ Due to the nature of this device, several packages need to be installed and conf
 2.  Ensure that the spectrum analyzer is connected on a USB 3.0 port.
 3.  Go to the Tektronix TekVISA connectivity software page (<https://www.tek.com/oscilloscope/tds7054-software/tekvisa-connectivity-software-v411>) and download the file.
 4.  Install the package according to the instructions from Tektronix.
-5.  Restart the computer.You should see the following applications (the ones marked with a red box are the ones we will use):
+5.  Restart the computer.
+    You should see the following applications (the ones marked with a red box are the ones we will use):
+
+![TekVisa AppList.png](~/connector-help/images/Tektronix_SignalVu_TekVisa_AppList.png)
 
 ## Installation and configuration
 
@@ -47,11 +50,19 @@ For this system to be accessed from the DataMiner server, some configuration is 
 
 ### Remote System
 
-1.  Open the **TekVisa Resource Manager**.There you should see a GPIB interface under **Instruments**. It should be something like this:If there is no GPIB present, go to the SignalVU User Manual and follow the Troubleshooting guide.
-2.  Open the TekVisa LAN Server control application. This application does not run in a normal window. To see if it is running, go to the taskbar (near the clock) and right-click the TekVISA icon.
+1.  Open the **TekVisa Resource Manager**.
+    There you should see a GPIB interface under **Instruments**. It should be something like this:
+    ![01_Configuration.png](~/connector-help/images/Tektronix_SignalVu_01_Configuration.png)
+    If there is no GPIB present, go to the SignalVU User Manual and follow the Troubleshooting guide.
+2.  Open the TekVisa LAN Server control application.
+    This application does not run in a normal window. To see if it is running, go to the taskbar (near the clock) and right-click the TekVISA icon.
+    ![02_Configuration.png](~/connector-help/images/Tektronix_SignalVu_02_Configuration.png)
 3.  Click **Start VXI-11 Server** (option surrounded by the red square in the image above).
 4.  Click **Server Properties** and ensure that both options are set to start when Windows starts, as illustrated below.
-5.  Hover the mouse over the TekVisa LAN Server icon to check if you see an IP address (the same as your computer). This indicates that the server is ready to pass the packets to the SignalVU Virtual GPIB. You can find more technical information on the Tektronix home page or in the SignalVu User Manual.
+    ![03_Configuration.png](~/connector-help/images/Tektronix_SignalVu_03_Configuration.png)
+5.  Hover the mouse over the TekVisa LAN Server icon to check if you see an IP address (the same as your computer).
+    ![04_Configuration.png](~/connector-help/images/Tektronix_SignalVu_04_Configuration.png)
+    This indicates that the server is ready to pass the packets to the SignalVU Virtual GPIB. You can find more technical information on the Tektronix home page or in the SignalVu User Manual.
 6.  Restart your computer to ensure that all services are active.
 
 ### DataMiner Server
@@ -59,13 +70,20 @@ For this system to be accessed from the DataMiner server, some configuration is 
 On the DataMiner server, the National Instruments NiVISA package must be configured. This will allow the Tektronix SignalVu driver to communicate with the computer.
 
 1.  Open the NiMax application that was previously installed on the server.
+    ![04b_Configuration.png](~/connector-help/images/Tektronix_SignalVu_04b_Configuration.png)
 2.  In the tree view on the left, go to **Devices and Interfaces** \> **Network Devices**.
-3.  Right-click Network Devices and select **Create New VISA TCP/IP Resource**. A new window will open with several options.
+3.  Right-click Network Devices and select **Create New VISA TCP/IP Resource**.
+    ![05_Configuration.png](~/connector-help/images/Tektronix_SignalVu_05_Configuration.png)
+    A new window will open with several options.
 4.  In the new window, select **Auto-Detect of LAN Instrument** and click **Next**.
+    ![06_Configuration.png](~/connector-help/images/Tektronix_SignalVu_06_Configuration.png)
 5.  Select **Select intrument(s) detected on local subnet**.
+    ![07_Configuration.png](~/connector-help/images/Tektronix_SignalVu_07_Configuration.png)
 6.  When all results are displayed in the box below, select the desired device.
 7.  Note down the displayed address, as you will need it during the DataMiner element creation.
-8.  Click **Finish**. The options tree will be updated and a LAN device will be created.
+8.  Click **Finish**.
+    The options tree will be updated and a LAN device will be created.
+    ![09_Configuration.png](~/connector-help/images/Tektronix_SignalVu_09_Configuration.png)
 9.  Close the window.
 
 ### Element creation in DataMiner
@@ -94,7 +112,8 @@ Before you first use the spectrum analyzer, please note the following difference
 
 > If you try to modify both at the same time, the device will not support this and erratic measurements could be generated.
 
-- This device does not support any commands to set the sweep time, as this is calculated internally taking into account the frequencies used (or the span) and the RBW.Therefore, the sweep time can only be configured in DataMiner for local use. If an incorrect value is set, it may cause an incomplete trace to be generated.
+- This device does not support any commands to set the sweep time, as this is calculated internally taking into account the frequencies used (or the span) and the RBW.
+  Therefore, the sweep time can only be configured in DataMiner for local use. If an incorrect value is set, it may cause an incomplete trace to be generated.
 
 ### General
 

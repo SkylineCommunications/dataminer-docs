@@ -12,11 +12,11 @@ This connector allows you to monitor and control the THU9 device.
 
 ### Version Info
 
-| **Range** | **Description**                                          |
-|-----------|----------------------------------------------------------|
-| 1.0.0.x   | Initial version.                                         |
-| 1.1.0.x   | Branch version based on 1.0.0.x.DVE functionality added. |
-| 2.0.0.x   | Dual connector implementation using Generic IRT MIB.     |
+| **Range** | **Description**                                           |
+|-----------|-----------------------------------------------------------|
+| 1.0.0.x   | Initial version.                                          |
+| 1.1.0.x   | Branch version based on 1.0.0.x. DVE functionality added. |
+| 2.0.0.x   | Dual connector implementation using Generic IRT MIB.      |
 
 ### Product Info
 
@@ -58,7 +58,7 @@ SNMP Settings:
 
 This page displays general information regarding the device, especially **Transmitter** **A** and **B**, and **Cooling**.
 
-There are also page buttons that lead to cooling information for the device's **Fans** and **Pumps** andto event **Notifications**.
+There are also page buttons that lead to cooling information for the device's **Fans** and **Pumps** and to event **Notifications**.
 
 ### Transmitter A page
 
@@ -131,7 +131,7 @@ The page also displays the **System Summary** and **State Summary** of the trans
 
 ### Transmitter
 
-This page contains detailed information about the transmitter: **Transmitter Configuration**, **Transmitter State**,and **Transmitter Notifications**.
+This page contains detailed information about the transmitter: **Transmitter Configuration**, **Transmitter State**, and **Transmitter Notifications**.
 
 The page includes several subpages:
 
@@ -142,7 +142,7 @@ The page includes several subpages:
 
 ### Exciter A
 
-This page displays information concerning **Exciter** **A**,including the **Exciter State** and the **Exciter Configuration** parameters.
+This page displays information concerning **Exciter** **A**, including the **Exciter State** and the **Exciter Configuration** parameters.
 
 This page includes several subpages:
 
@@ -159,7 +159,7 @@ This page displays the same kind of information as the **Exciter** **A** page, b
 
 ### Cooling
 
-This page contains detailed information about all the cooling elements: **Inlet** **Temperature**, **Outlet Temperature**, **Coolant Pressure**, **Coolant Configuration**, **Fans**,and **Pumps**.
+This page contains detailed information about all the cooling elements: **Inlet** **Temperature**, **Outlet Temperature**, **Coolant Pressure**, **Coolant Configuration**, **Fans**, and **Pumps**.
 
 ### DVE Modules
 

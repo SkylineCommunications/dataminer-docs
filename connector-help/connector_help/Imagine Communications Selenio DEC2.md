@@ -12,19 +12,19 @@ This driver displays information on different pages, described in the **Usage** 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 6.0.69.x         | DCF support.                                                                                                                                 | Yes                 | Yes                     |
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                       | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 6.0.69.x         | DCF support.                                                                                                                                  | Yes                 | Yes                     |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                          |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 6.0.69.x         | 6.0.68                                                                                                                                                                                                                                                                                                                                                                               |
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.* |
-| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                              |
+| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                            |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 6.0.69.x         | 6.0.68                                                                                                                                                                                                                                                                                                                                                                                 |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.* |
+| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                                |
 
 ## Installation and configuration
 
@@ -94,7 +94,7 @@ This section contains the following pages:
 This section contains the following pages:
 
 - **VANC Processing:** All information concerning the **Vertical Ancillary Data Space** of the signal.
-- **VBI Processing:** A list ofall **Vertical Blanking Interval Processing Field** functions (per line) and statuses.
+- **VBI Processing:** A list of all **Vertical Blanking Interval Processing Field** functions (per line) and statuses.
 
 ### TS Input section
 

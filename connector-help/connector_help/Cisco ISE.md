@@ -101,7 +101,7 @@ This page contains the Host Resources Device table, which displays status inform
 
 This page contains information related to the LLDP (Link Layer Discovery Protocol).
 
-The **LLDP Remote** table has information about the**remote devices** known to the host physical network and about the **system capabilities** supported by those devices.
+The **LLDP Remote** table has information about the **remote devices** known to the host physical network and about the **system capabilities** supported by those devices.
 
 ### Ping Function
 

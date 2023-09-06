@@ -17,10 +17,10 @@ This connector implements part of the communication with the AWS Elemental Media
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                         |
-|-----------|----------------------------------------------------------------|
-| 1.0.0.x   | AWS Elemental MediaConnectAWS CloudWatchAWS SNS                |
-| 1.0.1.x   | AWS Elemental MediaConnectAWS CloudWatchAWS SNSAWS EventBridge |
+| **Range** | **Supported Firmware**                                            |
+|-----------|-------------------------------------------------------------------|
+| 1.0.0.x   | AWS Elemental MediaConnect AWS CloudWatch AWS SNS                 |
+| 1.0.1.x   | AWS Elemental MediaConnect AWS CloudWatch AWS SNS AWS EventBridge |
 
 ### System Info
 
@@ -72,9 +72,10 @@ The element created with this connector consists of the following data pages:
 - **General**: Contains the parameters **Account**, **Access Key ID**, and **Secret Access Key**, which are used for authentication and verification. The parameters SNS URL and SNS Topic ARN contain the information related to the SNS subscription topic from which the connector received unsolicited messages.
 - **SNS Debug**: The parameter **SNS Message** contains the last received SNS message. This can be used for debug purposes to determine which information was received.
 - **Flow Tree**: Contains a tree control that shows the current flows. For each flow, there is a tab with **Sources**, **Outputs**, and **Metrics**.
-- **Flows Page:** Contains the **Flows** table, with the information for the list flows operation. The table only contains the flows present in the AWS Availability Zone specified in the connection. It is possible to start or stop a flow. The **Polling Status** parameter allows you to configure if additional information about the flow should be retrieved. If this parameter is enabled, the connector will schedule a request to retrieve the flow description with information about **Sources** and **Outputs**, and it will also schedule to retrieve **Flow** and **Source** **Metrics.** The parameter **Polling Frequency** allows you to determine how often this operation should be scheduled per flow. The parameter **Last Polled** shows when additional information was last requested for a flow.
+- **Flows Page:** Contains the **Flows** table, with the information for the list flows operation. The table only contains the flows present in the AWS Availability Zone specified in the connection. It is possible to start or stop a flow.
+  The **Polling Status** parameter allows you to configure if additional information about the flow should be retrieved. If this parameter is enabled, the connector will schedule a request to retrieve the flow description with information about **Sources** and **Outputs**, and it will also schedule to retrieve **Flow** and **Source** **Metrics.** The parameter **Polling Frequency** allows you to determine how often this operation should be scheduled per flow. The parameter **Last Polled** shows when additional information was last requested for a flow.
 - **Sources**: Contains the **Sources** table, which is linked to the **Flows** table. It contains source-related information such as the **Protocol**, **Ingest Port**, **Max Bitrate**, **Max Latency**, **Whitelist CIDR**, and **Ingest IP**.
-- **Outputs**: Contains the **Outputs** table, which is linked to the **Flows** table. It contains output-related information such as the **Destination**, **Port**,and **Protocol**.
+- **Outputs**: Contains the **Outputs** table, which is linked to the **Flows** table. It contains output-related information such as the **Destination**, **Port**, and **Protocol**.
 - **Entitlements**: Contains the **Entitlements** table, which displays the **Data Subscriber Fee Percent**.
 - **Flow Metric**: Contains the **Flow Metrics** table, which is linked to the **Flows** table. It contains 53 metrics related to a flow. This information is retrieved from CloudWatch. In case a notification is received via **SNS** for a flow, the related metrics will be polled again.
 - **Source Metric**: Contains the **Source Metrics** table, which is linked to the **Sources** table. It contains 26 metrics related to a source. This information is retrieved from CloudWatch.

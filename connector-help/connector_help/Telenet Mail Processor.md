@@ -4,7 +4,7 @@ uid: Connector_help_Telenet_Mail_Processor
 
 # Telenet Mail Processor
 
-The **Telenet Mail Processor** is part of the **SAM** project and will collect emails and create/update/closetickets accordingly.
+The **Telenet Mail Processor** is part of the **SAM** project and will collect emails and create/update/close tickets accordingly.
 
 This driver will fetch and process specific emails. According to the email, a flow is started to create/update/close a ticket via the **SAM** drivers and scripts (e.g. **Telenet Ticket Gateway**). The results of these processed emails are available.
 
@@ -38,7 +38,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-On the **General page**,there are several **page buttons** that need extra configuration.
+On the **General page**, there are several **page buttons** that need extra configuration.
 
 Via the **Configuration** page button, you can set the email settings. This includes the **server**, **port**, **user**, etc. but also the linked **Elements** in the **SAM** project:
 
@@ -54,4 +54,5 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General page** will provide an overview of all the emails and their process state. It also shows the time and number of emails that where last processed. As this driver is part of a system of different drivers, the heartbeat check on the **Ticket Gateway** is also displayed.
+The **General page** will provide an overview of all the emails and their process state. It also shows the time and number of emails that where last processed.
+As this driver is part of a system of different drivers, the heartbeat check on the **Ticket Gateway** is also displayed.

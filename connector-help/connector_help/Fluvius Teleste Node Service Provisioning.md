@@ -48,15 +48,16 @@ First, it will check that all nodes of the cluster are up and running, in order 
 
 In several tables on the page, information will be displayed:
 
-- In the **Manager Changes Table**,the AC3210 and AC8810 Managers that were added or removed will be listed, together with their state (*Added* or *Removed*).
-- The Teleste **AC3210 Devices Changes Table** will list theTeleste AC3210 devices that were added or removed, the **manager element** they belong to, and their state (*Added* or *Removed*).
-- The Teleste **AC8810 Devices Changes Table** will list theTeleste AC8810 devices that were added or removed, the **manager element** they belong to, and their state (*Added* or *Removed*).
+- In the **Manager Changes Table**, the AC3210 and AC8810 Managers that were added or removed will be listed, together with their state (*Added* or *Removed*).
+- The Teleste **AC3210 Devices Changes Table** will list the Teleste AC3210 devices that were added or removed, the **manager element** they belong to, and their state (*Added* or *Removed*).
+- The Teleste **AC8810 Devices Changes Table** will list the Teleste AC8810 devices that were added or removed, the **manager element** they belong to, and their state (*Added* or *Removed*).
 
 The progress of the change detection process is indicated by a **progress bar**.
 
 ### General - Convert Services
 
-After the change detection process is complete, to convert the services, the **Convert Services** button must be used within **2 minutes**. This time limit is implemented to make sure that the information is still up to date during the conversion.To see how much time is left, you can check the **Time Allowed to Apply Changes** parameter, which will count down to 0.
+After the change detection process is complete, to convert the services, the **Convert Services** button must be used within **2 minutes**. This time limit is implemented to make sure that the information is still up to date during the conversion.
+To see how much time is left, you can check the **Time Allowed to Apply Changes** parameter, which will count down to 0.
 
 If the button **Convert Services** is used in time, all services that have at least a **Teleste AC8810** device will be converted to the new **service template**. The driver will read out the old data, delete the old service, and recreate the new service with the service template. Services that have the **Teleste AC3210** but lack the **Teleste AC8810** device will not be converted.
 

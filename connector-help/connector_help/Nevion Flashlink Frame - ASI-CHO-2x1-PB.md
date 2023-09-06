@@ -32,7 +32,7 @@ This driver is used by DVE child elements that are **automatically created** by 
 
 ### General Page
 
-Thispage contains general information about an ASI-CHO-2x1-PB module, including:
+This page contains general information about an ASI-CHO-2x1-PB module, including:
 
 - Type
 - Card Status

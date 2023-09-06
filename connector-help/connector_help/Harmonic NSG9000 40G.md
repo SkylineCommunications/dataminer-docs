@@ -72,7 +72,7 @@ This page lists the CAS-related settings, similar to the web interface, but with
 - **CAS Properties**
 - **DVB Tier Based**
 
-The page also contains the **ECM Group Table**,which lists the ECM groups. To delete one or more rows, set the value in the **Delete ECM** column to *true* and then click the **Delete Selected** button below the table. To add a row, use the **Add ECM** page button and enter new values. Finally, click the **Set ECM** button to add the new row.
+The page also contains the **ECM Group Table**, which lists the ECM groups. To delete one or more rows, set the value in the **Delete ECM** column to *true* and then click the **Delete Selected** button below the table. To add a row, use the **Add ECM** page button and enter new values. Finally, click the **Set ECM** button to add the new row.
 
 NOTE: When you **edit, add or remove rows**, you may need to **wait** some time for each action to be **synchronized**. Otherwise, if new changes are sent before the DMA is updated, the previous **changes might be lost.**
 

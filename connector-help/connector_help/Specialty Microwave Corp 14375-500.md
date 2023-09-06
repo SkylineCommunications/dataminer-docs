@@ -54,6 +54,6 @@ SERIAL CONNECTION:
 
 ## How to Use
 
-The **General** page displays the operation mode, operation control status, the status of the power supplies and HPAs, and the switch position of the HPAs. You can change the operation mode and the switch position. Changing the switch position (HPAs) is only possible if the operation mode is set to Manual mode and the local/remote control status is Remote mode. If the operation mode is Automatic or the local/remote status is in Localmode, you will not be able to change the switch positions.
+The **General** page displays the operation mode, operation control status, the status of the power supplies and HPAs, and the switch position of the HPAs. You can change the operation mode and the switch position. Changing the switch position (HPAs) is only possible if the operation mode is set to Manual mode and the local/remote control status is Remote mode. If the operation mode is Automatic or the local/remote status is in Local mode, you will not be able to change the switch positions.
 
 The **Configuration Data** page provides general information on the device, as well as configuration data, including the firmware version, serial number and information related to the serial communications interface (SCI2).

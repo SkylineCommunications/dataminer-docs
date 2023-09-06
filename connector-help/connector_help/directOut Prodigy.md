@@ -4,7 +4,7 @@ uid: Connector_help_directOut_Prodigy
 
 # directOut Prodigy
 
-DirectOut Prodigy is a connector that monitors **Prodigy.MC** (Modular Audio Converter) through itscustom TCP API.
+DirectOut Prodigy is a connector that monitors **Prodigy.MC** (Modular Audio Converter) through its custom TCP API.
 
 ## About
 

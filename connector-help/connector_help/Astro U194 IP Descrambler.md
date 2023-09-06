@@ -26,7 +26,7 @@ This driver uses HTTP to monitor the **Astro U194** device. The driver also has 
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps. Depending on the setup, the **HTTP** configuration differs: this driver can communicate directly with the **U194**,but it can also be configured to send requests to the **Astro U100 Controller**, which will then serve as a proxy. In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U194** (not the controller).
+This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps. Depending on the setup, the **HTTP** configuration differs: this driver can communicate directly with the **U194**, but it can also be configured to send requests to the **Astro U100 Controller**, which will then serve as a proxy. In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U194** (not the controller).
 
 #### 1. Direct Communication
 

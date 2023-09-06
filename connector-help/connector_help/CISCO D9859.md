@@ -22,6 +22,8 @@ This is an SNMPv2 driver. Traps can be retrieved if they are enabled on the devi
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.11                        |
 
+
+
 ## Installation and configuration
 
 ### Creation
@@ -59,7 +61,7 @@ On this page you can find the following parameters: **Active Tuning Input, Signa
 
 In the **SI Receive Setup** page button, you can find the following tables: **Input Status Table, SI RCV Option Table** and **SI RCV Option Status Table.**
 
-The **Muting Thresholds ...** page button contains the **Muting Thresholds Table**,and the **Backupt Transport Table** can be found in the **Disaster Recovery Status ...** page button.
+The **Muting Thresholds ...** page button contains the **Muting Thresholds Table**, and the **Backupt Transport Table** can be found in the **Disaster Recovery Status ...** page button.
 
 The **Channel Status ...** page button contains the **Program Entry Status Table** and the **Conditional Access ...** page button, the **CA ADP Table.**
 
@@ -69,13 +71,15 @@ In the **Stream Details** **...** page button are the following tables displayed
 
 ### Audio - Video
 
-In the Video Decodingsection, you can find the **Video Control Table** and the **Video Status Table**.
+In the Video Decoding section, you can find the **Video Control Table** and the **Video Status Table**.
 
 In the **Subtitles ...** page button of this section, subtitles related parameters are shown: **Subtitles OP Mode, Subtitles Foreground, Subtitles Manual Entry, ...**
 
 In the same section, the **VBI ...** page button shows, among others: **VBI VITS Flag 17,** **VBI VITS Flag 18, **VBI VITS Flag 330, ****VBI VITS Flag 331, ...********
 
 In the Audio Decoding section, you can find 2 tables: **Audio CTRL Table** and **Audio Status Table.**
+
+
 
 2 page buttons are also available: **Cueing ...** **and** **Decode Enables ...**
 

@@ -59,7 +59,7 @@ This page displays general information about the device, e.g. **System Descripti
 The page also contains the following page buttons:
 
 - **SCP Credentials**: Allows you to define the username and password for the SCP connection.
-- **PSU**:Shows the available power supply unit and its state.
+- **PSU**: Shows the available power supply unit and its state.
 - **Fan**: Shows the available fans and their state.
 - **Ref. Clock**: Shows the available reference clocks and parameters related to these.
 

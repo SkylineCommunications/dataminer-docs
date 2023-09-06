@@ -16,10 +16,10 @@ To construct the program guide, the information is extracted from XML files that
 
 ### 1.1 Ranges of the driver
 
-| **Driver Range**     | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                           | No                  | Yes                     |
-| 1.0.1.x \[SLC Main\] | Recreation of elementImpact: loss of data | No                  | Yes                     |
+| **Driver Range**     | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                            | No                  | Yes                     |
+| 1.0.1.x \[SLC Main\] | Recreation of element Impact: loss of data | No                  | Yes                     |
 
 ## 2. Installation and Configuration
 
@@ -45,7 +45,8 @@ This section of the page focuses on establishing a connection with the server wh
 
 The following settings must be configured:
 
-- **Server Address:** The IP address or URL of the directory on the server where the EPG XML files are stored.Note: For FTP, "ftp://" must be added to the beginning of the address. For SMB, the address must start with "\\". For example:
+- **Server Address:** The IP address or URL of the directory on the server where the EPG XML files are stored.
+  Note: For FTP, "ftp://" must be added to the beginning of the address. For SMB, the address must start with "\\". For example:
 
 - <ftp://11.12.13.14/path/to/epg/files>
   - [\\path\to\epg\files](file://///path/to/epg/files)
@@ -90,9 +91,11 @@ This section focuses on how the EPG/TVA XML files are processed.
 
 The following settings can be configured:
 
-- **Enable Asset Polling**: Enables or disables the polling for new XML files on the EPG/TVA server.If this is disabled, no new programs will be added and the timeline with existing programs will not receive updates.
+- **Enable Asset Polling**: Enables or disables the polling for new XML files on the EPG/TVA server.
+  If this is disabled, no new programs will be added and the timeline with existing programs will not receive updates.
 - **Amount of Files to Process at Once**: The maximum number of files that will be downloaded before they are processed.
-- **Gap Resolution**: Determines how big the distance between two programs must be before it is recognized as a gap.If the difference between the end of a program and the beginning of the next program is higher than or equal to this parameter, a gap will be detected. If the resolution is 0, the start time of the new program and the end time of the finished program must be exactly the same.
+- **Gap Resolution**: Determines how big the distance between two programs must be before it is recognized as a gap.
+  If the difference between the end of a program and the beginning of the next program is higher than or equal to this parameter, a gap will be detected. If the resolution is 0, the start time of the new program and the end time of the finished program must be exactly the same.
 - **Keep locations for**: Determines for how many days entries in the **Program Location Table** are kept in the database.
 - **EPG Backward Limit** and **EPG Forward Limit**: These parameters determine the time range of the EPG timeline.
 - **Status**: Indicates what the driver is currently is doing. Examples of Status values can be "Idle", "Processing Files", "Adding Resources", "Deleting Content", etc.
@@ -129,7 +132,8 @@ On this page, the **Service Information Table** lists all the services/channels.
 - **Stagis IMI Verification**: Enables or disables the check for missing Stagis IMI on the channel.
 - **Creation Delta**: This is the smallest or most negative **program creation delta** value (see explanation **Program Location Table**).
 - **Delivered Delta**: This is the smallest or most negative **program delivered delta** value (see explanation **Program Location Table**).
-- **Delta Threshold**: Determines when a program is considered to be created or delivered late.A program is **considered late** when the **Creation Delta** is **larger than** the **Delta Threshold**.
+- **Delta Threshold**: Determines when a program is considered to be created or delivered late.
+  A program is **considered late** when the **Creation Delta** is **larger than** the **Delta Threshold**.
 - **Number of Late Creation**: This is the number of programs that were create late according to the **Delta Threshold**.
 - **Number of Late Delivery**: This is the number of programs that were delivered late according to the **Delta Threshold**.
 
@@ -167,8 +171,10 @@ This page contains the **Program Location Table**, which lists all the programs 
 - **Broadcasting Status**: Indicates whether the program will be or was broadcast.
 - **GUID**: Identifier of the program on the timeline. If the value equals *N/A*, then the program is not listed on the timeline.
 - **Stagis IMI**: The Stagis IMI identifier of the program.
-- **Creation Delta**: The time **difference between** the time that the entry was **first created** and the **start time** of the program.Negative values indicate that it was created before the start of the program. Positive values indicate that it was created after the program started.
-- **Delivered Delta**: The time **difference between** the time the entry was **last updated** and the **start time** of the program.Negative values indicate that it was last updated before the start of the program. Positive values indicate that it was last updated after the program started.
+- **Creation Delta**: The time **difference between** the time that the entry was **first created** and the **start time** of the program.
+  Negative values indicate that it was created before the start of the program. Positive values indicate that it was created after the program started.
+- **Delivered Delta**: The time **difference between** the time the entry was **last updated** and the **start time** of the program.
+  Negative values indicate that it was last updated before the start of the program. Positive values indicate that it was last updated after the program started.
 - **Registered**: The timestamp when the program was processed by the driver.
 
 This table can contain multiple entries for the same TV program/episode. This is because the program can air on multiple channels and at multiple times.

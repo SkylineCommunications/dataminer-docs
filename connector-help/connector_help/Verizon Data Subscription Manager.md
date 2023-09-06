@@ -89,4 +89,6 @@ This page displays the available configuration options, such as **SRM Update Sta
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS01/11/2018 1.0.0.1 FRO, Skyline Reports and Dashboards Solution integration17/10/2018 1.0.0.3 AIG, Skyline Resource Manager integration
+DATE VERSION AUTHOR COMMENTS
+01/11/2018 1.0.0.1 FRO, Skyline Reports and Dashboards Solution integration
+17/10/2018 1.0.0.3 AIG, Skyline Resource Manager integration

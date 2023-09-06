@@ -48,7 +48,7 @@ On the **Configuration** page, add the **Username** and **Private Key** to estab
 
 The **General** page of this connector shows a quick overview of the latest action that has been performed (creation, updating, or deletion of events, etc.). The Status parameter shows if the action was successful or if it failed. In case an action fails and the API response contains additional information, details are displayed explaining why the operation was not possible. It this information is not included in the API response, the details will show N/A.
 
-On the **Streams**, **Users**,and **Templates** pages, you can monitor all the available resources. No create and update features are available for these.
+On the **Streams**, **Users**, and **Templates** pages, you can monitor all the available resources. No create and update features are available for these.
 
 On the **Events** page, you can select the time range of searched events (the maximum is a time interval of 2 months). Via the right-click menu of the table you can add and delete events; however, note that events can only be deleted if they have the Pending state.
 

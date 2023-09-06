@@ -68,4 +68,5 @@ This page displays the **Configuration** options, including **Polling Status, Au
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS13/11/2018 1.0.0.1 AIG, Skyline Initial version
+DATE VERSION AUTHOR COMMENTS
+13/11/2018 1.0.0.1 AIG, Skyline Initial version

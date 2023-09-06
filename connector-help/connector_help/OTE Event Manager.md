@@ -12,9 +12,9 @@ Note that this connector is **designed to be used together with the SRM Booking 
 
 ### Version Info
 
-| **Range** | **Key Features**                                 | **Based on** | **System Impact** |
-|-----------|--------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | \- Event creation and monitoring.- SRM bookings. | \-           | \-                |
+| **Range** | **Key Features**                                  | **Based on** | **System Impact** |
+|-----------|---------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | \- Event creation and monitoring. - SRM bookings. | \-           | \-                |
 
 ### System Info
 

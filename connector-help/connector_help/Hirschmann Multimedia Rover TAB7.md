@@ -53,7 +53,8 @@ The page contains a number of buttons that provide access to configuration optio
 - Via the **Channel Panel** page button, you can among others set the **Target TV Mode**, **Target Symbol Rate** and **Target Frequency**.
 - Via the **Thresholds Panel** page button, you can set the **Max Level**, **Max bBER** or **Max Vision/Snd2 Threshold**.
 - Via the **Extra Settings Panel** page button, the **Target Audio Mismatch** or **Target Max Black Screen Size** can be configured.
-- You can get the measure once with the **Get Measure** button or use the **Measure Config** page button to automate the process.This opens a subpage where you can specify the **Measure Mode** and disable/enable the **Automatic Measure**. If the **Measure Mode** is set to *Continous*, the measure is done with an interval of 1 second. If it is set to *Streaming*, the measure is done, after a delay of 1 second, streaming is started and then stopped, the process is paused during 3 seconds, the measure is done again, and so on.
+- You can get the measure once with the **Get Measure** button or use the **Measure Config** page button to automate the process.
+  This opens a subpage where you can specify the **Measure Mode** and disable/enable the **Automatic Measure**. If the **Measure Mode** is set to *Continous*, the measure is done with an interval of 1 second. If it is set to *Streaming*, the measure is done, after a delay of 1 second, streaming is started and then stopped, the process is paused during 3 seconds, the measure is done again, and so on.
 
 In the **Measure Panel** section, parameters such as the **Measure Level**, **Measure Video Modulation** and **Radio Modulation** are displayed.
 

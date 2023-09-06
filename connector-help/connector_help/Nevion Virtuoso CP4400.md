@@ -79,7 +79,7 @@ This page allows the monitoring and configuration of basic information related t
 
 ### Device Status
 
-This page allows the monitoring and configuration of the status information regarding ASI and Ethernet interfaces, by means of a tree view. Other interfaces can also be found on this page, e.g. **Ref Sync Input**,but no additional information is provided on these.
+This page allows the monitoring and configuration of the status information regarding ASI and Ethernet interfaces, by means of a tree view. Other interfaces can also be found on this page, e.g. **Ref Sync Input**, but no additional information is provided on these.
 
 The page also contains page buttons to the following subpages:
 

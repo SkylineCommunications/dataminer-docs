@@ -35,18 +35,18 @@ In order to generate the DVE using this driver, enter the FSK **Element Name** o
 This page contains the following BUC parameters:
 
 - **BUC Power Supply**: Allows you to enable or disable the BUC power control.
-- **BUC 10Mhz Reference State**:Allows you to enable or disable the reference.
+- **BUC 10Mhz Reference State**: Allows you to enable or disable the reference.
 - **BUC Low Current Limit**: Allows you to set the BUC minimum threshold current.
 - **BUC High Current Limit**: Allows you to set the BUC maximum threshold current.
 - **BUC FSK Communications**: Allows you to enable or disable FSK communication.
 - **BUC FSK Address:** Allows you to specify a BUC address as a value between 1 and 15.
 - **BUC** **RF Output**: Allows you to enable or disable Tx carrier output power.
-- **BUC Attenuation**:Allows you to set the attenuation level in dB.
-- **BUC Power Supply Option**:Indicates if the BUC Power Supply Option has been installed.
+- **BUC Attenuation**: Allows you to set the attenuation level in dB.
+- **BUC Power Supply Option**: Indicates if the BUC Power Supply Option has been installed.
 - **BUC** **Voltage**: Displays the BUC voltage in V.
 - **BUC Current**: Displays the BUC current in mA.
 - **BUC Temperature**: Displays the BUC temperature in degrees Celsius.
-- **BUC Phase Lock Loop**:Only valid when FSK/BUC is turned on.
+- **BUC Phase Lock Loop**: Only valid when FSK/BUC is turned on.
 - **BUC Power Level**: Displays the BUC output power level.
 - **BUC Power Class**: Displays the BUC power class in Watts.
 - **BUC Software Version**: Displays the BUC software version.
@@ -64,6 +64,6 @@ This page contains the following LNB parameters:
 - **LNB Current High Threshold**: Allows you to set the LNB maximum threshold current.
 - **LNB Current**: Displays the LNB current in mA.
 - **LNB Voltage:** Displays the LNB voltage in V.
-- **LNB LO Frequency**:Allows you to set the receiver local oscillator frequency.
+- **LNB LO Frequency**: Allows you to set the receiver local oscillator frequency.
 - **LNB LO Mix**: Determines whether the L-Band carrier is added or subtracted from the LO.
-- **LNB Rx RF Frequency**:Displays the terminal receiver frequency.
+- **LNB Rx RF Frequency**: Displays the terminal receiver frequency.

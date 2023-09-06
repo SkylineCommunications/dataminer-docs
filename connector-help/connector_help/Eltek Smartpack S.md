@@ -61,7 +61,8 @@ HTTP CONNECTION:
 
 ### Configuration of credentials to retrieve logging (range 1.0.1.x)
 
-When the element goes in timeout, it will wait until it can retrieve the log file from the device and update the element with the data available in the file.However, for this feature to work, you need to make sure valid **credentials** for the web interface are specified on the System Overview page, as well as the **name** of the log file. Note that you need to specify the **encode password**.
+When the element goes in timeout, it will wait until it can retrieve the log file from the device and update the element with the data available in the file.
+However, for this feature to work, you need to make sure valid **credentials** for the web interface are specified on the System Overview page, as well as the **name** of the log file. Note that you need to specify the **encode password**.
 
 ### Configuration of normal or lite mode
 
@@ -87,7 +88,7 @@ In version **1.0.1.3**, the possibility is added to set the web interface addres
 
 ### Lite Mode
 
-This page displays **Status** parameters and information related to **Current System, Tenant Power, Flexi Monitor Input Table**,and **Generator Runtime.** The **Generator Runtime Day** and **Generator Runtime Week** can be reset instantly using the **Reset Generator Runtime** button.
+This page displays **Status** parameters and information related to **Current System, Tenant Power, Flexi Monitor Input Table**, and **Generator Runtime.** The **Generator Runtime Day** and **Generator Runtime Week** can be reset instantly using the **Reset Generator Runtime** button.
 
 ### Mains
 
@@ -129,13 +130,13 @@ The page contains two page buttons. The **Configuration** page button provides a
 
 This page displays information about the **Load**, such as the **Load Status** and the **Energy Log**.
 
-The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Energy Log Tables, Group Table, LVLD Table, Fuse Table**,and **Voltage Table** provide access to a number of tables.
+The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Energy Log Tables, Group Table, LVLD Table, Fuse Table**, and **Voltage Table** provide access to a number of tables.
 
 ### Battery
 
 This page displays information about the **Battery**, such as the **Battery Status,** the **Energy Log**, and the **Cycle Log**.
 
-The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Bank Tables, Monitor Tables, Energy Log Tables**,and **Cycle Log Tables** provide access to a number of tables.
+The page contains a number of page buttons. The **Configuration** page button provides access to all configurable parameters. The page buttons **Bank Tables, Monitor Tables, Energy Log Tables**, and **Cycle Log Tables** provide access to a number of tables.
 
 ### Battery Group 2
 

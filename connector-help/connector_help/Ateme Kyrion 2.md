@@ -14,19 +14,19 @@ Alarms are also generated for each received trap.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                          | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                                                                                                                         | No                  | Yes                     |
-| 1.0.1.x          | New firmware based on 1.0.0.13.                                                                                                                          | Yes                 | Yes                     |
-| 1.0.2.x          | New firmware based on 1.0.1.16.                                                                                                                          | No                  | Yes                     |
-| 1.0.3.x          | Based on 1.0.1.25.In every TS-related parameter, descriptions changed from '\[XXX\] \[ChannelNumber\].1' to 'Channel \[ChannelNumber\] Main TS \[XXX\]'. | Yes                 | Yes                     |
-| 1.1.0.x          | New firmware based on 2.0.1.17.                                                                                                                          | Yes                 | Yes                     |
-| 2.0.0.x          | Alternative parameter implementation based on version 1.0.0.11.                                                                                          | No                  | Yes                     |
-| 2.0.1.x          | New firmware based on 2.0.0.9.                                                                                                                           | No                  | Yes                     |
-| 2.0.2.x          | New firmware based on 2.0.1.14.                                                                                                                          | No                  | Yes                     |
-| 2.0.3.x          | DCF support.                                                                                                                                             | Yes                 | Yes                     |
-| 2.1.0.x          | New firmware based on 2.0.3.5.New trap mechanism.                                                                                                        | Yes                 | Yes                     |
-| 3.0.0.x          | New firmware based on 2.0.2.16.New trap mechanism.Compatible with DataMiner 7.5.                                                                         | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                                                                                                                          | No                  | Yes                     |
+| 1.0.1.x          | New firmware based on 1.0.0.13.                                                                                                                           | Yes                 | Yes                     |
+| 1.0.2.x          | New firmware based on 1.0.1.16.                                                                                                                           | No                  | Yes                     |
+| 1.0.3.x          | Based on 1.0.1.25. In every TS-related parameter, descriptions changed from '\[XXX\] \[ChannelNumber\].1' to 'Channel \[ChannelNumber\] Main TS \[XXX\]'. | Yes                 | Yes                     |
+| 1.1.0.x          | New firmware based on 2.0.1.17.                                                                                                                           | Yes                 | Yes                     |
+| 2.0.0.x          | Alternative parameter implementation based on version 1.0.0.11.                                                                                           | No                  | Yes                     |
+| 2.0.1.x          | New firmware based on 2.0.0.9.                                                                                                                            | No                  | Yes                     |
+| 2.0.2.x          | New firmware based on 2.0.1.14.                                                                                                                           | No                  | Yes                     |
+| 2.0.3.x          | DCF support.                                                                                                                                              | Yes                 | Yes                     |
+| 2.1.0.x          | New firmware based on 2.0.3.5. New trap mechanism.                                                                                                        | Yes                 | Yes                     |
+| 3.0.0.x          | New firmware based on 2.0.2.16. New trap mechanism. Compatible with DataMiner 7.5.                                                                        | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -93,7 +93,7 @@ This page displays a tree view showing the relationship between presets, transpo
 
 ### Channels
 
-This page contains the **Channel Table**, whichindicates which channels are currently running.
+This page contains the **Channel Table**, which indicates which channels are currently running.
 
 ### Channel {x}
 
@@ -103,7 +103,8 @@ The information for each transport stream is divided over separate pages. The pa
 
 The following subpages are available:
 
-- **TS {x}.{y} More**: Contains miscellaneous parameters: **Standard**, **Packet Size**, **Null Bitrate**, **PMT PID**, **PMT Number**, **PMT PCR PID**, **Enable SI/PSIP Tables**. In addition, this page links to the following subpages at an even lower level:
+- **TS {x}.{y} More**: Contains miscellaneous parameters: **Standard**, **Packet Size**, **Null Bitrate**, **PMT PID**, **PMT Number**, **PMT PCR PID**, **Enable SI/PSIP Tables**.
+  In addition, this page links to the following subpages at an even lower level:
 
 - **TS {x}.{y} SI Tables**: Contains parameters regarding the carrier, network and service setup.
   - **TS** **{x}.{y} Expert**: Contains the following parameters: **PAT TS ID**, **PAT Period**, **PMT Period**, **CAT Period**.
@@ -119,7 +120,8 @@ The following subpages are available:
 
 - **TS {x}.{y} Output IP**: Contains the **Output IP Table**, which contains settings for each IP output for this specific transport stream.
 
-- **TS {x}.{y} Audio**: Contains the **Audio Table**, which allows you to enable audio and various other settings for each audio channel. This page also links to various subpages at an even lower level:
+- **TS {x}.{y} Audio**: Contains the **Audio Table**, which allows you to enable audio and various other settings for each audio channel.
+  This page also links to various subpages at an even lower level:
 
 - **TS {x}.{y} Audio MPEG-L2**: Contains the **Audio MPEG-L2 Table**, which contains settings related to MPEG-L2 for each audio channel.
   - **TS {x}.{y} Audio AAC**: Contains settings related to AAC encoding.
@@ -131,17 +133,19 @@ The following subpages are available:
   - **TS {x}.{y} Audio Emulation**: Contains the **Audio Input Emulation Table**, which allows you to toggle the **Force Emulation** and change the **Emulation Mode**.
   - **TS {x}.{y} Audio Analog**: Contains the **Audio Input Analog Table**, which allows you to change the **Analog Level**.
 
-- **TS {x}.{y} Data**: Displays the **Data** **Table**, whichallows you to change the **Data Enabled**, **Data Type** and **Data PID**. This page also links to the following subpages at a lower level:
+- **TS {x}.{y} Data**: Displays the **Data** **Table**, which allows you to change the **Data Enabled**, **Data Type** and **Data PID**.
+  This page also links to the following subpages at a lower level:
 
 - **TS {x}.{y} Teletext Descriptor**: Contains the **Teletext Descriptor** **Table**, which contains Teletext-specific settings.
-  - **TS {x}.{y} More Data**: Contains the **Data Table More**, whichallows you to change the **Data Delay** and toggle the **Data Teletext Filter Enabled**.
+  - **TS {x}.{y} More Data**: Contains the **Data Table More**, which allows you to change the **Data Delay** and toggle the **Data Teletext Filter Enabled**.
 
-- **TS {x}.{y} Rate Control {z}**: Allows you to change the **{z}** **Video Rate Control Mode**. There are two encodings available, for which {z} is a placeholder in this help: **H264** and **MPEG-2**.This page also links to several subpages:
+- **TS {x}.{y} Rate Control {z}**: Allows you to change the **{z}** **Video Rate Control Mode**. There are two encodings available, for which {z} is a placeholder in this help: **H264** and **MPEG-2**.
+  This page also links to several subpages:
 
 - **TS {x}.{y} Rate Control {z} CBR**: Allows you to change the **CBR Bitrate** and **CBR CPB** parameters.
-  - **TS {x}.{y} Rate Control {z} Capped VBR**: Allows you to change the **VBR Capped Max Bitrate**, the **VBR Capped Quality** and **VBR Capped CPB**parameters.
-  - **TS {x}.{y} Rate Control {z} StatMux VBR**: Allows you to change the **VBR StatMux Min Bitrate**, the **VBR StatMux Max Bitrate** and **VBR StatMux CPB**parameters.
-  - **TS {x}.{y} Rate Control {z} Piecewise CBR**: Allows you to change the **Piecewise CBR Min Bitrate**, the **Piecewise CBR Bitrate** and **Piecewise CBR CPB**parameters.
+  - **TS {x}.{y} Rate Control {z} Capped VBR**: Allows you to change the **VBR Capped Max Bitrate**, the **VBR Capped Quality** and **VBR Capped CPB** parameters.
+  - **TS {x}.{y} Rate Control {z} StatMux VBR**: Allows you to change the **VBR StatMux Min Bitrate**, the **VBR StatMux Max Bitrate** and **VBR StatMux CPB** parameters.
+  - **TS {x}.{y} Rate Control {z} Piecewise CBR**: Allows you to change the **Piecewise CBR Min Bitrate**, the **Piecewise CBR Bitrate** and **Piecewise CBR CPB** parameters.
 
 ### SDI
 
@@ -195,7 +199,7 @@ This page displays a tree view showing the relationship between presets, transpo
 
 ### Channels
 
-This page contains the **Channel Table**, whichindicates which channels are currently running. You can **Start** or **Stop** a **Channel** by right-clicking it in the table.
+This page contains the **Channel Table**, which indicates which channels are currently running. You can **Start** or **Stop** a **Channel** by right-clicking it in the table.
 
 ### Channel 1
 
@@ -205,7 +209,8 @@ The information for each transport stream is divided over separate pages. The Ch
 
 ### TS 1.{y} More:
 
-This page contains miscellaneous parameters: **Standard**, **Packet** **Size**, **Null** **Bitrate**, **PMT** **PID**, **PMT** **Number**, **PMT** **PCR** **PID**, **Enable** **SI/PSIP** **Tables**. In addition, this page links to the following subpages:
+This page contains miscellaneous parameters: **Standard**, **Packet** **Size**, **Null** **Bitrate**, **PMT** **PID**, **PMT** **Number**, **PMT** **PCR** **PID**, **Enable** **SI/PSIP** **Tables**.
+In addition, this page links to the following subpages:
 
 - **TS 1.{y} SI Tables**: Contains parameters regarding the carrier, network and service setup.
 - **TS 1.{y} Expert**: Contains the following parameters: PAT TS ID, PAT Period, PMT Period, CAT Period.
@@ -231,7 +236,8 @@ This page contains the **Output IP** **Table**, which contains settings for each
 
 ### TS 1.{y} Audio:
 
-This page contains the **Audio** **Table**, which allows you to enable audio and various other settings for each audio channel. The page also links to various subpages:
+This page contains the **Audio** **Table**, which allows you to enable audio and various other settings for each audio channel.
+The page also links to various subpages:
 
 - **TS 1.{y} Audio MPEG-L2**: Contains the **Audio MPEG-L2** table, which contains settings related to **MPEG**-**L2** for each audio channel.
 - **TS 1.{y} Audio AAC**: Contains settings related to **AAC** encoding.
@@ -245,14 +251,16 @@ This page contains the **Audio** **Table**, which allows you to enable audio and
 
 ### TS 1.{y} Data:
 
-This page displays the **Data** table, which allows you to change **Data Enabled**, **Data Type** and **Data PID**. The page also links to the following subpages:
+This page displays the **Data** table, which allows you to change **Data Enabled**, **Data Type** and **Data PID**.
+The page also links to the following subpages:
 
 - **TS 1.{y} Teletext Descriptor**: Contains the **Teletext** **Descriptor** table, which contains **Teletext**-specific settings.
 - **TS 1.{y} More Data**: Contains the **Data Table** **More**, which allows you to change the **Data Delay** and toggle **Data Teletext Filter Enabled**.
 
 ### TS 1.{y} Rate Control {z}:
 
-This page allows you to change the {z} **Video Rate Control Mode**. There are two types of encoding available, for which {z} is a placeholder in this help: **H264** and **MPEG**-**2**.This page also links to several subpages:
+This page allows you to change the {z} **Video Rate Control Mode**. There are two types of encoding available, for which {z} is a placeholder in this help: **H264** and **MPEG**-**2**.
+This page also links to several subpages:
 
 - **TS 1.{y} Rate Control {z} CBR:** Allows you to change the **CBR Bitrate** and **CBR CPB** parameters.
 - **TS 1.{y} Rate Control {z} Capped VBR:** Allows you to change the **VBR** **Capped Max Bitrate**, the **VBR Capped Quality** and **VBR Capped CPB** parameters.

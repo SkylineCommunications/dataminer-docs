@@ -86,8 +86,28 @@ Test Element;127.0.0.1;Teleste AC9000;Basic Alarms;;132456;Test View
 
 #### JSON file
 
-\[ { "Node Name": "Test Element", "IP Address": "127.0.0.1", "Protocol": "Teleste AC9000", "Alarm Template": "Basic Alarms", "Trend Template": "", "DataMiner Agent": 123465, "View": "Test View" }\]
+\[
+{
+"Node Name": "Test Element",
+"IP Address": "127.0.0.1",
+"Protocol": "Teleste AC9000",
+"Alarm Template": "Basic Alarms",
+"Trend Template": "",
+"DataMiner Agent": 123465,
+"View": "Test View"
+}
+\]
 
 #### XML file
 
-\<Elements\> \<Element\> \<AlarmTemplate\>Basic Alarms\</AlarmTemplate\> \<DataMinerAgent\>123465\</DataMinerAgent\> \<IpAddress\>127.0.0.1\</IpAddress\> \<NodeName\>Test Element\</NodeName\> \<Protocol\>Teleste AC9000\</Protocol\> \<TrendTemplate /\> \<View\>Test View\</View\> \</Element\>\</Elements\>
+\<Elements\>
+\<Element\>
+\<AlarmTemplate\>Basic Alarms\</AlarmTemplate\>
+\<DataMinerAgent\>123465\</DataMinerAgent\>
+\<IpAddress\>127.0.0.1\</IpAddress\>
+\<NodeName\>Test Element\</NodeName\>
+\<Protocol\>Teleste AC9000\</Protocol\>
+\<TrendTemplate /\>
+\<View\>Test View\</View\>
+\</Element\>
+\</Elements\>

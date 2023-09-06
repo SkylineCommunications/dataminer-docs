@@ -12,21 +12,21 @@ This connector uses both an SNMP and a serial connection.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact**                                                                                    |
-|----------------------|----------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                             | \-           | \-                                                                                                   |
-| 1.0.1.x              | New firmware based on 1.0.0.x (see below).                                                   | \-           | \-                                                                                                   |
-| 1.0.2.x              | Cassandra compliance.                                                                        | 1.0.1.19     | Trend history data                                                                                   |
-| 1.0.3.x              | Additional firewall policy rates.                                                            | 1.0.2.3      | Custom reports or scripts calling Firewall Policy Statistics table IDX or displayed columns directly |
-| 1.0.4.x \[Obsolete\] | DCF integration added.New display key format used in interfaces table.                       | 1.0.3.1      | \-                                                                                                   |
-| 1.0.5.x              | HA Statistics table primary key and display key changed.HA Statistics table columns renamed. | 1.0.4.10     | Custom reports or scripts calling HA Statistics table IDX or displayed columns directly              |
+| **Range**            | **Key Features**                                                                              | **Based on** | **System Impact**                                                                                    |
+|----------------------|-----------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                              | \-           | \-                                                                                                   |
+| 1.0.1.x              | New firmware based on 1.0.0.x (see below).                                                    | \-           | \-                                                                                                   |
+| 1.0.2.x              | Cassandra compliance.                                                                         | 1.0.1.19     | Trend history data                                                                                   |
+| 1.0.3.x              | Additional firewall policy rates.                                                             | 1.0.2.3      | Custom reports or scripts calling Firewall Policy Statistics table IDX or displayed columns directly |
+| 1.0.4.x \[Obsolete\] | DCF integration added. New display key format used in interfaces table.                       | 1.0.3.1      | \-                                                                                                   |
+| 1.0.5.x              | HA Statistics table primary key and display key changed. HA Statistics table columns renamed. | 1.0.4.10     | Custom reports or scripts calling HA Statistics table IDX or displayed columns directly              |
 
 ### Product Info
 
-| **Range**                           | **Supported Firmware** |
-|-------------------------------------|------------------------|
-| 1.0.0.x                             | \-                     |
-| 1.0.1.x1.0.2.x1.0.3.x1.0.4.x1.0.5.x | 4.0.x5.6.8             |
+| **Range**                               | **Supported Firmware** |
+|-----------------------------------------|------------------------|
+| 1.0.0.x                                 | \-                     |
+| 1.0.1.x 1.0.2.x 1.0.3.x 1.0.4.x 1.0.5.x | 4.0.x 5.6.8            |
 
 ### System Info
 
@@ -90,7 +90,8 @@ The element created with this connector consists of the following data pages:
 - **Explicit Proxy Statistics**: Contains metrics related to the explicit proxy services running through the firewall.
 - **IMAP Statistics**: Contains metrics related to Instant Message Access Protocol packets that are sent through the firewall.
 - **NNTP Statistics**: Contains metrics related to Network News Transfer Protocol packets that are sent through the firewall.
-- **P2P Statistics**: Contains metrics related to P2P services running through the firewall.**POP3 Statistics**: Contains metrics related to POP3 messages sent through the firewall.
+- **P2P Statistics**: Contains metrics related to P2P services running through the firewall.
+  **POP3 Statistics**: Contains metrics related to POP3 messages sent through the firewall.
 - **Scan Unit Statistics**: Contains metrics related to the scan units present in the firewall.
 - **SIP Statistics**: Contains metrics related to Session Initiation Protocol packets sent through the firewall.
 - **SMTP Statistics**: Contains metrics related to Simple Mail Transfer Protocol packets sent through the firewall.

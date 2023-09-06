@@ -56,7 +56,7 @@ There is no redundancy defined.
 
 ### Tree View
 
-The connector will create a tree view on the **General** pagewith a separate branch for every satellite/polarization combination. Below it, an icon will be shown for each of the different services on that branch.
+The connector will create a tree view on the **General** page with a separate branch for every satellite/polarization combination. Below it, an icon will be shown for each of the different services on that branch.
 
 If you click on a satellite position, extra information is displayed, as well as a **Service table**. This information is refreshed every hour.
 
@@ -66,8 +66,10 @@ On the **Add Schedule** page, you can add a schedule for a switchover.
 
 To create a schedule:
 
-1.  Select the satellite position(s) you want to change from the Sat Positions page.For instance, if you select **Switch All Main to ASI**,all main IRDs for this satellite position will be switched to Main.
-2.  In the **Services** table below, make additional selections per IRD as necessary. You can combine the two groups of selections.For instance, if you want to make all backup IRDs for GSAT 30 (83.0øE)/H switch to IP, but within that group you have a couple of IRDs you want to switch to ASI, you can first select Switch All Backups to IP in the Satpositions table. All IRDs for this satellite position will then have the Backup IRD option set to IP. Next, you can select the IRDs in the Services table that you want to switch to ASI instead.
+1.  Select the satellite position(s) you want to change from the Sat Positions page.
+    For instance, if you select **Switch All Main to ASI**, all main IRDs for this satellite position will be switched to Main.
+2.  In the **Services** table below, make additional selections per IRD as necessary. You can combine the two groups of selections.
+    For instance, if you want to make all backup IRDs for GSAT 30 (83.0øE)/H switch to IP, but within that group you have a couple of IRDs you want to switch to ASI, you can first select Switch All Backups to IP in the Satpositions table. All IRDs for this satellite position will then have the Backup IRD option set to IP. Next, you can select the IRDs in the Services table that you want to switch to ASI instead.
 3.  Finally, either select a **Switch Time**, or change the **Schedule Type** to **Immediate,** and click the **Create Schedule** button**.**
 
 At the bottom of the page is also a **Discovery** button. This will make the connector poll the **MCR DB Provisioning** element again.
@@ -82,7 +84,8 @@ At the scheduled time, the switch will take place. You can see the result of thi
 
 - The **Schedule** Table contains a unique number per scheduled switch task, the time the switch should take place, and the general status of the task.
 - The **Verification Time** is the time when the inputs of the selected IRDs should be polled again. By default this is **10 seconds** after the last IRD has been set. This is set with the **Verification Wait Time** parameter at the bottom of the page.
-- The **Schedule Details** table contains a row per IRD, with the **Requested Input**, the **Resulting Requested Input**, the **Connector Details**, and the **Status** of the switch for that IRD.In case *IP* was selected as an **Input Type**, and this is not available on a particular IRD, the **Resulting Requested Input** is *ASI* instead.
+- The **Schedule Details** table contains a row per IRD, with the **Requested Input**, the **Resulting Requested Input**, the **Connector Details**, and the **Status** of the switch for that IRD.
+  In case *IP* was selected as an **Input Type**, and this is not available on a particular IRD, the **Resulting Requested Input** is *ASI* instead.
 - Any errors or warnings will be added to the **Errors** table, detailing the **IRD,** **date and time**, and the details of the error that was encountered**.**
 
 ### Managing Schedules

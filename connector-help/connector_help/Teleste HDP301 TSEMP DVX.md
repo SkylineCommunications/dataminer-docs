@@ -32,7 +32,7 @@ Click the **Alarm Limits** page button to view or configure the analog and discr
 
 ### Power Supply
 
-Thispage displays the state of the **Input Voltage**, the **Total Output Power** and **6.3V/25V Output Parameters**.
+This page displays the state of the **Input Voltage**, the **Total Output Power** and **6.3V/25V Output Parameters**.
 
 ## Notes
 

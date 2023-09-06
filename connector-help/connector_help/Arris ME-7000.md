@@ -119,7 +119,7 @@ This page displays parameters such as the **Device Redundancy Mode**, **Device R
 
 ### Alarms
 
-This page displays alarm parameters triggered by incoming traps such as the **Agent State**, **Service Interruption Reason** and **Force Redundancy State**. It also displays the **Alarms** tablewith the following parameters:
+This page displays alarm parameters triggered by incoming traps such as the **Agent State**, **Service Interruption Reason** and **Force Redundancy State**. It also displays the **Alarms** table with the following parameters:
 
 - **Severity**
 - **Alarm Description**
@@ -138,16 +138,16 @@ This page displays the device's general information parameters, such as **Softwa
 
 The page has two subpages:
 
-- **Add User**:Allows you to add new users to the system.
+- **Add User**: Allows you to add new users to the system.
 - **Change Password**: Allows you to change a password. To do so, select a username first.
 
 On this page, you also need to configure the **Protocol Version** before logging in. This is the version number assigned to the XML API protocol. The default value of this parameter is *2.2*.
 
 ### System
 
-This page displays system information parameters such as **Name, Mode, Version, Model, Memory Utilization, Time Format, Time Zone** and **Reset Filter Time Remaining**.It also also allows you to configure the **SDT Path.**
+This page displays system information parameters such as **Name, Mode, Version, Model, Memory Utilization, Time Format, Time Zone** and **Reset Filter Time Remaining**. It also also allows you to configure the **SDT Path.**
 
-On the **NTP Settings** subpage, you can find the **NTP Server Table** and the **Current NTP Server**. This page also allows you to add **NTP servers**,and contains the **NTP Sync** and **Reboot Device** buttons.
+On the **NTP Settings** subpage, you can find the **NTP Server Table** and the **Current NTP Server**. This page also allows you to add **NTP servers**, and contains the **NTP Sync** and **Reboot Device** buttons.
 
 ### Network
 
@@ -155,7 +155,7 @@ This page displays the **GigE Interface Port Configuration Table**, which allows
 
 The page has two subpages:
 
-- **Port Analyzer**: On this page, you can configure the parameters **Direction (In or Out)**,**Analyzer** **Source**, **Analyzer Destination**, **Auto Negotation**, **Speed** and **Port Analyzer** in order to enable the **Port Analyzer** in the selected source-destination combination. When the port analyzer is enabled, the parameter configuration can no longer be changed and the **PAN Configuration Edit Mode** is changed from *Read/Write Mode* to *Read Only*. You can cancel the settings and enter new values as long as the **Apply** button has not been pressed yet.
+- **Port Analyzer**: On this page, you can configure the parameters **Direction (In or Out)**, **Analyzer** **Source**, **Analyzer Destination**, **Auto Negotation**, **Speed** and **Port Analyzer** in order to enable the **Port Analyzer** in the selected source-destination combination. When the port analyzer is enabled, the parameter configuration can no longer be changed and the **PAN Configuration Edit Mode** is changed from *Read/Write Mode* to *Read Only*. You can cancel the settings and enter new values as long as the **Apply** button has not been pressed yet.
 - **Static Routes**: This page contains the **Static Routes Table**. With the **IP Address**, **Subnet Mask**, **Port ID**, **Network** and **Gateway** parameters, you can add a new static route entry to the table. With the **Delete** **All** button, you can remove all entries from the table. You can also delete a static route manually using the button in the table.
 
 ### SNMP
@@ -164,9 +164,10 @@ This page contains the System Name, SNMP Agent Status, Agent Version, Contact, L
 
 Note:
 
-- If the **SNMP Version** is changed from *version 2* to *version 3* and the **SNMP User Settings Table** does not have any user entries, the user will be forced to enter at least one **SNMPv3 User** first. If the **SNMP Version** is changed from *version 2* to *version 3* and there is at least one entry in the **SNMPv3 User Settings Table**,the change will be implemented without any need for additional configuration.
+- If the **SNMP Version** is changed from *version 2* to *version 3* and the **SNMP User Settings Table** does not have any user entries, the user will be forced to enter at least one **SNMPv3 User** first. If the **SNMP Version** is changed from *version 2* to *version 3* and there is at least one entry in the **SNMPv3 User Settings Table**, the change will be implemented without any need for additional configuration.
 
-- If you change the **SNMP Security Level**, the **SNMPv3 User Settings Table** will be deleted and you will need to enter at least one SNMPv3 user with the new security level. It is important that there are three **security levels**:
+- If you change the **SNMP Security Level**, the **SNMPv3 User Settings Table** will be deleted and you will need to enter at least one SNMPv3 user with the new security level.
+  It is important that there are three **security levels**:
 
 - *No Authorization No Privacy*: No authorization or privacy password need to be specified.
   - *Authorization No Privacy*: An authorization password must be specified, but no privacy password is needed.
@@ -214,7 +215,7 @@ This page contains the **Software Updates Table**, as well as parameters that al
 
 This page contains parameters related to the chassis redundancy: Mode, Backup Device IP Address, Backup Device Name, Auto Fail Back, Checking Frequency, Check Frequency Type, Start Checking on, Checking Duration, Backup Table and Primary Device IP Address to Backup.
 
-Wiht four buttons at the bottom of the page, you can execute the following actions: **Cancel** or **Apply** the Cred Failback settings, or trigger a **Failback** or **Failover**.You can also add a **Primary Device IP** **Address** to the **Backup Table**.
+Wiht four buttons at the bottom of the page, you can execute the following actions: **Cancel** or **Apply** the Cred Failback settings, or trigger a **Failback** or **Failover**. You can also add a **Primary Device IP** **Address** to the **Backup Table**.
 
 ### Tools
 

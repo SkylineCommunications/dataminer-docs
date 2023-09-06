@@ -68,9 +68,9 @@ This page contains the **Encoder Table**, with information such as the **Type**,
 
 This page contains the following tables:
 
-- **BMI Table**:Displays the **Health Status** and **Description**.
-- **Video Table**:Displays the **Health Status**, **Availability** and **Description**.
-- **Audio Table**:Displays the **Health Status**, **Availability** and **Description**.
+- **BMI Table**: Displays the **Health Status** and **Description**.
+- **Video Table**: Displays the **Health Status**, **Availability** and **Description**.
+- **Audio Table**: Displays the **Health Status**, **Availability** and **Description**.
 
 ### Module (2/2)
 
@@ -88,16 +88,16 @@ This page contains the **IRD Table**, with information such as the **IRD Comms S
 
 This page contains the following tables:
 
-- **Encoder Relay Table**:Displays the **Encoder Index** and **Health Status**.
-- **TSP Relay& Table**:Displays the **TSP Index** and **Health Status**.
-- **Mux Relay Table**:Displays the **Mux Index** and **Health Status**.
+- **Encoder Relay Table**: Displays the **Encoder Index** and **Health Status**.
+- **TSP Relay& Table**: Displays the **TSP Index** and **Health Status**.
+- **Mux Relay Table**: Displays the **Mux Index** and **Health Status**.
 
 ### Relay (2/2)
 
 This page contains the following tables:
 
-- **Stream Aux Relay Table**:Displays the **Relay Number** and **Health Status**.
-- **Aux Relay Table**:Displays the **Relay Number** and **Health Status**.
+- **Stream Aux Relay Table**: Displays the **Relay Number** and **Health Status**.
+- **Aux Relay Table**: Displays the **Relay Number** and **Health Status**.
 
 ### Router Chassis
 

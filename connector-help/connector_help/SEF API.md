@@ -48,7 +48,8 @@ This value is appended to the IP address or hostname to create the full link to 
 
 ### Overview
 
-This page contains a tree view of the **Health Control Status**.For each level, it shows a table with the **Full Resource Name**, **Resource Name**, **Status** and **Message**.
+This page contains a tree view of the **Health Control Status**.
+For each level, it shows a table with the **Full Resource Name**, **Resource Name**, **Status** and **Message**.
 
 ### Communications
 

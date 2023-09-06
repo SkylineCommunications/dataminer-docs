@@ -24,10 +24,10 @@ This connector is intended to handle the Verizon Circuit Acceptance (DCAT) workf
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                            | **Exported Components** |
-|-----------|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | Automation Scripts:- Verizon DCAT OnAccept- Verizon DCAT OnAcceptExecute- Verizon DCAT OnExecute- Verizon DCAT OnResult- Verizon DCAT OnScheduledExecute- Verizon DCAT OnScheduledExecuteReportVisio file: DM ToolsReport template: VRZ RDS DCAT | \-                      |
-| 1.0.1.x   | No                  | Yes                     | Automation Scripts:- Verizon DCAT OnAccept- Verizon DCAT OnAcceptExecute- Verizon DCAT OnExecute- Verizon DCAT OnResult- Verizon DCAT OnScheduledExecute- Verizon DCAT OnScheduledExecuteReportVisio file: DM ToolsReport template: VRZ RDS DCAT | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                    | **Exported Components** |
+|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | Automation Scripts: - Verizon DCAT OnAccept - Verizon DCAT OnAcceptExecute - Verizon DCAT OnExecute - Verizon DCAT OnResult - Verizon DCAT OnScheduledExecute - Verizon DCAT OnScheduledExecuteReport Visio file: DM Tools Report template: VRZ RDS DCAT | \-                      |
+| 1.0.1.x   | No                  | Yes                     | Automation Scripts: - Verizon DCAT OnAccept - Verizon DCAT OnAcceptExecute - Verizon DCAT OnExecute - Verizon DCAT OnResult - Verizon DCAT OnScheduledExecute - Verizon DCAT OnScheduledExecuteReport Visio file: DM Tools Report template: VRZ RDS DCAT | \-                      |
 
 ## Configuration
 

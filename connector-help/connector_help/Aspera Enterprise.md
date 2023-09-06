@@ -18,10 +18,10 @@ This driver takes this into account and will make sure that every line (new or o
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                        |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | Initial version.                                                                                                                                                                       |
-| 2.0.0.x          | New range version based on 1.0.0.x.Instead of creating multiple log files after reaching 10MB, this new version parses just one file, which is overwritten after the limit is reached. |
+| **Driver Range** | **Description**                                                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | Initial version.                                                                                                                                                                        |
+| 2.0.0.x          | New range version based on 1.0.0.x. Instead of creating multiple log files after reaching 10MB, this new version parses just one file, which is overwritten after the limit is reached. |
 
 ### Supported firmware versions
 

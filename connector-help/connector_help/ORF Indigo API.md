@@ -12,9 +12,9 @@ The ORF Indigo API communicates via HTTP.
 
 ### Version Info
 
-| **Range**           | **Key Features**     | **Based on** | **System Impact** |
-|---------------------|----------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Resource management. | \-           | \-                |
+| **Range**            | **Key Features**     | **Based on** | **System Impact** |
+|----------------------|----------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Resource management. | \-           | \-                |
 
 ### Product Info
 
@@ -60,7 +60,7 @@ You can specify what resource groups (pools) you are interested in and indicate 
 
 The **Frame Bookings** table is an overview of the frame bookings that are available on the system. These are the parent bookings.
 
-For each frame booking there will be one or more line bookingsavailable in the **Line Bookings** table.
+For each frame booking there will be one or more line bookings available in the **Line Bookings** table.
 
 ### Examples
 
@@ -69,3 +69,5 @@ N/A
 ## Notes
 
 N/A
+
+

@@ -82,7 +82,7 @@ There is also an **Instance Name Filter** that defines the instance that the que
 - If *All Instances* is selected, all queries will target all available instances.
 - If *No Instance* is selected, the existing queries will be automatically removed.
 
-The **Prometheus Collector Query Table** inthe selected **Generic Prometheus Collector** element will be populated by the respective queries as soon as the **Instance Name Filter** is changed.
+The **Prometheus Collector Query Table** in the selected **Generic Prometheus Collector** element will be populated by the respective queries as soon as the **Instance Name Filter** is changed.
 
 If the destination parameter is a table column, then these rows will be added automatically, but they will not be removed by default. With the **Remove Old Rows After** parameter, you can configure after how much time a row will be removed if it did not get any new data.
 

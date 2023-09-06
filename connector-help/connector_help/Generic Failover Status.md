@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Failover_Status
 
 # Generic Failover Status
 
-Thisconnector makes information available related to each of the DMAs in a Failover configuration.
+This connector makes information available related to each of the DMAs in a Failover configuration.
 
 It is a virtual connector, which requires no configuration during element creation. It will only display correct information if the DMA it is installed on is part of a Failover setup.
 

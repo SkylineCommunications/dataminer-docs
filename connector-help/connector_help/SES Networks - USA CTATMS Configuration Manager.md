@@ -10,9 +10,9 @@ This connector is used as the engine of the SES CTATMS application.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                       | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version:- Import + validation of Excel file- Retrieves data from Harmonic Proview PVR7000 elements- Retrieves data from SED Decimator elements | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                          | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version: - Import + validation of Excel file - Retrieves data from Harmonic Proview PVR7000 elements - Retrieves data from SED Decimator elements | \-           | \-                |
 
 ### System Info
 
@@ -37,7 +37,8 @@ When a new element is created, all parameters and tables will initially be empty
 1.  Upload the .xlsx file to the documents folder of this protocol.
 2.  Go to the **Import** page of the element and click the **Refresh Files** button.
 3.  Select the .xlsx file.
-4.  Click the **Import** button. You will be able to follow the import process in the displayed logging, which will also indicate if any data is invalid.
+4.  Click the **Import** button.
+    You will be able to follow the import process in the displayed logging, which will also indicate if any data is invalid.
 
 The imported file needs to contain at least the following worksheets with the correct columns:
 

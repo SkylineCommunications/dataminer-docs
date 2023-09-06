@@ -12,11 +12,11 @@ As the 3.0.0.x and 4.0.0.x range for this connector are very different, differen
 
 ### Version Info
 
-| **Range**            | **Key Features**                                  | **Based on** | **System Impact**                                                   |
-|----------------------|---------------------------------------------------|--------------|---------------------------------------------------------------------|
-| 3.0.0.x              | Concatenation, tie lines, and dual stream.        | \-           | \-                                                                  |
-| 4.0.0.x \[Obsolete\] | \- Label management- Tie line management- Actions | \-           | \-                                                                  |
-| 4.0.1.x \[SLC Main\] | Supports subscription as an update channel.       | 4.0.0.42     | Some configuration is required to enable subscriptions (see below). |
+| **Range**            | **Key Features**                                    | **Based on** | **System Impact**                                                   |
+|----------------------|-----------------------------------------------------|--------------|---------------------------------------------------------------------|
+| 3.0.0.x              | Concatenation, tie lines, and dual stream.          | \-           | \-                                                                  |
+| 4.0.0.x \[Obsolete\] | \- Label management - Tie line management - Actions | \-           | \-                                                                  |
+| 4.0.1.x \[SLC Main\] | Supports subscription as an update channel.         | 4.0.0.42     | Some configuration is required to enable subscriptions (see below). |
 
 ### Product Info
 
@@ -40,9 +40,11 @@ This range allows you to select one of the following functionalities: **Concaten
 
 Note: It is possible to put a matrix virtualization on top of another matrix virtualization to **support multiple functionalities**.
 
+![Overview.png](~/connector-help/images/Generic_Matrix_Virtualization_Overview.png)
+
 To be able to build the matrix virtualization on top of matrix elements (which we will refer to as children) there has to be a **Status String** (which indicates the state of the matrix) available on these children.
 
-The **Status String** must have the following format: *crosspoints list\|DMA_ID/Element_ID\|Write_Matrix_PID\|Physical_Max_Size_Inputs*In the crosspoints list, this is the content:
+The **Status String** must have the following format: *crosspoints list\|DMA_ID/Element_ID\|Write_Matrix_PID\|Physical_Max_Size_Inputs* In the crosspoints list, this is the content:
 
 - position = output number
 - value = input number, zero-based. If -1 = disconnected
@@ -76,15 +78,17 @@ This connector uses a virtual connection and does not require any input during e
 
 For the **Concatenation** method, an **Input and Output CSV file** must be created.
 
-The **Input CSV** file must have the following columns: '*Input;Label;Matrix;Child Input;Matrix;Child Input;...*.It can optionally have the following columns at the end: '*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*'.
+The **Input CSV** file must have the following columns: '*Input;Label;Matrix;Child Input;Matrix;Child Input;...*. It can optionally have the following columns at the end: '*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*'.
 
-**Example** of an Input CSV file:Input;label;matrix;Child Input;matrix;Child Input 1;M1 IN1;MTX1;1;; 2;M1 IN2;MTX1;2;; 3;M1 IN3;MTX1;3;; 4;M1 IN4;MTX1;4;; 5;M1 IN5;MTX1;5;; 6;X1 IN1;MTX1;6;MTX2;1 7;X1 IN2;MTX1;7;MTX2;2 8;X1 IN3;MTX1;8;MTX2;3 9;X1 IN4;MTX1;9;MTX2;4 10;X1 IN5;MTX1;10;MTX2;5 11;M2 IN1;;;MTX2;6 12;M2 IN2;;;MTX2;7 13;M2 IN3;;;MTX2;8 14;M2 IN4;;;MTX2;9 15;M2 IN5;;;MTX2;10
+**Example** of an Input CSV file: Input;label;matrix;Child Input;matrix;Child Input 1;M1 IN1;MTX1;1;; 2;M1 IN2;MTX1;2;; 3;M1 IN3;MTX1;3;; 4;M1 IN4;MTX1;4;; 5;M1 IN5;MTX1;5;; 6;X1 IN1;MTX1;6;MTX2;1 7;X1 IN2;MTX1;7;MTX2;2 8;X1 IN3;MTX1;8;MTX2;3 9;X1 IN4;MTX1;9;MTX2;4 10;X1 IN5;MTX1;10;MTX2;5 11;M2 IN1;;;MTX2;6 12;M2 IN2;;;MTX2;7 13;M2 IN3;;;MTX2;8 14;M2 IN4;;;MTX2;9 15;M2 IN5;;;MTX2;10
 
-The **Output CSV** file must have the following columns: '*Output;Label;Matrix;Child Output*'.It can optionally have the following columns at the end: '*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*'.
+The **Output CSV** file must have the following columns: '*Output;Label;Matrix;Child Output*'. It can optionally have the following columns at the end: '*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*'.
 
-**Example** of an Output CSV file:Output;label;Matrix;Child Output 1;M1 OUT 1;MTX1;1 2;M1 OUT 2;MTX1;2 3;M1 OUT 3;MTX1;3 4;M1 OUT 4;MTX1;4 5;M1 OUT 5;MTX1;5 6;M1 OUT 6;MTX1;6 7;M1 OUT 7;MTX1;7 8;M1 OUT 8;MTX1;8 9;M1 OUT 9;MTX1;9 10;M1 OUT 10;MTX1;10 11;M2 OUT 1;MTX2;1 12;M2 OUT 2;MTX2;2 13;M2 OUT 3;MTX2;3 14;M2 OUT 4;MTX2;4 15;M2 OUT 5;MTX2;5 16;M2 OUT 6;MTX2;6 17;M2 OUT 7;MTX2;7 18;M2 OUT 8;MTX2;8 19;M2 OUT 9;MTX2;9 20;M2 OUT 10;MTX2;10
+**Example** of an Output CSV file: Output;label;Matrix;Child Output 1;M1 OUT 1;MTX1;1 2;M1 OUT 2;MTX1;2 3;M1 OUT 3;MTX1;3 4;M1 OUT 4;MTX1;4 5;M1 OUT 5;MTX1;5 6;M1 OUT 6;MTX1;6 7;M1 OUT 7;MTX1;7 8;M1 OUT 8;MTX1;8 9;M1 OUT 9;MTX1;9 10;M1 OUT 10;MTX1;10 11;M2 OUT 1;MTX2;1 12;M2 OUT 2;MTX2;2 13;M2 OUT 3;MTX2;3 14;M2 OUT 4;MTX2;4 15;M2 OUT 5;MTX2;5 16;M2 OUT 6;MTX2;6 17;M2 OUT 7;MTX2;7 18;M2 OUT 8;MTX2;8 19;M2 OUT 9;MTX2;9 20;M2 OUT 10;MTX2;10
 
 The above can be visualized as follows:
+
+![Concat.png](~/connector-help/images/Generic_Matrix_Virtualization_Concat.png)
 
 ### Configuration of CSV files for Tie-Lines method
 
@@ -92,31 +96,35 @@ For the **Tie-Lines** method, an **Input,** **Output** **and** **Tie-Line CSV** 
 
 The **Input CSV** file must have the same format as for the **Concatenation** method, as explained above.
 
-**Example** of an Input CSV file:Input;label;matrix;Child Input;matrix;Child Input 1;M1 IN1;MTX1;1;; 2;M1 IN2;MTX1;2;; 3;M1 IN3;MTX1;3;; 4;M1 IN4;MTX1;4;; 5;M1 IN5;MTX1;5;; 6;M1 IN1;MTX1;6;; 7;X1 IN1;MTX1;7;MTX2;3 8;X1 IN2;MTX1;8;MTX2;4 9;M2 IN1;;;MTX2;5 10;M2 IN2;;;MTX2;6 11;M2 IN1;;;MTX2;7 12;M2 IN2;;;MTX2;8 13;M2 IN3;;;MTX2;9 14;M2 IN4;;;MTX2;10
+**Example** of an Input CSV file: Input;label;matrix;Child Input;matrix;Child Input 1;M1 IN1;MTX1;1;; 2;M1 IN2;MTX1;2;; 3;M1 IN3;MTX1;3;; 4;M1 IN4;MTX1;4;; 5;M1 IN5;MTX1;5;; 6;M1 IN1;MTX1;6;; 7;X1 IN1;MTX1;7;MTX2;3 8;X1 IN2;MTX1;8;MTX2;4 9;M2 IN1;;;MTX2;5 10;M2 IN2;;;MTX2;6 11;M2 IN1;;;MTX2;7 12;M2 IN2;;;MTX2;8 13;M2 IN3;;;MTX2;9 14;M2 IN4;;;MTX2;10
 
 The **Output CSV** file must have the same format as for the **Concatenation** method, as explained above.
 
-**Example** of an Output CSV file:Output;label;Matrix;Child Output 1;M1 OUT 1;MTX1;1 2;M1 OUT 2;MTX1;2 3;M1 OUT 3;MTX1;3 4;M1 OUT 4;MTX1;4 5;M1 OUT 5;MTX1;5 6;M1 OUT 6;MTX1;6 7;M1 OUT 7;MTX1;7 8;M1 OUT 8;MTX1;8 9;M2 OUT 1;MTX2;3 10;M2 OUT 2;MTX2;4 11;M2 OUT 3;MTX2;5 12;M2 OUT 4;MTX2;6 13;M2 OUT 5;MTX2;7 14;M2 OUT 6;MTX2;8 15;M2 OUT 7;MTX2;9 16;M2 OUT 8;MTX2;10
+**Example** of an Output CSV file: Output;label;Matrix;Child Output 1;M1 OUT 1;MTX1;1 2;M1 OUT 2;MTX1;2 3;M1 OUT 3;MTX1;3 4;M1 OUT 4;MTX1;4 5;M1 OUT 5;MTX1;5 6;M1 OUT 6;MTX1;6 7;M1 OUT 7;MTX1;7 8;M1 OUT 8;MTX1;8 9;M2 OUT 1;MTX2;3 10;M2 OUT 2;MTX2;4 11;M2 OUT 3;MTX2;5 12;M2 OUT 4;MTX2;6 13;M2 OUT 5;MTX2;7 14;M2 OUT 6;MTX2;8 15;M2 OUT 7;MTX2;9 16;M2 OUT 8;MTX2;10
 
 The **Tie-Line CSV** file must have the following columns: "*Tie-Line;Source (matrix);Source (output ID);Destination (Matrix);Destination (input ID)"*.
 
-**Example** of a Tie-Line CSV file:Tie-Line;Source (Matrix);Source (Output ID);Destination (Matrix);Destination (Input ID)1;MTX1;9;MTX2;1 2;MTX1;10;MTX2;2 3;MTX2;1;MTX1;9 4;MTX2;2;MTX1;10
+**Example** of a Tie-Line CSV file: Tie-Line;Source (Matrix);Source (Output ID);Destination (Matrix);Destination (Input ID) 1;MTX1;9;MTX2;1 2;MTX1;10;MTX2;2 3;MTX2;1;MTX1;9 4;MTX2;2;MTX1;10
 
 The above can be visualized as follows:
+
+![TIELines.png](~/connector-help/images/Generic_Matrix_Virtualization_TIELines.png)
 
 ### Configuration of CSV files for Dual Stream method
 
 For the **Dual Stream** method, an **Input** **and** **Output CSV** file must be created.
 
-The **Input CSV** file must have the following columns: "*Input;Label;Matrix;Child Input;Matrix;Child Input;...;Dual Stream*".It can optionally have the following columns at the end: "*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*".
+The **Input CSV** file must have the following columns: "*Input;Label;Matrix;Child Input;Matrix;Child Input;...;Dual Stream*". It can optionally have the following columns at the end: "*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*".
 
-**Example** of an Input CSV file:Input;label;matrix;Child Input;matrix;Child Input;Dual Stream 1;IN1 M1 LR;MTX1;1;;;MTX1:2 2;IN2 M1 LR;MTX1;3;;;MTX1:4 3;IN3 M1 L X R;MTX1;5;;;MTX1:6\|MTX2:1 4;IN4 X LR;MTX1;7;MTX2;2;MTX1:8\|MTX2:3 5;IN5 X LR;MTX1;9;MTX2;4;MTX1:10\|MTX2:5 6;IN6 M2 LR;;;MTX2;6;MTX2:7 7;IN7 M2 LR;;;MTX2;8;MTX2:9 8;IN8 M2 L;;;MTX2;10;
+**Example** of an Input CSV file: Input;label;matrix;Child Input;matrix;Child Input;Dual Stream 1;IN1 M1 LR;MTX1;1;;;MTX1:2 2;IN2 M1 LR;MTX1;3;;;MTX1:4 3;IN3 M1 L X R;MTX1;5;;;MTX1:6\|MTX2:1 4;IN4 X LR;MTX1;7;MTX2;2;MTX1:8\|MTX2:3 5;IN5 X LR;MTX1;9;MTX2;4;MTX1:10\|MTX2:5 6;IN6 M2 LR;;;MTX2;6;MTX2:7 7;IN7 M2 LR;;;MTX2;8;MTX2:9 8;IN8 M2 L;;;MTX2;10;
 
 The **Output CSV** file has to have the following columns: '"*Output;Label;Matrix;Child Output;Dual Stream*". It can optionally have the following columns at the end: "*External Custom 1;External Custom 2;External Custom 3;External Custom 4;X;Y;Page;Sequence*".
 
-**Example** of an Output CSV file:Output;label;Matrix;Child Output;Dual Stream 1; OUT1 M1 LR;MTX1;1;MTX1:2 2; OUT2 M1 LR;MTX1;3;MTX1:4 3; OUT3 M1 LR;MTX1;5;MTX1:6 4; OUT4 M1 LR;MTX1;7;MTX1:8 5; OUT5 M1 LR;MTX1;9;MTX1:10 6; OUT6 M2 LR;MTX2;1;MTX2:2 7; OUT7 M2 LR;MTX2;3;MTX2:4 8; OUT8 M2 LR;MTX2;5;MTX2:6 9; OUT9 M2 LR;MTX2;7;MTX2:8 10; OUT10 M2 LR;MTX2;9;MTX2:10
+**Example** of an Output CSV file: Output;label;Matrix;Child Output;Dual Stream 1; OUT1 M1 LR;MTX1;1;MTX1:2 2; OUT2 M1 LR;MTX1;3;MTX1:4 3; OUT3 M1 LR;MTX1;5;MTX1:6 4; OUT4 M1 LR;MTX1;7;MTX1:8 5; OUT5 M1 LR;MTX1;9;MTX1:10 6; OUT6 M2 LR;MTX2;1;MTX2:2 7; OUT7 M2 LR;MTX2;3;MTX2:4 8; OUT8 M2 LR;MTX2;5;MTX2:6 9; OUT9 M2 LR;MTX2;7;MTX2:8 10; OUT10 M2 LR;MTX2;9;MTX2:10
 
 The above can be visualized as follows:
+
+![DualStream.png](~/connector-help/images/Generic_Matrix_Virtualization_DualStream.png)
 
 ### Configuration of element connections
 
@@ -138,7 +146,7 @@ On the **Settings** page, the **Input Data** table shows the status strings of t
 
 ### Input/Outputs
 
-This page displays the **inputs**/**outputs** table of the virtual matrix. The **XPos**, **YPos**, **Page**, **Sequence**,and the five **External Custom** columns can be used in Visual Overview or for other purposes, but they are not used on the data pages.
+This page displays the **inputs**/**outputs** table of the virtual matrix. The **XPos**, **YPos**, **Page**, **Sequence**, and the five **External Custom** columns can be used in Visual Overview or for other purposes, but they are not used on the data pages.
 
 The **custom** columns provide more information on the **inputs** and **outputs** for some of the methods:
 
@@ -265,11 +273,11 @@ This page is only relevant if the connector is deployed as the SRM vMatrix solut
 
 ### Matrix Configuration
 
-If you use an [information template](https://docs.dataminer.services/user-guide/Basic_Functionality/Protocols_and_templates/Information_templates.html), you can rename the Label columns. This allows for more flexibility. In the **Label Management** table, you can change the names it should have. By default, this will be taken from the information template.With this table, Router Control can also show the correct descriptions. In addition, the table allows additional restrictions on the Labels columns. You can limit the character size and determine whether duplication is allowed.
+If you use an [information template](https://docs.dataminer.services/user-guide/Basic_Functionality/Protocols_and_templates/Information_templates.html), you can rename the Label columns. This allows for more flexibility. In the **Label Management** table, you can change the names it should have. By default, this will be taken from the information template. With this table, Router Control can also show the correct descriptions. In addition, the table allows additional restrictions on the Labels columns. You can limit the character size and determine whether duplication is allowed.
 
 The **Routing Preference** indicates whether tie line reuse is preferred, or the shortest possible path should always be used.
 
-Linked to the virtual inputs and virtual outputs are **Actions**. This table contains the possible actions that can be executed when a column value changes.The **Triggers** column represent the column IDs that can trigger the action. These can be multiple IDs separated by a semicolon. The supported columns are Label, Label01, Label02, Label03, Label04, Label05, Label06, Notes, IsEnabled, IsLocked, and ConnectedInput (only for Outputs).In the **Description** column, you should use the same syntax as to execute an Automation script in Visual Overview (See [Linking a shape to an Automation script](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/visio/Linking_a_shape_to_an_Automation_script.htm) in the DataMiner Help). Placeholders are supported in this syntax.
+Linked to the virtual inputs and virtual outputs are **Actions**. This table contains the possible actions that can be executed when a column value changes. The **Triggers** column represent the column IDs that can trigger the action. These can be multiple IDs separated by a semicolon. The supported columns are Label, Label01, Label02, Label03, Label04, Label05, Label06, Notes, IsEnabled, IsLocked, and ConnectedInput (only for Outputs). In the **Description** column, you should use the same syntax as to execute an Automation script in Visual Overview (See [Linking a shape to an Automation script](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/visio/Linking_a_shape_to_an_Automation_script.htm) in the DataMiner Help). Placeholders are supported in this syntax.
 
 Example: Script:TestScript\|\|TriggerId=\[TRIGGER\];VirtualId=\[ID\];CellValue=\[VALUE\]\|\|\|
 
@@ -321,6 +329,9 @@ The following example illustrates both options:
 | 11     | PLAYOUT TX 002A | False                        |                 |
 | 12     | PLAYOUT TX 003A | TX; MOD                      | True            |
 
+**
+**
+
 **SITE B - Matrix**
 
 ****Inputs****
@@ -337,6 +348,9 @@ The following example illustrates both options:
 | 30     | PLAYOUT TX 001B | TX                           | True            |
 | 31     | PLAYOUT TX 002B | MOD                          | True            |
 | 32     | PLAYOUT TX 003B | TX                           | False           |
+
+**
+**
 
 **Tie Lines**
 

@@ -32,7 +32,7 @@ To make sure this driver works correctly, fill in all the **configuration** para
 
 ### Statistics Page
 
-This page contains all the configuration parameters to set up the billing statistics. The parameters **FTP File Name**, **FTP Server User Name**, **FTP Password** and **Local File Location Folder (Temp)** must be filled in to retrieve all the correct FTP files for the voice statistics (elementsusing the driver CEFD Memotec NetPerformer SDM9220-9230).
+This page contains all the configuration parameters to set up the billing statistics. The parameters **FTP File Name**, **FTP Server User Name**, **FTP Password** and **Local File Location Folder (Temp)** must be filled in to retrieve all the correct FTP files for the voice statistics (elements using the driver CEFD Memotec NetPerformer SDM9220-9230).
 
 ATN and AFTN data is retrieved from elements using the drivers CEFD Memotec NetPerformer SDM9220-9230 and CEFD Memotec NetPerformer SDM8400.
 

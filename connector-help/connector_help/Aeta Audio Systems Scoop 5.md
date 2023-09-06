@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 - Interface connection:
 
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-  - **IP port**: The port of the connected device, by default *161*.
+  -  **IP port**: The port of the connected device, by default *161*.
   - **Bus address**: Range 1 to 8.
 
 #### Smart-Serial connection
@@ -115,7 +115,7 @@ On this page, you can set several parameters related to coding.
 
 ### Misc
 
-The page displays miscellaneous information such the **Auto Redial Codec 1 and 2, Redial Attempts** and**Time before Dial**.
+The page displays miscellaneous information such the **Auto Redial Codec 1 and 2, Redial Attempts** and **Time before Dial**.
 
 There is also a button available that can be used to enable echo. By default, the echo is enabled when a unexpected response is detected by the system.
 

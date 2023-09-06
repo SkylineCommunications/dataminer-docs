@@ -53,3 +53,5 @@ The page also allows you to change the **RF Input** of the device. A button at t
 ### Spectrum Analyzer
 
 This page contains the **spectrum analyzer UI**. This UI displays a graph with the **current center frequency** trace, with various controls that allow you to configure the graph. You can also adjust the **center frequency, frequency span** and **resolution bandwidth** of the device.
+
+

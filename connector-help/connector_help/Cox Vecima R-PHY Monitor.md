@@ -60,9 +60,11 @@ The driver contains a number of settings that allow you to customize its behavio
 
 <!-- -->
 
-- **Entity Export/Import Settings**: These sections handle the exporting of configuration files and importing of provisioning files. You can:
+- **Entity Export/Import Settings**: These sections handle the exporting of configuration files and importing of provisioning files.
+  You can:
 
 - **Enable/disable** the exporting/importing feature with the toggle buttons **Entity Export** and **Entity Import**, respectively.
   - Configure the path where files will be exported and imported, with the **Entity Export Directory** and **Entity Import Directory** parameters.
-  - Select whether to export/import to a local or to a remote location with the toggle buttons **Entity Export Directory Type** and **Entity Import Directory Type**,respectively. Note that for the **remote** file handling feature to work, you need to enter the credentials for the system in the **System Credentials** section, and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
+  - Select whether to export/import to a local or to a remote location with the toggle buttons **Entity Export Directory Type** and **Entity Import Directory Type**, respectively.
+    Note that for the **remote** file handling feature to work, you need to enter the credentials for the system in the **System Credentials** section, and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
   - Manually perform the export/import by clicking the **Apply** button in the respective section.

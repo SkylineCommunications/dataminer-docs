@@ -14,10 +14,10 @@ The driver first retrieves the destination-specific information, which includes 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                              | No                  | Yes                     |
-| 2.0.0.x          | Based on 1.0.0.1.Changed the matrix size to 1024x1024. Added redundant polling. Improved the delay when setting crosspoints. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                               | No                  | Yes                     |
+| 2.0.0.x          | Based on 1.0.0.1. Changed the matrix size to 1024x1024. Added redundant polling. Improved the delay when setting crosspoints. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -66,7 +66,7 @@ Note: If there is no redundant device, you can simply fill in the same settings 
 
 ### General
 
-Thispage contains general information on the device, such as the **Name**, **Model**, **IP** address, **Subnet** Mask, **Gateway**,etc.
+This page contains general information on the device, such as the **Name**, **Model**, **IP** address, **Subnet** Mask, **Gateway**, etc.
 
 The **Matrix Size** page button allows you to customize the number of inputs and outputs of the matrix. The **Maximum Number of Inputs/Outputs** parameters are read from the device, while the **Number of Inputs/Outputs Visible** are custom settings that allow you to overrule the **Maximum Number of Inputs/Outputs**.
 

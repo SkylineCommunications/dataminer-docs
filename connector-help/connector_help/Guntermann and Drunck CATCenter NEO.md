@@ -56,7 +56,7 @@ The Status and Error Status boxes are updated every 5 seconds. The Device and Sy
 
 ### Traps
 
-At the top of the page, the **Information Events** toggle buttonallows you to specify whether an information event should be generated when a trap is received.
+At the top of the page, the **Information Events** toggle button allows you to specify whether an information event should be generated when a trap is received.
 
 Below this, you can manage the number of traps that can be stored in the Traps table:
 
@@ -67,7 +67,7 @@ Note: The Maximum Number of Traps and Maximum Age of Traps cannot be disabled at
 
 The **Traps Number** parameter shows the total number of traps currently stored in the Traps table.
 
-The **Traps table** itself displays the following information for each trap: the **Trap Index**, the **Timestamp** specifying when the trap arrived, the **Error Level** of the trap and the **Message** that is in the trap. The last column in the table, **Delete Trap**,allows you to delete a separate trap.
+The **Traps table** itself displays the following information for each trap: the **Trap Index**, the **Timestamp** specifying when the trap arrived, the **Error Level** of the trap and the **Message** that is in the trap. The last column in the table, **Delete Trap**, allows you to delete a separate trap.
 
 ### Web Interface
 

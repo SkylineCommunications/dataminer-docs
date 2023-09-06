@@ -4,9 +4,9 @@ uid: Connector_help_SEE_Telecom_eAcsys_NMS
 
 # SEE Telecom eAcsys NMS
 
-The **SEE Telecom eAcsys NMS**is a management system that manages other elements that are used for Optical/RF transmission/reception. Other than that, it also monitors the state of the network element's chassis and the status of its PSU.
+The **SEE Telecom eAcsys NMS** is a management system that manages other elements that are used for Optical/RF transmission/reception. Other than that, it also monitors the state of the network element's chassis and the status of its PSU.
 
-This driver monitors and controls an **SEE Telecom eAcsys NMS**management system, allowing the end user to assess Optical/RF measurements performed by the device, and to perform actions on the devices controlled by the device*.*
+This driver monitors and controls an **SEE Telecom eAcsys NMS** management system, allowing the end user to assess Optical/RF measurements performed by the device, and to perform actions on the devices controlled by the device*.*
 
 ## About
 

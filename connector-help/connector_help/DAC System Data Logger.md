@@ -58,7 +58,7 @@ The Junction Boxes page contains an overview of the connected junction boxes. Fo
 
 ### Sensors
 
-The Sensors page contains an overview of the connected sensors. For each sensor, a **Name** and a **Type** are displayed. The **Transmitting Signal Power**, **Receiving Signal Power**, **Return Loss**, **VSWR** (Voltage Standing Wave Ratio), **Temperature** and **Humidity** of each sensor are retrieved. Each sensor has sixteen alarms. These are used to indicate any problems concerning the measured **Return Loss**, **Tx Signal**, **Current**, **Temperature** or **Humidity**,or to indicate a general **Malfunction**. The **Last Measurement** indicates the moment when the Data Logger performed the sensor measurement.
+The Sensors page contains an overview of the connected sensors. For each sensor, a **Name** and a **Type** are displayed. The **Transmitting Signal Power**, **Receiving Signal Power**, **Return Loss**, **VSWR** (Voltage Standing Wave Ratio), **Temperature** and **Humidity** of each sensor are retrieved. Each sensor has sixteen alarms. These are used to indicate any problems concerning the measured **Return Loss**, **Tx Signal**, **Current**, **Temperature** or **Humidity**, or to indicate a general **Malfunction**. The **Last Measurement** indicates the moment when the Data Logger performed the sensor measurement.
 
 ### Web Interface
 

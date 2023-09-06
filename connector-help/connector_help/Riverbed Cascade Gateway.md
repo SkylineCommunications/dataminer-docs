@@ -49,7 +49,7 @@ This page displays a table containing information on the **disk space** usage.
 
 ### Network Interfaces
 
-On this page, two tables are displayed. The **IP Adresses Table** showsthe IP addresses associated to the device interfaces. The **Interfaces Table** displays traffic statistics for all the network interfaces of the device (**RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error**, ...).
+On this page, two tables are displayed. The **IP Adresses Table** shows the IP addresses associated to the device interfaces. The **Interfaces Table** displays traffic statistics for all the network interfaces of the device (**RX/TX Octets, RX/TX Unicast Packets, RX Packets in Error**, ...).
 
 ### Web Interface
 

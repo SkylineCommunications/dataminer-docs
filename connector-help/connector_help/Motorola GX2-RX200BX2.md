@@ -38,7 +38,7 @@ This page displays the following read-only parameters: **Temperature**, **Fan Cu
 
 ### Alarms
 
-This page contains all the **Status** parameters. If an alarm is detected, the parameter will change from *OK*to *ALARM*.
+This page contains all the **Status** parameters. If an alarm is detected, the parameter will change from *OK* to *ALARM*.
 
 ### Factory
 

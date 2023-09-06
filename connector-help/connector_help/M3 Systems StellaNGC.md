@@ -18,7 +18,7 @@ This driver is used to manage the M3 Systems StellaNGC device.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 0.9.4.00.10.1.0        |
+| 1.0.0.x   | 0.9.4.0 0.10.1.0       |
 
 ### System Info
 

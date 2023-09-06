@@ -40,7 +40,8 @@ HTTP CONNECTION:
 
 ### Configuration of the HTTP Main connection
 
-The driver needs the credentials of the DataMiner system to poll configured on the General\>Security" page.The configured user needs to have the "Modules\>System Configuration\>Mobile Gateway\>Allow access to Mobile UI" permission.
+The driver needs the credentials of the DataMiner system to poll configured on the General\>Security" page.
+The configured user needs to have the "Modules\>System Configuration\>Mobile Gateway\>Allow access to Mobile UI" permission.
 
 ## Usage
 
@@ -58,11 +59,14 @@ For each entry in the table, a Microsoft Platform element can be configured to p
 
 ### Elements page and Services page
 
-On these pages, elements and Services can be configured to be monitored. Alarms of configured elements and Services can be requested to be shown on the page button pages.There are page buttons to list an overview of all elements/Services in the cluster.
+On these pages, elements and Services can be configured to be monitored.
+Alarms of configured elements and Services can be requested to be shown on the page button pages.
+There are page buttons to list an overview of all elements/Services in the cluster.
 
 ### Redundancy Groups
 
-Redundancy groups can be configured to be monitored by the driver.Monitored Redundancy groups will list virtual elements and Included elements.
+Redundancy groups can be configured to be monitored by the driver.
+Monitored Redundancy groups will list virtual elements and Included elements.
 
 There is an overview table with all redundancy groups on the page button page.
 

@@ -12,13 +12,14 @@ With this driver, you can configure the main networking options and receive trap
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                                                 | No                  | No                      |
-| 1.2.0.2(.x)      | For software version 2.0.2, based on 1.0.0.1.\[Obsolete: Use range 1.3.0.x.\]    | No                  | No                      |
-| 1.2.0.4.x        | For software version 2.0.4, based on 1.2.0.2.\[Obsolete: Use a 4-number range.\] | Yes                 | No                      |
-| 1.3.0.x          | Standardized range, continuation of 1.2.0.2.2.Added DCF.                         | Yes                 | No                      |
-| 1.3.1.x          | New range for Cassandra compliancy. Changed displayColumn to naming.             | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                                                  | No                  | No                      |
+| 1.2.0.2(.x)      | For software version 2.0.2, based on 1.0.0.1. \[Obsolete: Use range 1.3.0.x.\]    | No                  | No                      |
+| 1.2.0.4.x        | For software version 2.0.4, based on 1.2.0.2. \[Obsolete: Use a 4-number range.\] | Yes                 | No                      |
+| 1.3.0.x          | Standardized range, continuation of 1.2.0.2.2. Added DCF.                         | Yes                 | No                      |
+| 1.3.1.x          | New range for Cassandra compliancy. Changed displayColumn to naming.              | Yes                 | Yes                     |
+
 
 Note:
 
@@ -28,11 +29,11 @@ Note:
 
 ### Supported firmware versions
 
-| **Driver Range**          | **Device Firmware Version**               |
-|---------------------------|-------------------------------------------|
-| 1.0.0.x                   | Bucket Name: AZ212-1.1.2SW version: 1.1.0 |
-| 1.2.0.2(.x)1.3.0.x1.3.1.x | Bucket Name: AZ212-2.0.2                  |
-| 1.2.0.4.x                 | Bucket Name: AZ212-2.0.4                  |
+| **Driver Range**            | **Device Firmware Version**                |
+|-----------------------------|--------------------------------------------|
+| 1.0.0.x                     | Bucket Name: AZ212-1.1.2 SW version: 1.1.0 |
+| 1.2.0.2(.x) 1.3.0.x 1.3.1.x | Bucket Name: AZ212-2.0.2                   |
+| 1.2.0.4.x                   | Bucket Name: AZ212-2.0.4                   |
 
 ## Installation and configuration
 

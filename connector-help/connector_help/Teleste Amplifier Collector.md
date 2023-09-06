@@ -21,10 +21,10 @@ The driver can be provisioned via the import of CSV files with IP addresses and 
 
 The driver was tested with three different types of Teleste amplifiers, listed in the table below, and can also be used with other types of Teleste amplifiers that support the same MIBs.
 
-| **Driver Range** | **Device Firmware Version**                                                                            |
-|------------------|--------------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | Teleste AC3010Teleste AC3210Teleste ACE3(Other types of Teleste amplifiers that support the same MIBs) |
-| 1.0.1.x          | Teleste AC3010Teleste AC3210Teleste ACE3(Other types of Teleste amplifiers that support the same MIBs) |
+| **Driver Range** | **Device Firmware Version**                                                                               |
+|------------------|-----------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | Teleste AC3010 Teleste AC3210 Teleste ACE3 (Other types of Teleste amplifiers that support the same MIBs) |
+| 1.0.1.x          | Teleste AC3010 Teleste AC3210 Teleste ACE3 (Other types of Teleste amplifiers that support the same MIBs) |
 
 ## Installation and configuration
 
@@ -119,7 +119,7 @@ The page also contains the **Spectrum Analyzer Table**. For each amplifier, this
 
 In the table, for each Amplifier/Frequency pair, you can set the **Expected Value** and a **Margin**, which are used to compute the **TV Service Unavailable Time** and the **TV Service Availability** in the **Main Table**.
 
-Via the **Import Expected Values** page button, you can import a CSV file containing the **Expected Value** and the **Margin** per Amplifier/Frequencypair:
+Via the **Import Expected Values** page button, you can import a CSV file containing the **Expected Value** and the **Margin** per Amplifier/Frequency pair:
 
 - The CSV file needs to adhere to the following naming convention: *\<DMA_ID\>\_\<Element_ID\>\_ExpectedValues.csv* (eg. *192_9322_ExpectedValues.csv*).
 - The rows of the file must have the following format: *\<Name\>,\<Frequency\>(MHz),\<Expected Value\>(dB),\<Margin\>(dB)* (e.g. "*id=70307,450,11,2"*).
@@ -140,7 +140,7 @@ It is also possible to remove all the old windows at the same time by pressing t
 
 The **Amplified Reductions** table makes use of the information specified in the previous two tables:
 
-- The thresholds from the **Reductions Table** are used to compute the total **Reduction** and the **NQI** per amplifierwithin the current month.
+- The thresholds from the **Reductions Table** are used to compute the total **Reduction** and the **NQI** per amplifier within the current month.
 - The reduction computed during the time windows in the **Excluded Incident Windows** table is added to the **Excluded Reduction** column.
 
 ### SNMP Table Pages

@@ -51,10 +51,10 @@ The following pages are available:
 
 - The **General** page contains authentication and system parameters.
 - On the **Versions** page, you can find the current image and software versions.
-- The **Interfaces**page shows a list of all available interfaces.
+- The **Interfaces** page shows a list of all available interfaces.
 - The **Inputs** page contains a table with different types of inputs. Two types, **Web Streams** and **Transport Streams**, are supported and can be configured on the corresponding subpages.
 - The **Input Selectors** page contains a table with all input selectors.
-- The **Encoders** page contains two tables, one for monitoring and one for configuring encoders. An encoder must have a reference to either an input selector (Input Selectorstable) or an audio source (Inputstable).
+- The **Encoders** page contains two tables, one for monitoring and one for configuring encoders. An encoder must have a reference to either an input selector (Input Selectors table) or an audio source (Inputs table).
 - The **MPEG-2 TS** page contains a table with transport streams. Each transport stream can have multiple destinations and services*,* which can be managed on the **Destinations** and **Services** pages*.*
 - The **File Manager** page lists the available files.
 

@@ -21,12 +21,12 @@ Using the **HTTP API**, this connector both collects information from the device
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                              |
-|-----------|---------------------------------------------------------------------|
-| 1.0.0.x   | 2.0.20                                                              |
-| 1.0.1.x   | 2.0.20                                                              |
-| 1.0.2.x   | 2.0.20                                                              |
-| 1.1.0.x   | app-h264-enc-10b - 2.6.41app-h264-enc-8b- 2.5.45app-h264-dec- 2.3.3 |
+| **Range** | **Supported Firmware**                                                  |
+|-----------|-------------------------------------------------------------------------|
+| 1.0.0.x   | 2.0.20                                                                  |
+| 1.0.1.x   | 2.0.20                                                                  |
+| 1.0.2.x   | 2.0.20                                                                  |
+| 1.1.0.x   | app-h264-enc-10b - 2.6.41 app-h264-enc-8b - 2.5.45 app-h264-dec - 2.3.3 |
 
 ### System Info
 

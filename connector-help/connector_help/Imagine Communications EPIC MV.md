@@ -65,7 +65,7 @@ The **Multi Viewers** table describes the multi-viewers participating in the sys
 
 The **Displays** table is a list of the available displays and the active layout. There is also a list of PiP IDs active on the display and the resolution of the display.
 
-The **Layouts**page button leads to the **Display Layouts** subpage.
+The **Layouts** page button leads to the **Display Layouts** subpage.
 
 ### Display Layouts
 
@@ -79,7 +79,7 @@ Click the **Configuration** page button to go to the **Picture in Picture Config
 
 ### Picture in Picture Configuration
 
-Additional information can be added to the PiPs of a specific display. This feature might not be applicable for every setup. To add this information, choose the **Display ID** and click **Create**.The PiPs of that display will then be loaded into the **Configuration** table. Edit the **Service Key**, **Order** and **Quality** according to your preference, and the specified **Format** will be applied to the selected **Display ID**.
+Additional information can be added to the PiPs of a specific display. This feature might not be applicable for every setup. To add this information, choose the **Display ID** and click **Create**. The PiPs of that display will then be loaded into the **Configuration** table. Edit the **Service Key**, **Order** and **Quality** according to your preference, and the specified **Format** will be applied to the selected **Display ID**.
 
 ### Alarms
 

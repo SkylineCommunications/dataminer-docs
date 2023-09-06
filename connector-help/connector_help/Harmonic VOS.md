@@ -14,11 +14,11 @@ A Visio file is provided with the connector to group data and allow easy navigat
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version. Most parameters are read-only, but you can configure the Service Control State.A Visio drawing is available. | No                  | Yes                     |
-| 1.1.0.x              | OAUTH2 authentication.                                                                                                        | No                  | Yes                     |
-| 1.1.1.x \[SLC Main\] | Added new connection to improve polling rate.                                                                                 | No                  | Yes                     |
+| **Range**            | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version. Most parameters are read-only, but you can configure the Service Control State. A Visio drawing is available. | No                  | Yes                     |
+| 1.1.0.x              | OAUTH2 authentication.                                                                                                         | No                  | Yes                     |
+| 1.1.1.x \[SLC Main\] | Added new connection to improve polling rate.                                                                                  | No                  | Yes                     |
 
 ### Product Info
 

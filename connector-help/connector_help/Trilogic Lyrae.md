@@ -2,6 +2,8 @@
 uid: Connector_help_Trilogic_Lyrae
 ---
 
+
+
 # Trilogic Lyrae
 
 This connector can be used to monitor the Trilogic Lyrae probe.
@@ -19,8 +21,8 @@ This connector can be used to monitor the Trilogic Lyrae probe.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 0.15.00.21.2           |
-| 1.1.0.x   | 0.31.00.36.3           |
+| 1.0.0.x   | 0.15.0 0.21.2          |
+| 1.1.0.x   | 0.31.0 0.36.3          |
 
 ### System Info
 

@@ -60,9 +60,9 @@ This page displays information related to the **Inputs** and **Outputs**, includ
 
 The page also contains topology-related parameters, such as **Power Strategy** and **Unit Number**, as well as page buttons that open the following subpages:
 
-- **Environment Sensors**:Displays the **Ambient** and **Remote** **Temperature** and **Humidity**, as well as thresholds for the minimum and maximum allowed values for these parameters.
-- **UPS Config**: Displays the **UPS configuration**,with parameters such as **Input/Output Voltage**, **Output Watts**, **Output Frequency** and the **Voltage Output** thresholds.
-- **Control Output**:Allows you to configure the **Output ON/OFF Delay**,**Output ON/OFF Trap Delay**, **Bypass Delay** and the parameter **Load Shed Secs with Restart**.
+- **Environment Sensors**: Displays the **Ambient** and **Remote** **Temperature** and **Humidity**, as well as thresholds for the minimum and maximum allowed values for these parameters.
+- **UPS Config**: Displays the **UPS configuration**, with parameters such as **Input/Output Voltage**, **Output Watts**, **Output Frequency** and the **Voltage Output** thresholds.
+- **Control Output**: Allows you to configure the **Output ON/OFF Delay**, **Output ON/OFF Trap Delay**, **Bypass Delay** and the parameter **Load Shed Secs with Restart**.
 
 Note: **Control output parameter responses** will be available if these parameters have been **previously configured on the device**. Otherwise, you can find answers of type **"NO SUCH OBJECT" in the stream viewer** for the element.
 

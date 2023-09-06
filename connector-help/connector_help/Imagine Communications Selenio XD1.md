@@ -12,19 +12,19 @@ This driver displays information on different pages, described in the **Usage** 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                       | No                  | Yes                     |
-| 2.5.0.x          | New versioning scheme.                                                                                                                       | No                  | Yes                     |
-| 2.5.1.x          | DVE synchronizer.                                                                                                                            | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
+| 2.5.0.x          | New versioning scheme.                                                                                                                        | No                  | Yes                     |
+| 2.5.1.x          | DVE synchronizer.                                                                                                                             | No                  | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[obsolete\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28*. |
-| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                                    |
+| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                 |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| \<10.0.0.x       | **\[obsolete\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28*. |
+| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                                                                                                                                                                                                                                                                     |
 
 ### Exported drivers
 
@@ -73,7 +73,8 @@ The driver contains different pages divided into several sections using separato
 
 This section contains the following pages:
 
-- **General:** Contains information such as the slot number, state, temperature, protection status and chassis IP. In **version 2.5.1.x**, this page also contains the **DVE Creation** toggle button, which can be used to enable or disable the creation of the DVE synchronizers, as well as the **DVE Administration Table**, where the **Name** and **View** of the DVE can be modified.
+- **General:** Contains information such as the slot number, state, temperature, protection status and chassis IP.
+  In **version 2.5.1.x**, this page also contains the **DVE Creation** toggle button, which can be used to enable or disable the creation of the DVE synchronizers, as well as the **DVE Administration Table**, where the **Name** and **View** of the DVE can be modified.
 - **Alarming:** Contains a table with all the possible alarms that the card can generate and its current state (*Active priority 0-\>10* or *Inactive*).
 
 ### Video section
@@ -101,8 +102,8 @@ This section contains the following pages:
 
 This section contains the following pages:
 
-- **Data DMB 1 & 2:** DMBparameters concerning **VITC, WSS, Brandnet, RP196, LTC, CC/TT Present** and **ARC Codes.**
-- **Data EMB 1 & 2:** EMBparameters concerning **ATC, RP196, ARC, AFD, VI, WSS, Brandnet** and **ARIB.**
+- **Data DMB 1 & 2:** DMB parameters concerning **VITC, WSS, Brandnet, RP196, LTC, CC/TT Present** and **ARC Codes.**
+- **Data EMB 1 & 2:** EMB parameters concerning **ATC, RP196, ARC, AFD, VI, WSS, Brandnet** and **ARIB.**
 - **VBI 1 and 2:** Deletion of VBI Lines.
 
 ### Audio Section

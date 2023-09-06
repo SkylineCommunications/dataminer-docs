@@ -42,11 +42,11 @@ Alarms can be set on these parameters. A toggle button to **Switch Mode** from *
 
 ### Commands Page
 
-This page displays all the possible commands a user can give to the device: **Switch Mode, Reset, Save Options**, choice of **Main Transmitter**, **Reserve Transmitter**,etc.
+This page displays all the possible commands a user can give to the device: **Switch Mode, Reset, Save Options**, choice of **Main Transmitter**, **Reserve Transmitter**, etc.
 
 ### Transmitters Page
 
-This page displays a tree view containing all relevant information for a given **transmitter**.This can be convenient in case all parameters need to be updated for a given transmitter.
+This page displays a tree view containing all relevant information for a given **transmitter**. This can be convenient in case all parameters need to be updated for a given transmitter.
 
 ### Reserve Page
 

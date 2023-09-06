@@ -12,11 +12,11 @@ The **Cisco DCNM** monitors and displays the connections between the switches, m
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                | **Based on** | **System Impact**                                  |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                                                                | \-           | \-                                                 |
-| 1.0.1.x \[Obsolete\] | Fix for SLElement leak by fixing display keys:- RTP Flows- RTP Error History- RTP Packet Drop History- RTP Active Flows- RTP Switch Corrections- RTP Error Flows- Host Policies | 1.0.0.4      | Existing trend data will be lost for these tables. |
-| 1.0.2.x \[SLC main\] | Changed primary key for the following tables:- Active Flow Status- Inactive Flow Status- Sender Only Flow Status- Receiver Only Flow Status                                     | 1.0.1.4      | Existing alarm/trend data will be lost             |
+| **Range**            | **Key Features**                                                                                                                                                                       | **Based on** | **System Impact**                                  |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                                                                       | \-           | \-                                                 |
+| 1.0.1.x \[Obsolete\] | Fix for SLElement leak by fixing display keys: - RTP Flows - RTP Error History - RTP Packet Drop History - RTP Active Flows - RTP Switch Corrections - RTP Error Flows - Host Policies | 1.0.0.4      | Existing trend data will be lost for these tables. |
+| 1.0.2.x \[SLC main\] | Changed primary key for the following tables: - Active Flow Status - Inactive Flow Status - Sender Only Flow Status - Receiver Only Flow Status                                        | 1.0.1.4      | Existing alarm/trend data will be lost             |
 
 ### Product Info
 
@@ -75,8 +75,8 @@ On this page, you can view and configure the general flow information in the **F
 
 You can access the tables with the status of the **Active**, **Inactive**, **Sender Only** and **Receiver Only** flows via the page buttons at the bottom of the page.
 
-Note: Via the right-click menu, you can add or delete rows in the **Flow Alias**, **Flow Policy**and **Flow Policy Multicast Ranges**tables.
+Note: Via the right-click menu, you can add or delete rows in the **Flow Alias**, **Flow Policy** and **Flow Policy Multicast Ranges** tables.
 
 ## Notes
 
-**Warning**: Because of a change from version 1.0.0.3 onwards, the SLElement load will increase considerably, for example up to 1 Gb. The load depends on the number of records in the tablesPTP Switch Corrections, RTP Error History and RTP Packet Drop History.
+**Warning**: Because of a change from version 1.0.0.3 onwards, the SLElement load will increase considerably, for example up to 1 Gb. The load depends on the number of records in the tables PTP Switch Corrections, RTP Error History and RTP Packet Drop History.

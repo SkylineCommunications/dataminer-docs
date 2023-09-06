@@ -60,7 +60,7 @@ This page contains the **Interfaces Table**, which contains information such as 
 
 ### Performance
 
-This page contains **IP to Tel** and **Tel to IP**call statistics. There is also a **Reset Frequency** parameter, which can be used to reset all parameters on the page based on the selection (*Manual*, *Daily* or *Monthly*).
+This page contains **IP to Tel** and **Tel to IP** call statistics. There is also a **Reset Frequency** parameter, which can be used to reset all parameters on the page based on the selection (*Manual*, *Daily* or *Monthly*).
 
 ### Tel to IP Routing
 

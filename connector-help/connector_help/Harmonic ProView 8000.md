@@ -52,7 +52,7 @@ The LNB page button allows you to switch between the DVB-S/S2 ports. LNB can onl
 
 #### Inputs \> DVB-S/S2 Properties
 
-The Properties page button below the DVB-S/S2 Inputs Tableallows you to configure a DVB-S/S2 port. In order to set a parameter for a given DVB-S/S2 port, first select the port using the **DVB-S/S2 Port** parameter.
+The Properties page button below the DVB-S/S2 Inputs Table allows you to configure a DVB-S/S2 port. In order to set a parameter for a given DVB-S/S2 port, first select the port using the **DVB-S/S2 Port** parameter.
 
 The following properties can be set for a DVB-S/S2 port:
 
@@ -62,7 +62,9 @@ The following properties can be set for a DVB-S/S2 port:
 
 - **Spectral Inversion**: Allows you to select the mode of operation for the spectral inversion function.
 
-- **Modulation & FEC**: Allows you to select the modulation type and coding rate, according to the selected modulation standard. For DVB-S, one of the following must be selected: *QPSK 1/2*, *QPSK 2/3*, *QPSK 3/4*, *QPSK 5/6* or *QPSK 7/8*. When DVB-S2 is used, one of the following must be selected: *QPSK 1/2, QPSK 2/3, QPSK 3/4, QPSK 5/6, QPSK 3/5, QPSK 4/5, QPSK 8/9, QPSK 9/10, 8PSK 3/5, QPSK 2/3, 8PSK 3/4, 8PSK 5/6, 8PSK 8/9* or *8PSK 9/10*.
+- **Modulation & FEC**: Allows you to select the modulation type and coding rate, according to the selected modulation standard.
+  For DVB-S, one of the following must be selected: *QPSK 1/2*, *QPSK 2/3*, *QPSK 3/4*, *QPSK 5/6* or *QPSK 7/8*.
+  When DVB-S2 is used, one of the following must be selected: *QPSK 1/2, QPSK 2/3, QPSK 3/4, QPSK 5/6, QPSK 3/5, QPSK 4/5, QPSK 8/9, QPSK 9/10, 8PSK 3/5, QPSK 2/3, 8PSK 3/4, 8PSK 5/6, 8PSK 8/9* or *8PSK 9/10*.
 
 - **Pilots**: The Pilot feature should only be activated when the signal has Pilot symbols, otherwise the demodulator will not lock onto the signal. DVB-S2 only.
 
@@ -434,9 +436,9 @@ This page gives a graphical overview of the logical output displaying the servic
 
 This page contains an overview of the active alarms in the **Active Alarms Table** and also displays a log of previous alarms in the **Alarm Log Table**.
 
-For each alarm in the **Active Alarms Table**, a **Description** is given, as well as the **Fault Object** that caused the alarm, the **Asserted Time**,and a **Recovery Tip**.
+For each alarm in the **Active Alarms Table**, a **Description** is given, as well as the **Fault Object** that caused the alarm, the **Asserted Time**, and a **Recovery Tip**.
 
-For each logged alarm, the **Alarm Log Table** contains a **Description**, the **Fault Object**, the **Asserted Time**, the **State of the Alarm**,and the **Severity** of the alarm.
+For each logged alarm, the **Alarm Log Table** contains a **Description**, the **Fault Object**, the **Asserted Time**, the **State of the Alarm**, and the **Severity** of the alarm.
 
 ### Platform Page
 

@@ -12,9 +12,9 @@ From DataMiner 10.0.3 onwards, you can also generate a button panel UI component
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                        | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Page system for button panel.Supported actions for buttons:- Page jump- DataMiner parameter get- DataMiner parameter set- DataMiner element alarm state | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                             | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Page system for button panel. Supported actions for buttons: - Page jump - DataMiner parameter get - DataMiner parameter set - DataMiner element alarm state | \-           | \-                |
 
 ### Product Info
 
@@ -51,7 +51,7 @@ On this page, you can find information about the connected hardware panel, if an
 
 On the **Capabilities** page, you can find more information about the setup for the software panel. It shows all the capabilities of the button panel (button panel type, number of buttons, composition of these buttons on the panel, properties of the buttons, etc.).
 
-**Capabilities** will automatically be loaded when a panel manager is used (seeConfiguration section above), but you can also provision these manually by entering the file path of the capability file and clicking **Provision via File**. There is also the option to request the capabilities straight from the hardware panel, if that command has been implemented in the relevant connector and a link has been made between the hardware and software panel.
+**Capabilities** will automatically be loaded when a panel manager is used (see Configuration section above), but you can also provision these manually by entering the file path of the capability file and clicking **Provision via File**. There is also the option to request the capabilities straight from the hardware panel, if that command has been implemented in the relevant connector and a link has been made between the hardware and software panel.
 
 ### Subscriptions
 

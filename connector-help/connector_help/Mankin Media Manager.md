@@ -53,7 +53,8 @@ This page contains two tables with valuable information on each client and their
 
 ### Engineering
 
-This page displays the **Engineer Station Table**, which contains detailed information on the engineering stations and the configuration of their decoders. It allows an engineer or administrator to take a station or release it when its work is done. Your data will be taken into account in the entire management process of the engineer and for the tickets that are managed from this station.
+This page displays the **Engineer Station Table**, which contains detailed information on the engineering stations and the configuration of their decoders. It allows an engineer or administrator to take a station or release it when its work is done.
+Your data will be taken into account in the entire management process of the engineer and for the tickets that are managed from this station.
 
 ### Markers
 

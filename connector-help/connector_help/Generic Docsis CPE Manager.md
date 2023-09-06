@@ -4,7 +4,11 @@ uid: Connector_help_Generic_Docsis_CPE_Manager
 
 # Generic Docsis CPE Manager
 
+
+
 This driver aggregates and displays information from CM and CMTS. This driver can be used as a BE or FE CPE Manager.
+
+
 
 ## About
 
@@ -21,6 +25,8 @@ This driver aggregates and displays information from CM and CMTS. This driver ca
 This driver uses a virtual connection and does not require any input during element creation.
 
 ## Usage
+
+
 
 ### network topology
 
@@ -48,4 +54,4 @@ In this page is where the general configurations are done as well as the aggrega
 
 In the **CPE Manager Type** it's possible to select the type of CPE (BE or FE).
 
-- In the **general** tab one can define the directory where the necessary files are. This directory is defined and is the same in for the following: **Provisioning Location**,**Frontend Share Location** and **Backend Share Location** (only defined if the element is a BE).
+- In the **general** tab one can define the directory where the necessary files are. This directory is defined and is the same in for the following: **Provisioning Location**, **Frontend Share Location** and **Backend Share Location** (only defined if the element is a BE).

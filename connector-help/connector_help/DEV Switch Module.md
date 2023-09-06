@@ -20,11 +20,11 @@ The driver displays this information on two pages, one for each port of the modu
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                   |
-|-----------|----------------------------------------------------------|
-| 1.0.0.x   | Unknown                                                  |
-| 2.0.0.x   | Unknown                                                  |
-| 3.0.0.x   | A.08 (DEV1951)B.01 (DEV1520)P.01 (DEV7113)Q.03 (DEV2190) |
+| **Range** | **Supported Firmware**                                      |
+|-----------|-------------------------------------------------------------|
+| 1.0.0.x   | Unknown                                                     |
+| 2.0.0.x   | Unknown                                                     |
+| 3.0.0.x   | A.08 (DEV1951) B.01 (DEV1520) P.01 (DEV7113) Q.03 (DEV2190) |
 
 ## Configuration
 

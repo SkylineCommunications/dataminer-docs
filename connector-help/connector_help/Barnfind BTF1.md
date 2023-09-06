@@ -36,7 +36,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 - **IP address/host:** The polling IP of the device.
 - **Port:** The port of the connected device, by default *161*.
-- **Get community string**:The community string used when reading values from the device. The default value is *public*.
+- **Get community string**: The community string used when reading values from the device. The default value is *public*.
 - **Set community string**: The community string used when setting values on the device. The default value is *private*.
 
 ## Usage
@@ -49,7 +49,7 @@ The labels come from the **Output Label** and **Input Label** parameters in the 
 
 ### Inputs
 
-Thispage displays the **Input Ports Table**, which lists all input ports with their names, labels and parameters. The **Input Label** can be edited as normal text and the other editable parameters can be changed from a list.
+This page displays the **Input Ports Table**, which lists all input ports with their names, labels and parameters. The **Input Label** can be edited as normal text and the other editable parameters can be changed from a list.
 
 ### Outputs
 
@@ -57,7 +57,7 @@ This page displays the **Output Ports Table**, which lists all output ports with
 
 ### General
 
-This page displays the **Model**, **Serial Number** and all **Diagnostics**,such as the temperature, RPM and voltage.
+This page displays the **Model**, **Serial Number** and all **Diagnostics**, such as the temperature, RPM and voltage.
 
 In addition, there are page buttons linking to **SFP Info, Hardware** and **Firmware:**
 

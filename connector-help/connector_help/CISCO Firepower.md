@@ -135,4 +135,9 @@ This page displays the Interface Details Table, in which you can among others fi
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS02/10/2017 1.0.0.1 RSA , Skyline Initial version04/30/2018 1.0.0.2 JGA , Skyline Fixed MultipleGetNext option05/23/2018 1.0.0.3 JGA , Skyline Added System Information, System Services and Network Interface Table27/06/2018 1.0.0.4 AIG, Skyline Quick protocol review20/10/2021 2.0.0.1 MFR, Skyline NF: HTTP initial version.
+DATE VERSION AUTHOR COMMENTS
+02/10/2017 1.0.0.1 RSA , Skyline Initial version
+04/30/2018 1.0.0.2 JGA , Skyline Fixed MultipleGetNext option
+05/23/2018 1.0.0.3 JGA , Skyline Added System Information, System Services and Network Interface Table
+27/06/2018 1.0.0.4 AIG, Skyline Quick protocol review
+20/10/2021 2.0.0.1 MFR, Skyline NF: HTTP initial version.

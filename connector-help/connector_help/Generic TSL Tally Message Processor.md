@@ -10,9 +10,9 @@ This is a generic connector intended to monitor display devices using the TSL pr
 
 ### Version Info
 
-| **Range** | **Key Features**                                                                                       | **Based on** | **System Impact** |
-|-----------|--------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | \- Initial version.- Features: republish tallies, add publisher, add functions, and process CSV files. | \-           | \-                |
+| **Range** | **Key Features**                                                                                        | **Based on** | **System Impact** |
+|-----------|---------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | \- Initial version. - Features: republish tallies, add publisher, add functions, and process CSV files. | \-           | \-                |
 
 ### Product Info
 

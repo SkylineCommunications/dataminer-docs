@@ -61,7 +61,7 @@ SNMP Settings:
 
 ### General
 
-This page displays the **Combiner Table**,as well as the standalone parameters **Overload Threshold**, **Underload Threshold**, **RF Output** and **Output Level**.
+This page displays the **Combiner Table**, as well as the standalone parameters **Overload Threshold**, **Underload Threshold**, **RF Output** and **Output Level**.
 
 ### Web Interface
 

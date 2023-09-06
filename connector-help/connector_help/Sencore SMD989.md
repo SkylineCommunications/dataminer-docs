@@ -101,7 +101,7 @@ The possible values of the Failover Condition parameter depend on the value of t
 - If the value of the **Restore Condition** parameter is *On Primary TS Restored* or *On Backup TS Loss*, the only valid value for the **Failover Condition** parameter is *On Primary TS Loss*.
 - Similarly, if the value of the **Restore Condition** parameter is *On Primary TS Analysis Restored* or *On Backup TS Analysis Failure*, the only valid value for the **Failover Condition** parameter is *On Primary TS Analysis Failure*.
 - If the value of the **Failover Condition** parameter is *On Primary TS Loss*, then the valid values of the Restore Condition parameter are *On Primary TS Restored* and *On Backup TS Loss*.
-- Similarly, if the value of the **Failover Condition** parameter is *On Primary TS Analysis* *Failure*, then the valid values of the **Restore Condition** parameter are *On Primary TS Analysis Restored*or *On Backup TS Analysis Failure*.
+- Similarly, if the value of the **Failover Condition** parameter is *On Primary TS Analysis* *Failure*, then the valid values of the **Restore Condition** parameter are *On Primary TS Analysis Restored* or *On Backup TS Analysis Failure*.
 
 The page also displays the **Input Table**, which includes the following parameters:
 
@@ -153,8 +153,8 @@ This page contains the following information parameters:
 
 - **Symbol Rate**: Allows you to configure the modulation symbol rate in **Msymps**. Used only if the mod rate mode is set to symbol rate.
 - **DVB-S2 Frame Size**: Allows you to select **normal** or **short** frames. Some combinations of stream mod type code rate and DVB-S2 frame size are invalid.
-- **Modulation Mode**: Allows you to select the modulation mode (*DVB-S2 Single-CCM*,*DVB-S2 Multi-CCM*,*DVB-S2 Multi-VCM*,*DVB-S/DSNG*,*TurboPSK*or *DVB-S2X Single-CCM*).
-- **Spectral Inversion**: Allows you to enable spectral inversion (Possible values: *Normal* or*Inverted*).
+- **Modulation Mode**: Allows you to select the modulation mode (*DVB-S2 Single-CCM*, *DVB-S2 Multi-CCM*, *DVB-S2 Multi-VCM*, *DVB-S/DSNG*, *TurboPSK* or *DVB-S2X Single-CCM*).
+- **Spectral Inversion**: Allows you to enable spectral inversion (Possible values: *Normal* or *Inverted*).
 - **Filter Roll Off**: Allows you to select the roll-off value. The roll-off values in **%** **15**, **10**, and **5** are valid only in DVB-S2 Single-CCM or TurboPSK modulation mode.
 - **DVB-S Type Code Rate**: The selected modulation scheme and code rate for DVB-S.
 - **Rate Adaptation**: Allows you to enable or disable the S2 single stream rate adaptation.
@@ -179,7 +179,7 @@ This subpage contains the following parameters:
 
 #### PRBS subpage
 
-On this subpage, you can set the **PRBS Mode**, i.e. the mode to use when PRBS (pseudo-random binary sequence) is enabled (Possible values: *PN 23 Normal*or*PN 23 Inverted*).
+On this subpage, you can set the **PRBS Mode**, i.e. the mode to use when PRBS (pseudo-random binary sequence) is enabled (Possible values: *PN 23 Normal* or *PN 23 Inverted*).
 
 #### TS Analysis subpage
 

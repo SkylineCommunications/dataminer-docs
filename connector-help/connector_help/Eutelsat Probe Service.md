@@ -40,9 +40,9 @@ For more information on how the alarms are generated, refer to the section below
 
 When the **Compare Values** option is used, you can configure two input (**A** and **B**) and two output (**X** and **Y**) parameters.
 
-Alarms will be generated based on the following conditions:- if (max(**A**, **B**) - min(**A**, **B**)) / max(**A**, **B**) \> threshold **a**- if (max(**X**, **Y**) - min(**X**, **Y**)) / max(**X**, **Y**) \> threshold **a**- if (max(**A**, **X**) - min(**A**, **X**)) / max(**A**, **X**) \> threshold **b** or (max(**A**, **Y**) - min(**A**, **Y**)) / max(**A**, **Y**) \> threshold **c**- if (max(**B**, **X**) - min(**B**, **X**)) / max(**B**, **X**) \> threshold **b** or (max(**B**, **Y**) - min(**B**, **Y**)) / max(**B**, **Y**) \> threshold **c**
+Alarms will be generated based on the following conditions: - if (max(**A**, **B**) - min(**A**, **B**)) / max(**A**, **B**) \> threshold **a** - if (max(**X**, **Y**) - min(**X**, **Y**)) / max(**X**, **Y**) \> threshold **a** - if (max(**A**, **X**) - min(**A**, **X**)) / max(**A**, **X**) \> threshold **b** or (max(**A**, **Y**) - min(**A**, **Y**)) / max(**A**, **Y**) \> threshold **c** - if (max(**B**, **X**) - min(**B**, **X**)) / max(**B**, **X**) \> threshold **b** or (max(**B**, **Y**) - min(**B**, **Y**)) / max(**B**, **Y**) \> threshold **c**
 
-Alarms will be generated based on the following conditions for two inputs (**A**, **B**) and one output (**X**):- if (max(**A**, **B**) - min(**A**, **B**)) / max(**A**, **B**) \> threshold **a**- if (max(**A**, **X**) - min(**A**, **X**)) / max(**A**, **X**) \> threshold **b**- if (max(**B**, **X**) - min(**B**, **X**)) / max(**B**, **X**) \> threshold **c**
+Alarms will be generated based on the following conditions for two inputs (**A**, **B**) and one output (**X**): - if (max(**A**, **B**) - min(**A**, **B**)) / max(**A**, **B**) \> threshold **a** - if (max(**A**, **X**) - min(**A**, **X**)) / max(**A**, **X**) \> threshold **b** - if (max(**B**, **X**) - min(**B**, **X**)) / max(**B**, **X**) \> threshold **c**
 
 When the **Compare Alarms** option is used, you will receive alarms based on the following table:
 

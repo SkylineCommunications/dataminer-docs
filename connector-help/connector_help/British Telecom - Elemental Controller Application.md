@@ -53,3 +53,5 @@ General
 The General page contains a the **Conductor Cluster Table** that contains the Conductor identification and allows to enable or disable event management through the visual overview page.
 
 A subpage **Add Conductor** that can be accessed via pagebutton on the bottom of the page, and allows the user to add new entries on the Conductor Cluster Table.
+
+

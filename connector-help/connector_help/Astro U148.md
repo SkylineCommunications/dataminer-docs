@@ -12,17 +12,17 @@ This connector uses **HTTP** to monitor the device. It also uses an **SNMP** int
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                                                                        | **Based on** | **System Impact**                                                                                                                                                                                                                                                         |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version                                                                                                                                                                                                                                                                                                         | \-           | \-                                                                                                                                                                                                                                                                        |
-| 1.0.1.x \[SLC Main\] | \- **Removed** the **Connection Method Login** option since it was causing issues when trying to set parameter values such as the Transponder Frequency.- **Added** the **Web Interface Entrance** parameter, the **Login Message** parameter (both located on the Login page), and logic to check each login response. | 1.0.0.24     | Connection Method (read parameter with ID 85 and write parameter with ID 86) has been removed.Impact: Alarm/trend templates and Visio drawings will need to be reviewed. All templates or Visio drawings that reference these removed parameters will need to be adapted. |
+| **Range**            | **Key Features**                                                                                                                                                                                                                                                                                                         | **Based on** | **System Impact**                                                                                                                                                                                                                                                          |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version                                                                                                                                                                                                                                                                                                          | \-           | \-                                                                                                                                                                                                                                                                         |
+| 1.0.1.x \[SLC Main\] | \- **Removed** the **Connection Method Login** option since it was causing issues when trying to set parameter values such as the Transponder Frequency. - **Added** the **Web Interface Entrance** parameter, the **Login Message** parameter (both located on the Login page), and logic to check each login response. | 1.0.0.24     | Connection Method (read parameter with ID 85 and write parameter with ID 86) has been removed. Impact: Alarm/trend templates and Visio drawings will need to be reviewed. All templates or Visio drawings that reference these removed parameters will need to be adapted. |
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                    |
-|-----------|-------------------------------------------|
-| 1.0.0.x   | 5595579959745987601064206800681069006910  |
-| 1.0.1.x   | 5595579959745987 601064206800681069006910 |
+| **Range** | **Supported Firmware**                            |
+|-----------|---------------------------------------------------|
+| 1.0.0.x   | 5595 5799 5974 5987 6010 6420 6800 6810 6900 6910 |
+| 1.0.1.x   | 5595 5799 5974 5987 6010 6420 6800 6810 6900 6910 |
 
 ### System Info
 
@@ -38,9 +38,9 @@ This connector uses **HTTP** to monitor the device. It also uses an **SNMP** int
 
 This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
-Depending on the setup, the **HTTP** configuration can be different: this connector can communicate directly with the **U144/148/149** device being used,but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
+Depending on the setup, the **HTTP** configuration can be different: this connector can communicate directly with the **U144/148/149** device being used, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
 
-In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U144/148/149** device(not the controller).
+In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U144/148/149** device (not the controller).
 
 HTTP Connection for Communication with U100C as Proxy
 
@@ -82,7 +82,7 @@ The credentials of the device must be filled in via the **Login** page button. T
 
 Some important parameters are available at the end of the first column:
 
-- **Controller Name**: This parameter shows the name of the **Astro Virtual Controller**element that manages this device. If no such element is used, the parameter will show the exception value *N/A*.
+- **Controller Name**: This parameter shows the name of the **Astro Virtual Controller** element that manages this device. If no such element is used, the parameter will show the exception value *N/A*.
 
 - **Communication Type**:
 
@@ -154,11 +154,11 @@ The following table provides more information on how to upload/download configur
 </tr>
 <tr class="even">
 <td><p>To download a file, click <strong>Download</strong>. The following dialog will be displayed:</p>
-<p>Enter the name of the file, then click <strong>OK</strong>.</p>
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Download.PNG" alt="Download.PNG" /> Enter the name of the file, then click <strong>OK</strong>.</p>
 <p>The file will be saved in the following location:</p>
 <p><em>C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</em></p></td>
 <td><p>To upload a file, click <strong>Upload</strong>. The following dialog will be displayed:</p>
-<p><strong>Module Name</strong> lists all the Astro elements of the same type in the system.</p>
+<p><img src="/SiteAssets/Driver%20Help/Astro%20U116%20Edge%20PAL/Upload.PNG" alt="Upload.PNG" /> <strong>Module Name</strong> lists all the Astro elements of the same type in the system.</p>
 <p><strong>Upload File Name</strong> lists all the files available in the Documents folder of the selected module.</p>
 <p>The file to be uploaded is located at:</p>
 <p><em>C:\Skyline DataMiner\Documents\&lt;protocol name&gt;\&lt;element name&gt;\&lt;file name&gt;</em></p></td>
@@ -169,6 +169,8 @@ The following table provides more information on how to upload/download configur
 #### Software Update
 
 The connector allows you to upload a firmware archive from the local disk of the DMA:
+
+![SoftwareUpdate.PNG](~/connector-help/images/Astro_U148_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The drop-down list contains all the files present in the following directory of the DMA: *C:\Skyline DataMiner\Documents\\Protocol Name\>*.
 
@@ -215,7 +217,7 @@ DCF is supported in range 1.0.0.x, from version **1.0.0.8 onwards**. It can only
 
 #### Internal Connections
 
-**Internal Connections** between the **Sat/RF Input Ports** and the **Ethernet Data Outputs** are mapped and characterized by the following connection properties: **Transponder Name**, **TS-ID**, **ONID**, **Input Frequency** and **MC (Syntax** **"TX Destination IP:TX Destination Port")**.
+**Internal Connections** between the **Sat/RF Input Ports** and the **Ethernet Data Outputs** are mapped and characterized by the following connection properties: **Transponder Name**, **TS-ID**, **ONID**, **Input Frequency** and **MC (Syntax** **"TX Destination IP:TX Destination Port"** **)**.
 
 ## Notes
 

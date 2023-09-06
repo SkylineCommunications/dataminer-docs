@@ -46,15 +46,15 @@ This page displays the **Event Log Table** along with a number of other paramete
 
 ### Forward Path Page
 
-This page displays parameters related to the forward path. In the **Forward Path Settings** section, you can configure parameters such as **Band**, **Status**, **Type**,etc. In the **Forward Path Routing** section, you can configure routing-related settings.
+This page displays parameters related to the forward path. In the **Forward Path Settings** section, you can configure parameters such as **Band**, **Status**, **Type**, etc. In the **Forward Path Routing** section, you can configure routing-related settings.
 
 This page also contains the **Optical Receiver** and **Forward Path OMI** page buttons.
 
 ### Return Path Page
 
-This page displays parameters related to the return path. Like the Forward Path page, it is divided in two sections. In the **Return Path Settings** section, you can configure parameters such as **Band**, **Status**, **Amplifier Type**,etc. In the **Return Path Routing** section, you can configure routing-related settings.
+This page displays parameters related to the return path. Like the Forward Path page, it is divided in two sections. In the **Return Path Settings** section, you can configure parameters such as **Band**, **Status**, **Amplifier Type**, etc. In the **Return Path Routing** section, you can configure routing-related settings.
 
-This page also contains the **Optical Transmitter**,**Return Path OMI** and **Automatic Ingress Blocking** page buttons.
+This page also contains the **Optical Transmitter**, **Return Path OMI** and **Automatic Ingress Blocking** page buttons.
 
 ### Level Detector Page
 

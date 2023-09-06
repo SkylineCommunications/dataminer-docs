@@ -14,10 +14,10 @@ This driver requires a **large amount** **of polling** and will therefore use a 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                                                                                                                              | No                  | No                      |
-| 2.0.0.x          | Full protocol review based on version 1.0.0.7:- PIDs, names and descriptions of parameters are modified to align the driver with the guidelines.- Redundant connection name changed.- Layout revised and modified.- Naming is used instead of displayColumn. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                                                                                                                                                                  | No                  | No                      |
+| 2.0.0.x          | Full protocol review based on version 1.0.0.7: - PIDs, names and descriptions of parameters are modified to align the driver with the guidelines. - Redundant connection name changed. - Layout revised and modified. - Naming is used instead of displayColumn. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -44,7 +44,8 @@ SNMP Settings:
 
 #### SNMP redundant connection
 
-This driver supports **redundant polling**, for which the connection also needs to be configured during element creation. However, if there is no redundant device, you can simply fill in the connection information of the main connection for the redundant connection.
+This driver supports **redundant polling**, for which the connection also needs to be configured during element creation.
+However, if there is no redundant device, you can simply fill in the connection information of the main connection for the redundant connection.
 
 SNMP CONNECTION:
 
@@ -88,7 +89,7 @@ This page displays all **Input Events.**
 
 ### System
 
-This page displays parameters related to **Time Configuration**, **Output Configuration**, **UDP Port Mapping**, **Advanced Options** and **Trap Configuration**.In this last section, you can also find the **Trap Receivers Table.**
+This page displays parameters related to **Time Configuration**, **Output Configuration**, **UDP Port Mapping**, **Advanced Options** and **Trap Configuration**. In this last section, you can also find the **Trap Receivers Table.**
 
 ### Host/Enet
 
@@ -117,13 +118,13 @@ In the CTE Configuration section, the **Service List** page button displays the 
 
 ### SDV
 
-This page displays parameters related to the **Session Control Configuration**, **RPC Configuration**,**RTSP/MHA Edge Group Configuration**, and **RTSP/MHA Configuration**.
+This page displays parameters related to the **Session Control Configuration**, **RPC Configuration**, **RTSP/MHA Edge Group Configuration**, and **RTSP/MHA Configuration**.
 
 The RTSP/MHA Edge Group Configuration section contains the following page buttons:
 
 - **GigE BW Reported Status**: Displays the RTSP Status Bw Reported Table.
 - **Virtual IP BW Reported**: Displays the RTSP Status Virtual IP Bw Table.
-- **Blade Allocated BW**: Displays theRTSP Status Blade Bw Table.
+- **Blade Allocated BW**: Displays the RTSP Status Blade Bw Table.
 
 Finally, the RTSP/MHA Configuration section contains the following page buttons:
 
@@ -204,7 +205,7 @@ Whenever you change a setting in the element, for instance if you change text or
 
 ### General
 
-Thispage contains general device information.
+This page contains general device information.
 
 ### Hardware/Other Alarms
 
@@ -257,7 +258,7 @@ This page displays the **Host Ethernet Settings**, with the following page butto
 - **Static Routes**: Displays the **Fast Enet Routing** information.
 - **Generic QAM Devices**: Displays the **Generic QAM Device Configuration** information.
 - **Boot Info**: Displays all the boot information for the device.
-- **DNS Configuration**: Displays the **DNS Server IPs**and other **DNS Configuration settings.**
+- **DNS Configuration**: Displays the **DNS Server IPs** and other **DNS Configuration settings.**
 - **Host Redundancy Events:** Contains **Host Module Redundancy Events** information.
 
 The page also displays the **Host Module Status Treeview**, which shows all **Host Modules** with their status.
@@ -298,7 +299,7 @@ This page displays parameters related to the **Control Plane**, **QAM Parameter 
 
 ### HW Modules
 
-This page displays information related to the **Front Panel**,**DTI**,**RF Switch**, **Power Supply** and **Host Modules**.
+This page displays information related to the **Front Panel**, **DTI**, **RF Switch**, **Power Supply** and **Host Modules**.
 
 ### Blades
 

@@ -43,7 +43,8 @@ This page contains the **Configuration Table**. In this table, the information o
 For this purpose, an entry must be added in the table for each driver. This can be done by right-clicking the table and selecting the option **Add** in the context menu. After this, a pop-up window will appear where the following fields must be configured:
 
 - **Protocol**: Name of the driver.
-- **Selection String**: Indicates the **PID** of the parameter where the firmware is available in the driver. If the firmware is available in a table, you must indicate the PID of the table, the PID of the column and the primary key in the following format: *Table:Column:PK*. The primary key can contain the wildcard "\*", which represents any number of characters, and "?", which represents any single character. To specify multiple PIDs, separate them using a semicolon (";").
+- **Selection String**: Indicates the **PID** of the parameter where the firmware is available in the driver. If the firmware is available in a table, you must indicate the PID of the table, the PID of the column and the primary key in the following format: *Table:Column:PK*.
+  The primary key can contain the wildcard "\*", which represents any number of characters, and "?", which represents any single character. To specify multiple PIDs, separate them using a semicolon (";").
 - **State**: Indicates if the firmware data of the driver will be retrieved when the **Retrieve Data** button is pressed.
 - **Delete**: Deletes an entry from the table.
 

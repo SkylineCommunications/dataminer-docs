@@ -76,7 +76,7 @@ Note that the client machine has to be able to access the device, as otherwise i
 
 ## DataMiner Connectivity Framework
 
-**DCF** has been implemented in a different wayin the **1.0.1.x** range and the **1.0.2.x** range. The **1.0.2.x** range is the preferred range to use when you want to use DCF.
+**DCF** has been implemented in a different way in the **1.0.1.x** range and the **1.0.2.x** range. The **1.0.2.x** range is the preferred range to use when you want to use DCF.
 
 ### Interfaces
 

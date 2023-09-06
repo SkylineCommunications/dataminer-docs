@@ -36,3 +36,5 @@ The general page also gives access to sub-pages, namely:
 - **State Colors** - Allows the user to specify the UI colors for every booking status.
 - **Booking Block Info -** Defines the different placeholders that can be used to fill the property 'VisualBlockContent'.
 - **Custom Actions** - Allows to define up to five customizable buttons on the booking detail area of the Bookings Manager.
+
+

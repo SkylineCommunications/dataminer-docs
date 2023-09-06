@@ -52,7 +52,7 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 </ul>
 <p>INTEROP SERVICE connection:</p>
 <ul>
-<li><strong>IP address/host:</strong> any.(Note that if 'any' is configured DataMiner will behave similarly to a server since it will be listenning for incoming events on the port configured below.)</li>
+<li><strong>IP address/host:</strong> any. (Note that if 'any' is configured DataMiner will behave similarly to a server since it will be listenning for incoming events on the port configured below.)</li>
 <li><strong>Port:</strong> The port used for the interop service communication.</li>
 </ul>
 <p>INTEROP LISTENER connection:</p>
@@ -77,6 +77,8 @@ The **web service** API is an XML interface over HTTP. DataMiner can send reques
 ## ScheduAll table structure
 
 The driver combines data coming from several tables in ScheduAll. Below, you can find an overview of the different tables in ScheduAll:
+
+![ScheduAll Structure.png](~/connector-help/images/ScheduAll_Manager_ScheduAll_Structure.png)
 
 ## Usage (range 2.0.0.x / 2.0.1.x)
 
@@ -122,6 +124,8 @@ The **Message field configuration** allows you to define which data fields from 
 - **Query Custom Client Details Fields**: Here you can define which fields have to be retrieved in addition to the default fields from the client table in ScheduAll. Per resource, the values are JSON-encoded and stored in the "Custom Client Details Fields" column in the "Client Overview" table.
 - **Query Custom Values**: Here you can define which fields have to be retrieved in addition to the default fields from the resource info table in ScheduAll. Per resource, the values are stored in the "Custom x" columns in the "Resource Information" table.
 
+
+
 ### Configuration - Interop Service
 
 This page contains the **interop-specific configuration** parameters. Via the **Credentials** button, you can access a subpage where you can enter **user credentials**. These credentials are the **ScheduAll credentials** that will allow communication between DataMiner and the interop service.
@@ -132,7 +136,8 @@ This page contains a table of **Parameter Mapping Names.** Via the right-click m
 
 ### Work Order Overview
 
-This page contains a table of current **work order information**. This table contains an overview of all the information related to the present work orders, and provides the possibility to delete a specific work order. Note that this page also displays the current **resources scheduled** by ScheduAll.
+This page contains a table of current **work order information**. This table contains an overview of all the information related to the present work orders, and provides the possibility to delete a specific work order.
+Note that this page also displays the current **resources scheduled** by ScheduAll.
 
 ### Category Overview
 
@@ -150,6 +155,8 @@ This page contains **web service statistics** for current **queries** and **work
 
 On this page, a single parameter displays the **Interop Received Time**. In addition, there is a button linking to the **Interop Listener**. The interop listener provides information on the responses DataMiner receives from the interop service.
 
+
+
 ## Usage (range 2.0.3.x)
 
 ### General
@@ -158,7 +165,8 @@ This page indicates the **ScheduAll** **status** for both: **Web Service** and t
 
 ### Configuration
 
-This page contains **Communication Configuration** parameters for both the **Web Service** and the **Interop Services**, where it's possible to **enable** or **disable** the referred services.Moreover, this page also includes the **Task Configuration,** which allows the user to define the validation of the **Work Orders** content as well as the the data used to launch the configured **Automation Script** when new or modified **Work Orders** are retrieved.
+This page contains **Communication Configuration** parameters for both the **Web Service** and the **Interop Services**, where it's possible to **enable** or **disable** the referred services.
+Moreover, this page also includes the **Task Configuration,** which allows the user to define the validation of the **Work Orders** content as well as the the data used to launch the configured **Automation Script** when new or modified **Work Orders** are retrieved.
 
 ### Configuration \[Sub-Page: Task Automation Script\]
 
@@ -166,19 +174,28 @@ This page contains the configuration of the **Automation Script** defined in the
 
 - **Startup Trigger:** Defines whether the Automation Script is triggered at Connector Startup (Enabled) or not (Disabled).
 
+
 - **Default Behavior:** Defines whether the Default Behavior is Enabled or Disabled:
 
 - **Enabled:** The Task Automation Script will be triggered with the default Input Script Parameter: \[ "Work Order ID": WO ID \[IDX\] \]. Note that the referred Input Script Parameter in case of a 'Bulk' Processing State the will have a serialized list of 'WO ID \[IDX\]'.
+
   - **Disabled:** The Task Automation Script will be triggered according to the data present in the Input Script Parameters table.
+
+    >
 
 - **Processing State:** Defines whether the Task Automation Script processing is Single or Bulk:
 
 - **Single:** The Task Automation Script will be triggered individually for each new/modified Work Order.
   - **Bulk:** The Task Automation Script will be triggered once, receiving as input argument a serialized list of new or modified Work Orders information according to the current configuration of the Input Script Parameters table.
 
+
 - **Pending Script Processing Buffer:** Defines whether there's a buffer holding the pending Work Orders to be passed as Input Script Parameter (Enabled) or not (Disabled):
 
-- **Enabled:** A buffer will be used to hold the Work Orders that would be passsed as Input Parameter of the 'Task Automation Script' if the Script is still processing those same Work Orders. (e.g. If there's a running Script busy processing '#WO12345', that Work Order will be stored in the referred buffer).Note: If this option is selected, the 'Task Auatomation Script' will be responsible for triggering the Script again in order to process the pending Work Orders that were added, which can be done throught a set of the pending Work Order IDs (separated by ;) in the 'Work Order IDs Pending Script Processing (ID=35)'. (e.g. The Work Order IDs should be set with the following format: '12345;123456;123457').
+- **Enabled:** A buffer will be used to hold the Work Orders that would be passsed as Input Parameter of the 'Task Automation Script' if the Script is still processing those same Work Orders.
+    (e.g. If there's a running Script busy processing '#WO12345', that Work Order will be stored in the referred buffer).
+
+    Note: If this option is selected, the 'Task Auatomation Script' will be responsible for triggering the Script again in order to process the pending Work Orders that were added,
+    which can be done throught a set of the pending Work Order IDs (separated by ;) in the 'Work Order IDs Pending Script Processing (ID=35)'. (e.g. The Work Order IDs should be set with the following format: '12345;123456;123457').
   - **Disabled:** The Task Automation Script will be triggered once, receiving as input argument a serialized list of new or modified Work Orders information according to the current configuration of the Input Script Parameters table.
 
 In this page it's possible to define the **Input Script Parameters,** which are passed as an argument of the referred **Automation Script** for either **new or modified Work Orders:**
@@ -205,9 +222,10 @@ In addition, it's also possible to configure in this page which **Work Order Sta
 - **Current Status:** Defines the current Work Order status for the each configured transition.
 - **Valid Status for New Work Order(s):** Defines which status are valid to trigger the Automation Script for new Work Orders. Note that this table column is independent from the other columns and is only applied to new Work Orders.
 
+
 ### Configuration \[Sub-Page: Task Status Definition\]
 
-This page defines the mapping between the **STAT** and **STATUSEX ScheduAll** fieldsand the corresponding **Booking Status** in DataMiner, either for the **Web Service** as well as for the **Interop Services**.
+This page defines the mapping between the **STAT** and **STATUSEX ScheduAll** fields and the corresponding **Booking Status** in DataMiner, either for the **Web Service** as well as for the **Interop Services**.
 
 ### Configuration - Web Service
 
@@ -254,11 +272,13 @@ This page contains a table of **Parameter Mapping Names.** Via the right-click m
 
 ### Work Order Overview
 
-This page contains a table of current **work order information**. This table contains an overview of all the information related to the present work orders, and provides the possibility to delete a specific work order.Note that this page also displays the current **resources scheduled** by ScheduAll.
+This page contains a table of current **work order information**. This table contains an overview of all the information related to the present work orders, and provides the possibility to delete a specific work order.
+Note that this page also displays the current **resources scheduled** by ScheduAll.
 
 ### Resource Overview
 
-This page contains a table that displays an overview of the **Resources** contained in the **Work Orders** currently present in the Work Order Overview table.Note that a **Resource** contained in a **Work Order,** is from the ScheduALL Application point of view, an **Event Resource**.
+This page contains a table that displays an overview of the **Resources** contained in the **Work Orders** currently present in the Work Order Overview table.
+Note that a **Resource** contained in a **Work Order,** is from the ScheduALL Application point of view, an **Event Resource**.
 
 ### Category Overview
 
@@ -283,6 +303,8 @@ This page contains **web service statistics** for current **queries** and **work
 ### Statistics - Interop Service
 
 On this page, a single parameter displays the **Interop Received Time**. In addition, there is a button linking to the **Interop Listener**. The interop listener provides information on the responses DataMiner receives from the interop service.
+
+
 
 ## Usage (range 3.0.0.x)
 

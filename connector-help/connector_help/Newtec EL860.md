@@ -18,9 +18,9 @@ This driver communicates with the device using a serial connection. It retrieves
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                        |
-|------------------|--------------------------------------------------------------------|
-| 1.0.0.x          | TelliShape version 3.0.1 201010191428391Decapsulator version 1.1.7 |
+| **Driver Range** | **Device Firmware Version**                                         |
+|------------------|---------------------------------------------------------------------|
+| 1.0.0.x          | TelliShape version 3.0.1 201010191428391 Decapsulator version 1.1.7 |
 
 ## Installation and configuration
 
@@ -42,7 +42,10 @@ SERIAL CONNECTION:
 To allow DataMiner to poll the equipment, you need to add the IP addres/subnet mask of the polling DMA to a configuration file, and restart the TelliShape server to apply the changes:
 
 1.  Either log in on the device's web interface in expert mode or locate the file "/usr/local/tellitec/tc-shape-server/shape-server.ini".
-2.  Determine the IP address of the DMA in the management LAN of the equipment, and add the address in the following section of the configuration/file:*\[command_port\]allowed_address=127.0.0.1allowed_address=x.x.x.0/24*
+2.  Determine the IP address of the DMA in the management LAN of the equipment, and add the address in the following section of the configuration/file:
+    *\[command_port\]*
+    *allowed_address=127.0.0.1*
+    *allowed_address=x.x.x.0/24*
 3.  Restart the shaper process to apply your changes.
 
 Note that with an EL860 1+1 hot standby redundancy configuration, it is not possible to poll the standby/backup device/element, because the Tellishape Server process can only run on one device/element at a time.

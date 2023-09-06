@@ -16,9 +16,9 @@ The **IQH4B** enclosures offer industry-leading, high-density delivery of modula
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                            |
-|-----------|---------------------------------------------------|
-| 1.0.0.x   | Software Version: 5.38.25Build Number: 0242106059 |
+| **Range** | **Supported Firmware**                             |
+|-----------|----------------------------------------------------|
+| 1.0.0.x   | Software Version: 5.38.25 Build Number: 0242106059 |
 
 ### System Info
 

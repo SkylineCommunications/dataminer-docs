@@ -19,10 +19,10 @@ The driver uses **SNMP** and **HTTP** to poll data from the Evertz 570ITXE-HW-P6
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**              |
-|------------------|------------------------------------------|
-| 1.0.0.x          | N: V303B20180202-764S: V303B20180202-764 |
-| 1.0.1.x          | Build number: 1163                       |
+| **Driver Range** | **Device Firmware Version**               |
+|------------------|-------------------------------------------|
+| 1.0.0.x          | N: V303B20180202-764 S: V303B20180202-764 |
+| 1.0.1.x          | Build number: 1163                        |
 
 ## Installation and configuration
 
@@ -152,7 +152,9 @@ It also contains the following page buttons:
   - **Closed Captioning CEA 608 Faults** table.
   - **Closed Captioning CEA 708 Faults** table.
 
-- **Deinterlacer**: Displays controls related to active picture deinterlacing. Deinterlacing is a functional part of the video conversion process that converts interlaced field content into progressive frames. The deinterlacer generates the missing lines that were removed during field capture. It performs interpolation in both the spatial and temporal directions to achieve the optimal estimation of the missing pixels from the original captured video frame. The deinterlacer also utilizes a cadence detection algorithm for the detection of well-known cadences that may be present in the interlaced input signal. If a valid cadence is detected, the original progressive video frame can be extracted from the interlaced input. This results in a perfectly interpolated video signal when producing the progressive output frame.It is recommended that all interlaced inputs are deinterlaced. This ensures the highest quality scaling when performing video conversion.The subpage displayed by this page button consists of the following sections:
+- **Deinterlacer**: Displays controls related to active picture deinterlacing. Deinterlacing is a functional part of the video conversion process that converts interlaced field content into progressive frames. The deinterlacer generates the missing lines that were removed during field capture. It performs interpolation in both the spatial and temporal directions to achieve the optimal estimation of the missing pixels from the original captured video frame. The deinterlacer also utilizes a cadence detection algorithm for the detection of well-known cadences that may be present in the interlaced input signal. If a valid cadence is detected, the original progressive video frame can be extracted from the interlaced input. This results in a perfectly interpolated video signal when producing the progressive output frame.
+  It is recommended that all interlaced inputs are deinterlaced. This ensures the highest quality scaling when performing video conversion.
+  The subpage displayed by this page button consists of the following sections:
 
 - **Deinterlacer Status and Controls**: Includes the Mode, Operating Mode, Inverse Telecine and Temporal Noise Reduction Level.
   - **Cadence Selection** table.
@@ -185,7 +187,8 @@ It also contains the following page buttons:
   - **Scaler Controls**: Allows you to configure the Aspect Ratio Conversion, AFD Stamp, H and V Slew Limits and Horizontal and Vertical Filter Cutoffs Frequency parameters.
   - **Background Color**: Allows you to set the Red, Green and Blue background color.
 
-- **SD Aperture**: The precise definition of the active picture region for an SD video standard is often unclear, because SD signals have been defined differently in various standards. To support varying active picture regions for SD video standards, the 570ITXE module allows you to fully define both the production and clean aperture regions using the SD aperture feature. Both the SD Clean Aperture and the SD Production Aperture can be independently defined with an exact number of pixels and an exact number of lines.The SD Aperture subpage consists of the following sections:
+- **SD Aperture**: The precise definition of the active picture region for an SD video standard is often unclear, because SD signals have been defined differently in various standards. To support varying active picture regions for SD video standards, the 570ITXE module allows you to fully define both the production and clean aperture regions using the SD aperture feature. Both the SD Clean Aperture and the SD Production Aperture can be independently defined with an exact number of pixels and an exact number of lines.
+  The SD Aperture subpage consists of the following sections:
 
 - **SD Aperture Controls**: Allows you to toggle the Aspect Ratio Source.
   - **SD Clean Aperture Controls**: Allows you to set the Clean Aperture of H and V Start and Stop.

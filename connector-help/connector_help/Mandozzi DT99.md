@@ -53,7 +53,7 @@ This page displays parameters related to the **Trap Configuration**:
 - **M7 CCPU Alarm Status Trap**
 - **M8 CCPU Alarm Status Trap**
 
-The page also allows you to set a new **Trap Alarms Destination Address** and to toggle the**Alarm Status Traps** between enabled and disabled for each CCPU.
+The page also allows you to set a new **Trap Alarms Destination Address** and to toggle the **Alarm Status Traps** between enabled and disabled for each CCPU.
 
 ### Combimux Page
 

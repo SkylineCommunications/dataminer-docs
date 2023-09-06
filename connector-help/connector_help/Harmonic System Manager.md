@@ -35,7 +35,7 @@ The SystemManager acts as the administrative hub of an Spectrum media server ins
 <td>-</td>
 </tr>
 <tr class="odd">
-<td>1.0.1.x[SLC Main]</td>
+<td>1.0.1.x [SLC Main]</td>
 <td>REST API</td>
 <td>1.0.0.x</td>
 <td>New connection</td>
@@ -85,6 +85,8 @@ HTTP CONNECTION:
 - **IP port**: (Default: 443)
 - **Bus address**: (Default: ByPassProxy)
 
+
+
 ## How to use
 
 The element consists of the following pages/subpages:
@@ -93,3 +95,5 @@ The element consists of the following pages/subpages:
 - **Media Store:** Media storage data for devices in the System Manager database.
 - **Alarms:** Displays information from alarms received from System Manager.
 - **Alarm Settings:** Set if element should automatically remove alarms if they reach a certain lifetime in the element.
+
+

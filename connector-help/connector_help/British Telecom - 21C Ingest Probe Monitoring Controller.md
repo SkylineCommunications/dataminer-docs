@@ -38,9 +38,11 @@ This driver uses a virtual connection and does not require any input during elem
 
 When the element has been created, several things need to be configured on the **Configurations** page:
 
-- **Probe Polling Interval**: Determines how frequently the Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.Note that the probe info is instantly pushed towards the Manager. This polling interval is purely intended for sync/fallback purposes.
+- **Probe Polling Interval**: Determines how frequently the Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.
+  Note that the probe info is instantly pushed towards the Manager. This polling interval is purely intended for sync/fallback purposes.
 
-- **Automatic Clean Up Delay**: The hysteresis time that the failure must be active in order for the automatic rediscovery to take place. When the delay has passed, the script will check the current state again and perform the rediscovery only if it is still necessary.This hysteresis makes it possible to ignore short outages or brief temporary streams. When this setting is disabled, automatic rediscovery will take place as soon as a failure comes in (in case the channel is monitored and running in Auto mode).
+- **Automatic Clean Up Delay**: The hysteresis time that the failure must be active in order for the automatic rediscovery to take place. When the delay has passed, the script will check the current state again and perform the rediscovery only if it is still necessary.
+  This hysteresis makes it possible to ignore short outages or brief temporary streams. When this setting is disabled, automatic rediscovery will take place as soon as a failure comes in (in case the channel is monitored and running in Auto mode).
 
 - **QoS on Hysteresis Time**: The time to wait before an outage is taken into account. Note that when an outage is taken into account, the full time will be counted for the QoS statistics.
 
@@ -89,7 +91,8 @@ The VLAN Status parameters are combined status values:
 
 The main Visual Overview page contains page buttons that can be used to perform channel actions and configure settings. However, note that you need at least access level 1 to use these buttons.
 
-Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut Ctrl+A to select all the items in the table. When you first apply a regular filter on the table and press Ctrl+A, only the filtered items will be selected.You can also make a dynamic selection using the Ctrl key to select multiple single channels, or using the SHIFT key to select a range of channels in the table. The use of Ctrl+A, SHIFT and Ctrl can also be combined.
+Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut Ctrl+A to select all the items in the table. When you first apply a regular filter on the table and press Ctrl+A, only the filtered items will be selected.
+You can also make a dynamic selection using the Ctrl key to select multiple single channels, or using the SHIFT key to select a range of channels in the table. The use of Ctrl+A, SHIFT and Ctrl can also be combined.
 
 - **Channel Modes:** Opens a pop-up window where you can update the channel mode for all selected channels in bulk. The following modes are available:
 
@@ -100,7 +103,9 @@ Before opening the configuration window, you first have to make a selection in t
 
 > A confirmation message will list the changes you have made.
 
-- **Channel Actions**: Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).Once the selection has been made, you can perform the following actions:
+- **Channel Actions**: Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.
+  You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).
+  Once the selection has been made, you can perform the following actions:
 
 > - *Rediscover*: The script will be started per VLAN probe to rediscover all selected channels.
 >

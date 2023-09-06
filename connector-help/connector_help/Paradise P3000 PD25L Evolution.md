@@ -73,7 +73,7 @@ This page allows you to save, recall and delete configurations.
 
 To perform save, recall and delete commands, the DMA must be logged on to the PUP protocol. For details on how to log on, refer to the "PUP Manager" section below.
 
-To be able to save a configuration, the**Save Configuration File Name** must be specified.
+To be able to save a configuration, the **Save Configuration File Name** must be specified.
 
 This page also contains a toggle button that can be used to enable or disable the use of a recall delay when the recall button of a specific configuration is clicked. If this is enabled, the recall will only occur after the time defined in the **Recall Delay** parameter.
 

@@ -18,9 +18,9 @@ This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP)
 
 ### System Info
 
-| **Range**      | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
-|----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
+| **Range**       | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
+|-----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x 1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
 
 ## Configuration
 

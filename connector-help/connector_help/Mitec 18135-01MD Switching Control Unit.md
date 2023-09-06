@@ -33,7 +33,7 @@ Serial commands are used to retrieve the device information and to execute the s
 <tr class="even">
 <td>1.0.0.x</td>
 <td><p>Software version 01</p>
-<p>Model Number 216804MDModel Number 18135</p></td>
+<p>Model Number 216804MD Model Number 18135</p></td>
 </tr>
 </tbody>
 </table>
@@ -70,7 +70,7 @@ This page displays the **Model Number** and the **Software Version**.
 
 ### Status
 
-This page displays the **Control Mode**, **Redundancy Mode** and **Operation Mode**,the **Switch Summary** and **Power Supply Summary**, and finally also the **Antenna 1** and **Antenna 2 HPA Summary** and **Antenna 1** and **Antenna 2 Settings.**
+This page displays the **Control Mode**, **Redundancy Mode** and **Operation Mode**, the **Switch Summary** and **Power Supply Summary**, and finally also the **Antenna 1** and **Antenna 2 HPA Summary** and **Antenna 1** and **Antenna 2 Settings.**
 
 The page also contains settings that can be used to configure **Redundancy Mode** and **Operation Mode**, and a button to toggle **Alarm Acknowledge**.
 

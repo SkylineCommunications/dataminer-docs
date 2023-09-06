@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-On the **General** page, you can find general configurable system information such as the **Name**, **Type**, **Location**, and **Update URL**,and whether SNMP **Polling** is enabled for this page. The **Identify** button on this pagecan be used to make an LED blink on the front panel of the device in order to easily identify it.
+On the **General** page, you can find general configurable system information such as the **Name**, **Type**, **Location**, and **Update URL**, and whether SNMP **Polling** is enabled for this page. The **Identify** button on this page can be used to make an LED blink on the front panel of the device in order to easily identify it.
 
 On the **Polling configuration** page, you can configure whether polling should be enabled for specific pages.
 

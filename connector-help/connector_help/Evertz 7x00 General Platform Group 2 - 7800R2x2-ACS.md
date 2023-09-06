@@ -47,7 +47,7 @@ In case a specific range/branch was created and should **no longer be used**, in
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.2.x[SLC Main]</td>
+<td>1.0.2.x [SLC Main]</td>
 <td><p>Feature 1</p>
 <p>Feature 2</p></td>
 <td>-</td>
@@ -86,7 +86,8 @@ The web interface is only accessible when the client machine has network access 
 
 In this section, provide a more detailed description of **how the connector functions**.
 
-Also specify the **communication method**. Example: "SOAP calls are used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device." It must be clearly mentioned in case no data traffic will be seen in the **Stream Viewer**.
+Also specify the **communication method**. Example: "SOAP calls are used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device."
+It must be clearly mentioned in case no data traffic will be seen in the **Stream Viewer**.
 
 Note:
 
@@ -117,3 +118,5 @@ If you need to add more than just a couple of lines of text because the connecto
 ## Notes
 
 In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.
+
+

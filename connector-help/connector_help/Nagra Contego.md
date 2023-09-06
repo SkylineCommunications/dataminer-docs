@@ -41,6 +41,8 @@ HTTP CONNECTION:
 - **IP address/host**: The polling IP or URL of the destination
 - **IP port**: The IP port of the destination
 
+
+
 ### Initialization
 
 Before the data will be retrieved, the **User Name** and **Password** must be filled in on the **General** page.
@@ -51,4 +53,7 @@ There is no redundancy defined.
 
 ## How to Use
 
-At startup of the element or when using the **Login** button, data will be retrieved every minute using the login information. In case this would fail, a message will be shown on the **General** page.
+At startup of the element or when using the **Login** button, data will be retrieved every minute using the login information.
+In case this would fail, a message will be shown on the **General** page.
+
+

@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### General Page
 
-This page contains general information about the device, such as **Product Name, Device Name, Serial Number, Temperature**,etc.
+This page contains general information about the device, such as **Product Name, Device Name, Serial Number, Temperature**, etc.
 
 ### Data Interface Page
 

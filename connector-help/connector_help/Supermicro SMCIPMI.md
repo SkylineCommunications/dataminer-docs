@@ -37,7 +37,8 @@ This driver uses the IPMItool to connect with the device and requires the follow
 
 ### Configuration
 
-For the configuration of this driver, you first need to install the IPMItool and SMCIPMI tool.For this, 6 DLLs have to be made available in your system:
+For the configuration of this driver, you first need to install the IPMItool and SMCIPMI tool.
+For this, 6 DLLs have to be made available in your system:
 
 - cygcrypto-1.0.0.dll
 - cyggcc_s-1.dll
@@ -49,14 +50,18 @@ For the configuration of this driver, you first need to install the IPMItool and
 When you have made sure these are available, the path for both device executables ("ipmitool.exe" and "smcipmitool.exe") has to be configured in the driver:
 
 1.  Open the element and go to the **General** page.
-2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.The **Settings** window will open.
-3.  In the **General** section of this window, set the full path for both executables, including the file name, in the parameter **Intel File path** and **SMC** **IPMI File Path** respectively.Example: *C:\IPMI\ipmitool.exe,C:\SMCIPMI\SMCIPMITool.exe*
+2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
+    The **Settings** window will open.
+3.  In the **General** section of this window, set the full path for both executables, including the file name, in the parameter **Intel File path** and **SMC** **IPMI File Path** respectively.
+    Example: *C:\IPMI\ipmitool.exe,C:\SMCIPMI\SMCIPMITool.exe*
 
 Finally, also configure the user name and password:
 
 1.  Open the element and go to the **General** page.
-2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.The **Settings** window will open.
-3.  In the **Credentials** section of this window, set the **Intel** **User Name**,**Intel Password**, **SMC Username** and **SMC Password** for both devices.Note: The **Intel** **IPMI Password and SMC IPMI Password** have no associated "read" control, so it is not possible to see if the password has already been configured.
+2.  In the second column, in the section **Internal Driver Parameters**, below **Configuration**, click the button **More Settings**.
+    The **Settings** window will open.
+3.  In the **Credentials** section of this window, set the **Intel** **User Name**, **Intel Password**, **SMC Username** and **SMC Password** for both devices.
+    Note: The **Intel** **IPMI Password and SMC IPMI Password** have no associated "read" control, so it is not possible to see if the password has already been configured.
 
 At this point, the driver should be able to connect with the target device and start retrieving data.
 
@@ -66,7 +71,8 @@ For Intel communication only, if the driver is not able to connect yet, continue
 2.  Go to the **General** page, click the **More Settings** button, and go to the section **Connection**.
 3.  Depending on the current interface type, change the interface type either from *Lan* to *Lan+* or from *Lan+* to *Lan for Intel*, and restart the driver.
 4.  In the same section of the **Settings** window, disable **Use Caching** if this is enabled for the Intel device.
-5.  If the problem persists, open the element log file and verify if any errors have been logged.This will typically be at the end of the file, so we advise you to start looking there.
+5.  If the problem persists, open the element log file and verify if any errors have been logged.
+    This will typically be at the end of the file, so we advise you to start looking there.
 6.  Contact Skyline Communications (your TAM or <techsupport@skyline.be>).
 
 ## Usage
@@ -77,15 +83,18 @@ On this overview page, you can turn the device *On* or *Off* using the buttons n
 
 On the left side of the page, there are some general status indicators such as **System Power**, **Power on Hours** and **Last Restart Cause**.
 
-There are also four page buttons: **Users**, **SEL Info**, **BMC Info**, and **SDR Info**. These provide access to pages with a mix of polled data and "static" data.Trending and alarm monitoring are not possible on the "static" data. This data will only be retrieved from the device after one of these buttons are clicked, at which point all the data on these pages will be updated. However, note that it could take some time before the update is complete, so do not close the pages too quickly.
+There are also four page buttons: **Users**, **SEL Info**, **BMC Info**, and **SDR Info**. These provide access to pages with a mix of polled data and "static" data.
+Trending and alarm monitoring are not possible on the "static" data. This data will only be retrieved from the device after one of these buttons are clicked, at which point all the data on these pages will be updated. However, note that it could take some time before the update is complete, so do not close the pages too quickly.
 
 This page also contains a section **Internal Driver Parameters**. This contains parameters that do not come from the device but instead display settings, configuration info and status info about the driver and its behavior.
 
 The first section, **Statistics**, contains data related to the internal command stacks. This information is updated every 10 seconds.
 
 - **Manager - Waiting Commands**: Indicates how many commands are waiting to be executed (at the time of the update).
-- **Manager - Executing Commands**: Indicates how many commands are currently being executed (at the time of the update).The maximum value of this parameter is defined by **Manager - Max Processes**, but will often be less because of the **Manager - Max Background** **Processes** limitation.
-- **Manager - Finished Commands**: Indicates how many commands have finished since the previous update.Note that this could be more than the number of commands that was shown in the **Executing Commands** parameter. This is because if several commands take only 2 seconds, they will be started and finished without any indication in the **Waiting** and **Executing** parameters.
+- **Manager - Executing Commands**: Indicates how many commands are currently being executed (at the time of the update).
+  The maximum value of this parameter is defined by **Manager - Max Processes**, but will often be less because of the **Manager - Max Background** **Processes** limitation.
+- **Manager - Finished Commands**: Indicates how many commands have finished since the previous update.
+  Note that this could be more than the number of commands that was shown in the **Executing Commands** parameter. This is because if several commands take only 2 seconds, they will be started and finished without any indication in the **Waiting** and **Executing** parameters.
 
 Below this, you can find parameters that configure how many commands can be executed at the same time. The first parameter, **Sessions - Slot Count**, is retrieved from the device after startup and defines the maximum number of concurrent requests that the device supports. As such, the **Max Processes** may never exceed this value. However, it is recommended to take a smaller number of actual **Max Processes**, because these sessions are also shared with other users (for example on the command line) or other elements (for example when double polling.) It is best to take a **Slot Count** of *4* for a production element*.* This allows for a second (duplicate) element on a staging server using 2 or 3 connections, and for users using the command line or any other tool.
 
@@ -123,7 +132,7 @@ Polling parameters stage 2:
 - **SEN Asserted** (Sensor assertion enabled states)
 - **SEN Deassertions** (Sensor deassertion states)
 
-Note: Parameters of type **Temperature**, **Fan**, **Power Unit**, **Voltage** and **Current** are forwarded to separate tables, allowing for trending and alarm monitoring. Note that in these tables, units are preconfigured and not compared to the actual units reported by the device. As such, it can occur that a temperature measured as *85 degrees* *Fahrenheit*is displayed as *85 øC*.
+Note: Parameters of type **Temperature**, **Fan**, **Power Unit**, **Voltage** and **Current** are forwarded to separate tables, allowing for trending and alarm monitoring. Note that in these tables, units are preconfigured and not compared to the actual units reported by the device. As such, it can occur that a temperature measured as *85 degrees* *Fahrenheit* is displayed as *85 øC*.
 
 ### System Event Log
 

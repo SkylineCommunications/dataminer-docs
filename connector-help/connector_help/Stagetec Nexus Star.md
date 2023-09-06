@@ -4,7 +4,8 @@ uid: Connector_help_Stagetec_Nexus_Star
 
 # Stagetec Nexus Star
 
-The Stagetec Nexus Star is an **audio-router system** which was designed for the most extensive routing requirements typically found, in broadcast centres, large production companies, and exhibition grounds. The Stagetec Nexus Star is a routing node serving as the core of a Nexus installation and interconnecting numerous Nexus Base Devices scattered over separate studios and apparatus areas via optical cables. It is a versatile audio-network and routing system for controlling studio or mixing-desk resources, for apparatus-area and broadcast-complex networking, for OB trucks, sound reinforcement, and for any other professional audio technology applications.Stagetec Nexus Star can accommodate up to 16 boards each with 256 inputs and 256 outputs. This allows for routing a maximum of 4,096 inputs to 4,096 outputs, resulting in more than 16 million crosspoints.
+The Stagetec Nexus Star is an **audio-router system** which was designed for the most extensive routing requirements typically found, in broadcast centres, large production companies, and exhibition grounds. The Stagetec Nexus Star is a routing node serving as the core of a Nexus installation and interconnecting numerous Nexus Base Devices scattered over separate studios and apparatus areas via optical cables. It is a versatile audio-network and routing system for controlling studio or mixing-desk resources, for apparatus-area and broadcast-complex networking, for OB trucks, sound reinforcement, and for any other professional audio technology applications.
+Stagetec Nexus Star can accommodate up to 16 boards each with 256 inputs and 256 outputs. This allows for routing a maximum of 4,096 inputs to 4,096 outputs, resulting in more than 16 million crosspoints.
 
 ## About
 
@@ -76,3 +77,5 @@ This page displays the **DSP Cards Table**, a parameter in order to On/off the *
 ### Monitoring Table
 
 This page contains the **Monitoring Input-Output Table**.
+
+

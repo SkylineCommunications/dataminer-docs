@@ -64,7 +64,7 @@ This connector uses a virtual connection and does not require any input during e
 
 ### Initialization
 
-To configure the entire system properly, as a **DataMinerSystem Administrator**, you shouldfollow these steps:
+To configure the entire system properly, as a **DataMiner** **System Administrator**, you should follow these steps:
 
 1.  Create a front-end Skyline ICMP Platform Manager element by setting the parameter **Element Manager Type** to *Front-End* on the **Configuration** page.
 
@@ -80,7 +80,11 @@ To configure the entire system properly, as a **DataMinerSystem Administrator**,
 
 7.  If you are configuring the front end, register the back end (DMA ID/element ID) in the **FE-BE Registration** table; otherwise register the front end.
 
-8.  In the location specified in the File Import Path parameter earlier, provide a CSV file (separated by ";") with the format illustrated below. **If the folder defined in the parameter does not exist, you will need to create it**.Note that headers must be capitalized, and the file name should follow the format **DMAID_ElementID_ICMP**.The relation in the CSV file between topology levels must be One-to-Many from up to down and One-to-One from down to up. Levels from up to down: **Super-Region, Sub-Region, State, Station, Model,** and **Device.**
+8.  In the location specified in the File Import Path parameter earlier, provide a CSV file (separated by ";") with the format illustrated below.
+    **If the folder defined in the parameter does not exist, you will need to create it**.
+    ![Captura de pantalla 2021-10-19 174320.png](~/connector-help/images/Skyline_ICMP_Platform_Manager_Captura_de_pantalla_2021-10-19_174320.png)
+    Note that headers must be capitalized, and the file name should follow the format **DMAID_ElementID_ICMP**.
+    The relation in the CSV file between topology levels must be One-to-Many from up to down and One-to-One from down to up. Levels from up to down: **Super-Region, Sub-Region, State, Station, Model,** and **Device.**
 
 ### Redundancy
 

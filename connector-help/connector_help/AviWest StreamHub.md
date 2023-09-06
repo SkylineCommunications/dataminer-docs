@@ -18,9 +18,9 @@ Up to 8 videos can be decoded simultaneously thanks to 8 SDI outputs, while up t
 
 ### Product Info
 
-| **Range** | **Supported Firmware**         |
-|-----------|--------------------------------|
-| 1.0.0.x   | 3.4.03.5.03.5.24.0.14.1.04.2.3 |
+| **Range** | **Supported Firmware**              |
+|-----------|-------------------------------------|
+| 1.0.0.x   | 3.4.0 3.5.0 3.5.2 4.0.1 4.1.0 4.2.3 |
 
 ### System Info
 

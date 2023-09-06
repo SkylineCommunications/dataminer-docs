@@ -73,7 +73,8 @@ The page contains the following page buttons:
 
 - **SSH Files Server:** Allows you to establish a connection with an **SSH server** through **SFTP** protocol, in order to copy a file to this server. Every field on this page must be filled in correctly in order to successfully establish the connection. If the Username and Password are not configured, no information will be polled through this connection.
 
-- **TCP/UDP** **Statistics**: Displays the **TCP Segments Total Sent**, **TCP Segments Total Received**, **UDP Datagrams Sent**, etc.Contains two page buttons that display the **UDP Listener Table** and **TCP Connection Table**, respectively.
+- **TCP/UDP** **Statistics**: Displays the **TCP Segments Total Sent**, **TCP Segments Total Received**, **UDP Datagrams Sent**, etc.
+  Contains two page buttons that display the **UDP Listener Table** and **TCP Connection Table**, respectively.
 
 - **ICMP** **Statistics**: Displays **ICMP Received/Sent Messages**, **ICMP Echo Requests/Replies**, etc.
 
@@ -96,7 +97,8 @@ The page contains the following page buttons:
   - TCP/UDP Statistics
   - Huawei VLAN Table
 
-**NOTE**: It is possible to configure the bitrate polling time on this page. For device firmware version 5.1, 10 seconds is used as the default value.If the connector is used with **newer firmware versions (e.g. 8.190), a 1-minute timer should be used to avoid spikes in bitrates**, as the counters (IfTable and IfXTable) are only updated every minute.
+**NOTE**: It is possible to configure the bitrate polling time on this page. For device firmware version 5.1, 10 seconds is used as the default value.
+If the connector is used with **newer firmware versions (e.g. 8.190), a 1-minute timer should be used to avoid spikes in bitrates**, as the counters (IfTable and IfXTable) are only updated every minute.
 
 In range 1.0.2.x, the parameter **Counter Type Mode** has been added, which allows you to select to *Always use 64 bits*. When you do so, 64 bits will be used for bitrate calculations. You should consider using this option with firmware version 8.1.90 or higher.
 

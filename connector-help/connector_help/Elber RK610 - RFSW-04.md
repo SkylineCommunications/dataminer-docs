@@ -28,7 +28,7 @@ This driver is used by DVEs that are **automatically created** by the parent ele
 
 ### Status
 
-This page contains status parameters: **Card Slot**,**Input Selected**, etc.
+This page contains status parameters: **Card Slot**, **Input Selected**, etc.
 
 ### Configuration
 

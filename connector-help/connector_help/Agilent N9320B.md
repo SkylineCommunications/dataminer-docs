@@ -46,7 +46,7 @@ In version 1.0.0.2, an additional toggle button **VGA Output Status** is include
 
 ### Spectrum Analyzer
 
-This page contains DataMiner'sdefault **Spectrum Analysis** component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
+This page contains DataMiner's default **Spectrum Analysis** component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
 
 - **Reference Level**
 - **Reference Scale**

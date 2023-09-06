@@ -18,7 +18,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### File Reader
 
-To retrieve the formatted values from files, the path to the file has to be filled in. This is done with the page button **File Properties.** on any of the **Main View** pages. An example of the path is *C:\Folder1\File.txt.*
+To retrieve the formatted values from files, the path to the file has to be filled in. This is done with the page button **File Properties.** on any of the **Main View** pages.
+An example of the path is *C:\Folder1\File.txt.*
 
 ## Usage
 

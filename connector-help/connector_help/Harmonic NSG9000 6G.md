@@ -51,7 +51,8 @@ This page contains a list of all the CAS-related settings. The following groups 
 - **Privacy Mode Settings**
 - **CAS Properties**
 - **DVB Tier Based**
-- **ECM Group Table:** A table with the ECM groups. To delete one or more rows, set the value in the **Delete ECM** column to *true* and then click the **Delete Selected** button below the table. To add a row, click the **Add ECM.** page button, enter new values, and click the **Set ECM** button to add the new row. Note: When editing, adding and removing rows, it is important that you wait for each action to synchronise. If new changes are sent before the DMA is updated, the previous changes might be lost.
+- **ECM Group Table:** A table with the ECM groups. To delete one or more rows, set the value in the **Delete ECM** column to *true* and then click the **Delete Selected** button below the table. To add a row, click the **Add ECM.** page button, enter new values, and click the **Set ECM** button to add the new row.
+  Note: When editing, adding and removing rows, it is important that you wait for each action to synchronise. If new changes are sent before the DMA is updated, the previous changes might be lost.
 
 ### IP Settings
 

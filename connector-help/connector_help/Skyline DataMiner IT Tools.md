@@ -54,8 +54,12 @@ As this is a virtual driver, **no data traffic** will be shown **in the Stream V
 
 There are two workflows to process incoming requests:
 
-- **CLI Commands:** Communicates with connectors (ex. Generic Powershell) to retrieve the results of supported CLI commands requested by the user in the visual layer. The information related to each request is displayed in the **Operation Overview** table, and includes operation type, operation status, user name, in request (incoming request from visual), out request (request sent to connector), and result. Note: You can **add connectors** to the Subscription table via its right-click menu.
-- **Application Launch**: Allows you to open local application such as Putty. When you click on a Visual Overview button connected to an application path, DITT validates whether the application is in the registration table. If it is in the table, the application will be launched; otherwise, a pop-up box is displayed where you need to enter the required information. Note: You can also **add entries** to this registration table via its right-click menu.
+- **CLI Commands:** Communicates with connectors (ex. Generic Powershell) to retrieve the results of supported CLI commands requested by the user in the visual layer.
+  The information related to each request is displayed in the **Operation Overview** table, and includes operation type, operation status, user name, in request (incoming request from visual), out request (request sent to connector), and result.
+  Note: You can **add connectors** to the Subscription table via its right-click menu.
+- **Application Launch**: Allows you to open local application such as Putty.
+  When you click on a Visual Overview button connected to an application path, DITT validates whether the application is in the registration table. If it is in the table, the application will be launched; otherwise, a pop-up box is displayed where you need to enter the required information.
+  Note: You can also **add entries** to this registration table via its right-click menu.
 
 ## Notes
 

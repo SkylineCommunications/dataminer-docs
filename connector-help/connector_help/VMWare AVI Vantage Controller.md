@@ -56,7 +56,7 @@ There is no redundancy defined.
 
 The element created using this connector has the following data pages:
 
-- **General**: Contains the general **cluster information**, such as the cluster'sdate, tag, version, build, etc. Also allows you to log in to receive data from the AVI Vantage (see "Initialization").
+- **General**: Contains the general **cluster information**, such as the cluster's date, tag, version, build, etc. Also allows you to log in to receive data from the AVI Vantage (see "Initialization").
 
 - **Virtual Service**: Displays the Virtual Services table, with general information of the virtual services, such as the tenant, the name, the service ports, and related pools. This table also shows the current health score, as well as the number of open connections, requests per second, connections per second, and throughput.
 

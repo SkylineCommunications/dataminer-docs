@@ -25,11 +25,11 @@ This connector exports different types of DVEs, representing modems, network (fo
 
 ### Version Info
 
-| **Range**            | **Description**                                                       | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-----------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version                                                       | No                  | Yes                     |
-| 1.0.1.x \[Obsolete\] | Connector DVE structure changed.                                      | No                  | Yes                     |
-| 1.0.2.x \[SLC Main\] | Added SNMP connection.New connection has to be configured on startup. | No                  | Yes                     |
+| **Range**            | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version                                                        | No                  | Yes                     |
+| 1.0.1.x \[Obsolete\] | Connector DVE structure changed.                                       | No                  | Yes                     |
+| 1.0.2.x \[SLC Main\] | Added SNMP connection. New connection has to be configured on startup. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -144,4 +144,5 @@ The page contains several tables with info regarding the forward and return link
 
 ### Connector flow
 
-The connector is designed around the TSDB as the "master" source of data of remotes and networks. Data from the Dialog API is used to fetch static configuration data of remotes and networks to build the full information. For example, a terminal is retrieved from the TSDB and then all associated mapping data is fetched from the Dialog API (like terminal name, MAC address, etc.). All stats and metrics are retrieved from the TSDB.
+The connector is designed around the TSDB as the "master" source of data of remotes and networks. Data from the Dialog API is used to fetch static configuration data of remotes and networks to build the full information.
+For example, a terminal is retrieved from the TSDB and then all associated mapping data is fetched from the Dialog API (like terminal name, MAC address, etc.). All stats and metrics are retrieved from the TSDB.

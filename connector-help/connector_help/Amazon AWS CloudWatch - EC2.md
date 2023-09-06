@@ -38,4 +38,4 @@ The General page contains the **Entry ID** that is a unique identifier for this 
 
 ### Metrics
 
-The variousMetrics pages contain all polled metric values. Polling of the appropriate metric can be enabled via the **Config Poll** page button. It is not possible to set the Poll parameter to *Enabled* for metric parameters that have the *N/A* value. These *N/A* metrics are not present in the provided metrics list for this instance and hence their Poll parameter will remain *Disabled*.
+The various Metrics pages contain all polled metric values. Polling of the appropriate metric can be enabled via the **Config Poll** page button. It is not possible to set the Poll parameter to *Enabled* for metric parameters that have the *N/A* value. These *N/A* metrics are not present in the provided metrics list for this instance and hence their Poll parameter will remain *Disabled*.

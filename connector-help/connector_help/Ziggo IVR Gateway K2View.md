@@ -52,14 +52,15 @@ On this page, you can configure different settings regarding SOAP and offload.
 
 - **Username** and **Password** for SOAP calls that will be sent to the Oracle MiddleWare. The **Password** is optional.
 - **Number of Retries** in case a SOAP call fails.
-- **IVR Clear Delay**on automatic deactivation requests.
+- **IVR Clear Delay** on automatic deactivation requests.
 
 #### OFFLOAD CONFIG
 
 The parameters **Max Amount of Incidents** and **Amount of Incidents to Offload** affect the **Ticket Status Overview** table:
 
 - **Max Amount of Incidents** determines how many entries the table can contain before an offload will occur.
-- **Amount of Incidents to Offload** determines the number of entries that will be offloaded.The number of remaining entries in the table is based on the formula **Max Amount of Incidents - Amount of Incidents to Offload**. As such, even if the table already contains more entries than the allowed maximum, the remaining entries after an offload will always be the same based on the configuration.
+- **Amount of Incidents to Offload** determines the number of entries that will be offloaded.
+  The number of remaining entries in the table is based on the formula **Max Amount of Incidents - Amount of Incidents to Offload**. As such, even if the table already contains more entries than the allowed maximum, the remaining entries after an offload will always be the same based on the configuration.
 
 The other parameters are used to configure when the offload check will be done, how the offload files will be stored and how long those files will be stored.
 
@@ -86,3 +87,5 @@ To create a rule, right-click and select **Add row.** You will then be able to f
 The IVR Rules table has a column called **Priority**. This editable parameter allows you to select the priority for each rule entry. The table is sorted automatically from the highest priority (value 1) to the lowest (number of entries in table).
 
 - *IT IS NOT RECOMMENDED* to set multiple priorities simultaneously, as this may result in incorrect sorting. When a new rule is created, it will automatically receive the lowest priority and be placed at the bottom of the table.
+
+

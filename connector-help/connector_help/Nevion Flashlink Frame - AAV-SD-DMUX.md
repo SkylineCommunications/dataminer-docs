@@ -85,7 +85,7 @@ It also allows you to configure the **Mode**, **Current Input**, **Main**, **Bac
 
 This page displays the **Delay** **Table**, which contains information about delay parameters.
 
-It also allows you to configure the **Status**, **Lines**,**Samples** and **Nanosecs** delays.
+It also allows you to configure the **Status**, **Lines**, **Samples** and **Nanosecs** delays.
 
 ### Optical Input Page
 
@@ -101,7 +101,7 @@ This page displays the **Serial Port** **Table**, which contains all serial port
 
 This page displays the **Monitor Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error** **Delta** and **Error** **Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error** **Delta** and **Error** **Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Video Generator Page
 

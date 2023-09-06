@@ -12,7 +12,7 @@ At up to 16 transmitters per RU, DMT 1310nm transmitters are ideal for upgrading
 
 ## About
 
-This connector is generated automatically by the [ATX Networks ChromaFlex](xref:Connector_help_ATX_Networks_ChromaFlex)connector.
+This connector is generated automatically by the [ATX Networks ChromaFlex](xref:Connector_help_ATX_Networks_ChromaFlex) connector.
 
 ### Version Info
 
@@ -30,4 +30,4 @@ This connector is used by DVEs that are **automatically generated** when DVE cre
 
 ### General
 
-This page contains system information parameters, such as the **Software Version**, **Hardware Version**, **Model Name**, **Serial Number**,**Module Temperature**,and **DMTx Lasers Table**.
+This page contains system information parameters, such as the **Software Version**, **Hardware Version**, **Model Name**, **Serial Number**, **Module Temperature**, and **DMTx Lasers Table**.

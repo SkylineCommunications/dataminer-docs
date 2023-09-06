@@ -78,4 +78,4 @@ The element has the following data pages:
 - **Local Outputs**: Contains parameters used to route the default channels to the output muxes or to route the encoded Dolby E signal to a specific output.
 - **Loudness**: Contains loudness control and monitoring parameters.
 - **Monitoring**: Contains the current status information of the AES inputs and channels.
-- **Alarm Priority**:This page displays the event messages of the card, i.e. special messages generated asynchronously on the card.
+- **Alarm Priority**: This page displays the event messages of the card, i.e. special messages generated asynchronously on the card.

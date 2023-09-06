@@ -54,4 +54,4 @@ The web interface is only accessible when the client machine has network access 
 
 The **General** page displays information about the system such as the **Controller Status**, the **Switch State**, and the **Control State**. On the **Configuration** subpage, you can configure the **system parameters** and enable the **controller events**.
 
-On the **Transmitter** page, you can check the current status of the **Alarm** parameters and the current values of transmission parameters like the **Frequency**, **Power**,and **VSWR**. On the **Events** and **Configuration** subpages, you can set the transmitter definition parameters.
+On the **Transmitter** page, you can check the current status of the **Alarm** parameters and the current values of transmission parameters like the **Frequency**, **Power**, and **VSWR**. On the **Events** and **Configuration** subpages, you can set the transmitter definition parameters.

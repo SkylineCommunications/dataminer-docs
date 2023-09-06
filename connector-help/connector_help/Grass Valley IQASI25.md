@@ -10,9 +10,11 @@ This driver monitors the activity of the Grass Valley IQASI25 device, an ASI Swi
 
 ### Version Info
 
-| **Range**           | **Key Features** |
-|---------------------|------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  |
+| **Range**            | **Key Features** |
+|----------------------|------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  |
+
+
 
 ### Product Info
 
@@ -20,11 +22,15 @@ This driver monitors the activity of the Grass Valley IQASI25 device, an ASI Swi
 |-----------|------------------------|
 | 1.0.0.x   | 5.0.5                  |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** |
 |-----------|---------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     |
+
+
 
 ## Configuration
 
@@ -71,3 +77,5 @@ In this page the user can configure the Logging. There are subpages for specific
 ### Connection Info
 
 This page displays the configuration status.
+
+

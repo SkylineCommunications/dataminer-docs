@@ -8,7 +8,8 @@ With the CISCO Manager, it is possible to configure and monitor CISCO switches, 
 
 ## About
 
-The CISCO Manager connector can retrieve information from different device types. This makes it possible to limit the retrieval of parameter values to what is needed or available on the device at hand.In addition to polling values, you can configure settings such as the ping function as if doing so on the device itself.
+The CISCO Manager connector can retrieve information from different device types. This makes it possible to limit the retrieval of parameter values to what is needed or available on the device at hand.
+In addition to polling values, you can configure settings such as the ping function as if doing so on the device itself.
 
 ### Version Info
 
@@ -23,12 +24,12 @@ The CISCO Manager connector can retrieve information from different device types
 | 5.1.2.x \[Obsolete\] | SNMPv2: Replaces 5.1.1.x. This range fixes the IF Utilization Range that was off with 100 since version 5.1.1.78.                                                                                                | 5.1.1.83     | No element recreation needed; just be aware that trending/alarm monitoring on IF Utilization can show spikes between versions.                                                                                                                                                            |
 | 5.1.3.x \[Obsolete\] | SNMPv2: replaces 5.1.2.x. This range adds a new HTTP interface. This interface is hidden and does not require that the element is recreated.                                                                     | \-           | \-                                                                                                                                                                                                                                                                                        |
 | 5.1.4.x \[Obsolete\] | Made Cassandra-compliant.                                                                                                                                                                                        | 5.1.3.12     | \-                                                                                                                                                                                                                                                                                        |
-| 5.1.5.x \[Obsolete\] | \- Improvements to IPSec logic.- Merge of all 5.1.X.X versions.                                                                                                                                                  | \-           | \-                                                                                                                                                                                                                                                                                        |
+| 5.1.5.x \[Obsolete\] | \- Improvements to IPSec logic. - Merge of all 5.1.X.X versions.                                                                                                                                                 | \-           | \-                                                                                                                                                                                                                                                                                        |
 | 5.1.6.x \[Obsolete\] | Added extra connection for SysLog information.                                                                                                                                                                   | 5.1.5.1      | \-                                                                                                                                                                                                                                                                                        |
 | 5.1.7.x \[SLC Main\] | Added rate exceptions on device timeout/restart                                                                                                                                                                  | 5.1.6.19     | No impact as long as "Handle SNMP Rates on Timeout" is disabled. It is disabled by default. Otherwise, any dashboards or filters using rate values may need to be updated slightly.                                                                                                       |
 | 6.1.1.x              | SNMPv3 version of 5.1.1.x.                                                                                                                                                                                       | \-           | \-                                                                                                                                                                                                                                                                                        |
 | 7.0.0.x \[Obsolete\] | SNMP2: temporary branch created based on 5.1.1.x to change the element type to "Management System".                                                                                                              | \-           | If you move to this branch, you will need to recreate the element.                                                                                                                                                                                                                        |
-| 8.0.0.x \[Obsolete\] | Customer-specific range.**Deprecated as of 2021.**                                                                                                                                                               | 5.1.3.12     | \-                                                                                                                                                                                                                                                                                        |
+| 8.0.0.x \[Obsolete\] | Customer-specific range. **Deprecated as of 2021.**                                                                                                                                                              | 5.1.3.12     | \-                                                                                                                                                                                                                                                                                        |
 
 **The main version to use for new elements is 5.1.7.x.**
 
@@ -80,17 +81,19 @@ Version range 2.1.x.x, 3.1.x.x, and 5.x.x.x do not require any extra settings.
 
 ### SNMP Polling
 
-As this connector supports different types of devices, all polling of parameters is disabled by default. The needed parameter sections have to be explicitly enabled. You can do so on the **General** page via the **SNMP Polling** page button.
+As this connector supports different types of devices, all polling of parameters is disabled by default. The needed parameter sections have to be explicitly enabled.
+You can do so on the **General** page via the **SNMP Polling** page button.
 
 ### HTTP Polling
 
 Some tables are not accessible through SNMP, so an interface was added in order to make some data available for display.
 
-You cannot configure this interface during element creation; however, **youmust** **configure the device's HTTP interface in the device CLI** in order for DataMiner to be able to access data via HTTP. You also have to go to the **HTTP Polling** subpage of the **General** page and set up the connection with CLI **username**, **password**, **privilege** **level**,and **operation** **mode**. The connector will start polling HTTP data when the username and password are configured and when any of the toggle buttons present on the HTTP Polling page are set to "Enable".
+You cannot configure this interface during element creation; however, **you** **must** **configure the device's HTTP interface in the device CLI** in order for DataMiner to be able to access data via HTTP.
+You also have to go to the **HTTP Polling** subpage of the **General** page and set up the connection with CLI **username**, **password**, **privilege** **level**, and **operation** **mode**. The connector will start polling HTTP data when the username and password are configured and when any of the toggle buttons present on the HTTP Polling page are set to "Enable".
 
 ### Enabling LITE Mode
 
-You can enable LITE mode (only displaying part of the interface table) on the **General** page via the **SNMP Polling**page button.
+You can enable LITE mode (only displaying part of the interface table) on the **General** page via the **SNMP Polling** page button.
 
 ### Device Configuration
 
@@ -110,13 +113,13 @@ Multiple page buttons are also available that provide access to more specific in
 - **IP Stats**: When enabled, IP information will be shown. Polling can be enabled or disabled.
 - **Services**: Displays whether a service layer is active or not.
 - **VTP Info**: Displays VTP information. This can be loaded manually.
-- **MAC Addresses**:Displays the MAC addresses. This must be loaded manually.
+- **MAC Addresses**: Displays the MAC addresses. This must be loaded manually.
 - **Copy config**: Allows you to define the CISCO Copy Configuration and start it.
 - **Ping**: Allows you to define items for which the ping operation will be performed. The ping can be enabled or disabled.
 - **Reset Counters**: Allows you to clear the interface counters of all ports or of specific ports.
 - **Enable Polling**: Allows you to enable or disable multiple and/or different sections of parameters that need to be polled.
 
-In addition, buttons are available that allow you to perform a **Redetect Config**, **Save Configuration**,or **Reset Device** operation.
+In addition, buttons are available that allow you to perform a **Redetect Config**, **Save Configuration**, or **Reset Device** operation.
 
 Note: The **Chassis Model** and **Chassis Serial Number** parameters are linked with the table **Ent Physical Table**. Make sure to enable the table to make this information available.
 
@@ -128,9 +131,10 @@ The column **IF Counter Type** displays if the bitrates are calculated with 32-b
 
 **XMPL RPC** is an option to retrieve data that is not available on the CISCO device itself, e.g. **IF Speed** from a server. It will be retrieved via calls to a customized platform.
 
-Via **Measurement Configuration**, you can enable or disable the display and calculation of the interface communication KPIs. Range 2.1.x.x uses subtables, which limits the polling (disabled rows are not polled). Range 3.1.x.x uses "multiplegetbulk",because when some cells were empty, the complete interface table was empty when polled with range 2.1.x.x. Multiplegetbulk does not support subtables, so disabled rows will still be polled.
+Via **Measurement Configuration**, you can enable or disable the display and calculation of the interface communication KPIs. Range 2.1.x.x uses subtables, which limits the polling (disabled rows are not polled). Range 3.1.x.x uses "multiplegetbulk", because when some cells were empty, the complete interface table was empty when polled with range 2.1.x.x. Multiplegetbulk does not support subtables, so disabled rows will still be polled.
 
-In the **3.1.1.x** and **4.1.1.x** ranges, you can temporarily activate the **high-resolution measuring** option, which triggers polling, calculating and updating interface-related KPIs with a frequency of **approximately 1 second**.You can enable this option and define the active time in the **MCT- High Resolution Measuring** and **MCT- High Res Active Time** columns of the **Measurement Configuration Table**, respectively.
+In the **3.1.1.x** and **4.1.1.x** ranges, you can temporarily activate the **high-resolution measuring** option, which triggers polling, calculating and updating interface-related KPIs with a frequency of **approximately 1 second**.
+You can enable this option and define the active time in the **MCT- High Resolution Measuring** and **MCT- High Res Active Time** columns of the **Measurement Configuration Table**, respectively.
 
 More detailed information about the incoming and outgoing information can be found on the **Detailed Information Info - Rx** and **Detailed Information Info - Tx** pages.
 
@@ -155,7 +159,7 @@ There are several possibilities to change these columns (the explanation below f
 
 ### Other pages
 
-For each of the pages **PoE, ISDN, BGP, HSRP, LDP, OSPF, IGMP, IPSec, IPSLA, Vlan Info, IP Routing Info, Fan - PS Info, Chassis, Hardware Status, Temperature, Multicast, Multicast Next Hop, Ping Function** and **NBAR, Netflow, SHDSL**, and **XDSL**,polling can be enabled or disabled.
+For each of the pages **PoE, ISDN, BGP, HSRP, LDP, OSPF, IGMP, IPSec, IPSLA, Vlan Info, IP Routing Info, Fan - PS Info, Chassis, Hardware Status, Temperature, Multicast, Multicast Next Hop, Ping Function** and **NBAR, Netflow, SHDSL**, and **XDSL**, polling can be enabled or disabled.
 
 In the **3.1.1.x** and **4.1.1.x** ranges, you can use the **Measurement Configuration** functionality for **IP SLAs**.
 
@@ -220,10 +224,10 @@ On the DCF Config page, you can select 2 different sources for creating internal
 
 4.  - Connections are created based on the multicast flows from the **Multicast Next Hop** table.
 
-- Between interfaces,an internal connection is created with the following properties (if enabled):
+- Between interfaces, an internal connection is created with the following properties (if enabled):
 
-- **VLAN** connection property of type **inout**with value **VLAN ID**.
-  - **MC** connection property of type **inout**with value **Multicast IPs** (separated by ";").
+- **VLAN** connection property of type **inout** with value **VLAN ID**.
+  - **MC** connection property of type **inout** with value **Multicast IPs** (separated by ";").
 
 ## Notes
 

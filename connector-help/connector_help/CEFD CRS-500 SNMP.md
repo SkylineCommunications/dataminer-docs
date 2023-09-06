@@ -17,12 +17,16 @@ The CEFD CRS-500 SNMP driver is designed to monitor and control a CEFD CRS -500 
 | 1.0.0.x              | Initial version                                                                                                     | \-           | \-                |
 | 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.1      | \-                |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Installation and configuration
 

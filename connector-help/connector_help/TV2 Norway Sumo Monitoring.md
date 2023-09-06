@@ -29,7 +29,7 @@ Configuration
 On the **Configuration** page, the element must be further configured:
 
 - **Platform Code**: The value of this parameter will be filled in on the URL to request the asset details. ("\<platform\>" placeholder)
-- **Webservice username and password**: The credentialsto log on to the SUMO server. Header based authentication is used.
+- **Webservice username and password**: The credentials to log on to the SUMO server. Header based authentication is used.
 - **Asset details url**: Play URL to request the asset details. The following placeholders can be used and are automatically filled in : \<platform\>, \<serverId\>, \<assetId\>.
 - **User-Agent Header**: User agent to use in the HTTP requests.
 - **Vman Server ID**: The server ID that is used in the URL to request the asset details. ("\<serverId\>" placeholder)

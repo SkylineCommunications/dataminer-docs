@@ -19,10 +19,10 @@ The driver layout is designed to look similar to the web interface of the device
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                   |
-|------------------|-------------------------------------------------------------------------------|
-| 1.0.0.x1.0.0.8   | Firmware version 1.2.4 (based on manuals of the device)Firmware version 1.4.2 |
-| 1.0.1.x          | Firmware version 1.2.4 (based on manuals of the device)Firmware version 1.4.2 |
+| **Driver Range** | **Device Firmware Version**                                                    |
+|------------------|--------------------------------------------------------------------------------|
+| 1.0.0.x 1.0.0.8  | Firmware version 1.2.4 (based on manuals of the device) Firmware version 1.4.2 |
+| 1.0.1.x          | Firmware version 1.2.4 (based on manuals of the device) Firmware version 1.4.2 |
 
 ### Exported drivers
 
@@ -76,7 +76,7 @@ This page displays the main device parameters. It is divided in two main section
 
 With the **Save Configuration** button, you can save the current configuration. The **Factory Reset** button allows you to reset the device to the factory defaults.
 
-For systems with packet processor KST or CSAT modules, you can toggle polling of the relevant information with the **Poll Packet Processor Module Information,** **Poll KST Module Information** and **Poll CSAT Module Information**toggle buttons.
+For systems with packet processor KST or CSAT modules, you can toggle polling of the relevant information with the **Poll Packet Processor Module Information,** **Poll KST Module Information** and **Poll CSAT Module Information** toggle buttons.
 
 ### Admin - Access / SNMP
 
@@ -94,7 +94,7 @@ The page is divided in two main sections:
 - SNMP:
 
 - **Trap IP 1 / Trap IP 2:** Allows you to assign up to two SNMP trap IP addresses.
-  - **Trap Version:** Allows you to set the trap versionto *SNMPv1*or *SNMPv2*, using the drop-down box.
+  - **Trap Version:** Allows you to set the trap version to *SNMPv1* or *SNMPv2*, using the drop-down box.
   - **Trap Community String:** Allows you to assign the SNMP trap community string. The community string should consist of at least 0 and at most 20 alphanumeric characters.
 
 These options (with the exception of Remote Control) are only available when the device is working in *Local* mode (See "Config - Utilities" section below).
@@ -109,7 +109,7 @@ A number of optional features can be activated on the unit. Fully Accessible Sys
 
 - **Equipment ID**: This read-only section displays the operational status for a number of FAST-enabled features.
 - **Hardware**: This section lists the installed and currently operational FAST-enabled features, as well as uninstalled FAST-enabled features that are available for purchase and activation from Comtech EF Data. Slot 1 and 2 have been replaced by future expansions and slot 5 (RAN Optimizer card) is no longer in the MIB. Three extra options are also displayed: Carrier ID, Audio Chips and CnC Activation.
-- **Demo**:Displays the available demo time and indicates whether demo mode is activated.
+- **Demo**: Displays the available demo time and indicates whether demo mode is activated.
 
 ### Config - Modem
 
@@ -127,7 +127,7 @@ This page allows you to configure parameters related to LAN IP. It consists of f
 - **IP Gateway**: Allow you to configure the IP address of the default gateway. Only applicable in *Managed Switch Mode*.
   - **Traffic/Mgmt IP Address** (and subnet mask): Allows you to configure the modem's IP addresses.
   - **MAC Address**: Displays the Ethernet port MAC address.
-  - **MAC Learning**: Allows you to set MAC Learning to *On*or *Off*. Only applicable in *Managed Switch Mode*.
+  - **MAC Learning**: Allows you to set MAC Learning to *On* or *Off*. Only applicable in *Managed Switch Mode*.
   - **WAN Buffer Length**: Enter a value between *20 ms* and *400 ms*, in *20 ms* increments.
   - **L2 QoS** (Layer 2 QoS): Can be set to *Off*, *VLANonly*, *Port only*, or *VLAN & Port*.
   - **L3 QoS** (Layer 3 QoS): This feature is only operational when the optional IP Packet Processor card is installed and enabled. Allows you to set the L3 (Advanced) QoS to *Off*, *Max/Priority*, *Min Max*, or *DiffServ*.
@@ -138,15 +138,15 @@ This page allows you to configure parameters related to LAN IP. It consists of f
 - Per Port Configuration: This section contains a table where you can set the parameters for each port (1 to 4):
 
 - **Port Speed**: Allows you to set the speed for the port to *Auto*, *100 Full-Duplex*, *100 Half-Duplex*, *10 Full-Duplex*, or *10 Half-Duplex*.
-  - **Pause Flow Control**: Allows you to set pause flow control for the port to *Off*or *On*.
-  - **Port Mode**: Allows you to set the native mode for the port to *Trunk*or *Access*.
+  - **Pause Flow Control**: Allows you to set pause flow control for the port to *Off* or *On*.
+  - **Port Mode**: Allows you to set the native mode for the port to *Trunk* or *Access*.
   - **PVID**: When **Native Mode** is enabled, a PVID (Native VLAN ID) can be assigned to the selected port using a value range of *0001-4095*.
-  - **Priority**: Allows you to set the operational priority of the selected port, in the order of preference (from *1*to *4*).
+  - **Priority**: Allows you to set the operational priority of the selected port, in the order of preference (from *1* to *4*).
   - **Actual Negotiated Port Speed**: Displays the status of the current operating actual speed and duplex. If the port is not connected, *Link Down* is displayed.
 
 - VLAN Mode: This mode is supported in *Managed Switch Mode*, with or without the optional **IP Packet Processor** enabled.
 
-- **VLAN Mode**: Allows you to set the mode to *Disabled*or *Enabled*.
+- **VLAN Mode**: Allows you to set the mode to *Disabled* or *Enabled*.
   - **Management VLAN ID**: Allows you to assign a management VLAN ID to the selected port using a value range of *0001-4095*.
 
 - VLAN Table
@@ -208,7 +208,7 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - **Circuit ID**: Enter a Circuit ID string of up to 40 characters. The Circuit ID you specify here will be displayed in the title bar of compatible web browsers for easy unit identification. A carrier ID can also be enabled or disabled in this section.
 
-- **BERT Config**: This section allows you to set **Bit Error Rate Test**for **Tx** or **Rx** to *On*or *Off*, to configure the pattern for **Tx** or **Rx**, and to set **Error Insertion** to either *Off* or *10E-3*.
+- **BERT Config**: This section allows you to set **Bit Error Rate Test** for **Tx** or **Rx** to *On* or *Off*, to configure the pattern for **Tx** or **Rx**, and to set **Error Insertion** to either *Off* or *10E-3*.
 
 - Date & Time:
 
@@ -218,7 +218,7 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - Warm-Up:
 
-- **Warm Up Delay**:Allows you to enable or disable the warm-up delay for internal frequency reference (OCXO). If it is disabled, there is no delay for OCXO to reach temperature. If it is enabled, the unit waits until OCXO reaches the correct temperature.
+- **Warm Up Delay**: Allows you to enable or disable the warm-up delay for internal frequency reference (OCXO). If it is disabled, there is no delay for OCXO to reach temperature. If it is enabled, the unit waits until OCXO reaches the correct temperature.
   - **Warm Up Countdown**: Displays the number of seconds remaining in the warm-up delay countdown.
   - **Truncate Delay**: This button allows you to truncate the warm-up delay period to zero, forcing the unit into "instant-on" mode.
 
@@ -226,8 +226,8 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - Save / Load: Saving takes precedence over loading.
 
-- **Configuration Save / Configuration Load**: These drop-down boxes allow you to save or load up to 10 different modem configurations (numbered *0*to *9)*.
-  - **Configuration Slots** page button:Displays the available configuration slots.
+- **Configuration Save / Configuration Load**: These drop-down boxes allow you to save or load up to 10 different modem configurations (numbered *0* to *9)*.
+  - **Configuration Slots** page button: Displays the available configuration slots.
 
 ### Config - Drop and Insert
 
@@ -242,18 +242,18 @@ The page consists of the following sections:
 - BUC Configuration:
 
 - **BUC Power Enable**, **10 MHz Ref Enable** and **Output Power Enable**: These parameters allow you to turn these functions *On* or *Off*.
-  - **BUC Low** and **High Current Limit**:Assign a value (in mA) ranging from *0* to *4000*.
-  - **Tx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Tx LO Frequency, and then use the toggle button to set the value as a *HIGH (+)*or *LOW (-)*limit.
-  - **BUC Address**:Assign a value for the BUC address from *1*to *15*.
+  - **BUC Low** and **High Current Limit**: Assign a value (in mA) ranging from *0* to *4000*.
+  - **Tx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Tx LO Frequency, and then use the toggle button to set the value as a *HIGH (+)* or *LOW (-)* limit.
+  - **BUC Address**: Assign a value for the BUC address from *1* to *15*.
 
 - BUC Status: Provides information about the BUC status.
 
 - LNB Control:
 
 - **LNB DC Power**: Use the drop-down box to either set this to *Off* or to choose the appropriate voltage.
-  - **LNB Reference Enable**:Use the toggle button to turn this function *On* or *Off*.
-  - **LNB Low** and **High Current Threshold**:Assign a value (in mA) ranging from *0* to *500* for either function.
-  - **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO Frequency, and then use the drop-down menu to set the value as a *HIGH (+)*or *LOW (-)*limit.
+  - **LNB Reference Enable**: Use the toggle button to turn this function *On* or *Off*.
+  - **LNB Low** and **High Current Threshold**: Assign a value (in mA) ranging from *0* to *500* for either function.
+  - **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO Frequency, and then use the drop-down menu to set the value as a *HIGH (+)* or *LOW (-)* limit.
 
 - LNB Status: Provides information about the LNB status.
 
@@ -298,8 +298,8 @@ The page consists of the following sections:
 
 Via page buttons, you can access the following subpages:
 
-- **Alarm Masking**: Contains toggle buttons that allow you to set specific alarms to *Masked*or *Active***.**
-- **Packet Processor**: Allows you to set the level of logging of the packet processor elements of the device.The **Packet Event Logs** table displays the log events.
+- **Alarm Masking**: Contains toggle buttons that allow you to set specific alarms to *Masked* or *Active***.**
+- **Packet Processor**: Allows you to set the level of logging of the packet processor elements of the device. The **Packet Event Logs** table displays the log events.
 
 ### Status - Traffic Statistics
 
@@ -308,7 +308,7 @@ The page displays statistics regarding the network interfaces and the Ethernet p
 Via page buttons, you can access the following subpages:
 
 - **Router**: Displays the number of **Router, Management** and **LAN Received and Transmitted Packets**, as well as the number of counted **IP Header, IP Destination, No Router** and **Buffer Full Errors**. You can clear the counters with the **Clear** button.
-- **Managed Switch**: Displays the counters for the **Managed Switch Received** and **Transmitted Packets** for each interface, as well asthe **WAN Tx Utilization**, **Tx Data Rate** and **Rx** and **Tx Errors**. You can clear the counters with the **Clear** button.
+- **Managed Switch**: Displays the counters for the **Managed Switch Received** and **Transmitted Packets** for each interface, as well as the **WAN Tx Utilization**, **Tx Data Rate** and **Rx** and **Tx Errors**. You can clear the counters with the **Clear** button.
 - **WAN Statistics**: Displays the statistics related to the WAN interface, including the **Satellite Tx** and **Rx Frames** and various errors. You can clear the counters with the **Clear** button.
 - **Compression Status**: Displays the **Header Compression Statistics** table, as well as the **Pre-Compression Bytes, Post-Compression Bytes**, **Compression Savings** and **Compression Ratio**.
 - **QoS**: Displays the **QoS Mode** and the **QoS Statistics** table. You can clear the counters with the **Clear** button.

@@ -24,7 +24,8 @@ Supported firmware versions
 
 ### Creation
 
-***Serial Main connection***This driver uses a Serial connection and needs the following user information:
+***Serial Main connection***
+This driver uses a Serial connection and needs the following user information:
 
 SERIAL CONNECTION:
 
@@ -40,20 +41,20 @@ SERIAL CONNECTION:
 
 Use this page to configure Block Up Converter parameters and to check BUC status for L-Band operation.
 
-- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled*or *Disabled*.
-- **BUC Low** and **High Current Limit** value ranging from *0*to *4000*mA.
-- **BUC Lockout Frequency** from *3000* to *65000* MHzand designate the value as a *HIGH (+)*or *LOW (-)*limit.
-- **BUC Address** from *0*to *15*.
+- Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled* or *Disabled*.
+- **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
+- **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
+- **BUC Address** from *0* to *15*.
 
-> BUC Status: The values displayed in this section are read-onlyand cannot be changed.
+> BUC Status: The values displayed in this section are read-only **** and cannot be changed.
 
 ### LNB
 
 Use this page to configure Low-Noise Block Down Converter parameters and to check LNB status for L-Band operation.
 
 - **DC Supply Voltage:** *Off* or On with *13*, *18* or *24* V.
-- **LNB 10MHz Reference:** Enableoperations *Disabled*or *Enabled*.
-- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10*to *600*mA.
-- Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)*or *LOW (-)*limit.
+- **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
+- Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
+- Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-onlyand cannot be changed.
+> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.

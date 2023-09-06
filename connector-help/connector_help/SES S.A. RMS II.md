@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 ### General
 
-On this page, you can see and manipulate the **Radiometers**. Each request requires the Radiometer **ID** and **Frequency** and the **Protocol Version Number** found on the **Advanced** page. For all entries in the table, the **Attenuation**, **Sky Noise**,and **Status** are filled in. If there is a status message to show, it is displayed in the **Error Description** column.
+On this page, you can see and manipulate the **Radiometers**. Each request requires the Radiometer **ID** and **Frequency** and the **Protocol Version Number** found on the **Advanced** page. For all entries in the table, the **Attenuation**, **Sky Noise**, and **Status** are filled in. If there is a status message to show, it is displayed in the **Error Description** column.
 
 ### Advanced
 

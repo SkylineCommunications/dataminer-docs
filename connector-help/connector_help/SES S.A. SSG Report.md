@@ -44,7 +44,7 @@ The element created with this driver has only one data page, the **General** pag
 
 To add rows, right-click the table and select **Add item** in the context menu. You will then be able to enter a **Custom Name** for the new row, describing the data to be polled. Via the context menu, you can also **duplicate a row** or **delete a row**.
 
-If you wish to exclude a certain parameter from the report, you can use the **Include in Report** column for this purpose. Thiscolumn indicates whether or not the value will be included in the report.
+If you wish to exclude a certain parameter from the report, you can use the **Include in Report** column for this purpose. This column indicates whether or not the value will be included in the report.
 
 At the top of the page, the **Poll Information** button can be used to poll the data for all rows at once.
 

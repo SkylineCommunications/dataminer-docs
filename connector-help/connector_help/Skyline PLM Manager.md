@@ -10,9 +10,9 @@ This manager connector will install the **DataMiner Object Model** application u
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                        | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Installation of PLM DOM application.Support for Standard Skyline PLM Approval.Support for configuration capabilities for a default PLM record creation. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                          | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Installation of PLM DOM application. Support for Standard Skyline PLM Approval. Support for configuration capabilities for a default PLM record creation. | \-           | \-                |
 
 ### Product Info
 
@@ -98,8 +98,10 @@ The activities use the information from the PLM DOM application by providing a p
 
 The placeholder is formatted in a specific way:
 
-- Retrieving info from the default section (GeneralInformationSectionDefinition) is done by defining *\[DomFieldDescriptor:\<field name\>\]* where \<field name\> is the name of the field in the section that holds the data.For example, retrieving the resources is done with *\[DomFieldDescriptor:Resources\]*
-- Retrieving info from a field in another section is done by adding the section name in front of the field name, separated by a dot: *\[DomFieldDescriptor:\<section name\>.\<field name\>\]*For example, retrieving the technician name that is stored in the section *Admin* is done with *\[DomFieldDescriptor:Admin.Technician\]*
+- Retrieving info from the default section (GeneralInformationSectionDefinition) is done by defining *\[DomFieldDescriptor:\<field name\>\]* where \<field name\> is the name of the field in the section that holds the data.
+  For example, retrieving the resources is done with *\[DomFieldDescriptor:Resources\]*
+- Retrieving info from a field in another section is done by adding the section name in front of the field name, separated by a dot: *\[DomFieldDescriptor:\<section name\>.\<field name\>\]*
+  For example, retrieving the technician name that is stored in the section *Admin* is done with *\[DomFieldDescriptor:Admin.Technician\]*
 
 ### Running the process flows
 

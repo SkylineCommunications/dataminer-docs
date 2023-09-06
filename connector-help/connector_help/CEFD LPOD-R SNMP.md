@@ -50,7 +50,7 @@ Use this page to get a general perspective on some of the most important device 
 
 - Device Overall Status
 
-- **Toggle polling speed:**Toggle between *Normal Polling* and *Fast Polling* when the card is open. This includes status and configuration parameters, but excludes tables and variables which are unlikely to change.
+- **Toggle polling speed:** Toggle between *Normal Polling* and *Fast Polling* when the card is open. This includes status and configuration parameters, but excludes tables and variables which are unlikely to change.
 
 ### Admin
 

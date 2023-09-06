@@ -94,7 +94,7 @@ This page displays the **AFD Input** and **Output Status**, including some setti
 
 ### Ident 1 - Path 1 / Ident 2 - Path 1
 
-These pages allow you to configure up to two **ident text strings** on **output video**for path 1.
+These pages allow you to configure up to two **ident text strings** on **output video** for path 1.
 
 ### Timecode Burn - Path 1 / Timecode Burn - Path 2
 
@@ -102,7 +102,7 @@ These pages provide controls that allow you to configure a **time code** on **ou
 
 ### Ident 1 - Path 2 / Ident 2 - Path 2
 
-These pages allow you to configure up to two **ident text strings** on **output video**for path 2.
+These pages allow you to configure up to two **ident text strings** on **output video** for path 2.
 
 ### Timecode - Path 1 / Timecode - Path 2
 

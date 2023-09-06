@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General
 
-This page displays general information about the system: **Description**,**Up Time**,**Contact**, **Name** and **Location.**
+This page displays general information about the system: **Description**, **Up Time**, **Contact**, **Name** and **Location.**
 
 ### Unit
 
@@ -60,7 +60,7 @@ The **ASI/310 Input** and **DVB-S2 Tuner Input** status and settings are also av
 
 Services
 
-This page contains configuration options for **Decoders**: **Audio**,**Video**, **BISS** (Basic Interoperable Scrambling System) **and CI** (Common Interface). These parameters can be accessed via the corresponding page buttons.
+This page contains configuration options for **Decoders**: **Audio**, **Video**, **BISS** (Basic Interoperable Scrambling System) **and CI** (Common Interface). These parameters can be accessed via the corresponding page buttons.
 
 In addition, the **Source ID** page button displays the **Current Station Name**, **Lookup Mode** and **Timeout**.
 

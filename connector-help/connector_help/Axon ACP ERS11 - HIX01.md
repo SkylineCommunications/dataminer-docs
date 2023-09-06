@@ -4,7 +4,7 @@ uid: Connector_help_Axon_ACP_ERS11_-_HIX01
 
 # Axon ACP ERS11 - HIX01
 
-Thisdriver can be used to display and configure information of the **Axon ACP ERS11 - HIX01** card. This is a dual-channel high-performance 3Gb/s, HD and SD SDI basic video and embedded audio probe (signal integrity monitor) with clean video switch-over function.
+This driver can be used to display and configure information of the **Axon ACP ERS11 - HIX01** card. This is a dual-channel high-performance 3Gb/s, HD and SD SDI basic video and embedded audio probe (signal integrity monitor) with clean video switch-over function.
 
 ## About
 

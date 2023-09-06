@@ -20,9 +20,9 @@ The driver only monitors the device. Though the API also allows for requests to 
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                      |
-|------------------|----------------------------------------------------------------------------------|
-| 1.0.0.x          | Tested with DIVArchive 7.1Compatible with the most recent version DIVArchive 7.3 |
+| **Driver Range** | **Device Firmware Version**                                                       |
+|------------------|-----------------------------------------------------------------------------------|
+| 1.0.0.x          | Tested with DIVArchive 7.1 Compatible with the most recent version DIVArchive 7.3 |
 
 ## Installation and configuration
 

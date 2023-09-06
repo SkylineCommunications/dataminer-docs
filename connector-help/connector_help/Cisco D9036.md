@@ -15,14 +15,16 @@ Before using this protocol, make sure you have read and understand the section "
 Please note the following:
 
 - This driver was developed for DataMiner Cube, so if you use Element Display instead, not everything may function properly.
-- The last major update of the driver was tested using firmware version V01.08.90. However, using older firmware versions should not cause any major issues. If data is missing, verify if the problem is solved by upgrading to this version (or newer).
+- The last major update of the driver was tested using firmware version V01.08.90.
+  However, using older firmware versions should not cause any major issues. If data is missing, verify if the problem is solved by upgrading to this version (or newer).
 - Consecutive firmware upgrades have always been backward compatible, so upgrading to a more recent version should be no problem.
 
 ## Installation & Configuration
 
 ### Prerequisites
 
-The driver requires that Visual C++ 2008 (or 2010) Redistributional is installed. To verify this, go to: Control Panel \> Programs and Features.If this program has not been installed yet, you can download and install it from the following website: <http://www.microsoft.com/en-us/download/details.aspx?id=29>.
+The driver requires that Visual C++ 2008 (or 2010) Redistributional is installed. To verify this, go to: Control Panel \> Programs and Features.
+If this program has not been installed yet, you can download and install it from the following website: <http://www.microsoft.com/en-us/download/details.aspx?id=29>.
 
 ### Installing the protocol
 
@@ -31,7 +33,8 @@ Fom version 1.0.0.10 onwards, you can install the driver along with the necessar
 For older versions, however, the installation requires two steps:
 
 1.  Install the protocol (.xml file) as usual.
-2.  Run a "**.dmupgrade**" package containing the extra DLLs by copying it to one of your DMAs and double-clicking it.Settings for the upgrade can be ignored: whatever you choose, the DMA will not be restarted and Internet Explorer will not be closed.
+2.  Run a "**.dmupgrade**" package containing the extra DLLs by copying it to one of your DMAs and double-clicking it.
+    Settings for the upgrade can be ignored: whatever you choose, the DMA will not be restarted and Internet Explorer will not be closed.
 
 ### Element Creation
 
@@ -82,7 +85,8 @@ To verify the IIOP credentials:
 2.  Open the page Security and select the tab OS Accounts. A list should appear with available OS accounts.
 3.  Make a new user account or edit an existing one. It is advisable to use the username *guest* and password *guest* and to make sure the option IIOP is enabled.
 4.  Go to the element card and click the **IIOP Login ...** button on the **Communication** page.
-5.  If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No*Otherwise set this parameter to *Yes* and fill in the correct username and password.
+5.  If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No
+    *Otherwise set this parameter to *Yes* and fill in the correct username and password.
 
 Notes:
 
@@ -100,7 +104,8 @@ In the folder "*C:\Skyline Dataminer\Files*":
 
 - omniORB416_vc10_rt.dll
 - omnithread34_vc10_rt.dll
-- D9036_1.1.0.X.dll(Where X can be found on DCP\Drivers)
+- D9036_1.1.0.X.dll
+  (Where X can be found on DCP\Drivers)
 
 If a file is missing, run the upgrade package again and check the DLLs. If the problem persists, contact Skyline in order to obtain the required DLLs.
 
@@ -126,7 +131,8 @@ Once an element has been created, it is possible to fine-tune the behavior of th
 
 *Poll Manager*
 
-With the poll manager, you can enable or disable polling commands, as well as change the poll interval (within certain limits). By default, most commands are disabled, so you will almost certainly need to enable some commands.
+With the poll manager, you can enable or disable polling commands, as well as change the poll interval (within certain limits).
+By default, most commands are disabled, so you will almost certainly need to enable some commands.
 
 #### Network Error Handling
 
@@ -150,7 +156,8 @@ The functionality of the various pages of the driver is explained below.
 
 ### Overview
 
-This page contains a tree view representing the device. It is a mix of the input/output and processing trees in the web interface under the **Services** tab with the information in the **VSE** tab.The main structure is:
+This page contains a tree view representing the device. It is a mix of the input/output and processing trees in the web interface under the **Services** tab with the information in the **VSE** tab.
+The main structure is:
 
 1.  Board
 2.  Port
@@ -166,14 +173,16 @@ The "Chassis" is represented as the "Main Board" and does not have any children.
 The data shown in the VSE tab in the web interface is shown below a virtual board named **Virtual Service Encoder**. This 'card' also follows a different structure:
 
 1.  Board (= *Virtual Service Encoder*)
-2.  Transport StreamTo this level an extra tab page is added to include 'service' parameters. such as PCR and PMT PID.We currently assume that every transport stream holds exactly one service.
+2.  Transport Stream
+    To this level an extra tab page is added to include 'service' parameters. such as PCR and PMT PID.
+    We currently assume that every transport stream holds exactly one service.
 3.  Component
 
 VSE Cards (= Cards listed in table **VSE Encoder Cards**) may not have any ports attached to them. This will be the case when they are also not visible under the Service tab in the web interface.
 
 ### General
 
-This page contains information about the chassis. This includes **System Name**, **Serial Number**, **Current Activation Mode**, **Power Supply Status**,etc. Additionally, **Device Operational Status** will indicate if there's a *Device Operational Failure* when the alarm table is polled.
+This page contains information about the chassis. This includes **System Name**, **Serial Number**, **Current Activation Mode**, **Power Supply Status**, etc. Additionally, **Device Operational Status** will indicate if there's a *Device Operational Failure* when the alarm table is polled.
 
 Below this are buttons to initiate a **Clean**, **Cold** and **Warm Reboot**. The other buttons open a pop-up page displaying a list of installed **Licenses** and a pop-up page displaying the **Driver Startup** behavior (see "Advanced Setup" section for more information).
 
@@ -181,7 +190,8 @@ Finally, there is also a **Module Info** table listing all detected hardware wit
 
 ### Alarms
 
-This page contains an **Alarm Overview** table, which shows all alarms present on the device.Available columns are:
+This page contains an **Alarm Overview** table, which shows all alarms present on the device.
+Available columns are:
 
 - Type
 - Name
@@ -204,7 +214,8 @@ A backup contains the complete configuration of a device. When you take a backup
 
 Backups are usually stored on the local DataMiner agent. The default folder is the Windows %Temp% folder.
 
-Important note:While you are taking a backup, all other polling is set on hold. Taking a backup should take at most 30 seconds in most circumstances; however, it is possible that it takes up to several minutes. Keep this in mind if you decide to take regular backups using the Poll Manager or an Automation script. Usually, the time it takes to complete a backup does not change, so you can first take a backup manually and see how long it takes, and then decide if this is acceptable. However, the duration can change if you modify many streams and settings, so it is best to only test this after the DCM is fully (re-)configured.
+Important note:
+While you are taking a backup, all other polling is set on hold. Taking a backup should take at most 30 seconds in most circumstances; however, it is possible that it takes up to several minutes. Keep this in mind if you decide to take regular backups using the Poll Manager or an Automation script. Usually, the time it takes to complete a backup does not change, so you can first take a backup manually and see how long it takes, and then decide if this is acceptable. However, the duration can change if you modify many streams and settings, so it is best to only test this after the DCM is fully (re-)configured.
 
 **Backup Save Path**
 
@@ -258,7 +269,8 @@ To enable a command, you can set the **PM - Status** column to *Enabled*. Howeve
 
 The same applies for disabling commands: disabling a command will fail if there is at least one other command which requires that command. However, it is also possible to stop all "child commands" using the option *Disable (Including Children)*.
 
-To change the poll interval, simply specify a new timespan in the **PM - Interval** column. The value should be specified as follows: *\[Days\].\[Hours\]:\[Minutes\]:\[Seconds\]*However, please note:
+To change the poll interval, simply specify a new timespan in the **PM - Interval** column. The value should be specified as follows: *\[Days\].\[Hours\]:\[Minutes\]:\[Seconds\]*
+However, please note:
 
 - Days and Seconds are optional.
 - When a timespan is specified that is less than the minimum or more than the maximum allowed interval, the value will be rounded down or up to respectively the minimum or the maximum interval.
@@ -283,7 +295,7 @@ For more information related to
 - **IIOP Login**: See section "Verify IIOP Credentials" above.
 - **Driver Startup**: See section "Advanced Setup" above.
 
-This page has a page button **SNMP...**,which displays a list of trap servers to which the device should send SNMP traps. It is possible to add or delete targets using the two fields and buttons below the table.
+This page has a page button **SNMP...**, which displays a list of trap servers to which the device should send SNMP traps. It is possible to add or delete targets using the two fields and buttons below the table.
 
 In version **1.0.0.12**, the **Poll Manager** was introduced, replacing the toggle buttons found on this page.
 
@@ -293,7 +305,7 @@ This page displays the main and optional IP addresses used for polling. You can 
 
 The page also contains a parameter that indicates the currently used IP address, and buttons to force change/select one IP address. However, note that Management IP Address 1 can only be set or changed through the element editor.
 
-Finally, there are buttons to displaythe **Network Error**, **SNMP** and **IIOP Login** pop-up pages.
+Finally, there are buttons to display the **Network Error**, **SNMP** and **IIOP Login** pop-up pages.
 
 ### Table Data
 
@@ -319,7 +331,8 @@ The following tables are related to the **VSE** tab in the web interface:
 
 - **VSE:** *Boards and Ports ...*, *Services* & *TS ...,* *Svc Components ...*
 
-- *App Objects ...*This page contains a list of all application objects and a second table listing a mapping of the keys of the tables in the parameter and the XPath required to select the source of those parameters in an xml file. These tables should be considered background information, although they could be very important for advanced configuration in Automation scripts.
+- *App Objects ...*
+  This page contains a list of all application objects and a second table listing a mapping of the keys of the tables in the parameter and the XPath required to select the source of those parameters in an xml file. These tables should be considered background information, although they could be very important for advanced configuration in Automation scripts.
 
 - *All parameter schema tables in the second column:*
 
@@ -330,7 +343,8 @@ The following tables are related to the **VSE** tab in the web interface:
 
 ### Customer Specific Requests
 
-This page contains page buttons to parameters and tables specifically requested by customers to help them integrate this device. Examples could be:
+This page contains page buttons to parameters and tables specifically requested by customers to help them integrate this device.
+Examples could be:
 
 - extra parameters for Visio files.
 - an alternative interface for Automation scripts.

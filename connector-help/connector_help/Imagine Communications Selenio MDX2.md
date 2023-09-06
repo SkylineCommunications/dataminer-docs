@@ -135,7 +135,7 @@ They allow you to configure the **External Conditional Access Systems**. Differe
 
 This section consists of the following pages: **DVB-T2 Gateway, Frame, System** and **SFN.**
 
-Control and monitoringof **Digital Video Broadcasting options** is available on these pages**.**
+Control and monitoring of **Digital Video Broadcasting options** is available on these pages**.**
 
 ## Notes
 

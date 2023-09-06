@@ -73,7 +73,7 @@ In addition to the previous there is a button, **Refresh**, that refreshes the d
 
 # SEE Telecom eAcsys NMS_X_eACSYS PS 48V
 
-The **SEE Telecom eAcsys NMS_X_eACSYS PS 48V**driver is exported by the **SEE Telecom eAcsys NMS** driver.It displays information regarding a power supply module compatible with an **SEE Telecom eAcsys**system. The driver is used in order to monitor the power supply measurements*.*
+The **SEE Telecom eAcsys NMS_X_eACSYS PS 48V** driver is exported by the **SEE Telecom eAcsys NMS** driver. It displays information regarding a power supply module compatible with an **SEE Telecom eAcsys** system. The driver is used in order to monitor the power supply measurements*.*
 
 ## About
 
@@ -119,7 +119,7 @@ On the right-hand side of the page, the following parameters are displayed:
 
 ### Power Supply
 
-Thispage displays the following information:
+This page displays the following information:
 
 - **Input Voltage**
 - **6.3/24/25 V Output Voltage**

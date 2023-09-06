@@ -54,7 +54,8 @@ Remark: use this page cautiously. Changing the SNMP settings may sever the conne
 
 The Modem Operating Mode is a key page within this driver. It displays and configures settings as the **Modem Operating Mode**, the **Transmit** settings, the **Receive** settings.
 
-The Parameters in the **Transmit** settings as well as those in the **Receive** settings may depend on either the **Modem Operating Mode** or eachother. In either case, the driver will automatically select a correct configuration. Dependencies for these parameters are as follows: (for both Rx as Tx)
+The Parameters in the **Transmit** settings as well as those in the **Receive** settings may depend on either the **Modem Operating Mode** or eachother. In either case, the driver will automatically select a correct configuration.
+Dependencies for these parameters are as follows: (for both Rx as Tx)
 
 - Overhead Type
 
@@ -102,7 +103,8 @@ The Cnc page displays and configures settings for **Cnc**, its **Tx Power**, and
 
 ### Config - AUPC
 
-The AUPC page displays and configures settings for AUPC, related **Power Settings**, **Carrier Loss Action**, **Async** and **AUPC Logging**.This page *can only be shown* when the modem operating mode is AUPC.
+The AUPC page displays and configures settings for AUPC, related **Power Settings**, **Carrier Loss Action**, **Async** and **AUPC Logging**.
+This page *can only be shown* when the modem operating mode is AUPC.
 
 ### Stats - Modem Status
 

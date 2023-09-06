@@ -4,7 +4,7 @@ uid: Connector_help_WAGO_Kontakttechnik_750-880_(Flairmo)
 
 # Wago Kontakttechnik 750-880 (Flairmo)
 
-The **Kontakttechnik 750-880 (Flairmo)**driver displays information related to the **Kontakttechnik 750-880 (Flairmo)** air compressordevice.
+The **Kontakttechnik 750-880 (Flairmo)** driver displays information related to the **Kontakttechnik 750-880 (Flairmo)** air compressor device.
 
 ## About
 

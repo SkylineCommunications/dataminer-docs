@@ -36,7 +36,7 @@ You can also find more specific **Rx2 Status** information here, namely the **Rx
 
 ### Rx Channel Control
 
-This page displays the **Rx Channel Control Table**, which shows theRF Status, Low Level, Status, Maintenance Mode and Attenuation Level for each Rx channel.
+This page displays the **Rx Channel Control Table**, which shows the RF Status, Low Level, Status, Maintenance Mode and Attenuation Level for each Rx channel.
 
 ### Configuration
 

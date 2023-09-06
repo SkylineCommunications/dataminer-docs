@@ -86,7 +86,7 @@ Allows you to configure the **Database**, **RCA** and **Time** settings, and per
 - **Force RCA**
 - **Read File**
 
-Via **Configuration File**,you can read a probe configuration file into memory and compare it to the current configuration of a number of probes.
+Via **Configuration File**, you can read a probe configuration file into memory and compare it to the current configuration of a number of probes.
 
 ### Probe Configuration
 

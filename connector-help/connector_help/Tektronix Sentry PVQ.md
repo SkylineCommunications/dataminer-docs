@@ -14,14 +14,14 @@ This driver will display information related to the selected **Sentry PVQ** devi
 
 ### Ranges of the driver
 
-| **Driver Range**                                     | **Description**                                                                                                                                          | **DCF Integration** | **Cassandra Compliant** |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x                                              | Initial version.                                                                                                                                         | No                  | Yes                     |
-| 1.1.0.x                                              | New firmware based on 1.0.0.x (see below).                                                                                                               | No                  | Yes                     |
-| 1.2.0.x                                              | New firmware based on 2.1.0.x (see below).                                                                                                               | No                  | Yes                     |
-| 1.3.0.x **(existing elements need to be recreated)** | Supports new firmware version 10.0.2.                                                                                                                    | No                  | Yes                     |
-| 1.4.0.x \[obsolete\]                                 | Supports firmware version 10.3.Improved communication with Tektronix Config Manager.Works with the latest version of Tektronix Config Manager (1.1.0.x). | No                  | Yes                     |
-| 1.4.1.x                                              | PID Overview table no longer has duplicate display keys that prevent the correct use of the alarm template.                                              | No                  | Yes                     |
+| **Driver Range**                                     | **Description**                                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
+|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x                                              | Initial version.                                                                                                                                           | No                  | Yes                     |
+| 1.1.0.x                                              | New firmware based on 1.0.0.x (see below).                                                                                                                 | No                  | Yes                     |
+| 1.2.0.x                                              | New firmware based on 2.1.0.x (see below).                                                                                                                 | No                  | Yes                     |
+| 1.3.0.x **(existing elements need to be recreated)** | Supports new firmware version 10.0.2.                                                                                                                      | No                  | Yes                     |
+| 1.4.0.x \[obsolete\]                                 | Supports firmware version 10.3. Improved communication with Tektronix Config Manager. Works with the latest version of Tektronix Config Manager (1.1.0.x). | No                  | Yes                     |
+| 1.4.1.x                                              | PID Overview table no longer has duplicate display keys that prevent the correct use of the alarm template.                                                | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -200,30 +200,35 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 - To **edit** a program template:
 
 1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
+        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
 > 1.  On the **Load From File** page, select the program template file name from the files located in the Documents folder.
 > 2.  Apply one of the following two options:
 >
-> > - **Upload to Probe**Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+> > - **Upload to Probe**
+> >   Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
 > >
 > > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
 > >   - Otherwise, the existing program template will be updated.
 > >
-> > - **Load to Table**With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+> > - **Load to Table**
+> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
 1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Alerts (available from 1.2.0.7 and 1.3.0.3 onwards)
 
 This page contains an overview of the **Program Template Alerts**. The content of this page is updated every 10 minutes. You can also update it immediately by clicking the buttons **Refresh Alerts** or **Refresh Templates**.
 
-The **Program Template Alert Table**,which displays the **Alert details**, allows you to **create, edit, delete, upload and export** (JSON) program template alerts.
+The **Program Template Alert Table**, which displays the **Alert details**, allows you to **create, edit, delete, upload and export** (JSON) program template alerts.
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template alert**.
 
@@ -253,7 +258,8 @@ From version 1.3.0.3 of the driver onwards, the **Use Program Group** option in 
 - To **export** a program template alert:
 
 1.  1.  Right-click in the Program Template Alert Table to access the context menu
-    2.  Select **Export**. The file will be saved in the Documents folder.Note that if the file name already exists, it will be overwritten.
+    2.  Select **Export**. The file will be saved in the Documents folder.
+        Note that if the file name already exists, it will be overwritten.
 
 ### Web Interface
 

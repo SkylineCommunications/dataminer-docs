@@ -38,7 +38,8 @@ HTTP CONNECTION:
 
 - **IP address/host**: The pooling IP of the device, e.g. *bcam.broadcast.bskyb.com.*
 - **IP port**: The IP port of the device, e.g. *80.*
-- **Bus address**: This should consist of a combination of the node/device name and the BUS value representing a service name. If the proxy server has to be bypassed, also specify *BypassProxy*.For example: *ByPassProxy;NodeName/DeviceName;BusAddress;*
+- **Bus address**: This should consist of a combination of the node/device name and the BUS value representing a service name. If the proxy server has to be bypassed, also specify *BypassProxy*.
+  For example: *ByPassProxy;NodeName/DeviceName;BusAddress;*
 
 ## How to Use
 

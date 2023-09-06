@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General
 
-This page displays the system's general information parameters such as **System Contact**, **System Name**, **Device Status**,etc.
+This page displays the system's general information parameters such as **System Contact**, **System Name**, **Device Status**, etc.
 
 ### Carriers
 

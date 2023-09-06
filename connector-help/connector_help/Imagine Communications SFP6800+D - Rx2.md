@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_SFP6800+D_-_Rx2
 
 Imagine Communications SFP6800+D - Rx2
 
-This driver can be used to view information and configure settings of **Rx2 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical, Opticaland Alarming (Signal Loss of SFP) of the Rx2 cage.
+This driver can be used to view information and configure settings of **Rx2 cards** connected to the Imagine Communications SFP6800+D Chassis. This includes information regarding HDMI, CMPST, Electrical, Optical and Alarming (Signal Loss of SFP) of the Rx2 cage.
 
 ## About
 
@@ -32,16 +32,16 @@ This page contains the information about the available alarms regarding Rx2 card
 
 ### CMPST Rx2
 
-This page contains the information about CMPST parameters regarding Rx2cards.
+This page contains the information about CMPST parameters regarding Rx2 cards.
 
 ### Electrical Rx2
 
-This page contains the information about Electrical parameters regarding Rx2cards.
+This page contains the information about Electrical parameters regarding Rx2 cards.
 
 ### HDMI Rx
 
-This page contains the information about HDMI parameters regarding Rxcards.
+This page contains the information about HDMI parameters regarding Rx cards.
 
 ### Optical Rx2
 
-This page contains the information about Optical parameters regarding Rx2cards.
+This page contains the information about Optical parameters regarding Rx2 cards.

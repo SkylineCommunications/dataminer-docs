@@ -10,10 +10,10 @@ The connector uses an SNMP connection to communicate with the device and also pr
 
 ## About
 
-| **Range**            | **Key Features**                                                           | **Based on** | **System Impact**                                                                                                                                                                                                                                                                        |
-|----------------------|----------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                           | \-           | \-                                                                                                                                                                                                                                                                                       |
-| 2.0.0.x \[SLC Main\] | Changed protocol name to the correct name "Digigram" instead of "Digiram". | 1.0.0.2      | Live Update will be broken.Elements will need to use the new connector, which means that existing configurations for monitoring, reports, filters, and Automation scripts may need to be modified.If you are using an "allowed protocols" license, your license may need to be adjusted. |
+| **Range**            | **Key Features**                                                           | **Based on** | **System Impact**                                                                                                                                                                                                                                                                          |
+|----------------------|----------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                           | \-           | \-                                                                                                                                                                                                                                                                                         |
+| 2.0.0.x \[SLC Main\] | Changed protocol name to the correct name "Digigram" instead of "Digiram". | 1.0.0.2      | Live Update will be broken. Elements will need to use the new connector, which means that existing configurations for monitoring, reports, filters, and Automation scripts may need to be modified. If you are using an "allowed protocols" license, your license may need to be adjusted. |
 
 ### Product Info
 
@@ -55,7 +55,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-The Generalpage contains general information about the device as well as GPIO counters. It also allows you to select how you want to access the web interface of the device, i.e. through an HTTP or an HTTPS connection.
+The General page contains general information about the device as well as GPIO counters. It also allows you to select how you want to access the web interface of the device, i.e. through an HTTP or an HTTPS connection.
 
 The following page buttons are available:
 

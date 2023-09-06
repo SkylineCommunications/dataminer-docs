@@ -35,7 +35,8 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### General
 
-This page contains the **Remote Eye Session Timeout** parameter, which allows you to define after which timespan the remote eye sessions should be automatically disabled.As soon as the timeout time for a session is reached, the linked entry will be deleted from the **Session Table** and from the **IRD Allocation Table**.
+This page contains the **Remote Eye Session Timeout** parameter, which allows you to define after which timespan the remote eye sessions should be automatically disabled.
+As soon as the timeout time for a session is reached, the linked entry will be deleted from the **Session Table** and from the **IRD Allocation Table**.
 
 ### IRD Allocation
 

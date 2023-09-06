@@ -19,10 +19,12 @@ The driver uses 2 connections. The main connection (*smart-serial*) implements t
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**  |
-|------------------|------------------------------|
-| 1.0.0.x          | N/A                          |
-| 2.0.0.x          | Software: 2.43Hardware: 2.03 |
+| **Driver Range** | **Device Firmware Version**   |
+|------------------|-------------------------------|
+| 1.0.0.x          | N/A                           |
+| 2.0.0.x          | Software: 2.43 Hardware: 2.03 |
+
+
 
 ## Installation and configuration
 

@@ -32,19 +32,26 @@ General
 
 System Mib (system info and snmp config + GpResetCI + alarm parameters + Rate info)
 
-SubPage - Decoder (General Param: from ES Mode .... to Program Select ; Gpdescram,from gpaudiospdif to gp destination mac + Ac3 Pass subtree) - Receiver ( the rest of param of Generalparam tree)
+SubPage
+- Decoder (General Param: from ES Mode .... to Program Select ; Gpdescram,from gpaudiospdif to gp destination mac + Ac3 Pass subtree)
+- Receiver ( the rest of param of Generalparam tree)
 
 ## Modules
 
-\- Card program info table- Program info control
+\- Card program info table
+- Program info control
 
 ## Input Page
 
-\- Input program table- Input AV pid- BissData info
+\- Input program table
+- Input AV pid
+- BissData info
 
 ## Output Page
 
-\- Output Program table- Output AV PId table- SPTS settings
+\- Output Program table
+- Output AV PId table
+- SPTS settings
 
 ## Dvb Page
 

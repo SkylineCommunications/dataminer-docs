@@ -65,7 +65,7 @@ All information related to the **Advanced** **ASI Analyzer** can be found here.
 
 ### Terrestrial T2
 
-All information related to the **Terrestrial T2**can be found here.
+All information related to the **Terrestrial T2** can be found here.
 
 ### Dual Commom Interface
 

@@ -44,6 +44,8 @@ SNMP Settings:
 
 > **Get community string**: \[The community string used when reading values from the device. (default: *public*)\] **Set community string**: \[The community string used when setting values on the device. (default: *private*)\]
 
+
+
 ## How to Use
 
 ### General
@@ -57,3 +59,5 @@ Displays a table with the latest received traps.
 ### Active Trap
 
 Displays a table with last trap received.
+
+

@@ -19,10 +19,10 @@ The connector uses an SNMP connection to monitor and configure the Meinberg Lant
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                             |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | 2.9.2.r1.5887.00.001 - 7.00.007 (starting from 7.00.005, there is a new REST API available, which is used to retrieve some PTP parameters)         |
-| 1.0.1.x   | 2.9.2.r1.5887.00.001 - 7.00.007 (starting from 7.00.005, there is a new REST API available, which is used to retrieve some PTP parameters)7.02.004 |
+| **Range** | **Supported Firmware**                                                                                                                               |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | 2.9.2.r1.588 7.00.001 - 7.00.007 (starting from 7.00.005, there is a new REST API available, which is used to retrieve some PTP parameters)          |
+| 1.0.1.x   | 2.9.2.r1.588 7.00.001 - 7.00.007 (starting from 7.00.005, there is a new REST API available, which is used to retrieve some PTP parameters) 7.02.004 |
 
 ### System Info
 
@@ -116,7 +116,8 @@ This page allows you to configure SNMP settings for the device, e.g. **SNMP Cont
 It also contains page buttons to the following subpages:
 
 - **Trap Receiver:** Allows you to configure each trap receiver.
-- **Trap Configuration:** Allows you to enable signaling information for specific events, e.g. **Antenna Faulty**, **Fan Failure**. Multiple signaling outputs can be configured, e.g. E-mail, SNMP, VP100. A comma-separated string stating the signaling outputs is to be set for each event.
+- **Trap Configuration:** Allows you to enable signaling information for specific events, e.g. **Antenna Faulty**, **Fan Failure**.
+  Multiple signaling outputs can be configured, e.g. E-mail, SNMP, VP100. A comma-separated string stating the signaling outputs is to be set for each event.
 
 ### NTP
 

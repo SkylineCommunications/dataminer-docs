@@ -52,4 +52,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver displays the **Groups**, **Sub-Groups** and **Presets**,as well as the **Cluster and Meters** information associated with each **Preset.**
+This driver displays the **Groups**, **Sub-Groups** and **Presets**, as well as the **Cluster and Meters** information associated with each **Preset.**

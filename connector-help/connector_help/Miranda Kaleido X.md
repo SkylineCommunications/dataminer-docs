@@ -103,7 +103,7 @@ This page displays the **RCP Command** to send and the **RCP Response**.
 
 ### Virtual Alarms (version 2.0.1.11 onwards)
 
-This page displays the **Virtual Alarm Table**,with information about the alarms for each video channel.
+This page displays the **Virtual Alarm Table**, with information about the alarms for each video channel.
 
 ### Web Interface
 

@@ -123,7 +123,7 @@ Physical fixed interfaces:
 - **SDI in 1**: Physical SDI interface with type **in**.
 - **SDI in 1**: Physical SDI interface with type **in**.
 - **SDI in 1**: Physical SDI interface with type **in**.
-- **SDI in 1**:Physical SDI interface with type **in**.
+- **SDI in 1**: Physical SDI interface with type **in**.
 - **SDI out 1**: Physical SDI interface with type **out**.
 - **SDI out 1**: Physical SDI interface with type **out**.
 - **SDI out 1**: Physical SDI interface with type **out**.

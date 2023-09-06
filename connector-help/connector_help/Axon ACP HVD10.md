@@ -20,7 +20,7 @@ This driver allows you to monitor status information and configure control param
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 06081315               |
+| 1.0.0.x   | 0608 1315              |
 
 ### System Info
 
@@ -68,12 +68,12 @@ There is no redundancy defined.
 
 The element has the following pages:
 
-- **General**:This page displays general information about the card: Card Name, Card Description, SW Revision, HW Revision, etc.
-- **Status**:This page contains status parameters.
-- **I/O**:This page contains input/output control parameters that are used to configure the I/O settings of the card.
-- **Video**:This page contains control parameters used to configure the video settings of the card.
-- **Audio**:This page contains audio status information for each individual channel, as well as control parameters to configure the audio settings of the card.
-- **Alarm Priority**:This page displays the event messages of the card, i.e. special messages generated asynchronously on the card.
+- **General**: This page displays general information about the card: Card Name, Card Description, SW Revision, HW Revision, etc.
+- **Status**: This page contains status parameters.
+- **I/O**: This page contains input/output control parameters that are used to configure the I/O settings of the card.
+- **Video**: This page contains control parameters used to configure the video settings of the card.
+- **Audio**: This page contains audio status information for each individual channel, as well as control parameters to configure the audio settings of the card.
+- **Alarm Priority**: This page displays the event messages of the card, i.e. special messages generated asynchronously on the card.
 
 ## DataMiner Connectivity Framework
 

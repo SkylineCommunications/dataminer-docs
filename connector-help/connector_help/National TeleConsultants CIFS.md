@@ -20,13 +20,13 @@ This driver uses a virtual connection and does not need any user input.
 
 ### CIFS Shares
 
-On this page, you can configure and **Add Filters** on **Drives** that are to be polled. The Drive is selected using **UNC-Paths**,and in the other columns the **Authentication** can be filled in.
+On this page, you can configure and **Add Filters** on **Drives** that are to be polled. The Drive is selected using **UNC-Paths**, and in the other columns the **Authentication** can be filled in.
 
 The page contains a page button called **Export/Import**. This leads to a page where the current configuration can be **exported** into a .csv file, and where configurations can be **imported** from .csv files. Please make sure that the **Path** is filled in with a valid folder path and that it ends with the name and extension of the file.
 
 ### Disk Info
 
-This page provides the result table of all correctly configured **Filters**. The **Total Space**, **Free Space** and **Usage** are displayed here, along with the **Total Files,** which shows the number of files that correspond with the selected filter, and the **Total Directories**,which corresponds to the number of directories under the chosen location (without taking the File Filter into account). The age of the oldest file is also displayed in the column **Oldest File Age**, indicated in minutes up till the present moment.
+This page provides the result table of all correctly configured **Filters**. The **Total Space**, **Free Space** and **Usage** are displayed here, along with the **Total Files,** which shows the number of files that correspond with the selected filter, and the **Total Directories**, which corresponds to the number of directories under the chosen location (without taking the File Filter into account). The age of the oldest file is also displayed in the column **Oldest File Age**, indicated in minutes up till the present moment.
 
 ## Notes
 

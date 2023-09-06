@@ -42,7 +42,8 @@ This driver uses an HTTPS connection to communicate with the Amazon MediaLive AP
 
 HTTP CONNECTION:
 
-- **IP address/host**: *https://medialive.****\#REGION#****.amazonaws.com*. \#REGION# is the Amazon AWS region code. For more information, see <https://docs.aws.amazon.com/general/latest/gr/rande.html>.For example, for Europe (Frankfurt), specify *https://medialive.**eu-central-1**.amazonaws.com*.
+- **IP address/host**: *https://medialive.****\#REGION#****.amazonaws.com*. \#REGION# is the Amazon AWS region code. For more information, see <https://docs.aws.amazon.com/general/latest/gr/rande.html>.
+  For example, for Europe (Frankfurt), specify *https://medialive.**eu-central-1**.amazonaws.com*.
 - **IP port**: The IP port of the destination (default: *443*).
 
 #### HTTP Connection - Monitoring Connection
@@ -51,7 +52,8 @@ This driver uses an additional HTTPS connection to communicate with the Amazon C
 
 HTTP CONNECTION:
 
-- **IP address/host**: *https://monitoring.****\#REGION#****.amazonaws.com*. \#REGION# is the Amazon AWS region code. For more information, see <https://docs.aws.amazon.com/general/latest/gr/rande.html>.For example, for Europe (Frankfurt), specify *[https://monitoring.**eu-central-1**.amazonaws.com](https://monitoring.eu-central-1.amazonaws.com/)*.
+- **IP address/host**: *https://monitoring.****\#REGION#****.amazonaws.com*. \#REGION# is the Amazon AWS region code. For more information, see <https://docs.aws.amazon.com/general/latest/gr/rande.html>.
+  For example, for Europe (Frankfurt), specify *[https://monitoring.**eu-central-1**.amazonaws.com](https://monitoring.eu-central-1.amazonaws.com/)*.
 - **IP port**: The IP port of the destination (default: *443*).
 - **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
@@ -66,7 +68,8 @@ It is advised to create a dedicated IAM account user to use with DataMiner. To d
 3.  Create a user with a name of your choosing. We recommend the name *DataminerMediaLiveProtocol*.
 4.  Make sure to grant Programmatic Access to the user account.
 5.  Make sure to grant policies for accessing the MediaLive and CloudWatch APIs.
-6.  Copy the **Access Key** and the **Secret Key** and paste them on the **General page** of the element. Note that these keys are only **generated once**, so you will not be able to recover them if you lose them. Make sure to store them in a safe location, as Skyline or Amazon cannot trace them back.
+6.  Copy the **Access Key** and the **Secret Key** and paste them on the **General page** of the element.
+    Note that these keys are only **generated once**, so you will not be able to recover them if you lose them. Make sure to store them in a safe location, as Skyline or Amazon cannot trace them back.
 
 ## How to Use
 

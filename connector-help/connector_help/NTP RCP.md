@@ -51,6 +51,6 @@ SERIAL CONNECTION:
 
 ## How to use
 
-The **General** page shows basic information about the device such as **Version, Number of Users, Matrices, Macros, Virtual GPIs, Levels, Sources**,and **Destinations**. It also includes a **Refresh** button, which refreshes the matrix information. With the **Park Input** parameter you can configure to which input an output should be connected when a crosspoint is disconnected.
+The **General** page shows basic information about the device such as **Version, Number of Users, Matrices, Macros, Virtual GPIs, Levels, Sources**, and **Destinations**. It also includes a **Refresh** button, which refreshes the matrix information. With the **Park Input** parameter you can configure to which input an output should be connected when a crosspoint is disconnected.
 
 The **Logical Lines** page contains **Sources** and **Destinations** tables.

@@ -18,9 +18,9 @@ The protocol uses the CPI serial protocol in **ASCII mode** with STX/ETX bytes a
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | \- Front Panel Boot Kernel Software Version: *03.00.19*- Front Main Program Software Version: *03.01.85*- Power Supply Controller Boot Kernel Software Version: *03.00.03*- Power Supply Controller Main Program Software Version: *03.01.40*- RF Controller Boot Kernel Software Version: *03.00.03*- RF Controller Main Program Software Version: *03.01.46*- External Interface Controller Boot Kernel Software Version: *03.00.03*- External Interface Controller Main Program Software Version: *03.01.62*- CAN Communication Level Key Version: *03.01.31* |
+| **Range** | **Supported Firmware**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | \- Front Panel Boot Kernel Software Version: *03.00.19* - Front Main Program Software Version: *03.01.85* - Power Supply Controller Boot Kernel Software Version: *03.00.03* - Power Supply Controller Main Program Software Version: *03.01.40* - RF Controller Boot Kernel Software Version: *03.00.03* - RF Controller Main Program Software Version: *03.01.46* - External Interface Controller Boot Kernel Software Version: *03.00.03* - External Interface Controller Main Program Software Version: *03.01.62* - CAN Communication Level Key Version: *03.01.31* |
 
 ### System Info
 
@@ -45,6 +45,8 @@ SERIAL CONNECTION:
   - **Bus address**: The bus address of the device. Required. Uses the format *\<Node\>\<Destination\>*, e.g. *3031* for Node 0x30, Destination 0x31, or *\<Destination\>,* e.g. *31* for Destination 0x31. The node refers to the controller (e.g. Mitec 17345), the destination refers to the HPA itself.
 
 ### System Setup
+
+![2016-06-03 13_14_11-CPI Comm Protocols.vsdx - Visio Standard.png](~/connector-help/images/CPI_K4D72C_2016-06-03_13_14_11-CPI_Comm_Protocols.vsdx_-_Visio_Standard.png)
 
 ## How to use
 

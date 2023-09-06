@@ -59,4 +59,4 @@ This page displays the Video Standard, Clock Frequency, Reference Standard, Genl
 
 ### Web Interface
 
-This page displays the web interfaceof the device. Note that the client machine has to be able to access to the device, as otherwise it will not be possible to open the web interface.
+This page displays the web interface of the device. Note that the client machine has to be able to access to the device, as otherwise it will not be possible to open the web interface.

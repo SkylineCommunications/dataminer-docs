@@ -84,7 +84,7 @@ This page contains information regarding FEC data: **FEC Mode** and **Packets Co
 
 ### Genlock Control
 
-This page contains controls for genlock, such as **Genlock Source Select**,as well as the **Horizontal/Vertical Phase** parameters.
+This page contains controls for genlock, such as **Genlock Source Select**, as well as the **Horizontal/Vertical Phase** parameters.
 
 ### AVM Control
 

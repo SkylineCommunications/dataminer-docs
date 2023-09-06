@@ -34,7 +34,7 @@ SNMP Settings:
 
 In order to enable alarm monitoring in DataMiner's Alarm Console, the parameter **Severity Current Alarm** must be monitored in the alarm template (the default values are recommended).
 
-The severity of the generated alarms for the various types of errors can be configured in the **Alarm Configuration Table**,which can be accessed by clicking the page button **Alarm Configurations.** on the **Alarms** page of the element.
+The severity of the generated alarms for the various types of errors can be configured in the **Alarm Configuration Table**, which can be accessed by clicking the page button **Alarm Configurations.** on the **Alarms** page of the element.
 
 ## Usage
 
@@ -47,13 +47,13 @@ Several buttons are available, with which you can make the **LED blink**, **Rebo
 The following page buttons are available:
 
 - **Options**: Opens a list of the activated options.
-- **Network interface**:Configuration of the network interface.
+- **Network interface**: Configuration of the network interface.
 - **Date and Time:** Allows the user to change the date and time.
 - **Trap receiver**: Allows the user to configure the trap settings.
 
 ### Alarms Page
 
-This page displays the **Current Active Alarms** and **Status** of the device, including a list of the active alarms in the **Current Alarms** table.Extra buttons: **Clear Log** and **Refresh Log.**
+This page displays the **Current Active Alarms** and **Status** of the device, including a list of the active alarms in the **Current Alarms** table. Extra buttons: **Clear Log** and **Refresh Log.**
 
 Since version 1.0.0.7 the **Alarm Current** table as available a functionality that allows you to remove from the table the alarms with severity "No Log". You can do this changing the **No Log Entries Displayed** togglebutton to No.
 

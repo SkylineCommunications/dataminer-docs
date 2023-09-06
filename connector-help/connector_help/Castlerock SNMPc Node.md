@@ -56,7 +56,7 @@ DVEs running this driver can only be created via the parent driver. More details
 
 ### Range 1.0.0.x
 
-The **General** page of the driver contains all the raw data that is storedfor the node (corresponding to a specific entry in the SNMPc Node Table). The information is updated once every hour.
+The **General** page of the driver contains all the raw data that is stored for the node (corresponding to a specific entry in the SNMPc Node Table). The information is updated once every hour.
 
 The **Traps** page is synchronized with the Traps table in the parent driver. However, this page shows only the traps for this specific node. The Map ID is the foreign key used to filter out his data.
 

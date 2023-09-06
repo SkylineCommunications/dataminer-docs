@@ -12,16 +12,16 @@ This is an **SNMP** driver that is used to display the status of the different p
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|---------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.1.0.x          | Release version.Added embedded web page.Enabled backup on all parameters.                               | No                  | Yes                     |
-| 1.1.1.x          | Dynamic table used for the audio params.New MIBs implemented.**DCF** form version 1.1.1.20 implemented. | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.1.0.x          | Release version. Added embedded web page. Enabled backup on all parameters.                               | No                  | Yes                     |
+| 1.1.1.x          | Dynamic table used for the audio params. New MIBs implemented. **DCF** form version 1.1.1.20 implemented. | Yes                 | Yes                     |
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime,and requires the following input during element creation:
+This driver uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime, and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -73,30 +73,30 @@ The following page buttons are available:
 
 ### Audio Page
 
-This page contains the **Audio Table**,which contains parameters such as the **Coding Standard**, **Bit Rate**,etc.
+This page contains the **Audio Table**, which contains parameters such as the **Coding Standard**, **Bit Rate**, etc.
 
 The following page buttons are available:
 
 - **AC3 Settings**: Displays the **Audio AC3 Table**, which contains parameters such as **Low Frequency**, **Dialogue Norm**, **Compression**, etc.
-- **More Settings**: Displays the **More Settings Table**, whichcontains extra parameters, such as **Language**, **Clip Level**, **Copyright**, **Silence Timeout**, etc.
+- **More Settings**: Displays the **More Settings Table**, which contains extra parameters, such as **Language**, **Clip Level**, **Copyright**, **Silence Timeout**, etc.
 
 ### Video Page
 
-This page contains parameters such as **Video Input**, **Video Delay**, **Video Text Colour**,etc.
+This page contains parameters such as **Video Input**, **Video Delay**, **Video Text Colour**, etc.
 
 The following page buttons are available:
 
-- **TTx/VBI Settings**: Opens the **Teletext and VBI Settings** subpage, whichcontains parameters such as the **Teletext PID**,the **Video Index Field 1**, the **Blank Line23**, etc.
+- **TTx/VBI Settings**: Opens the **Teletext and VBI Settings** subpage, which contains parameters such as the **Teletext PID**, the **Video Index Field 1**, the **Blank Line23**, etc.
 - **VBI Lines**: Allows you to define the function of the **VBI Lines**.
-- **More Settings**: Opens the **More Video Encoder Settings** subpage, where you can define settings such as the **Video GOP Length**,the **Video Adaptive GOP** and the **Video Deinterlacer** settings.
+- **More Settings**: Opens the **More Video Encoder Settings** subpage, where you can define settings such as the **Video GOP Length**, the **Video Adaptive GOP** and the **Video Deinterlacer** settings.
 
 ### SDI Page
 
-This page contains parameters related to **SDI Options**, such as **Video Default Output**, **RAS Mode**, **DSNG Key**,etc.
+This page contains parameters related to **SDI Options**, such as **Video Default Output**, **RAS Mode**, **DSNG Key**, etc.
 
 ### Service Page
 
-This page contains parameters related to **Service Types and Descriptions**, such as **Network Name**, **Service Network ID**, **Service PMT PID**,etc.
+This page contains parameters related to **Service Types and Descriptions**, such as **Network Name**, **Service Network ID**, **Service PMT PID**, etc.
 
 ### Data Page
 
@@ -106,14 +106,14 @@ This page contains parameters related to **RS232** and **RS422** data communicat
 
 This page contains 2 tables:
 
-- The **IP Transport Stream Table** contains parameters related to IPStreamer parameters, such as **TS Slot Number**, **IP Output**,etc.
+- The **IP Transport Stream Table** contains parameters related to IPStreamer parameters, such as **TS Slot Number**, **IP Output**, etc.
 - The **IP Destination Table** contains parameters such as **Destination IP Output**, **Time To Live**, etc.
 
 There is also a page button that links to the **IPStreamer General** subpage, which contains parameters such as **IPStreamer Protocol/FEC**, **IPStreamer Type of Service**, etc.
 
 ### MUX Page
 
-This page contains parameters related to the MUX settings, such as **Mux Packet Length**, **Mux Utilised BitRate**,etc.
+This page contains parameters related to the MUX settings, such as **Mux Packet Length**, **Mux Utilised BitRate**, etc.
 
 There are several subpages:
 
@@ -125,13 +125,13 @@ There are several subpages:
 
 - The **Remux** subpage contains parameters such as **Remux Software Release**, **Remux Mode** and **Remux HostBitrate 188**. It also contains the following three tables:
 
-- The **Remux Service Information PID Table** contains parameters such as the **Remux PID Entry Index**,the **Remux Service Type**, and the **Remux Original PID**.
-  - The **Remux Service Information Table** contains parameters such as the **Remux SI PAT Filter Version**,the **Remux SI SDT Filter Version**, and the **Remux SI PMT Filter Version**.
-  - The **Remux Service Information Audio Table** contains parameters such as the **Remux Audio Entry Index** andthe **Remux Audio Language Left**.
+- The **Remux Service Information PID Table** contains parameters such as the **Remux PID Entry Index**, the **Remux Service Type**, and the **Remux Original PID**.
+  - The **Remux Service Information Table** contains parameters such as the **Remux SI PAT Filter Version**, the **Remux SI SDT Filter Version**, and the **Remux SI PMT Filter Version**.
+  - The **Remux Service Information Audio Table** contains parameters such as the **Remux Audio Entry Index** and the **Remux Audio Language Left**.
 
 ### Modulator Page
 
-This page contains parameters that refer to the modulator settings, such as the **MOD Format**,**MOD IF Output**,etc.
+This page contains parameters that refer to the modulator settings, such as the **MOD Format**, **MOD IF Output**, etc.
 
 It also contains the **Modulator Table**, which contains parameters such as the **MOD Modulation**, the **MOD Symbol Rate** and the **MOD FEC Rate**.
 

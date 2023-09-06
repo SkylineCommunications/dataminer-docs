@@ -60,4 +60,8 @@ Following **settings** are provided with pagebuttons:
 
 ### Fine-pointing
 
-This page contains information/options for a fine-pointing offset. **OPM ACU Status:** indicate if the pointing correction has been established (**On Target**) or if is still **Moving**.**Offset:** Indicate fine-pointing offset. Directions arrow selection (**Left**, **Right** and **Up**, **Down**) of **0.1ø** increments with **maximum** value of **1.9ø**.The pagebutton **Console** (described above) is presented too on this page.
+This page contains information/options for a fine-pointing offset.
+**OPM ACU Status:** indicate if the pointing correction has been established (**On Target**) or if is still **Moving**.
+**Offset:** Indicate fine-pointing offset. Directions arrow selection (**Left**, **Right** and **Up**, **Down**) of **0.1ø** increments with **maximum** value of **1.9ø**.
+
+The pagebutton **Console** (described above) is presented too on this page.

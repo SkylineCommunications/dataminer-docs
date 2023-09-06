@@ -19,6 +19,8 @@ This driver uses a **Serial** connection and requires the following input during
 - **IP address/host**: The IP address of the device, e.g. *192.168.10.2.*
 - **IP port**: The port of the connected device, by default *22*.
 
+
+
 ### Ranges of the driver
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
@@ -30,6 +32,8 @@ This driver uses a **Serial** connection and requires the following input during
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
+
+
 
 ## Installation and configuration
 
@@ -63,6 +67,8 @@ This page displays the **System Date** and **Time** and allows the user to modif
 This page allows the user as well to **Save**, **Load** and **Clear** configurations on the device. There are 16 (0 - 15) slots to store configurations, slot 0 is loaded at startup.
 
 The "**Factory Reset**" button allows the user to reset the device configuration.^
+
+
 
 ## Dataminer Connectivity Framework
 
@@ -113,6 +119,7 @@ Device outputs:
 - Fixed: Input 1 B out (out) - Input 2 B (in)
 - Fixed: Output 3 B out (out) - Output 1 B (in)
 - Fixed: Output 4 B out (out) - Output 2 B (in)
+
 - Input 1 A (in) - Input 1 A/B Out (out)
 - Input 1 B (in) - Input 1 A/B Out (out)
 - Input 2 A (in) - Input 1 A/B Out (out)

@@ -8,7 +8,8 @@ The **CEFD CDM-600 Serial** is a serial driver intended to communicate with CDM-
 
 ## About
 
-This driver uses serial communication to retrieve information from the device and to set the device configuration.For more information, refer to the following page: <http://www.comtechefdata.com/support/docs/satellitemodemdocs>.
+This driver uses serial communication to retrieve information from the device and to set the device configuration.
+For more information, refer to the following page: <http://www.comtechefdata.com/support/docs/satellitemodemdocs>.
 
 ### Version Info
 
@@ -83,9 +84,9 @@ Use this page to configure a number of the CDM-600's utility functions.
 
 - **Re-Center Buffer**: Click **\[Re-Center Buffer\]** to force the re-centering of the Plesiochronous/Doppler buffer.
 
-- **Unit**: Use the drop-down menus provided in this section to configure **Unit** **Test Mode**, **Operating Mode, Unit Outdoor Communications & Rx IF Impedance**.The **Front Panel Lockout** is only functional for CDM-600L modems.
+- **Unit**: Use the drop-down menus provided in this section to configure **Unit** **Test Mode**, **Operating Mode, Unit Outdoor Communications & Rx IF Impedance**. The **Front Panel Lockout** is only functional for CDM-600L modems.
 
-- **Clocks**: Use the drop-down menus provided in this section to configure **Tx/Rx Clock Sources**, **Rx Buffer Size**, **Rx External Clock Type & Rx External Clock**.The **Modem Reference Clock** is only functional for CDM-600L modems.
+- **Clocks**: Use the drop-down menus provided in this section to configure **Tx/Rx Clock Sources**, **Rx Buffer Size**, **Rx External Clock Type & Rx External Clock**. The **Modem Reference Clock** is only functional for CDM-600L modems.
 
 - **Circuit ID**: Enter a Circuit ID string of up to 40 characters. The Circuit ID, as created here, appears in the title bar of compatible web browsers for easy unit identification.
 
@@ -135,7 +136,7 @@ Use this page to control the way faults, statistics, and alarm masking parameter
 - **Statistics Interval**: Define the interval at which the statistics are taken.
   - **Statistics Overview**: Table showing the statistics.
 
-- **Alarm Masking**: Allows you to define a designated alarm as *Masked*or *Active***.**
+- **Alarm Masking**: Allows you to define a designated alarm as *Masked* or *Active***.**
 
 ### FSK
 

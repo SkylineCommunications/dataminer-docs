@@ -64,7 +64,7 @@ This page provides a simple command interface that can be used to send unconnect
 
 ### Setup Page
 
-This page contains information about the card, e.g. **Input 1 Name**, **Input 2 Name**, etc.In addition, buttons allow you to restart the device (**Restart**), set back the factory settings **(Factory Default**), or set back the default settings (**Default Settings**).
+This page contains information about the card, e.g. **Input 1 Name**, **Input 2 Name**, etc. In addition, buttons allow you to restart the device (**Restart**), set back the factory settings **(Factory Default**), or set back the default settings (**Default Settings**).
 
 ### Web Interface Page
 

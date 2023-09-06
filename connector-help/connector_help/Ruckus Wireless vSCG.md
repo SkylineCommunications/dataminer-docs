@@ -133,18 +133,18 @@ Once created, the element can be used immediately. There are 12 pages available,
 
 ### Controller
 
-This page displays the **Controller Version**, current **Active Node IP Address**, **HTTP Status Code**, **Login Error Message**, **Ruckus Error Code**,and **System Summary Table**.
+This page displays the **Controller Version**, current **Active Node IP Address**, **HTTP Status Code**, **Login Error Message**, **Ruckus Error Code**, and **System Summary Table**.
 
 The **Login page button** can be used to configure the **username** and **password** in order to access the API.
 
 In addition, the page also contains the following parameters:
 
-1.  **Automatic Follow Leader:** By default, this parameter is *Enabled*. This means that as soon as the element receives the response from the API related to the **System Summary**,it will start polling from the node with the **Cluster Role** equal to **Leader**. If this parameter is *Disabled,* it will use the IP address configured during element creation. If there is a **Timeout**, the element will try to find an IP address that replies correctly. As soon as such an IP address is detected, the element will start using it as the Active Node IP Address.
+1.  **Automatic Follow Leader:** By default, this parameter is *Enabled*. This means that as soon as the element receives the response from the API related to the **System Summary**, it will start polling from the node with the **Cluster Role** equal to **Leader**. If this parameter is *Disabled,* it will use the IP address configured during element creation. If there is a **Timeout**, the element will try to find an IP address that replies correctly. As soon as such an IP address is detected, the element will start using it as the Active Node IP Address.
 2.  **Polling Node IP Address:** The current IP address that it is being polled. This parameter displays a dropdown box containing all IP addresses in the System Summary Table.
 
 ### Polling Node Summary
 
-This page displays all the values for the **Polling Node IP Address**,using different standalone parameters: **Cluster Role**, **Hostname**, **MAC Address**, **Model**, **Description**, **Node Name**, etc.
+This page displays all the values for the **Polling Node IP Address**, using different standalone parameters: **Cluster Role**, **Hostname**, **MAC Address**, **Model**, **Description**, **Node Name**, etc.
 
 ### System Statistics
 
@@ -194,7 +194,7 @@ This page displays the **SCG AP Table**, with detailed information about the APs
 
 The table also allows you to create or remove **dynamic virtual elements** that represent each access point individually. However, as there can be a high number of APs in use, we do **NOT recommend creating** **AP DVEs** **on a large scale**.
 
-The **Smart Cell Gateway Access Points Table** allows you to create or delete **SCG access point virtual elements** individually, via the column **SCG AP Status (Enabled/Disabled)**.By default, all the rows are *Disabled*. This table offers more detailed information about the APs. In addition to the values from the page WLAN AP, here each AP is identified by a **Name**, **Group**, **Zone**, and **Domain**. The page also displays the **model** of the AP, the **connection status**, and other parameters.
+The **Smart Cell Gateway Access Points Table** allows you to create or delete **SCG access point virtual elements** individually, via the column **SCG AP Status (Enabled/Disabled)**. By default, all the rows are *Disabled*. This table offers more detailed information about the APs. In addition to the values from the page WLAN AP, here each AP is identified by a **Name**, **Group**, **Zone**, and **Domain**. The page also displays the **model** of the AP, the **connection status**, and other parameters.
 
 The page also includes the following parameters:
 
@@ -216,13 +216,13 @@ This page displays different statistics regarding the AP tunnels configured in t
 
 This page contains information organized by **Service Set Identifier (SSID)**. For each SSID, the **Number STA** connected to that SSID is displayed, along with the **total received bytes** and **total transmitted bytes**.
 
-As the content of this table is already available on the page **SCG WLAN**,the **WLAN Table** is by default disabled to reduce unnecessary polling. However, polling can be activated if required.
+As the content of this table is already available on the page **SCG WLAN**, the **WLAN Table** is by default disabled to reduce unnecessary polling. However, polling can be activated if required.
 
 ### WLAN Access Points
 
 This page displays information about the access points (APs). All APs connected to the WLAN are displayed in the table, organized by MAC address.
 
-As the content of this table is already available on the page **SCG Access Points**,the **WLAN AP Table** is by default disabled to reduce unnecessary polling. However, polling can be activated if required.
+As the content of this table is already available on the page **SCG Access Points**, the **WLAN AP Table** is by default disabled to reduce unnecessary polling. However, polling can be activated if required.
 
 ### Note
 

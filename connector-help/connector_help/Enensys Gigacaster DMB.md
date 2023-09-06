@@ -12,10 +12,10 @@ This driver monitors and configures Enensys GigaCaster DMB devices over **SNMP**
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                   | **Based on** | **System Impact**                             |
-|----------------------|------------------------------------------------------------------------------------|--------------|-----------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                   | \-           | \-                                            |
-| 1.0.1.x \[SLC Main\] | Compliancies, version history, and new parameters have been added in this version. | 1.0.0.3      | Page name changed.Cassandra compliance added. |
+| **Range**            | **Key Features**                                                                   | **Based on** | **System Impact**                              |
+|----------------------|------------------------------------------------------------------------------------|--------------|------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                   | \-           | \-                                             |
+| 1.0.1.x \[SLC Main\] | Compliancies, version history, and new parameters have been added in this version. | 1.0.0.3      | Page name changed. Cassandra compliance added. |
 
 ### Product Info
 
@@ -85,7 +85,7 @@ This page contains a **Config** and **Stats** table to monitor and configure the
 
 ### Alarms
 
-On this page, you can monitor the current alarms and their history, in the **Alarm Current Table** and the **Log Table**respectively.
+On this page, you can monitor the current alarms and their history, in the **Alarm Current Table** and the **Log Table** respectively.
 
 ### Alarm Settings
 

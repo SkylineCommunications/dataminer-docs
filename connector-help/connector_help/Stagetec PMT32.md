@@ -52,4 +52,5 @@ SERIAL CONNECTION:
 
 ### General
 
-The **General Page** shows if the device is still responding to the commands with the **Keep Alive Responding** and with the **Host State** parameters.There is also the **Slot Table**, which is the main **DVE Table**, displaying the **State** **of each** **Module** and also allows the user to **rename each DVE** and hide with the **DVE Status** parameter.
+The **General Page** shows if the device is still responding to the commands with the **Keep Alive Responding** and with the **Host State** parameters.
+There is also the **Slot Table**, which is the main **DVE Table**, displaying the **State** **of each** **Module** and also allows the user to **rename each DVE** and hide with the **DVE Status** parameter.

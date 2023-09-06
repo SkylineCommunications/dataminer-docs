@@ -8,7 +8,7 @@ The **Snell Wilcox IQOTX81** is an optical transmitter.
 
 ## About
 
-This driver allows the management of the **Snell Wilcox IQOTX81** using a serialconnection.
+This driver allows the management of the **Snell Wilcox IQOTX81** using a serial connection.
 
 ### Ranges of the driver
 

@@ -64,7 +64,7 @@ All tables are filled in automatically apart from the last one - **Time Window T
 
 The **Platform** table is filled in with the values found in the Element Properties (Platform Dashboard).
 
-Note: for the **Start Time** and **End Time**, only the hour and minute matter but, it is important to choose also a day in the Start Time so that the **Day of the Week** can befilled in accordingly.
+Note: for the **Start Time** and **End Time**, only the hour and minute matter but, it is important to choose also a day in the Start Time so that the **Day of the Week** can be filled in accordingly.
 
 ### Tree Control Overview
 

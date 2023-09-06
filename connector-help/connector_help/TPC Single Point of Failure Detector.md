@@ -28,6 +28,8 @@ This driver is a virtual driver developed to execute queries on demand. It retri
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | Yes                 | Yes                     | \-                    | \-                      |
 
+
+
 ## Configuration
 
 ### Connections
@@ -38,7 +40,10 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-To configure the element using this driver, go to the **Configuration** page, then fill in the **Server Address**, **Database Name**, **User Name** and **Password**.Via the **Test Connection** page button, you can check if the connection has been established. Click the **Connect** button and then check the **Connection Result** field.
+To configure the element using this driver, go to the **Configuration** page, then fill in the **Server Address**, **Database Name**, **User Name** and **Password**.
+Via the **Test Connection** page button, you can check if the connection has been established. Click the **Connect** button and then check the **Connection Result** field.
+
+
 
 ## How to use
 
@@ -50,13 +55,20 @@ Subpage **Device Types** contains a data table with columns: **Device type name*
 
 Subpage **Interface Lookup Table** contains a data table with columns: **Protocol** (name of the protocol in DataMiner), **Database Port format** (the format specifying the port in the Database), **DCF Interface format** (the format for the DCF interface in the Element), **Type** (Ignore: the interface will not be used, Exact Match, Wildcard Match, Regex Match). Also, Rows can be added, edited and deleted by user with ContextMenu.
 
-The **Connections** page contains **DCF Connection Table**, which is used to populate DCF Connection between the two listed elements.The table will consist of the following columns:- **From Element**: Element Name of the Device- **From Port**: the DCF Interface from the Device from where we create the connection,- **To Element**: Element Name of the Switch we connect to- **To Port**: DCF interface of the Switch we connect to
+The **Connections** page contains **DCF Connection Table**, which is used to populate DCF Connection between the two listed elements.
+The table will consist of the following columns:
+- **From Element**: Element Name of the Device- **From Port**: the DCF Interface from the Device from where we create the connection,
+- **To Element**: Element Name of the Switch we connect to- **To Port**: DCF interface of the Switch we connect to
 
 Currently this table is filled by the user (rows can be added, edited and deleted by user with ContextMenu). It is possible to create DCF connection for individual rows by clicking on Commit connection in a specific row or to create connections for all rows for which no connection was previously created. Also, it is possible to export and import the data of this table in CSV format.
 
 ### Examples
 
-Device Type (Regex match) example:- Device Name = \`VGW-705'- Element Name = \`Imagine SNP VGW705'- Device Name Format: \[1\]-\[2\]- Element Name Format: Imagine SNP \[1\]\[2\]
+Device Type (Regex match) example:
+- Device Name = \`VGW-705'
+- Element Name = \`Imagine SNP VGW705'- Device Name Format: \[1\]-\[2\]- Element Name Format: Imagine SNP \[1\]\[2\]
+
+
 
 ## DataMiner Connectivity Framework
 

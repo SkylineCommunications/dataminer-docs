@@ -14,7 +14,7 @@ The ****TT1260 SNMP**** provides a monitoring interface to the ****Tandberg TT12
 
 ## Creation
 
-The ****Tandberg TT1260 SNMP****is a **SNMP** driver. The **IP** need to be configured during creation of the **element**.
+The ****Tandberg TT1260 SNMP**** is a **SNMP** driver. The **IP** need to be configured during creation of the **element**.
 
 **SNMP CONNECTION:**
 

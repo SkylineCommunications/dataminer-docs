@@ -14,11 +14,11 @@ This connector exports several other connectors based on the information retriev
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                      | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                                     | Yes                 | Yes                     |
-| 1.0.1.x \[Obsolete\] | Support for Unicode.**Impact:** Element data and trend data need to be removed entirely.             | Yes                 | Yes                     |
-| 1.0.2.x \[SLC Main\] | Support for additional modules.**Impact:** Duplicate description of 2 parameters, very small impact. | Yes                 | Yes                     |
+| **Range**            | **Description**                                                                                       | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                      | Yes                 | Yes                     |
+| 1.0.1.x \[Obsolete\] | Support for Unicode. **Impact:** Element data and trend data need to be removed entirely.             | Yes                 | Yes                     |
+| 1.0.2.x \[SLC Main\] | Support for additional modules. **Impact:** Duplicate description of 2 parameters, very small impact. | Yes                 | Yes                     |
 
 ### Product Info
 
@@ -83,7 +83,7 @@ This page contains parameters related to files and commands, such as IP address,
 
 ### Slots
 
-This page contains all the status and configuration tables for each slot. You can reset the modules on this page. You can also handle the time configuration for the cards and check their **running temperatures**, different channel statuses, **voltages**,and input/output **power**.
+This page contains all the status and configuration tables for each slot. You can reset the modules on this page. You can also handle the time configuration for the cards and check their **running temperatures**, different channel statuses, **voltages**, and input/output **power**.
 
 ### PSU
 

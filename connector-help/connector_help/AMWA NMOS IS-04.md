@@ -12,9 +12,9 @@ Allows control and monitoring applications to find the resources on a network. R
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Websocket        |              |                   |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Websocket        |              |                   |
 
 ### Product Info
 

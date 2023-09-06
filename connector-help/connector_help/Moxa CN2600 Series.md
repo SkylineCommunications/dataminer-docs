@@ -4,7 +4,9 @@ uid: Connector_help_Moxa_CN2600_Series
 
 # Moxa CN2600 Series
 
-This device has the ability to enable redundancy in your networkAboutThis driver allows us to retrieve information from the Moxa CN2600 series. It allows to monitor, alarms, statistical information, and configure/activate the entire device.The driver retrieves and sets information on the device through SNMP.
+This device has the ability to enable redundancy in your network
+AboutThis driver allows us to retrieve information from the Moxa CN2600 series. It allows to monitor, alarms, statistical information, and configure/activate the entire device.
+The driver retrieves and sets information on the device through SNMP.
 
 ### Ranges of the driver
 
@@ -80,6 +82,8 @@ This page includes the following settings:
 > - Reset to Factory default
 > - Auto warning Settings
 
+
+
 ### Network settings
 
 Configuration of:
@@ -90,6 +94,8 @@ Configuration of:
 > > > - DNS Settings
 > > > - Wins Settings
 > > > - ARP Settings
+
+
 
 ### Serial Port Settings
 
@@ -116,6 +122,8 @@ All port settings:
 - Modem Settings
 
 - Port Mode
+
+
 
 ### Web interface
 

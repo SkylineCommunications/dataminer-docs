@@ -76,7 +76,8 @@ This page displays the **Value Tables** of all the supported DVEs. These tables 
 On the left side of this page, you can send a query or set a value. To do so:
 
 1.  Select the **Current Module** where the query or set should be applied.
-2.  To send a query, add the **Command** (without a colon at the beginning; optionally concatenating multiple queries). To set a value, fill in the **Set Value** parameter.
+2.  To send a query, add the **Command** (without a colon at the beginning; optionally concatenating multiple queries).
+    To set a value, fill in the **Set Value** parameter.
 3.  Click the **Send Command** button. The response will be displayed below.
 
 The right side of the page contains buttons with **common commands** for general control of the system. However, be careful when you use these commands, as these can cause a complete timeout of the system.

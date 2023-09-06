@@ -55,7 +55,8 @@ Once the manager element has been activated, it will broadcast its presence to a
 
 The manager will automatically detect new nodes in the network. It also detects services and hitless services that are configured in the network, so that it can give a full overview of the activity in the network.
 
-If NetInsight Nimbra nodes are set up with a location, the Nimbra manager can give you a location-based usage overview.The same applies for services: you can link each service to a specific customer so that you also can get a customer-based usage overview.
+If NetInsight Nimbra nodes are set up with a location, the Nimbra manager can give you a location-based usage overview.
+The same applies for services: you can link each service to a specific customer so that you also can get a customer-based usage overview.
 
 ## Notes
 

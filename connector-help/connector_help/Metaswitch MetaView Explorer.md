@@ -56,4 +56,5 @@ There is no redundancy defined.
 
 - When the **SNMP Settings** are filled in, the driver is ready to poll the data from the device. No extra configuration is needed.
 - It is possible to limit the size of the **Trap** table, by configuring the maximum number of rows or configuring the maximum age of the traps via **Alarms** \> **Trap Config**.
-- The **Server Statistics** and **MetaSwitch Statistics Table** contain column headers indicating the **maximum** value for that column.All other tables containing column headers are configured to show the **sum** of the column values.
+- The **Server Statistics** and **MetaSwitch Statistics Table** contain column headers indicating the **maximum** value for that column.
+  All other tables containing column headers are configured to show the **sum** of the column values.

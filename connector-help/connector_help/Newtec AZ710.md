@@ -87,7 +87,7 @@ The web interface is only accessible when the client machine has network access 
 
 This page contains general information regarding this device, including **Device Hardware ID**, **Control Mode**, **Operating Mode**, **RMCP Version**, etc.
 
-In addition, specific information can be displayed or set on multiple subpages: **Device Info**, **Display**, **Power Supply**, **Security**, **Ethernet**, **Serial**,and **Config**.
+In addition, specific information can be displayed or set on multiple subpages: **Device Info**, **Display**, **Power Supply**, **Security**, **Ethernet**, **Serial**, and **Config**.
 
 ### Control
 
@@ -105,4 +105,4 @@ This page contains various information about alarms.
 
 The **Alarm Status** page displays the **Alarm Table,** which contains an overview of the state of all the possible alarms in the system. If an alarm has the status *Fail*, you can manually clear the alarm by clicking the **Clear** button for that alarm. You can also check the corresponding **Alarm Count**, and you can reset that value to zero by clicking the **Reset** button.
 
-On the **Converter** page and its subpages you can find information such as the **RF Gain**, **Upconverter Frequency**,and **Converter Output Level**.
+On the **Converter** page and its subpages you can find information such as the **RF Gain**, **Upconverter Frequency**, and **Converter Output Level**.

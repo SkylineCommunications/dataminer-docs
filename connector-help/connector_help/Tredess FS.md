@@ -73,7 +73,7 @@ The following settings can be accessed via page buttons:
 
 ### Polling Configuration
 
-From version 1.1.1.4 onwards, aPolling Configuration page is available, where you can define the polling intervals for the following groups of parameters:
+From version 1.1.1.4 onwards, a Polling Configuration page is available, where you can define the polling intervals for the following groups of parameters:
 
 - **System**
 - **Web Configuration**
@@ -129,7 +129,7 @@ This page provides information about the **reference**. Here you can select whic
 
 ### Amplifier
 
-This page provides information about the **amplifier**, such as **configured power, forward and reverse power, thresholds, temperature**,and **transistor currents.**
+This page provides information about the **amplifier**, such as **configured power, forward and reverse power, thresholds, temperature**, and **transistor currents.**
 
 ### Redundancy
 
@@ -148,5 +148,5 @@ This page displays the web interface of the device. The **address of the host/we
 There are several **known issues** in the device:
 
 - The device returns **GENERIC_ERROR** when you try to set event configurations.
-- Some parameters that are included in the MIB are not available on the device: **rfinput, echoCanceller, modLinearPrecorrection, modNonLinearPrecorrection, modEfficiencyImprovement, modClipping, modPrecorrectorLevels**,some parameters related to **synchronization**,and some **status parameters.**
+- Some parameters that are included in the MIB are not available on the device: **rfinput, echoCanceller, modLinearPrecorrection, modNonLinearPrecorrection, modEfficiencyImprovement, modClipping, modPrecorrectorLevels**, some parameters related to **synchronization**, and some **status parameters.**
 - **Elevated Power Threshold** and **Reduced Power Threshold:** When a set is performed via the MIB, the device responds with a **bad value** **error**. When the set is performed via protocol, the device does not respond.

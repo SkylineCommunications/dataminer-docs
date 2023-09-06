@@ -40,6 +40,7 @@ HTTP CONNECTION:
 - **IP port**: The IP port of the destination
 - **Bus address**: ByPassProxy
 
+
 ### Web Interface
 
 "The web interface is only accessible when the client machine has network access to the product."

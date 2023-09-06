@@ -48,7 +48,7 @@ On the right-hand side of the page, the following parameters are displayed:
 
 ### Optical
 
-Thispage displays the optical measurements from the transmitter module with the following parameters:
+This page displays the optical measurements from the transmitter module with the following parameters:
 
 - **Laser Bias Current**
 - **TEC Current**
@@ -67,7 +67,7 @@ In addition, you can normalize the values via the **Normalize Values** page butt
 
 ### RF
 
-Thispage displays the RF measurements from the transmitter module with the following parameters:
+This page displays the RF measurements from the transmitter module with the following parameters:
 
 - **Rx Power** (in dBm and dBmV)
 - **Attenuator Settings** (can be set by the user)

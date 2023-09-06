@@ -47,7 +47,7 @@ SNMP Settings:
 
 This page contains general parameters such as **System Name**, **System Description**, **System Uptime** and **Fan Status**.
 
-Two page buttons are available that provide access to additional information about **Modules**and **Module Details**.
+Two page buttons are available that provide access to additional information about **Modules** and **Module Details**.
 
 ### Power Supply
 

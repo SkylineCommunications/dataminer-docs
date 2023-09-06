@@ -31,9 +31,9 @@ The connector shows all information in table format, the same way as it is store
 
 ### Exported Connectors
 
-| **Exported Connector**                                                                                                       | **Description**                              |
-|------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------|
-| [Advantech AMT Monitor and Control Panel Unit](xref:Connector_help_Advantech_AMT_Monitor_and_Control_Panel_Unit) | SSPAs, Transceiver.Not in the 1.2.0.x range. |
+| **Exported Connector**                                                                                                       | **Description**                               |
+|------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
+| [Advantech AMT Monitor and Control Panel Unit](xref:Connector_help_Advantech_AMT_Monitor_and_Control_Panel_Unit) | SSPAs, Transceiver. Not in the 1.2.0.x range. |
 
 ## Configuration
 
@@ -57,7 +57,7 @@ SNMP Settings:
 
 ### General
 
-This page contains general configuration information for the interfaces of the device: the **Unit Serial Number**, **PS Voltages**, **Shroud Temperature**,and **Port and** **MAC** information of the **Defined Units**.
+This page contains general configuration information for the interfaces of the device: the **Unit Serial Number**, **PS Voltages**, **Shroud Temperature**, and **Port and** **MAC** information of the **Defined Units**.
 
 There is also a **Reset Control Panel** option.
 
@@ -71,4 +71,4 @@ This page contains the status of the switches connected to the device.
 
 ### Network
 
-This page contains network information including **IP**, **UDP**,and **Interfaces**.
+This page contains network information including **IP**, **UDP**, and **Interfaces**.

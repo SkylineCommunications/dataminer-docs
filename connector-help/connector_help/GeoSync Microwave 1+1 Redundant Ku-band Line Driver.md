@@ -18,7 +18,7 @@ Data is polled from the device via a serial protocol.
 
 ### Creation
 
-This driver uses a serialconnection and needs the following user information:
+This driver uses a serial connection and needs the following user information:
 
 **SERIAL CONNECTION**:
 
@@ -49,3 +49,4 @@ Displays different settings for the two redundant power supply units.
 ### LOG
 
 This page contains a table that displays all log entries recorded by the device. This table is polled at a low frequency. A **Refresh** button is available to allow the user to poll the table on demand. A **Clear** button is also available.
+

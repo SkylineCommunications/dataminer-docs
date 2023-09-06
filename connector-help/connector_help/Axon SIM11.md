@@ -35,7 +35,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver only has onepage: **SIM11**.
+This driver only has one page: **SIM11**.
 
 ### SIM11
 
@@ -47,7 +47,8 @@ The page contains two page buttons: **Events** and **Settings**.
 
 <!-- -->
 
-- The **Settings** page button contains configuration settings for **SDI-Format**, **OSD-label**, **OSD-Chan-Pres**, **Safe Area**, **Safe Area Control**, **WSS**, **VI-Det** and **EDH-Det**. It displays information regarding **Text-Background**, **Subtitles**, **Slice CPhase**, **Slice Level**, **Scales** and **Scale-Levels**. It also contains five additional page buttons with the following configuration settings:
+- The **Settings** page button contains configuration settings for **SDI-Format**, **OSD-label**, **OSD-Chan-Pres**, **Safe Area**, **Safe Area Control**, **WSS**, **VI-Det** and **EDH-Det**. It displays information regarding **Text-Background**, **Subtitles**, **Slice CPhase**, **Slice Level**, **Scales** and **Scale-Levels**.
+  It also contains five additional page buttons with the following configuration settings:
 
 - **Silence Detection**
   - **Black Detection**

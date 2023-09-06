@@ -35,13 +35,13 @@ This driver uses two serial connections and requires the following input during 
 
 - **Type of port:** The type of port used for the communication with the device, e.g. *TCP/IP.*
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-- **IP Port:**The polling port of the device, e.g. 4010.
+- **IP Port:** The polling port of the device, e.g. 4010.
 
 **SERIAL CONNECTION 2**:
 
 - **Type of port:** The type of port used for the communication with the device, e.g. *TCP/IP.*
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-- **IP Port:**The polling port of the device, e.g. *975.*
+- **IP Port:** The polling port of the device, e.g. *975.*
 
 ### Resources
 

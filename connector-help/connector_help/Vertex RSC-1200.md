@@ -8,7 +8,7 @@ The **Vertex RSC-1200** driver will display information related to the **Vertex 
 
 ## About
 
-The **Vertex RSC-1200**allows monitoring of the **Vertex RSC-1200** SWO device.
+The **Vertex RSC-1200** allows monitoring of the **Vertex RSC-1200** SWO device.
 
 ### Ranges of the driver
 

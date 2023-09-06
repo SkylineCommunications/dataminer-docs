@@ -47,13 +47,13 @@ The write parameter ranges and discreet values are retrieved from the device and
 
 ### Creation
 
-Thisis a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 #### SERIAL MAIN CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, set to the fixed value *4050.*
-- **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.\<**slotID\>" (e.g. frame 1, slot 12 = bus address*1.12).*
+- **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.\<**slotID\>" (e.g. frame 1, slot 12 = bus address *1.12).*
 
 #### SMART-SERIAL PORTDEV CONNECTION:
 
@@ -64,7 +64,7 @@ Thisis a serial driver combined with smart-serial communication. During the crea
 
 ### General
 
-On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Software Reset** **Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** andall **SFP Type Status** parameters (**A** to **F**).
+On this page, all general parameters are available. Some parameters can be configured, such as **License Key**, **Software Reset** **Mode** and **Factory Recall**. Other parameters are not configurable, such as **Serial Number** and all **SFP Type Status** parameters (**A** to **F**).
 
 There is also a pop-up page, **DVE**, which displays the four main DVE tables (**SFP RX1**, **RX2**, **TX1** and **TX2**).
 
@@ -84,7 +84,7 @@ This page contains settings and status information for each SFP, from SFP A to S
 
 ### Alarms
 
-On this page, all alarm parameters are displayed. The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available for these parameters. With the buttons **Enable** and**Disable** you can change the monitoring state on the device card.
+On this page, all alarm parameters are displayed. The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available for these parameters. With the buttons **Enable** and **Disable** you can change the monitoring state on the device card.
 
 ### Web Interface
 

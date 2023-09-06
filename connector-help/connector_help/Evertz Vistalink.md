@@ -93,7 +93,7 @@ By clicking **Import Data**, you can upload a .csv file to fill in the product s
 
 *C:\Skyline DataMiner\Documents\Evertz VistaLink\\*
 
-**Note: if there is already an entry in the table with the same index key,** **thisentry will be ignored.**
+**Note: if there is already an entry in the table with the same index key,** **this** **entry will be ignored.**
 
 #### Exporting data
 

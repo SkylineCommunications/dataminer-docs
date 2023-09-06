@@ -65,6 +65,7 @@ The connector polls the general information of the device and monitors its curre
 - **Event History**: Displays the past events on the device, with a maximum of 99 entries.
 - **Redundancy Configuration**: Contains settings related to the redundancy operation of the device, including the switch mode (manual or auto), the spare functionality, alarm off delay, query cycle, etc.
 - **Unit Configuration**: Contains a table with the configuration parameters for the operation of the device (e.g. redundancy operation, IP address, gain offset, and priority). On a subpage, the SNMP configuration is available.
-- **RS485 Termination \[1.1.0.x\]**:Allows you to enable or disable the TX or RX of the RS485.**Trap Sink server \[1.1.0.x\]**: Displays the trap sink server information and configuration.
+- **RS485 Termination \[1.1.0.x\]**: Allows you to enable or disable the TX or RX of the RS485.
+  **Trap Sink server \[1.1.0.x\]**: Displays the trap sink server information and configuration.
 
 The current version does not monitor the Relay Alarm IF and RF, since the device sends a null value for an integer parameter, which causes it to fail to retrieve these values.

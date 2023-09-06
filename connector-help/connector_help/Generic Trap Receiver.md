@@ -10,10 +10,10 @@ The Generic Trap Receiver is used to capture and display all the traps for a spe
 
 ### Version Info
 
-| **Range** | **Key Features**                               | **Based on** | **System Impact** |
-|-----------|------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial version                                | \-           | \-                |
-| 1.0.1.x   | Display traps in a table.Lookup functionality. | \-           | \-                |
+| **Range** | **Key Features**                                | **Based on** | **System Impact** |
+|-----------|-------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version                                 | \-           | \-                |
+| 1.0.1.x   | Display traps in a table. Lookup functionality. | \-           | \-                |
 
 ### Product Info
 

@@ -66,6 +66,6 @@ The web interface is only accessible when the client machine has network access 
 
 On the **General** page of the element, you can find general information about the device such as the Name Alias, Network IP Address, Gateway, etc.
 
-The **Matrix**page displays the device matrix, where you can set crosspoints.
+The **Matrix** page displays the device matrix, where you can set crosspoints.
 
 The **IO** **Control** page contains tables listing the inputs and outputs.

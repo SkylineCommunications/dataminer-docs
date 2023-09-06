@@ -57,7 +57,7 @@ The element created with this connector consists of the data pages detailed belo
 
 ### General
 
-This page contains general parameters such as **Company**, **Product**,and **Version**
+This page contains general parameters such as **Company**, **Product**, and **Version**
 
 ### Synchronization
 

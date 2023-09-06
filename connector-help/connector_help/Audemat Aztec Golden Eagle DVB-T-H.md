@@ -56,7 +56,7 @@ On this page, general system parameters are displayed, such as **Name**, **Versi
 
 Page buttons allow you to view the "raw" data as retrieved from the device.
 
-Note: In versions prior to 1.0.0.10, you can view or configure the normal values for the **RF Level** by clicking the **Normalize RF Levels** button, and copy the current values to the **Nominal Levels Table** by clicking the **Normalize**button, so that they can be used for comparison with new measurements. However, this feature has been removed in version 1.0.0.10 as there is normalization support in alarm templates.
+Note: In versions prior to 1.0.0.10, you can view or configure the normal values for the **RF Level** by clicking the **Normalize RF Levels** button, and copy the current values to the **Nominal Levels Table** by clicking the **Normalize** button, so that they can be used for comparison with new measurements. However, this feature has been removed in version 1.0.0.10 as there is normalization support in alarm templates.
 
 ### Alarms
 
@@ -84,14 +84,14 @@ This page displays the **Monitored Multiplexes Table**, which shows the multiple
 - **Mpx RF Level** and **Mpx MER** are polled every 2 seconds.
   - **Mpx BER**, **Mpx Per** and **Mpx C/N** are polled every 5 seconds.
 
-- The other configuration data is polled every24 hours.
+- The other configuration data is polled every 24 hours.
 
 - **Mpx Trap** columns are updated when traps are received.
 
 ### Monitored Services
 
-This page displays the **Monitored Reference Services Table**, which is polled every24 hours and contains basic service information.
+This page displays the **Monitored Reference Services Table**, which is polled every 24 hours and contains basic service information.
 
 ### Monitored Components
 
-This page displays the **Monitored Reference Components Table**, whichis polled every 24 hours and contains basic component information.
+This page displays the **Monitored Reference Components Table**, which is polled every 24 hours and contains basic component information.

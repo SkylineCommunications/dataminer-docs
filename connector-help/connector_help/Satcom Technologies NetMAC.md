@@ -4,7 +4,8 @@ uid: Connector_help_Satcom_Technologies_NetMAC
 
 # Satcom Technologies NetMAC
 
-The NetMAC driver is designed to collect data from the NetMAC device, which is a management tool for telecommunication systems. The relevant information is contained in data points, associated to different SCUs, owned by nodes of different systems.
+The NetMAC driver is designed to collect data from the NetMAC device, which is a management tool for telecommunication systems.
+The relevant information is contained in data points, associated to different SCUs, owned by nodes of different systems.
 
 ## About
 
@@ -74,9 +75,10 @@ On this page, the tables are displayed that are used in the tree control of the 
 
 The **System Table** displays the **System Names** and the **System First Node** for each of them.
 
-The **Node Table** displays the **Node Name**,the **Node System** (the system owning the node), and the **Node First SCU** (the first SCU owned by the current node) for each node.
+The **Node Table** displays the **Node Name**, the **Node System** (the system owning the node), and the **Node First SCU** (the first SCU owned by the current node) for each node.
 
-All the SCUs are displayed in the **SCU Table**.Each line of the table describes a different SCU, with its associated **SCU Sys Type,** **SCU Sub Sys Type,** **SCU Equip Type** and **SCU SCU Type**.In addition, it is possible to enable one or more DVEs with toggle buttons in the **DVE Status** column. You can also enable all the DVEs or remove those previously created by clicking the **Enable All DVEs** and **Disable All DVEs** buttons. All the created DVEs are shown in the **Filtered SCU Table**. For the sake of convenience, the names of the SCUs are editable.
+All the SCUs are displayed in the **SCU Table**. Each line of the table describes a different SCU, with its associated **SCU Sys Type,** **SCU Sub Sys Type,** **SCU Equip Type** and **SCU SCU Type**.
+In addition, it is possible to enable one or more DVEs with toggle buttons in the **DVE Status** column. You can also enable all the DVEs or remove those previously created by clicking the **Enable All DVEs** and **Disable All DVEs** buttons. All the created DVEs are shown in the **Filtered SCU Table**. For the sake of convenience, the names of the SCUs are editable.
 
 The **DP Table** contains the final information for each data point: the **DP Type**, **DP Direction**, **DP String/Numeric Value**, **DP Quality**, **DP State**, **DP Enable** (status), **DP Sample Rate**, **DP Sample Period**, **DP Last Update**, etc.
 

@@ -27,7 +27,7 @@ This driver uses a serial connection and needs the following user information:
 
 ### General
 
-In this page is available general information about the device. Use the **Log** pagebutton to get a log entry from the device. Set the **Log Entry RF Units** and then the **Log Entry Number to Get**.Retrieving the same entry number, but with a different unit, will overwrite the row with same entry number.
+In this page is available general information about the device. Use the **Log** pagebutton to get a log entry from the device. Set the **Log Entry RF Units** and then the **Log Entry Number to Get**. Retrieving the same entry number, but with a different unit, will overwrite the row with same entry number.
 
 ### Measurements
 

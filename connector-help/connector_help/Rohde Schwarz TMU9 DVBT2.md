@@ -6,7 +6,7 @@ uid: Connector_help_Rohde_Schwarz_TMU9_DVBT2
 
 The R&S TMU9 DVBT2 is a compact-size, efficient and reliable transmitter with different possible standard configurations. Power consumption ranges from 300 W to 3.0 kW for digital standards, going up to 4.75 kW for analog standards. With an efficiency of up to 30 % in normal mode, it both saves energy and reduces CO2 emissions. Built-in bandpass filters ensure short delivery times and innovative configurations, such as MultiTX or N+1 systems in a single rack.
 
-This **SNMP** driver is used to monitor and configure the **Rohde Schwarz TMU9 DVBT2**transmitter.
+This **SNMP** driver is used to monitor and configure the **Rohde Schwarz TMU9 DVBT2** transmitter.
 
 ## About
 
@@ -14,11 +14,11 @@ This driver can be used to monitor parameters of the transmitter and configure i
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-----------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.1.x              | New MIB implementation. Cooling page added                                        | No                  | Yes                     |
-| 1.1.1.x \[SLC Main\] | Based on version 1.0.1.5Parameter sequence changed. Analog mode parameters added. | No                  | Yes                     |
-| 2.0.0.x              | Branch version based on 1.0.1.x. DVE functionality added.                         | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.1.x              | New MIB implementation. Cooling page added                                         | No                  | Yes                     |
+| 1.1.1.x \[SLC Main\] | Based on version 1.0.1.5 Parameter sequence changed. Analog mode parameters added. | No                  | Yes                     |
+| 2.0.0.x              | Branch version based on 1.0.1.x. DVE functionality added.                          | No                  | Yes                     |
 
 ### Supported firmware versions
 

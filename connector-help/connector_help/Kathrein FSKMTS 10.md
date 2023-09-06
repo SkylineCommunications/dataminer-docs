@@ -7,7 +7,11 @@ uid: Connector_help_Kathrein_FSKMTS_10
 <col style="width: 100%" />
 </colgroup>
 <tbody>
-<tr class="odd">
+<tr class="header">
+<th><br />
+</th>
+</tr>
+&#10;<tr class="odd">
 <td><h1 id="kathrein-fskmts-10">Kathrein FSKMTS 10</h1>
 <p>Kathrein FSKMTS 10 is an FSK Management Termination System used to send commands to amplifiers on the network that are only able to receive FSK commands. In order to be able send FSK command to the amplifiers, a prerequisite is to load a list of the amplifiers managed by the given HEC. This list is also called "nodelist". This connector can be used to import the nodelist into the device and show an overview of the nodes.</p>
 <h2 id="about">About</h2>
@@ -88,3 +92,5 @@ uid: Connector_help_Kathrein_FSKMTS_10
 </tr>
 </tbody>
 </table>
+
+

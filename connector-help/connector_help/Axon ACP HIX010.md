@@ -18,9 +18,9 @@ The **Axon ACP HIX010** driver is used to monitor and display status information
 
 ### Product Info
 
-| **Range** | **Supported Firmware** |
-|-----------|------------------------|
-| 1.0.0.x   | 10101011111316161718   |
+| **Range** | **Supported Firmware**   |
+|-----------|--------------------------|
+| 1.0.0.x   | 1010 1011 1113 1616 1718 |
 
 ### System Info
 

@@ -16,9 +16,9 @@ This connector can receive JSON responses from the InfluxData InfluxDB Collector
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                    | **Exported Components** |
-|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | InfluxData InfluxDB CollectorSupported Queries:- Yelo Total- Yelo Resources (Channel)- Yelo Channel Duplicate Rate- Yelo OS- Yelo Type- Yelo Client Type | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                           | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | InfluxData InfluxDB Collector Supported Queries: - Yelo Total - Yelo Resources (Channel) - Yelo Channel Duplicate Rate - Yelo OS - Yelo Type - Yelo Client Type | \-                      |
 
 ## Configuration
 

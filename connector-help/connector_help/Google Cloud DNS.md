@@ -10,9 +10,9 @@ This driver manages Google Cloud DNS, which is a high-performance, resilient, gl
 
 Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 
@@ -59,6 +59,9 @@ When the element has been created:
 3.  Navigate to the URL. You will first need to go through permission steps, and then you will be able to copy the required code.
 4.  Paste the code into the **Authorization Code** parameter. The Access Token will now be set, allowing you to poll data.
 
+
 ## How to use
 
 The DNS Zones page shows each of the managed zones, while each of the **Records** pages show the zones' corresponding records (A, SOA, CNAME, and NS). You can configure the polling cycles on the **Polling Configuration** page.
+
+

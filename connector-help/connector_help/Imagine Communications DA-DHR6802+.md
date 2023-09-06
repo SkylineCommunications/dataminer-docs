@@ -16,13 +16,13 @@ Current Version: 1.0.0.3
 
 ### Creation
 
-Thisis a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 #### SERIAL MAIN CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, set to the fixed value *4050.*
-- **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.**\<slotID\>" (e.g. frame 1 and slot 12 = bus address*1.12).*
+- **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.**\<slotID\>" (e.g. frame 1 and slot 12 = bus address *1.12).*
 
 #### SMART-SERIAL PORTDEV CONNECTION:
 
@@ -33,7 +33,7 @@ Thisis a serial driver combined with smart-serial communication. During the crea
 
 ### Alarms Page
 
-On this page, several alarm parameters are displayed (**Ch.1** **Loss of Input,** **Ch.2** **Loss of Input**, **Ch.1Input Not Locked** and **Ch.1Input Not Locked**). The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available on these parameters.
+On this page, several alarm parameters are displayed (**Ch.1** **Loss of Input,** **Ch.2** **Loss of Input**, **Ch.1** **Input Not Locked** and **Ch.1** **Input Not Locked**). The state of the alarms can be *Alarm Inactive* or *Alarm Active*. Alarm monitoring is available on these parameters.
 
 ### Input Page
 
@@ -57,4 +57,5 @@ On this page you can access the web interface of the Imagine Communications fram
 
 ## Notes
 
-A **serial** driver with **smart-serial** connection means that there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.
+A **serial** driver with **smart-serial** connection means that there has to be a connection to a real device.
+If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.

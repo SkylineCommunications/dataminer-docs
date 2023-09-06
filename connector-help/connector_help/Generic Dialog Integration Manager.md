@@ -10,9 +10,9 @@ This driver is intended to collect the parameter IDs from the different protocol
 
 ### Version Info
 
-| **Range**            | **Key Features**                                 | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | DWS Calls: GetProtocolParameterInfoInterpolation | \-           | \-                |
+| **Range**            | **Key Features**                                  | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | DWS Calls: GetProtocolParameterInfo Interpolation | \-           | \-                |
 
 ### Product Info
 
@@ -50,6 +50,7 @@ The **Debug Parameter** is disabled by default, so that debug pages are hidden. 
 
 The driver executes the logic daily or on demand when the **Update** button on the Elements page is pressed. When a valid Username, Password and IP Address have been specified, the driver executes the Connect App Request (via DWS). With a valid token, the next step is the GetElementInfo request.
 
-The response is processed in order to fill in the **Elements Table**. The index of the Elements Table is used to compose a buffer to request the protocol info, which includes the protocol name, version and all its parameters. **NOTE**: Not all protocols are processed because more than 1 element uses the same protocol name and version.
+The response is processed in order to fill in the **Elements Table**. The index of the Elements Table is used to compose a buffer to request the protocol info, which includes the protocol name, version and all its parameters.
+**NOTE**: Not all protocols are processed because more than 1 element uses the same protocol name and version.
 
 The tables **Dialog Protocols Overview** and **Unsupported Dialog Protocols Overview** are filled in after the buffer logic finishes.

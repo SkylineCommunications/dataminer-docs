@@ -64,7 +64,7 @@ The element created with this driver consists of the data pages detailed below.
 
 ### Main View
 
-This page contains information about the satellite that is currently being tracked, including the **Satellite Name** and **Position**, **Azimuth**, **Elevation**, **Polarotor Position**,and other dish-related data.
+This page contains information about the satellite that is currently being tracked, including the **Satellite Name** and **Position**, **Azimuth**, **Elevation**, **Polarotor Position**, and other dish-related data.
 
 ### General
 

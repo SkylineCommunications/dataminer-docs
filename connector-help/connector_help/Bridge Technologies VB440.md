@@ -88,15 +88,19 @@ uid: Connector_help_Bridge_Technologies_VB440
 <ul>
 <li>Configuring credentials for <strong>HTTP Authentication</strong> (if HTTP authentication is enabled on the probe).</li>
 <li>Configuring how to handle probe alarms.</li>
-<li>Enable more verbose logging if needed</li>
+<li>Enable more verbose logging if needed<br />
+</li>
 </ul>
 <h3 id="redundancy">Redundancy</h3>
 <p>There is no redundancy defined.</p>
 <h3 id="web-interface">Web Interface</h3>
-<p>The web interface is only accessible when the client machine has network access to the product.</p>
+<p>The web interface is only accessible when the client machine has network access to the product.<br />
+</p>
 <h2 id="how-to-use">How to use</h2>
-<p>The <strong>Streams</strong> page holds tables regarding grouped stream data, while more detailed statistical information can be found on the <strong>Media Window</strong> page.</p>
-<p>Various alarm and threshold information is found in and under the <strong>Alarms</strong> page.</p></td>
+<p>The <strong>Streams</strong> page holds tables regarding grouped stream data, while more detailed statistical information can be found on the <strong>Media Window</strong> page.<br />
+</p>
+<p>Various alarm and threshold information is found in and under the <strong>Alarms</strong> page.<br />
+</p></td>
 </tr>
 </tbody>
 </table>

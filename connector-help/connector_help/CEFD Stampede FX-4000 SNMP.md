@@ -24,13 +24,13 @@ Further information can be found on the following website: <http://www.comtechef
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                    |
-|------------------|----------------------------------------------------------------|
-| 1.0.0.x          | Firmware: 6.3.0aD-201512032235E4-3.10.62-FX30 ENMIB: Rev 6.2.3 |
-| 1.1.0.x          | Firmware updated. taken from 1.0.0.3MIB: REV 7.1               |
-| 1.1.1.x          | MIB: REV 7.1                                                   |
-| 1.2.0.x          | MIB: REV 7.2.8                                                 |
-| 1.2.1.x          | MIB: REV 7.2                                                   |
+| **Driver Range** | **Device Firmware Version**                                     |
+|------------------|-----------------------------------------------------------------|
+| 1.0.0.x          | Firmware: 6.3.0aD-201512032235E4-3.10.62-FX30 EN MIB: Rev 6.2.3 |
+| 1.1.0.x          | Firmware updated. taken from 1.0.0.3 MIB: REV 7.1               |
+| 1.1.1.x          | MIB: REV 7.1                                                    |
+| 1.2.0.x          | MIB: REV 7.2.8                                                  |
+| 1.2.1.x          | MIB: REV 7.2                                                    |
 
 ## Installation and configuration
 
@@ -99,8 +99,8 @@ This page is similar to the "Advanced - Groups" page, but contains the **QOS Que
 This page consists of the following sections:
 
 - **Device Status - Overview**: Displays the CPU Usage, Memory Usage, Temperature, Uptime, and Current Time.
-- **System Status - Overview**: Displays theAcceleration Status, Redundancy Status, Current Active LAN Port and Admin Bypass Mode.
-- **Network** **Status - Overview**:Contains the Ethernet Interface Status table.
+- **System Status - Overview**: Displays the Acceleration Status, Redundancy Status, Current Active LAN Port and Admin Bypass Mode.
+- **Network** **Status - Overview**: Contains the Ethernet Interface Status table.
 
 ### Statistics - WANOP
 

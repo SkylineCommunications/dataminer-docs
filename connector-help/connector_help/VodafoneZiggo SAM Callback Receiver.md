@@ -10,9 +10,9 @@ This connector is responsible for updating the Incident ID property on alarms of
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                     | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Updates Incident ID property on alarms.Displays a log of the latest JSON messages received from the external system. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                      | **Based on** | **System Impact** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Updates Incident ID property on alarms. Displays a log of the latest JSON messages received from the external system. | \-           | \-                |
 
 ### System Info
 
@@ -42,8 +42,14 @@ You can find all the information needed to monitor incoming messages on the **Ge
 
 The connector expects JSON messages to be written to the parameter with **ID 2**. The JSON messages must have the following structure:
 
-{ 'IncidentID': \<string with incident id\>, 'AlarmID': \<string with the alarm ID with the following format: AgentID/AlarmID\>}
+{
+'IncidentID': \<string with incident id\>,
+'AlarmID': \<string with the alarm ID with the following format: AgentID/AlarmID\>
+}
 
 For example:
 
-{ 'IncidentID': 'VZINC0006', 'AlarmID': '305/269767'}
+{
+'IncidentID': 'VZINC0006',
+'AlarmID': '305/269767'
+}

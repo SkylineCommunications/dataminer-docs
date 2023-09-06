@@ -47,7 +47,8 @@ SERIAL CONNECTION:
 
 On the Configuration page you can find all configuration parameters that affect the initialization of the connection to the SMSC and the communication between DataMiner (as "ESME") and the "SMSC".
 
-Make sure that at least **System ID** (= username) and **Password** are correct and match with the credentials needed to set up the connection with the SMSC. If no authentication is necessary, you can leave them blank. The same applies for the **Source Phone Number**. The rest of the configuration parameters have default values which should be a good start when initiating a new element. In case default values do not work, you may need to get advice from people familiar with the SMSC for specific settings.
+Make sure that at least **System ID** (= username) and **Password** are correct and match with the credentials needed to set up the connection with the SMSC. If no authentication is necessary, you can leave them blank. The same applies for the **Source Phone Number**.
+The rest of the configuration parameters have default values which should be a good start when initiating a new element. In case default values do not work, you may need to get advice from people familiar with the SMSC for specific settings.
 
 ### Redundancy
 

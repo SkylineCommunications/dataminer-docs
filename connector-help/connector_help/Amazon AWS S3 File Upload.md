@@ -16,9 +16,9 @@ This driver allows you to automatically upload files from a specific source dire
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                     |
-|-----------|----------------------------------------------------------------------------|
-| 1.0.0.x   | Amazon S3 API 2006-03-01<https://docs.aws.amazon.com/AmazonS3/latest/dev/> |
+| **Range** | **Supported Firmware**                                                      |
+|-----------|-----------------------------------------------------------------------------|
+| 1.0.0.x   | Amazon S3 API 2006-03-01 <https://docs.aws.amazon.com/AmazonS3/latest/dev/> |
 
 ### System Info
 

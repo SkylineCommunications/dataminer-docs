@@ -78,7 +78,8 @@ Each region should be interpreted as one Amazon AWS Elemental MediaPackage eleme
 
 HTTP CONNECTION:
 
-- **IP address/host**: [https://mediapackage.**\#REGION#**.amazonaws.com](https://mediapackage./#REGION%23.amazonaws.com)For example, for Europe (Frankfurt): *https://mediapackage.****eu-central-1****.amazonaws.com*
+- **IP address/host**: [https://mediapackage.**\#REGION#**.amazonaws.com](https://mediapackage./#REGION%23.amazonaws.com)
+  For example, for Europe (Frankfurt): *https://mediapackage.****eu-central-1****.amazonaws.com*
 - **IP port**: The IP port of the destination (default: *443).*
 
 #### HTTP Connection - Monitoring Connection
@@ -87,7 +88,8 @@ This connector uses an HTTPS connection to communicate with the Amazon CloudWatc
 
 HTTP CONNECTION:
 
-- **IP address/host**: [https://monitoring.**\#REGION#**.amazonaws.com](https://monitoring./#REGION%23.amazonaws.com)For example, for Europe (Frankfurt): [https://monitoring.**eu-central-1**.amazonaws.com](https://monitoring.eu-central-1.amazonaws.com/).
+- **IP address/host**: [https://monitoring.**\#REGION#**.amazonaws.com](https://monitoring./#REGION%23.amazonaws.com)
+  For example, for Europe (Frankfurt): [https://monitoring.**eu-central-1**.amazonaws.com](https://monitoring.eu-central-1.amazonaws.com/).
 - **IP port**: The IP port of the destination (default: *443*).
 - **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
@@ -108,7 +110,8 @@ In order to securely interact with AWS APIs, go to the General page and fill in 
 2.  Go to *Users* and click *Add User*.
 3.  Create a user with a name of your choosing (we recommend "DataminerMediaPackageProtocol") and make sure to grant *Programmatic Access* to this account.
 4.  Make sure to grant policies for accessing the MediaPackage and CloudWatch APIs (ReadOnly).
-5.  Copy the **Access Key ID** and the **Secret Key** and paste them on the **General page** of the DataMiner element. Note that these **keys are only generated once**, so you will not be able to recover these if you lose them. Make sure to store them in a safe location as neither Skyline nor Amazon will be able to trace them back.
+5.  Copy the **Access Key ID** and the **Secret Key** and paste them on the **General page** of the DataMiner element.
+    Note that these **keys are only generated once**, so you will not be able to recover these if you lose them. Make sure to store them in a safe location as neither Skyline nor Amazon will be able to trace them back.
 
 ## How to Use
 

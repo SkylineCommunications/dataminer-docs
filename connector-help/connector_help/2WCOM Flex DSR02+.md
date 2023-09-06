@@ -62,7 +62,7 @@ The element created with this driver consists of the data pages detailed below.
 
 ### General
 
-This page contains general parameters such as the **Hostname** and the **System Description**. In addition, three page buttons are available, which allow you to retrieve more information about **SNTP**, **SNMP**,and **Service Info**.
+This page contains general parameters such as the **Hostname** and the **System Description**. In addition, three page buttons are available, which allow you to retrieve more information about **SNTP**, **SNMP**, and **Service Info**.
 
 There are also buttons that allow you to restart the device and refresh the data.
 
@@ -103,10 +103,10 @@ This page gives an overview of the event parameters related to the tuner (e.g.Tu
 In addition, the following page buttons display more detailed event information:
 
 - **Audio Event**: Displays a table with information about the audio event settings.
-- **Icecast Event**: Displays settings in theAoip Icecast Input Data Event Table.
-- **UDP Event**: Displays settings in theAoip UDP Input Data Event Table.
-- **Flexsource Event**: Displays settings in theFlex Source Event Table.
-- **DTE Event**: Displays settings in theDTE Event Table.
+- **Icecast Event**: Displays settings in the Aoip Icecast Input Data Event Table.
+- **UDP Event**: Displays settings in the Aoip UDP Input Data Event Table.
+- **Flexsource Event**: Displays settings in the Flex Source Event Table.
+- **DTE Event**: Displays settings in the DTE Event Table.
 - **Audio Level Event**: Displays settings in the Audio Level Event Table.
 - **Other Events**: Contains settings for the case temperature events (e.g. Case Temperature Event Max Value) and internal storage (Internal Storage Event Enabled).
 

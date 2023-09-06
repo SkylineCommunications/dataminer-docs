@@ -26,7 +26,8 @@ This driver uses a **HTTP** connection and needs following user information:
 
 ### General
 
-On the left side of the page you can see the settings for the transmission connection.The right side shows the numbers of all the transmitted or dropped packages, bytes and frames.
+On the left side of the page you can see the settings for the transmission connection.
+The right side shows the numbers of all the transmitted or dropped packages, bytes and frames.
 
 ### Alarm Overview
 

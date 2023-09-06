@@ -10,10 +10,10 @@ The Symmetricom XL-GPS is a time and frequency receiver. This connector allows y
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                | **Based on** | **System Impact**                                                          |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version. SNMP connection to retrieve general and status information about the device.                                                                   | \-           | \-                                                                         |
-| 1.0.1.x \[SLC Main\] | \- Telnet connection added to retrieve Option Bay and GPS Satellite information.- Tree control implemented to display Option Bay and GPS Satellite information. | 1.0.0.1      | Additional Telnet connection requires configuration in the element editor. |
+| **Range**            | **Key Features**                                                                                                                                                 | **Based on** | **System Impact**                                                          |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version. SNMP connection to retrieve general and status information about the device.                                                                    | \-           | \-                                                                         |
+| 1.0.1.x \[SLC Main\] | \- Telnet connection added to retrieve Option Bay and GPS Satellite information. - Tree control implemented to display Option Bay and GPS Satellite information. | 1.0.0.1      | Additional Telnet connection requires configuration in the element editor. |
 
 ### Product Info
 

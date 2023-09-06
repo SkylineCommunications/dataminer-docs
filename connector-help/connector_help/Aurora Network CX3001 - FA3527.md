@@ -12,7 +12,7 @@ The Dynamic Virtual Element has four pages:
 
 - The **Status** page contains info about the optical power, lasers and module statuses.
 - The **Alarming** page contains all the alarm information for the module, EDFA and lasers.
-- The **User Setup**page contains information regarding the mode selection, laser setup and alarm setup.
+- The **User Setup** page contains information regarding the mode selection, laser setup and alarm setup.
 - The **Module Info** page contains information about the module itself.
 
 ### Supported firmware versions

@@ -18,9 +18,9 @@ This is an **SNMPv2** protocol. Traps are not implemented.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                 |
-|------------------|-----------------------------------------------------------------------------|
-| 1.0.0.x          | Software Identification Number: 2095.8613.00Software Version Number: 1.33.0 |
+| **Driver Range** | **Device Firmware Version**                                                  |
+|------------------|------------------------------------------------------------------------------|
+| 1.0.0.x          | Software Identification Number: 2095.8613.00 Software Version Number: 1.33.0 |
 
 ## Installation and Configuration
 

@@ -14,9 +14,9 @@ The driver is exported by the parent element **Harmonic HLP4800** if DVE creatio
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                         |
-|------------------|-----------------------------------------------------|
-| 1.0.1.x          | Module version: unknownController version: 4.1.0.24 |
+| **Driver Range** | **Device Firmware Version**                          |
+|------------------|------------------------------------------------------|
+| 1.0.1.x          | Module version: unknown Controller version: 4.1.0.24 |
 
 ## Installation and configuration
 

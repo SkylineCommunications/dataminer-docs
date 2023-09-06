@@ -50,7 +50,7 @@ For more information on the correct settings, refer to the manual of the device.
 
 ### Slope Equalization
 
-The value of the **Slope Path Module \#** parametersdepends on the **System Configuration**.Like for the **Attenuators,** these settings need to be done manually.
+The value of the **Slope Path Module \#** parameters depends on the **System Configuration**. Like for the **Attenuators,** these settings need to be done manually.
 
 Protocol version 1.0.0.1 can support up to 4 slope modules, while version 1.3.9.1 only supports 2 (see note).
 

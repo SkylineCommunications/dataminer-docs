@@ -14,17 +14,23 @@ This is a virtual protocol that is used to control/switch sources on the **Appea
 |----------------------|------------------|--------------|-------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version  | FDS          | New Application   |
 
+
+
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | /                      |
 
+
+
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                    | **Exported Components** |
-|-----------|---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [AppearTV X20 Platform](/Driver%20Help/AppearTV%20X20%20Platform.aspx)[IneoQuest Surveyor TS](/Driver%20Help/IneoQuest%20Surveyor%20TS.aspx)[IneoQuest Inspector Live](xref:Connector_help_IneoQuest_Inspector_Live) | /                       |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                      | **Exported Components** |
+|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | [AppearTV X20 Platform](/Driver%20Help/AppearTV%20X20%20Platform.aspx) [IneoQuest Surveyor TS](/Driver%20Help/IneoQuest%20Surveyor%20TS.aspx) [IneoQuest Inspector Live](xref:Connector_help_IneoQuest_Inspector_Live) | /                       |
+
+
 
 ## Configuration
 
@@ -38,9 +44,13 @@ This driver uses a virtual connection and does not require any input during elem
 
 When the element has been created, several things need to be configured on the **Configurations** page:
 
-- **Probe Polling Interval**: Determines how frequently the ATV Failover Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.Note that the probe info is instantly pushed towards the Manager. This polling interval is purely intended for sync/fallback purposes.
+- **Probe Polling Interval**: Determines how frequently the ATV Failover Manager needs to poll the probes. The range is *5 seconds* up to *2 minutes*.
+  Note that the probe info is instantly pushed towards the Manager. This polling interval is purely intended for sync/fallback purposes.
 - **ATV Polling Interval**: Determines how frequently the ATV Failover Manager needs to poll the AppearTV X20 devices. The range is *1minute* up to *1 Day*.
-- **Auto Switch Delay**: The hysteresis time that the automatic routing/unrouting will wait before checking the current state again and performing the expected switch based on this result.This hysteresis makes it possible to ignore short outages or short temporary streams.
+- **Auto Switch Delay**: The hysteresis time that the automatic routing/unrouting will wait before checking the current state again and performing the expected switch based on this result.
+  This hysteresis makes it possible to ignore short outages or short temporary streams.
+
+
 
 ### Redundancy
 
@@ -85,7 +95,8 @@ The Path Status parameters are combined status values:
 
 The main Visio page contains page buttons that can be used to perform channel actions and configure settings. However, note that you need at least access level 1 to use these buttons.
 
-Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut "CTRL+A" to select all the items in the table. When you first apply a regular filter on the table and press "CTRL+A", only the filtered items will be selected.You can also make a dynamic selection using the "CTRL" key to select multiple single channels, or using the "SHIFT" key to select a range of channels in the table. The "CTRL+A", "SHIFT" and "CTRL" actions can also be combined
+Before opening the configuration window, you first have to make a selection in the Channels table. You can use the shortcut "CTRL+A" to select all the items in the table. When you first apply a regular filter on the table and press "CTRL+A", only the filtered items will be selected.
+You can also make a dynamic selection using the "CTRL" key to select multiple single channels, or using the "SHIFT" key to select a range of channels in the table. The "CTRL+A", "SHIFT" and "CTRL" actions can also be combined
 
 - **Channel Modes:** Opens a pop-up window where you can update the channel mode for all selected channels in bulk. The following modes are available:
 
@@ -95,7 +106,9 @@ Before opening the configuration window, you first have to make a selection in t
 
 > A confirmation message will list the changes you've made.
 
-- **Channel Actions:** Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).Once the selection has been made, you can perform the following actions:
+- **Channel Actions:** Opens a pop-up window where you can perform channel actions in bulk for all the selections made on this page.
+  You can make the selections by using the Select All/Unselect All buttons, or by using the selection buttons on row or column level. You can also update single selections by directly selecting/deselecting the selection icon (lightning icon).
+  Once the selection has been made, you can perform the following actions:
 
 > - *Manual Mode*: Will allow manual routings and no automatic actions will be performed.
 > - *Auto Mode*: Will no longer allow manual override actions. Automatic actions will be performed. In case the state was *(M) Master Fail*, and the Slave is running fine, Auto routing will be initiated (or vice-versa).
@@ -110,6 +123,8 @@ Note that all manual changes will be performed immediately. The hysteresis times
 ### History Logs
 
 When you select the history log icon on the main Visio page, a pop-up window will open that lists the history events. The window shows the timestamp and the user that performed the manual action. When you select an entry, a detailed overview of the committed change is displayed next to it.
+
+
 
 ## Notes
 

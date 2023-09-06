@@ -28,4 +28,4 @@ The element created with this driver consists of the following data pages:
 
 - **General**: Displays system information such as the **Summary Alarm** and the **Operation Time**. The following control features are also available: **Clear Alarm**, **Reboot** and **ETL Discovery**.
 - **IP Settings**: Allows you to configure settings, such as enabling or disabling **DHCP** and defining the **IP** **Address**.
-- **TCP/IP Port**: Allows you to enable or disable the TCP/IP **State**,and define the **Data Port** and the **Timeout**.
+- **TCP/IP Port**: Allows you to enable or disable the TCP/IP **State**, and define the **Data Port** and the **Timeout**.

@@ -4,7 +4,7 @@ uid: Connector_help_Ruckus_Wireless_vSCG_-_Zone
 
 # Ruckus Wireless vSCG - Zone
 
-The **Ruckus Wireless Virtualized SmartCell Gateway**(vSCG) is an NFV-based and cloud-ready WLAN controller for service providers and enterprises that require a high flexibility and resiliency in their WLAN deployment. This is an **SNMP- and HTTP**-based protocol for the Ruckus Wireless vSCG.
+The **Ruckus Wireless Virtualized SmartCell Gateway** (vSCG) is an NFV-based and cloud-ready WLAN controller for service providers and enterprises that require a high flexibility and resiliency in their WLAN deployment. This is an **SNMP- and HTTP**-based protocol for the Ruckus Wireless vSCG.
 
 ## About
 
@@ -28,7 +28,7 @@ This driver is generated automatically by the driver **Ruckus Wireless vSCG**.
 
 ### Creation
 
-This driver is used by DVEs that are**automatically generated** when a user enables an instance of a zone in the **Zones Details Table** of the parent element.
+This driver is used by DVEs that are **automatically generated** when a user enables an instance of a zone in the **Zones Details Table** of the parent element.
 
 ## Usage
 
@@ -42,7 +42,7 @@ This page shows all the access points that belong to the current zone in the **S
 
 ### SCG WLAN
 
-This page displays the **SCG WLAN Table**,which contains all information related to the WLANs that belong to the current zone. For each individual WLAN this information includes **SSID**, **Zone**, **Domain**, **Number of STA**, **Input Bit Rate**, **Output Bit Rate**, etc.
+This page displays the **SCG WLAN Table**, which contains all information related to the WLANs that belong to the current zone. For each individual WLAN this information includes **SSID**, **Zone**, **Domain**, **Number of STA**, **Input Bit Rate**, **Output Bit Rate**, etc.
 
 ### SCG SoftGRE Tunnels
 

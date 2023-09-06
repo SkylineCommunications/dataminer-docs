@@ -117,7 +117,7 @@ The following functionalities are available on this page:
 - Editing an entry in the subscriber table:
 
 1.  1.  Right-click the entry you want to edit.
-    2.  Select **Edit Sat Subscriber**in the context menu.
+    2.  Select **Edit Sat Subscriber** in the context menu.
     3.  Edit the necessary information in the pop-up window.
     4.  Click OK.
 

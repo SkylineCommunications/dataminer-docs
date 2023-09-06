@@ -2,7 +2,8 @@
 uid: Connector_help_Specialty_Microwave_Corp_13966-507
 ---
 
-Specialty Microwave Corp 13966-507The TLT RF Switching Panel, Part No. 13966-507 consists of a logic panel used in satellite communications earth stations. The TLT RF Switching Panel provides localindication and commands and using a serial interface provides remote indication and commands of four RF switches.
+Specialty Microwave Corp 13966-507
+The TLT RF Switching Panel, Part No. 13966-507 consists of a logic panel used in satellite communications earth stations. The TLT RF Switching Panel provides localindication and commands and using a serial interface provides remote indication and commands of four RF switches.
 
 ## About
 

@@ -58,6 +58,8 @@ This driver uses the Bridge Technologies External Integration Interface over HTT
 - **IP port**: The IP port of the destination.
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
+
+
 ### Initialization
 
 No extra configuration is needed.

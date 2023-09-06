@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This page displays the **Operation Mode Status/Remote Control Status**, the status of the **Power Supplies** andLNBs and the switch position of the LNBs.
+This page displays the **Operation Mode Status/Remote Control Status**, the status of the **Power Supplies** and LNBs and the switch position of the LNBs.
 
 Each LNB either has the **LNB Main** or the **LNB Standby** status.
 

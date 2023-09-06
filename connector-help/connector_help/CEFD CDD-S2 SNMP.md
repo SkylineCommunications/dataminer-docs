@@ -17,12 +17,16 @@ The CEFD CDD-S2 driver is used to monitor and control a CEFD CDD-S2 device. The 
 | 1.0.0.x              | Initial version                                                                                                     | \-           | \-                                                |
 | 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.9      | **Old trend data will be lost for these tables.** |
 
+
+
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | Unknown                |
 | 1.0.1.x   | Unknown                |
+
+
 
 ### System Info
 
@@ -31,11 +35,14 @@ The CEFD CDD-S2 driver is used to monitor and control a CEFD CDD-S2 device. The 
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
 
+
+
 ## Installation and configuration
 
 ### Creation
 
-***SNMP connection***This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+***SNMP connection***
+This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
 
 SNMP CONNECTION:
 
@@ -77,7 +84,7 @@ On this page the settings and the status for the **LNB** Control can be viewed/s
 
 ### Configuration - WAN Page
 
-The user can set each Receive WANlabel on this page, to a value between 1 and 2047, if an arriving packet matches the value of the label, then the packet is processed, otherwise it is filtered.
+The user can set each Receive WAN label on this page, to a value between 1 and 2047, if an arriving packet matches the value of the label, then the packet is processed, otherwise it is filtered.
 
 ### Configuration - Network Page
 
@@ -119,7 +126,8 @@ On the **FTP** page the **FTP** **table** can be viewed.
 
 ### Webinterface page
 
-Here the webinterface of the device can be viewed. The client machine has to be able to access the device. If not, it won't be possible to open the webinterface.
+Here the webinterface of the device can be viewed. The client machine has to be able to access the device. If not, it won't be possible to open the web
+interface.
 
 ## Notes
 

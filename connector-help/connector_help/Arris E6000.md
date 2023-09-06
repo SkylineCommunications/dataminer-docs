@@ -131,7 +131,7 @@ The button **Refresh Data** allows you to manually force a repoll of the data. I
 
 On the right-hand side of this page, several page buttons are displayed, which display the following information:
 
-- **Disk Volume**: Displays theDisk Volume Table, which shows the Volume Name, Volume Size, Volume Usage, and Disk Capacity of each disk on the device.
+- **Disk Volume**: Displays the Disk Volume Table, which shows the Volume Name, Volume Size, Volume Usage, and Disk Capacity of each disk on the device.
 - **PEM Status**: Contains information about the Power Entry Module (PEM). The chassis contains two redundant PEMs, which are monitored in the PEM Status table. The **PEM Status Table** monitors the overall LED status, feed presence, voltage, and current, and indicates whether breakers are enabled. Power distribution within the PEM is divided into 9 power branch circuits: A to I. This is indicated in the **PEM Branch Status Table**.
 - **Fan Status**: Provides an overview of the status of the device fans. The chassis contains 3 fan trays, each containing three fans. (The fans are numbered 0, 1, 2 from the front view, left to right.) The **Fan Status Table** indicates the speed of the fans for each fan tray, the last measured speed level of the fans, and the ambient temperature.
 - **Firmware Version**: Displays the hardware version, software version, and software uptime for slots on the device.
@@ -165,7 +165,7 @@ A distinction is made between alarms and notifications. When the device sends an
 
 The notifications tables (**Notifications Table** and **Generic Notifications** **Table**) contain notifications and the **Alarms Table** contains alarms.
 
-With the **Auto Clear** page button, the number of notifications that should be stored in a notification table (Notifications Table and Generic Notifications Table) can be configured. A maximum duration (**Notification Max Duration**) can be set as a number of days. Notifications that are older than the set number of days will automatically be removed from the table. In addition, the maximum number of notifications that the notification table should contain can be set through the **Notification Max Number**parameter. Once the table contains more notifications than the specified number, the oldest notifications will automatically be removed from the table. The parameter **Notification Count** shows the number of notifications present in the table.
+With the **Auto Clear** page button, the number of notifications that should be stored in a notification table (Notifications Table and Generic Notifications Table) can be configured. A maximum duration (**Notification Max Duration**) can be set as a number of days. Notifications that are older than the set number of days will automatically be removed from the table. In addition, the maximum number of notifications that the notification table should contain can be set through the **Notification Max Number** parameter. Once the table contains more notifications than the specified number, the oldest notifications will automatically be removed from the table. The parameter **Notification Count** shows the number of notifications present in the table.
 
 You can remove individual notifications from the table with the **Delete** button in the corresponding row. For each notification, the table provides the following information (when available): the timestamp, description, severity, OID, and event ID.
 
@@ -225,11 +225,28 @@ Note: It is advisable to limit the number of backup files to manage in the devic
 
 The restore procedure mainly consists of manual steps. These are listed when you click the **Restore** button. The **Source Directory** parameter points to a directory containing the source file that will be uploaded to the Arris E6000 device. After you select a directory, the dropdown box for the **Config File Name** parameter will be populated with files that have the extension ".cfg". After you select a configuration file, you can click the **Restore** button to upload the configuration file to the device. This operation will transfer the configuration file via SFTP to the directories "/system/cfgfiles/" and "/clone/system/cfgfiles/". After the configuration file has been uploaded, you should then perform the following remaining manual steps to complete the restore procedure:
 
-1.  Erase the startup configuration. The erase nvram must be performed before the reload of a configuration file to clear the contents of the current configuration loaded on the E6000.
-2.  Reset the current system configuration. The following command will force the E6000 to reset its configuration and lose access using SSH. After this command, access will only be available using serial communication. configure reset system After this command is executed, the system will reset the configuration and RSM cards will be started up. This process will take 5 minutes. After the wait time, you should be able to log back in using the serial connection.
-3.  Verify the primary RSM card. Once the system has been reset, it is possible for any of the two RSM cards in the chassis to become the primary port. To differentiate Primary from Standby, you can use the command prompt to differentiate the two cards.
-4.  Execute the file (backup) copy into the running configuration. After copying the configuration file from the SFTP server, use the following command:exc file /system/cfgfiles/backup_filename.cfg This will load the new configuration into the E6000.
-5.  Save the running configuration to the startup configuration file. After starting up the new configuration, save the new configuration to the startup configuration by typing the following command:write mem
+1.  Erase the startup configuration.
+    The erase nvram must be performed before the reload of a configuration file to clear the contents of the current configuration loaded on the E6000.
+2.  Reset the current system configuration.
+    The following command will force the E6000 to reset its configuration and lose access using SSH. After this command, access will only be available using serial communication.
+
+    configure reset system
+
+    After this command is executed, the system will reset the configuration and RSM cards will be started up. This process will take 5 minutes.
+    After the wait time, you should be able to log back in using the serial connection.
+3.  Verify the primary RSM card.
+    Once the system has been reset, it is possible for any of the two RSM cards in the chassis to become the primary port.
+    To differentiate Primary from Standby, you can use the command prompt to differentiate the two cards.
+4.  Execute the file (backup) copy into the running configuration.
+    After copying the configuration file from the SFTP server, use the following command:
+
+    exc file /system/cfgfiles/backup_filename.cfg
+
+    This will load the new configuration into the E6000.
+5.  Save the running configuration to the startup configuration file.
+    After starting up the new configuration, save the new configuration to the startup configuration by typing the following command:
+
+    write mem
 
 ### Upload & Upgrade File Page
 

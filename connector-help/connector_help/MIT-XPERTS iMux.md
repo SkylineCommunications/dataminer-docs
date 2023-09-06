@@ -68,7 +68,7 @@ You can also create new Transport Streams by clicking the respective page button
 
 The functionality of this page is also similar to that of the **DSMCC Carousels** page. A list of configured applications is shown and additional information for each application can be displayed by selecting the desired application and clicking the **Edit Selected Application.** page button. Values set to "*NA*" are not used by the specific application type and will therefore be ignored when the **Save All Changes** button is pressed.
 
-To create a new application, click the respective New Applicationpage button for the desired type ("**DVB-HTML Application.**", "**DVB-J (MHP) Application.**", "**MHEG Application.**", "**HBBTV/CE-HTML Application.**"). Then fill in the correct values for each parameter and click the **Create** button.
+To create a new application, click the respective New Application page button for the desired type ("**DVB-HTML Application.**", "**DVB-J (MHP) Application.**", "**MHEG Application.**", "**HBBTV/CE-HTML Application.**"). Then fill in the correct values for each parameter and click the **Create** button.
 
 ### Services Page
 

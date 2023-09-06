@@ -18,9 +18,9 @@ This driver uses **SNMP** to manage the Audemat Aztec FMB80 encoder.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                   |
-|------------------|---------------------------------------------------------------|
-| 1.0.0.x          | Application Software Version RDS5002.8System Version ECI2691L |
+| **Driver Range** | **Device Firmware Version**                                    |
+|------------------|----------------------------------------------------------------|
+| 1.0.0.x          | Application Software Version RDS5002.8 System Version ECI2691L |
 
 ## Installation and configuration
 

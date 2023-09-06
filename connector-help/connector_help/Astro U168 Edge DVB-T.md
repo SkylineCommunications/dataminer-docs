@@ -74,7 +74,7 @@ The credentials of the device must be filled in via the **Login** page button.
 
 Some important parameters are available at the end of the first column:
 
-- **Controller Name**: This parameter shows the name of the **Astro Virtual Controller**element that manages this device. If no such element is used, the parameter will show the exception value *No Virtual Controller Found*.
+- **Controller Name**: This parameter shows the name of the **Astro Virtual Controller** element that manages this device. If no such element is used, the parameter will show the exception value *No Virtual Controller Found*.
 
 - **Communication Type**:
 
@@ -125,16 +125,22 @@ This page allows you to upload and download config files to the device. You can 
 To download a file:
 
 1.  Click **Download**. The following pop-up message will be displayed:
-2.  Enter the name of the file and click OK. The file will be saved in the following location:C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
+    ![Download.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Download.PNG)
+2.  Enter the name of the file and click OK. The file will be saved in the following location:
+    C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 To upload a file:
 
 1.  Click **Upload**. The following pop-up window will be displayed:
-2.  In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
+    ![Upload.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_Upload.PNG)
+2.  In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.
+    The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 #### Software update
 
 The driver allows you to upload a firmware archive from the local disk of the DMA:
+
+![SoftwareUpdate.PNG](~/connector-help/images/Astro_U168_Edge_DVB-T_SoftwareUpdate.PNG)
 
 The **Firmware File** parameter is used to select which file to upload. The drop-down list contains all the files present in the following folder on the DMA: C:\Skyline DataMiner\Documents\\Protocol Name\>.
 

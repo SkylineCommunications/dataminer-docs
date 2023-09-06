@@ -59,7 +59,7 @@ Each entry in the **Entries** list contains:
 
 ### General/Maintenance
 
-On the **Maintenance** subpage, the maximum number of entries in the list can be defined with the parameter **Entries Maximum Entries**. This parameter will be checked whenever entries are added or cleaned up. When there are more entries than the defined maximum, the oldest entries (based on *Last Update*) will be removed. You can set expired entries to be removed automatically upon every cleanup by setting**Entries Maximum Age**. An automatic cleanup will be performed every hour, but can be forced using the **Cleanup** button.
+On the **Maintenance** subpage, the maximum number of entries in the list can be defined with the parameter **Entries Maximum Entries**. This parameter will be checked whenever entries are added or cleaned up. When there are more entries than the defined maximum, the oldest entries (based on *Last Update*) will be removed. You can set expired entries to be removed automatically upon every cleanup by setting **Entries Maximum Age**. An automatic cleanup will be performed every hour, but can be forced using the **Cleanup** button.
 
 The **Clear** button will remove all entries. After you confirm this clear action, the entries cannot be restored.
 

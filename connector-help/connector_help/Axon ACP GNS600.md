@@ -25,8 +25,8 @@ There are different possibilities available for **alarm monitoring** and **trend
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 140721093112           |
-| 1.0.1.x   | 1407210931123213       |
+| 1.0.0.x   | 1407 2109 3112         |
+| 1.0.1.x   | 1407 2109 3112 3213    |
 
 ### System Info
 

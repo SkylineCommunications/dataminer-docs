@@ -16,9 +16,9 @@ This driver can be used to monitor and control the **Evertz 570FC** frame contro
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                            |
-|-----------|-----------------------------------------------------------------------------------|
-| 1.0.0.x   | Kernel Major Release: 5.1Software Build: 1.5 Build 87Software Build: 1.5 Build 61 |
+| **Range** | **Supported Firmware**                                                              |
+|-----------|-------------------------------------------------------------------------------------|
+| 1.0.0.x   | Kernel Major Release: 5.1 Software Build: 1.5 Build 87 Software Build: 1.5 Build 61 |
 
 ### System Info
 

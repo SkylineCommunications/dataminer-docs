@@ -16,11 +16,11 @@ All data in the element is read-only. It is not posible to configure the Romanti
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                                                                                                                                                                                     | No                  | Yes                     |
-| 1.0.1.x          | Added secondary HTTP connection to allow polling of a redundant system. There is no way to determine which NMS is online, so switching must be done manually.                                                                       | No                  | Yes                     |
-| 1.0.2.x          | Removed secondary HTTP connection.Creation of DVEs for each controller and station.Added a hidden SNMP connection to populate the DVEs with additional parameters from controllers and stations when the Management IP is selected. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                                                                                       | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                                                                                                                                                                                       | No                  | Yes                     |
+| 1.0.1.x          | Added secondary HTTP connection to allow polling of a redundant system. There is no way to determine which NMS is online, so switching must be done manually.                                                                         | No                  | Yes                     |
+| 1.0.2.x          | Removed secondary HTTP connection. Creation of DVEs for each controller and station. Added a hidden SNMP connection to populate the DVEs with additional parameters from controllers and stations when the Management IP is selected. | No                  | Yes                     |
 
 ### Supported firmware versions
 

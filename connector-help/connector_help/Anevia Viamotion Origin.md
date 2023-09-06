@@ -48,7 +48,7 @@ This page also contains a **Reboot Server** button.
 
 ### Profiles Page
 
-This page contains information about the **Stream Adaptations** and the **Stream Adaptation Families**. You can edit the **Destination NPVR**, **Login**,and **Password** of the stream adaptation here.
+This page contains information about the **Stream Adaptations** and the **Stream Adaptation Families**. You can edit the **Destination NPVR**, **Login**, and **Password** of the stream adaptation here.
 
 ### Live Channels Page
 

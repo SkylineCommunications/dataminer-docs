@@ -8,7 +8,8 @@ The Memotec Netperformer SDM9220-9230 version is a SNMP driver intended to commu
 
 ## About
 
-This driver implements the available parameters present in the device's MIB. The driver layout is implemented as much as possible like the device's web interface. There are menus that are not 100% coincident.A **SNMP** connection is used in order to successfully retrieve and configure the device's information.
+This driver implements the available parameters present in the device's MIB. The driver layout is implemented as much as possible like the device's web interface. There are menus that are not 100% coincident.
+A **SNMP** connection is used in order to successfully retrieve and configure the device's information.
 
 ## Installation and configuration
 

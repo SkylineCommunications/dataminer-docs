@@ -60,7 +60,7 @@ The **Display Status Table** shows the scalar ID in full screen within a display
 
 ### Audio Status
 
-This page displays the **Audio Status Table**, which containseach bitwise **Audio Alarm** for each audio channel across all the **Audio PIP** channels.
+This page displays the **Audio Status Table**, which contains each bitwise **Audio Alarm** for each audio channel across all the **Audio PIP** channels.
 
 ### Alarm Summary
 
@@ -68,13 +68,13 @@ On this page, the **Recent Alarms** section shows information about the most rec
 
 ### Dolby E Status
 
-This page displays the **Dolby E Status Table**,which shows several alarms and parameters for each audio channel, including **Channel Type**, **Loss**, **Program Configuration Changes**, **Dialnorm Under Level**, **Dialnorm Over Level**, **DRC Change** and **Metadata Mismatch**.
+This page displays the **Dolby E Status Table**, which shows several alarms and parameters for each audio channel, including **Channel Type**, **Loss**, **Program Configuration Changes**, **Dialnorm Under Level**, **Dialnorm Over Level**, **DRC Change** and **Metadata Mismatch**.
 
 ### Traps
 
 This page displays traps received from the multiviewer. Enabling and using traps can capture short duration alarms that occur outside of the normal driver polling cycles.
 
-On the **Auto Clear** subpage, the auto-clear methodcan be configured, either by configuring **Max. Number** of traps, **Max. Duration** of traps or **Both (Max. Number and Max. Duration)**,or by clearing **Upon Alarm Polling**. The table size will remain constant, but when the max. number has been reached, the oldest table entries will be purged to make room for new entries. You can also clear all current traps by clicking the **Clear All Traps Now** button on this subpage.
+On the **Auto Clear** subpage, the auto-clear method can be configured, either by configuring **Max. Number** of traps, **Max. Duration** of traps or **Both (Max. Number and Max. Duration)**, or by clearing **Upon Alarm Polling**. The table size will remain constant, but when the max. number has been reached, the oldest table entries will be purged to make room for new entries. You can also clear all current traps by clicking the **Clear All Traps Now** button on this subpage.
 
 ## Notes
 
@@ -84,5 +84,5 @@ In order to receive SNMP traps with this element, it is necessary to make the fo
 
 - **Time Code: Trap Timestamps** are affected by this setting and care should be taken to select a proper time sync reference.
 
-- **PC**: Allows you to set the **DMA IP** as the time source or the **Virtual IP** when using a1:1 Failover DMA configuration.
-  - **NTP**: Allows you to set **any NTP Server** in the networkas the time source.
+- **PC**: Allows you to set the **DMA IP** as the time source or the **Virtual IP** when using a 1:1 Failover DMA configuration.
+  - **NTP**: Allows you to set **any NTP Server** in the network as the time source.

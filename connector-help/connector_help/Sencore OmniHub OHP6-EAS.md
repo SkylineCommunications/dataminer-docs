@@ -52,7 +52,7 @@ In range 1.0.0.x, this connector is a DVE of the Sencore OmniHub 6-16 connector.
 SNMP CONNECTION:
 
 - **SNMP Type**: SNMPv2.
-- **IP address/host**: The polling IP or URL of the destination. **Important**: The IPmust be set to the **IP address assigned to the specific card in the System Settings Advanced Network tab** of the device, as the connector has to access the card directly to work properly because of limitations in the device SNMP implementation.
+- **IP address/host**: The polling IP or URL of the destination. **Important**: The IP must be set to the **IP address assigned to the specific card in the System Settings Advanced Network tab** of the device, as the connector has to access the card directly to work properly because of limitations in the device SNMP implementation.
 - **IP port**: The IP port of the destination.
 - **Bus address**: The bus address of the device (default: *ByPassProxy*).
 

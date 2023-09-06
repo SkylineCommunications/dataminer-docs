@@ -44,7 +44,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.* From version 2.0.0.5 onwards, dual-redundant controllers can be dynamically polled.
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.
+  *From version 2.0.0.5 onwards, dual-redundant controllers can be dynamically polled.
 
 SNMP Settings:
 

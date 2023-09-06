@@ -10,7 +10,7 @@ With this driver it is possible to monitor **Harris X50** devices with **SNMP**.
 
 This driver is used to monitor the **Harris X50** Frame Synchronizer and Converter.
 
-In addition to the normal **SNMPpolling**, the device also sends **traps** (**notifications**) when an alarm occurs on the system. If a trap is received, the driver will update the **Alarms Page** with the new alarms.
+In addition to the normal **SNMP** **polling**, the device also sends **traps** (**notifications**) when an alarm occurs on the system. If a trap is received, the driver will update the **Alarms Page** with the new alarms.
 
 ## Installation and configuration
 

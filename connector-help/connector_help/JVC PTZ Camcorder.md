@@ -4,7 +4,8 @@ uid: Connector_help_JVC_PTZ_Camcorder
 
 # JVC PTZ Camcorder
 
-JVC PTZ Camrecorder KY-PZ100 is a robotic pan, tilt and zoom video production camera, it can be used as a single camera or part of a multi-camera shoot. In addition to its 3G-SDI and HDMI outputs, it is also capable of reliably streaming 1080i/60, 1080p, 720p, and 360p video with 2-channel audio-all.The **JVC PTZ Camrecorder** driver can be used to display and configure information related to this device.
+JVC PTZ Camrecorder KY-PZ100 is a robotic pan, tilt and zoom video production camera, it can be used as a single camera or part of a multi-camera shoot. In addition to its 3G-SDI and HDMI outputs, it is also capable of reliably streaming 1080i/60, 1080p, 720p, and 360p video with 2-channel audio-all.
+The **JVC PTZ Camrecorder** driver can be used to display and configure information related to this device.
 
 ## About
 
@@ -45,7 +46,7 @@ In this page it is possible to set the **Username** and **P**a**ssword** for ret
 
 This page displays information related to the main camera operations:
 
-- **Pan/Tilt: Pan** and **Tilt** parameterswill move the camera with a configurable **Speed.**
+- **Pan/Tilt: Pan** and **Tilt** parameters will move the camera with a configurable **Speed.**
 - **Zoom:** Manual zoom can be configured using **Zoom Position;** or **Tele** and **Wide** buttons can be used as well for **Zoom In** and **Zoom Out**
 - **Focus:** Can be set to **Auto** or manual using the **Far** and **Near** buttons.
 - **Streaming: Resolution** and **Bit Rate** can be configured for streaming the image.

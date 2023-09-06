@@ -80,7 +80,7 @@ With this connector, you can monitor Linux platforms with SSH or with SNMP.
 
 ### Configuration SSH
 
-On the **General page**, click **Security**to enter the Login and Password. Then click the **Login** button to start the communication.
+On the **General page**, click **Security** to enter the Login and Password. Then click the **Login** button to start the communication.
 
 For range **2.0.0.x** or higher, on the **General page**, click **Configuration** to set up the **SSH configuration** and to select the connection type, **SNMP** or **SSH**.
 
@@ -104,7 +104,8 @@ NOTE: In SSH Mode, the Processor table will use different indexes for each proce
 
 This page contains the **Task Manager** table, which lists the processes that are active on the server.
 
-In addition, the **Process Validation** table allows you to validate whether a given process is still running upon each new polling cycle.When you add a process to validate, you will be able to select it from a prepopulated list of the current processes.
+In addition, the **Process Validation** table allows you to validate whether a given process is still running upon each new polling cycle.
+When you add a process to validate, you will be able to select it from a prepopulated list of the current processes.
 
 ### Network Info
 

@@ -62,7 +62,8 @@ With the **Refresh Config** button, the driver can be forced to poll the site co
 
 ### Web Interface
 
-This page displays the SetManage portal web interface. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the webinterface.
+This page displays the SetManage portal web interface. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web
+interface.
 
 ### Site DVEs
 

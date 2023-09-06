@@ -104,14 +104,14 @@ This page shows the web interface of the device. Note that the client machine ha
 
 ### General Page
 
-This page displays general parameters of the **Audemat Aztec Goldeneagle FM** device, such as the **System Name**, **Software Version**,**CPU Temperature** and **Serial Number**.
+This page displays general parameters of the **Audemat Aztec Goldeneagle FM** device, such as the **System Name**, **Software Version**, **CPU Temperature** and **Serial Number**.
 
 The page also displays the **Channels** table, which displays all configured FM channels.
 
 It also contains the following page buttons:
 
 - **SNMP Configuration**: Allows you to configure the SNMP parameters, such as the **SNMP Manager Address**, **Trap Version** and **Local Agent Port**.
-- **Email Configuration**:Allows you to configure the **Email Address** of the main recipient and two copy recipients.
+- **Email Configuration**: Allows you to configure the **Email Address** of the main recipient and two copy recipients.
 
 ### Carriers
 

@@ -79,12 +79,12 @@ DCF can also be implemented through the DataMiner DCF user interface and through
 
 Fixed interfaces
 
-- **Input - DVB-SPI-LVDS IN** -A single fixed interface of type **input.**
-- **Input** - **RS422-LVDS IN**- A single fixed interface of type **input.**
-- **Input** - **ASI-A IN**- A single fixed interface of type **input.**
-- **Input- ASI-B IN** -A single fixed interface of type **input.**
+- **Input - DVB-SPI-LVDS IN** - A single fixed interface of type **input.**
+- **Input** - **RS422-LVDS IN**  - A single fixed interface of type **input.**
+- **Input** - **ASI-A IN**  - A single fixed interface of type **input.**
+- **Input- ASI-B IN** - A single fixed interface of type **input.**
 - **Output - Modulator Output OUT** - A single fixed interface of type **output**.
-- **Output - Monitoring Output OUT** -A single fixed interface of type **output**.
+- **Output - Monitoring Output OUT** - A single fixed interface of type **output**.
 
 ### Connections
 

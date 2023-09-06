@@ -4,7 +4,8 @@ uid: Connector_help_Extron_Crosspoint_MAV_Plus
 
 # Extron Crosspoint MAV Plus
 
-The Extron Crosspoint MAV Plus matrix switcher family distributes any audio/video input to any combination of outputs.The switcher can route multiple input/output combinations simultaneously.
+The Extron Crosspoint MAV Plus matrix switcher family distributes any audio/video input to any combination of outputs.
+The switcher can route multiple input/output combinations simultaneously.
 
 ## About
 

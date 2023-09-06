@@ -50,8 +50,25 @@ The eMTA collector will generate tab-separated CSV files. For more information o
 
 ### Slow offload structure
 
-1\. MAC Address CM2. SAPID3. Another Operator4. Node5. Timestamp6. Chassis7. FQDN 1.3.6.1.4.1.7432.1.1.1.4.08. End Point Count 1.3.6.1.4.1.7432.1.1.1.5.09. Dev Enabled 1.3.6.1.4.1.7432.1.1.1.6.010. DynamicOID111. DynamicOID212. DynamicOID3
+1\. MAC Address CM
+2. SAPID
+3. Another Operator
+4. Node
+5. Timestamp
+6. Chassis
+7. FQDN 1.3.6.1.4.1.7432.1.1.1.4.0
+8. End Point Count 1.3.6.1.4.1.7432.1.1.1.5.0
+9. Dev Enabled 1.3.6.1.4.1.7432.1.1.1.6.0
+10. DynamicOID1
+11. DynamicOID2
+12. DynamicOID3
 
 ### IVR offload structure
 
-1\. MAC Address CM2. Prov Phase 1.3.6.1.4.1.7432.1.1.2.16.03. End Point Status 1 1.3.6.1.4.1.7432.2.1.2.1.1.31.9 (Motorola) or 1.3.6.1.2.1.2.2.1.8.9 (Arris)4. End Point Status 2 1.3.6.1.4.1.7432.2.1.2.1.1.31.10 (Motorola) or 1.3.6.1.2.1.2.2.1.8.10 (Arris)5. Timestamp6. SAPID7. Another Operator
+1\. MAC Address CM
+2. Prov Phase 1.3.6.1.4.1.7432.1.1.2.16.0
+3. End Point Status 1 1.3.6.1.4.1.7432.2.1.2.1.1.31.9 (Motorola) or 1.3.6.1.2.1.2.2.1.8.9 (Arris)
+4. End Point Status 2 1.3.6.1.4.1.7432.2.1.2.1.1.31.10 (Motorola) or 1.3.6.1.2.1.2.2.1.8.10 (Arris)
+5. Timestamp
+6. SAPID
+7. Another Operator

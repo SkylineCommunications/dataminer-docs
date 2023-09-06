@@ -66,6 +66,6 @@ The web interface is only accessible when the client machine has network access 
 
 On the **General** page of this connector, you can initialize the **API Token** to be able to poll data.
 
-The **Debug** pagecontains basic information about the communication with the device, as well as specific logs for every entry.
+The **Debug** page contains basic information about the communication with the device, as well as specific logs for every entry.
 
 The other pages contain status information for the DSG orchestration and general information.

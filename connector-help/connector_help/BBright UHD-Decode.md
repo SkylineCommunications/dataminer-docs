@@ -10,10 +10,10 @@ This connector implements the BBright UHD-Decode API. Communication happens via 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                | **Based on** | **System Impact**         |
-|----------------------|-----------------------------------------------------------------------------------------------------------------|--------------|---------------------------|
-| 1.0.0.x              | Initial version.                                                                                                | \-           | \-                        |
-| 1.1.0.x \[SLC Main\] | Added support for ASI interfaces.Changed implementation to accommodate latest firmware response format changes. | 1.0.0.x      | Not backwards compatible. |
+| **Range**            | **Key Features**                                                                                                 | **Based on** | **System Impact**         |
+|----------------------|------------------------------------------------------------------------------------------------------------------|--------------|---------------------------|
+| 1.0.0.x              | Initial version.                                                                                                 | \-           | \-                        |
+| 1.1.0.x \[SLC Main\] | Added support for ASI interfaces. Changed implementation to accommodate latest firmware response format changes. | 1.0.0.x      | Not backwards compatible. |
 
 ### Product Info
 

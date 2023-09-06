@@ -74,7 +74,31 @@ Also the **Webservice Endpoint URL** can be configured on this page.
 
 Format of the XML data that is sent to the CMDB API:
 
-\<UpdateInstallationRequest xmlns="[http://BP.MDM.Artifacts/NewOrder](http://bp.mdm.artifacts/NewOrder)"\> \<DataMinerSystemId\>string\</DataMinerSystemId\> \<DataMinerAgentId\>int\</DataMinerAgentId\> \<EntityId\>int\</EntityId\> \<EntityType\>ELEMENT\</EntityType\> \<!-- ELEMENT \| SERVICE \| VIEW \| PARAMETER \| REDUNDANCYGROUP --\> \<Properties\> \<Property\> \<!-- 0..\* --\> \<Key\> \<Id\>int\</Id\> \<Name\>string\</Name\> \<Description\>string\</Description\> \<Index\>string\</Index\> \<IndexPK\>string\</IndexPK\> \</Key\> \<LastValueChangeUTC\>datetime\</LastValueChangeUTC\> \<Values\> \<OldValue\>string\</OldValue\> \<NewValue\>string\</NewValue\> \</Values\> \</Property\> \<Property\> ... \</Property\> \</Properties\>\</UpdateInstallationRequest\>
+\<UpdateInstallationRequest xmlns="[http://BP.MDM.Artifacts/NewOrder](http://bp.mdm.artifacts/NewOrder)"\>
+\<DataMinerSystemId\>string\</DataMinerSystemId\>
+\<DataMinerAgentId\>int\</DataMinerAgentId\>
+\<EntityId\>int\</EntityId\>
+\<EntityType\>ELEMENT\</EntityType\> \<!-- ELEMENT \| SERVICE \| VIEW \| PARAMETER \| REDUNDANCYGROUP --\>
+\<Properties\>
+\<Property\> \<!-- 0..\* --\>
+\<Key\>
+\<Id\>int\</Id\>
+\<Name\>string\</Name\>
+\<Description\>string\</Description\>
+\<Index\>string\</Index\>
+\<IndexPK\>string\</IndexPK\>
+\</Key\>
+\<LastValueChangeUTC\>datetime\</LastValueChangeUTC\>
+\<Values\>
+\<OldValue\>string\</OldValue\>
+\<NewValue\>string\</NewValue\>
+\</Values\>
+\</Property\>
+\<Property\>
+...
+\</Property\>
+\</Properties\>
+\</UpdateInstallationRequest\>
 
 Fields:
 

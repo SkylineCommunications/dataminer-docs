@@ -56,7 +56,7 @@ In addition, specific information can be displayed and set on multiple subpages:
 
 ### Modulator
 
-This page contains more technical information: **L-Band Monitor**/**Operational output** **frequencies**, **Modulation Standard**, **FEC Rate** and **Modulation**, **Carrier Modulation**, **Symbol Rate**, **Current Rate Estimation**, **Interface Bitrate**, **Rate Priority**, **Transmit Status**, **Output Signal**, **Phase Error Deviation**, **Clock Loop State**, **Main Acquisition State**, **Measured Output Level**, **RF Gain** and **Gain Control (State /Mode)**.
+This page contains more technical information: **L-Band Monitor**/**Operational output** **frequencies**, **Modulation Standard**, **FEC Rate** and **Modulation**, **Carrier Modulation**, **Symbol Rate**, **Current Rate Estimation**, **Interface Bitrate**, **Rate Priority**, **Transmit Status**, **Output Signal**, **Phase Error Deviation**, **Clock Loop State**, **Main Acquisition State**, **Measured Output Level**, **RF Gain** and **Gain Control (State /** **Mode)**.
 
 Additional information can be displayed and set on multiple subpages: **NCR**, **BBFraming**, **PHLA**, **Additional**, **BER**, **BISS**, **Rate** **Adapter**, **Frames** and **Packets**.
 

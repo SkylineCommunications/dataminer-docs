@@ -62,7 +62,8 @@ SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
-  - **Bus address**: The **matrix number**, **level number**, **number of inputs** and **number of outputs** of the matrix separated by periods (".") The matrix number range is 0-15, the level number range is 0-7, and the range of inputs and outputs is 1-1024. For example: *"0.0.1024.1024".*
+  - **Bus address**: The **matrix number**, **level number**, **number of inputs** and **number of outputs** of the matrix separated by periods (".") The matrix number range is 0-15, the level number range is 0-7, and the range of inputs and outputs is 1-1024.
+    For example: *"0.0.1024.1024".*
 
 ### Redundancy
 

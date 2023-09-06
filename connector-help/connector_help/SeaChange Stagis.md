@@ -4,7 +4,7 @@ uid: Connector_help_SeaChange_Stagis
 
 # SeaChange Stagis
 
-This driver can be used for basic KPI monitoring for **SeaChange Stagis** devices:interfaces, storage, software and more generic info.
+This driver can be used for basic KPI monitoring for **SeaChange Stagis** devices: interfaces, storage, software and more generic info.
 
 ## About
 

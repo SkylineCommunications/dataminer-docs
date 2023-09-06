@@ -10,10 +10,10 @@ This driver allows you to monitor the FOR-A MFR-6100 Video Router via an SNMP co
 
 ### Version Info
 
-| **Range**            | **Key Features**                                 | **Based on** | **System Impact**                                                        |
-|----------------------|--------------------------------------------------|--------------|--------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version (SNMP).                          | \-           | \-                                                                       |
-| 1.0.1.x \[SLC Main\] | \- Added matrix.- Added extra serial connection. | 1.0.0.x      | Existing elements must be edited to configure the additional connection. |
+| **Range**            | **Key Features**                                  | **Based on** | **System Impact**                                                        |
+|----------------------|---------------------------------------------------|--------------|--------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version (SNMP).                           | \-           | \-                                                                       |
+| 1.0.1.x \[SLC Main\] | \- Added matrix. - Added extra serial connection. | 1.0.0.x      | Existing elements must be edited to configure the additional connection. |
 
 ### Product Info
 

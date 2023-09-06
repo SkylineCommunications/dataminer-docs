@@ -18,11 +18,11 @@ For more information, refer to <https://store.emc.com/us/Product-Family/ISILON-P
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                                       | No                  | Yes                     |
-| 1.0.1.x          | Based on 1.0.0.4.Uses dynamic IP for redundancy.                       | No                  | Yes                     |
-| 2.0.0.x          | Based on 1.0.0.4.Adds a second HTTP connection, for manual redundancy. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                                        | No                  | Yes                     |
+| 1.0.1.x          | Based on 1.0.0.4. Uses dynamic IP for redundancy.                       | No                  | Yes                     |
+| 2.0.0.x          | Based on 1.0.0.4. Adds a second HTTP connection, for manual redundancy. | No                  | Yes                     |
 
 ### Supported firmware versions
 

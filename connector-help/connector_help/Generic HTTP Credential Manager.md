@@ -34,4 +34,4 @@ This driver uses a virtual connection and does not require any input during elem
 
 The driver displays only one page, the General page, which contains the **Credentials** table. In this table, you can view and edit the **Friendly Name**, **Username**, and **Password** for each set of credentials.
 
-The page also contains a page button, **Add Credential**, which opens up a pop-up page that allows you to add a new set of credentials. To do so, fill in the **Friendly Name**, **Username** and **Password**,and click the **Add New Credential** button to add it to the table.
+The page also contains a page button, **Add Credential**, which opens up a pop-up page that allows you to add a new set of credentials. To do so, fill in the **Friendly Name**, **Username** and **Password**, and click the **Add New Credential** button to add it to the table.

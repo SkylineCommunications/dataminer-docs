@@ -62,7 +62,9 @@ The file name can contain an underscore "\_" so you can give it a more specific 
 
 The CSV has a specific layout:
 
-> Element Name;DNS Name;DMS View;;"Here you can start making your nodes"
+> Element Name;DNS Name;DMS View
+> ;;
+> "Here you can start making your nodes"
 
 The "Element Name" and "DNS Name" need to be unique.
 
@@ -70,7 +72,9 @@ The "DMS View" is a view in the DataMiner System.
 
 For example:
 
-> Element Name;DNS Name;DMS View;;Labo Node AC8810;LaboNodeUniqueName.be;Skyline View
+> Element Name;DNS Name;DMS View
+> ;;
+> Labo Node AC8810;LaboNodeUniqueName.be;Skyline View
 
 ### Redundancy
 

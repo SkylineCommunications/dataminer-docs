@@ -74,10 +74,11 @@ The **Virtual Disk Table** contains all settings and statusses of the virtual di
 
 ### Logical Devices
 
-The**Configuration** page contains all the settings parameters like the provisioning **File Path**and the master **Polling Status.**
+The **Configuration** page contains all the settings parameters like the provisioning **File Path** and the master **Polling Status.**
 
 Revision History
 
 DATE VERSION AUTHOR COMMENTS
 
 08/10/2018 1.0.0.1 AIG, Skyline Initial version
+

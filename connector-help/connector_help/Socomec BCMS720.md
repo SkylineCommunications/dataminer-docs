@@ -26,7 +26,7 @@ This driver uses a serial connection and requires the following input during ele
 
 ### Monitoring
 
-This page displaysinformation for **each branch:**
+This page displays information for **each branch:**
 
 - **Current**
 - **Minimum Current**
@@ -45,7 +45,7 @@ In addition, you can **reset** the **min/max values** as well as the **kWh Value
 
 ### Alarms
 
-This page displays the3 kinds of **current alarms for each branch:**
+This page displays the 3 kinds of **current alarms for each branch:**
 
 - **Zero Current Alarm**
 - **High-Current Pre-Alarm**

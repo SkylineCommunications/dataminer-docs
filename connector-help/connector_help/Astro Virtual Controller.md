@@ -66,7 +66,7 @@ This page displays the **RF To IP Summary Table**, which contains information on
 
 On this page, the **Firmware Update Schedule Table** lists all the scheduled firmware updates.
 
-To schedule a new firmware update, right-click the table and click **Launch new schedule wizard**.This will open a pop-up window where updates can be scheduled.
+To schedule a new firmware update, right-click the table and click **Launch new schedule wizard**. This will open a pop-up window where updates can be scheduled.
 
 Note that the Automation scripts "Astro Firmware Update Wizard" and "Astro Firmware Update Execute" must be present in the DMS to be able to launch the wizard.
 

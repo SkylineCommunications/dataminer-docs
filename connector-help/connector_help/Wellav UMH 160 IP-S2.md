@@ -54,7 +54,7 @@ This page displays all status information for the **Input Tuner**, **Input ASI**
 
 The page contains the **Program Table** with the **Program Names** and **Program PIDs**. Two buttons allow to **Scan TS** for **DVB** and **ATSC**.
 
-The **Source Select**, the **T2MI** and **Bypass Whole Stream** for ASI and IPcan also be set on this page.
+The **Source Select**, the **T2MI** and **Bypass Whole Stream** for ASI and IP can also be set on this page.
 
 ### Input Receiver
 
@@ -97,7 +97,7 @@ This page provides the **GbE Port-Setting** for the **Main** and **Backup** and 
 
 ### CA
 
-This page shows the **CAM Max Bitrate** and BISS related parameters: **Mode**,the **BISS-1** and **BISS-E** **Keys** and the **BISS-E ID.**
+This page shows the **CAM Max Bitrate** and BISS related parameters: **Mode**, the **BISS-1** and **BISS-E** **Keys** and the **BISS-E ID.**
 
 ### System
 

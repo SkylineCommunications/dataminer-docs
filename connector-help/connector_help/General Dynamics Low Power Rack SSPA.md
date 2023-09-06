@@ -10,10 +10,10 @@ This driver can be used to monitor the GD Satcom Low Power Rack SSPA using an SN
 
 ### Version Info
 
-| **Range**            | **Key Features**                        | **Based on** | **System Impact**                                                                                                                           |
-|----------------------|-----------------------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version with SNMP connection.   | \-           | \-                                                                                                                                          |
-| 2.0.0.x \[SLC Main\] | Initial version with serial connection. | \-           | \- Existing elements using this driver need to be reconfigured when you switch to this range.- Some parameters IDs were removed or changed. |
+| **Range**            | **Key Features**                        | **Based on** | **System Impact**                                                                                                                            |
+|----------------------|-----------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version with SNMP connection.   | \-           | \-                                                                                                                                           |
+| 2.0.0.x \[SLC Main\] | Initial version with serial connection. | \-           | \- Existing elements using this driver need to be reconfigured when you switch to this range. - Some parameters IDs were removed or changed. |
 
 ### System Info
 
@@ -74,7 +74,8 @@ From range 2.0.0.x onwards, the element created with this driver contains the fo
 
 - **General**: Displays generic information about the module, such as the **Unit Type**, **Firmware version**, **Operation Time** and **RF State**.
 - **Module**: Displays specific information about the module, such as **General Status**, **Gate Voltage** and **Temperature**.
-- **Settings**: Allows you to change device settings such as **Mode**, **Control** and **Attenuation**.Note: RF Power Fault Limits only work in dBm because of a device issue when values are set in dBW or Watts. The logic for the other units of measure is still in the driver, but hidden.
+- **Settings**: Allows you to change device settings such as **Mode**, **Control** and **Attenuation**.
+  Note: RF Power Fault Limits only work in dBm because of a device issue when values are set in dBW or Watts. The logic for the other units of measure is still in the driver, but hidden.
 - **Active Faults**: Displays the module active faults, such as **Logic Board**, **Fan** and **Power Supply**.
 - **Detailed Faults**: Displays the **Detailed Fault Table**, with detailed information about module failures.
 - **Events**: Displays the **Event Log Table**, with information about the historical module failures.

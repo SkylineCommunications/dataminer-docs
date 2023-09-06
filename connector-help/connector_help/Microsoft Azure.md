@@ -87,7 +87,7 @@ Multiple elements using different service principals can be created in a DMS.
 
 ## How to use
 
-This manager element will create a **view for each managed subscription**,and under each subscription view it will create a view for each **resource group**,which contains at least one **resource type** of which the metrics can be retrieved (defined in the Supported Resource Type Elements table).
+This manager element will create a **view for each managed subscription**, and under each subscription view it will create a view for each **resource group**, which contains at least one **resource type** of which the metrics can be retrieved (defined in the Supported Resource Type Elements table).
 
 The **resource type elements** are responsible for retrieving the **metrics** for every **resource** of the same type within the same **resource group**.
 
@@ -102,7 +102,7 @@ You can manage the resource type elements in the table on the **Resource Type El
 
 The resource type elements will be created under the view of the resource group they belong to.
 
-On the **Elements Configuration** subpage, you can also define the **Default Polling Frequency**,and enable or disablethe **automatic creation** of new resource type elements added to the table. These parameters will not affect the resource type elements that are already present in the table. This page also contains two buttons to enable and disable the creation of all resource type elements in the table.
+On the **Elements Configuration** subpage, you can also define the **Default Polling Frequency**, and enable or disable the **automatic creation** of new resource type elements added to the table. These parameters will not affect the resource type elements that are already present in the table. This page also contains two buttons to enable and disable the creation of all resource type elements in the table.
 
 ### Polling Frequency Configuration
 

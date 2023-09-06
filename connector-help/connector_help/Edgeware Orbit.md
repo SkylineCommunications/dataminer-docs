@@ -74,7 +74,7 @@ Among others, this page displays both the **Connection** and the **Logon State**
 
 It also has two page buttons:
 
-- **Configuration**:Allows you to download the configuration to a location on your computer.
+- **Configuration**: Allows you to download the configuration to a location on your computer.
 - **Security**: Allows you to fill in your login credentials. This is necessary for the driver to work properly (cf. 'Configuration' section of this help).
 
 ### System Information
@@ -87,7 +87,7 @@ This page provides information about the **power supplies, voltages, fans** and 
 
 ### CPU and Memory Information
 
-Thispage displays CPU key values and **load averages**,as well as information about every **DIMM** **slot** and about how the memory is used.
+This page displays CPU key values and **load averages**, as well as information about every **DIMM** **slot** and about how the memory is used.
 
 ### Processes Information
 
@@ -103,7 +103,7 @@ This page displays information about the **interfaces** the server is using and 
 
 ### Streams
 
-On this page, you can poll for **ls-media -lj**,which returns every stream the server is using. As this response can be very large, there is an option to enable or disable this functionality.
+On this page, you can poll for **ls-media -lj**, which returns every stream the server is using. As this response can be very large, there is an option to enable or disable this functionality.
 
 ### Statistics
 
@@ -121,6 +121,7 @@ On this page, you can configure custom commands to send to the device. There are
 
 For the configuration of custom CLI commands, please note the following:
 
-- The .csv file used to import custom CLI commands should have the following format: *Polling Interval,Result Type,Command Name,Command*. E.g. *10,string,Uname,uname -a*
+- The .csv file used to import custom CLI commands should have the following format: *Polling Interval,Result Type,Command Name,Command*.
+  E.g. *10,string,Uname,uname -a*
 
 - The field 'Command Name' in the .csv file must not contain commas.

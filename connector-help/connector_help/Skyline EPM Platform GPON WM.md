@@ -8,15 +8,15 @@ The **Skyline EPM Platform GPON WM** is a configuration manager used to handle w
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                           | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Initial version- Manages the workflow and creation of OLT KPI files- Manages the workflow and creation of Passive files | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                             | **Based on** | **System Impact** |
+|----------------------|------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Initial version - Manages the workflow and creation of OLT KPI files - Manages the workflow and creation of Passive files | \-           | \-                |
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                              | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | Automation scripts:- WmGponToOlt- OltToGponWmGeneric KAFKA ConsumerOLT Connectors:- ZTE ZXA10 C600 GPON Platform- Huawei 5600-5800 GPON Platform- Nokia ISAM 7300 FX GPON Platform | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                     | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | Automation scripts: - WmGponToOlt - OltToGponWm Generic KAFKA Consumer OLT Connectors: - ZTE ZXA10 C600 GPON Platform - Huawei 5600-5800 GPON Platform - Nokia ISAM 7300 FX GPON Platform | \-                      |
 
 ## Configuration
 
@@ -57,7 +57,8 @@ Finally, if considered necessary it is possible to configure the handling of the
 
 ## How to use
 
-The **Skyline EPM Platform GPON WM** is configured to handle requests from the OLT elements [ZTE ZXA10 C600 GPON Platform](/Driver%20Help/ZTE%20ZXA10%20C600%20GPON%20Platform.aspx), [Huawei 5600-5800 GPON Platform](/Driver%20Help/Huawei%205600-5800%20GPON%20Platform.aspx) and [Nokia ISAM 7300 FX GPON Platform](xref:Connector_help_Nokia_ISAM_7300_FX_GPON_Platform). These workflow requests and their respective result status are visible in the **Workflow Overview** table. The supported workflows are the following:
+The **Skyline EPM Platform GPON WM** is configured to handle requests from the OLT elements [ZTE ZXA10 C600 GPON Platform](/Driver%20Help/ZTE%20ZXA10%20C600%20GPON%20Platform.aspx), [Huawei 5600-5800 GPON Platform](/Driver%20Help/Huawei%205600-5800%20GPON%20Platform.aspx) and [Nokia ISAM 7300 FX GPON Platform](xref:Connector_help_Nokia_ISAM_7300_FX_GPON_Platform). These workflow requests and their respective result status are visible in the **Workflow Overview** table.
+The supported workflows are the following:
 
 ### ONT KPI Requests
 
@@ -72,17 +73,21 @@ The objective of this workflow is to retrieve the main KPIs (provided by a KAFKA
 
 **Note:** If an unexpected error occurs during the workflow, the **Status** of the request in the **Workflow Overview** table is set to **Failed**.
 
+
 ### Passive Data Requests
 
 This workflow allows an OLT to obtain the passive components (Subscribers and Splitters) linked to its topology.
 
 1.  An **OLT element** sends a request for the **Subscriber** or **Splitter** information to the **GPON WM**.
 2.  The ****Skyline EPM Platform GPON WM**** receives the request and adds it to the **Workflow Overview** table to later process it depending on the parameters defined in the Configuration page.
-3.  The **Skyline EPM Platform GPON WM** access the directory defined in the **Entity Import Directory** and retrieves therespective Subscriber or Splitter CSV files. The element proceeds to process the required file and create a new compatible CSV file with the OLT element.
+3.  The **Skyline EPM Platform GPON WM** access the directory defined in the **Entity Import Directory** and retrieves the respective Subscriber or Splitter CSV files. The element proceeds to process the required file and create a new compatible CSV file with the OLT element.
 4.  The new compatible **Subscriber** or **Splitter** file is exported to the **Entity Export Directory** and a message is sent to the OLT indicating that the file is ready. After this, the **Status** of the request in the **Workflow Overview** table is set to **Completed.**
 
 **Note:** If an unexpected error occurs during the workflow, the **Status** of the request in the **Workflow Overview** table is set to **Failed**.
 
+
 ## Notes
 
 The Subscriber, Splitter and KAFKA Stream files are created by connectors external to the Skyline Platform EPM Solution, like the Generic KAFKA Consumer or the Telefonia por Cable S.A de C.V Geomarketing DB GPON.
+
+

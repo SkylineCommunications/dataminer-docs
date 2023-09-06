@@ -111,7 +111,7 @@ Depending on the state of the **Input Selection A**, the following connections a
   - Between **Reclocker** **A** and **Output A1.**
   - Between **Reclocker** **A** and **Output A2.**
   - Between **Reclocker** **A** and **Output A3.**
-  - Between **SDI Input B**and **Reclocker B.**
+  - Between **SDI Input B** and **Reclocker B.**
   - Between **Reclocker** **B** and **Output B1.**
   - Between **Reclocker** **B** and **Output B2.**
   - Between **Reclocker** **B** and **Output B3.**

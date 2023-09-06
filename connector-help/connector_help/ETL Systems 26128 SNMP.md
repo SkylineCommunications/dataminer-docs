@@ -14,11 +14,11 @@ This SNMP driver for the ETL Systems 26128 chassis will create elements for all 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                                         | No                  | Yes                     |
-| 1.0.1.x          | Based on 1.0.0.1Added creation of DVEs (different layout of main page). | No                  | Yes                     |
-| 1.0.2.x          | Based on 1.0.1.9Number of attenuators and amplifiers is now dynamic.    | No                  | Yes                     |
+| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+|------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version                                                          | No                  | Yes                     |
+| 1.0.1.x          | Based on 1.0.0.1 Added creation of DVEs (different layout of main page). | No                  | Yes                     |
+| 1.0.2.x          | Based on 1.0.1.9 Number of attenuators and amplifiers is now dynamic.    | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -67,7 +67,7 @@ This page displays the status (**Internal Voltage** and **Temperature)** of the 
 
 This page lists all the module slots (from 1 to 18) and the name and type of the module in each slot. If no module is present, the module type will display "Empty". You can also alter the Module Name in this table.
 
-The **Module Name** is used in the creation of the elements. In version range **1.0.0.x**,the name cannot be changed via the table once the elements have been created. In version range **1.0.1.x**, changing the Module Name in the table will cause the **Element Name** to be changed. Please take into account that the name must always be unique within the DataMiner System. If the proposed new name is not unique, the change will not be implemented.
+The **Module Name** is used in the creation of the elements. In version range **1.0.0.x**, the name cannot be changed via the table once the elements have been created. In version range **1.0.1.x**, changing the Module Name in the table will cause the **Element Name** to be changed. Please take into account that the name must always be unique within the DataMiner System. If the proposed new name is not unique, the change will not be implemented.
 
 ### Web Interface
 

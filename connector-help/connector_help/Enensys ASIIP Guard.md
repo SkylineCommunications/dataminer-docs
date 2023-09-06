@@ -60,7 +60,8 @@ In order to perform automatic switching, the device relies on switching conditio
 
 ### Alarms
 
-From version 1.0.0.6 onwards, you can select the display key format of the **Alarm Current Table**. You can choose between the formats *ID/Description/Severity* (default) or *Custom Description.*If you select **Custom Description**, you can define a custom description in the **Alarm Configuration Table** that will be used as the display key for the Alarm Current Table.
+From version 1.0.0.6 onwards, you can select the display key format of the **Alarm Current Table**. You can choose between the formats *ID/Description/Severity* (default) or *Custom Description.*
+If you select **Custom Description**, you can define a custom description in the **Alarm Configuration Table** that will be used as the display key for the Alarm Current Table.
 
 If the **Custom Description** Column is **empty** for a specific alarm, the display key will be the default **ID/Description/Severity**.
 

@@ -66,7 +66,7 @@ This page contains the matrix, sized according to the **Number of Inputs** and *
 
 ### General
 
-Thispage contains the following parameters:
+This page contains the following parameters:
 
 - **Matrix Configuration:** Displays any detected misconfigurations. The status **OK** indicates that the matrix was successfully configured.
 - **Number of Inputs:** Displays the selected number of inputs for the matrix.

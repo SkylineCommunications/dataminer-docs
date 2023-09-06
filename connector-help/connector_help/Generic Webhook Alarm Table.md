@@ -10,9 +10,9 @@ This connector shows received JSON objects in an Alarm Table. You can change the
 
 ### Version Info
 
-| **Range** | **Key Features**                                                                                                                                 | **Based on** | **System Impact** |
-|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.1   | \- Inserting and modifying source URL.- Enabling/disabling automatic removal of rows in table.- Configuring rules for automatic removal of rows. | \-           | \-                |
+| **Range** | **Key Features**                                                                                                                                   | **Based on** | **System Impact** |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.1   | \- Inserting and modifying source URL. - Enabling/disabling automatic removal of rows in table. - Configuring rules for automatic removal of rows. | \-           | \-                |
 
 ### System Info
 
@@ -46,4 +46,27 @@ Alarm properties that are supported by this connector are **alarm_id**, **severi
 
 This is an example JSON message:
 
-{ "alarm_id": "alarm_id_error_1345", "severity": "critical", "value": "Bar" "alarm_properties": { "Property1": "SomeElement", "Property2": "Foo", "Property3": "NA", "Property4": "SomeValue1", "Property5": "SomeValue2", "Property6": "SomeResource", "Property7": "Fubar", "Property8": "test", "Property9": "yes", "Property10": "Fubar", "Property11": "Some Machine", "Property12": "Network is down", "Property13": "", "Property14": "", "Property15": "", }}
+{
+"alarm_id": "alarm_id_error_1345",
+"severity": "critical",
+"value": "Bar"
+"alarm_properties":
+{
+"Property1": "SomeElement",
+"Property2": "Foo",
+"Property3": "NA",
+"Property4": "SomeValue1",
+"Property5": "SomeValue2",
+"Property6": "SomeResource",
+"Property7": "Fubar",
+"Property8": "test",
+"Property9": "yes",
+
+"Property10": "Fubar",
+"Property11": "Some Machine",
+"Property12": "Network is down",
+"Property13": "",
+"Property14": "",
+"Property15": "",
+}
+}

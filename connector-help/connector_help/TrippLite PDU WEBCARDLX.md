@@ -8,7 +8,7 @@ uid: Connector_help_TrippLite_PDU_WEBCARDLX
 </colgroup>
 <tbody>
 <tr class="odd">
-<td>TrippLite PDU WEBCARDLXThe PDU line of devices from TrippLite allow for the use of multiple outlets, but does not guard against surge or line noise protection for connected equipment.
+<td>TrippLite PDU WEBCARDLX The PDU line of devices from TrippLite allow for the use of multiple outlets, but does not guard against surge or line noise protection for connected equipment.
 <h2 id="about">About</h2>
 <p>The TrippLite PDU WEBCARDLX driver allows for configuration and monitoring of several PDU and EnviroSense devices.</p>
 <h3 id="ranges-of-the-driver">Ranges of the driver</h3>

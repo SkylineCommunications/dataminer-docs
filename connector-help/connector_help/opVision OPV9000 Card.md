@@ -30,13 +30,13 @@ This driver has five different pages: **Card Overview**, **Video**, **Optical**,
 
 ### General Information
 
-On thispage, the general information for each card installed in the opVision OPV9000 is displayed in the **System Information Table**.
+On this page, the general information for each card installed in the opVision OPV9000 is displayed in the **System Information Table**.
 
 This includes:
 
 - **Card Identification**
 - **Card Address**
-- **Board Description, Name,** and**Nickname**
+- **Board Description, Name,** and **Nickname**
 - **Frame Description, Name,** and **Nickname**
 - **Equipment/Function Type**
 
@@ -44,7 +44,7 @@ In addition, you can also perform a factory reset or reboot of the OpVision 9000
 
 ### Video
 
-On thispage, the following information is displayed in the **Video Table:**
+On this page, the following information is displayed in the **Video Table:**
 
 - The table row identification, in the **Video Index** column
 - The **card index**
@@ -54,7 +54,7 @@ On thispage, the following information is displayed in the **Video Table:**
 
 ### Optical
 
-Thispage displays the following information in the **Optical Modules Table:**
+This page displays the following information in the **Optical Modules Table:**
 
 - The table row identification, in the **Index** column
 - The **card index**
@@ -76,7 +76,7 @@ The **Power State Table** contains the following information:
 
 - The row identification, in the **Power Index** column, which combines the card identification and the power unit in use
 - The card identification, in the **Card Index**
-- The **Power Unit**identification
+- The **Power Unit** identification
 - The **Power State**
 
 The **Fan Table** displays the following information:
@@ -89,7 +89,7 @@ The **Fan Table** displays the following information:
 
 ### Channel Control State
 
-Thispage displays the **Channel Control State Table**, which displays the card and channel combination state and its medium type.
+This page displays the **Channel Control State Table**, which displays the card and channel combination state and its medium type.
 
 This table has the following columns:
 

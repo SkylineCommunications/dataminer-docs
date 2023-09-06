@@ -27,9 +27,9 @@ The driver has two levels of complexity:
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                       | **Exported Components** |
-|-----------|---------------------|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Agama Consumer](/Driver%20Help/Telenor%20EPM%20Agama%20Consumer.aspx)Telenor EPM MAM Consumer[Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx)[Telenor Propaganda](xref:Connector_help_Telenor_Propaganda) (not required - see "General" section below) | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                                                                                                                                          | **Exported Components** |
+|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | [Telenor EPM Agama Consumer](/Driver%20Help/Telenor%20EPM%20Agama%20Consumer.aspx) Telenor EPM MAM Consumer [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx) [Telenor Propaganda](xref:Connector_help_Telenor_Propaganda) (not required - see "General" section below) | \-                      |
 
 ## Configuration
 
@@ -79,7 +79,8 @@ As this is an EPM Manager, most users should only ever use the **visual pages**.
 
 This page shows as which kind of manager the element is used: FE or BE. If the element type is set to BE, the page also shows for which county the element is responsible.
 
-The **Telenor Propaganda** driver is used to monitor EPM Manager information, such as alarms, active devices, etc. at the end of an aggregation cycle (FE Manager). If you want to use this driver with the EPM Manager, fill in the parameter **Propaganda Element ID** in the **FE Manager** element.There is also a button to force the synchronization between the two drivers (**Propaganda Synchronization**).
+The **Telenor Propaganda** driver is used to monitor EPM Manager information, such as alarms, active devices, etc. at the end of an aggregation cycle (FE Manager). If you want to use this driver with the EPM Manager, fill in the parameter **Propaganda Element ID** in the **FE Manager** element.
+There is also a button to force the synchronization between the two drivers (**Propaganda Synchronization**).
 
 **Note:** Some parameters on the General page are read-only, but these can be changed on the **Configurations** page.
 

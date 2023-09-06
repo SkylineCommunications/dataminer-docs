@@ -12,9 +12,9 @@ This driver needs an SNMP connection to retrieve data from the device and to per
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | New version for Sencore MRD-3187x based on 3187a version 1.2.0.13.VsbTable and Decoders Table added from MIB files. General review according to development rules.Supported by MRD-3187A and MRD-3187B since version 1.2.0.12. | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | New version for Sencore MRD-3187x based on 3187a version 1.2.0.13. VsbTable and Decoders Table added from MIB files. General review according to development rules. Supported by MRD-3187A and MRD-3187B since version 1.2.0.12. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -52,7 +52,7 @@ It also displays **fan error and temperature** information, and provides access 
 
 - **SNMP Setting**: Allows you to enable or disable the fan error trap and to set the community strings.
 
-- **SNMP Tables**:Displays the Read Only Communication Table and Read Write Communication Table.
+- **SNMP Tables**: Displays the Read Only Communication Table and Read Write Communication Table.
 
 - **Genlock**: Allows you to set the Genlock format.
 
@@ -164,7 +164,7 @@ This page displays an overview of the input status and settings. It contains the
 
 - **PSI PAT**: Displays the PAT Overview table and PAT Programs Overview table.
 - **PSI PMT**: Displays the PMT Overview table.
-- **PSI ES**:Displays the ES Overview table.
+- **PSI ES**: Displays the ES Overview table.
 
 ### RDS2 - Input MPEG/IP
 

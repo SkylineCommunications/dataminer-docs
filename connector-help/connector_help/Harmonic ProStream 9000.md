@@ -144,7 +144,8 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-A **BULK** parameter is added from version 1.0.0.10 onwards to update the "Socket Active Source (In)" for multiple rows in one call.The set will be done from within a script. It should set a string value on the BULK parameter:
+A **BULK** parameter is added from version 1.0.0.10 onwards to update the "Socket Active Source (In)" for multiple rows in one call.
+The set will be done from within a script. It should set a string value on the BULK parameter:
 
 - Read PID: 12000
 - Write PID:12001

@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device (e.g. *172.32.65.38*).
 - **IP port**: The IP port of the device (fixed value: *4050*).
-- **Bus address**: This is a combination of the frame number and slot number/ID in the format \<frameNumber **.** slotID\>. For example, frame 1 and slot 12 correspond to bus address*1.12.*
+- **Bus address**: This is a combination of the frame number and slot number/ID in the format \<frameNumber **.** slotID\>. For example, frame 1 and slot 12 correspond to bus address *1.12.*
 
 SMART-SERIAL CONNECTION:
 

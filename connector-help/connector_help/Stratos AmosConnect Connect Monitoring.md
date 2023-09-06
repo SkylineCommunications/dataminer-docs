@@ -18,9 +18,9 @@ This driver uses an **Oracle Connection** to connect with the database.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                         |
-|------------------|---------------------------------------------------------------------|
-| 1.0.0.x          | 11.2.0.2.0 Oracle Database 11g Release 11.2.0.2.0 -64bit Production |
+| **Driver Range** | **Device Firmware Version**                                          |
+|------------------|----------------------------------------------------------------------|
+| 1.0.0.x          | 11.2.0.2.0 Oracle Database 11g Release 11.2.0.2.0 - 64bit Production |
 
 ## Installation and configuration
 

@@ -42,7 +42,7 @@ Note: All alarms can be removed from the table at any time if needed.
 
 ### Reports Gallery Page
 
-On the Reports Gallery page, you can find important reports such as **Data** **Throughput**, **Es/N0**,and **C/N0**. After an element restart, it can take a couple of minutes before the values for these parameters are filled in. This is expected behavior.
+On the Reports Gallery page, you can find important reports such as **Data** **Throughput**, **Es/N0**, and **C/N0**. After an element restart, it can take a couple of minutes before the values for these parameters are filled in. This is expected behavior.
 
 ### Statistics Page
 

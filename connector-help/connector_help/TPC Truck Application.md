@@ -76,7 +76,8 @@ When an outgoing flow is selected, you can load the receivers from VSM and perfo
 
 DCF is used to find the Arista interfaces linked to the source element that was selected via the outgoing flow. The interface name, RX and TX rates are displayed along with generic parameters of the Arista elements.
 
-SFlow monitoring is initiated when you press the **Fetch Receivers** **button**. The Truck Application will then check if the multicast and ANC addresses are detected in the SFlow packets. A green or red indicator will show the result. To view extra details, open the **Sflow Details** pop-up window.
+SFlow monitoring is initiated when you press the **Fetch Receivers** **button**. The Truck Application will then check if the multicast and ANC addresses are detected in the SFlow packets.
+A green or red indicator will show the result. To view extra details, open the **Sflow Details** pop-up window.
 
 The **Egress Flows** pop-up window is a direct view on the linked Arista element and shows the **IGMP Snooping Table**. Filter buttons with the MC and ANC addresses are available at the top.
 

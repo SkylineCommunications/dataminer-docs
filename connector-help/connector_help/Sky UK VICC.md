@@ -10,7 +10,8 @@ This Sky UK VICC driver is capable of showing which event is the current on-air 
 
 This driver retrieves a text file (in JSON format) from the VICC API, containing a collection of events (current on-air events, past events and future events scheduled to be on air) on a certain channel from an automation system. Each event in the collection might be a program part, a commercial, etc. The target automation system and channel to monitor can be configured by the user.
 
-HTTP requests are used in this driver to retrieve the information from the VICC application in two different polling modes: **Fast poll** polls the device every minute and **slow poll** polls the device every hour.When there are changes, data updates are sent by the application using the SignalR interface. This driver is also able to retrieve data using a WebSocket connection. This way, this driver can poll the device periodically by HTTP and handle data update messages sent by the application's SignalR and process these using a WebSocket connection.
+HTTP requests are used in this driver to retrieve the information from the VICC application in two different polling modes: **Fast poll** polls the device every minute and **slow poll** polls the device every hour.
+When there are changes, data updates are sent by the application using the SignalR interface. This driver is also able to retrieve data using a WebSocket connection. This way, this driver can poll the device periodically by HTTP and handle data update messages sent by the application's SignalR and process these using a WebSocket connection.
 
 ### Ranges of the driver
 
@@ -42,7 +43,8 @@ HTTP CONNECTION:
 
 - **IP port**: The IP port of the device, e.g. *80.*
 
-- **Bus address**: This consists of the automation system and the channel to monitor, separated by a forward slash. If a proxy server needs to be bypassed, also specify *byPassProxy*. You can use a comma (",") or a semicolon (";") as a separator.For example: *byPassProxy;SYSTEM1/LVH* or *byPassProxy,SYSTEM1/LVH*.
+- **Bus address**: This consists of the automation system and the channel to monitor, separated by a forward slash. If a proxy server needs to be bypassed, also specify *byPassProxy*. You can use a comma (",") or a semicolon (";") as a separator.
+  For example: *byPassProxy;SYSTEM1/LVH* or *byPassProxy,SYSTEM1/LVH*.
 
 *WebSocket SignalR Interface connection*
 
@@ -109,8 +111,10 @@ Via the Start Data Time page button you can access the **Data Distribution** pop
 
 ### Future Events
 
-This page displays a table with all the instances of future events detected in the VICC response. This table has a column for each scheduled item property, with the same parameters as on the On Air Event page. The display key for this table is "\[Event Number\]/\[Type of Material\]/\[Sequence Number\]".
+This page displays a table with all the instances of future events detected in the VICC response. This table has a column for each scheduled item property, with the same parameters as on the On Air Event page.
+The display key for this table is "\[Event Number\]/\[Type of Material\]/\[Sequence Number\]".
 
 ### Past Events
 
-This page displays a table with all the instances of past events detected in the VICC response. This table has a column for each scheduled item property, with the same parameters as on the On Air Event page. The display key for this table is "\[Event Number\]/\[Type of Material\]/\[Sequence Number\]".
+This page displays a table with all the instances of past events detected in the VICC response. This table has a column for each scheduled item property, with the same parameters as on the On Air Event page.
+The display key for this table is "\[Event Number\]/\[Type of Material\]/\[Sequence Number\]".

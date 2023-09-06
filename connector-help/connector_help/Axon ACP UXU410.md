@@ -20,7 +20,7 @@ The Axon ACP UXU410 driver is used to manage UXU410 Axon cards.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 17201925               |
+| 1.0.0.x   | 1720 1925              |
 
 ### System Info
 

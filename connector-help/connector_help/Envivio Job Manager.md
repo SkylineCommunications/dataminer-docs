@@ -65,13 +65,20 @@ It is possible to save extra logging on all the states of the jobs in a csv file
 
 Job Manager
 
-Execution or finishing a job is done via an **automation script**. The name of this script needs to be configured. On execute a configuration file for the resources is generated containing all the settings. This needs to be save on a specific location. It is also possible to define how long a completed job should stay in the **Job Overview**. This is set in amount of days. All these settings are done via the **Job Manager.** page button.
+Execution or finishing a job is done via an **automation script**. The name of this script needs to be configured.
+On execute a configuration file for the resources is generated containing all the settings. This needs to be save on a specific location.
+It is also possible to define how long a completed job should stay in the **Job Overview**. This is set in amount of days.
+All these settings are done via the **Job Manager.** page button.
 
 ## Usage
 
-Job Overview Page This page shows a list of all the Job requests in the **Job Overview Table**. And keep track of their current state. E.g.: Scheduled, Running, Completed, Failed. A Job can be linked to a group and these groups are displayed in the **Group Table.** Whenever a group is disabled or enabled, the jobs linked to this group will be disabled or enabled as well.
+Job Overview Page
+This page shows a list of all the Job requests in the **Job Overview Table**. And keep track of their current state. E.g.: Scheduled, Running, Completed, Failed.
+A Job can be linked to a group and these groups are displayed in the **Group Table.** Whenever a group is disabled or enabled, the jobs linked to this group will be disabled or enabled as well.
 
-Resource Overview Page This page shows a list of all the resources and a percentage of the already booked pool: **Resource Pool Usage.** Depending on the configuration of the resource elements itself, see **Notes** for more details, the resource list can be updated manually via the **Check Resources** button.
+Resource Overview Page
+This page shows a list of all the resources and a percentage of the already booked pool: **Resource Pool Usage.**
+Depending on the configuration of the resource elements itself, see **Notes** for more details, the resource list can be updated manually via the **Check Resources** button.
 
 # Notes
 

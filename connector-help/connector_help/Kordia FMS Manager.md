@@ -46,4 +46,4 @@ The **General** page contains the **Request Log Table** along with refresh and c
 
 The **PA Debug** page contains information regarding the data imported into DataMiner regarding the different HTTP requests that are done. These parameters contain the information of the latest applicable request.
 
-In the Log Table, the status column indicates how the request was evaluated: *Successful* or*Failed*.
+In the Log Table, the status column indicates how the request was evaluated: *Successful* or *Failed*.

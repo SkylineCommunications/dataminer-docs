@@ -10,10 +10,10 @@ The Generic Trap Forwarder is a generic connector that can be used to save all i
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                               | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                               | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | Adapted to show information of up to 30 bindings.Custom port to forward traps. | \-           | \-                |
+| **Range**            | **Key Features**                                                                | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | Adapted to show information of up to 30 bindings. Custom port to forward traps. | \-           | \-                |
 
 ### Product Info
 

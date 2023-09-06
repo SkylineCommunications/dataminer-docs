@@ -44,7 +44,8 @@ Response:
 
 ### Creation
 
-***Virtual connection***This driver uses a virtual connection and does not need any user information.
+***Virtual connection***
+This driver uses a virtual connection and does not need any user information.
 
 ### Configuration
 
@@ -120,8 +121,8 @@ Contains some controls to define the settings that are used by the API.
 - **Number of Rows:** default 3
 - **Number of Columns:** default 8
 - **Default Page:** page to return when no page is specified in the request
-- **Default Background Color:** button color when not overridden in the**Buttons Table**
-- **Default Text Color:** button color when not overridden in the**Buttons Table**
+- **Default Background Color:** button color when not overridden in the **Buttons Table**
+- **Default Text Color:** button color when not overridden in the **Buttons Table**
 - **Default Set Timout:** Default time to wait until a parameter set succeeded
 - **REST API Port**: TCP port where the REST API will be running on
 
@@ -131,7 +132,7 @@ Contains some controls to define the settings that are used by the API.
 
 The **Format** column on a button can be used to specify some optional conditions. Multiple pipe-separated conditions can be added.
 
-- *PAGE:DeviceSelection2Page:\<b\>\*\</b\>*:In case the page that will be generated is 'DeviceSelection2Page', the text will be surrounded by '\<b\>' and '\</b\>'.
+- *PAGE:DeviceSelection2Page:\<b\>\*\</b\>*: In case the page that will be generated is 'DeviceSelection2Page', the text will be surrounded by '\<b\>' and '\</b\>'.
 
 - MAPVALUE:1=OK;2=Loss : Allows to change the value of a parameter, to another value
 

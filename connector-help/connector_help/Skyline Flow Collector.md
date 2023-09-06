@@ -147,4 +147,4 @@ On this page, you can configure the default initial settings that will be used f
 
 ## Notes
 
-Netflow packets (raw bytes) are immediately added to the incoming data queue. This queue has a limited size of 200,000 *packets*. When this queue is full, it means that the driver was not able to process previous packets in time and new incoming data isdropped.
+Netflow packets (raw bytes) are immediately added to the incoming data queue. This queue has a limited size of 200,000 *packets*. When this queue is full, it means that the driver was not able to process previous packets in time and new incoming data is dropped.

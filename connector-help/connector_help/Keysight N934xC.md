@@ -41,9 +41,11 @@ SERIAL CONNECTION:
 
 This page contains basic device information such as the **Manufacturer**, **Model**, **Serial Number** and **Firmware Version** of the device. It also contains a toggle button: **DMS Spectrum Measurements**.
 
+
+
 ### Spectrum Analyzer
 
-This page contains DataMiner'sdefault **Spectrum Analysis** component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
+This page contains DataMiner's default **Spectrum Analysis** component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
 
 - **Reference Level**
 - **Reference Scale**
@@ -54,3 +56,5 @@ This page contains DataMiner'sdefault **Spectrum Analysis** component. In additi
 - **Video Bandwidth**
 - **Sweep Time**
 - **Input Attenuation**
+
+

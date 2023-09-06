@@ -19,10 +19,10 @@ This connector uses a serial protocol developed by CPI. Two communication modes 
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|-----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | \- Front Panel Boot Kernel Software Version: *03.00.19*- Front Main Program Software Version: *01.00.90*- Power Supply Boot Kernel Software Version: *03.00.03*- Power Supply Main Program Software Version: *01.00.49*- RF Controller Boot Kernel Software Version: *03.00.03*- RF Controller Main Program Software Version: *01.00.36*- External Interface Boot Kernel Software Version: *03.00.03*- External Interface Main Program Software Version: *01.00.42* |
-| 1.1.0.x   | N/A                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| **Range** | **Supported Firmware**                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | \- Front Panel Boot Kernel Software Version: *03.00.19* - Front Main Program Software Version: *01.00.90* - Power Supply Boot Kernel Software Version: *03.00.03* - Power Supply Main Program Software Version: *01.00.49* - RF Controller Boot Kernel Software Version: *03.00.03* - RF Controller Main Program Software Version: *01.00.36* - External Interface Boot Kernel Software Version: *03.00.03* - External Interface Main Program Software Version: *01.00.42* |
+| 1.1.0.x   | N/A                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 
 ## Configuration
 
@@ -50,11 +50,11 @@ On this page, you can find information such as the **ID Version**, **Power Suppl
 
 This page displays the following parameters: **Attenuator Setting**, **Linearizer** parameters, **UPC Mode**, **Beacon States**, **Helix Currents**, and **Voltage**, etc.
 
-With a page button, you can retrieve specific information regarding the **Inhibits**: **CIF**, **External Interlock**, **Internal**, **Local**, **Remote**, **Switch Controller**,and **SIM Inhibit**.
+With a page button, you can retrieve specific information regarding the **Inhibits**: **CIF**, **External Interlock**, **Internal**, **Local**, **Remote**, **Switch Controller**, and **SIM Inhibit**.
 
 ### RF Measurements
 
-This page contains all **RF** status parameters, such as **RF Drive**, **Imbalance RF**, **RF Output**, **Reflected RF Output Power**, **ALC RF Output Power**,and **Manual RF Output Power**.
+This page contains all **RF** status parameters, such as **RF Drive**, **Imbalance RF**, **RF Output**, **Reflected RF Output Power**, **ALC RF Output Power**, and **Manual RF Output Power**.
 
 The **Set RF Units** button allows you to choose the unit: **dBm**, **dBW**, or **W**.
 
@@ -68,9 +68,9 @@ In addition, the **2.25KM TWT Error** for **Amplifier \#1 to \#8** and the **Off
 
 ### Status
 
-This page contains the status parameters **Step Start 1/2 Fault**, **BBRAM Data Fault**,etc.
+This page contains the status parameters **Step Start 1/2 Fault**, **BBRAM Data Fault**, etc.
 
-Via page buttons, you can access more detailed information concerning the following aspects of the device: **Helix**, **Heater**,**EXT Controller**, **Power Supply**, **RF Controller**, **ETH**, **Px Controllers**, **Beacon,** **Low/High Alarms**,and **SIM**.
+Via page buttons, you can access more detailed information concerning the following aspects of the device: **Helix**, **Heater**, **EXT Controller**, **Power Supply**, **RF Controller**, **ETH**, **Px Controllers**, **Beacon,** **Low/High Alarms**, and **SIM**.
 
 ### Trip Limit - RF Control
 

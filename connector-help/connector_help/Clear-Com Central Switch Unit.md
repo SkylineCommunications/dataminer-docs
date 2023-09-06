@@ -38,6 +38,8 @@ SERIAL CONNECTION:
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
+
+
 ## Usage (1.0.0.x)
 
 ### General
@@ -55,6 +57,8 @@ This page contains a 512x512 **matrix** that displays the current **crosspoints*
 ### Configuration
 
 On this page, you can configure the necessary information to send notifications to the manager element. The most important parameters are **DMA Id**, **Element Id**, **Other Parameter** **Id** and a toggle button to enable or disable notifications.
+
+
 
 ## Usage (1.1.0.x)
 
@@ -93,3 +97,5 @@ Displays the device **Alarms**
 ### Matrix
 
 In this page is possible to check the current Matrix configurations.
+
+

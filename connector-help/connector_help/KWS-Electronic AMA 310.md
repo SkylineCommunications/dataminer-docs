@@ -73,9 +73,13 @@ On this page, the round-robin mechanism can be configured together with some SNM
 
 ### Import/Export Data
 
-It is possible to export the current configuration for all the measurements to an .xml file. From version 1.0.0.19 of the driver onwards, it is also possible to export the name, type, frequency and sound type of each measurement to a .csv file.To export, select the appropriate **File Type (Export)**, fill in the export **File Name** and click the **Export** button. When the export has succeeded, the value of the **Last Export** field changes to the current time. This parameter will also display any errors that occurred.
+It is possible to export the current configuration for all the measurements to an .xml file. From version 1.0.0.19 of the driver onwards, it is also possible to export the name, type, frequency and sound type of each measurement to a .csv file.
+To export, select the appropriate **File Type (Export)**, fill in the export **File Name** and click the **Export** button.
+When the export has succeeded, the value of the **Last Export** field changes to the current time. This parameter will also display any errors that occurred.
 
-A measurement configuration in .xml format can also be imported. In addition, from version 1.0.0.19 of the driver onwards, you can modify existing measurements and add new measurements by importing a .csv file.To import, select the appropriate **File Type (Import)**, select the file name via **Select File** and click the **Import** button. When the import has succeeded, the value of the **Last Import** field changes to the current time. This parameter will also display any errors that occurred.
+A measurement configuration in .xml format can also be imported. In addition, from version 1.0.0.19 of the driver onwards, you can modify existing measurements and add new measurements by importing a .csv file.
+To import, select the appropriate **File Type (Import)**, select the file name via **Select File** and click the **Import** button.
+When the import has succeeded, the value of the **Last Import** field changes to the current time. This parameter will also display any errors that occurred.
 
 Below, you can find an example of the structure of the .csv file that can be used from version 1.0.0.19 onwards. Note that the header line is fixed and each line has 4 columns. A semicolon (";") delimiter is used. Values for frequency use a decimal point ( . ).
 
@@ -101,4 +105,5 @@ Before the firmware can be upgraded, you first need to **load the software via F
 Once this is done, the **upgrade itself** can be performed. To do so:
 
 1.  Configure the **FTP User Name**, **FTP Password** and **Uploaded File Name** correctly. (In case the *anonymous* user is used, the *password* can be blank.)
-2.  Start the upgrade itself by clicking the **Start Upgrade** button.The **Uploaded File Execution State** parameter will indicate the status of the upgrade. When the upgrade is successfully completed, this parameter will transition to *Idle*.
+2.  Start the upgrade itself by clicking the **Start Upgrade** button.
+    The **Uploaded File Execution State** parameter will indicate the status of the upgrade. When the upgrade is successfully completed, this parameter will transition to *Idle*.

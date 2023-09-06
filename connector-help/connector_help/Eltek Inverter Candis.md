@@ -61,14 +61,14 @@ The web interface is only accessible when the client machine has network access 
 The current driver has two different kinds of behavior:
 
 - **Default mode**: Polls all data continuously.
-- **Lite mode**:Polls specific data only, reducing the volume of data polled.
+- **Lite mode**: Polls specific data only, reducing the volume of data polled.
 
 To use the **Lite functionality** of this driver, you need to enable the parameter **LITE PROTOCOL** on the **Network Settings** page.
 
 The driver consists of the following pages:
 
 - **General Page:** Displays status parameters, such as the **Software Version** and **Serial Number**.
-- **Module Page:** Contains a tableshowing the different values related to the TSI modules such as voltages, current, status, and much more.
+- **Module Page:** Contains a table showing the different values related to the TSI modules such as voltages, current, status, and much more.
 - **Phase Page:** Contains a table with information regarding the power phases.
 - **Groups Page:** Contains two tables with information regarding the AC and DC Groups.
 - **Configuration Page:** Contains a table with configuration information.

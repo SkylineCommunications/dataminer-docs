@@ -10,12 +10,12 @@ The function of this connector is to receive and display data from a Mediagenix 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                          | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version.                                                          | \-           | \-                |
-| 2.0.0.x \[Obsolete\] | \- Finnish Broadcasting Company branch- Communication through web service | \-           | \-                |
-| 2.0.1.x \[Obsolete\] | Support for Unicode characters added.                                     | 2.0.0.4      | \-                |
-| 2.0.2.x \[SLC Main\] | Communication through RabbitMQ.                                           | 2.0.1.7      | \-                |
+| **Range**            | **Key Features**                                                           | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Initial version.                                                           | \-           | \-                |
+| 2.0.0.x \[Obsolete\] | \- Finnish Broadcasting Company branch - Communication through web service | \-           | \-                |
+| 2.0.1.x \[Obsolete\] | Support for Unicode characters added.                                      | 2.0.0.4      | \-                |
+| 2.0.2.x \[SLC Main\] | Communication through RabbitMQ.                                            | 2.0.1.7      | \-                |
 
 ### Product Info
 
@@ -47,7 +47,8 @@ There is no redundancy defined.
 
 ## How to use (range 2.0.2.x)
 
-During startup of the element, the connector will start listening to several hardcoded RabbitMQ queues using the connection settings defined in the parameters.Data coming in through these queues is parsed and stored in one of the multiple tables in the connector.
+During startup of the element, the connector will start listening to several hardcoded RabbitMQ queues using the connection settings defined in the parameters.
+Data coming in through these queues is parsed and stored in one of the multiple tables in the connector.
 
 On the Configuration page of this connector, you can configure the connection settings for the RabbitMQ communication.
 

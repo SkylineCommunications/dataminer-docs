@@ -10,9 +10,9 @@ This driver is intended to catch traps from the Witbe Experience Center and list
 
 ### Version Info
 
-| **Range**            | **Key Features**                                | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.Collects traps in Alarms table. | \-           | \-                |
+| **Range**            | **Key Features**                                 | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. Collects traps in Alarms table. | \-           | \-                |
 
 ### Product Info
 

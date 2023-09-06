@@ -44,7 +44,7 @@ This page displays the **Stream Based Overview** table.
 
 This page displays the **Channel Names Table**. New channels can be added to this table in two ways: either by using a .csv file to add several channels at a time, or by adding channels one by one using the **Add Channel ID** page button. To load from a .csv file, first set the **CSV File Path** and then click the **Load Channels Names CSV File** button. To delete a channel, use the **Delete Channel ID** page button.
 
-The page also displays the **Range Config Table**. Click the **Delete Range** or **Add Range** page buttonsto delete or add a **Range Index**.
+The page also displays the **Range Config Table**. Click the **Delete Range** or **Add Range** page buttons to delete or add a **Range Index**.
 
 Finally, you can also find the **Trap IP IP** here, which is filled in with the IP that was set when creating the element, and the **Traps Max duration**.
 

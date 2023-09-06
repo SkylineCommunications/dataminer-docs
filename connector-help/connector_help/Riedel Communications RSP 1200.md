@@ -10,17 +10,17 @@ This connector is used to communicate with an RSP 1200 smart panel. This panel h
 
 ### Version Info
 
-| **Range**            | **Key Features**                           | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version                            | \-           | \-                |
-| 2.0.0.x \[SLC Main\] | Fixed API.Integration with software panel. | 1.0.0.1      | \-                |
+| **Range**            | **Key Features**                            | **Based on** | **System Impact** |
+|----------------------|---------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Initial version                             | \-           | \-                |
+| 2.0.0.x \[SLC Main\] | Fixed API. Integration with software panel. | 1.0.0.1      | \-                |
 
 ### Product Info
 
-| **Range** | **Supported Firmware**           |
-|-----------|----------------------------------|
-| 1.0.0.x   | Node API v1.3Connection API v1.1 |
-| 2.0.0.x   | API v1.3                         |
+| **Range** | **Supported Firmware**            |
+|-----------|-----------------------------------|
+| 1.0.0.x   | Node API v1.3 Connection API v1.1 |
+| 2.0.0.x   | API v1.3                          |
 
 ### System Info
 

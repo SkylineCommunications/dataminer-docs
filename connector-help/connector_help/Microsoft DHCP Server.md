@@ -10,9 +10,9 @@ This connector allows you to extract data from a DHCP server through PowerShell 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact** |
-|----------------------|----------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version:- Added Commands Configuration Table- Added Scopes Table- Added Leases Table | \-           | \-                |
+| **Range**            | **Key Features**                                                                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version: - Added Commands Configuration Table - Added Scopes Table - Added Leases Table | \-           | \-                |
 
 ### Product Info
 
@@ -55,7 +55,9 @@ On the **Configurations** page, several parameters need to be configured for the
 
 The currently implemented commands are:
 
-- *Get-DhcpServerv4Scope -ComputerName \<****DHCP Server****\>* Default period: 1 hour. This command is used to fill in the **Scopes**Table
-- *Get-DhcpServerv4Lease -ComputerName* *\<****DHCP Server****\>* *-ScopeId \<Scope ID\>*Default period: 1 hour. This command is used to fill in the **Leases** Table.
+- *Get-DhcpServerv4Scope -ComputerName \<****DHCP Server****\>
+  *Default period: 1 hour. This command is used to fill in the **Scopes** Table
+- *Get-DhcpServerv4Lease -ComputerName* *\<****DHCP Server****\>* *-ScopeId \<Scope ID\>
+  *Default period: 1 hour. This command is used to fill in the **Leases** Table.
 
 All the information about **Scopes** and **Leases** is displayed on the **General** page.

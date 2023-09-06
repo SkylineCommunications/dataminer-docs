@@ -4,7 +4,8 @@ uid: Connector_help_Omnitronix_SL10
 
 # Omnitronix SL10
 
-The Omnitronix SL10 device is intended to retrieve monitoring information from devices that are non-networked or that do not implement SNMP.Moreover, there is a pass-through allowing communication with a connected serial device.
+The Omnitronix SL10 device is intended to retrieve monitoring information from devices that are non-networked or that do not implement SNMP.
+Moreover, there is a pass-through allowing communication with a connected serial device.
 
 ## About
 
@@ -43,15 +44,15 @@ There are several page buttons on the page:
 
 - With the **Temperature Sensor** page button, the **Temperature Value** can be monitored. You can also enable the **Temperature Alarm** and set the different alarm thresholds and the associated severity levels.
 - The **Humidity Sensor** page button is used to monitor the **Humidity Value** and set alarm thresholds and associated severities.
-- The **Passthrough** page button shows different configuration parameters for communication with an attached serial device. Some of the configurable parameters are the **Passthrough** **Username**, **Passthrough Esc Char**, **Passthrough Serial Baudrate**,**Passthrough** **Serial Parity**, ...
-- With the **FTP Server** page button, you canconfigure the **FTP Username** and **FTP Password**.
+- The **Passthrough** page button shows different configuration parameters for communication with an attached serial device. Some of the configurable parameters are the **Passthrough** **Username**, **Passthrough Esc Char**, **Passthrough Serial Baudrate**, **Passthrough** **Serial Parity**, ...
+- With the **FTP Server** page button, you can configure the **FTP Username** and **FTP Password**.
 - The **Techsupport** page button shows the network configuration to access the Omnitronix SL10 device via the element (**Techsupport IP Address**,**Techsupport NetMask**, **Techsupport Router**, etc.).
 
 ### Contacts
 
 On this page, you can configure the contact information retrieval. You can, for example, set the **Contact Active Direction** (*Alarm On Open* or *Alarm On Closed*). The **Contact Configured State** column produces an alarm based on the actual **Contact State** and the configured **Contact Active Direction**.
 
-You can enable the **Contact Alarm**,define a time delay before trap sending (**Contact Threshold**), and specify if a trap must be sent when the contact is returned to the normal state. Finally, you can also set an interval between alarm trap repetitions and the severity associated with the contact alarm.
+You can enable the **Contact Alarm**, define a time delay before trap sending (**Contact Threshold**), and specify if a trap must be sent when the contact is returned to the normal state. Finally, you can also set an interval between alarm trap repetitions and the severity associated with the contact alarm.
 
 ### Network Settings
 

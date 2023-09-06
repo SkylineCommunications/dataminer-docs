@@ -10,12 +10,12 @@ The Zixi Zen Master is a platform to monitor and control live video orchestratio
 
 ### Version Info
 
-| **Range**            | **Key Features**                                            | **Based on** | **System Impact**                                                  |
-|----------------------|-------------------------------------------------------------|--------------|--------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                            | \-           | \-                                                                 |
-| 1.0.1.x              | DCF interfaces enabled.                                     | 1.0.0.1      | DCF interfaces are now available for this cpnnector.               |
-| 1.1.0.x              | DCF interfaces enabled.Supports Zixi Zen API version 1.0.0. | 1.0.1.4      | Table modifications have been implemented to adapt to the new API. |
-| 1.1.1.x \[SLC Main\] | DCF interfaces enabled.Supports Zixi Zen API version 1.0.0. | 1.1.0.6      | General status parameters are now discrete strings.                |
+| **Range**            | **Key Features**                                             | **Based on** | **System Impact**                                                  |
+|----------------------|--------------------------------------------------------------|--------------|--------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                             | \-           | \-                                                                 |
+| 1.0.1.x              | DCF interfaces enabled.                                      | 1.0.0.1      | DCF interfaces are now available for this cpnnector.               |
+| 1.1.0.x              | DCF interfaces enabled. Supports Zixi Zen API version 1.0.0. | 1.0.1.4      | Table modifications have been implemented to adapt to the new API. |
+| 1.1.1.x \[SLC Main\] | DCF interfaces enabled. Supports Zixi Zen API version 1.0.0. | 1.1.0.6      | General status parameters are now discrete strings.                |
 
 ### Product Info
 
@@ -59,6 +59,6 @@ There is no redundancy defined.
 
 ## How to use
 
-The first pages display **Broadcasters**, **Feeders**,and **Receivers** in a tree view.
+The first pages display **Broadcasters**, **Feeders**, and **Receivers** in a tree view.
 
-The remaining pages (**Channels**, **Targets**, **Sources**,and **Events**) display information in a table.
+The remaining pages (**Channels**, **Targets**, **Sources**, and **Events**) display information in a table.

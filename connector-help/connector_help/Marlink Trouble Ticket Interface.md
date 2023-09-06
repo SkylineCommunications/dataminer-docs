@@ -76,7 +76,7 @@ Note that:
 - "iIncidentSeverity" is an integer with possible values '1' (Medium), '2' (Minor), '4' (High) or '5' (Critical).
 - "iOutageStatus" must always be '1' because a newly created ticket is always '1' (Open).
 
-The page also contains a toggle button **Auto Resolve Tickets**, which can be usedto enable or disable automatic ticket resolution (by default it is set to *Enable*).
+The page also contains a toggle button **Auto Resolve Tickets**, which can be used to enable or disable automatic ticket resolution (by default it is set to *Enable*).
 
 A number of other configuration parameters are also available on this page: **Default Delay Time, Alarm System, Ticket Overview Table Maintenance (Row Count)** and **Ticket Overview Table Maintenance (Timespan)**.
 

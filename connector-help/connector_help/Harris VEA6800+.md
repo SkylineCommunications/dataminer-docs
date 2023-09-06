@@ -4,7 +4,7 @@ uid: Connector_help_Harris_VEA6800+
 
 # Harris VEA6800+
 
-The **Harris VEA6800+** driver has an **SNMP**connection towards the 6800+ frame to monitor a device slot in the frame. Alarm monitoring and trending can be activated on all important parameters.
+The **Harris VEA6800+** driver has an **SNMP** connection towards the 6800+ frame to monitor a device slot in the frame. Alarm monitoring and trending can be activated on all important parameters.
 
 ## About
 
@@ -34,7 +34,7 @@ SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, by default *161.*
-- **Bus address**: This is a combination of the frame number, slot number and card type (ETH or ICE): "*\<frameNumber\>****.\<****slotID\>.\<cardType\>*" (e.g. frame 1, slot 12, ETH Card = bus address*1.12.ETH).*
+- **Bus address**: This is a combination of the frame number, slot number and card type (ETH or ICE): "*\<frameNumber\>****.\<****slotID\>.\<cardType\>*" (e.g. frame 1, slot 12, ETH Card = bus address *1.12.ETH).*
 
 ## Usage
 

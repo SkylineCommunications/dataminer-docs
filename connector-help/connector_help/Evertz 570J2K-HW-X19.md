@@ -18,9 +18,9 @@ This driver uses SNMP to poll data from this device based on the encoder and dec
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                            |
-|-----------|-----------------------------------------------------------------------------------|
-| 1.0.0.x   | \- Encoder: V1.0.0B20200826-1122-G-U9E-8A- Decoder: V1.0.0B20210325-1310-H-U9D-8A |
+| **Range** | **Supported Firmware**                                                             |
+|-----------|------------------------------------------------------------------------------------|
+| 1.0.0.x   | \- Encoder: V1.0.0B20200826-1122-G-U9E-8A - Decoder: V1.0.0B20210325-1310-H-U9D-8A |
 
 ### System Info
 

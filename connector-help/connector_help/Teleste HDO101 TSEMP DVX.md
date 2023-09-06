@@ -46,7 +46,7 @@ Click the **Alarm Limits** page button to view or configure the analog and discr
 
 ### Switch
 
-This page displays the **Input 1** and **Input 2 Measured RF Power**,together with their **Power Reference**,which can be set with the **Store As Reference** button.
+This page displays the **Input 1** and **Input 2 Measured RF Power**, together with their **Power Reference**, which can be set with the **Store As Reference** button.
 
 You can also configure the **Routing Mode** and **Status Switch** on this page.
 

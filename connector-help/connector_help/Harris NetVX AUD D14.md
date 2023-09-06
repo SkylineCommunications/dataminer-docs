@@ -17,7 +17,7 @@ The **Harris NetVX AUD D14** driver has a **SNMP** Connection:
 - **Port:** 161
 - **Bus Address:** The slot number of the **Audio Converter.**
 - **IP Address:** The IP of the Device
-- **Get community string:**public
+- **Get community string:** public
 - **Set community string:** private
 
 ## Usage

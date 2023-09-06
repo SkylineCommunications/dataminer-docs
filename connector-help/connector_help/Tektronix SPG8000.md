@@ -91,11 +91,11 @@ This page displays the speed of the different fans: the **main fan**, **power su
 
 ### Power Supply
 
-This page contains critical information about each power supply of the device, such as **Active Hours**, **Standby Hours**, **FOM Status (TWH)** and **12V Status**.It also allows you to **Load Test History.**
+This page contains critical information about each power supply of the device, such as **Active Hours**, **Standby Hours**, **FOM Status (TWH)** and **12V Status**. It also allows you to **Load Test History.**
 
 ### Alarm Status
 
-This page contains status parameters that are associated with each trap the device sends. Based on the received traps, these parameters display *Alarm*or *OK*.
+This page contains status parameters that are associated with each trap the device sends. Based on the received traps, these parameters display *Alarm* or *OK*.
 
 This page also contains a configurable parameter, **Alarm Time-Slot**, which allows you to configure the interval to update the status parameters with incoming traps.
 

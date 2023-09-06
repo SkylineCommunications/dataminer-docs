@@ -65,7 +65,7 @@ If the login is successfull the REST vCenter API Status, REST Appliance API Stat
 
 **An adequate toogle button is provided for enabling each API.**
 
-The user must enable the APIs that he would like to enable polling. Currently the driver supports the **vCenter API** (Datacenters, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data)and the **Web Services API** (Performances Data).
+The user must enable the APIs that he would like to enable polling. Currently the driver supports the **vCenter API** (Datacenters, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data) and the **Web Services API** (Performances Data).
 
 Refer to the driver log if the login is unsuccessfull.
 

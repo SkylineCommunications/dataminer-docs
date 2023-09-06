@@ -21,10 +21,10 @@ Data is retrieved via the SNMP protocol.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                  |
-|------------------|------------------------------------------------------------------------------|
-| 1.0.0.x          | Unknown                                                                      |
-| 1.1.0.x          | Hardware version: \[V123\]2010.08.04Software version: \[150.0110\]2012.11.12 |
+| **Driver Range** | **Device Firmware Version**                                                   |
+|------------------|-------------------------------------------------------------------------------|
+| 1.0.0.x          | Unknown                                                                       |
+| 1.1.0.x          | Hardware version: \[V123\]2010.08.04 Software version: \[150.0110\]2012.11.12 |
 
 ## Installation and Configuration
 

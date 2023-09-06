@@ -10,7 +10,10 @@ The RCUH200 unit is a redundancy control unit for Peak Communications converters
 
 ### Creation
 
-***Serial connection***The Peak device uses a RS485 4 Wire connector.The settings used on the Moxa: 9600 baudrate, 8 data bits and 1 stop bit.Bus address: 32
+***Serial connection***
+The Peak device uses a RS485 4 Wire connector.
+The settings used on the Moxa: 9600 baudrate, 8 data bits and 1 stop bit.
+Bus address: 32
 
 ## Usage
 
@@ -22,4 +25,5 @@ Displays some general information about the unit and a summary alarm status.
 
 Displays a more detailed status overview.
 
-Attached UnitsDisplays the status of all attached units.
+Attached Units
+Displays the status of all attached units.

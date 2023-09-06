@@ -55,7 +55,9 @@ There is no redundancy defined.
 The element created with this driver has the following data pages:
 
 - **General**: From here you can enable or disable the web service feature. (***This will be implemented in a future update.***)
-- **Configuration:** From the **Subscription Parameters** table, you can add entries that can represent single or multiple parameters subscriptions (**Currently only supported for table columns**).To add a row, right-click the table and select **Add**. Then configure the necessary fields. Only the Protocol, Version, Table ID, Parameter ID and Metric Name fields must always be filled in.You can also delete entries using the **Delete** option in the right-click menu.
+- **Configuration:** From the **Subscription Parameters** table, you can add entries that can represent single or multiple parameters subscriptions (**Currently only supported for table columns**).
+  To add a row, right-click the table and select **Add**. Then configure the necessary fields. Only the Protocol, Version, Table ID, Parameter ID and Metric Name fields must always be filled in.
+  You can also delete entries using the **Delete** option in the right-click menu.
 - **Available parameters:** A table here contains all the subscription values that were configured in the Subscription Parameters table.
 - **Debug:** The request received by the web service and response sent back to the client will be shown here for debugging purposes.
 

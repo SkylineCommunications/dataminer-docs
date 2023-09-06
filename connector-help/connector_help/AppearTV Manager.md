@@ -4,7 +4,10 @@ uid: Connector_help_AppearTV_Manager
 
 # AppearTV Manager
 
-The **AppearTV Manager** is an Application for managing and creating elements using the **AppearTV General Platform**.The application is used to have an overview of all the devices and services. On top of this application there is a visio layer to visualize all the elements, DVE Map & services.
+The **AppearTV Manager** is an Application for managing and creating elements using the **AppearTV General Platform**.
+The application is used to have an overview of all the devices and services. On top of this application there is a visio layer to visualize all the elements, DVE Map & services.
+
+
 
 ## About
 
@@ -17,6 +20,8 @@ When the Chassis elements are already created on the DMA, you can also use the s
 ### Creation
 
 The AppearTV Manager is a virtual driver, so you don't have to fill in any configuration parameters.
+
+
 
 VISIO Usage
 
@@ -52,6 +57,7 @@ Here you will find a list of all the created services. The service names are con
 
 This page is used for configuration of the network search for Chassis devices.
 
+
 General:
 
 **Progress** & **Detected Devices** are parameters that will update while the Scan is running.
@@ -61,6 +67,8 @@ General:
 Note that an element should be running with the **Skyline IP Network Discovery** protocol in order to be able to use the Detection mechanism.
 
 (extra information about the Detection driver: see ****Skyline IP Network Discovery****)
+
+
 
 Settings:
 
@@ -83,6 +91,8 @@ When an element is not created, you can also remove the entry from the list by u
 On Top of the page we have the **Create**- and **Delete All Elements** buttons. Using these buttons, alle elements will be created/deleted. The elements will be created with protocol **AppearTV General Platform** version: **production**.
 
 There is also the **Synchronize** button which can be usefull if this application is installed on a system that already contains a lot of **AppearTV General Platform** Chassis elements.
+
+
 
 Elementcard Usage
 

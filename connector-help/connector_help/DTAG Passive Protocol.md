@@ -10,7 +10,7 @@ A common situation where this protocol is used is in an environment with passive
 
 ## About
 
-The driver will query the DMSabout this element every minute. This way it's not necessary to restart the element after editing its settings.
+The driver will query the DMS about this element every minute. This way it's not necessary to restart the element after editing its settings.
 
 ## Installation and configuration
 
@@ -22,4 +22,4 @@ This driver uses a virtual connection and does not need any user information.
 
 ### General
 
-This page shows theelement's information. All parameters are read-only, except **Element Additional Info**. The latter can be used to add additional information.
+This page shows the element's information. All parameters are read-only, except **Element Additional Info**. The latter can be used to add additional information.

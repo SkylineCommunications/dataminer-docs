@@ -39,11 +39,11 @@ This driver uses a serial connection and needs the following user information:
 
 ### Main View page
 
-Thispage contains three parameters: **Circuit** **ID**, **Unit** **Summary** **Alarm** and **Last** **Trap** **Since**.
+This page contains three parameters: **Circuit** **ID**, **Unit** **Summary** **Alarm** and **Last** **Trap** **Since**.
 
 ### General page
 
-On thispage, the general parameters of the device are displayed. Some of these parameters can also be set to a preferred value.
+On this page, the general parameters of the device are displayed. Some of these parameters can also be set to a preferred value.
 
 The **Store** **Configuration** parameter causes the device to store the current modem configuration in a configuration memory location defined by the argument (*0* to *9*).
 
@@ -59,7 +59,7 @@ For each row in the table, the **Tx** **Unit** **Test** **Mode** can be set.
 
 ### Modulator page
 
-Thispage contains three tables:
+This page contains three tables:
 
 - **Tx** **Status**: Displays the transmit status.
 - **Tx** **Primary** **Settings**: Displays the primary settings of the transmission.
@@ -67,7 +67,7 @@ Thispage contains three tables:
 
 ### Demodulator page
 
-Thispage contains three tables:
+This page contains three tables:
 
 - **Rx** **Status**: Displays the receiver status.
 - **Rx** **Primary** **Settings**: Displays the primary settings of the receiver.

@@ -24,9 +24,9 @@ The **Meinberg LANTIME Non-Modular API V10** connector displays both status and 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                          |
-|-----------|---------------------|-------------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | DataMiner connector:[Meinberg LANTIME Non-Modular API V10 - SyncMon Node](xref:Connector_help_Meinberg_LANTIME_Non-Modular_API_V10_-_SyncMon_Node) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                           |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | DataMiner connector: [Meinberg LANTIME Non-Modular API V10 - SyncMon Node](xref:Connector_help_Meinberg_LANTIME_Non-Modular_API_V10_-_SyncMon_Node) |
 
 ## Configuration
 
@@ -45,11 +45,13 @@ HTTP CONNECTION:
 
 #### REST API
 
-The HTTP communication uses a REST API, which needs to be enabled.On the device's web interface, make sure the **Enable REST API** option is selected under the **general settings** on the **System** page.
+The HTTP communication uses a REST API, which needs to be enabled.
+On the device's web interface, make sure the **Enable REST API** option is selected under the **general settings** on the **System** page.
 
 #### HTTP Credentials
 
-The HTTP communication will not be up and running until the necessary HTTP credentials have been provided.On the **Credentials** page of the element, the **user name** and **password** must be configured.
+The HTTP communication will not be up and running until the necessary HTTP credentials have been provided.
+On the **Credentials** page of the element, the **user name** and **password** must be configured.
 
 ### Web Interface
 
@@ -61,7 +63,8 @@ REST (Representational State Transfer) calls are used to retrieve the device inf
 
 ### HTTP Communication
 
-On the **HTTP Communication** page, you can track the HTTP sessions used for communicating with the device.This makes it possible to follow the communication flow and provides some useful statistics, e.g. request time, response time, time span (RTT), etc.
+On the **HTTP Communication** page, you can track the HTTP sessions used for communicating with the device.
+This makes it possible to follow the communication flow and provides some useful statistics, e.g. request time, response time, time span (RTT), etc.
 
 - **HTTP Sessions State:** If you enable this setting, the active HTTP sessions will be tracked.
 - **HTTP Sessions Max Count:** This determines the maximum number of HTTP sessions that will be tracked.

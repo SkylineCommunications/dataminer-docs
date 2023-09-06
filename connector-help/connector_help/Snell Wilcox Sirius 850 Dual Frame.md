@@ -36,7 +36,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: The polling IP of the device.
+- **IP address/host**: The polling IP of the device.*
+  *
 
 SNMP Settings:
 
@@ -51,7 +52,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: The polling IP of the device.
+- **IP address/host**: The polling IP of the device.*
+  *
 
 SNMP Settings:
 
@@ -59,6 +61,9 @@ SNMP Settings:
 - **Device address**: The matrix level to be used, format: *{x}.{y}*, where {x} is the matrix number and {y} the level. The default value is *1.1*.
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
+
+*
+*
 
 ### Web Interface
 
@@ -109,3 +114,5 @@ Finally, the **Configuration** page contains a table with two rows, which allows
 ## Notes
 
 For the implementation of the Matrix view in the connector, the appropriate matrix level must be selected. However, the tables are not filtered to only contain the rows for the specified level. When multiple levels are available and different elements are made to use those, data will be duplicated. An investigation can be launched to find the optimal solution in that case.
+
+

@@ -174,11 +174,14 @@ Based on whether or not the HTTP POST succeeds or fails, the following result co
 
 #### JSON Example
 
-Items below in **bold** are mandatory for creation. A hostname is the identifier and must always be specified and an operation must also always be included.Possible values for "operation" are: *create*, *update*, and *delete*. To delete an item, only the operation and hostname need to be specified.
+Items below in **bold** are mandatory for creation. A hostname is the identifier and must always be specified and an operation must also always be included.
+Possible values for "operation" are: *create*, *update*, and *delete*. To delete an item, only the operation and hostname need to be specified.
 
     {
        "operation" : "create",
-       "hostname" : "BDH-1171GX-21-AR001",   "model_name" : "AR169FGW-L",   "mgmt_ip" : "198.18.0.88",
+       "hostname" : "BDH-1171GX-21-AR001",
+       "model_name" : "AR169FGW-L",
+       "mgmt_ip" : "198.18.0.88",
        "cpe_status" : "planned",
        "customer" : {
           "customer_relation_id" : "EXT117117",

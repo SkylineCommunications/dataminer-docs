@@ -10,12 +10,12 @@ With this driver, it is possible to monitor **Junger C8000** devices with **SNMP
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                           | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                          | No                  | No                      |
-| 2.0.0.x              | SNMP traps; DVE; status: metadata, encoder, decoder, SDI input, etc.                      | No                  | No                      |
-| 2.0.1.x \[Obsolete\] | Added support for C8492 module.Fixed several issues, renamed Authentication Failure trap. | No                  | No                      |
-| 2.0.3.x \[SLC Main\] | Redesigned driver and added modules.                                                      | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                           | No                  | No                      |
+| 2.0.0.x              | SNMP traps; DVE; status: metadata, encoder, decoder, SDI input, etc.                       | No                  | No                      |
+| 2.0.1.x \[Obsolete\] | Added support for C8492 module. Fixed several issues, renamed Authentication Failure trap. | No                  | No                      |
+| 2.0.3.x \[SLC Main\] | Redesigned driver and added modules.                                                       | No                  | Yes                     |
 
 ### Supported firmware versions
 

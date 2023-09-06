@@ -16,9 +16,9 @@ The **GatesAir Maxiva XTE MSC** is a frame for transmitters and exciters that po
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                     |
-|-----------|------------------------------------------------------------|
-| 1.0.0.x   | 06.00.0034 (PCM software version)01.00.0685 (SNMP version) |
+| **Range** | **Supported Firmware**                                      |
+|-----------|-------------------------------------------------------------|
+| 1.0.0.x   | 06.00.0034 (PCM software version) 01.00.0685 (SNMP version) |
 
 ### System Info
 
@@ -58,4 +58,5 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-With this driver, it is possible to monitor and configure the MSC frame itself. In addition, it is also possible to enable trap notifications and define their priorities.The communication protocol that is used to get and set the values is SNMP.
+With this driver, it is possible to monitor and configure the MSC frame itself. In addition, it is also possible to enable trap notifications and define their priorities.
+The communication protocol that is used to get and set the values is SNMP.

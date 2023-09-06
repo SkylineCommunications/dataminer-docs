@@ -44,11 +44,12 @@ To configure a manager element using this connector, follow these steps:
 1.  **Add a new monitor:**
 
 2.  1.  On the **Monitors** page, click the **Monitors Configuration** button.
-    2.  In the pop-up window, specify the name of the **SCTE Source** and **SCTE Destination** elements, and click **Add Monitor**. The connector will validate the provided information and create new rows in the Source and Destination Monitor tables if they do not exist already. The created combination will start as "disabled" and will have empty program mappings. If an element does not exist in the DMS, only a message in the manager's log will be created.
+    2.  In the pop-up window, specify the name of the **SCTE Source** and **SCTE Destination** elements, and click **Add Monitor**.
+        The connector will validate the provided information and create new rows in the Source and Destination Monitor tables if they do not exist already. The created combination will start as "disabled" and will have empty program mappings. If an element does not exist in the DMS, only a message in the manager's log will be created.
 
-3.  **Configuring the mappings**: Every destination monitor should have a **program mapping** to complete the matching logic implemented in the manager. A mapping is a pair of strings indicating the program or stream name in the reference SCTE monitor and the program name in the destination SCTE monitor. More than one mapping is possible. Mappings can be created on the Mapping Configurationpage.
+3.  **Configuring the mappings**: Every destination monitor should have a **program mapping** to complete the matching logic implemented in the manager. A mapping is a pair of strings indicating the program or stream name in the reference SCTE monitor and the program name in the destination SCTE monitor. More than one mapping is possible. Mappings can be created on the Mapping Configuration page.
 
-4.  1.  Click **Mapping Configuration**.This will display two tables, **Channel Mappings** and **Channel Mapping Relation**.
+4.  1.  Click **Mapping Configuration**. This will display two tables, **Channel Mappings** and **Channel Mapping Relation**.
     2.  If necessary, in the **Channel Mappings** table, add a new row with the strings in the source reference and destination monitors (i.e. the stream in the SCTE 104 reference and the program name in the SCTE 35 monitor).
     3.  Once a mapping configuration string is available, in the **Relation Destination** and **Relation Mapping** boxes, select the **string configuration and destination pair** you created earlier.
     4.  Click **Add Relation** to add the new mapping.

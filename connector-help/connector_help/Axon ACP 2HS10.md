@@ -27,7 +27,7 @@ The **Axon ACP 2HS10** driver is used to configure and monitor the 2HS10 card.
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Initial Version</li>
 </ul></td>
@@ -48,6 +48,8 @@ The **Axon ACP 2HS10** driver is used to configure and monitor the 2HS10 card.
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | Yes                 | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

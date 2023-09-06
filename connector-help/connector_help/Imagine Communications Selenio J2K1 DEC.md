@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_Selenio_J2K1_DEC
 
 # Imagine Communications Selenio J2K1 DEC
 
-Thisdriver can be used to monitor and control the **decoder** functionality of the **Imagine Communications Selenio JPEG2000**.
+This driver can be used to monitor and control the **decoder** functionality of the **Imagine Communications Selenio JPEG2000**.
 
 The Imagine Communications Selenio JPEG2000 is a multichannel encoder/decoder solution, offering real-time, high-quality JPEG2000 compression over IP.
 
@@ -12,21 +12,21 @@ The Imagine Communications Selenio JPEG2000 is a multichannel encoder/decoder so
 
 There are 2 drivers that can be used to monitor and control the **Imagine Communications Selenio JPEG2000** card.
 
-This driver only supports the **decoder** functionality. The [Imagine Communications Selenio J2K1 ENC](xref:Connector_help_Imagine_Communications_Selenio_J2K1_ENC)driver can be used to monitor and control the encoder functionality of the card.
+This driver only supports the **decoder** functionality. The [Imagine Communications Selenio J2K1 ENC](xref:Connector_help_Imagine_Communications_Selenio_J2K1_ENC) driver can be used to monitor and control the encoder functionality of the card.
 
 The driver has two different versions to support 2-channel and 4-channel decoders. Starting from version **3.0.0.1**, DVEs can be created for the 4 decoder channels, whereas from version **4.0.0.1** onwards, DVEs can be created for 2 decoder channels.
 
 ### Ranges of the driver
 
-| **Driver Range**    | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|---------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.90.x            | Initial range.                                                                                                                               | No                  | No                      |
-| 1.1.0.x             | Updated for firmware 2.0.13.                                                                                                                 | No                  | No                      |
-| 2.2.0.x             | Updated for firmware 2.0.                                                                                                                    | No                  | No                      |
-| 3.0.0.x             | DVEs for each decoder.                                                                                                                       | No                  | Yes                     |
-| \<10.0.0.x \[Main\] | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.                 | No                  | Yes                     |
-| 10.0.0.x            | Replaced "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                           | No                  | Yes                     |
-| 4.0.0.x             | \- Changed the base OID from .1.3.6.1.4.1.290.9.3.3.**21.18** to .1.3.6.1.4.1.290.9.3.3.**21.20.**- Removed Decoder Channel 3 and Channel 4. | No                  | Yes                     |
+| **Driver Range**    | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|---------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.90.x            | Initial range.                                                                                                                                | No                  | No                      |
+| 1.1.0.x             | Updated for firmware 2.0.13.                                                                                                                  | No                  | No                      |
+| 2.2.0.x             | Updated for firmware 2.0.                                                                                                                     | No                  | No                      |
+| 3.0.0.x             | DVEs for each decoder.                                                                                                                        | No                  | Yes                     |
+| \<10.0.0.x \[Main\] | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.                  | No                  | Yes                     |
+| 10.0.0.x            | Replaced "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                            | No                  | Yes                     |
+| 4.0.0.x             | \- Changed the base OID from .1.3.6.1.4.1.290.9.3.3.**21.18** to .1.3.6.1.4.1.290.9.3.3.**21.20.** - Removed Decoder Channel 3 and Channel 4. | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -78,7 +78,7 @@ This page allows you to enable/disable **DVE creation** for each of the 2 or 4 d
 
 ### Alarming
 
-Contains the **Alarm Table**,with all the possible alarms that the card can generate and their current state (*Active priority 0-\>10* or *Inactive*).
+Contains the **Alarm Table**, with all the possible alarms that the card can generate and their current state (*Active priority 0-\>10* or *Inactive*).
 
 **Alarm polling** can be toggled to *30 seconds* or *3 seconds*.
 

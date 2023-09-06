@@ -12,10 +12,10 @@ It is intended to be used with generic SNMP devices. SNMP is used to communicate
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                               | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version                                                                                                                                                                                | \-           | \-                |
-| 2.0.0.x \[SLC Main\] | \- Implemented support for RS232 Port information.- Alarm monitoring and trending is now possible for all table parameters. - Tables now use naming to make the connector Cassandra-compliant. | 1.0.0.x      | \-                |
+| **Range**            | **Key Features**                                                                                                                                                                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x              | Initial version                                                                                                                                                                                 | \-           | \-                |
+| 2.0.0.x \[SLC Main\] | \- Implemented support for RS232 Port information. - Alarm monitoring and trending is now possible for all table parameters. - Tables now use naming to make the connector Cassandra-compliant. | 1.0.0.x      | \-                |
 
 ### Product Info
 
@@ -57,7 +57,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains general information about the device, such as **System Contact**, **System Name**,and **System Locations**.
+This page contains general information about the device, such as **System Contact**, **System Name**, and **System Locations**.
 
 ### Interfaces
 
@@ -65,7 +65,7 @@ This page contains a table with key information about the interfaces, such as **
 
 ### Address Translations
 
-This page contains a table with key information related to address translations,such as **Physical Address** and **Net Address**.
+This page contains a table with key information related to address translations, such as **Physical Address** and **Net Address**.
 
 ### TCP/IP/UDP/SNMP/ICMP Statistics
 

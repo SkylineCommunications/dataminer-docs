@@ -8,23 +8,24 @@ With the Microsoft Platform connector, it is possible to monitor a Microsoft ser
 
 ## About
 
-The Microsoft Platform connector retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
+The Microsoft Platform connector retrieves basic information from a Microsoft server. Extra information can be enabled or disabled, e.g. Task Manager, Service List, etc.
+On the Task Manager page, a button allows you to normalize alarms in order to set the current values as normal.
 
 ### Version Info
 
-| **Range**                                            | **Description**                                                                                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
-|------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[obsolete\]                                 | Microsoft WMI interface implementation.                                                                                                                                                                                                             | Yes                 | Yes                     |
-| 1.1.0.x                                              | Microsoft WMI interface implementation.                                                                                                                                                                                                             | Yes                 | No                      |
-| 1.1.1.x \[move to 1.1.2.x\]                          | Branched from 1.1.0.89: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                              | Yes                 | Yes                     |
-| 1.1.2.x \[obsolete\]                                 | Branched from 1.1.1.x: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                               | Yes                 | Yes                     |
-| 1.1.3.x \[SLC Main - Virtual Machine Environment\]   | Branched from 1.1.0.97: Contains partitionedTrending database option. Difference between 1.1.3.x and 1.1.0.x branch will not be noticeable with Cassandra general database, only with MySQL general database.Version 1.1.3.5 merged with 1.1.0.106. | Yes                 | Yes                     |
-| 1.2.0.x                                              | Multiple tables now use naming instead of displayColumn to make the database for these tables Cassandra-compliant.                                                                                                                                  | Yes                 | Yes                     |
-| 2.1.0.x                                              | Branched from 1.1.0.41: Network Interface table adjustments.                                                                                                                                                                                        | Yes                 | Yes                     |
-| 3.0.0.x                                              | Branched from 1.1.0.71: Implemented a workaround for a WMI bug in the network adapter table.                                                                                                                                                        | Yes                 | Yes                     |
-| 4.0.0.x                                              | Branched from 1.1.0.78: Customer-specific branch including functionality to see if the element is running on the active DMA (Failover) with specific security configuration settings in the elements.                                               | Yes                 | Yes                     |
-| 5.0.0.x                                              | Branched from 1.1.1.5: Temporary branch to be used as workaround for a problem with retrieving the service table via WMI calls.                                                                                                                     | Yes                 | Yes                     |
-| 6.0.0.x \[SLC Main - Physical Hardware Environment\] | Branched from 1.1.2.31: Microsoft WMI interface + interface for DELL-, HP- and Supermicro-specific SNMP parameters.                                                                                                                                 | Yes                 | Yes                     |
+| **Range**                                            | **Description**                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x \[obsolete\]                                 | Microsoft WMI interface implementation.                                                                                                                                                                                                              | Yes                 | Yes                     |
+| 1.1.0.x                                              | Microsoft WMI interface implementation.                                                                                                                                                                                                              | Yes                 | No                      |
+| 1.1.1.x \[move to 1.1.2.x\]                          | Branched from 1.1.0.89: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                               | Yes                 | Yes                     |
+| 1.1.2.x \[obsolete\]                                 | Branched from 1.1.1.x: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                                | Yes                 | Yes                     |
+| 1.1.3.x \[SLC Main - Virtual Machine Environment\]   | Branched from 1.1.0.97: Contains partitionedTrending database option. Difference between 1.1.3.x and 1.1.0.x branch will not be noticeable with Cassandra general database, only with MySQL general database. Version 1.1.3.5 merged with 1.1.0.106. | Yes                 | Yes                     |
+| 1.2.0.x                                              | Multiple tables now use naming instead of displayColumn to make the database for these tables Cassandra-compliant.                                                                                                                                   | Yes                 | Yes                     |
+| 2.1.0.x                                              | Branched from 1.1.0.41: Network Interface table adjustments.                                                                                                                                                                                         | Yes                 | Yes                     |
+| 3.0.0.x                                              | Branched from 1.1.0.71: Implemented a workaround for a WMI bug in the network adapter table.                                                                                                                                                         | Yes                 | Yes                     |
+| 4.0.0.x                                              | Branched from 1.1.0.78: Customer-specific branch including functionality to see if the element is running on the active DMA (Failover) with specific security configuration settings in the elements.                                                | Yes                 | Yes                     |
+| 5.0.0.x                                              | Branched from 1.1.1.5: Temporary branch to be used as workaround for a problem with retrieving the service table via WMI calls.                                                                                                                      | Yes                 | Yes                     |
+| 6.0.0.x \[SLC Main - Physical Hardware Environment\] | Branched from 1.1.2.31: Microsoft WMI interface + interface for DELL-, HP- and Supermicro-specific SNMP parameters.                                                                                                                                  | Yes                 | Yes                     |
 
 ## Configuration
 
@@ -146,7 +147,8 @@ Note that in order for these parameters to be polled, you have to **enable polli
 
 ### Software Info
 
-This page contains the **Software Info Table**, which displays a list of all installed programs. **Note: USERNAME and PASSWORD have to be set! (Under Performance \> Security Settings).**
+This page contains the **Software Info Table**, which displays a list of all installed programs.
+**Note: USERNAME and PASSWORD have to be set! (Under Performance \> Security Settings).**
 
 Above the table, it is possible to select the polling method. (Alternative methods were introduced after problems were encountered with the used WMI Query.)
 
@@ -161,7 +163,8 @@ Above the table, it is possible to select the polling method. (Alternative metho
 
 From Windows 2000 onwards, WMI is installed by default.
 
-Except in Windows Vista, WMI uses random ports. To configure a fixed port in Windows Vista:
+Except in Windows Vista, WMI uses random ports.
+To configure a fixed port in Windows Vista:
 
 1.  In the command prompt window, type *winmgmt -standalonehost.*
 2.  Stop the WMI service by typing the command *net stop "Windows Management Instrumentation"*.
@@ -193,11 +196,13 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 >
 >   - 1.  Click **Start** \> **Run** and enter *wmimgmt.msc*.
 >     2.  Right-click **WMI Control (Local)** and select **Connect to another computer**.
->     3.  Select **Actions** \> **More Actions** \> **Properties**.At this point, you will receive the following error: Failed to connect to [\\%RemoteIP%](file:///) because "Win32 Access is denied".
+>     3.  Select **Actions** \> **More Actions** \> **Properties**.
+>         At this point, you will receive the following error: Failed to connect to [\\%RemoteIP%](file:///) because "Win32 Access is denied".
 >
 >   - The second procedure:
 >
->   - - Run "wmimgmt.msc" directly on server. You will receive the following error: Microsoft Management Console "An attempt was made to reference a token that does not exist".
+>   - - Run "wmimgmt.msc" directly on server.
+>       You will receive the following error: Microsoft Management Console "An attempt was made to reference a token that does not exist".
 
 **Problem:**
 
@@ -222,7 +227,8 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 **Problem:**
 
-- Possible memory leak on remote machines that are running 2008/Vista:<http://support.microsoft.com/kb/970520/en-us>
+- Possible memory leak on remote machines that are running 2008/Vista:
+  <http://support.microsoft.com/kb/970520/en-us>
 
 > **Solution:**
 >
@@ -230,12 +236,17 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 **Re-registering the WMI components on the monitored server:**
 
-- The .DLL and .EXE files used by WMI are located in %windir%\system32\wbem. You may need to re-register all the .DLL and .EXE files in this directory. If you are running a 64-bit system you may also need to check for DLLs and EXE files in %windir%\sysWOW64\wbem.
-- To re-register the WMI components, run the following commands with the command prompt: *cd /d %windir%\system32\wbem* *for %i in (\*.dll) do RegSvr32 -s %i* *for %i in (\*.exe) do %i /RegServer*
+- The .DLL and .EXE files used by WMI are located in %windir%\system32\wbem. You may need to re-register all the .DLL and .EXE files in this directory.
+  If you are running a 64-bit system you may also need to check for DLLs and EXE files in %windir%\sysWOW64\wbem.
+- To re-register the WMI components, run the following commands with the command prompt:
+  *cd /d %windir%\system32\wbem*
+  *for %i in (\*.dll) do RegSvr32 -s %i*
+  *for %i in (\*.exe) do %i /RegServer*
 
 **Problem:**
 
-- Task Manager data through WMI cannot be retrieved. This can be related to missing "Process Performance Counters". Refer to this technet post for more info: <http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx>
+- Task Manager data through WMI cannot be retrieved. This can be related to missing "Process Performance Counters".
+  Refer to this technet post for more info: <http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx>
 
 > **Solution**:
 >
@@ -243,7 +254,8 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 **Problem:**
 
-- StreamViewer mentions the following: Query failed : Retrieving the data failed. (hr = 0x80041010) for numerous WQL SELECT queries. When wbemtest is used and these queries are performed or the classes are listed, this results in similar errors mentioning "Invalid class".
+- StreamViewer mentions the following: Query failed : Retrieving the data failed. (hr = 0x80041010) for numerous WQL SELECT queries.
+  When wbemtest is used and these queries are performed or the classes are listed, this results in similar errors mentioning "Invalid class".
 
 > **Solution**:
 >
@@ -261,7 +273,8 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 **Problem:**
 
-- WMI is working and everything gets filled in, but Performance Monitor does not work. Pressing Refresh Categories provides the following error in element logging:Exception Perf Counters The network path was not found.
+- WMI is working and everything gets filled in, but Performance Monitor does not work. Pressing Refresh Categories provides the following error in element logging:
+  Exception Perf Counters The network path was not found.
 
 > **Solution:**
 >

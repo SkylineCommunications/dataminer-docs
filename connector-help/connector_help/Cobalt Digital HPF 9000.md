@@ -10,9 +10,9 @@ The Cobalt Digital HPF 9000 is an SNMP driver for a modular frame. This frame co
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 
@@ -22,9 +22,9 @@ The Cobalt Digital HPF 9000 is an SNMP driver for a modular frame. This frame co
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                            | **Exported Components** |
-|-----------|---------------------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Cobalt Digital HPF 9000 - Cobalt Digital 9001](xref:Connector_help_Cobalt_Digital_HPF_9000_-_Cobalt_Digital_9001) |                         |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                          |
+|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     |                       | [Cobalt Digital HPF 9000 - Cobalt Digital 9001](xref:Connector_help_Cobalt_Digital_HPF_9000_-_Cobalt_Digital_9001) |
 
 ## Configuration
 
@@ -41,6 +41,8 @@ SNMP Settings:
 - **Port number**: 183
 - **Get community string:** The community string used when reading values from the device. The default value is *public*.
 - **Set community string:** The community string used when setting values on the device. The default value is *private*.
+
+
 
 ### Initialization
 

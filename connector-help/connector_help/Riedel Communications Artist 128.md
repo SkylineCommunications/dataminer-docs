@@ -12,14 +12,14 @@ This connector uses a **TCP/IP** connection in order to retrieve and configure t
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                        | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Redundancy for the SERIAL connection is not available.The Serial Redundancy connection does not need to be configured. | No                  | Yes                     |
-| 1.0.1.x              | Redundancy for the SERIAL connection is available.The Serial Redundancy connection will need to be configured.         | No                  | Yes                     |
-| 2.0.0.x              | It is now possible to interact with the RRCS HTTP interface.                                                           | No                  | Yes                     |
-| 2.0.1.x              | Changes made to table structures and keys.                                                                             | No                  | Yes                     |
-| 2.0.2.x \[SLC Main\] | Addition of Unicode support.                                                                                           | No                  | Yes                     |
-| 3.0.0.x              | Monitoring-only range based on range 2.0.0.x.                                                                          | No                  | Yes                     |
+| **Range**            | **Description**                                                                                                         | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Redundancy for the SERIAL connection is not available. The Serial Redundancy connection does not need to be configured. | No                  | Yes                     |
+| 1.0.1.x              | Redundancy for the SERIAL connection is available. The Serial Redundancy connection will need to be configured.         | No                  | Yes                     |
+| 2.0.0.x              | It is now possible to interact with the RRCS HTTP interface.                                                            | No                  | Yes                     |
+| 2.0.1.x              | Changes made to table structures and keys.                                                                              | No                  | Yes                     |
+| 2.0.2.x \[SLC Main\] | Addition of Unicode support.                                                                                            | No                  | Yes                     |
+| 3.0.0.x              | Monitoring-only range based on range 2.0.0.x.                                                                           | No                  | Yes                     |
 
 ### Product Info
 
@@ -197,6 +197,7 @@ To use the CSV import feature:
 
 | Panel Table.Name \[IDX\] (Panel) | Panel Table.Main/Extension (Panel) | Panel Table.Model (Panel) | Panel Table.Node (Panel) | Panel Table.Port (Panel) |
 |----------------------------------|------------------------------------|---------------------------|--------------------------|--------------------------|
+|                                  |                                    |                           |                          |                          |
 
 - **Panel Table.Name \[IDX\] (Panel)**: Panel identifier (must be unique).
 - **Panel Table.Main/Extension (Panel)**: 7 possible values ranging from 0 (Main), 1 (Extension 1), ..., to 6 (Extension 6).
@@ -208,6 +209,7 @@ To use the CSV import feature:
 
 | Key Table.Key ID \[IDX\] (Key) | Key Table.Page (Key) | Key Table.Key Number (Key) | Key Table.Call Status (Key) | Key Table.Panel ID (Key) |
 |--------------------------------|----------------------|----------------------------|-----------------------------|--------------------------|
+|                                |                      |                            |                             |                          |
 
 For the Key table data, you only need to fill in **Panel ID**, **Number**, **Page**, and **Call Status**.
 
@@ -223,6 +225,7 @@ Note: This table is automatically filled in after the Key Table CSV file is impo
 
 | Functions Table.ID \[IDX\] (Functions) | Functions Table.Key ID (Functions) | Functions Table.Port ID (Functions) | Functions Table.IFB ID (Functions) | Functions Table.Trunk Port ID (Functions) | Functions Table.Trunk IFB ID (Functions) | Functions Table.Delete (Functions) | Functions Table.Label (Functions) |
 |----------------------------------------|------------------------------------|-------------------------------------|------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------|-----------------------------------|
+|                                        |                                    |                                     |                                    |                                           |                                          |                                    |                                   |
 
 - **Functions Table.ID \[IDX\] (Functions)**: Function identifier. This is a combination of the key ID and an auto-increment number.
 - **Functions Table.Key ID (Functions)**: Key ID number defined in the Key Table. This value will link the key to the corresponding key in the tree control view.

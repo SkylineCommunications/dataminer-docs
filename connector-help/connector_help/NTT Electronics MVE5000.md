@@ -133,6 +133,9 @@ Physical fixed interfaces:
 
 #### Internal Connections
 
-- Connections are made based on the condition of **Interface Audio/Video** on the **Input** page, and the condition of the **Transmission Stream 1, Transmission Stream 2, Transmit Interface Stream 1** and **Transmit Interface Stream 2** on the **Stream** page.The connection(s) start from the selected input interface and go to the **IP Output FE** and/or **IP Output GbE**. If the selected input is not an SDI interface, the DCF connections will not be made, since these interfaces are not supported for DCF in this driver.
-- Example 1: Input **SDI** is selected for the **Interface Audio/Video, Transmission Stream 1** is **Enabled**, **Transmission Stream 2** is **Enabled, PPPoE \#1 (GbE)** is selected for **Transmit Interface Stream 1** and **FE** is selected for **Transmit Interface Stream 2**.Two connections will be made from the **SDI** **Input** interface to the **IP Output FE** and **IP Output GbE** interfaces.
-- Example 2: Input **SDI Analog Audio** is selected, both transport streams are enabled and have the same transmit interface selected (**GbE**). One connection is made from the **SDI Analog Audio Input** interface to the **IP Output GbE** interface.
+- Connections are made based on the condition of **Interface Audio/Video** on the **Input** page, and the condition of the **Transmission Stream 1, Transmission Stream 2, Transmit Interface Stream 1** and **Transmit Interface Stream 2** on the **Stream** page.
+  The connection(s) start from the selected input interface and go to the **IP Output FE** and/or **IP Output GbE**. If the selected input is not an SDI interface, the DCF connections will not be made, since these interfaces are not supported for DCF in this driver.
+- Example 1: Input **SDI** is selected for the **Interface Audio/Video, Transmission Stream 1** is **Enabled**, **Transmission Stream 2** is **Enabled, PPPoE \#1 (GbE)** is selected for **Transmit Interface Stream 1** and **FE** is selected for **Transmit Interface Stream 2**.
+  Two connections will be made from the **SDI** **Input** interface to the **IP Output FE** and **IP Output GbE** interfaces.
+- Example 2: Input **SDI Analog Audio** is selected, both transport streams are enabled and have the same transmit interface selected (**GbE**).
+  One connection is made from the **SDI Analog Audio Input** interface to the **IP Output GbE** interface.

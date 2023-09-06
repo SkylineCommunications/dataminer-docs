@@ -38,7 +38,7 @@ SNMP Settings:
 
 - **Port number**: The UDP port, by default *161.*
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string:** The community string used when setting values on the device,by default *private*.
+- **Set community string:** The community string used when setting values on the device, by default *private*.
 
 ## Usage
 
@@ -48,11 +48,11 @@ This page displays system parameters and the **System OR Table**.
 
 ### Crosspoints
 
-This page displays the **Crosspoint table**.It also contains three page buttons to the **Level Output** **Table**, **Level Input Table** and **Level Table**.
+This page displays the **Crosspoint table**. It also contains three page buttons to the **Level Output** **Table**, **Level Input Table** and **Level Table**.
 
 ### Alarm
 
-This page displays the **Alarm table**,which lists all alarms.
+This page displays the **Alarm table**, which lists all alarms.
 
 ### Module
 

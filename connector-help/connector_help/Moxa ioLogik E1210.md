@@ -59,4 +59,5 @@ This page displays **system information**: the total number of channels, server 
 
 ### I/O Status Page
 
-On this page, you can find the **DI channel monitor table**. This table allows you to monitor all available DI channels, as well as set specific parameters for each channel such as mode, filter, trigger and counter.This table also allows you to configure a custom name for each channel. Greyed out entries in this table are disabled and cannot be set.
+On this page, you can find the **DI channel monitor table**. This table allows you to monitor all available DI channels, as well as set specific parameters for each channel such as mode, filter, trigger and counter.
+This table also allows you to configure a custom name for each channel. Greyed out entries in this table are disabled and cannot be set.

@@ -48,7 +48,7 @@ This page is only available in the 1.0.0.x range of the driver and can be used t
 
 ### Reservations (1.0.0.x only)
 
-Thispage contains the **Reservation Table**, which provides an overview of the reservations that have been made in the SLM.
+This page contains the **Reservation Table**, which provides an overview of the reservations that have been made in the SLM.
 
 The **Find Reservations** page button can be used to access a page where you can retrieve reservations from the SLM that were booked during a specific timespan.
 

@@ -12,10 +12,10 @@ This driver uses **SNMP** to retrieve and update data on the device. With this c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                 | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                                                                                                 | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | \- Changed the column descriptions to match the current guidelines and use parentheses instead of square brackets.- Changed discretes to be consistent in the driver.- Updated measurements to the correct type. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                                                                                   | **Based on** | **System Impact** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                                                                                                   | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | \- Changed the column descriptions to match the current guidelines and use parentheses instead of square brackets. - Changed discretes to be consistent in the driver. - Updated measurements to the correct type. | \-           | \-                |
 
 ### Product Info
 

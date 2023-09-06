@@ -22,9 +22,9 @@ The GENUS series is a set of modular chassis that can be fitted with a variety o
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                                                                                                                           |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Yes                 | Yes                     | \-                    | \- [ETL Systems Genus - CPU](/Driver%20Help/ETL%20Systems%20Genus%20-%20CPU.aspx)- [ETL Systems Genus - PSU](/Driver%20Help/ETL%20Systems%20Genus%20-%20PSU.aspx)- [ETL Systems Genus - Splitter-Combiner](/Driver%20Help/ETL%20Systems%20Genus%20-%20Splitter-Combiner.aspx)- [ETL Systems Genus - 22544](xref:Connector_help_ETL_Systems_Genus_-_22544) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                                                                                                                                              |
+|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | Yes                 | Yes                     | \-                    | \- [ETL Systems Genus - CPU](/Driver%20Help/ETL%20Systems%20Genus%20-%20CPU.aspx) - [ETL Systems Genus - PSU](/Driver%20Help/ETL%20Systems%20Genus%20-%20PSU.aspx) - [ETL Systems Genus - Splitter-Combiner](/Driver%20Help/ETL%20Systems%20Genus%20-%20Splitter-Combiner.aspx) - [ETL Systems Genus - 22544](xref:Connector_help_ETL_Systems_Genus_-_22544) |
 
 ## Configuration
 
@@ -53,4 +53,4 @@ The web interface is only accessible when the client machine has network access 
 The element created with this driver consists of the following data pages:
 
 - **General**: Displays the current status of the **System Summary Alarm**, and contains a table listing the device **Modules**.
-- **DVE**: Allows you to enable or disable the **DVE Automatic Removal** feature. The tables of the supported modules are also displayed on this page: **CPU Modules**, **PSU Modules,** **Splitter/Combiner Modules** and the**Hybrid 22544 Modules.**
+- **DVE**: Allows you to enable or disable the **DVE Automatic Removal** feature. The tables of the supported modules are also displayed on this page: **CPU Modules**, **PSU Modules,** **Splitter/Combiner Modules** and the **Hybrid 22544 Modules.**

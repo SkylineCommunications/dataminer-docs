@@ -54,4 +54,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The **General** page displays general info about the device (System Model, Software Version, etc.). The **Positioning** page displays info about the current position of the ACU and the tracking configuration.All the alarms and warnings are displayed on the **Faults** page.
+The **General** page displays general info about the device (System Model, Software Version, etc.).
+The **Positioning** page displays info about the current position of the ACU and the tracking configuration.
+All the alarms and warnings are displayed on the **Faults** page.

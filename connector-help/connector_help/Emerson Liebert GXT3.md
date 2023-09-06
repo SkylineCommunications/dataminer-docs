@@ -35,20 +35,29 @@ It is possible that some settings need to be configured on the device before the
 
 2.  Select the folder **SNMP** in the left section of the web interface.
 
-3.  Enable all check boxes on this page and set the *Heartbeat Trap Interval* to 1 minute. Note: you may need to click an *Edit* button first, before you will be able to change any settings.Note: you may be prompted to enter administrator credentials to proceed.Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
+3.  Enable all check boxes on this page and set the *Heartbeat Trap Interval* to 1 minute.
+    Note: you may need to click an *Edit* button first, before you will be able to change any settings.
+    Note: you may be prompted to enter administrator credentials to proceed.
+    Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
 
 4.  In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
 
-5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
+5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
+    Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
 
-6.  In the left section of the web interface,just below **V1 Access**, select the folder **V1 Traps**. Click *Save* when finished.
+6.  In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click *Save* when finished.
 
-7.  Add a trap entry, and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.Note: use the same *Community*as specified in the V1 Access table.Note: also enable the *Heartbeat* for this entry.Note: the default port *162* should be correct.Click *Save* when finished. The device may notify you that a restart is required to apply the changes.
+7.  Add a trap entry, and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
+    Note: use the same *Community* as specified in the V1 Access table.
+    Note: also enable the *Heartbeat* for this entry.
+    Note: the default port *162* should be correct.
+    Click *Save* when finished. The device may notify you that a restart is required to apply the changes.
 
 8.  If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
 
 9.  1.  Click the **Restart** folder in the left section of the web interface.
-    2.  Click the *Restart* button on this new page.Note: this should only restart the SNMP module and not the full device.
+    2.  Click the *Restart* button on this new page.
+        Note: this should only restart the SNMP module and not the full device.
 
 ## Usage
 
@@ -101,18 +110,22 @@ Finally, there is also a button to reset the statistics. These statistics includ
 Note:
 
 - **System Up Time** is not polled, instead it is set by the heartbeat trap. This can be used to verify if traps are configured correctly.
-- The **Last Shutdown Cause** parameter is calculated by the driver, based on the values of the parameters behind the **Shutdown Cause** page button.In short, the last shutdown cause will be the last parameter set to *Yes*. These parameters are also saved, but as long as all parameters are *No*, the cause will be *Unknown*. Note that it is possible that this cause is not correct. If for instance the device was rebooted when it was not monitored, and the shutdown parameters were reset again by the time the element was started, then the device will not be aware of this shutdown. Also, if for some reason multiple parameters are set to *Yes*, the summary could be wrong, because it will take the last received parameter, which is defined by polling order.
+- The **Last Shutdown Cause** parameter is calculated by the driver, based on the values of the parameters behind the **Shutdown Cause** page button.
+  In short, the last shutdown cause will be the last parameter set to *Yes*. These parameters are also saved, but as long as all parameters are *No*, the cause will be *Unknown*.
+  Note that it is possible that this cause is not correct. If for instance the device was rebooted when it was not monitored, and the shutdown parameters were reset again by the time the element was started, then the device will not be aware of this shutdown. Also, if for some reason multiple parameters are set to *Yes*, the summary could be wrong, because it will take the last received parameter, which is defined by polling order.
 
 ### Alarms
 
 This page contains an **Alarm** **Table** and an **Alarms Present** parameter displaying the number of currently active alarms.
 
-After the first startup, the alarm table is populated with all "well-known" alarms. This is a list of general alarms which should be implemented on all GXT3 devices.Some devices could generate some extra alarms depending on the installed configuration and firmware.
+After the first startup, the alarm table is populated with all "well-known" alarms. This is a list of general alarms which should be implemented on all GXT3 devices.
+Some devices could generate some extra alarms depending on the installed configuration and firmware.
 
 The available columns in the driver are:
 
 - **Alarm ID:** This is a 'hidden' column. It is the first column in the table and can be made visible by positioning the mouse pointer in the top left corner of the table and, when the cursor changes, dragging the columns to the right. The content of this column is a unique ID for the alarm. In fact it is the OID (Object IDentifier) of a node in the MIB of the device. The description of that node is the description of the alarm.
-- **Alarm Description:** This column should contain a unique and user-friendly description of the alarm. For well-known alarms, this will be set after startup (though it is overridable), but for custom alarms, this will be the OID of the node in the MIB. Because this OID is very difficult to understand, it is possible to change the alarm description to make it more user-friendly.Note that the row (and therefore the alarm description) will not be removed when the alarm is cleared. Instead the **Alarm Status** column will just change to *OK*.
+- **Alarm Description:** This column should contain a unique and user-friendly description of the alarm. For well-known alarms, this will be set after startup (though it is overridable), but for custom alarms, this will be the OID of the node in the MIB. Because this OID is very difficult to understand, it is possible to change the alarm description to make it more user-friendly.
+  Note that the row (and therefore the alarm description) will not be removed when the alarm is cleared. Instead the **Alarm Status** column will just change to *OK*.
 - **Alarm Status:** This column indicates whether the alarm is currently active. (Active = *Alarm*, not active = *Ok*). The benefit of not removing the alarms is that, when using trending, it becomes easy to check when a certain alarm has occurred in the past.
 - **Alarm Time:** This column contains the value of the **System Up Time** parameter when the alarm occurred.
 
@@ -120,7 +133,8 @@ The available columns in the driver are:
 
 This page contains the **Conditions** table and a page button displaying a list of known conditions and their associated description.
 
-Conditions are in a way very similar to alarms. They can be active or not. There are however a lot more predefined conditions (equivalent to "well-known").Because of this, instead of listing all possible conditions, the table only displays currently active conditions.
+Conditions are in a way very similar to alarms. They can be active or not. There are however a lot more predefined conditions (equivalent to "well-known").
+Because of this, instead of listing all possible conditions, the table only displays currently active conditions.
 
 Because it is possible that "unknown" conditions occur, depending on the firmware of the device, an extra table is added to map the alarm IDs (OIDs) to alarm descriptions. You can find this mapping by clicking the **Descriptions** button above the table. The pop-up page will show a **Condition Name Dictionary**, containing all well-known conditions and all OIDs of unknown conditions that have occurred since the element was created. The naming of the alarms in the Alarm Console should be the description next to the OID in the **Condition Name Dictionary**. (By default, for not well-known conditions, this will be the OID of the condition.)
 
@@ -129,7 +143,8 @@ Available columns are:
 - **Condition Description:** Contains the well-known condition. This is not editable. In case of a not well-known condition, this column will contain the OID of the condition.
 - **Condition Time:** Contains the value of the **System Up Time** parameter when the condition was met.
 - **Condition Type:** *Warning*, *Alarm*, *Fault*, or *Not Specified.*
-- **Condition Current State:** *Active* or *Inactive*. Note: Some conditions need to be acknowledged first before they are removed from the table. So even though normally rows are automatically removed and therefore never have the value *Inactive*, some entries could remain and have this value if they still need to be acknowledged. Note also that acknowledging a condition will not remove the condition if the current state is still active.
+- **Condition Current State:** *Active* or *Inactive*.
+  Note: Some conditions need to be acknowledged first before they are removed from the table. So even though normally rows are automatically removed and therefore never have the value *Inactive*, some entries could remain and have this value if they still need to be acknowledged. Note also that acknowledging a condition will not remove the condition if the current state is still active.
 - **Condition Severity:** *Not Applicable*, *Minor*, *Major*, or *Critical.*
 - **Condition Acknowledged:** Indicates whether the condition was acknowledged by an operator.
 - **Condition Ack Req.:** Indicates if acknowledgement is required before the entry will be removed.
@@ -147,7 +162,8 @@ Available parameters are: all battery-related parameters from the general page, 
 
 ### Configuration
 
-This page contains parameters related to the configuration of the device.Note that not all devices support sets on these parameters. (Some have hard-coded values.)
+This page contains parameters related to the configuration of the device.
+Note that not all devices support sets on these parameters. (Some have hard-coded values.)
 
 Available parameters are:
 
@@ -163,7 +179,8 @@ Note: Muting the **Audible Alarm** will temporarily silence the alarm. At the po
 
 ### Monitor
 
-Contains measurement and status parameters related to input, output and bypass.Several of these parameters are also available on the **General** page.
+Contains measurement and status parameters related to input, output and bypass.
+Several of these parameters are also available on the **General** page.
 
 Some additional parameters include:
 

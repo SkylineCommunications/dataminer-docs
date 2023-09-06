@@ -123,7 +123,7 @@ This page contains information about the input parameters and allows you to set 
 The page contains page buttons to the following subpages:
 
 - **Sat Input**: Displays parameters related to **Satellite input**, such as **Selected Input Channel**, **Signal Status**, **Signal Strength, C/N** and **C/N Margin.**
-- **Configuration**:Allows you to set the parameters **LNB Frequency**, **Satellite Frequency**, **L-Band Frequency**, **Symbol Rate**, **Modulation Type**, **Roll Off**, **Spectrum Sense**, **Search Range**, **LNB Power Output**, **LNB Power Level** and **LNB 22Khz**.
+- **Configuration**: Allows you to set the parameters **LNB Frequency**, **Satellite Frequency**, **L-Band Frequency**, **Symbol Rate**, **Modulation Type**, **Roll Off**, **Spectrum Sense**, **Search Range**, **LNB Power Output**, **LNB Power Level** and **LNB 22Khz**.
 
 ### Service Plus
 
@@ -142,7 +142,7 @@ The page contains page buttons to the following subpages:
 - **Teletext**: Displays the Teletext status and allows you to configure several related parameters. The parameters on this subpage include **Current Teletext**, **User Teletext PID**, **Stream**, etc.
 - **Advanced**: Displays several parameters such as **Service Hunt**, **Service Drop** and **Major Minor Tracking**.
 - **Advanced Video**: Displays parameters related to video, such as **Test Pattern Type**, **User Video PID**, **Composite 625 Modes**, **VGA Embedded Sync**, etc.
-- **Decode Audio**: Only available from version 2.0.1x onwards. Displays parameters related to audio, such as **Audio PID**, **Audio Display**, **Primary Language**,etc.
+- **Decode Audio**: Only available from version 2.0.1x onwards. Displays parameters related to audio, such as **Audio PID**, **Audio Display**, **Primary Language**, etc.
 
 ### Service Split
 
@@ -152,7 +152,7 @@ This page is only available from version 2.0.1.x onwards.
 
 ### Output
 
-This page contains all parameters for the output, such as **TS Output**, **Output 1**, **IP Output Ports Configuration Table**, **Bitrate Type**, **Service Splitting**,etc.
+This page contains all parameters for the output, such as **TS Output**, **Output 1**, **IP Output Ports Configuration Table**, **Bitrate Type**, **Service Splitting**, etc.
 
 ### Load/Save
 

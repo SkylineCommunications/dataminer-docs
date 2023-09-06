@@ -55,7 +55,7 @@ There is no redundancy defined.
 
 The **General** page of this connector contains the username and password to access the device.
 
-The **Instance Settings** pagecontains a table with basic information about the existing instances, as well as specific logs for every instance. This page has multiple subpages, which can among others be used to add new instances or edit existing instances:
+The **Instance Settings** page contains a table with basic information about the existing instances, as well as specific logs for every instance. This page has multiple subpages, which can among others be used to add new instances or edit existing instances:
 
 - **New Instance Settings**: Allows you to create a new instance with the necessary basic information.
 
@@ -69,7 +69,7 @@ The **Instance Settings** pagecontains a table with basic information about the 
   - **ANC Multicast Source:** The UDP port to listen to or the multicast address and port to receive a 2110-40 ancillary stream as a source of upstream captioning. Upstream captioning from this stream will be multiplexed with any new captioning that is locally inserted according to priority rules as documented in EEG Smart Encoder protocol documentation. This parameter may be changed from its initial value by NMOS IS-05 once the device is active.
   - **Media Network Interface:** If multiple NICs are available on the Alta VM, specify one of the NIC IP addresses in this field to control which interface is used to send and listen for media multicasts associated with this instance.
 
-- **iCap Settings**:Allows you to edit the iCap settings for existing instances.
+- **iCap Settings**: Allows you to edit the iCap settings for existing instances.
 
 - **iCap Company, Username, and Password:** iCap account information will be provided to you by EEG with your purchase or demo or will be accessible from your company's admin account at [https://www.eegicap.com](https://www.eegicap.com/). Each iCap account has a company namespace, a username, and a password. This account will be used to allow unique identification of your stream by your contracted real-time captioner over iCap, so you must use a different username for each simultaneously operating Alta encoder instance. You do not need an iCap account to perform certain non-cloud functions such as caption bridging between input sources or SCTE-35 cue insertion.
 

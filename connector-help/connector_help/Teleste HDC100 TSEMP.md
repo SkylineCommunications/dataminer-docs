@@ -110,7 +110,10 @@ For every card type, an entry is created in the **Modules** table. Different con
 - **Configuration Import**: When **Automatic DVE Name** is set to *Configuration File*, the selected configuration file will be used with the DVE name and view that need to be used.
 
 - Every line in the **CSV** file represents a module of which the data should be in the following format: ***Main Element IP Address;Rack Number;Slot Number;DVE Name;DVE View***
-  - Example: 10.3.3.9;0;4;DVE Name 1;DVE View 110.3.3.9;0;7;DVE Name 2;DVE View 210.3.3.9;1;9;DVE Name 3;DVE View 2
+  - Example:
+    10.3.3.9;0;4;DVE Name 1;DVE View 1
+    10.3.3.9;0;7;DVE Name 2;DVE View 2
+    10.3.3.9;1;9;DVE Name 3;DVE View 2
 
 ### Module Type pages
 
@@ -128,7 +131,7 @@ The statistics include the **Uptime**, **Total Uptime**, **Number of Restarts**,
 
 ### Interfaces page
 
-This page contains network settings such as the **IP Address**, **Network Mask** and **Default Gateway**,as well as the following **HDO Bus** parameters: **IP Address**, **Network Mask**, **Default Gateway**, **Master Address**, **Mastering**, **Poll** **Timeout** and **Packet** **Timeout**.
+This page contains network settings such as the **IP Address**, **Network Mask** and **Default Gateway**, as well as the following **HDO Bus** parameters: **IP Address**, **Network Mask**, **Default Gateway**, **Master Address**, **Mastering**, **Poll** **Timeout** and **Packet** **Timeout**.
 
 ### Module Overview page
 
@@ -181,7 +184,7 @@ For each of the tables, a subpage allows you to enable or disable the **automati
 
 ### Alarm Limits pages
 
-These pages display the **Analog** and **Discrete Alarm Limits** **Table** for each of the module types. In the Analog Alarm Limits Table, you can configure the **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband**,as well as the **Status** for each of these columns.
+These pages display the **Analog** and **Discrete Alarm Limits** **Table** for each of the module types. In the Analog Alarm Limits Table, you can configure the **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband**, as well as the **Status** for each of these columns.
 
 ## Usage (4.0.0.x)
 
@@ -197,8 +200,8 @@ It contains three page buttons:
 
 - **Monitoring***:* Contains both the **Analog** and **Discrete Alarm Limits** **Tables**, as well as the parameters **Alarm Control Detection**, **ACD** **on** **Delay** and **ACD off Delay**.
 
-- In the **Analog Alarm Limits Table**,the **HiHi**, **Hi**, **LoLo**, **Lo**, **Deadband**, **HiHi State**, **Hi State**, **Lo State** and **LoLo State** can be configured.
-  - For the **Discrete Alarm Limits**,the **settings** can be configured, and the **alarm** status can be monitored.
+- In the **Analog Alarm Limits Table**, the **HiHi**, **Hi**, **LoLo**, **Lo**, **Deadband**, **HiHi State**, **Hi State**, **Lo State** and **LoLo State** can be configured.
+  - For the **Discrete Alarm Limits**, the **settings** can be configured, and the **alarm** status can be monitored.
 
 ### Overview page
 

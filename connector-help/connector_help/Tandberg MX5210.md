@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General Info
 
-This page contains general status information, such as the **Product Name**,**Hardware Address** and **Router**.
+This page contains general status information, such as the **Product Name**, **Hardware Address** and **Router**.
 
 Other displayed parameters are among others **Unit Alarm Status**, **Configuration Changed Alarm**, **Illegal Configuration Alarm**, **Display Unlocked Alarm** and **No Input Board Alarm**.
 

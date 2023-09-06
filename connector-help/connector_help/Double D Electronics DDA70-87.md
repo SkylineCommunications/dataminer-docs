@@ -4,7 +4,7 @@ uid: Connector_help_Double_D_Electronics_DDA70-87
 
 # Double D Electronics DDA70-87
 
-Thisdriver can be used to display and configure information of the **Double D Electronics DDA70-87** WG Switch.
+This driver can be used to display and configure information of the **Double D Electronics DDA70-87** WG Switch.
 
 ## About
 
@@ -47,7 +47,7 @@ This driver uses a serial connection and needs the following user information:
     - **Databits**: \[Databits specified in the manual of the device, default *7*.\]
     - **Stopbits**: \[Stopbits specified in the manual of the device, default *1*.\]
     - **Parity**: \[Parity specified in the manual of the device, default *even*.\]
-    - **FlowControl**: \[FlowControl specified in the manual of the device, default*No*.\]
+    - **FlowControl**: \[FlowControl specified in the manual of the device, default *No*.\]
   - Interface connection:
 
   <!-- -->

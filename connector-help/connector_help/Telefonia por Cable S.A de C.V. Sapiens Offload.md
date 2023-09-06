@@ -12,9 +12,9 @@ About
 
 **This subsection can only be omitted for an exported connector**
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### System Info
 
@@ -38,8 +38,16 @@ There is no redundancy defined.
 
 Configure the file paths in the configuration page and trigger button when ready to ingest file
 
-\- Upstream Channel SNR: These parameters are used to offload data to the table Upstream Channel SNR Data- Upstream Utilization: These parameters are used to offload data to the table Upstream Channel Utilization- Upstream Utilization: These parameters are used to offload data to the table Downstream Channel UtilizationFile Path: This parameter contains the full file path of the CSV file that will be used by the connector to extract information from session records and store it in the corresponding table.Processed Lines: This parameter displays the number of lines processed by the connector when reading the CSV file set in the previous parameter (File Path)Last Update: This parameter displays the last time that a file was processedButton 'Offload': This button can be used to execute a manual offload
+\- Upstream Channel SNR: These parameters are used to offload data to the table Upstream Channel SNR Data- Upstream Utilization: These parameters are used to offload data to the table Upstream Channel Utilization- Upstream Utilization: These parameters are used to offload data to the table Downstream Channel Utilization
+File Path: This parameter contains the full file path of the CSV file that will be used by the connector to extract information from session records and store it in the corresponding table.Processed Lines: This parameter displays the number of lines processed by the connector when reading the CSV file set in the previous parameter (File Path)Last Update: This parameter displays the last time that a file was processed
+Button 'Offload': This button can be used to execute a manual offload
+
+
 
 ## Notes
 
 Driver includes read me in General page with more information
+
+
+
+

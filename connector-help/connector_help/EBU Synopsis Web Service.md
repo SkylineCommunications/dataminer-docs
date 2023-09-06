@@ -8,7 +8,8 @@ The EBU Synopsis Web Service connector retrieves information from the **European
 
 ## About
 
-The EBU Synopsis Web Service is used to retrieve information from **eurovision.net** via the [**Eurovision Web Services**](https://workspace.ebu.ch/display/EurovisionWebServices).There is also a possibility to use **callbacks** and get notified immediately in case of changes to synopses or requests.
+The EBU Synopsis Web Service is used to retrieve information from **eurovision.net** via the [**Eurovision Web Services**](https://workspace.ebu.ch/display/EurovisionWebServices).
+There is also a possibility to use **callbacks** and get notified immediately in case of changes to synopses or requests.
 
 There are multiple ranges of the EBU Synopsis Web Service connector. The **2.x range** is the generic, recommended range. This help only describes the configuration and usage of this range.
 
@@ -70,7 +71,7 @@ Note that your DMA will require an **internet connection** and a correctly confi
 </ul></li>
 </ul></td>
 <td>2.0.0.8</td>
-<td>Most polling is disabled by default to avoid a lot of requests (as most of this data is not needed if no bookings are created using this connector).<strong>If this data is required, manually enable polling when you move to this range.</strong></td>
+<td>Most polling is disabled by default to avoid a lot of requests (as most of this data is not needed if no bookings are created using this connector). <strong>If this data is required, manually enable polling when you move to this range.</strong></td>
 </tr>
 </tbody>
 </table>
@@ -155,7 +156,8 @@ Note that an organization can only be selected if polling of the organization it
 
 The **Organizations** page shows a lot of information linked to the different organizations that are part of EBU. In addition to the organizations, the **countries**, **cities** and **broadcast centers** can all be retrieved when polling is enabled.
 
-There is also an additional subpage for the **Broadcast Center Details**, which contains more details on the capabilities of each broadcast center. **Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
+There is also an additional subpage for the **Broadcast Center Details**, which contains more details on the capabilities of each broadcast center.
+**Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
 
 ### Satellites
 
@@ -163,11 +165,13 @@ On the **Satellites** page, you can find the satellites, their **satellite famil
 
 ### Video
 
-The **Video** page and its subpages contain multiple tables with **video details**. **Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
+The **Video** page and its subpages contain multiple tables with **video details**.
+**Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
 
 ### Audio
 
-The **Audio** page contains a list of **audio codes** that are used in the **synopses** and can also be used when creating bookings through the EBU API. **Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
+The **Audio** page contains a list of **audio codes** that are used in the **synopses** and can also be used when creating bookings through the EBU API.
+**Polling of this data should not be enabled** unless it is specifically needed to for example create EBU bookings via this connector. This data could then help to make sure nothing can be booked that is technically not possible.
 
 ### Callbacks
 

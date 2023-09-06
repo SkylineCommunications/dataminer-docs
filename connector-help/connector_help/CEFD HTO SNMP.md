@@ -90,7 +90,7 @@ The following page buttons are also available:
 
 ### Configuration - Interface
 
-This page displays the **Interface Table**, which containsinformation on the network interfaces present in the unit.
+This page displays the **Interface Table**, which contains information on the network interfaces present in the unit.
 
 ### Config - WAN - Mod
 
@@ -129,7 +129,7 @@ Via the **Encryption/Decryption Keys** page button, you can preconfigure the enc
 
 This page contains the following tables:
 
-- The **Remote Site List table**, whichcontains information on the device communication with the associated remote sites (e.g. Remote Site IP Address, currently assigned MODCOD, last Es/No, etc.).
+- The **Remote Site List table**, which contains information on the device communication with the associated remote sites (e.g. Remote Site IP Address, currently assigned MODCOD, last Es/No, etc.).
 - The **ACM Events log table**.
 
 ### Config - WAN - BUC
@@ -138,7 +138,7 @@ This page allows you to configure the **Block Upconverter (BUC)** control parame
 
 ### Config - Network
 
-On the left side of this page, you can find the **ARP Table**, which isused for network mapping. On the right side, you can find several **PTP** (Precision Time Protocol) and **Working Mode** configuration parameters.
+On the left side of this page, you can find the **ARP Table**, which is used for network mapping. On the right side, you can find several **PTP** (Precision Time Protocol) and **Working Mode** configuration parameters.
 
 Below the ARP Table, the **Add Entry** page button allows you to preconfigure the parameters for a new entry in the **ARP Table** and then add the entry by clicking the **Create** button.
 
@@ -204,7 +204,7 @@ The table also contains the **Diagnostic** page button, which displays statistic
 
 ### Traffic
 
-This page displays the **Interfaces table**, whichcontains **traffic statistics** related to the different interfaces of the device.
+This page displays the **Interfaces table**, which contains **traffic statistics** related to the different interfaces of the device.
 
 ### Web Interface
 

@@ -6,7 +6,7 @@ uid: Connector_help_Skyline_KPI_and_KQI_Editor
 
 The **Skyline KPI and KQI Editor** is a virtual connector intended to provide an updated value of the **trending** of parameters from elements in the cluster. Those parameters can be single parameters or indexes from a table column (all the indexes as one, all the indexes individually, or just one of the indexes).
 
-Ultimately, the goal of the connector is to have an updated value of the **average, minimum, or maximum** of the trending during a predefined period. The calculation can be made **daily, weekly, or monthly**,and it can be based on **real-time or average** (5-min or 1-hour) trending values. Note that when it is based on real-time trending values, the calculation can only be done daily. You can also set the calculation to be done continually or only over a fixed period of time.
+Ultimately, the goal of the connector is to have an updated value of the **average, minimum, or maximum** of the trending during a predefined period. The calculation can be made **daily, weekly, or monthly**, and it can be based on **real-time or average** (5-min or 1-hour) trending values. Note that when it is based on real-time trending values, the calculation can only be done daily. You can also set the calculation to be done continually or only over a fixed period of time.
 
 ## About
 
@@ -36,7 +36,7 @@ This page displays the **KPI & KQI** table, where the parameters to be measured 
 
 It also includes the following page buttons:
 
-- **Network Machine Credentials**: Allows you to set the remote credentials to copy files from the **Merged Files Destination Folder** to the **Remote Files Destination Folder**. To get access to the **CSV Files Folder**, **Generated Files Destination Folder**,and **Merged Files Destination Folder**, set the Network Machine Credentials.
+- **Network Machine Credentials**: Allows you to set the remote credentials to copy files from the **Merged Files Destination Folder** to the **Remote Files Destination Folder**. To get access to the **CSV Files Folder**, **Generated Files Destination Folder**, and **Merged Files Destination Folder**, set the Network Machine Credentials.
 
 - **Settings:**
 
@@ -49,9 +49,9 @@ It also includes the following page buttons:
   - **Debug/Set:**
 
   - - **Generate Log File**: Enables the creation of .txt files with information about the processing results.
-    - **Log Store Time**: If log files were generated, the ones older than the Log Store Timewill be zipped and deleted or simply deleted, depending on the **Action Log Files** setting.
+    - **Log Store Time**: If log files were generated, the ones older than the Log Store Time will be zipped and deleted or simply deleted, depending on the **Action Log Files** setting.
     - **Action Log Files**: Allows you to choose between zipping or just deleting the log files older than the Log Store Time. This is done automatically after the **Next Get Value** occurs. Click the **Execute Now** button to have the verification done immediately at the moment the button is clicked, and then automatically afterwards.
-    - **Set Prev Period**:Allows you to set the previous **Next Get Value** in order to trigger previous period calculation.
+    - **Set Prev Period**: Allows you to set the previous **Next Get Value** in order to trigger previous period calculation.
     - **Average Trend Interval**: Set this value and then click the **Apply All** button in order to set the **Average Trend Interval Type** column for all the rows.
 
 - **Add**: Allows you to add new entries to the table. If a table is used, a **Filter** can be applied to the retrieved keys.
@@ -65,17 +65,18 @@ After the necessary information has been provided, it will be validated. Validat
 - The **DMA ID\Element ID\Parameter ID** is invalid (parameter ID is not correct, parameter is not being trended, or parameter is a table column).
 - The parameter ID refers to a table, but you have not entered the **Column ID** and selected the **Table Indexes.**
 - The **Recurrence Range Period** is set to *Yes,* but the **Recurrence Start** **and** **End Dates** are not filled in or the selected dates do not allow the calculation of the **Next Get Value** (time when the query to the database is done).
-- The **Trending Type** is *Real Time*, butfor that parameter only average trending is activated, or vice versa. Check the logging for more information.
+- The **Trending Type** is *Real Time*, but for that parameter only average trending is activated, or vice versa. Check the logging for more information.
 
 Note:
 
-- If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*,only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added.If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually*,and only one row is added in the **KPI & KQI Results** table.
+- If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*, only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added.
+  If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually*, and only one row is added in the **KPI & KQI Results** table.
 - By default, if **Trending Type** is *Real Time,* the **Average Trend Interval Type** will be set to *Auto*. If *Average* is selected, two options are available: *5min* or *1h*.
 - **Range Low** and **Range High** should be defined in order to set the range of valid values that are included in the calculation. This is intended to avoid exception values that are outside the normal range of the parameter.
 
 If the validation does not fail, rows will be added to the tables. In case the **Recurrence Range Period** is set to *No,* the **Recurrence Start Date** and the **Recurrence End Date** will be set with default values, which are the first and last day of the month.
 
-Note: There is a difference between the hours on the **Next Get Value** and on the **Daily Recurrence Time** when the selected **Trending Type** is *Average*. This is necessary in order to get the trend record taken at the time of the **Daily Recurrence Time**. If **Trending Type** is set to *Real Time*, trending records must be taken at the exact time, because real-timetrending values only last for a day.
+Note: There is a difference between the hours on the **Next Get Value** and on the **Daily Recurrence Time** when the selected **Trending Type** is *Average*. This is necessary in order to get the trend record taken at the time of the **Daily Recurrence Time**. If **Trending Type** is set to *Real Time*, trending records must be taken at the exact time, because real-time trending values only last for a day.
 
 Changing settings on the row will set the **Status** to *Not Active,* except if that setting is the **KPI\KQI Name** or if the setting does not relate to the current setup, i.e.:
 

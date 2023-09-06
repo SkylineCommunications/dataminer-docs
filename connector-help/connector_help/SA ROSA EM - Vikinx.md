@@ -45,7 +45,7 @@ SNMP Settings:
 
 Each element created for a Vikinx device connected to Rosa EM will contain the following pages:
 
-- **Input Output Settings:**Matrix representation for input/output setting.
+- **Input Output Settings:** Matrix representation for input/output setting.
 - **Input Output Settings Table:** Output values from matrix displayed as normal parameters.
 - **Vikinx - Alarms:** Alarms for the Vikinx device.
 - **Vikinx - Properties:** Properties for the Vikinx device.

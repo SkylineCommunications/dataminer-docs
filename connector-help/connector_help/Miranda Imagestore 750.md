@@ -122,3 +122,5 @@ The inputs are retrieved from the video table and connected to the program outpu
 From version 1.0.2.20 onwards, the connector can prevent a potential problem where rebooting causes the device to freeze. To enable this feature, set the parameter **Reboot Precaution** to *Enabled*. You can set a delay to start up the serial connection. You will need to adapt the connection setting as well.
 
 This is an example of what this should look like:
+
+![MirandaImagestore750.png](~/connector-help/images/Miranda_Imagestore_750_MirandaImagestore750.png)

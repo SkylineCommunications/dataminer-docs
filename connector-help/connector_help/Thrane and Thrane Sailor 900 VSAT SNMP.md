@@ -110,7 +110,7 @@ A **blocking zone** identifies a region where the antenna is not allowed to tran
 
 ### Blind Sector Settings
 
-On this page, you can add blind sectors, define the **Start and Stop Azimuth and Elevation** and determine ifa blind sector is **Active or Inactive.**
+On this page, you can add blind sectors, define the **Start and Stop Azimuth and Elevation** and determine if a blind sector is **Active or Inactive.**
 
 A **blind sector** identifies a region where the antenna cannot successfully communicate because of an obstacle, such as for example a ship's mast. With this table, you can identify such regions and make the element generate an alarm if the ACU aims the antenna into such a blind sector.
 
@@ -134,7 +134,7 @@ The page includes a page button with information about the **Backup Ping Functio
 
 ### Export GPS Trace
 
-On this page, you can enable or disable the **GPS data export feature** (which stores GPS locations in the database)and adjust the corresponding settings.
+On this page, you can enable or disable the **GPS data export feature** (which stores GPS locations in the database) and adjust the corresponding settings.
 
 ### Web Interface
 

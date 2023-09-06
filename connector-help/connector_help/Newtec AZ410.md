@@ -76,9 +76,9 @@ This page allows you to monitor and control the Ethernet settings associated wit
 Via page buttons, you can access page buttons that allow more detailed configuration:
 
 - **Interfaces**: Contains interface-related settings such as Auto Negotiation, Speed Advertisement, etc.
-- **Redundancy**: Allows you to monitor and configure redundancy parameters such as Ethernet Interface Redundancy, Unit Redundancy State,etc.
+- **Redundancy**: Allows you to monitor and configure redundancy parameters such as Ethernet Interface Redundancy, Unit Redundancy State, etc.
 - **QoS**: Allows you to monitor and configure QoS parameters such as Ethernet RX QoS, QoS on CPU load, and Rx Qos Rules.
-- **Modem**: Allows you to monitor and configure network parameters such as Own IP Address A& B, Default Gateway, Multicast Interface, etc.
+- **Modem**: Allows you to monitor and configure network parameters such as Own IP Address A & B, Default Gateway, Multicast Interface, etc.
 - **IP Encapsulation**: Allows you to monitor and configure encapsulation parameters such as Default Output MAC, Ethernet Output, Encapsulation Protocol, Promiscuous Mode, etc.
 - **Signaling**: Allows you to monitor and configure the Signaling IP and Modulator to Demodulator Signaling parameters.
 

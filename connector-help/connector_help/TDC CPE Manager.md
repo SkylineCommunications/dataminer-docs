@@ -65,19 +65,19 @@ The following parameters can be set via **multiple set** in order to configure t
 
 - The directory can be a shared folder. The credentials for the folder can be set using the **Offload Shared Folder Username** and **Offload Shared Folder Password** parameters.
   - A folder will be created per OLT with its name - the **OLT Name.**
-  - Default value:*\\80.62.121.234\c\$\Skyline_Data\BE Manager Offload\\*
+  - Default value: *\\80.62.121.234\c\$\Skyline_Data\BE Manager Offload\\*
 
 - **Offload AMP Directory**: The root directory where the offload files will be stored.
   - The directory can be a shared folder. The credentials for the folder can be set using the **Offload Shared Folder Username** and **Offload Shared Folder Password** parameters.
   - A folder will be created per OLT with its name - the **OLT Name.**
-  - Default value:*\\80.62.121.234\c\$\Skyline_Data\AMP\\*
+  - Default value: *\\80.62.121.234\c\$\Skyline_Data\AMP\\*
 
 - **Offload File Age Threshold**: Determines for how long files are stored in the **Offload CMC Directory** before they are deleted to free up space.
 
 - Range between *8 hours* and *1 year*, with 8-hour increments.
   - Default value: *2 weeks*
 
-- **Force Offload / Offload To Disk**: Set this button to manually execute the offload of the files, regardless of both**Offload State (CMC/AMP)** values.
+- **Force Offload / Offload To Disk**: Set this button to manually execute the offload of the files, regardless of both **Offload State (CMC/AMP)** values.
 
 - **Debug Log Times**: Enables or disables extra logging related to the offload.
 
@@ -93,7 +93,7 @@ The offload will not occur to front-end managers.
 
 The offload files will always contain the primary key of the tables and a column with the **OLT Name** linked to each entry.
 
-The files will be separated per OLT, inside the **Offload CMC Directory** and **Offload AMP Directory**.This means that each file will only contain the entries of a table related to a single OLT.
+The files will be separated per OLT, inside the **Offload CMC Directory** and **Offload AMP Directory**. This means that each file will only contain the entries of a table related to a single OLT.
 
 ## Usage
 

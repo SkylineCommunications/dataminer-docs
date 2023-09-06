@@ -66,7 +66,7 @@ uid: Connector_help_Double_D_Electronics_DDA286_(4+1)
 </ul>
 <h2 id="usage">Usage</h2>
 <h3 id="general-page">General Page</h3>
-<p>On the general page, the user can observe some general information from the device on the left such asthe <strong>Software Version;</strong> the <strong>Device</strong> <strong>Name</strong>;the <strong>Maximum</strong> <strong>Number of Supported Switches</strong> and the <strong><strong>Maximum</strong> <strong>Number of Supported Chains</strong>.</strong></p>
+<p>On the general page, the user can observe some general information from the device on the left such as <strong></strong> the <strong>Software Version;</strong> the <strong>Device</strong> <strong>Name</strong>; <strong></strong> the <strong>Maximum</strong> <strong>Number of Supported Switches</strong> and the <strong><strong>Maximum</strong> <strong>Number of Supported Chains</strong>.</strong></p>
 <p>In addition to the previous, the user can define the device's mode (<strong>Global Device Mode</strong>) and its respective <strong>Control Mode</strong>.</p>
 <p>At the right of the page the user can observe if there's any existing alarms regarding: <strong>Active Alarms; Unacknowledged Alarms; PSU 1</strong> and <strong>PSU 2 Alarm.</strong></p>
 <h3 id="switches">Switches</h3>

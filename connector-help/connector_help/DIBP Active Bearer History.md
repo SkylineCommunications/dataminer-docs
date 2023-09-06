@@ -32,13 +32,13 @@ This page contains the **Active Bearer History** table. This is a custom table t
 
 - **Total Rows**: Shows the total number of rows in the **Active Bearer Table.**
 
-- **Active Bearer History Table**: Keeps track of the changes of the **Active Bearer** parameterof the **DIBP Active Bearer** element.The table contains the following columns:
+- **Active Bearer History Table**: Keeps track of the changes of the **Active Bearer** parameter of the **DIBP Active Bearer** element. The table contains the following columns:
 
-- **Index**: The index of the table,consisting of the **active bearer and the start time** of that bearer.
-  - **Bearer**: Displays theactive bearer,received from the **DIBP Active Bearer** element
-  - **Start Time**: Displays the time theactive bearer became active.
-  - **Stop Time**: Displays the time theactive bearer stopped.
-  - **Duration**: Displays how long theactive bearer was active.
+- **Index**: The index of the table, consisting of the **active bearer and the start time** of that bearer.
+  - **Bearer**: Displays the active bearer, received from the **DIBP Active Bearer** element
+  - **Start Time**: Displays the time the active bearer became active.
+  - **Stop Time**: Displays the time the active bearer stopped.
+  - **Duration**: Displays how long the active bearer was active.
   - **State**: Displays if there was an outage during the time the active bearer was active.
 
 ### Cleanup Configuration

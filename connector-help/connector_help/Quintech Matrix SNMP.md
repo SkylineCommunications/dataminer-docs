@@ -51,7 +51,7 @@ This page displays **system information.**
 Multiple page buttons are available:
 
 - **SNMP**: Opens a subpage with SNMP parameters.
-- **QPE**:Opens a subpage with QPE parameters.
+- **QPE**: Opens a subpage with QPE parameters.
 - **UI**: Opens a subpage with user parameters.
 
 ### Matrix Page

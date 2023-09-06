@@ -39,7 +39,7 @@ SERIAL CONNECTION:
 - Interface connection:
 
 - **IP address/host**: The polling IP of the device.
-  - **IP port**: The IP port of the device. This is required. The default value is *21963*;the range is *0*to *65535*.
+  - **IP port**: The IP port of the device. This is required. The default value is *21963*; the range is *0* to *65535*.
 
 ## Usage
 

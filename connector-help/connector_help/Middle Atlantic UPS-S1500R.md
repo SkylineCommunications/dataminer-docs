@@ -44,7 +44,7 @@ SNMP Settings:
 
 ### General
 
-This page displays the **Battery and UPS status**,as well as general **System Data**.You can also change the **Location** and **Contact** information to identify the system here.
+This page displays the **Battery and UPS status**, as well as general **System Data**. You can also change the **Location** and **Contact** information to identify the system here.
 
 ### Status
 

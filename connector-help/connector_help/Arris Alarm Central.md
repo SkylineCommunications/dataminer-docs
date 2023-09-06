@@ -45,8 +45,10 @@ All the notifications received by the element are displayed in the **Notificatio
 
 For example, if **Event Types Affected Devices** equals **USNOISE\|DSNOISE\|USFEC\|OUTAGE\|NCN_OUTAGE**, and in the notification we find the following:
 
-- USFEC, critical = 20, USNOISE, minor = 25, OUTAGE, minor = 7, then this would result in **Affected Devices Event Type**equal to 20 affected devices. Only the highest severity (in this case **CRITICAL**) of the configured event types is counted.
-- DSFEC, critical = 20, USNOISE, minor = 25, OUTAGE, minor = 7, then this would result in **Affected Devices Event Type**equal to 32 affected devices. The number of events with **minor** severity is added, since **DSFEC** is not on the **Event Types Affected Devices** list.
+- USFEC, critical = 20, USNOISE, minor = 25, OUTAGE, minor = 7,
+  then this would result in **Affected Devices Event Type** equal to 20 affected devices. Only the highest severity (in this case **CRITICAL**) of the configured event types is counted.
+- DSFEC, critical = 20, USNOISE, minor = 25, OUTAGE, minor = 7,
+  then this would result in **Affected Devices Event Type** equal to 32 affected devices. The number of events with **minor** severity is added, since **DSFEC** is not on the **Event Types Affected Devices** list.
 
 #### Version 2.0.0.x only
 
@@ -56,7 +58,8 @@ For the post forwarding to work, a port and IP need to be configured in the elem
 
 The list defined in **Event Types Affected Devices** works as a filter to send new alarms northbound via HTTP post: if the received notification does not contain any of the defined event types, no HTTP post will be forwarded. However, when an already forwarded alarm receives an update, this update will also be forwarded, even if the event type linked to the alarm is different from the ones listed in the **Event Types Affected Devices**.
 
-From version 2.0.0.4 onwards, the Arris Alarm Central driver can forward notifications to a second destination defined with the **Upstream HTTP Destination** parameter on the **HTTP Forward** subpage. These notifications are forwarded using the list defined in **Upstream Event Types Affected Devices** as a filter, as mentioned above. If a received notification contains an event type defined in both lists, the notification is forwarded to both destinations.The total count of the **Affected Devices Event Type** is now associated with both lists: **Event Types Affected Devices** and **Upstream Event Types Affected Devices.**
+From version 2.0.0.4 onwards, the Arris Alarm Central driver can forward notifications to a second destination defined with the **Upstream HTTP Destination** parameter on the **HTTP Forward** subpage. These notifications are forwarded using the list defined in **Upstream Event Types Affected Devices** as a filter, as mentioned above. If a received notification contains an event type defined in both lists, the notification is forwarded to both destinations.
+The total count of the **Affected Devices Event Type** is now associated with both lists: **Event Types Affected Devices** and **Upstream Event Types Affected Devices.**
 
 ### Path
 

@@ -12,9 +12,9 @@ The Sintai OTNS8600 SNMP driver can be used to monitor the transmission power, c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                              | **Based on** | **System Impact** |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | \- Monitoring of the optical line protection system.- Monitoring of the NCP Ethernet and fiber ports.- Monitoring of the OTDS Ethernet ports. | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | \- Monitoring of the optical line protection system. - Monitoring of the NCP Ethernet and fiber ports. - Monitoring of the OTDS Ethernet ports. | \-           | \-                |
 
 ### Product Info
 

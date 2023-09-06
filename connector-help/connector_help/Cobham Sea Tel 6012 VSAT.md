@@ -14,7 +14,8 @@ This is a smart-serial driver. It uses the telnet protocol to retrieve the neces
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:**SERIAL CONNECTION:**
+This driver uses a serial connection and needs the following user information:
+**SERIAL CONNECTION:**
 
 - **IP address/host:** The polling IP of the device, e.g. *10.224.85.37.*
 - **IP port:** The IP port of the device, e.g. *2003.*

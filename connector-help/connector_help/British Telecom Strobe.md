@@ -70,7 +70,7 @@ The columns in this table are polled via SSH, but are also updated based on the 
 
 ### Configurations
 
-This page contains the **Username** and **Password** parameters, which **must be filled in** for the protocol to successfully log into the device via **SSH**.
+This page contains the **Username** and **Password** parameters, which **must be filled in** for the protocol to successfully log in to the device via **SSH**.
 
 It also contains the **Connection Status** parameter, which show the status *Connected*, *Invalid Response* or *Timeout*, and the **Last Changing State Response**, which shows the last received response after a channel state change.
 

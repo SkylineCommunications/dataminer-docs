@@ -4,7 +4,7 @@ uid: Connector_help_CSE_Seprol_S500
 
 # CSE Seprol S500
 
-The **CSE Seprol S500**driver is an I/O contact interface.
+The **CSE Seprol S500** driver is an I/O contact interface.
 
 ## About
 

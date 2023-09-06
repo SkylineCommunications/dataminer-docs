@@ -10,9 +10,9 @@ The **Paneda Mux Orchestration** connector can be used to orchestrate and manage
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -86,3 +86,8 @@ The **Muxes** page contains a table that lists the current muxes that are config
 Context menus on the tables can be used to create or remove items. Entities can only be removed when the corresponding container is already removed.
 
 When creating a new mux, multiple network interfaces and static routes can be assigned. This can be done by separating the values with a comma (,) as shown in the following screenshot:
+
+![image](~/connector-help/images/Paneda_Mux_Orchestration_image.png)
+
+
+

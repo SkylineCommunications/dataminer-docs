@@ -30,6 +30,8 @@ This connector uses a virtual connection to provide a standardized way of managi
 | 1.1.1.x   | No                  | Yes                     | \-                    | \-                      |
 | 1.1.2.x   | Yes                 | Yes                     | \-                    | \-                      |
 
+
+
 ## Configuration
 
 ### Connections

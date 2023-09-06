@@ -44,7 +44,8 @@ SERIAL CONNECTION:
   - **Databits**: Databits specified in the manual of the device, e.g. *7.*
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1.*
   - **Parity**: Parity specified in the manual of the device, e.g. *No.*
-  - **FlowControl**: FlowControl specified in the manual of the device, e.g. *No.*
+  - **FlowControl**: FlowControl specified in the manual of the device, e.g. *No.
+    *
 
 - Interface connection:
 

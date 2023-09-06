@@ -54,8 +54,8 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-On the **General** page, you can find the **Control Network** and **Product Features** Table, as well as buttons to set the **Card Alias**, **Reboot**,and perform a **Factory Reset**.
+On the **General** page, you can find the **Control Network** and **Product Features** Table, as well as buttons to set the **Card Alias**, **Reboot**, and perform a **Factory Reset**.
 
-On the **Ports** page, you can find the **Port Config, Status**,and **Bandwidth Tables.** The **Port Count** is also displayed on this page.
+On the **Ports** page, you can find the **Port Config, Status**, and **Bandwidth Tables.** The **Port Count** is also displayed on this page.
 
 The **SFP** page displays the global SFP parameters.

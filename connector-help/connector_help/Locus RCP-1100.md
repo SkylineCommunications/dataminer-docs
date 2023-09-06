@@ -8,7 +8,8 @@ This is an **Serial** driver that will show the status of the different paramete
 
 # About
 
-The ****Locus RCP-1100**** consists of a **SWO** control panel,There is no web interface to control the device.
+The ****Locus RCP-1100**** consists of a **SWO** control panel,
+There is no web interface to control the device.
 
 # Configuration and Installation
 
@@ -21,6 +22,8 @@ The ******Locus RCP-1100****** is a **Serial** driver. The **IP** and **Port** n
 - **Type of port**: TCP/IP
 - **IP address**: The IP of the device (e.g. 10.11.12.13)
 - **IP Port**: The IP Port of the device (8080)
+
+
 
 # Usage
 

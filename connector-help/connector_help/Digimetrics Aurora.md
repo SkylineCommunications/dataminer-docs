@@ -8,7 +8,7 @@ The Digimetrics Aurora is a high volume automated, no reference, file-based QC w
 
 ## About
 
-This driver makes it possible to interact with the Auroraweb service. Users can add jobs to the web service, get the status of these jobs, place a job on hold, or move the priority of a job in the queue. The driver also retrieves information from the templates, machines, processors and the VUCoreMode.
+This driver makes it possible to interact with the Aurora web service. Users can add jobs to the web service, get the status of these jobs, place a job on hold, or move the priority of a job in the queue. The driver also retrieves information from the templates, machines, processors and the VUCoreMode.
 
 ## Installation and configuration
 
@@ -42,7 +42,7 @@ When you click the **Configuration.** page button, a pop-up page, the Configurat
 
 ### General page
 
-On the **General** page, the **User** **Name** and **Password** for the Auroraweb service can be filled in, as described in the *Configuration for Aurora web service* section above.
+On the **General** page, the **User** **Name** and **Password** for the Aurora web service can be filled in, as described in the *Configuration for Aurora web service* section above.
 
 On the right-hand side, buttons are available that allow the user to manually refresh the **VUCoreMode**, **Templates**, **Machines** and **Processors**.
 
@@ -54,7 +54,7 @@ Every 15 minutes, the status of these jobs will be requested and the updated dat
 
 ### Machines page
 
-The **Machines** page displays a table with all the machines of the Auroraweb service.
+The **Machines** page displays a table with all the machines of the Aurora web service.
 
 This table will be refreshed every 60 minutes.
 

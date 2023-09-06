@@ -87,7 +87,7 @@ Note: All of the parameters on this page will appear as *N/A* if the **Transmitt
 
 ### RBL Configuration
 
-Thispage displays **DVBT2 Configuration**, **Alarm** and **Transmitter Receiver Status** parameters.
+This page displays **DVBT2 Configuration**, **Alarm** and **Transmitter Receiver Status** parameters.
 
 Configuration options include **DVBT2 Network Mode**, **Bandwidth**, **Transmission ID**, **MI Control Mode**, **Cell ID**, **Network ID**, **T2 System ID** and **Configuration Coherency**.
 
@@ -99,7 +99,7 @@ Note: All of the parameters on this page will appear as *N/A* if the **Transmitt
 
 ### RBL Input Management
 
-Thispage includes **source selection**, **configuration** and **status** parameters related to the input of the device. These are only relevant when the device is in *RBL Mode*.
+This page includes **source selection**, **configuration** and **status** parameters related to the input of the device. These are only relevant when the device is in *RBL Mode*.
 
 Parameters include: **Input Switch Mode**, **Input Selection**, **Input on Air**, **ASI Output Source**, **GBE Sources**, **External Reference**, **10 MHz Reference**, **Hitless Switch Mode**, **GPS Absent alarm**, **PPS Absent alarm**, **10 MHz Reference Absent alarm**.
 
@@ -107,7 +107,7 @@ Note: All of the parameters on this page will appear as *N/A* if the **Transmitt
 
 ### Gap Filler Configuration
 
-Thispage includes **configuration options**, **power options** and **alarm events** that are only relevant when the device has been placed in *Gap Filler Mode*.
+This page includes **configuration options**, **power options** and **alarm events** that are only relevant when the device has been placed in *Gap Filler Mode*.
 
 Options include **GF Nominal Power**, **Channel Frequency**, **Repeater Channel Offset**, **Repeater Low Power Warning Threshold**, **Repeater Reflected Power Alarm Threshold**, **Repeater Selectivity Delay**, **Gap Filler Repeater Mode** and **GF Input Channel Frequency**.
 
@@ -121,7 +121,7 @@ Note: All of the parameters on this page will appear as *N/A* if the **Transmitt
 
 ### Alarms
 
-Thispage displays all alarm-related parameters, such as:
+This page displays all alarm-related parameters, such as:
 
 - **Low Power Warning**
 - **Low Power Alarm**

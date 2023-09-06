@@ -16,10 +16,10 @@ This driver is exported by the parent driver **Sony Signal Processing Unit**, fr
 
 ### Version Info
 
-| **Range**            | **Key Features**                        | **Based on** | **System Impact**                           |
-|----------------------|-----------------------------------------|--------------|---------------------------------------------|
-| 1.0.0.x              | Initial version                         | \-           | \-                                          |
-| 1.0.1.x \[SLC Main\] | Support monitoring of Sony 2110 devices | 1.0.0.14     | \- Button parameters renamed- Pages renamed |
+| **Range**            | **Key Features**                        | **Based on** | **System Impact**                            |
+|----------------------|-----------------------------------------|--------------|----------------------------------------------|
+| 1.0.0.x              | Initial version                         | \-           | \-                                           |
+| 1.0.1.x \[SLC Main\] | Support monitoring of Sony 2110 devices | 1.0.0.14     | \- Button parameters renamed - Pages renamed |
 
 ### Product Info
 

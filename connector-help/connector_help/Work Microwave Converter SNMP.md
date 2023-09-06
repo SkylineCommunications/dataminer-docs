@@ -8,14 +8,15 @@ This SNMP driver is used to monitor and configure the various Work Microwave Con
 
 ## About
 
-The **Work Microwave Converter SNMP** driver is a full implementation of the conv2 MIB from Work. As such, this driver can be used for any Work Microwave that uses the conv2 MIB.The driver allows the user to monitor the converter and to configure the system and converter.
+The **Work Microwave Converter SNMP** driver is a full implementation of the conv2 MIB from Work. As such, this driver can be used for any Work Microwave that uses the conv2 MIB.
+The driver allows the user to monitor the converter and to configure the system and converter.
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                                               | No                  | Yes                     |
-| 1.1.0.x \[SLC Main\] | Added frequency and attenuation channel band parameters that will replace the existing ones.Changed snmpSet to snmpSetAndGet. | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                                                | No                  | Yes                     |
+| 1.1.0.x \[SLC Main\] | Added frequency and attenuation channel band parameters that will replace the existing ones. Changed snmpSet to snmpSetAndGet. | No                  | Yes                     |
 
 ### Supported firmware versions
 

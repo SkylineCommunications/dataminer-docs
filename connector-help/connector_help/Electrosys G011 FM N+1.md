@@ -24,9 +24,9 @@ For each monitored transmitter, a DVE can be created.
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                            |
-|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | [Electrosys G011 FM N+1 - Main Transmitter](/Driver%20Help/Electrosys%20G011%20FM%20N+1%20-%20Main%20Transmitter.aspx)[Electrosys G011 FM N+1 - Reserve Transmitter](xref:Connector_help_Electrosys_G011_FM_N+1_-_Reserve_Transmitter) |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                                             |
+|-----------|---------------------|-------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | [Electrosys G011 FM N+1 - Main Transmitter](/Driver%20Help/Electrosys%20G011%20FM%20N+1%20-%20Main%20Transmitter.aspx) [Electrosys G011 FM N+1 - Reserve Transmitter](xref:Connector_help_Electrosys_G011_FM_N%2B1_-_Reserve_Transmitter) |
 
 ## Configuration
 

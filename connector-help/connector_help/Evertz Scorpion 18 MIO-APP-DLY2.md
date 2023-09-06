@@ -41,8 +41,10 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: \[The IP port of the storage system. e.g. *161\]*
-- **Get community string**: \[The community string used when reading values from the device(default value if not overridden in the connector: *public*).
-- **Set community string**: \[The community string used when setting values on the device(default value if not overridden in the connector: *private*).
+- **Get community string**: \[The community string used when reading values from the device
+  (default value if not overridden in the connector: *public*).
+- **Set community string**: \[The community string used when setting values on the device
+  (default value if not overridden in the connector: *private*).
 
 ### Web Interface
 
@@ -52,7 +54,8 @@ The web interface is only accessible when the client machine has network access 
 
 All data available is retrieved using the **SNMP** interface of the Evertz Scorpion 18 MIO-APP-DLY2.
 
-The **General** page contains all data related to **System.**
+The **General** page contains all data related to **System.
+**
 
 The **Network Management** page contains tables related to network configuration, NTP servers and SNMP Trap servers.
 

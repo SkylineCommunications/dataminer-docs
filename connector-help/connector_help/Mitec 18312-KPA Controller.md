@@ -23,9 +23,9 @@ It performs manual or automatic switching to a backup high-power amplifier.
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                              |
-|-----------|-----------------------------------------------------|
-| 1.0.0.x   | Configuration Version: 1.00Software Version: 2.23.1 |
+| **Range** | **Supported Firmware**                               |
+|-----------|------------------------------------------------------|
+| 1.0.0.x   | Configuration Version: 1.00 Software Version: 2.23.1 |
 
 ### System Info
 

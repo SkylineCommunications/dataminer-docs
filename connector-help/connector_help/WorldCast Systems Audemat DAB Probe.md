@@ -10,9 +10,9 @@ The Audemat DAB Probe is a complete DAB radio monitoring solution to perform adv
 
 ### Version Info
 
-| **Range** | **Key Features**                                                    | **Based on** | **System Impact** |
-|-----------|---------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial version.**TDF** only (**DataMiner 7.5**) with custom traps. | \-           | \-                |
+| **Range** | **Key Features**                                                     | **Based on** | **System Impact** |
+|-----------|----------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version. **TDF** only (**DataMiner 7.5**) with custom traps. | \-           | \-                |
 
 ### Product Info
 

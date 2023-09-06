@@ -44,4 +44,4 @@ This page contains parameters related to **Input 1** and **Input 2** (**Status**
 
 This page displays both the **Analog** **Alarm** **Limits** and the **Discreet** **Alarm** **Limits** table.
 
-For the **analog parameters**, you can configure both the threshold and the status of **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband.**For the **discrete parameters**, the **Notification** can be changed.
+For the **analog parameters**, you can configure both the threshold and the status of **HiHi**, **Hi**, **Lo**, **LoLo** and **Deadband.** For the **discrete parameters**, the **Notification** can be changed.

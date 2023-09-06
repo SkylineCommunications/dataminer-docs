@@ -10,10 +10,10 @@ This driver makes it possible to monitor an AVT Magic SDC EDI Converter with SNM
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                   | **Based on** | **System Impact**                                                                                           |
-|----------------------|------------------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                   | \-           | \-                                                                                                          |
-| 1.0.1.x \[SLC Main\] | \- Updated DCF version.- Changed type string to fit units.- Additional minor fixes | 1.0.0.4      | \- New DCF version increases the minimum DataMiner version.- Changing type of parameter affects versioning. |
+| **Range**            | **Key Features**                                                                     | **Based on** | **System Impact**                                                                                            |
+|----------------------|--------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                     | \-           | \-                                                                                                           |
+| 1.0.1.x \[SLC Main\] | \- Updated DCF version. - Changed type string to fit units. - Additional minor fixes | 1.0.0.4      | \- New DCF version increases the minimum DataMiner version. - Changing type of parameter affects versioning. |
 
 ### Product Info
 

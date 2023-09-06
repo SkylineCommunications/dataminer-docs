@@ -10,16 +10,16 @@ Harmonic's NMX Digital Service Manager is a video network management solution, e
 
 ### Version Info
 
-| **Range**                | **Key Features**                                                                                                            | **Based on** | **System Impact**                                                                                  |
-|--------------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------|
-| 1.0.0.x                  | Initial version.                                                                                                            | \-           | \-                                                                                                 |
-| 2.0.0.x                  | Initial version SNMP.                                                                                                       | \-           | \-                                                                                                 |
-| 3.0.0.x                  | DVE integration.                                                                                                            | \-           | \-                                                                                                 |
-| 4.0.0.x                  | Parsing XML with LINQ, streams per device.                                                                                  | \-           | \-                                                                                                 |
-| 4.0.1.x                  | Smart-serial conversion.                                                                                                    | \-           | \-                                                                                                 |
-| 4.1.0.x **\[Obsolete\]** | REST API communication.                                                                                                     | 4.0.1.5      | \-                                                                                                 |
-| 4.1.1.x **\[Obsolete\]** | \- REST API refactored.- Enhancement of HTTP data relations and organization.                                               | 4.1.0.3      | \- Primary/display keys changed.- Possible impact on monitoring and trending.                      |
-| 4.2.0.x **\[SLC Main\]** | Added WebSocket connection.New firmware version support.Possible to select regular HTTP polling or WebSocket communication. | 4.1.1.22     | If you use a range supporting firmware 8, you will need to configure the new WebSocket connection. |
+| **Range**                | **Key Features**                                                                                                              | **Based on** | **System Impact**                                                                                  |
+|--------------------------|-------------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------|
+| 1.0.0.x                  | Initial version.                                                                                                              | \-           | \-                                                                                                 |
+| 2.0.0.x                  | Initial version SNMP.                                                                                                         | \-           | \-                                                                                                 |
+| 3.0.0.x                  | DVE integration.                                                                                                              | \-           | \-                                                                                                 |
+| 4.0.0.x                  | Parsing XML with LINQ, streams per device.                                                                                    | \-           | \-                                                                                                 |
+| 4.0.1.x                  | Smart-serial conversion.                                                                                                      | \-           | \-                                                                                                 |
+| 4.1.0.x **\[Obsolete\]** | REST API communication.                                                                                                       | 4.0.1.5      | \-                                                                                                 |
+| 4.1.1.x **\[Obsolete\]** | \- REST API refactored. - Enhancement of HTTP data relations and organization.                                                | 4.1.0.3      | \- Primary/display keys changed. - Possible impact on monitoring and trending.                     |
+| 4.2.0.x **\[SLC Main\]** | Added WebSocket connection. New firmware version support. Possible to select regular HTTP polling or WebSocket communication. | 4.1.1.22     | If you use a range supporting firmware 8, you will need to configure the new WebSocket connection. |
 
 ### Product Info
 
@@ -36,16 +36,16 @@ Harmonic's NMX Digital Service Manager is a video network management solution, e
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                         |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------------------------------|
-| 1.0.0.x   | No                  | No                      | \-                    | \-                                              |
-| 2.0.0.x   | No                  | No                      | \-                    | \-                                              |
-| 3.0.0.x   | No                  | No                      | \-                    | \-                                              |
-| 4.0.0.x   | No                  | No                      | \-                    | \-                                              |
-| 4.0.1.x   | No                  | No                      | \-                    | \-                                              |
-| 4.1.0.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device                        |
-| 4.1.1.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device- Harmonic NMX - Switch |
-| 4.2.0.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device- Harmonic NMX - Switch |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                          |
+|-----------|---------------------|-------------------------|-----------------------|--------------------------------------------------|
+| 1.0.0.x   | No                  | No                      | \-                    | \-                                               |
+| 2.0.0.x   | No                  | No                      | \-                    | \-                                               |
+| 3.0.0.x   | No                  | No                      | \-                    | \-                                               |
+| 4.0.0.x   | No                  | No                      | \-                    | \-                                               |
+| 4.0.1.x   | No                  | No                      | \-                    | \-                                               |
+| 4.1.0.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device                         |
+| 4.1.1.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device - Harmonic NMX - Switch |
+| 4.2.0.x   | No                  | Yes                     | \-                    | \- Harmonic NMX - Device - Harmonic NMX - Switch |
 
 ## Configuration
 
@@ -189,9 +189,9 @@ Depending on the connector range, the element created with this connector can ha
 
 The General page displays an overview of all general parameters.
 
-On the left-hand side, you can find the **Alarm Server Version**, the **ID of the last alarm**, the maximal **number of alarm entries**,and a toggle button to change the **trap state of the** **AFA mode**.
+On the left-hand side, you can find the **Alarm Server Version**, the **ID of the last alarm**, the maximal **number of alarm entries**, and a toggle button to change the **trap state of the** **AFA mode**.
 
-On the right-hand side, the primary and backup **IP addresses** and the **Redundancy Status**are displayed, as well as the **Poll SAPI Interface** parameter, which can be used to enable or disable the polling of serial commands. The latter is used for a redundancy feature in this connector that allows dynamic polling between primary and backup IP addresses to keep track of socket errors in SAPI registration processes in slow or fast serial connections.
+On the right-hand side, the primary and backup **IP addresses** and the **Redundancy Status** are displayed, as well as the **Poll SAPI Interface** parameter, which can be used to enable or disable the polling of serial commands. The latter is used for a redundancy feature in this connector that allows dynamic polling between primary and backup IP addresses to keep track of socket errors in SAPI registration processes in slow or fast serial connections.
 
 ### Alarm
 
@@ -236,7 +236,7 @@ The Redundancy Overview page displays a tree control, showing the **primary and 
 
 The Platform page contains parameters related to the creation of the different DVEs.
 
-In the **Platform Table**,the **System Uptime** is polled per device. By default, the same SNMP get community string is used for the DVE children as for the parent DVE element. To define a different community string per device, fill in a value in the **Overwrite SNMP Community** column in this table.
+In the **Platform Table**, the **System Uptime** is polled per device. By default, the same SNMP get community string is used for the DVE children as for the parent DVE element. To define a different community string per device, fill in a value in the **Overwrite SNMP Community** column in this table.
 
 The **Autoclear Platform** toggle button can be set to *Enabled* to have DVEs removed automatically when the corresponding device is no longer found. If this button is set to *Disabled*, in the row corresponding to the device, the column **Missing Platform** will instead be set to *Yes*, and you can then remove the DVE manually by clicking the button **Remove Missing**.
 
@@ -244,7 +244,9 @@ Note: Enabling autoclear has an important downside. If a device disappears from 
 
 This page also contains the following page buttons:
 
-- **Extra Poll**: Displays a table with the platform types that require extra polling to detect **input stream redundancy socket switching** sooner. To add a row to this table, fill in a platform type in the **Add Extra Poll Platform Type** parameter and click the **Add** button. To remove a row, use the **Remove** button in the table.Note: This generates extra traffic, so we recommend that you add as few platform types as possible.
+- **Extra Poll**: Displays a table with the platform types that require extra polling to detect **input stream redundancy socket switching** sooner.
+  To add a row to this table, fill in a platform type in the **Add Extra Poll Platform Type** parameter and click the **Add** button. To remove a row, use the **Remove** button in the table.
+  Note: This generates extra traffic, so we recommend that you add as few platform types as possible.
 - **Exclude DVE**: Displays a table with the platform types that should be **excluded from the Platform Table**, i.e. the platform types for which no DVE should be created. By default, the values "INPUT_DEVICE" and "OUTPUT_DEVICE" are filled in. Adding and removing rows in this table is done in the same way as for the Extra Poll Table.
 
 For **range 4.1.0.x - 4.1.1.x** only: For DVEs, it is possible to configure whether child elements should be deleted automatically when they are no longer present in the Harmonic NMX. To do so, configure the **DVE Automatic Deletion** parameter on the **Platform** page. You can also configure the DVE child's name and the view where it should be located, using the **DVE Name** and **DVE View** columns in the **Devices** table.

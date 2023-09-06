@@ -41,7 +41,8 @@ Treeview page
 
 The treeview page displays a tree structure of all the inputs, with their corresponding streams, services and PIDs.
 
-All PIDs are grouped in three groups: **Service PIDs**, **Table PIDs** and **Other PIDs**.All error parameters are displayed in the best fitting view.
+All PIDs are grouped in three groups: **Service PIDs**, **Table PIDs** and **Other PIDs**.
+All error parameters are displayed in the best fitting view.
 
 In addition to all Input specific parameters, the **DVB-T2** inputs have additional **PLP**, **Auxiliary Stream** and **RF Channel** information.
 

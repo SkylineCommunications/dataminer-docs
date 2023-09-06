@@ -22,9 +22,9 @@ This driver is used to gather STB data coming from MAM events and Agama firehose
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                 | **Exported Components** |
-|-----------|---------------------|-------------------------|-----------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | Telenor EPM Agama ConsumerTelenor EPM MAM ConsumerTelenor EPM Manager | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                   | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | Telenor EPM Agama Consumer Telenor EPM MAM Consumer Telenor EPM Manager | \-                      |
 
 ## Configuration
 
@@ -74,15 +74,18 @@ As it is possible to zap through channels, the **Minimum Agama Activity** settin
 
 The channel details are used to make the mapping of a channel. This is for Live DVB-C, Live IPTV, OTT Live/Start-Over and OTT Catchup. You can load these by clicking the **Load** button. The details will be loaded from the configured LPI folder in the sublocation *\enrichment\services\channels.csv*.
 
-The content of that file must be comma-separated and must contain the following headers: *ChannelID,ChannelName,CS_Type,DVB-C-Live-TV,IPTV-Live-TV,OTT-Live-TV,Start-over,Catchup,MultiCast,MC_Port,SID,TS_ID,ONid,MPEG-DASH OTT Live/Start-Over URL,HLS OTT Live/Start-Over URL,MPEG-DASH OTT Catch-Up URL,HLS OTT Catch-Up URL*
+The content of that file must be comma-separated and must contain the following headers:
+*ChannelID,ChannelName,CS_Type,DVB-C-Live-TV,IPTV-Live-TV,OTT-Live-TV,Start-over,Catchup,MultiCast,MC_Port,SID,TS_ID,ONid,MPEG-DASH OTT Live/Start-Over URL,HLS OTT Live/Start-Over URL,MPEG-DASH OTT Catch-Up URL,HLS OTT Catch-Up URL*
 
 ### Asset Details
 
 The asset details are used to make the mapping of an OTT VOD asset. You can load these by clicking the **Load** button. The details will be loaded from the configured LPI folder in the sublocation *\enrichment\services\assets.csv* and *\enrichment\services\providers.csv*.
 
-The content of the *assets.csv* file must be separated by semicolons (";") and must contain the following headers: *Asset Id;Timestamp;Provider Id;Log Title Nb;Telenor Common Id;Stream Id;Dash Url;HLS Url*
+The content of the *assets.csv* file must be separated by semicolons (";") and must contain the following headers:
+*Asset Id;Timestamp;Provider Id;Log Title Nb;Telenor Common Id;Stream Id;Dash Url;HLS Url*
 
-The content of the *providers.csv* file must be separated by semicolons (";") and must contain the following headers: *ProviderNumber;ProviderId;ProviderName*
+The content of the *providers.csv* file must be separated by semicolons (";") and must contain the following headers:
+*ProviderNumber;ProviderId;ProviderName*
 
 To be able to easily detect if a URL is for a VOD asset, the asset details will be analyzed, and one or more signatures will be created and added to the **Asset Signatures** table. This table is displayed to make it possible to investigate problems in case mapping is not working as expected.
 
@@ -108,7 +111,8 @@ You can subscribe to a type of MAM event, or choose MAM-specific content to look
 
 You can also subscribe to Agama files. Agama Basic shows the summary of when the different types of Agama files were received, without showing content. Either the header line of a specific file can be shown, or the entire content. There is no need to specify both *Header* and *Content*, because when *Content* is selected, the header line is included. It is also possible to view only rejected content to see what data has been ignored and the specific reason why. Agama logging does not support a **Filter Value** as most content consists of numbers only.
 
-Logging for a *Specific Device* is also supported. To use this, select this type of logging and fill in the device ID in the Filter Value. All incoming data about this device across the different MAM events and Agama files will be logged, including the reason why some data has been rejected.The **Full Content** with all incoming data can be logged, but this is not advised as it will log everything. This could only be handy when there is no data present at all, to investigate if any data enters the element.
+Logging for a *Specific Device* is also supported. To use this, select this type of logging and fill in the device ID in the Filter Value. All incoming data about this device across the different MAM events and Agama files will be logged, including the reason why some data has been rejected.
+The **Full Content** with all incoming data can be logged, but this is not advised as it will log everything. This could only be handy when there is no data present at all, to investigate if any data enters the element.
 
 The **Log Result** table will display the logging in case the **Log** **Request Destination Type** is set to *Table*. This type of logging can be useful to quickly investigate something when there is no file access. The number of rows is limited to 2000. The oldest rows get overwritten when there are there are new entries. You can clean the table by clicking the **Clear Results** button.
 

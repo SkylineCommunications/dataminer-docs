@@ -28,7 +28,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Sites
 
-This page displays a table listing all the sites or **ground stations**.For each site, the **Latitude**, **Longitude** and **Height Above Sea Level** are mentioned**.**
+This page displays a table listing all the sites or **ground stations**. For each site, the **Latitude**, **Longitude** and **Height Above Sea Level** are mentioned**.**
 
 Sites can be added and removed via the context menu of the table or via CSV import. This is the header of the CSV file: Site;Latitude;Longitude;Height Above Sea level.
 

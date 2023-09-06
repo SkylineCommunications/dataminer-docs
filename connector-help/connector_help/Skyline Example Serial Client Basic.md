@@ -31,7 +31,7 @@ SERIAL CONNECTION:
 
 - **Type of port**: The type of port used for communication with the device, e.g. *TCP/IP.*
 - **IP address/host:** The polling IP of the device, e.g. *127.0.0.1.*
-- **IP Port**:The polling port of the device, e.g. *12345*.
+- **IP Port**: The polling port of the device, e.g. *12345*.
 
 ### Configuration
 

@@ -111,6 +111,8 @@ The page also contains two page buttons:
 > Finally, go to the **Alarm Table** page and enable the alarm table polling if necessary.
 >
 > Note that the Transport Stream, Services, Teletext and Card health tables are filled via the imported Excel file, located in the folder indicated by the File Path parameter or in the element document folder. After these are filled in, the data is polled.
+>
+> ![Example Excel Sheet Kaleido.png](~/connector-help/images/Miranda_Kaleido_IP_X320_Example_Excel_Sheet_Kaleido.png)
 
 - **On-Air Services**: Opens a window where you can edit the on-air service times.
 
@@ -184,6 +186,8 @@ In the driver, you can define up to four text strings to be displayed: Text1, Te
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
+
+
 ## Troubleshooting
 
 ### GSMALARM connection issues
@@ -198,3 +202,5 @@ The GSM SNMP support can be added to the device by enabling the global action ed
 4.  Open *XEdit* and connect to the device.
 5.  Click the *Tools* menu and navigate to *Edit global actions...*.
 6.  Press *Add global...*, enter the name, community string and port *2161* and click *OK*.
+
+

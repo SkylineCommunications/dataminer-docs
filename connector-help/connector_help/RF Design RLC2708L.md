@@ -12,7 +12,7 @@ The RLC2708L features a flexible and compact RF-distribution solution which is p
 
 ## About
 
-This driver retrieves and sets data viaSNMP.
+This driver retrieves and sets data via SNMP.
 
 ### Ranges of the driver
 
@@ -22,9 +22,9 @@ This driver retrieves and sets data viaSNMP.
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device** **Firmware Version** |
-|------------------|---------------------------------|
-| 1.0.0.x          | 2.3.23.D11.S23.H18.18.9.4       |
+| **Driver Range**  | **Device** **Firmware Version** |
+|-------------------|---------------------------------|
+| 1.0.0.x           | 2.3.23.D11.S23.H18.18.9.4       |
 
 ## Installation and configuration
 

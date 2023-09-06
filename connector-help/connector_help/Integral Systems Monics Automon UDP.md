@@ -12,11 +12,11 @@ This is a smart-serial driver that receives carrier, transponder and beacon stre
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                         | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version                                                                                         | No                  | Yes                     |
-| 2.0.0.x \[SLC Main\] | Alarm presets.Communication with SES Channel Manager.                                                   | No                  | Yes                     |
-| 2.0.1.x \[Obsolete\] | Removed parameters that control the rows displayed based on the number or age.Added auto clear feature. | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version                                                                                          | No                  | Yes                     |
+| 2.0.0.x \[SLC Main\] | Alarm presets. Communication with SES Channel Manager.                                                   | No                  | Yes                     |
+| 2.0.1.x \[Obsolete\] | Removed parameters that control the rows displayed based on the number or age. Added auto clear feature. | No                  | Yes                     |
 
 ### Supported firmware versions
 

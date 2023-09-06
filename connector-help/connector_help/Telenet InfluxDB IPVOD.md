@@ -16,9 +16,9 @@ This connector can receive JSON responses from the InfluxData InfluxDB Collector
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                  | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | InfluxData InfluxDB CollectorSupported Queries:- IPVOD Concurrent Sessions- IPVOD API Response Times- IPVOD API Error Response Counts- IPVOD SSM-TRAXIS Response Times | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                       | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | InfluxData InfluxDB Collector Supported Queries: - IPVOD Concurrent Sessions - IPVOD API Response Times - IPVOD API Error Response Counts - IPVOD SSM-TRAXIS Response Times | \-                      |
 
 ## Configuration
 

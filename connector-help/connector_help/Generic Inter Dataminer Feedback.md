@@ -48,7 +48,7 @@ The table has the following columns:
 
 - **ID**: Auto-incremented ID of this row.
 - **To**: The destination of the message.
-- **From**:The source of the message.
+- **From**: The source of the message.
 - **Status**: The status of the message. This can be *New* or *Read*. (When a message is received, the status is set as *New*).
 - **Message**: Content of the message.
 - **Mark as Read**: Button to change the status of the message from *New* to *Read*.

@@ -4,7 +4,7 @@ uid: Connector_help_Ross_Video_General_Frame
 
 # Ross Video General Frame
 
-The Ross Video General Frame connector can monitor **product**, **hardware**, **power**,and **network** parameters. The device it monitors is a 2RU frame controller.
+The Ross Video General Frame connector can monitor **product**, **hardware**, **power**, and **network** parameters. The device it monitors is a 2RU frame controller.
 
 **SNMP** polling is used to retrieve the device information.
 

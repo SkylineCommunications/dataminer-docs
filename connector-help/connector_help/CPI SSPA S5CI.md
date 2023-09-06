@@ -42,12 +42,12 @@ SERIAL CONNECTION:
 
 ### General Page
 
-This page contains both the **Main Controller** and **Front Panel Software Revisions**, as well as the **Band**,**Time**, **Time Zone**, **Web Interface**, **System State**, **Switch Controller Mode**, **Serial Number** and **Auto Log Time.**
+This page contains both the **Main Controller** and **Front Panel Software Revisions**, as well as the **Band**, **Time**, **Time Zone**, **Web Interface**, **System State**, **Switch Controller Mode**, **Serial Number** and **Auto Log Time.**
 
 The page contains three page buttons, which open the following subpages:
 
 - *Configuration:* **BUC Unlock**, **Relay 1**, **Relay 2**, **Relay 3**, **Relay 4**, **High Reflected RF** and **Switch System** configuration parameters.
-- *Network:***IP Address**, **IP Gateway**, **IP Mask**, **NTP** and **SMTP** server.
+- *Network:* **IP Address**, **IP Gateway**, **IP Mask**, **NTP** and **SMTP** server.
 - *Settings*: **Fwd** and **Rev Sampler Offset**, **Attenuator**, **Waveguide Switch**, **Attenuation Calibration**, **Power Copy** and **Switch Sequential Drive**.
 
 Finally, there is also a button that can be used to **reset** all **faults**.

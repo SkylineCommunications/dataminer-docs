@@ -75,9 +75,9 @@ SMART-SERIAL CONNECTION:
 
 This page displays the **Frame Controller Card Table**.
 
-This table contains information about all the inserted cards on the video router. This information includes the **Card Type**, **Card Address** (IP address, used for polling), **Card Status**, **Card Departure Count**,and **Card Production ID**.
+This table contains information about all the inserted cards on the video router. This information includes the **Card Type**, **Card Address** (IP address, used for polling), **Card Status**, **Card Departure Count**, and **Card Production ID**.
 
-Virtual elements will be created for all the supported card types, based on the **Card Production ID**.You can decide for each card whether it should be polled or not. However, note that only supported cards that have a **Card Status** with value *Communicating* will be polled. Enabling polling for an unavailable card on the frame controller will not have any effect until the card has the correct status.
+Virtual elements will be created for all the supported card types, based on the **Card Production ID**. You can decide for each card whether it should be polled or not. However, note that only supported cards that have a **Card Status** with value *Communicating* will be polled. Enabling polling for an unavailable card on the frame controller will not have any effect until the card has the correct status.
 
 ### Redundant Connections
 
@@ -126,33 +126,33 @@ On this page, there is a table for each fan, indicating the **Status**, **Temper
 
 This page displays general information about the system, such as the **Description**, **Uptime**, **Name**, **Location**, and **Contact** person.
 
-It also contains general software and hardware information, such as the **Card** **Name**, **Creation** **Date**, **Software** **Revision**, **Release** **Number**, **Firmware** **Location**, **Board** **Serial** **Number**, **Board** **Name**, **Board** **Revision**,and **Hardware** **Build** **Number**.
+It also contains general software and hardware information, such as the **Card** **Name**, **Creation** **Date**, **Software** **Revision**, **Release** **Number**, **Firmware** **Location**, **Board** **Serial** **Number**, **Board** **Name**, **Board** **Revision**, and **Hardware** **Build** **Number**.
 
-You can also find **System** **Control** parameters here, with information regarding **Frame** **Controller** **Description**, whether the **Frame** **Controller** has been configured, the **Q-link** **Activity**, **Primary** and **Secondary** **F-Linkactivity**, the **Q-Link** **Errors**, the **Quartz** **Errors**,and the **Primary** and **Secondary** **F-Link Errors**.
+You can also find **System** **Control** parameters here, with information regarding **Frame** **Controller** **Description**, whether the **Frame** **Controller** has been configured, the **Q-link** **Activity**, **Primary** and **Secondary** **F-Linkactivity**, the **Q-Link** **Errors**, the **Quartz** **Errors**, and the **Primary** and **Secondary** **F-Link Errors**.
 
 ### Cards
 
 This page displays the **Frame Controller Card Table**.
 
-This table contains information about all the inserted cards on the video router. This information includes the **Card Type**, **Card Address** (IP address, used for polling), **Card Status**, **Card Departure Count**,and **Card Production ID**.
+This table contains information about all the inserted cards on the video router. This information includes the **Card Type**, **Card Address** (IP address, used for polling), **Card Status**, **Card Departure Count**, and **Card Production ID**.
 
 ### Fan
 
 This page displays the **Fan Table**.
 
-This table contains information about all of the fans within the chassis. This information includes the **Fan Status**, **Fan** **Temperature**,and **Fan Speed**.
+This table contains information about all of the fans within the chassis. This information includes the **Fan Status**, **Fan** **Temperature**, and **Fan Speed**.
 
 ### Timing Plane
 
 This page displays the **Timing** **Plane** **Table**.
 
-This table contains information about all of the timing planes. This information includes the **Timing Plane Reference**, **Timing Plane Switch** **Point**, the **Timing Plane Offset**,and the **Timing Plane Status**.
+This table contains information about all of the timing planes. This information includes the **Timing Plane Reference**, **Timing Plane Switch** **Point**, the **Timing Plane Offset**, and the **Timing Plane Status**.
 
 ### Faults
 
 This page displays the **Faults Table**.
 
-This table contains information about all of the faults present on the device. This information includes the **Fault Name**, the **Fault Send Trap State**,and the **Fault Status**.
+This table contains information about all of the faults present on the device. This information includes the **Fault Name**, the **Fault Send Trap State**, and the **Fault Status**.
 
 ## DataMiner Connectivity Framework
 

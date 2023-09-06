@@ -12,7 +12,7 @@ The Huawei 5600-5800 GPON Platform connector uses an SNMP connection to communic
 
 | **Range** | **Key Features**                                                                   | **Based on** | **System Impact** |
 |-----------|------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | \- Initial version.- Compatibility with Skyline EPM Solution.                      | \-           | \-                |
+| 1.0.0.x   | \- Initial version. - Compatibility with Skyline EPM Solution.                     | \-           | \-                |
 | 1.0.1.x   | Modified passive logic. Now it is compatible with routes, distributions, and FATs. | 1.0.0.6      | \-                |
 
 ### Product Info
@@ -24,10 +24,10 @@ The Huawei 5600-5800 GPON Platform connector uses an SNMP connection to communic
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                 | **Exported Components** |
-|-----------|---------------------|-------------------------|-------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- Skyline EPM Solution- Skyline EPM Platform GPON WM | \-                      |
-| 1.0.1.x   | No                  | Yes                     | \- Skyline EPM Solution- Skyline EPM Platform GPON WM | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                  | **Exported Components** |
+|-----------|---------------------|-------------------------|--------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- Skyline EPM Solution - Skyline EPM Platform GPON WM | \-                      |
+| 1.0.1.x   | No                  | Yes                     | \- Skyline EPM Solution - Skyline EPM Platform GPON WM | \-                      |
 
 ## Configuration
 
@@ -56,7 +56,7 @@ The EPM Solution works with a file system for internal element communication in 
 - **Entity Export/Import Settings**: These sections allow the exporting of the configuration files and importing of the provisioning files.
 
 - **Export State** and **Import State**: These parameters allow you to enable/disable the exporting and importing feature.
-  - **Export Directory,** **Entity Import Directory, and ONT Import Directory**:Specify the pathswhere the files will be exported and imported.
+  - **Export Directory,** **Entity Import Directory, and ONT Import Directory**: Specify the paths where the files will be exported and imported.
   - **Entity Export Directory Type,** **Entity Import Directory Type, and ONT Import Directory Type**: Specify whether the export/import paths are **local or remote**. Note that for the remote file handling to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directories. The path must be shared/accessible, or this feature will not work.
 
 <!-- -->
@@ -83,7 +83,8 @@ Once the initial setup is done, the connector can function without further confi
 - **SNMP Fast Interval**: Determines how often the information related to the status of the OLT will be polled. By default, the parameter is set to 15 minutes.
 - **SNMP Slow Interval**: Determines how often the information related to the configuration of the OLT will be polled. By default, the parameter is set to 4 hours.
 - **Virtual Interval**: Determines how often the topology will be synced with EPM. By default, the parameter is set to 2 hours.
-- **ONT Interval**: Determines how often state data of the ONTs will be requested. This data can for example come from a KAFKA stream. Default value: 15 minutes.The performance of this feature can vary depending on the number of updates received in the system.
+- **ONT Interval**: Determines how often state data of the ONTs will be requested. This data can for example come from a KAFKA stream. Default value: 15 minutes.
+  The performance of this feature can vary depending on the number of updates received in the system.
 
 ## How to Use - Range 1.0.1.x
 

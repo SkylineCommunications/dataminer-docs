@@ -52,7 +52,7 @@ This page contains general information about the device status. Here you can for
 
 ### Heater Status
 
-This page contains general information about the heater status. There are 6 heaters available. Here you can for examplefind **Heater 1**, **Heater** **1: Fail**, **Heater 1: Call For Heat**, **Heater 1: Blower**, ...
+This page contains general information about the heater status. There are 6 heaters available. Here you can for example find **Heater 1**, **Heater** **1: Fail**, **Heater 1: Call For Heat**, **Heater 1: Blower**, ...
 
 ## Notes
 

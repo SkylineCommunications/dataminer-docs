@@ -27,7 +27,7 @@ The channel manager solution comes in the form of a single instance of a DataMin
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>3.0.0.x[SLC Main]</td>
+<td>3.0.0.x [SLC Main]</td>
 <td><ul>
 <li>AVCM Channels retrieved</li>
 <li>AVCM Channels Validation</li>
@@ -50,6 +50,8 @@ The channel manager solution comes in the form of a single instance of a DataMin
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 3.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

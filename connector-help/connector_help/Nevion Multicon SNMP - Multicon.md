@@ -4,7 +4,8 @@ uid: Connector_help_Nevion_Multicon_SNMP_-_Multicon
 
 # Nevion Multicon SNMP - Multicon
 
-Multicon GYDA is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.The **Nevion Multicon SNMP - Multicon** DVE driver is used to monitor cards of type GYDA.
+Multicon GYDA is used to configure the latest range of advanced Flashlink signal processing and distribution cards for such functions as video format conversion and audio embedding.
+The **Nevion Multicon SNMP - Multicon** DVE driver is used to monitor cards of type GYDA.
 
 ## About
 

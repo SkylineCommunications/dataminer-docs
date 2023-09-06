@@ -68,7 +68,7 @@ This page provides access to the web interface of the device. Note that the clie
 
 DCF has been implemented since the initial version of this driver. Note that DataMiner version **8.5.4** is the minimum required version to support DCF.
 
-Below, you can find an overview of the DCF implementation in the driver itself. Note thatDCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+Below, you can find an overview of the DCF implementation in the driver itself. Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 
 ### Interfaces
 

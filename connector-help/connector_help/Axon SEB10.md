@@ -54,7 +54,7 @@ Some parameters on this page are the same as on the Main View page. In addition,
 
 ### Settings Page
 
-On thispage, you can configure several aspects of the SEB10.
+On this page, you can configure several aspects of the SEB10.
 
 In the left column, the following settings are available:
 
@@ -73,7 +73,7 @@ in the right column, the following settings are available:
 
 ### Events Page
 
-On thispage, you can **set the alarm priority** for the following:
+On this page, you can **set the alarm priority** for the following:
 
 - **Announcements**
 - **Input**

@@ -92,7 +92,8 @@ This page contains connection information related to redundancy and automatic sw
 
 ## DataMiner Connectivity Framework
 
-The 1.0.0.1 range of the Atos BNCS Router protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+The 1.0.0.1 range of the Atos BNCS Router protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
 
 ### Interfaces
 
@@ -107,4 +108,4 @@ Physical dynamic interfaces:
 
 #### Internal Connections
 
-- Between a **Router Input** and a **Router Output**,an internal connection is created when the input is connected to the output.
+- Between a **Router Input** and a **Router Output**, an internal connection is created when the input is connected to the output.

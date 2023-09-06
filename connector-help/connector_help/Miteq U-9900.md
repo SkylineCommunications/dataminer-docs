@@ -25,7 +25,7 @@ This driver allows monitoring and control of the up converter.
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>Monitoring &amp; Control</li>
 <li>Same UX as Miteq D-9900 (down converter) 1.0.0.x</li>
@@ -47,6 +47,8 @@ This driver allows monitoring and control of the up converter.
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

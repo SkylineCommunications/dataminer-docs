@@ -4,6 +4,8 @@ uid: Connector_help_Skyline_Bookings_Monitoring
 
 # Skyline Bookings Monitoring
 
+
+
 The **Skyline Bookings Monitoring** is a virtual connector that allows **SRM Solution** to report the status of bookings to produce alarm and trend data over the booking data.
 
 ## About
@@ -25,7 +27,7 @@ The **Skyline Bookings Monitoring** is a virtual connector that allows **SRM Sol
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><p>Booking Table to Monitor booking</p>
 <p>Clear all Nominal Bookings Button</p>
 <p>Clear all Bookings Button</p>
@@ -96,6 +98,8 @@ Two parameters are available on this page to set the:
 **Retention Time:** Time over which a booking is keept on the Table even after the booking as already finished.
 
 **Past Lookup Time:** Time over which the element actively looks for bookings which have not ended.
+
+
 
 ## Notes
 

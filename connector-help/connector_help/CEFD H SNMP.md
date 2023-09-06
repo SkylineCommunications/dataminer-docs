@@ -120,12 +120,12 @@ The page also contains the following page buttons:
 
 ### Configuration - WAN - QoS
 
-This page displays the **QoS Groups** (QoS levels that represent a reservation of bandwidth) and the **QoS Rules tables**.These tables allow you to configure the different QoS groups (including the Priority Mechanism, CIR, MIR, etc.) and QoS rules (including Source/Destination IP/Mask, Port Info, Min/Max Bandwidth, Priority, Network Scheduler Discipline, etc.).
+This page displays the **QoS Groups** (QoS levels that represent a reservation of bandwidth) and the **QoS Rules tables**. These tables allow you to configure the different QoS groups (including the Priority Mechanism, CIR, MIR, etc.) and QoS rules (including Source/Destination IP/Mask, Port Info, Min/Max Bandwidth, Priority, Network Scheduler Discipline, etc.).
 
 The page also contains the following page buttons:
 
 - **Create New Entry (below QoS Rules and Group tables)**: These two subpages allow you to preconfigure the parameters for a new entry in the **QoS Rules table** and in the **QoS Group table**, respectively, and to add this configuration by clicking the **Create** button.
-- **QoS Group Attribute**: Displays the **QoS Group VLANs** and **QoS Group Subnets tables**,which list the different VLANs and subnets configured in the system.
+- **QoS Group Attribute**: Displays the **QoS Group VLANs** and **QoS Group Subnets tables**, which list the different VLANs and subnets configured in the system.
 - **DiffServ**: Displays a table used for the configuration of the **DiffServ** (Differentiated Services) architecture, when available.
 
 ### Configuration - WAN - Compression
@@ -201,13 +201,13 @@ This page contains **statistical data** on the WAN (**Wide Area Networks**) oper
 
 ### Status - Statistics - Ethernet
 
-This page contains tables with **statistical information** on the **Ethernet** traffic. This includes **global** **statistics**,such as the Bytes Received, Bytes Transmitted and Total Received Errors, and detailed **Rx/Tx** statistics such as the Total Packets Rx/Tx.
+This page contains tables with **statistical information** on the **Ethernet** traffic. This includes **global** **statistics**, such as the Bytes Received, Bytes Transmitted and Total Received Errors, and detailed **Rx/Tx** statistics such as the Total Packets Rx/Tx.
 
 ### Status - Statistics - Mod/Demod
 
 This page contains the following tables:
 
-- **Modulator Statistics**: Contains modulator radio link statistics,including the Total/Unicast/Multicast Packets Transmitted.
+- **Modulator Statistics**: Contains modulator radio link statistics, including the Total/Unicast/Multicast Packets Transmitted.
 - **Demodulator Status:** Displays status info for each Rx tuner, such as Lock State, BER, Signal Level, etc.
 - **Demodulator Statistics**: Contains demodulator radio link statistics, including the Total/Unicast/Multicast Packets Received.
 
@@ -253,7 +253,7 @@ The page also contains the **Diagnostic** page button, which displays statistica
 
 ### Utility - BERT / Redundancy
 
-On this page, you can view the BERT(**Bit Error Rate Test**) monitoring parameters and configure BERT-related settings. You can also configure settings used for the **System Redundancy**, **Console Configuration** and **Satellite Delay**.
+On this page, you can view the BERT (**Bit Error Rate Test**) monitoring parameters and configure BERT-related settings. You can also configure settings used for the **System Redundancy**, **Console Configuration** and **Satellite Delay**.
 
 ### Traps
 
@@ -315,12 +315,12 @@ The page also contains the following page buttons:
 
 ### Configuration - WAN - QoS
 
-This page displays the **QoS Groups** (QoS levels that represent a reservation of bandwidth) and the **QoS Rules tables**.These tables allow you to configure the different QoS Groups (including the Priority Mechanism, CIR, MIR, etc.) and QoS Rules (including Source/Destination IP/Mask, Port Info, Min/Max Bandwidth, Priority, Network Scheduler Discipline, etc.).
+This page displays the **QoS Groups** (QoS levels that represent a reservation of bandwidth) and the **QoS Rules tables**. These tables allow you to configure the different QoS Groups (including the Priority Mechanism, CIR, MIR, etc.) and QoS Rules (including Source/Destination IP/Mask, Port Info, Min/Max Bandwidth, Priority, Network Scheduler Discipline, etc.).
 
 The table also contains the following page buttons:
 
 - **Create New Entry (below QoS Rules and Group tables)**: These two subpages allow you to preconfigure the parameters for a new entry in the **QoS Rules Table** and in the **QoS Group Table**, respectively, and to add this configuration by clicking the **Create** button.
-- **QoS Group Attribute**: Displays the **QoS Group VLAN Table** and **QoS Group Subnet Table**,which list the different VLANs and subnets configured in the system.
+- **QoS Group Attribute**: Displays the **QoS Group VLAN Table** and **QoS Group Subnet Table**, which list the different VLANs and subnets configured in the system.
 - **DiffServ**: Displays a table used for configuration of the **DiffServ** (Differentiated Services) architecture, when available.
 
 ### Configuration - WAN - Compression
@@ -333,7 +333,7 @@ Via the **Encryption/Decryption Keys** page button, the encryption keys can be p
 
 ### Configuration - WAN - BUC/LNB
 
-On this page, you can configure the **Block Upconverter (BUC)** and the**Low-Noise Block** **Downconverter (LNB)** control parameters and display the related status parameters.
+On this page, you can configure the **Block Upconverter (BUC)** and the **Low-Noise Block** **Downconverter (LNB)** control parameters and display the related status parameters.
 
 ### Configuration - WAN - WANOp
 
@@ -449,7 +449,7 @@ The page also contains the following page buttons:
 
 ### Utility - BERT / Redundancy
 
-On this page, you can view the BERT(**Bit Error Rate Test**) monitoring parameters and configure BERT-related settings. You can also configure settings used for the **System Redundancy**, **Console Configuration** and **Satellite Delay**.
+On this page, you can view the BERT (**Bit Error Rate Test**) monitoring parameters and configure BERT-related settings. You can also configure settings used for the **System Redundancy**, **Console Configuration** and **Satellite Delay**.
 
 ### Traps
 

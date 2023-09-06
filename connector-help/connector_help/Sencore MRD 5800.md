@@ -12,7 +12,7 @@ This driver uses **SNMP** to retrieve data about the inputs and outputs of the d
 
 The driver is very similar to the **Sencore MRD 4400**. In fact, the layout of both drivers is almost identical.
 
-It is also possible to **download** a profile to a local fileand to **upload** a profile.
+It is also possible to **download** a profile to a local file and to **upload** a profile.
 
 ### Ranges of the driver
 
@@ -115,7 +115,8 @@ On this page, you can configure the network properties of the device.
 The following page buttons are available:
 
 - **Security:** Allows the user to fill in the username and password used for the HTTP communication.
-- **Profiles:** Provides an overview of the available profiles, and allows the user to download a profile to a local file or upload a profile. The profiles are stored in the DataMiner Documents folder for this protocol (C:\Skyline DataMiner\Documents\Sencore MRD 5800).
+- **Profiles:** Provides an overview of the available profiles, and allows the user to download a profile to a local file or upload a profile.
+  The profiles are stored in the DataMiner Documents folder for this protocol (C:\Skyline DataMiner\Documents\Sencore MRD 5800).
 
 ### Reporting
 

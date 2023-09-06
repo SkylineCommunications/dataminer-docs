@@ -10,9 +10,9 @@ This driver monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall devic
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 
@@ -20,11 +20,15 @@ This driver monitors the activity of the Snell Wilcox IQOTX00+HTX RollCall devic
 |-----------|---------------------------------|
 | 1.0.0.x   | 0003 - 5.0.5 (software version) |
 
+
+
 ### System Info
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
+
 
 ## Configuration
 

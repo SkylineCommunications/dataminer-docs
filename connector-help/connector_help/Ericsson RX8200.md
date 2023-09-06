@@ -78,7 +78,7 @@ In the 3.0.0.x range, from version 3.0.0.15 onwards, and in the 3.1.0.x range, f
 
 ### Main View Page
 
-This page contains general status information, such as the **TS Lock status**, **Signal Status** and**Current Status**. There are also three bar graphs, showing the **Signal Strength**, **C/N** and **C/N Margin**.
+This page contains general status information, such as the **TS Lock status**, **Signal Status** and **Current Status**. There are also three bar graphs, showing the **Signal Strength**, **C/N** and **C/N Margin**.
 
 On the right-hand side, you can find the **Selected Service Name**, **Selected Service ID,** **Uptime**, **Video Status** and **Combined Audio Status**.
 
@@ -92,7 +92,7 @@ There is also a **Reboot button**, which allows you to restart the device.
 
 With the **Configurations** page button, you can export and import configurations for your device.
 
-The **Features** page button opens a table listing all the features with thelicense state.
+The **Features** page button opens a table listing all the features with the license state.
 
 ### Alarm Settings Page
 
@@ -112,7 +112,7 @@ The page contains a number of page buttons:
 
 - **VSB Card**: Shows status parameters of a VSB input board.
 - **Inputs ASI**: Shows ASI parameters, such as signal strength.
-- **Inputs IP**: Opens a page with all IP input-related parameters, such as **Last IP Address Received**, **TS Packets per UDP Frame**, **network utilization**, **IP Jitter**, **Buffer Level**, **IP Card Firmware/Software Version**, **redundancy parameters**,etc. There is also a **Reset IP Stats** button that can be used to reset the IP statistics.
+- **Inputs IP**: Opens a page with all IP input-related parameters, such as **Last IP Address Received**, **TS Packets per UDP Frame**, **network utilization**, **IP Jitter**, **Buffer Level**, **IP Card Firmware/Software Version**, **redundancy parameters**, etc. There is also a **Reset IP Stats** button that can be used to reset the IP statistics.
 - **Inputs Sat**: Opens a page with parameters related to satellite input: **Sat Status**, **Null Packet Override**, **Null Packet Threshold**, **Signal Status**, **Selected Input RF**, **Post Viterbi BER**, **Selected Modulation**, **Selected Format**, **Selected FEC**, **Selected Sense**, **Selected Input Symbol Rate**, **Pilot Symbol Status** and **Frame Length**. There are also three bar graphs, showing the **Signal Strength**, **C/N** and **C/N Margin**.
 - **Sat Input**: Displays the **Satellite Input Configuration** table, where you can define the **LNB Frequency, Satellite Frequency, L-Band Frequency, Symbol Rate, Modulation Type, Roll Off, Spectrum Sense, Search Range, LNB Power Output, LNB Power Level** and **LNB 22Khz** parameters.
 - **IP Configuration**: Opens a page where you can see and modify parameters for the IP configuration, such as **Network Utilization, Rx Uptime, IP Address, Subnet Mask, Default Gateway, VLAN Tag, VLAN Enable, ICMP Enable, IGMP Version, ARP Enable, Ethernet Line Mode, Ethernet Current Line Mode, Duplex Mode, MAC Address, Multicast Address, Enable Multicast, Enable Unicast, Source IP Address, UDP Port, Column** and **Row Port**.
@@ -124,7 +124,7 @@ This page contains all parameters for the output, such as **TS Feed** (*Input, T
 
 ### CA Card Page
 
-This page contains all parameters for use with the Conditional Access Module or CA descrambling in the software. The parameters include **Over Air Control, Over Air Message, Power Carrier Mode** and **Biss Mode**, and **BISS Detected**. The **BISS Key** and the **User 1** and **User 2 keys** can also be entered here. Finally, the page also displays the **CI Module Status**, the **CI Module Name**,the **Number of Descrambled Services** and the **Number of Descrambled Components**, and it allows you to define the **Max CAM Services** and **Max CAM Components**.
+This page contains all parameters for use with the Conditional Access Module or CA descrambling in the software. The parameters include **Over Air Control, Over Air Message, Power Carrier Mode** and **Biss Mode**, and **BISS Detected**. The **BISS Key** and the **User 1** and **User 2 keys** can also be entered here. Finally, the page also displays the **CI Module Status**, the **CI Module Name**, the **Number of Descrambled Services** and the **Number of Descrambled Components**, and it allows you to define the **Max CAM Services** and **Max CAM Components**.
 
 ### Decode Page
 
@@ -148,7 +148,7 @@ The **Advanced** subpage contains more advanced options: **Test Pattern Type, Te
 
 This page contains parameters related to the decoding of the audio part of the TS.
 
-You can find a table here for the **Audio Channel Configuration**,which lists the **Audio Channel, Audio PID, PIDs list, Audio Status, Primary Language, Default Primary Language, Primary Language Changed, Secondary Language, Audio Bitrate, Audio Coding Type, Sampling Frequency, Buffer Usage, Decode Time, Info, Downmix, Audio Gain, Audio User PID, User Standard, Clipping Level, Routing, Delay Adjustment, Range Control** and **Line Mode Adjust**.
+You can find a table here for the **Audio Channel Configuration**, which lists the **Audio Channel, Audio PID, PIDs list, Audio Status, Primary Language, Default Primary Language, Primary Language Changed, Secondary Language, Audio Bitrate, Audio Coding Type, Sampling Frequency, Buffer Usage, Decode Time, Info, Downmix, Audio Gain, Audio User PID, User Standard, Clipping Level, Routing, Delay Adjustment, Range Control** and **Line Mode Adjust**.
 
 Another table displays the **Audio Embedding status**, with **Audio Embedding Decoder** and **Audio Embedding Status** settings.
 

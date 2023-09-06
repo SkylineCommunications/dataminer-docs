@@ -10,11 +10,11 @@ The Amphinicy Monica connector integrates a monitoring and control software suit
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                      | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version:- Instruments and parameter values- Active alarms                                                                     | \-           | \-                |
-| 1.0.1.x \[Obsolete\] | \- Update of the API request messages- Implementation of DVEs                                                                         | 1.0.0.x      | \-                |
-| 1.0.2.x \[SLC Main\] | \- Moved the Generic Instruments Details table to the Instruments Generic Details page.- Updated instrument parameter values parsing. | 1.0.0.x      | \-                |
+| **Range**            | **Key Features**                                                                                                                       | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version: - Instruments and parameter values - Active alarms                                                                    | \-           | \-                |
+| 1.0.1.x \[Obsolete\] | \- Update of the API request messages - Implementation of DVEs                                                                         | 1.0.0.x      | \-                |
+| 1.0.2.x \[SLC Main\] | \- Moved the Generic Instruments Details table to the Instruments Generic Details page. - Updated instrument parameter values parsing. | 1.0.0.x      | \-                |
 
 ### Product Info
 

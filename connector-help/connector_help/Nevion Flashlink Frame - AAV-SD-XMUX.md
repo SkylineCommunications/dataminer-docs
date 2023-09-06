@@ -89,13 +89,13 @@ It also allows you to view the Laser **Num**, **Wavelength**, **Power** and **Ty
 
 ### Serial Port Page
 
-This page displays the **Serial Port** **Table**, which contains all serial port functions, such as **Mode**, **Status**, **Parity**, **Stopbits**, **Speed**,etc.
+This page displays the **Serial Port** **Table**, which contains all serial port functions, such as **Mode**, **Status**, **Parity**, **Stopbits**, **Speed**, etc.
 
 ### Signal Integrity Page
 
 This page displays the **Monitor** **Table**, which contains information about monitor parameters.
 
-It also allows you to configure **Monitor Alarm**, **Error Count**, **Error** **Delta** and **Error** **Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**,etc.
+It also allows you to configure **Monitor Alarm**, **Error Count**, **Error** **Delta** and **Error** **Free Alarm**, **FF-CRC**, **AP-CRC**, **LOCK**, **ANCS**, etc.
 
 ### Video Generator Page
 

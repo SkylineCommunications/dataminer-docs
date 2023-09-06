@@ -95,9 +95,11 @@ And three variable values:
 Each of them needs to be configured using one of the following formats:
 
 - **Parameter** ID of the **read**
-- **Parameter** ID of the **write** (=**Column** ID) / **parameter** ID of the **read** (= **Table** ID) : **Column** Index : Key e.g. 110/100:2:1_A
+- **Parameter** ID of the **write** (=**Column** ID) / **parameter** ID of the **read** (= **Table** ID) : **Column** Index : Key
+  e.g. 110/100:2:1_A
 
-When one of the items in the format does not exist it may be left empty. E.g.: 110/100
+When one of the items in the format does not exist it may be left empty.
+E.g.: 110/100
 
 ### Satellite
 

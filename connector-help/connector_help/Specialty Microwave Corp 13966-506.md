@@ -2,7 +2,8 @@
 uid: Connector_help_Specialty_Microwave_Corp_13966-506
 ---
 
-Specialty Microwave Corp 13966-506The TLT Coaxial Switching Panel, Part No. 13966-506 consists of a logic panel used in satellite communications earth stations. The TLT Coaxial Switching Panel provideslocal indication and commands and using a serial interface provides remote indication and commands of four coaxial switches.
+Specialty Microwave Corp 13966-506
+The TLT Coaxial Switching Panel, Part No. 13966-506 consists of a logic panel used in satellite communications earth stations. The TLT Coaxial Switching Panel provideslocal indication and commands and using a serial interface provides remote indication and commands of four coaxial switches.
 
 ## About
 

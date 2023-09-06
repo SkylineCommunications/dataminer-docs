@@ -38,4 +38,4 @@ This page displays the **Events table**. All traps that are not cleared automati
 
 ### Traps
 
-This page displays the **Trap Overview** table, with information received in traps. Each entry in this table corresponds to a diferent **video channel.** Received traps will automatically update the state of the respective program.You can also manually set an alarm on each entry.
+This page displays the **Trap Overview** table, with information received in traps. Each entry in this table corresponds to a diferent **video channel.** Received traps will automatically update the state of the respective program. You can also manually set an alarm on each entry.

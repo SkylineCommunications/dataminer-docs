@@ -4,7 +4,7 @@ uid: Connector_help_Double_D_Electronics_DDA70-80
 
 # Double D Electronics DDA70-80
 
-Thisdriver can be used to display and configure information of the **Double D Electronics DDA70-80** WG Switch.
+This driver can be used to display and configure information of the **Double D Electronics DDA70-80** WG Switch.
 
 ## About
 

@@ -4,7 +4,8 @@ uid: Connector_help_UHP_Networks_NMS_-_Controller
 
 # UHP Networks NMS - Controller
 
-The UHP Networks NMS - Controller is a fully featured, software-defined VSAT System Platform.The platform is a solution for WiFi and mobile (3G and 4G) backhaul as well as branch office connectivity for remote applications such as mine sites, oil rigs and gas pipeline monitoring. The system is especially suited for maritime connectivity.
+The UHP Networks NMS - Controller is a fully featured, software-defined VSAT System Platform.
+The platform is a solution for WiFi and mobile (3G and 4G) backhaul as well as branch office connectivity for remote applications such as mine sites, oil rigs and gas pipeline monitoring. The system is especially suited for maritime connectivity.
 
 ## About
 

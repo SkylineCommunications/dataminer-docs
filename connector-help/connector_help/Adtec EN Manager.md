@@ -60,7 +60,7 @@ This page contains general information about the device, such as the **name**, *
 
 ### Encoder
 
-This page displays product information such as the **Type**, **Name** and **Version**. It also displays the **Power Supplies Status**,the **Fan Table**,and the **Encoder Temperature**, **State**, **Frames**, **Horizontal** and **Vertical Sizes**, **Bit Rate** and **Encoding Time.**
+This page displays product information such as the **Type**, **Name** and **Version**. It also displays the **Power Supplies Status**, the **Fan Table**, and the **Encoder Temperature**, **State**, **Frames**, **Horizontal** and **Vertical Sizes**, **Bit Rate** and **Encoding Time.**
 
 ### Service
 
@@ -68,7 +68,7 @@ This page contains the **IP Transport Table**, the **Audio Color Bars Tone Table
 
 ### Video
 
-This page contains parameters related to the **Video Encoder**,such as **Video Input**, **Video Detected**, **SDI Video Mode**, **Chromatype**, **Video Auto Fill**, **Video Bit Rate**, **Codec Mode**, **Source Contrast**, **Brightness**,etc.
+This page contains parameters related to the **Video Encoder**, such as **Video Input**, **Video Detected**, **SDI Video Mode**, **Chromatype**, **Video Auto Fill**, **Video Bit Rate**, **Codec Mode**, **Source Contrast**, **Brightness**, etc.
 
 ### Audio
 
@@ -84,7 +84,7 @@ This page displays the **PID PMT**, **Video**, **Transport Stream ID**, **PCR**,
 
 ### CAS
 
-This page contains the **BISS Mode**, **One Key CSW**, **E Key ESW**, **E Key Injected ID One**,and **E Key Injected ID Two.**
+This page contains the **BISS Mode**, **One Key CSW**, **E Key ESW**, **E Key Injected ID One**, and **E Key Injected ID Two.**
 
 ### Profiles (Range 1.0.1.x)
 

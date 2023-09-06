@@ -8,7 +8,8 @@ This **SNMP** protocol is designed to monitor several Kathrein HMS (Hybrid Manag
 
 ## About
 
-The compact transponders, TVM 840H and TVM 840V, are designed for the compact receiver platform ORA 820 and the compact amplifiers from the VGF 8000 series and VGF 81 series.The CATV/GGA transponders, TVT 10 and TVL 40L, are used in the CATV 862 MHz system and in the GGA 6/8 fiber nodes and the appropriate amplifier points.
+The compact transponders, TVM 840H and TVM 840V, are designed for the compact receiver platform ORA 820 and the compact amplifiers from the VGF 8000 series and VGF 81 series.
+The CATV/GGA transponders, TVT 10 and TVL 40L, are used in the CATV 862 MHz system and in the GGA 6/8 fiber nodes and the appropriate amplifier points.
 
 The transponders are frequency agile and include, along with alarm messages, so-called inventory data such as unit type, order number and construction year. They allow remotely controlled functions and measurements. All configuration data is securely saved in all Kathrein transponders. Each transponder is equipped with a virtual IP address and is managed by a Phoenix Gateway.
 
@@ -78,7 +79,7 @@ The **Configuration** page button displays values for **Configuration Offset**, 
 
 ### Return
 
-In the **Common** section of this page, you can find the **Slot** information and the **Type** of the return path amplifier. Also in this section, you can set the **Slope** and **Attenuation**,as well as change the **Primary** and **Secondary** **Switch** to *Attenuated*, *Connected* or *Disconnected*.
+In the **Common** section of this page, you can find the **Slot** information and the **Type** of the return path amplifier. Also in this section, you can set the **Slope** and **Attenuation**, as well as change the **Primary** and **Secondary** **Switch** to *Attenuated*, *Connected* or *Disconnected*.
 
 The **State** parameters on this page show if an alarm is active: **Config Changed**, **Defective**, **Handheld Connected** and **Controller Defective** **Return Amplifier.**
 

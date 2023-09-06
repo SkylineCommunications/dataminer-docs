@@ -14,17 +14,17 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                       | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                        | No                  | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                  |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
-| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                      |
+| **Driver Range** | **Device Firmware Version**                                                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                       |
 
 ## Installation and configuration
 
@@ -95,8 +95,8 @@ This section contains the following pages:
 
 This section contains the following pages:
 
-- **Data DMB 1 & 2:** DMBparameters concerning **VITC**, **WSS**, **Brandnet**, **RP196**, **LTC**, **CC/TT Present** and **ARC Codes.**
-- **Data EMB 1 & 2:** EMBparameters concerning **ATC**, **RP196**, **ARC**, **AFD**, **VI**, **WSS**, **Brandnet** and **ARIB.**
+- **Data DMB 1 & 2:** DMB parameters concerning **VITC**, **WSS**, **Brandnet**, **RP196**, **LTC**, **CC/TT Present** and **ARC Codes.**
+- **Data EMB 1 & 2:** EMB parameters concerning **ATC**, **RP196**, **ARC**, **AFD**, **VI**, **WSS**, **Brandnet** and **ARIB.**
 - **VBI 1 and 2:** Deletion of VBI Lines.
 
 ### Audio Section

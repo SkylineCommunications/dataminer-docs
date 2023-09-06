@@ -27,7 +27,7 @@ This driver communicates using SNMP Protocol version 2. It allows the monitor an
 <td><strong>System Impact</strong></td>
 </tr>
 <tr class="even">
-<td>1.0.0.x[SLC Main]</td>
+<td>1.0.0.x [SLC Main]</td>
 <td><ul>
 <li>DVE</li>
 </ul></td>
@@ -43,6 +43,8 @@ This driver communicates using SNMP Protocol version 2. It allows the monitor an
 |-----------|------------------------|
 | 1.0.0.x   | 2.9.2.r1.588           |
 
+
+
 ## Configuration
 
 ### Initialization
@@ -56,3 +58,5 @@ There is no redundancy defined.
 ## How to use
 
 On the **Configuration** page, set **File Import Path**, **Import** the csv file with all the Dell M1000e devices information and set **Polling Status** to Enabled.
+
+

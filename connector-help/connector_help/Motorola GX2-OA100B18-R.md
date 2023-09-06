@@ -8,7 +8,7 @@ The **Motorola GX2-OA100B18-R** driver is an SNMP-based driver used to monitor a
 
 ## About
 
-This driver provides a monitoring interface for the **Motorola GX2-OA100B18-R**and **Motorola GX2-OA508B21** chassis.
+This driver provides a monitoring interface for the **Motorola GX2-OA100B18-R** and **Motorola GX2-OA508B21** chassis.
 
 ### Ranges of the driver
 

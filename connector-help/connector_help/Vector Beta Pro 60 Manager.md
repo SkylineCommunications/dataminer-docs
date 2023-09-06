@@ -26,7 +26,7 @@ To create an element with this driver:
 1.  Add a new element and select the **Vector Beta Pro 60 Manager** protocol.
 2.  Define a unique name and optionally add a description.
 3.  Optionally enter an IP address and port. The address will in fact be ignored by the driver, since there will be many devices. However, the port can be used to define a default port. Note that you can override the port settings for each device.
-4.  Preferably, set the retries to zero and select a short timeout time, so that the driver does not get stuck for too long if one device fails to respond.
+4.  Preferably, set the retries to zero and select a short timeout time, so that the driver does not get stuck for too long if one device fails to respond. ****
 
 ### Configuring the element
 
@@ -60,13 +60,26 @@ There are a few rules that the .csv file must comply with and some things that t
 
 #### Example of a .csv file
 
-> ID;Name;Manager;IP;IP Modem;ViewsExample file -\> contains data for two managers named "Main Manager" and "Simulation"
+> ID;Name;Manager;IP;IP Modem;Views
+> Example file -\> contains data for two managers named "Main Manager" and "Simulation"
 >
-> 1;Brugge;Main Manager;10.0.58.1;10.0.58.2;; Will generate a new element named "Brugge" in the manager with name "Main Manager" and in the same view of the main manager.2;Brugge;Main Manager;10.1.42.1;10.1.42.2;; Will generate a new element named "Brugge (2)" in the manager with the name "Main Manager" and in the same view of the main manager.3;Brugge;Main Manager;10.1.42.3;10.1.42.4;; Will generate a new element named "Brugge (3)";Diksmuide;Main Manager;10.1.42.5;10.1.42.6;; Will generate a new element named "Diksmuide" every time the CSV is parsed by the main manager. (This also means that trending information will be lost and masked alarms will be "unmasked".)
 >
-> 1;Lab01;Simulation;10.0.1.10;10.0.1.11;Lab; Will generate a new element named "Lab01" in the manager with name "Simulation", the DVE element will be added to the view "Lab"2;Lab02;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will generate a new element named "Lab02" ...2;Lab03;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will be ignored, because there is already a record for the manager "Simulation" and ID "2".
+> 1;Brugge;Main Manager;10.0.58.1;10.0.58.2;; Will generate a new element named "Brugge" in the manager with name "Main Manager" and in the same view of the main manager.
+> 2;Brugge;Main Manager;10.1.42.1;10.1.42.2;; Will generate a new element named "Brugge (2)" in the manager with the name "Main Manager" and in the same view of the main manager.
+> 3;Brugge;Main Manager;10.1.42.3;10.1.42.4;; Will generate a new element named "Brugge (3)"
+> ;Diksmuide;Main Manager;10.1.42.5;10.1.42.6;; Will generate a new element named "Diksmuide" every time the CSV is parsed by the main manager.
+> (This also means that trending information will be lost and masked alarms will be "unmasked".)
 >
-> Note: the headers on the first line are ignored by the driver, so you cannot change the order of the data (columns) in the csv file.Note: you can add comments on the first line if the separator char occurs more than the comma or semi column char.Note: you can add comments on the second line without any restrictionsNote: you can add comments on all other lines in unused columnsNote: even this line would be considered a comment because there is no data in the thrird column. Which means that no "Manager" is selected.Note: even this line would be considered a comment if there is no manager named "third col" because that's the value in the third column: ;second column;third column
+> 1;Lab01;Simulation;10.0.1.10;10.0.1.11;Lab; Will generate a new element named "Lab01" in the manager with name "Simulation", the DVE element will be added to the view "Lab"
+> 2;Lab02;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will generate a new element named "Lab02" ...
+> 2;Lab03;Simulation;10.0.1.10;10.0.1.11;Lab\|Test; Will be ignored, because there is already a record for the manager "Simulation" and ID "2".
+>
+> Note: the headers on the first line are ignored by the driver, so you cannot change the order of the data (columns) in the csv file.
+> Note: you can add comments on the first line if the separator char occurs more than the comma or semi column char.
+> Note: you can add comments on the second line without any restrictions
+> Note: you can add comments on all other lines in unused columns
+> Note: even this line would be considered a comment because there is no data in the thrird column. Which means that no "Manager" is selected.
+> Note: even this line would be considered a comment if there is no manager named "third col" because that's the value in the third column: ;second column;third column
 
 #### The first Line
 
@@ -201,7 +214,7 @@ A brief description of the available parameters:
 </tr>
 <tr class="even">
 <td><strong>Polling Status</strong></td>
-<td><p>Indicates if the device and modem are polled.Polling can be disabled and enabled by the user or automatically stopped by the driver if the DNS cannot translate the server name to an IP address.</p></td>
+<td><p>Indicates if the device and modem are polled. Polling can be disabled and enabled by the user or automatically stopped by the driver if the DNS cannot translate the server name to an IP address.</p></td>
 </tr>
 </tbody>
 </table>
@@ -226,7 +239,8 @@ This page contains a list of all the devices polled by the element, along with s
 
 #### Note about DNS errors:
 
-It is possible to supply the name of the server instead of an IP address. In that case the driver will try to translate the name to an IP address just before polling. This will be repeated in every poll cycle, so the IPs can be dynamic. However, it is possible that the name cannot be resolved by the DNS server. In that case, the DVE will be set in timeout and the polling for both the Vector Beta Pro device and the modem will be stopped.This is indicated by the *Stopped (Error)* value in the **MD -** **Polling Status** parameter. The source of the problem will also be indicated by the value *DNS Error* in the **Timeout** and/or **Timeout Modem** columns, depending on which name(s) could not be resolved.
+It is possible to supply the name of the server instead of an IP address. In that case the driver will try to translate the name to an IP address just before polling. This will be repeated in every poll cycle, so the IPs can be dynamic. However, it is possible that the name cannot be resolved by the DNS server. In that case, the DVE will be set in timeout and the polling for both the Vector Beta Pro device and the modem will be stopped.
+This is indicated by the *Stopped (Error)* value in the **MD -** **Polling Status** parameter. The source of the problem will also be indicated by the value *DNS Error* in the **Timeout** and/or **Timeout Modem** columns, depending on which name(s) could not be resolved.
 
 Once every hour the driver will re-evaluate, or retry, the names, so that polling can automatically be resumed if the problem is solved. The user can force a retry by manually setting the **Polling Status** to *Enabled*. It is also possible to set a *Stopped (Error)* record to *Disabled,* in which case polling will not be resumed until this is explicitly set to *Enabled* again by the user.
 

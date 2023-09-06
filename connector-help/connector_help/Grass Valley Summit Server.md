@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_Summit_Server
 
 # Grass Valley Summit Server
 
-The **Grass Valley Summit Server**driver displays information related to the **Grass Valley Summit Server** device.
+The **Grass Valley Summit Server** driver displays information related to the **Grass Valley Summit Server** device.
 
 ## About
 

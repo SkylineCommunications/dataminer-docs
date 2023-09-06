@@ -14,7 +14,7 @@ The driver offers several possibilities for **alarm monitoring** and **trending*
 
 ### Supported firmware versions
 
-This driversupports multiple firmware versions.
+This driver supports multiple firmware versions.
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
@@ -31,4 +31,4 @@ This driver is used by DVEs that are **automatically created** by the parent ele
 
 This page contains generic information: **IP Address**, **Device Name**, **Location**, and all traps retrieved for a specific device.
 
-The **Traps table**on this page displays each binding, **Date And Time of Events**, **Severity**, **Possible Causes**, etc.
+The **Traps table** on this page displays each binding, **Date And Time of Events**, **Severity**, **Possible Causes**, etc.

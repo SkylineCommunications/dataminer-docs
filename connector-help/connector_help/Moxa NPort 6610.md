@@ -133,9 +133,9 @@ Several settings can be configured on this page:
 - **DDNS**: Allows you to configure the NPort 6000 to enable a remote server to access it using its domain name instead of its IP address.
 - **Host Table**: Can be used to simplify IP address entry on the NPort 6000 console by assigning a host name to a host IP address.
 - **Route table**: Allows you to configure how the NPort 6000 will connect to an outside network.
-- **User Table**:Can be used to authenticate users for terminal or reverse terminal access.
+- **User Table**: Can be used to authenticate users for terminal or reverse terminal access.
 - **Authentication Server**: To be used if a RADIUS server is used for user authentication.
-- **System Log Settings**:Allow the administrator to customize which network events are logged by the NPort 6000.
+- **System Log Settings**: Allow the administrator to customize which network events are logged by the NPort 6000.
 - **Remote Log Server**: Allows you to configure the remote log server.
 
 ### Sys Mgmt - Auto Warning

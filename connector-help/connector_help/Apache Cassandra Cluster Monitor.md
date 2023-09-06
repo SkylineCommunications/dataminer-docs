@@ -20,11 +20,11 @@ This connector is designed to monitor a Cassandra cluster, providing useful info
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                           |
-|-----------|--------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | 3.114.0 (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
-| 1.0.1.x   | 3.114.0 (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
-| 1.0.2.x   | 3.114.x (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
+| **Range** | **Supported Firmware**                                                                            |
+|-----------|---------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | 3.11 4.0 (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
+| 1.0.1.x   | 3.11 4.0 (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
+| 1.0.2.x   | 3.11 4.x (virtual tables: clients, disk_usage, max_partition_size, settings, tombstones_per_read) |
 
 ### System Info
 
@@ -46,7 +46,7 @@ This connector uses a virtual connection and does not require any input during e
 
 ### Initialization
 
-When the element has been created, configure the connection to the Cassandra cluster. To do so, on the **Connector Settings**page, specify the **IP**, **Port**, **User Name,** and **Password**.
+When the element has been created, configure the connection to the Cassandra cluster. To do so, on the **Connector Settings** page, specify the **IP**, **Port**, **User Name,** and **Password**.
 
 ## How to Use
 

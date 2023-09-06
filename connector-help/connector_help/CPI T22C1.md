@@ -18,9 +18,9 @@ This driver uses a serial protocol developed by CPI. Two communication modes are
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | \- Front Panel Boot Kernel Software Version: *03.00.19*- Front Main Program Software Version: *01.00.80*- Power Supply Boot Kernel Software Version: *03.00.03*- Power Supply Main Program Software Version: *01.00.47*- RF Controller Boot Kernel Software Version: *03.00.03*- RF Controller Main Program Software Version: *01.00.33*- External Interface Boot Kernel Software Version: *03.00.03*- External Interface Main Program Software Version: *01.00.40* |
+| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | \- Front Panel Boot Kernel Software Version: *03.00.19* - Front Main Program Software Version: *01.00.80* - Power Supply Boot Kernel Software Version: *03.00.03* - Power Supply Main Program Software Version: *01.00.47* - RF Controller Boot Kernel Software Version: *03.00.03* - RF Controller Main Program Software Version: *01.00.33* - External Interface Boot Kernel Software Version: *03.00.03* - External Interface Main Program Software Version: *01.00.40* |
 
 ## Installation and configuration
 
@@ -48,13 +48,13 @@ You can also perform a Snapshot by clicking on the **Snapshot** button. The prog
 
 ### Measurements
 
-This page displays the following parameters: **Attenuator Setting**, **Beam Current**, **User Time Delay**, **Inlet Temperature**, **Reflected RF**,**RF Drive**, etc.
+This page displays the following parameters: **Attenuator Setting**, **Beam Current**, **User Time Delay**, **Inlet Temperature**, **Reflected RF**, **RF Drive**, etc.
 
 Specific information can be retrieved via multiple page buttons: **Trip Point**, **Linearizer**, **Imbalance**, **Output**, **Trip Point**, **Heater** and **Helix**.
 
 ### Status
 
-This page contains the status parameters **Step Start 1/2 Fault**, **CAN Bus Comm Fault**,etc.
+This page contains the status parameters **Step Start 1/2 Fault**, **CAN Bus Comm Fault**, etc.
 
 Via page buttons, you can access more detailed information concerning the following aspects of the device: **Helix**, **Heater**, **Inhibit**, **EXT Controller**, **Power Supply**, **RF Controller**, **ETH**, **Px Controllers**, **Beacon,** **Low/High Alarms** and **SIM**.
 

@@ -32,7 +32,7 @@ This driver has several data display pages:
 
 This page displays the **Product Name, Serial Number, Version, Date, IP Address, Gateway Sub Net and DHCP**.
 
-The page also has two buttons to **Save Device Config** to non volatile memory (will be remembered upon restart) and to do a **Soft Reset**of the device.
+The page also has two buttons to **Save Device Config** to non volatile memory (will be remembered upon restart) and to do a **Soft Reset** of the device.
 
 ### Status Page
 

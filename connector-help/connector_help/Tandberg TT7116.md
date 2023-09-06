@@ -20,14 +20,14 @@ This driver uses both a serial connection (HTTP) and an SNMP connection and need
 
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
 - **Port**: The port of the device, by default *80.*
-- **Bus address**:Not needed.
+- **Bus address**: Not needed.
 
 **SNMP CONNECTION**:
 
 - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
 - **Port**: The port of the device, by default *161.*
-- **Get Community**:The community string used when reading values from the device. The default value is *public.*
-- **Set Community**:The community string used when setting values on the device. The default value is *private.*
+- **Get Community**: The community string used when reading values from the device. The default value is *public.*
+- **Set Community**: The community string used when setting values on the device. The default value is *private.*
 
 ### Configuration
 
@@ -41,7 +41,7 @@ This page contains general status information such as the **IP Address**, **Subn
 
 ### General Page
 
-This page contains general status information, such as the **IP Address**,the **Alarm Status**, the **Device Serial Number**, etc.
+This page contains general status information, such as the **IP Address**, the **Alarm Status**, the **Device Serial Number**, etc.
 
 On the left-hand side, the **Trap Destination Table** is displayed, as well as the **Get Serial ID** button, which can be used to retrieve the Unique Serial ID of this device.
 
@@ -63,7 +63,7 @@ With the **Clear Inputs** button, you can clear the table.
 There are also two page buttons:
 
 - **Services**: Shows a table with more information about the services, such as the **Input Of Service,** **Stream Id**, **PCR**, etc. Individual services can be deleted from this page.
-- **PIDs**:Shows a page with information about the various PIDs in the system, such as the **PID Index**, **PID rate**, etc. Individual **PIDs** can be deleted from this page.
+- **PIDs**: Shows a page with information about the various PIDs in the system, such as the **PID Index**, **PID rate**, etc. Individual **PIDs** can be deleted from this page.
 
 ### Streams Page
 

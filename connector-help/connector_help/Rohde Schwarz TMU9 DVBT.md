@@ -6,7 +6,7 @@ uid: Connector_help_Rohde_Schwarz_TMU9_DVBT
 
 The R&S TMU9 DVBT2 is a compact-size, efficient and reliable transmitter with different possible standard configurations. Power consumption ranges from 300 W to 3.0 kW for digital standards, going up to 4.75 kW for analog standards. Built-in bandpass filters ensure short delivery times and innovative configurations, such as MultiTX or N+1 systems in a single rack.
 
-This **SNMP** connector is used to monitor and configure the **Rohde Schwarz TMU9 DVBT**transmitter. This connector is based on the Rohde Schwarz TMU9 DVBT2 connector, range 2.0.0.x
+This **SNMP** connector is used to monitor and configure the **Rohde Schwarz TMU9 DVBT** transmitter. This connector is based on the Rohde Schwarz TMU9 DVBT2 connector, range 2.0.0.x
 
 ## About
 
@@ -76,7 +76,7 @@ On this page, you can monitor the **Transmitter State** and both monitor and con
 
 ### Tx Exciter
 
-This page is similar to the Tx Transmitter page, displaying the **Exciter Notification**, **Commands**,and **State**.
+This page is similar to the Tx Transmitter page, displaying the **Exciter Notification**, **Commands**, and **State**.
 
 ### Tx Exciter Automatic
 
@@ -128,7 +128,7 @@ This page displays the **MTx** **Notification** **Table**. Via page buttons, you
 
 ### Air Cooling State
 
-This page contains the **Air Cooling State, Air Cooling Notification, Air Cooling Pressure**,and **Air Cooling Fan** tables.
+This page contains the **Air Cooling State, Air Cooling Notification, Air Cooling Pressure**, and **Air Cooling Fan** tables.
 
 ### Active Reserve
 

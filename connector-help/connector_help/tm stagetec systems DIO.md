@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-On the **General** page, you can configure the **Polling Time**, save the device configuration (under **Unsaved Configuration**)and view general information, such as the **Uptime**, **Temperature**, **Model name** and **XML Configuration version**.
+On the **General** page, you can configure the **Polling Time**, save the device configuration (under **Unsaved Configuration**) and view general information, such as the **Uptime**, **Temperature**, **Model name** and **XML Configuration version**.
 
 The **Unsaved Configuration** parameter indicates if sets have been sent to the device without saving the configuration. Below this, the **Save Config** button allows you to write all changes to the disk, and the **Clear Flag** button allows you to set the flag to *No* without saving the parameters. Note that the parameter changes apply the moment the parameter is set, but they will only be "set" in active memory. This means that after a device reboot, the changes will be lost. The value of this flag is not retrieved from the device, but updated after any set and cleared when the configuration is saved (or the flag is cleared explicitly). The flag will also be cleared when the element is restarted.
 

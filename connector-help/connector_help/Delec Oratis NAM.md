@@ -20,10 +20,10 @@ There are several versions of the driver. The 1.0.0.x range is used for older fi
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                              |
-|-----------|---------------------------------------------------------------------------------------------------------------------|
-| 1.1.0.x   | Supported device types: NAM 201, NAM 202, NAM 601, NAM 602.Dante Firmware: 4.00.002.007Dante Software: 4.00.004.019 |
-| 1.2.0.x   | Supported device types: NAM x03                                                                                     |
+| **Range** | **Supported Firmware**                                                                                                |
+|-----------|-----------------------------------------------------------------------------------------------------------------------|
+| 1.1.0.x   | Supported device types: NAM 201, NAM 202, NAM 601, NAM 602. Dante Firmware: 4.00.002.007 Dante Software: 4.00.004.019 |
+| 1.2.0.x   | Supported device types: NAM x03                                                                                       |
 
 ### System Info
 
@@ -66,9 +66,11 @@ A first group of parameters provides information about the device:
 
 A second group of parameters is related to the internal functioning of the driver. These parameters are:
 
-- **Last Response Received:** Indicates the number of seconds that have passed since a response was received from the device. As the driver frequently polls the device, this value should never be more than *30* seconds. If the value is more, this indicates a communication problem.
+- **Last Response Received:** Indicates the number of seconds that have passed since a response was received from the device.
+  As the driver frequently polls the device, this value should never be more than *30* seconds. If the value is more, this indicates a communication problem.
 - **Max Time Allowed Before Timeout:** A user-configurable value that indicates how much time should be allowed after the last response before the element is set in timeout. A reasonable value would be *15* seconds.
-- **Force Poll**: Button that can be used to force an update of all parameters. If, for instance, the current values might not be correct or up to date, clicking this button will instantly update all parameters.The button can also be used after a reboot or backup/restore. However, if a restore was executed by the driver, all data should automatically be polled again.
+- **Force Poll**: Button that can be used to force an update of all parameters. If, for instance, the current values might not be correct or up to date, clicking this button will instantly update all parameters.
+  The button can also be used after a reboot or backup/restore. However, if a restore was executed by the driver, all data should automatically be polled again.
 
 A last group of parameters, in the lower right corner, is a set of buttons that provide access to functions or settings requiring explicit user interaction:
 

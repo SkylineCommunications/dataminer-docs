@@ -52,17 +52,22 @@ This page provides an overview of all **Errors**, indicating the **Subject** and
 
 On this page, you can configure the locations based on **Latitude**, **Longitude** and **Height**. Each location can be configured to be present in the Summary table (**Monitored** = *Enabled*) or not (**Monitored** = *Disabled*). Location **Names** can be configured and will be shown in the **Summary table**.
 
-Locations can be added individually with the **Add Location button**. Individual locations can be **Refreshed** or **Deleted**. However, please note that it is better to enable or disable **Monitoring** instead of deleting a location, as deleting locations can lead to inconsistent trending.
+Locations can be added individually with the **Add Location button**. Individual locations can be **Refreshed** or **Deleted**.
+However, please note that it is better to enable or disable **Monitoring** instead of deleting a location, as deleting locations can lead to inconsistent trending.
 
 Several locations can be added in one go with the **AS AddLocations** parameter. This is also the parameter that should be used when adding rows with **Automation scripts**. The parameter expects the following format:
 
-- *Location\*Latitude\*Longitude\*Height\*Monitored;Location\*Latitude\*Longitude\*Height\*Monitored; ...*If there is no **Height**,leave the value blank (e.g. \*Longitude\*\*Monitored;).**Monitored** should be set to 0 for false or to 1 for true.Locations must be unique!Example: *TestLocation 1\*60.10\*9.58\*\*1;TestLocation 2\*60.10\*9.58\*\*1;TestLocation 3\*60.10\*9.58\*\*1*
+- *Location\*Latitude\*Longitude\*Height\*Monitored;Location\*Latitude\*Longitude\*Height\*Monitored; ...*
+  If there is no **Height**, leave the value blank (e.g. \*Longitude\*\*Monitored;).
+  **Monitored** should be set to 0 for false or to 1 for true.
+  Locations must be unique!
+  Example: *TestLocation 1\*60.10\*9.58\*\*1;TestLocation 2\*60.10\*9.58\*\*1;TestLocation 3\*60.10\*9.58\*\*1*
 
 ### Summary
 
-This pagecontains all **weather data averaged per day**. The number of days shown can be defined with the **Predicted Days** parameter. Please note that the data for every predicted day will be contained in an **extra row for each** **location** (e.g. *200 locations showing 5 days will result in 1000 rows*).
+This page contains all **weather data averaged per day**. The number of days shown can be defined with the **Predicted Days** parameter. Please note that the data for every predicted day will be contained in an **extra row for each** **location** (e.g. *200 locations showing 5 days will result in 1000 rows*).
 
-The display key of each row consists of the following information: **Location - Time**,where Time = *Today, Tomorrow, 1 Day From Now, 2 Days From Now, ...*
+The display key of each row consists of the following information: **Location - Time**, where Time = *Today, Tomorrow, 1 Day From Now, 2 Days From Now, ...*
 
 The following data is available for each location:
 
@@ -99,7 +104,7 @@ The page button **Lite Details** opens a page that is very similar to the Detail
 
 This page provides all **textual forecasts** currently issued for every location.
 
-With the **Configuration** page button,a selection of **text forecast types** can be *Enabled* or *Disabled*. Each enabled type adds additional data (if available) to the **Text Forecasts table**.
+With the **Configuration** page button, a selection of **text forecast types** can be *Enabled* or *Disabled*. Each enabled type adds additional data (if available) to the **Text Forecasts table**.
 
 ## Notes
 

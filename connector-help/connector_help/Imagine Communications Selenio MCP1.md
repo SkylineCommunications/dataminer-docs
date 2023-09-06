@@ -14,19 +14,19 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
-|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 4.3.4.x          | Initial version (adapted from Selenio FR3 v4.0.1.1)                                                                                                                                               | No                  | No                      |
-| 4.4.0.x          | Update to firmware 5.0.Cross Connections, Module Association, Module Function, Module Interface, Module Output, Repository, Slot Upgrade and VLAN pages are functional from this version onwards. | No                  | No                      |
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.                                                      | No                  | Yes                     |
-| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                                                                            | No                  | Yes                     |
+| **Driver Range** | **Description**                                                                                                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 4.3.4.x          | Initial version (adapted from Selenio FR3 v4.0.1.1)                                                                                                                                                | No                  | No                      |
+| 4.4.0.x          | Update to firmware 5.0. Cross Connections, Module Association, Module Function, Module Interface, Module Output, Repository, Slot Upgrade and VLAN pages are functional from this version onwards. | No                  | No                      |
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports.                                                      | No                  | Yes                     |
+| 10.0.0.x         | Replaced the "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                                                                                             | No                  | Yes                     |
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                  |
-|------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
-| \<10.0.0.x       | **\[Main\]**The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
-| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                      |
+| **Driver Range** | **Device Firmware Version**                                                                                                                   |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
+| \<10.0.0.x       | **\[Main\]** The **versioning** of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware.                                       |
 
 ## Installation and configuration
 

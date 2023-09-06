@@ -86,4 +86,5 @@ Some important parameters are available on the General page:
 
 To most tables a row/new entry can be added by right-clicking the table and selecting **Add New Entry**. This action will display a pop-up window with the required parameters to add a new entry.
 
-Downloaded files can be found under *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*.To upload a file, the file must be located in the following folder: *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*. The driver will display a list of available files in that location to upload.
+Downloaded files can be found under *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*.
+To upload a file, the file must be located in the following folder: *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*. The driver will display a list of available files in that location to upload.

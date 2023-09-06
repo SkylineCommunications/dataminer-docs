@@ -10,10 +10,10 @@ The NPG3200 is the main Neuron processing board. It is a multi-channel A/V-over-
 
 ### Version Info
 
-| **Range**            | **Key Features**                               | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                               | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | \- DCF Integration.- Support for firmware 5.x. | 1.0.0.3      | \-                |
+| **Range**            | **Key Features**                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                | \-           | \-                |
+| 1.0.1.x \[SLC Main\] | \- DCF Integration. - Support for firmware 5.x. | 1.0.0.3      | \-                |
 
 ### Product Info
 

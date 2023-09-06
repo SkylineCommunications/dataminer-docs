@@ -104,7 +104,7 @@ The page displays the following configurable items:
 
 ### Setup Page
 
-The page displays the following informationfor the **product settings:**
+The page displays the following information for the **product settings:**
 
 - **Product;**
 - **Release;**

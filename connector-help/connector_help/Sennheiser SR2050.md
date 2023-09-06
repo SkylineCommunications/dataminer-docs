@@ -48,7 +48,8 @@ The following input is required during element creation:
   - **IP address/host**: *any*.
   - **IP port**: The IP port of the destination (default: *53212*).
 
-**Note:** The option "any" defines that the element will have an UDP socket listening for any incoming request on the IP address of the DataMiner Agent where the element resides and on the configured IP port.This is needed because the product always replies to a specific port and not to the port that originated the communication, so that two connections are required to process the requests and receive the responses.
+**Note:** The option "any" defines that the element will have an UDP socket listening for any incoming request on the IP address of the DataMiner Agent where the element resides and on the configured IP port.
+This is needed because the product always replies to a specific port and not to the port that originated the communication, so that two connections are required to process the requests and receive the responses.
 
 ## How to use
 

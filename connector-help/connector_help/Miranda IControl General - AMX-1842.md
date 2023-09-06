@@ -4,7 +4,8 @@ uid: Connector_help_Miranda_IControl_General_-_AMX-1842
 
 # Miranda IControl General - AMX-1842
 
-The **Miranda IControl AMX-1842** is a high-quality embedder which embeds up to four AES 24-bit 48kHz digital audio signals into HD/SD serial digital video signal.It includes audio and video signal presence detection and reporting, and local or remote configuration and control. A unique feature is its ability to embed timecode, a serial RS-422 data signal tone, timecode and video color bar test signals.
+The **Miranda IControl AMX-1842** is a high-quality embedder which embeds up to four AES 24-bit 48kHz digital audio signals into HD/SD serial digital video signal.
+It includes audio and video signal presence detection and reporting, and local or remote configuration and control. A unique feature is its ability to embed timecode, a serial RS-422 data signal tone, timecode and video color bar test signals.
 
 ## About
 
@@ -39,3 +40,5 @@ This page displays the test parameters, such as, **Audio Video Test**, **Test on
 Mute
 
 This page displays the AES Mute parameters status.
+
+

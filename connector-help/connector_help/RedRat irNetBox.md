@@ -23,10 +23,10 @@ It is also possible to import **channel** information and then manually select t
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                                                                    |
-|------------------|------------------------------------------------------------------------------------------------|
-| 1.0.0.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01-irNetBox Network Control Protocol V3.03 |
-| 1.0.1.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01-irNetBox Network Control Protocol V3.03 |
+| **Driver Range** | **Device Firmware Version**                                                                     |
+|------------------|-------------------------------------------------------------------------------------------------|
+| 1.0.0.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01- irNetBox Network Control Protocol V3.03 |
+| 1.0.1.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01- irNetBox Network Control Protocol V3.03 |
 
 ## Installation and configuration
 
@@ -68,7 +68,7 @@ This page also contains two page buttons:
 
 This page contains a large **Output Overview** table, which contains a row for each **physical IR output on the irNetBox**. Each output can be given a custom name to increase user-friendliness.
 
-For each output, you can **select which device is connected** via a drop-down menu that contains all custom device names. When you select a device, the command drop-down menu is automatically updatedwith all the commands for the specific device. When you **select a command** from the drop-down menu, that command is **directly sent to the irNetBox**.
+For each output, you can **select which device is connected** via a drop-down menu that contains all custom device names. When you select a device, the command drop-down menu is automatically updated with all the commands for the specific device. When you **select a command** from the drop-down menu, that command is **directly sent to the irNetBox**.
 
 From version 1.0.1.2 onwards, at the top of the page, a parameter is available that can be used to specify the **DVE Name Format** with the following options:
 
@@ -77,7 +77,7 @@ From version 1.0.1.2 onwards, at the top of the page, a parameter is available t
 
 ### Channel Overview
 
-This page contains a large **Channel Overview** table, which contains **imported channels**. Each channel row has a channel number and 16 columns, which represent the **physical IR outputs with buttons**. When you **click a button**,the protocol will **send the channel number to the IR output of the irNetBox** with the correct commands for the device that is connected to the output. If you press a button for an output for which no device is selected, you will be notified with a message.
+This page contains a large **Channel Overview** table, which contains **imported channels**. Each channel row has a channel number and 16 columns, which represent the **physical IR outputs with buttons**. When you **click a button**, the protocol will **send the channel number to the IR output of the irNetBox** with the correct commands for the device that is connected to the output. If you press a button for an output for which no device is selected, you will be notified with a message.
 
 This page also contains a page button:
 

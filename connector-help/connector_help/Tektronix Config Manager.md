@@ -51,8 +51,10 @@ The **Probe Elements** **Table** displays all the elements found in the cluster 
 You can configure the elements via the context menu:
 
 1.  Select one or multiple rows, right-click, and select **Load Configuration**.
-2.  In the dialog box, select the applicable .csv files in the drop-down lists. These are the .csv files found in the **Documents folder** of the **Tektronix Config Manager** directory.Alternatively, you can also enter a complete file path or a file path starting from a subfolder in the Documents folder, and select the appropriate **TS Config File** and **Service Config File**. Note that the file path may not start with "\\.
-3.  Click *OK*.The configuration will now be applied to the selected elements.
+2.  In the dialog box, select the applicable .csv files in the drop-down lists. These are the .csv files found in the **Documents folder** of the **Tektronix Config Manager** directory.
+    Alternatively, you can also enter a complete file path or a file path starting from a subfolder in the Documents folder, and select the appropriate **TS Config File** and **Service Config File**. Note that the file path may not start with "\\.
+3.  Click *OK*.
+    The configuration will now be applied to the selected elements.
 
 The current status can be found in the **Probe Last Load State** column parameter. This parameter can have the following values:
 
@@ -113,7 +115,7 @@ During an import, a number of checks are performed (the data in the import file 
 
 The **Links** page provides an overview of the links that are present between output pairs and probe elements. Each link also indicates whether source splitting needs to be performed or not.
 
-The **Links Table** displays an overview of the link definitions. A link definition consists of a **Link Name**, an **Output Pair Name**,a **Probe Element Name** and a **Source Splitting Configuration**. In order to add a link definition, right-click, and select **Add Link** in the context menu. This will open a new window where you can provide the link definition details.
+The **Links Table** displays an overview of the link definitions. A link definition consists of a **Link Name**, an **Output Pair Name**, a **Probe Element Name** and a **Source Splitting Configuration**. In order to add a link definition, right-click, and select **Add Link** in the context menu. This will open a new window where you can provide the link definition details.
 
 The following restrictions apply:
 
@@ -122,7 +124,7 @@ The following restrictions apply:
 
 To remove a link definition, select the line mentioning the link, right-click to open the context menu, and select **Delete selected row(s)**.
 
-The Links Table can be populated by importing a CSV file. To import a CSV file, right-click the table, and select **Import** in the context menu. Then select a file from the **Link File** drop-down box.Note that only files matching the table definition in the **Documents** **folder** of the **Tektronix Config Manager** are included.
+The Links Table can be populated by importing a CSV file. To import a CSV file, right-click the table, and select **Import** in the context menu. Then select a file from the **Link File** drop-down box. Note that only files matching the table definition in the **Documents** **folder** of the **Tektronix Config Manager** are included.
 
 During an import, a number of checks are performed (the data in the import file is subject to the same restrictions as mentioned above). Also note that in order for a link to be imported, the output pair and probe element name have to be present in the Output Pairs table and Probe Elements Table, respectively.
 
@@ -146,7 +148,9 @@ This page contains an overview of the source elements (i.e. the DataMiner elemen
 In this table:
 
 - The **State** column indicates whether the device is *Available* (i.e. the element is active and is not in timeout state) or *Unavailable*.
-- The toggle button in the **Source Subscription** column allows you to enable or disable SLNet subscriptions for a given source element. In order to retrieve messages from a source element, Source Subscription has to be set to *Enabled*.*Note:* The **SLNet Subscriptions** parameter on the General page needs to be set to *Enabled* before any source element can be subscribed to.
+- The toggle button in the **Source Subscription** column allows you to enable or disable SLNet subscriptions for a given source element.
+  In order to retrieve messages from a source element, Source Subscription has to be set to *Enabled*.
+  *Note:* The **SLNet Subscriptions** parameter on the General page needs to be set to *Enabled* before any source element can be subscribed to.
 
 The **Source Elements Table** is automatically refreshed every 30 minutes. You can also refresh the table manually by pressing the **Refresh** button.
 
@@ -157,7 +161,9 @@ This page contains an overview of the probe elements (i.e. elements in the DataM
 In this table:
 
 - The **State** column indicates whether the probe is *Available* (i.e. the element is active and is not in timeout) or *Unavailable*.
-- The toggle button in the **Source Subscription** column allows you to enable or disable SLNet subscriptions for a given probe. In order to retrieve messages from a probe element, **Source Subscription** has to be set to *Enabled*.*Note:* The **SLNet Subscriptions** parameter on the General page needs to be set to *Enabled* before any probe element can be subscribed to.
+- The toggle button in the **Source Subscription** column allows you to enable or disable SLNet subscriptions for a given probe.
+  In order to retrieve messages from a probe element, **Source Subscription** has to be set to *Enabled*.
+  *Note:* The **SLNet Subscriptions** parameter on the General page needs to be set to *Enabled* before any probe element can be subscribed to.
 
 The **Probe Elements Table** is automatically refreshed every 30 minutes. You can also refresh the table manually by pressing the **Refresh** button.
 
@@ -270,7 +276,8 @@ To edit a DCM configuration:
 To remove one or more DCM configurations:
 
 1.  Select one or more rows in the DCM Configuration table.
-2.  Right-click the selected row(s) and select **Remove** in the context menu.All the selected rows will be removed from the table.
+2.  Right-click the selected row(s) and select **Remove** in the context menu.
+    All the selected rows will be removed from the table.
 
 To export the DCM Configuration table:
 
@@ -417,7 +424,7 @@ To import an RF Pairs Table:
 
 ### Service Detection
 
-This page applies to all three probes. It shows the **Service Configuration Table**,which contains all the services that are configured on each probe in the entire system. The table is refreshed every hour, but can also be refreshed manually at any time with the **Refresh** button. The table can be exported and imported.
+This page applies to all three probes. It shows the **Service Configuration Table**, which contains all the services that are configured on each probe in the entire system. The table is refreshed every hour, but can also be refreshed manually at any time with the **Refresh** button. The table can be exported and imported.
 
 For each service, you can specify an **Alert Template Name** in the corresponding column in this table. These need to be configured in the Alert Template Configuration Table (see "Service Configuration" page). When an alert name has been configured, click the **Apply** button or select Apply in the context menu to configure a service with the corresponding alert for each probe that has that service. If something goes wrong, the error message will be displayed in the **Error Logging Table** below.
 

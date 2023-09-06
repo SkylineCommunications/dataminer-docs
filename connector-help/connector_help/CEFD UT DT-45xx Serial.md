@@ -16,11 +16,11 @@ This is a generic driver for UT-4500, which uses a **serial** connection. The fr
 
 ### Ranges of the driver
 
-| **Driver Range**         | **Description**                                                                                                                                                                                                                                                                                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x                  | Initial version.                                                                                                                                                                                                                                                                                                                                                                                           | No                  | No                      |
-| 2.0.0.x **\[SLC Main\]** | Support for all 4505, 4514 and 4518 models.Configuration via interface (Device Specification page): - Frequency range (mandatory, no default) - Frequency step size (default: 125 KHz) - Attenuation step size (default: 0.25 dB)Fixed "packed configuration state" response.Fixed "equipment type" response.Supports a virtual address in bus address to access converter controlled by backup converter. | No                  | No                      |
-| 2.0.1.x                  | Major update on parameter descriptions.                                                                                                                                                                                                                                                                                                                                                                    | No                  | Yes                     |
+| **Driver Range**         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+|--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x                  | Initial version.                                                                                                                                                                                                                                                                                                                                                                                               | No                  | No                      |
+| 2.0.0.x **\[SLC Main\]** | Support for all 4505, 4514 and 4518 models. Configuration via interface (Device Specification page): - Frequency range (mandatory, no default) - Frequency step size (default: 125 KHz) - Attenuation step size (default: 0.25 dB) Fixed "packed configuration state" response. Fixed "equipment type" response. Supports a virtual address in bus address to access converter controlled by backup converter. | No                  | No                      |
+| 2.0.1.x                  | Major update on parameter descriptions.                                                                                                                                                                                                                                                                                                                                                                        | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This page displays **System Information**, including the**Model Number** and **Date/Time**, as well as the **Device Overall Status**, including the **RF Frequency** and **Attenuation.**
+This page displays **System Information**, including the **Model Number** and **Date/Time**, as well as the **Device Overall Status**, including the **RF Frequency** and **Attenuation.**
 
 ### Config - Converter
 
@@ -67,7 +67,7 @@ Two page buttons, **Program Preset** and **Clear Preset**, allow you to configur
 
 ### Config - Utility
 
-This page contains among others the **Date/Time**and **Circuit ID** parameters.
+This page contains among others the **Date/Time** and **Circuit ID** parameters.
 
 The **Time Synchronization** page button provides access to parameters that can be used to configure the time synchronization.
 

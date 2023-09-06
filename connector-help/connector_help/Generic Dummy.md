@@ -50,7 +50,7 @@ After the interfaces are added externally, internal connections are made between
 
 #### Internal Connections
 
-- Between all interfaces,an internal connection is created after a change is made (externally) on parameter **51000**.
+- Between all interfaces, an internal connection is created after a change is made (externally) on parameter **51000**.
 
 ## Notes
 

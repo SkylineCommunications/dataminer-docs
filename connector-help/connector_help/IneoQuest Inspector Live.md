@@ -134,9 +134,9 @@ This page allows you to configure a **Northbound** entity. Note that some of the
 
 ### Census Data
 
-On this page, the **Census Data** tableshows the list of flows and programs/assets that are currently being monitored in the system.
+On this page, the **Census Data** table shows the list of flows and programs/assets that are currently being monitored in the system.
 
-The page also displays information on **Current Alarms**, in a table that is filled in based on the incoming traps. Via the **Config** page button, you can determine whether rows will be removed or kept in this table when a Clear trap arrives. You can also configure the **List of Considered Events**. The **Event Name** of each of the traps will be validated against this list, and in case the event is part of it, the **Status** column for the relevant **Asset** in the **Census Data** table will change to *Failure* or *Ok*,depending on whether it is a Set or Clear trap.
+The page also displays information on **Current Alarms**, in a table that is filled in based on the incoming traps. Via the **Config** page button, you can determine whether rows will be removed or kept in this table when a Clear trap arrives. You can also configure the **List of Considered Events**. The **Event Name** of each of the traps will be validated against this list, and in case the event is part of it, the **Status** column for the relevant **Asset** in the **Census Data** table will change to *Failure* or *Ok*, depending on whether it is a Set or Clear trap.
 
 Depending on the driver version, an **Override** page button can be available, which displays the alarms that are merged in the **Current Alarms** table. Each trap (Event Name and PIDs) that is received is checked against the rules added in the **Alarm Override** table (**SNMP Event Name** and **Value** columns). If there is a match, the Description (**Display Key \[IDX\]**) and **Severity** of the alarm will be overridden. In case a trap is missed, when the **Alarm Log** is polled, the **Current Alarms** table is verified. Entries from the Alarm Log will be evaluated by comparing the Event Name and PIDs with the **API Event Name** and **Column Value** columns.
 

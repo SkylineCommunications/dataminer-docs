@@ -73,7 +73,7 @@ This page displays the Status for each device input.
 
 This page displays the **Channel Config** and **IP Decode Config** table
 
-The **Channel Config** tableit's possible to find and edit the channel configuration: **Service Name (Channel), Switching Control** and **Alarms.**
+The **Channel Config** table it's possible to find and edit the channel configuration: **Service Name (Channel), Switching Control** and **Alarms.**
 
 The **IP Decode Config** table, it's possible to edit the **Input Mode,** **VLAN**, and **Source/Destination IP Address/Port.**
 

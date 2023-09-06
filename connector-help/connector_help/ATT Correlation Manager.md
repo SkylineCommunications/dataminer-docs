@@ -34,11 +34,11 @@ From this page the user can access the **Threads** pop-up page by means of a pag
 
 ### History
 
-The **History** page displays the **Alarm History** table. This table includes all the alarm notifications that were processed by the ATT Correlation Manager element. Each row in the table represent one processed alarm. For each processed alarm, the table displays the following parameters:**ID,** **Element,** **Parameter,** **Index,** **Severity,** **Value,** **Received** **Timestamp,** **Processed Timestamp**, **Correlation Result** and **Impact.**
+The **History** page displays the **Alarm History** table. This table includes all the alarm notifications that were processed by the ATT Correlation Manager element. Each row in the table represent one processed alarm. For each processed alarm, the table displays the following parameters: **ID,** **Element,** **Parameter,** **Index,** **Severity,** **Value,** **Received** **Timestamp,** **Processed Timestamp**, **Correlation Result** and **Impact.**
 
 The **History** page also includes the **Clear History** button. Clicking this button clears the **Alarm History** table.
 
-From this page the user can access the Auto Clear pop-up page by means of the page button. Thre Auto Clear page allows to enable/disable the auto clear feature and it includes the following parameters:**Clean Up Method,** **Maximum Rows**,**Maximum Age**and **Clear Amount.**
+From this page the user can access the Auto Clear pop-up page by means of the page button. Thre Auto Clear page allows to enable/disable the auto clear feature and it includes the following parameters: **Clean Up Method,** **Maximum Rows**, **Maximum Age** and **Clear Amount.**
 
 ### Configuration
 
@@ -48,7 +48,7 @@ The **Configuration** page also displays a set of toggle buttons used to enable/
 
 ## Revision History
 
-DATEVERSIONAUTHORCOMMENTS25/05/20181.0.0.1 AIG , Skyline Initial Version
+DATE VERSION AUTHOR COMMENTS25/05/2018 1.0.0.1 AIG , Skyline Initial Version
 
 ## Notes
 

@@ -12,11 +12,11 @@ This driver was designed to work with the **Evertz XRF-6L**. With it, you can mo
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
-|------------------|--------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                 | No                  | Yes                     |
-| 2.0.0.x          | Incremental improvements to driver.              | No                  | Yes                     |
-| 2.0.1.x          | Implemented DCF.Changed displayColumn to naming. | Yes                 | Yes                     |
+| **Driver Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
+|------------------|---------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version.                                  | No                  | Yes                     |
+| 2.0.0.x          | Incremental improvements to driver.               | No                  | Yes                     |
+| 2.0.1.x          | Implemented DCF. Changed displayColumn to naming. | Yes                 | Yes                     |
 
 ### Supported firmware versions
 
@@ -113,7 +113,7 @@ Physical dynamic interfaces:
 
 #### Internal Connections
 
-- Between each **Input** and the connected **Output**, as determined by the parameter **Input (Output) (ID:204)**,an internal connection is created.
+- Between each **Input** and the connected **Output**, as determined by the parameter **Input (Output) (ID:204)**, an internal connection is created.
 
 ## Notes
 

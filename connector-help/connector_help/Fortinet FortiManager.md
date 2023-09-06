@@ -10,9 +10,9 @@ The Fortinet FortiManager protocol can be used to monitor the different devices 
 
 ### Version Info
 
-| **Range** | **Key Features**                                       | **Based on** | **System Impact** |
-|-----------|--------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x   | Initial versionFORTINET-FORTIMANAGER-FORTIANALYZER-MIB | \-           | \-                |
+| **Range** | **Key Features**                                        | **Based on** | **System Impact** |
+|-----------|---------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version FORTINET-FORTIMANAGER-FORTIANALYZER-MIB | \-           | \-                |
 
 ### Product Info
 

@@ -20,9 +20,9 @@ The remote gateway elements are created automatically by the **CEFD NetVue Manag
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                      | **Exported Components** |
-|-----------|---------------------|-------------------------|--------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | CEFD NetVue ManagerCEFD NetVue HUB Gateway | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                       | **Exported Components** |
+|-----------|---------------------|-------------------------|---------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | CEFD NetVue Manager CEFD NetVue HUB Gateway | \-                      |
 
 ## Configuration
 

@@ -77,4 +77,4 @@ On this page, you can view **Software Information**. A toggle button allows you 
 
 ### PCI
 
-On this page, you can view **PCI Slots** details.A toggle button allows you to switch polling of this information on or off.
+On this page, you can view **PCI Slots** details. A toggle button allows you to switch polling of this information on or off.

@@ -56,7 +56,7 @@ On the **General** page of the element, you must authenticate to a Kafka broker 
 - **Broker:** The server's address.
 - **SASL User:** The username for use with PLAIN.
 - **SASL Password:** The password for use with PLAIN.
-- **Connect:**Thisbuttonallows you to force the connection to a broker. By default, the driver tries to establish the connection by polling metadata from the broker in order to check the connectivity.
+- **Connect:** This button allows you to force the connection to a broker. By default, the driver tries to establish the connection by polling metadata from the broker in order to check the connectivity.
 
 ### Redundancy
 
@@ -94,7 +94,9 @@ On the Alarms page, the following parameters are available:
 
 - **Pending Alarms Range**: Displays the range of pending alarms to be sent to a non-reachable broker. An internal queue holds pending alarms and resends them once the broker's connection is established. The size of the queue is limited.
 
-- **Bindings Configuration** table: This table lists the inform/trap bindings that will be sent in a JSON-format message to the topic. Keep in mind that the bindings/OIDs defined or imported must match the bindings/OIDs defined in the SNMP Manager configuration. The following options are available via the **right-click menu** of the table:
+- **Bindings Configuration** table: This table lists the inform/trap bindings that will be sent in a JSON-format message to the topic.
+  Keep in mind that the bindings/OIDs defined or imported must match the bindings/OIDs defined in the SNMP Manager configuration.
+  The following options are available via the **right-click menu** of the table:
 
 - **Add New Row**: Allows you to add a new row. You will need to specify the OID and the binding name. Because the OIDs present in the binding's discrete option match the binding's SNMP Forwarding configuration, when a new binding name is defined, the corresponding OID is automatically filled in and vice versa.
   - **Delete Selected Row(s)**: Deletes the selected rows.
@@ -149,7 +151,7 @@ The following parameters are available on this page:
 
 #### Parameters Configuration table
 
-Each configurable row in the table represents a Kafka message that contains a key as the partition key and a value as a JSON object, where the properties are the column values:DataMiner ID, Protocol Name, Element Name, Timestamp, Parameter ID, Parameter Name, and Parameter Value.
+Each configurable row in the table represents a Kafka message that contains a key as the partition key and a value as a JSON object, where the properties are the column values: DataMiner ID, Protocol Name, Element Name, Timestamp, Parameter ID, Parameter Name, and Parameter Value.
 
 Kafka message example:
 
@@ -158,13 +160,18 @@ Kafka message example:
 
 Row configuration example:
 
+![Picture4.svg](~/connector-help/images/Generic_KAFKA_Producer_Picture4.svg)
+
 Based on the current configuration of the highlighted row, the Send Data column cell is set to *Enabled*, meaning that the polling cycle for the parameter with ID 2 is activated. The parameter value is polled from the element "Service test" every minute (as determined by the Forwarding Time column) and the value is only forwarded to the topic if the value changes (as determined by the On Change column). The current value is different from the previous one.
 
 It is possible to add parameters from all the elements with the same protocol name.
 
+![row.svg](~/connector-help/images/Generic_KAFKA_Producer_row.svg)
+
 When you right-click the Parameters Configuration table, the following options are available:
 
 - **Add New Row**: Adds a default row with each cell value set to N/A except the Forwarding Time (with default value 30s), On Change (with default value *If Value Changes*) and Send Data (with default value *Disabled*). To properly set up a row, make sure to define the fields starting from the left-hand side: DataMiner ID first, then Protocol Name, and so on. This is because when you select the DataMiner ID, the discrete options for the Protocol Name are updated with the existing protocols on that DMA. The same occurs when you select a new Protocol Name: the discrete options for the Element Name are also updated.
+  ![1.svg](/SiteAssets/Driver%20Help/Generic%20KAFKA%20Producer/1.svg)![2.svg](~/connector-help/images/Generic_KAFKA_Producer_2.svg)
 - **Enable Selected Row(s)**: The Send Data value will be set to *Enabled*, meaning that the parameter value will be sent to the parameter's topic in a Kafka message.
 - **Disable Selected Row(s)**: The Send Data value will be set to *Disabled*, meaning that the selected parameter values will not be sent to the parameter's topic in a Kafka message.
 - **Delete Selected Row(s)**: Deletes the selected rows.

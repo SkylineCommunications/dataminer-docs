@@ -12,10 +12,10 @@ The model **ALT-C300** is a redundant ALTO amplifier chassis with auto switch be
 
 Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|--------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial version.                                                                                 | Yes                 | Yes                     |
-| 1.0.1.x \[SLC main\] | Based on 1.0.0.3.Fixed validator error regarding table index using discreet as measurement type. | Yes                 | Yes                     |
+| **Driver Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|---------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version.                                                                                  | Yes                 | Yes                     |
+| 1.0.1.x \[SLC main\] | Based on 1.0.0.3. Fixed validator error regarding table index using discreet as measurement type. | Yes                 | Yes                     |
 
 ### Supported firmware versions
 

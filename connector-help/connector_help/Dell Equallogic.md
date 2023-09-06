@@ -74,4 +74,4 @@ This page contains **status information about each controller**. A page button p
 
 ### IP Address
 
-This page contains information about the **IP address entries and interfaces**. The **IF States** page buttondisplays interface status information, while the **INET Addr Entry** page buttons displays IP-related address information.
+This page contains information about the **IP address entries and interfaces**. The **IF States** page button displays interface status information, while the **INET Addr Entry** page buttons displays IP-related address information.

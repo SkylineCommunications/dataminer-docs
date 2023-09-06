@@ -36,3 +36,11 @@ This page displays the **Player Table** with information about the players regis
 ### Enclosure Info
 
 This page displays the **Enclosure Table** with information about the Enclosures (MediaStores) registered for this device. This table has **GUID**, **Name**, **Status**, **Director Name** - which corresponds to the Device Name, **Info Events**, **Warning Events**, **Error Events** and **Critical Events** columns.
+
+
+
+
+
+
+
+

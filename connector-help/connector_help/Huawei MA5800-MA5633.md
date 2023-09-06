@@ -60,7 +60,7 @@ SNMP Settings:
 
 ### General
 
-This page contains general parameters related to the device, such as **Serial Number**, **Software Version**, **Device Name**,etc.
+This page contains general parameters related to the device, such as **Serial Number**, **Software Version**, **Device Name**, etc.
 
 There are also 3 page buttons:
 

@@ -12,12 +12,12 @@ This is an **HTTP** driver that communicates with the **Newtec Dialog System** v
 
 ### Ranges of the driver
 
-| **Driver Range**     | **Description**                                                                                                | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x              | Initial versionThe initial version in this range is deprecated. Use version **1.0.0.2** of this range instead. | No                  | Yes                     |
-| 1.0.1.x              | Improvements to the faults functionality                                                                       | No                  | Yes                     |
-| 1.1.1.x              | Driver has been adapted to new firmware version 2.1.2.                                                         | No                  | Yes                     |
-| 1.1.2.x \[SLC Main\] | Driver has been adapted to work with DMS.                                                                      | No                  | Yes                     |
+| **Driver Range**     | **Description**                                                                                                 | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|-----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x              | Initial version The initial version in this range is deprecated. Use version **1.0.0.2** of this range instead. | No                  | Yes                     |
+| 1.0.1.x              | Improvements to the faults functionality                                                                        | No                  | Yes                     |
+| 1.1.1.x              | Driver has been adapted to new firmware version 2.1.2.                                                          | No                  | Yes                     |
+| 1.1.2.x \[SLC Main\] | Driver has been adapted to work with DMS.                                                                       | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -110,7 +110,7 @@ This page contains a table listing all the alarms related to the **Remotes** **M
 
 ### Hub Networks
 
-This page contains a table that collects information from different tables in the driver such as **Hub Forward**, **Hub Return**, **Satellite Network**, **Hub Module**,and **Remotes.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Networks** within the driver. The table on this page displays the **Hub Return Symbol Rate**, **Hub Forward Booked Bandwidth**, **Nominal MODCOD**, etc.
+This page contains a table that collects information from different tables in the driver such as **Hub Forward**, **Hub Return**, **Satellite Network**, **Hub Module**, and **Remotes.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Networks** within the driver. The table on this page displays the **Hub Return Symbol Rate**, **Hub Forward Booked Bandwidth**, **Nominal MODCOD**, etc.
 
 ### Hub Forward
 
@@ -118,7 +118,7 @@ This page contains a table that collects information from different tables in th
 
 ### Hub Return
 
-This page contains a table that collects information from different tables in the driver such as **Return Link**, **Return Carrier**,and **Return Pool**.The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Return** within the driver. The table on this page displays the **Free Slots**, **Booked Bandwidth**, **Slot Usage**, etc.
+This page contains a table that collects information from different tables in the driver such as **Return Link**, **Return Carrier**, and **Return Pool**. The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Return** within the driver. The table on this page displays the **Free Slots**, **Booked Bandwidth**, **Slot Usage**, etc.
 
 ### Circuits
 
@@ -133,8 +133,8 @@ The table on this page displays the **Hub Forward Traffic**, **Hub Return C/No**
 This page allows you to configure the following critical functionality of the driver:
 
 - **Authentication:** In this section, the username and password must be specified that allow the data to be retrieved from the **Newtec Dialog System**.
-- **Import/export configuration**: Allows you to export a configuration file to the **VSAT Database**,which will then create a **provisioning** **file**. This file can then be imported using the **import** feature, so that specific fields within the **Circuits Table** can be populated.
-- **Ping configuration**:Allows you to enable the ping feature, which pings each **Remote** present in the driver. You can also select the **VLAN** that you want to ping and the **Processing Time**, in order to determine how often the ping will occur.
+- **Import/export configuration**: Allows you to export a configuration file to the **VSAT Database**, which will then create a **provisioning** **file**. This file can then be imported using the **import** feature, so that specific fields within the **Circuits Table** can be populated.
+- **Ping configuration**: Allows you to enable the ping feature, which pings each **Remote** present in the driver. You can also select the **VLAN** that you want to ping and the **Processing Time**, in order to determine how often the ping will occur.
 - **Other settings:** Includes the **File Handling**, which is associated with the **Import/Export Configuration** feature. This allows you to control whether the **import** and **export file** are processed by the driver. The **Circuit Request Size** allows you to specify how many **Circuits** will be retrieved in a single call.
 - **SLA & fault configuration:** Allows you to enable or disable the ability to update SLA & fault configuration parameters automatically. This section also includes a timer that allows you to select how frequently the updates should occur.
 
@@ -160,7 +160,7 @@ The overview table on this page contains among others the **Orbital Position**, 
 
 This page contains information regarding the **CPM Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
-The overview table on this page contains among others the **Total Bandwidth**, **Locked** and**Amp Instance ID** columns.
+The overview table on this page contains among others the **Total Bandwidth**, **Locked** and **Amp Instance ID** columns.
 
 ### HRC MXDMA RCG
 
@@ -170,7 +170,7 @@ The overview table on this page contains among others the **Login Symbol Rate**,
 
 ### HRC SCPC RCG
 
-This page contains information regarding the **HRC SCPC** **Return Capacity Group**of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
+This page contains information regarding the **HRC SCPC** **Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
 The overview table on this page contains among others the **EIRP Tracking Static Margin**, **Max MODCOD,** and **Locked** columns.
 
@@ -194,15 +194,15 @@ In the table on this page, you can among others find the **Forward Class Pool**,
 
 ### FP Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool**within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool ** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPL Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool L1**within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool L1 ** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPCI Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool Class L1**within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool Class L1** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Return Pool
 
@@ -320,7 +320,7 @@ The overview table on this page contains among others the **Version**, **Type,**
 
 This page contains critical information regarding the **Enclosure Device** of the **Newtec Dialog System**. This information is retrieved via the **SOAP API**.
 
-In the table on this page, you can among others find the **Asset Tag**, **Spare Part Number** and **Server Blade Presence**columns.
+In the table on this page, you can among others find the **Asset Tag**, **Spare Part Number** and **Server Blade Presence** columns.
 
 ### Enclosure Device Alarms
 
@@ -330,7 +330,7 @@ This page contains a table listing all the alarms related to the **Enclosure Dev
 
 This page contains critical information regarding the **Microsoft Server** of the **Newtec Dialog System**. This information is retrieved via the **SOAP API**.
 
-The page contains the **MS Server**, **Processors**,and **Ports List tables**, which include parameters such as **Total Handles**, **Total Threads,** and **Last Time Sync.**
+The page contains the **MS Server**, **Processors**, and **Ports List tables**, which include parameters such as **Total Handles**, **Total Threads,** and **Last Time Sync.**
 
 ### MSS Alarms
 
@@ -340,7 +340,7 @@ This page contains a table listing all the alarms related to the **Microsoft Ser
 
 This page contains critical information regarding the **Linux Server** of the **Newtec Dialog System**. This information is retrieved via the **SOAP API**.
 
-The page contains the **Linux Server** and **Storage Table** tables, which include parameters such as **Total Memory Usage**and **Type.**
+The page contains the **Linux Server** and **Storage Table** tables, which include parameters such as **Total Memory Usage** and **Type.**
 
 ### LXS Alarms
 
@@ -400,7 +400,7 @@ In the table on this page, you can among others find the **Receive Bitrate**, **
 
 ### CSES Alarms
 
-This page contains a table listing all the alarms related to the **CSE Shaper**within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **CSE Shaper** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### CPMCTL Controller
 
@@ -534,7 +534,7 @@ The overview table on this page contains among others the **Locked**, **Service 
 
 ### IPv4 API Alarms
 
-This page contains a table listing all the alarms related to the **IPv4 Address Pool**within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **IPv4 Address Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### IPv6 Address Pool
 

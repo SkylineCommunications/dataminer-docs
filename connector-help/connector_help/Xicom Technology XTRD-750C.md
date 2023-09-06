@@ -64,4 +64,4 @@ This page contains the controller's alarm reading, with parameters such as **Sum
 
 ### Alarm Settings
 
-This page contains the controller's alarm settings, with parameters such as **Min/Max/Reflected Power Alarm**,and **Min/Max/Reflected** **Power Fault**.
+This page contains the controller's alarm settings, with parameters such as **Min/Max/Reflected Power Alarm**, and **Min/Max/Reflected** **Power Fault**.

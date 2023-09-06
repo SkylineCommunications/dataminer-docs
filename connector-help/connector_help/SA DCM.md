@@ -34,19 +34,20 @@ Note that the two connectors are not compatible.
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                    |
-|-----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | \-                                                                                                                                                        |
-| 2.0.0.x   | Before connector version 2.0.0.51, only firmware versions below 16.10 are supported.Connector version 2.0.0.52 adds support for firmware 16.10 and above. |
-| 2.0.1.x   | \-                                                                                                                                                        |
-| 2.0.2.x   | Firmware version below 16.10                                                                                                                              |
-| 3.0.0.x   | \-                                                                                                                                                        |
+| **Range** | **Supported Firmware**                                                                                                                                     |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | \-                                                                                                                                                         |
+| 2.0.0.x   | Before connector version 2.0.0.51, only firmware versions below 16.10 are supported. Connector version 2.0.0.52 adds support for firmware 16.10 and above. |
+| 2.0.1.x   | \-                                                                                                                                                         |
+| 2.0.2.x   | Firmware version below 16.10                                                                                                                               |
+| 3.0.0.x   | \-                                                                                                                                                         |
 
 ## Configuration
 
 ### Prerequisites
 
-For this connector, Visual C++ 2008 (or 2010) Redistributional must be installed. To verify whether this program has been installed, go to: Control Panel \> Programs and Features. If the program has not been installed yet, you can download it from microsoft.com.
+For this connector, Visual C++ 2008 (or 2010) Redistributional must be installed. To verify whether this program has been installed, go to: Control Panel \> Programs and Features.
+If the program has not been installed yet, you can download it from microsoft.com.
 
 ### Installation
 
@@ -54,9 +55,11 @@ The SA DCM connector is more than just an XML protocol file. It comes with multi
 
 To install the DataMiner package:
 
-1.  Copy the upgrade package to one of the DMAs and double-click it.This will start the upgrade procedure.
+1.  Copy the upgrade package to one of the DMAs and double-click it.
+    This will start the upgrade procedure.
 2.  Do not modify the standard upgrade settings.
-3.  Upload the protocol or, if available, install the protocol package.All required files should now be installed and ready for use.
+3.  Upload the protocol or, if available, install the protocol package.
+    All required files should now be installed and ready for use.
 
 Note: The .dmupgrade package does not install the XML protocol itself, only the extra DLLs. The Protocol.xml file will be delivered along with the package and can be installed in the same way as any other protocol.
 
@@ -106,7 +109,8 @@ Test the connection again before you continue.
 
 #### Verifying the IIOP credentials
 
-Depending on the firmware version of the device, you may need to enable and configure IIOP settings to ensure that the DCM will allow external communication. Older versions (V8) have IIOP automatically enabled and use "guest" as username and password. However, for newer versions (V10, V12) it must be enabled, and the latest versions (V14, V15) may need different settings on several pages.
+Depending on the firmware version of the device, you may need to enable and configure IIOP settings to ensure that the DCM will allow external communication.
+Older versions (V8) have IIOP automatically enabled and use "guest" as username and password. However, for newer versions (V10, V12) it must be enabled, and the latest versions (V14, V15) may need different settings on several pages.
 
 To verify the IIOP credentials:
 
@@ -122,15 +126,19 @@ Test the connection again before you continue.
 
 #### Verifying the DLLs
 
-The connector requires several DLLs in order to function properly.Check if all files mentioned below are in the correct location in the system.
+The connector requires several DLLs in order to function properly.
+Check if all files mentioned below are in the correct location in the system.
 
 - In the folder "*C:\Skyline DataMiner\Files*":
 
 - omniORB416_vc10_rt.dll
   - omnithread34_vc10_rt.dll
-  - SLDCM Full 2.0.0.X .dll orSLDCM L 1.0.0.X .dll
+  - SLDCM Full 2.0.0.X .dll
+    or
+    SLDCM L 1.0.0.X .dll
 
-> In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/result/driver/2048). Not all records specify all required DLLs; usually they contain only the DLLs that have a version number. If even these are not mentioned, there were no changes to the DLLs. If so, you should look for the previous version of the connector until you find a record mentioning the DLL names. However, you should only look for versions in the same range.
+> In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/result/driver/2048).
+> Not all records specify all required DLLs; usually they contain only the DLLs that have a version number. If even these are not mentioned, there were no changes to the DLLs. If so, you should look for the previous version of the connector until you find a record mentioning the DLL names. However, you should only look for versions in the same range.
 
 The newest version may also need the following files:
 
@@ -139,7 +147,8 @@ The newest version may also need the following files:
 - IIOPChannel.dll
   - SL_API_CISCO_D9900_IIOP.NET.dll
 
-If a file is missing, run the upgrade package again and verify if the DLLs are present.If the problem persists, contact Skyline in order to obtain the required DLLs.
+If a file is missing, run the upgrade package again and verify if the DLLs are present.
+If the problem persists, contact Skyline in order to obtain the required DLLs.
 
 #### Verifying network traffic
 
@@ -155,7 +164,8 @@ Verify if the prerequisites are installed: Visual C++ 2008 (or 2010) Redistribut
 
 If you have tried all the previous steps and there is still no data in the DCM, check the log file. It is possible that the reason for the problem is clearly indicated in the log file. Usually it can be found somewhere at the end and is repeated several times. If there are no errors or it is not clear how to fix the errors, contact your Skyline Communications Technical Account Manager and send them the log file.
 
-The log file can be found in "*C:\Skyline Dataminer\Logging\\ElementName\].txt*".You can also find it in Cube:
+The log file can be found in "*C:\Skyline Dataminer\Logging\\ElementName\].txt*".
+You can also find it in Cube:
 
 1.  In the **Surveyor**, click **Start \>** **Apps** \> **Logging**. This will open a new card.
 2.  Select **Elements** and select the name of the element in the list.
@@ -164,7 +174,7 @@ The log file can be found in "*C:\Skyline Dataminer\Logging\\ElementName\].txt*"
 
 ### General
 
-This page contains device information parameters such as **System Name**, **Serial Number**,and **Software Version**. There is also a table, **Module Info**, which lists all detected parts on the controller and cards with their version info.
+This page contains device information parameters such as **System Name**, **Serial Number**, and **Software Version**. There is also a table, **Module Info**, which lists all detected parts on the controller and cards with their version info.
 
 There is also a page button, **IIOP Login**, that leads to a window where you can configure the **IIOP** **Login Name** and **IIOP Password**. These are used to log on to an OS account. Note that this OS account is not the same account used to access the web interface. Also, make sure that the OS account in question has IIOP enabled. (See the Initialization section above.)
 
@@ -181,7 +191,8 @@ In this version, the page also contains two other important parameters:
 - *Yes* means that there is no communication with the device at all. This can be because a firewall blocks all traffic, the IP address is wrong, the device is offline, or the Ethernet cable is unplugged.
   - *No* means that there is an IIOP-enabled device at the specified end point. If the device does not seem to work, and there is no network error, the problem is usually caused by wrong credentials.
 
-- **Action After Network Error:**Network errors are typically not solved quickly and require manual interaction to fix the problem. This means that continuing the normal poll cycle can cause an avoidable, unnecessary use of resources. Especially in older versions, a network error could severely affect the polling of other elements. For instance, because of bad locking policies, all elements could wait for the timeout of an element during logon, which could take 20 seconds. This would entail that all other elements would not poll during those 20 seconds. In more recent versions, all communication to the device is **asynchronous**, so that this problem cannot occur.
+- **Action After Network Error:**
+  Network errors are typically not solved quickly and require manual interaction to fix the problem. This means that continuing the normal poll cycle can cause an avoidable, unnecessary use of resources. Especially in older versions, a network error could severely affect the polling of other elements. For instance, because of bad locking policies, all elements could wait for the timeout of an element during logon, which could take 20 seconds. This would entail that all other elements would not poll during those 20 seconds. In more recent versions, all communication to the device is **asynchronous**, so that this problem cannot occur.
 
 - *None* is the default value. This means that the device will keep polling as usual.
   - *Reduce Polling* is an alternative where only the alarms are polled until the network problem is solved.
@@ -191,13 +202,13 @@ In this version, the page also contains two other important parameters:
 
 This page contains a table displaying the transrater settings.
 
-It contains the columns **On ID**, **Group Name, Type**, **Input Service Bitrate**, **Output Service Bitrate**,and **Compression**.
+It contains the columns **On ID**, **Group Name, Type**, **Input Service Bitrate**, **Output Service Bitrate**, and **Compression**.
 
 ### TS Backup
 
 This page contains an overview table with the backup settings on transport stream level.
 
-Available fields are **Input TS ID**, **Revertive**, **Main - Backup Delay**, **Backup - Main Delay**,and the **Active TS**.
+Available fields are **Input TS ID**, **Revertive**, **Main - Backup Delay**, **Backup - Main Delay**, and the **Active TS**.
 
 ### Service Backup
 
@@ -224,7 +235,8 @@ Packet counters can be retrieved for all packet types in case:
 - Single Port Hitless Merge is enabled, or
 - Hitless Merge over Separate Ports is enabled.
 
-In general, the **Missing Packets before Error Correction** counters are only increased for streams of which stream-specific settings have a non-zero threshold value (limited to **at most** **32** main TS per port pair).If no error correction is configured, only the **Valid Packet** counters and the **Missing Packets after Error Correction** counters are increased. The **Fixed Packet** counters are only increased if FEC protection is used.
+In general, the **Missing Packets before Error Correction** counters are only increased for streams of which stream-specific settings have a non-zero threshold value (limited to **at most** **32** main TS per port pair).
+If no error correction is configured, only the **Valid Packet** counters and the **Missing Packets after Error Correction** counters are increased. The **Fixed Packet** counters are only increased if FEC protection is used.
 
 Note:
 
@@ -258,7 +270,8 @@ On this page, a table lists the following information about IGMP:
 - **Filter Type:**
 
 - *Include*: An Include source list contains the IP addresses from which multi-cast reception is allowed.
-  - *Exclude*: An Exclude source list contains the IP addresses from which multi-cast reception is not allowed.Note: In an **IGMPv2** environment, the **Filter** parameter must be set to ***Exclude***.
+  - *Exclude*: An Exclude source list contains the IP addresses from which multi-cast reception is not allowed.
+    Note: In an **IGMPv2** environment, the **Filter** parameter must be set to ***Exclude***.
 
 - **Filter List:** A list containing comma-separated filter items.
 
@@ -272,6 +285,7 @@ The native interface for the device. The client machine has to be able to access
 
 This connector uses a non-standard communication protocol to interact with the device. As a result, the stream viewer will not contain any traffic even if everything works correctly. The best way to verify the communication is to open the log file after setting the **Info Logging Level** to *Level 1*. With these settings, the connector will log each start and end as well as potential errors in the log file.
 
-All IIOP communication happens on port 5003, regardless of the port configured in the element wizard.The SNMP interface is only used in case there is a timeout when Slow Poll is activated. At this point, the connector may poll the "System Name" only to verify the connection status. (This parameter is not displayed in the UI.)
+All IIOP communication happens on port 5003, regardless of the port configured in the element wizard.
+The SNMP interface is only used in case there is a timeout when Slow Poll is activated. At this point, the connector may poll the "System Name" only to verify the connection status. (This parameter is not displayed in the UI.)
 
 Because of limitations of the communication framework, it is **not possible to poll the same IP address from multiple elements on the same DMA**. Doing so can in the worst case **result in runtime errors and require a restart** of the main software to recover. If this happens, all elements using the omni orb framework may be affected by this problem (including Cisco DCM elements and Cisco D9036 elements.) You may be able to work around this by using traffic redirection with third-party software.

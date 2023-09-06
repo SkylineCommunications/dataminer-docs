@@ -36,7 +36,8 @@ This is a virtual driver. Its data is retrieved from the Surveyor or from Visual
 
 This page displays the **Desk Table**, with all info regarding the different desks. At startup, this information is retrieved from the desk view properties of all desks found in the sites view.
 
-A new desk can be added via a pop-up page. On this page, you need to specify the **Desk Index**, **MAC** **Address**, **Name** and **Site**. The values of these last three parameters can also be changed in the table. The other column values can be set using the buffer strings from the Visual Overview: **Connection Status**, **Type**, **Selected Scenario Name** and **User Name**.
+A new desk can be added via a pop-up page. On this page, you need to specify the **Desk Index**, **MAC** **Address**, **Name** and **Site**. The values of these last three parameters can also be changed in the table.
+The other column values can be set using the buffer strings from the Visual Overview: **Connection Status**, **Type**, **Selected Scenario Name** and **User Name**.
 
 You can also remove a desk with the **Remove** button at the end of the desk row. With the **Refresh Table** button, you can update the Desk Table data with any changes from the desk views.
 

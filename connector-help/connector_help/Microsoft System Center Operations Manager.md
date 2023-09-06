@@ -4,7 +4,8 @@ uid: Connector_help_Microsoft_System_Center_Operations_Manager
 
 # Microsoft System Center Operations Manager
 
-**Microsoft System Center Operations Manager** (**SCOM**) is a cross-platform data center monitoring system for operating systems and hypervisors. With this driver, a connection is made to the server hosting the SCOM application to extract monitoring information to DataMiner.Polling happens via the SCOM DLLs (SDK binaries).
+**Microsoft System Center Operations Manager** (**SCOM**) is a cross-platform data center monitoring system for operating systems and hypervisors. With this driver, a connection is made to the server hosting the SCOM application to extract monitoring information to DataMiner.
+Polling happens via the SCOM DLLs (SDK binaries).
 
 ## About
 
@@ -16,9 +17,9 @@ uid: Connector_help_Microsoft_System_Center_Operations_Manager
 
 ### Product Info
 
-| **Range** | **Supported Firmware**                                                                                                                                                           |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Microsoft.EnterpriseManagement.Core.dll - 7.5.7487.142Microsoft.EnterpriseManagement.OperationsManager.dll - 7.2.12150.0Microsoft.EnterpriseManagement.Runtime.dll - 7.2.11719.0 |
+| **Range** | **Supported Firmware**                                                                                                                                                             |
+|-----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | Microsoft.EnterpriseManagement.Core.dll - 7.5.7487.142 Microsoft.EnterpriseManagement.OperationsManager.dll - 7.2.12150.0 Microsoft.EnterpriseManagement.Runtime.dll - 7.2.11719.0 |
 
 ### System Info
 
@@ -68,7 +69,9 @@ The data can also be accessed in table form on the **Servers**, **Alerts** or **
 
 Polling intervals can be configured on the **Settings** page. Note that you can also use filters for the **Events** and **Alerts**. With these filters, you can limit the displayed data to what you want to view.
 
-In the **Categories** table, you can define custom categories. This will be a first logical level for organizing the listed servers (i.e. the top level in the tree view).Uncategorized servers are displayed under the *Default* category. For each category, you can choose to *enable* or *disable* DVE creation.To **add**, **rename** or **remove** **categories**, right-click the table to use its context menu.
+In the **Categories** table, you can define custom categories. This will be a first logical level for organizing the listed servers (i.e. the top level in the tree view).
+Uncategorized servers are displayed under the *Default* category. For each category, you can choose to *enable* or *disable* DVE creation.
+To **add**, **rename** or **remove** **categories**, right-click the table to use its context menu.
 
 To link the servers to a certain category, change the value in the **Category Link** column of the **Servers** table.
 

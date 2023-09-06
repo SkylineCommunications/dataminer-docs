@@ -26,8 +26,8 @@ This driver polls information about the **Rohde Schwarz NetCCU800 1+1** in gener
 
 | **Exported Protocol**                                                                          | **Description**                                     |
 |------------------------------------------------------------------------------------------------|-----------------------------------------------------|
-| [Rohde Schwarz NetCCU800 1+1 TxA](xref:Connector_help_Rohde_Schwarz_NetCCU800_1+1_TxA) | Exported driver containing info about transmitter A |
-| [Rohde Schwarz NetCCU800 1+1 TxB](xref:Connector_help_Rohde_Schwarz_NetCCU800_1+1_TxB) | Exported driver containing info about transmitter B |
+| [Rohde Schwarz NetCCU800 1+1 TxA](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxA) | Exported driver containing info about transmitter A |
+| [Rohde Schwarz NetCCU800 1+1 TxB](xref:Connector_help_Rohde_Schwarz_NetCCU800_1%2B1_TxB) | Exported driver containing info about transmitter B |
 
 ## Installation and configuration
 

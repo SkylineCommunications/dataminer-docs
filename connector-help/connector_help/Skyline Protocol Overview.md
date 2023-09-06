@@ -10,9 +10,9 @@ With the **Skyline Protocol Overview** driver you can parse multiple protocol fi
 
 ### Version Info
 
-| **Range**                  | **Key Features**                                                                                                                                                                                                                                                                                        | **Based on** | **System Impact** |
-|----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.X\[SLC Main\]1.0.1.X | Initial VersionParse XML versionhistory; Metric on number of found matches; Support for XPath filters; Refresh more Efficient; CancelButtons; Search case-insensitive; Support code library in detection for manipulates external elements; Add indexed items - Class Library & Community Class Library | -1.0.0.5     | --                |
+| **Range**                    | **Key Features**                                                                                                                                                                                                                                                                                         | **Based on** | **System Impact** |
+|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.X \[SLC Main\] 1.0.1.X | Initial Version Parse XML versionhistory; Metric on number of found matches; Support for XPath filters; Refresh more Efficient; CancelButtons; Search case-insensitive; Support code library in detection for manipulates external elements; Add indexed items - Class Library & Community Class Library | \- 1.0.0.5   | \- -              |
 
 ### Product Info
 

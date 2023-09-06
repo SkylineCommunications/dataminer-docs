@@ -30,4 +30,4 @@ This connector is used by DVEs that are **automatically generated** when DVE cre
 
 ### General
 
-This page contains system information parameters, such as the **Software Version**, **Hardware Version**, **Model Name**, **Serial Number**,**Module Temperature**,and **QRRX Lasers Table**.
+This page contains system information parameters, such as the **Software Version**, **Hardware Version**, **Model Name**, **Serial Number**, **Module Temperature**, and **QRRX Lasers Table**.

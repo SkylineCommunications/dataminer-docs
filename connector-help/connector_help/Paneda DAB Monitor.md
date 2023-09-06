@@ -66,6 +66,6 @@ The web interface is only accessible when the client machine has network access 
 
 On the **General** page of this connector, you can initialize the **API Token** and **DAB Monitor ID** to be able to poll data. The page also shows the state of the specified monitor.
 
-The **Debug** pagecontains basic information about the communication with the device, as well as specific logs for every entry.
+The **Debug** page contains basic information about the communication with the device, as well as specific logs for every entry.
 
 The **Transport Aggregated Data** page contains aggregated telemetry information from the DAB monitor for the transport layer, as well as a button for clearing the counters.

@@ -12,10 +12,10 @@ By means of a tree view, the driver displays all streams, services and PIDs. The
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.This range uses the Round Robin type scheduler from Rohde Schwarz. | No                  | No                      |
-| 2.0.0.x          | Based on full review of range 1.0.0.x. This range only uses the DVMS directly.     | No                  | No                      |
+| **Driver Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version. This range uses the Round Robin type scheduler from Rohde Schwarz. | No                  | No                      |
+| 2.0.0.x          | Based on full review of range 1.0.0.x. This range only uses the DVMS directly.      | No                  | No                      |
 
 ### Supported firmware versions
 

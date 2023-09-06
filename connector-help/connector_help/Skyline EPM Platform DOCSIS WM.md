@@ -22,9 +22,9 @@ The Skyline EPM Platform DOCSIS WF is a configuration manager protocol that conv
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                              | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | \- The *EPMBeToWm* and *WmToEPMBe* Automation scripts- Skyline EPM Platform DOCSIS | \-                      |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                               | **Exported Components** |
+|-----------|---------------------|-------------------------|-------------------------------------------------------------------------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \- The *EPMBeToWm* and *WmToEPMBe* Automation scripts - Skyline EPM Platform DOCSIS | \-                      |
 
 ## Configuration
 
@@ -36,15 +36,15 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-For a **Skyline EPM DOCSIS WM** element to function, the **Skyline EPM Platform** solution and a **Passive Retrieval** element (e.g. Telefonica por Cable S.A de C.V. Geomarketing DB)must be installed in the DMS. The EPM solution and Passive Retrieval elements create the necessary input CSV files.
+For a **Skyline EPM DOCSIS WM** element to function, the **Skyline EPM Platform** solution and a **Passive Retrieval** element (e.g. Telefonica por Cable S.A de C.V. Geomarketing DB) must be installed in the DMS. The EPM solution and Passive Retrieval elements create the necessary input CSV files.
 
 In addition, the following scripts must be installed: **EPMBeToWm** and **WmToEPMBe.** These are required for the communication between the **Skyline EPM Platform DOCSIS** back end and the **Skyline EPM Platform DOCSIS WF** element.
 
 Two Correlation rules must be created to activate each of these Automation scripts:
 
 - Both Correlation rules must **accept information events**.
-- The first Correlation rule must have the alarm filter**Parameter description (by protocol)**equal to *Skyline EPM Platform DOCSIS* on the parameter *Workflow on change event.* This rule must activate the script **EPMBeToWm**.
-- The second Correlation rule must have the alarm filter **Parameter description (by protocol)**equal to *Skyline EPM Platform DOCSIS WM* on parameter *BE on change event.* This rule must activate the script **WmToEPMBe**.
+- The first Correlation rule must have the alarm filter **Parameter description (by protocol)** equal to *Skyline EPM Platform DOCSIS* on the parameter *Workflow on change event.* This rule must activate the script **EPMBeToWm**.
+- The second Correlation rule must have the alarm filter **Parameter description (by protocol)** equal to *Skyline EPM Platform DOCSIS WM* on parameter *BE on change event.* This rule must activate the script **WmToEPMBe**.
 
 For more information on how to configure Correlation rules, refer to the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_4/correlation/correlation.htm).
 
@@ -52,7 +52,8 @@ Finally, to begin using the **Skyline EPM Platform DOCSIS WF** element, go to th
 
 ## How to use
 
-When everything has been configured correctly as described in the "Initialization" section above, the Skyline EPM DOCSIS WM element will be able to receive requests to create the compatible passives CSV files from a back-end element of the **Skyline EPM Platform** solution.It can create compatible node, amplifier, tap and subscriber CSV files.
+When everything has been configured correctly as described in the "Initialization" section above, the Skyline EPM DOCSIS WM element will be able to receive requests to create the compatible passives CSV files from a back-end element of the **Skyline EPM Platform** solution.
+It can create compatible node, amplifier, tap and subscriber CSV files.
 
 On the **General** page, the **Workflow Table** is displayed. This table contains the latest workflow requests that have been made by the **back-end** element with their results.
 

@@ -21,11 +21,11 @@ The transport stream analyzer makes it possible to monitor the incoming transpor
 
 ### Product Info
 
-| **Range**      | **Supported Firmware** |
-|----------------|------------------------|
-| 1.0.0.x1.0.1.x | \-                     |
-| 1.1.0.x        | 2.5.3                  |
-| 1.1.1.x        | 2.5.3                  |
+| **Range**       | **Supported Firmware** |
+|-----------------|------------------------|
+| 1.0.0.x 1.0.1.x | \-                     |
+| 1.1.0.x         | 2.5.3                  |
+| 1.1.1.x         | 2.5.3                  |
 
 ### System Info
 
@@ -97,7 +97,7 @@ On this page, the multiplex data can be monitored. In addition, you can also con
 
 On this page, you can view several DVB modulator alarm parameters and configure the DVB settings.
 
-There are five page buttons: **DVB-S**, **DVB-S2**, **DVB-S2 ACM**, **Equalizer Linear**,and **Equalizer Non Linear**. Each of the subpages shows a more detailed overview of the DVB modulator as well as some settings.
+There are five page buttons: **DVB-S**, **DVB-S2**, **DVB-S2 ACM**, **Equalizer Linear**, and **Equalizer Non Linear**. Each of the subpages shows a more detailed overview of the DVB modulator as well as some settings.
 
 ### Input Selection
 
@@ -156,7 +156,7 @@ This page displays the ASI Output **Measured TS Bit Rate**. It also allows you t
 
 This page displays the following tables:
 
-- **Mgmt Interface Table**: Contains information about the management interfaces, such asthe **Interface Name** and **State**. Also allows you to configure the **IP Address** and **Virtual IP Address** of the interfaces.
+- **Mgmt Interface Table**: Contains information about the management interfaces, such as the **Interface Name** and **State**. Also allows you to configure the **IP Address** and **Virtual IP Address** of the interfaces.
 - **Ethernet Link Management Table**: Contains information about the management Ethernet interfaces, such as the **Name** and **Link State**. Also allows you to configure the MAS Address, Advertised Speeds, Forced Speed, MTU, etc.
 - **Ethernet Management Statistics Table**: Contains statistics about the management Ethernet interfaces, such as **Input/Output Bytes**, **Input/Output Packets**, and **Input/Output Dropped Packets**.
 
@@ -217,4 +217,4 @@ This page can be used to access the web interface of the device. Note that the c
 
 ### Alarms
 
-This page displays all the alarm parameters of the Newtec M6100, including **General**, **ASI**, **TS Mux**,and **Modulator Alarms**.
+This page displays all the alarm parameters of the Newtec M6100, including **General**, **ASI**, **TS Mux**, and **Modulator Alarms**.

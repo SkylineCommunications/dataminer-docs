@@ -32,7 +32,7 @@ SNMP Settings:
 
 ### System Management
 
-This page displays general information about the system, such as the **System Description**, **System Name**,**System Location**, etc.
+This page displays general information about the system, such as the **System Description**, **System Name**, **System Location**, etc.
 
 The **SNMP Info** page button displays several counters: **SNMP Incoming Packets**, **SNMP Incoming Bad Values**, **SNMP Outgoing Set Requests**, **SNMP Outgoing Traps**, etc.
 
@@ -52,7 +52,7 @@ This page contains parameters related to the TCP layer: **TCP Retrans Timeout Al
 
 This page displays parameters such as **UDP Incoming Datagrams** and **UDP Incoming Errors**.
 
-It also contains the **UDP Table**,which indicates the **UDP Local Address** and the **UDP Local Port** for each UDP listener**.**
+It also contains the **UDP Table**, which indicates the **UDP Local Address** and the **UDP Local Port** for each UDP listener**.**
 
 ### EGP Management
 
@@ -85,7 +85,7 @@ This page displays all events in the **Event Table.** For each event, the follow
 
 ### Alarm
 
-On this page, the **Alarm Table** displays information concerning the alarms,including the **Alarm Level**and the **Alarm Elevate.**
+On this page, the **Alarm Table** displays information concerning the alarms, including the **Alarm Level** and the **Alarm Elevate.**
 
 In addition, the **Set Alarm Table** allows you to adjust the alarm level and the alarm hardware indication delay with the columns **Sal Level** and **Sal Delay.**
 
@@ -125,7 +125,7 @@ This page contains a table where you can edit the **IO Name** for each input/out
 
 This page contains the following tables:
 
-- **RS232 Table**: Allows you to edit the **COM Mode**,the **COM Echo**,the **COM EOL** (*CR, LF, CRLF)*,and the **COM Baud**.
+- **RS232 Table**: Allows you to edit the **COM Mode**, the **COM Echo**, the **COM EOL** (*CR, LF, CRLF)*, and the **COM Baud**.
 - **COM Parameter Table**: Allows you to define a **COM Timeout** in seconds for each **COM Type**.
 
 ### SNMP Manager
@@ -138,7 +138,7 @@ The page buttons **SNMPv2** and **SNMPv3** display the following information: th
 
 This page contains the parameters **System PBO**, **System Reset Clock**, **System Operational Mode**, **System TL1 Format**, **System Event Login** and **System ACO.**
 
-It also contains the **Sys Keep Alive Table**, which provides the **Sys Alive Time** (*trap period*) for each **Sys Alive Type** (*TL1 session*or *SNMP session*).
+It also contains the **Sys Keep Alive Table**, which provides the **Sys Alive Time** (*trap period*) for each **Sys Alive Type** (*TL1 session* or *SNMP session*).
 
 ### Users
 

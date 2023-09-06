@@ -61,11 +61,11 @@ It also contains a subpage with the **Enable/Disable Traps** functionality for t
 
 ### Reserve Transmitters
 
-This page contains the **Reserve Transmitters Table**,which displays the **Name**, **Status Detection**, **Output Connection Route**, **ASI Input**, **Operation Mode**, **Ready State**, **Alarm State**, **Fault State**, **Communication State**, **ASI Input Control**, **ON/OFF Control** and **Reset Control**. On this page, the DVEs for each of the reserve transmitters can be created.
+This page contains the **Reserve Transmitters Table**, which displays the **Name**, **Status Detection**, **Output Connection Route**, **ASI Input**, **Operation Mode**, **Ready State**, **Alarm State**, **Fault State**, **Communication State**, **ASI Input Control**, **ON/OFF Control** and **Reset Control**. On this page, the DVEs for each of the reserve transmitters can be created.
 
 ### Main Transmitters
 
-This page contains the **Main Transmitters Table**,which displays the **Name**, **Status Detection**, **Output Connection Route**, **Operation State**, **Operation Mode**, **Coaxial Switch Fault**, **Alarm Status**, **Fault Status**, **Tx Channel**, **Priority Antenna Status**, **ON/OFF Control** and **Reset Control**. On this page, the DVEs for each of the main transmitters can be created.
+This page contains the **Main Transmitters Table**, which displays the **Name**, **Status Detection**, **Output Connection Route**, **Operation State**, **Operation Mode**, **Coaxial Switch Fault**, **Alarm Status**, **Fault Status**, **Tx Channel**, **Priority Antenna Status**, **ON/OFF Control** and **Reset Control**. On this page, the DVEs for each of the main transmitters can be created.
 
 ### Embedded Web Server
 

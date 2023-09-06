@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 The connector uses **serial** commands to request and push information to and from the node. This communication can be seen in the **Stream Viewer**.
 
-The **Alarm Limits**, **Status**,and **Alarms** pages contain the most important parameters for monitoring.
+The **Alarm Limits**, **Status**, and **Alarms** pages contain the most important parameters for monitoring.
 
 The **Spectrum** and **Ingress** pages can be used to monitor and import real-time spectrum and ingress measurements that are being performed on the node.
 

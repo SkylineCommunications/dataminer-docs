@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ### General Page
 
-Thispage displays parameters such as:
+This page displays parameters such as:
 
 - **BC4 CPU Temperature**
 - **BC4 Motherboard Temperature**
@@ -37,7 +37,7 @@ Thispage displays parameters such as:
 
 ### Alarms
 
-Thispage displays a table with the device's trap alarms and three parameters, which can be used to perform different actions:
+This page displays a table with the device's trap alarms and three parameters, which can be used to perform different actions:
 
 - **Clear Alarms**: Clears all alarms present in the table.
 - **Clear Table**: Empties the table.

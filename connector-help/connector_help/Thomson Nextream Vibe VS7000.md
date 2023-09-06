@@ -75,15 +75,16 @@ This page contains the **Node Table**.
 
 ### Jobs
 
-This page displays the **Jobs List Table**.From device firmware version 4.0.0.0 and driver version 1.1.0.1 onwards, this table has new parameters.
+This page displays the **Jobs List Table**.
+From device firmware version 4.0.0.0 and driver version 1.1.0.1 onwards, this table has new parameters.
 
 Via the **Job Information** page button, you can find more detailed information about each job on the device.
 
 In version **1.1.0.x**, there is a **Custom Display Key** parameter that allows you to customize the Job Table's display key.
 
-From version **1.1.1.5** onwards, a **Create Job** buttonis available, which starts a wizard that allows you to create and configure the WorkFlow that will be used for the job. The wizard uses the Automation script *Thomson_Nextream_Vibe_VS7000_New_Job.*
+From version **1.1.1.5** onwards, a **Create Job** button is available, which starts a wizard that allows you to create and configure the WorkFlow that will be used for the job. The wizard uses the Automation script *Thomson_Nextream_Vibe_VS7000_New_Job.*
 
-From version **1.1.1.6** onwards, a **Manage** buttonis available in the **Job Table**, which starts a wizard that allows you to configure the WorkFlow parameters that will be used for the job. The wizard uses the Automation script *Thomson_Nextream_Vibe_VS7000_Manage_Job.*
+From version **1.1.1.6** onwards, a **Manage** button is available in the **Job Table**, which starts a wizard that allows you to configure the WorkFlow parameters that will be used for the job. The wizard uses the Automation script *Thomson_Nextream_Vibe_VS7000_Manage_Job.*
 
 ### Alarms
 

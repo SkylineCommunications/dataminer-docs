@@ -73,4 +73,5 @@ The element created with this connector has the following data pages:
 - **Product Information**: This page displays the **Product Information**, **Modules**, and **Remote Maintenance** tables.
 - **Traps**: This page displays the **Traps Destination** table.
 - **Alarms**: This page displays the **Error Status** table. This table is both polled and updated based on traps. The table is cleared when a "Coldstart" trap is received.
-- **NMI**: This page contains specific NMI interface data such as **Protocol Version**, **System ID**, **Control Point ID**, **IP Checksum Errors**, **UDP Checksum Errors**, **TCP Checksum Errors**, **NMI Discard Packets**, and **NMI Checksum Last Change**. It also contains page buttons that provide access to additional NMI data.
+- **NMI**: This page contains specific NMI interface data such as **Protocol Version**, **System ID**, **Control Point ID**, **IP Checksum Errors**, **UDP Checksum Errors**, **TCP Checksum Errors**, **NMI Discard Packets**, and **NMI Checksum Last Change**.
+  It also contains page buttons that provide access to additional NMI data.

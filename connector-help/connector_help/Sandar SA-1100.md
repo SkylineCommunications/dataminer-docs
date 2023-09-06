@@ -32,7 +32,7 @@ SNMP Settings:
 
 ### General Page
 
-This page displays general information about the device, such as **System Description**,**Active Input** and **Contact**.
+This page displays general information about the device, such as **System Description**, **Active Input** and **Contact**.
 
 ### Interfaces Page
 

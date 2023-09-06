@@ -127,7 +127,7 @@ On this page, general logging information is displayed: **OS Version, Hardware V
 
 The following page buttons are available:
 
-- You can use the **Input 1** page button to monitor the **Input 1 Standard**, the **Input 1 Type, Input 1 Audio 1 1, Input 1 Audio 4 2**, etc.The **Input 2** subpage is similar but applies to input 2.
+- You can use the **Input 1** page button to monitor the **Input 1 Standard**, the **Input 1 Type, Input 1 Audio 1 1, Input 1 Audio 4 2**, etc. The **Input 2** subpage is similar but applies to input 2.
 - The **Output 1** page button displays logging for the **Output 1 Type, Output 1 State, Output 1 Std**, etc.
 - The **GPI** page button shows the state of the GPIs 1 to 4.
 - The **RollCall** page button shows the state of the RollCalls 1 to 4.

@@ -8,7 +8,7 @@ This driver is used to monitor IMCI Open-I XL devices, i.e. **SNMP-based Network
 
 ## About
 
-With this driver, it is possible to monitor IMCI Open-I XLdevices, such as the **IMCI Open-I 200XL** and **1000XL series**,with **SNMP**.
+With this driver, it is possible to monitor IMCI Open-I XL devices, such as the **IMCI Open-I 200XL** and **1000XL series**, with **SNMP**.
 
 The different parameters from the device are displayed on multiple pages according to the subject of the parameters.
 
@@ -76,7 +76,7 @@ This page displays a table with the **interface** states and configuration setti
 
 ### Ext Services Page
 
-This page displays a table with the **external services**and configuration settings for the services.
+This page displays a table with the **external services** and configuration settings for the services.
 
 ### Access Page
 
@@ -101,8 +101,8 @@ This page displays a table with the current **serial sessions**.
 
 ### Analog Input Page
 
-This page displays a table with the **analog inputs** of the systemand configuration settings for the analog inputs.
+This page displays a table with the **analog inputs** of the system and configuration settings for the analog inputs.
 
 ### Event Correlation Page
 
-This page displays a table with the **event correlations**.It is also possible to enable or disable event correlation here.
+This page displays a table with the **event correlations**. It is also possible to enable or disable event correlation here.

@@ -46,7 +46,7 @@ This page contains the **Service Element Status** table, which displays informat
 
 ### Activation
 
-This pageincludes all relevant parameters taken into account for the **dynamic monitoring** of elements.
+This page includes all relevant parameters taken into account for the **dynamic monitoring** of elements.
 
 - **Service Status**: This parameter toggles the monitoring of elements.
 

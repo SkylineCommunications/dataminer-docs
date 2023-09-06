@@ -61,7 +61,7 @@ It also contains a page button to the **Polling** subpage, where you can find th
 
 ### Switch Control
 
-This page contains the tables **TS Input Switches Table**,**Seamless Switch Config Table**,and **TS Input Switch Details**. It also contains the **Switch Relay Current Position** and **Switch Relay Control Mode** configuration parameters.
+This page contains the tables **TS Input Switches Table**, **Seamless Switch Config Table**, and **TS Input Switch Details**. It also contains the **Switch Relay Current Position** and **Switch Relay Control Mode** configuration parameters.
 
 This page includes page buttons to the following subpages:
 

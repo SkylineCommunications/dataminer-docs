@@ -18,9 +18,9 @@ An HTTP connection is used to retrieve information from the software. Data is re
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version** |
-|------------------|-----------------------------|
-| 1.0.0.x          | Firmware: 3.8.22API: 1.10.2 |
+| **Driver Range** | **Device Firmware Version**  |
+|------------------|------------------------------|
+| 1.0.0.x          | Firmware: 3.8.22 API: 1.10.2 |
 
 ## Installation and configuration
 
@@ -55,7 +55,7 @@ This page contains a table with the different partitions available within the sy
 This page is divided into two sections, **Jobs Overview** and **Job List Overview**:
 
 - **Job Overview** contains overall information about the jobs within the software, for example the **Total** number of jobs, the **Jobs Completed**, **Jobs Failed** and **Jobs Aborted.**
-- **Job List Overview** is a table that contains all the jobsin the system with more details about each one, for example its **State**, **Progress**, **Start Time** and **Estimated End Time.**
+- **Job List Overview** is a table that contains all the jobs in the system with more details about each one, for example its **State**, **Progress**, **Start Time** and **Estimated End Time.**
 
 The page also contains a page button **Job Stats**, which displays the following information:
 

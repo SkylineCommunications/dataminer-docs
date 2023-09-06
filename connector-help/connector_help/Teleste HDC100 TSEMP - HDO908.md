@@ -39,11 +39,11 @@ Via the **Alarm Limits HDO908** page button, you can access the **Analog Alarm L
 
 This page contains parameters related to the **Laser**, such as **Output Mode,** **Laser Bias Current**, **Laser Output Power**, **Laser Temperature**, etc. It also contains the **Initial Factory Values** parameter.
 
-It is recommended to refresh the page after setting the **Output Mode**,since it can take some time for the values to be updated after the set.
+It is recommended to refresh the page after setting the **Output Mode**, since it can take some time for the values to be updated after the set.
 
 ### RF
 
-This page contains parameters related to **Input 1** and **Input 2** (**State**, **Attenuator**, **Equalizer**, etc.), as well as the **Adjustment Mode** and **APC Settings**parameters**.**
+This page contains parameters related to **Input 1** and **Input 2** (**State**, **Attenuator**, **Equalizer**, etc.), as well as the **Adjustment Mode** and **APC Settings** parameters**.**
 
 ## Usage (Range 4.0.0.x)
 

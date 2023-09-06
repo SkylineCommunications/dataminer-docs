@@ -8,7 +8,8 @@ The **HP 3PAR StoreServ** driver monitors a unit using SNMP and an HTTP connecti
 
 ## About
 
-The **HP 3PAR StoreServ** driver updates an alarm table every 5 seconds, receives traps from the device and displays them in three tables.It also monitors several parameters and tables using an HTTP connection.
+The **HP 3PAR StoreServ** driver updates an alarm table every 5 seconds, receives traps from the device and displays them in three tables.
+It also monitors several parameters and tables using an HTTP connection.
 
 ### Ranges of the driver
 
@@ -74,7 +75,7 @@ This page displays the **Storage System Table**, with information about the **Li
 
 ### Fibre Channel Ports
 
-This page displays the **Fibre Channel Table**,with information about the **Fibre Channel Ports**.
+This page displays the **Fibre Channel Table**, with information about the **Fibre Channel Ports**.
 
 ### SAS Ports
 

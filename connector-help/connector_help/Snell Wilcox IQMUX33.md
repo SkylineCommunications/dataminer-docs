@@ -117,7 +117,7 @@ You can use the RollTrack settings to:
 
 ### System-Setup
 
-This page displays general information (e.g. **Slot Number**, **Serial Number**,.).
+This page displays general information (e.g. **Slot Number**, **Serial Number**, .).
 
 On this page, you can also **Restart** the unit or to reset it to the **Default Settings**.
 

@@ -41,9 +41,10 @@ This page contains all the standard **SNMP** data related to the system (name, c
 It also contains four page buttons that open the following subpages:
 
 - **Unit Status**: This page contains a table with a row for each Power Supply Unit in the system (main and backup).
-- **Amp Status**: This page contains a table with two rows: a row for the splitter amplifier system and a row for the combiner amplifier system. The amplifier status is displayed in the column **Amp Mon Status** (*OK*/*main path failed*/*both paths failed*/*Not Powered* Or *Monitored*). **Amp Mon Report**allows you to enable/disable trap reports.
+- **Amp Status**: This page contains a table with two rows: a row for the splitter amplifier system and a row for the combiner amplifier system. The amplifier status is displayed in the column **Amp Mon Status** (*OK*/*main path failed*/*both paths failed*/*Not Powered* Or *Monitored*). **Amp Mon Report** allows you to enable/disable trap reports.
 - **Trap Settings**: This page allows you to change the **trap** settings. You can enable/disable the trap reports, specify to which **IP address** traps must be sent and choose the **community string**. When a trap is received by the element, DataMiner will immediately poll the data from the device to update the status. No alarms are shown when a trap is received.
-- **IP Settings**: This page allows you to change the network parameters of the monitoring unit.Note: Each change to the parameters requires a reset of the unit.
+- **IP Settings**: This page allows you to change the network parameters of the monitoring unit.
+  Note: Each change to the parameters requires a reset of the unit.
 
 ### Web Interface
 

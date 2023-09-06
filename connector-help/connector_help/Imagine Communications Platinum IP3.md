@@ -2,6 +2,8 @@
 uid: Connector_help_Imagine_Communications_Platinum_IP3
 ---
 
+
+
 # Imagine Communications Platinum IP3
 
 This device is a rack-sized expandable matrix. The **Platinum IP3** provides matrix expandability beyond 8x8 to 576x1024 in a single 28RU frame, with very flexible configuration in terms of input, output and control modules. The system can be composed of up to six frames with a final matrix size of 1152x3072. Each IP3 frame can accommodate up to 576 inputs across 64 modular input slots, and 1024 wideband outputs distributed across 65 output slots.
@@ -72,7 +74,7 @@ This page contains a table with all the **outputs**, with their **description** 
 
 ### Layouts
 
-On this page, you can **add** **layouts** to the **table**,which will then be available in the **Monitors** **table**. The page allows you to **delete** **everything** or only the **layouts** that **are not used**.
+On this page, you can **add** **layouts** to the **table**, which will then be available in the **Monitors** **table**. The page allows you to **delete** **everything** or only the **layouts** that **are not used**.
 
 You can also **import** **a CSV file** to populate the table.
 

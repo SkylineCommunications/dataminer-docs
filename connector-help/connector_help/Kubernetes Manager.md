@@ -10,13 +10,13 @@ This is a generic Kubernetes connector that allows full container-based operatio
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                    | **Based on** | **System Impact**                                                                                |
-|----------------------|---------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version Kubelet API v1.6                                                                                    | \-           | \-                                                                                               |
-| 1.1.0.x              | Kubelet API v1.7                                                                                                    | \-           | \-                                                                                               |
-| 1.2.0.x              | Kubelet API v1.11Oboslete  See 1.2.2.x                                                                              | \-           | \-                                                                                               |
-| 1.2.1.x              | Protocol type change from Virtual to HTTP. Added HTTP connection to the element configuration.Oboslete  See 1.2.2.x | \-           | The element will need to be adjusted to use the correct connections.                             |
-| 1.2.2.x \[SLC Main\] | Parameter discrete updates for 'Conditions table'.Based on 1.2.1.5.                                                 | 1.2.1.5      | Parameter discrete updates for 'Conditions table'. Possible impact on trend and alarm templates. |
+| **Range**            | **Key Features**                                                                                                     | **Based on** | **System Impact**                                                                                |
+|----------------------|----------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version Kubelet API v1.6                                                                                     | \-           | \-                                                                                               |
+| 1.1.0.x              | Kubelet API v1.7                                                                                                     | \-           | \-                                                                                               |
+| 1.2.0.x              | Kubelet API v1.11 Oboslete  See 1.2.2.x                                                                              | \-           | \-                                                                                               |
+| 1.2.1.x              | Protocol type change from Virtual to HTTP. Added HTTP connection to the element configuration. Oboslete  See 1.2.2.x | \-           | The element will need to be adjusted to use the correct connections.                             |
+| 1.2.2.x \[SLC Main\] | Parameter discrete updates for 'Conditions table'. Based on 1.2.1.5.                                                 | 1.2.1.5      | Parameter discrete updates for 'Conditions table'. Possible impact on trend and alarm templates. |
 
 ### Product Info
 
@@ -75,6 +75,8 @@ In this range, a virtual connection is used with HTTPS support via QAction. Data
 
 To set up the connection, enter the Kubernetes server address and a valid bearer token on the General page, as depicted below.
 
+![2019-03-08 13_14_47-Window.png](~/connector-help/images/Kubernetes_Manager_2019-03-08_13_14_47-Window.png)
+
 ### Creation (v1.2.1.x and v1.2.2.x)
 
 #### HTTP Connection - Main
@@ -88,6 +90,8 @@ HTTP CONNECTION:
 - **Device address**: The device address (default: *ByPassProxy*).
 
 To set up the connection, enter a valid bearer token on the General page, as depicted below. If the token is valid, the Authorization State will change to "Authorized".
+
+![kubernetesManagerSetupV1.2.1.x.png](~/connector-help/images/Kubernetes_Manager_kubernetesManagerSetupV1.2.1.x.png)
 
 ### Web Interface (v1.0.0.x and v1.1.0.x)
 
@@ -115,7 +119,7 @@ This page contains a table summarizing each deployment and its status.
 
 ### Pods
 
-This page contains a tree control with all **PODs** and their properties. You can navigate through **Conditions**, **Containers**,and **Events**.
+This page contains a tree control with all **PODs** and their properties. You can navigate through **Conditions**, **Containers**, and **Events**.
 
 ### Services
 

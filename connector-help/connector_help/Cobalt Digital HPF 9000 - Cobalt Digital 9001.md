@@ -10,9 +10,9 @@ The Cobalt Digital 9001 is an exported DVE SNMP card for a modular frame. The ca
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial Version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial Version  | \-           | \-                |
 
 ### Product Info
 
@@ -22,9 +22,9 @@ The Cobalt Digital 9001 is an exported DVE SNMP card for a modular frame. The ca
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                        | **Exported Components** |
-|-----------|---------------------|-------------------------|------------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x   | No                  | Yes                     | [Cobalt Digital HPF 9000](xref:Connector_help_Cobalt_Digital_HPF_9000) |                         |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                      |
+|-----------|---------------------|-------------------------|-----------------------|------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     |                       | [Cobalt Digital HPF 9000](xref:Connector_help_Cobalt_Digital_HPF_9000) |
 
 ## Configuration
 
@@ -43,3 +43,5 @@ There is no redundancy defined.
 ## How to use
 
 This dynamic virtual element is created by the SNMP driver Cobalt Digital HPF 9000 via a toggle button. The user can toggle DVE creation for the specific card in the slot which exports the information virtually.
+
+

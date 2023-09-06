@@ -8,7 +8,8 @@ The **7860IM2-HD** is a device for performing signal monitoring and analysis on 
 
 ## About
 
-The driver is an **SNMP** driver that can change the configuration of the device and the signalsand it monitors the incoming signals of the device. **Alarming** is enabled for the configuration parameters and for the incoming signals.
+The driver is an **SNMP** driver that can change the configuration of the device and the signals
+and it monitors the incoming signals of the device. **Alarming** is enabled for the configuration parameters and for the incoming signals.
 
 ## Installation and configuration
 
@@ -34,11 +35,13 @@ The driver is an **SNMP** driver that can change the configuration of the device
 
 ### General
 
-Specific to the device you can see the **FPGA build number** and the **Factory Reset** allows you to reset the device to the factory settings**.**You can control the path of the signal and can check the **GPI**, **VANC** and **Split display** parameters through the **pagebuttons**.
+Specific to the device you can see the **FPGA build number** and the **Factory Reset** allows you to reset the device to the factory settings**.**
+You can control the path of the signal and can check the **GPI**, **VANC** and **Split display** parameters through the **pagebuttons**.
 
 ### Video
 
-On the video page, there are four tables used for the configuration of the video stream.There's a button that brings you to the **Subtitle detection page**, where you can set the configuration for the subtitles.
+On the video page, there are four tables used for the configuration of the video stream.
+There's a button that brings you to the **Subtitle detection page**, where you can set the configuration for the subtitles.
 
 ### IntelliTrak
 

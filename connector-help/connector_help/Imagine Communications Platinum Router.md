@@ -23,7 +23,7 @@ This driver requires **DataMiner version 8.5.3** or higher.
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
-| 1.1.0.x1.1.2.x   | Unknown                     |
+| 1.1.0.x 1.1.2.x  | Unknown                     |
 
 ## Installation and configuration
 
@@ -38,7 +38,8 @@ SERIAL CONNECTION:
 - **IP address/host**: The polling IP of the device.
 - **IP port**: The default value is *52116*.
 - **Bus address**: A one-based number between 1 and 16, 16 included. Defines the level that is monitored by the driver.
-- **Ignore** the **Timeout of a single command** and **Number of retries** settings (the latter should be *0*).(Note: it is possible to configure an element timeout in the **Advanced element settings**.)
+- **Ignore** the **Timeout of a single command** and **Number of retries** settings (the latter should be *0*).
+  (Note: it is possible to configure an element timeout in the **Advanced element settings**.)
 
 #### SNMP secondary connection
 
@@ -53,7 +54,8 @@ SNMP CONNECTION:
 
 ### Configuration in case the matrix remains empty
 
-In case the matrix remains empty after you have created the element, check if the IP address, bus address and port are correct. Also verify if the DataMiner software is version 8.0.5.4 or later.If this is the case and all settings seem correct, check the element log file and verify if there is no firewall blocking traffic on port 52116.
+In case the matrix remains empty after you have created the element, check if the IP address, bus address and port are correct. Also verify if the DataMiner software is version 8.0.5.4 or later.
+If this is the case and all settings seem correct, check the element log file and verify if there is no firewall blocking traffic on port 52116.
 
 ## Usage
 
@@ -63,7 +65,8 @@ On this page, you can view the status of the device matrix, and make changes to 
 
 ### Table View Page (version 1.1.0.3 onwards)
 
-On this page, you can view a table representation of the matrix, and you can also set a crosspoint or disconnect it.This is only available if the appropriate setting is configured on the **Configuration Page**.
+On this page, you can view a table representation of the matrix, and you can also set a crosspoint or disconnect it.
+This is only available if the appropriate setting is configured on the **Configuration Page**.
 
 ### Configuration Page
 
@@ -82,7 +85,8 @@ On this page, you can view the status of the device matrix, and make changes to 
 
 ### Table View Page
 
-On this page, you can view a table representation of the matrix, and you can also set a crosspoint or disconnect it.This is only available if the appropriate setting is configured on the **Configuration Page**.
+On this page, you can view a table representation of the matrix, and you can also set a crosspoint or disconnect it.
+This is only available if the appropriate setting is configured on the **Configuration Page**.
 
 ### Configuration Page
 
@@ -111,4 +115,5 @@ For inputs to be shown, you must enable the **Poll State** of the outputs on the
 - All sets are (currently) done ONLY on the level that is being monitored.
 - It is possible to hide some inputs and outputs from the matrix. To do so, go to the **Configuration** page and set the **Matrix Resize Method** to *Manual.* Then set the **Number of Inputs Visible** to the number you want to see. The same applies for the outputs. When you do this, only the first chosen number of inputs and outputs will be visible in the matrix.
 - The maximum number of inputs and outputs is 640.
-- When you set the **Matrix Resize Method** to *Automatic*, the driver will query the dimensions of the matrix and show only the first N and M inputs and outputs.From version 1.1.0.3 onwards, there is also a **Table View Page**, which shows a Table View of the matrix, and allows you to connect or disconnect crosspoints.
+- When you set the **Matrix Resize Method** to *Automatic*, the driver will query the dimensions of the matrix and show only the first N and M inputs and outputs.
+  From version 1.1.0.3 onwards, there is also a **Table View Page**, which shows a Table View of the matrix, and allows you to connect or disconnect crosspoints.

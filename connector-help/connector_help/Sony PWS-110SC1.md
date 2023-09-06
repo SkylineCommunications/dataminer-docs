@@ -15,11 +15,11 @@ The Sony PWS-110SC1 is a vision mixer controller to which different cards can be
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                              | **Based on** | **System Impact**                                                                                                        |
-|----------------------|-----------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version.                                                                              | \-           | \-                                                                                                                       |
-| 1.0.1.x              | Support for monitoring of Sony 2110 devices.Support for manual deletion and creation of DVEs. | 1.0.0.24     | Columns of Device table renamed.NMI table renamed to IP IV Interfaces table; columns were also renamed.NMI page renamed. |
-| 1.0.2.x \[SLC Main\] | Added DCF support                                                                             | 1.0.1.9      | \-                                                                                                                       |
+| **Range**            | **Key Features**                                                                               | **Based on** | **System Impact**                                                                                                          |
+|----------------------|------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.                                                                               | \-           | \-                                                                                                                         |
+| 1.0.1.x              | Support for monitoring of Sony 2110 devices. Support for manual deletion and creation of DVEs. | 1.0.0.24     | Columns of Device table renamed. NMI table renamed to IP IV Interfaces table; columns were also renamed. NMI page renamed. |
+| 1.0.2.x \[SLC Main\] | Added DCF support                                                                              | 1.0.1.9      | \-                                                                                                                         |
 
 ### Product Info
 
@@ -30,11 +30,11 @@ The Sony PWS-110SC1 is a vision mixer controller to which different cards can be
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                              |
-|-----------|---------------------|-------------------------|-----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000Sony PWS-110SC1 - MKS-X2700Sony PWS-110SC1 - MKS-X7011Sony PWS-110SC1 - MKS-X7099Sony PWS-110SC1 - XVS-7000Sony PWS-110SC1 - XVS-6000Sony PWS-110SC1 - XVS-9000Sony PWS-110SC1 - MKS-X7700 |
-| 1.0.1.x   | No                  | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000Sony PWS-110SC1 - MKS-X2700Sony PWS-110SC1 - MKS-X7011Sony PWS-110SC1 - MKS-X7099Sony PWS-110SC1 - XVS-7000Sony PWS-110SC1 - XVS-6000Sony PWS-110SC1 - XVS-9000Sony PWS-110SC1 - MKS-X7700 |
-| 1.0.2.x   | Yes                 | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000Sony PWS-110SC1 - MKS-X2700Sony PWS-110SC1 - MKS-X7011Sony PWS-110SC1 - MKS-X7099Sony PWS-110SC1 - XVS-7000Sony PWS-110SC1 - XVS-6000Sony PWS-110SC1 - XVS-9000Sony PWS-110SC1 - MKS-X7700 |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components**                                                                                                                                                                                                     |
+|-----------|---------------------|-------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000 Sony PWS-110SC1 - MKS-X2700 Sony PWS-110SC1 - MKS-X7011 Sony PWS-110SC1 - MKS-X7099 Sony PWS-110SC1 - XVS-7000 Sony PWS-110SC1 - XVS-6000 Sony PWS-110SC1 - XVS-9000 Sony PWS-110SC1 - MKS-X7700 |
+| 1.0.1.x   | No                  | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000 Sony PWS-110SC1 - MKS-X2700 Sony PWS-110SC1 - MKS-X7011 Sony PWS-110SC1 - MKS-X7099 Sony PWS-110SC1 - XVS-7000 Sony PWS-110SC1 - XVS-6000 Sony PWS-110SC1 - XVS-9000 Sony PWS-110SC1 - MKS-X7700 |
+| 1.0.2.x   | Yes                 | Yes                     | \-                    | Sony PWS-110SC1 - XVS-8000 Sony PWS-110SC1 - MKS-X2700 Sony PWS-110SC1 - MKS-X7011 Sony PWS-110SC1 - MKS-X7099 Sony PWS-110SC1 - XVS-7000 Sony PWS-110SC1 - XVS-6000 Sony PWS-110SC1 - XVS-9000 Sony PWS-110SC1 - MKS-X7700 |
 
 ## Configuration
 

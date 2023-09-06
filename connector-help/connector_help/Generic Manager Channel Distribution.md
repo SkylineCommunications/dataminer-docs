@@ -8,7 +8,8 @@ This driver comes with a WFM app that should be used as the main user interface.
 
 ## About
 
-The driver implements the logic used by the Channel Substitution WFM. It allows the user to perform sets on other elements, and provides a central location to do so.There are currently two main parts in this driver:
+The driver implements the logic used by the Channel Substitution WFM. It allows the user to perform sets on other elements, and provides a central location to do so.
+There are currently two main parts in this driver:
 
 - One to manage Matrix drivers from multiple vendors. This part is not used, and as such also not documented.
 - One to manage services managed by Cisco DCM devices.
@@ -27,13 +28,15 @@ Simply create a new element with a unique name. Technically, only one element on
 
 Optionally, on the element's **General** page, set the email addresses and the pagers (separated by a semicolon).
 
-When using the driver with DCM redundancy groups, also add the desired redundancy groups on the **DCM** page by setting the name in the parameter **Add Redundancy Group**.Note that the available drop-down lists will only be populated after you click the **Refresh** button in the bottom right corner. Also make sure to set the **Group Filter** in the **DCM Redundancy Groups** table. Group filters can be used to define which ports and boards on the DCM can be used to retrieve and show services.
+When using the driver with DCM redundancy groups, also add the desired redundancy groups on the **DCM** page by setting the name in the parameter **Add Redundancy Group**.
+Note that the available drop-down lists will only be populated after you click the **Refresh** button in the bottom right corner. Also make sure to set the **Group Filter** in the **DCM Redundancy Groups** table. Group filters can be used to define which ports and boards on the DCM can be used to retrieve and show services.
 
 Note: You can optionally override the group filter by specifying a filter in the **DCM Elements** table.
 
 ### Installing the WFM
 
-The WFM comes as a separate DLL (SLChannelSubstitutionWfm.dll) and should be provided together with the driver. It must be installed in the same folder as where the protocol is stored (which typically will be the Production version folder), e.g. *C:\Skyline DataMiner\Protocols\Generic Manager Channel Distribution\1.0.0.7\\*There should be an upgrade package available that will automatically install the DLL on all DMAs. If this is not the case, it may be necessary to do this manually.
+The WFM comes as a separate DLL (SLChannelSubstitutionWfm.dll) and should be provided together with the driver. It must be installed in the same folder as where the protocol is stored (which typically will be the Production version folder), e.g. *C:\Skyline DataMiner\Protocols\Generic Manager Channel Distribution\1.0.0.7\\*
+There should be an upgrade package available that will automatically install the DLL on all DMAs. If this is not the case, it may be necessary to do this manually.
 
 ### Using the WFM
 
@@ -55,9 +58,12 @@ This page contains the original logic that is used to manage matrix drivers.
 
 The most important parameters are:
 
-- **Full Email To**Can be used to send detailed information about sets performed on another element by this element.
-- **Short Email To**Can be used to send a summary of the full email.
-- **Pager**Can be used to send a message to a pager, to inform about a set done by the element.
+- **Full Email To**
+  Can be used to send detailed information about sets performed on another element by this element.
+- **Short Email To**
+  Can be used to send a summary of the full email.
+- **Pager**
+  Can be used to send a message to a pager, to inform about a set done by the element.
 
 ### DCM
 
@@ -65,9 +71,11 @@ Supported since version 1.0.0.7.
 
 To add or remove redundancy groups in the system, use the **Add Redundancy Group** and **Remove Redundancy Group** parameters. A drop-down list containing all valid options will be available after you click the **Refresh** button at the bottom of the page. The **Remove All** button will remove all entries from the table.
 
-There is a table, **DCM Redundancy Groups**, listing all selected redundancy groups. For each redundancy group, it shows the name, the description, the group filter and the type of redundancy used. (However, currently only one type of redundancy is supported, i.e. "one on one". With this type of redundancy, the driver assumes that each service on the main has exactly one equivalent service on the backup.) The default value for the group filter used to be *Not implemented,* excluding all ports until otherwise defined, but this has changed to *\*.\** in version 1.0.0.12, including all ports on the targeted devices.
+There is a table, **DCM Redundancy Groups**, listing all selected redundancy groups.
+For each redundancy group, it shows the name, the description, the group filter and the type of redundancy used. (However, currently only one type of redundancy is supported, i.e. "one on one". With this type of redundancy, the driver assumes that each service on the main has exactly one equivalent service on the backup.) The default value for the group filter used to be *Not implemented,* excluding all ports until otherwise defined, but this has changed to *\*.\** in version 1.0.0.12, including all ports on the targeted devices.
 
-There is also a second table, **DCM Elements**,listing all DCM elements found in the imported redundancy groups.For each element, the name and the element active status are shown, as well as their role in the redundancy group (primary or backup) and the ID of the redundancy group they belong to. The most important column in this table is the **DCM Filter**, which by default is set to *Inherited.* In most cases, this is fine, but it is possible to have another filter depending on the element in the redundancy group.
+There is also a second table, **DCM Elements**, listing all DCM elements found in the imported redundancy groups.
+For each element, the name and the element active status are shown, as well as their role in the redundancy group (primary or backup) and the ID of the redundancy group they belong to. The most important column in this table is the **DCM Filter**, which by default is set to *Inherited.* In most cases, this is fine, but it is possible to have another filter depending on the element in the redundancy group.
 
 Note:
 
@@ -86,9 +94,11 @@ This button will remove items that are no longer in a redundancy group, add new 
 
 This page contains the interface used by the WFM. It can also be used to test if everything works fine.
 
-- To get a list of virtual DCM elements, set something (no matter what) in the field **Refresh DCM List**. This will update the data in the **Export Interface: Virtual DCM List**.
+- To get a list of virtual DCM elements, set something (no matter what) in the field **Refresh DCM List**.
+  This will update the data in the **Export Interface: Virtual DCM List**.
 
-- To get the output services from one virtual element, copy the name to the parameter **Get Output Services For**.This will update the parameter **Export Interface: Output Service List**.
+- To get the output services from one virtual element, copy the name to the parameter **Get Output Services For**.
+  This will update the parameter **Export Interface: Output Service List**.
 
 - To get the backup services for one output service, copy the key of the output service found in the table **Output Service List** to the parameter **Get Backup Services For**.
 
@@ -96,28 +106,46 @@ This page contains the interface used by the WFM. It can also be used to test if
 
 - To activate an alternate source, set the parameter **Activate Alternating Source** with a command containing these parameters, separated by a new line or semicolon:
 
-- KEY:\[KEY\]Key of the backup service as found in the **Backup Service List.**Contains dataminer ID, element ID, and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
-  - SERVICENAME:\[NAME\]Used in the emails.
-  - USERNAME:\[NAME\]Used in the emails.
-  - DEVICENAME:\[NAME\]Used in the emails.
-  - MAINSERVICENAME:\[NAME\]Used in the emails.
+- KEY:\[KEY\]
+    Key of the backup service as found in the **Backup Service List.**
+    Contains dataminer ID, element ID, and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
+  - SERVICENAME:\[NAME\]
+    Used in the emails.
+  - USERNAME:\[NAME\]
+    Used in the emails.
+  - DEVICENAME:\[NAME\]
+    Used in the emails.
+  - MAINSERVICENAME:\[NAME\]
+    Used in the emails.
 
 - To activate a backup service, set the **Activate Backup Service** parameter with a command containing some of these parameters, separated by a new line or a semicolon:
 
-- KEY:\[KEY\]Key of the backup service as found in the **Backup Service List**.Contains dataminer ID, element ID and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
-  - DERIVED-KEY:\[KEY\]Key of the backup service formatted in the same way as in the **Backup Service List**, but using the element ID of the derived/virtual element representing the active element in the redundancy group.Note: Cannot be combined with the KEY argument.Note: It is possible that the active element changes, and the KEY will point to a wrong value.
-  - MASKFOR:\[TIME\]\[OPTIONAL\] Valid TimeSpan, example: *00:01:30*
-  - SERVICENAME:\[NAME\]Used in the emails.
-  - ACTION:deactivate\[OPTIONAL\] Add only if the main service should be activated instead.
-  - USERNAME:\[NAME\]Used in the emails.
-  - MERGEDSERVICENAME:\[NAME\]Used in the emails.
-  - MAINSERVICENAME:\[NAME\]Used in the emails.
+- KEY:\[KEY\]
+    Key of the backup service as found in the **Backup Service List**.
+    Contains dataminer ID, element ID and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
+  - DERIVED-KEY:\[KEY\]
+    Key of the backup service formatted in the same way as in the **Backup Service List**, but using the element ID of the derived/virtual element representing the active element in the redundancy group.
+    Note: Cannot be combined with the KEY argument.
+    Note: It is possible that the active element changes, and the KEY will point to a wrong value.
+  - MASKFOR:\[TIME\]
+    \[OPTIONAL\] Valid TimeSpan, example: *00:01:30*
+  - SERVICENAME:\[NAME\]
+    Used in the emails.
+  - ACTION:deactivate
+    \[OPTIONAL\] Add only if the main service should be activated instead.
+  - USERNAME:\[NAME\]
+    Used in the emails.
+  - MERGEDSERVICENAME:\[NAME\]
+    Used in the emails.
+  - MAINSERVICENAME:\[NAME\]
+    Used in the emails.
 
 Note: Each set should also result in an update of the **WFM Status** parameter. If something went wrong, the error will be visible there.
 
 ### Alarm Suppression
 
-Contains a table displaying all current alarm suppression requests.This table is filled when a WFM command is received to activate a backup service containing a "MASKFOR" argument. In that case, a line is added containing the backup service identifier and the UTC time when the masking should stop.
+Contains a table displaying all current alarm suppression requests.
+This table is filled when a WFM command is received to activate a backup service containing a "MASKFOR" argument. In that case, a line is added containing the backup service identifier and the UTC time when the masking should stop.
 
 To actually make this work, an automation script is required that is triggered by the alarm(s) to mask and then checks whether the alarm actually should be masked or not (based on this table). The automation script is not included with this driver and should be added manually. (For more information, contact Skyline, CVH.)
 

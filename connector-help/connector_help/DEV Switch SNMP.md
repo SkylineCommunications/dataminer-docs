@@ -28,11 +28,11 @@ The information displayed in the driver is divided over seven pages:
 
 ### Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                              |
-|------------------|----------------------------------------------------------|
-| 1.0.0.x          | Unknown                                                  |
-| 2.0.0.x          | Unknown                                                  |
-| 3.0.0.x          | A.08 (DEV1951)B.01 (DEV1520)P.01 (DEV7113)Q.03 (DEV2190) |
+| **Driver Range** | **Device Firmware Version**                                 |
+|------------------|-------------------------------------------------------------|
+| 1.0.0.x          | Unknown                                                     |
+| 2.0.0.x          | Unknown                                                     |
+| 3.0.0.x          | A.08 (DEV1951) B.01 (DEV1520) P.01 (DEV7113) Q.03 (DEV2190) |
 
 ### Exported drivers
 
@@ -93,7 +93,7 @@ This page contains all extra parameters of the application folder in the dev-swi
 
 ### Alarms Page
 
-The top part of this page, **Alarms Config**,contains the alarm configurations. The four toggle buttons are used to enable/disable the sending of different types of alarm traps. You can find more detailed information about these types by double-clicking the parameter. You can also open a pop-up page with the **Error Alarm Config** button that allows you to further configure the type of error traps sent.
+The top part of this page, **Alarms Config**, contains the alarm configurations. The four toggle buttons are used to enable/disable the sending of different types of alarm traps. You can find more detailed information about these types by double-clicking the parameter. You can also open a pop-up page with the **Error Alarm Config** button that allows you to further configure the type of error traps sent.
 
 The bottom section of the page contains the alarms that were generated from inside the device, with a timestamp added by DataMiner.
 

@@ -14,9 +14,14 @@ The driver is used to configure a cxu-810. The configuration has to be applied a
 
 ### Creation
 
-**CEFD MEMOTEC CXU-810** is a **SNMP/HTTP over DLL** driver. Before you will be able to use the driver. You will need to copy 2 dll files ("**cxcuaconfigapi_SLC.dll**" and "**cxuaconfigapi.dll**" ) to the following location:**"C:\Skyline DataMiner\Files"**
 
-Also make sure that the device is running at **firmware version 2.9.0** or higher.Once these settings have been done it is possible to create an element of this driver. using the understanding settings.
+
+**CEFD MEMOTEC CXU-810** is a **SNMP/HTTP over DLL** driver.
+Before you will be able to use the driver.
+You will need to copy 2 dll files ("**cxcuaconfigapi_SLC.dll**" and "**cxuaconfigapi.dll**" ) to the following location:**"C:\Skyline DataMiner\Files"**
+
+Also make sure that the device is running at **firmware version 2.9.0** or higher.
+Once these settings have been done it is possible to create an element of this driver. using the understanding settings.
 
 **SNMP CONNECTION**:
 
@@ -46,19 +51,25 @@ This page contains some general data concerning the device.
 
 ## Admin Page
 
-This page contains standard administrator parameter such as the location and name of the device.There are also buttons to reset the device or reboot it with the alternate firmware.On this page you can also validate the pending configuration here and apply this configuration to the running configuration of the device.
+This page contains standard administrator parameter such as the location and name of the device.
+There are also buttons to reset the device or reboot it with the alternate firmware.
+On this page you can also validate the pending configuration here and apply this configuration to the running configuration of the device.
 
 Further on there are also options to set the trap receiver IP and the redundancy here.
 
 ## Configuration - Network Page
 
-On this page you will find the configuration of the Management interface and the wan interface.For applying the new settings to the device you can use the apply configuration button located at the bottom of the page
+On this page you will find the configuration of the Management interface and the wan interface.
+For applying the new settings to the device you can use the apply configuration button located at the bottom of the page
+
 
 **Important note**: when the apply configuration button is pressed all settings of the driver will be applied to the running configuration and not only those of the Configuration- network Page.
 
 ## Configuration - E1 Ports Page
 
-On this page you will find the configurations of the E1 ports.Also the configuration of the Optimization can be found here.For applying the new settings to the device you can use the apply configuration button located at the bottom of the page
+On this page you will find the configurations of the E1 ports.
+Also the configuration of the Optimization can be found here.
+For applying the new settings to the device you can use the apply configuration button located at the bottom of the page
 
 **Important note:** when the apply configuration button is pressed all settings of the driver will be applied to the running configuration and not only those of the Configuration- E1 Ports Page.
 
@@ -66,17 +77,21 @@ On this page you will find the configurations of the E1 ports.Also the configura
 
 On this page you will find the configuration of the Wan Interfaces.
 
-Also the configuration of the Bandwidth Provider can be found here. For applying the new settings to the device you can use the apply configuration button located at the bottom of the page.
+Also the configuration of the Bandwidth Provider can be found here.
+
+For applying the new settings to the device you can use the apply configuration button located at the bottom of the page.
 
 **Important note:** when the apply configuration button is pressed all settings of the driver will be applied to the running configuration and not only those of the Configuration- Wan interfaces Page.
 
 ## Configuration - Clocking
 
-On this page you will find the Clocking Configuration.Under the page button **E1 Ports.** you will find the states of the different E1 Ports.
+On this page you will find the Clocking Configuration.
+Under the page button **E1 Ports.** you will find the states of the different E1 Ports.
 
 ## Statistics - Network
 
-On this page you are able to find the stats of the network interface.With the clear button it is possible to clear all the statistics of the device.
+On this page you are able to find the stats of the network interface.
+With the clear button it is possible to clear all the statistics of the device.
 
 ## Statistics - E1 Ports
 
@@ -106,9 +121,11 @@ When pressing the button "select E1 Port" that E1 Port will be selected for the 
 
 ## Alarms
 
-On this page you are able to find a table witch contains the currently active alarms and the alarm history of the device.There is also a global alarm severity of the device available.
+On this page you are able to find a table witch contains the currently active alarms and the alarm history of the device.
+There is also a global alarm severity of the device available.
 
-The clear button located at the bottom of the page is used to clear the active alarms.On the pagebutton **Alarm Management...** It is possible to acknowledge an alarm.
+The clear button located at the bottom of the page is used to clear the active alarms.
+On the pagebutton **Alarm Management...** It is possible to acknowledge an alarm.
 
 ## Test Commands
 

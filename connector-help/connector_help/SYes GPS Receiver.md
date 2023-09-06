@@ -52,7 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-- The **General** page displays general information about the device such as the **General Status**, **Device Mode**, **Active Module**,and **Board Temperature**. The subpages display additional information about the **Hardware** and **Firmware**.
+- The **General** page displays general information about the device such as the **General Status**, **Device Mode**, **Active Module**, and **Board Temperature**. The subpages display additional information about the **Hardware** and **Firmware**.
 - On the **Configuration** page, you can set up the configuration of the device: **Switch Mode**, **External Reference**, **10 Mhz Output Power**, **Label**, **Holdover**, **Traps**, and **PPS** settings.
 - The **GNSS** page displays information related to the GNSS (Global Navigation Satellite System) configuration and modules. The device has two modules: **Module A** and **Module B**.
 - The **Alarms** page has alarm parameters associated with the **PSUs**, **Fan** modules, **Board Temperature**, **Inputs**, and **Outputs**.

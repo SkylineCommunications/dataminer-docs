@@ -4,7 +4,8 @@ uid: Connector_help_Miteq_RSUN
 
 # Miteq RSUN
 
-The Redundancy Switching Unit (RSU) monitors the status of up to eight on-line frequencyconverters and the standby converter.
+The Redundancy Switching Unit (RSU) monitors the status of up to eight on-line frequency
+converters and the standby converter.
 
 ## About
 

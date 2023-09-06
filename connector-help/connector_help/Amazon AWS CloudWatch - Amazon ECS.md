@@ -44,6 +44,6 @@ You can also modify the **Polling Interval** on this page. In addition, with the
 
 ### Metrics
 
-The variousMetrics pages contain all polled metric values.
+The various Metrics pages contain all polled metric values.
 
 Polling of the appropriate metric can be enabled via the **Config Poll** page button. It is not possible to set the Poll parameter to *Enabled* for metric parameters that have the *N/A* value. These *N/A* metrics are not present in the provided metrics list for this instance and hence their Poll parameter will remain *Disabled*.

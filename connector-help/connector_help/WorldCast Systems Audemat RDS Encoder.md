@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 The element created with this driver consists of the following data pages:
 
-- **General**: Displays system information such as the **Name**, **Description**, **Serial** **Number** and **Software** **Version**.Also displays **Date & Time** information and **Network** information.
+- **General**: Displays system information such as the **Name**, **Description**, **Serial** **Number** and **Software** **Version**. Also displays **Date & Time** information and **Network** information.
 
 - **Status**: Displays the Current RDS State along with the Current **PI**, **PS**, **TA State** and **TP State**. Also contains the **UECP Timeouts Table**.
 

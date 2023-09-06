@@ -76,7 +76,7 @@ You can also configure the Lock Status, Vertical Lines, and Horizontal Us settin
 
 ### Audio Delay
 
-In the tables on this page, you can configure theaudio delay of each channel for path 1 and path 2.
+In the tables on this page, you can configure the audio delay of each channel for path 1 and path 2.
 
 ### Dolby E Alignment
 
@@ -88,7 +88,7 @@ On this page, you can configure the input bus for each channel of path 1 and pat
 
 ### Input Flex
 
-On this page, you can configure the input flexfor each channel of path 1 and path 2.
+On this page, you can configure the input flex for each channel of path 1 and path 2.
 
 ### Input Audio Status - Path 1 / Input Audio Status - Path 2
 
@@ -172,7 +172,7 @@ On this page, you can set up the GPO for path 1 and path 2.
 
 ### Ancillary Data Processing Path 1 & Ancillary Data Processing Path 2
 
-This page shows the status of the ancillary data processing. You can also configure the data processing for each ADP Proc of path 1 and 2, includingSetup Mode, Setup Did, Setup SDid, etc.
+This page shows the status of the ancillary data processing. You can also configure the data processing for each ADP Proc of path 1 and 2, including Setup Mode, Setup Did, Setup SDid, etc.
 
 ### YC Alignment
 

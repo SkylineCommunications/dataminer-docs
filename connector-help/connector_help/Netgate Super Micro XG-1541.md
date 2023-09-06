@@ -108,7 +108,7 @@ The page contains several subpages:
 
 ### Memory Info
 
-This page displays memory information in the **Storage Table**,if **Storage Table Polling** is enabled.
+This page displays memory information in the **Storage Table**, if **Storage Table Polling** is enabled.
 
 The following page buttons are available:
 

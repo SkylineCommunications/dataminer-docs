@@ -61,7 +61,7 @@ This page contains 12 page buttons with configuration options, namely **GSM Mode
 
 ### Alarms Settings
 
-This page displays several **Alarms Triggers** for the following parameters: **RF**, **MPX**, **MPX Power**, **Left/Right Audio**, **RDS Group**, **Pilot**, **RDS Levels**, **Temperature** and **Fan**.In case a parameter exceeds the limits, the device will initiate the sending of an alarm notification via the selected communication path, which can be via **Email**, **SMS**, **SNMP Trap** or **GPO**.
+This page displays several **Alarms Triggers** for the following parameters: **RF**, **MPX**, **MPX Power**, **Left/Right Audio**, **RDS Group**, **Pilot**, **RDS Levels**, **Temperature** and **Fan**. In case a parameter exceeds the limits, the device will initiate the sending of an alarm notification via the selected communication path, which can be via **Email**, **SMS**, **SNMP Trap** or **GPO**.
 
 ### Status Page
 
@@ -81,4 +81,15 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS 09/10/2015 1.0.0.1 TPI, Skyline Initial version 17/12/2015 1.0.0.2 TPI, Skyline Extra parameters added. 14/04/2016 1.0.0.3 TPI, Skyline Active and Inactive channels fixed on Status table. 16/09/2016 1.0.0.4 TPI, Skyline Alarm RDS Group A and Alarm RDS Group B in the Channel Status Table are now numeric values. 24/07/2017 1.0.0.5 BSM, Skyline Fixed an inconsistency in the round-robin logger channel measurements 12/09/2017 1.0.0.6 BSM, Skyline Removed QAction 2, which forced the acquisition time to 60s. Removed polling of some of the monitoring parameters to improve logger quality. Added Web Interface page. 01/15/2018 1.0.0.7 RRE, Skyline Average Measurements, RDS Lock, and RDS BER parameters added to monitoring table. Drop-down display key option added to monitoring table with same \[IDX\] format as channel table. 11/06/2018 1.0.0.8 RBL, Skyline Added avg parameters to Monitoring Table. Exceptions described in task handled.
+DATE VERSION AUTHOR COMMENTS
+
+09/10/2015 1.0.0.1 TPI, Skyline Initial version
+17/12/2015 1.0.0.2 TPI, Skyline Extra parameters added.
+14/04/2016 1.0.0.3 TPI, Skyline Active and Inactive channels fixed on Status table.
+16/09/2016 1.0.0.4 TPI, Skyline Alarm RDS Group A and Alarm RDS Group B in the Channel Status Table are now numeric values.
+24/07/2017 1.0.0.5 BSM, Skyline Fixed an inconsistency in the round-robin logger channel measurements
+12/09/2017 1.0.0.6 BSM, Skyline Removed QAction 2, which forced the acquisition time to 60s. Removed polling of some of the
+monitoring parameters to improve logger quality. Added Web Interface page.
+01/15/2018 1.0.0.7 RRE, Skyline Average Measurements, RDS Lock, and RDS BER parameters added to monitoring table.
+Drop-down display key option added to monitoring table with same \[IDX\] format as channel table.
+11/06/2018 1.0.0.8 RBL, Skyline Added avg parameters to Monitoring Table. Exceptions described in task handled.

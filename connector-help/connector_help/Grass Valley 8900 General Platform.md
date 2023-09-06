@@ -20,9 +20,9 @@ This is an **SNMP** driver that exports the protocol **Grass Valley 8900 Slot**.
 
 ### Supported firmware versions
 
-| **Driver Range**      | **Device Firmware Version**                   |
-|-----------------------|-----------------------------------------------|
-| 1.0.0.x1.0.1.x1.0.2.x | Software version: 4.0.0Hardware revision: 01A |
+| **Driver Range**        | **Device Firmware Version**                    |
+|-------------------------|------------------------------------------------|
+| 1.0.0.x 1.0.1.x 1.0.2.x | Software version: 4.0.0 Hardware revision: 01A |
 
 ### Exported drivers
 

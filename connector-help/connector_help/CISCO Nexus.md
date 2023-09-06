@@ -148,7 +148,7 @@ This page contains the following subpages:
 
 This page contains the **Detailed Interface** **table**. This table provides general information about each interface.
 
-From version **1.0.3.7 onwards**, the polling period of the **Detailed Interface table** (as well as the **Interface Rx table** and **Interface Tx table**)can be configured using the **Detailed Interface Polling Interval** parameter. The default value of this parameter is *2 minutes*. Its possible values range between 30 seconds and 1 hour.
+From version **1.0.3.7 onwards**, the polling period of the **Detailed Interface table** (as well as the **Interface Rx table** and **Interface Tx table**) can be configured using the **Detailed Interface Polling Interval** parameter. The default value of this parameter is *2 minutes*. Its possible values range between 30 seconds and 1 hour.
 
 From version **3.0.3.1 onwards**, you can add or delete VLANs from an interface via the right-click menu.
 
@@ -190,7 +190,7 @@ The page also contains the following buttons:
 
 ### IP
 
-This page displays general IP statistics such as **requests**, **discards**,and **fragment fails**.
+This page displays general IP statistics such as **requests**, **discards**, and **fragment fails**.
 
 The page also contains the following buttons:
 
@@ -214,7 +214,7 @@ This page displays the **VTP VLAN** and **VTP** **Internal VLAN tables**.
 The page also contains the following buttons:
 
 - **VTP Authentication**: Displays a page containing the **VTP Authentication** **table**. The table shows the authentication information of VTP for the local system.
-- **VTP Management Domain**: Displays a page containing the **VTP VLAN Management Domain table**.This table shows information on the management domains for the local system.
+- **VTP Management Domain**: Displays a page containing the **VTP VLAN Management Domain table**. This table shows information on the management domains for the local system.
 - **VTP Statistics**: Displays a page with the **VTP Statistics** **table**.
 - **VTP Edit Control**: Displays a page that contains the **VTP Edit Control** **table**. This table allows you to control the editing of the VLANs for a particular management domain.
 - **VTP VLAN Membership:** Displays a page with the **VLAN Membership** **table**.

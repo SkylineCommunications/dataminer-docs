@@ -60,7 +60,7 @@ The element created with this driver consists of the following data pages:
 
 - **General:** Displays general device information as well as vital operation elements and their status.
 - **Status:** Contains status information of important parameters, including information on the operating status and cueing details.
-- **Control Panel:** Contains various important device settings, including **Local Operation**, **Timer Mode**,**Play Control** settings (e.g. Cue Up with Data, Play, Stop, Fast Forward and Rewind) and **Speed control** settings (e.g. buttons to **Jog**, **Var** and **Shuttle** in both forward and reverse directions).
+- **Control Panel:** Contains various important device settings, including **Local Operation**, **Timer Mode**, **Play Control** settings (e.g. Cue Up with Data, Play, Stop, Fast Forward and Rewind) and **Speed control** settings (e.g. buttons to **Jog**, **Var** and **Shuttle** in both forward and reverse directions).
 - **Web Interface:** Displays the web interface of the polling IP address.
 
 ## Notes

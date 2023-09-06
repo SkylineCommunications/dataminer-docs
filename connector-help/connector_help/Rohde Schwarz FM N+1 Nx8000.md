@@ -50,7 +50,7 @@ The driver's main element contains the following pages:
 For every configured **transmitter** on the device, a Dynamic Virtual Element (**DVE**) is created with a specific name (**Main Element Name** followed by the related **Transmitter Name**, for instance: *FM N+1 Nx8000.Transmitter A1*). Each of these DVEs contains the following pages:
 
 - **Summary:** Information about the related transmitter, such as **Summary Fault**, **Summary Warning**, **Forward Power**, etc.
-- **Transmitter:** Transmitter-related settings, such as **Tx Reset Sum Fault**, **MPX**, **AES**, **AUX,**etc.
+- **Transmitter:** Transmitter-related settings, such as **Tx Reset Sum Fault**, **MPX**, **AES**, **AUX,** etc.
 - **Exciter:** Overview table of the transmitter-related Exciter statuses, such as **Nominal**, **Current dBu**, etc.
 
 ## Monitoring

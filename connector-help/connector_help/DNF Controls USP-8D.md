@@ -8,7 +8,9 @@ The **DNF Controls USP-8D** can be configured by and can configure the DNF Contr
 
 ## About
 
-The DNF Controls USP-8D driver is polled by the DNF Controls USP-8D Control Console. Since the latter device cannot be accessed by SNMP, the device polls the element instead of the other way around. Sets can be performed from the driver, and will be updated, depending on the interval between gets on the Control Console.
+The DNF Controls USP-8D driver is polled by the DNF Controls USP-8D Control Console.
+Since the latter device cannot be accessed by SNMP, the device polls the element instead of the other way around.
+Sets can be performed from the driver, and will be updated, depending on the interval between gets on the Control Console.
 
 ### Ranges of the driver
 

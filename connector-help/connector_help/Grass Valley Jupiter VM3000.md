@@ -76,4 +76,4 @@ Physical dynamic interfaces:
 
 #### Internal Connections
 
-- Between the **Matrix** inputs and outputs,an internal connection is created.
+- Between the **Matrix** inputs and outputs, an internal connection is created.

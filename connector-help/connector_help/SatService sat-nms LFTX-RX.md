@@ -67,6 +67,6 @@ The connector retrieves the type of the unit. Based on this, the pages related t
 
 In case of a redundant chassis, it is only necessary to create one element for the master chassis. The connector will automatically poll data from both the master and slave chassis and display it on the corresponding data pages.
 
-Both chassis (master and slave) have a read-only data page, e.g. **Master Chassis**, and a page where settings can be viewed and configured, e.g. **Master Chassis Config**.The **attenuator** value is displayed on both pages and can be changed on the config page.
+Both chassis (master and slave) have a read-only data page, e.g. **Master Chassis**, and a page where settings can be viewed and configured, e.g. **Master Chassis Config**. The **attenuator** value is displayed on both pages and can be changed on the config page.
 
 The **Setup** page contains the settings needed to configure redundancy on the equipment.

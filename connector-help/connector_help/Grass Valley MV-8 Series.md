@@ -54,6 +54,6 @@ There is no redundancy defined.
 
 On the **General** page, you can find information about the multiviewer.
 
-The **Alarms** page displays information about the **Temperature**, **PSU**,and **Fan** **Alarms**.
+The **Alarms** page displays information about the **Temperature**, **PSU**, and **Fan** **Alarms**.
 
 The **Input Alarms** page contains information about the input alarms, and the **Wall Layout** page shows information about the wall layout.

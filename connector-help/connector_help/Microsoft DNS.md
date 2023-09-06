@@ -10,9 +10,9 @@ This connector allows you to extract data from a DNS server through PowerShell c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                | **Based on** | **System Impact** |
-|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version:- Added Commands Configuration Table- Added A Records and feature to add A Record commands from context menu- Added PTR Records | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                   | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version: - Added Commands Configuration Table - Added A Records and feature to add A Record commands from context menu - Added PTR Records | \-           | \-                |
 
 ### Product Info
 
@@ -56,8 +56,10 @@ On the **Configurations** page, several parameters need to be configured for the
 
 The currently implemented commands are:
 
-- *Get-DnsServerResourceRecord -ComputerName \<***Default*** **DNS Server**\> -ZoneName \<**Default** **Zone Name**\> -RRType "A"* Default period: 1 hour. This command is used to fill in the **A Records** Table.
-- *Get-DnsServerResourceRecord -ComputerName *\<***Default*** **DNS Server**\>* -ZoneName *\<**Default** **Zone Name**\>* -RRType "PTR"*Default period: 1hour. This command is used to fill in the **PTR Records** Table.
+- *Get-DnsServerResourceRecord -ComputerName \<***Default*** **DNS Server**\> -ZoneName \<**Default** **Zone Name**\> -RRType "A"
+  *Default period: 1 hour. This command is used to fill in the **A Records** Table.
+- *Get-DnsServerResourceRecord -ComputerName *\<***Default*** **DNS Server**\>* -ZoneName *\<**Default** **Zone Name**\>* -RRType "PTR"
+  *Default period: 1hour. This command is used to fill in the **PTR Records** Table.
 
 All the information about **A Records** and **PTR Records** is displayed on the **General** page.
 

@@ -66,7 +66,8 @@ The three tables on this page provide monitoring for temperature, memory and CPU
 
 ### Operating States Page
 
-Three tables display the operating states of the different components of the device. This page also provides the possibility to import/export monitoring configuration.
+Three tables display the operating states of the different components of the device.
+This page also provides the possibility to import/export monitoring configuration.
 
 ### Chassis Page
 
@@ -74,7 +75,8 @@ This page provides information about the different containers and contents of th
 
 ### Configuration Page
 
-This page provides configuration parameters to enable or disable polling of various tables.It also displays some information about configuration events.
+This page provides configuration parameters to enable or disable polling of various tables.
+It also displays some information about configuration events.
 
 ### Alarms Page
 
@@ -82,7 +84,8 @@ This page provides information about the yellow and red alarms.
 
 ### Interfaces Page
 
-This page contains the Interface Table. It also provides the option to choose the naming format used to identify interface in all 4 tables, including those that are accessible via the pagebuttons.The Interface poll table provides the option to enbale or disable polling for each interface.
+This page contains the Interface Table. It also provides the option to choose the naming format used to identify interface in all 4 tables, including those that are accessible via the pagebuttons.
+The Interface poll table provides the option to enbale or disable polling for each interface.
 
 ### IP Page
 
@@ -91,3 +94,5 @@ Different monitoring parameters concerning IP can be found on this page.
 ### VLAN Page
 
 The tables on this page provide monitoring and configuration parameters for everything related to VLAN.
+
+

@@ -8,13 +8,14 @@ The **Grass Valley Morpheus UX** is a completely configurable user interface, th
 
 This protocol allows you to obtain the base data that is used to generate the user interfaces, and manage basic channel information.
 
+
 ## About
 
 ### Version Info
 
-| **Range**           | **Key Features** | **Based on** | **System Impact** |
-|---------------------|------------------|--------------|-------------------|
-| 1.0.0.x\[SLC Main\] | Initial version  | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -72,4 +73,10 @@ This page displays all the **channels**, for each of the **systems** associated 
 
 This page displays both **unacknowledged** and **acknowledged alarms** on all the systems.
 
+
+
 ## Notes
+
+
+
+

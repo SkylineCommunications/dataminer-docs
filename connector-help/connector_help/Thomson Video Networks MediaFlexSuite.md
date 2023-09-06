@@ -26,7 +26,8 @@ For each device in the system, a DVE can be created, which provides an overview 
 
 ### Connections
 
-SNMP Main connectionThis driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+SNMP Main connection
+This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +57,8 @@ This page displays the general information of the device manager. At the top of 
 
 Below the configuration section, you can find the **Element Table**. This table contains all the available devices in the network. Device names, descriptions, statuses, types, functions, and states are displayed in this table for each device entry. With the button **Refresh Device Table,** you can manually update this table immediately. Below the Refresh Device Table button, there are 4 buttons that each open a page with a table.
 
-Below that, you can disable/enable a DVE for one single device, or you can enable/disable DVEs for all the devices at once. For each created DVE, an entry is added in the **Dynamic Virtual Element (DVE) Table** and a DVE is created under the same view as that of the main element.
+Below that, you can disable/enable a DVE for one single device, or you can enable/disable DVEs for all the devices at once.
+For each created DVE, an entry is added in the **Dynamic Virtual Element (DVE) Table** and a DVE is created under the same view as that of the main element.
 
 ### Alarm
 
@@ -64,7 +66,7 @@ This page displays a table that contains the general alarms. Above the table, yo
 
 ### Events
 
-This pagedisplays the General Event Table. At the top of this page, there is a button that retrieves the information for this table. The table is also polled whenever a trap is received.
+This page displays the General Event Table. At the top of this page, there is a button that retrieves the information for this table. The table is also polled whenever a trap is received.
 
 ## Notes
 

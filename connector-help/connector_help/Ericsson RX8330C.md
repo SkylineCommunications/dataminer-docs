@@ -64,7 +64,7 @@ There is also a page button that allows access to the **Alarm Status** table.
 
 ### Alarm Configuration
 
-Thispage displays the alarm configuration (disabled/enabled) for **Input** **Alarms**, **Environment Alarms** and **Service Alarms**.
+This page displays the alarm configuration (disabled/enabled) for **Input** **Alarms**, **Environment Alarms** and **Service Alarms**.
 
 ### Customization
 
@@ -76,17 +76,17 @@ This page displays the **CA Status** parameter, as well as the **CA Service Stat
 
 ### Input
 
-Thispage displays the input parameters (e.g. **Current Input**, **TS Lock** and **Packet Length**) and **Satellite Input** parameters.
+This page displays the input parameters (e.g. **Current Input**, **TS Lock** and **Packet Length**) and **Satellite Input** parameters.
 
 There are also four page buttons (**Configuration RF1 - 4**) that open subpages with the current RF configuration.
 
 ### Decode - Service
 
-Thispage displays the overall decode service parameters (e.g. **Service**, **Current SI Mode** and **TS ID**).
+This page displays the overall decode service parameters (e.g. **Service**, **Current SI Mode** and **TS ID**).
 
 It also contains a number of page buttons:
 
-- **Advanced**:Displays advanced information such as the **Selection Control**, **Service**, **Video**, **Audio#1** and **Audio#2**.
+- **Advanced**: Displays advanced information such as the **Selection Control**, **Service**, **Video**, **Audio#1** and **Audio#2**.
 - **VBI-VANC**: Displays parameters related to **VBI**, **Closed Captions**, **AMOL-48 and AMOL-96**, **TVG**, **VPS**, **WSS**, **ITS**, **Monochrome**, **Brandnet**, **VITC** and **NTSC Pedestral**.
 - **Splice**: Displays parameters such as **Splice PID**, **Splice Status** (with the **Splice Status - Remaining Time**, **Splice Status - Expected Time** and **Splice Status - Pending Time**) and **Splice Count**.
 - **DVB Subtitles**: Displays parameters related to both **DVB-Subtitles** and **User DVB-Subtitles**.
@@ -94,11 +94,11 @@ It also contains a number of page buttons:
 
 ### Decode - Video
 
-Thispage displays the decode video parameters, such as **Status**, **Video Standard** or **Bit Rate**.
+This page displays the decode video parameters, such as **Status**, **Video Standard** or **Bit Rate**.
 
 ### Decode - Audio
 
-Thispage displays the general **Channel Configuration Status** parameter, as well as several specific parameters related to both Audio 1 and Audio 2.
+This page displays the general **Channel Configuration Status** parameter, as well as several specific parameters related to both Audio 1 and Audio 2.
 
 There is also a page button, **Audio Routing**, which displays parameters related to **Audio Connectors** and **SDI Embedding**.
 

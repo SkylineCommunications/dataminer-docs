@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### General
 
-This page displays information about the device hardware, the **Unit** **Status**, the **PSU Status**and the **Input**/**Output** configuration.
+This page displays information about the device hardware, the **Unit** **Status**, the **PSU Status** and the **Input**/**Output** configuration.
 
 ### Input
 

@@ -69,7 +69,7 @@ This page contains page buttons that provide access to the following subpages:
 - **External Power Amplifier**: Displays info related to Gain and Status.
 - **Wireless Ethernet Statistics**: Includes the number of buffered and discarded packets (both Rx and Tx).
 - **Ethernet Port Statistics**: Displays statistical info on the buffered and discarded packets at the Ethernet interface.
-- **EIM:**Displays information on Enhanced Interference Mitigation, including **EIM Channel Change Status**, **Interference Detected** and **Relative Noise Floor**.
+- **EIM:** Displays information on Enhanced Interference Mitigation, including **EIM Channel Change Status**, **Interference Detected** and **Relative Noise Floor**.
 - **SW Upgrade Status**: Displays the firmware download status, the **TFTP Server Address** and the **Download TFTP Address Type**.
 
 ### Links Summary

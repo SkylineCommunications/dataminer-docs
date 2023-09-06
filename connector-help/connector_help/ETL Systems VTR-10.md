@@ -49,5 +49,6 @@ The element created with this driver consists of the following page:
 
 The matrix interface allows you to do the following actions:
 
-- Set a new connection, by clicking on the desired connection. Note that setting a new connection can disconnect an existing connection.
+- Set a new connection, by clicking on the desired connection.
+  Note that setting a new connection can disconnect an existing connection.
 - Edit the labels, by right-clicking in the matrix and selecting **Edit**. On the pop-up page, the field description of the relevant output or input should then be changed.

@@ -57,7 +57,8 @@ On the same page, you may also need to change the **default location** where **c
 
 This page contains general information about the device, such as the **supported SOAP APIs**.
 
-The **Web Service Status** parameter displays any possible errors returned by the server while polling. Note: If this status indicates an error, check the log file for details.
+The **Web Service Status** parameter displays any possible errors returned by the server while polling.
+Note: If this status indicates an error, check the log file for details.
 
 ### Inputs
 
@@ -77,7 +78,7 @@ The table displays the status of the **services** and the **programs** that are 
 
 ### Broadcasts
 
-On this page, you can manage the available **broadcasts**.They are displayed in a table, where you can **start**, **stop** and **delete** them.
+On this page, you can manage the available **broadcasts**. They are displayed in a table, where you can **start**, **stop** and **delete** them.
 
 It is also possible to create a **new broadcast**. To do so, click the **Create Broadcast** page button and fill in the details on the pop-up page.
 
@@ -87,7 +88,7 @@ This page displays a table with the **Conditional Access Modules**. The **name**
 
 ### Tree Control
 
-This page displays a tree view with the different **inputs**. For these inputs, you can see the **services** **linked to the inputs**, and for each service,you can see the **broadcasts linked to the service**.
+This page displays a tree view with the different **inputs**. For these inputs, you can see the **services** **linked to the inputs**, and for each service, you can see the **broadcasts linked to the service**.
 
 ### Save/Load Menu
 

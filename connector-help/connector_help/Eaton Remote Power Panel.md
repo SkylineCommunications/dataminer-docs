@@ -10,9 +10,9 @@ The Eaton RPP driver is used to monitor the Eaton Remote Power Panel.
 
 ### Version Info
 
-| **Range**            | **Key Features**                               | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | Initial version.Monitors the EATON RPP system. | \-           | \-                |
+| **Range**            | **Key Features**                                | **Based on** | **System Impact** |
+|----------------------|-------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version. Monitors the EATON RPP system. | \-           | \-                |
 
 ### Product Info
 

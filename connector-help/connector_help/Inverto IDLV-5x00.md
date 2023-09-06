@@ -58,7 +58,7 @@ This page contains **DVB-S2** configuration parameters.
 
 ### CI
 
-On this page, the **CI Source** can be selected from the available input list. It is also possible to set the corresponding **CI** **Programs** liston each **CI slot**.
+On this page, the **CI Source** can be selected from the available input list. It is also possible to set the corresponding **CI** **Programs** list on each **CI slot**.
 
 ### Decoder
 
@@ -78,7 +78,7 @@ On this page, you can select the **input source** from the available input list.
 
 ### Mux
 
-This page can be used for the **Mux** configuration. It also contains the **Mux Programs** list,where programs can be added to the multiplexer.
+This page can be used for the **Mux** configuration. It also contains the **Mux Programs** list, where programs can be added to the multiplexer.
 
 ### TS over IP
 

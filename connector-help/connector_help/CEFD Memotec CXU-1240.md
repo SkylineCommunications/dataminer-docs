@@ -45,7 +45,8 @@ With the button **Clear temperature statistics**, it is possible to clear the te
 
 This page contains standard administrator parameter such as the location and name of the device.
 
-With the button **Reboot unit**, it is possible to reboot the device. When pressing the button **Save Configuration**, The System parameters will be saved to the device.
+With the button **Reboot unit**, it is possible to reboot the device.
+When pressing the button **Save Configuration**, The System parameters will be saved to the device.
 
 On this page it is also possible to switch to the redundant unit and to set the SNMP Trap Destination address.
 
@@ -53,27 +54,40 @@ On this page it is also possible to switch to the redundant unit and to set the 
 
 Here it is possible to find the current network settings.
 
-It is possible to change these setting by clicking on the **Modify.** page A new page will pop up where it is possible to fill in the new values for the parameters.Once this has been done click on the **Apply** button to apply these settings to the device.
+It is possible to change these setting by clicking on the **Modify.** page
+A new page will pop up where it is possible to fill in the new values for the parameters.
+Once this has been done click on the **Apply** button to apply these settings to the device.
 
-Configuration - E1 Ports PageOn this page you will find the configurations of the E1 ports. Here you can configure everything concerning the E1 Ports.
+Configuration - E1 Ports Page
+On this page you will find the configurations of the E1 ports.
+Here you can configure everything concerning the E1 Ports.
 
-On the bottom of the page you will also find the possibility to change the jitter buffer Depth. **Note**: settings done on this page will immediately be applied to the device.
+On the bottom of the page you will also find the possibility to change the jitter buffer Depth.
+
+**Note**: settings done on this page will immediately be applied to the device.
 
 ## Configuration - Wan interfaces
 
-On this page you will find the configuration of the Wan Interfaces Here you can configure the Traffic channels. It is possible to delete an entry from the table by clicking the **Delete** button of the corresponding row.
+On this page you will find the configuration of the Wan Interfaces
+Here you can configure the Traffic channels.
+It is possible to delete an entry from the table by clicking the **Delete** button of the corresponding row.
 
-For creating a new entry in the Traffic channel Table click on the **Create New Entry.** button located on the bottom of the page. Fill in the Different Parameters. Press **Apply** to add the new entry to the table.
+For creating a new entry in the Traffic channel Table click on the **Create New Entry.** button located on the bottom of the page. Fill in the Different Parameters.
+Press **Apply** to add the new entry to the table.
 
 **Note**: when the maximum number of entries is reached. It is not possible to add a new entry and therefore a row should first be deleted.
 
 ## Configuration - Clocking
 
-On this page you will find the Settings of the Clocking Configuration. For changing these parameters click on the **Modify.** button. A new window will pop up where you can change the selected settings. When clicking the **Apply** button, these settings will be applied to the device.
+On this page you will find the Settings of the Clocking Configuration.
+For changing these parameters click on the **Modify.** button.
+A new window will pop up where you can change the selected settings.
+When clicking the **Apply** button, these settings will be applied to the device.
 
 ## Configuration - Redundancy
 
-On this page you will find the settings of the clocking configuration. For changing these parameters click on the **Modify.** button. A new page will pop up where you can change these settings. When clicking the **Apply** button, the new settings will be applied to the device.
+On this page you will find the settings of the clocking configuration. For changing these parameters click on the **Modify.** button. A new page will pop up where you can change these settings.
+When clicking the **Apply** button, the new settings will be applied to the device.
 
 ## Statistics - Network
 
@@ -87,17 +101,21 @@ On this page you are able to find the statistics of theE1 Ports.
 
 With the **clear** button it is possible to clear the corresponding row.
 
+
 ## Performance monitoring E1 Ports
 
 On this page you are able to find the performance statistics of the device.
 
-When clicking the **Intervals.** button a new page will pop up where it is possible to select a port and interval to view the performance statistics of up to a day ago in blocks of 15 min. Pressing the next will shift the interval by one and get the new data.
+When clicking the **Intervals.** button a new page will pop up where it is possible to select a port and interval to view the performance statistics of up to a day ago in blocks of 15 min.
+Pressing the next will shift the interval by one and get the new data.
 
-Example:For selecting the interval of 45 minutes ago on E1 Port 2.
+Example:
+For selecting the interval of 45 minutes ago on E1 Port 2.
 
 - Select under the parameter E1 Port: Port 2
 - Set the interval to 3 (3\*15min = 45 min ago.)
 - Press the **Get** button.
+
 
 ## Statistics - Wan Interfaces
 
@@ -115,7 +133,8 @@ Pressing the **Clear** button will clear TX and RX Savings.
 
 With the **Clear** button it is possible to clear the corresponding row.
 
-When clicking on **Select E1 Port** and then clicking on the button **Mapping.** this will open a window with the Timeslots of the selected E1 Port. It is also possible to select the E1 port by changing the E1 Port Selected parameter located on the top of the page.
+When clicking on **Select E1 Port** and then clicking on the button **Mapping.** this will open a window with the Timeslots of the selected E1 Port.
+It is also possible to select the E1 port by changing the E1 Port Selected parameter located on the top of the page.
 
 You can refresh the Timeslots by clicking on the **Refresh** button located on the bottom of the page.
 
@@ -135,4 +154,5 @@ With the **Reset** button it is possible to reset the statistics.
 
 on this page you can see the traps that have been received from the device.
 
-It is possible to delete a entry by pressing the **Delete** button on the corresponding row. For deleting all entries from the table click on the **Clear Table** button located at the bottom of the page.
+It is possible to delete a entry by pressing the **Delete** button on the corresponding row.
+For deleting all entries from the table click on the **Clear Table** button located at the bottom of the page.

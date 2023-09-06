@@ -44,7 +44,7 @@ This page allows you to configure the credentials to establish HTTP communicatio
 
 On the **Configuration** subpage, you can configure the following parameters:
 
-- **JSON RPC**,**JSON Command ID** and **JSON Version**: These parameters are intended to make sure that the correct values are used in the JSON request, so that these do not need to be hard-coded in the logic of the driver.
+- **JSON RPC**, **JSON Command ID** and **JSON Version**: These parameters are intended to make sure that the correct values are used in the JSON request, so that these do not need to be hard-coded in the logic of the driver.
 - **Command Interval*:*** This parameter determines the frequency at which the sequential buffer containing the truck's information is sent through the **vantruck show TruckName** command. By default, this is set to 10 seconds to avoid flooding the device.
 - **Debugging Message Status**: By default, this parameter is disabled, which means that any extra logging messages will not be added to the element log. However, in case you encounter issues with this driver, it may be useful to enable this parameter in order to add these messages to the log.
 - **Commands Forwarding State**: Enable this parameter in order to forward commands executed on this element to the element(s) configured with the Target Element(s) parameter.

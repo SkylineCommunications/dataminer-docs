@@ -83,12 +83,12 @@ The element created using this connector has the following data pages:
 
 - **General**: This page displays system information, including the **System Time**, **System Description**, **System Location**, **System Contact**, **System Up Time**, and other general parameters.
 - **Network**: This page displays the **Interfaces** table. This table displays the operational status of the interfaces available in the workstation. This operational status can also change based on incoming traps.
-- **Product Information**: This page displays the **Product Information**, **Modules**,and **Remote Maintenance** tables.
-- **Storage Information**: This page displays the **System Frequency**, **Storage Capacity** (Total, Remaining, Remaining Percentage),and the **Port Information.**
+- **Product Information**: This page displays the **Product Information**, **Modules**, and **Remote Maintenance** tables.
+- **Storage Information**: This page displays the **System Frequency**, **Storage Capacity** (Total, Remaining, Remaining Percentage), and the **Port Information.**
 - **Traps**: This page displays the **Traps Destination** table.
 - **Alarms**: This page displays the **Error Status** table. This table is both polled and updated based on traps. The table is cleared when a "Coldstart" trap is received.
 - **FTP Configuration**: On this page, you can configure the **FTP Username** and **FTP Password**. These credentials can be **verified** with a button.
-- **Configuration File**: DataMiner can **request** and **store** **configuration files** from the PWS-4500. To request a file, specify a **Configuration File Title** and **Configuration File Name**.The configuration files will be uploaded to and stored in the DMA Documents folder under the connector name "Sony PWS-4500".
+- **Configuration File**: DataMiner can **request** and **store** **configuration files** from the PWS-4500. To request a file, specify a **Configuration File Title** and **Configuration File Name**. The configuration files will be uploaded to and stored in the DMA Documents folder under the connector name "Sony PWS-4500".
 - **License Info**: This page contains the **License Info** table. This table contains **Code**, **Installation**, and **Activation** information.
 - **Options Board Info**: This page contains the **Options Board** table. This table contains **Board**, **Type**, **ID**, **Suffix**, and **Status** information.
 - **NMI**: On this page, the NMI table allows you to check which NMI element is connected to which IP converter board. You can also **add** or **delete** NMI interfaces here, as well as **resubscribe** to the NMI elements.

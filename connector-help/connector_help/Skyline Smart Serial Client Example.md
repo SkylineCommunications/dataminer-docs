@@ -28,8 +28,9 @@ This driver uses a smart serial connection and requires the following input duri
 SMART SERIAL CONNECTION:
 
 - **Type of port**: The type of port used for communication with the device, e.g. *TCP/IP.*
-- **IP address/host**: The polling IP of the device, e.g. *127.0.0.2.* Ensure that the configured IP address is outside the local IP address range recognized by DataMiner. Use any address in the 127.0.0.\* range except for 127.0.0.1. This is necessary because of the way DataMiner receives and forwards smart serial data internally, and is only required when both client and server are running on the same host.
-- **IP Port:**The polling port of the device, e.g. *12345*.
+- **IP address/host**: The polling IP of the device, e.g. *127.0.0.2.*
+  Ensure that the configured IP address is outside the local IP address range recognized by DataMiner. Use any address in the 127.0.0.\* range except for 127.0.0.1. This is necessary because of the way DataMiner receives and forwards smart serial data internally, and is only required when both client and server are running on the same host.
+- **IP Port:** The polling port of the device, e.g. *12345*.
 
 ### Configuration
 

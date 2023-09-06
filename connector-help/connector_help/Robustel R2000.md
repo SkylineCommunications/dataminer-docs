@@ -68,8 +68,8 @@ This page displays several tables with information related to firewall rules and
 Several page buttons are available:
 
 - **IP Passthrough**: Opens a subpage where you can configure IP passthrough.
-- **DMZ Config**: Opens a subpage with the DMZ configuration. Note:In order to enable DMZ, the host and source IPs must be set.
-- **Firewall Config**:Opens a subpage where you can configure multiple firewall settings.
+- **DMZ Config**: Opens a subpage with the DMZ configuration. Note: In order to enable DMZ, the host and source IPs must be set.
+- **Firewall Config**: Opens a subpage where you can configure multiple firewall settings.
 
 ### VPN Page
 
@@ -90,6 +90,6 @@ Several page buttons are available:
 - **SSH:** Allows you to configure SSH-related settings.
 - **Email:** Allows you to configure various email settings.
 - **Trap:** Allows you to configure various SNMP trap settings.
-- **SNMP:** Opens a subpage where you can configure various SNMP Agent Settings. Note:This is where you can edit the **read/write community strings**, as well as the **SNMP port**.
+- **SNMP:** Opens a subpage where you can configure various SNMP Agent Settings. Note: This is where you can edit the **read/write community strings**, as well as the **SNMP port**.
 - **NTP:** Allows you to configure various NTP settings.
 - **Syslog:** Allows you to configure various system log settings.

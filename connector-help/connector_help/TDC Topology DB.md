@@ -19,7 +19,7 @@ The connector will create DSL files from data available in the following tables:
 
 The **offload cycle** for these tables, which determines when they should be polled and offloaded, can be configured in the connector. The same goes for the location where these DSL files should be stored.
 
-When an offload is started, the data will be stored in a **temporary file**,and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataminerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
+When an offload is started, the data will be stored in a **temporary file**, and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataminerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
 
 ## About
 
@@ -55,9 +55,9 @@ This connector does not show any actual data from the database, because all data
 
 ### Offload Settings
 
-To configure the **Offload Cycle** for the tables, use the **Offload Info** table on the **Configuration** page. By default, all tables are offloaded every 24 hours, but this time period can be increased or decreased. The Offload Info table also contains more information about the last offload (**Time**, **Duration**, **Status**,and **Entries**). You can also manually trigger a new offload.
+To configure the **Offload Cycle** for the tables, use the **Offload Info** table on the **Configuration** page. By default, all tables are offloaded every 24 hours, but this time period can be increased or decreased. The Offload Info table also contains more information about the last offload (**Time**, **Duration**, **Status**, and **Entries**). You can also manually trigger a new offload.
 
-To be able to offload the data to **DSL** files, you also have to configure the pathwhere these files need to be stored. This is also done on the **Configuration** page. It is possible to configure a local or a network path. If a network path is configured, the **Network User** and **Network Password** are also required.
+To be able to offload the data to **DSL** files, you also have to configure the path where these files need to be stored. This is also done on the **Configuration** page. It is possible to configure a local or a network path. If a network path is configured, the **Network User** and **Network Password** are also required.
 
 When **Check File Changes** is set to *Enabled*, only the changes since the last offload will be added in the new **DSL** file. To make it possible to compare the new data with the previous DSL, a copy is stored in the Documents folder of the DMA.
 
@@ -67,7 +67,7 @@ To check the **connection** towards the database, a **ping query** can be used.
 
 This query is executed in a configurable cycle (**Ping Query Cycle**) with a default of *15 minutes*. Note that this query will only be executed if the **Ping Query State** is *enabled* (which is not the case by default).
 
-When the ping query **fails**, it will set the element into **timeout**,and the regular queries will not be executed. As soon as the ping query is OK again, the normal queries will also be executed.
+When the ping query **fails**, it will set the element into **timeout**, and the regular queries will not be executed. As soon as the ping query is OK again, the normal queries will also be executed.
 
 ### KQI/KPI Score
 

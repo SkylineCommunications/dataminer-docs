@@ -66,6 +66,6 @@ On these pages, you can find tables that are automatically filled in and that ar
 
 ### Element page
 
-On this page, you can find two tables. The upper table displays all the elements on the DMA with their **Name**, **Protocol** **Version**, **Protocol** **Name**, **Element** **ID**and **Severity**.
+On this page, you can find two tables. The upper table displays all the elements on the DMA with their **Name**, **Protocol** **Version**, **Protocol** **Name**, **Element** **ID** and **Severity**.
 
 The lower table displays a selection of elements that are probes. The information displayed in this table is similar to that in the table above.

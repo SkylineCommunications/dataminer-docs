@@ -54,7 +54,7 @@ It also displays a list of parameters indicating the current status of the diffe
 This page displays the following tables with information relating to power parameters:
 
 - **CMC Power Table:** Displays electric values related to the chassis, such as the **Potential Power**, **Amps reading**, **Watts reading**, etc.
-- **CMC Power Supply Unit Table**: Displays electric values related to the power supply units and information such asthe **Location** and the **Monitoring Capabilities**.
+- **CMC Power Supply Unit Table**: Displays electric values related to the power supply units and information such as the **Location** and the **Monitoring Capabilities**.
 
 ### Traps Page
 

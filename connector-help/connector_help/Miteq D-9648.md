@@ -24,6 +24,7 @@ SERIAL CONNECTION:
 
 ### General
 
-The General page contains **the Frequency, Attenuation and Indicators** for **Local/Remote** operation.The page also contains two Page Buttons: **List Channels** and **Status Alarms.**
+The General page contains **the Frequency, Attenuation and Indicators** for **Local/Remote** operation.
+The page also contains two Page Buttons: **List Channels** and **Status Alarms.**
 
 **List Channels** allows a user to view and **edit all the Channels** presently configured on the D-9648.

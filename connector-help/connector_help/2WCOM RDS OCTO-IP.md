@@ -64,7 +64,8 @@ On this page, the received traps are logged in a table. You can change how many 
 
 ### Service Status
 
-On this page, you can start and stop a service in a Microsoft Server. To do so, first click **Refresh Servers** and select a Microsoft Server from the list **Microsoft Servers**. Then click **Refresh Services** to update the list of services, and select the service from the **Server Services**. To poll the status of the service, set the **Poll Service Status** parameter to *Enabled*. Stop or start the service by clicking the **Start/Stop Service** parameter. Use the **Service Log** page button if necessary.
+On this page, you can start and stop a service in a Microsoft Server.
+To do so, first click **Refresh Servers** and select a Microsoft Server from the list **Microsoft Servers**. Then click **Refresh Services** to update the list of services, and select the service from the **Server Services**. To poll the status of the service, set the **Poll Service Status** parameter to *Enabled*. Stop or start the service by clicking the **Start/Stop Service** parameter. Use the **Service Log** page button if necessary.
 
 In addition, on this page you can also retrieve information about the status of two OCTO-IP devices working in redundancy. To do so, set the **Element ID Redundant OCTO-IP** number.
 

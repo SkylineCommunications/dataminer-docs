@@ -8,9 +8,9 @@ This connector uses the Serial Tally communication protocol to control either a 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                              | **Based on** | **System Impact** |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x \[SLC Main\] | 2-1. M/E Xpt (Write/Read)4. Key (Write/Read)8. Snapshot (Write)9. Key Snapshot (Write)10. Macro Control (Write)12-4. Source Name Setup (Read) | \-           | \-                |
+| **Range**            | **Key Features**                                                                                                                                   | **Based on** | **System Impact** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | 2-1. M/E Xpt (Write/Read) 4. Key (Write/Read) 8. Snapshot (Write) 9. Key Snapshot (Write) 10. Macro Control (Write) 12-4. Source Name Setup (Read) | \-           | \-                |
 
 ### Product Info
 

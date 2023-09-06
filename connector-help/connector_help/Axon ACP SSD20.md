@@ -24,7 +24,7 @@ There are different possibilities available for **alarm monitoring** and **trend
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | 04000500               |
+| 1.0.0.x   | 0400 0500              |
 
 ### System Info
 

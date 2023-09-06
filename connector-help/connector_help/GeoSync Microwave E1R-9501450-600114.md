@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This page contains system info parameters such as **Model Number**, **Serial Number** and **Software Version**. It also displays system alarms that can be triggered by the **Primary Unit** orthe **Backup Unit**, as well as the selected **Switch Mode** (*Manual/Automatic*) and both the **Primary and Backup Unit Status** (*Online/Standby*).
+This page contains system info parameters such as **Model Number**, **Serial Number** and **Software Version**. It also displays system alarms that can be triggered by the **Primary Unit** or the **Backup Unit**, as well as the selected **Switch Mode** (*Manual/Automatic*) and both the **Primary and Backup Unit Status** (*Online/Standby*).
 
 ### Primary
 
@@ -49,7 +49,7 @@ This page contains parameters specific to the primary unit, including its **Atte
 
 ### Backup
 
-This page contains parameters specific to the backup unit, including its **Attenuation** (dB) and **Slope** (0-6 dB range) when the unit is either online or in standby, **Low and High Current** (A) **Limits** and **Power Supply Voltage** for both the +6 V (4.5 - 7.5 V range) and the +12 V(10.5 - 13.5 V range).
+This page contains parameters specific to the backup unit, including its **Attenuation** (dB) and **Slope** (0-6 dB range) when the unit is either online or in standby, **Low and High Current** (A) **Limits** and **Power Supply Voltage** for both the +6 V (4.5 - 7.5 V range) and the +12 V (10.5 - 13.5 V range).
 
 ### Misc
 
@@ -59,7 +59,7 @@ This page contains a variety of parameters, including:
 - **Switch Mode**: Allows you to toggle between *Manual* or *Automatic* mode.
 - **Status**: Signals whether the primary unit is online and the backup unit is in standby or vice versa, and allows you to switch between these states.
 - System alarms, such as the **Primary and Backup Unit Alarm**, **Transfer Switch Alarm**, and both the **Primary and Backup Power Supply Alarm**.
-- **Date/Time**:Displayed at the bottom of the page. Can only be modified by users who have at least security level 3.
+- **Date/Time**: Displayed at the bottom of the page. Can only be modified by users who have at least security level 3.
 
 ### Log
 
@@ -75,4 +75,5 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Revision History
 
-DATE VERSION AUTHOR COMMENTS 30/04/2018 1.0.0.1 RBL, Skyline Initial version
+DATE VERSION AUTHOR COMMENTS
+30/04/2018 1.0.0.1 RBL, Skyline Initial version

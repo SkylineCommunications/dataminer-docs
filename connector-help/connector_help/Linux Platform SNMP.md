@@ -40,19 +40,19 @@ This driver uses SNMP in order to monitor a Linux platform.
 </tr>
 <tr class="even">
 <td>1.1.1.x [SLC Main]</td>
-<td>Based on 1.1.0.56Process Counter table was created in version 1.1.0.47.Impact upgrading from 1.1.0.46 or below: noneImpact upgrading from 1.1.0.47 or above: <strong>loss of trend data for Process Counter Table</strong>.Process Counter table remade.</td>
+<td>Based on 1.1.0.56 Process Counter table was created in version 1.1.0.47. Impact upgrading from 1.1.0.46 or below: none Impact upgrading from 1.1.0.47 or above: <strong>loss of trend data for Process Counter Table</strong>. Process Counter table remade.</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr class="odd">
 <td>2.0.0.x</td>
-<td>Based on 1.1.0.35Implemented SNMPv3</td>
+<td>Based on 1.1.0.35 Implemented SNMPv3</td>
 <td>Yes</td>
 <td>No</td>
 </tr>
 <tr class="even">
 <td>2.0.1.x</td>
-<td>Based on 1.1.0.44Changed displayColumn to Naming to improve performance and make the driver Cassandra-compliant.Impact: <strong>loss of trend data on tables</strong>:
+<td>Based on 1.1.0.44 Changed displayColumn to Naming to improve performance and make the driver Cassandra-compliant. Impact: <strong>loss of trend data on tables</strong>:
 <ul>
 <li>Software Info</li>
 <li>Storage Table</li>
@@ -150,7 +150,7 @@ From version **1.1.0.53** onwards, an additional monitoring subpage is available
 
 ### Memory Info
 
-This page displays memory information in the **Storage Table**,if **Storage Table Polling** is enabled.
+This page displays memory information in the **Storage Table**, if **Storage Table Polling** is enabled.
 
 The following page buttons are available:
 

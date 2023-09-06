@@ -8,7 +8,8 @@ The Moxa ioLogik E4200 protocol sets and configures the modules the Moxa ioLogik
 
 ## About
 
-The driver displays each individual module of the device in a list. Its inputs are visible, as well as its outputs, should there be any. There is also an overview table for all inputs and outputs. The driver uses SNMP to get this data.
+The driver displays each individual module of the device in a list. Its inputs are visible, as well as its outputs, should there be any. There is also an overview table for all inputs and outputs.
+The driver uses SNMP to get this data.
 
 ### Ranges of the driver
 
