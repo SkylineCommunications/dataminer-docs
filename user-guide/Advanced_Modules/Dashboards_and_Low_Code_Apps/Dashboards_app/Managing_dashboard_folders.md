@@ -28,6 +28,7 @@ uid: Managing_dashboard_folders
 1. Click OK to confirm the deletion.
 
 > [!NOTE]
+>
 > - When you delete a folder, any dashboards or folders within that folder will also be deleted.
 > - If a folder contains a dashboard you are not allowed to modify, you will not be able to delete that folder.
 
@@ -40,6 +41,7 @@ uid: Managing_dashboard_folders
 1. Enter a new folder name, and click OK.
 
 > [!NOTE]
+>
 > - When you rename a folder, the location and URL of all dashboards in that folder and any of its subfolders will automatically be adapted.
 > - If a folder contains a dashboard you are not allowed to modify, you will not be able to rename that folder.
 
