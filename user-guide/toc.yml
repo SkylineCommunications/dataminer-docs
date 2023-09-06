@@ -4118,6 +4118,10 @@
       items:
         - name: Connecting devices using RS-232/RS-422/RS-485
           topicUid: Connecting_devices_using_RS_232_RS_422_RS_485
+      topicUid: NatsCustodian
+      items:
+        - name: NatsCustodian
+          topicUid: NatsCustodian
     - name: Frequently asked questions
       topicUid: faq
       items:
