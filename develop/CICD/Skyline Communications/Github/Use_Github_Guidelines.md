@@ -71,7 +71,7 @@ It is important to add a *README.md* file to the root folder. The contents of th
 
 ## Adding a .gitignore
 
-It is important to add a *.gitignore* file to the root folder. The contents of this file will avoid committing things like assemblies from the bin folders or other user-side configurations. Using the default suggested .gitignore should be sufficient.
+It is important to add a *.gitignore* file to the root folder. The contents of this file will ensure that you do not commit things like assemblies from the bin folders or other user-specific configuration. Using the default suggested .gitignore should be sufficient.
 
 ## Adding topics to a repository
 
