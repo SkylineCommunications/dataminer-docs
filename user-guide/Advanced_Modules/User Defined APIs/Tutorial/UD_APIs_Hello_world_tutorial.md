@@ -86,7 +86,7 @@ Now that the solution is set up and the dependencies are up to date. You will ne
 
 The script has now been updated with the `OnApiTrigger(IEngine, ApiTriggerInput)` method. You can also remove the comments and unused "using" directives. This should result in the following script code:
 
-```C#
+```csharp
 namespace HelloWorldAPI_1
 {
     using Skyline.DataMiner.Automation;
@@ -113,7 +113,7 @@ namespace HelloWorldAPI_1
 
 The goal of this tutorial is to have "Hello world!" returned when the API script is triggered. To configure this, you need to replace the default "Succeeded" string provided by the snippet with the "Hello world!" string. The resulting and final state of the script should look like this:
 
-```C#
+```csharp
 namespace HelloWorldAPI_1
 {
     using Skyline.DataMiner.Automation;

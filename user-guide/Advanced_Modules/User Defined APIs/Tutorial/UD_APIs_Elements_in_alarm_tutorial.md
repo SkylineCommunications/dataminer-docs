@@ -226,4 +226,4 @@ When you click the blue *Send* button again, the API will be triggered and all e
   
 ![Postman UI response](~/user-guide/images/UDAPIS_Tutorials_Elements_Postman_Response.jpg)
 
-This is only a simple example of what can be done using the input and output functionality of a user-defined API. For this case, a list of alarm levels could be provided in the input. Additionally, a flag (i.e. bool property) could be added to the response that would indicate whether there were more elements than the provided limit.
+This is only a simple example of what can be done using the input and output functionality of a user-defined API. Numerous extensions could be made. For example, a list of alarm levels could be provided in the input. Additionally, a flag (i.e. bool property) could be added to the response that would indicate whether there were more elements than the provided limit.
