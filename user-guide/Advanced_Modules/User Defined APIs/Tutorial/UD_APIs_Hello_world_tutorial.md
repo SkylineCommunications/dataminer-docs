@@ -4,7 +4,7 @@ uid: UD_APIs_Hello_world_tutorial
 
 # Hello world tutorial
 
-This tutorial shows you how to create your first custom API. You will create a simple API that, upon execution, will return "Hello world". The content and screenshots for this tutorial were created in DataMiner version 10.3.9.
+This tutorial shows you how to create your first custom API. You will create a simple API that, upon execution, will return "Hello world". The content and screenshots for this tutorial have been created in DataMiner version 10.3.9.
 
 > [!IMPORTANT]
 > Before you start this tutorial, take a look at the [prerequisites](xref:UD_APIs_Tutorials).
@@ -39,9 +39,9 @@ While you could develop the Automation script in Cube, creating an Automation sc
 
 The logic of your API is in an Automation script. This processes input arguments, executes logic, and returns a response. In this example, no input is processed, and no logic is executed. The API will only return "Hello world!" to the user.
 
-### [Preparing the project](#tab/preparing-the-project)
+### Preparing the project
 
-You first need to prepare the project so our dependencies are up to date. To develop API scripts you will need the "Skyline.DataMiner.Dev.Automation" NuGet package of at least version 10.2.12.
+You first need to prepare the project so the dependencies are up to date. To develop API scripts, you will need the "Skyline.DataMiner.Dev.Automation" NuGet package of at least version 10.2.12.
 
 1. Specify *HelloWorldAPI* as the name of your Automation script, fill in your name as the author, and click *Create*.
 
@@ -66,7 +66,7 @@ You first need to prepare the project so our dependencies are up to date. To dev
       > [!TIP]
       > Not sure which DataMiner version you are using? Connect to your DataMiner System using Cube, click the user icon in the Cube header, and select *About*. Under *general*, you will see the DataMiner version.
 
-### [Preparing the script](#tab/preparing-the-script)
+### Preparing the script
 
 Now that the solution is set up and the dependencies are up to date. You will need to update the default script content with the wrapper code for the API script. The default run method should be replaced with a special entry-point method.
 
@@ -109,7 +109,7 @@ namespace HelloWorldAPI_1
 }
 ```
 
-### [Writing the API logic](#tab/writing-the-api-logic)
+### Writing the API logic
 
 The goal is to return "Hello world!" when the API script is triggered. To configure this, you need to replace the default "Succeeded" string provided by the snippet with our "Hello world!" string. The resulting and final state of the script should look like this.
 
@@ -135,7 +135,7 @@ namespace HelloWorldAPI_1
 }
 ```
 
-### [Publishing the script](#tab/publishing-the-script)
+### Publishing the script
 
 The API script is complete and needs to be published to the DataMiner system. This can be done using the built-int publish feature of DIS. Make sure that DIS can connect to the DataMiner system you want to upload your script to. You will need to [edit the DIS settings](xref:DIS_settings#dma) so the DMA is selectable.
 
@@ -146,8 +146,6 @@ The API script is complete and needs to be published to the DataMiner system. Th
 1. Click on the arrow next to the *Publish* button at the top of the code window and select the DataMiner system you want to upload the script to.
 
    ![Publish to DMA](~/user-guide/images/UDAPIS_Tutorials_DIS_Publish.jpg)
-
----
 
 ## Step 3: Create an API token
 
