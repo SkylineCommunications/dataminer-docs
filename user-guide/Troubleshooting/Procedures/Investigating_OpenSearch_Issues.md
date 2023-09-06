@@ -158,7 +158,7 @@ To resolve this, you may need to increase the start timeout for systemd (see [sy
    sudo systemctl start opensearch
    ```
 
-1. Execute the following command to verify that OpenSearch no longer goes into timeout:
+1. Execute the following command to verify that OpenSearch no longer goes into timeout and keeps running:
 
    ```bash
    sudo systemctl status opensearch
