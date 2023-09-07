@@ -12,9 +12,9 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [Dashboards app & Low-Code Apps: New Stepper component [ID_37200]](#dashboards-app--low-code-apps-new-stepper-component-id_37200)
 
-## Other features
+## New features
 
 #### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
 

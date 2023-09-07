@@ -18,9 +18,17 @@ uid: General_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]](#dataminer-object-models-full-crud-meta-scripts-id_37004)
 
-## Other features
+## New features
+
+#### DataMiner Object Models: 'Full CRUD meta' scripts [ID_37004]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Apart from **ID only** scripts, which use the `OnDomInstanceCrud` entry point method and give you access to the CRUD type and the ID of the `DomInstance` in the script, it is now also possible to configure **Full CRUD meta** scripts. These use the `OnDomInstanceCrudWithFullMeta` entry point method and give you access to the CRUD type and the full `DomInstance` object(s).
+
+For more detailed information, see [ExecuteScriptOnDomInstanceActionSettings](xref:ExecuteScriptOnDomInstanceActionSettings).
 
 #### DataMiner Object Models: GenericEnumEntry objects can now be soft-deleted [ID_37121]
 

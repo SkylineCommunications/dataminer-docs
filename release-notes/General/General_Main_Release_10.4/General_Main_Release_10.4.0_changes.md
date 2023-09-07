@@ -79,6 +79,25 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
+#### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
+
+For all types that are read in a partitioned way (currently alarms and trending), the migration progress will now be stored in *TokenRange.txt* files located in the `C:\Skyline DataMiner\Database` folder.
+
+To resume a migration after restarting all DMAs in your DataMiner System, do the following:
+
+1. Start *SLCCMigrator.exe* (which is located in the `C:\Skyline DataMiner\Tools\` folder).
+1. Initialize all the DMAs in the list.
+1. Click *Start Migration*.
+
+> [!NOTE]
+>
+> - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
+> - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
+
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -560,12 +579,6 @@ When NATS tried to automatically reconnect at a moment when none of the servers 
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
 
-#### NATS connection could fail due to payloads being too large [ID_36427]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
-
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
 <!-- MR 10.4.0 - FR 10.3.8 -->
@@ -626,3 +639,9 @@ When you imported an element that already existed in the system, in some cases, 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.

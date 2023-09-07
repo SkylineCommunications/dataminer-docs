@@ -12,9 +12,50 @@ uid: Cube_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]](#alarm-console-light-bulb-id_36777-id_36871-id_36918-id_37057-id_37136-id_37145-id_37167-id_37184)
 
-## Other new features
+- [Protocols & Templates app: Editing, deleting and duplicating elements [ID_36971]](#protocols--templates-app-editing-deleting-and-duplicating-elements-id_36971)
+
+## New features
+
+#### Having data offloaded to multiple Elasticsearch clusters & enabling TLS when configuring a Cassandra database [ID_36399]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+In the *Database* section of *System Center*, you can now do the following:
+
+- Have data offloaded to multiple Elasticsearch clusters.
+
+  For detailed instructions, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)
+
+- Enable TLS when configuring a Cassandra database.
+
+  See [Configuring the general database settings](xref:Configuring_the_database_settings_in_Cube)
+
+> [!IMPORTANT]
+> From now on, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube.
+
+#### Alarm Console: Light bulb [ID_36777] [ID_36871] [ID_36918] [ID_37057] [ID_37136] [ID_37145] [ID_37167] [ID_37184]
+
+<!-- RNs 36777/36871/36918: MR 10.4.0 - FR 10.3.9 -->
+<!-- RNs 37057/37136/37145/37167/37184: MR 10.4.0 - FR 10.3.10 -->
+
+In the top-right corner of the Alarm Console, you can now find a light bulb icon that will light up when there are alarms or suggestion events related to an SLAnalytics feature. When you click this light bulb, a menu will open, possibly showing you the following notifications:
+
+| Notification | Action when clicked |
+|--------------|---------------------|
+| X alarms require your focus in the current tab | Applies a filter that makes the current tab only list the focused alarms. |
+| Also show alarms not requiring focus      | Clears the above-mentioned filter and makes the current tab list all alarms. |
+| X incidents are present on the system     | Opens a new tab listing all active incidents. |
+| X anomalies were found in your trend data | Opens a new tab listing all anomaly suggestions/alarms. |
+| X alarms are predicted in the near future | Opens a new tab listing all prediction suggestions/alarms. |
+| X recent pattern occurrence detected      | Opens a new tab listing all trend pattern suggestions. |
+
+> [!NOTE]
+>
+> - Each of the above-mentioned notifications will only appear in the menu when there is at least one alarm, incident, anomaly or pattern occurrence.
+> - When at least one SLAnalytics feature (alarm focus, automatic incident tracking, behavioral anomaly detection, proactive cap detection or pattern matching) is disabled or not available, a link to [Advanced analytics features in the Alarm Console](xref:Advanced_analytics_features_in_the_Alarm_Console) will appear below the light bulb icon.
+> - If the DataMiner System does not include a Cassandra database, the menu will only show a notification saying the Cassandra is required.
 
 #### Trending - Pattern matching: Pattern highlighted when mouse pointer hovers over label [ID_36863]
 

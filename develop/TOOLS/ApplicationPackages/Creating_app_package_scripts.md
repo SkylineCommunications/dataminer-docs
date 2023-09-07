@@ -40,13 +40,13 @@ public void Install(Engine engine, AppInstallContext context)
 > [!NOTE]
 > The namespace `Skyline.DataMiner.Net.AppPackages` needs to be included to provide access to `AppInstallContext`.
 
-### SLAppInstaller
+### AppInstaller
 
 The created method should contain all actions that need to be performed in order to have a successful installation.
 
-The `SLAppInstaller` namespace contains various classes related to installing a DMAPP and can be used to define the installation.
+The [Skyline.AppInstaller](xref:Skyline.AppInstaller) namespace contains various classes related to installing a DMAPP and can be used to define the installation.
 
-The example below will install all (by default supported) content of the package.
+The example below will install all (by default supported) content of the package using the [InstallDefaultContent](xref:Skyline.AppInstaller.AppInstaller.InstallDefaultContent) method.
 
 ```csharp
 [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]

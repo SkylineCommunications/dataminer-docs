@@ -1,8 +1,8 @@
 ---
-uid: General_Main_Release_10.2.0_CU20
+uid: General_Main_Release_10.3.0_CU8
 ---
 
-# General Main Release 10.2.0 CU20 – Preview
+# General Main Release 10.3.0 CU8 – Preview
 
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
@@ -16,19 +16,17 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Fixes
 
+#### NATS connection could fail due to payloads being too large [ID_36427]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.8 -->
+
+In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
+
 #### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
-
-#### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
-
-When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
-
-Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
 
 #### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
 
@@ -51,19 +49,8 @@ The Asset Manager would add NullReference exceptions to the SLNet log file when 
 
 When a view or an element was deleted on the DMA before a synchronization was performed from the database to the DMA, the deleted items would not get recreated unless the DMA had been restarted before the synchronization, and when a mediation configuration file was adapted and reloaded, the view configuration would not be reloaded.
 
-#### DataMiner Cube - Alarm Console : Problem when a correlation/incident alarm got cleared [ID_37231]
+#### SLElement could read and write to the same memory blocks on different threads [ID_37180]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
-
-#### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-When a custom time zone was used, in some cases, that time zone would not be processed correctly.
-
-For example, when you set a custom time zone in a *Clock* component, the current time of that custom time zone would not be identical to the current time of the local time zone.
-
-> [!NOTE]
-> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
