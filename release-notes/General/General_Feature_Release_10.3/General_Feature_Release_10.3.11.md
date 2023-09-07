@@ -68,6 +68,20 @@ From now on, the number of backups you specify will be the number of backups tha
 > [!NOTE]
 > A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
 
+#### SLNet would incorrectly return certain port information fields of type string as null values [ID_37165]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 - This RN is identical to RN 36524 -->
+
+When element information was retrieved from SLNet, in some cases, certain port information fields of type string would incorrectly be returned as a null value instead of an empty string value. As a result, DataMiner Cube would no longer show the port information when you edited an element.
+
+Affected port information fields:
+
+- BusAddress
+- Number
+- PollingIPAddress
+- PollingIPPort
+
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
