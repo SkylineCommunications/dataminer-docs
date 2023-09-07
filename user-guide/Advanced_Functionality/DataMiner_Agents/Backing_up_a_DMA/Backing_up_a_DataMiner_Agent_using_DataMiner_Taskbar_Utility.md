@@ -21,6 +21,9 @@ uid: Backing_up_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
 > [!NOTE]
 > By default, backup files are placed in *C:\\Skyline DataMiner Backups\\*. If you want to specify another backup folder, right-click the DataMiner Taskbar Utility icon, click *Options* and specify a different folder in the *General* tab.
 
+>[!NOTE]
+> From 10.3.11/10.3.0(CU8)/10.2.05CU20) a subfolder for each agent will be created at the chosen location, which will store the backups for their respective agent. This subfolder will use the DMAID as name.
+
 > [!TIP]
 > See also:
 > [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility)

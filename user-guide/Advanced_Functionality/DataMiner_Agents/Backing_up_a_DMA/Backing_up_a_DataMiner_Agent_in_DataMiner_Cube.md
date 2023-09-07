@@ -24,6 +24,9 @@ The following steps can be taken to configure the backups for a DMA:
      
      > [!NOTE]
      > Only SMB file shares are supported for network backups. It is not possible to back up to e.g. (S)FTP shares.
+     
+     >[!NOTE]
+     > From 10.3.11/10.3.0(CU8)/10.2.05CU20) a subfolder for each agent will be created at the chosen location, which will store the backups for their respective agent. This subfolder will use the DMAID as name.
 
 1. In the *General* tab, under *Policy*, enter the number of backups that should be kept.
 
