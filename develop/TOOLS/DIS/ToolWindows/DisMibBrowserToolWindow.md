@@ -9,9 +9,6 @@ This tool window allows you to build [Param](xref:Protocol.Params.Param) tags ba
 > [!NOTE]
 > The MIB Browser currently supports adding parameters of type Gauge32, Integer, Integer32, TimeTicks and Unsigned32.
 
-> [!TIP]
-> See also: [Getting Started with the DIS MIB Browser](xref:DIS_MIB_Browser)
-
 ![DIS MIB browser tool window](~/develop/images/DisMibBrowserToolWindow.png)
 
 ## MIB tree
@@ -45,3 +42,7 @@ The *Compare* tab shows the differences between the OID data in the MIB tree and
 - The top pane lists the OIDs that do not have a corresponding *\<Param>* tag in the protocol XML file.
 
 - The bottom pane lists the *\<Param>* tags in the protocol XML file that do not have a corresponding OID in the MIB tree.
+
+## See also
+
+- [Getting Started with the DIS MIB Browser](xref:DIS_MIB_Browser).

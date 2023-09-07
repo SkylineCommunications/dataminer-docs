@@ -4,7 +4,7 @@ uid: DisTutorials_MibBrowser
 
 # Tutorial: Exploring the DIS MIB Browser
 
-In this tutorial, you familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them to a sample protocol.
+In this tutorial, you familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them in a connector.
 
 > [!TIP]
 > You can follow along with this [step-by-step video tutorial](https://skyline.be/).
@@ -20,11 +20,13 @@ In this tutorial, you familiarize yourself with the DIS MIB Browser's functional
 
 - Carefully read [Using the DIS MIB Browser](xref:DIS_MIB_Browser)
 
-- Download the MIB Browser tutorial file [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser/tree/main/Documentation)
+- Download the tutorial files [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser)
 
-- Download the *protocol.xml* file [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser)
+## Step 1: Open the connector solution
 
-## Step 1: Exploring the DIS MIB Browser functionalities
+After downloading the tutorial files, double click on the 'Tutorials-DIS-MIB_Browser.sln' file to open Visual Studio with the connector solution.
+
+## Step 2: Exploring the DIS MIB Browser functionalities
 
 1. Load a MIB file:
 
@@ -40,30 +42,30 @@ In this tutorial, you familiarize yourself with the DIS MIB Browser's functional
 
    1. Find the *cpuLoad* parameter in the MIB Tree.
 
-   1. Drag and drop it into the sample protocol (i.e. *protocol.xml*) to see how the parameter details are automatically filled.
+   1. Drag and drop it into the connector (i.e. *protocol.xml*) to see how the parameter details are automatically filled.
 
 1. Generate parameters in bulk:
 
-   1. Right-click your protocol and select *Generate Parameters*.
+   1. Right-click in your connector and select *Generate Parameters*.
 
    1. In the second window, select *systemDateTime*, *moduleName*, and *logTable* to generate multiple parameters simultaneously, and observe the process.
 
-1. Compare the loaded MIB file with the protocol:
+1. Compare the loaded MIB file with the connector:
 
    1. Navigate to the *Compare* tab.
 
    1. Click *Refresh*.
 
-   1. Create a list of any discrepancies between the MIB file and the protocol.
+   1. Create a list of any discrepancies between the MIB file and the connector.
 
-1. If there are parameters in the MIB file not in the protocol, use the *drag and drop* feature to integrate them into the protocol.
+1. If there are parameters in the MIB file not in the connector, use the *drag and drop* feature to integrate them into the connector.
 
    > [!NOTE]
-   > Because of how we define tables, the comparison will always show the first column of a table, even if it is already included in the protocol.
+   > Because of how we define tables, the comparison will always show the first column of a table, even if it is already included in the connector.
 
-## Step 2: Submitting your protocol.xml file
+## Step 3: Submitting your protocol.xml file
 
-Once you have successfully navigated the steps under [Exploring the DIS MIB Browser](#step-1-exploring-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
+Once you have successfully navigated the steps under [Exploring the DIS MIB Browser](#step-2-exploring-the-dis-mib-browser-functionalities), forward your updated *protocol.xml* file to [Team Data Acquisition](mailto:domain.create.data-acquisition@skyline.be).
 
 Adhere to the following email format:
 

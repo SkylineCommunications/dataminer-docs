@@ -53,7 +53,7 @@ When you want to remove files from the list, select them and click *Remove*. To 
 
 ### Generating an individual parameter
 
-To generate a single parameter, drag a parameter from the MIB Tree and drop it into the protocol at your chosen location.
+To generate a single parameter, drag a parameter from the MIB Tree and drop it into the connector at your chosen location.
 
 The DIS tool will automatically retrieve the relevant MIB data and populate the parameter accordingly.
 
@@ -93,7 +93,7 @@ In larger projects, generating multiple parameters simultaneously may be benefic
       > [!NOTE]
       > After this point, you can skip additional settings and generate parameters immediately by selecting *Finish*.
 
-   1. **Timers**: A list of all timers in the protocol is displayed. You can modify the current timers or add new ones.
+   1. **Timers**: A list of all timers in the connector is displayed. You can modify the current timers or add new ones.
 
       ![DIS - Generate Parameters - Timers](~/develop/images/DIS_ToolWindow_MibBrowser_GenerateParameters_Timers.png)
 
@@ -107,25 +107,25 @@ In larger projects, generating multiple parameters simultaneously may be benefic
 
 1. Select *Finish* in the lower right corner to generate your parameters, along with their respective groups and timers.
 
-## Comparing the protocol with MIB Files
+## Comparing the connector with MIB Files
 
-Your SNMP protocol should always be up-to-date with the latest MIB files. The DIS MIB Browser's *Compare* tab offers an effective way to identify any disparities between your protocol and the MIB files.
+Your SNMP connector should always be up-to-date with the latest MIB files. The DIS MIB Browser's *Compare* tab offers an effective way to identify any disparities between your connector and the MIB files.
 
 1. In the DIS MIB Browser, go to the *Compare* tab.
 
 1. Click *Refresh* to synchronize the data.
 
-1. Observe any potential differences between the loaded MIB files and your protocol:
+1. Observe any potential differences between the loaded MIB files and your connector:
 
-   - The top list displays parameters found in the MIB files that are missing in your protocol.
+   - The top list displays parameters found in the MIB files that are missing in your connector.
 
-   - The bottom list displays parameters found in your protocol that are missing in the loaded MIB files.
+   - The bottom list displays parameters found in your connector that are missing in the loaded MIB files.
 
    > [!NOTE]
    > You can copy and share any differences by selecting *Copy to Clipboard*.
 
    ![DIS ToolWindow - MIB Browser - MIB Tree - Compare](~/develop/images/DIS_ToolWindow_MibBrowser_Compare.png)
 
-1. If there are parameters missing from your protocol, use the *drag and drop* feature to transfer them from the top list to the protocol.
+1. If there are parameters missing from your connector, use the *drag and drop* feature to transfer them from the top list to the connector.
 
    This action will enable the DIS MIB Browser to populate various parameter details automatically, streamlining the integration process.

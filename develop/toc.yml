@@ -5271,10 +5271,11 @@
               topicUid: DisVisualStudioSolutionsIntroduction
             - name: Developing connectors
               topicUid: Developing_connectors_as_Visual_Studio_solutions
+              items:
+                - name: Using the DIS MIB Browser
+                  topicUid: DIS_MIB_Browser
             - name: Developing Automation scripts
               topicUid: Developing_Automation_scripts_as_Visual_Studio_solutions
-            - name: Using the DIS MIB Browser
-              topicUid: DIS_MIB_Browser
         - name: Debugging connectors and Automation scripts
           topicUid: Debugging_connectors_and_Automation_scripts
           items:
