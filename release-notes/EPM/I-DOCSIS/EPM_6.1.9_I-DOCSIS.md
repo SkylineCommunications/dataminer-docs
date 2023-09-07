@@ -28,6 +28,12 @@ When you navigate to the node segment or service group entities in the topology 
 
 On all levels of the topology, a new DOCSIS 1.X counter parameter has been added, similar to the existing DOCSIS 2.X, DOCSIS 3.0, and DOCSIS 3.1 counter parameters.
 
+#### Creating new CCAP/CM pairs from a CSV file [ID_37262]
+
+It is now possible to create CCAP/CM pairs based on a CSV file.
+
+The existing script *EPM_I_DOCSIS_AddNewCcapCmPair* has been expanded with the possibility to specify the path to a CSV file and then create the CCAP/CM pairs based on that file. The CSV file must have the following structure: *ElementName, Be_DMA, Collector_DMA, Protocol , IpAddress, CommunityString, Network, Market, Hub, SystemUser, SystemPass*.
+
 ## Changes
 
 ### Enhancements
