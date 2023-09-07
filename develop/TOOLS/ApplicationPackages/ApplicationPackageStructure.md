@@ -1,5 +1,5 @@
 ---
-uid: Creating_an_app_package
+uid: ApplicationPackageStructure
 ---
 
 # Application package structure

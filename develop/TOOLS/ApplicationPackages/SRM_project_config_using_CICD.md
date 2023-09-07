@@ -2,7 +2,7 @@
 uid: SRM_project_config_using_CICD
 ---
 
-# SRM project configuration using CI/CD
+# Application packages for SRM projects
 
 When you implement [an SRM project](xref:About_SRM), we highly recommend that you create a repository containing all custom components deployed on top of the SRM framework (function definitions, service definitions, custom scripts, Visio drawings, etc.). This facilitates the development process and the deployment of the project on any cluster.
 
@@ -85,7 +85,7 @@ To create the repositories:
 
 1. In the "Install" Automation script of the "Package" repository, add the necessary steps to import the SRM configuration:
 
-   1. Add the *SLC.SRM.Installer* NuGet package (available on <nuget.org> ) to the "Install" project.
+   1. Add the [Skyline.DataMiner.Core.AppPackageInstaller.SRM](https://www.nuget.org/packages/Skyline.DataMiner.Core.AppPackageInstaller.SRM) NuGet package (available on <nuget.org> ) to the "Install" project.
 
    1. In the code of the "Install" script, reference the *Skyline.DataMiner.Srm.AppPackageInstaller* namespace.
 

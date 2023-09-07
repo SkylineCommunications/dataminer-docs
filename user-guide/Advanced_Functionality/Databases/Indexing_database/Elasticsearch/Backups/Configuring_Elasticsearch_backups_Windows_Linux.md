@@ -312,3 +312,23 @@ You have now finished configuring an Elasticsearch backup. If you do not want to
 
 > [!IMPORTANT]
 > If you followed these steps in preparation of migrating your data from an existing Elasticsearch cluster to a new target Elasticsearch cluster, you can now run the migration as explained in [Running the migration with bespoke Elasticsearch data](xref:Migrating_the_general_database_to_a_DMS_Cassandra_cluster#running-the-migration).
+
+## Troubleshooting
+
+### Unable to access path.repo
+
+If the error "Unable to access 'path.repo' (\\[SERVER]]\FOLDER]\)" is generated in the Elasticsearch backup file, this means that the SYSTEM user does not have access to the network path.
+
+Whether you are triggering the backup via DataMiner or using an Elasticsearch REST API client such as Kibana, you need to make sure that the backup path is accessible on all the nodes in the cluster. If the network path requires credentials, the SYSTEM user must be granted access in one of the following ways:
+
+- Following the instructions under [Restrictions for the backup path](xref:Configuring_Elasticsearch_backups_Windows#restrictions-for-the-backup-path).
+
+- Using the Sysinternals PSTools:
+
+  1. Download [PSTools](https://learn.microsoft.com/en-us/sysinternals/downloads/psexec).
+  1. Open a command prompt as administrator and navigate to the folder containing the *psexec* tool.
+  1. Execute `psexec -i -s cmd.exe`. This way you will run the command prompt as the SYSTEM user instead of Administrator.
+  1. Execute the `net use` command, e.g. `net use \\DataMiner-01\ElasticBackup`.
+  1. When prompted, enter the credentials to access the shared folder.
+  1. Restart the Elasticsearch service.
+  1. Verify whether the service indeed starts.

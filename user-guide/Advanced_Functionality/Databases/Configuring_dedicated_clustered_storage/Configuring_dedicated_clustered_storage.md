@@ -10,6 +10,8 @@ First install a Cassandra Cluster (i.e. a Cassandra cluster used for all DMAs in
 
 Then install the indexing database. You can use an on-premises Elasticsearch cluster (supported from DataMiner 9.6.4 onwards), Amazon OpenSearch Service on AWS (supported from DataMiner 10.3.0/10.3.3 onwards), or an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards).
 
+![dedicated clustered storage](~/user-guide/images/Dedicated_clustered_storage.svg)
+
 - **Cassandra-compatible database service**
 
   - [Cassandra Cluster](xref:Cassandra_database): Supported from DataMiner 10.1.0/10.1.2 onwards.

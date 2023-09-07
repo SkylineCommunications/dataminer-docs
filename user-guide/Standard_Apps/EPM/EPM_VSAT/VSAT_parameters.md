@@ -22,6 +22,7 @@ This section lists the available parameters by protocol for each topology level 
 | Hub Return C/No                   |x|||
 | Hub Return Errors                 |x|x||
 | Hub Return Error Periods          |x|x||
+| Circuit Availability              |x|||
 | Power Headroom                    |x|x||
 | Latency                           |x|x||
 | SLA Site Status                   |x|x||
