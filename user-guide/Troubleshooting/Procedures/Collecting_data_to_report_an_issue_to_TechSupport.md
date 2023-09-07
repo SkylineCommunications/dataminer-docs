@@ -16,7 +16,7 @@ The type of data required depends on the type of issue you are experiencing:
 
 ## Log Collector packages
 
-A Log Collector package provides comprehensive information about the DataMiner System, including software version, cluster composition, network and database statistics, and more. Even if the Log Collector package appears empty, it can be valuable information, helping Technical Support verify that the DataMiner core logic is functioning correctly, and the issue lies elsewhere.
+A Log Collector package provides comprehensive information about the DataMiner System, including software version, cluster composition, network and database statistics, and more. Even if the Log Collector contains no errors, this can be valuable information, helping Technical Support verify that the DataMiner core logic is functioning correctly, and the issue lies elsewhere.
 
 To save a Log Collector package:
 
