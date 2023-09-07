@@ -22,9 +22,9 @@ In this tutorial, you familiarize yourself with the DIS MIB Browser's functional
 
 - Download the tutorial files [from GitHub](https://github.com/SkylineCommunications/Tutorials-DIS-MIB_Browser)
 
-## Step 1: Open the connector solution
+## Step 1: Opening the connector solution
 
-After downloading the tutorial files, double click on the 'Tutorials-DIS-MIB_Browser.sln' file to open Visual Studio with the connector solution.
+Once you have downloaded the tutorial files, double-click the *Tutorials-DIS-MIB_Browser.sln* file to open Visual Studio with the connector solution.
 
 ## Step 2: Exploring the DIS MIB Browser functionalities
 
@@ -46,7 +46,7 @@ After downloading the tutorial files, double click on the 'Tutorials-DIS-MIB_Bro
 
 1. Generate parameters in bulk:
 
-   1. Right-click in your connector and select *Generate Parameters*.
+   1. Right-click a chosen location in your connector and select *Generate Parameters*.
 
    1. In the second window, select *systemDateTime*, *moduleName*, and *logTable* to generate multiple parameters simultaneously, and observe the process.
 
