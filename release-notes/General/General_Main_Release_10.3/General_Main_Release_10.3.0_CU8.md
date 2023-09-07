@@ -28,6 +28,14 @@ In some cases, the NATS connection could fail due to payloads being too large. A
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would not be read out, which could lead to unexpected behavior.
 
+#### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+The Asset Manager would add NullReference exceptions to the SLNet log file when trying to synchronize between the DMA and the database.
+
+When a view or an element was deleted on the DMA before a synchronization was performed from the database to the DMA, the deleted items would not get recreated unless the DMA had been restarted before the synchronization, and when a mediation configuration file was adapted and reloaded, the view configuration would not be reloaded.
+
 #### SLElement could read and write to the same memory blocks on different threads [ID_37180]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
