@@ -20,6 +20,9 @@ With the DataMiner User-Defined APIs module, you can create custom APIs to inter
 1. [Hello world example](xref:UD_APIs_Hello_world_tutorial)
 1. [Elements in alarm example](xref:UD_APIs_Elements_in_alarm_tutorial)
 
+> [!NOTE]
+> The Automation script solution, which is created and used in the tutorials, is [available on GitHub](https://github.com/SkylineCommunications/SLC-UDAPI-Documentation-Tutorial-Scripts). The API scripts can also be deployed directly to DataMiner Systems [connected to dataminer.services](xref:AboutCloudPlatform) using the corresponding [DataMiner Catalog item](https://catalog.dataminer.services/catalog/5162).
+
 > [!TIP]
 >
 > - You can also find some basic examples on the [API script examples page](xref:UD_APIs_API_script_examples).
