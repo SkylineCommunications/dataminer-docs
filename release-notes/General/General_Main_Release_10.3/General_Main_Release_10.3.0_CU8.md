@@ -22,11 +22,24 @@ uid: General_Main_Release_10.3.0_CU8
 
 In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
-#### Not all Protocol.Params.Param.Interprete.Others tags would not be read out [ID_36797]
+#### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
-Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would not be read out, which could lead to unexpected behavior.
+Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
+
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When configuring a DataMiner backup, you can specify the number of backups that should be kept.
+
+Up to now, this setting would incorrectly be interpreted as the total number of backups to be kept in the system. This would cause problems on systems where the number of backups specified was smaller than the number of DataMiner Agents in the DMS.
+
+From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
+
+> [!NOTE]
+> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 

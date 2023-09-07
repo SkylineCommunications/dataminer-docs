@@ -16,11 +16,11 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Fixes
 
-#### Not all Protocol.Params.Param.Interprete.Others tags would not be read out [ID_36797]
+#### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would not be read out, which could lead to unexpected behavior.
+Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would be read out, which could lead to unexpected behavior.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
@@ -29,6 +29,19 @@ Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Int
 When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
 
 Also, from now on, it is no longer allowed to save a folder with a name containing leading spaces.
+
+#### DataMiner backup: Number of backups to be kept would be interpreted incorrectly [ID_37143]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When configuring a DataMiner backup, you can specify the number of backups that should be kept.
+
+Up to now, this setting would incorrectly be interpreted as the total number of backups to be kept in the system. This would cause problems on systems where the number of backups specified was smaller than the number of DataMiner Agents in the DMS.
+
+From now on, the number of backups you specify will be the number of backups that will be kept per DMA or Failover setup. For example, when you set the number of backups to be kept to 3 on a DMS with 5 DMAs or Failover setups, 3 backups will now be kept on every DMA or Failover setup.
+
+> [!NOTE]
+> A DataMiner Agent will now store its backups in a subfolder of the folder set as backup location. The name of that subfolder will be identical to the DMA ID of the DataMiner Agent in question.
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
@@ -53,4 +66,4 @@ When a custom time zone was used, in some cases, that time zone would not be pro
 For example, when you set a custom time zone in a *Clock* component, the current time of that custom time zone would not be identical to the current time of the local time zone.
 
 > [!NOTE]
-> This problem would mostly occur when using a time zone that does not observe daylight saving time (e.g. Altai Standard Time).
+> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).

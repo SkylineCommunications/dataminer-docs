@@ -41,4 +41,4 @@ When a custom time zone was used, in some cases, that time zone would not be pro
 For example, when you set a custom time zone in a *Clock* component, the current time of that custom time zone would not be identical to the current time of the local time zone.
 
 > [!NOTE]
-> This problem would mostly occur when using a time zone that does not observe daylight saving time (e.g. Altai Standard Time).
+> This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
