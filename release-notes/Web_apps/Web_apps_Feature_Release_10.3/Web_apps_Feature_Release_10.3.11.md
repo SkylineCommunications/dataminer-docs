@@ -32,6 +32,12 @@ uid: Web_apps_Feature_Release_10.3.11
 
 When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
+#### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->

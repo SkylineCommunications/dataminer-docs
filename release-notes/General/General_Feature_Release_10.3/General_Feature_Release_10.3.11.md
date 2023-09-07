@@ -95,3 +95,9 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
+
+#### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.

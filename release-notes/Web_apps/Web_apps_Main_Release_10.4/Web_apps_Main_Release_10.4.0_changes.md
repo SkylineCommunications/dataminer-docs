@@ -790,3 +790,9 @@ When, on a dashboard, a website was embedded using a Web component, in some case
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+
+#### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
