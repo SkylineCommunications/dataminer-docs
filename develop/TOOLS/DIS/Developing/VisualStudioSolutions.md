@@ -11,5 +11,3 @@ This section consists of the following topics:
 - [Developing connectors](xref:Developing_connectors_as_Visual_Studio_solutions)
 
 - [Developing Automation scripts](xref:Developing_Automation_scripts_as_Visual_Studio_solutions)
-
-- [Using the DIS MIB Browser](xref:DIS_MIB_Browser)
