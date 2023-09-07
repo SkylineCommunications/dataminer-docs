@@ -79,6 +79,8 @@ The elements will be created with the following specifications:
 
 ## Creating a new CCAP/CM pair from a CSV file
 
+<!-- RN 37262 -->
+
 1. In DataMiner Cube, go to apps > Automation.
 
 1. In the pane on the left, select the script *EPM_I_DOCSIS_AddNewCcapCmPair*.
