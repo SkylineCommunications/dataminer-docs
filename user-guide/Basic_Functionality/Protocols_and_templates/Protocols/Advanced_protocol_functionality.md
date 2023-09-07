@@ -15,9 +15,9 @@ To do so, in DataMiner Cube:
 
 1. Go to Apps \> Protocols & Templates.
 
-2. Right-click the protocol version for which you want to generate the MIB, and select *Get MIB file*.
+1. Right-click the protocol version for which you want to generate the MIB, and select *Get MIB file*.
 
-3. In the *Save As* dialog box, select a name and a location for the MIB that is about to be generated, and click *Save*.
+1. In the *Save As* dialog box, select a name and a location for the MIB that is about to be generated, and click *Save*.
 
 ## Generating a list of all parameters in a protocol version
 
@@ -27,20 +27,20 @@ To export the parameters of a protocol version or an element using the protocol:
 
 1. In the Protocols & Templates module, right-click the protocol version or the element using the protocol.
 
-2. In the context menu, select *Export parameters*.
+1. In the context menu, select *Export parameters*.
 
-3. In the *Save As* dialog box, select a folder, specify a file name, and click *Save*.
+1. In the *Save As* dialog box, select a folder, specify a file name, and click *Save*.
 
-    The exported CSV file will contain write and read parameters combined in a single row, with the following column order:
+   The exported CSV file will contain write and read parameters combined in a single row, with the following column order:
 
-    ```txt
-    Parameter name; Parameter description; Read parameter ID; Write parameter ID; Table parameter ID; Type; Discreet values; Can be monitored; Allow trending; Critical low; Major low; Minor low; Warning low; Normal; Warning high; Minor high; Major high; Critical high; ToolTip text; ToolTip subtext
-    ```
+   ```txt
+   Parameter name; Parameter description; Read parameter ID; Write parameter ID; Table parameter ID; Type; Discreet values; Can be monitored; Allow trending; Critical low; Major low; Minor low; Warning low; Normal; Warning high; Minor high; Major high; Critical high; ToolTip text; ToolTip subtext
+   ```
 
-    > [!NOTE]
-    > The discrete values are displayed as "ActualValue:StringValue" and are separated by pipe characters ("\|").
-    >
-    > For example: *0:Disconnected\|1:Connecting\|2:Connected\|3:Disconnecting\|4:Hardware Not Present\|5:Hardware Disabled\|6:Hardware Malfunction\|7:Media Disconnected\|8:Authenticating\|9:Authentication Succeeded\|10:Authentication Failed*
+   > [!NOTE]
+   > The discrete values are displayed as "ActualValue:StringValue" and are separated by pipe characters ("\|").
+   >
+   > For example: *0:Disconnected\|1:Connecting\|2:Connected\|3:Disconnecting\|4:Hardware Not Present\|5:Hardware Disabled\|6:Hardware Malfunction\|7:Media Disconnected\|8:Authenticating\|9:Authentication Succeeded\|10:Authentication Failed*
 
 ## Making changes to a protocol.xml file
 
@@ -52,15 +52,16 @@ To make changes to a *Protocol.xml* file within Cube:
 
 1. Go to *Apps* > *Protocols & Templates*.
 
-2. Under *Versions*, right-click the protocol version you want to edit and select *Open*.
+1. Under *Versions*, right-click the protocol version you want to edit and select *Open*.
 
-3. Make the necessary changes and click *OK*.
+1. Make the necessary changes and click *OK*.
 
 > [!WARNING]
 > Each time you make changes to a protocol version, all elements using that protocol version will automatically be restarted.
 
 > [!NOTE]
+>
 > - Encrypted protocols and exported DVE protocols are read-only. They cannot be edited.
 > - When you save changes to a protocol in Cube, an automatic XML validity check is done. If the XML is invalid, you cannot save your changes until the problem has been corrected.
 > - If you make changes to a protocol version that is currently in use, a warning message will appear when you try to save your changes. If you then confirm the changes, the elements using the protocol version will be restarted.
->
+> - If you add a parameter to a protocol.xml file while an element card for that protocol is opened, prior to DataMiner 10.3.8/10.4.0, you will need to close and reopen the card to see your changes. This is no longer needed from DataMiner 10.3.8/10.4.0 onwards<!-- RN 36286 -->.

@@ -24,4 +24,4 @@ However, if the firewall update fails after an upgrade to DataMiner 10.1.0 or hi
 
 `NATS has stopped, restarting …`
 
-To solve this issue, manually configure the firewall settings as described in [Configuring a DataMiner Agent](xref:Configuring_a_DataMiner_Agent), or follow the steps mentioned in the answer to the question [How to solve 'NATS has stopped working, restarting…' after an upgrade?](https://community.dataminer.services/question/how-to-solve-nats-has-stopped-working-restarting-after-an-upgrade/) on DataMiner Dojo.
+To solve this issue, manually configure the firewall settings as described in [Configuring a DataMiner Agent](xref:Changing_the_DMA_ID), or follow the steps mentioned in the answer to the question [How to solve 'NATS has stopped working, restarting…' after an upgrade?](https://community.dataminer.services/question/how-to-solve-nats-has-stopped-working-restarting-after-an-upgrade/) on DataMiner Dojo.

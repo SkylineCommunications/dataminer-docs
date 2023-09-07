@@ -21,12 +21,12 @@ The **Health package** is an insurance policy for your system that includes feat
 
 ## Storage as a Service *(coming soon)*
 
-Platform services prioritize convenience. Imagine not having to manage your Cassandra and Elasticsearch database clusters anymore. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. We are developing a Storage as a Service solution that streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
+Platform services prioritize convenience. Imagine not having to manage your Cassandra and Elasticsearch database clusters anymore. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. We are developing a Storage as a Service (STaaS) solution that streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
 
 > [!TIP]
 > See also:
 >
-> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/)
+> - [Video - DataMiner compute and storage, on-prem and in the cloud](https://community.dataminer.services/video/dataminer-compute-and-storage-on-prem-and-in-the-cloud/) ![Video](~/user-guide/images/video_Duo.png)
 
 ## DataMiner Node as a Service *(coming soon)*
 

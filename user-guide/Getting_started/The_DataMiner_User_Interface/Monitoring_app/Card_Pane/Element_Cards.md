@@ -12,13 +12,13 @@ The following pages are available:
 
 - *Data*: One or more pages with parameters, as configured in the element protocol. The following icons provide access to additional functionality:
 
-  - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter.
+  - ![Wrench icon](~/user-guide/images/MonitoringX_writeparam2.png) : Allows you to modify the value of a parameter. Obsolete from DataMiner 10.3.7/10.4.0 onwards. <!-- RN 36275-->
+
+  - ![Pencil icon](~/user-guide/images/PencilIcon.png): Allows you to edit a parameter (from DataMiner 10.3.7/10.4.0 onwards). <!-- RN 36275 -->
 
   - ![Histogram icon](~/user-guide/images/MonitoringX_histogram2.png) : Displays a histogram for a trended table parameter.
 
-  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed.
-
-    Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
+  - ![Trend graph icon](~/user-guide/images/MonitoringX_trend2.png) : From DataMiner 10.3.7/10.4.0 onwards: Allows you to access the [trending page](xref:Trending_Page).<!-- RN 36352 --> Prior to DataMiner 10.3.7/10.4.0: Allows you to view additional information on a trended parameter. When you click the icon, the parameter description, the parameter ID, and the time of the last change to the parameter are displayed. Below this, the *View trending* option provides access to the [trending page](xref:Trending_Page).
 
 - *Alarms*: Displays the active alarms for the element.
 
@@ -27,7 +27,7 @@ The following pages are available:
 - *Dashboards*: Displays the legacy dashboards app.
 
   > [!NOTE]
-  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app is no longer available by default in new DataMiner installations. To enable it, set the soft-launch option *LegacyReportsAndDashboards* to true. See [Soft-launch options](xref:SoftLaunchOptions).
+  > From DataMiner 10.2.0/10.1.12 onwards, the legacy Dashboards app can be disabled using the soft-launch option *LegacyReportsAndDashboards*. See [Soft-launch options](xref:SoftLaunchOptions).
 
 - *Notes*: Allows you to add and view notes related to the element.
 

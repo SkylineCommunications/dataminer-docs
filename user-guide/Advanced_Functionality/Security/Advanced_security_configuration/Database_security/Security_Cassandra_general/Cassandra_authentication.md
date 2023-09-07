@@ -10,11 +10,11 @@ By default, DataMiner installs Cassandra with the PasswordAuthenticator enabled.
 
 We highly recommend that you configure more secure passwords for the default user. Preferably, these passwords should be randomly generated and stored in a password vault.
 
-You can do so by executing the following queries (using DevCenter, the DataMiner Cube Query Executor, or your preferred query tool):
+You can do so by executing the following queries (using *cqlsh* in a Linux environment, DevCenter in Windows, Query Executor in DataMiner Cube, or your preferred query tool):
 
-`ALTER USER cassandra WITH PASSWORD '<NEW PASSWORD>'`
+`ALTER ROLE cassandra WITH PASSWORD = '<NEW PASSWORD>';`
 
-`ALTER USER root WITH PASSWORD '<NEW PASSWORD>'`
+`ALTER ROLE root WITH PASSWORD = '<NEW PASSWORD>';`
 
 > [!TIP]
 > To easily change the password for the Cassandra database, execute the [change-cassandra-password-script](https://github.com/SkylineCommunications/change-db-password-scripts/blob/main/change-cassandra-password-script.xml) script. This will allow you to change the credentials without a DataMiner restart.
@@ -25,7 +25,7 @@ We also recommend that you create a new superuser and disable the default *cassa
 
 1. Log in with the *cassandra* user and execute the following query:
 
-   `CREATE ROLE <new_super_user> WITH PASSWORD = "<STRONG PASSWORD>" AND SUPERUSER = true AND LOGIN = true;`
+   `CREATE ROLE <new_super_user> WITH PASSWORD = '<STRONG PASSWORD>' AND SUPERUSER = true AND LOGIN = true;`
 
 1. Switch to your *new_super_user* and execute the following query:
 
@@ -33,7 +33,7 @@ We also recommend that you create a new superuser and disable the default *cassa
 
 1. Applying the principle of separation of privileges, we recommend that you also create a dedicated user for DataMiner:
 
-   `CREATE ROLE dataminer WITH PASSWORD '<STRONG PASSWORD>' AND LOGIN = true;`
+   `CREATE ROLE dataminer WITH PASSWORD = '<STRONG PASSWORD>' AND LOGIN = true;`
 
 1. Set the new credentials in DataMiner Cube. For more information, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube).
 

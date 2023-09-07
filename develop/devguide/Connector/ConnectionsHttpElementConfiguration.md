@@ -27,4 +27,4 @@ Suppose the proxyServer attribute references parameter 1. The following behavior
 ### See also
 
 - [Protocol.HTTP.Session@proxyServer](xref:Protocol.HTTP.Session-proxyServer)
-- HTTP(S) connection section of [Adding and deleting elements](xref:Adding_and_deleting_elements)
+- [HTTP(S) connections](xref:HTTPS_Connection)

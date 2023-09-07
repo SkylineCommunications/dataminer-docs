@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.3.0_CU1
 ---
 
-# General Main Release 10.3.0 CU1 – Preview
+# General Main Release 10.3.0 CU1
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -145,12 +145,6 @@ From now on, parameter update throttling can be disabled by setting the *Message
 
 When a client retrieved the protocol of a DVE parent element, its alarm filter would not get returned correctly for some of its parameters that are exported as standalone parameters.
 
-#### GQI: Problem when applying an 'aggregation' or 'group by' operation on a datetime column of an Elasticsearch table [ID_35609]
-
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
-
-When an *aggregation* or *group by* operation was applied on a datetime column of an Elasticsearch table, the datetime values in that column would be parsed incorrectly.
-
 #### A number of alarm-related issues have been fixed [ID_35611]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
@@ -190,12 +184,6 @@ Up to now, when the SLAnalytics process started, the entire focus data cache of 
 Also, when the SLAnalytics processes of different agents in the same cluster were restarted right before a full hour, it was possible to trigger the internal duplication of active alarms hosted on non-leader agents. This could, in turn, lead to an incorrect internal alarm state and incorrect incidents containing copies of the same alarm.
 
 From now on, the focus data cache will no longer be cleared when SLAnalytics process starts up. Instead, only the focus data associated with the alarms that are no longer active will be removed from the cache.
-
-#### GQI: Display value of an empty cell of type 'double' would incorrectly be set to a "0" string [ID_35718]
-
-<!-- MR 10.3.0 [CU1] - FR 10.3.4 -->
-
-The display value of an empty cell of type *double* would incorrectly be set to a "0" string. From now on, it will be set to an empty string instead.
 
 #### SLAnalytics - Automatic incident tracking: Problem when starting up [ID_35731]
 

@@ -166,7 +166,7 @@ AgentState state = agent.State;
 
 ## Creating, updating and retrieving HTTP connections of elements
 
-In version 1.2.0.5 of the class library, support has been added for HTTP connections of elements (virtual and SNMP connections were already supported in previous versions). The following diagram gives an overview of the provided interfaces:
+The following diagram gives an overview of the provided interfaces:
 
 ![alt text](../../images/classlibrary1205_1.png "Connections class diagram")
 
@@ -229,7 +229,7 @@ private static void SetPort(SLProtocol protocol)
 
 ## Creating and deleting properties in a DataMiner System
 
-In version 1.2.0.5 of the class library, support has been added for creating and deleting element, view or service properties in a DataMiner System.
+Support has been added for creating and deleting element, view or service properties in a DataMiner System.
 
 The following example illustrates how to create an element property:
 

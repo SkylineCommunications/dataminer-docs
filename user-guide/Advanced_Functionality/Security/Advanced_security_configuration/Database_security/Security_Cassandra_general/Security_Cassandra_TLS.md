@@ -120,7 +120,7 @@ The *client_encryption_options* allow you to encrypt all the traffic between Dat
 
 To enable client-server TLS encryption:
 
-1. Copy the Java KeyStores to the node
+1. Copy the Java Keystore (.jks file), or the PKCS12 store (.p12 file) if you used a script to generate the certificates, to the node
 
 1. Open the *cassandra.yaml* file, and locate the *client_encryption_options*.
 
@@ -138,7 +138,7 @@ To enable client-server TLS encryption:
       enabled: true
       # If enabled and optional is set to true, both encrypted and unencrypted connections are handled.
       optional: false
-      keystore: path/to/<NODE IP>.jks
+      keystore: path/to/<NODE CERT STORE>
       keystore_password: <STRONG PASSWORD>
    ```
 
@@ -150,7 +150,7 @@ The *server_encryption_options* allow you to encrypt all the traffic between the
 
 To enable inter-node TLS encryption:
 
-1. Copy the Java KeyStores to the corresponding node
+1. Copy the Java Keystore (.jks file), or the PKCS12 store (.p12 file) if you used a script to generate the certificates, to the corresponding node
 
 1. Open the *cassandra.yaml* file, and locate the *server_encryption_options*.
 
@@ -168,9 +168,9 @@ To enable inter-node TLS encryption:
       internode_encryption: all
       # If enabled and optional is set to true, both encrypted and unencrypted connections are handled.
       optional: false
-      keystore: path/to/<NODE IP>.jks
+      keystore: path/to/<NODE CERT STORE>
       keystore_password: <YOUR PASSWORD>
-      truststore: /path/to/<NODE IP>.jks
+      truststore: /path/to/<NODE CERT STORE>
       truststore_password: <YOUR PASSWORD>
    ```
 

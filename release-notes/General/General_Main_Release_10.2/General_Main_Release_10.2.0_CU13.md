@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.2.0_CU13
 ---
 
-# General Main Release 10.2.0 CU13 – Preview
+# General Main Release 10.2.0 CU13
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
@@ -79,13 +79,28 @@ SLLogCollector packages will now also include the following additional file:
 
 A clearer error message will now be returned when you are building a query against a logger table without `RTDisplay=true` settings, neither on table level nor on column level.
 
-#### Dashboards app & Low-code apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
+#### Dashboards app & Low-Code Apps - Line & area chart component: Enhanced performance when exporting trend data to CSV [ID_35727]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 Because of a number of enhancements, overall performance has increased when exporting trend data to a CSV file.
 
+#### Web apps - Query builder: Query node options with only a single value will no longer be displayed in a selection box [ID_35865]
+
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU2] - FR 10.3.5 -->
+
+In the query builder, from now on, when a query node option only has a single value, that option will no longer be displayed in a selection box.
+
+For example, up to now, when you selected the *Get elements* data source, followed by the *Aggregate* operator, the method selection box would display "Get the". This will no longer be the case.
+
 ### Fixes
+
+#### DataMiner upgrade: VerifyNatsRunning prerequisite could fail due to SLCloudBridge.dll having been renamed [ID_33875]
+
+<!-- MR 10.3.0 - FR 10.2.8 [CU0] -->
+<!-- Also added to MR 10.2.0 [CU13] -->
+
+During a DataMiner upgrade, the VerifyNatsRunning prerequisite could fail due to the SLCloudBridge.dll file having been renamed to SLMessageBroker.dll in DataMiner versions 10.2.0/10.1.5.
 
 #### Memory leak in SLNet after closing a client connection that had been using a "SLDataGateway.API" subscription set [ID_35319]
 
@@ -113,7 +128,7 @@ From now on, Cube will check whether the pattern matching feature is enabled eac
 
 When an EPM element was stopped, in some rare cases, an error could occur in SLElement.
 
-#### Dashboards app & Low-code apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
+#### Dashboards app & Low-Code Apps - GQI: Problem with 'Update data' option when using the 'Get parameter table by ID' data source [ID_35490]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -155,7 +170,7 @@ From now on, when you activate the follow mode by specifying the *EnableFollowMo
 
 #### Dashboards app: Problem with width of PDF reports [ID_35531]
 
-<!-- MR 10.2.0 [CU13] - FR 10.3.4 -->
+<!-- MR 10.2.0 [CU13]/10.3.0 [CU3] - FR 10.3.4 -->
 
 When a PDF report was generated via Automation or Scheduler, in some cases, its width would be set incorrectly.
 
@@ -185,7 +200,7 @@ Error parsing SNMPv3 password for port: <port number> on element: <element name>
 
 Also, an error could occur in SLDataMiner when you tried to re-enter the SNMPv3 port settings.
 
-#### Low-code apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
+#### Low-Code Apps: Sidebar would incorrectly be displayed when there was only one visible page [ID_35544]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -197,7 +212,7 @@ Up to now, whether the sidebar was displayed or not would incorrectly depend on 
 
 In some cases, alarm groups could incorrectly be created without a focus value.
 
-#### Low-code apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
+#### Low-Code Apps: Clock components in a published low-code app would incorrectly only update when you moved the mouse [ID_35554]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -304,7 +319,7 @@ When you applied a filter to an alarm tab, no alarms would be shown when you had
 
 When you exported the data shown in a line & area chart component to a CSV file, the file could incorrectly contain duplicate data.
 
-#### Dashboards app & low-code apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
+#### Dashboards app & Low-Code Apps - State component: Changing the query order would incorrectly only be applied when the browser was refreshed [ID_35690]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
@@ -316,13 +331,13 @@ When you changed the order of the queries added to a State component, this chang
 
 When a line & area chart was filtered by means of a time range feed, in some cases, the dashboard would incorrectly keep on loading when a new time range was selected.
 
-#### Dashboards app & Low-code apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
+#### Dashboards app & Low-Code Apps: Last nodes of a migrated query would incorrectly be cut off [ID_35693]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 
 When a GQI was migrated, in some cases, the last nodes of the migrated query would incorrectly be cut off.
 
-#### Dashboards app & Low-code apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
+#### Dashboards app & Low-Code Apps - Node edge component: An incorrect tooltip would appear when hovering over a segment of an edge [ID_35696]
 
 <!-- MR 10.2.0 [CU13]/10.3.0 [CU1] - FR 10.3.4 -->
 

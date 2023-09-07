@@ -2,7 +2,7 @@
 uid: Service_Orchestration_custom_events
 ---
 
-# Service Orchestration custom events configuration
+# Service Orchestration: custom events configuration
 
 Next to the standard events (start of pre-roll, stop of pre-roll, start of post-roll, and stop of post-roll), the Booking Manager app can be configured to generate extra events. However, note that these cannot be executed at the exact same time as the standard events<!-- RN 28730 -->.
 

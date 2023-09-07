@@ -14,18 +14,15 @@ To install and set up DataMiner IDP:
 
    - If you want to use Process Automation, make sure **DataMiner SRM, Process Automation, and Token activity** are installed before you install the IDP package. If you want to be able to repeat processes with a timer, the **Repeat Gateway** also has to be installed.
 
-1. Double-click the DataMiner IDP package.
+1. Download the DataMiner IDP package from [DataMiner Dojo](https://community.dataminer.services/downloads/).
 
-1. In the upgrade window, click the *Upgrade* button. The installation will begin, and the installation progress will be displayed.
+1. Double-click the IDP package, and install the package in the same manner as a DataMiner upgrade.
 
-1. When the installation process has finished, the *Upgrade Summary* window will display information on any issues that have occurred. Click *Close* to go back to the main upgrade window.
-
-1. Click the *Finished* button to close the upgrade window.
-
-1. Connect to your DataMiner System using DataMiner Cube.
+   > [!NOTE]
+   > DataMiner will restart during the installation of the package.
 
    > [!TIP]
-   > See also: [Opening DataMiner Cube](xref:Opening_DataMiner_Cube)
+   > See also: [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent)
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 

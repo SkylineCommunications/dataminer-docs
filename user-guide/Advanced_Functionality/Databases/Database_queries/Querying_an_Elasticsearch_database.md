@@ -22,9 +22,9 @@ To connect to Kibana:
 1. On the server with the Elasticsearch database, navigate to `C:\Program Files\Elasticsearch\Kibana\bin` and run *Kibana.bat* as an administrator.
 
     > [!TIP]
-    > We recommend to run *Kibana.bat* using an elevated command line, as it takes a while to start the Kibana server and this will allow you to see when it has started.
+    > We recommend running *Kibana.bat* using an elevated command line, as it takes a while to start the Kibana server and this will allow you to see when it has started.
 
-2. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g. <http://127.0.0.1:5601>) to access Kibana.
+1. Open any browser window and navigate to <http://ElasticNodeIP:5601> (e.g. <http://127.0.0.1:5601>) to access Kibana.
 
 ## Basic queries
 
@@ -45,6 +45,75 @@ GET _cat/indices
 This will return the name of the index, the state of the index, and its size.
 
 Especially the name and state of the index may be interesting for debugging purposes.
+
+### Manually setting the replication count for indices
+
+With the queries below, you can alter the number of replicas per shard. This is typically done to configure redundancy and availability based on the number of Elasticsearch nodes you have available.
+
+> [!TIP]
+> If the number of shards you have is too large, decreasing the number of replicas per shard is one option to decrease the strain on the system.
+
+> [!NOTE]
+> This setting only applies for current data. It does not apply to new data. The newer data added by DataMiner will again have the default number of replicas.
+
+To set the replication count for indices in the Elasticsearch database, first enter the query below:
+
+```txt
+GET _cluster/health?level=shards&pretty
+```
+
+This will return the name of the indices, the state of the indices, and the number of replicas:
+
+```txt
+ "indices" : {
+    "dms-alarms-2022.06.11.05-000016" : {
+      "status" : "green",
+      "number_of_shards" : 3,
+      "number_of_replicas" : 0,
+      "active_primary_shards" : 3,
+      "active_shards" : 3,
+      "relocating_shards" : 0,
+      "initializing_shards" : 0,
+      "unassigned_shards" : 0,
+      "shards" : {
+        "0" :
+    },
+    "dms-alarms-2023.03.22.10-000063" : {
+      "status" : "green",
+      "number_of_shards" : 3,
+      "number_of_replicas" : 0,
+      "active_primary_shards" : 3,
+      "active_shards" : 3,
+      "relocating_shards" : 0,
+      "initializing_shards" : 0,
+      "unassigned_shards" : 0,
+      "shards" : {
+        "0" :
+    },
+```
+
+You can then for example set the replica count to 2 for a specific index using the following query:
+
+```txt
+PUT /<my-index>/_settings
+{
+  "index" :{
+    "number_of_replicas" : 2
+  }
+}
+```
+
+To set the replica count to 2 for all indices, use the following query:
+
+```txt
+PUT /_all/_settings
+{
+  "index" :{
+    "number_of_replicas" : 2
+  }
+}
+```
+
 
 ### Retrieving the number of hits + example records
 

@@ -12,11 +12,14 @@ In a trend template, you can define both the scope and the type of the trend inf
 
 - Type: You can choose between real-time or average trending, or a combination of both.
 
-    - **Real-time trending**: Continuous logging of all measurements, in a sliding window of maximum 1000 hours.
+  - **Real-time trending**: Continuous logging of all measurements, in a sliding window of maximum 1000 hours.
 
-    - **Average trending**: Logs average trending per time slot. The time slot depends on the size of the window.
+  - **Average trending**: Logs average trending per time slot. The time slot depends on the size of the window.
 
-        > [!NOTE]
-        > - In case of average trending, the DMS not only stores the average value for a particular time slot, but also the minimum and maximum value detected in that same time slot.
-        > - Average trend values and values of parameters with average type “sum” are only calculated for the current runtime of the element. Values measured during the same trend interval, but in a previous runtime of the element (e.g. after an element or DataMiner restart) are not taken into account.
-        >
+    > [!NOTE]
+    >
+    > - In case of average trending, the DMS not only stores the average value for a particular time slot, but also the minimum and maximum value detected in that same time slot.
+    > - Average trend values and values of parameters with average type “sum” are only calculated for the current runtime of the element. Values measured during the same trend interval, but in a previous runtime of the element (e.g. after an element or DataMiner restart) are not taken into account.
+
+> [!TIP]
+> See also: [Trending](xref:trending)

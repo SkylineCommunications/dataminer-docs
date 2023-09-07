@@ -8,7 +8,7 @@ uid: Support_services_terms
 
 This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
 
-These terms apply on all orders for Support Services placed at Skyline by the User. The User accepts these terms when placing Support Services orders at Skyline. Any deviations from these terms shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
+These Terms apply on all orders for Support Services placed at Skyline by the User. The User accepts these Terms when placing Support Services orders at Skyline. Any deviations from these Terms shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
 
 ## Definitions
 
@@ -39,13 +39,13 @@ Skyline offers two levels of Support Services: Continuity and Evolve. An overvie
 
 ## Supported products
 
-Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [DataMiner Dojo](https://community.dataminer.services/3rd-party-software-support-life-cycle).
+Skyline provides Support Services for its Software only, which consists of its core software, connectors, and cloud components. Skyline does not provide Support Services for third-party components, except for maintenance on database content for supported databases. An overview of supported databases can be found on [docs.dataminer.services](xref:Software_support_life_cycles#third-party-software-support-life-cycle).
 
 ## Supported versions
 
 Support and Updates for the Software shall only be provided on the two latest main releases of the Software. A new main release is issued by Skyline about every year. Main releases contain all new features and cumulative updates that were issued since the previous main release.
 
-It is the User's responsibility to make sure that their Software is updated timely to a supported Software version. An up-to-date Support timeline shall be available on [DataMiner Dojo](https://community.dataminer.services/dataminer-supported-versions-lifecycle/).
+It is the User's responsibility to make sure that their Software is updated timely to a supported Software version. An up-to-date Support timeline shall be available on [docs.dataminer.services](xref:Software_support_life_cycles).
 
 ## Upgrades and updates
 
@@ -120,7 +120,7 @@ To the extent that Skyline processes personal data on behalf of the User in perf
 
 All Support Services are provided in the English language. Other languages may be possible but are not guaranteed and are provided on a best effort basis.
 
-These Support Services terms are always supplementary to and conditional upon the acceptance of Skyline's end-user license agreement for Skyline's Software ("**EULA**") or any other license agreement(s) concluded between the Parties.
+These Terms are always supplementary to and conditional upon the acceptance of Skyline's end-user license agreement for Skyline's Software ("**EULA**") or any other license agreement(s) concluded between the Parties.
 
 ## Schedule 1: Support Plan
 

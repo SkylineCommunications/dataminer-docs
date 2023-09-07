@@ -19,7 +19,9 @@ To create a DOM manager, you first need to create a [ModuleSettings](xref:DOM_Mo
 
 ## Creation and startup logic
 
-A DOM manager gets initialized in SLNet as soon as the first call arrives for it. For this reason, the first call may take longer than others. The following logic flow applies:
+A DOM manager gets initialized in SLNet as soon as the first call arrives for it. For this reason, the first call may take longer than others. When caching is enabled, the initialization time will also depend on the number of DOM configuration objects that are present in the DOM manager. By default, caching is enabled (see [CachingSettings](xref:DOM_StorageSettings#cachingsettings)).
+
+The following logic flow applies:
 
 1. DataMiner receives a message for an unknown manager (e.g. from a script or application).
 

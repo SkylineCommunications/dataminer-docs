@@ -6,13 +6,7 @@ uid: Configuring_SLA_Compliance
 
 To configure how many violations are allowed in an SLA or what duration these may have, it is necessary to configure SLA Compliance.
 
-To configure SLA compliance, go to the *Compliance Configuration* page of the SLA element in DataMiner Cube. There, you can configure the following settings:
-
-- [Setting the total violation limit](#setting-the-total-violation-limit)
-
-- [Setting the violation count limit](#setting-the-violation-count-limit)
-
-- [Setting the limit for a single violation](#setting-the-limit-for-a-single-violation)
+To configure SLA compliance, go to the *Compliance Configuration* page of the SLA element in DataMiner Cube. There, you can configure the settings detailed below.
 
 ## Setting the total violation limit
 
@@ -26,21 +20,21 @@ To set a relative limit:
 
 1. Set *Maximum Total Violations Type* to Relative, using the drop-down list.
 
-2. Enter the desired percentage under *Maximum Total Violations Percentage*.
+1. Enter the desired percentage under *Maximum Total Violations Percentage*.
 
-3. Confirm your settings.
+1. Confirm your settings.
 
-    The maximum total violation time will appear as a percentage next to *Maximum Total Violation Time*.
+   The maximum total violation time will appear as a percentage next to *Maximum Total Violation Time*.
 
 To set an absolute limit:
 
 1. Set *Maximum Total Violations Type* to Absolute, using the drop-down list.
 
-2. Enter a unit and value under *Maximum Total Violations Unit* and *Maximum Total Violations Value* respectively.
+1. Enter a unit and value under *Maximum Total Violations Unit* and *Maximum Total Violations Value* respectively.
 
-3. Confirm your settings.
+1. Confirm your settings.
 
-    The maximum total violation time will appear next to *Maximum Total Violation Time*.
+   The maximum total violation time will appear next to *Maximum Total Violation Time*.
 
 ## Setting the violation count limit
 
@@ -59,18 +53,18 @@ To set a relative limit:
 
 1. Set *Maximum Single Violation Type* to *Relative*, using the drop-down list.
 
-2. Enter the desired percentage under *Maximum Single Violation Percentage*.
+1. Enter the desired percentage under *Maximum Single Violation Percentage*.
 
-3. Confirm your settings.
+1. Confirm your settings.
 
-    The maximum total violation time will appear as a percentage next to *Maximum Single Violation Time*.
+   The maximum total violation time will appear as a percentage next to *Maximum Single Violation Time*.
 
 To set an absolute limit:
 
 1. Set *Maximum Single Violation Type* to *Absolute*, using the drop-down list.
 
-2. Enter a unit and value under *Maximum Single Violation Unit* and *Maximum Single Violation Value* respectively.
+1. Enter a unit and value under *Maximum Single Violation Unit* and *Maximum Single Violation Value* respectively.
 
-3. Confirm your settings.
+1. Confirm your settings.
 
-    The maximum total violation time will appear next to *Maximum Single Violation Time*.
+   The maximum total violation time will appear next to *Maximum Single Violation Time*.

@@ -4,20 +4,12 @@ uid: Changing_custom_alarm_properties
 
 # Changing custom alarm properties
 
-In this section:
-
-- [Adding a custom alarm property](#adding-a-custom-alarm-property)
-
-- [Deleting a custom alarm property](#deleting-a-custom-alarm-property)
-
-- [Editing custom alarm properties](#editing-custom-alarm-properties)
-
-> [!TIP]
-> See also: [Alarm Console – Adding extra properties on alarms](https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/) on DataMiner Dojo.
-
 ## Adding a custom alarm property
 
-1. Right-click an alarm in the Alarm Console, and select *Properties*.
+> [!TIP]
+> See also: [Alarm Console – Adding extra properties on alarms](https://community.dataminer.services/video/alarm-console-adding-extra-properties-on-alarms/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)
+
+1. In DataMiner Cube, right-click an alarm in the Alarm Console, and select *Properties*.
 
 1. Go to the *Custom* tab.
 
