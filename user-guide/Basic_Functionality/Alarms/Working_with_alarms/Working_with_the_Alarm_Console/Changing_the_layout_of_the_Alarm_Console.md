@@ -25,7 +25,8 @@ By default, the Alarm Console contains the following tabs:
 In the Alarm Console, you can add and remove tabs as you see fit. However, this custom layout is only saved across sessions for tabs displaying active alarms or alarms in a sliding window, not for alarm history tabs.
 
 > [!NOTE]
-> - If the Alarm Console contains more tabs than can be displayed on the screen, a “...” icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the drop-down list.
+>
+> - If the Alarm Console contains more tabs than can be displayed on the screen, a "..." icon will be displayed. To open one of the tabs that are not displayed, click this icon, and select the tab from the drop-down list.
 > - For embedded Alarm Consoles displayed on the ALARMS page of cards, custom tabs are only saved if you select to *Apply filters*, and then select the *Show this tabpage* checkbox before clicking *Show alarms*.
 
 ### Adding a tab
@@ -57,9 +58,10 @@ In the Alarm Console, you can add and remove tabs as you see fit. However, this 
    - **Show alarms in a sliding window**: Displays the alarms that have occurred in a certain time frame that moves along with the present time. You can set the size of the sliding window to a minimum of one minute and a maximum of 1440 minutes.
 
      > [!NOTE]
+     >
      > - In tabs set to a sliding window, only alarms raised within this window are shown. As a consequence, if you turn off history tracking or correlation tracking, history alarms and correlation source alarms will only be shown if they were raised within the sliding window.
      > - Refresh rate and delay cannot be set in sliding window alarm tabs.
-     > - From DataMiner 9.6.11 onwards, you can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
+     > - You can select the option *Keep active alarms* along with the option to show alarms in a sliding window. When you do so, active alarms will remain displayed in the tab even if they no longer fall in the sliding window.
 
    - **Include alarms / Include masked alarms / Include information events / Include suggestion events**: Select or clear these checkboxes to determine the type of alarms that will be displayed in the new tab. This allows you to for example display a tab with information events only.
 
@@ -100,6 +102,7 @@ To sort the alarms by a particular field:
 - Click a column header. Click it again to reverse the sort order.
 
   > [!NOTE]
+  >
   > - By default, alarms are sorted by timestamp (with the most recent alarm on top).
   > - If you are using the keyboard to navigate the Cube interface, to sort by a particular field, press Enter when the keyboard focus is on the header of that column. See [Using keyboard navigation](xref:Using_keyboard_navigation).
 
@@ -192,6 +195,7 @@ To do so:
    1. In the fourth column, for each column selected in the third column, change the column alignment and width if necessary.
 
 > [!NOTE]
+>
 > - Settings that are enforced at group level cannot be changed at user level.
 > - If you create new settings for a group, these will not by default contain the tabs *Active Alarms*, *Information Events* and *Masked alarms*.
 
@@ -236,4 +240,3 @@ To view severity timelines per element or per parameter:
 
 > [!NOTE]
 > This feature is only available in a DataMiner System using a Cassandra database.
->
