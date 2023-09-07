@@ -24,6 +24,12 @@ In some cases, the NATS connection could fail due to payloads being too large. A
 
 #### Not all Protocol.Params.Param.Interprete.Others tags would not be read out [ID_36797]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would not be read out, which could lead to unexpected behavior.
+
+#### SLElement could read and write to the same memory blocks on different threads [ID_37180]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
