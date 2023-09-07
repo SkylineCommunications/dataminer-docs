@@ -126,7 +126,7 @@ uid: glossary_a_to_l
 | DataMiner Client | An entity communicating with a DataMiner Agent. The term is mostly used to denote a client application that allows users to interact with the DataMiner Agent. |
 | DataMiner Cloud Platform | Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. Abbreviated as DCP. See [dataminer.services](xref:AboutCloudPlatform). |
 | DataMiner Comparison tool | Web application that allows you to compare the values of two string parameters.<br>See [DataMiner Comparison tool](xref:DataMinerComparisonTool). |
-| DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
+| DataMiner Connectivity Framework | Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure. Abbreviated as DCF.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DataMiner Cube | The main client application used to connect to a DMA. Exists both as a desktop app and a browser app. |
 | DataMiner Dojo | Community website where both people from the Skyline community, and people from the worldwide DataMiner community exchange experiences and knowledge, both about DataMiner and about general hot topics in the ICT, broadband and media industry.<br>See [DataMiner Community](xref:Community#dataminer-community). |
 | DataMiner Driver | An XML file that allows a DMA to communicate with a data source in the system. Also known as connector or protocol.<br>See [Protocols](xref:Protocols1#protocols). |
@@ -139,7 +139,7 @@ uid: glossary_a_to_l
 | DataMiner Taskbar Utility | System tray application on a DataMiner Agent that can be used to manage the Agent.<br>See [DataMiner Taskbar Utility](xref:DataMiner_Taskbar_Utility). |
 | DB | Database. |
 | DBS | Direct Broadcast Satellite. Broadcasting transmissions where end users receive signals directly from geostationary satellites. |
-| DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:DCF#dataminer-connectivity-framework). |
+| DCF | DataMiner Connectivity Framework. Framework used to manage element connectivity, e.g. to configure and visualize signal paths within an infrastructure.<br>See [DataMiner Connectivity Framework](xref:About_the_DataMiner_Connectivity_Framework). |
 | DCL | DataMiner Class Library. |
 | DCP | DataMiner Cloud Platform. Online platform with information related to the DataMiner software and DataMiner projects. Includes software downloads, release notes, etc. See [dataminer.services](xref:AboutCloudPlatform). |
 | DELT | DataMiner Element Location Transparency. DataMiner feature that allows the exporting and importing of packages and the migration of elements across DMAs in a cluster. |
@@ -180,7 +180,7 @@ uid: glossary_a_to_l
 | Edge QAM | Headend or hub device that receives packets of digital video or data. It repacketizes the video or data into an MPEG transport stream and digitally modulates the digital transport stream onto a downstream RF carrier using quadrature amplitude modulation (QAM). |
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
 | Elasticsearch | Open-source search and analytics engine, used as the DataMiner Indexing database.<br>See [Elasticsearch database](xref:Elasticsearch_database). |
-| Element | A DataMiner object that usually represents a device monitored by the DataMiner System.<br>See [Elements](xref:elements). |
+| Element | A DataMiner object that usually represents a device monitored by the DataMiner System.<br>See [Elements](xref:About_elements). |
 | Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework.<br>See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
 | Element Display | Deprecated client application that was used in conjunction with System Display to view element-specific data. |
 | Element state | Indication of whether an element is currently active, paused or stopped.<br>See [Element states](xref:Element_states). |
@@ -248,13 +248,14 @@ uid: glossary_a_to_l
 | Term | Description |
 |------|-------------|
 | IaaS | Infrastructure as a Service. Cloud-based service that provides a basic computing infrastructure. |
+| IaC  | Infrastructure as Code |
 | IAM | Inventory & Asset Management. DataMiner module that establishes a link between a DMS and a CMDB.<br>See [Inventory & Asset Management](xref:AssetManagement). |
 | IAS | Interactive Automation script. A DataMiner Automation script that is designed to require user interaction.<br>See [Building interactive Automation scripts with C#](xref:Building_interactive_Automation_scripts_with_CSharp). |
 | IDE | Integrated Development Environment. Software application that provides comprehensive facilities for software development. |
 | IDP | Infrastructure Discovery Provisioning. DataMiner Standard Application that allows you to automatically discover, provision and manage the devices in your network.<br>See [DataMiner IDP app](xref:SolIDP). |
 | IETF | Internet Engineering Task Force. Organization developing and promoting open internet standards. |
 | Import package | Package based on an export from DataMiner, which can contain, elements, services, views, properties, protocols, Automation scripts, etc.<br>See [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA). |
-| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database per DMS](xref:Configuring_indexing_database_per_DMS). |
+| Indexing Engine | Dedicated indexing database, by default Elasticsearch, used to index information from the DataMiner System to allow rapid information retrieval. Required for certain DataMiner features, e.g. for DataMiner Job Manager.<br>See [Configuring an indexing database](xref:Indexing_Database). |
 | Inform message | An SNMP notification sent by an SNMP agent to an SNMP manager informing the latter that an alarm event occurred on a particular element. Unlike for an SNMP trap, for an inform message the SNMP manager needs to acknowledge receipt.<br>See [SNMP managers](xref:SNMP). |
 | Information event | A message in the Alarm Console intended to inform DataMiner users without raising an alarm.<br>See [Information event](xref:Alarm_types#information-events). |
 | Information template | A template that is used to override specific parameter data defined in a protocol without making any changes to the protocol itself.<br>See [Information templates](xref:Information_templates). |

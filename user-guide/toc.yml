@@ -24,7 +24,7 @@
       topicUid: DataminerApplications
       items:
         - name: Accessing DataMiner Cube
-          topicUid: Accessing_DataMiner_Cube
+          topicUid: Installing_configuring_the_DataMiner_Cube_software
           items:
             - name: Installing & configuring the DataMiner Cube software
               topicUid: Installing_configuring_the_DataMiner_Cube_software
@@ -46,7 +46,7 @@
               - name: DataMiner Cube deployment methods
                 topicUid: DataMiner_Cube_deployment_methods
             - name: Opening DataMiner Cube
-              topicUid: Opening_DataMiner_Cube
+              topicUid: Opening_the_desktop_app
               items:
               - name: Opening the desktop application
                 topicUid: Opening_the_desktop_app
@@ -72,7 +72,7 @@
       topicUid: GettingStarted
       items:
         - name: The DataMiner Cube user interface
-          topicUid: The_DataMiner_Cube_user_interface
+          topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
           items:
             - name: Main Cube UI components from DataMiner 10.0.0/10.0.2 onwards
               topicUid: Main_Cube_UI_components_from_DataMiner_10_0_0_10_0_2_onwards
@@ -215,7 +215,7 @@
             - name: Alarm storm protection
               topicUid: Alarm_storm_protection
     - name: Elements
-      topicUid: elements
+      topicUid: About_elements
       items:
         - name: About elements
           topicUid: About_elements
@@ -235,7 +235,7 @@
             - name: Element properties
               topicUid: Element_properties
         - name: Working with elements in DataMiner
-          topicUid: Working_with_elements_in_DataMiner
+          topicUid: Element_cards
           items:
             - name: Element cards
               topicUid: Element_cards
@@ -288,7 +288,7 @@
       topicUid: parameters
       items:
         - name: Types of parameters
-          topicUid: Types_of_parameters
+          topicUid: Read_parameters_versus_write_parameters
           items:
             - name: Read parameters versus write parameters
               topicUid: Read_parameters_versus_write_parameters
@@ -404,7 +404,7 @@
             - name: Managing service templates
               topicUid: Managing_service_templates
     - name: Views
-      topicUid: views
+      topicUid: About_views
       items:
         - name: About views
           topicUid: About_views
@@ -416,7 +416,7 @@
       topicUid: visio
       items:
         - name: Getting started
-          topicUid: Getting_started
+          topicUid: Working_with_shape_data_in_Microsoft_Visio
           items:
             - name: Working with shape data in Microsoft Visio
               topicUid: Working_with_shape_data_in_Microsoft_Visio
@@ -701,7 +701,7 @@
             - name: Configuring a page to execute a script automatically
               topicUid: Configuring_a_page_to_execute_a_script_automatically
         - name: Reference
-          topicUid: Reference
+          topicUid: Overview_of_DataMiner_shape_data_fields
           items:
             - name: Overview of DataMiner shape data fields
               topicUid: Overview_of_DataMiner_shape_data_fields
@@ -862,7 +862,7 @@
             - name: Exporting alarm template parameter data
               topicUid: Exporting_alarm_template_parameter_data
         - name: Trend templates
-          topicUid: Trend_templates
+          topicUid: About_trend_templates
           items:
             - name: About trend templates
               topicUid: About_trend_templates
@@ -897,7 +897,7 @@
       topicUid: DataminerAgents
       items:
         - name: Configuring a DataMiner Agent
-          topicUid: Configuring_a_DataMiner_Agent
+          topicUid: Changing_the_DMA_ID
           items:
             - name: Changing the DataMiner ID of a DMA
               topicUid: Changing_the_DMA_ID
@@ -977,6 +977,8 @@
               topicUid: Checking_the_upgrade_history_of_a_DataMiner_Agent
             - name: Configuring the default upgrade options
               topicUid: Configuring_the_default_upgrade_options
+        - name: Health assessment guidelines for DataMiner Agents
+          topicUid: Health_Assessment_Guidelines_for_DataMiner_Agent
         - name: Uninstalling a DataMiner Agent
           topicUid: Uninstalling_a_DataMiner_Agent
         - name: DataMiner packages
@@ -989,7 +991,7 @@
             - name: Importing elements, services, etc. from a .dmimport file
               topicUid: Importing_elements_services_etc_from_a_dmimport_file
     - name: DataMiner Systems
-      topicUid: DataminerSystems
+      topicUid: About_DataMiner_Systems
       items:
         - name: About DataMiner Systems
           topicUid: About_DataMiner_Systems
@@ -1007,7 +1009,7 @@
         - name: Viewing information on the DMAs in a DMS
           topicUid: Viewing_information_on_the_DMAs_in_a_DMS
         - name: Setting up a new DataMiner System
-          topicUid: Setting_up_a_new_DataMiner_System
+          topicUid: Before_you_begin_to_set_up_a_new_DMS
           items:
             - name: Before you begin to set up a new DMS
               topicUid: Before_you_begin_to_set_up_a_new_DMS
@@ -1023,7 +1025,7 @@
         - name: Removing a DataMiner Agent from a DataMiner System
           topicUid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
         - name: Starting or stopping DataMiner Agents in your DataMiner System
-          topicUid: Starting_or_stopping_DataMiner_Agents_in_your_DataMiner_System
+          topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
           items:
             - name: Starting or stopping a DMA in DataMiner Cube
               topicUid: Starting_or_stopping_a_DMA_in_DataMiner_Cube
@@ -1124,6 +1126,15 @@
           topicUid: Databases_about
         - name: Supported system data storage architectures
           topicUid: Supported_system_data_storage_architectures
+          items:
+            - name: Dedicated clustered storage
+              topicUid: Dedicated_clustered_storage
+            - name: Separate Cassandra setup with Elasticsearch
+              topicUid: Separate_Cassandra_setup_with_Elasticsearch
+            - name: Separate Cassandra setup without Elasticsearch
+              topicUid: Separate_Cassandra_setup_without_Elasticsearch
+            - name: Legacy setup with MySQL or MSSQL database
+              topicUid: Legacy_setup_with_MySQL_or_MSSQL_database
         - name: Storage as a Service
           topicUid: STaaS
         - name: Database configuration
@@ -1160,51 +1171,6 @@
                       items:
                         - name: Deploying the Amazon Keyspaces Service
                           topicUid: Deploying_Amazon_Keyspaces_Service
-                - name: Indexing database
-                  topicUid: Elasticsearch_database
-                  items:
-                    - name: Elasticsearch
-                      topicUid: Elasticsearch_database
-                      items:
-                        - name: Installing Elasticsearch on a separate Linux machine
-                          topicUid: Installing_Elasticsearch_on_separate_Linux_machine
-                        - name: Manually connecting a DMA to an Elasticsearch cluster
-                          topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
-                        - name: Configuring the Elasticsearch database
-                          topicUid: Configuring_Elasticsearch_Database
-                          items:
-                            - name: Configuring the master nodes
-                              topicUid: Configuring_master_Elasticsearch_nodes
-                            - name: Adding an Elasticsearch cluster node
-                              topicUid: Configuring_Elasticsearch_node_add
-                        - name: Configuring multiple Elasticsearch clusters
-                          topicUid: Configuring_multiple_Elasticsearch_clusters
-                          items:
-                            - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
-                              topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
-                            - name: Verify Elasticsearch synchronization
-                              topicUid: Verifying_Elasticsearch_Synchronization
-                        - name: Maintaining the Elasticsearch database
-                          topicUid: Configuring_Elasticsearch_backups
-                          items:
-                            - name: Configuring Elasticsearch backups
-                              topicUid: Configuring_Elasticsearch_backups
-                              items:
-                                - name: Taking and restoring snapshots
-                                  topicUid: Configuring_Elasticsearch_backups_Windows_Linux
-                                - name: Restoring backups using the Standalone Elastic Backup Tool
-                                  topicUid: Configuring_Elasticsearch_backups_Windows
-                            - name: Removing an Elasticsearch cluster node
-                              topicUid: Configuring_Elasticsearch_node_remove
-                    - name: Amazon Opensearch Service
-                      topicUid: Amazon_OpenSearch_Service
-                    - name: OpenSearch database
-                      topicUid: OpenSearch_database
-                      items:
-                        - name: Installing an OpenSearch database
-                          topicUid: Installing_OpenSearch_database
-                        - name: Configuring multiple OpenSearch clusters
-                          topicUid: Configuring_multiple_OpenSearch_clusters
                 - name: Configuring the general database settings
                   topicUid: Configuring_the_database_settings_in_Cube
                 - name: Migrating existing systems to dedicated clustered storage
@@ -1226,6 +1192,8 @@
                           topicUid: Configuring_Cassandra_Backups
                         - name: Moving the Cassandra database to a different disk drive
                           topicUid: Moving_the_Cassandra_database_to_a_different_disk_drive
+                    - name: Configuring an indexing database
+                      topicUid: SPD_Configuring_indexing_database
                 - name: MySQL database
                   topicUid: MySQL_database
                   items:
@@ -1237,23 +1205,64 @@
                       topicUid: Moving_MySQL_data_to_another_location
                     - name: Configuring the SQL database settings
                       topicUid: Configuring_MySQL_database_in_Cube
-            - name: Configuring an indexing database per DMS
-              topicUid: Configuring_indexing_database_per_DMS
+            - name: Configuring an indexing database
+              topicUid: Indexing_Database
               items:
-                - name: Deploying the dedicated Elasticsearch indexing database
-                  topicUid: Installing_Elasticsearch_via_DataMiner
+                - name: Elasticsearch
+                  topicUid: Elasticsearch_database
                   items:
-                    - name: Installing Elasticsearch on a DMA via DataMiner
-                      topicUid: Installing_Elasticsearch_via_DataMiner
-                    - name: Migrating SRM resources to Elasticsearch
-                      topicUid: Resources_migration_to_elastic
-                - name: Configuring indexing settings
-                  topicUid: Configuring_DataMiner_Indexing
-                - name: Maintaining an indexing database
-                  topicUid: Configuring_Elasticsearch_indexing_database_backups
+                    - name: Setting up Elasticsearch for a dedicated clustered storage setup
+                      topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                      items:
+                        - name: Installing Elasticsearch on a separate Linux machine
+                          topicUid: Installing_Elasticsearch_on_separate_Linux_machine
+                        - name: Configuring the Elasticsearch database (Linux)
+                          topicUid: Configuring_Elasticsearch_Database
+                          items:
+                            - name: Configuring the master nodes
+                              topicUid: Configuring_master_Elasticsearch_nodes
+                            - name: Adding an Elasticsearch cluster node
+                              topicUid: Configuring_Elasticsearch_node_add
+                            - name: Configuring multiple Elasticsearch clusters
+                              topicUid: Configuring_multiple_Elasticsearch_clusters
+                              items:
+                                - name: Taking a snapshot of one Elasticsearch cluster and restoring it to another
+                                  topicUid: Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster
+                                - name: Verifying Elasticsearch synchronization
+                                  topicUid: Verifying_Elasticsearch_Synchronization
+                    - name: Setting up Elasticsearch in a setup with storage per DMA
+                      topicUid: Configuring_indexing_database_per_DMS
+                      items:
+                        - name: Installing Elasticsearch on a DMA via DataMiner
+                          topicUid: Installing_Elasticsearch_via_DataMiner
+                        - name: Migrating SRM resources to Elasticsearch
+                          topicUid: Resources_migration_to_elastic
+                        - name: Configuring indexing settings in DataMiner Cube
+                          topicUid: Configuring_DataMiner_Indexing
+                        - name: Configuring the Elasticsearch database (Windows)
+                          topicUid: Configuring_Elasticsearch_database_Windows
+                    - name: Manually connecting a DMA to an Elasticsearch cluster
+                      topicUid: Manually_Connecting_DMA_to_Elasticsearch_Cluster
+                    - name: Configuring Elasticsearch backups
+                      topicUid: Configuring_Elasticsearch_backups
+                      items:
+                        - name: Taking and restoring snapshots
+                          topicUid: Configuring_Elasticsearch_backups_Windows_Linux
+                        - name: Restoring backups using the Standalone Elastic Backup Tool
+                          topicUid: Configuring_Elasticsearch_backups_Windows
+                    - name: Removing an Elasticsearch cluster node
+                      topicUid: Configuring_Elasticsearch_node_remove
+                - name: OpenSearch database
+                  topicUid: OpenSearch_database
                   items:
-                    - name: Configuring Elasticsearch indexing database backups
-                      topicUid: Configuring_Elasticsearch_indexing_database_backups
+                    - name: Installing an OpenSearch database
+                      topicUid: Installing_OpenSearch_database
+                    - name: Configuring multiple OpenSearch clusters
+                      topicUid: Configuring_multiple_OpenSearch_clusters
+                    - name: Configuring OpenSearch backups
+                      topicUid: Configuring_OpenSearch_Backups
+                - name: Amazon Opensearch Service
+                  topicUid: Amazon_OpenSearch_Service
             - name: Common database settings
               topicUid: Specifying_TTL_overrides
               items:
@@ -1287,7 +1296,7 @@
             - name: Querying a Cassandra database compared to MySQL
               topicUid: Querying_Cassandra_vs_MySQL
     - name: Security
-      topicUid: security
+      topicUid: About_DMS_Security
       items:
         - name: About DataMiner security
           topicUid: About_DMS_Security
@@ -1443,7 +1452,7 @@
             - name: Custom DataMiner notification
               topicUid: Custom_DataMiner_notification
     - name: DataMiner Connectivity Framework
-      topicUid: DCF
+      topicUid: About_the_DataMiner_Connectivity_Framework
       items:
         - name: About the DataMiner Connectivity Framework
           topicUid: About_the_DataMiner_Connectivity_Framework
@@ -1466,7 +1475,7 @@
             - name: Automatically generating service RCA chains based on connectivity
               topicUid: Automatically_generating_service_RCA_chains_based_on_connectivity
     - name: TCP-IP sockets
-      topicUid: TCPIPSockets
+      topicUid: About_TCP-IP_sockets
       items:
         - name: About TCP-IP sockets
           topicUid: About_TCP-IP_sockets
@@ -1488,6 +1497,11 @@
           topicUid: Features_of_a_DMS_Serial_Gateway
         - name: Using a DMS Serial Gateway
           topicUid: Using_a_DMS_Serial_Gateway
+    - name: Swarming
+      topicUid: Swarming
+      items:
+        - name: Switching objects
+          topicUid: SwitchingObjects
 - name: DataMiner modules
   topicUid: Part4AdvancedModules
   items:
@@ -1827,6 +1841,15 @@
               topicUid: Specifying_data_input_in_URL
             - name: Executing actions via the app URL
               topicUid: Executing_actions_via_URL
+            - name: Tutorials
+              topicUid: Tutorial_Apps
+              items:
+                - name: Creating and publishing an app
+                  topicUid: Tutorial_Apps_Creating_And_Publishing
+                - name: Editing an existing app
+                  topicUid: Tutorial_Apps_Edit_Existing_App
+                - name: Managing the pages in an app
+                  topicUid: Tutorial_Apps_Managing_Pages
         - name: Available visualizations
           topicUid: Available_visualizations
           items:
@@ -1853,6 +1876,8 @@
                 topicUid: DashboardIcon
               - name: Image
                 topicUid: DashboardImage
+              - name: Stepper
+                topicUid: DashboardStepper
               - name: Text
                 topicUid: DashboardText
               - name: Web
@@ -1910,7 +1935,7 @@
             - name: Feeds
               topicUid: Feeds
               items:
-              - name: CPE feed
+              - name: EPM feed
                 topicUid: DashboardCPEFeed
               - name: Drop-down feed
                 topicUid: DashboardDropdownFeed
@@ -1924,6 +1949,8 @@
                 topicUid: DashboardTreeFeed
               - name: Trigger feed
                 topicUid: DashboardTriggerFeed
+              - name: Query filter feed
+                topicUid: DashboardQueryFilterFeed
             - name: Basic controls
               topicUid: DashboardDropdownFeed
               items:
@@ -2145,6 +2172,10 @@
               topicUid: DOM_ModuleBehaviorDefinition
             - name: TtlSettings
               topicUid: DOM_TtlSettings
+            - name: DomInstanceHistorySettings
+              topicUid: DOM_DomInstanceHistorySettings
+            - name: StorageSettings
+              topicUid: DOM_StorageSettings
         - name: DOM data storage
           topicUid: DOM_data_storage
         - name: DOM examples
@@ -2638,6 +2669,83 @@
     - name: DataMiner EPM Solution
       topicUid: SolEPM
       items:
+        - name: DataMiner EPM D-DOCSIS
+          topicUid: EPM_D-DOCSIS
+          items:
+            - name: EPM D-DOCSIS architecture
+              topicUid: D-DOCSIS_architecture
+            - name: EPM D-DOCSIS components
+              topicUid: D-DOCSIS_components
+            - name: Supported technologies for D-DOCSIS
+              topicUid: D-DOCSIS_supported_technologies
+            - name: EPM D-DOCSIS deployment
+              topicUid: D-DOCSIS_deployment
+            - name: Available parameters in D-DOCSIS
+              topicUid: D-DOCSIS_parameters
+              items:
+                - name: Network
+                  topicUid: D-DOCSIS_parameters_network
+                - name: Market
+                  topicUid: D-DOCSIS_parameters_market
+                - name: Hub
+                  topicUid: D-DOCSIS_parameters_hub
+                - name: CCAP Core
+                  topicUid: D-DOCSIS_parameters_ccap_core
+                - name: RPD
+                  topicUid: D-DOCSIS_parameters_rpd
+                - name: CM
+                  topicUid: D-DOCSIS_parameters_cm
+                - name: DPIC
+                  topicUid: D-DOCSIS_parameters_dpic
+                - name: DPIC Interface
+                  topicUid: D-DOCSIS_parameters_dpic_interface
+                - name: US Controller
+                  topicUid: D-DOCSIS_parameters_us_controller
+                - name: DS Controller
+                  topicUid: D-DOCSIS_parameters_ds_controller
+                - name: Fiber Node
+                  topicUid: D-DOCSIS_parameters_fiber_node
+                - name: Node Segment
+                  topicUid: D-DOCSIS_parameters_node_segment
+                - name: Service Group
+                  topicUid: D-DOCSIS_parameters_service_group
+                - name: DS Service Group
+                  topicUid: D-DOCSIS_parameters_ds_service_group
+                - name: US Service Group
+                  topicUid: D-DOCSIS_parameters_us_service_group
+                - name: Core Leaf
+                  topicUid: D-DOCSIS_parameters_core_leaf
+                - name: Spine
+                  topicUid: D-DOCSIS_parameters_spine
+                - name: Node Leaf
+                  topicUid: D-DOCSIS_parameters_node_leaf
+                - name: CIN Interface
+                  topicUid: D-DOCSIS_parameters_cin_interface
+                - name: Manufacturer
+                  topicUid: D-DOCSIS_parameters_manufacturer
+#GPON TOC      
+        - name: DataMiner EPM GPON
+          topicUid: EPM_GPON
+          items:
+            - name: EPM GPON architecture
+              topicUid: GPON_architecture
+            - name: EPM GPON components
+              topicUid: GPON_components
+              items:
+                - name: EPM GPON supported technologies
+                  topicUid: GPON_supported_technologies
+                - name: Standard EPM GPON ONT JSON definition
+                  topicUid: GPON_ONT_Json_definition
+            - name: EPM GPON deployment
+              topicUid: GPON_deployment
+            - name: Available parameters in EPM GPON
+              topicUid: GPON_KPI
+              items:
+                - name: EPM GPON parameter thresholds
+                  topicUid: GPON_parameters_thresholds
+                - name: EPM GPON ONT parameters
+                  topicUid: GPON_ONT
+#GPON TOC END
         - name: DataMiner EPM I-DOCSIS
           topicUid: EPM_I-DOCSIS
           items:
@@ -2701,60 +2809,6 @@
                   topicUid: I-DOCSIS_parameters_cable_modem
                 - name: Thresholds
                   topicUid: I-DOCSIS_parameters_thresholds
-        - name: DataMiner EPM D-DOCSIS
-          topicUid: EPM_D-DOCSIS
-          items:
-            - name: EPM D-DOCSIS architecture
-              topicUid: D-DOCSIS_architecture
-            - name: EPM D-DOCSIS components
-              topicUid: D-DOCSIS_components
-            - name: Supported technologies for D-DOCSIS
-              topicUid: D-DOCSIS_supported_technologies
-            - name: EPM D-DOCSIS deployment
-              topicUid: D-DOCSIS_deployment
-            - name: Available parameters in D-DOCSIS
-              topicUid: D-DOCSIS_parameters
-              items:
-                - name: Network
-                  topicUid: D-DOCSIS_parameters_network
-                - name: Market
-                  topicUid: D-DOCSIS_parameters_market
-                - name: Hub
-                  topicUid: D-DOCSIS_parameters_hub
-                - name: CCAP Core
-                  topicUid: D-DOCSIS_parameters_ccap_core
-                - name: RPD
-                  topicUid: D-DOCSIS_parameters_rpd
-                - name: CM
-                  topicUid: D-DOCSIS_parameters_cm
-                - name: DPIC
-                  topicUid: D-DOCSIS_parameters_dpic
-                - name: DPIC Interface
-                  topicUid: D-DOCSIS_parameters_dpic_interface
-                - name: US Controller
-                  topicUid: D-DOCSIS_parameters_us_controller
-                - name: DS Controller
-                  topicUid: D-DOCSIS_parameters_ds_controller
-                - name: Fiber Node
-                  topicUid: D-DOCSIS_parameters_fiber_node
-                - name: Node Segment
-                  topicUid: D-DOCSIS_parameters_node_segment
-                - name: Service Group
-                  topicUid: D-DOCSIS_parameters_service_group
-                - name: DS Service Group
-                  topicUid: D-DOCSIS_parameters_ds_service_group
-                - name: US Service Group
-                  topicUid: D-DOCSIS_parameters_us_service_group
-                - name: Core Leaf
-                  topicUid: D-DOCSIS_parameters_core_leaf
-                - name: Spine
-                  topicUid: D-DOCSIS_parameters_spine
-                - name: Node Leaf
-                  topicUid: D-DOCSIS_parameters_node_leaf
-                - name: CIN Interface
-                  topicUid: D-DOCSIS_parameters_cin_interface
-                - name: Manufacturer
-                  topicUid: D-DOCSIS_parameters_manufacturer
         - name: DataMiner EPM VSAT
           topicUid: EPM_VSAT
           items:
@@ -2954,7 +3008,7 @@
         - name: Additional configuration for Resource Orchestration
           topicUid: config_resource_orchestration
       - name: Booking Manager app
-        topicUid: SolSRM
+        topicUid: Booking_Manager_user_interface
         items:
           - name: Booking Manager user interface
             topicUid: Booking_Manager_user_interface
@@ -2965,18 +3019,13 @@
                 topicUid: Booking_Manager_Config_tab
               - name: Admin tab
                 topicUid: Booking_Manager_Admin_tab
-          - name: Interacting with the Booking Manager app using custom Automation scripts
-            topicUid: Interacting_with_the_Booking_Manager_app_using_custom_Automation_scripts
-            items:
-              - name: Silent actions
-                topicUid: Silent_actions
-              - name: Frequently asked questions related to bookings and scripting
-                topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
           - name: SRM properties for use with the Booking Manager app
             topicUid: SRM_properties_Booking_Manager
       - name: Advanced configuration
-        topicUid: SRM_user_interface_customization
+        topicUid: SRM_logging_config
         items:
+          - name: Configuring SRM logging
+            topicUid: SRM_logging_config
           - name: User interface customization
             topicUid: SRM_user_interface_customization
             items:
@@ -2990,13 +3039,13 @@
                 topicUid: SRM_custom_booking_blocks
           - name: Configuring SRM alarm monitoring
             topicUid: SRM_alarm_monitoring
-          - name: Configuring SRM logging
-            topicUid: SRM_logging_config
           - name: Advanced configuration for Service Orchestration
             topicUid: Service_Orchestration_bookings_advanced
             items:
               - name: Bookings configuration
                 topicUid: Service_Orchestration_bookings_advanced
+              - name: Contributing bookings configuration
+                topicUid: Service_Orchestration_contrib_bookings
               - name: Resources configuration
                 topicUid: Service_Orchestration_resources_advanced
               - name: Profile instances configuration
@@ -3011,6 +3060,70 @@
                 topicUid: Service_Orchestration_life_cycle_states
               - name: Service states configuration
                 topicUid: Service_Orchestration_service_states
+              - name: LSO script configuration
+                topicUid: Service_Orchestration_LSO_script
+              - name: Data Transfer Rules configuration
+                topicUid: Service_Orchestration_DTR
+              - name: Manual Orchestration
+                topicUid: Service_Orchestration_manual_orchestration
+              - name: Configuring SLA creation
+                topicUid: Service_Orchestration_SLA_creation
+      - name: Migrating an SRM configuration
+        topicUid: SRM_migrating
+        items:
+          - name: Migrating virtual function definitions
+            topicUid: SRM_migrating_functions
+          - name: Migrating profile instances
+            topicUid: SRM_migrating_profile_instances
+          - name: Migrating resources
+            topicUid: SRM_migrating_resources
+          - name: Migrating service definitions
+            topicUid: SRM_migrating_service_definitions
+      - name: Interacting with SRM using code
+        topicUid: Interacting_with_SRM_using_code
+        items:
+          - name: Finding the reference of an object
+            topicUid: SRM_find_reference_of_object
+          - name: Silent actions
+            topicUid: Silent_actions
+            items:
+              - name: Creating a booking
+                topicUid: SRM_creating_booking_silently
+              - name: Editing a pending booking
+                topicUid: SRM_editing_pending_booking_silently
+              - name: Assigning resource, profile and parameter values
+                topicUid: SRM_assigning_resource_profile_parameter_value_silently
+              - name: Adding properties to an existing booking
+                topicUid: SRM_adding_properties_to_booking_silently
+              - name: Applying booking life cycle transitions
+                topicUid: SRM_apply_LS_transition_silently
+              - name: Applying service state transitions
+                topicUid: SRM_apply_service_state_transitions_silently
+              - name: Updating the timing of a booking
+                topicUid: SRM_update_timing_booking_silently
+              - name: Extending the timing of a booking
+                topicUid: SRM_extend_timing_booking_silently
+              - name: Renaming a booking
+                topicUid: SRM_rename_booking_silently
+              - name: Adding an extra resource
+                topicUid: SRM_adding_extra_resource_silently
+              - name: Removing a resource and node
+                topicUid: SRM_removing_resource_and_node_silently
+              - name: Creating or editing many bookings using caching
+                topicUid: SRM_creating_editing_many_bookings_with_caching
+              - name: Applying a profile to an unmapped resource
+                topicUid: SRM_apply_profile_to_unmatched_resource
+          - name: Launching default wizards from custom scripts
+            topicUid: SRM_launching_booking_wizard
+            items:
+              - name: Launching the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard
+              - name: Launching specific pages of the standard Booking Wizard from a custom script
+                topicUid: SRM_launching_booking_wizard_pages
+              - name: Launching the Service Profile Booking Wizard from a custom script
+                topicUid: SRM_launching_service_profile_wizard
+          - name: Frequently asked questions related to bookings and scripting
+            topicUid: Frequently_asked_questions_related_to_bookings_and_scripting
       - name: SRM logging
         topicUid: SRM_logging
 - name: dataminer.services
@@ -3133,7 +3246,7 @@
           topicUid: Controlling_remote_access
         - name: Consulting dataminer.services audit logs
           topicUid: DCP_Auditing
-        - name: Granting admin consent for Teams actions
+        - name: Granting admin consent for Teams Chat Integration
           topicUid: Granting_admin_consent
         - name: Controlling cloud feed data offloads
           topicUid: Controlling_cloudfeed_data_offloads
@@ -3364,8 +3477,10 @@
       topicUid: Known_issues
       items:
         - name: Current issues
-          topicUid: KI_Multiple_Datacenters
+          topicUid: KI_Unable_to_Connect_Net_Remoting
           items:
+            - name: Unable to connect to DMS when using .NET Remoting
+              topicUid: KI_Unable_to_Connect_Net_Remoting
             - name: Various issues with a geo-redundant Cassandra setup with multiple data centers
               topicUid: KI_Multiple_Datacenters
             - name: Cassandra disconnects after loss of a single node
@@ -3374,8 +3489,6 @@
               topicUid: KI_app_corruption_after_editing
             - name: Cassandra cluster data not offloaded while database is unavailable
               topicUid: KI_Cassandra_cluster_data_not_offloaded
-            - name: RTEs caused by problem during automatic NATS reconfiguration
-              topicUid: KI_RTEs_NATS_reconfiguration
             - name: Elasticsearch not initialized when DataMiner starts up
               topicUid: KI_Elasticsearch_not_initialized_on_DMA_startup
             - name: DataMiner keeps trying to restart when Elasticsearch is unavailable
@@ -3411,8 +3524,16 @@
             - name: Setting a protocol to production takes a long time
               topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
         - name: Resolved issues
-          topicUid: KI_Inaccessible_data_Elasticsearch_casing
+          topicUid: KI_Cassandra_backups_not_working
           items:
+            - name: Cassandra backups no longer working
+              topicUid: KI_Cassandra_backups_not_working
+            - name: RTEs caused by problem during automatic NATS reconfiguration
+              topicUid: KI_RTEs_NATS_reconfiguration
+            - name: Default NATS port is already in use
+              topicUid: KI_NATS_port_9090
+            - name: RTEs caused by problem when updating alarm templates
+              topicUid: KI_RTEs_Alarm_Template_Issue
             - name: Inaccessible logger table data in Elasticsearch because of incorrect casing
               topicUid: KI_Inaccessible_data_Elasticsearch_casing
             - name: Activities and scripts delayed because of CheckVIPs thread
@@ -3496,8 +3617,10 @@
   items:
     - name: DataMiner Compute Requirements
       topicUid: DataMiner_Compute_Requirements
+    - name: DataMiner Client Requirements
+      topicUid: DataMiner_Client_Requirements
     - name: Skyline DataMiner folder
-      topicUid: SkylineDataminerFolder
+      topicUid: Overview_of_the_files_found_in_the_root_folder
       items:
         - name: Overview of the files found in the root folder
           topicUid: Overview_of_the_files_found_in_the_root_folder
@@ -3599,8 +3722,12 @@
           topicUid: Cassandra_Cluster_Migrator
         - name: Cassandra Cluster Validator
           topicUid: Cassandra_Cluster_Validator
+        - name: Change Element States Offline
+          topicUid: Change_Element_States_Offline
         - name: Connection Check
           topicUid: Connection_Check
+        - name: Copy Element Data
+          topicUid: Copy_Element_Data
         - name: DataMiner Comparison tool
           topicUid: DataMinerComparisonTool
         - name: DataMiner Size tool
@@ -3624,6 +3751,74 @@
           topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
         - name: Protocol debug tools
           topicUid: Protocol_Debug_Tools
+        - name: Skyline Device Simulator
+          topicUid: TOOQASNMPSimulator
+          items:
+            - name: Simulations
+              topicUid: Simulations
+              items:
+                - name: Creating SNMP simulations
+                  topicUid: Creating_SNMP_simulations
+                - name: Creating HTTP simulations
+                  topicUid: Creating_HTTP_simulations
+                - name: Running simulations
+                  topicUid: Running_simulations
+                - name: Static simulations
+                  topicUid: Static_simulations
+                - name: Artificial dynamic simulations
+                  topicUid: Artificial_dynamic_simulations
+                - name: Realistic dynamic simulations
+                  topicUid: Realistic_dynamic_simulations
+                - name: SNMP simulation schema reference
+                  topicUid: DeviceSimulator_SNMP_Schema_Reference_Overview
+                  items:
+                  - name: Simulation
+                    topicUid: DeviceSimulator_SNMP_Schema_Simulation
+                    items:
+                    - name: Agents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+                      items:
+                      - name: Agent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent                
+                    - name: DatabaseAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+                      items:
+                      - name: DatabaseAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+                    - name: ProxyAgents
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+                      items:
+                      - name: ProxyAgent
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+                    - name: Options
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options
+                      items:
+                      - name: MaxResponseWeight
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+                    - name: DefaultDefinitionAttributes
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+                    - name: Definitions
+                      topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions
+                      items:
+                      - name: Definition
+                        topicUid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
+            - name: Trap sender
+              topicUid: Trap_sender
+              items:
+                - name: File menu
+                  topicUid: File_menu
+                - name: General configuration
+                  topicUid: General_config
+                - name: Packet interval schedule
+                  topicUid: Packet_interval_schedule
+                - name: Loaded packets
+                  topicUid: Loaded_packets
+                - name: Packet configuration and bindings
+                  topicUid: Packet_configuration_and_bindings
+                - name: Sending
+                  topicUid: Sending
+            - name: Trap receiver
+              topicUid: Trap_receiver
         - name: SLLogCollector
           topicUid: SLLogCollector
         - name: SLNetClientTest tool
@@ -3753,6 +3948,8 @@
                 topicUid: SLNetClientTest_managing_trend_patterns
               - name: Modifying the engine ID of a DMA
                 topicUid: SLNetClientTest_modifying_engine_id
+              - name: Reinitializing Resource Manager
+                topicUid: SLNetClientTest_reinitialize_resourcemanager
               - name: Removing a DOM manager
                 topicUid: SLNetClientTest_removing_DOM_Manager
               - name: Removing references to items that no longer exist
@@ -3761,6 +3958,8 @@
                 topicUid: SLNetClientTest_setting_TTL_database
               - name: Specifying credentials for a shared backup path for Elasticsearch
                 topicUid: SLNetClientTest_credentials_shared_backup_Elasticsearch
+              - name: Triggering a midnight sync for a DOM manager
+                topicUid: SLNetClientTest_triggering_DOM_midnight_sync
               - name: Triggering and managing user-defined APIs
                 topicUid: SLNetClientTest_triggering_api
         - name: SLOffload tool
@@ -3790,7 +3989,7 @@
         - name: Verify NATS is Running
           topicUid: VerifyNatsIsRunning
     - name: Methods of Procedure
-      topicUid: mops
+      topicUid: MOP_Changing_the_default_password_for_Cassandra
       items:
         - name: Changing the default password for Cassandra
           topicUid: MOP_Changing_the_default_password_for_Cassandra

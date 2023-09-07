@@ -12,4 +12,4 @@ Proceed as follows if you want to debug a QAction or an Automation script locate
 
     See [DMA](xref:DIS_settings#dma)
 
-You are now ready to start debugging. See [Debugging a QAction](xref:Debugging_a_QAction) or [Debugging an Automation script](xref:Debugging_an_Automation_script).
+You are now ready to start debugging. See [Debugging a connector](xref:Debugging_a_connector) or [Debugging an Automation script](xref:Debugging_an_Automation_script).

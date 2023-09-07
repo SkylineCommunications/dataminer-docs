@@ -79,6 +79,25 @@ Also, when using the DomBehaviorDefinition inheritance system, the server-side l
 
 From now on, all custom CollectorConfig XML files will be synchronized across the DataMiner cluster.
 
+#### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
+
+For all types that are read in a partitioned way (currently alarms and trending), the migration progress will now be stored in *TokenRange.txt* files located in the `C:\Skyline DataMiner\Database` folder.
+
+To resume a migration after restarting all DMAs in your DataMiner System, do the following:
+
+1. Start *SLCCMigrator.exe* (which is located in the `C:\Skyline DataMiner\Tools\` folder).
+1. Initialize all the DMAs in the list.
+1. Click *Start Migration*.
+
+> [!NOTE]
+>
+> - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
+> - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
+
 #### SLAnalytics - Pattern matching: Manually created tags will now be saved as pattern occurrences [ID_35299]
 
 <!-- MR 10.4.0 - FR 10.3.3 -->
@@ -124,11 +143,11 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
-<!-- 36319: MR 10.4.0 - FR 10.3.9 -->
+<!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
 
 A number of security enhancements have been made.
@@ -305,9 +324,175 @@ A number of enhancements have been made to the caching mechanism used by the *Be
 
 #### SLProtocol is now a 64-bit process by default [ID_36725]
 
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
 SLProtocol is now a 64-bit process by default.
 
 However, if necessary, it can still be run as a 32-bit process. For more information, see [Activating SLProtocol as a 32-bit process](xref:Activating_SLProtocol_as_a_32_Bit_Process).
+
+#### Service & Resource Management: A series of checks will now be performed when you add or upload a functions file [ID_36732]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When a functions file is added or uploaded, the following checks will now be performed:
+
+1. Can the content of the file (in XML format) be parsed?
+1. Does the file contain the name of the protocol?
+1. Does the protocol name in the file correspond to the protocol name in the request?
+1. Does the file contain a version number?
+1. Does the DataMiner System not contain a functions file with the same version for the protocol in question?
+
+When you try to upload a functions file using DataMiner Cube, the log entry (in Cube logging) and the information event (in the Alarm Console) created when the upload fails will indicate the checks that did not return true.
+
+#### DataMiner Object Models: DomInstanceHistory will now be saved asynchronously [ID_36785]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When a DomInstance is created or updated, a HistoryChange record is stored in the database, and when a DomInstance is deleted, all HistoryChange objects associated with that DomInstance are deleted from the database. Up to now, those HistoryChange records were always created, updated and deleted synchronously.
+
+From now on, all DOM managers will create, update and delete their HistoryChange records asynchronously, which will considerably enhance overall performance when creating, updating or deleting DomInstances.
+
+Using the new `DomInstanceHistoryStorageBehavior` enum on the new `DomInstanceHistorySettings` class, you can configure whether HistoryChange records will be stored and how they will be stored. See the following example:
+
+```csharp
+​ModuleSettings.DomManagerSettings.DomInstanceHistorySettings.StorageBehavior = DomInstanceHistoryStorageBehavior.Disabled;
+```
+
+The `DomInstanceHistoryStorageBehavior` can be set to one of three values:
+
+- **EnabledAsync** (default value): The HistoryChange records will be created, updated and deleted asynchronously.
+
+- **EnabledSync**: The HistoryChange records will be created and deleted synchronously.
+
+- **Disabled**: No HistoryChange records will be created, updated or deleted.
+
+  > [!NOTE]
+  > If you set the value to "Disabled" after it had been set to one of the other options, the existing HistoryChange records in the database will be left untouched, even if the corresponding DomInstance is deleted.
+
+> [!NOTE]
+> When you delete a DomInstance with a large number of associated HistoryChange records, deleting all those HistoryChange records can take a long time, even when this is done asynchronously. Therefore, we recommend disabling the creation of HistoryChange records if you do not need them.
+
+#### Service & Resource Management: Enhanced performance when adding or updating ReservationInstances [ID_36788]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Because of a number of enhancements, overall performance has increased when adding or updating ReservationInstances, especially on systems with a large number of overlapping bookings and a large number of bookings using the same resources.
+
+#### SLAnalytics - Automatic incident tracking: Root time of an alarm group will be set to the most recent of the base alarm root times [ID_36809]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+From now on, the root time of an alarm group (i.e. the time of arrival of the first alarm in the alarm group tree) will be set to the most recent of the base alarm root times.
+
+Up to now, when alarm groups were recreated after a DataMiner upgrade, their time of arrival and root time was set to the time of the upgrade.
+
+#### DataMiner upgrade: Microsoft .NET 5 will no longer be installed by default [ID_36815]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, Microsoft .NET 5 would always be installed during a DataMiner upgrade. As all DataMiner components using .NET 5 have been upgraded to use .NET 6 instead, .NET 5 will no longer be installed by default.
+
+> [!NOTE]
+> If Microsoft .NET 5 is present, it will not be automatically uninstalled during a DataMiner upgrade.  
+
+#### Elasticsearch/OpenSearch: Unused suggest indices have been disabled [ID_36875]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Up to now, each time a new DOM manager was initialized, SLDataGateway would create a main data index and a suggest index in the Elasticsearch database for each DOM type. As these suggest indices are not used, they have now been disabled. As a result, overall performance will increase when initializing new DOM managers.
+
+Other unused suggest indices have been disabled as well. This will have a positive impact on the hardware resources required for Elasticsearch or OpenSearch.
+
+The following suggest indices have been disabled:
+
+- ApiDefinition
+- ApiToken
+- AutoIncrementer
+- DomBehaviorDefinition
+- DomDefinition
+- DomInstance
+- DomTemplate
+- HistoryChange
+- JobDomain
+- JobTemplate
+- MediationSnippet
+- ModuleSettings
+- PaProcess
+- Parameter
+- PaToken
+- ProfileDefinition
+- ProfileInstance
+- Record
+- RecordDefinition
+- ReservationDefinition
+- ReservationInstance
+- Resource
+- ResourcePool
+- SectionDefinition
+- ServiceDefinition
+- ServiceDeletionHistory
+- ServiceProfileDefinition
+- ServiceProfileInstance
+- SRMServiceInfo
+- SRMSettableServiceState
+- Ticket
+- TicketFieldResolver
+- TicketHistory
+- VirtualFunctionDefinition
+- VirtualFunctionProtocolMeta
+
+> [!NOTE]
+> Existing suggest indices will not automatically be removed from the database. You can remove them manually if necessary.
+
+#### SLNetClientTest: Enhancements made to 'DataMiner Object Model' window [ID_36891]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+A number of enhancements have been made to the *DataMiner Object Model* window.
+
+- The *DataMiner Object Model* window will now only subscribe to the events of the DOM manager you selected in the *ModuleSettings* window. Up to now, it would subscribe to all events of all DOM managers.
+
+- The *DomInstances* and *History* pages will initially only load up to 500 objects. A warning message at the top of the window will indicate that only a limited list was loaded, and that you will need to click *Refresh* to load all items.
+
+- The objects listed on the *DomInstances* and *History* pages will now be sorted by the data that was last modified (descending), allowing you to quickly see the recently updated objects.
+
+- On the *History* page, the GUID of the DomInstance will no longer have a "DomInstanceId" prefix.
+
+- The *Attachments* page will no longer load all DomInstances at startup. If you want all DomInstances to be loaded, you will need to click *Load all DOM instances*.
+
+- On the *SectionDefinitions* page, the IDs of the section definitions will now be shown in the first column.
+
+- When you click *View* after selecting a section definition, the text will no longer include a *Validators* line if no validators could be found.
+
+- When no name is assigned to a *DomBehaviorDefinition* or a *DomDefinition*, the text "(no name)" will appear to indicate that no name was assigned.
+
+- If, on any of the pages, you want to select an item in a table, you can now click the item anywhere. Up to now, you had to click the cell in the first column.
+
+> [!CAUTION]
+> Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
+
+#### Service & Resource Management: Improved ResourceManager logging [ID_36989]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+The ResourceManager logging (*SLResourceManager.txt*) has been improved to make debugging easier.
+
+Some log entries have been rewritten to make them clearer, have been assigned another log level or have been removed entirely.
+
+#### DataMiner Object Models: Bulk deletion of history records when deleting a DOM instance [ID_37012]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
+
+#### SLAnalytics: Enhanced performance when using automatic incident tracking based on properties [ID_37198]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Because of a number of enhancements, overall performance has increased when using automatic incident tracking based on service, view or element properties.
+
+> [!IMPORTANT]
+> For the properties that should be taken into account, the option *Update alarms on value changed* must be selected. For more information, see [Configuration of incident tracking based on properties](xref:Automatic_incident_tracking#configuration-of-incident-tracking-based-on-properties).
 
 ### Fixes
 
@@ -382,17 +567,17 @@ When a DomInstance was created with an empty status, in some cases, a `MultipleS
 
 In some cases, whitespace characters would incorrectly be removed from signatures, causing validation to fail.
 
+#### NATS auto-reconnect mechanism could lead to a situation in which a large number of TCP ports were left open [ID_36339]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+When NATS tried to automatically reconnect at a moment when none of the servers were available, it would incorrectly not wait for a while until the cluster was online again. In some cases, this could lead to a situation in which a large number of TCP ports were left open.
+
 #### Community credentials from the credential library would be ignored for SNMPv1 and SNMPv2 [ID_36353]
 
 <!-- MR 10.4.0 - FR 10.3.7 -->
 
 When, in element settings, community credentials from the credential library were used, those credentials would be ignored for SNMPv1 and SNMPv2. The get-community and set-community configured on the element would incorrectly be used instead.
-
-#### NATS connection could fail due to payloads being too large [ID_36427]
-
-<!-- MR 10.4.0 - FR 10.3.8 -->
-
-In some cases, the NATS connection could fail due to payloads being too large. As a result, parameter updates and alarms would no longer be saved to the database.
 
 #### SLNet would incorrectly return certain port information fields of type string as null values [ID_36524]
 
@@ -407,6 +592,12 @@ Affected port information fields:
 - PollingIPAddress
 - PollingIPPort
 
+#### Cassandra Cluster Migrator would fail to start up [ID_36804]
+
+<!-- MR 10.4.0 - FR 10.3.8 [CU0] -->
+
+When the *Cassandra Cluster Migrator* tool (*SLCCMigrator.exe*) was started, in some cases, it would get stuck in the initialization phase due to a connection issue.
+
 #### Certain alarms would have their 'root creation time' set incorrectly [ID_36812]
 
 <!-- MR 10.4.0 - FR 10.3.9 -->
@@ -414,3 +605,37 @@ Affected port information fields:
 In some cases, the *root creation time* of an alarm would not be equal to the *creation time* of the root alarm.
 
 For example, when an alarm group was created with an old time of arrival, the *root creation time* would be set to the root time (i.e. the time of arrival of the root alarm), while the *creation time* would be set to the time at which the alarm was created.
+
+#### Problem when renaming an element [ID_36855]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In some rare cases, an error could be thrown when an element was renamed.
+
+#### Deprecated DMS_GET_INFO call could return unexpected DVE child data [ID_36964]
+
+The deprecated DMS_GET_INFO call would return unexpected data when it returned data of elements that contained remotely hosted DVE child elements.
+
+#### Problem when restarting DataMiner [ID_37112]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When DataMiner was restarted, in some rare cases, it would not start up again.
+
+#### SLAnalytics: Problem when creating or editing a multivariate pattern [ID_37212]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you created or edited a linked pattern with subpatterns from elements on different agents, and the first subpattern was from an element on an agent other than the one from which the CreateLinkedPatternMessage or EditLinkedPatternMessage was originally sent, SLNet would throw an exception.
+
+#### Problem when importing an existing element [ID_37214]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you imported an element that already existed in the system, in some cases, an error could occur in SLDataMiner.
+
+#### SLAnalytics: Problem when deleting trend pattern while connected to a DMA running an old DataMiner version [ID_37225]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.

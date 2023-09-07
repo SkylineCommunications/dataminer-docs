@@ -295,7 +295,7 @@ Now anytime a `leaf` changes, it will send out a notification with the new value
 
 ### Accessing a specific instance
 
-If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name:Ethernet1]/state`
+If you need to access a specific instance in a `container`, you can use [ ] to specify the instance. For example: `interfaces/interface[name='Ethernet1']/state`
 
 Using this path will result in only reading or writing the *Ethernet1* instance of the *interfaces/interface/state* `container`.
 

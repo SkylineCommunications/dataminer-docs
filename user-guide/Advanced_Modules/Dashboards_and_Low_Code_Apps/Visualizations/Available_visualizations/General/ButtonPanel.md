@@ -4,12 +4,10 @@ uid: DashboardButtonPanel
 
 # Button panel
 
-> [!WARNING]
-> This feature is currently still in preview. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+> [!NOTE]
+> Prior to DataMiner 10.3.9/10.4.0, this feature is available in preview, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
-This dashboard component is available in soft launch from DataMiner 10.0.3 onwards, if the soft-launch option *ReportsAndDashboardsButtonPanel* is enabled.
-
-This component will display a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed. The following types of buttons can be configured:
+This component is available from DataMiner 10.3.9/10.4.0 onwards<!-- RN 36775 -->. It displays a button panel with buttons representing the rows of a table parameter. Using an element with a custom button panel protocol, you can configure what kind of buttons are displayed and how the buttons are displayed. The following types of buttons can be configured:
 
 - Simple buttons used only to set parameters.
 
@@ -59,7 +57,7 @@ In the table listing the buttons, add the buttons that you want to display and s
 
   - *HTML - Advanced*: HTML button, configured in the *Advanced Layout* column. For HTML buttons, a separate CSS parameter can also be available, which allows you to specify the CSS for all HTML buttons (allowing overrides in the *Advanced Layout* column).
 
-  - *UI*: Available from DataMiner 9.6.13 onwards. This button will not trigger a parameter set when it is clicked, but is only used to display information.
+  - *UI*: This button will not trigger a parameter set when it is clicked, but is only used to display information.
 
 - *Advanced Layout*: Allows you to configure the layout of the button using a JSON string.
 
@@ -83,7 +81,7 @@ In the table listing the buttons, add the buttons that you want to display and s
         "version":"1.0.0.0"}
     ```
 
-  - For a button with images (supported from DataMiner 9.6.13 onwards):
+  - For a button with images:
 
     ```json
     {"buttonLayout": {
@@ -109,7 +107,7 @@ In the table listing the buttons, add the buttons that you want to display and s
 
 ### Other parameters
 
-From DataMiner 9.6.13 onwards, if a separate parameter is used for the advanced configuration of the entire panel, it can be configured with a setting to allow free configuration of the button panel layout:
+If a separate parameter is used for the advanced configuration of the entire panel, it can be configured with a setting to allow free configuration of the button panel layout:
 
 ```json
 {"panelLayout": {"layoutStyle": "FreeLayout"} }

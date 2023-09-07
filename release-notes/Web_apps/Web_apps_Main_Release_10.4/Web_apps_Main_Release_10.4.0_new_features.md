@@ -46,6 +46,65 @@ In a low-code app, this component will also make a number of component actions a
 - *Set form to edit mode*
 - *Set form to read mode*
 
+#### Dashboards app & Low-Code Apps: Query filter component now officially released [ID_33530] [ID_33547] [ID_34037] [ID_36822] [ID_36832]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+The *Query filter* component has now officially been released. When linked to a *Table* component or a *Node edge graph* component, this component will allow you to filter the table or the node edge graph on the fly.
+
+There are two ways in which you can link a query filter. See the following examples.
+
+- **Feeding queries as data**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Queries* on top of the table component.
+
+  Result: Each time you change the query filter, a new query will be fed to the table. The latter will only show the rows that match the filter set in the query filter component.
+
+- **Feeding query columns as filter**
+
+  1. Place a new *Query filter* component on the dashboard.
+
+  1. Create a query (e.g. a query named *Elements* based on the *Get elements* data source) and drag it on top of the query filter component.
+  
+     Note that a feed name will appear in the bottom-right corner of the query filter component (e.g. "Query filter 1").
+
+  1. Place a new *Table* component on the dashboard.
+
+  1. In the *Data* tab, go to *All available data* > *Queries*, and drag the query you created earlier (e.g. *Elements*) on top of the table component.
+
+  1. In the *Data* tab, go to *All available data* > *Feeds*, expand the feed associated with the query filter (e.g. "Query filter 1"), and drag *Query columns* on top of the yellow filter drop area of the table component.
+
+  Result: Each time you change the query filter, the data inside the table will be filtered according to the filter settings in the query filter. No new query will be fed to the table. The latter will keep on showing all rows, but those that do not match the filter will turn gray.
+
+Settings:
+
+- **Filter assistance**: If you activate this setting, the choices the query filter offers will already be filtered according to the data that is available.
+
+  For example, if the table contains a *State* column, and the table only contains rows of which that column contains "Active" or "Stopped", you will not be able to filter on other state values. Moreover, next to each filter option the number of matching rows will be displayed. For example, when there are 20 rows of which the *State* column contains "Active", then the filter will show the Active state option as "Active (20)".
+
+- **Allow color mode**: If this setting is activated (which it is by default), in the top-right corner of the filter query component, you will be able to click a color marker icon. When you do so, a color legend will appear on the right of the filter options, and for each of those options you will be able to configure a color (default color: green).
+
+  > [!NOTE]
+  > When you deactivate the *Allow color mode* setting, the colors you configured will stay visible and applied.
+
+> [!NOTE]
+>
+> - At the top of a *Query filter* component, you have an *Active (x)* toggle button. If you enable this button, the component will display only the active filter options and the button itself will indicate the number of active options.
+> - In a *Query filter* component, next to each column that contains discrete values of type string or number, you will find a button that allows you to change how the possible values are displayed:
+>
+>   - Click *Toggle checklist* to have all possible values listed in the form of a checklist.
+>   - Click *Toggle free form* to display a text box in which users can type a value.
+>
+> - when you only filter a node edge graph by node, edges will be highlighted only when both source and destination are highlighted. When you only filter a node edge graph by edge, the source and/or destination attached to the highlighted edge segments will be highlighted.
+
 #### Dashboards app & Low-Code Apps: Icon component [ID_34867]
 
 <!-- MR 10.4.0 - FR 10.3.1 -->
@@ -367,13 +426,14 @@ Note that, from now on, every *Sort by* node will nullify any preceding *Sort by
 > The behavior of existing queries (using e.g. *Sort by B* followed by *Sort by A*) will not be altered in any way. Their syntax will automatically be adapted when they are migrated to the most recent GQI version.
 > For example, an existing query using *Sort by B* followed by *Sort by A* will use *Sort by A* followed by *Then sort by B* after being migrated.
 
-#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902]
+#### Dashboards app & Low-Code Apps: New 'Text input' feed [ID_35902] [ID_36983]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 35902: MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 36983: MR 10.4.0 - FR 10.3.9 -->
 
 The new *Text input* feed is a text box that exposes the entered text as a string feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Text input* feed, you can optionally specify a label, an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
+When configuring this new *Text input* feed, you can optionally specify a label (and its position), an icon and a placeholder. You can also indicate whether the text box should allow multiple lines of texts and whether it should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -394,13 +454,14 @@ A default value can be set by means of a URL option:
 
 For more information on how to pass data using a JSON object, see [Specifying data input in an app URL](xref:Specifying_data_input_in_URL).
 
-#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911]
+#### Dashboards app & Low-Code Apps: New 'Numeric input' feed [ID_35911] [ID_36983]
 
-<!-- MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 35902: MR 10.4.0 - FR 10.3.5 -->
+<!-- RN 36983: MR 10.4.0 - FR 10.3.9 -->
 
 The new *Numeric input* feed is a text box that exposes the entered numbers as a number feed that can currently be consumed by GQI queries and script parameters in low-code app actions.
 
-When configuring this new *Numeric input* feed, you can optionally specify a label, an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
+When configuring this new *Numeric input* feed, you can optionally specify a label (and its position), an icon, a placeholder, a unit, a step size, a number of decimals, a minimum value and a maximum value. You can also indicate whether the text box should feed its value when triggered by the following events:
 
 - On Enter
 - On Focus lost
@@ -571,3 +632,50 @@ You can export the data displayed by a table component by clicking the ... butto
 Exporting the display values will result in a CSV file that contains all the values as they are seen in the table, formatted and with units. If you export the raw values, no formatting will be applied to them. The only exception are discrete values, for which the corresponding display values will always be exported.
 
 If no rows are selected in the table, the entire table will be exported; otherwise only the selected rows will be exported.
+
+#### GQI: Ad hoc data sources can now include columns of type GQITimeSpanColumn [ID_36717]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+Ad hoc data sources can now include columns of type `GQITimeSpanColumn`. These columns can contain a time span and can have operators applied to them.
+
+#### Dashboards app & Low-Code Apps - Parameters dataset: Selecting an index/cell of a column parameter [ID_36724]
+
+<!-- MR 10.4.0 - FR 10.3.9 -->
+
+In the *Parameters* section of the edit panel's *DATA* tab, column parameters will now by default list their first 100 indices (i.e. cells). When you drag one of those cells onto a component, element ID, parameter ID as well as index will be passed along.
+
+If the index (i.e. cell) you need is not among the first 100 indices that are listed, you can use the search box above the parameter list to narrow down the list of indices.
+
+#### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+Table visualizations now support real-time GQI query updates.
+
+A table visualization will now immediately show the updated values if the *Update data* option is enabled in the table component settings.
+
+> [!NOTE]
+> Real-time updates only work when supported by the data source used in the query.
+
+#### Dashboards app & Low-Code Apps - Time range component: Presets [ID_37050]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+When configuring a *Time range* component, you can now find a new *Presets* section in the *Layout* tab. This section allows you to define the presets that will be available to users who open a *Time range* feed.
+
+The list of presets will also include three new presets (each with a corresponding quick pick option):
+
+- *Starting from now*
+- *Near future*
+- *Distant future*
+
+In addition, other settings found on the *Layout* tab have been rearranged. The alignment and visibility settings have now been moved to a new *Layout* section, and the order of the quick pick options has been changed.
+
+#### Dashboards app & Low-Code Apps: New Stepper component [ID_37200]
+
+<!-- MR 10.4.0 - FR 10.3.10 -->
+
+A new *Stepper* component is now available. This component is used to guide the user through a workflow by splitting it up into different numbered or labeled steps. It indicates the progress through the workflow by showing the past steps, current step, and future steps. The component uses a stateful DOM instance or DOM definition (i.e. a DOM instance or DOM definition that contains states) as data input.
+
+For more information on how to configure this component, see [Stepper](xref:DashboardStepper).

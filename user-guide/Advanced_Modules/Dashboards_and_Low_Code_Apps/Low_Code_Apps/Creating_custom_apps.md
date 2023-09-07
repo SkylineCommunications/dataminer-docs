@@ -25,3 +25,6 @@ To create a new low-code application:
 
    > [!NOTE]
    > When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, click the cogwheel button and activate *Show draft applications*.
+
+> [!TIP]
+> See also: [Tutorials - Creating and publishing an app](xref:Tutorial_Apps_Creating_And_Publishing)

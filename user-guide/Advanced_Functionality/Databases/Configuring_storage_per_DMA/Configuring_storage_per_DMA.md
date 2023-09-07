@@ -18,6 +18,8 @@ By default, when you install a new DataMiner System, a Cassandra database per DM
 > [!NOTE]
 > For many of the above-mentioned features, an [indexing database](xref:Configuring_indexing_database_per_DMS) is required as well.
 
+![storage per DMA](~/user-guide/images/Storage_per_DMA.svg)
+
 ## MySQL database
 
 On legacy DataMiner Systems, typically a MySQL (or MSSQL) database is used as the general database. For the currently supported DataMiner versions, a Cassandra database is preferred instead. Though DataMiner can still be used with a MySQL or MSSQL database, [switching to Cassandra](xref:Migrating_the_general_database_to_Cassandra) is highly recommended as it leads to enhanced performance, and certain DataMiner features are only available if a Cassandra database is used.
