@@ -22,34 +22,90 @@ To save a Log Collector package:
 
 1. Connect to the DataMiner server using Remote Desktop.
 
-1. Run the Log Collector tool by following the steps in [SLLogCollector](xref:SLLogCollector).
+1. Right-click the DataMiner Taskbar Utility icon and select *Launch > Tools > Log Collector*
 
-1. The Log Collector package is saved by default in an *SL_LogCollector* folder on your desktop.
+   ![Log Collector](~/user-guide/images/LogCollector.png)
+
+   > [!NOTE]
+   > If the DataMiner Taskbar Utility icon is missing from the taskbar, or if the Log Collector option is not present in the dropdown list, you can manually find the *C:\Skyline DataMiner\Tools\SLLogCollector\SL_LogCollector.exe* file or download it from [DataMiner Dojo](https://community.dataminer.services/download/sllogcollector/).
+
+1. In the *DataMiner Log Collector* pop-up window, select *Start* in the lower right corner.
+
+   > [!NOTE]
+   > If you want a memory dump to be saved, before starting the log collection, first select the checkbox next to *Include memory dump* and choose the required process(es) from the list. In the case of a run-time error, the necessary processes are selected automatically.
+   >
+   > ![Include memory dump](~/user-guide/images/Include_Memory_Dump.png)<br/>*DataMiner Log Collector version 10.3.2330.1610*
+
+1. The Log Collector package will be saved by default in an *SL_LogCollector* folder on your desktop.
+
+> [!TIP]
+> For more information about the Log Collector, see [SLLogCollector](xref:SLLogCollector).
 
 ## Cube Debug information
 
+When investigating issues related to DataMiner Cube, Cube Debug information is invaluable. You can access this information either through DataMiner Cube when Cube is connected to your DMA or via the Cube login page when Cube cannot connect to your DMA.
+
 ### Cube is connected to your DMA
+
+To export Cube debug information:
 
 1. In DataMiner Cube, go to *Apps* > *About*.
 
 1. In the *general* tab, select *Export debug information*.
 
+![Export debug information](~/user-guide/images/Debug_information.png)<br/>*DataMiner Cube version 10.3.10*
+
 ### Cube is unable to connect to your DMA
+
+To export Cube debug information:
 
 1. On the login page, click the cogwheel button in the lower right corner and select *About* in the menu.
 
+   ![Login page](~/user-guide/images/Login_Screen.png)<br/>*DataMiner Cube version 10.3.10*
+
 1. In the *general* tab, select *Export debug information*.
 
-> [!NOTE]
-> To investigate why Cube could not connect to your DMA, go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*. In the *Logs* folder, open the file named corresponding to the current date, e.g. `log20230904.txt` for September 4th, 2023.
+To investigate why Cube could not connect to your DMA:
+
+1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
+
+   ![View Logging](~/user-guide/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
+
+1. In the *Logs* folder, find the file named corresponding to the current date, e.g. `log20230904.txt` for September 4th, 2023.
 
 ## DELT export packages
 
 When investigating issues related to a specific element or service, DELT (DataMiner Element Location Transparency) export packages are invaluable sources of information. This functionality allows you to export and import elements, services, and more to/from a *.dmimport* file.
 
-- To export an element or service, follow the procedure in [Exporting elements, services, etc. to a .dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file).
+> [!TIP]
+> For more information on DELT export and import packages, see [Exporting and importing packages on a DMA](xref:Exporting_and_importing_packages_on_a_DMA).
 
-- To import an element or service, follow the procedure in [Importing elements, services, etc. from a .dmimport file](xref:Importing_elements_services_etc_from_a_dmimport_file).
+To export an element or service:
+
+1. In the Surveyor, right-click the item and select *Actions > Export*.
+
+   ![Export element](~/user-guide/images/Export_Element.png)<br/>*DataMiner Cube version 10.3.10*
+
+1. In the *Export* pop-up window, choose *Export to DataMiner package (\*.dmimport)*.
+
+1. Select the items you want to export. If you have selected to include a service, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+
+   ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
+
+1. Specify which additional information should be included (if any) using the checkboxes below this:
+
+   - Trend and alarm data
+
+   - Documents
+
+   - Information events
+
+   Unless requested otherwise, we recommend disabling these options to reduce the package size and export time.
+
+1. Select *Export* in the lower right corner.
+
+   > [!IMPORTANT]
+   > If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
 
 ## Stream Viewer traces
 
@@ -57,11 +113,19 @@ Stream Viewer captures communication between the DMA and the monitored device.
 
 To save a Stream Viewer trace:
 
-1. Open Stream Viewer as detailed in [Connecting to an element using Stream Viewer](xref:Connecting_to_an_element_using_Stream_Viewer).
+1. Right-click the element in the Surveyor or open the element card's hamburger menu.
+
+1. In the context menu or header menu, select *View > Stream Viewer*.
+
+   ![Stream Viewer](~/user-guide/images/Stream_Viewer.png)<br/>*DataMiner Cube version 10.3.10*
 
 1. In the *Stream Viewer* window, select *Sniffer*.
 
-1. In the *Stream Sniffer* pop-up window, specify the output location and click *Start*.
+1. In the *Stream Sniffer* pop-up window, specify the output location and capture duration, and click *Start*.
 
-> [!NOTE]
-> Closing the *Stream Sniffer* and *Stream Viewer* window will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.
+   ![Stream Sniffer](~/user-guide/images/Stream_Sniffer.png)<br/>*DataMiner Cube version 10.3.10*
+
+   > [!NOTE]
+   >
+   > - We recommend setting the capture duration to 5 minutes.
+   > - Closing the *Stream Sniffer* and *Stream Viewer* windows will not interrupt the capture. However, closing or disconnecting Cube will stop the capture.
