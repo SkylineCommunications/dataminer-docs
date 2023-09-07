@@ -59,7 +59,7 @@ The repository name should look like this (using "-" as separator): **{customerA
   - T (Tests)
   - GQIDS (GQI data source)
   - GQIO (GQI operator)
-  - ADAPI (User Defined API)
+  - UDAPI (User-Defined APIs)
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
