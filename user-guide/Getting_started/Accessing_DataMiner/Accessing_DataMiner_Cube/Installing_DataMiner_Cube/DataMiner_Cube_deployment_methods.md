@@ -122,7 +122,7 @@ Below you can find an overview of the different methods that can be used to depl
 
 - Installing the CefSharp web browser plugin avoids the need for each individual user to download the CefSharp web browser plugin from a DMA.
 
-- Windows 8, 8.1 and 2012 R2 require Microsoft Visual C++ Runtime 2015 to be installed separately.
+- Windows 2012 R2 requires Microsoft Visual C++ Runtime 2015 to be installed separately.
 
   For more information, see [the latest supported Visual C++ downloads](https://support.microsoft.com/en-us/topic/the-latest-supported-visual-c-downloads-2647da03-1eea-4433-9aff-95f26a218cc0).
 
