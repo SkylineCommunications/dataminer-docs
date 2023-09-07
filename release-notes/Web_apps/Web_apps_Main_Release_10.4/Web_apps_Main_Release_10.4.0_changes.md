@@ -779,6 +779,12 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 
+#### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
+
 #### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
