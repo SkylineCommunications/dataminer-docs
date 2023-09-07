@@ -9,7 +9,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.1
 > Minimum DataMiner Version due to:
 > - Methods to obtain table cell data assumed the use of DisplayKey. It's now possible to ask for this data using the Primary Key
 
-### 1.1.1.0
+### 1.1.1.1
 
 #### Breaking Change - AddSubscriptions in ICommunication
 

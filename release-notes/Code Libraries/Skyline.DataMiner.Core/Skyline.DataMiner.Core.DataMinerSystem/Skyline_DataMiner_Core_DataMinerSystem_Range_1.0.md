@@ -8,7 +8,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.0
 > Range 1.0.x.x is supported as from DataMiner version 10.1.0
 > This is a continuation from the now obsolete [Class Library](xref:ClassLibrary_Range_1.2)
 
-### 1.0.1.0
+### 1.0.1.1
 
 #### Breaking Change - AddSubscriptions in ICommunication
 
