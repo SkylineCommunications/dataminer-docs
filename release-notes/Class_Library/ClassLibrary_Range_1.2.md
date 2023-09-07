@@ -4,6 +4,10 @@ uid: ClassLibrary_Range_1.2
 
 # Class Library Range 1.2
 
+>[!IMPORTANT]
+> DEPRECATED: This Library is no longer maintained. Code has been split and moved to Public NuGets.
+> See [Skyline.DataMiner.Core.DataMinerSystem](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.0)
+
 > [!NOTE]
 > Range 1.2.x.x is supported as from DataMiner version 10.0.3
 
