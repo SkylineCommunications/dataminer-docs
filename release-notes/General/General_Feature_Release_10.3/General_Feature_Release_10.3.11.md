@@ -32,4 +32,8 @@ uid: General_Feature_Release_10.3.11
 
 ### Fixes
 
-*No fixes have been added to this release yet.*
+#### Not all Protocol.Params.Param.Interprete.Others tags would not be read out [ID_36797]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Not all [Protocol.Params.Param.Interprete.Others](xref:Protocol.Params.Param.Interprete.Others) tags would not be read out, which could lead to unexpected behavior.
