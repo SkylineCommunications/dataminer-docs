@@ -170,6 +170,8 @@
               topicUid: UsingTheRCASlider
             - name: Configuring a custom alert sound for an alarm tab
               topicUid: ConfiguringACustomAlertSoundForAnAlarmTab
+            - name: Working with the Alarm Console light bulb feature
+              topicUid: Light_Bulb_Feature
             - name: Alarm Console columns
               topicUid: AlarmConsoleColumns
             - name: Alarm Console settings
