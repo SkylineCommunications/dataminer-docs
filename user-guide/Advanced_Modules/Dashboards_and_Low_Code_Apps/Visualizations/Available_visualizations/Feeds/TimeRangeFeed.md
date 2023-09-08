@@ -22,10 +22,10 @@ To configure the component:
 
    - *Show refresh timer*: Determines whether an indication is displayed that the data will be refreshed.
 
-   - *Presets*: Available from DataMiner 10.3.10/10.4.0 onwards. Allows you to customize the presets displayed when you select the component in read mode. The following presets are available: *Still busy*, *In the past*, *Recently*, *Long run*, *Starting from now*, *Near future*, and *Distant future*.
+   - *Presets*: Available from DataMiner 10.3.10/10.4.0 onwards. Allows you to customize the presets displayed when you select the component. The following presets are available: *Still busy*, *In the past*, *Recently*, *Long run*, *Starting from now*, *Near future*, and *Distant future*.
 
      > [!NOTE]
-     > Prior to DataMiner 10.3.10/10.4.0, the default presets in read mode include *Still busy*, *In the past*, *Recently*, and *Long run*. These presets cannot be edited.
+     > Prior to DataMiner 10.3.10/10.4.0, the default presets include *Still busy*, *In the past*, *Recently*, and *Long run*. These presets cannot be edited.
 
    - *Use quick picks*: Available from DataMiner 10.0.2 onwards. Determines whether the component includes quick pick buttons that allow users to enter a preset time range by clicking a single button.
 
