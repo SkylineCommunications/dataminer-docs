@@ -47,3 +47,7 @@ The deployment script that creates the CCAP-CM pair (*EPM_I_DOCSIS_AddNewCcapCmP
 #### Incorrect modulation value in DS QAM Channel dashboard [ID_37135]
 
 In DS QAM Channel dashboards, it could occur that the modulation type indicated for the node segment was different from the one reported by the CMs. The value options for the Modulation parameter have now been adjusted to prevent this.
+
+#### Discrepancy between total number of CMs from CCAP and collector [ID_37299]
+
+In some cases, it could occur that the total number of CMs in the CCAP topology did not match the total number of CMs from the collector. The aggregated values from both sources will now always line up.
