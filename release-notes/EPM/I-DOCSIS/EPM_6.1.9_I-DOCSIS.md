@@ -42,6 +42,10 @@ The existing script *EPM_I_DOCSIS_AddNewCcapCmPair* has been expanded with the p
 
 The deployment script that creates the CCAP-CM pair (*EPM_I_DOCSIS_AddNewCcapCmPair*) has been updated so that it is now possible to create the CM collector on a different DMA than the CCAP.
 
+#### ID request batching [ID_37300]
+
+To improve performance of the EPM Solution, ID assignment requests are now handled in batches.
+
 ### Fixes
 
 #### Incorrect modulation value in DS QAM Channel dashboard [ID_37135]
