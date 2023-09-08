@@ -34,6 +34,10 @@ IDms can now retrieve Automation Scripts that have EXE blocks that do not contai
 
 IDms can now create Service Properties.
 
+#### New Feature - Monitors on tables now allow filtering on columns
+
+Starting a value monitor on tables can now be done on only a few columns. This allows more efficiency by only subscribing to the changes you need.
+
 ### 1.1.0.5
 
 #### New Feature - LocalElement and GetColumns support
