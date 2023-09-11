@@ -75,9 +75,6 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Last Successful CMTS Poll**: Calculated. The date and time of the last successful polling cycle based on Status, Last Registration Time, and System ID returning valid data.
 
-- **Status**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.6. Operational.
-
-- **Last Registration Time**: Direct value. OID: 1.3.6.1.4.1.4491.2.1.20.1.3.1.14.
 
 ## Subscriber
 
@@ -100,6 +97,18 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
   The EPM engine makes this association via import operation.
 
 - **Service Group \[Fiber Node] Name**: Direct value.
+
+  The EPM engine makes this association via import operation.
+
+- **Node Name**: Direct value. The Node device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **Amplifier Name**: Direct value. The Amplifier device associated with the cable modem.
+
+  The EPM engine makes this association via import operation.
+
+- **TAP Name**: Direct value. The TAP device associated with the cable modem.
 
   The EPM engine makes this association via import operation.
 
