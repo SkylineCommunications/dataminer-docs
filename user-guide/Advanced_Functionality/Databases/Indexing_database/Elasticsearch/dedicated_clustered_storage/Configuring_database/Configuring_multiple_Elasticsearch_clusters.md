@@ -32,7 +32,7 @@ To configure this setup:
 
 1. Select the checkbox next to *Multi cluster offload*.
 
-1. Specify the **File Offload Identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+1. Specify the **File offload identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
 1. Select *Add* in the lower right corner to add an empty Elasticsearch offload cluster to the list.
 
@@ -52,7 +52,7 @@ To configure this setup:
 
    - **Password**: Password with which the DMA has to log on to Elasticsearch.
 
-   - **File Offload Identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+   - **File offload identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
    ![Configuration](~/user-guide/images/DBOffload_CubeConfig.png)<br/>*DataMiner 10.3.10 example configuration*
 
