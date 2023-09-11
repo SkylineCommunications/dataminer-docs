@@ -113,7 +113,7 @@ When the input data is not correctly formatted, exceptions can be thrown. This i
 
 Note that there are also `JsonSerializerSettings` defined. These ensure that the conversion will always accept and output camel-case JSON names, which is the recommended casing type for JSON. ("alarmLevel" instead of "AlarmLevel")
 
-[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_json_input.cs?highlight=16-20,25-32,34-47,68-76)]
+[!code-csharp[](~/user-guide/Advanced_modules/User Defined APIs/Tutorial/Scripts/Elements_Tutorial_Script_With_json_input.cs?highlight=4,8-9,16-20,25-32,34-47,49,68-76)]
 
 ### Retrieving the element data
 
