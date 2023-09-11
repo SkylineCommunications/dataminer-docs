@@ -72,6 +72,8 @@ items:
             topicUid: General_Feature_Release_10.3.9
           - name: General Feature Release 10.3.9 CU1
             topicUid: General_Feature_Release_10.3.9_CU1
+          - name: General Feature Release 10.3.9 CU2
+            topicUid: General_Feature_Release_10.3.9_CU2
         - name: General Feature Release 10.3.8
           topicUid: General_Feature_Release_10.3.8
         - name: General Feature Release 10.3.7
