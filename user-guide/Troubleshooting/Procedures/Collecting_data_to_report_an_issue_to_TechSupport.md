@@ -16,7 +16,7 @@ The type of data required depends on the type of issue you are experiencing:
 
 ## Log Collector packages
 
-A Log Collector package provides comprehensive information about the DataMiner System, including software version, cluster composition, network and database statistics, and more. Even if the Log Collector contains no errors, this can be valuable information, helping Technical Support verify that the DataMiner core logic is functioning correctly, and the issue lies elsewhere.
+A Log Collector package provides comprehensive information about the DataMiner System, including software version, cluster composition, network and database statistics, and more. Even if the Log Collector package contains no errors, this can be valuable information, helping Technical Support verify that the DataMiner core logic is functioning correctly, and the issue lies elsewhere.
 
 To save a Log Collector package:
 
@@ -69,7 +69,7 @@ To investigate why Cube could not connect to your DMA:
 
 1. Go to the DataMiner Cube start window, click the cogwheel button in the lower right corner, and select *View logging*.
 
-   ![View Logging](~/user-guide/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
+![View Logging](~/user-guide/images/View_Logging.png)<br/>*DataMiner Cube version 10.3.10*
 
 1. In the *Logs* folder, find the file named corresponding to the current date, e.g. `log20230904.txt` for September 4th, 2023.
 
@@ -90,8 +90,6 @@ To export an element or service:
 
 1. Select the items you want to export. If you have selected to include a service, any elements within that group will automatically be included in the export. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
 
-   ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
-
 1. Specify which additional information should be included (if any) using the checkboxes below this:
 
    - Trend and alarm data
@@ -103,6 +101,8 @@ To export an element or service:
    Unless requested otherwise, we recommend disabling these options to reduce the package size and export time.
 
 1. Select *Export* in the lower right corner.
+
+   ![Exporting an SLA](~/user-guide/images/SLA_Export.png)<br/>*DataMiner Cube version 10.3.10*
 
    > [!IMPORTANT]
    > If the export fails due to package size, consider excluding trend and alarm data. Also, try connecting directly to the DMA hosting the item to be exported.
