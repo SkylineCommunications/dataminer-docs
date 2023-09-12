@@ -56,7 +56,7 @@ For a Cassandra cluster database (i.e. one Cassandra cluster that is used as the
 
      ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfiguration.png)
 
-<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399), you can enable TLS by selecting the checkbox next to *TLS enabled*.
+<!--1. From DataMiner 10.3.10/10.4.0 onwards (RN 36399 - reverted in RN 37322), you can enable TLS by selecting the checkbox next to *TLS enabled*.
 
    ![Cube Cassandra Cluster Configuration](~/user-guide/images/CassandraCluster_CubeConfig.png)<br>*DataMiner 10.3.10 example configuration*-->
 

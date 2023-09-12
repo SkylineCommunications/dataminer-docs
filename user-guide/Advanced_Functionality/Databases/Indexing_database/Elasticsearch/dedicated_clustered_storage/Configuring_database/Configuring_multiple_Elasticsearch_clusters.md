@@ -24,7 +24,7 @@ To configure this setup:
 <!--## [From DataMiner 10.3.10/10.4.0 onwards](#tab/tabid-1)
 
 > [!IMPORTANT]
-> From DataMiner 10.3.10/10.4.0 onwards, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube (RN 36399).
+> From DataMiner 10.3.10/10.4.0 onwards, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube (RN 36399 - reverted in RN 37322).
 
 1. Go to *Apps > System Center > Database*.
 
