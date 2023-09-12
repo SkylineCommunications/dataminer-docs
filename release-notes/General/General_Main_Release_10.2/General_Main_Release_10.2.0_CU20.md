@@ -57,6 +57,14 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
 
+#### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
+
+In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->

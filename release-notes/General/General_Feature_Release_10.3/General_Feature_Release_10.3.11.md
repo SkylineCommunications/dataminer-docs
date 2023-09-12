@@ -107,3 +107,11 @@ In some cases, SLElement could read and write to the same memory blocks on diffe
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
+
+In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
