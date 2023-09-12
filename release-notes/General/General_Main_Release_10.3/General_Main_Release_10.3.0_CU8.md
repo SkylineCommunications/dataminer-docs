@@ -68,3 +68,9 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
+
+#### DBConfiguration.xml file would not be included in backups taken via the Taskbar Utility [ID_37296]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you took a DataMiner backup via the DataMiner Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.

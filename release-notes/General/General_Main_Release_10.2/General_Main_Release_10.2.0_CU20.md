@@ -81,3 +81,9 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 > [!NOTE]
 > This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+
+#### DBConfiguration.xml file would not be included in backups taken via the Taskbar Utility [ID_37296]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you took a DataMiner backup via the DataMiner Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
