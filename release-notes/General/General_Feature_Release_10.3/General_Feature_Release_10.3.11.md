@@ -47,6 +47,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### ElasticBackup.exe will now always convert the keyspace and the snapshot name to lower case [ID_37247]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+From now on, the *ElasticBackup.exe* tool will always convert the keyspace and the snapshot name to lower case.
+
 #### Security enhancements [ID_37267]
 
 <!-- 37267: MR 10.4.0 - FR 10.3.11 -->
@@ -115,3 +121,9 @@ Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly
 When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
 
 In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
+
+#### SLLogCollector would not copy all memory dumps to the correct folder [ID_37255]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.

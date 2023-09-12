@@ -12,7 +12,11 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### ElasticBackup.exe will now always convert the keyspace and the snapshot name to lower case [ID_37247]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+From now on, the *ElasticBackup.exe* tool will always convert the keyspace and the snapshot name to lower case.
 
 ### Fixes
 
@@ -64,6 +68,12 @@ On a system with a large number of correlation/incident alarms, in some cases, a
 When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
 
 In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
+
+#### SLLogCollector would not copy all memory dumps to the correct folder [ID_37255]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
