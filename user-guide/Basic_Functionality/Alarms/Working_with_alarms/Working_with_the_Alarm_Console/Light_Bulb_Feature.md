@@ -26,7 +26,7 @@ The Alarm Console light bulb feature supports the following advanced analytics f
 
 - **When the light bulb feature detects any alarms or suggestion events**, the *light bulb* button turns a blue color: ![Light bulb blue](~/user-guide/images/BlueLightBulb.png)
 
-  In this case, the light bulb menu may display any of the following notifications, depending on the behavior the light bulb feature has detected:
+  In this case, the light bulb menu may display any of the following notifications, depending on the behavior detected by the light bulb feature:
 
   | Notification | Action when clicked |
   |--|--|
@@ -39,6 +39,4 @@ The Alarm Console light bulb feature supports the following advanced analytics f
 
 - **When no insights are available**, the *light bulb* button retains its default gray color, and clicking the button will alert you that no insights are currently available<!--RN 37167-->.
 
-- If one or more of the analytics features are disabled, a message in the light bulb menu will recommend enabling all supported features to access more information<!--RN 37136-->. You can activate or deactivate all features in System Center, via *System Center > System settings > analytics config*.
-
-- If your DataMiner System does not meet the requirements for the light bulb feature to detect alarms or suggestion events, a message in the light bulb menu will notify you of this<!--RN 37136-->.
+- If any of the analytics features are disabled or if your DataMiner System does not meet the requirements for the light bulb feature to detect alarms or suggestion events, a message in the light bulb menu will alert you of this<!--RN 37136-->. You can activate or deactivate any features in System Center, via *System Center > System settings > analytics config*.
