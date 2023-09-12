@@ -16,11 +16,8 @@ The Alarm Console light bulb feature supports the following advanced analytics f
 
 > [!NOTE]
 >
-> - These analytics features are only available on systems with a Cassandra database. Pattern matching is only available on systems with an [indexing database](xref:Elasticsearch_database).
+> - For more information about the DataMiner setup required to work with these analytic features, see [Advanced analytics features in the Alarm console](xref:Advanced_analytics_features_in_the_Alarm_Console).
 > - If your DataMiner System does not meet the requirements, the light bulb feature will notify you of this<!--RN 37136-->.
-
-> [!TIP]
-> For more information on these analytics features, see [Advanced analytics features in the Alarm console](xref:Advanced_analytics_features_in_the_Alarm_Console).
 
 ## Navigating the light bulb menu
 
