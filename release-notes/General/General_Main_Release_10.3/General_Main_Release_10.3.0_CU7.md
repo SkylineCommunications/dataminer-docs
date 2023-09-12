@@ -188,3 +188,9 @@ In some cases, the length parameter in a response would not be set to the the co
 In some cases, events scheduled to run at the end of a booking would not be run because the status of the booking was set to "Ended" too soon.
 
 From now on, the status of a booking will only be set to "Ended" once all events have been run.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.

@@ -259,3 +259,9 @@ When you imported an element that already existed in the system, in some cases, 
 <!-- MR 10.4.0 - FR 10.3.10 -->
 
 When you deleted a trend pattern when connected to a DataMiner Agent running an old DataMiner version (e.g. 10.3.0), the pattern itself was deleted but the occurrences/matches would remain visible until you closed the trend graph and opened it again.
+
+#### Problem when updating the NATS server [ID_37305]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
+
+In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.
