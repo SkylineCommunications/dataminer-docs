@@ -370,6 +370,9 @@ Permission to download a Visio file from the DataMiner System to the client comp
 
 Permission to change Visio files using the embedded Visio file editor.
 
+> [!NOTE]
+> To edit the visual overview of an element, service, or view, you also need to have the *Config* privilege for the relevant item. Access to specific items can only be edited on group level.
+
 ### General \> Collaboration
 
 #### General \> Collaboration \> UI available
