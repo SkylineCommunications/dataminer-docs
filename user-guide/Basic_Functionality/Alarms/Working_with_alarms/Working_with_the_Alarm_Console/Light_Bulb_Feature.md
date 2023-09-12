@@ -24,7 +24,7 @@ The Alarm Console light bulb feature supports the following advanced analytics f
 
 ## Navigating the light bulb menu
 
-- **When the light bulb feature detects any alarms or suggestion events**, the *light bulb* button turns a blue color: ![Light bulb blue](~/user-guide/images/BlueLightBulb.png)
+- **When the light bulb feature detects any alarms or suggestion events**, the *light bulb* button turns blue: ![Light bulb blue](~/user-guide/images/BlueLightBulb.png)
 
   In this case, the light bulb menu may display any of the following notifications, depending on the behavior detected by the light bulb feature:
 
