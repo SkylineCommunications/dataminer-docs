@@ -12,11 +12,7 @@ uid: General_Main_Release_10.3.0_CU8
 
 ### Enhancements
 
-#### ElasticBackup.exe will now always convert the keyspace and the snapshot name to lower case [ID_37247]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-From now on, the *ElasticBackup.exe* tool will always convert the keyspace and the snapshot name to lower case.
+*No enhancements have been added yet.*
 
 ### Fixes
 

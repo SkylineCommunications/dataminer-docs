@@ -47,12 +47,6 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
-#### ElasticBackup.exe will now always convert the keyspace and the snapshot name to lower case [ID_37247]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
-
-From now on, the *ElasticBackup.exe* tool will always convert the keyspace and the snapshot name to lower case.
-
 #### Security enhancements [ID_37267]
 
 <!-- 37267: MR 10.4.0 - FR 10.3.11 -->
