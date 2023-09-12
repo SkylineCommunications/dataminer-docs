@@ -41,7 +41,7 @@ Note: This driver will export different drivers based on the retrieved data. A l
 | [Aurora Network CH3000 - PS30xx](xref:Connector_help_Aurora_Network_CH3000_-_PS30xx)                                                     | Power supply        |
 | [Aurora Network CH3000 - CX300x](xref:Connector_help_Aurora_Network_CH3000_-_CX300x)                                                     | Controller          |
 | [Aurora Network CH3000 - AT33xx](xref:Connector_help_Aurora_Network_CH3000_-_AT33xx)                                                     | Transmitter         |
-| [Aurora Network CH3000 - AT351x](xref:Connector_help_Aurora_Network_CH3000_-_AT351X)                                                     | Transmitter         |
+| [Aurora Network CH3000 - AT351x](xref:Connector_help_Aurora_Network_CH3000_-_AT351x)                                                     | Transmitter         |
 | [Aurora Network CH3000 - AR3002](xref:Connector_help_Aurora_Network_CH3000_-_AR3002)                                                     | Transmitter         |
 | [Aurora Network CH3000 - AB3S21](xref:Connector_help_Aurora_Network_CH3000_-_AB3S21)                                                     | AB switch           |
 | [Aurora Network CH3000 - FA35xx](xref:Connector_help_Aurora_Network_CH3000_-_FA35xx)                                                     | Optical amplifier   |

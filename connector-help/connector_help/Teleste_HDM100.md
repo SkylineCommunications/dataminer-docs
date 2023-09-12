@@ -12,10 +12,10 @@ This connector allows you to interface with various modules. For an overview of 
 
 ### Version Info
 
-| **Range** | **Key Features** | **Based on** | **System Impact** |
-|--|--|--|--|
-| 1.0.0.x | Initial version | \- | \- |
-| 2.0.0.x \[SLC Main\] | Removed DVE generation. Instead the controller will generate standalone elements for connected modules. | \- | Most of the existing parameters are still available, but parameter IDs have changed. Existing alarm and trend templates will no longer work. New elements should be created when upgrading from 1.0.0.x to this range. |
+| **Range**            | **Key Features**                                                                                        | **Based on** | **System Impact**                                                                                                                                                                                                      |
+|----------------------|---------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                         | \-           | \-                                                                                                                                                                                                                     |
+| 2.0.0.x \[SLC Main\] | Removed DVE generation. Instead the controller will generate standalone elements for connected modules. | \-           | Most of the existing parameters are still available, but parameter IDs have changed. Existing alarm and trend templates will no longer work. New elements should be created when upgrading from 1.0.0.x to this range. |
 
 ### Product Info
 
@@ -26,10 +26,10 @@ This connector allows you to interface with various modules. For an overview of 
 
 ### System Info
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
-|--|--|--|--|--|
-| 1.0.0.x | No | No | \- | \- [Teleste HDM100 - AC8000](/Driver%20Help/Teleste%20HDM100%20-%20AC8000.aspx) <br/>- [Teleste HDM100 - AC3200](/Driver%20Help/Teleste%20HDM100%20-%20AC3200.aspx) <br/>- [Teleste HDM100 - AC3000](/Driver%20Help/Teleste%20HDM100%20-%20AC3000.aspx) <br/>- [Teleste HDM100 - AC8810](/Driver%20Help/Teleste%20HDM100%20-%20AC8810.aspx) <br/>- [Teleste HDM100 - AC8800](xref:Connector_help_Teleste_HDM100_-_AC8800) |
-| 2.0.0.x | No | Yes | \- [Teleste AC8810](/Driver%20Help/Teleste%20AC8810.aspx) <br/>- [Teleste AC8000](/Driver%20Help/Teleste%20AC8000.aspx) <br/>- Teleste AC8710 | \- |
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                       | **Exported Components**                                                                                                                                                                                                                                                                                                                                                                                     |
+|-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x   | No                  | No                      | \-                                                                                                                                                                          | \- [Teleste HDM100 - AC8000](/Driver%20Help/Teleste%20HDM100%20-%20AC8000.aspx) - [Teleste HDM100 - AC3200](/Driver%20Help/Teleste%20HDM100%20-%20AC3200.aspx) - [Teleste HDM100 - AC3000](/Driver%20Help/Teleste%20HDM100%20-%20AC3000.aspx) - [Teleste HDM100 - AC8810](/Driver%20Help/Teleste%20HDM100%20-%20AC8810.aspx) - [Teleste HDM100 - AC8800](xref:Connector_help_Teleste_HDM100_-_AC8800) |
+| 2.0.0.x   | No                  | Yes                     | \- [Teleste AC8810](/Driver%20Help/Teleste%20AC8810.aspx) - [Teleste AC8000](/Driver%20Help/Teleste%20AC8000.aspx) - [Teleste AC8710](xref:Connector_help_Teleste_AC8710) | \-                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Configuration
 
