@@ -83,7 +83,7 @@ On this page, you can configure the following settings:
 
 On this page, you can check information regarding the managed STBs available in the STB Table.
 
-You can also define the number of STBs and start a KPI update.
+You can also define the number of STBs, configure the minimum poll timing and the size of the query partitions for KPI updates, and to manually start a KPI update.
 
 ### Tuners
 

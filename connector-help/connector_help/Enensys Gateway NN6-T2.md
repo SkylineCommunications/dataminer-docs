@@ -10,23 +10,30 @@ The **Enensys Gateway NN6-T2** is a DVB-T2 Gateway that is used to deliver TV se
 
 This driver is mainly used to monitor the device, but also allows the configuration of certain parameters, such as the general device information and the date and time settings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version | No                  | Yes                     |
-| 1.0.1.x          | Driver review   | No                  | Yes                     |
+| **Range**            | **Key Features** | **Based on** | **System Impact**                                                                                                                                                   |
+|----------------------|------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version  | \-           | \-                                                                                                                                                                  |
+| 1.0.1.x \[SLC Main\] | Driver review    | 1.0.0.1      | The entire driver was updated considering the newest DMA features. Furthermore, the vendor discontinued the main MIB and the driver suffered a considerable change. |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
-|------------------|-----------------------------|
-| 1.0.0.x          | Unknown                     |
-| 1.0.1.x          | 1.8.2                       |
+| **Range** | **Supported Firmware** |
+|-----------|------------------------|
+| 1.0.0.x   | Unknown                |
+| 1.0.1.x   | 1.8.2                  |
 
-## Installation and configuration
+### System Info
 
-### Creation
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+| 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
+
+## Configuration
+
+### Connections
 
 #### SNMP main connection
 
@@ -42,7 +49,7 @@ SNMP Settings:
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-## Usage
+## How to Use
 
 ### System page (renamed since version 1.0.1.1)
 

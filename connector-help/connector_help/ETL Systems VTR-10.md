@@ -8,13 +8,13 @@ The **ETL Systems VTR-10** driver is used to configure and display information o
 
 ## About
 
-This protocol can be used to monitor and control the **ETL Systems VTR-10** device. The driver supports one serial connection to communicate with the device.
+This driver can be used to monitor and control the **ETL Systems VTR-10** device.
 
-**Alarming** and **trending** are enabled for parameters in the protocol.
+**Alarm monitoring** and **trending** can be enabled for parameters in the driver.
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
 **SNMP Connection:**
 
@@ -26,42 +26,29 @@ This protocol can be used to monitor and control the **ETL Systems VTR-10** devi
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private*.
 
-## Usage
+**Serial connection using TCP:**
 
-### General Page
-
-This page displays general information about the device, such as:
-
-- **Summary Alarm**
-- **CPU Temperature**
-- **Fan Status**
-- Etc.
-
-### Matrix Page
-
-This page displays the matrix containing the connections present on the device.
-
-The matrix interface allows the user to do the following actions:
-
-- Set a new connection, by clicking on the desired connection. Note that setting a new connection can disconnect an existing connection.
-- Edit the labels, by right-clicking in the matrix and selecting **Edit**. On the pop up page, the field description of the desired output or input should then be changed.
-
-### Inputs Page
-
-This page displays a table with the configuration and readings of the inputs.
-
-### Outputs Page
-
-This page displays a table with the configuration of the outputs.
-
-### Trap Configurations Page
-
-On this page, the user can configure the traps receiver.
-
-### Configuration Page
-
-On this page, the user can configure the matrix/device.
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
+- **Port number**: The port of the connected device, by default 4000.
+- **Device address**: By default 65
 
 ### Web Interface
 
-This page displays the web interface of the device.
+The web interface is only accessible when the client machine has network access to the product
+
+## How to Use
+
+The element created with this driver consists of the following page:
+
+- **General**: Displays general information about the device such as SummaryAlarm, CPU Temperature and Fan Status.
+- **Matrix**: Displays the matrix containing the connections present on the device.
+- **Inputs**: Displays a table with the configuration and readings of the inputs.
+- **Outputs**: Displays a table with the configuration of the outputs.
+- **Trap Configurations**: Allows you to configure the traps receiver.
+- **Configuration**: Allows you to configure the matrix/device.
+
+The matrix interface allows you to do the following actions:
+
+- Set a new connection, by clicking on the desired connection.
+  Note that setting a new connection can disconnect an existing connection.
+- Edit the labels, by right-clicking in the matrix and selecting **Edit**. On the pop-up page, the field description of the relevant output or input should then be changed.

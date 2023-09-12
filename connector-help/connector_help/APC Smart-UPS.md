@@ -10,6 +10,18 @@ Smart-UPS devices provide high density, true double-conversion on-line power pro
 
 This driver can be used with all APC Smart-UPS models. It makes it possible to monitor the state of the battery, power status and alarms, as well as to configure different parameters and functionalities. The different parameters from the device are displayed on multiple pages grouped by function.
 
+### Ranges of the driver
+
+| **Driver Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+|------------------|------------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version, added traps | No                  | No                      |
+
+### Supported firmware versions
+
+| **Driver Range** | **Device Firmware Version** |
+|------------------|-----------------------------|
+| 1.0.0.x          | UPS 07.4 (ID1003)           |
+
 ## Installation and configuration
 
 ### Creation
@@ -36,7 +48,8 @@ This page contains general information such as **software versions**, **diagnost
 
 ### Battery Status
 
-On this page, it is possible to check different parameters related to the operational state of the battery
+On this page, it is possible to check different parameters related to the operational state of the battery as well as the information
+concerning battery packs.
 
 ### Power Status
 
@@ -49,6 +62,13 @@ This is the main page for the configuration of the device. Here, you can set the
 ### Alarms
 
 This page displays all the available **alarms** reported by the device.
+
+### Traps
+
+This page displays the **Traps** table as well as the **Total Traps** parameter and the following buttons
+
+- **Refresh Table** - refreshes the number of total traps, and deletes traps if total number exceeds **Max Traps**, or age exceeds **Max Age**
+- **Clean Up Config... -** opens a pop up that contains **Trap Clean Up Method, Max Traps, Max Age Traps,** and **Trap Clean Up Amount**
 
 ### Outlet Groups
 

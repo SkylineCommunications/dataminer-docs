@@ -10,6 +10,53 @@ The **CEFD Radyne MDX420 SkyWire** driver can be used to display information and
 
 This protocol can be used to monitor and control the **CEFD Radyne MDX420 SkyWire** modem. An SNMP connection is used to retrieve and set the modem's information and configuration data.
 
+### Ranges of the driver
+
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><strong>Driver Range</strong></td>
+<td><strong>Description</strong></td>
+<td><strong>DCF Integration</strong></td>
+<td><strong>Cassandra Compliant</strong></td>
+</tr>
+<tr class="even">
+<td>1.0.0.x</td>
+<td>Initial version</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>2.0.0.x</td>
+<td><p>Same as 1.0.0.x but this version uses SNMPv3.</p></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>1.0.1.x [SLC Main]</td>
+<td><p>Based on 1.0.0.4</p>
+<p>Implemented changes in layout and configuration parameters based in feedback from vendor.</p>
+<p>Parameters listed in the Notes section are no longer available, so please verify any references in DMS to these parameters.(Visio, Automation Scripts, DMS Filters, Reports ...)</p></td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+
+### Supported firmware versions
+
+| **Driver Range** | **Device Firmware Version** |
+|------------------|-----------------------------|
+| 1.0.0.x          | F05804-L                    |
+| 1.0.0.x          | Unknown                     |
+| 1.0.1.x          | F05804-L                    |
+
 ## Installation and configuration
 
 ### Creation
@@ -81,3 +128,19 @@ The **Remotes** page displays remote configuration and information data. This da
 ### TCP/IP Settings
 
 The **TCP/IP Settings** page can be used to access the TCP/IP settings. The **FTP** **controls** are also displayed on this page. The **Advanced...** page button displays a separate page that can be used to change the **Terminal Logon Password**.
+
+### Ping Function
+
+This page displays information about the **Ping Queries**, such as **Ping Status**, **Average** **Success**, **Average** **RTT**, **Availability** and **Percentage of Packet Loss**. It also contains a toggle button to enable or disable **Ping Queries** and other editable properties of the queries ,such as **Cycle**, **Timeout**, **Requests** **per** **Cycle** and **Requests** **History**.
+
+## Notes
+
+The following parameters are not longer available in driver range 1.0.1.x:
+
+\- Events Log Status (PID 684). That parameter now is hidden and its information is showed in a new table.
+
+\- Rx Mesh Membership Key (PID 303), Rx Test Pattern Ber Status(PID 402), Rx Test Pattern Error Count(PID 403), Rx Test Pattern Bit Count(PID 404), Rx Composite Alarms(PID 409), NV Inband(PID 714). These parameters were hidden.
+
+\- Boot Mode(PID 1000/1001). Parameter was removed
+
+\- The following parameters are read-only, so the drop-down menu was removed: Local Host Name, Modem IP Mask, Modem IP Address, Server IP Address, Router IP Address, Modem Ethernet Address.
