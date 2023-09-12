@@ -18,6 +18,8 @@ Currently, the pipeline for protocol development consists of the following stage
 
 - [Prepare solution](#prepare-solution)
 
+- [Validate possible dependency NuGets](#validate-possible-dependency-nugets)
+
 - [Sync DataMiner feature release DLLs](#sync-dataminer-feature-release-dlls)
 
 - [Sync DIS version](#sync-dis-version)
@@ -91,11 +93,11 @@ This stage also retrieves information from the protocol such as the integration 
 
 Based on the DCP task ID that is provided in the protocol, the pipeline will:
 
-- Fill in the “Developer” in a task.
+- Fill in the "Developer" in a task.
 
 - Fill in the Task ID in the driver version record.
 
-- Fill in the “Released In” version in the task on release.
+- Fill in the "Released In" version in the task on release.
 
 - Create/update the driver installation record automatically on release.
 
@@ -139,7 +141,13 @@ This stage is only executed for pipeline runs for a tag. It will verify whether 
 
 ## Prepare solution
 
-During this stage, the solution is configured to build against a recent version of the .NET Framework. This is to allow compiling against the latest feature release of DataMiner, which could require a new .NET Framework version compared to the one specified in the protocol solution. Note that this is just a local change, it does not change anything to the solution in the Git repository hosted by Gerrit.
+This stage verifies whether a MaximumSupportedVersion was defined in the protocol.xml.
+
+## Validate possible dependency NuGets
+
+For solutions that consist of legacy-style projects, this stage checks whether projects use the obsolete packages.config package management format.
+
+For solutions that consist of SDK-style projects, this stage is not executed as packageReference is the only supported package management format for this type of project.
 
 ## Sync DataMiner feature release DLLs
 
@@ -163,18 +171,20 @@ This stage creates a .dmprotocol package including the protocol XML, assemblies,
 
 ## Scan test projects
 
-This stage scans the solution for the presence of any test projects. Projects with a name that end with "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end with "Tests" will be considered unit test projects.
+This stage scans the solution for the presence of any test projects. This stage is only executed for solutions that consist of legacy-style projects. Projects with a name that ends in "Integration Tests" or "IntegrationTests" (case insensitive) will be considered integration test projects. All other projects that end in "Tests" will be considered unit test projects.
+
+For solutions that consist of SDK-style projects, this stage is not executed. The dotnet test command automatically detects test projects. Therefore, SDK-style test projects do not have the requirement that their name should end in "Tests". In SDK-style projects, to indicate that a tests is an integration test, use the [TestCategoryAttribute](https://learn.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.testcategoryattribute) and specify as value "IntegrationTest".
 
 ## Run unit tests
 
-This stage executes the unit test projects. If no unit test projects were detected, this stage is skipped.
+This stage executes the unit test projects. For solutions that consist of legacy-style projects, if no unit test projects were detected, this stage is skipped.
 
 > [!NOTE]
 > In case the tests fail, the unit tests will be executed against DataMiner 10.0.3 CU1 (if the protocol supports this version). The purpose of this is to support unit tests that were created using the SLProtocol API up to version 10.0.3 CU1. RN 27995 introduced changes to the API that could make a unit test fail if it depends on the prior implementation of the API. If unit tests using the DataMiner DLLs of 10.0.3 CU1 are re-executed, tests that are failing because of the changed API will succeed in the second execution.
 
 ## Run integration tests
 
-This stage executes the integration test projects. If no integration test projects were detected, this stage is skipped.
+This stage executes the integration test projects. For solutions that consist of legacy-style projects, if no integration test projects were detected, this stage is skipped.
 
 ## SonarQube analysis
 
@@ -187,7 +197,7 @@ This stage performs SonarQube C# code analysis on the QAction code.
 
 This stage initializes the validator settings by obtaining the previous version from SVN and running the validator on the previous version.
 
-To indicate on which version a protocol is based, the *basedOn* attribute can be used. In case you create a new minor version, e.g. A.B.C.D where D \> 1, and you do not specify the previous version explicitly, the previous version will be assumed to be the previous minor version: A.B.C.D-1.
+To indicate on which version a protocol is based, the *basedOn* attribute can be used. In case you create a new minor version, e.g. A.B.C.D where D \> 1, and you do not specify the previous version explicitly, the previous version will be assumed to be the previous minor version: A.B.C.D-1.
 
 In case you create a new major or system range (i.e. D equals 1, and B or C do not equal 0), e.g. 1.1.0.1 or 1.0.1.1, then you are required to explicitly specify the version this protocol is based on.
 
@@ -280,7 +290,7 @@ In order for the pipeline to generate a test package, all you need to do is prov
 > - In case multiple tasks are defined, which results in multiple customers, providing simulation files for only one customer is sufficient.
 > - In case no simulation files were found by the CI/CD for any of the expected customers, the pipeline will perform a fallback to a simulation of another customer (if present) for this version.
 
-A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
+A simulation must be provided for each connection of the protocol. The **name of the simulation file** must be *Connection\_**\<connectionNumber>*, where *\<connectionNumber>* denotes the zero-based connection number, e.g. *Connection_0*.
 
 For **SNMP simulations**, two files should be provided:
 
@@ -297,7 +307,7 @@ For **SNMP simulations**, two files should be provided:
 The Driver Passport Platform will use these files to automatically start a Skyline Device Simulator instance and ingest the dynamic data into the database.
 
 > [!NOTE]
-> A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.
+> A simulation must also be provided for an SNMP connection that only processes traps. You can use the empty simulation file available in *S:\\Public\\Simulations\\DummySnmpSimulation_ForNonPollingConnections.zip* as the simulation file for such a connection.
 
 For **HTTP simulations**, the following file should be provided:
 
@@ -338,7 +348,7 @@ For non-initial versions, the validator quality gate settings will be configured
 > [!NOTE]
 > The following error codes are currently ignored:
 >
-> - 1401: "x% of monitored parameters do not have default alarm values set”
+> - 1401: "x% of monitored parameters do not have default alarm values set"
 
 ### SonarQube
 
@@ -379,11 +389,11 @@ Next, based on the integration ID specified in the protocol, the DCP driver reco
 
 Next, it will check the status of the driver in this driver record. If it has been marked as "Released", the pipeline will fail.
 
-At this point, information about this driver version is obtained from the *VersionHistory* tag in the protocol. Note that the protocol must have a *VersionHistory* tag and this *VersionHistory* tag must hold an entry for the current version. Also, the *Author* tag must be filled in with the correct initials of the developer and a valid date must be specified.
+At this point, information about this driver version is obtained from the *VersionHistory* tag in the protocol. Note that the protocol must have a *VersionHistory* tag and this *VersionHistory* tag must hold an entry for the current version. Also, the *Author* tag must be filled in with the correct initials of the developer and a valid date must be specified.
 
 The comments that will be provided for this driver version on DCP are based on the information provided in the version history.
 
-The driver version state of the DCP driver version record will be set to “Development”.
+The driver version state of the DCP driver version record will be set to "Development".
 
 > [!NOTE]
 > if there is no record for this driver version yet on DCP, a new one will be created. Otherwise, the existing one will be updated.
@@ -392,7 +402,7 @@ The driver version state of the DCP driver version record will be set to “Deve
 
 This stage takes care of the automatic registration on DCP in case the protocol is released.
 
-It performs the same actions as the development registration except that the driver version state of the DCP driver version record will be set to “Released”, and the *LiveUpdate* flag will be set.
+It performs the same actions as the development registration except that the driver version state of the DCP driver version record will be set to "Released", and the *LiveUpdate* flag will be set.
 
 ## (Release) Prepare for SVN
 

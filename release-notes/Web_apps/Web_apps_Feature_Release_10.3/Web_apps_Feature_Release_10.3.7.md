@@ -2,15 +2,15 @@
 uid: Web_apps_Feature_Release_10.3.7
 ---
 
-# DataMiner web apps Feature Release 10.3.7 – Preview
+# DataMiner web apps Feature Release 10.3.7
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Feature Release 10.3.7](xref:General_Feature_Release_10.3.7).
 
-## Highlights
+## New features
 
 #### Interactive Automation scripts: New DownloadButton component [ID_35869]
 
@@ -71,10 +71,6 @@ To do so, the system will proceed as follows:
 
 > [!NOTE]
 > Existing *Column & bar chart* components and *Pie & donut chart* components will be migrated automatically.
-
-## Other features
-
-*No other features yet*
 
 ## Changes
 
@@ -194,7 +190,7 @@ In the Surveyor of the Monitoring app, items of which the name contained a numbe
 
 #### Dashboards app: Problem with trend components in PDF reports [ID_36331]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In a PDF report of a dashboard, in some cases, trend components would collide with other components.
 
@@ -304,3 +300,9 @@ When you installed a DataMiner web upgrade for version 10.3.5 or newer on a serv
 <!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
 
 When a pie chart or a bar chart had its settings changed automatically, in some cases, an update would be triggered in the background, causing the Web API to throw an error when the user did not have edit rights. From now on, when the user does not have edit rights, updates will no longer be sent to the Web API.
+
+#### Dashboards app & Low-Code Apps: Problem with large tables in PDF reports [ID_36616]
+
+<!-- MR 10.3.0 [CU5] - FR 10.3.7 [CU0] -->
+
+When you generated a PDF report of a dashboard that contained a large table, in the PDF report, the table would incorrectly not contain all rows. Moreover, the rows in the table would all show a loading state.

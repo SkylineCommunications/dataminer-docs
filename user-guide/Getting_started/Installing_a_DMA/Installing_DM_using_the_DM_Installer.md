@@ -9,6 +9,9 @@ uid: Installing_DM_using_the_DM_installer
 
 The DataMiner installer allows you to run a default DataMiner installation, which includes a Cassandra database on the C drive, or to run a custom installation. A custom installation can for instance be used to install a MySQL database instead of a Cassandra database.
 
+> [!NOTE]
+> The DataMiner software can only be installed on the C: drive. It is currently not possible to select another drive for the installation of DataMiner.
+
 ## Before you run the installer
 
 1. Make sure the necessary .NET and .NET Framework versions are installed. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
@@ -31,7 +34,10 @@ The DataMiner installer allows you to run a default DataMiner installation, whic
 
 ### Default DataMiner installation
 
-1. Make sure you are logged into Windows with the Administrator account. (Do not use a regular user account with administrative rights.)
+1. Make sure you are logged into Windows with the correct user account:
+
+   - If you are using the DataMiner 10.2 installer or newer, use an account with administrator rights. During the installation, the user account will automatically be added to a local DataMiner user group named *Administrator (installer)*. 
+   - If you are using a DataMiner installer older than version 10.2, use the server's local Administrator account. Do not use a regular user account with administrative rights.
 
 1. Double-click the setup executable.
 
@@ -110,7 +116,7 @@ At this point, the basic installation is complete. However, to be able to make f
 
    - If you are using the DataMiner 10.0 installer, on systems intended for DataMiner Failover, install WinPcap by clicking *Install WinPcap*. The Setup Wizard of WinPcap will be launched. Follow the wizard, select *Automatically start the WinPcap driver at boot time*, and click *Next* when necessary.
 
-     On Windows 8 and Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
+     On Windows Server 2012, click *Run without getting online help*. Follow the WinPcap setup. When an error occurs, click *OK*.
 
      > [!NOTE]
      > The DataMiner 10.2 installer no longer supports WinPCap. If you intend to configure a [Failover setup based on hostname](xref:Failover_configuration_in_Cube), this software will not be needed. However, if you intend to configure a [Failover setup based on virtual IP](xref:Failover_configuration_in_Cube), you will need to install [NPCap](https://nmap.org/npcap/) instead.

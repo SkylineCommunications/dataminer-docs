@@ -8,7 +8,7 @@ Before DataMiner Analytics can track specific patterns, you first need to define
 
 ## [From DataMiner 10.3.6/10.4.0 onwards](#tab/tabid-1)
 
-In a trend graph showing trend information for one single parameter, **first select the section of the graph** that you identify as a recurring pattern. The way you can do so depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
+In a trend graph showing trend information for one single parameter ([univariate patterns](xref:Working_with_pattern_matching#univariate-patterns)) or multiple parameters ([multivariate patterns](xref:Working_with_pattern_matching#multivariate-patterns)), **first select the section of the graph** that you identify as a recurring pattern. The way you can do so depends on the configuration of the trending user settings. See [Trending settings](xref:User_settings#trending-settings).
 
 There are now two ways to define the pattern, a quick way where you use all default options, and a more extensive way where you can customize those options.<!-- RN 36114 -->
 

@@ -40,8 +40,9 @@ To add a new scheduled task without a Scheduler template:
     | Script                         | Select an existing Automation script to be executed at the scheduled time. For more information on the script execution options, see [Script execution options](xref:Script_execution_options). |
 
     > [!NOTE]
-    > 
+    >
     > - To attach a report to an email message as a separate PDF, select both *Plain text* and *Include report or dashboard*.
+    > - If you want to specify multiple parameters for one element, service, or protocol version in a report or dashboard, assign them all within a single line.
     > - For the *Email* or *Upload report* actions, from DataMiner 9.6.13 onwards, you can select a dashboard from the Dashboards app instead of a legacy report. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
 
 10. To add more actions, repeat the previous step until all actions have been added.

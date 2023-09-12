@@ -18,6 +18,7 @@ This page consists of three sections:
 - A pane on the right displaying the log details for any log file selected in the list on the left. You can refresh the displayed content by clicking the refresh icon at the top of the pane.
 
 > [!NOTE]
+>
 > - It is possible to retrieve a previous version of a log file by right-clicking an element in the list and selecting *Open previous*. If there is no previous log file, this option is not available.
 > - To quickly go to the logging for a particular element from the Surveyor, right-click the element in the Surveyor and select *View \> Log*.
 > - If an element is renamed, the log file for that element will also be renamed.
@@ -30,11 +31,11 @@ In the *Log settings* section, you can change the log levels for each element. T
 
 1. Select one or more elements in the log file list.
 
-2. Click *Log settings* at the top of the page.
+1. Click *Log settings* at the top of the page.
 
-3. Change the log levels for info, debug and error logging, as required.
+1. Change the log levels for info, debug and error logging, as required.
 
-4. Click *Apply levels* to apply your changes.
+1. Click *Apply levels* to apply your changes.
 
 > [!NOTE]
 > Logging requires resources from your DataMiner Agent (CPU and HD usage), so be careful with the higher log levels like *Log everything (5)* and *Development logging (6)*.
@@ -51,8 +52,7 @@ To do so:
 
 1. In the list on the left, select the element or elements.
 
-2. Click the *Clear* button in the pane on the right.
+1. Click the *Clear* button in the pane on the right.
 
     > [!NOTE]
     > If one element is selected, the button is located in the lower right corner of the pane. If several elements are selected, it is displayed in the top-left corner.
-    >

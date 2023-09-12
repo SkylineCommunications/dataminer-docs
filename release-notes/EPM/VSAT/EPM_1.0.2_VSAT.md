@@ -2,10 +2,7 @@
 uid: EPM_1.0.2_VSAT
 ---
 
-# EPM 1.0.2 VSAT - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# EPM 1.0.2 VSAT
 
 ## New features
 
@@ -71,10 +68,6 @@ WM ticketing connectors now point to the EPM PLM Solution.
 #### Skyline Universal Weather: pagination added [ID_36469]
 
 In the Skyline Universal Weather connector, pagination has been added for the tables with ID 100, 300, 1000, and 1100.
-
-#### iDirect Evolution Platform Collector: MODCOD reference for hub return carriers updated [ID_36471]
-
-The MODCOD reference for hub return carriers has been updated.
 
 #### Newtec Dialog Platform VSAT: TSDB Rx technology integration + UI adjustments [ID_36473]
 

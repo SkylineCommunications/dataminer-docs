@@ -61,11 +61,15 @@ To get started, you can find several example Automation scripts with more inform
 
 After you have made sure the above-mentioned prerequisites are in place, you can download and deploy [the DcpChatIntegrationExamples DMAPP](https://github.com/SkylineCommunications/ChatOps-Extensions/blob/main/ChatIntegrationExamples/README.md#getting-started) to your DataMiner System and immediately try out these examples.
 
+## Limitations
+
+- Notifications cannot exceed 35 KB.
+
 ## Security
 
 By granting [Admin consent](xref:Granting_admin_consent) from your Microsoft (Teams) tenant to "DataMiner" (i.e. Skyline Communications) in the [Admin app](https://admin.dataminer.services), you allow Skyline Communications to execute these chat integration actions. This includes creating teams, channels, and chats, fetching users, chats, etc.
 
-You can revoke this access at any time. See [Granting admin consent for Teams actions](xref:Granting_admin_consent).
+You can revoke this access at any time. See [Granting admin consent for Teams Chat Integration](xref:Granting_admin_consent).
 
 > [!NOTE]
 > You may need to regrant admin consent to enable new released features. This will be indicated in [the dataminer.services change log](xref:DCP_change_log).

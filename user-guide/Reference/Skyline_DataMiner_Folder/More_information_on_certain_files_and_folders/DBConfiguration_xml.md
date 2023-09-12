@@ -4,7 +4,10 @@ uid: DBConfiguration_xml
 
 # DBConfiguration.xml
 
-The DBConfiguration.xml file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
+The *DBConfiguration.xml* file is not present by default on a DMA. It can be added to configure certain database settings, as detailed below.
+
+> [!NOTE]
+> This file is not automatically synced between DataMiner Agents. This applies both for the midnight sync in a DMS and for the synchronization between Failover Agents.
 
 ## Configuring a size limit for file offloads
 
@@ -33,4 +36,4 @@ You can configure this size limit as follows:
 
 ## Configuring multiple Elasticsearch clusters
 
-It is possible to have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This is configured in *DBConfiguration.xml*. For detailed information, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).
+It is possible to have data offloaded to multiple Elasticsearch clusters, i.e. one main cluster and several replicated clusters. This <!--Prior to DataMiner 10.3.10/10.4.0 (RN 36399 - reverted in RN 37322), this -->is configured in *DBConfiguration.xml*. For detailed information, see [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters).

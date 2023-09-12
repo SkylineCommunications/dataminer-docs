@@ -6,7 +6,7 @@ uid: Cassandra_Cleaner
 
 ## About this tool
 
-This tool can be used to remove data from the Cassandra *timetrace* table for a specific time range. This can be useful in case you urgently need to reclaim disk space on a DMA using a Cassandra local database, and you do not want to wait for the TTL of the timetrace data (which is by default set to 1 year) to expire.
+This tool can be used to remove data from the Cassandra *timetrace* or *infotrace* table for a specific time range. This can be useful in case you urgently need to reclaim disk space on a DMA using a Cassandra local database, and you do not want to wait for the TTL of the timetrace or infotrace data (which is by default set to 1 year) to expire.
 
 Do not use this tool unless you have no other option, as DataMiner functionality related to **alarm monitoring with time ranges will no longer work for the deleted time range**. For more information, refer to the FAQ section below. Note that you also need advanced knowledge of Cassandra in order to use this tool.
 
@@ -18,23 +18,27 @@ You can download this tool from [DataMiner Dojo](https://community.dataminer.ser
 
 There are two configuration files present in the root directory of the tool:
 
-- *db.yaml*: Similar to *DB.xml*. Contains information about the database.
+- *db.yaml*: Similar to *DB.xml*. Contains information about the database. See [db.yaml](#dbyaml).
 
 - *settings.yaml*: Contains application-specific settings.
 
 If these files are not present, generate them by running the executable with the `generate -c` arguments. As soon as the files have been generated, the tool will stop running. This allows you to first configure the files and then run the tool with the proper configuration.
 
-The most important settings are the `delete.start.time` and `delete.end.time` fields.
+### db.yaml
+
+The most important settings are the `table.name`, `delete.start.time`, and `delete.end.time` fields.
+
+When the *db.yaml* file is generated, `table.name` is generated with the *timetrace* value. You can change this to the *infotrace* value.
 
 > [!CAUTION]
-> All timetrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
+> All timetrace or infotrace data between the `delete.start.time` and `delete.end.time` timestamps will be deleted, so be careful.
 
-Log levels for both file and console output can be configured with the `logging.level.file` and `logging.level.console` fields. The possible log levels are TRACE, DEBUG, INFO, WARN, ERROR and FATAL.
+Log levels for both file and console output can be configured with the `logging.level.file` and `logging.level.console` fields. The possible log levels are TRACE, DEBUG, INFO, WARN, ERROR, and FATAL.
 
 > [!NOTE]
 > Enabling TRACE logging will log all executed queries and may affect performance.
 
-It is advised to throttle the number of concurrent deletes if the system is already under heavy load. Throttling can be achieved by reducing the `queue.max.concurrent.queries` setting. This setting should typically be kept between 10 and 100.
+We recommend throttling the number of concurrent deletes if the system is already under heavy load. Throttling can be achieved by reducing the `queue.max.concurrent.queries` setting. This setting should typically be kept between 10 and 100.
 
 Make sure that the `queue.buffer.size` setting is always at least 5 times greater than the `queue.max.concurrent.queries` setting to guarantee efficient execution.
 
@@ -51,15 +55,21 @@ The format of all timestamps is `dd/MM/yyyy hh:mm:ss`.
 
 ## Running the tool
 
-Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the timetrace table.
+Once the *db.yaml* and *settings.yaml* files have been correctly configured, as detailed in the previous section, you can start cleaning the *timetrace* or *infotrace* table.
 
-The cleaning of the timetrace table has been divided in two steps, both of which can be triggered by passing the corresponding arguments when running the executable:
+Depending on the table specified in the *db.yaml* configuration, the following arguments are supported to clean the table:
 
-- `clean -l` or `clean --large-partition` to clean the ‘-1_-1_-1_-1’ partition.
+- **Timetrace table**
 
-- `clean -s` or `clean --small-partition` to clean all other partitions.
+  - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 
-To execute both steps sequentially in one run, specify both options: `clean -l -s`
+  - `clean -s` or `clean --small-partition` to clean all other partitions.
+
+  To execute both steps sequentially in one run, specify both options: `clean -l -s`
+
+- **Infotrace table**<!-- RN 36592 -->
+
+  - `clean -l` or `clean --large-partition` to clean the "-1_-1_-1_-1" partition.
 
 When the program has finished and the data has been deleted, you still need to run compaction to actually reclaim the disk space. However, note that you need to wait `gc_grace_seconds` after the program finishes before you start the compaction.
 
@@ -81,7 +91,7 @@ You only need to run the tool on one of the Cassandra nodes. After the program h
 
 In general, all functionality regarding alarm monitoring with time ranges will no longer work for the deleted time range.
 
-Affected features:
+Affected features for the *timetrace* table:
 
 - The alarm history retrieval function in DataMiner Cube (e.g. all alarms of the last 24 hours).
 
@@ -91,6 +101,6 @@ Affected features:
 
 - Migration of Cassandra alarms to Elasticsearch (timetrace is used for this, cleaned time ranges will not be available in Elasticsearch for future migrations).
 
-Unaffected features:
+Affected features for the *infotrace* table:
 
 - Information events history retrieval function in Cube (e.g. all information events of the last 24 hours).

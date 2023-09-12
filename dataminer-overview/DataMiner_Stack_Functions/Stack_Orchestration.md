@@ -94,7 +94,7 @@ A typical example as part of the automation and orchestration stack is the Booki
 > [!TIP]
 > For more information:
 >
-> - [Booking Manager app](xref:SolSRM) in the DataMiner User Guide
+> - [Booking Manager app](xref:Booking_Manager_user_interface) in the DataMiner User Guide
 > - [DataMiner Standard Apps, Frameworks & Solutions](xref:Part5StandardApps) in the DataMiner User Guide
 > - [DataMiner Apps](https://community.dataminer.services/dataminer-apps/) on DataMiner Dojo Community
 

@@ -28,7 +28,7 @@ uid: Part1GettingStarted
   </div>
 </div>
 
-## Beyond the basics
+## Features and functionality
 
 <div class="row"> 
   <div class="column">

@@ -6,7 +6,7 @@ uid: LogicActionRunActions
 
 This action can be executed on parameters only.
 
-This action will execute trigger the execution of any QActions that trigger on the specified parameter.
+This action will trigger the execution of any QActions that trigger on the specified parameter.
 
 ## Attributes
 

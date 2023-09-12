@@ -15,7 +15,7 @@ To configure the component:
 
 1. In the *Component* > *Settings* tab, click the configuration icon next to *On click* and select the action(s) you want the button to execute. See [Configuring low-code app events](xref:LowCodeApps_event_config).
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
@@ -31,7 +31,7 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
    You will only be able to select button parameters for the data feed. Several parameters can be added in the same component.
 
-1. Fine-tune the component layout. In the *Component* > *Layout*, tab the following options are available:
+1. Fine-tune the component layout. In the *Component* > *Layout* tab, the following options are available:
 
    - The default options available for all components. See [Customizing the component layout](xref:Configuring_dashboard_components#customizing-the-component-layout).
 
@@ -74,3 +74,6 @@ In the Dashboards app, the soft-launch button component can be used to execute t
 
 > [!NOTE]
 > From DataMiner 10.2.5/10.3.0 onwards, the output of an (interactive) Automation script can be used as a feed for other components, for example in a GQI query.
+
+> [!TIP]
+> See also: [Using button components and header bars in Low-Code Apps](https://community.dataminer.services/video/using-button-components-and-header-bars-in-dataminer-apps/) on DataMiner Dojo ![Video](~/user-guide/images/video_Duo.png)

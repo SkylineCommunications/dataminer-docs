@@ -47,11 +47,11 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
 - **Could not find AspNetCore installed on this system**
 
-  DataMiner should install ASP.NET Core 5 automatically, but in case this failed or in case it has been removed, the installer can generate this error.
+  DataMiner should install ASP.NET Core 6 automatically, but in case this failed or in case it has been removed, the installer can generate this error.
 
   To fix this:
 
-  1. Go to the [.NET 5 download page](https://dotnet.microsoft.com/en-us/download/dotnet/5.0) and download the latest ASP.NET Core Runtime 5.
+  1. Go to the [.NET 6 download page](https://dotnet.microsoft.com/en-us/download/dotnet/6.0) and download the latest ASP.NET Core Runtime 6.
 
   1. On the DMA, got to the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\` and run the installer `DataMiner UserDefinableApiEndpoint 1.X.X.X.msi`.
 
@@ -70,6 +70,12 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
   When the DxM is upgraded or automatically repaired during the execution of a DataMiner upgrade package, it can occur that the files in question are locked. This prevents the installer from continuing until they are unlocked. The installer will log a message if this is the case, and it will continuously check every 5 seconds for a maximum of 60 seconds until the files are unlocked. If they are still locked, this message is logged, and the installer will try to continue. This may result in files not being copied, and other errors may occur. The log lines mentioned should contain the names of the process or processes that are locking the files. You may need to terminate these and try the upgrade again.
 
 ## Issues when triggering user-defined APIs
+
+- **Access to XXX at 'XXX' from origin 'XXX' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.**
+
+  For safety reasons, user-defined APIs do not set CORS headers<!-- RN 36727 -->. It is not safe to use a user-defined API from a web client. See [Triggering an API](xref:UD_APIs_Triggering_an_API#cors).
+
+### General checks
 
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.
 

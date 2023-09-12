@@ -14,31 +14,30 @@ jobs:
     runs-on: windows-latest
     name: Build Job
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           submodules: true
       - name: Install DocFX
-        run: |
-          dotnet tool update -g docfx
+        run: dotnet tool update -g docfx
         env:
           CI: true
       - name: Restore NuGet
-        run: |
-          dotnet restore "src/NuGetPackages"
+        run: dotnet restore "src/NuGetPackages"
       - name: Build
-        run: |
-          dotnet build "src/NuGetPackages" --configuration Release
+        run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
         id: build-documentation
         run: |
           docfx metadata
           docfx build --warningsAsErrors
         shell: powershell
+      - name: Zip artifact for deployment
+        run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
       - name: Publish results
         uses: actions/upload-artifact@v3
         with:
-          name: _site
-          path: _site/
+          name: release
+          path: _site.zip
           
   deploy_job:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
@@ -48,8 +47,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: _site
-          path: _site 
+          name: release
+          path: .
+      - name: Unzip artifact for deployment
+        run: Expand-Archive -Path _site.zip -DestinationPath ./_site
+        shell: pwsh
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
@@ -63,8 +65,7 @@ jobs:
           api_location: "" # Api source code path - optional
           output_location: "" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
-  
-  
+    
   deploy_job_Storage_Account:
     if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
@@ -73,8 +74,11 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: _site
-          path: _site
+          name: release
+          path: .
+      - name: Unzip artifact for deployment
+        run: Expand-Archive -Path _site.zip -DestinationPath ./_site
+        shell: pwsh
       - name: Upload the new files
         uses: bacongobbler/azure-blob-storage-upload@main
         with:

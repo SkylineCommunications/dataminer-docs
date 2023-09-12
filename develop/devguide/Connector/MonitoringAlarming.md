@@ -6,7 +6,7 @@ uid: MonitoringAlarming
 
 ## Introduction
 
-DataMiner provides the possibility to define alarm templates. An alarm template is an XML file containing all alarm thresholds for all parameters that support alarming in a DataMiner protocol. For more information about alarm templates in DataMiner, refer to [Alarm templates](xref:Alarm_templates).
+DataMiner provides the possibility to define alarm templates. An alarm template is an XML file containing all alarm thresholds for all parameters that support alarming in a DataMiner protocol. For more information about alarm templates in DataMiner, refer to [Alarm templates](xref:About_alarm_templates).
 
 Typically, only a subset of the parameters defined in a protocol should support alarming (and therefore be included in the alarm template overview). This is because many parameters in a protocol are defined to implement internal protocol logic.
 
@@ -145,7 +145,7 @@ With the threshold option, you can define that when the value of the second para
 
 ## Conditional parameter alarming
 
-Since DataMiner version 8.0.0, it is possible to deactivate alarming on a parameter based on a condition.
+Alarm monitoring of a parameter can be deactivated based on a condition.
 
 In the example below, if parameter 10003 equals "Not Monitored", the parameter will no longer be monitored until the condition is again not met.
 
@@ -156,4 +156,4 @@ In the example below, if parameter 10003 equals "Not Monitored", the parameter w
 ```
 
 > [!NOTE]
-> In case a condition is defined in the protocol, this condition acts as a default condition in the alarm template. This default can be disabled in the alarm template. For more information about using conditions in an alarm template, refer to the [Configuring alarm templates](xref:Configuring_alarm_templates).
+> In case a condition is defined in the protocol, this condition acts as a default condition in the alarm template. This default can be disabled in the alarm template. For more information about using conditions in an alarm template, see [Using conditions in an alarm template](xref:Using_conditions_in_an_alarm_template).

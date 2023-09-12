@@ -2,7 +2,7 @@
 uid: Service_Orchestration_profile_instances
 ---
 
-# Service Orchestration profile instances configuration
+# Service Orchestration: profile instances configuration
 
 ## Configuring a default profile instance for a node
 
@@ -63,10 +63,10 @@ In the context of Service Orchestration, you can mark a node or interface profil
 
 1. Select the service definition and the node or interface.
 
-1. In the *properties* pane in the lower right corner, add the *IsProfileInstanceOptional* property and set its value to *True*.
+1. In the *properties* pane in the lower right corner, add the [IsProfileInstanceOptional](xref:SRM_properties_Booking_Manager#isprofileinstanceoptional) property and set its value to *True*.
 
 > [!TIP]
-> See also: [IsProfileInstanceOptional](xref:SRM_properties_Booking_Manager#isprofileinstanceoptional)
+> If you want to mark a resource as optional, use the [Optional](xref:SRM_properties_Booking_Manager#options) option on the service definition node instead.
 
 > [!NOTE]
 > From SRM 1.2.20 onwards, it is not possible to create a booking if parameters still need to be configured for a node and there are no profile instances in the system for that node. If you do want it to be possible to create a booking in such a case, for example for a transport node, make sure you have set *IsProfileInstanceOptional* to *True*. <!-- RN 31534 -->

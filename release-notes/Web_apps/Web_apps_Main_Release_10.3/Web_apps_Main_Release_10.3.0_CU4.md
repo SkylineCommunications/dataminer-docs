@@ -2,10 +2,10 @@
 uid: Web_apps_Main_Release_10.3.0_CU4
 ---
 
-# DataMiner web apps Main Release 10.3.0 CU4 – Preview
+# DataMiner web apps Main Release 10.3.0 CU4
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 > For release notes for this release that are not related to the web applications, see [General Main Release 10.3.0 CU4](xref:General_Main_Release_10.3.0_CU4).
@@ -88,7 +88,7 @@ In the Surveyor of the Monitoring app, items of which the name contained a numbe
 
 #### Dashboards app: Problem with trend components in PDF reports [ID_36331]
 
-<!-- MR 10.3.0 [CU4] - FR 10.3.7 -->
+<!-- MR 10.2.0 [CU19]/10.3.0 [CU4] - FR 10.3.7 -->
 
 In a PDF report of a dashboard, in some cases, trend components would collide with other components.
 

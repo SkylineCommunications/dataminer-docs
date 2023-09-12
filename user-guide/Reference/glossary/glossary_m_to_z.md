@@ -131,7 +131,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Redundancy group template | A template that contains the configuration for a redundancy group but does not have fixed elements assigned.<br>See [Creating a redundancy group template](xref:Creating_a_redundancy_group_template) and [Assigning elements to a redundancy group template](xref:Assigning_elements_to_a_redundancy_group_template). |
 | Redundancy mode | Mode that determines whether element switchover and switchback in a redundancy group happen automatically or manually, or a combination of both.<br>See [Changing the redundancy mode](xref:Changing_the_redundancy_mode). |
 | Regular expression | Sequence of characters resulting in a pattern that can be used to find and manage matching text. |
-| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring an alarm template with dynamic alarm thresholds](xref:Configuring_alarm_templates#configuring-an-alarm-template-with-dynamic-alarm-thresholds). |
+| Relative alarm threshold | Dynamic alarm threshold that is configured as a percentage representing the delta with the baseline value.<br>See [Configuring dynamic alarm thresholds](xref:Configuring_dynamic_alarm_thresholds). |
 | Replicated element/service | An element or service that is shown in a DMS, but managed by a different DMS. It inherits all parameter values from its counterpart in the other DMS. |
 | Report | Document with specific information on the DataMiner System, based on a report template in the DMS Reporter module.<br>See [DMS Reporter](xref:reporter). |
 | Reporter | DataMiner application that allows you to generate graphical reports showing statistical data and operational metrics of the DMS.<br>See [DMS Reporter](xref:reporter). |
@@ -176,7 +176,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SDV | Switched Digital Video. Also referred to as Switched Broadcast (SWB). Method for distributing digital video via cable, where digitally encrypted channels are switched out when they are not being watched and switched in when they are needed. |
 | Second-party DataMiner Connector | DataMiner connector developed by the owner of a DataMiner System. |
 | Serial Gateway | Serial server that allows you to connect multiple RS-232 ports to a DMS via the acquisition LAN of a DMA.<br>See [Serial gateways](xref:SerialGateways#serial-gateways). |
-| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:services#services-and-service-templates). |
+| Service | Group of elements or partial elements, combined from the perspective of a particular business aspect.<br>See [Services and service templates](xref:About_services). |
 | Service booking instance | Booking instance that will create a matching DataMiner service while it is active.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service booking definition | Blueprint for service booking instances that are grouped in a recurring pattern.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
 | Service definition | Definition of the topology, behavior (LSO) and data exchange ruleset (DTR) of a service, in the context of DataMiner SRM.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |
@@ -240,6 +240,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | SRM Standard Solution | DataMiner blueprint configuration that facilitates and accelerates the design and deployment of application-specific SRM solutions. This includes an installation and upgrade package of the required DataMiner components, a pre-built user interface to configure and operate SRM solutions, and ready-made workflows for booking and life cycle orchestration of services (LSO). |
 | SSH | Secure Shell. Protocol for secure remote login and other secure network services over an insecure network. |
 | SSPA | Solid-State Power Amplifier. Amplifier that uses field-effect transistors to amplify radio frequency signals. |
+| STaaS | Storage as a Service. Cloud-native storage platform that allows users to connect their DMS to a scalable storage platform. |
 | StatMux | Statistical Multiplexing. Multiplexing technique where a communication channel is divided into an arbitrary number of variable bitrate data streams. |
 | STB | Set-top box. Device connecting a TV to an external source in order to receive digital television broadcasts. |
 | Stencil | Preconfigured shapes or groups of shapes in Microsoft Visio. DataMiner supplies stencils in the DataMiner house style.<br>See [Accessing the DataMiner stencils](xref:Working_with_shape_data_in_Microsoft_Visio#accessing-the-dataminer-stencils). |
@@ -277,7 +278,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | Trend group | A group of parameters for which trending is displayed.<br>See [Working with trend groups](xref:Working_with_trend_groups). |
 | Trend pattern | A tagged pattern in the trend data of a parameter.<br>See [Working with pattern matching](xref:Working_with_pattern_matching) and [Monitoring of trend patterns](xref:Monitoring_of_trend_patterns). |
 | Trend prediction | Prediction of the expected trend of a parameter value in the future.<br>See [Working with trend predictions](xref:Working_with_trend_predictions). |
-| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:Trend_templates). |
+| Trend template | Template that defines for which parameter trending information has to be logged and which kind of trending information has to be included.<br>See [Trend templates](xref:About_trend_templates). |
 | Trending | DataMiner functionality that allows you to visualize the trend of parameter values.<br>See [Trending](xref:trending). |
 | TS | Transport Stream. Digital container format for transmission and storage of audio, video and data of a broadcast. |
 | TSoIP | Transport Stream over IP. Transfer of transport streams over IP-based networks. |
@@ -306,7 +307,7 @@ See [Glossary (A to L)](xref:glossary_a_to_l).
 | VDA | Video Distribution Amplifier. Device that amplifies a video signal and sends it to multiple outputs. |
 | VF | Virtual Function. |
 | VHF | Very High Frequency. Refers to radio frequencies between 30 MHz and 299.9 MHz. |
-| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:views). |
+| View | Folder within the DataMiner software that can contain elements, services and other DataMiner components.<br>See [Views](xref:About_views). |
 | Violation filter | Filter configured on an SLA to give a specific weight to certain alarms or to filter out alarms.<br>See [Setting a violation filter](xref:Configuring_the_alarm_settings_for_an_SLA#setting-a-violation-filter). |
 | Virtual element | Element that does not communicate directly with a device. Usually, it instead connects to one or more other elements in the DMS.<br>See [Virtual elements](xref:Virtual_elements). |
 | Virtual function | Virtual DataMiner element that represents a specific virtual function resource. Abbreviated as VF.<br>See [Service and Resource Management](xref:SRM#service-and-resource-management). |

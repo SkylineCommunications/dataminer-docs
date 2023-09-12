@@ -4,11 +4,21 @@ uid: Installing_a_DataMiner_Agent
 
 # Installing a DataMiner Agent
 
+> [!TIP]
+> With DataMiner as a Service (DaaS), scheduled for **production release in Q3 of 2023**, you can deploy a DataMiner System with a single click. For more information on DaaS and its benefits, see [Sneak peek: DataMiner as a Service (DaaS) in action](https://community.dataminer.services/sneak-peek-dataminer-as-a-service-daas-in-action/) on DataMiner Dojo.
+>
+> Currently, you can only use DaaS by [contacting Skyline](mailto:hi@skyline.be), after which a DaaS DataMiner System will be made available to you. Read more about this on [DataMiner Dojo](https://community.dataminer.services/dataminer-storage-as-a-service-staas-is-live/).
+
 - [Installing DataMiner using the DataMiner Installer](xref:Installing_DM_using_the_DM_installer)
+
 - [Unattended DataMiner installation](xref:Unattended_DM_installation)
+
 - [Checking the DataMiner installation](xref:Checking_the_DM_installation)
+
 - [Regarding virtual servers](xref:Regarding_virtual_servers)
+
 - [Regarding antivirus software](xref:Regarding_antivirus_software)
+
 - [Frequently asked questions](xref:Installing_a_DMA_FAQ)
 
 > [!IMPORTANT]
