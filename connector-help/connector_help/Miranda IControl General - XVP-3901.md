@@ -75,6 +75,6 @@ These pages allow you to configure basic parameters such as the **Y Gain**, **Ch
 
 ### Logging (Version 3.0.2.20 only)
 
-**(\*\*This feature has been discontinued in subsequent versions)** This page displays logging for the SCTE104 parameter. Polling for this element can be toggled on or off in the main element.
+**This feature is only available in version 3.0.2.20 of the connector. It has been discontinued in subsequent versions.** This page displays logging for the SCTE104 parameter. Polling for this element can be toggled on or off in the main element.
 
 Note: Make sure that the XVP-3901 DVE is licensed to poll these parameters.

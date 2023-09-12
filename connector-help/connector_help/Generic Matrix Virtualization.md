@@ -92,7 +92,7 @@ The above can be visualized as follows:
 
 ### Configuration of CSV files for Tie-Lines method
 
-For the **Tie-Lines** method, an **Input,** **Output** **and** **Tie-Line CSV** file must be created.
+For the **Tie-Lines** method, an **Input,** **Output,** **and** **Tie-Line CSV** file must be created.
 
 The **Input CSV** file must have the same format as for the **Concatenation** method, as explained above.
 
@@ -243,7 +243,7 @@ You can instruct the **Generic Matrix Virtualization connector** to not use cert
 This can be configured either using element connections or subscriptions.
 
 - **Element Connections**: In the [Element Connections](https://docs.dataminer.services/user-guide/Basic_Functionality/Elements/About_elements/Virtual_elements.html#configuring-virtual-elements-with-the-element-connections-module) module in DataMiner, you will find an entry for the Generic Matrix Virtualization for each row you have added. Link each source matrix (**Status String** parameter) with a row.
-- **Subscriptions**: When you edit one of the subscription parameters, the parameter **Source Matrix Subscription State** will report ***Not Synced***. When you configured all Subscription parameters in the Source matrix data table (Element Name, Matrix Buffer PID, Max. Inputs, Max. Outputs, Source Table Pid, Destination Table Pid, and Park Input ID) you can click the **Sync** button on the page. This will cause the element to attempt to subscribe on the source matrices. After this configuration, data will be sent to the Generic Matrix Virtualization element, and tables will be filled in with inputs and outputs.
+- **Subscriptions**: When you edit one of the subscription parameters, the parameter **Source Matrix Subscription State** will report ***Not Synced***. When you have configured all subscription parameters in the Source matrix data table (Element Name, Matrix Buffer PID, Max. Inputs, Max. Outputs, Source Table Pid, Destination Table Pid, and Park Input ID) you can click the **Sync** button on the page. This will cause the element to attempt to subscribe on the source matrices. After this configuration, data will be sent to the Generic Matrix Virtualization element, and tables will be filled in with inputs and outputs.
 
 ## How to use range 4.0.0.x
 
@@ -329,9 +329,6 @@ The following example illustrates both options:
 | 11     | PLAYOUT TX 002A | False                        |                 |
 | 12     | PLAYOUT TX 003A | TX; MOD                      | True            |
 
-**
-**
-
 **SITE B - Matrix**
 
 ****Inputs****
@@ -348,9 +345,6 @@ The following example illustrates both options:
 | 30     | PLAYOUT TX 001B | TX                           | True            |
 | 31     | PLAYOUT TX 002B | MOD                          | True            |
 | 32     | PLAYOUT TX 003B | TX                           | False           |
-
-**
-**
 
 **Tie Lines**
 

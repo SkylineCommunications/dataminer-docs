@@ -8,14 +8,15 @@ The Enensys IPGuard v2 is a unique, secure solution that enables 1+1 automatic r
 
 ## About
 
-IPGuard v2 is a switching module from Enensys that provides 1+1 redundancy of any equipment that delivers TSoIP or IP streams or any IP network used to transport those IP streams. This connector allows you to completely monitor, configure and control the device, and allows advanced alarm monitoring and trending mechanisms.
+IPGuard v2 is a switching module from Enensys that provides 1+1 redundancy of any equipment that delivers TSoIP or IP streams or any IP network used to transport those IP streams. This connector allows you to completely monitor, configure, and control the device, and allows advanced alarm monitoring and trending mechanisms.
 
 ### Version Info
 
-| **Range**            | **Key Features** | **Based on** | **System Impact** |
-|----------------------|------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version. | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | New firmware.    | 1.0.0.9      | \-                |
+| **Range**            | **Key Features**      | **Based on** | **System Impact**                                                                                   |
+|----------------------|-----------------------|--------------|-----------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version.      | \-           | \-                                                                                                  |
+| 1.0.1.x \[SLC Main\] | New firmware.         | 1.0.0.9      | \-                                                                                                  |
+| 1.0.2.x \[SLC Main\] | Override Timeout DVE. | 1.0.1.5      | Timeout alarms might get stuck on (function) DVEs when you upgrade to or downgrade from this range. |
 
 ### Product Info
 
@@ -23,6 +24,7 @@ IPGuard v2 is a switching module from Enensys that provides 1+1 redundancy of an
 |-----------|------------------------|
 | 1.0.0.x   | 2.1.1                  |
 | 1.0.1.x   | 2.10.0                 |
+| 1.0.2.x   | 2.10.0                 |
 
 ### System Info
 
@@ -30,6 +32,7 @@ IPGuard v2 is a switching module from Enensys that provides 1+1 redundancy of an
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | Yes                 | Yes                     | \-                    | \-                      |
 | 1.0.1.x   | Yes                 | Yes                     | \-                    | \-                      |
+| 1.0.2.x   | Yes                 | Yes                     | \-                    | \-                      |
 
 ## Configuration
 

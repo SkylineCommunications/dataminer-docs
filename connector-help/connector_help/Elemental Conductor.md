@@ -16,7 +16,7 @@ The **Elemental Conductor** driver is an **HTTP** driver that is used to monitor
 |------------------|---------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                               | No                  | Yes                     |
 | 1.0.1.x          | New driver range based on 1.0.0.13                            | No                  | Yes                     |
-| 1.1.0.x          | Remake of the driver, with similar layout as previous version | No                  | Yes                     |
+| 1.0.1.x          | Remake of the driver, with similar layout as previous version | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -66,8 +66,6 @@ On this page, all channel data is available. This data is listed in separate tab
 
 The **Channels table** displays all the channels, with the following options: **Start**, **Stop**, **Pause** and **Unpause**.
 
-**Channels Table** allows, as well, the user to define for each channel the transmitting node.
-
 Aside from that, there is also the **Channels Inputs Group table**, **Channels Inputs table**, **Channels Outputs Group table** and **Channels Outputs table**. The Channels InOut table is used for the tree structure on the Overview Page.
 
 ### Statistics Page
@@ -102,17 +100,13 @@ The **Overview tree view** contains all information of the previous pages. The l
 
 ## Usage (1.1.0.x)
 
-### Overview
-
-The **Overview tree view** on this page contains all information of the previous pages, except the profiles. The linking from all the tables to the **Nodes** table results in one major tree view, where you can select data for each node such as **Channels**, **Channel Inputs**, **Channel Outputs**, **Channel Parameters**, **Alerts** and **Messages**.
-
-### Cluster
+### Cluster Page
 
 This page contains the **Node Table**. This table contains information regarding each **Node** in the system, such as **IP Address**, **Version**, **Status**, number of **Channels**, **Inflight Channels**, **MPTS**, **Alerts** and **Messages**.
 
 From this table, you can control if a node is **Enable**/**Disabled** for **DVE**.
 
-### Channels
+### Channels Page
 
 This page displays the **Channel** **Table** and **Channel Outputs Table:**
 
@@ -121,19 +115,23 @@ This page displays the **Channel** **Table** and **Channel Outputs Table:**
 
 The page also contains the **Channel Parameters** pagebutton, which provides access to the **Channel Parameters Table** with more information regarding the channels, such as **Encoder SDI 1/2 Input**, **ESAM**, **Service ID**, **Service Name**, **Streams URL** and **bond0.400**.
 
-### Alerts
-
-This page lists the **active alerts**, with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable** **Type** and **ID**, **Node ID**, **Updated** **At** and **Readable Type**.
-
-### Messages
-
-This page displays the **Messages Table**, which is similar to the Alerts table.
-
-### Profiles
+### Profiles Page
 
 On this page, the **Profile Table** displays information on the profiles: **Name**, **Permalink**, **Description**, **Loop All Inputs**, **Require Initial Timecode**, **Source**, **Backoff Time**, **Max Failures**, **Priority**, **Restart On Failure**, etc.
 
-### Configurations
+### Alerts Page
+
+This page lists the **active alerts**, with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable** **Type** and **ID**, **Node ID**, **Updated** **At** and **Readable Type**.
+
+### Message Page
+
+This page displays the **Messages Table**, which is similar to the Alerts table.
+
+### Overview Page
+
+The **Overview tree view** on this page contains all information of the previous pages, except the profiles. The linking from all the tables to the **Nodes** table results in one major tree view, where you can select data for each node such as **Channels**, **Channel Outputs**, **Channel Parameters**, **Alerts** and **Messages**.
+
+### Configurations Page
 
 The **Username** and **API Key** parameters on this page are used to fill in the **logon credentials**. This is only needed **if the system is using authentication**.
 
@@ -141,7 +139,7 @@ The **Username** and **API Key** parameters on this page are used to fill in the
 
 The **Connection Status** parameter shows if there is a connection to the device, or if you have used the wrong credentials.
 
-### Web Interface
+### Web Interface Page
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 

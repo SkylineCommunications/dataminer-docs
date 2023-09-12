@@ -4,7 +4,7 @@ uid: Connector_help_SED_Decimator_CarrierWatch
 
 # SED Decimator CarrierWatch
 
-This driver is used to monitor carrier measurements performed by a **SED Decimator** device. The **SED Decimator** device is a spectum analyzer which perfoms measurements on carriers and can emit SNMP traps when some conditions are met. The **SED Decimator CarrierWatch** element collects those traps and displays them in a table. The element also retireve generic information about the device.
+This connector is used to monitor carrier measurements performed by a **SED Decimator** device. This device is a spectrum analyzer that performs measurements on carriers and that can send SNMP traps when some conditions are met. The **SED Decimator CarrierWatch** connector collects those traps and displays them in a table. The connector also retrieves generic information about the device.
 
 ## About
 
@@ -18,7 +18,7 @@ This driver is used to monitor carrier measurements performed by a **SED Decimat
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | Unknown                |
+| 1.0.0.x   | \-                     |
 
 ### System Info
 
@@ -32,7 +32,7 @@ This driver is used to monitor carrier measurements performed by a **SED Decimat
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,15 +50,13 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver contains 4 pages.
-
 ### General
 
-This page displays general information about the device : **Device Status**, **Up Time**,...
+This page displays general information about the device: **Device Status**, **Up Time**, etc.
 
 ### Measurements
 
-This table displays the carrier measurements performed by the device. This table is only filled by traps.
+This table displays the carrier measurements performed by the device. This table is filled in entirely based on traps.
 
 ### SNMP Information
 
@@ -66,4 +64,4 @@ This page displays general information about the SNMP interface.
 
 ### SNMP Statistics
 
-This page displays statistics about the SNMP interface.
+This page displays statistics related to the SNMP interface.

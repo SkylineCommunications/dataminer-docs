@@ -4,11 +4,11 @@ uid: Connector_help_Telenor_EPM_MAM_Consumer
 
 # Telenor EPM MAM Consumer
 
-This driver is used to collect messages stored in a RabbitMQ queue and forward them to multiple **Telenor EPM Collector** elements.
+This connector is used to collect messages stored in a RabbitMQ queue and forward them to multiple **Telenor EPM Collector** elements.
 
 The messages are transferred from the MAM consumer to the collectors using multi-threaded serial communication.
 
-To be aware of the collector elements available in the system, the driver will read provision files created by the **Telenor EPM Manager** element.
+To be aware of the collector elements available in the system, the connector will read provision files created by the **Telenor EPM Manager** element.
 
 ## About
 
@@ -36,7 +36,7 @@ To be aware of the collector elements available in the system, the driver will r
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,8 +44,8 @@ SERIAL CONNECTION:
 
 <!-- -->
 
-- **IP address/host**: The IP address is irrelevant because the driver uses multi-threaded serial communication. The field can be set to *127.0.0.1*.
-  - **IP port**: The port is irrelevant because the driver uses multi-threaded serial communication. The field can be set to the default value *8935*.
+- **IP address/host**: The IP address is irrelevant because the connector uses multi-threaded serial communication. The field can be set to *127.0.0.1*.
+  - **IP port**: The port is irrelevant because the connector uses multi-threaded serial communication. The field can be set to the default value *8935*.
 
 ## How to Use
 
@@ -53,6 +53,6 @@ On the **General** page, the connection settings towards the RabbitMQ server mus
 
 The **Collectors** page displays a table containing all the collectors detected in the system and their current state. The path and access details to the folder containing the provisioning files can be configured on this same page
 
-The **Log** page can be used to configure the custom logging. The driver uses custom logging to display the messages received for specific devices. The log files are stored in the folder *C:\Skyline DataMiner\Telenor\Elements\\ElementName\>\Logging*. The devices table is used to configure the list of devices for which the received messages should be logged. Via the right-click menu of the table, you can add devices to the table or remove them.
+The **Log** page can be used to configure the custom logging. The connector uses custom logging to display the messages received for specific devices. The log files are stored in the folder *C:\Skyline DataMiner\Telenor\Elements\\ElementName\>\Logging*. The devices table is used to configure the list of devices for which the received messages should be logged. Via the right-click menu of the table, you can add devices to the table or remove them.
 
 The **Elastic Search Offload** page contains the toggle button **Elastic Offloading Status** to configure the offload of Errors to Elastic. The index under which the records are stored is *MAMConsumerDB.ErrorMessagesTable*. Next to this option, there is a possibility to debug the offloading of errors by temporary copy the offloaded errors to the Erros Offloaded Debug Table.

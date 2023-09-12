@@ -4,7 +4,9 @@ uid: Connector_help_Viavi_Solutions_ONMSi
 
 # Viavi Solutions ONMSi
 
-The **Viavi Solutions ONMSi** product is a Remote Fiber Test System (RFTS), which detects and locates fiber degradation, alerting operators and managers with the details of faults. The **Viavi Solutions ONMSi connector** acts as a monitoring platform where the user can see the relevant information retrieved from the device.
+Viavi Solutions ONMSi is a Remote Fiber Test System (RFTS), which detects and locates fiber degradation, alerting operators and managers with the details of faults.
+
+This connector acts as a monitoring platform for this product, where the user can see the relevant information retrieved from the system.
 
 ## About
 
@@ -36,9 +38,9 @@ This connector uses an HTTP connection and requires the following input during e
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination. (default: *80*)\]
-- **Device address**: \[The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination (default: *80*).
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
 ### Redundancy
 
@@ -50,7 +52,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver acts as a monitoring platform where the user can see the relevant information retrieved from the device regarding the **OTUs** (Optical Transport Units), **Links**, **Ports** and their corresponding **Events** (Alarms).
-This information is organized within a tree view where it is properly related and segmented.
+This connector acts as a monitoring platform, allowing you to see the relevant information retrieved from the system regarding the **OTUs** (Optical Transport Units), **Links**, **Ports**, and the corresponding **Events** (alarms).
 
-
+This information is organized in a tree view.

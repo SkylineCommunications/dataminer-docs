@@ -4,17 +4,18 @@ uid: Connector_help_EVS_Cerebrum
 
 # EVS Cerebrum
 
-This is a WebSocket-based connector with Cerebrum acting as the server, using either secure or nonsecure communication, depending on how this is configured within the Cerebrum application.
+This is a WebSocket-based connector with Cerebrum acting as the server, using either secure or non-secure communication, depending on how this is configured within the Cerebrum application.
+
 The data sent over the WebSocket connection, once initial handshakes are complete, is XML-based.
 
 ## About
 
 ### Version Info
 
-| **Range**            | **Key Features**                                  | **Based on** | **System Impact**                                                                        |
-|----------------------|---------------------------------------------------|--------------|------------------------------------------------------------------------------------------|
-| 1.0.0.x \[obsolete\] | Initial version                                   | \-           | \-                                                                                       |
-| 1.0.1.x              | New version due to invalid connector integration. | \-           | Loss of trending, alarming, saved parameters, etc. It's advised to create a new element. |
+| **Range**            | **Key Features**                                      | **Based on** | **System Impact**                                                                         |
+|----------------------|-------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
+| 1.0.0.x \[obsolete\] | Initial version                                       | \-           | \-                                                                                        |
+| 1.0.1.x              | New version because of invalid connector integration. | \-           | Loss of trending, alarming, saved parameters, etc. Creating a new element is recommended. |
 
 ### Product Info
 
@@ -59,9 +60,9 @@ SNMP Settings:
 
 ### Initialization
 
-To be able to log-in with the WebSocket API, specify the **UserName** and **Password** on the **credentials** page.
+To be able to log in to the WebSocket API, specify the **User Name** and **Password** on the **Credentials** page.
 
-When the log-in is successful, the **credential state** will show the '**OK**' state.
+When the login is successful, the **Credential State** will show the *OK* state.
 
 ### Web Interface
 
@@ -69,92 +70,69 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-### General
+### General Page
 
-Provides the **system** and **WebSocket** API related parameters.
-When the **system controller state** changes to '**Enabled**', the Cerebrum server acts as the active server and the WebSocket subscriptions are made.
+This page contains parameters related to the **system** and the **WebSocket** API.
 
-### Cortex Link
+When the **System Controller State** changes to *Enabled*, the Cerebrum server acts as the active server and the WebSocket subscriptions are made.
 
-Provides an overview of the Cortex link **Tx**, **Rx** and **connectivity** parameters.
+### Cortex Link Page
 
-### Cortex Link Redundancy
+This page provides an overview of the Cortex link **Tx**, **Rx**, and **connectivity** parameters.
 
-Provides an overview of the Cortex link **redundancy** parameters.
+### Cortex Link Redundancy Page
 
-### SQL Server Info
+This page provides an overview of the Cortex link **redundancy** parameters.
 
-Provides an overview of the **primary** and **secondary** server, and **SQL** information.
+### SQL Server Info Page
 
-### Statistics
+This page provides an overview of the **primary** and **secondary** server, and **SQL** information.
 
-Provides an overview of the WebSocket API related statistics.
+### Statistics Page
 
-### Sources
+This page provides an overview of statistics related to the WebSocket API.
 
-*Context Menu
-*- **Add To Category**: Adds the selection of sources to the specified category.
-- **Add Alternate Mnemonic**: Add an alternate mnemonic to the source.
-- **Exclude:** Adds the selected sources to the source exclusion list.
-Any routes matching the source exclusions will not be shown in the routes table.
-E.g. you do not want to show your 'not connected' routes.
+### Sources Page
+
+The following options are available in the right-click menu on this page:
+
+- **Add To Category**: Adds the selection of sources to the specified category.
+- **Add Alternate Mnemonic**: Adds an alternate mnemonic to the source.
+- **Exclude:** Adds the selected sources to the source exclusion list. Any routes matching the source exclusions will not be shown in the routes table. You can for example use this if you do not want to show your "not connected" routes.
 
 ### Source Associations
 
-*Configuration*
-In order to create a source association, specify the configuration settings on the **Source Configuration** page and click the **Create** button.
+To **create** a source association, specify the configuration settings on the **Source Configuration** subpage and click the **Create** button.
 
-*Context Menu
-*- **Delete**: Deletes the selected source assocation.
+With the **Delete** option in the right-click menu, you can delete the selected source association.
 
-### Destinations
+### Destinations Page
 
-*Context Menu
-*- **Add To Category**: Adds the selection of destinations to the specified category.
-- **Add Alternate Mnemonic**: Add an alternate mnemonic to the destination.
+The following options are available in the right-click menu on this page:
 
-### Destinations Associations
+- **Add To Category**: Adds the selection of destinations to the specified category.
+- **Add Alternate Mnemonic**: Adds an alternate mnemonic to the destination.
 
-*Configuration
-*In order to create a destination association, specify the configuration settings on the **Destination** **Configuration** page and click the **Create** button.
+### Destination Associations
 
-*Context Menu
-*- **Delete**: Deletes the selected destination association.
+To **create** a destination association, specify the configuration settings on the **Destination** **Configuration** page and click the **Create** button.
+
+With the **Delete** option in the right-click menu, you can delete the selected destination association.
 
 ### Categories
 
-*Context Menu
-*- **Create**: Creates a new category with the specified settings.
+The following options are available in the right-click menu on this page:
+
+- **Create**: Creates a new category with the specified settings.
 - **Delete**: Deletes the selected category.
 - **Add To Parent**: Adds the selected category to the specified parent category.
 
-### Category Sub Categories
-
-*Context Menu
-*- **Delete**: Deletes the selected sub category item.
-
-### Category Sources
-
-*Context Menu
-*- **Delete**: Deletes the selected source category item.
-
-### Category Destinations
-
-*Context Menu
-*- **Delete**: Deletes the selected destination category item.
-
-### Category Salvos
-
-*Context Menu
-*- **Delete**: Deletes the selected salvo category item.
+On the **Category Sub Categories**, **Category Sources**, **Category Destinations**, and **Category Salvos** subpages, you can also use the **Delete** option in the right-click menu to delete the selected sub category item, source category item, destination category item, or salvo category item, respectively.
 
 ## Notes
 
-Most Cerebrum systems consist of both a Primary and Secondary server.
-At any point in time only on of these servers will be 'active', the other will be in an 'inactive' state.
-Whilst a connection can always be made to both servers, the inactive server will only respond to the LOGIN and POLL command.
+Most Cerebrum systems consist of both a primary and a secondary server. At any point in time, only one of these servers will be "active", and the other will be in an "inactive" state. While a connection can always be made to both servers, the inactive server will only respond to the LOGIN and POLL command.
 
-If a virtual IP address has been enabled within Cerebrum, this can be used to ensure that the client is always connected to the active server.
-However, as this method does not confirm network connectivity from the client to the currently inactive server, some provision should be made to ensure a connection will be available following a failover of servers.
+If a virtual IP address has been enabled within Cerebrum, this can be used to ensure that the client is always connected to the active server. However, as this method does not confirm network connectivity from the client to the currently inactive server, some provisions should be made to ensure that a connection will be available following a switch between the servers.
 
-The configuration of the WebSocket related subscription items is only applicable when the Cerebrum server acts as the active server.
+The configuration of the WebSocket-related subscription items is only applicable when the Cerebrum server acts as the active server.

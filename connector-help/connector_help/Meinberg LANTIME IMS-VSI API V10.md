@@ -20,9 +20,9 @@ The VSI enables users to set up a Black Burst-to-PTP converter with a LANTIME IM
 
 ### Product Info
 
-| **Range** | **Supported Firmware**  |
-|-----------|-------------------------|
-| 1.0.0.x   | REST API version 10.x.y |
+| **Range** | **Supported Firmware** | **REST API Version** |
+|-----------|------------------------|----------------------|
+| 1.0.0.x   | 7.06.x                 | 10.x.y               |
 
 ### System Info
 

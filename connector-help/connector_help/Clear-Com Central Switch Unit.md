@@ -8,21 +8,19 @@ The CSU is a matrix to enable push-to-talk communications between network operat
 
 ## About
 
-This driver uses a serial connection to communicate with the device.
+This driver uses a **serial** connection to communicate with the device.
 
 ### Ranges of the driver
 
-| **Driver Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial Version             | No                  | Yes                     |
-| 1.1.0.X          | Driver Review; New Features | No                  | Yes                     |
+| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
 ### Supported firmware versions
 
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          | HCI 2.0                     |
-| 1.1.0.x          | HCI 2.0                     |
 
 ## Installation and configuration
 
@@ -30,7 +28,7 @@ This driver uses a serial connection to communicate with the device.
 
 #### Serial Main Connection
 
-This driver uses a serial-over-IP connection connection and requires the following input during element creation:
+This driver uses a serial-over-IP connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -38,9 +36,7 @@ SERIAL CONNECTION:
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
-
-
-## Usage (1.0.0.x)
+## Usage
 
 ### General
 
@@ -48,7 +44,7 @@ This page displays general-purpose information such as **Master Uptime** and **R
 
 ### Panel
 
-On this page, you can fill in the necessary information to manually send a Key Panel Assignment command. It contains parameters such as **Card Number**, **Port Number**, **Destination Port**, **Key Number**, **Panel Type** (unused) as **Destination Type**.
+On this page, you can fill in the necessary information to manually send a **Key Panel Assignment** command. It contains parameters such as **Card Number**, **Port Number**, **Destination Port**, **Key Number**, **Panel Type** (unused) and **Destination Type**.
 
 ### Crosspoints
 
@@ -56,46 +52,6 @@ This page contains a 512x512 **matrix** that displays the current **crosspoints*
 
 ### Configuration
 
-On this page, you can configure the necessary information to send notifications to the manager element. The most important parameters are **DMA Id**, **Element Id**, **Other Parameter** **Id** and a toggle button to enable or disable notifications.
+On this page, you can configure the necessary information to send notifications to the manager element.
 
-
-
-## Usage (1.1.0.x)
-
-### General
-
-This page displays general-purpose information such as status of the **CPU** and **Reset Flags**.
-
-### Crosspoints
-
-This page contains a 512x512 matrix that displays the current **crosspoints**.
-
-### Crosspoint Levels
-
-This page displays the **crosspoints**, **inputs** and **outputs** levels.
-
-### Conferences
-
-A tree controll displays all the **Conferences** and the associated **Ports**. It is possible to add a new port to a conference and to set the type of the connection. Also possible to add or remove conferences.
-
-### GPIO/SFO
-
-Displays the status of the **GPIO/SFO Cards**.
-
-### Panels
-
-Displays the status of the **Panels** of the device.
-
-### System Cards
-
-This page displays the status of the **System Cards** and the **System RCUs**.
-
-### Alarms
-
-Displays the device **Alarms**
-
-### Matrix
-
-In this page is possible to check the current Matrix configurations.
-
-
+The most important parameters are **DMA Id**, **Element Id**, **Other Parameter Id** and a toggle button to **enable** or **disable notifications**.

@@ -4,7 +4,7 @@ uid: Connector_help_EVS_Neuron_NAP_-_COMPRESS
 
 # EVS Neuron NAP - COMPRESS
 
-The convert function of the EVS Neuron.
+This connector is intended to be used with the Neuron COMPRESS, which provides the convert function of the EVS Neuron.
 
 ## About
 
@@ -38,8 +38,8 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-  - **IP port**: \[The IP port of the destination. (fixed value: 2072)\]
+- **IP address/host**: The polling IP or URL of the destination.
+  - **IP port**: The IP port of the destination (fixed value: 2072).
 
 ## How to Use
 
@@ -49,16 +49,15 @@ After element startup, the connector can also receive events (unsolicited messag
 
 ### General
 
-This page contains Card information parameters, such as **Card Name, Product Version,** and **Card Description.**
-
+This page contains card information parameters, such as the **Card Name**, **Product Version**, and **Card Description**.
 
 ### General Settings
 
-This page includes the **Gen Lock Settings, Input Stream Configuration** and **De-Embedders** parameters as well as buttons for popup pages.
+This page includes the **Gen Lock Settings**, **Input Stream Configuration**, and **De-Embedders** parameters as well as buttons for pop-up pages.
 
 ### Network Settings
 
-This page contains Network related tables such as **MAC settings, MAC DNS Settings** and **MAC Statistics.**
+This page contains network-related tables such as **MAC settings, MAC DNS Settings**, and **MAC Statistics.**
 
 ### IP Video I/O
 
@@ -78,26 +77,24 @@ This page contains tables for **De-Embedded Audio** and **IP Audio.**
 
 ### Video Paths
 
-This page contains tables for **Video Formats, Video Paths** and **Video Paths Color Correction.**
+This page contains tables for **Video Formats, Video Paths**, and **Video Paths Color Correction.**
 
 ### Compress
 
-This page displays **Compression Rate,** **Compression ratio** and **Quality Optimization.**
+This page displays **Compression Rate,** **Compression Ratio**, and **Quality Optimization.**
 
 ### Chassis
 
-This page contains Chassis information parameters, such as **Board**,** IO Board,** **Board Temperature** and **SMARC.**
+This page contains chassis information parameters, such as **Board**,** IO Board,** **Board Temperature**, and **SMARC**.
 
 ### Power Supply Unit
 
-This page displays **Fan Control, Power Consumption** and **Temperature** parameters, as well as the **Power Supply Units** table.
+This page displays **Fan Control, Power Consumption**, and **Temperature** parameters, as well as the **Power Supply Units** table.
 
 ### Management Port
 
-This page contains **Ethernet** and **DNS** related parameters.
+This page contains parameters related to **Ethernet** and **DNS**.
 
 ### Network interface Modules
 
 This page contains **SQFP** and **SFP** tables.
-
-

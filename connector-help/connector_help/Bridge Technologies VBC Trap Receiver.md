@@ -10,11 +10,11 @@ The **VBC Trap Receiver** connector integrates the **VideoBRIDGE Controller (VBC
 
 ### Version Info
 
-| **Range**             | **Key Features**                                                                    | **Based on** | **System Impact**                                  |
-|-----------------------|-------------------------------------------------------------------------------------|--------------|----------------------------------------------------|
-| 1.0.0.x \[Obsolete\]  | Initial.                                                                            | \-           | \-                                                 |
-| 1.0.1.x \[Obsolete\]  | Add probe filtering for traps aggregation.                                          | 1.0.0.3      | Page renamed.                                      |
-| 1.0.2..x \[SLC Main\] | HTTP connection added to support Bridge Technologies External Integration Interface | 1.0.1.4      | New connection added to element configuration card |
+| **Range**             | **Key Features**                                                                     | **Based on** | **System Impact**                              |
+|-----------------------|--------------------------------------------------------------------------------------|--------------|------------------------------------------------|
+| 1.0.0.x \[Obsolete\]  | Initial version.                                                                     | \-           | \-                                             |
+| 1.0.1.x \[Obsolete\]  | Probe filtering added for traps aggregation.                                         | 1.0.0.3      | Page renamed.                                  |
+| 1.0.2..x \[SLC Main\] | HTTP connection added to support Bridge Technologies External Integration Interface. | 1.0.1.4      | New connection added to element configuration. |
 
 ### Product Info
 
@@ -38,7 +38,7 @@ The **VBC Trap Receiver** connector integrates the **VideoBRIDGE Controller (VBC
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,13 +52,11 @@ SNMP Settings:
 
 #### HTTP Secondary Connection
 
-This driver uses the Bridge Technologies External Integration Interface over HTTP to get additional information from the VBC
+This connector uses the Bridge Technologies External Integration Interface over HTTP to get additional information from the VBC.
 
-- **IP address/host**: The polling IP or URL of the destination, e.g: http://10.24.4.138
+- **IP address/host**: The polling IP or URL of the destination, e.g. *http://10.24.4.138.*
 - **IP port**: The IP port of the destination.
 - **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
-
-
 
 ### Initialization
 

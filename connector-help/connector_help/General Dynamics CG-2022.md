@@ -4,11 +4,11 @@ uid: Connector_help_General_Dynamics_CG-2022
 
 # General Dynamics CG-2022
 
-The General Dynamics CG-2022 is a Digital Tracking receiver developed for satellite tracking and uplink power control applicatios. The DSP-based receiver accepts wideband RF Inputs, performs frequency selection, and digitally processes the selected signal.
+The General Dynamics CG-2022 is a digital tracking receiver developed for satellite tracking and uplink power control applications. The DSP-based receiver accepts wideband RF inputs, performs frequency selection, and digitally processes the selected signal.
+
+The General Dynamics CG-2022 connector is used to control and monitor this device via a serial connection.
 
 ## About
-
-The General Dynamics CG-2022 connector is used to control and monitor the device via a Serial Connection.
 
 ### Version Info
 
@@ -34,22 +34,26 @@ The General Dynamics CG-2022 connector is used to control and monitor the device
 
 #### Serial Main Connection
 
-This driver uses a Serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination.
 
+### Web Interface
+
+The web interface is only accessible when the client machine has network access to the product.
+
 ## How to use
 
 ### General
 
-This page displays the Configuratable parameters, namely **Frequency**, **POL Select**, **I**n**put Attenuation**, **Output Attenuation** parameters and the **Acknowledgement fault** button.
+This page displays the configurable parameters, namely **Frequency**, **POL Select**, **Input Attenuation**, **Output Attenuation**, and the **Acknowledgement Fault** button.
 
 ### Rxer Operation
 
-This page displays configurable parameters related to the DAC, suchn as **DAC1 Range**, **DAC1 Slope** and **DAC1 Output.**
+This page displays configurable parameters related to the DAC, such as **DAC1 Range**, **DAC1 Slope** and **DAC1 Output.**
 
 ### System
 
@@ -57,28 +61,20 @@ This page contains the device **Time** and **Date** parameter.
 
 ### Interface Options
 
-This page displays the configurable parameters the **Low SIgnal Level** and **High Temperature Limit**.
-
+This page displays the configurable parameters **Low Signal Level** and **High Temperature Limit**.
 
 ### Beacon
 
-This page displays the configurable parameters **Store Beacon** and **Restore Beacon** paramters.
-
+This page displays the configurable parameters **Store Beacon** and **Restore Beacon**.
 
 ### Alarms
 
-This page displays the **Alarms Table.**
+This page displays the **Alarms Table**.
 
 ### Version
 
-This page displays the **Display Version.**
+This page displays the **Display Version**.
 
 ### Get All
 
-This page displays the parameters from **General**, **Rxer Operation**, **Interface Options** and **System** all in one page.
-
-### Web Interface
-
-This page displays the web interface of the device. However, the web interface is only accessible when the client machine has network access to the product.
-
-
+This page displays the parameters from **General**, **Rxer Operation**, **Interface Options**, and **System**.

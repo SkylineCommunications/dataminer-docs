@@ -847,6 +847,8 @@
     topicUid: Connector_help_Ateme_Titan_Mux_(Lite)
   - name: Ateme Titan Mux
     topicUid: Connector_help_Ateme_Titan_Mux
+  - name: Ateme Titan Recorder
+    topicUid: Connector_help_Ateme_Titan_Recorder
 - name: Aten
   topicUid: Connector_help_Aten_PE6324
   items:
@@ -2296,6 +2298,11 @@
   items:
   - name: Commscope VUE Splicer
     topicUid: Connector_help_Commscope_VUE_Splicer
+- name: ComRex
+  topicUid: Connector_help_ComRex_ACCESS_MultiRack
+  items:
+  - name: ComRex ACCESS MultiRack
+    topicUid: Connector_help_ComRex_ACCESS_MultiRack
 - name: Comsat
   topicUid: Connector_help_COMSAT_Inc_FTP_Uploader
   items:
@@ -3319,6 +3326,8 @@
     topicUid: Connector_help_Evertz_7700FC
   - name: Evertz 7700R2x2-HD
     topicUid: Connector_help_Evertz_7700R2x2-HD
+  - name: Evertz 7703BPX-DC-RF
+    topicUid: Connector_help_Evertz_7703BPX-DC-RF
   - name: Evertz 7703DA-RFA
     topicUid: Connector_help_Evertz_7703DA-RFA
   - name: Evertz 7703PA
@@ -4179,6 +4188,11 @@
     topicUid: Connector_help_Google_Cloud_Compute_Engine
   - name: Google Cloud DNS
     topicUid: Connector_help_Google_Cloud_DNS
+- name: Gracenote
+  topicUid: Connector_help_Gracenote_OnAPI_Channel_Schedule_Monitor
+  items:
+  - name: Gracenote OnAPI Channel Schedule Monitor
+    topicUid: Connector_help_Gracenote_OnAPI_Channel_Schedule_Monitor
 - name: Grafana
   topicUid: Connector_help_Grafana_Alerting_API
   items:
@@ -4302,6 +4316,8 @@
   items:
   - name: Harmonic CableOs
     topicUid: Connector_help_Harmonic_CableOs
+  - name: Harmonic DMS
+    topicUid: Connector_help_Harmonic_DMS
   - name: Harmonic Electra X2
     topicUid: Connector_help_Harmonic_Electra_X2
   - name: Harmonic Electra XT
@@ -8832,6 +8848,8 @@
     topicUid: Connector_help_TDF_SSDD
   - name: TDF TBOX Emetteur Manager
     topicUid: Connector_help_TDF_TBOX_Emetteur_Manager
+  - name: TDF TNT Rights Management
+    topicUid: Connector_help_TDF_TNT_Rights_Management
 - name: TDK-Lambda
   topicUid: Connector_help_TDK-Lambda_HFE_LAN
   items:

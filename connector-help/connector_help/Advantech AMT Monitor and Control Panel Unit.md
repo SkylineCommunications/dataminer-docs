@@ -4,21 +4,23 @@ uid: Connector_help_Advantech_AMT_Monitor_and_Control_Panel_Unit
 
 # Advantech AMT Monitor and Control Panel Unit
 
+This connector displays information for the units related to the Advantec AMT Monitor and Control Panel.
+
 ## About
 
-This driver displays the information of the units related to the **[Advantec AMT Monitor and Control](xref:Connector_help_Advantech_AMT_Monitor_and_Control_Panel)**
+This connector is automatically exported by the parent connector [Advantec AMT Monitor and Control Panel](xref:Connector_help_Advantech_AMT_Monitor_and_Control_Panel)
 
-## Installation and configuration
+## Configuration
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
 ### General
 
-This page displays information about **Serial Number**, **Temperature**, **PS Voltages**, **Current Consumption**, etc.
+This page displays information about the **Serial Number**, **Temperature**, **PS Voltages**, **Current Consumption**, etc.
 
 ### Config
 

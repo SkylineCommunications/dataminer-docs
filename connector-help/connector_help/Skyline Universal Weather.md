@@ -18,7 +18,7 @@ This connector uses an HTTPS connection to communicate with the selected API. Th
 | 1.0.1.x \[Obsolete\] | Implemented support for Unicode languages like Cyrillic script, Chinese, Arabic, etc.                    | 1.0.0.4      | All existing data will be lost. The element needs to be recreated.                                                  |
 | 1.0.2.x \[Obsolete\] | Migrated element communication to InterApp to handle ad hoc requests.                                    | 1.0.1.7      | The Weather API DLL (NuGet) needs to be deployed. Class Library DLLs version 1.2.2.4 or higher need to be deployed. |
 | 1.0.3.x              | \- Partial option added to tables 100, 300, 1000, and 1100. - WeatherApi and InterApp libraries updated. | 1.0.2.3      | The tables now have multiple pages.                                                                                 |
-| 1.0.4.x \[SLC Main\] | \- Windy Api added                                                                                       | 1.0.3.1      | The driver now polls the Windy API as well as the weather API of the user's choice.                                 |
+| 1.0.4.x \[SLC Main\] | Windy Api added.                                                                                         | 1.0.3.1      | The connector now polls the Windy API as well as the weather API of the user's choice.                              |
 
 ### Product Info
 
@@ -99,9 +99,9 @@ This page also contains a page button that opens the Locations subpage, where lo
 
 This page contains forecast information retrieved from the Windy Point-Forecast API. It contains the following parameters:
 
-- Windy Forecast Last Polled: Time at which the last Windy API request was made.
-- Windy Forecast Table: Table that stores the API response. It returns predictions in fixed 3 hour intervals for at least the next 7-10 days. Forecast parameters returned are all recorded at surface level.
-- Windy Forecast History Table: When the prediction expires, it is sent to the history table. History entries can be deleted through the context menu.
+- Windy Forecast Last Polled: Time when the last Windy API request was made.
+- Windy Forecast Table: Table that stores the API response. It returns predictions in fixed 3-hour intervals for at least the next 7-10 days. Returned forecast parameters are all recorded at surface level.
+- Windy Forecast History Table: When a prediction expires, it is sent to the history table. History entries can be deleted through the context menu.
 
 #### Locations
 
@@ -147,7 +147,7 @@ This page contains **configuration parameters** that allow you to modify **how t
 - **Powered By**: Displays by whom the API is powered once the service source is selected. Some service source providers require this to be present.
 - **Auto Processing Time**: Allows you to specify how often a request is sent to the API for the locations that are entered in the **Locations Table**.
 
-This page also contains three page buttons, **Ad-Hoc**, **Dark Sky**, **OpenWeather 2.5**, and **OpenWeather 3.0**.
+This page also contains several page buttons. You can find more information about these below.
 
 #### Ad Hoc
 
@@ -175,27 +175,28 @@ This subpage contains parameters that allow you to configure the communication w
 - **Max Number of Request (24 Hours)**: The maximum number of calls that can be made to the API.
   Note: **1000 calls daily are free**, but there will be charges after the initial 1000.
 
-Windy (Range 1.0.4.x)
+#### Windy (Range 1.0.4.x)
+
 This subpage contains parameters to configure the communication with the **Windy Point-Forecast API v4**.
 
-- **Windy API Polling Status**: Enable/Disable polling of Windy API.
+- **Windy API Polling Status**: Enable/disable polling of the Windy API.
 
-- **Windy API Key**: Point-forecast API Key that is used to obtain forecast information from the Windy API.
+- **Windy API Key**: The Point-Forecast API key that is used to obtain forecast information from the Windy API.
 
-- **Windy Max Number of Request (24 Hours):** The maximum number of calls that can be made to the API each day. Configure based on the account that you have to avoid incurring unnecessary charges.
+- **Windy Max Number of Request (24 Hours)**: The maximum number of calls that can be made to the API each day. Configure this based on your account to avoid incurring unnecessary charges.
 
-- **Windy Forecast Model**: Forecast model that will be used to obtain information. Currently supports the following models.
+- **Windy Forecast Model**: The forecast model that will be used to obtain information. The following models are currently supported:
 
-- arome: covers France and surrounding areas
-  - iconEu: covers Europe and surrounding areas
-  - gfs: global model
-  - namConus: covers the USA and surrounding areas (Canada, Mexico)
-  - namHawaii: covers Hawaii
-  - namAlaska: covers Alaska and surrounding areas
+- *arome*: Covers France and surrounding areas.
+  - *iconEu*: Covers Europe and surrounding areas.
+  - *gfs*: Global model.
+  - *namConus*: Covers the USA and surrounding areas (Canada, Mexico).
+  - *namHawaii*: Covers Hawaii.
+  - *namAlaska*: Covers Alaska and surrounding areas.
 
-- **Number of Windy API Requests Made (24 Hours):** Number of Windy API requests made by the driver. Resets every 24 hours.
+- **Number of Windy API Requests Made (24 Hours)**: The number of Windy API requests made by the connector. This parameter resets every 24 hours.
 
-- **Windy API Polling Frequency**: Frequency at which the driver makes an API request.
+- **Windy API Polling Frequency**: The frequency at which the connector makes API requests.
 
 More details of the Windy API can be found [here](https://api.windy.com/point-forecast/docs).
 
@@ -203,5 +204,5 @@ More details of the Windy API can be found [here](https://api.windy.com/point-fo
 
 - **Listener PID**: 283
   Note: **From range 1.0.2.x onwards, the listener parameter is no longer used**, because the element communication uses InterApp calls instead.
-- **APIs Integrated**: Dark Sky, OpenWeather OneCall and Windy Point-Forecast
-- Windy API url is in-built and uses the same proxy server as the Dark Sky/OpenWeather OneCall APIs.
+- **APIs Integrated**: Dark Sky, OpenWeather OneCall, and Windy Point-Forecast.
+- The Windy API URL is built-in and uses the same proxy server as the Dark Sky/OpenWeather OneCall APIs.

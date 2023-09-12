@@ -10,7 +10,7 @@ The ATC usually serves as the host serial device that provides an operator contr
 
 ## About
 
-Version Info
+### Version Info
 
 | **Range**            | **Key Features** | **Based on** | **System Impact** |
 |----------------------|------------------|--------------|-------------------|
@@ -51,7 +51,7 @@ SERIAL CONNECTION:
 - **IP address/host**: TBD
   - **IP port**: TBD
 
-#### Initialization
+### Initialization
 
 TBD
 

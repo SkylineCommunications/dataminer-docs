@@ -2,11 +2,9 @@
 uid: Connector_help_Generic_Virtual_Chassis
 ---
 
-
-
 # Generic Virtual Chassis
 
-This protocol is used for the Rack Layout manager integration of module elements that don't have a parent chassis element. A virtual chassis element will be assigned a location on the rack, and the element will show a visio with the modules.
+This connector is used for the Rack Layout Manager integration of module elements that do not have a parent chassis element. A virtual chassis element will be assigned a location on the rack, and the element will show a visual overview with the modules.
 
 ## About
 
@@ -16,7 +14,17 @@ This protocol is used for the Rack Layout manager integration of module elements
 |-----------|------------------|--------------|-------------------|
 | 1.0.0.x   | Initial version  | \-           | \-                |
 
+### Product Info
 
+| **Range** | **Supported Firmware** |
+|-----------|------------------------|
+| 1.0.0.x   | \-                     |
+
+### System Info
+
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
 
 ## Configuration
 
@@ -28,19 +36,14 @@ This connector uses a virtual connection and does not require any input during e
 
 ## How to Use
 
-- Adding an element
+### Adding an element
 
-Right clicking on the table will show a popup with mandatory input for Element Name, Slot, and Width. After the element name is provided, the DMA/Element ID will automatically be retrieved, and the table will be filled with the new element if it exists, and if the element is not already added.
+Right-click the table and select the option to add an element. This will open a pop-up window where you will need to specify the Element Name, Slot, and Width. After you have provided the element name, the DMA ID/Element ID will automatically be retrieved, and the table will be filled in with the new element, if it exists, and if the element has not been added already.
 
-- Deleting element(s)
+### Deleting one or more elements
 
-After choosing one or multiple elements right clicking and clicking Delete selected module(s) will show a confirmation prompt. After confirming, the chosen elements will be deleted.
+You can delete one or more elements by selecting them in the table, right-clicking them and selecting **Delete selected module(s)**. This will show a confirmation prompt. When you confirm, the selected elements will be deleted.
 
-- Modifying elements
+### Modifying an element
 
-Clicking on a pencil icon in the slot or width cells will allow us to modify the value. Do note that you will not be allowed to assign multiple elements to a single slot.
-
-
-Examples
-
-You can find all the information you need on the General data page, and in the How to Use section of this guide.
+Click the pencil icon in a slot or width cell to modify the value. Note that you cannot assign multiple elements to a single slot.

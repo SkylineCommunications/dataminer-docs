@@ -27,9 +27,9 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
 
 - **DOCSIS Service**
 
-- Network
-  - Market
-  - Hub
+- DOCSIS Network
+  - DOCSIS Market
+  - DOCSIS Hub
   - CCAP Core
   - Service Group \[Fiber Node\]
   - DS Service Group - US Service Group
@@ -87,8 +87,9 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
 | 1.0.4.x              | \- Partial table option enabled on several tables to improve loading time of the filter box for the EPM topology. - Parameter added that lets the user change the name of the Automation script that notifies the CCAPs/CM collector pairs of new data to be ingested. | \-           | \-                |
 | 1.0.5.x              | \- New exceptions added for the correction of the default value for average percentage US and DS utilization.                                                                                                                                                          | \-           | \-                |
 | 1.0.6.x              | \- Quick topology for GPON now contains Split Route, Split Distribution, and Split FAT. Generic Split level was removed.                                                                                                                                               | \-           | \-                |
-| 1.0.7.x              | Remove remote views from DOCSIS CPE level(Cable Modem, QAM Channels).                                                                                                                                                                                                  | \-           | \-                |
-| 1.0.8.x \[SLC Main\] | Remove remote views from GPON CPE level(ONT)                                                                                                                                                                                                                           | \-           | \-                |
+| 1.0.7.x              | Remote views removed from DOCSIS CPE level (Cable Modem, QAM Channels).                                                                                                                                                                                                | \-           | \-                |
+| 1.0.8.x              | Remote views removed from GPON CPE level (ONT).                                                                                                                                                                                                                        | \-           | \-                |
+| 1.0.9.x \[SLC Main\] | Organization and grouping for KPIs through GPON Service, DOCSIS Network, and DOCSIS Service topologies.                                                                                                                                                                | \-           | \-                |
 
 ### Product Info
 
@@ -103,6 +104,7 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
 | 1.0.6.x   | N/A                    |
 | 1.0.7.x   | N/A                    |
 | 1.0.8.x   | N/A                    |
+| 1.0.9.x   | N/A                    |
 
 ### System Info
 
@@ -117,6 +119,7 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
 | 1.0.6.x   | No                  | Yes                     | \-                    | \-                      |
 | 1.0.7.x   | No                  | Yes                     | \-                    | \-                      |
 | 1.0.8.x   | No                  | Yes                     | \-                    | \-                      |
+| 1.0.9.x   | No                  | Yes                     | \-                    | \-                      |
 
 ## Configuration
 
@@ -165,7 +168,7 @@ Once the ID assignment is completed, the front-end element will export a series 
 
 For DOCSIS, the back-end elements are in charge of requesting the **passives** from the CMTS devices that they have assigned. For this, each back-end element sends a request every 24 hours to their respective **Skyline Platform EPM DOCSIS WM** element. This second element receives the request, creates the required passive CSV files, and notifies the back-end element. The back-end element then notifies the front-end element that its passive files are available and requests the ID assignment. Once this process is finished, the front-end element informs the back-end element, and it imports the passive resources with their assigned IDs.
 
-The **Provision** button makes the element import and export all files and add any new entities. This will notify the back end, Platform, and Generic DOCSIS CM Collector elements that they need to perform the import.
+The **Provision** button makes the element import and export all files and add any new entities. This will notify the back-end, Platform, and Generic DOCSIS CM Collector elements that they need to perform the import.
 
 The **Reset** button will remove existing data from tables and performs provisioning logic to remove any erroneous data.
 

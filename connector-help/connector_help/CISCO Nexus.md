@@ -12,17 +12,18 @@ The connector uses an **SNMP** connection and **DCF** integration to monitor Cis
 
 ### Version Info
 
-| **Range**                          | **Description**                                                                                 | **DCF Integration** | **Cassandra Compliant** |
-|------------------------------------|-------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.2.x                            | SNMPv2 - complete review.                                                                       | Yes                 | Yes                     |
-| 1.0.3.x                            | SNMPv3 version.                                                                                 | Yes                 | Yes                     |
-| 1.0.4.x                            | SNMPv2 version - Advance display key.                                                           | Yes                 | Yes                     |
-| 3.0.0.x \[Obsolete - see 3.0.1.x\] | SNMPv2 version - Advance display key.                                                           | Yes                 | Yes                     |
-| 3.0.1.x \[Obsolete - see 3.0.2.x\] | Removed duplicate Interfaces table introduced in 3.0.0.24.                                      | Yes                 | Yes                     |
-| 3.0.2.x \[Obsolete - see 3.0.3.x\] | Changed display key of interface tables. Changed API polling table to a complete polling table. | Yes                 | Yes                     |
-| 3.0.3.x \[Obsolete - see 3.0.4.x\] | Reworked VTP VLAN table to support both SNMP and NX API polling.                                | Yes                 | Yes                     |
-| 3.0.4.x \[SLC Main\]               | Improved display keys of RTP Flow and RTP Flow Errors tables.                                   | Yes                 | Yes                     |
-| 4.0.0.x                            | SNMPv3 version (based on version 1.0.0.9).                                                      | No                  | Yes                     |
+| **Range**                              | **Description**                                                                                 | **DCF Integration** | **Cassandra Compliant** |
+|----------------------------------------|-------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.2.x                                | SNMPv2 - complete review.                                                                       | Yes                 | Yes                     |
+| 1.0.3.x                                | SNMPv3 version.                                                                                 | Yes                 | Yes                     |
+| 1.0.4.x                                | SNMPv2 version - Advance display key.                                                           | Yes                 | Yes                     |
+| 3.0.0.x **\[Obsolete - see 3.0.1.x\]** | SNMPv2 version - Advance display key.                                                           | Yes                 | Yes                     |
+| 3.0.1.x **\[Obsolete - see 3.0.2.x\]** | Removed duplicate Interfaces table introduced in 3.0.0.24.                                      | Yes                 | Yes                     |
+| 3.0.2.x **\[Obsolete - see 3.0.3.x\]** | Changed display key of interface tables. Changed API polling table to a complete polling table. | Yes                 | Yes                     |
+| 3.0.3.x **\[Obsolete - see 3.0.4.x\]** | Reworked VTP VLAN table to support both SNMP and NX API polling.                                | Yes                 | Yes                     |
+| 3.0.4.x                                | Improved display keys of RTP Flow and RTP Flow Errors tables.                                   | Yes                 | Yes                     |
+| 3.0.5.x \[SLC Main\]                   | OpenConfig implementation.                                                                      | Yes                 | Yes                     |
+| 4.0.0.x                                | SNMPv3 version (based on version 1.0.0.9).                                                      | No                  | Yes                     |
 
 ### Product Info
 
@@ -36,6 +37,7 @@ The connector uses an **SNMP** connection and **DCF** integration to monitor Cis
 | 3.0.2.x   | 7.0(8)N1(1)            |
 | 3.0.3.x   | 7.0(8)N1(1)            |
 | 3.0.4.x   | 7.0(8)N1(1)            |
+| 3.0.5.x   | 7.0(8)N1(1)            |
 | 4.0.0.x   | 7.0(8)N1(1)            |
 
 ## Configuration
@@ -89,11 +91,11 @@ It also contains the following buttons:
 
 ### OpenConfig
 
-In version 3.0.4.X, there is support for **OpenConfig**. It is possible to update some columns from the **Detailed Interface**, **Rx Interface** and **Tx Interface** tables.
+Version 3.0.5.x of the connector introduces support for **OpenConfig**. You can update some columns from the **Detailed Interface**, **Rx Interface**, and **Tx Interface** tables.
 
-When used, the data from SNMP will be removed in those tables and filled in with the values from OpenConfig.
+When this is used, the data from SNMP will be removed in those tables and filled in with the values from OpenConfig.
 
-To configure OpenConfig, fill in all values on the **OpenConfig Settings** page:
+To configure OpenConfig, fill in these parameters on the **OpenConfig Settings** page:
 
 - Data Source IP Address
 - Data Source Port
@@ -141,12 +143,12 @@ This page contains the following subpages:
 - **PTP Interfaces**: Displays the Foreign Master Records and PTP Interfaces tables.
 - **PTP Grandmaster**: Displays parameters related to the grandmaster clock.
 - **PTP Time Sync**: Displays parameters related to the time sync.
-- **PTP VLAN:** Displays the VLAN table.
+- **PTP VLAN**: Displays the VLAN table.
 - **PTP Corrections**: Displays the PTP Corrections table.
 
 ### Interface Detailed
 
-This page contains the **Detailed Interface** **table**. This table provides general information about each interface.
+This page contains the **Detailed Interface table**. This table provides general information about each interface.
 
 From version **1.0.3.7 onwards**, the polling period of the **Detailed Interface table** (as well as the **Interface Rx table** and **Interface Tx table**) can be configured using the **Detailed Interface Polling Interval** parameter. The default value of this parameter is *2 minutes*. Its possible values range between 30 seconds and 1 hour.
 
@@ -217,7 +219,7 @@ The page also contains the following buttons:
 - **VTP Management Domain**: Displays a page containing the **VTP VLAN Management Domain table**. This table shows information on the management domains for the local system.
 - **VTP Statistics**: Displays a page with the **VTP Statistics** **table**.
 - **VTP Edit Control**: Displays a page that contains the **VTP Edit Control** **table**. This table allows you to control the editing of the VLANs for a particular management domain.
-- **VTP VLAN Membership:** Displays a page with the **VLAN Membership** **table**.
+- **VTP VLAN Membership:** Displays a page with the **VLAN Membership table**.
 - **VTP VLAN Status**: Displays a page with general VTP information such as the **VTP Version** and **VTP Maximum VLAN Storage**.
 - **VTP VLAN Trunk Port:** Displays a page that contains the **VLAN Trunk Port** **table**. This table shows information on the VLAN trunk ports of the local system.
 

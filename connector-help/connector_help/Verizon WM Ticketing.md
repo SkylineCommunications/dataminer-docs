@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_WM_Ticketing
 
 # Verizon WM Ticketing
 
-The Verizon WM Ticketing connector is used to handle the Verizon VSAT business logic towards the automation of the ticketing workflow. The connector interacts, directly or indirectly, with collector elements, Correlation rules and Automation scripts.
+The Verizon WM Ticketing connector is used to handle the Verizon VSAT business logic towards the automation of the ticketing workflow. The connector interacts, directly or indirectly, with collector elements, Correlation rules, and Automation scripts.
 
 ## About
 
@@ -33,11 +33,11 @@ As this is a virtual connector, **no data traffic** will be shown **in the Strea
 
 ### Version Info
 
-| **Range**            | **Description**                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version. Uses BinaryFormatter which contains deserialization and security vulnerabilities and should not be used. | No                  | Yes                     |
-| 1.0.1.x \[SLC Main\] | Layout adapted and SLA and fault logic implemented.                                                                       | No                  | Yes                     |
-| 1.0.2.x \[SLC Main\] | Minimum DataMiner required version increased from '10.0.3.0 - 8964' to '10.0.10.0 - 9454'                                 | No                  | Yes                     |
+| **Range**            | **Description**                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
+|----------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version. Uses BinaryFormatter, which contains deserialization and security vulnerabilities and should not be used. | No                  | Yes                     |
+| 1.0.1.x \[SLC Main\] | Layout adapted and SLA and fault logic implemented.                                                                        | No                  | Yes                     |
+| 1.0.2.x \[SLC Main\] | Minimum DataMiner required version increased from '10.0.3.0 - 8964' to '10.0.10.0 - 9454'                                  | No                  | Yes                     |
 
 ## Configuration
 

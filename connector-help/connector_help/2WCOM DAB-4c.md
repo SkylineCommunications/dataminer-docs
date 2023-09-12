@@ -10,13 +10,13 @@ This is a DataMiner connector for the 2WCOM DAB-4c, a converter device that can 
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                   | **Based on** | **System Impact**                                                                                                                                            |
-|----------------------|----------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version                                                                                    | \-           | \-                                                                                                                                                           |
-| 1.1.0.x              | New firmware (V0.9)                                                                                | 1.0.0.x      | \-                                                                                                                                                           |
-| 1.2.0.x              | New firmware (V2.0)                                                                                | 1.1.0.x      | \-                                                                                                                                                           |
-| 1.2.1.x              | Various improvements                                                                               | 1.2.0.x      | The description of the SNMP column and the column display order of the table has changed, which can affect existing visual overviews and Automation scripts. |
-| 1.2.2.x \[SLC Main\] | Mutiple new tables and parameters have been added in the driver according to the newest MIB (V2.5) | 1.2.1.x      | Page names have been changed, which can affect existing visual overviews                                                                                     |
+| **Range**            | **Key Features**                                                                                        | **Based on** | **System Impact**                                                                                                                                            |
+|----------------------|---------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version                                                                                         | \-           | \-                                                                                                                                                           |
+| 1.1.0.x              | New firmware (V0.9)                                                                                     | 1.0.0.x      | \-                                                                                                                                                           |
+| 1.2.0.x              | New firmware (V2.0)                                                                                     | 1.1.0.x      | \-                                                                                                                                                           |
+| 1.2.1.x              | Various improvements                                                                                    | 1.2.0.x      | The description of the SNMP column and the column display order of the table has changed, which can affect existing visual overviews and Automation scripts. |
+| 1.2.2.x \[SLC Main\] | Multiple new tables and parameters have been added in the connector according to the newest MIB (V2.5). | 1.2.1.x      | Page names have been changed, which can affect existing visual overviews.                                                                                    |
 
 ### Product Info
 
@@ -72,7 +72,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-On this page, you can monitor and configure the system's **Name**, **Location** and **Contact**. You can also monitor details related to the hardware and software versions running on the device.
+On this page, you can monitor and configure the system's **Name**, **Location**, and **Contact**. You can also monitor details related to the hardware and software versions running on the device.
 
 The page contains page buttons to the following subpages:
 
@@ -134,7 +134,7 @@ On this page, you can configure user accounts and the access to these accounts.
 
 ### Device Hardware
 
-This page provides an overview of the device status, including the **CPU/Device Temperature**, **CPU Load** and **Power Supply Unit Parameters**, along with other generic monitoring parameters.
+This page provides an overview of the device status, including the **CPU/Device Temperature**, **CPU Load**, and **Power Supply Unit Parameters**, along with other generic monitoring parameters.
 
 - **PSU**: Allows you to configure **PSU 1** and **PSU 2** built-in device alarm monitoring conditions.
 - **Temp**: Allows you to configure **Temp** built-in device alarm monitoring conditions.

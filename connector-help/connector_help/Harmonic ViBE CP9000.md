@@ -10,10 +10,10 @@ The Harmonic ViBe CP9000 is a contribution encoder that preserves video quality 
 
 ### Version Info
 
-| **Range**            | **Key Features**                              | **Based on** | **System Impact**                                                    |
-|----------------------|-----------------------------------------------|--------------|----------------------------------------------------------------------|
-| 1.0.0.x              | \- Monitoring. - Configuration of the device. | \-           | \-                                                                   |
-| 1.0.1.x \[SLC Main\] | \- Monitoring. - Configuration of the device. | 1.0.0.2      | \- Changed display key of 'Alarms' table and 'Sub System Info' table |
+| **Range**            | **Key Features**                              | **Based on** | **System Impact**                                                          |
+|----------------------|-----------------------------------------------|--------------|----------------------------------------------------------------------------|
+| 1.0.0.x              | \- Monitoring. - Configuration of the device. | \-           | \-                                                                         |
+| 1.0.1.x \[SLC Main\] | \- Monitoring. - Configuration of the device. | 1.0.0.2      | The display key of the Alarms table and Sub System Info table has changed. |
 
 ### Product Info
 
@@ -35,7 +35,7 @@ The Harmonic ViBe CP9000 is a contribution encoder that preserves video quality 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,11 +63,11 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page contains product information, such as the **System Name**, **System Description** and **Serial Number**. It also displays the primary and secondary alarm output status.
+This page contains product information, such as the **System Name**, **System Description**, and **Serial Number**. It also displays the primary and secondary alarm output status.
 
 ### HW/SW Info
 
-On this page, you can monitor the **Board Info**, **Software Licenses** and **Inventory Info** tables.
+On this page, you can monitor the **Board Info**, **Software Licenses**, and **Inventory Info** tables.
 
 ### Alarms
 

@@ -84,31 +84,3 @@ Note that the \[IDX\] was added to this column in spite of a pre-existing \[IDX\
 ### Discrete Audio Page
 
 This page displays the **Discrete Audio Table**. This table contains all discrete audio available on the Kaleido X16 device.
-
-### Traps
-
-This page displays the **Traps** table, which displays all the received traps. The auto clear information can be configured at the top of the page.
-
-### Trap Target
-
-This page displays the **Traps Target** table, which displays the port and ip address of all received traps.
-
-### GPI
-
-This page displays the **GPI** table, which contains all frame's GPIs and their information. The information includes the ID reference, number, logical name, direction (in or out), status (open or closed), and if it is enabled.
-
-### Router
-
-This page displays the **Router** table, which contains router information. This includes router output number and crosspoint label and status.
-
-### Virtual Alarms
-
-This page displays the **Virtual Alarms** table. It displays a virtual alarm's friendly name, alarm status, trap status, and causes of this virtual alarm. The trap status indicates whether or not a trap will be generated upon current virtual alarm status change.
-
-### LTC
-
-This page contains a table with all frame's **LTCs.** Here you will find the LTC hard slot ID, number, logical name, status, and trap status.
-
-### HDM
-
-This page contains the **HDM** table. The HDM information included is an HDM's slot ID, logical name, presence, and status. The presence can have the values: disabled, normal, warning, error, and unknown.

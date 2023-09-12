@@ -4,33 +4,40 @@ uid: Connector_help_Schneider_Electric_Generic_UPS
 
 # Schneider Electric Generic UPS
 
-The Schneider Electric Generic UPS driver can be used to configure and monitor an uninterruptable power supply.
+The Schneider Electric Generic UPS connector can be used to configure and monitor an uninterruptable power supply.
+
+This connector retrieves and sets data via **SNMP**. If this is enabled on the device, **SNMP traps** can also be retrieved.
 
 ## About
 
-This driver retrieves and sets data via **SNMP**. If this is enabled on the device, **SNMP traps** can also be retrieved.
+### Version Info
 
-### Ranges of the driver
+| **Range** | **Key Features** | **Based on** | **System Impact** |
+|-----------|------------------|--------------|-------------------|
+| 1.0.0.x   | Initial version  | \-           | \-                |
+| 1.1.0.x   | \-               | \-           | \-                |
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version | No                  | Yes                     |
-| 1.1.0.x          | No              | Yes                 |                         |
+### Product Info
 
-### Supported firmware versions
+| **Range** | **Supported Firmware** |
+|-----------|------------------------|
+| 1.0.0.x   | JB.GDENA8S300IC303     |
+| 1.1.0.x   | \-                     |
 
-| **Driver Range** | **Device Firmware Version** |
-|------------------|-----------------------------|
-| 1.0.0.x          | JB.GDENA8S300IC303          |
-| 1.1.0.x          |                             |
+### System Info
 
-## Installation and configuration
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+| 1.1.0.x   | No                  | Yes                     | \-                    | \-                      |
 
-### Creation
+## Configuration
+
+### Connections
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,11 +50,15 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device. The default value is *public*.
 - **Set community string**: The community string used when setting values on the device. The default value is *private*.
 
+### Web Interface
+
+The web interface is only accessible when the client machine has network access to the product.
+
 ## Usage
 
 ### General
 
-This is the default page. It displays general information about the identity of the device, such as the **manufacturer**, **model**, **software version**, **name, revision level, firmware version, User ID, Installation Date and Serial Number.**
+This is the default page. It displays general information about the identity of the device, such as the **manufacturer**, **model**, **software version**, **name, revision level, firmware version, User ID, Installation Date, and Serial Number.**
 
 ### Alarm Overview
 
@@ -55,11 +66,11 @@ This page contains the **number of alarms**, and an **alarm table**, where you c
 
 ### Input
 
-This page contains the input status as well as an **input** **table**, which contains information on all the inputs of the device, including the **frequency**, **voltage**, **current** and **power**.
+This page contains the input status as well as an **input** **table**, which contains information on all the inputs of the device, including the **frequency**, **voltage**, **current**, and **power**.
 
 ### Output
 
-This page contains the output status parameters as well as an **output** **table**, which contains information on the outputs of the device, including the **voltage**, **current**, **power** and **percent load**.
+This page contains the output status parameters as well as an **output** **table**, which contains information on the outputs of the device, including the **voltage**, **current**, **power**, and **percent load**.
 
 ### Battery
 
@@ -71,7 +82,7 @@ This page can be used to configure several parameters, such as the **low battery
 
 ### Receptacles
 
-This page contains two tables, one which shows the **status of the receptacles**, and another one that can be used to **configure the receptacles**,
+This page contains two tables, one that shows the **status of the receptacles**, and another one that can be used to **configure the receptacles**,
 
 ### Devices
 
@@ -87,8 +98,4 @@ This page can be used to **control the receptacles,** including the **outlet typ
 
 ### Test
 
-This page contains the information and control of **testing** the **battery**, such as **battery test time, battery test day** and **automatic battery test interval**.
-
-### Web interface
-
-This page displays the web interface of the device. The address of the host/web UI is the same as the polling IP of the element. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page contains the information and control of **testing** the **battery**, such as **battery test time, battery test day**, and **automatic battery test interval**.

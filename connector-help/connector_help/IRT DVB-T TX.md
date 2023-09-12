@@ -4,7 +4,7 @@ uid: Connector_help_IRT_DVB-T_TX
 
 # IRT DVB-T TX
 
-This generic connector was built to retrieve all the IRT DVB-T parameters available on IRT-DVBT MIBs. It does so via SNMP Polling and traps. The connector can be used in all devices that have base IRT-DVBT MIBs.
+This generic connector was built to retrieve all the IRT DVB-T parameters available on IRT-DVBT MIBs. It does so via SNMP polling and traps. The connector can be used in all devices that have base IRT-DVBT MIBs.
 
 ## About
 
@@ -51,7 +51,7 @@ This connector has the following main pages: **Single Transmitter (SD)**, **Acti
 
 On each of these pages, monitoring parameters are available. Some pages also have subpages for the A and B exciters, transmitters, and amplifiers.
 
-There are also **Configuration** and **Events Configuration** subpages available. The latter allow you to define which events from the device to the connector in the form of traps. When these traps are received, the relevant parameters are updated with the trap value.
+There are also **Configuration** and **Events Configuration** subpages available. The latter allow you to define which events from the device are sent to the connector in the form of traps. When these traps are received, the relevant parameters are updated with the trap value.
 
 There is also a **Polling Configuration** page, where you can define the polling intervals for the following groups of parameters:
 
@@ -116,3 +116,5 @@ There is also a **Polling Configuration** page, where you can define the polling
 By default, polling is enabled for these groups, and the following polling intervals are used: 10 seconds for fast parameters, 1 minute for medium parameters, and 1 hour for slow parameters.
 
 In the **Polling Table**, you can configure the intervals in the **Time** column, enable or disable the polling in the **State** column, and poll a specific group on demand in the **Refresh on Demand** column.
+
+The **SNMP Overview Table** allows you to enter information to retrieve data from a specific OID. It is also possibly to specify the name of an Automation script to execute when a new value is received after polling compared to the previous value. The dummy in the Automation script needs to be named "dummy1" to make sure that the element gets correctly passed to the Automation script. The parameter name of the row is passed to the first parameter in the Automation script.

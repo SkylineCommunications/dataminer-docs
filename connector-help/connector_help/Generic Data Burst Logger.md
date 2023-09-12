@@ -4,46 +4,26 @@ uid: Connector_help_Generic_Data_Burst_Logger
 
 # Generic Data Burst Logger
 
-The Generic Data Burst Logger will retrieve information from different LAN switch drivers. The data will be displayed in one table, then for each LAN Switch driver a report will be built and saved in the documents page. These reports are then monthly sended via e-mail to a number of selected email addresses.
+The Generic Data Burst Logger will retrieve information from different LAN switch drivers. The data will then be sent in a report to a number of selected email addresses.
 
 ## About
 
 The Generic Data Burst Logger driver collects data from various other LAN switch drivers. The following data is retrieved: Transmit Rate, Maximum Transmit Rate, Minimum Transmit Rate, Receive Rate, Maximum Receive Rate, Minimum Receive Rate.
 
-This reports are updated at a time interval that can be chosen freely. The fastest possible interval is every 5 minutes.
+This information is received at a time interval that can be chosen freely. The fastest possible interval is every 5 minutes.
 
-Every month a report is sent to a number of email addresses that are specified in the driver.
+Every 3 months a report is sent to a number of email addresses that are specified in the driver.
 
-### Version Info
+## Installation and configuration
 
-| **Range**            | **Key Features**                                                                                                           | **Based on** | **System Impact**                |
-|----------------------|----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------|
-| 1.0.0.x \[obsolete\] | Initial version                                                                                                            | \-           | \-                               |
-| 2.0.0.x \[SLC Main\] | Complete driver refactoring and implement Dynamic Table replacing the standalone parameters displayed in Port status page. | 1.0.0.18     | **Old trend data will be lost.** |
-
-### Product Info
-
-| **Range** | **Supported Firmware** |
-|-----------|------------------------|
-| 1.0.0.x   | \[Unknown\]            |
-| 2.0.0.x   | \[Unknown\]            |
-
-### System Info
-
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------|
-| 1.0.0.x   | No                  | No                      | \-                    | \-                      |
-| 2.0.0.x   | No                  | Yes                     | \-                    | \-                      |
-
-## Configuration
-
-### Connections
+### Creation
 
 This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
 
 **SNMP CONNECTION**:
 
-- **IP address/host**: The polling IP of the devices is defined in each row of the dynamic table, this driver can poll from several different LAN Switches*.*
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
+- **Device address**: Not used.
 
 **SNMP Settings**:
 
@@ -54,32 +34,22 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 ### Configuration
 
 Go to the **Port** **Status** page, and add the different switches you want to monitor.
-For each device, enter the **Label**, choose the **Type** of switch from the predefined types, the **Polling** **IP** and the **Polling Instance.**
+For each device, enter the **Label**, choose the **Type** of switch from the predefined types, the **Polling** **Port**, and the **Log** **Speed**.
 
-## How to Use
+## Usage
 
 ### Port Status page
 
-The **Port** **Status** page only displays one table, where you can add LAN switches by clicking **Add Row** and defining the **Label**, **Type**, **Polling IP** and **Polling Instance**. Once added the switches the retrieved data for these LAN switches is shown in this table.
-
-In this page you can also define the **Log Speed Period** that defines the period that the log files are updated (reports).
-
-You can also define a csv import file from where you can import the table from the previous version of the driver. To do this you need do define teh **Import File Path**, the **Import File Name** and click **Import**.
+The **Port** **Status** page only displays one table, where you can add a LAN switch as described in the Configuration section. The retrieved data for these LAN switches is also shown in this table.
 
 ### Settings page
 
-On the **Settings** page, in the **Log File Settings** you can choose the decimal format (dot or comma) to be included in the Log files.
+On the **Settings** page, you can choose the decimal format (dot or comma), and the list of email addresses to send the report to. You can also enter a **Mail** **Subject**, and a **Mail** **Body**.
 
-In the **Mail settings** you can define the list of email addresses to send the report to separed by ";", you can also enter a **Mail** **Subject**, and a **Mail** **Body**.
+Underneath this, there is a page button, **Send Email.,** that will open a pop-up page where you can choose an attachment.
 
-In the **Send Mail** section you can select the respective label of the device you want to send the report by email form the **Selected Label in Attachment,** clicking in **Send E-mail** it will send an E-mail to all adresses with the selected LAN Switch Log File in attachment**.**
-
-The **Refresh Labels** button is to update the list of available lables in the table if it didn't updated automatically.
-
-#### Multi-Threaded Timer sub-page
-
-In this sub-page you can check all the debug parameters of the Multi-Threaded timer implemented in the table.
+To send an email manually rather than automatically, click the **Send** **Email** button.
 
 ## Notes
 
-The SMTP tag in Dataminer.xml must be correctly configured if you want to receive the E-mails.
+N/A

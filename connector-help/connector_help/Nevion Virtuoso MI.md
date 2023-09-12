@@ -10,11 +10,12 @@ This is a DataMiner connector for the Nevion Virtuoso MI, a media server designe
 
 ### Version Info
 
-| **Range**            | **Key Features**                                    | **Based on** | **System Impact**                                                                         |
-|----------------------|-----------------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
-| 1.0.0.x \[Obsolete\] | Initial version.                                    | \-           | \-                                                                                        |
-| 1.0.1.x \[SLC Main\] | SNMP traps implemented.                             | 1.0.0.1      | Existing elements need to be reconfigured before the new connection will be taken in use. |
-| 1.1.0.x \[SLC Main\] | Support added for firmware using TXP communication. | \-           | Most parameters present in previous ranges do not exist in this range.                    |
+| **Range**            | **Key Features**                                                                                                                              | **Based on** | **System Impact**                                                                         |
+|----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------------------------------------------------------------------------------|
+| 1.0.0.x \[Obsolete\] | Initial version.                                                                                                                              | \-           | \-                                                                                        |
+| 1.0.1.x \[SLC Main\] | SNMP traps implemented.                                                                                                                       | 1.0.0.1      | Existing elements need to be reconfigured before the new connection will be taken in use. |
+| 1.1.0.x \[Obsolete\] | Support added for firmware using TXP communication. Refer to the [Nevion Virtuoso FA](https://catalog.dataminer.services/result/driver/8342). | \-           | Most parameters present in previous ranges do not exist in this range.                    |
+| 1.1.1.x \[Obsolete\] | Communication using TXP. Refer to the [Nevion Virtuoso FA](https://catalog.dataminer.services/result/driver/8342).                            | 1.1.0.2      | Adding parameters and tables.                                                             |
 
 ### Product Info
 
@@ -23,6 +24,7 @@ This is a DataMiner connector for the Nevion Virtuoso MI, a media server designe
 | 1.0.0.x   | 1.2.14                 |
 | 1.0.1.x   | 1.2.14                 |
 | 1.1.0.x   | 2.10.8                 |
+| 1.1.1.1   | 2.10.8                 |
 
 ### System Info
 
@@ -31,6 +33,7 @@ This is a DataMiner connector for the Nevion Virtuoso MI, a media server designe
 | 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
 | 1.1.0.x   | No                  | Yes                     | \-                    | \-                      |
+| 1.1.1.x   | No                  | Yes                     | \-                    | \-                      |
 
 ## Configuration
 
@@ -71,117 +74,67 @@ The element using this connector consists of the data pages detailed below.
 
 This page displays basic information about the device, e.g. **Device Name**, **Software Version**.
 
-The page also contains page buttons to the following subpages:
+The page also contains page buttons to several subpages:
 
-- **General Alarms**: Lists alarms and severities.
-- **SNMP**: Contains SNMP settings.
-- **Daylight Saving Time**: Contains all daylight-saving time settings.
-- **Time**: Contains settings related to the local time zone, reference clock, and SNTP.
+- **Frames**: Lists cards and ports. You can change the mode in the Ports table if the type of the slot is ASI.
+- **Slots**: Contains the information of the slots in the device.
+- **Licenses**: Contains all license information of the device.
 
-### Definitions
+### IP Interfaces
 
-This page displays the types of alarms that have been defined and their behavior, e.g. **Alarm Description**, **Send SNMP Trap**.
+This page displays the types of IP interfaces and their labels, e.g. **Description**, **Label**.
 
-The page also contains a page button to the **Limits** subpage, which lists all thresholds for alarms to be triggered.
-
-### Alarms
-
-This page displays basic logging and filter information, e.g. **Sequence Number**, **Log Size**.
-
-The page also contains a page button to the **Group Lists** subpage, which displays all alarms grouped in specific lists.
-
-### Features
-
-This page displays information about the licenses installed for each slot and the services they enable, e.g. **Filename**, **Is Activated**.
-
-### Shelf
-
-This page displays information about the physical location of the modules, e.g. **Position**, **Software Version**.
+In the **State** column, you can enable or disable the IP interface.
 
 ### Ethernet
 
-This page displays general information about each Ethernet interface and its severities, e.g. **Speed/Duplex Mode**, **Top Severity**.
+This page displays Ethernet information related to the device, e.g. **MAC Address**, **RX Bitrate**, **TX Bitrate**.
+
+In the **State** column, you can enable or disable Ethernet.
 
 The page also contains page buttons to the following subpages:
 
-- **Routing**: Displays routing information for each Ethernet interface.
-- **Status**: Displays metrics for received and transmitted packets for each Ethernet interface.
-- **Sync Input**: Displays information regarding the sync input for each Ethernet interface.
+- **Routing**: Lists receiver and transmitter routing information.
+- **Status**: Contains status information related to receiving and transmitting, and the errors that might be in the device.
+- **Sync Input**: Contains all information regarding Ethernet reference sync input and input routing.
 
-### Network
+### ASI Input
 
-This page displays network information for each interface, e.g. **Allow Management Traffic**, **Allow NMOS mDNS-SD**.
+This page displays tables with information about the ASI input, e.g. **Routing**, **Stream**.
 
-The page also contains a page button to the **Network Routing** subpage, which displays routing information for each interface.
+You can configure the values in the Label and Enabled columns in the ASI Input table.
 
-### NetworkR
+### ASI Output
 
-This page displays NetworkR information for each interface, e.g. **Allow Management Traffic**, **Allow NMOS mDNS-SD**.
+This page displays information about the ASI output, e.g. **Description**, **Stream Mode**.
 
-The page also contains a page button to the **NetworkR Routing** subpage, which displays routing information for each interface.
+You can configure the TS Mode and Advanced Monitoring columns with a dropdown box and toggle button, respectively.
 
-### Settings
+### IP Input
 
-This page allows you to fill in the credentials in order to **enable polling** and displays the configuration of the device.
+This page displays general information about the SIPS configuration and status, e.g. **Speed/Duplex Mode**, **Top Severity**.
 
-### Slot
-
-This page displays basic information about the slot, e.g. **Product Name**, **Model**.
+The values in all the columns except the instance column of the table SIPS configuration can be changed. With the dropdown box in the Expected Lagging Flow and Preferred Flow columns, you can select the values *Auto*, *A*, and *B*.
 
 The page also contains page buttons to the following subpages:
 
-- **Slot Configuration**: Lists slot configuration and memory usage information.
-- **Slot Definitions**: Lists the type of alarms that are defined and their threshold value.
-- **Slot Alarms**: Lists alarms.
-- **Slot Shelf**: Lists information regarding the inserted card.
+- **Flow A**: Displays status information of the Flow A. The last columns to the right can be changed as desired.
+- **Flow B**: Displays status information of the Flow B. The last columns to the right can be changed as desired.
+- **FEC**: Displays information regarding the FEC of the device.
+- **Buffer Regulator:** Displays information about the buffer regulator, e.g. **Utilization,** **Size.**
 
-### Slot Ethernet
+### TS input Switch
 
-This page displays general information about the Ethernet interface of each slot, e.g. **Speed/Duplex Mode**, **PTP Support**.
+This page displays tables with information regarding the transport input switch, e.g. **TS Input Switch**, **Ts Switch Inputs**.
 
-The page also contains page buttons to the following subpages:
+### Transport Streams
 
-- **Slot Routing**: Displays routing information for the Ethernet interface of each slot.
-- **Slot Status**: Displays metrics for received and transmitted packets for the Ethernet interface of each slot.
-- **Slot Alarms**: Displays the severities for the Ethernet interface of each slot.
+This page displays information for each IP input. You can also configure information like the state, source filter, and log IP statistics. The information is organized in tables, e.g. **TS IP Inputs**, **TS IP Outputs**.
 
-### Slot SFP
+### Services
 
-This page displays information about the SFP, e.g. **SFP Present**, **SFP Mode**.
+This page displays information about the services present in the device., e.g. **Service Name**, **Total Rate**.
 
-The page also contains page buttons to the following subpages:
+### Alarms
 
-- **Slot SFP Routing**: Lists SFP routing information.
-- **Slot SFP Channels**: Lists information about each specific SFP channel.
-
-### Slot Generic UDP Input
-
-This page displays information about the generic UDP input, e.g. **UDP Maximum Rate**, **Current RTP SSRC**.
-
-The page also contains page buttons to the following subpages:
-
-- **Generic UDP Input Routing**: Lists routing information for the generic UDP input.
-- **Generic UDP Input Alarms**: Lists current alarms for the generic UDP input.
-- **Generic UDP Input SIPS**: Lists SIPS information for the generic UDP input.
-- **Generic UDP Input IP Source**: Lists IP source information for the generic UDP input.
-
-### Slot IP Input
-
-This page displays information about the IP inputs, e.g. **Enabled**, **Initial Rate**.
-
-The page also contains page buttons to the following subpages:
-
-- **IP Inputs Routing**: Lists routing information for the IP inputs.
-- **IP Inputs Alarms**: Lists current alarms for the IP inputs.
-- **IP Inputs SIPS**: Lists SIPS information for the IP inputs.
-- **IP Inputs IP Source**: Lists IP source information for the IP inputs.
-
-### Slot Generic UDP Output
-
-This page displays information about the generic UDP output, e.g. **Minimum Depth**, **Maximum Size**.
-
-The page also contains page buttons to the following subpages:
-
-- **Generic UDP Output Routing**: Lists routing information for the generic UDP output.
-- **Generic UDP Output Alarms**: Lists current alarms for the generic UDP output.
-- **Generic UDP Output Destination**: Lists destination information for the generic UDP output.
+This page displays information about the alarms in the device, e.g. **Severity,** **Description**.

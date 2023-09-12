@@ -12,14 +12,13 @@ This same connector is used as the front-end element of the EPM Solution and als
 
 Different topologies are presented in this connector. These topologies are diagrams shown in Visual Overview, which describe the connections between the entities of the different infrastructures. The current implementation integrates the Quick topology which allows you to quickly access the passive topology level by selecting the desired filter (**OLT**, **POP**, **Label**, **ONT**).
 
-
 ## About
 
 ### Version Info
 
-| **Range** | **Key Features** | **Based on** | **System Impact** |
-|-----------|------------------|--------------|-------------------|
-| 1.0.0.x   | Initial version. | \-           | \-                |
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
 ### Product Info
 
@@ -27,13 +26,19 @@ Different topologies are presented in this connector. These topologies are diagr
 |-----------|------------------------|
 | 1.0.0.x   | \-                     |
 
+### System Info
+
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | No                  | Yes                     | \-                    | \-                      |
+
 ## Configuration
 
 ### Connections
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -46,8 +51,8 @@ When you create a Skyline EPM Platform FTTH element, you need to configure the f
 
 The provisioning of the EPM Solution is sequential and involves the following components:
 
-- **Skyline EPM Platform FTTH** as Front-end element: Responsible for the top-level data aggregation and for displaying the topologies.
-- **Skyline EPM Platform FTTH** as Back-end element: In charge of the data aggregation from the collectors.
+- **Skyline EPM Platform FTTH** as front-end element: Responsible for the top-level data aggregation and for displaying the topologies.
+- **Skyline EPM Platform FTTH** as back-end element: In charge of the data aggregation from the collectors.
 - **Skyline EPM Platform FTTH Collector**: In charge of the ONT data aggregation from an OLT.
 - **Telenet EPM Platform FTTH WM**: Creates compatible files regarding the passives available within the GPON infrastructure and the KAFKA OLT KPIs.
 
@@ -55,8 +60,14 @@ The provisioning of the EPM Solution is sequential and involves the following co
 
 The solution is based on the usage of **CSV** files.
 
-The implemented architecture has a central point of control where the Front-end element notifies, using Inter-App messages, all the Workflow Managers in the DMS to generate the structured files for each entity. After that, the remaining blocks (Collectors and Backends) are informed to ingest them.
+The implemented architecture has a central point of control where the front-end element notifies, using Inter-App messages, all the Workflow Managers in the DMS to generate the structured files for each entity. After that, the remaining blocks (collectors and back-end elements) are informed to ingest them.
 
-A new provisioning process is initiated when the provision button in the Front-end element is pressed. This action triggers a sequence of events spaced at 5-second intervals.
-- First, the Workflow Manager elements are notified to generate the structured files with the IDs for each entity. Once generated/exported, the Front-end element is notified that the files are generated. - Then, the Collector elements are notified to import the files. - At last, Back-end elements are notified to import the files.
-A 5-second interval is given to the destination to respond back - this polling interval may be customizable using the timer base option. Since all blocks report to the Front-end element, if one block fails to respond, we can immediately identify the source of the failure.
+A new provisioning process is initiated when you click the provision button in the front-end element. This action triggers a sequence of events spaced at 5-second intervals.
+
+1.  The Workflow Manager elements are notified to generate the structured files with the IDs for each entity. Once these have been generated/exported, the front-end element is notified of this.
+2.  The collector elements are notified to import the files.
+3.  The back-end elements are notified to import the files.
+
+By default, the destination is expected to respond within 5 seconds, but this polling interval can be customized with the timer base option.
+
+Since all blocks report to the front-end element, if one block fails to respond, the source of the failure can immediately by identified.

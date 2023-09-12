@@ -1,10 +1,10 @@
 ---
-uid: Connector_help_Evertz_7882ENC-H264HD-IPASI
+uid: Connector_help_Ateme_Titan_Recorder
 ---
 
-# Evertz 7882ENC-H264HD-IPASI
+# Ateme Titan Recorder
 
-The 7882ENC-H264HD-IPASI is professional contribution H.264 and MPEG-2 encoder.
+TITAN Recorder is a powerful, flexible, and reliable stream-delay solution that can adapt to a wide range of ecosystems and with secure 24/7 service.
 
 ## About
 
@@ -18,7 +18,7 @@ The 7882ENC-H264HD-IPASI is professional contribution H.264 and MPEG-2 encoder.
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | v2.0 build 1145        |
+| 1.0.0.x   | API version 6.5.0      |
 
 ### System Info
 
@@ -30,19 +30,19 @@ The 7882ENC-H264HD-IPASI is professional contribution H.264 and MPEG-2 encoder.
 
 ### Connections
 
-#### SNMP Connection
+#### HTTP Connection
 
-This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
-SNMP CONNECTION:
+HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination.
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
 
-SNMP Settings:
+### Initialization
 
-- **Get community string**: The community string used when reading values from the device (default: *public*).
-- **Set community string**: The community string used when setting values on the device (default: *private*).
+When you have created the element, set the credentials of the device on the **General** page.
 
 ### Web Interface
 
@@ -50,4 +50,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element displays the device information on the following pages: **System**, **Product Features**, **Audio Proc Control**, **Encoder Control**, **Encoder Monitor**, **H264/MPEG2 Encoder**, **Dolby Metadata Control**, **SCTE 35 GPI**, **Preset**, and **Faults**.
+The element displays the available information of the device on the following pages: **General**, **Recorders**, **Delay Lines**, and **Alarms/Events**.
+
+On the **Polling page**, you can configure the polling of the parameters.

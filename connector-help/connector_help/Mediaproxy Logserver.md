@@ -41,7 +41,7 @@ This connector uses an SNMP connection and requires the following input during e
 
 SNMP CONNECTION:
 
-- **IP address/host**: Set this as any
+- **IP address/host**: Set this to "any".
 
 SNMP Settings:
 
@@ -54,27 +54,25 @@ This connector uses an HTTP connection and requires the following input during e
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **IP port**: Default 443
-- **Bus address**: Default *bypassproxy.*
+- **IP port**: Default: *443*.
+- **Bus address**: Default: *bypassproxy.*
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
-<!-- -->
-
-- **IP address/host**: Set this as any
-- **IP port:** Set this as any
+- **IP address/host**: Set this to "any".
+  - **IP port:** Set this to "any".
 
 Push API:
 
-- When setting up the push API urls on the device, be sure to use the following formats:
+- When setting up the push API URLs on the device, be sure to use the following formats:
 
-- **http://\<ip of device\>/events** for event messages
-  - **http://\<ip of device\>/dpi** for dpi/scte messages
-  - **http://\<ip of device\>/nave** for NAVE event messages
-  - **http://\<ip of device\>/captions** for closed caption messages
-  - **http://\<ip of device\>/eas** for EAS messages
+- **http://\<ip of device\>/events** for event messages.
+  - **http://\<ip of device\>/dpi** for DPI/SCTE messages.
+  - **http://\<ip of device\>/nave** for NAVE event messages.
+  - **http://\<ip of device\>/captions** for closed caption messages.
+  - **http://\<ip of device\>/eas** for EAS messages.
 
 ### Initialization
 
@@ -91,4 +89,4 @@ The element consists of the following data pages:
 - **Traps**: Displays the received traps. Traps will be mapped to status information.
 - **Events**: This page and its subpages display the event-related information retrieved from the REST API. Events will be mapped to status information.
 - **Extracts**: This page and its subpages display the extract-related information retrieved from the REST API.
-- **Push API Status**: This page contains a table which shows the timeout status/configurations for the different Push API channels
+- **Push API Status**: This page contains a table that shows the timeout status/configuration for the different Push API channels.

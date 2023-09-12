@@ -4,9 +4,9 @@ uid: Connector_help_NBCU_ServiceNow_Prism
 
 # NBCU ServiceNow Prism
 
-The ServiceNow Prism is a ticketing system that is created to create CAG incident tickets. This driver was developed for NBCU integration between **CAG** and **ServiceNow** driver.
+The ServiceNow Prism is a ticketing system that is created to create CAG incident tickets. This connector was developed for NBCU integration between **CAG** and the **ServiceNow** connector.
 
-About
+## About
 
 ### Version Info
 
@@ -36,7 +36,7 @@ HTTPS CONNECTION:
 
 ### Initialization
 
-After the user creates the element, they must configure the username and password param values placed on **General** page.
+When you have created the element, configure the username and password on the **General** page.
 
 ### Web Interface
 
@@ -44,15 +44,20 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-On **General** page, the element has default parameter values that would be used for the API connection.
+On the **General** page, the element has the default parameter values that will be used for the API connection.
 
-- For Incident and CI standalone parameters, the driver uses them to create the sysparam_query API header parameter. The format is the following: \[**fieldParamvalue** LIKE **valueParamValue**\]
-- The **Maximum Records per Polling** parameter is used to set the limit number of data the user wants to receive.
+- For Incident and CI standalone parameters, the connector uses these to create the sysparam_query API header parameter. The following format is used: \[**fieldParamvalue** LIKE **valueParamValue**\]
+- The **Maximum Records per Polling** parameter is used to limit how much data will be received.
 
-The driver does not have set values that we need to send to the device. It contains three tables: **Incidents**, **CI** and **Assignment Groups** tables.
+The connector does not set values to the device. It contains the following tables with information: **Incidents**, **CI**, and **Assignment Groups**.
 
-There is only one way to create new tickets: the parameter 150 receive the data in JSON format and just send it via API call to the device. The JSON format is the following:
+There is only one way to create new tickets: the parameter 150 has to receive the data in JSON format and then send it via API call to the device. The following JSON format is used:
 
-{ "short_description": "string", "cmdb_ci": "CI_ID (string)", "active": "string (true/false)", "description": "string", "priority": "priorityNumber (string)", "assignment_group":"assignmentGroup_ID (string)"
+{
+"short_description": "string",
+"cmdb_ci": "CI_ID (string)",
+"active": "string (true/false)",
+"description": "string",
+"priority": "priorityNumber (string)",
+"assignment_group":"assignmentGroup_ID (string)"
 }
-

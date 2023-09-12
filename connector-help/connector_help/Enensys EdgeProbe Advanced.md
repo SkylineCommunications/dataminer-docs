@@ -10,31 +10,23 @@ With this driver, you can configure and monitor an **Enensys EdgeProbe Advanced*
 
 This driver can be used for multiple purposes, including the configuration of the device. You can configure overall settings like the device name or the location of the device, but also network settings, trap settings and alarm settings. It is also possible to monitor different channels on the device (e.g. DVB-T, DVB-C, ETR, Multiplex).
 
-### Version info
+### Ranges of the driver
 
-| **Range** | **Key Features** | **Based on** | **System Impact**                                                                                                                  |
-|-----------|------------------|--------------|------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | Initial version  | \-           | \-                                                                                                                                 |
-| 1.0.1.x   | New driver based | 1.0.0.4      | New improved Display look, New features, added data from new MIBs, changed the way the snmp data is retrieved using snmpSetAndGet. |
-| 1.0.2.x   | \-               | 1.0.1.14     | New MIBs are added + Data linking between several Echoes Tables                                                                    |
+| **Driver Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial version             | No                  | No                      |
+| 1.0.1.x          | New driver based on 1.0.0.4 | No                  | Yes                     |
 
-### Product Info
+### Supported firmware versions
 
-| **Range** | **Supported Firmware** |
-|-----------|------------------------|
-| 1.0.0.x   | 3.1.3.5                |
-| 1.0.1.x   | 3.5.3.3                |
+| **Driver Range** | **Device Firmware Version** |
+|------------------|-----------------------------|
+| 1.0.0.x          | 3.1.3.5                     |
+| 1.0.1.x          | 3.5.3.3                     |
 
-### System Info
+## Installation and Configuration
 
-| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
-|-----------|---------------------|-------------------------|-----------------------|-------------------------|
-| 1.0.0.x   | No                  | No                      | \-                    | \-                      |
-| 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
-
-## Configuration
-
-### Connections
+### Creation
 
 #### SNMP Enensys EdgeProbe Advance connection
 
@@ -51,7 +43,7 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device, by default *public*.
 - **Set community string**: The community string used when setting values on the device, by default *public*.
 
-## How to Use
+## Usage
 
 ### General
 
@@ -103,7 +95,6 @@ Several subpages are available:
 
 - Channel T Configuration: DVB-T and DVB-T2 settings, such as **Frequency**, **Signal levels**, **Mer levels**, **Pre Viterbi Ber**, **Post RS (Reed Solomon) Ber** and **DC Constellation degradation** settings. A **Profile Name** can also be changed
 - Channel C Configuration: DVB-C and DVC-C2 settings, such as **Frequency**, **Signal levels**, **SNR levels, Post RSPer levels** and **Pre Viterbi Ber** settings. A **Profile Name** can also be changed.
-- Channel S2 Configuration: DVB-S2 settings, such as **Frequency**, **LNB Frequency**, **Symbol Rate**, **Band**, **Polarization**, **Isi**, **Signal levels**, **CNR levels, Eb/No levels, PER** and **Link Margin** settings. A **Profile Name** and a **Profile Description** can also be changed. (Only available on 1.0.1.8 version)
 - SFN T Configuration: SFN-T, SFN-T2 and T2Mi settings, such as **Drift** **levels**, **Delays** and **Status** settings.
 - Channel IP Configuration: Channel IP settings, such as the **Mode**, **IP Address** and **Port**. A **Profile Name** can be changed and a **Description** can be added per IP channel.
 - Channel ASI Configuration: Channel ASI settings, such as the **Name**, **Profile Name** and **Description**.
@@ -123,7 +114,6 @@ The **RF** section contains four page buttons:
 
 - DVB-T: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Mer**, **Pre** **Viterbi** **Ber** and **SNR** for the DVB-T Channel and DVB-T2 Channel.
 - DVB-C: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Post RSPer**, **Post** **Viterbi** **Ber** and **SNR** for the DVB-C Channel and DVB-C2 Channel.
-- DVB-S2: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **CNR**, **Eb/No**, **PER**, **Link Margin** for the DVB-S2 Channel. (Only available on 1.0.1.8 version)
 - Isdb-T: Information about **Frequencies**, **Lock** **Statuses**, **Signal** **Levels**, **Post RSPer**, **Pre and** **Post** **Viterbi** **Ber** and **SNR** for the Isdb-T Channel.
 - Echoes: Information about **Echoes level, Channel ID** and **Delays**.
 

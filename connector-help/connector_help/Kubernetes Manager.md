@@ -10,13 +10,13 @@ This is a generic Kubernetes connector that allows full container-based operatio
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                     | **Based on** | **System Impact**                                                                                |
-|----------------------|----------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------|
-| 1.0.0.x              | Initial version Kubelet API v1.6                                                                                     | \-           | \-                                                                                               |
-| 1.1.0.x              | Kubelet API v1.7                                                                                                     | \-           | \-                                                                                               |
-| 1.2.0.x              | Kubelet API v1.11 Oboslete  See 1.2.2.x                                                                              | \-           | \-                                                                                               |
-| 1.2.1.x              | Protocol type change from Virtual to HTTP. Added HTTP connection to the element configuration. Oboslete  See 1.2.2.x | \-           | The element will need to be adjusted to use the correct connections.                             |
-| 1.2.2.x \[SLC Main\] | Parameter discrete updates for 'Conditions table'. Based on 1.2.1.5.                                                 | 1.2.1.5      | Parameter discrete updates for 'Conditions table'. Possible impact on trend and alarm templates. |
+| **Range**            | **Key Features**                                                                                                         | **Based on** | **System Impact**                                                                              |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------|--------------|------------------------------------------------------------------------------------------------|
+| 1.0.0.x              | Initial version Kubelet API v1.6                                                                                         | \-           | \-                                                                                             |
+| 1.1.0.x              | Kubelet API v1.7                                                                                                         | \-           | \-                                                                                             |
+| 1.2.0.x              | Kubelet API v1.11 **Obsolete  See 1.2.2.x**                                                                              | \-           | \-                                                                                             |
+| 1.2.1.x              | Protocol type change from Virtual to HTTP. Added HTTP connection to the element configuration. **Obsolete  See 1.2.2.x** | \-           | The element will need to be adjusted to use the correct connections.                           |
+| 1.2.2.x \[SLC Main\] | Parameter discrete updates for Conditions table. Based on 1.2.1.5.                                                       | 1.2.1.5      | Parameter discrete updates for Conditions table. Possible impact on trend and alarm templates. |
 
 ### Product Info
 
@@ -44,7 +44,7 @@ This is a generic Kubernetes connector that allows full container-based operatio
 
 #### HTTP Connection - Main
 
-This connector uses a HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -81,7 +81,7 @@ To set up the connection, enter the Kubernetes server address and a valid bearer
 
 #### HTTP Connection - Main
 
-This connector uses a HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -95,15 +95,15 @@ To set up the connection, enter a valid bearer token on the General page, as dep
 
 ### Web Interface (v1.0.0.x and v1.1.0.x)
 
-The web interface is only accessible when the client machine has network access to the product
+The web interface is only accessible when the client machine has network access to the product.
 
 ## Usage
 
 ### General
 
-In range **1.0.0.x and 1.1.0.x**, the General page summarizes the existing **namespaces**. It also contains a generic **HTTP Error Log** table. In range **1.0.0.x**, it also includes the **Statistics**, **PODs**, **Replica Sets**, **Deployments** and **Nodes** tables, as well as a **Kubectl** subpage from which you can send and receive any kubectl message using the SSH serial connection to the Kubernetes proxy. A **Service** subpage is also available, which is meant for SRM management purposes only. In range **1.1.0.x**, it only includes the **PODs** table.
+In range **1.0.0.x and 1.1.0.x**, the General page summarizes the existing **namespaces**. It also contains a generic **HTTP Error Log** table. In range **1.0.0.x**, it also includes the **Statistics**, **PODs**, **Replica Sets**, **Deployments**, and **Nodes** tables, as well as a **Kubectl** subpage from which you can send and receive any kubectl message using the SSH serial connection to the Kubernetes proxy. A **Service** subpage is also available, which is meant for SRM management purposes only. In range **1.1.0.x**, it only includes the **PODs** table.
 
-In range **1.2.0.x, 1.2.1.x and 1.2.2.x**, the General page includes the main KPIs for the overall cluster and the login data, as depicted above. It also includes access to subpages to list **Namespaces**, **PODs**, **Containers**, **Conditions**, **Replica Controllers** and **Services**. Finally, it also allows access to the **Labels Manager** page, where you can manage labels for both nodes and PODs.
+In range **1.2.0.x, 1.2.1.x, and 1.2.2.x**, the General page includes the main KPIs for the overall cluster and the login data, as depicted above. It also includes access to subpages to list **Namespaces**, **PODs**, **Containers**, **Conditions**, **Replica Controllers**, and **Services**. Finally, it also allows access to the **Labels Manager** page, where you can manage labels for both nodes and PODs.
 
 ### Nodes
 

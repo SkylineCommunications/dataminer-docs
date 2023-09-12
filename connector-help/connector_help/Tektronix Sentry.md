@@ -21,8 +21,6 @@ The **Tektronix Sentry** driver will display information related to the selected
 | 1.2.0.x          | New firmware based on 1.2.0.x (see below)                                                                                                               | No                  | Yes                     |
 | 1.2.1.x          | Change to display key in Program Trap Table.                                                                                                            | No                  | Yes                     |
 | 1.3.0.x          | Supports firmware version 10.3 Improved communication with Tektronix Config Manager Works with the latest version of Tektronix Config Manager (1.1.0.x) | No                  | Yes                     |
-| 1.4.0.x          | New range for firmware 10.6.6 Add ABR parameters for program statistics                                                                                 | No                  | Yes                     |
-| 1.5.0.x          | New range for firmware 10.7.3                                                                                                                           | No                  | Yes                     |
 
 ### Supported firmware versions
 
@@ -32,8 +30,6 @@ The **Tektronix Sentry** driver will display information related to the selected
 | 1.1.0.x          | 9.3                                                                |
 | 1.2.0.x          | 9.4                                                                |
 | 1.3.0.x          | 10.3+ (10.4 also works with this driver range; tested with 10.4.3) |
-| 1.4.0.x          | 10.6.6                                                             |
-| 1.5.0.x          | 10.7.3                                                             |
 
 ## Installation and configuration
 
@@ -300,7 +296,6 @@ The page contains page buttons that provide access to the following subpages:
 - **Program Groups**: This page contains the **Program Groups** table. In this table, you can delete a program group. You can only delete static program groups. To add services or create a new program group, go to the **Service Overview** page.
 - **Program Mappings**: This page contains the **Program Mappings** table. You can use the delete button in the table to remove a program mapping. Use the **Add** page button at the bottom of the page to define a new program mapping.
 - **Program Overview Config**: This page contains the **Program Overview Display Key Format** parameter. This determines what the display key in the Service Overview Table will look like.
-- **ABR Statistics:** This page contains the **ABR Statistics** table, where you can view the program fragment statistics.
 
 ### MPEG Input Settings
 

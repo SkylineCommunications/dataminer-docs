@@ -4,48 +4,52 @@ uid: Connector_help_Keysight_N934xC
 
 # Keysight N934xC
 
-The **Keysight N934xC** protocol is a driver that can be used for three types of handheld spectrum analyzers: **N9342C** (7 GHz), **N9343C** (13.6 GHz), **N9344C** (20 GHz).
+This connector can be used for three types of handheld spectrum analyzers: **N9342C** (7 GHz), **N9343C** (13.6 GHz), and **N9344C** (20 GHz).
+
+The connector interfaces with the spectrum analyzer and allows you to monitor the spectrum of any signal connected to the spectrum analyzer. You can also use it for the basic configuration of the device.
 
 ## About
 
-The ****Keysight N934xC**** driver interfaces with the spectrum analyzer of the same name, and allows the user to monitor the spectrum of any signal connected to the spectrum analyzer. In addition, the driver allows for basic configuration of the device.
+### Version Info
 
-Ranges of the driver
+| **Range**            | **Key Features** | **Based on** | **System Impact** |
+|----------------------|------------------|--------------|-------------------|
+| 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version | Yes                 | Yes                     |
+### Product Info
 
-### Supported firmware versions
+| **Range** | **Supported Firmware** |
+|-----------|------------------------|
+| 1.0.0.x   | A.06.27                |
 
-| **Driver Range** | **Device Firmware Version** |
-|------------------|-----------------------------|
-| 1.0.0.x          | A.06.27                     |
+### System Info
 
-## Installation and configuration
+| **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components** | **Exported Components** |
+|-----------|---------------------|-------------------------|-----------------------|-------------------------|
+| 1.0.0.x   | Yes                 | Yes                     | \-                    | \-                      |
 
-### Creation
+## Configuration
+
+### Connections
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
 - **IP port**: The IP port of the device, by default *5025*.
 
-## Usage
+## How to Use
 
 ### General
 
-This page contains basic device information such as the **Manufacturer**, **Model**, **Serial Number** and **Firmware Version** of the device. It also contains a toggle button: **DMS Spectrum Measurements**.
-
-
+This page contains basic device information such as the **Manufacturer**, **Model**, **Serial Number**, and **Firmware Version** of the device, as well as the **DMS Spectrum Measurements** toggle button, which determines whether measurements are initiated from the DMA or not.
 
 ### Spectrum Analyzer
 
-This page contains DataMiner's default **Spectrum Analysis** component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
+This page contains DataMiner's default Spectrum Analysis component. In addition to the default functionalities available in all spectrum analyzer elements, it allows you to configure the following parameters:
 
 - **Reference Level**
 - **Reference Scale**
@@ -56,5 +60,3 @@ This page contains DataMiner's default **Spectrum Analysis** component. In addit
 - **Video Bandwidth**
 - **Sweep Time**
 - **Input Attenuation**
-
-

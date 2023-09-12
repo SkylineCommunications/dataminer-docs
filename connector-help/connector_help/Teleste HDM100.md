@@ -6,9 +6,9 @@ uid: Connector_help_Teleste_HDM100
 
 The Teleste HDM100 module communicates with HFC network transponders via its RF modem, maintains a list of transponder statuses, manages the data link, and provides connectivity between element/network management system and transponders.
 
-## About
-
 This connector allows you to interface with various modules. For an overview of the supported modules, refer to the "System Info" section below.
+
+## About
 
 ### Version Info
 
@@ -28,8 +28,8 @@ This connector allows you to interface with various modules. For an overview of 
 
 | **Range** | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                                                                                                                       | **Exported Components**                                                                                                                                                                                                                                                                                                                                                                                     |
 |-----------|---------------------|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | No                  | No                      | /                                                                                                                                                                           | \- [Teleste HDM100 - AC8000](/Driver%20Help/Teleste%20HDM100%20-%20AC8000.aspx) - [Teleste HDM100 - AC3200](/Driver%20Help/Teleste%20HDM100%20-%20AC3200.aspx) - [Teleste HDM100 - AC3000](/Driver%20Help/Teleste%20HDM100%20-%20AC3000.aspx) - [Teleste HDM100 - AC8810](/Driver%20Help/Teleste%20HDM100%20-%20AC8810.aspx) - [Teleste HDM100 - AC8800](xref:Connector_help_Teleste_HDM100_-_AC8800) |
-| 2.0.0.x   | No                  | Yes                     | \- [Teleste AC8810](/Driver%20Help/Teleste%20AC8810.aspx) - [Teleste AC8000](/Driver%20Help/Teleste%20AC8000.aspx) - [Teleste AC8710](xref:Connector_help_Teleste_AC8710) | /                                                                                                                                                                                                                                                                                                                                                                                                           |
+| 1.0.0.x   | No                  | No                      | \-                                                                                                                                                                          | \- [Teleste HDM100 - AC8000](/Driver%20Help/Teleste%20HDM100%20-%20AC8000.aspx) - [Teleste HDM100 - AC3200](/Driver%20Help/Teleste%20HDM100%20-%20AC3200.aspx) - [Teleste HDM100 - AC3000](/Driver%20Help/Teleste%20HDM100%20-%20AC3000.aspx) - [Teleste HDM100 - AC8810](/Driver%20Help/Teleste%20HDM100%20-%20AC8810.aspx) - [Teleste HDM100 - AC8800](xref:Connector_help_Teleste_HDM100_-_AC8800) |
+| 2.0.0.x   | No                  | Yes                     | \- [Teleste AC8810](/Driver%20Help/Teleste%20AC8810.aspx) - [Teleste AC8000](/Driver%20Help/Teleste%20AC8000.aspx) - [Teleste AC8710](xref:Connector_help_Teleste_AC8710) | \-                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 ## Configuration
 
@@ -52,7 +52,7 @@ This connector has a second connection that cannot be configured manually. It is
 
 ### Initialization
 
-A configuration file can optionally be linked to the element from the **Configuration** page. This configuration file should be a semicolon-delimited .csv file with the following headers: "ip address", "name", and "view name". This file should be available in the Documents folder for the Teleste HDM100 protocol. The values from this file will be used in the HFC devices table and during element generation.
+A configuration file can optionally be linked to the element from the **Configuration** page. This configuration file should be a semicolon-delimited .csv file with the following headers: "ip address", "name", and "view name". This file should be available in the Documents folder for the Teleste HDM100 connector. The values from this file will be used in the HFC devices table and during element generation.
 
 On the **Module Overview** page, there are several parameters that specify when elements should be generated. By default, elements will be generated for nodes that are not part of the config file, elements will not be generated if they are not part of the same subnet as the controller, and missing modules will not be removed automatically.
 
@@ -74,23 +74,23 @@ The element created with this connector consists of the following data pages:
 - **ONU Spectrum Monitoring**: Provides spectrum monitoring.
 - **RF**: Contains radio frequency info and settings.
 - **Station**: Contains station info and settings.
-- **Alarm Limits AC8000/AC8810/AC8800**: These pages display the alarm limits tables for the Teleste AC8000, AC8810 and AC8800, respectively.
+- **Alarm Limits AC8000/AC8810/AC8800**: These pages display the alarm limits tables for the Teleste AC8000, AC8810, and AC8800, respectively.
 
 ### 2.0.0.x
 
 The most important parameters for monitoring can be found on the **General**, **Alarm Limits**, and **Module Overview** (HFC Devices table) pages.
 
-Every 2 minutes, the connector will retrieve the connected nodes from the HDM100 controller. All connected nodes are displayed in the HFC Devices table. When a new node is discovered, the configuration file will be checked for its presence. Depending on the settings and the type of node, a new element will be created. The connector searches for a compatible protocol (set to production) in the system and uses this to create the new element. If no compatible protocol is found, the element creation status of the node will be set to Fail in the HFC Devices table.
+Every 2 minutes, the connector will retrieve the connected nodes from the HDM100 controller. All connected nodes are displayed in the HFC Devices table. When a new node is discovered, the configuration file will be checked for its presence. Depending on the settings and the type of node, a new element will be created. The connector searches for a compatible connector (set to production) in the system and uses this to create the new element. If no compatible connector is found, the element creation status of the node will be set to *Fail* in the HFC Devices table.
 
-#### Manage Generated Module Elements
+#### Managing Generated Module Elements
 
-By selecting and right clicking modules from the HFC Device table, you are able to easily start/stop/restart module elements that were generated by this connector.
+By selecting and right-clicking modules in the HFC Device table, you can easily start, stop, or restart module elements that were generated by this connector.
 
 #### Trend and Alarm Templates
 
-From the Templates page, you can define the default alarm and trend templates for every supported module type. Whenever a new module gets connected, the configured templates will be assiged to its linked element in DataMiner. By selecting and right clicking a module in the HFC overview table, you can overwrite the currently assigned alarm or trend template by the configured one.
+On the Templates page, you can define the default alarm and trend templates for every supported module type. Whenever a new module gets connected, the configured templates will be assigned to its linked element in DataMiner. By selecting and right-clicking a module in the HFC overview table, you can overwrite the currently assigned alarm or trend template with the configured one.
 
-NOTE: If no template is defined, this action will cause the templates to be unassigned from the selected module elements.
+**NOTE**: If **no template** is defined, this action will **cause the templates to be unassigned** from the selected module elements.
 
 #### Main Element Property
 

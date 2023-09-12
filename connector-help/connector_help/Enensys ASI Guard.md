@@ -55,8 +55,6 @@ The following page buttons are available:
 
 This page displays the **Current Active Alarms** and **Status** of the device, including a list of the active alarms in the **Current Alarms** table. Extra buttons: **Clear Log** and **Refresh Log.**
 
-Since version 1.0.0.7 the **Alarm Current** table as available a functionality that allows you to remove from the table the alarms with severity "No Log". You can do this changing the **No Log Entries Displayed** togglebutton to No.
-
 The following page buttons are available:
 
 - **Alarm Configurations**: Provides access to a table that enables the user to configure the severity of the alarms generated when certain errors occur on the device.

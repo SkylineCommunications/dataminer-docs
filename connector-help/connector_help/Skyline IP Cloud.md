@@ -12,11 +12,11 @@ This protocol assists on SRM functionality making possible to monitor **Network 
 
 ### Ranges of the driver
 
-| **Range**            | **Key Features**                          | **Based on** | **Min. DMA Version** |
-|----------------------|-------------------------------------------|--------------|----------------------|
-| 1.0.0.x \[SLC Main\] | Monitor and create services on the system | \-           | 9.6.3.0 - 8092       |
+| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+|------------------|-----------------|---------------------|-------------------------|
+| 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Installation and configuration
+## Installation and configuration
 
 ### Creation
 

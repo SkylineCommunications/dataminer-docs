@@ -4,43 +4,49 @@ uid: Connector_help_Ruckus_Wireless_Virtual_SmartZone
 
 # Ruckus Wireless Virtual SmartZone
 
-The Ruckus Wireless Virtual SmartZone driver can be used to monitore and configure the Ruckus Wireless Virtual SmartZone Management System.
+The Ruckus Wireless Virtual SmartZone connector can be used to monitor and configure the Ruckus Wireless Virtual SmartZone Management System.
+
+The connector uses SNMPv2 to retrieve data from the Ruckus Wireless Virtual SmartZone Management System. Traps can also be forwarded to DataMiner and will be processed by the connector as well.
 
 ## About
 
-To driver uses SNMPv2 to retrieve data from the Ruckus Wireless Virtual SmartZone Management System. Traps can also be forwarded to DataMiner and will be processed by the driver as well.
+### Version Info
 
-### Ranges of the driver
+| **Range** | **Description**                                        | **DCF Integration** | **Cassandra Compliant** |
+|-----------|--------------------------------------------------------|---------------------|-------------------------|
+| 1.0.0.x   | Initial version.                                       | No                  | Yes                     |
+| 1.0.1.x   | Updated display key for Access Point Statistics table. | No                  | Yes                     |
+| 1.1.0.x   | Updated OIDs to support firmware version 3.6.          | No                  | Yes                     |
 
-| **Driver Range** | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version                                      | No                  | Yes                     |
-| 1.0.1.x          | Updated displaykey for Access Point Statistics table | No                  | Yes                     |
-| 1.1.0.x          | Update OIDs to support firmware version 3.6          | No                  | Yes                     |
+### Product Info
 
-### Supported firmware versions
+| **Range** | **Supported Firmware** |
+|-----------|------------------------|
+| 1.0.0.x   | \-                     |
+| 1.0.1.x   | 3.2                    |
+| 1.1.0.x   | 3.6                    |
 
-| **Driver Range** | **Device Firmware Version** |
-|------------------|-----------------------------|
-| 1.0.0.x          | /                           |
-| 1.0.1.x          | 3.2                         |
-| 1.1.0.x          | 3.6                         |
+## Configuration
 
-## Installation and configuration
+### Connections
 
-### Creation
+#### SNMP Connection - Main
 
-This driver uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
 
-**SNMP Connection:**
+SNMP Connection:
 
 - **IP address/host:** The polling IP of the device, e.g. *10.11.12.13*.
 
-**SNMP Settings:**
+SNMP Settings:
 
 - **Port number:** The port of the connected device, by default *161*.
 - **Get community string:** The community string used when reading values from the device. The default value is *public*.
 - **Set community string:** The community string used when setting values on the device. The default value is *private*.
+
+### Web Interface
+
+The web interface is only accessible when the client machine has network access to the product.
 
 ## Usage
 
@@ -58,25 +64,25 @@ This page contains the WLAN Statistics table, which contains statistics for each
 
 ### Statistics - All Access Points
 
-This page displays the Access Point Statistics table, which contains statistics about individual Access Points.
+This page displays the Access Point Statistics table, which contains statistics for the individual access points.
 
 ### Configuration - All Access Points
 
-This page contains the WLAN Configuration table with the configuration of every Access Point.
+This page contains the WLAN Configuration table, with the configuration of every access point.
 
 ### Trap Clean Up Config
 
-This page can be used to configure the amount of traps that need to be kept.
+This page can be used to configure the number of traps that need to be kept.
 
 ### Traps
 
-This page displays the amount of trap events.
+This page displays the number of trap events.
 
-Popup pages can be accessed to check specific traps:
+You can access subpages to check specific traps:
 
-- AP Events: traps related to access points
-- Rogue AP Events: traps related to rogue access points
-- Wireless Client Events: traps related to wireless clients
+- **AP Events**: Traps related to access points.
+- **Rogue AP Events**: Traps related to rogue access points.
+- **Wireless Client Events**: Traps related to wireless clients.
 
 ### Web UI
 

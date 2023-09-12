@@ -47,6 +47,6 @@ This connector consists of the following pages:
 
 - **General**: Displays general information about the device, such as the **Version**, **Disk Occupation,** **Session Status**, etc.
 - **GNSS (Global navigation satellite system) KPI Values**: Contains two tables, the **L1 KPI Table** and the **L5 KPI Table**. Each table displays the current values and the limits of the KPIs monitored by the device.
-- **Shelter KPI Values**: Contains two tables, the **Shelter Temperature KPI Table** and the **Shelter Humidity KPI Table**, where the KPI Values are stored about the humidity and temperature in the shelter.
+- **Shelter KPI Values**: Contains two tables, the **Shelter Temperature KPI Table** and the **Shelter Humidity KPI Table**, where the KPI values are stored related to the humidity and temperature in the shelter.
 - **Export**: Allows you to export the KPIs, generate a report, and fetch IQ values.
 - **Log**: Displays a table with the logs of the device.

@@ -16,7 +16,7 @@ The **directOut montone.42** connector provides information related to the input
 |----------------------|--------------------------------|--------------|-------------------|
 | 1.0.0.x              | Initial version                | \-           | \-                |
 | 1.1.0.x              | Supports new firmware changes. | 1.0.0.4      | \-                |
-| 1.1.1.x \[SLC Main\] | Supports DCF                   | 1.1.0.7      |                   |
+| 1.1.1.x \[SLC Main\] | Supports DCF.                  | 1.1.0.7      | \-                |
 
 ### Product Info
 
