@@ -12,7 +12,7 @@ uid: General_Main_Release_10.2.0_CU20
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+*No enhancements have been added yet.*
 
 ### Fixes
 
@@ -57,6 +57,20 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
 
+#### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
+
+In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
+
+#### SLLogCollector would not copy all memory dumps to the correct folder [ID_37255]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -67,3 +81,9 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 > [!NOTE]
 > This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+
+#### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.

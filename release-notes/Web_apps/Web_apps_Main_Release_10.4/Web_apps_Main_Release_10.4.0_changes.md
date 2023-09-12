@@ -773,12 +773,6 @@ When you enabled the *Show seconds* option of multiple clock components on the s
 
 The label of the *Icon* setting of an *Icon* component would incorrectly be in lower case. It is now in upper case.
 
-#### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
-
 #### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->

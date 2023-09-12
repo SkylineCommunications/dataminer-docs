@@ -72,6 +72,8 @@ items:
             topicUid: General_Feature_Release_10.3.9
           - name: General Feature Release 10.3.9 CU1
             topicUid: General_Feature_Release_10.3.9_CU1
+          - name: General Feature Release 10.3.9 CU2
+            topicUid: General_Feature_Release_10.3.9_CU2
         - name: General Feature Release 10.3.8
           topicUid: General_Feature_Release_10.3.8
         - name: General Feature Release 10.3.7
@@ -982,8 +984,10 @@ items:
       - name: PTP 1.1.0
         topicUid: PTP_1.1.0
     - name: SRM release notes
-      topicUid: SRM_1.2.32
+      topicUid: SRM_1.2.33
       items:
+      - name: SRM 1.2.33
+        topicUid: SRM_1.2.33
       - name: SRM 1.2.32
         topicUid: SRM_1.2.32
       - name: SRM 1.2.31

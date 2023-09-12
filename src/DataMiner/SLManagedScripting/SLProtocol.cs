@@ -2334,6 +2334,9 @@ namespace Skyline.DataMiner.Scripting
 		///			<item>
 		///				<description>In case a table ID or a column ID is provided, the following message is logged: NT_GET_DATA for [tableID] failed. 0x80040239.</description>
 		///			</item>
+		///			<item>
+		///				<description>In case the parameter has a fixed length, IsEmpty will always return false.</description>
+		///			</item>
 		///		</list>
 		///	</remarks>
 		/// <example>

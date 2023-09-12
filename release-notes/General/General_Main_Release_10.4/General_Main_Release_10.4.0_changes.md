@@ -143,12 +143,13 @@ The zoom range of a map can now be set by means of a slider.
 
 Because of a number of enhancements, overall performance has increased when fetching relation information for the automatic incident tracking feature.
 
-#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928]
+#### Security enhancements [ID_35434] [ID_35997] [ID_36319] [ID_36624] [ID_36928] [ID_37267]
 
 <!-- 35434: MR 10.4.0 - FR 10.3.4 -->
 <!-- 35997: MR 10.4.0 - FR 10.3.5 -->
 <!-- 36319/36928: MR 10.4.0 - FR 10.3.9 -->
 <!-- 36624: MR 10.4.0 - FR 10.3.8 -->
+<!-- 37267: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -177,7 +178,6 @@ In the *SLNetClientTest* tool, the following new DOM-related features have been 
   > [!NOTE]
   >
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will count the number of DOM instances. If the DOM Manager in question contains more than 10,000 DOM instances, an error message will appear, saying that deleting the DOM Manager would take too long.
-
   > - When you instruct the *SLNetClientTest* tool to delete a DOM Manager, it will not remove the indices from the Elasticsearch database. These indices have to be deleted manually. If you do not delete them manually, we recommend to not re-use the module ID as this could cause configuration conflicts.
 
 > [!CAUTION]

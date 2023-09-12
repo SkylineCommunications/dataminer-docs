@@ -219,7 +219,7 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 

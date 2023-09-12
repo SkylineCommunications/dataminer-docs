@@ -21,10 +21,10 @@ Configuring multiple Elasticsearch clusters becomes crucial when on-premises set
 
 To configure this setup:
 
-## [From DataMiner 10.3.10/10.4.0 onwards](#tab/tabid-1)
+<!--## [From DataMiner 10.3.10/10.4.0 onwards](#tab/tabid-1)
 
 > [!IMPORTANT]
-> From DataMiner 10.3.10/10.4.0 onwards, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube<!-- RN 36399-->.
+> From DataMiner 10.3.10/10.4.0 onwards, configuring multiple Elasticsearch clusters should only be done via DataMiner Cube (RN 36399 - reverted in RN 37322).
 
 1. Go to *Apps > System Center > Database*.
 
@@ -32,7 +32,7 @@ To configure this setup:
 
 1. Select the checkbox next to *Multi cluster offload*.
 
-1. Specify the **File Offload Identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+1. Specify the **File offload identifier**, which is the string used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
 1. Select *Add* in the lower right corner to add an empty Elasticsearch offload cluster to the list.
 
@@ -52,7 +52,7 @@ To configure this setup:
 
    - **Password**: Password with which the DMA has to log on to Elasticsearch.
 
-   - **File Offload Identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
+   - **File offload identifier**: String used to identify this connection. Each connection should have a different identifier, which will be used for file offloads.
 
    ![Configuration](~/user-guide/images/DBOffload_CubeConfig.png)<br/>*DataMiner 10.3.10 example configuration*
 
@@ -66,7 +66,7 @@ To configure this setup:
 > [!CAUTION]
 > While it was possible to configure multiple Elasticsearch clusters in the *DBConfiguration.xml* file prior to DataMiner 10.3.10/10.4.0, this should not be done in recent DataMiner versions. Specifically, refrain from editing the *ID* tag in this file, as this could lead to a need for complete reconfiguration.
 
-## [Prior to DataMiner 10.3.10/10.4.0](#tab/tabid-2)
+## [Prior to DataMiner 10.3.10/10.4.0](#tab/tabid-2) -->
 
 1. Create and configure a file *DBConfiguration.xml* as illustrated below. For each Elasticsearch cluster, an *ElasticCluster* tag must be added with the following configuration:
 
@@ -125,4 +125,4 @@ To configure this setup:
 > [!NOTE]
 > If an exception occurs for one of the replicated clusters, an alarm will be generated in the Alarm Console, indicating that not all data might be replicated. If further errors occur, no new alarms are created until the DMA is restarted.
 
-***
+<!--***-->

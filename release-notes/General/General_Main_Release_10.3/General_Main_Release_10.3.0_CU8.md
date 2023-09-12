@@ -12,7 +12,13 @@ uid: General_Main_Release_10.3.0_CU8
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, for the *CassandraCluster* database type, the IP addresses of the Cassandra Cluster nodes would be added automatically to the *DB.xml* file's `<DBServer>` element. From now on, those addresses will no longer be added automatically.
+
+Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
 ### Fixes
 
@@ -54,3 +60,23 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
+
+#### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When a booking ends or when a booking is deleted, SLNet will try to deactivate any function DVEs that are no longer required.
+
+In some cases, when function DVEs were being cleaned up while a resource swap occurred on another booking, DVEs required by that other booking would incorrectly also get deactivated.
+
+#### SLLogCollector would not copy all memory dumps to the correct folder [ID_37255]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
+
+#### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
