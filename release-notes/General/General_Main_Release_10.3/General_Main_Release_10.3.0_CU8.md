@@ -12,7 +12,13 @@ uid: General_Main_Release_10.3.0_CU8
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Up to now, for the *CassandraCluster* database type, the IP addresses of the Cassandra Cluster nodes would be added automatically to the *DB.xml* file's `<DBServer>` element. From now on, those addresses will no longer be added automatically.
+
+Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
 ### Fixes
 
@@ -69,8 +75,8 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
-#### DBConfiguration.xml file would not be included in backups taken via the Taskbar Utility [ID_37296]
+#### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
-When you took a DataMiner backup via the DataMiner Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
