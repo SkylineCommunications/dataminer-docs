@@ -87,9 +87,3 @@ For example, when you set a custom time zone in a *Clock* component, the current
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
-
-#### Problem when updating the NATS server [ID_37305]
-
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 [CU0] -->
-
-In some cases, when updating the NATS server, an error could occur while replacing the *nats-streaming-server.exe* file.
