@@ -63,6 +63,16 @@ A number of security enhancements have been made.
 
 ### Fixes
 
+#### Failover: Data could get lost when the backup agent was the online agent during a Cassandra Cluster migration [ID_34018]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When the backup agent was the online agent while a Failover pair was being migrated to Cassandra Cluster, data generated during the migration could get lost.
+
+From now on, it will only be possible to migrate a Failover pair to Cassandra Cluster when the main agent is the online agent.
+
+If, for any of the Failover pairs in the cluster, the backup agent is the online agent, a warning message will appear, advising you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
+
 #### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->

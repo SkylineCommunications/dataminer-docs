@@ -22,6 +22,16 @@ Also, in case of a Failover setup, the above-mentioned list of IP addresses will
 
 ### Fixes
 
+#### Failover: Data could get lost when the backup agent was the online agent during a Cassandra Cluster migration [ID_34018]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When the backup agent was the online agent while a Failover pair was being migrated to Cassandra Cluster, data generated during the migration could get lost.
+
+From now on, it will only be possible to migrate a Failover pair to Cassandra Cluster when the main agent is the online agent.
+
+If, for any of the Failover pairs in the cluster, the backup agent is the online agent, a warning message will appear, advising you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
+
 #### NATS connection could fail due to payloads being too large [ID_36427]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.8 -->
