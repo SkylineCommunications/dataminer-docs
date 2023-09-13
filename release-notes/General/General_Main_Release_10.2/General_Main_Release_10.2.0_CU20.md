@@ -71,6 +71,12 @@ When you enabled the *Show seconds* option of multiple clock components on the s
 
 On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
 
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
+
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->

@@ -61,6 +61,12 @@ Also, in case of a Failover setup, the above-mentioned list of IP addresses will
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -123,6 +129,12 @@ In some cases, SLElement could read and write to the same memory blocks on diffe
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
 
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 

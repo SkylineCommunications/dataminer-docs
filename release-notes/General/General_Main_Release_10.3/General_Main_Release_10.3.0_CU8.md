@@ -20,6 +20,12 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
@@ -68,6 +74,12 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
+
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
 
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 
