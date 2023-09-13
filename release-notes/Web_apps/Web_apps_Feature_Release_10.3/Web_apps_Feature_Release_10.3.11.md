@@ -48,3 +48,9 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 > [!NOTE]
 > This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+
+#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in the IIS web server when redirecting the user to the login page.

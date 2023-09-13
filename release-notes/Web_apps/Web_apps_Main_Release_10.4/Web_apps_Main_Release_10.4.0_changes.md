@@ -784,3 +784,9 @@ When, on a dashboard, a website was embedded using a Web component, in some case
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
+#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
