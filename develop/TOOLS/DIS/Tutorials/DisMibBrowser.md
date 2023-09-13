@@ -7,7 +7,7 @@ uid: DisTutorials_MibBrowser
 In this tutorial, you familiarize yourself with the DIS MIB Browser's functionalities by loading a MIB file, generating parameters, and comparing them in a connector.
 
 > [!TIP]
-> You can follow along with this [step-by-step video tutorial](https://skyline.be/).
+> You can follow along with this [step-by-step video tutorial](https://www.youtube.com/watch?v=BiVWfI3l5H8).
 
 > [!NOTE]
 > This tutorial uses DataMiner Integration Studio version 2.44.
