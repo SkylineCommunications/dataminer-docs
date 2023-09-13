@@ -8,7 +8,7 @@ uid: Validator_18_2_2
 
 ### Description
 
-Untrimmed attribute 'Hierarchy@path' in TreeControl ''. Current value '{untrimmedValue}'.
+Untrimmed attribute 'Hierarchy@path' in TreeControl '{treeControlPid}'. Current value '{untrimmedValue}'.
 
 ### Properties
 

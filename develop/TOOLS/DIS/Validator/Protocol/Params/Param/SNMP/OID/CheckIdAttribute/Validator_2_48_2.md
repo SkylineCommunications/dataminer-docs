@@ -8,7 +8,7 @@ uid: Validator_2_48_2
 
 ### Description
 
-Unsupported attribute 'SNMP\/OID@id' in Param ''. Current value ''.
+Unsupported attribute 'SNMP\/OID@id' in Param '{pid}'. Current value '{currentValue}'.
 
 ### Properties
 

@@ -8,7 +8,7 @@ uid: Validator_7_5_2
 
 ### Description
 
-Tag 'Group' references a non\-existing '' with ID '{referenceId}'. Timer ID '{timerId}'.
+Tag 'Group' references a non\-existing '{referenceKind}' with ID '{referenceId}'. Timer ID '{timerId}'.
 
 ### Properties
 

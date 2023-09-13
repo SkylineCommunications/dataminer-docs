@@ -8,7 +8,7 @@ uid: Validator_2_73_3
 
 ### Description
 
-Invalid value '{tagValue}' in tag 'LengthType'.
+Invalid value '{tagValue}' in tag 'LengthType'. Param ID '{paramId}'.
 
 ### Properties
 
@@ -16,8 +16,12 @@ Invalid value '{tagValue}' in tag 'LengthType'.
 | ------------ | ----------- |
 | Category     | Param       |
 | Full Id      | 2.73.3      |
-| Severity     | Critical    |
+| Severity     | Major       |
 | Certainty    | Certain     |
 | Source       | Validator   |
 | Fix Impact   | NonBreaking |
 | Has Code Fix | False       |
+
+### Details
+
+When 'Param\/Type' is 'fixed', 'Interprete\/LengthType' should also be 'fixed'.

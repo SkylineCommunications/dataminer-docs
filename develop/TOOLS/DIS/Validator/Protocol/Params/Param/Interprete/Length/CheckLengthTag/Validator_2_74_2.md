@@ -8,7 +8,7 @@ uid: Validator_2_74_2
 
 ### Description
 
-Empty tag 'Length'.
+Empty tag 'Length' in Param '{paramId}'.
 
 ### Properties
 
@@ -16,7 +16,7 @@ Empty tag 'Length'.
 | ------------ | ----------- |
 | Category     | Param       |
 | Full Id      | 2.74.2      |
-| Severity     | Critical    |
+| Severity     | Major       |
 | Certainty    | Certain     |
 | Source       | Validator   |
 | Fix Impact   | NonBreaking |

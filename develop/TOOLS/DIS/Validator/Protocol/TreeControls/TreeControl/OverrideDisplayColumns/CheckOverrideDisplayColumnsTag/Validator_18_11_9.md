@@ -8,7 +8,7 @@ uid: Validator_18_11_9
 
 ### Description
 
-Invalid value '' in tag 'OverrideDisplayColumns'.
+Invalid value '{invalidPart}' in tag 'OverrideDisplayColumns'.
 
 ### Properties
 

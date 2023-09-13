@@ -8,7 +8,7 @@ uid: Validator_2_74_3
 
 ### Description
 
-Invalid value '{tagValue}' in tag 'Length'.
+Invalid value '{tagValue}' in tag 'Length'. Param ID '{paramId}'.
 
 ### Properties
 
@@ -16,8 +16,13 @@ Invalid value '{tagValue}' in tag 'Length'.
 | ------------ | ----------- |
 | Category     | Param       |
 | Full Id      | 2.74.3      |
-| Severity     | Critical    |
+| Severity     | Variable    |
 | Certainty    | Certain     |
 | Source       | Validator   |
 | Fix Impact   | NonBreaking |
 | Has Code Fix | False       |
+
+### Details
+
+The 'Length' tag needs to be an unsigned integer.  
+When the parameter is of type 'length', the 'Length' tag can not be larger than 4.

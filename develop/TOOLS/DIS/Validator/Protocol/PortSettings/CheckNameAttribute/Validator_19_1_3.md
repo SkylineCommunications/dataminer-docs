@@ -8,7 +8,7 @@ uid: Validator_19_1_3
 
 ### Description
 
-Untrimmed attribute 'PortSettings@name' in Connection ''. Current value '{attributeValue}'.
+Untrimmed attribute 'PortSettings@name' in Connection '{connectionId}'. Current value '{attributeValue}'.
 
 ### Properties
 

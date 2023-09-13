@@ -8,7 +8,7 @@ uid: Validator_2_48_5
 
 ### Description
 
-Untrimmed attribute 'SNMP\/OID@id' in Param ''. Current value '{untrimmedValue}'.
+Untrimmed attribute 'SNMP\/OID@id' in Param '{pid}'. Current value '{untrimmedValue}'.
 
 ### Properties
 

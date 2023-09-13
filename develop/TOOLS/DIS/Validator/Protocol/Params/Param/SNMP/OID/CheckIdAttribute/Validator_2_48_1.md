@@ -8,7 +8,7 @@ uid: Validator_2_48_1
 
 ### Description
 
-Empty attribute 'SNMP\/OID@id' in Param ''.
+Empty attribute 'SNMP\/OID@id' in Param '{pid}'.
 
 ### Properties
 

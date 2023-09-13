@@ -8,7 +8,7 @@ uid: Validator_18_5_3
 
 ### Description
 
-Invalid value '' in attribute 'Table@condition'. TreeControl ID '{treeControlPid}'.
+Invalid value '{attributeValue}' in attribute 'Table@condition'. TreeControl ID '{treeControlPid}'.
 
 ### Properties
 

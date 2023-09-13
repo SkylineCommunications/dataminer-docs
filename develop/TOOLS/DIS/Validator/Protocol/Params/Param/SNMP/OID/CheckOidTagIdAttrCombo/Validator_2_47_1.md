@@ -8,7 +8,7 @@ uid: Validator_2_47_1
 
 ### Description
 
-Unsupported attribute 'SNMP\/OID@id' in Param ''.
+Unsupported attribute 'SNMP\/OID@id' in Param '{pid}'.
 
 ### Properties
 
