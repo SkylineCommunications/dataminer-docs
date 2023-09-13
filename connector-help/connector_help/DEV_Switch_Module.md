@@ -50,6 +50,6 @@ On the left side of each page, you can view information on the module, while on 
 
 The **3.0.0.x** driver range of the DEV Switch Module protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for this driver is managed by the parent driver DEV Switch SNMP.

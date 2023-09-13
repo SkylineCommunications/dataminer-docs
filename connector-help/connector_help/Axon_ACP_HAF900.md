@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (fixed value: *2071*).
   - **Bus address**: The bus address of the device.
 
@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination. (fixed value: *2071*).
   - **Bus address**: The bus address of the device.
 
@@ -72,7 +72,7 @@ The parameters will be filled in when the Rack Manager has created the element.
 
 The **1.0.0.x** driver range of the Axon ACP HAF900 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

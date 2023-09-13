@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: TBD
+  - **IP address/host**: TBD
   - **IP port**: TBD
 
 ### Initialization

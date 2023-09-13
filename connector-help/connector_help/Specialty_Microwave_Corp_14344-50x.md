@@ -28,7 +28,7 @@ This driver uses a **serial** connection and needs the following user informatio
 
 Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
 - **IP port**: The IP port of the device.
 - **Bus address**: The bus address of the device. The range varies from 0 to 255.
 

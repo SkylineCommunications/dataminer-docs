@@ -10,23 +10,23 @@ The following methods are currently supported by the API:
 
 - /createScheduledTask
 
-- POST: Creates a new scheduled task.
+  - POST: Creates a new scheduled task.
 
 - /deleteScheduledTask/{taskId}
 
-- DELETE: Deletes a scheduled task by ID.
+  - DELETE: Deletes a scheduled task by ID.
 
 - /getAutomationScripts
 
-- GET: Lists all available Automation scripts.
+  - GET: Lists all available Automation scripts.
 
 - /getSchedulerTasks
 
-- GET: Lists all scheduler tasks.
+  - GET: Lists all scheduler tasks.
 
 - /updateScheduledTask
 
-- PATCH: Updates an existing scheduled task.
+  - PATCH: Updates an existing scheduled task.
 
 ## About
 
@@ -93,7 +93,7 @@ To create or update a task, specific guidelines for the request body must be fol
 
 - **RepeatInterval:**
 
-- If **RepeatType =** "**Once**": This field can be omitted.
+  - If **RepeatType =** "**Once**": This field can be omitted.
   - If **RepeatType =** "**Daily**": This field can be omitted and the interval can be defined in the **RepeatIntervalInMin** field.
   - If **RepeatType =** "**Weekly**": String containing the days of the week, separated by commas. For example, if "1,2,7" is specified, the task will be repeated every Monday, Tuesday and Sunday.
   - If **RepeatType =** "**Monthly**": String containing the days of the month and the code of the months to repeat, separated by commas. The code for January is 101, for February it is 102, etc. with the code for December being 112. For example, if "1,2,7,101,105,112" is specified, the task will be repeated on days 1, 2 and 7 of January, May and December.
@@ -104,77 +104,81 @@ To create or update a task, specific guidelines for the request body must be fol
 
 - **Script:**
 
-- **Name**: String containing the Automation Script name.
+  - **Name**: String containing the Automation Script name.
 
   - **Dummies**:
 
-  - - **Dummy:**
+    - **Dummy:**
 
-    - - **ID**: String containing the ID of the script dummy.
+      - **ID**: String containing the ID of the script dummy.
       - **ElementName**: Name of the element to assign to the dummy.
 
   - **Params**:
 
-  - - **Param**:
+    - **Param**:
 
-    - - **ID**: String containing the ID of the script parameter.
+      - **ID**: String containing the ID of the script parameter.
       - **Value**: String containing the value for the parameter ID.
 
 ### Example of /createScheduledTask Request Body in JSON
 
+```json
 {
-"Task":{
-"Name":"Example1",
-"Description":"Sts",
-"StartDate":"2020-05-07",
-"StartTime":"10:00:00",
-"RepeatType":"Monthly",
-"RepeatInterval":"1,2,102,107",
-"RepeatIntervalInMin":"50",
-"Enabled":"True",
-"DmaId":"512",
-"Script":{
-"Name":"ExampleScriptName1",
-"Dummies":\[{
-"ID":"1",
-"ElementName":"Example Element Name"
-}\],
-"Params":\[{
-"ID":"1",
-"Value":"param1_value"
-}\]
+   "Task":{
+        "Name":"Example1",
+        "Description":"Sts",
+        "StartDate":"2020-05-07",
+        "StartTime":"10:00:00",
+        "RepeatType":"Monthly",
+        "RepeatInterval":"1,2,102,107",
+        "RepeatIntervalInMin":"50",
+        "Enabled":"True",
+        "DmaId":"512",
+        "Script":{
+             "Name":"ExampleScriptName1",    
+             "Dummies":[{
+                  "ID":"1",
+                  "ElementName":"Example Element Name"
+               }],
+             "Params":[{
+                  "ID":"1",
+                  "Value":"param1_value"
+                 }] 
+                   }
+   }
 }
-}
-}
+```
 
 ### Example of /createScheduledTask Request Body in XML
 
-\<CreateTaskRequest\>
-\<Task\>
-\<Name\>Example2\</Name\>
-\<StartDate\>2020-05-08\</StartDate\>
-\<StartTime\>10:00:00\</StartTime\>
-\<Enabled\>True\</Enabled\>
-\<RepeatType\>Weekly\</RepeatType\>
-\<RepeatInterval\>1,2,3\</RepeatInterval\>
-\<Script\>
-\<Name\>ExampleScriptName2\</Name\>
-\<Dummies\>
-\<Dummy\>
-\<ID\>1\</ID\>
-\<ElementName\>Example Element Name\</ElementName\>
-\</Dummy\>
-\</Dummies\>
-\<Params\>
-\<Param\>
-\<ID\>2\</ID\>
-\<Value\>param2_value\</Value\>
-\</Param\>
-\<Param\>
-\<ID\>3\</ID\>
-\<Value\>param3_value\</Value\>
-\</Param\>
-\</Params\>
-\</Script\>
-\</Task\>
-\</CreateTaskRequest\>
+```xml
+<CreateTaskRequest>
+  <Task>
+    <Name>Example2</Name>
+    <StartDate>2020-05-08</StartDate>
+    <StartTime>10:00:00</StartTime>
+    <Enabled>True</Enabled>
+    <RepeatType>Weekly</RepeatType>
+    <RepeatInterval>1,2,3</RepeatInterval>
+    <Script>
+      <Name>ExampleScriptName2</Name>      
+      <Dummies>
+        <Dummy>
+          <ID>1</ID>
+          <ElementName>Example Element Name</ElementName>
+        </Dummy>
+      </Dummies>
+      <Params>
+        <Param>
+          <ID>2</ID>
+          <Value>param2_value</Value>
+        </Param>
+        <Param>
+          <ID>3</ID>
+          <Value>param3_value</Value>
+        </Param>
+      </Params>
+    </Script>
+  </Task>
+</CreateTaskRequest>
+```

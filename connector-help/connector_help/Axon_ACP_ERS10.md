@@ -76,7 +76,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host:** The polling IP of the device.
+  - **IP address/host:** The polling IP of the device.
   - **IP port:** The IP port of the device, by default *2071*.
 
 ## Usage

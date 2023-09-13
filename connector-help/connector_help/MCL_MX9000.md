@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: The bus address of the device. If the device also uses the Channel Changer, a second bus address needs to be specified here as well. For example, *2.3* should be specified if 2 is the standard bus address and 3 is the bus address for the channel changer.
 

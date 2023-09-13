@@ -4,17 +4,17 @@ uid: Connector_help_Telenor_MAT_File_Validator
 
 # Telenor MAT File Validator
 
-The **Telenor MAT File Validator** driver consolidates data from multiple servers to a single location. The data consists of **.mat files** and **.dat files** representing Beacon, Signal and Weather Information. The consistency of these files is validated through multiple checks. You can also view requested .mat and .dat files with the driver. Alarm monitoring and trending are enabled for certain parameters, so that it is possible to monitor these or follow their trend information.
+The **Telenor MAT File Validator** connector consolidates data from multiple servers to a single location. The data consists of **.mat files** and **.dat files** representing Beacon, Signal and Weather Information. The consistency of these files is validated through multiple checks. You can also view requested .mat and .dat files with the connector. Alarm monitoring and trending are enabled for certain parameters, so that it is possible to monitor these or follow their trend information.
 
 ## About
 
-The information retrieved by this driver is displayed on different pages. The information and settings displayed on each page are described in the "Usage" section of this document.
+The information retrieved by this connector is displayed on different pages. The information and settings displayed on each page are described in the "Usage" section of this document.
 
-### Ranges of the driver
+### Version Info
 
-This protocol does DB queries to the local Dataminer DB and is not Cassandra compliant.
+This connector does DB queries to the local DataMiner database and is not Cassandra-compliant.
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,29 +22,31 @@ This protocol does DB queries to the local Dataminer DB and is not Cassandra com
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
-However, you should follow the steps below to install the driver:
+However, you should follow the steps below to install the connector:
 
 - Download and install **Scilab** (32-bit version) from http://www.scilab.org/.
-  Note: the 64-bit version will not function properly with this driver.
+
+  Note: the 64-bit version will not function properly with this connector.
+
 - On every server of the cluster, add the **DotNet-Component-Scilab.dll** to the folder *C:\Skyline DataMiner\ProtocolScripts*.
-- Create a new element and select the correct driver and version.
+- Create a new element and select the correct connector and version.
 
 ### Configuration
 
-After creating the element, you can set up the driver using the following steps:
+After creating the element, you can set up the connector using the following steps:
 
 - On the **Configuration** page:
 
-- Fill in the **User**, **Domain** and **Password** required to connect to the remote servers. Make sure that the selected user has the necessary rights to access files on all remote servers.
+  - Fill in the **User**, **Domain** and **Password** required to connect to the remote servers. Make sure that the selected user has the necessary rights to access files on all remote servers.
   - Check that the **Local Workfolder** is set to an accessible path. This folder will be automatically created when data appears.
 
 - On the **Locations** page:
 
-- Use **Add New Location** to add records to the **Location Mapping** table:
+  - Use **Add New Location** to add records to the **Location Mapping** table:
 
-  - - Locations must be entered using the UNC path.
+    - Locations must be entered using the UNC path.
     - Make sure the path does not end with a backslash ("\\).
     - Locations must end with a folder named "Signal", "Beacon", "TB" or "WXT" (used to indicate the type of data).
     - The same location cannot be added twice. If this is attempted anyway, a notification will appear.
@@ -52,9 +54,9 @@ After creating the element, you can set up the driver using the following steps:
 
   - Polling is by default *Disabled*. Use the button **Enable All** to start polling, or use the button **Resync All Locations** to manually request a resync.
 
-  - Note: No files are ever deleted by the driver. Deletion and cleanup of files must be done manually by the user.
+  - Note: No files are ever deleted by the connector. Deletion and cleanup of files must be done manually by the user.
 
-Important note: Make sure the **Local Workfolder** is **empty** of all other folders except the ones created by the driver. The file-checking algorithm will select the last X files from the entire root folder, so if the Local Workfolder contains other folders, files from a 'non-aggregated' folder could be included.
+Important note: Make sure the **Local Workfolder** is **empty** of all other folders except the ones created by the connector. The file-checking algorithm will select the last X files from the entire root folder, so if the Local Workfolder contains other folders, files from a 'non-aggregated' folder could be included.
 
 ## Usage
 
@@ -74,9 +76,9 @@ This page contains the **Location Mapping** table. This table indicates all the 
 
 - The **Location Validity** column indicates if the entered network location exists and is available.
 
-- The **Sync Threshold** indicates from which date the driver should begin syncing the files. All files that have their **Last Edit Date** set to lower than this threshold will be ignored.
+- The **Sync Threshold** indicates from which date the connector should begin syncing the files. All files that have their **Last Edit Date** set to lower than this threshold will be ignored.
 
-- To enter a date, use the following format: *yyyy.MM.dd*. E.g. "*2014.01.17*" indicates that all files from this folder are to be copied when their last edit date is larger than or equal to the 17th of January, 2014.
+  - To enter a date, use the following format: *yyyy.MM.dd*. E.g. "*2014.01.17*" indicates that all files from this folder are to be copied when their last edit date is larger than or equal to the 17th of January, 2014.
   - Adding a new location will set the **Threshold Date** to the current date by default.
   - When you leave the **Sync Threshold** blank, this indicates that a Full Sync of all files should occur.
 
@@ -86,7 +88,7 @@ The **File Table** provides the user with a configurable number of records indic
 
 - The **File Status** column contains the **Validity Status** after performing all checks. The possible values for **File Status** are:
 
-- Not Checked: Indicates that the file still needs to be checked.
+  - Not Checked: Indicates that the file still needs to be checked.
   - Checked - OK: All checks have been successfully passed and the file is healthy.
   - Checked - NOK: Bad File Size - Check failed against the File Size parameter.
   - Checked - NOK: Insufficient Values - Check failed against the Low Row Number Limit.
@@ -96,15 +98,13 @@ The **File Table** provides the user with a configurable number of records indic
   - MASKED - Alarm Masked: Alarm is masked, no further checks will be done until the alarm is unmasked or a 'Force Full Recheck' is called.
   - Checking ERROR - See Element Log: An exception has occurred in the code to process this file, please check the element log and provide Skyline Communications with a copy of this log and the file in question for debugging.
 
-> Only one error will be visible at a time. The checking hierarchy is as follows:
+    Only one error will be visible at a time. The checking hierarchy is as follows:
 
-- - Check 1: File Extension test.
+    - Check 1: File Extension test.
     - Check 2: File Type test.
     - Check 3: File Size test.
     - Check 4: Value Count / Row Count check.
     - Check 5: Threshold Checks (stops at the first error).
-
-<!-- -->
 
 - The **Additional Info** column displays detailed information about the first point of failure in a specific file.
 - The **Configure View Page** button automatically fills in the file path and if necessary the range 10 below and 10 above a threshold violation on the **View Files** page. Click **Read** on the View Files to access the correct information. A **Masking** column was added, enabling the user to mask or unmask an alarm.

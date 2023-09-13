@@ -37,17 +37,19 @@ This driver uses a **virtual connection** and does not require any input during 
 
 To configure the demodulator elements:
 
-1.  Open the **General** page and click the **Settings** page button.
+1. Open the **General** page and click the **Settings** page button.
 
-2.  Click the **Refresh** button to find all the demodulator elements in the DMS.
+1. Click the **Refresh** button to find all the demodulator elements in the DMS.
 
-3.  Select an element in the **Add Element** parameter.
-    This will add a new row to the **Element Table**. A DVE will also be created.
+1. Select an element in the **Add Element** parameter.
 
-4.  In this table, the following parameters should be configured:
+   This will add a new row to the **Element Table**. A DVE will also be created.
 
-5.  - **Element Alias**: Fill in a unique name. This will be used to refer from the **Measurement Table** to this element.
-    - **Timeout Measurement**: This is the total amount of time that the manager should wait for results from the demodulator elements. If no results are returned within this time, the measurement row for this carrier is placed in timeout and the next carrier will be tested.
+1. In this table, the following parameters should be configured:
+
+   - **Element Alias**: Fill in a unique name. This will be used to refer from the **Measurement Table** to this element.
+
+   - **Timeout Measurement**: This is the total amount of time that the manager should wait for results from the demodulator elements. If no results are returned within this time, the measurement row for this carrier is placed in timeout and the next carrier will be tested.
 
 ### Configuration of the .csv file
 
@@ -55,15 +57,17 @@ The **Measurement Table** will either be filled in by the .csv file or through t
 
 To configure the .csv file:
 
-1.  Fill in the parameter **File Path** with the directory where the .csv file can be found.
+1. Fill in the parameter **File Path** with the directory where the .csv file can be found.
 
-2.  - If this parameter is empty, the default path is *C:\Skyline DataMiner\Documents\Generic Carrier Monitor Manager\\*
-    - If only a name is entered, e.g. *Test,* the path will be *C:\Skyline DataMiner\Documents\Generic Carrier Monitor Manager\Test\\*.
-    - A full path can also be specified.
+   - If this parameter is empty, the default path is *C:\Skyline DataMiner\Documents\Generic Carrier Monitor Manager\\*
 
-3.  Fill in the parameter **File Name** with the name of the .csv file that contains the measurements.
+   - If only a name is entered, e.g. *Test,* the path will be *C:\Skyline DataMiner\Documents\Generic Carrier Monitor Manager\Test\\*.
 
-4.  Click the **Load** button to read out the .csv file and load it into the **Measurement Table**.
+   - A full path can also be specified.
+
+1. Fill in the parameter **File Name** with the name of the .csv file that contains the measurements.
+
+1. Click the **Load** button to read out the .csv file and load it into the **Measurement Table**.
 
 The .csv file must have the structure below. The first line will always be skipped to make it possible to add a description at the top.
 
@@ -75,9 +79,11 @@ The **Measurement Table** will either be filled in by the .csv file or through t
 
 To configure the database:
 
-1.  Fill in the **Server** parameter with the server IP address.
-2.  Fill in the parameters **Username**, **Password** and **Database Name**.
-3.  Click the **Load DB** button to read out the database and load it into the **Measurement Table**.
+1. Fill in the **Server** parameter with the server IP address.
+
+1. Fill in the parameters **Username**, **Password** and **Database Name**.
+
+1. Click the **Load DB** button to read out the database and load it into the **Measurement Table**.
 
 ## Usage
 

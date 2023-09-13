@@ -33,7 +33,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: The bus address of the device. The default value is 49, with a range of 33 to 126,
 

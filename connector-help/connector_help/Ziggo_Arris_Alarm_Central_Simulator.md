@@ -34,56 +34,59 @@ This driver requires a HTTP connection to send events, and, by default, asks for
 
 This page displays a tree view with all stored **scenarios** and associated **events**. Clicking on a **scenario** of the tree view shows a table with all events associated to it, and all relevant information regarding that scenario:
 
-- **Name** - Name of the scenario.
+- **Name**: Name of the scenario.
 
-- **Description** - Description of the scenario.
+- **Description**: Description of the scenario.
 
-- **Destination** - Ip address and port where the events should be forward to.
+- **Destination**: The IP address and port the events should be forwarded to.
 
-- **Delay** - Time delay, in milliseconds, between each event of a scenario.
+- **Delay**: Time delay, in milliseconds, between each event of a scenario.
 
 - **State**
 
-- *Idle*: Scenario is not sending any events at the time
+  - *Idle*: Scenario is not sending any events at the time.
+
   - *Running*: Events of the scenario are scheduled to be forwarded.
 
-- **Current** **step** - The position, in the scenario, of the last event to be sent.
+- **Current** **step**: The position, in the scenario, of the last event to be sent.
 
-- E.g.: "1/5" means the first event of the scenario (with 5 events) was sent.
+  - E.g.: "1/5" means the first event of the scenario (with 5 events) was sent.
+
   - On the tree view, the last event sent has an arrow icon.
 
-Every **scenario** have 5 buttons/actions available:
+Every **scenario** has 5 buttons/actions available:
 
-- **Next** - Send next **event** in line
+- **Next**: Send next **event** in line
 
-- E.g.: If the **Current Step** is "1/5", by clicking on **Next**, the second event will be sent immediatly, and the cell becomes "2/5".
+  - E.g.: If the **Current Step** is "1/5", by clicking on **Next**, the second event will be sent immediately, and the cell becomes "2/5".
+
   - **Next** actions do not take **Delay** values into account.
 
-- **Reset** - Resets **scenario** to default values and restarts **Current Steps** back to default (*Not started*).
+- **Reset**: Resets **scenario** to default values and restarts **Current Steps** back to default (*Not started*).
 
-- **Run** - Initiates a **scenario** run. All **events** of the **scenario** will automatically, and sequentially, be forwarded with a predefined **delay** between each others. The run starts on the position displayed in **Current Step**.
+- **Run**: Initiates a **scenario** run. All **events** of the **scenario** will automatically, and sequentially, be forwarded with a predefined **delay** between each others. The run starts on the position displayed in **Current Step**.
 
-- E.g.: If **scenario's delay** is set to *500 ms* and the **Current Step** is "2/5", by clicking on **Run**, all the last 3 events are scheduled to be sent with *500 ms* apart.
+  - E.g.: If **scenario's delay** is set to *500 ms* and the **Current Step** is "2/5", by clicking on **Run**, all the last 3 events are scheduled to be sent with *500 ms* apart.
 
-- **Stop** - Stops a running **scenario**. The **Current Step** is not reset, it remains on the same step when the action **Stop** was performed.
+- **Stop**: Stops a running **scenario**. The **Current Step** is not reset, it remains on the same step when the action **Stop** was performed.
 
-- Analogously, **Run/Stop** can be used as **Resume/Pause**.
+  - Analogously, **Run/Stop** can be used as **Resume/Pause**.
 
-- **Delete** - Deletes the scenario.
+- **Delete**: Deletes the scenario.
 
 The table listing all **events** of the **scenario** contains useful information for tracking and debugging:
 
-- **Event Idx** - Name of the **event**
+- **Event Idx**: Name of the **event**.
 
-- **Order** - Order of the **event** in the scenario
+- **Order**: Order of the **event** in the scenario.
 
-- **Breakpoint** - The user can set an **event** with a **breakpoint**. If so, when the **scenario** is *running*, it will automatically **stop** before the specified **event** is sent.
+- **Breakpoint**: The user can set an **event** with a **breakpoint**. If so, when the **scenario** is *running*, it will automatically **stop** before the specified **event** is sent.
 
-- On the tree view, the **breakpoint** **event** that stopped the run of the **scenario** has an special "i" icon.
+  - In the tree view, the **breakpoint event** that stopped the run of the **scenario** has a special "i" icon.
 
-- **Alarm ID** - The *\<AlarmId\>* tag value of the **event** that was forwarded.
+- **Alarm ID**: The *\<AlarmId\>* tag value of the **event** that was forwarded.
 
-- Useful when using placeholders.
+  - Useful when using placeholders.
 
 The **New Scenario** page allows the user to configure **scenarios**. This page will be explained on the Scenarios section below.
 
@@ -93,40 +96,40 @@ This page displays all the **scenarios** stored in the element, in the **Scenari
 
 By clicking the **New Scenario** page button the user can **create** and **edit** **scenarios**.
 
-Creating a new scenario:
+**Creating a new scenario**:
 
-1.  On the **Scenario Settings** section, fill scenario's general information:
+1. On the **Scenario Settings** section, fill scenario's general information:
 
-2.  - **Name**
-    - **Description**
-    - **Destination**
-    - **Delay**
+   - **Name**
+   - **Description**
+   - **Destination**
+   - **Delay**
 
-3.  Select an **event** from the **Scenario Event Name** drop down box and click *Add Event*;
+1. Select an **event** from the **Scenario Event Name** drop down box and click *Add Event*;
 
-4.  - The **event** is added to the bottom of the **CreateScenarios table**.
+   - The **event** is added to the bottom of the **CreateScenarios table**.
 
-5.  The **CreateScenarios table** lists the **events** and allows the user to order them within the **scenario**, via **Order column**.
+1. The **CreateScenarios table** lists the **events** and allows the user to order them within the **scenario**, via **Order column**.
 
-6.  When the scenario is configured, click *Add* on the **Scenario Settings** section.
+1. When the scenario is configured, click *Add* on the **Scenario Settings** section.
 
-Edit an existing scenario:
+**Editing an existing scenario**:
 
-1.  On the **Load Scenario** section, select the **scenario** from the **Scenario List** drop down box and click *Load;*
+1. On the **Load Scenario** section, select the **scenario** from the **Scenario List** drop down box and click *Load;*
 
-2.  - The general information is filled and the sequence of **events** of that specific **scenario** is imported to the **CreateScenarios** *table*
+   - The general information is filled and the sequence of **events** of that specific **scenario** is imported to the **CreateScenarios** *table*
 
-3.  Edit any information or the list of **events**
+1. Edit any information or the list of **events**
 
-4.  - Do not change the Name of the scenario, otherwise the scenario is interpreted as a new one
+   - Do not change the Name of the scenario, otherwise the scenario is interpreted as a new one
 
-5.  Click *Replace* on the **Scenario Settings** section
+1. Click *Replace* on the **Scenario Settings** section
 
 The **Import/Export** page allows the user to export/import scenarios into/from a file.
 
 - Exporting a **scenario** saves all scenarios and **events** information, meaning that, when importing, all the **event** files need to be available at the same location, otherwise the import operation is canceled.
 
-- The user is notified of the *names* and *locations* of the missing files.
+  - The user is notified of the *names* and *locations* of the missing files.
 
 ### Events
 
@@ -134,14 +137,15 @@ This page shows a list of all **events** that can be sent, in the **Events Table
 
 To import an event:
 
-1.  Set the location of the .xml file(s) on the **Import Event Filepath** paremeter
+1. Set the location of the .xml file(s) on the **Import Event Filepath** parameter.
 
-2.  Select one of the files in the drop down box **Import Event Filename** parameter
+1. Select one of the files in the drop down box **Import Event Filename** parameter.
 
-3.  Click on the *Import XML* button
+1. Click on the *Import XML* button
 
-4.  - A new event is added to the **Events table**
-    - The name of the event will be the name of the file, and it is unchangeable.
+   - A new event is added to the **Events table**
+
+   - The name of the event will be the name of the file, and it is unchangeable.
 
 The content of the xml file is not loaded into the element, only the file location is stored. When an event is ready to be sent, the driver reads the xml content using the filepath value set on the **Events Table** upon "*event import*".
 

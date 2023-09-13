@@ -4,27 +4,27 @@ uid: Connector_help_Tektronix_Sentry_Edge
 
 # Tektronix Sentry Edge
 
-The **Tektronix Sentry Edge** driver is used to display information related to the **Sentry Edge** device.
+The **Tektronix Sentry Edge** connector is used to display information related to the **Sentry Edge** device.
 
 ## About
 
-This driver will display information related to the selected **Sentry Edge** device. This information and details related to ports, transport and services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the driver, e.g. the **bitrate**.
+This connector will display information related to the selected **Sentry Edge** device. This information and details related to ports, transport and services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the connector, e.g. the **bitrate**.
 
-**Note: This driver requires the .Net Framework 4.0.**
+**Note: This connector requires the .Net Framework 4.0.**
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version.                                                                                                                                           | No                  | Yes                     |
-| 1.1.0.x          | New firmware based on 1.0.0.x (see below).                                                                                                                 | No                  | Yes                     |
-| 1.2.0.x          | New firmware based on 1.2.0.x (see below).                                                                                                                 | No                  | Yes                     |
-| 1.3.0.x          | Supports firmware version 10.3. Improved communication with Tektronix Config Manager. Works with the latest version of Tektronix Config Manager (1.1.0.x). | No                  | Yes                     |
-| 1.3.1.x          | Different displayed order of columns in the RF Status Table. As a consequence, existing custom reports may no longer work.                                 | No                  | Yes                     |
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x | Initial version. | No | Yes |
+| 1.1.0.x | New firmware based on 1.0.0.x (see below). | No | Yes |
+| 1.2.0.x | New firmware based on 1.2.0.x (see below). | No | Yes |
+| 1.3.0.x | Supports firmware version 10.3. Improved communication with Tektronix Config Manager. Works with the latest version of Tektronix Config Manager (1.1.0.x). | No | Yes |
+| 1.3.1.x | Different displayed order of columns in the RF Status Table. As a consequence, existing custom reports may no longer work. | No | Yes |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**   |
+| Range | Supported Firmware Version   |
 |------------------|-------------------------------|
 | 1.0.0.x          | Older versions                |
 | 1.1.0.x          | 9.3                           |
@@ -32,13 +32,13 @@ This driver will display information related to the selected **Sentry Edge** dev
 | 1.3.0.x          | 10.3+ (10.4 also still works) |
 | 1.3.1.x          | 10.3+ (10.4 also still works) |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
-SNMP connection
+#### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -53,7 +53,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -65,19 +65,19 @@ HTTP CONNECTION:
 
 The first time you start a **Tektronix Sentry Edge** element, you have to enter a username and a password in the **Configuration** dialog box:
 
-1.  Go to the **General** page.
-2.  Click the **Configuration** page button.
-3.  Enter the **Username** and **Password**.
-4.  Select to **Enable**/**Disable** KPI2.
-5.  If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
-6.  Log on.
+1. Go to the **General** page.
+1. Click the **Configuration** page button.
+1. Enter the **Username** and **Password**.
+1. Select to **Enable**/**Disable** KPI2.
+1. If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
+1. Log on.
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
-1.  Open the web interface.
-2.  Select **Configure** \> **Users**.
-3.  Select the username.
-4.  Set **API Access** to *Yes*.
+1. Open the web interface.
+1. Select **Configure** \> **Users**.
+1. Select the username.
+1. Set **API Access** to *Yes*.
 
 The API password must be the same as the password used to log in on the web interface.
 
@@ -85,17 +85,17 @@ The API password must be the same as the password used to log in on the web inte
 
 The first time you start a **Tektronix Sentry Edge** element, you have to enter a username and a password in the **Configuration** dialog box:
 
-1.  Go to the **General** page.
-2.  Click the **Configuration** page button.
-3.  Enter the **Username** and **Password**.
-4.  Log on.
+1. Go to the **General** page.
+1. Click the **Configuration** page button.
+1. Enter the **Username** and **Password**.
+1. Log on.
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
-1.  Open the web interface.
-2.  Select **Configure** \> **Users**.
-3.  Select the username.
-4.  Set **API Access** to *Yes*.
+1. Open the web interface.
+1. Select **Configure** \> **Users**.
+1. Select the username.
+1. Set **API Access** to *Yes*.
 
 The API password must be the same as the password used to log in on the web interface.
 
@@ -190,36 +190,41 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 
 - To **create** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Create** and provide a name for the new program template.
-    3.  A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. Once it has been configured, select **Upload to Probe** in the right-click menu.
+  1. Right-click in the **Program Template Table** to access the context menu.
+  1. Select **Create** and provide a name for the new program template.
+  1. A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. Once it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template:
 
-1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
-        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+  1. Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
+  1. When ready, click the **Update Probe** button to send the new configuration to the probe.
+
+     Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
-> 1.  On the **Load From File** page, select the program template file name from the files located in the Documents folder.
-> 2.  Apply one of the following two options:
->
-> > - **Upload to Probe**
-> >   Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
-> >
-> > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
-> >   - Otherwise, the existing program template will be updated.
-> >
-> > - **Load to Table**
-> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
-> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+  1. On the **Load From File** page, select the program template file name from the files located in the Documents folder.
+  1. Apply one of the following two options:
+
+     - **Upload to Probe**
+
+       Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+
+       - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
+       - Otherwise, the existing program template will be updated.
+
+     - **Load to Table**
+
+       With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+
+       Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the **Program Template Table** to access the context menu.
+  1. Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Alerts (available from 1.2.0.5 onwards)
 
@@ -229,34 +234,36 @@ The **Program Template Alert Table**, which displays the **Alert details**, allo
 
 The **Load From File page** button opens a subpage where you can **upload or load** an **exported program template alert**.
 
-From version 1.2.0.5 of the driver onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *true*.
+From version 1.2.0.5 of the connector onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *true*.
 
 - To **create** a program template alert:
 
-1.  1.  Right-click in the **Program Template Alert Table** to access the context menu.
-    2.  Select **Create** and select a program template from the drop-down list.
-    3.  A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
+  1. Right-click in the **Program Template Alert Table** to access the context menu.
+  1. Select **Create** and select a program template from the drop-down list.
+  1. A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template alert:
 
-1.  1.  Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
-    2.  When you are ready, select **Upload to Probe** in the right-click menu.
+  1. Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
+  1. When you are ready, select **Upload to Probe** in the right-click menu.
 
 - To **import** a program template alert:
 
-> 1.  On the **Load From File** page, select the program template alert file name from the files located in the Documents folder.
-> 2.  Apply one of the following two options:
->
-> - - **Upload to Probe**
->   - **Load to Table:** With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+  1. On the **Load From File** page, select the program template alert file name from the files located in the Documents folder.
+  1. Apply one of the following two options:
 
-> > Note: For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
+     - **Upload to Probe**
+     - **Load to Table:** With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+
+     > [!NOTE]
+     > For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
 
 - To **export** a program template alert:
 
-1.  1.  Right-click in the Program Template Alert Table to access the context menu
-    2.  Select **Export**. The file will be saved in the Documents folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the Program Template Alert Table to access the context menu
+  1. Select **Export**. The file will be saved in the Documents folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Web Interface
 
@@ -264,7 +271,7 @@ This page can be used to access the web interface of the device. Note that the c
 
 ## Usage (from version 1.3.0.x onwards)
 
-The driver has been synced with the Tektronix Sentry driver ([https://dcp.skyline.bexref:Connector_help_Tektronix_Sentry](xref:Connector_help_Tektronix_Sentry)), and is identical to this driver except for the page below.
+The connector has been synced with the [Tektronix Sentry](xref:Connector_help_Tektronix_Sentry) connector, and is identical to this connector except for the page below.
 
 ### MPEG Input Settings
 

@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host:** The polling IP of the device.
+  - **IP address/host:** The polling IP of the device.
   - **IP port:** The IP port of the device (default: 2050).
   - **Bus Address:** The bus of the card on the chassis. The default shows the expected structure of the address, where UU is the chassis ID, and PP is the card position, both in Hex (default: UU.PP (Hex)).
 

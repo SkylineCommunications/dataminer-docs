@@ -55,7 +55,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
 #### Serial BROADCAST connection (Not available in range 3.0.0.x)
@@ -66,7 +66,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
 ## Usage (1.0.0.x, 2.0.0.x, and 2.0.1.x)

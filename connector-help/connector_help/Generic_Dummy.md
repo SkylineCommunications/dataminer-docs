@@ -28,11 +28,11 @@ This driver uses a virtual connection and does not require any input during elem
 
 Dummy parameters are shown and editable from this page. In range 1.0.2.x, the dummy parameters are not always used, but they are available for future use.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The 1.0.2.x driver range of the **Generic Dummy** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

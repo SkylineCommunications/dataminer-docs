@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the destination (default: *2050*).
   - **Bus address**: The bus address of the device, in the format *UU.PP*, where UU is the unit address and PP is the unit port. For example: *01.01*.
 

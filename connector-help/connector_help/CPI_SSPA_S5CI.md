@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *192.168.14.11 (Moxa)*.
+  - **IP address/host**: The polling IP of the device, e.g. *192.168.14.11 (Moxa)*.
   - **IP port**: The IP port of the device, e.g. *4003*.
   - **Bus address**: Used to fill in the unit address, by default *48.*
 

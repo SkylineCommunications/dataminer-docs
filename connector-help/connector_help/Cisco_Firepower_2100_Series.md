@@ -61,7 +61,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
+- **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: \[The IP port of the destination. (default: *161*)\]
 
 SNMP Settings:

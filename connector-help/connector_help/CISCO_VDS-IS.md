@@ -4,41 +4,41 @@ uid: Connector_help_CISCO_VDS-IS
 
 # CISCO VDS-IS
 
-Cisco Video Distribution Suite for Internet Streaming (VDS-IS) is an integrated system with a network-based architecture, Streaming Solution. The **Cisco VDS-IS driver** can be used to display information of and configure the Cisco VDS-IS system.
+Cisco Video Distribution Suite for Internet Streaming (VDS-IS) is an integrated system with a network-based architecture, Streaming Solution. The **Cisco VDS-IS connector** can be used to display information of and configure the Cisco VDS-IS system.
 
 ## About
 
 **SNMP** and **HTTP** are used to retrieve parameters and display them on different pages.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version    | No                  | Yes                     |
 | 1.0.1.x          | API implementation | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.2.1                       |
 | 1.0.1.x          | 4.2.1                       |
 
-### Exported drivers
+### Exported connectors
 
-| **Exported Protocol**                              | **Description**                 |
-|----------------------------------------------------|---------------------------------|
-| [Cisco VDS-IS - Service Engine]()                  | Service Engine device           |
-| [Cisco VDS-IS - Service Router]()                  | Service Router device           |
-| [Cisco VDS-IS - Content Delivery System Manager]() | Content Delivery System Manager |
+| Exported Connector                             | Description                     |
+|------------------------------------------------|---------------------------------|
+| Cisco VDS-IS - Service Engine                  | Service Engine device           |
+| Cisco VDS-IS - Service Router                  | Service Router device           |
+| Cisco VDS-IS - Content Delivery System Manager | Content Delivery System Manager |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -136,7 +136,7 @@ The parameters on this page are retrieved via HTTP.
 
 ### Files
 
-This page contains the **File Table**, listing the files, their **Types** and other related information such as **Destination**, **Active**, **Last Change**, **Origin** **URL**, **TTL**, etc. You can also **Refetch** the file, **Apply Geo/IP** and **Register** the file.
+This page contains the **File Table**, listing the files, their **Types** and other related information such as **Destination**, **Active**, **Last Change**, **Origin URL**, **TTL**, etc. You can also **Refetch** the file, **Apply Geo/IP** and **Register** the file.
 
 The parameters on this page are retrieved via HTTP.
 
@@ -148,7 +148,7 @@ The page contains the following parameters statistics related to the **Content D
 - **Bandwidth Efficiency Gain**: **In**, **Out** and **Efficiency Gain**.
 - **Streaming Session**: **Windows Media Unicast**, **Windows Media Multicast**, **Movie Streamer Unicast** and **Flash Media Unicast**.
 
-The CDN statistics are retrieved every 5 minutes, as this is the minimum timeframe in which the device holds statistical data. The current values are therefore calculated by the device as the average of the last 5 minutes.
+The CDN statistics are retrieved every 5 minutes, as this is the minimum time frame in which the device holds statistical data. The current values are therefore calculated by the device as the average of the last 5 minutes.
 
 The parameters on this page are retrieved via HTTP.
 

@@ -32,11 +32,11 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: \[The polling IP of the device.\]
+- **IP address/host**: The polling IP of the device.
 
 SNMP Settings:
 
-- **Port number**: \[The port of the connected device, by default *161*.\]
+- **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: \[The community string used when reading values from the device
   (default value if not overridden in the driver: *public*).
   Note: If you have specified a default value in the driver, then specify that custom value.\]
@@ -50,9 +50,9 @@ This driver uses an HTTP connection and requires the following input during elem
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination.\]
-- **Bus address**: \[If the proxy server has to be bypassed, specify *bypassproxy.*\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination.
+- **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 ## Usage
 

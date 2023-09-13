@@ -18,7 +18,7 @@ Style: Heading 2
 
 SERIAL CONNECTION:
 
-- **IP address/host:** \[The polling IP of the device\]
+- **IP address/host:** The polling IP of the device
 - **IP port:** \[The IP port of the device..\]
 - **Bus address:** \[The bus address of the device.\]
 

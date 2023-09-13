@@ -223,33 +223,33 @@ Three modes are available:
 
 - **Manual (default):**
 
-- When a new device is added, the corresponding element will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding element will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing element will be deleted if the configuration settings allow it.
+    - The existing element will be deleted if the configuration settings allow it.
     - A new element will be created if the configuration settings allow it.
 
   - When a device is removed, the existing element will not be deleted.
 
 - **Semi-automatic:**
 
-- When a new device is added, the corresponding element will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding element will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing element will be deleted.
+    - The existing element will be deleted.
     - A new element will be created if the configuration settings allow it.
 
   - When a device is removed, the existing element will not be deleted.
 
 - **Automatic:**
 
-- When a new device is added, the corresponding element will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding element will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing element will be deleted.
+    - The existing element will be deleted.
     - A new element will be created if the configuration settings allow it.
 
   - When a device is removed, the existing element will be deleted.

@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **Bus address**: The bus address of the device. Specify the bus address in the format **UU.PP**, with UU being the RollNet address and PP being the slot number (chassis is 00). Example: *10.01*.
 
 ### Initialization

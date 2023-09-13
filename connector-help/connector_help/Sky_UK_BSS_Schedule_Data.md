@@ -55,7 +55,7 @@ This page shows the parameters related to the DVEs exportation:
 
 **Buses Table** shows a table with every different buses detected in TX_MONITOR_VIEW, its **Polling Mode** (can on ON or Off), its **System Name** and its **Custom Name**. The Buses with Polling Mode ON are also present on Enabled Buses table and its data will be exported to a DVE, which name will match Custom Name column.
 
-**Enabled Buses** table shows all the buses that will be exported as DVEs, its System Name, its DVE ID, internal ID in Dataminer, its Custom Name, which will be the DVE Name and its Status. Status can be Off-Air - if the current event in Schedule has Type equal to "SUSP" - or Off-Air - if the current event in Schedule has Type different from "SUSP".
+**Enabled Buses** table shows all the buses that will be exported as DVEs, its System Name, its DVE ID, internal ID in DataMiner, its Custom Name, which will be the DVE Name and its Status. Status can be Off-Air - if the current event in Schedule has Type equal to "SUSP" - or Off-Air - if the current event in Schedule has Type different from "SUSP".
 
 **Automatic Removal** toggle button allows the user to configure if the DVEs will be automatically deleted when Polling Mode is set to OFF or they just will be flagged as 'Removed' in the DVE Status (Enabled Buses) column and can be removed afterwards.
 
@@ -77,7 +77,7 @@ For Database Name, there is a discrete value named Server=Dedicated, which will 
 
 There is also available parameters related to the polling mechanism and an action button:
 
-**DataBase State**, which shows the state of the communcation with the database (Disabled, Finished, Polling or General Error);
+**DataBase State**, which shows the state of the communication with the database (Disabled, Finished, Polling or General Error);
 
 **DataBase Message** will show a message when DataBase State is General Error.
 

@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **Type of port**: TCP/IP or UDP/IP. Default: *UDP/IP*.
+  - **Type of port**: TCP/IP or UDP/IP. Default: *UDP/IP*.
   - **IP address/host**: The IP address of the device.
   - **IP port**: Port of the device. Default: *9900*.
   - **Local IP port**: Client port used by DataMiner to connect to the device. Default: *9902*.

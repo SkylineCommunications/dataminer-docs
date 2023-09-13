@@ -16,7 +16,7 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 - **CCAP Overview**
 
-- Network
+  - Network
   - Market
   - Hub
   - CCAP Core
@@ -25,7 +25,7 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 - **CCAP DOCSIS Network**
 
-- Network
+  - Network
   - Market
   - Hub
   - CCAP Core
@@ -37,7 +37,7 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 - **CCAP DOCSIS Service**
 
-- Network
+  - Network
   - Market
   - Hub
   - CCAP Core
@@ -49,11 +49,11 @@ Topologies describe the connections in the diagram shown in the visual interface
 
 - **Quick**
 
-- Allows you to quickly access any platform topology level by selecting the desired filter (Network, Market, Hub, Manufacturer, CCAP Core, RPD, CM).
+  - Allows you to quickly access any platform topology level by selecting the desired filter (Network, Market, Hub, Manufacturer, CCAP Core, RPD, CM).
 
 - **Configuration**
 
-- Allows you to place Visual Overview layouts on a separate chain.
+  - Allows you to place Visual Overview layouts on a separate chain.
 
 ### Version Info
 
@@ -115,14 +115,14 @@ Back-end elements import info on the resources with their assigned IDs, and noti
 
 **Provisioning Workflow Overview:**
 
-1.  Collector elements export info on resources without IDs.
-2.  Collector elements interrogate the assigned front-end manager for ID assignment.
-3.  The front-end element imports info on resources without IDs.
-4.  The front-end element exports info on resources with assigned IDs.
-5.  The front-end element notifies the handling back-end element.
-6.  The handling back-end element imports info on resources with IDs.
-7.  The handling back-end element notifies the assigned collector elements that the ID request has been fulfilled.
-8.  The collector element imports info on resources with the assigned IDs.
+1. Collector elements export info on resources without IDs.
+1. Collector elements interrogate the assigned front-end manager for ID assignment.
+1. The front-end element imports info on resources without IDs.
+1. The front-end element exports info on resources with assigned IDs.
+1. The front-end element notifies the handling back-end element.
+1. The handling back-end element imports info on resources with IDs.
+1. The handling back-end element notifies the assigned collector elements that the ID request has been fulfilled.
+1. The collector element imports info on resources with the assigned IDs.
 
 ### Redundancy
 
@@ -130,17 +130,19 @@ There is no redundancy defined.
 
 ## How to use
 
-1.  Ensure that the configuration tables are properly filled in (See Configuration section above).
+1. Ensure that the configuration tables are properly filled in (See Configuration section above).
 
-2.  Specify the file paths for the import and export paths and ensure they all line up as follows:
+1. Specify the file paths for the import and export paths and ensure they all line up as follows:
 
-3.  - Collector import = Front-end export
-    - Collector export = Front-end import
-    - Front-end export = Back-end import
+   - Collector import = Front-end export
 
-4.  If an import or export directory is a remote location, fill in the Username and Password fields in the System Credentials section of the Configuration page.
+   - Collector export = Front-end import
 
-5.  Click the **Provision** button to import and export all files and add any new entities found to the managers table. This will notify back-end elements and collectors to perform an import.
+   - Front-end export = Back-end import
+
+1. If an import or export directory is a remote location, fill in the Username and Password fields in the System Credentials section of the Configuration page.
+
+1. Click the **Provision** button to import and export all files and add any new entities found to the managers table. This will notify back-end elements and collectors to perform an import.
 
 You can use the **Reset** button to remove existing data from tables and perform provisioning logic to remove any erroneous data that may have been lingering. A reset is also done daily to ensure that data is up to date. This will also inform back-end elements and collectors to import the new files.
 

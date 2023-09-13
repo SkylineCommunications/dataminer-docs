@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: (1200 - 19200)
+  - **Baudrate**: (1200 - 19200)
   - **Databits**: 7
   - **Stopbits**: 1
   - **Parity**: Even
@@ -46,7 +46,7 @@ Or
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Required.
 
 ## Usage

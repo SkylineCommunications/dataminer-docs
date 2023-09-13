@@ -58,15 +58,13 @@ The EPM solution works with a file system for internal element communication in 
 
 - **Entity Export/Import Settings**: These sections allow the exporting of the configuration files and importing of the provisioning files.
 
-- **Export State** and **Import State**: These parameters allow you to enable/disable the exporting and importing feature.
+  - **Export State** and **Import State**: These parameters allow you to enable/disable the exporting and importing feature.
   - **Export Directory,** **Entity Import Directory, and ONT Import Directory**: Specify the paths where the files will be exported and imported.
   - **Entity Export Directory Type,** **Entity Import Directory Type, and ONT Import Directory Type**: Specify whether the export/import paths are **local or remote**. Note that for the remote file handling to work, you must enter the credentials for the system in the **System Credentials** section and enter the path to the remote directories. The path must be shared/accessible, or this feature will not work.
 
-<!-- -->
-
 - **System Credentials**: This section is to be used if the element is configured to a remote file location.
 
-- **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
+  - **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
   - **System Password**: The password of the user to access the remote directory.
 
 ### Redundancy

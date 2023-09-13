@@ -120,7 +120,7 @@ The following page buttons allow access to additional Huawei info:
 
 DCF is supported from version 1.1.0.11 of the driver onwards and requires DataMiner version 8.5.3 or higher.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

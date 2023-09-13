@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
+  - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
   - **IP port**: The IP port of the device, e.g. *9193*.
 
 ## Usage (Range 1.0.0.x)

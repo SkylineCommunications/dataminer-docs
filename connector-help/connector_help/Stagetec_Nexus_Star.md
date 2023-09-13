@@ -31,11 +31,11 @@ This driver retrieves data via **Smart-Serial** **Communication** over **UDP**.
 | 2.0.0.x          | Version 5, Revision 2       |
 | 2.0.1.x          | Version 6, Revision 2       |
 
-## Installation and configuration
+## Configuration
 
-Creation
+### Connections
 
-#### Serial \[Name of the connection\] connection
+#### Serial Connection - Main
 
 This driver uses a serial connection and requires the following input during element creation:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Indicate if required or not. If so, specify default value and range.
   - **Bus address**: Not required.
 
@@ -55,13 +55,13 @@ The Stagetec Nexus Star driver has **5 pages**.
 
 The General page displays the **Project Information** (**Project Name**, **Version**, **Revision**, **Date** and **Time**), **Central Status** **(Sampling Frequency**, **Full Scale**, **Waveform Internal Generator**, **Gain Internal Generator** and **Frequency Internal Generator**), a pagebutton with the **Board Overview Table**, and buttons to **Refresh All Data**, **Clear Blocked Writes** and **Reset Alarm**.
 
-This page also displays information related with the driver itself, such as: **Driver Initialization**, **Get-Set Time-Out**, **Get-set Time-Out Count** and a **Driver Monitor** pagebutton, which contains: **Counter MaxRetries**, **FLAG Reading Allowed** and a button in order to **Process the Buffer**.
+This page also displays information related with the driver itself, such as: **Driver Initialization**, **Get-Set Time-Out**, **Get-set Time-Out Count** and a **Driver Monitor** page button, which contains: **Counter MaxRetries**, **FLAG Reading Allowed** and a button in order to **Process the Buffer**.
 
 ### Switchpoints
 
 The Switchpoints contains the **Switchpoints Overview Table**, displays the number of **Available DSP-Cards**, **Link Input Gain to Output** and two buttons in order to **Clean Tables** and **Refresh Distribution**.
 
-It also contains the following pagebuttons:
+It also contains the following page buttons:
 
 - **View All Points** - Contains the **SwitchPoints Overview Table** with all of the switchpoints.
 - **Filter** - **Switchpoint Filter Table**.
@@ -77,5 +77,3 @@ This page displays the **DSP Cards Table**, a parameter in order to On/off the *
 ### Monitoring Table
 
 This page contains the **Monitoring Input-Output Table**.
-
-

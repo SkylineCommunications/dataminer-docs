@@ -28,6 +28,6 @@ This page displays the following parameters polled from the device: **Station Na
 
 To remove the alarms from the parameters linked to traps, click the button **Clear Alarms**. This will update all trap parameters to the value ***N/A.***
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 This protocol does contain any DCF implementation.

@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600 (specified in the device manual).
+  - **Baudrate**: 9600 (specified in the device manual).
   - **Databits**: 8 (specified in the device manual).
   - **Stopbits**: 1 (specified in the device manual).
   - **Parity**: No (specified in the device manual).
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP address of the device.
+  - **IP address/host**: The IP address of the device.
   - **IP port**: The IP port of the device.
 
 ### Initialization

@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600
+  - **Baudrate**: 9600
   - **Databits**: 7
   - **Stopbits**: 1
   - **Parity**: odd
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: This is required. The default value is *8008*.
   - **Bus address**: This is required. The default value is *70.* Range: from *64* to *95*.
 

@@ -86,7 +86,7 @@ This page displays the web interface of the device. Note that the client machine
 
 The ETL Systems ALT-C300 supports the usage of DCF from version 1.0.0.2 onwards and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 
@@ -105,12 +105,12 @@ Physical fixed interfaces:
 
 - Device inputs:
 
-- In 1 (in)
+  - In 1 (in)
   - In 2 (in)
 
 - Device outputs:
 
-- Out 1(out)
+  - Out 1(out)
   - Out 2(out)
 
 ### Connections
@@ -120,8 +120,6 @@ Physical fixed interfaces:
 - Fixed: Amp 1 In Virtual (inout) - Amp 1 Out Virtual (inout)
 - Fixed: Amp 2 In Virtual (inout) - Amp 2 Out Virtual (inout)
 - Amp 3 In Virtual (inout) - Amp 3 Out Virtual (inout)
-
-<!-- -->
 
 - In 1 (in) - Amp 1, 2, 3 In Virtual (inout)
 - In 2 (in) - Amp 1, 2, 3 In Virtual (inout)

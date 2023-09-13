@@ -37,12 +37,12 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-  - **IP port**: The IP port of the destination.
+- **IP port**: The IP port of the destination.
 
 SNMP Settings:
 
 - **Get community string**: The community string used when reading values from the device (default: *public*).
-  - **Set community string**: The community string used when setting values on the device (default: *private*).
+- **Set community string**: The community string used when setting values on the device (default: *private*).
 
 #### Smart Serial Connection
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *9600*).
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *9600*).
   - **Databits**: Databits specified in the manual of the device, e.g. *7* (default: *8*).
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1* (default: *1*).
   - **Parity**: Parity specified in the manual of the device, e.g. *No* (default: *no*).
@@ -60,7 +60,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
   - **Bus address**: The **matrix number**, **level number**, **number of inputs** and **number of outputs** of the matrix separated by periods (".") The matrix number range is 0-15, the level number range is 0-7, and the range of inputs and outputs is 1-1024.
     For example: *"0.0.1024.1024".*

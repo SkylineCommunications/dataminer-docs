@@ -24,8 +24,6 @@ The driver communicates through a serial connection with the device to change it
 |------------------|-----------------------------|
 | 1.0.0.x          | A1.05.B00                   |
 
-
-
 ## Installation and configuration
 
 ### Creation
@@ -38,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device.\]
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: 1025
   - **Bus address**: 01
 
@@ -46,24 +44,22 @@ SERIAL CONNECTION:
 
 ### General
 
-Here you can find the **device** **name** and the **firmware** **version**.
+Here you can find the **device name** and the **firmware version**.
 
 ### DI Status
 
-On this page you can find the statusses of the *6* **outputs**.
+On this page you can find the status of the 6 outputs.
 
 ### DI Configuration
 
-Here you can configure the **outputs**, you can choose what **function** they are used for and a few more options.
+Here you can configure the **outputs**. You can choose which **function** they are used for and a few more options.
 
-you can change **multiple** ****outputs**** at once and press **save** **changes**, only after you click on save changes will the changes be done on the device.
+You can change **multiple outputs** at once and click **save changes**. Only after you click save changes, will the changes be implemented on the device.
 
 ### Stream
 
-On this page you can change the **IP** **addresses** of the **stream**, on the right side you can **enable/disable** each stream.
+On this page you can change the **IP addresses** of the **stream**, on the right side you can **enable/disable** each stream.
 
 ### Flags
 
-you can configure the **GCL** **flags** on this page, at the bottom are *2* **buttons** that change all of them.
-
-
+you can configure the **GCL flags** on this page. At the bottom, there are 2 buttons that change all of them.

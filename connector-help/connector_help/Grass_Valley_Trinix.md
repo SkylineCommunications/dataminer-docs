@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the Encore controller
+  - **IP address/host**: The polling IP of the Encore controller
   - **IP port**: Must be set to port *12345*.
   - **Number of retries:** Should be set to *0*, because the buffer system already includes 3 retries on every command.
   - **Timeout of a single command (ms)**: By default *60 000*, because the buffer system already contains a timeout mechanism if the device takes too long to respond.

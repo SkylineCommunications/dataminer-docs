@@ -28,7 +28,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device.\]
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: Default value is set to 2000.
   - **Bus address**: not required.
 

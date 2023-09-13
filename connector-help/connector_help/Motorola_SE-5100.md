@@ -32,12 +32,12 @@ Ranges of the driver
 
 SNMP CONNECTION:
 
-- **IP address/host**: \[The polling IP of the device.\]
+- **IP address/host**: The polling IP of the device.
 - **Device address**: \[Indicate if required or not. If it is, specify default value and range.\]
 
 SNMP Settings:
 
-- **Port number**: \[The port of the connected device, by default *161*.\]
+- **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: \[The community string used when reading values from the device
   (default value if not overridden in the driver: *public*).
   Note: If you have specified a default value in the driver, then specify that custom value.\]

@@ -6,9 +6,9 @@ uid: Connector_help_Advent_Communications_ARC4010
 
 The **ARC4010** is a redundancy controller capable of monitoring the status of 10 units and controlling 10 wave guide.
 
-## About
+The driver uses a **serial connection** to communicate with the device.
 
-The driver is using a **serial connection** to communicate with the device.
+## About
 
 ### Ranges of the driver
 
@@ -26,7 +26,7 @@ The driver is using a **serial connection** to communicate with the device.
 
 ### Creation
 
-#### Serial \[Main\] connection
+#### Serial Connection - Main
 
 This driver uses a serial connection and requires the following input during element creation:
 
@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600
+  - **Baudrate**: 9600
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: No
@@ -42,8 +42,8 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device.\]
-  - **IP port**: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
+  - **IP address/host**: The polling IP of the device.
+  - **IP port**: The IP port of the device.
   - **Bus address**: 0
 
 ## Usage
@@ -73,4 +73,4 @@ At this page you can set some parameters from the device.
 - Protection
 - Lock Mode
 
-There is a button where you can change the chain prioritys.
+There is a button where you can change the chain priorities.

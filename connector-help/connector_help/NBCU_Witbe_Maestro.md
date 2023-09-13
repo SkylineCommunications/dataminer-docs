@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The DataMiner IP.
+  - **IP address/host**: The DataMiner IP.
   - **IP port**: The IP port of the destination (default: *8000*).
 
 #### HTTP Connection

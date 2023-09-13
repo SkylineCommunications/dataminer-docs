@@ -104,7 +104,7 @@ This page can be used to access the web interface of the device. Note that the c
 
 The version **2.1.1.x** of the Wellav UMH160R-IP supports the usage of DCF and can only be used on a DMA with **8.5.7** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

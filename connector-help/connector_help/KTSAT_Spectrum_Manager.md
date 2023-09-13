@@ -49,16 +49,16 @@ At most one station can be active at any time. The **Auto Control** and **Round 
 
 - **Auto Control** is set to *Enabled:*
 
-- At least one station is currently triggered by a Correlation rule. The station with the lowest priority will be set to *Active*.
+  - At least one station is currently triggered by a Correlation rule. The station with the lowest priority will be set to *Active*.
 
   - No station is currently triggered:
 
-  - - **Round Robin** is set to *Enabled*: The manager will set each station to *Active* one after the other*.*
+    - **Round Robin** is set to *Enabled*: The manager will set each station to *Active* one after the other*.*
     - **Round Robin** is set to *Disabled*: All the stations will be set to *Not Active*.
 
 - **Auto Control** is set to *Disabled:*
 
-- **Round Robin** is *Enabled*: The manager will set each station to *Active* one after the other*.*
+  - **Round Robin** is *Enabled*: The manager will set each station to *Active* one after the other*.*
   - **Round Robin** is *Disabled*: All the stations will be set to *Not Active*.
 
 When **Auto Control** is disabled, you can manually select which station is active by clicking the **Select** button on the station row.

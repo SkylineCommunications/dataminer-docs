@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Default: *9600*
+  - **Baudrate**: Default: *9600*
   - **Databits**: Default: *7*
   - **Stopbits**: Default: *1*
   - **Parity**: Default: *No*
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: Range: *48-111*.
 
@@ -64,11 +64,11 @@ On this page, you can set the **High/Low Alarm/Fault Trip-Points** and control t
 
 This page displays the **Fault**, **Information** and **Error** status.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.0.x** and **1.1.1.x** driver ranges of the CPI VZU-6997AB protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

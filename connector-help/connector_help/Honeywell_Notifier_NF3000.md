@@ -34,11 +34,11 @@ SMART-SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600.*
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600.*
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
 ## Usage

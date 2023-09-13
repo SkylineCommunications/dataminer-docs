@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *10.80.121.55.*
+  - **IP address/host**: The polling IP of the device, e.g. *10.80.121.55.*
   - **IP port**: The IP port of the device, e.g. *4050.* Required.
   - **Bus address**: The bus address of the device, e.g. *50*. Not required.
 
@@ -73,7 +73,7 @@ This page can be used to debug the HTTP communication. It displays the requests 
 
 The **1.0.1.x** driver range of the **Sky UK STB DRX-595** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for all exported protocols is managed by this protocol.
 

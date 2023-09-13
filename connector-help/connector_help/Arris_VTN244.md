@@ -20,14 +20,13 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 **SNMP CONNECTION:**
 
-- **IP address/host:** \[The polling IP of the device\]
-- **Device address:** \[Indicate if required or not. If so, specify default value and range.\]
+- **IP address/host:** The polling IP of the device
 
 **SNMP Settings:**
 
-- **Port number:** \[The port of the connected device (default: 161)\]
-- **Get community string:** \[The community string used when reading values from the device (default value if not overridden in the driver: public).
-- **Set community string:** \[The community string used when setting values on the device (default value if not overridden in the driver: private).
+- **Port number:** The port of the connected device (default: 161)
+- **Get community string:** The community string used when reading values from the device (default value: *public*).
+- **Set community string:** The community string used when setting values on the device (default value: *private*).
 
 ## Usage
 
@@ -35,14 +34,14 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 The Electroline DOCSIS-HMS Transponder provides status monitoring information for HMS-compliant devices and for some DOCSIS cable modem channel parameters.
 
-Under this page is available information about **Product Info**, **System Description,** **Transponder Status** and **RF Communication Status**.
+Under this page is available information about **Product Info**, **System Description**, **Transponder Status**, and **RF Communication Status**.
 
 There are also available several other settings:
 
-- **USB** **-** USB related information
-- **Inventory** **-** Device identification
-- **Attached** **Devices** - Transponder interface bus related
-- **Status and Reset** - Status parameters and Reset buttons
+- **USB**: USB related information
+- **Inventory**: Device identification
+- **Attached Devices**: Transponder interface bus related
+- **Status and Reset**: Status parameters and Reset buttons
 
 ### General - Configuration
 
@@ -54,7 +53,7 @@ Information related to DOCSIS-compliant cable modems and cable-modem termination
 
 ### RF Connection
 
-This page shows the data that corresponds to the cable modem section of the Electroline Transponder. It includes the **Upstream**, **Downstream** and **Signal** **Quality** information data.
+This page shows the data that corresponds to the cable modem section of the Electroline Transponder. It includes the **Upstream**, **Downstream** and **Signal Quality** information data.
 
 ### HMS
 

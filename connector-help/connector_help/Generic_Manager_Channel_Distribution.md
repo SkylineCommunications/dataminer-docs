@@ -9,6 +9,7 @@ This driver comes with a WFM app that should be used as the main user interface.
 ## About
 
 The driver implements the logic used by the Channel Substitution WFM. It allows the user to perform sets on other elements, and provides a central location to do so.
+
 There are currently two main parts in this driver:
 
 - One to manage Matrix drivers from multiple vendors. This part is not used, and as such also not documented.
@@ -24,11 +25,12 @@ Note: At this time, only redundancy groups with 2 DCMs are supported: one active
 
 ## Installation & Configuration
 
-Simply create a new element with a unique name. Technically, only one element on the entire DMS is sufficient.
+Create a new element with a unique name. Technically, only one element in the entire DMS is sufficient.
 
 Optionally, on the element's **General** page, set the email addresses and the pagers (separated by a semicolon).
 
 When using the driver with DCM redundancy groups, also add the desired redundancy groups on the **DCM** page by setting the name in the parameter **Add Redundancy Group**.
+
 Note that the available drop-down lists will only be populated after you click the **Refresh** button in the bottom right corner. Also make sure to set the **Group Filter** in the **DCM Redundancy Groups** table. Group filters can be used to define which ports and boards on the DCM can be used to retrieve and show services.
 
 Note: You can optionally override the group filter by specifying a filter in the **DCM Elements** table.
@@ -36,6 +38,7 @@ Note: You can optionally override the group filter by specifying a filter in the
 ### Installing the WFM
 
 The WFM comes as a separate DLL (SLChannelSubstitutionWfm.dll) and should be provided together with the driver. It must be installed in the same folder as where the protocol is stored (which typically will be the Production version folder), e.g. *C:\Skyline DataMiner\Protocols\Generic Manager Channel Distribution\1.0.0.7\\*
+
 There should be an upgrade package available that will automatically install the DLL on all DMAs. If this is not the case, it may be necessary to do this manually.
 
 ### Using the WFM
@@ -44,7 +47,7 @@ The WFM can be started from a Visio file by creating a shape with label "Execute
 
 "*Dll\|SLWFMControls\SLChannelSubstitutionWfm/SLChannelSubstitutionWfm.Starter/LaunchWFM/protocol/\[DMA\]/\[EID\]*"
 
-In the above value, \[DMA\] should be replaced with the Dataminer ID from the DMA where the element running this protocol is installed. \[EID\] should be replaced by the element ID from that same element.
+In the above value, \[DMA\] should be replaced with the DataMiner ID from the DMA where the element running this protocol is installed. \[EID\] should be replaced by the element ID from that same element.
 
 The WFM can also be available from the **View** menu as configured in the MenuItems.xml file.
 
@@ -58,12 +61,9 @@ This page contains the original logic that is used to manage matrix drivers.
 
 The most important parameters are:
 
-- **Full Email To**
-  Can be used to send detailed information about sets performed on another element by this element.
-- **Short Email To**
-  Can be used to send a summary of the full email.
-- **Pager**
-  Can be used to send a message to a pager, to inform about a set done by the element.
+- **Full Email To**: Can be used to send detailed information about sets performed on another element by this element.
+- **Short Email To**: Can be used to send a summary of the full email.
+- **Pager**: Can be used to send a message to a pager, to inform about a set done by the element.
 
 ### DCM
 
@@ -95,9 +95,11 @@ This button will remove items that are no longer in a redundancy group, add new 
 This page contains the interface used by the WFM. It can also be used to test if everything works fine.
 
 - To get a list of virtual DCM elements, set something (no matter what) in the field **Refresh DCM List**.
+
   This will update the data in the **Export Interface: Virtual DCM List**.
 
 - To get the output services from one virtual element, copy the name to the parameter **Get Output Services For**.
+
   This will update the parameter **Export Interface: Output Service List**.
 
 - To get the backup services for one output service, copy the key of the output service found in the table **Output Service List** to the parameter **Get Backup Services For**.
@@ -106,38 +108,66 @@ This page contains the interface used by the WFM. It can also be used to test if
 
 - To activate an alternate source, set the parameter **Activate Alternating Source** with a command containing these parameters, separated by a new line or semicolon:
 
-- KEY:\[KEY\]
+  - KEY:\[KEY\]
+
     Key of the backup service as found in the **Backup Service List.**
+
     Contains dataminer ID, element ID, and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
+
   - SERVICENAME:\[NAME\]
+
     Used in the emails.
+
   - USERNAME:\[NAME\]
+
     Used in the emails.
+
   - DEVICENAME:\[NAME\]
+
     Used in the emails.
+
   - MAINSERVICENAME:\[NAME\]
+
     Used in the emails.
 
 - To activate a backup service, set the **Activate Backup Service** parameter with a command containing some of these parameters, separated by a new line or a semicolon:
 
-- KEY:\[KEY\]
+  - KEY:\[KEY\]
+
     Key of the backup service as found in the **Backup Service List**.
+
     Contains dataminer ID, element ID and full key of an existing backup service. Example: *12\551:1.0.5.3#1.0.1*
+
   - DERIVED-KEY:\[KEY\]
+
     Key of the backup service formatted in the same way as in the **Backup Service List**, but using the element ID of the derived/virtual element representing the active element in the redundancy group.
+
     Note: Cannot be combined with the KEY argument.
+
     Note: It is possible that the active element changes, and the KEY will point to a wrong value.
+
   - MASKFOR:\[TIME\]
+
     \[OPTIONAL\] Valid TimeSpan, example: *00:01:30*
+
   - SERVICENAME:\[NAME\]
+
     Used in the emails.
+
   - ACTION:deactivate
+
     \[OPTIONAL\] Add only if the main service should be activated instead.
+
   - USERNAME:\[NAME\]
+
     Used in the emails.
+
   - MERGEDSERVICENAME:\[NAME\]
+
     Used in the emails.
+
   - MAINSERVICENAME:\[NAME\]
+
     Used in the emails.
 
 Note: Each set should also result in an update of the **WFM Status** parameter. If something went wrong, the error will be visible there.
@@ -175,40 +205,40 @@ Note: Boards are one-based, because '0' represents the main board (or DCM chassi
 
 - The dot character '.'
 
-> A dot is used to separate the board and port parts of a key combination. Using multiple dots in one part is not allowed.
->
-> Example: "1.5" means: allow services on board 1 port 5 (which is actually port 6 since it is zero based.)
+  A dot is used to separate the board and port parts of a key combination. Using multiple dots in one part is not allowed.
+
+  Example: "1.5" means: allow services on board 1 port 5 (which is actually port 6 since it is zero based.)
 
 - The comma character ','
 
-> A comma can be used to select multiple items within the board or port part.
->
-> Example: "1.1,2" selects port 1 and 2 on board 1.
+  A comma can be used to select multiple items within the board or port part.
 
-- #### The semicolon character ';'
+  Example: "1.1,2" selects port 1 and 2 on board 1.
 
-> The semicolon can be used to define multiple key combinations separated in an OR manner. This means that if you want to include port 1 and 2 on board one, you could use this filter: "1.1;1.2"
+- The semicolon character ';'
 
-- #### The colon character ':'
+  The semicolon can be used to define multiple key combinations separated in an OR manner. This means that if you want to include port 1 and 2 on board one, you could use this filter: "1.1;1.2"
 
-> The colon character can be used to specify a group of numbers.
->
-> Example: "1.1:2" selects port 1 and 2 on board 1 (and is thus completely equivalent to "1.1;1.2" )
+- The colon character ':'
 
-- #### The asterisk character '\*'
+  The colon character can be used to specify a group of numbers.
 
-> An asterisk can be used to select all numbers, or all numbers from/to X on.
+  Example: "1.1:2" selects port 1 and 2 on board 1 (and is thus completely equivalent to "1.1;1.2" )
 
-- Example: "1.\*" selects all ports on board 1.
+- The asterisk character '\*'
+
+  An asterisk can be used to select all numbers, or all numbers from/to X on.
+
+  - Example: "1.\*" selects all ports on board 1.
   - Example: "1.5:\*" selects all ports with ID 5 or more.
   - Example: "1.\*:5" selects port 0, 1, 2, 3, 4 and 5 on board 1.
   - Example: "\*.\*" select all ports on all boards.
 
-- #### The bracket characters '\[' and '\]'
+- The bracket characters '\[' and '\]'
 
-> Brackets can be used to group several items. They can also help to make filters more readable. Though they have no further functionality, they are also not filtered away during normalization.
+  Brackets can be used to group several items. They can also help to make filters more readable. Though they have no further functionality, they are also not filtered away during normalization.
 
-- Example: "1.\[2:5\]" selects port 2, 3, 4 and 5 on board 1
+  - Example: "1.\[2:5\]" selects port 2, 3, 4 and 5 on board 1
   - Example: "\[1\].\[2\]" selects port 2 on board 1
   - Example: "\[\*\].\[1,2,3,4\],\[10:\*\]" selects port 1, 2, 3, 4, 10 and all ports with ID above 10 on all boards.
 
@@ -218,13 +248,13 @@ When a filter is edited, the system will normalize the filter so that all illega
 
 - Accepted characters are limited to: 1, 2, 3, 4, 5, 6, 7, 8, 9, ',', ':', ';', '\[', '\]', '.'. All other characters are considered to be illegal.
 
-> Example: "Include board 1. Include port 2" would become "1.2" which is a valid filter and will indeed include port 2 on board 1.
+  Example: "Include board 1. Include port 2" would become "1.2" which is a valid filter and will indeed include port 2 on board 1.
 
 - Special cases such as a dot "." or an empty string "" become respectively "All ports blocked." and "Inherited" if used in the "DCM Elements" table. When used in the redundancy group table, a dot "." becomes "Not Defined."
 
 - Notice that normalized filters result in a real filter when illegal characters are removed. For example:
 
-- removing illegal characters from "All ports blocked." becomes "." after normalization.
+  - removing illegal characters from "All ports blocked." becomes "." after normalization.
   - "Inherited" becomes an empty string "" and therefore inherits the group filter if used on element level.
 
 #### Ambiguous Filters

@@ -12,7 +12,8 @@ Based on the position and orientation of an earth station and the current UTC da
 
 Earth stations can be fixed or steerable, and in the latter case the orientation is updated based on another element via element subscriptions.
 
-Note: The Generic Sun Outage connector is based on requirements and calculations provided by other clients and is designed to provide approximate, best-effort notifications and estimates of when a sun outage may occur.
+> [!NOTE]
+> The Generic Sun Outage connector is based on requirements and calculations provided by other clients and is designed to provide approximate, best-effort notifications and estimates of when a sun outage may occur.
 
 ### Ranges of the driver
 
@@ -91,14 +92,16 @@ In this section, you can enable or disable three different pages: **Earth Statio
 
 - **Earth Stations Config:** This subpage consists of two main sections:
 
-- **Earth Stations Config**: Contains the parameters that allow you to configure **automatic polling** of **earth stations** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the Earth Station table will be updated via the CSV file. This section also displays the status of the earth station retrieval process. With the **Apply** button, you can manually poll the earth stations from the CSV at any time.
+  - **Earth Stations Config**: Contains the parameters that allow you to configure **automatic polling** of **earth stations** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the Earth Station table will be updated via the CSV file. This section also displays the status of the earth station retrieval process. With the **Apply** button, you can manually poll the earth stations from the CSV at any time.
 
-- **Earth Stations Options**: This section includes a number of configuration parameters that make the protocol more robust:
+  - **Earth Stations Options**: This section includes a number of configuration parameters that make the protocol more robust:
 
-  - - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
+    - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
 
-- - *Manual*: This mode does not override the data in the table with that from the CSV file and does not update the CSV file with manually added entries from the table. This means that all data is kept in the table, but there is no sync operation.
+      - *Manual*: This mode does not override the data in the table with that from the CSV file and does not update the CSV file with manually added entries from the table. This means that all data is kept in the table, but there is no sync operation.
+
       - *Auto Delete*: This mode overrides the Earth Stations Overview table with the data from the CSV file every time the import logic is applied. **This is the default mode**.
+
       - *Auto Sync*: This mode keeps the data in the Earth Stations Overview table and the CSV file in perfect sync. This means that the file and table data will mirror each other at all times.
 
     - **Auto Delete Delay**: This parameter is associated with the "Auto Delete" reflection mode. This allows you to delay the time when a record in the table is removed after it is no longer present in the CSV file. ***Real-time* is the default value**.
@@ -107,18 +110,18 @@ In this section, you can enable or disable three different pages: **Earth Statio
 
     - **Sync All Data**: Performs a one-time sweep through the Earth Stations Overview table and the CSV file and syncs all the data so that the file and the table mirror each other.
 
-<!-- -->
-
 - **Satellites Config**: This subpage consists of two main sections:
 
 - **Satellites Config**: Contains the parameters that allow you to configure **automatic polling** of **satellites** via a **CSV file**. In this section, you can enable or disable the **Update Status**, which enables or disables automatic polling, you can specify the path where the CSV file can be found, and you can also set the timer for how frequently the satellites table will be updated via the CSV file. This section also displays the status of the satellite retrieval process. With the **Apply** button, you can manually poll the satellites from the CSV at any time.
 
   - **Satellites Options**: This section includes a number of configuration parameters that make the protocol more robust:
 
-  - - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
+    - **Reflection Mode**: This parameter determines how the table will be updated. There are three modes:
 
-    - - *Manual*: This mode does not override the data in the table with that from the CSV file and does not update the CSV file with manually added entries from the table. This means that all data is kept in the table, but there is no sync operation. **This is the default mode**.
+      - *Manual*: This mode does not override the data in the table with that from the CSV file and does not update the CSV file with manually added entries from the table. This means that all data is kept in the table, but there is no sync operation. **This is the default mode**.
+
       - *Auto Delete*: This mode overrides the Satellites Overview table with the data from the CSV file every time the import logic is applied.
+
       - *Auto Sync*: This mode keeps the data in the Satellites Overview table and the CSV file in perfect sync. This means that the file and table data will mirror each other at all times.
 
   - **Auto Delete Delay**: This parameter is associated with the "Auto Delete" reflection mode. This allows you to delay the time when a record in the table is removed after it is no longer present in the CSV file. ***Real-time* is the default value.**
@@ -127,15 +130,12 @@ In this section, you can enable or disable three different pages: **Earth Statio
 
   - **Sync All Data**: Performs a one-time sweep through the Satellites Overview table and the CSV file and syncs all the data so that the file and the table mirror each other.
 
-<!-- -->
-
 - **Tree Overview Info**: This page contains the information that is used on the **Outage Overview page**, in the **Earth Stations table** and in the **Outages Table**. Only **earth stations** that are **enabled** will be displayed in this table, and only the **outages** for those earth stations will be displayed in the **Outages Table** on this page. For more information on the Outage Overview, refer to the Tree Control Config section below.
-
-<!-- -->
 
 - **Outage Config**: This subpage allows you to configure the following settings:
 
-- **Visibility Threshold**: The earth station elevation value below which it is considered not to have visibility on a given satellite. (By default 0§.)
+  - **Visibility Threshold**: The earth station elevation value below which it is considered not to have visibility on a given satellite. (By default 0§.)
+
   - **Number of Cycles**: The number of equinoxes for which the future outages should be calculated. (By default 2.)
 
 #### Tree Control Config

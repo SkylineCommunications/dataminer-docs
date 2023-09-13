@@ -62,25 +62,23 @@ It also displays **fan error and temperature** information, and provides access 
 
 - **VSQ/QAM**: Displays the VSB Table, which contains important information about the input card:
 
-- - Card Location
-      - Card ID
-      - Modulation Error Rate (MER)
-      - Signal Lock Status
-      - Signal Level Status
-      - Channel
-      - Low Signal Level Error Threshold
-      - Low MER Error Threshold
-
-<!-- -->
+  - Card Location
+  - Card ID
+  - Modulation Error Rate (MER)
+  - Signal Lock Status
+  - Signal Level Status
+  - Channel
+  - Low Signal Level Error Threshold
+  - Low MER Error Threshold
 
 - **Decoders:** Displays the Decoders Table, which includes the following information:
 
-- - Tuning Mode
-    - PCR PID
-    - Video PID
-    - Priority 1 Program Number
-    - Priority 2 Program Number
-    - Auto Program Number
+  - Tuning Mode
+  - PCR PID
+  - Video PID
+  - Priority 1 Program Number
+  - Priority 2 Program Number
+  - Auto Program Number
 
 ### RDS1 - Input Status
 

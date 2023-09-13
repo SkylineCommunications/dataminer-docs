@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600
+  - **Baudrate**: 9600
   - **Databits**: 7
   - **Stopbits**: 1
   - **Parity**: Odd parity
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: Required.
   - **Bus address**: Required. From 64 to 95. Default value is 64. The bus address can be filled in as a decimal number in the element configuration in DataMiner.
 

@@ -34,17 +34,15 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device: *19200.*
+  - **Baudrate**: Baudrate specified in the manual of the device: *19200.*
   - **Databits**: Databits specified in the manual of the device: *8*.
   - **Stopbits**: Stopbits specified in the manual of the device: *1*.
   - **Parity**: Parity specified in the manual of the device: *No*.
   - **FlowControl**: FlowControl specified in the manual of the device: *No*.
 
-<!-- -->
-
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device: *10.80.120.50*.
+  - **IP address/host**: The polling IP of the device: *10.80.120.50*.
   - **IP port**: The IP port of the device. Default value: *4006*.
   - **Bus address**: The bus address of the device. Range: *64 - 95*.
 

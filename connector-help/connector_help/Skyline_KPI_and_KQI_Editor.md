@@ -40,7 +40,7 @@ It also includes the following page buttons:
 
 - **Settings:**
 
-- **Import/Export**: Can be used to import/export a file to/from the KPI & KQI table. First define the folder where the export file should be located. There can only be one file in this folder with a name starting with "*Export..."*.
+  - **Import/Export**: Can be used to import/export a file to/from the KPI & KQI table. First define the folder where the export file should be located. There can only be one file in this folder with a name starting with "*Export..."*.
 
   - **Topology Report**: Define the folder from where the topology files are read and where they are stored. You can also configure over how many files the results should be divided, by specifying the number of rows for each file. The **Remote Files Destination Folder** will be a remote folder that mirrors the **Merged Files Destination Folder**.
 
@@ -48,7 +48,7 @@ It also includes the following page buttons:
 
   - **Debug/Set:**
 
-  - - **Generate Log File**: Enables the creation of .txt files with information about the processing results.
+    - **Generate Log File**: Enables the creation of .txt files with information about the processing results.
     - **Log Store Time**: If log files were generated, the ones older than the Log Store Time will be zipped and deleted or simply deleted, depending on the **Action Log Files** setting.
     - **Action Log Files**: Allows you to choose between zipping or just deleting the log files older than the Log Store Time. This is done automatically after the **Next Get Value** occurs. Click the **Execute Now** button to have the verification done immediately at the moment the button is clicked, and then automatically afterwards.
     - **Set Prev Period**: Allows you to set the previous **Next Get Value** in order to trigger previous period calculation.
@@ -67,12 +67,14 @@ After the necessary information has been provided, it will be validated. Validat
 - The **Recurrence Range Period** is set to *Yes,* but the **Recurrence Start** **and** **End Dates** are not filled in or the selected dates do not allow the calculation of the **Next Get Value** (time when the query to the database is done).
 - The **Trending Type** is *Real Time*, but for that parameter only average trending is activated, or vice versa. Check the logging for more information.
 
-Note:
-
-- If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*, only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added.
-  If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually*, and only one row is added in the **KPI & KQI Results** table.
-- By default, if **Trending Type** is *Real Time,* the **Average Trend Interval Type** will be set to *Auto*. If *Average* is selected, two options are available: *5min* or *1h*.
-- **Range Low** and **Range High** should be defined in order to set the range of valid values that are included in the calculation. This is intended to avoid exception values that are outside the normal range of the parameter.
+> [!NOTE]
+>
+> - If you selected *All* for the **Table Indexes**, and **Process Indexes** is set to *All as One*, only one row is added to the **KPI & KQI Results** table. If *Individually* was selected, one row per index is added.
+>
+>   If you selected one of the indexes for **Table Indexes**, **Process Indexes** is automatically set to *Individually*, and only one row is added in the **KPI & KQI Results** table.
+>
+> - By default, if **Trending Type** is *Real Time,* the **Average Trend Interval Type** will be set to *Auto*. If *Average* is selected, two options are available: *5min* or *1h*.
+> - **Range Low** and **Range High** should be defined in order to set the range of valid values that are included in the calculation. This is intended to avoid exception values that are outside the normal range of the parameter.
 
 If the validation does not fail, rows will be added to the tables. In case the **Recurrence Range Period** is set to *No,* the **Recurrence Start Date** and the **Recurrence End Date** will be set with default values, which are the first and last day of the month.
 

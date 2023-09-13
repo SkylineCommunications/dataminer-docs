@@ -73,4 +73,4 @@ This page displays the webpage of the device. Note that the client machine has t
 
 This driver uses the DataMiner Connectivity Framework, or DCF, to allow this element to connect its inputs and outputs to other elements. This is only available on DMA version 8.5.8.5 or higher.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance ask a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance ask a manager).

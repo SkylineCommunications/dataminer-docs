@@ -112,7 +112,7 @@ This page allows you to access the original web interface of the device. However
 
 The **1.0.0.x** driver range of the **Snell Wilcox KudosPro** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

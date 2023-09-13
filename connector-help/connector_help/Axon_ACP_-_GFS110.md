@@ -57,7 +57,7 @@ This element has the following data pages:
 
 The Axon ACP protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for this protocol is managed by the parent protocol Axon ACP.
 

@@ -70,35 +70,35 @@ The following parameters can be set via **multiple set** in order to configure t
 
 - **CM Offload Directory**: The root directory where the CM offload files will be stored.
 
-- The directory can be a shared folder, where the credentials can be set using the **PNM Share Username** and **PNM Share Password** parameters.
+  - The directory can be a shared folder, where the credentials can be set using the **PNM Share Username** and **PNM Share Password** parameters.
   - A folder will be created per OLT with its name - the **OLT Name** is retrieved via **full provisioning** (see important note below).
   - Default value: *\\80.62.121.234\c\$\Skyline_Data\CM Offload\\*
 
 - **Cleanup State**: Enables or disables the file cleanup mechanism.
 
-- If enabled, all files in the **CM Offload Directory** that are older than the age defined in the **File Age Threshold** parameter will be deleted.
+  - If enabled, all files in the **CM Offload Directory** that are older than the age defined in the **File Age Threshold** parameter will be deleted.
   - This parameter is automatically enabled when the **CM Offload State** is also enabled.
   - Default value: *Disabled.*
 
 - **File Age Threshold**: Determines for how long files are stored in the **CM Offload Directory** before they are deleted to free up space.
 
-- Range between *8 hours* and *1 year*, with 8-hour increments.
+  - Range between *8 hours* and *1 year*, with 8-hour increments.
   - Default value: *2 weeks*
 
 - **CM Config String**: All the column parameters that should be offloaded for the **CM** table, except the data related to **CM QAM DS Channels**.
 
-- Multiple columns are allowed, using a comma (",") as separator.
+  - Multiple columns are allowed, using a comma (",") as separator.
   - The primary key will always be offloaded as the first column.
 
 - **CM QAM DS Channels Config String**: All the column parameters related to **CM QAM DS Channels** that should be offloaded for the **CM** table.
 
-- Multiple columns are allowed, using a comma (",") as separator.
+  - Multiple columns are allowed, using a comma (",") as separator.
 
   - The primary key will always be offloaded as the first column.
 
   - The columns related to **CM QAM DS Channels** data are:
 
-  - - CM QAM DS Avg Rx Power
+    - CM QAM DS Avg Rx Power
     - CM QAM DS Avg Rx MER
     - CM QAM DS Sum Codewords
     - CM QAM DS Sum Corrected Codewords
@@ -106,17 +106,17 @@ The following parameters can be set via **multiple set** in order to configure t
 
 - **CM QAM US Channels Config String**: All the column parameters that should be offloaded for the **CM QAM US Channels** table.
 
-- Multiple columns are allowed, using a comma (",") as separator.
+  - Multiple columns are allowed, using a comma (",") as separator.
   - The primary key will always be offloaded as the first column.
 
 - **CM OFDM DS Channels Config String**: All the column parameters that should be offloaded for the **CM OFDM DS Channels** table.
 
-- Multiple columns are allowed, using a comma (",") as separator.
+  - Multiple columns are allowed, using a comma (",") as separator.
   - The primary key will always be offloaded as the first column.
 
 - **CM OFDMA US Channels Config String**: All the column parameters that should be offloaded for the **CM OFDMA US Channels** table.
 
-- Multiple columns are allowed, using a comma (",") as separator.
+  - Multiple columns are allowed, using a comma (",") as separator.
   - The primary key will always be offloaded as the first column.
 
 Important note: The collector element needs to retrieve its **OLT Name** from the IAM database, so the offload files are stored in the correct folder structure. The retrieval is done via **full provisioning**.

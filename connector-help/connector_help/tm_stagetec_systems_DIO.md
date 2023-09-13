@@ -38,7 +38,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **type:** UDP/IP
+  - **type:** UDP/IP
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 

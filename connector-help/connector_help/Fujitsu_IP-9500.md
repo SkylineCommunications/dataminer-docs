@@ -124,7 +124,7 @@ This page provides access to the device web portal. However, note that the clien
 
 The version **1.0.0.2** of the Fujitsu IP-9500 supports the usage of DCF and can be only on a DMA with **8.5.7** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

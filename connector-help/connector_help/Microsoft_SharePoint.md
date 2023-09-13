@@ -26,8 +26,8 @@ SOAP is used for the communication.
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination.\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination.
 - **Bus address**: Default ByPassProxy
 
 ## Usage

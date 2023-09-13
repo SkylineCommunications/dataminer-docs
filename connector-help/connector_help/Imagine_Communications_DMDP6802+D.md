@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **Bus Address**: X.Y, where X = Frame Number and Y = slot number.
 
 #### Serial IP Connection - PortDev Connection
@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: "any", meaning the device will reply in broadcast mode.
 
 ### Web Interface
@@ -95,13 +95,13 @@ The Alarms page contains the alarm configuration.
 
 ### Supported features (present on many pages)
 
-#### Video:
+#### Video
 
 - Auto-detection of input video standard with 3G/HD/SD-SDI auto-sensing
 - Signal presence monitoring on each video input
 - SQM and thumbnail support
 
-#### Metadata:
+#### Metadata
 
 - AFD, WSS, and VI detection and insertion
 - Inter-station control package detection and insertion
@@ -111,14 +111,14 @@ The Alarms page contains the alarm configuration.
 - Support WST and OP47 extract, insert and bridge
 - Support SCTE104 extract, insert and bridge
 
-#### Control:
+#### Control
 
 - Shadowed/restored parameter settings when switching video standards
 - Card-edge control and monitoring
 - Serial and Ethernet remote control and monitoring
 - Support field upgrading, license and options
 
-#### Extra:
+#### Extra
 
 - Auto-detects SDI input presence and format
 - Supports signal quality monitoring (SQM)

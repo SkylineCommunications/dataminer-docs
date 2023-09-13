@@ -200,7 +200,7 @@ This page contains a link to the web page of the actual device. Note that the cl
 
 The **3.0.0.x** and **3.1.0.x** driver range of the **Ericsson Rx8200** protocol support the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

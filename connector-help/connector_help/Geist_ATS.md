@@ -32,9 +32,9 @@ This driver uses an HTTP connection and requires the following input during elem
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
+- **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: \[The IP port of the destinationm by default it should be 80.\]
-- **Bus address**: \[If the proxy server has to be bypassed, specify *bypassproxy.*\]
+- **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 #### Usage
 

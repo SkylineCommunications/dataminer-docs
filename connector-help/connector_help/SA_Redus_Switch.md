@@ -56,7 +56,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600*.
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600*.
   - **Databits**: Databits specified in the manual of the device, e.g. *7*.
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1*.
   - **Parity**: Parity specified in the manual of the device, e.g. *No*.
@@ -64,7 +64,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: The bus address of the device. Range: *126 - 0*.
 
@@ -96,4 +96,4 @@ This page displays the critical **Device Messages** of the device, i.e. the **AS
 
 The **2.0.1.x** driver range of the **SA Redus Switch** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

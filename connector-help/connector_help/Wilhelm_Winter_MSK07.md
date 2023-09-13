@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Required. The value depends on the port of the serial gateway the device is connected to.
   - **Bus address**: The bus address of the device. Required. Hardware-adjustable between 1 and 9.
 

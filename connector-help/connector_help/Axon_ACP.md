@@ -216,33 +216,33 @@ Three modes are available:
 
 - **Manual (default):**
 
-- When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing DVE will be deleted if the configuration settings allow it.
+    - The existing DVE will be deleted if the configuration settings allow it.
     - A new DVE will be created if the configuration settings allow it.
 
   - When a device is removed, the existing DVE will not be deleted.
 
 - **Semi-Automatic:**
 
-- When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing DVE will be deleted.
+    - The existing DVE will be deleted.
     - A new DVE will be created if the configuration settings allow it.
 
   - When a device is removed, the existing DVE will not be deleted.
 
 - **Automatic:**
 
-- When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new device is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a device is replaced by a device of a different type:
 
-  - - The existing DVE will be deleted.
+    - The existing DVE will be deleted.
     - A new DVE will be created if the configuration settings allow it.
 
   - When a device is removed, the existing DVE will be deleted.

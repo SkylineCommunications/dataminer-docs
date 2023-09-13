@@ -55,7 +55,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device.\]
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: \[The IP port of the device. *Default 5038*.\]
 
 #### Smart-Serial SITTIG Interface connection
@@ -66,7 +66,7 @@ SITTIG INTERFACE:
 
 - Interface connection:
 
-- **IP address/host**: *localhost* (DataMiner acts as server)
+  - **IP address/host**: *localhost* (DataMiner acts as server)
   - **IP port**: \[The DataMiner IP port used by Sittig DVA to send requests to. *Default 7531*.\]
 
 ### Configuration of Asterisk PBX credentials

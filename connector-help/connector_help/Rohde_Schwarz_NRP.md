@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: *9600*.
+  - **Baudrate**: *9600*.
   - **Databits**: *7*.
   - **Stopbits**: *1*.
   - **Parity**: *No*.
@@ -51,7 +51,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **Bus address**: The bus address of the device (sensor number).
 
 ### Initialization

@@ -59,25 +59,36 @@ The parameters on this page are:
 
 The vessel can have several different active bearers. The active bearer is determined based on the state of several different parameters:
 
-1.  The first step to determine the active bearer checks the value of the latency that is received from the **average ping-based latency** **element.
-    **The possible values of the **Active Bearer** parameter can be limited based on the received value:
+1. The first step to determine the active bearer checks the value of the latency that is received from the **average ping-based latency** **element.
 
-2.  - If the value is **between the** **lower and higher** threshold, the active bearer is expected to be ***GX*, *WGS*** or ***Blocked*****.**
-    - If the value is **above the** **higher threshold**, the active bearer is expected to be ***FB500*** or ***Blocked*.**
-    - If the value is **below the** **lower threshold**, the active bearer is expected to be ***3G/4G*** or ***Blocked*.**
-    - if the latency is **not available** or **does not exist**, the active bearer is ***Down***.
-    - If none of the above apply, this will result in **Unknown**. In normal circumstances, this value will never occur. It was implemented in case unexpected situations should occur.
+   **The possible values of the **Active Bearer** parameter can be limited based on the received value:
 
-3.  The second step checks parameters from the Cobra and EBEM element to determine the active bearer. **Cobra parameters** are used to check if the active bearer is **GX**, while both **Cobra and EBEM parameters** are used to determine if it is **WGS**.
-    **GX** and **WGS** are considered to be the expected active bearer under normal operating conditions.
-    These are some of the combinations of parameters used to perform these checks:
+   - If the value is **between the** **lower and higher** threshold, the active bearer is expected to be ***GX*, *WGS*** or ***Blocked*****.**
 
-4.  - If Cobra Satellite is *GX*, Modem Network State is *In Network*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **GX** if the latency is between the lower and higher threshold, and in **Unknown** if the latency is not between the thresholds.
-    - If Cobra Satellite is *WGS* or *Generic*, EBEM Acquired State is *Acquired*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **WGS** if the latency is between the lower and higher threshold, and in **Unknown** if the latency is not between the thresholds.
-    - If Cobra Satellite is *WGS* or *Generic*, EBEM Acquired State is not *Acquired*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **FB500** if the latency is higher than the threshold, **3G/4G** if it is lower than the threshold, and **Unknown** if neither of these apply.
+   - If the value is **above the** **higher threshold**, the active bearer is expected to be ***FB500*** or ***Blocked*.**
 
-5.  The final step also checks parameters from the Cobra and EBEM elements. **Cobra** **parameters** are used in the check if the active bearer is **GX**, while both **Cobra** **and** **EBEM parameters** are used in the check if it is **WGS.** This is similar to the previous step, but now the check is executed in order to determine which **statistics** will be started.
-    The following active bearer values activate the statistics:
+   - If the value is **below the** **lower threshold**, the active bearer is expected to be ***3G/4G*** or ***Blocked*.**
 
-6.  - ***GX*** **and** ***WGS***: For these values, the **Uptime** is activated as these are the **only values that are expected during normal operation.**
-    - ***FB500*, *3G/4G*, *Down*, *Unknown* and *Blocked***: These values activate the **Downtime**, as these are not expected during normal operation. These can also activate the **Outage and Time of Outage,** if **Wooded** is ***Disabled***.
+   - if the latency is **not available** or **does not exist**, the active bearer is ***Down***.
+
+   - If none of the above apply, this will result in **Unknown**. In normal circumstances, this value will never occur. It was implemented in case unexpected situations should occur.
+
+1. The second step checks parameters from the Cobra and EBEM element to determine the active bearer. **Cobra parameters** are used to check if the active bearer is **GX**, while both **Cobra and EBEM parameters** are used to determine if it is **WGS**.
+
+   **GX** and **WGS** are considered to be the expected active bearer under normal operating conditions.
+
+   These are some of the combinations of parameters used to perform these checks:
+
+   - If Cobra Satellite is *GX*, Modem Network State is *In Network*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **GX** if the latency is between the lower and higher threshold, and in **Unknown** if the latency is not between the thresholds.
+
+   - If Cobra Satellite is *WGS* or *Generic*, EBEM Acquired State is *Acquired*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **WGS** if the latency is between the lower and higher threshold, and in **Unknown** if the latency is not between the thresholds.
+
+   - If Cobra Satellite is *WGS* or *Generic*, EBEM Acquired State is not *Acquired*, Safety Zone is *Enabled* and Transmission Status is *Enabled*, this will result in **FB500** if the latency is higher than the threshold, **3G/4G** if it is lower than the threshold, and **Unknown** if neither of these apply.
+
+1. The final step also checks parameters from the Cobra and EBEM elements. **Cobra** **parameters** are used in the check if the active bearer is **GX**, while both **Cobra** **and** **EBEM parameters** are used in the check if it is **WGS.** This is similar to the previous step, but now the check is executed in order to determine which **statistics** will be started.
+
+   The following active bearer values activate the statistics:
+
+   - ***GX*** **and** ***WGS***: For these values, the **Uptime** is activated as these are the **only values that are expected during normal operation.**
+
+   - ***FB500*, *3G/4G*, *Down*, *Unknown* and *Blocked***: These values activate the **Downtime**, as these are not expected during normal operation. These can also activate the **Outage and Time of Outage,** if **Wooded** is ***Disabled***.

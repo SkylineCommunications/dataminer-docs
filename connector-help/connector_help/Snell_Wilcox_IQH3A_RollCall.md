@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *192.168.14.11*.
+  - **IP address/host**: The polling IP of the device, e.g. *192.168.14.11*.
   - **IP Port**: The IP port of the device, e.g. *2050*.
   - **Bus address**: Used to fill in the unit address and the unit port, e.g. *20.00* for unit address *0x20* and unit port *0x00*.
 

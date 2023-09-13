@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port that the web service will listen to (default: *3000*).
   - **Accepted IP address:** Allows you to configure from which IP addresses your element will accept requests.
 
@@ -63,6 +63,6 @@ The element created with this driver has the following data pages:
 
 ## Notes
 
-- The webservice only responds to [http://\[dmaip\]:\[configuredport\]/metrics]().
+- The web service only responds to *http://\[dmaip\]:\[configuredport\]/metrics*.
 - Subscription parameters can only be configured for int/double column parameters. They are not compatible with string columns or with any type of standalone parameters.
 - As of version 1.0.0.1, the toggle button on the General page is only a placeholder.

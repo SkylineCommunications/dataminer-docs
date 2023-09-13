@@ -8,7 +8,7 @@ The Brocade 6510 is a 48-port, high-performance, enterprise-class switch that me
 
 ## About
 
-TheBrocade 6510 driver enables Skyline Communication Dataminer to communicate with a Brocade 6510 Switch allowing a user to remotly monitor and operate in the such device via SNMP.
+TheBrocade 6510 driver enables Skyline Communication DataMiner to communicate with a Brocade 6510 Switch allowing a user to remotely monitor and operate in the such device via SNMP.
 
 ### Ranges of the driver
 
@@ -64,7 +64,7 @@ In this page the user may find information regarding every **interface** this de
 
 ### Fabric Element
 
-In the **Fabric element** page multiple features are available. The user can check the device **Capacbilities**, **Accounting** performances, **Error** Statistics and configured **Modules**.
+In the **Fabric element** page multiple features are available. The user can check the device **Capabilities**, **Accounting** performances, **Error** Statistics and configured **Modules**.
 
 ### Physical Entities
 
@@ -72,7 +72,7 @@ This page provides a table that provides specific information regarding the devi
 
 ### Switch Configuration
 
-The **switch configuration** page provides a set of pages that allow the user to check and configure multiple switch related componentes such as:
+The **switch configuration** page provides a set of pages that allow the user to check and configure multiple switch related components such as:
 
 - **Neighbors**
 - **Connected Unit Statistics**
@@ -105,8 +105,8 @@ This page contains 5 **page buttons:**
 
 ### Field Replaceable Units
 
-This page allows a user to analyze the installed inventory and the specific instalation/de-instalation events.
+This page allows a user to analyze the installed inventory and the specific installation/uninstallation events.
 
 ### Events
 
-In this page the user may find a log on which all device events are registered. The table is limited by the ammount of entries configured in the device. This page also provides access to Trap related information.
+In this page the user may find a log on which all device events are registered. The table is limited by the amount of entries configured in the device. This page also provides access to Trap related information.

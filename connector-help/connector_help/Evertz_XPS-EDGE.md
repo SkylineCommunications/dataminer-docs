@@ -10,15 +10,15 @@ XPS is Evertz' real-time high-quality and low-latency video streaming platform. 
 
 - **SDI ports:** To connect I/O devices to be encoded/decoded.
 
-- 4K options:
+  - 4K options:
 
-  - - Encoder/decoder (1E1D)
+    - Encoder/decoder (1E1D)
     - 2 encoders (2E)
     - 2 decoders (2D)
 
   - 3G options:
 
-  - - Dual encoder/decoder (2E2D)
+    - Dual encoder/decoder (2E2D)
     - 4 encoders (4E)
     - 4 decoders (4D)
 

@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (fixed value: *5933*).
   - **Bus address**: The bus address of the device (default: *100*).
 

@@ -86,4 +86,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-The **API Key** that is needed in order to retrieve the HTTP content can be found via the web interface. Log on with the Login and Password, and go to [http://\<ipaddress\_\>/user_profile]().
+The **API Key** that is needed in order to retrieve the HTTP content can be found via the web interface. Log on with the Login and Password, and go to *http://\<ipaddress\_\>/user_profile*.

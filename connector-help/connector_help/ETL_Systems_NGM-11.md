@@ -37,12 +37,12 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-  - **IP port**: The IP port of the destination.
+- **IP port**: The IP port of the destination.
 
 SNMP Settings:
 
 - **Get community string**: The community string used when reading values from the device (default: *public*).
-  - **Set community string**: The community string used when setting values on the device (default: *private*).
+- **Set community string**: The community string used when setting values on the device (default: *private*).
 
 #### Serial Serial Connection - 1 Connection
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *19200*).
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *19200*).
   - **Databits**: Databits specified in the manual of the device, e.g. *7* (default: *8*).
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1* (default: *1*).
   - **Parity**: Parity specified in the manual of the device, e.g. *No* (default: *no*).
@@ -60,7 +60,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (default: *4000*).
   - **Bus address**: The bus address of the device. (default: *65*) (range: *32* - *122*). Use the decimal ASCII value of the **matrix address** configured in the device, e.g. A = *65*, P = *80*.
 
@@ -88,12 +88,12 @@ Via the **Import-Export Matrix** page button, you can export or import the setti
 
 - **Export Options**: Choose which parameters are exported.
 
-- *Normal*: I/O index, label, locked status
+  - *Normal*: I/O index, label, locked status
   - *With Crosspoints*: I/O index, label, locked status, connected crosspoint(s)
 
 - **Loading Labels Indicator**: Shows how labels are synchronized when a file with different labels than the current matrix is imported.
 
-- *Polling labels from device*: Labels are periodically polled from the device.
+  - *Polling labels from device*: Labels are periodically polled from the device.
   - *Importing labels from file*: Label polling is disabled, the matrix of the element is updated and sent to the device.
   - *Sending labels to device*: Label polling is disabled, the element is updated, but labels are still sent to the device.
 
@@ -110,7 +110,10 @@ Via the **Bulk Edit Matrix** page button, you can perform two different types of
 
 - **Change Crosspoints from one Input to another Input**: You can switch all outputs from one input to another in smaller sets with time delays, using the following settings:
 
-- **Maximum changes per Command**: The number of crosspoints that can be changed per batch.
+  - **Maximum changes per Command**: The number of crosspoints that can be changed per batch.
+
   - **Commands Delay**: The time delay in seconds between each batch of changes.
+
   - **From Input** and **To Input**: the inputs to switch.
+
   - **Changes Crosspoints**: Executes the change.

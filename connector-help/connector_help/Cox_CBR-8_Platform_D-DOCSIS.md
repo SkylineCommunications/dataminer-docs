@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination. **Default port: 22.**
 
 ### Initialization
@@ -93,7 +93,7 @@ When you first start using this element, navigate to the Configuration page and 
 
 The **1.0.0.x** connector range of the Cox CBR-8 Platform D-DOCSIS connector supports the usage of DCF.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

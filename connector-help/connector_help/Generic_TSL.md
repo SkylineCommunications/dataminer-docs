@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **Type of port**: Both *UDP/IP* and *TCP/IP* are supported. The type is also discovered in the element to adjust the message format.
+  - **Type of port**: Both *UDP/IP* and *TCP/IP* are supported. The type is also discovered in the element to adjust the message format.
   - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Default is *2050*.
 

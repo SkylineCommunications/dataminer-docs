@@ -70,7 +70,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP or URL of the destination. Should be the same as the HTTP Connection IP.\]
+  - **IP address/host**: \[The polling IP or URL of the destination. Should be the same as the HTTP Connection IP.\]
   - **IP port**: \[The IP port of the destination. (default: *5000*)\]
   - **Bus address**: \[The bus address of the device. (possible values: *ByPassProxy*)\]
 

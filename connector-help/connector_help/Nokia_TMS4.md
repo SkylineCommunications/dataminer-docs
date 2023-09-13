@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP or hostname of the destination (i.e. the terminal server that the TMS4 is connected to).
+  - **IP address/host**: The IP or hostname of the destination (i.e. the terminal server that the TMS4 is connected to).
   - **IP port**: The IP port of the destination. (i.e. the port on the terminal server configured to relay messages to the TMS4 device).
   - **Accepted IP address:** This field can be left blank. Refer to DataMiner User Guide for more details regarding this field.
 

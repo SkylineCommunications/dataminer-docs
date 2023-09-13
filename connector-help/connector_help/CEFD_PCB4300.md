@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: Depending on the customer
+  - **IP address/host**: Depending on the customer
   - **IP port**: Depending on the customer
   - **Bus address**: Not required
 

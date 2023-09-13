@@ -51,7 +51,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
   - **Accepted IP addresses**: The IP (usually multiple IP addresses) of the associated Reflex servers that might send unsolicited TCP messages to DataMiner.
 

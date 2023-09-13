@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: Will be filled in by the element at runtime. Specify *127.0.0.1* as the value during element creation.
+  - **IP address/host**: Will be filled in by the element at runtime. Specify *127.0.0.1* as the value during element creation.
   - **IP port**: Will be filled in by the element at runtime. Keep the default value *8098* during element creation.
 
 ### Configuration of the broker parameters

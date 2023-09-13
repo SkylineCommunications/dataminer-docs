@@ -63,7 +63,7 @@ SERIAL CONNECTION:
 
 Interface connection:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
+  - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: \[The IP port of the destination. (fixed value: *2071*)\]
 - **Bus address**: \[The bus address or slot number/position of the card in the frame.\]
 
@@ -75,7 +75,7 @@ SMART SERIAL CONNECTION:
 
 Interface connection:
 
-- **IP address/host**: \[The polling IP or URL of the destination. Specify "any"\]
+  - **IP address/host**: \[The polling IP or URL of the destination. Specify "any"\]
 - **IP port**: \[The IP port of the destination. (fixed value: *2071*)\]
 - **Bus address**: \[The bus address or slot number/position of the card in the frame.\]
 
@@ -105,11 +105,11 @@ The element has the following pages:
 
 **Note**: If the setting of a parameter depends on another parameter, when the user tries to set the second parameter before the first parameter is set, a pop up window will be displayed indicating what to do first. In this case, the user must set the first parameter according to the information in the pop up window before setting the second parameter. Example: In order to set Active Preset (on the Preset page), the Preset Control has to be set to Manual mode.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.0.x** driver range of the Axon ACP HDV080 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

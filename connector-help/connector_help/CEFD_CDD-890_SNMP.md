@@ -38,7 +38,7 @@ This page displays information about the **System Information**, **Service Conta
 
 The **Admin** page displays the selected configuration and options. The page shows information about the **FAST Configuration** and it is possible to set the **SNMP Configuration**, **Auto Logout Configuration**, **CTOG** and **MEO**.
 
-Also there are two pagebuttons available that will open pop-up pages which display additional information regarding the subject stated on the pagebutton. It concerns the **Firmware Configuration** and the **Vipersat Management System Configuration**.
+Also there are two page buttons available that will open pop-up pages which display additional information regarding the subject stated on the page button. It concerns the **Firmware Configuration** and the **Vipersat Management System Configuration**.
 
 ### Configuration - Interface page
 
@@ -58,11 +58,11 @@ This page can be used to set the **LNB** **Control** configurations and to check
 
 ### Configuration - Network page
 
-In his page several configurations can be done.
+On this page, several configurations can be done.
 
-- In the **ARP Table** the ARP configurations can be set. New entries can be added to the table using the pop-up window that opens by the **Create New entry...** pagebutton.
+- In the **ARP Table** the ARP configurations can be set. New entries can be added to the table using the pop-up window that opens by the **Create New entry...** page button.
 - The **Working Mode** is used to set the Working Mode to *Router* or *BPM*.
-- The Encryption ... pagebutton makes it possible to set the 8 **Encryption Keys**.
+- The Encryption ... page button makes it possible to set the 8 **Encryption Keys**.
 
 ### Configuration - Network - Routing page
 
@@ -82,7 +82,7 @@ In this page, the **Ethernet Stats Table** is available.
 
 ### Status - Stats - Demod page
 
-Several status tables related to the demodualotor are available in this page:
+Several status tables related to the demodulator are available in this page:
 
 - **Demod Status Table**
 - **Link Adaptation Status Table**
@@ -94,16 +94,14 @@ This page displays the **Interface**, **Routers** and **Management Counters**. T
 
 ### Status - Stats - Managed Switch page
 
-The **Managed Switch **Statistics**** and the **Managed Switch LAN Statistics** are display on this page.
+The **Managed Switch Statistics** and the **Managed Switch LAN Statistics** are display on this page.
 
 ### Status - Monitor - Alarms page
 
-Several information about alarms can be found here:
+Various information about alarms can be found here:
 
-- Alarms - **Unit**, **LNB**, **Traffic** **Ethernet** and **PTP** general **Alarms**.
+- Alarms - **Unit**, **LNB**, **Traffic Ethernet** and **PTP** general **Alarms**.
 - Rx Alarms - Related to the Demodulators.
-
-<!-- -->
 
 - **Demodulator Alarms...** - In depth information about **Demod Alarm State**/**Mask**.
 - **Unit Alarms...** - In depth information about **Unit** **Alarm States**/**Masks**.
@@ -119,7 +117,7 @@ In this page some utility functions are present:
 - **Modem** - Some modem settings and general information.
 - **Save/Load Configuration** - To save current settings in the device's memory or to load settings from one of the 10 available memory's indexes.
 - Memory Usage (**Diagnostic...**) - Information about memory usage.
-- The **Time Synch...** pagebutton makes it possible to synchronize the device.
+- The **Time Synch...** page button makes it possible to synchronize the device.
 
 ### Utility - BERT / Redundancy page
 
@@ -135,8 +133,4 @@ Settings related to download or upload firmware to and from the device can be fo
 
 ### Web Interface
 
-Use this page to have access to the Web Interface provided by the device's web server. The client machine has to be able to access the device. If not, it won't be possible to open the web interface.
-
-## Notes
-
-N/A
+Use this page to have access to the Web Interface provided by the device's web server. The client machine has to be able to access the device. If not, it will not be possible to open the web interface.

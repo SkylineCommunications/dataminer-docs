@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 38400
+  - **Baudrate**: 38400
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: Even
@@ -46,8 +46,8 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
-  -  **IP port**: The port of the connected device, by default *161*.
+  - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
+  - **IP port**: The port of the connected device, by default *161*.
   - **Bus address**: Range 1 to 8.
 
 #### Smart-Serial connection
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 38400
+  - **Baudrate**: 38400
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: Even
@@ -66,7 +66,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
+  - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
   - **IP port**: The port of the connected device, by default *161.*
   - **Bus address**: Range 1 to 8.
 

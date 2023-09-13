@@ -47,7 +47,7 @@ SERIAL Connection
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (default: *9000*).
 
 #### SNMP Connection

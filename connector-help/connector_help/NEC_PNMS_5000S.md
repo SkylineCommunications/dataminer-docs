@@ -59,11 +59,11 @@ Each row contains a **Clear Alarms** button that can be used to clear the alarms
 
 This page displays the **Remote DCF Interface Table.**
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.1.1** driver range of the NEC PNMS 5000S protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.0.8**.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

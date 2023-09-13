@@ -38,7 +38,7 @@ Range **2.0.1.x** of the connector only uses one SNMPv3 connection to monitor th
 
 This connector uses two Simple Network Management Protocol version 3 (**SNMPv3**) connections, as well as a **serial** connection (for SSH communication), and requires the following input during element creation:
 
-#### SNMP main connection:
+#### SNMP main connection
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ SNMP Settings:
 - **Authentication algorithm**: The SNMPv3 authentication algorithm as configured on the Arris E6000 device, e.g. *HMAC-MD5*.
 - **Encryption algorithm**: The SNMPv3 encryption algorithm as configured on the Arris E6000 device, e.g. *DES*.
 
-#### SNMP traps connection:
+#### SNMP traps connection
 
 SNMP CONNECTION:
 
@@ -70,7 +70,7 @@ SNMP Settings:
 - **Authentication algorithm**: The SNMPv3 authentication algorithm as configured on the Arris E6000 device, e.g. *HMAC-MD5*.
 - **Encryption algorithm**: The SNMPv3 encryption algorithm as configured on the Arris E6000 device, e.g. *DES*.
 
-#### Serial connection:
+#### Serial connection
 
 - **IP address/host**: The IP address of the device, e.g. *192.168.10.2.*
 - **IP port**: The port of the connected device, by default *22*.
@@ -214,8 +214,8 @@ This page consists of a Backup and a Restore section.
 
 This section allows you to create a backup of the running configuration. To do so:
 
-1.  First provide a folder where the running configuration will be transferred after it has been created on the device.
-2.  Click the **Create Backup** button to trigger the creation of a backup file for the running configuration on the Arris E6000 device (in the directory "/system/cfgfiles/").
+1. First provide a folder where the running configuration will be transferred after it has been created on the device.
+1. Click the **Create Backup** button to trigger the creation of a backup file for the running configuration on the Arris E6000 device (in the directory "/system/cfgfiles/").
 
 The name of the backup file has the following format: "ELEMENTNAME_YYYYMMDD_HHMMSS.cfg". Once a backup file has been created, the connector will check for the presence of old configuration files on the device (i.e. files that were created more than 48 hours before the new .cfg file was created). If such files are found, the connector will delete them. Note that an element will only manage the backup files that start with the name of that element (i.e. backup files that start with ELEMENTNAME\_, where ELEMENTNAME is the name of the element).
 
@@ -225,28 +225,39 @@ Note: It is advisable to limit the number of backup files to manage in the devic
 
 The restore procedure mainly consists of manual steps. These are listed when you click the **Restore** button. The **Source Directory** parameter points to a directory containing the source file that will be uploaded to the Arris E6000 device. After you select a directory, the dropdown box for the **Config File Name** parameter will be populated with files that have the extension ".cfg". After you select a configuration file, you can click the **Restore** button to upload the configuration file to the device. This operation will transfer the configuration file via SFTP to the directories "/system/cfgfiles/" and "/clone/system/cfgfiles/". After the configuration file has been uploaded, you should then perform the following remaining manual steps to complete the restore procedure:
 
-1.  Erase the startup configuration.
-    The erase nvram must be performed before the reload of a configuration file to clear the contents of the current configuration loaded on the E6000.
-2.  Reset the current system configuration.
-    The following command will force the E6000 to reset its configuration and lose access using SSH. After this command, access will only be available using serial communication.
+1. Erase the startup configuration.
 
-    configure reset system
+   The erase nvram must be performed before the reload of a configuration file to clear the contents of the current configuration loaded on the E6000.
 
-    After this command is executed, the system will reset the configuration and RSM cards will be started up. This process will take 5 minutes.
-    After the wait time, you should be able to log back in using the serial connection.
-3.  Verify the primary RSM card.
-    Once the system has been reset, it is possible for any of the two RSM cards in the chassis to become the primary port.
-    To differentiate Primary from Standby, you can use the command prompt to differentiate the two cards.
-4.  Execute the file (backup) copy into the running configuration.
-    After copying the configuration file from the SFTP server, use the following command:
+1. Reset the current system configuration.
 
-    exc file /system/cfgfiles/backup_filename.cfg
+   The following command will force the E6000 to reset its configuration and lose access using SSH. After this command, access will only be available using serial communication.
 
-    This will load the new configuration into the E6000.
-5.  Save the running configuration to the startup configuration file.
-    After starting up the new configuration, save the new configuration to the startup configuration by typing the following command:
+   `configure reset system`
 
-    write mem
+   After this command is executed, the system will reset the configuration and RSM cards will be started up. This process will take 5 minutes.
+
+   After the wait time, you should be able to log back in using the serial connection.
+
+1. Verify the primary RSM card.
+
+   Once the system has been reset, it is possible for any of the two RSM cards in the chassis to become the primary port.
+
+   To differentiate Primary from Standby, you can use the command prompt to differentiate the two cards.
+
+1. Execute the file (backup) copy into the running configuration.
+
+   After copying the configuration file from the SFTP server, use the following command:
+
+   `exc file /system/cfgfiles/backup_filename.cfg`
+
+   This will load the new configuration into the E6000.
+
+1. Save the running configuration to the startup configuration file.
+
+   After starting up the new configuration, save the new configuration to the startup configuration by typing the following command:
+
+   `write mem`
 
 ### Upload & Upgrade File Page
 
@@ -256,18 +267,20 @@ Ideally, you should configure the SSH connection, specifically the **File Server
 
 To perform a file **upload**:
 
-1.  Specify the **File Remote Source Directory** containing the directory path with the file that will be uploaded to the Arris E6000 device.
-2.  Select the **File Type**: *Image*, *Patch* or *Other*.
-3.  Select the **File** and click the **Upload** button.
+1. Specify the **File Remote Source Directory** containing the directory path with the file that will be uploaded to the Arris E6000 device.
+
+1. Select the **File Type**: *Image*, *Patch* or *Other*.
+
+1. Select the **File** and click the **Upload** button.
 
 To perform an image **upgrade**/**commit** or **apply a patch**:
 
-1.  Make sure the file has been uploaded on the Arris E6000.
+1. Make sure the file has been uploaded on the Arris E6000.
 
-2.  Click the Upgrade and Commit or Apply Patch buttons:
+1. Click the Upgrade and Commit or Apply Patch buttons:
 
-3.  - The Upgrade button is required to upgrade the image. Only after the upgrade is completed, it will be possible to commit it.
-    - It is not possible to select a patch file and use Upgrade and Commit, as well as select an image file and use Apply Patch. If you do so, the Progress Status parameter will show an error.
+   - The Upgrade button is required to upgrade the image. Only after the upgrade is completed, it will be possible to commit it.
+   - It is not possible to select a patch file and use Upgrade and Commit, as well as select an image file and use Apply Patch. If you do so, the Progress Status parameter will show an error.
 
 The **Refresh** button allows you to refresh the list of files in the dropdown list for the File parameter.
 

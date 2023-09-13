@@ -44,20 +44,23 @@ When you have created an element, you still need to configure several things bas
 
 Add one or more **brokers** to the element:
 
-1.  Go to the **Broker** page of the element.
-2.  Right-click the table and select **Add** in the context menu.
-3.  Enter the information for the broker(s).
+1. Go to the **Broker** page of the element.
+
+1. Right-click the table and select **Add** in the context menu.
+
+1. Enter the information for the broker(s).
 
 Add one or more **topics** to the element:
 
-1.  Go to the **Topics** page of the element.
+1. Go to the **Topics** page of the element.
 
-2.  Right-click the table and select **Add** in the context menu.
+1. Right-click the table and select **Add** in the context menu.
 
-3.  Specify the **Topic name** and the following settings:
+1. Specify the **Topic name** and the following settings:
 
-4.  - **Subscription Interval**: Determines how frequently the topic will be polled. Default: 5 minutes.
-    - **Poll Duration**: Will be used in the API call to determine how long it will poll before the call ends. Default: 1 minute.
+   - **Subscription Interval**: Determines how frequently the topic will be polled. Default: 5 minutes.
+
+   - **Poll Duration**: Will be used in the API call to determine how long it will poll before the call ends. Default: 1 minute.
 
 #### Optional Configuration
 

@@ -45,12 +45,11 @@ The page contains two page buttons: **Events** and **Settings**.
 
 - The **Events** page button contains configuration settings regarding **Priorities**.
 
-<!-- -->
-
 - The **Settings** page button contains configuration settings for **SDI-Format**, **OSD-label**, **OSD-Chan-Pres**, **Safe Area**, **Safe Area Control**, **WSS**, **VI-Det** and **EDH-Det**. It displays information regarding **Text-Background**, **Subtitles**, **Slice CPhase**, **Slice Level**, **Scales** and **Scale-Levels**.
+
   It also contains five additional page buttons with the following configuration settings:
 
-- **Silence Detection**
+  - **Silence Detection**
   - **Black Detection**
   - **Freeze Detection**
   - **VU-Bar Properties**

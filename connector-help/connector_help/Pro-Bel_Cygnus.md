@@ -36,13 +36,13 @@ In this subsection, insert a table with two columns, and set the column widths t
 
 ### Creation
 
-#### Serial \[Name of the connection\] connection
+#### Serial connection - Main
 
 SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 38400
+  - **Baudrate**: 38400
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: Even
@@ -50,17 +50,17 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: 1
 
-#### Serial Secondary connection
+#### Serial connection - Secondary
 
 SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 38400
+  - **Baudrate**: 38400
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: Even
@@ -68,7 +68,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: 1
 

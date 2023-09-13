@@ -40,12 +40,13 @@ Communication with the CellScanner device happens via a DLL provided by the vend
 
 However, this helper process needs to be installed separately. You can do so by copying files to the DataMiner server.
 
-1.  Build the whole protocol solution (Rebuild All).
+1. Build the whole protocol solution (Rebuild All).
 
-2.  Copy the generated files:
+1. Copy the generated files:
 
-3.  - Source folder: \<solution directory\>\CellScannerService\bin\x64\Release
-    - Target folder: C:\Skyline DataMiner\ProtocolScripts\CellScanner
+   - Source folder: \<solution directory\>\CellScannerService\bin\x64\Release
+
+   - Target folder: C:\Skyline DataMiner\ProtocolScripts\CellScanner
 
 After you have created a new element with this connector, configure the **IP address of the device** on the **Configuration** page. On the same page, you can also configure whether GPS coordinates should be registered.
 

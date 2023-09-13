@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (fixed value: *4050*).
   - **Bus address**: The bus address of the device, in the format *frameNumber****.****slotID*, e.g. *1.0* (the default value) represents frame 1 and slot 0. Range: *0* - *100* (0 because this is a frame controller card).
 

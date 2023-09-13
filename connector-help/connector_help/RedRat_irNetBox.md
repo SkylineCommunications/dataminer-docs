@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: *10001*
   - **Bus address**: *byPassProxy*
 
@@ -91,7 +91,7 @@ This page displays the web interface of the device. Note that the client machine
 
 The **1.0.1.x** driver range of the RedRat irNetBox protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for all exported protocols is managed by this protocol.
 

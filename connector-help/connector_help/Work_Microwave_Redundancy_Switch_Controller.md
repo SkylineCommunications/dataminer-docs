@@ -19,8 +19,6 @@ This driver uses a **Serial** connection and requires the following input during
 - **IP address/host**: The IP address of the device, e.g. *192.168.10.2.*
 - **IP port**: The port of the connected device, by default *22*.
 
-
-
 ### Ranges of the driver
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
@@ -32,8 +30,6 @@ This driver uses a **Serial** connection and requires the following input during
 | **Driver Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
-
-
 
 ## Installation and configuration
 
@@ -47,7 +43,7 @@ When creating the element the **device IP address,** the **port and** the **bus 
 
 This page displays **general System Information** and the **Overall Status** of the device and the connected converters.
 
-With the pagebutton, It is possible to change some general configuration.
+With the page button, It is possible to change some general configuration.
 
 ### Events
 
@@ -55,7 +51,7 @@ This page displays the **Events History** stored on the device (maximum 99). The
 
 ### Uplink Power Control
 
-This page alows the user to view and change settings about the UPC module such as:
+This page allows the user to view and change settings about the UPC module such as:
 
 - **Clear Sky Calibration**
 - **Deep Fade Settings**
@@ -68,13 +64,11 @@ This page allows the user as well to **Save**, **Load** and **Clear** configurat
 
 The "**Factory Reset**" button allows the user to reset the device configuration.^
 
-
-
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The Work Microwave supports the usage of DCF from version 1.0.0.2 onwards and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 
@@ -125,14 +119,10 @@ Device outputs:
 - Input 2 A (in) - Input 1 A/B Out (out)
 - Input 2 B (in) - Input 1 A/B Out (out)
 
-<!-- -->
-
 - Output 1 A (in) - Output 1 A/B Out (out)
 - Output 1 B (in) - Output 1 A/B Out (out)
 - Output 2 A (in) - Output 1 A/B Out (out)
 - Output 2 B (in) - Output 1 A/B Out (out)
-
-<!-- -->
 
 - Output 3 A (in) - Output 3 A/B Out (out)
 - Output 3 B (in) - Output 3 A/B Out (out)

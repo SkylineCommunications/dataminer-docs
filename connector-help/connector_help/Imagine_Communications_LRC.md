@@ -60,7 +60,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Default: *52116*.
   - **Bus address**: The matrix level to be polled from the device. Range: *1* to *16*.
 

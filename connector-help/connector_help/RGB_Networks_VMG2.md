@@ -30,7 +30,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 ### Configuration
 
-Credentials are required for the device to poll data from the VMG2. Those credentials can be filled in via the **Credentials** page button on the **General** page. Note that the default web interface of the VMG encrypts the credentials before sending them to the device. However, the driver does not automatically encrypt the credentials, so the user must then enter the encrypted values in Dataminer.
+Credentials are required for the device to poll data from the VMG2. Those credentials can be filled in via the **Credentials** page button on the **General** page. Note that the default web interface of the VMG encrypts the credentials before sending them to the device. However, the driver does not automatically encrypt the credentials, so the user must then enter the encrypted values in DataMiner.
 
 The default credentials are:
 

@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: default: *19200* \[range: *300, 1200, 2400, 9600, 19200, 38400*\]
+  - **Baudrate**: default: *19200* \[range: *300, 1200, 2400, 9600, 19200, 38400*\]
   - **Databits**: *8*
   - **Stopbits**: *0*
   - **Parity**: No
@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: The bus address of the device.
 

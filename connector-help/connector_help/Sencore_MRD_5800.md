@@ -70,7 +70,7 @@ This page provides more details about the different inputs. Five kinds of inputs
 
 From driver version 1.0.1.2 onwards, this page contains a subpage, **IP - Name**, where destination names are used to resolve an IP address in the MPEG/IP table on the main Input page.
 
-On the **IP - Name** subpage, lines can be added one by one or **imported** from a semicolon-separated CSV file. They may also be **exported** directly to a suitable format and then imported again later. In the CSV file, the destination name should be the first column, and the destination IP the second column. You can confirm the format by trying an export of a number of test lines. All exported and imported files are stored in the folder "C:\Skyline Dataminer\Documents". In the text boxes defining these files, only the file names and the extension ".csv" must be entered. All lines can also easily be removed. All of this can be done via the right-click menu of the subpage.
+On the **IP - Name** subpage, lines can be added one by one or **imported** from a semicolon-separated CSV file. They may also be **exported** directly to a suitable format and then imported again later. In the CSV file, the destination name should be the first column, and the destination IP the second column. You can confirm the format by trying an export of a number of test lines. All exported and imported files are stored in the folder "C:\Skyline DataMiner\Documents". In the text boxes defining these files, only the file names and the extension ".csv" must be entered. All lines can also easily be removed. All of this can be done via the right-click menu of the subpage.
 
 ### Biss
 

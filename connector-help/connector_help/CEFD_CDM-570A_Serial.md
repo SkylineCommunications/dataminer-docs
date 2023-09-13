@@ -77,7 +77,7 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as Date and Time and Circuit ID, and to Load or Store Configuration presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* unit, this forces a switchover so the unit is then placed in *standby* mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
 - **Load/Store Configuration:** To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
 - Date & Time: Use the format *MM/DD/YYYY* to enter the **date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YYYY = year).*
 
@@ -118,45 +118,31 @@ Use this page to configure Block Up Converter parameters and to display the BUC 
 
 - **Poll BUC/LNB Parameters -** *Enable* or *Disable* the BUC and LNB polling.
 
-BUC Configuration
+**BUC Configuration**:
 
 - Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** *Enabled* or *Disabled*.
-
-<!-- -->
-
 - **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
-
-<!-- -->
-
 - **BUC Address** from *0* to *15*.
 
-BUC Status
+**BUC Status**: The values displayed in this section are read-only and cannot be changed.
 
-The values displayed in this section are read-only **** and cannot be changed.
-
-LNB Control
+**LNB Control**:
 
 - **DC Supply Voltage:***Off* or On with *13*, *18* or *24* V.
 - **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-LNB Status
-
-The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### Maint - Unit Info
 
 This page contains the information of the device.
 
-- Unit Information
+- **Unit Information**: In this section it is possible to find the **Serial Number** and the **Software Revision**.
 
-In this section it is possible to find the **Serial Number** and the **Software Revision**.
-
-- Firmware
-
-The **Active Firmware Image** and the **Next Reboot Image** are available.
+- **Firmware**: The **Active Firmware Image** and the **Next Reboot Image** are available.
 
 ### FSK
 

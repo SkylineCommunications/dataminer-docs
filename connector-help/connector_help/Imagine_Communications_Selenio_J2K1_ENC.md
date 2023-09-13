@@ -142,19 +142,19 @@ Displays the module webpage. Note that the client machine has to be able to acce
 
 All data gets retrieved from the device in three ways.
 
-1.  Timers:
+1. Timers:
 
-2.  - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
-    - Medium timer that triggers every 15 minutes and retrieves status parameters.
-    - Alarm slow timer that triggers every 30 seconds and retrieves alarm information. By default, this is retrieved every 3 seconds instead. It is advisable not to change this to 30 seconds unless you enable traps to be sent to DataMiner.
-    - Fast timer that triggers every 10 seconds and retrieves slot information (state, temperature, protection).
-    - Very fast timer that triggers every 3 seconds and retrieves dirty changes and alarm information. Alarm information can be toggled to be retrieved every 3 seconds instead.
-    - Regular timer that triggers every 300 seconds.
+   - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
+   - Medium timer that triggers every 15 minutes and retrieves status parameters.
+   - Alarm slow timer that triggers every 30 seconds and retrieves alarm information. By default, this is retrieved every 3 seconds instead. It is advisable not to change this to 30 seconds unless you enable traps to be sent to DataMiner.
+   - Fast timer that triggers every 10 seconds and retrieves slot information (state, temperature, protection).
+   - Very fast timer that triggers every 3 seconds and retrieves dirty changes and alarm information. Alarm information can be toggled to be retrieved every 3 seconds instead.
+   - Regular timer that triggers every 300 seconds.
 
-3.  Dirty changes
+1. Dirty changes
 
-4.  - Every 3 seconds, the driver checks if any configurable values have changed. If it detects such a change, it instantly updates the displayed information with the new value. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
+   - Every 3 seconds, the driver checks if any configurable values have changed. If it detects such a change, it instantly updates the displayed information with the new value. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
 
-5.  Traps
+1. Traps
 
-6.  - When enabled and set up on the chassis, traps can be sent to DataMiner whenever an alarm occurs. The traps are accepted and processed for the ENC1 card.
+   - When enabled and set up on the chassis, traps can be sent to DataMiner whenever an alarm occurs. The traps are accepted and processed for the ENC1 card.

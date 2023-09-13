@@ -101,7 +101,7 @@ The DCF feature can be disabled on the **General** page using the **DCF** parame
 
 Note that DCF can only be used on a DMA with **8.5.4** as the minimum version. When the installed DataMiner version does not support DCF, the **DCF** parameter will be disabled and it will not be possible to enable it. The driver will generate a warning alarm if this is attempted anyway, or if the DataMiner version is downgraded so that DCF is no longer supported.
 
-Note that DCF can also be implemented through the DataMiner DCF User Interface and through DataMiner Third Party protocols (for instance a manager).
+Note that DCF can also be implemented through the DataMiner DCF User Interface and through DataMiner third-party connectors (for instance a manager).
 
 ### PM1004V
 
@@ -112,131 +112,145 @@ All internal connections on the card will include interface X1 or X2. Every (int
 Below you can find a list of the interfaces and the connections and properties that can originate from each interface.
 
 - **X1**
+
   This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
 
-- Is connected to *ETH* name: *./X1-ETH*
+  - Is connected to *ETH* name: *./X1-ETH*
 
-  - - [*@Port*]() *Name =* *ETH*
+    - *@Port* *Name =* *ETH*
 
   - Is connected to *FE* name: *./X1-FE*
 
-  - - [*@Port*]() *Name =* *FE*
+    - *@Port* *Name =* *FE*
 
   - Is connected to *V2 Tx* name: *./X1-V2Tx*
 
-  - - [*@Port*]() *Name = V2*
+    - *@Port* *Name = V2*
 
   - Is connected to *V3 Tx* name: *./X1-V3Tx*
 
-  - - [*@Port*]() *Name = V3*
+    - *@Port* *Name = V3*
 
   - Is connected to *V4 Tx* name: *./X1-V4Tx*
 
-  - - [*@Port*]() *Name = V4*
+    - *@Port* *Name = V4*
 
   - Is connected to *V5 Tx* name*:* *./X1-V5Tx*
 
-  - - [*@Port*]() *Name = V5*
+    - *@Port* *Name = V5*
 
 - **X2**
+
   This is an optical connector, used to connect two Ekinops 360 Platforms with each other.
 
-- Is connected to *ETH* name: *./X1-ETH*
+  - Is connected to *ETH* name: *./X1-ETH*
 
-  - - [*Port*]() *Name =* *ETH*
+    - *Port* *Name =* *ETH*
 
   - Is connected to *FE* name: *./X1-FE*
 
-  - - [*@Port*]() *Name =* *FE*
+    - *@Port* *Name =* *FE*
 
   - Is connected to *V2 Tx* name: *./X1-V2Tx*
 
-  - - [*@Port*]() *Name = V2*
+    - *@Port* *Name = V2*
 
   - Is connected to *V3 Tx* name: *./X1-V3Tx*
 
-  - - [*@Port*]() *Name = V3*
+    - *@Port* *Name = V3*
 
   - Is connected to *V4 Tx* name: *./X1-V4Tx*
 
-  - - [*@Port*]() *Name = V4*
+    - *@Port* *Name = V4*
 
   - Is connected to *V5 Tx* name*:* *./X1-V5Tx*
 
-  - - [*@Port*]() *Name = V5*
+    - *@Port* *Name = V5*
 
 - **V2 Rx**
+
   This is an HD SDI input connector.
 
-- Is connected to *X1* name *./V2Rx-X1*
+  - Is connected to *X1* name *./V2Rx-X1*
 
-  - - [@Port]() Name = *V2*
+    - @Port Name = *V2*
 
   - Is connected to *X2* name *./V2Rx-X2*
-    - [@Port]() Name = *V2*
+
+    - @Port Name = *V2*
 
 - **V3 Rx**
+
   This is an HD SDI input connector.
 
-- Is connected to *X1* name *./V3Rx-X1*
+  - Is connected to *X1* name *./V3Rx-X1*
 
-  - - [@Port]() Name = *V3*
+    - @Port Name = *V3*
 
   - Is connected to *X2* name *./V3Rx-X2*
-    - [@Port]() Name = *V3*
+
+    - @Port Name = *V3*
 
 - **V4 Rx**
+
   This is an HD SDI input connector.
 
-- Is connected to *X1* name *./V4Rx-X1*
+  - Is connected to *X1* name *./V4Rx-X1*
 
-  - - [@Port]() Name = *V4*
+    - @Port Name = *V4*
 
   - Is connected to *X2* name *./V4Rx-X2*
 
-  - - [@Port]() Name = *V4*
+    - @Port Name = *V4*
 
 - **V5 Rx**
+
   This is an HD SDI input connector.
 
-- Is connected to *X1* name *./V5Rx-X1*
+  - Is connected to *X1* name *./V5Rx-X1*
 
-  - - [@Port]() Name = *V5*
+    - @Port Name = *V5*
 
   - Is connected to *X2* name *./V5Rx-X2*
 
-  - - [@Port]() Name = *V5*
+    - @Port Name = *V5*
 
-- **V2 Tx
-  **This is an HD SDI output connector.
+- **V2 Tx**
 
-- **V3 Tx
-  **This is an HD SDI output connector.
+  This is an HD SDI output connector.
 
-- **V4 Tx
-  **This is an HD SDI output connector.
+- **V3 Tx**
 
-- **V5 Tx
-  **This is an HD SDI output connector.
+  This is an HD SDI output connector.
+
+- **V4 Tx**
+
+  This is an HD SDI output connector.
+
+- **V5 Tx**
+
+  This is an HD SDI output connector.
 
 - **ETH**
+
   This is a standard Ethernet connector (RJ45)
 
-- Is connected to *X1* name *./ETH-X1*
+  - Is connected to *X1* name *./ETH-X1*
 
-  - - [@Port]() Name = *ETH*
+    - @Port Name = *ETH*
 
   - Is connected to *X2* name *./ETH-X2*
 
-  - - [@Port]() Name = *ETH*
+    - @Port Name = *ETH*
 
 - **FE**
+
   This is a Fast Ethernet connector.
 
-- Is connected to *X1* name *./FE-X1*
+  - Is connected to *X1* name *./FE-X1*
 
-  - - [@Port]() Name = *FE*
+    - @Port Name = *FE*
 
   - Is connected to *X2* name *./FE-X2*
 
-  - - [@Port]() Name = *FE*
+    - @Port Name = *FE*

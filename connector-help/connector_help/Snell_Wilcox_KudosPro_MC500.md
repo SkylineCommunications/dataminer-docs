@@ -23,7 +23,7 @@ This driver uses a Serial connection and needs the following user information:
 **SERIAL CONNECTION**:
 
 - **Type of Port**: IP
-- **IP address/host**: \[The polling IP of the device\]
+- **IP address/host**: The polling IP of the device
 - **IP port**: 2050
 
 ## Usage

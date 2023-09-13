@@ -92,7 +92,7 @@ This page displays the web interface of the device. Note that the client machine
 
 Version **1.0.0.1** of this connector supports DCF and should only be used with a DMA using DataMiner 9.0.0.5 or higher.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

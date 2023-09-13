@@ -40,7 +40,7 @@ This driver uses a serial connection and needs the following user information:
 
 - Interface connection:
 
-- **IP address/host:** The polling IP of the device.
+  - **IP address/host:** The polling IP of the device.
   - **IP port:** The IP port of the device.
 
 ## Usage

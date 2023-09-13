@@ -80,9 +80,9 @@ This page contains the **Profile DCAT Metric** and **Profile DCAT Fault** tables
 
 - Profile DCAT Metric:
 
-- For the "Value" column, depending on the "Operator" column selection, many different entries are possible:
+  - For the "Value" column, depending on the "Operator" column selection, many different entries are possible:
 
-  - - Equal to (==): The logic will return "OK" if this value equals that of the corresponding metric (i.e. FWD C/N) for the given entity (i.e. Circuit x). Otherwise, "Failed" will be returned.
+    - Equal to (==): The logic will return "OK" if this value equals that of the corresponding metric (i.e. FWD C/N) for the given entity (i.e. Circuit x). Otherwise, "Failed" will be returned.
 
     - Not Equal to (!=): The logic will return "OK" if this value does not equal that of the corresponding metric for the given entity. Otherwise, "Failed" will be returned.
 
@@ -96,7 +96,7 @@ This page contains the **Profile DCAT Metric** and **Profile DCAT Fault** tables
 
     - Between (BETWEEN): The logic will return "OK" if the value of the corresponding metric for the given entity is between the values entered using "BETWEEN" as separator (including the limits). Otherwise, "Failed" will be returned. Supported options are:
 
-    - - \[numeric value\] BETWEEN \[numeric value\]
+      - \[numeric value\] BETWEEN \[numeric value\]
       - \[metric name\] BETWEEN \[metric name\]
       - \[metric name\] \[+-\*/\] \[numeric value\] BETWEEN \[metric name\] \[+-\*/\] \[numeric value\]
       - \[avg, min, max\] \[metric name\] BETWEEN \[avg, min, max\] \[metric name\]
@@ -104,7 +104,7 @@ This page contains the **Profile DCAT Metric** and **Profile DCAT Fault** tables
 
     - Not Between (!BETWEEN): The logic will return "OK" if the value of the corresponding metric for the given entity is not between the values entered using "!BETWEEN" as separator (including the limits). Otherwise, "Failed" will be returned. Supported options are:
 
-    - - \[numeric value\] !BETWEEN \[numeric value\]
+      - \[numeric value\] !BETWEEN \[numeric value\]
       - \[metric name\] !BETWEEN \[metric name\]
       - \[metric name\] \[+-\*/\] \[numeric value\] !BETWEEN \[metric name\] \[+-\*/\] \[numeric value\]
       - \[avg, min, max\] \[metric name\] !BETWEEN \[avg, min, max\] \[metric name\]
@@ -112,19 +112,19 @@ This page contains the **Profile DCAT Metric** and **Profile DCAT Fault** tables
 
   - For the "Exception" column, some metrics will be included/excluded in the DCAT analysis, depending on the values of other metrics.
 
-  - - \[metric name\]\[==\]\[value\]
+    - \[metric name\]\[==\]\[value\]
 
-    - - The logic will only include the metric specified under "Name" in the DCAT analysis if the metric "metric name" equals "value".
+      - The logic will only include the metric specified under "Name" in the DCAT analysis if the metric "metric name" equals "value".
 
     - \[metric name\]\[==\]\[value\] OR \[metric nameX\]\[!=\]\[valueX\] AND \[metric nameY\]\[!=\]\[valueY\]
 
-    - - The logic will only include the metric specified under "Name" in the DCAT analysis if the metric "metric name" equals "value" or the metric "metric nameX" equals "valueX" and the metric "metrixY" equals "valueY".
+      - The logic will only include the metric specified under "Name" in the DCAT analysis if the metric "metric name" equals "value" or the metric "metric nameX" equals "valueX" and the metric "metrixY" equals "valueY".
 
     - Any combination of the above.
 
     - Supported math operators:
 
-    - - Equal to (==)
+      - Equal to (==)
       - Not Equal to (!=)
       - Less Than (\<)
       - Less Than or Equal To (\<=)
@@ -133,14 +133,14 @@ This page contains the **Profile DCAT Metric** and **Profile DCAT Fault** tables
 
     - Supported logical operators:
 
-    - - OR
+      - OR
       - AND
 
 - Profile DCAT Fault:
 
-- Filter logic: The Value Filter, Display Key Filter, and Severity Filter columns allow for the logical inclusion or exclusion of alarm events in the "Operator" logic. The following options are possible:
+  - Filter logic: The Value Filter, Display Key Filter, and Severity Filter columns allow for the logical inclusion or exclusion of alarm events in the "Operator" logic. The following options are possible:
 
-  - - All: All values will be considered towards the "Operator" logic.
+    - All: All values will be considered towards the "Operator" logic.
     - \![value\]: The value "value" will not be considered towards the "Operator" logic.
     - \![value1\]/\![value2\]/\![valueX\]: The values "value1", "value2", and "valueX" will not be considered towards the "Operator" logic.
     - \[value\]: Only the value "value" will be considered towards the "Operator" logic.

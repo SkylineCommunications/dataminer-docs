@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. This can be the TCP port of a serial gateway or the TCP port on the device itself. (In case of direct IP connection: by default *9998.*)
   - **Bus address**: The bus address of the device (range *64-95*). This needs to match the bus address setting on the device itself (depending on the DIP switches).
 

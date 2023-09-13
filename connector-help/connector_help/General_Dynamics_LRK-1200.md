@@ -4,7 +4,7 @@ uid: Connector_help_General_Dynamics_LRK-1200
 
 # General Dynamics LRK-1200
 
-The **driver** is a **virtual driver** used to monitor and configure the General Dynamics LRK-1200.
+This is a **virtual driver** used to monitor and configure the General Dynamics LRK-1200.
 
 ## About
 
@@ -14,7 +14,8 @@ The General Dynamics LRK-1200 is a redundant LNA system.
 
 ### Creation
 
-This **driver** is a virtual **driver**, and upon creating an **element** you need to define for each of the **input parameters** from which **Dataminer element** and from which **parameter** the Status information will be received, and also for the **output parameters**, to which **Dataminer Element** and to which **parameter** the data will be sent.
+This is a virtual driver. When you create an element, you need to define for each of the **input parameters** from which **DataMiner element** and from which **parameter** the Status information will be received, and also for the **output parameters**, to which **DataMiner Element** and to which **parameter** the data will be sent.
+
 These parameters are linked to :
 
 **Auto/Manual Status Write (Write)** = output parameter
@@ -41,5 +42,6 @@ These parameters are linked to :
 
 ### General
 
-This **page** gives you the option to see the status of the **Summary Alarm**, and of the **LNA1** **Status, LNA 2 Status, LNA 3 Status**, of the **Controller PSU 1 Status, Controller PSU 2 Status, Auto/Manual Select** and **Local/Remote Status.**
+This **page** gives you the option to see the status of the **Summary Alarm**, and of the **LNA1** **Status, LNA 2 Status, LNA 3 Status**, of the **Controller PSU 1 Status, Controller PSU 2 Status, Auto/Manual Select** and **Local/Remote Status**.
+
 **POL1** and **POL2** can also be toggled here.

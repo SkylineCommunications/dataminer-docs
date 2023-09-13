@@ -63,7 +63,9 @@ The following properties can be set for a DVB-S/S2 port:
 - **Spectral Inversion**: Allows you to select the mode of operation for the spectral inversion function.
 
 - **Modulation & FEC**: Allows you to select the modulation type and coding rate, according to the selected modulation standard.
+
   For DVB-S, one of the following must be selected: *QPSK 1/2*, *QPSK 2/3*, *QPSK 3/4*, *QPSK 5/6* or *QPSK 7/8*.
+
   When DVB-S2 is used, one of the following must be selected: *QPSK 1/2, QPSK 2/3, QPSK 3/4, QPSK 5/6, QPSK 3/5, QPSK 4/5, QPSK 8/9, QPSK 9/10, 8PSK 3/5, QPSK 2/3, 8PSK 3/4, 8PSK 5/6, 8PSK 8/9* or *8PSK 9/10*.
 
 - **Pilots**: The Pilot feature should only be activated when the signal has Pilot symbols, otherwise the demodulator will not lock onto the signal. DVB-S2 only.
@@ -90,18 +92,18 @@ The following properties can be set for a DVB-S/S2 port:
 
 - **Local Oscillator Frequency**: This parameter depends on the **LNB Type parameter** (and the **22 kHz Tone parameter**):
 
-- When the LNB Type is *Ku*, the configurable value ranges from 8.500 to 13.000. The resolution is GHz. The step is 125 kHz. Default: 9.750.
+  - When the LNB Type is *Ku*, the configurable value ranges from 8.500 to 13.000. The resolution is GHz. The step is 125 kHz. Default: 9.750.
 
   - When the LNB Type is *C*, the configurable value ranges from 5.000 to 6.000. The resolution is GHz. The step is 125 kHz. Default: 5.150.
 
   - When the LNB Type is *Universal*
 
-  - - and 22 kHz Tone is *Low Band (Off)*, the value is 9.750
+    - and 22 kHz Tone is *Low Band (Off)*, the value is 9.750
     - and 22 kHz Tone is *High Band (On)*, the value is 10.600
 
   - When the LNB Type is *Universal Wide*
 
-  - - and 22 kHz Tone is *Low Band (Off)*, the value is 9.750
+    - and 22 kHz Tone is *Low Band (Off)*, the value is 9.750
     - and 22 kHz Tone is *High Band (On)*, the value is 10.750
 
 - **22 kHz Tone**: The receiver controls the LNB band by sending a 22 kHz signal. When the signal is sent, the LNB uses its High Band Local Oscillator (L.O.). When the signal is not sent, the LNB uses its Low Band L.O. Range: 10.700 - 11.900 GHz. Possible values: *High Band - (On)* and *Low Band - (Off)* (default value).
@@ -116,11 +118,11 @@ The following properties can be set for a DVB-S/S2 port:
 
 In order to apply the changes, click the **Apply** button. This will write the parameters displayed on this subpage to the device.
 
-Note:
-
-- Once you start to change parameter settings, the polling of platform parameters will be postponed until you have clicked **Apply**. Then the parameters will be written to the device and information will be polled again.
-- In case you have started to modify parameters and **5 minutes** go by without any further parameter configuration changes, the connector will start to the platform data again. Consequently, any **parameter configuration changes will be lost**.
-- Applying changes can take some time, so it is possible that changes will only be visible after some time.
+> [!NOTE]
+>
+> - Once you start to change parameter settings, the polling of platform parameters will be postponed until you have clicked **Apply**. Then the parameters will be written to the device and information will be polled again.
+> - In case you have started to modify parameters and **5 minutes** go by without any further parameter configuration changes, the connector will start to the platform data again. Consequently, any **parameter configuration changes will be lost**.
+> - Applying changes can take some time, so it is possible that changes will only be visible after some time.
 
 #### Inputs \> GbE Port Properties
 
@@ -142,7 +144,7 @@ The following properties can be set for a GbE port:
 
 - **Redundancy Scheme**: The following options are available:
 
-- *Manual*: You can manually switch between the primary port and the backup port regardless of their link status.
+  - *Manual*: You can manually switch between the primary port and the backup port regardless of their link status.
   - *Manual Revert*: The device switches from the primary port to the backup port when the primary port fails on the redundancy trigger and the backup port has no active alarms. You can revert from the backup port to the primary port manually.
   - *Automatic*: The device switches to the standby port whenever the active port fails on one of the redundancy triggers and the standby port has no active alarms.
   - *Automatic Revert*: The device switches from the primary port to the backup port when the primary port fails on one of the redundancy triggers and the backup port has no active alarms. The device reverts to the primary as soon as the primary port has no active alarms.
@@ -173,7 +175,7 @@ The page contains three tables:
 - **Services Table**: This table gives an overview of the services (or programs) included in the logical input transport stream. In addition to the **Program Number**, the table also displays the **Program Name**, the **PMT PID**, the Service **PCR PID** and the **Service Bitrate** for each service.
 - **PIDs Table**: This table gives an overview of the elementary streams (ES) included in the transport stream. Each row represents an elementary stream and indicates the PID value (**PID ID)**, the program(s) that reference this ES (**Ref by Service**), the type of ES (**Type**) (note that the type can only be determined if the ES is referenced by a service or the PID is a PSI/SI-specific PID), the bitrate (**Bitrate**) and the **CC Errors**.
 
-#### Logical Inputs \> Properties
+#### Logical Inputs > Properties
 
 The Properties page button below the Logical Inputs Table allows you to configure the following parameters of the logical input transport stream:
 
@@ -208,7 +210,7 @@ This page contains the following parameters:
 
 - **Service Mode**: The following options are available:
 
-- *No Decoding*: Use this mode to disable decoding. When the Service Mode is set to *No Decoding*, the remaining decoder options are not applicable.
+  - *No Decoding*: Use this mode to disable decoding. When the Service Mode is set to *No Decoding*, the remaining decoder options are not applicable.
   - *Program*: Use this mode to set the decoder to manual program selection.
   - *Fixed PID*: Use this mode to set the decoder to manual PID selection.
   - *Automatic*: Use this mode for the device to automatically decode the first program in the TS (first in PAT).
@@ -247,20 +249,20 @@ In order to change the service mode (and/or the input program), click the **Appl
 
 Several page buttons are present that allow you to monitor/configure specific parts of the decoder. In order to change a decoder configuration parameter, click the **Apply** button on the corresponding page.
 
-#### Decoder \> Descrambling
+#### Decoder > Descrambling
 
 This subpage contains decoder setting related to descrambling. The following parameters are present:
 
 - **CA Device**: Allows you to select a CA device for descrambling. Available options are *None*, *CAM-1*, *CAM-2* and *BISS*. Default: *CAM-1*.
 - **BISS Key:** Only applicable when CA Device is set to *BISS*.
 
-#### Decoder \> Video
+#### Decoder > Video
 
 This subpage contains parameters related to the video decoder. The following parameters are present:
 
 - **Video PID Selection Mode:** Allows you to select the PID selection mode. Available options are:
 
-- *None*: No PID selected. (When Service Mode is *Fixed PID*, the PID Selection Mode default is *None*.)
+  - *None*: No PID selected. (When Service Mode is *Fixed PID*, the PID Selection Mode default is *None*.)
   - *Fixed PID*: Allows you to select a video PID by its number (1-8190).
   - *Automatic*: Selects the video PID with the lowest number in the PMT. PID selection occurs whenever there is any change in the PMT. (When Service mode is *Automatic*, the PID Selection Mode default is *Automatic*.)
 
@@ -288,7 +290,7 @@ This subpage contains parameters related to the video decoder. The following par
 
 - **Error recovery Mode**: Can be set to *Full* (default), *Partial*, *None* or *High*.
 
-#### Decoder \> PCR
+#### Decoder > PCR
 
 The following parameters are present on this subpage:
 
@@ -298,7 +300,7 @@ The following parameters are present on this subpage:
 - **A/V Sync**: Can be *Frame* (default) or *Off*.
 - **Video Buffer Delay:** Range: 1 to 300 ms. (Default: *100*.)
 
-#### Decoder \> Audio#1/Audio#2
+#### Decoder > Audio#1/Audio#2
 
 These subpages contain parameters related to the audio decoders:
 
@@ -314,11 +316,11 @@ These subpages contain parameters related to the audio decoders:
 - **Audio \#1/#2 Digital Channel Status**: Only on PVR-8130 model. Can be set to *Professional* (default) or *Consumer*.
 - **Audio \#1/#2 Volume**: Sets the audio volume. Range: -63 to 0 dB. Default: 0.
 
-#### Decoder \> Embedded Audio
+#### Decoder > Embedded Audio
 
 Use embedded audio to embed the audio channels into the SDI out ports.
 
-#### Decoder \> DPI
+#### Decoder > DPI
 
 - **DPI Selection Mode:** PID Selection can only be done on the PVR-8130 and the **Service Mode** must be set to *Program* or *Automatic*. Available options: *None*, *Fixed PID* (only when Service Mode is set to *Program*), *Automatic* (default when Service Mode is set to *Automatic* or *No Decoding*).
 - **DPI PID**: The DPI PID value.
@@ -332,12 +334,12 @@ Use embedded audio to embed the audio channels into the SDI out ports.
 - **Insert to HD VANC**: Can be set to *Yes* or *No*.
 - **Line in HD Outputs**
 
-#### Decoder \> VBI/VANC
+#### Decoder > VBI/VANC
 
 - **VBI VANC PID Selection Mode:** Can be set to *Automatic* or *None*. If set to *None*, the decoder can extract information from the incoming stream and re-insert it into the output (VBI or VANC). No decoding occurs.
 - **VBI/VANC PID**: The VBI/VANC PID value.
 
-#### Decoder \> OSD
+#### Decoder > OSD
 
 - **Subtitling Type**: Only displayed when Service Mode is *Program* or *Automatic*. Can be set to *None* (default), *DVB Subtitling* or *VBI Teletext*.
 - **DVB PID Selection Mode**
@@ -365,7 +367,7 @@ The page contains three tables:
 - **Output Services Table**: This table gives an overview of the services (or programs) included in the logical input transport stream. In addition to the **Program Number**, the table also displays the **Program Name**, the **PMT PID**, the Service **PCR PID** and the **Service Bitrate** for each service.
 - **Output PIDs Table**: This table gives an overview of the elementary streams (ES) included in the transport stream. Each row represents an elementary stream and indicates the **PID ID**, the programs that reference this ES (**Ref by Service**), the **Type** of ES (note that the type can only be determined if the ES is referenced by a service or the PID is a PSI/SI-specific PID), the **Bitrate** and the **CC Errors**. In addition, it contains the PID value of the elementary stream of the logical input (**Input PID**) that corresponds with this elementary stream of the logical output, as well as the **Scramble State**.
 
-#### Logical Outputs \> Properties
+#### Logical Outputs > Properties
 
 The **Properties** page button below the **Logical Inputs Table** displays the following parameters for the logical input transport stream:
 
@@ -387,7 +389,7 @@ The logical outputs page also contains page buttons that display information rel
 
 - **PAT**: On this page, information related to the Program Association Table (PAT) is displayed.
 
-- **Logical Output PAT TS ID**: The ID of the TS that carries the PAT. In *Generate* mode, the TS ID in the PAT is configured by the user.
+  - **Logical Output PAT TS ID**: The ID of the TS that carries the PAT. In *Generate* mode, the TS ID in the PAT is configured by the user.
   - **Logical Output PAT Number of Sections**: The number of sections the PAT table consists of.
   - **Logical Output PAT Mode**: If set to *None*, the device does not generate or pass the PAT. If set to *Generate*, the device generates the PAT (default). If set to *Pass*, the device passes the PAT without any changes.
   - **Logical Output PAT Repetition Rate**: Range: 50-1000 ms, in steps of 10 ms. Default: 300.
@@ -396,7 +398,7 @@ The logical outputs page also contains page buttons that display information rel
 
 - **CAT**: on this page, information related to the Conditional Access Table (CAT) is displayed.
 
-- **Logical Output CAT Version**: The version number of the CAT.
+  - **Logical Output CAT Version**: The version number of the CAT.
   - **Logical Output CAT Number of Sections**: The number of sections the CAT table consists of.
   - **Logical Output CAT Mode**: If set to *None*, the device does not generate or pass the CAT. If set to *Generate*, the device generates the CAT (default). If set to *Pass*, the device passes the CAT without any changes.
   - **Logical Output CAT Repetition Rate**: Range: 50-1000 ms, in steps of 10 ms. Default: 500.
@@ -405,13 +407,13 @@ The logical outputs page also contains page buttons that display information rel
 
 - **NIT**: On this page, information related to the Network Information Table (NIT) is displayed.
 
-- **Logical Output NIT Mode**: If set to *None*, the device does not pass the NIT. If set to *Pass*, the device passes the NIT without any changes (default).
+  - **Logical Output NIT Mode**: If set to *None*, the device does not pass the NIT. If set to *Pass*, the device passes the NIT without any changes (default).
   - **Logical Output NIT Input TS**: The current logical input TS.
   - **Logical Output NIT Input PID**: In *Pass* mode, the Input PID is required. Range 1-8190. Default: 16.
 
 - **SDT**: On this page, information related to the Service Description Table (SDT) is displayed.
 
-- **Logical Output SDT TS ID**: The TS ID that carries the SDT.
+  - **Logical Output SDT TS ID**: The TS ID that carries the SDT.
   - **Logical Output SDT Version**: The version number of the SDT.
   - **Logical Output SDT Number of Sections**: The number of sections the SDT table consists of.
   - **Logical Output SDT Mode**: If set to *None*, the device does not generate or pass the SDT. If set to *Generate*, the device generates the SDT (default). If set to *Pass*, the device passes the SDT without any changes.

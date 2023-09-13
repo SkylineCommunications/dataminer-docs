@@ -8,7 +8,7 @@ The RCI RC2000 is a Satellite Antenna Controller that allows a dish to find and 
 
 ## About
 
-With this driver you can monitor and manipulate the antenna using Azimuth, Elevation, Polarisation and Rotating Feed.
+With this driver you can monitor and manipulate the antenna using Azimuth, Elevation, Polarisation, and Rotating Feed.
 
 ## Installation and configuration
 
@@ -44,9 +44,9 @@ On this page, you can move the antenna to different satellites or reset the ante
 
   Please note that only the **Polarisation** is used as an extra set if **Preset Table Usage** is enabled, other data in the Preset table (position, azimuth, elevation) are currently only supplied by way of information, not as configuration settings.
 
-- **Importing from an Excel** file requires the file to have a fixed structure.
+  - **Importing from an Excel** file requires the file to have a fixed structure.
 
-  - - **Column C** should contain a **formatted name** for the satellite.
+    - **Column C** should contain a **formatted name** for the satellite.
     - **Column D** should contain the **Position Value** for the satellite.
     - **Column E** should contain the **Directional Part** of the Position (N, E, S, W).
 
@@ -57,7 +57,7 @@ On this page, you can move the antenna to different satellites or reset the ante
   - Enter the columns in this spreadsheet table that contain the **Azimuth, Elevation and Polarisation** (in that order) (default:*MNO*). The **Parabole Columns (Az, El, Pol)** should hold this value.
     For example: *MNO* means:
 
-  - - **Column M** contains the **Azimuth.**
+    - **Column M** contains the **Azimuth.**
     - **Column N** contains the **Elevation.**
     - **Column O** contains the **Polarisation.**
 

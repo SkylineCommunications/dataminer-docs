@@ -44,7 +44,7 @@ HTTPS CONNECTION:
 
 This page contains the **Saved Runbook Script** table, which can be used to execute, add, delete and edit a script.
 
-You can export this table by right-clicking it, selecting Other, and then selecting the export option. To make sure the import function can find the CSV file for import, make sure you save the export in the folder **C:\Skyline Dataminer\Documents\Resolve Systems Resolve Platform**. You can import a CSV file via the button at the bottom.
+You can export this table by right-clicking it, selecting Other, and then selecting the export option. To make sure the import function can find the CSV file for import, make sure you save the export in the folder **C:\Skyline DataMiner\Documents\Resolve Systems Resolve Platform**. You can import a CSV file via the button at the bottom.
 
 ### Overview
 

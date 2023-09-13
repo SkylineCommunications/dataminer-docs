@@ -68,19 +68,19 @@ HTTP CONNECTION:
 
 The first time you start a **Tektronix Sentry** element, enter a username and a password in the **Configuration** dialog box.
 
-1.  Go to the **General** page.
-2.  Click the **Configuration** page button.
-3.  Enter the **Username** and **Password**.
-4.  Select to **Enable**/**Disable** KPI2.
-5.  If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
-6.  Log on.
+1. Go to the **General** page.
+1. Click the **Configuration** page button.
+1. Enter the **Username** and **Password**.
+1. Select to **Enable**/**Disable** KPI2.
+1. If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
+1. Log on.
 
 Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
-1.  Open the web interface.
-2.  Select **Configure** \> **Users**
-3.  Select the username.
-4.  Set **API Access** to *Yes*.
+1. Open the web interface.
+1. Select **Configure** \> **Users**
+1. Select the username.
+1. Set **API Access** to *Yes*.
 
 The API password must be the same as the password used to log in on the web interface.
 
@@ -88,17 +88,17 @@ The API password must be the same as the password used to log in on the web inte
 
 The first time you start a **Tektronix Sentry** element, enter a username and a password in the **Configuration** dialog box.
 
-1.  Go to the **General** page.
-2.  Click the **Configuration** page button.
-3.  Enter the **Username** and **Password**.
-4.  Log on.
+1. Go to the **General** page.
+1. Click the **Configuration** page button.
+1. Enter the **Username** and **Password**.
+1. Log on.
 
 Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
-1.  Open the web interface.
-2.  Select **Configure** \> **Users**
-3.  Select the username.
-4.  Set **API Access** to *Yes*.
+1. Open the web interface.
+1. Select **Configure** \> **Users**
+1. Select the username.
+1. Set **API Access** to *Yes*.
 
 The API password must be the same as the password used to log in on the web interface.
 
@@ -193,36 +193,46 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 
 - To **create** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Create** and provide a name for the new program template.
-    3.  A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. When it has been configured, select **Upload to Probe** in the right-click menu.
+   1. Right-click in the **Program Template Table** to access the context menu.
+
+   1. Select **Create** and provide a name for the new program template.
+
+   1. A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. When it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template:
 
-1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
-        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+   1. Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
+
+   1. When ready, click the **Update Probe** button to send the new configuration to the probe.
+
+       Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
-> 1.  On the **Load From File** page, select the program template file name from the files located in the Documents folder.
-> 2.  Apply one of the following two options:
->
-> > - **Upload to Probe**
-> >   Note that if the program template from the file **already exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
-> >
-> > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
-> >   - Otherwise, the existing program template will be updated.
-> >
-> > - **Load to Table**
-> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
-> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+   1. On the **Load From File** page, select the program template file name from the files located in the Documents folder.
+
+   1. Apply one of the following two options:
+
+       - **Upload to Probe**
+
+         Note that if the program template from the file **already exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+
+         - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
+         - Otherwise, the existing program template will be updated.
+
+       - **Load to Table**
+
+         With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+
+         Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the **Program Template Table** to access the context menu.
+
+  1. Select **Export** and provide a name for the new program template file. The file will be saved in the Documents folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Alerts (available from 1.2.0.9 onwards)
 
@@ -236,30 +246,32 @@ From version 1.2.0.9 of the driver onwards, the **Use Program Group** option in 
 
 - To **create** a program template alert:
 
-1.  1.  Right-click in the **Program Template Alert Table** to access the context menu.
-    2.  Select **Create** and select a program template from the drop-down list.
-    3.  A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
+  1. Right-click in the **Program Template Alert Table** to access the context menu.
+  1. Select **Create** and select a program template from the drop-down list.
+  1. A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template alert:
 
-1.  1.  Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
-    2.  When you are ready, select **Upload to Probe** in the right-click menu.
+  1. Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
+  1. When you are ready, select **Upload to Probe** in the right-click menu.
 
 - To **import** a program template alert:
 
-> 1.  On the **Load From File** page, select the program template alert file name from the files located in the Documents folder.
-> 2.  Apply one of the following two options:
->
-> - - **Upload to Probe**
->   - **Load to Table:** With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+  1. On the **Load From File** page, select the program template alert file name from the files located in the Documents folder.
+  1. Apply one of the following two options:
 
-> > Note: For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
+     - **Upload to Probe**
+     - **Load to Table**: With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+
+     > [!NOTE]
+     > For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
 
 - To **export** a program template alert:
 
-1.  1.  Right-click in the Program Template Alert Table to access the context menu.
-    2.  Select **Export**. The file will be saved in the Documents folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the Program Template Alert Table to access the context menu.
+  1. Select **Export**. The file will be saved in the Documents folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Web Interface
 
@@ -366,36 +378,41 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 
 - To **create** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Create** and provide a name for the new program template.
-    3.  A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. When it has been configured, select **Upload to Probe** in the right-click menu.
+  1. Right-click in the **Program Template Table** to access the context menu.
+  1. Select **Create** and provide a name for the new program template.
+  1. A new entry will be created in the Trigger table and in all Alert Type tables, so that the new program template can be configured. When it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template:
 
-1.  1.  Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
-    2.  When ready, click the **Update Probe** button to send the new configuration to the probe.
-        Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
+  1. Click the **Edit** button in the **Program Template Table** to edit an existing configuration.
+  1. When ready, click the **Update Probe** button to send the new configuration to the probe.
+
+     Alternatively, you can cancel the editing by clicking the **Cancel Edit** button.
 
 - To **import** a program template:
 
-> 1.  On the **Load From File** page, select the program template file name from the files located in the **Documents\Tektronix Sentry\Program Template\\** folder.
-> 2.  Apply one of the following two options:
->
-> > - **Upload to Probe**
-> >   Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
-> >
-> > - - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
-> >   - Otherwise, the existing program template will be updated.
-> >
-> > - **Load to Table**
-> >   With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
-> >   Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
+  1. On the **Load From File** page, select the program template file name from the files located in the **Documents\Tektronix Sentry\Program Template\\** folder.
+  1. Apply one of the following two options:
+
+     - **Upload to Probe**
+
+       Note that if the program template from the file **already** **exists** in the **Program Template Table**, the **Status in Probe** will be evaluated.
+
+       - If *Not Present*, the content of the file will be uploaded to the probe and the table content will be overwritten.
+       - Otherwise, the existing program template will be updated.
+
+     - **Load to Table**
+
+       With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Table and select **Upload to Probe** to upload the loaded program template.
+
+       Note that if the program template from the file **already exists** in the **Program Template Table**, it will **not be loaded**.
 
 - To **export** a program template:
 
-1.  1.  Right-click in the **Program Template Table** to access the context menu.
-    2.  Select **Export** and provide a name for the new program template file. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\** folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the **Program Template Table** to access the context menu.
+  1. Select **Export** and provide a name for the new program template file. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\** folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Alerts
 
@@ -407,30 +424,32 @@ The **Load From File** page button opens a subpage where you can **upload or loa
 
 - To **create** a program template alert:
 
-1.  1.  Right-click in the **Program Template Alert Table** to access the context menu.
-    2.  Select **Create** and select a program template from the drop-down list.
-    3.  A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
+  1. Right-click in the **Program Template Alert Table** to access the context menu.
+  1. Select **Create** and select a program template from the drop-down list.
+  1. A new entry will be created in the table, which you can then configure. When it has been configured, select **Upload to Probe** in the right-click menu.
 
 - To **edit** a program template alert:
 
-1.  1.  Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
-    2.  When you are ready, select **Upload to Probe** in the right-click menu.
+  1. Edit the relevant field directly in the **Program Template Alert Table**. The **Status in Probe** will change to *Editing*.
+  1. When you are ready, select **Upload to Probe** in the right-click menu.
 
 - To **import** a program template alert:
 
-> 1.  On the **Load From File** page, select the program template alert file name from the files located in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.
-> 2.  Apply one of the following two options:
->
-> - - **Upload to Probe**
->   - **Load to Table:** With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+  1. On the **Load From File** page, select the program template alert file name from the files located in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.
+  1. Apply one of the following two options:
 
-> > Note: For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
+     - **Upload to Probe**
+     - **Load to Table:** With this option, you can view and edit the configuration in the file. If everything is as expected, you can then right-click the Program Template Alert Table and select **Upload to Probe** to upload the loaded alert.
+
+     > [!NOTE]
+     > For both options, the program template from the file must exist in the Program Template Table. In addition, if the Program Group Name from the file already exists in the Program Template Alert Table, the content from the file will overwrite the existing content.
 
 - To **export** a program template alert:
 
-1.  1.  Right-click in the Program Template Alert Table to access the context menu.
-    2.  Select **Export**. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.
-        Note that if the file name already exists, it will be overwritten.
+  1. Right-click in the Program Template Alert Table to access the context menu.
+  1. Select **Export**. The file will be saved in the **Documents\Tektronix Sentry\Program Template\\Alert\\** folder.
+
+     Note that if the file name already exists, it will be overwritten.
 
 ### Program Alerts
 

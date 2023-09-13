@@ -4,7 +4,7 @@ uid: Connector_help_Emerson_Liebert_GXT
 
 # Emerson Liebert GXT
 
-This connector can be used to monitor UPS GXT platforms. It supports **GXT2,** **GXT3, GXT4**, and **GXT5** and receives information via **SNMP** communication. **SNMP traps** are received to update corresponding data.
+This connector can be used to monitor UPS GXT platforms. It supports **GXT2**, **GXT3**, **GXT4**, and **GXT5** and receives information via **SNMP** communication. **SNMP traps** are received to update corresponding data.
 Depending on which type is used, GXT2, GXT3, GXT4, or GXT5, specific parameters will be retrieved in addition to the common parameters. When data cannot be retrieved for a particular parameter, the parameter will indicate *No Data.*
 
 ## About
@@ -53,9 +53,9 @@ The web interface is only accessible when the client machine has network access 
 
 ### General
 
-This page displays a quick overview of the device status, including the **Device Info**, **Module** **Status**, **Battery**, **Input** and **Output.**
+This page displays a quick overview of the device status, including the **Device Info**, **Module Status**, **Battery**, **Input** and **Output.**
 
-To consult additional info like **Reboot**, **Shutdown** **Cause** and **Tests**, click the corresponding page buttons.
+To consult additional info like **Reboot**, **Shutdown Cause** and **Tests**, click the corresponding page buttons.
 
 ### Alarms and Conditions
 
@@ -101,30 +101,40 @@ This page contains **GXT2 Network** information.
 
 It is possible that some settings need to be configured on the device before the element is able to set up the connection and start polling the data. The steps below briefly explain how to proceed if polling does not start automatically:
 
-1.  Open the web interface and select the tab **Configuration***.*
+1. Open the web interface and select the tab **Configuration**.
 
-2.  Select the folder **SNMP** in the left section of the web interface.
+1. Select the folder **SNMP** in the left section of the web interface.
 
-3.  Enable all checkboxes on this page and set the **Heartbeat Trap Interval** to 1 minute.
-    Note: You may need to click an **Edit** button first in order to be able to change settings.
-    Note: You may be prompted to enter administrator credentials to proceed.
-    Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
+1. Enable all checkboxes on this page and set the **Heartbeat Trap Interval** to 1 minute.
 
-4.  In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
+   Note: You may need to click an **Edit** button first in order to be able to change settings.
 
-5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
-    Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
+   Note: You may be prompted to enter administrator credentials to proceed.
 
-6.  In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click **Save** when ready.
+   Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
 
-7.  Add a trap entry and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
-    Note: Use the same **Community** as specified in the V1 Access table.
-    Note: Also enable the **Heartbeat** for this entry.
-    Note: The default port *162* should be correct.
-    Click **Save** when ready. The device may notify you that a restart is required to apply the changes.
+1. In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
 
-8.  If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
+1. Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
 
-9.  1.  Click the **Restart** folder in the left section of the web interface.
-    2.  Click the **Restart** button on this new page.
-        Note: This should only restart the SNMP module and not the complete device.
+   Click **Save** when ready. The device may notify you that a restart is required to apply the changes; however, ignore the restart for now.
+
+1. In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click **Save** when ready.
+
+1. Add a trap entry and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
+
+   Note: Use the same **Community** as specified in the V1 Access table.
+
+   Note: Also enable the **Heartbeat** for this entry.
+
+   Note: The default port *162* should be correct.
+
+   Click **Save** when ready. The device may notify you that a restart is required to apply the changes.
+
+1. If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
+
+   1. Click the **Restart** folder in the left section of the web interface.
+
+   1. Click the **Restart** button on this new page.
+
+      Note: This should only restart the SNMP module and not the complete device.

@@ -28,15 +28,15 @@ For this set of parameters, the manager element will keep track of the parameter
 
 ### Creation
 
-#### HTTP \[Name of the connection\] connection
+#### HTTP connection - Main
 
 This driver uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination.\]
-- **Bus address**: \[If the proxy server has to be bypassed, specify *bypassproxy.*\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination.
+- **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 ### Configuration
 
@@ -56,7 +56,7 @@ Contains a **Protocols Table**, an **Elements Table** and a **Parameters Table**
 - **Elements Table**: a list of all elements that are found on the DMS. Use the **Element Selected** parameter to select the elements you are interested in.
 - **Parameters Table**: a list with all parameters of the selected elements. Use the **Parameter Selected** parameter to subscribe on value changes, and forward the changes to CMDB.
 
-### Subsciptions
+### Subscriptions
 
 This page contains a table with a list of all parameters the driver is currently subscribed to.
 
@@ -74,38 +74,40 @@ Also the **Webservice Endpoint URL** can be configured on this page.
 
 Format of the XML data that is sent to the CMDB API:
 
-\<UpdateInstallationRequest xmlns="[http://BP.MDM.Artifacts/NewOrder](http://bp.mdm.artifacts/NewOrder)"\>
-\<DataMinerSystemId\>string\</DataMinerSystemId\>
-\<DataMinerAgentId\>int\</DataMinerAgentId\>
-\<EntityId\>int\</EntityId\>
-\<EntityType\>ELEMENT\</EntityType\> \<!-- ELEMENT \| SERVICE \| VIEW \| PARAMETER \| REDUNDANCYGROUP --\>
-\<Properties\>
-\<Property\> \<!-- 0..\* --\>
-\<Key\>
-\<Id\>int\</Id\>
-\<Name\>string\</Name\>
-\<Description\>string\</Description\>
-\<Index\>string\</Index\>
-\<IndexPK\>string\</IndexPK\>
-\</Key\>
-\<LastValueChangeUTC\>datetime\</LastValueChangeUTC\>
-\<Values\>
-\<OldValue\>string\</OldValue\>
-\<NewValue\>string\</NewValue\>
-\</Values\>
-\</Property\>
-\<Property\>
-...
-\</Property\>
-\</Properties\>
-\</UpdateInstallationRequest\>
+```xml
+<UpdateInstallationRequest xmlns="http://BP.MDM.Artifacts/NewOrder">
+  <DataMinerSystemId>string</DataMinerSystemId>
+  <DataMinerAgentId>int</DataMinerAgentId>
+  <EntityId>int</EntityId>
+  <EntityType>ELEMENT</EntityType> <!-- ELEMENT | SERVICE | VIEW | PARAMETER | REDUNDANCYGROUP -->
+  <Properties>
+    <Property> <!-- 0..* -->
+      <Key>
+        <Id>int</Id>
+        <Name>string</Name>
+        <Description>string</Description>
+        <Index>string</Index>
+        <IndexPK>string</IndexPK>
+      </Key>
+      <LastValueChangeUTC>datetime</LastValueChangeUTC>
+      <Values>
+        <OldValue>string</OldValue>
+        <NewValue>string</NewValue>
+      </Values>
+    </Property>
+    <Property>
+      ...
+    </Property>
+  </Properties>
+</UpdateInstallationRequest>
+```
 
 Fields:
 
 - DataMinerSystemId = identifier whereby we can distinguish from which DMS the call is coming from.
 - DataMinerAgentId = identifier of the DataMiner Agent.
 - EntityId = identifier of an Element/Service/etc. For example ElementId.
-- EntityType = the type of the entitiy that belongs to the EntityId.
+- EntityType = the type of the entity that belongs to the EntityId.
 - Properties = list of properties that has been changed at ones.
 - Property = information that you can subscribe on.
 - Key.Id = identifier of property (is optional, but must be filled if is available).

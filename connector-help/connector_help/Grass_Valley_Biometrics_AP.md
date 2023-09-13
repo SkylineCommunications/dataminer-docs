@@ -41,13 +41,13 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
 
   - **IP port**: The IP port of the destination (default: *2050*).
 
   - **Bus address**: The bus address of the device.
 
-  - - Range 1.0.0.x: The format is equal to *UU.PP*, where UU is the unit address and PP is the unit port. For example: *01.01*.
+    - Range 1.0.0.x: The format is equal to *UU.PP*, where UU is the unit address and PP is the unit port. For example: *01.01*.
     - Range 1.0.1.x: The format is equal to *NNNN.UU.PP*, where NNNN is the unit network address, UU is the unit address and PP is the unit port. For example: *1160.01.01*.
 
 ### Initialization

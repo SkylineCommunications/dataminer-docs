@@ -38,7 +38,7 @@ SERIAL CONNECTION (via Serial Gateway):
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *127.0.0.1*.
+  - **IP address/host**: The polling IP of the device, e.g. *127.0.0.1*.
   - **IP port**: The IP port of the device, e.g. *4006.* Required.
   - **Bus address**: The bus address of the device, e.g. 64. Required.
 

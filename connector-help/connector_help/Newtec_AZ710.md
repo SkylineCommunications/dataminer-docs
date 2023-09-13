@@ -49,7 +49,7 @@ Direct connection:
 
 Interface connection:
 
-- **IP address/host**: The IP of the device.
+  - **IP address/host**: The IP of the device.
 - **IP port**: By default *5933*.
 - **Bus address**: By default *100*.
 

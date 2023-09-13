@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **Type of port**: Default *UDP/IP*.
+  - **Type of port**: Default *UDP/IP*.
   - **IP address/host**: specify "*any*" to receive data from all devices
   - **IP port**: The IP port of the device. Default: *2055*.
 

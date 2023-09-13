@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, by default *9600 (*range: from *300* to *19200,* except *600*, which is not supported).
+  - **Baudrate**: Baudrate specified in the manual of the device, by default *9600 (*range: from *300* to *19200,* except *600*, which is not supported).
   - **Databits**: Databits specified in the manual of the device, by default *8.* The eighth bit is the parity bit or 0 when the parity is set to *none*.
   - **Stopbits**: Stopbits specified in the manual of the device, by default *1.*
   - **Parity**: Parity specified in the manual of the device (*even*, *odd* or *none*).
@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *6001* (range: from *1* to *65534*).
   - **Bus address**: The bus address of the device (range: from *33* to *126*).
 

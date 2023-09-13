@@ -21,12 +21,12 @@ This driver uses a 2 Smart-Serial connection and needs the following user inform
 
 SERIAL CONNECTION (Connected for MBT A):
 
-- IP address/host: \[The polling IP of the device\]
+- IP address/host: The polling IP of the device
 - IP port: \[The IP port of the device\]
 
 MBTB (Connected for MBT B):
 
-- IP address/host: \[The polling IP of the device\]
+- IP address/host: The polling IP of the device
 - IP port: \[The IP port of the device\]
 
 ***HTTP connection

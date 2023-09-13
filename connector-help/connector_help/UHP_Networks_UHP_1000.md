@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600*.
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600*.
   - **Databits**: Databits specified in the manual of the device, e.g. *7*.
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1*.
   - **Parity**: Parity specified in the manual of the device, e.g. *No*.
@@ -60,7 +60,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (default: *23*).
 
 ### Initialization

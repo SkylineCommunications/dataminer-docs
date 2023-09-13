@@ -38,18 +38,16 @@ GPIB CONNECTION:
 
 - Interface connection:
 
-<!-- -->
-
-- **I/O API**: Choose between SICL or VISA
+  -**I/O API**: Choose between SICL or VISA
 
   - **Device address**: Specify the IP address and GPIB address. For example:
 
-  - - lan\[192.168.122.19\]:gpib0,30
+    `lan[192.168.122.19]:gpib0,30`
 
-    - - "lan" is the "SICL Interface name" in the IO configuration.
-      - "192.168.122.19" is the "machineName", which is the IP address of the network GPIB interface.
-      - "gpib0" is the "Remote SICL Interface Name".
-      - "30" is the bus address on the device.
+    - "lan" is the "SICL Interface name" in the IO configuration.
+    - "192.168.122.19" is the "machineName", which is the IP address of the network GPIB interface.
+    - "gpib0" is the "Remote SICL Interface Name".
+    - "30" is the bus address on the device.
 
 ## How to Use
 

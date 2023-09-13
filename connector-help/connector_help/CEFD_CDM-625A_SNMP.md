@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_CDM-625A_SNMP
 
 # CEFD CDM-625A SNMP
 
-The CEFD CDM-625A SNMP is intended to communicate with CDM-625A Comtech devices - the driver is based on the CDM 625 SNMP MIB.
+The CEFD CDM-625A SNMP is intended to communicate with CDM-625A Comtech devices. The driver is based on the CDM 625 SNMP MIB.
 
 ## About
 
@@ -56,7 +56,7 @@ This page displays the main device parameters. It is divided in two main section
 
 - System Information:
 
-- **Model Number**: The model number of the modem.
+  - **Model Number**: The model number of the modem.
   - **Hardware Revision**: The hardware revision of the modem, in the format *xx.y*, where *xx* indicates the main (bottom) card and *y* indicates the top (modem) card.
   - **Software Revision**
   - **Serial Number**
@@ -65,7 +65,7 @@ This page displays the main device parameters. It is divided in two main section
 
 - Device Overall Status:
 
-- **Unit Alarm**: Shows whether modem unit faults are present.
+  - **Unit Alarm**: Shows whether modem unit faults are present.
   - **Tx Traffic Alarm**: Shows whether modem TX traffic faults are present.
   - **Rx Traffic Alarm**: Shows whether modem RX traffic faults are present.
   - **Offline Unit Status**: Displays the fault status information of the offline modem.
@@ -86,14 +86,14 @@ The page is divided in two main sections:
 
 - Host Access List:
 
-- **Access List**: Allows you to grant access via HTTP and SNMP to a defined list of client machines.
+  - **Access List**: Allows you to grant access via HTTP and SNMP to a defined list of client machines.
   - **Access List Overview**: Allows you to define which remote clients can connect when the access list is enabled. For each entry, you can specify an **IP Address** and a **Subnet Mask** to define a unique class of machines that are allowed access.
   - **Authentication Check:** Allows you to test if a username/password combination is correct. The combination must be as follows: *1S:&lt;NONCE&gt;:&lt;USERNAME&gt;:&lt;PASSWORD&gt;)*.
   - **Remote Control:** Allows you to indicate whether the device should work in local or remote mode, and also the type of remote mode.
 
 - SNMP:
 
-- **Trap IP 1 / Trap IP 2:** Allows you to assign up to two SNMP trap IP addresses.
+  - **Trap IP 1 / Trap IP 2:** Allows you to assign up to two SNMP trap IP addresses.
   - **Trap Version:** Allows you to set the trap version to *SNMPv1* or *SNMPv2*, using the drop-down box.
   - **Trap Community String:** Allows you to assign the SNMP trap community string. The community string should consist of at least 0 and at most 20 alphanumeric characters.
 
@@ -124,7 +124,7 @@ This page allows you to configure parameters related to LAN IP. It consists of f
 
 - Network Configuration
 
-- **IP Gateway**: Allow you to configure the IP address of the default gateway. Only applicable in *Managed Switch Mode*.
+  - **IP Gateway**: Allow you to configure the IP address of the default gateway. Only applicable in *Managed Switch Mode*.
   - **Traffic/Mgmt IP Address** (and subnet mask): Allows you to configure the modem's IP addresses.
   - **MAC Address**: Displays the Ethernet port MAC address.
   - **MAC Learning**: Allows you to set MAC Learning to *On* or *Off*. Only applicable in *Managed Switch Mode*.
@@ -137,7 +137,7 @@ This page allows you to configure parameters related to LAN IP. It consists of f
 
 - Per Port Configuration: This section contains a table where you can set the parameters for each port (1 to 4):
 
-- **Port Speed**: Allows you to set the speed for the port to *Auto*, *100 Full-Duplex*, *100 Half-Duplex*, *10 Full-Duplex*, or *10 Half-Duplex*.
+  - **Port Speed**: Allows you to set the speed for the port to *Auto*, *100 Full-Duplex*, *100 Half-Duplex*, *10 Full-Duplex*, or *10 Half-Duplex*.
   - **Pause Flow Control**: Allows you to set pause flow control for the port to *Off* or *On*.
   - **Port Mode**: Allows you to set the native mode for the port to *Trunk* or *Access*.
   - **PVID**: When **Native Mode** is enabled, a PVID (Native VLAN ID) can be assigned to the selected port using a value range of *0001-4095*.
@@ -146,12 +146,12 @@ This page allows you to configure parameters related to LAN IP. It consists of f
 
 - VLAN Mode: This mode is supported in *Managed Switch Mode*, with or without the optional **IP Packet Processor** enabled.
 
-- **VLAN Mode**: Allows you to set the mode to *Disabled* or *Enabled*.
+  - **VLAN Mode**: Allows you to set the mode to *Disabled* or *Enabled*.
   - **Management VLAN ID**: Allows you to assign a management VLAN ID to the selected port using a value range of *0001-4095*.
 
 - VLAN Table
 
-- **VLAN ID**: This parameter is read-only and reflects the ID value assigned in the "Per Port Configuration" section of this page (any ID has a value range of 0001-4095).
+  - **VLAN ID**: This parameter is read-only and reflects the ID value assigned in the "Per Port Configuration" section of this page (any ID has a value range of 0001-4095).
   - **Port 1** through **Port 4**: Use the drop-down menu to set the port to *Untagged*, *Tagged*, or *Filtered***.**
   - **VLAN Row Status**: Contains a button that can be used to delete this active ID.
   - **Create VLAN**: This button is displayed below the table and allows you to create a new VLAN ID.
@@ -212,13 +212,13 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - Date & Time:
 
-- **RTC Date**: Specify a date in MM/DD/YY format (where MM = month \[01 to 12\], DD = day \[01 to 31\] and YY = year \[00 to 99\]).
+  - **RTC Date**: Specify a date in MM/DD/YY format (where MM = month \[01 to 12\], DD = day \[01 to 31\] and YY = year \[00 to 99\]).
   - **RTC Time**: Specify a time in HH:MM:SS format (where HH = hour \[00 to 23\], MM = minutes \[00 to 59\] and SS = seconds \[00 to 59\]).
   - **Time Sync** page button: Displays parameters related to time sync.
 
 - Warm-Up:
 
-- **Warm Up Delay**: Allows you to enable or disable the warm-up delay for internal frequency reference (OCXO). If it is disabled, there is no delay for OCXO to reach temperature. If it is enabled, the unit waits until OCXO reaches the correct temperature.
+  - **Warm Up Delay**: Allows you to enable or disable the warm-up delay for internal frequency reference (OCXO). If it is disabled, there is no delay for OCXO to reach temperature. If it is enabled, the unit waits until OCXO reaches the correct temperature.
   - **Warm Up Countdown**: Displays the number of seconds remaining in the warm-up delay countdown.
   - **Truncate Delay**: This button allows you to truncate the warm-up delay period to zero, forcing the unit into "instant-on" mode.
 
@@ -226,7 +226,7 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - Save / Load: Saving takes precedence over loading.
 
-- **Configuration Save / Configuration Load**: These drop-down boxes allow you to save or load up to 10 different modem configurations (numbered *0* to *9)*.
+  - **Configuration Save / Configuration Load**: These drop-down boxes allow you to save or load up to 10 different modem configurations (numbered *0* to *9)*.
   - **Configuration Slots** page button: Displays the available configuration slots.
 
 ### Config - Drop and Insert
@@ -241,7 +241,7 @@ The page consists of the following sections:
 
 - BUC Configuration:
 
-- **BUC Power Enable**, **10 MHz Ref Enable** and **Output Power Enable**: These parameters allow you to turn these functions *On* or *Off*.
+  - **BUC Power Enable**, **10 MHz Ref Enable** and **Output Power Enable**: These parameters allow you to turn these functions *On* or *Off*.
   - **BUC Low** and **High Current Limit**: Assign a value (in mA) ranging from *0* to *4000*.
   - **Tx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Tx LO Frequency, and then use the toggle button to set the value as a *HIGH (+)* or *LOW (-)* limit.
   - **BUC Address**: Assign a value for the BUC address from *1* to *15*.
@@ -250,7 +250,7 @@ The page consists of the following sections:
 
 - LNB Control:
 
-- **LNB DC Power**: Use the drop-down box to either set this to *Off* or to choose the appropriate voltage.
+  - **LNB DC Power**: Use the drop-down box to either set this to *Off* or to choose the appropriate voltage.
   - **LNB Reference Enable**: Use the toggle button to turn this function *On* or *Off*.
   - **LNB Low** and **High Current Threshold**: Assign a value (in mA) ranging from *0* to *500* for either function.
   - **Rx LO (Low Oscillator) Frequency**: Assign a value (in MHz) to the Rx LO Frequency, and then use the drop-down menu to set the value as a *HIGH (+)* or *LOW (-)* limit.
@@ -263,12 +263,12 @@ Use this page to configure PTP and SNTP operating parameters. This page consists
 
 - PTP
 
-- **PTP Feature**: Allows you to enable or disable PTP operation.
+  - **PTP Feature**: Allows you to enable or disable PTP operation.
   - **PTP Grandmaster**: Use the drop-down box to specify to which side (*LAN* port or *WAN* port) the PTP grandmaster is connected.
 
 - SNTP
 
-- **Primary Server**: Allows you to set IP address of the primary server.
+  - **Primary Server**: Allows you to set IP address of the primary server.
   - **Backup Server**: Allows you to set the IP address of the backup SNTP server.
   - **Enable SNTP**: Allows you to enable or disable the SNTP feature.
 
@@ -288,12 +288,12 @@ The page consists of the following sections:
 
 - Events Log
 
-- **Poll Event Table**: Allows you to enable or disable polling for the events table.
+  - **Poll Event Table**: Allows you to enable or disable polling for the events table.
   - **Events Overview**: Displays the events that have occurred.
 
 - Statistics Log
 
-- **Statistics Interval**: Allows you to specify the interval at which the statistics are taken.
+  - **Statistics Interval**: Allows you to specify the interval at which the statistics are taken.
   - **Statistics Overview**: Displays the statistics.
 
 Via page buttons, you can access the following subpages:
@@ -328,27 +328,27 @@ The page consists of the following sections:
 
 - ODU:
 
-- **ODU Comms**: Allows you to enable or disable ODU operation.
+  - **ODU Comms**: Allows you to enable or disable ODU operation.
 
   - If the **CSAT** and **KST** modules are enabled, generic system information such as firmware and software versions can be found below the ODU.
 
   - Via page buttons, you can access the configuration and status parameters for the **KST** and **CSAT** modules:
 
-  - - **KST Config**: Allows you to configure the KST information, such as Circuit ID, AGC State and the Reference Oscillator Adjust.
+    - **KST Config**: Allows you to configure the KST information, such as Circuit ID, AGC State and the Reference Oscillator Adjust.
     - **KST Status**: Displays the KST status information for the Unit, Common Equipment, Reference, AGC, Up and Down Converters, HPA and LNA.
     - **CSAT Config**: Allows you to configure the CSAT modules, including the Circuit ID, Mute Mode and Tx and Rx Frequencies.
     - **CSAT Status**: Displays the CSAT status information for the **Power Supplies**, **Tx and Rx**, and other systems.
 
 - Redundancy:
 
-- **Redundancy Traffic IP Address and Network Prefix**: Enter the IP address and subnet mask in the format XXX.XXX.XXX.XXX and YY.
+  - **Redundancy Traffic IP Address and Network Prefix**: Enter the IP address and subnet mask in the format XXX.XXX.XXX.XXX and YY.
   - **Redundancy 1:N mode**: Allows you enable or disable set 1:N redundancy mode. **Use with** **caution**.
   - **Packet Processor Redundancy**: When the optional IP Packet Processor card is installed and enabled in a 1:1 redundancy configuration, there is no need to use this toggle button, as packet processor redundancy is enabled automatically in that case.
   - **Force 1:1 Switch**: When redundant modems are used and the selected unit is currently the online unit, click the **Force 1:1 Switch** button to force a switchover, so the unit will then be in offline (standby) mode. This command is only valid for the online unit in a 1:1 pair.
 
 - Redundancy Monitor:
 
-- **Redundancy State and Offline Unit Status**: These parameters allow you to monitor the redundancy setup, both the status of the active modem (*Online* or *Offline*) and the detected presence of a redundancy switch.
+  - **Redundancy State and Offline Unit Status**: These parameters allow you to monitor the redundancy setup, both the status of the active modem (*Online* or *Offline*) and the detected presence of a redundancy switch.
   - **Redundancy status**: This parameter provides more detailed information than the Redundancy State parameter.
 
 ### FSK

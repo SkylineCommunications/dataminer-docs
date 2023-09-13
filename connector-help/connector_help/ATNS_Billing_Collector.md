@@ -14,7 +14,7 @@ The voice, data and serial data statistics will be processed and put in a databa
 
 ### Ranges of the driver
 
-This protocol does database queries to the local Dataminer database and is not compatible with Cassandra.
+This protocol does database queries to the local DataMiner database and is not compatible with Cassandra.
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|

@@ -51,7 +51,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: any
+  - **IP address/host**: any
   - **Bus address**: The bus address of the device is the slot number/position of the card in the frame
 
 ### Initialization

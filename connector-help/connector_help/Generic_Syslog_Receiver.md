@@ -51,7 +51,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP should be set to the specific keyword *any*. This will make sure the Syslog Receiver takes the Server role.
+  - **IP address/host**: The IP should be set to the specific keyword *any*. This will make sure the Syslog Receiver takes the Server role.
   - **IP port**: The IP port of the device, by default *514*.
 
 ## Usage

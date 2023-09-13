@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device (by default *2071*).
   - **Bus address**: The bus address of the device.
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device. Set this field to the value "*any*".
+  - **IP address/host**: The polling IP of the device. Set this field to the value "*any*".
   - **IP port**: The IP port of the device, by default *2072*.
   - **Bus address**: Specify "*any*".
 
@@ -60,7 +60,7 @@ The parameter "Input Detection" makes it possible to detect if there is an input
 
 The **1.0.0.x** driver range of the Axon ACP SDN08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

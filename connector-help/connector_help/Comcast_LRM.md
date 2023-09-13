@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The driver will act as a server. Set this field to "*Any*".
+  - **IP address/host**: The driver will act as a server. Set this field to "*Any*".
   - **IP port**: By default *3000*. A different port can be specified.
 
 ### Initialization

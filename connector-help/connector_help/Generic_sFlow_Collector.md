@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: *127.0.0.1*
+  - **IP address/host**: *127.0.0.1*
   - **Type:** *UDP*
   - **IP port**: *6343*
 

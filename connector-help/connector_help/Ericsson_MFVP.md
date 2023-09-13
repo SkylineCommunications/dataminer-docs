@@ -141,19 +141,17 @@ This system implementation covers two different HTTPS interfaces with different 
 
 - The **HTTP CONNECTION** using the **General API Credentials** has the following default credentials:
 
-- Username: *admin*
+  - Username: *admin*
   - Password: *admin*
 
 - The **HTTPS Connection - MDT API** using the **MDT API Credentials** has the following default credentials:
 
-- Username: *mdt-admin*
+  - Username: *mdt-admin*
   - Password: *changeme*
-
-<!-- -->
 
 - The **HTTPS Connection - STATS** using the **STATS Credentials** has the following default credentials:
 
-- Username: *mdt-admin*
+  - Username: *mdt-admin*
   - Password: *changeme*
 
 NOTE: If the element is properly authenticated, but still some **400 HTTP Bad Requests** are identified in Stream Viewer, **use range 1.1.0.x** instead. In this kind of situation, an update action on behalf of the vendor is needed.

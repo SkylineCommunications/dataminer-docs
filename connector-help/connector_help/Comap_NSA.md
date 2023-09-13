@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Not specified.
+  - **Baudrate**: Not specified.
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: No.
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *4001*. Range: *0-65535*.
   - **Bus address**: The bus address of the device, by default *1*. Range is *0-255*.
 
@@ -68,7 +68,7 @@ This page displays all information regarding the output of the device. The infor
 
 ### In Page
 
-This page displays all infomation regarding the input of the device. The information is grouped in the box **Mains Values**.
+This page displays all information regarding the input of the device. The information is grouped in the box **Mains Values**.
 
 ### Alarms Pages
 
@@ -93,15 +93,15 @@ The 16 Alarm Details Pages are:
 - **SD Alarms**
 - **Water Alarms**
 
-On each of these 16 pages, the alarm parameters are grouped into **Alarm boxes**, titled with a desciption of the alarm. Each alarm parameter originates from 2 or 3 bits of a specific register, specified in the subtext of every parameter.
+On each of these 16 pages, the alarm parameters are grouped into **Alarm boxes**, titled with a description of the alarm. Each alarm parameter originates from 2 or 3 bits of a specific register, specified in the subtext of every parameter.
 
 These **Alarm boxes** contain three values and are the result of dividing the bytes in three groups:
 
 - **... Level 1:** The status of level 1 of this alarm:
 
-- Possible values are:
+  - Possible values are:
 
-  - - Inactive. (0)
+    - Inactive. (0)
     - N/A. (1;5)
     - Active, confirmed. (2)
     - Active, but blocked or delay still running. (3)
@@ -111,9 +111,9 @@ These **Alarm boxes** contain three values and are the result of dividing the by
 
 - **... Level 2:** The status of level 2 of this alarm:
 
-- Possible values are:
+  - Possible values are:
 
-  - - Inactive. (0)
+    - Inactive. (0)
     - N/A. (1;5)
     - Active, confirmed. (2)
     - Active, but blocked or delay still running. (3)
@@ -123,15 +123,11 @@ These **Alarm boxes** contain three values and are the result of dividing the by
 
 - **... Sensor Failure:** The status of the sensor of this alarm:
 
-- Possible values are:
+  - Possible values are:
 
-  - - Inactive. (0)
+    - Inactive. (0)
     - Active, confirmed. (1)
     - Previously active, not confirmed yet. (2)
     - Active, not confirmed yet. (3)
 
 These alarm parameters are enabled for monitoring and trending. If the default alarm template is applied, each non-regular value (i.e. not *Inactive*) will cause the operator to be notified via the Alarm Console.
-
-## Notes
-
-N/A

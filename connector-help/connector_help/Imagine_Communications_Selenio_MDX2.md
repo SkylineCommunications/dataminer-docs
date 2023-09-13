@@ -12,15 +12,15 @@ This driver displays information on different pages, described in the **Usage** 
 
 All data gets retrieved from the device in two ways.
 
-1.  **Timers**
+1. **Timers**
 
-2.  - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
-    - Medium timer that triggers every 15 minutes and retrieves status parameters.
-    - Fast timer that triggers every 7 seconds and retrieves slot information (state, temperature, protection and Source State). Alarm information is also retrieved every 7 seconds, but this can be changed to every 30 seconds. The latter is recommended when traps are configured on the Selenio.
+   - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
+   - Medium timer that triggers every 15 minutes and retrieves status parameters.
+   - Fast timer that triggers every 7 seconds and retrieves slot information (state, temperature, protection and Source State). Alarm information is also retrieved every 7 seconds, but this can be changed to every 30 seconds. The latter is recommended when traps are configured on the Selenio.
 
-3.  **Dirty changes**
+1. **Dirty changes**
 
-4.  - Every 7 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
+   - Every 7 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
 
 The **versioning** for the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*
 

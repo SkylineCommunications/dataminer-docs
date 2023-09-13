@@ -34,19 +34,24 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *10210* (TelliShape Server).
 
 ### Configuration
 
-To allow DataMiner to poll the equipment, you need to add the IP addres/subnet mask of the polling DMA to a configuration file, and restart the TelliShape server to apply the changes:
+To allow DataMiner to poll the equipment, you need to add the IP address/subnet mask of the polling DMA to a configuration file, and restart the TelliShape server to apply the changes:
 
-1.  Either log in on the device's web interface in expert mode or locate the file "/usr/local/tellitec/tc-shape-server/shape-server.ini".
-2.  Determine the IP address of the DMA in the management LAN of the equipment, and add the address in the following section of the configuration/file:
-    *\[command_port\]*
-    *allowed_address=127.0.0.1*
-    *allowed_address=x.x.x.0/24*
-3.  Restart the shaper process to apply your changes.
+1. Either log in on the device's web interface in expert mode or locate the file "/usr/local/tellitec/tc-shape-server/shape-server.ini".
+
+1. Determine the IP address of the DMA in the management LAN of the equipment, and add the address in the following section of the configuration/file:
+
+   ```
+   [command_port]
+   allowed_address=127.0.0.1
+   allowed_address=x.x.x.0/24
+   ```
+
+1. Restart the shaper process to apply your changes.
 
 Note that with an EL860 1+1 hot standby redundancy configuration, it is not possible to poll the standby/backup device/element, because the Tellishape Server process can only run on one device/element at a time.
 
@@ -64,13 +69,13 @@ The **Statistics Per Modcod** page button provides access to more information ab
 
 ### Terminals Page
 
-This page provides an overview of the terminals, with information such as the **Number of IP Bytes sent**, **Symbols Rate** and **Terminal Current Modcod.**
+This page provides an overview of the terminals, with information such as the **Number of IP Bytes sent**, **Symbols Rate** and **Terminal Current Modcod**.
 
 ### ACM Control Page
 
 This page contains information related to the ACM, including the **Total Received ACM Feedbacks** and **Total Received ACM Changes**.
 
-The page also contains the **Statistics Per ACM Controller** table, which displays among others the **ACM Feedback Rate**, **ACM changes** and **ACM** **Expiry Rate.**
+The page also contains the **Statistics Per ACM Controller** table, which displays among others the **ACM Feedback Rate**, **ACM changes** and **ACM Expiry Rate.**
 
 ### Statistics per Rule Page
 

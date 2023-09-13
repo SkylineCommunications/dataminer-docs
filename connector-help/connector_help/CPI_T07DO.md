@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **Type of Port**: TCP/IP
+  - **Type of Port**: TCP/IP
   - **IP address/host**: The polling IP of the device, e.g. *10.11.12.13.*
   - **IP port**: The IP port of the device, by default *50000*.
   - **Bus address**: The bus address of the device, by default *48*.
@@ -77,4 +77,4 @@ The element has the following data pages:
 
 The **1.2.0.x** driver range of the CPI T07DO protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

@@ -69,7 +69,7 @@ The element consists of the data pages described below. Each table is updated ba
 
 The **1.0.1.x** driver range of the AVT Magic SDC EDI Converter protocol supports the usage of DCF and can only be used on a DMA with **9.5.0** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

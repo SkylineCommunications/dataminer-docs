@@ -25,7 +25,7 @@ This driver uses a serial connection and requires the following input during ele
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device (e.g. *192.168.10.19*).
+  - **IP address/host**: The polling IP of the device (e.g. *192.168.10.19*).
   - **IP port**: Not required.
   - **Bus address**: Not required.
 

@@ -87,7 +87,7 @@ This page contains general settings for the exciter.
 
 From version **1.0.0.4** of this driver onwards, the usage of DCF is supported and the driver can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

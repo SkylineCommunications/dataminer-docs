@@ -229,7 +229,7 @@ The following page buttons allow access to additional virtual server info:
 
 From version **1.1.0.29** onwards, this protocol supports the usage of DCF and can only be used on a DMA with **8.0** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

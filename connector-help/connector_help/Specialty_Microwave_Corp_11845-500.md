@@ -34,7 +34,7 @@ This driver uses a **serial** connection and requires the following input during
 
 Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
 - **IP port**: The IP port of the device.
 - **Bus address**: The bus address of the device. The value has a range of *0* to *255* (default: *49*).
 

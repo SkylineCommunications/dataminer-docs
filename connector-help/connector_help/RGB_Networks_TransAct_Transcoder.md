@@ -78,12 +78,12 @@ This page allows Key server management.
 
 ### License
 
-This page displays the license feature on this transcoder. The **Update.** button gives access to license management.
+This page displays the license feature on this transcoder. The **Update** button gives access to license management.
 
 The license can be updated in two ways:
 
 - By directly filling in the **License File** text box with a string key.
-- By uploading a file containing the license. This file must be located in the following Dataminer Documents folder: "*Documents/RGB Networks TransAct Transcoder/\[Element Name\]/License*".
+- By uploading a file containing the license. This file must be located in the following DataMiner Documents folder: "*Documents/RGB Networks TransAct Transcoder/\[Element Name\]/License*".
 
 ### Transcode
 
@@ -107,7 +107,7 @@ This page contains parameters related to the SNMP Protocol, such as **Trap Serve
 
 ### Software Update
 
-This page allows you to update the transcoder. The upload file must be located in the following Dataminer Documents folder "*Documents/RGB Networks TransAct Transcoder/\[Element Name\]/Update*". You also have to specify the **Username** and **Password** of a Dataminer user. It is recommended to create a user with minimal rights dedicated to this task (e.g. Update/Update).
+This page allows you to update the transcoder. The upload file must be located in the following DataMiner Documents folder "*Documents/RGB Networks TransAct Transcoder/\[Element Name\]/Update*". You also have to specify the **Username** and **Password** of a DataMiner user. It is recommended to create a user with minimal rights dedicated to this task (e.g. Update/Update).
 
 ### Events
 

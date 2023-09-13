@@ -52,24 +52,20 @@ SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
 
-<!-- -->
-
-- SNMPv2 settings:
+SNMPv2 settings:
 
 - **Port number**: The port of the connected device, e.g. *161.*
-  - **Get community string**: The community string used when reading values from the device, e.g. *public.*
-  - **Set community string**: The community string used when setting values on the device, e.g. *private*.
+- **Get community string**: The community string used when reading values from the device, e.g. *public.*
+- **Set community string**: The community string used when setting values on the device, e.g. *private*.
 
-<!-- -->
-
-- SNMPv3 settings:
+SNMPv3 settings:
 
 - **Username**: The SNMPv3 username.
-  - **Security level**: The SNMPv3 security level.
-  - **Authentication type**: The SNMPv3 authentication type.
-  - **Authentication password**: The SNMPv3 authentication password.
-  - **Privacy type**: The SNMPv3 privacy type.
-  - **Privacy password**: The SNMPv3 privacy password.
+- **Security level**: The SNMPv3 security level.
+- **Authentication type**: The SNMPv3 authentication type.
+- **Authentication password**: The SNMPv3 authentication password.
+- **Privacy type**: The SNMPv3 privacy type.
+- **Privacy password**: The SNMPv3 privacy password.
 
 ### External Components
 

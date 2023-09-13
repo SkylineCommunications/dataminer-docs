@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device. Required.
+  - **IP address/host**: The polling IP of the device. Required.
   - **IP port**: The IP port of the device, by default *80*.
 
 ## Usage

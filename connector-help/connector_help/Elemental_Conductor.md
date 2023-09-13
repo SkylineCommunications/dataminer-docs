@@ -114,7 +114,7 @@ From this table, you can control if a node is **Enable**/**Disabled** for **DVE*
 
 ### Channels
 
-This page displays the **Channel** **Table** and **Channel Outputs Table:**
+This page displays the **Channel Table** and **Channel Outputs Table:**
 
 - The **Channel Table** displays information for each channel, such as the **Name**, **Node ID**, **Profile ID**, **Status**, **Elapsed**, **Buffer Average** and **Max** and **Dropped Frames**. The table also has a **Start** and **Stop** button, which can be used to start and stop channels.
 - The **Channel Output Table** shows the Channel Outputs of each channel. It lists **Video Bitrate**, **Status**, **Elapsed**, **Width**, **Height**, **Audio Level**, **FPS**, **PCT**, **PCT RT**, **PSNR**, **URI** and **Content Source ID**.
@@ -123,7 +123,7 @@ The page also contains the **Channel Parameters** pagebutton, which provides acc
 
 ### Alerts
 
-This page lists the **active alerts**, with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable** **Type** and **ID**, **Node ID**, **Updated** **At** and **Readable Type**.
+This page lists the **active alerts**, with the following data: **Type**, **Name**, **Message**, **Last Set**, **Code**, **Alertable Type** and **ID**, **Node ID**, **Updated At** and **Readable Type**.
 
 ### Messages
 
@@ -137,7 +137,7 @@ On this page, the **Profile Table** displays information on the profiles: **Name
 
 The **Username** and **API Key** parameters on this page are used to fill in the **logon credentials**. This is only needed **if the system is using authentication**.
 
-**API Key** **is not** the same as **the password of the user** account. (See "Notes" section below.)
+**API Key is not** the same as **the password of the user** account. (See "Notes" section below.)
 
 The **Connection Status** parameter shows if there is a connection to the device, or if you have used the wrong credentials.
 
@@ -147,5 +147,6 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-The API Key that is needed to log on to an authenticated system is not the same as the password. To find the API Key, use the web interface, log on with the username and password, and go to [http://\<ipaddress_Conductor_Node\>/users.xml]().
-If you cannot find the API Key there, check here instead: [http://\<ipaddress_Conductor_Node\>/user_profile](). Make sure that you do not copy "hidden spaces" before or after the key.
+The API Key that is needed to log on to an authenticated system is not the same as the password. To find the API Key, use the web interface, log on with the username and password, and go to *http://\<ipaddress_Conductor_Node\>/users.xml*.
+
+If you cannot find the API Key there, check here instead: *http://\<ipaddress_Conductor_Node\>/user_profile*. Make sure that you do not copy "hidden spaces" before or after the key.

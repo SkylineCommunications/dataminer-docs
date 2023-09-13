@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 19200
+  - **Baudrate**: 19200
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: None
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: 10.218.128.200 (Moxa Terminal Server)
+  - **IP address/host**: 10.218.128.200 (Moxa Terminal Server)
   - **IP port**: 4001
   - **Bus address**: Not required
 

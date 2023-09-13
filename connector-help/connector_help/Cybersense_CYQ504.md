@@ -32,15 +32,15 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600
+  - **Baudrate**: 9600
   - **Databits**: 8
   - **Stopbits**: 1
   - **Parity**: none
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device.\]
-  - **IP port**: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
+  - **IP address/host**: The polling IP of the device.
+  - **IP port**: The IP port of the device.
 
 ## Usage
 
@@ -50,4 +50,4 @@ In this section of the driver help, some general info is available about the usa
 
 Here you find the voltage on the 4 ports and general parameters about the device.
 
-There are also 2 buttons that can be used to reset the error led and to querry the settings of the device.
+There are also 2 buttons that can be used to reset the error led and to query the settings of the device.

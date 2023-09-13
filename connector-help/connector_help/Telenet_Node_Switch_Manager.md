@@ -8,13 +8,15 @@ The **Telenet Node Switch Manager** is a DataMiner Application that is used to s
 
 ## About
 
-This driver makes it possible to plan jobs containing nodes that need to be switched. Once a task has been planned, a **scheduled** **task** is created. The different nodes that can be switched are retrieved via SOAP messages to a specific headend DMA. The scheduled tasks will execute an **Interactive** **Automation Script,** which in turn will execute another **Automation Script** that takes care of the actual switching of the nodes. Once a job has been completed, another **Automation Script** is activated which creates and emails a **Report** of the job that has been completed.
+This connector makes it possible to plan jobs containing nodes that need to be switched. Once a task has been planned, a **scheduled** **task** is created. The different nodes that can be switched are retrieved via SOAP messages to a specific headend DMA. The scheduled tasks will execute an **Interactive** **Automation Script,** which in turn will execute another **Automation Script** that takes care of the actual switching of the nodes. Once a job has been completed, another **Automation Script** is activated which creates and emails a **Report** of the job that has been completed.
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
-This driver uses an **HTTP** connection and needs the following user information:
+#### HTTP Connection - Main
+
+This connector uses an **HTTP** connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -22,9 +24,9 @@ This driver uses an **HTTP** connection and needs the following user information
 - **IP port**: The port of the destination e.g. *80.*
 - **Bus address**: This field can be used to bypass the proxy. To do so, fill in the value *bypassproxy*.
 
-### Configuration
+### Automation scripts
 
-This driver uses three **Automation Scripts**. These must be added before you can start using the driver:
+This connector uses three **Automation Scripts**. These must be added before you can start using the connector:
 
 - CreateReport.xml
 - Switching Nodes AS.xml
@@ -32,11 +34,11 @@ This driver uses three **Automation Scripts**. These must be added before you ca
 
 There are two ways to add these Automation Scripts:
 
-1.  In **System Display**, go to Advanced \> Automation, then select "Insert File" and select the Automation Scripts one by one.
+1. In **System Display**, go to Advanced \> Automation, then select "Insert File" and select the Automation Scripts one by one.
 
-2.  Paste the three **Automation Scripts** into *C:\Skyline DataMiner\Scripts* and then perform a force synchronisation as follows:
+1. Paste the three **Automation Scripts** into *C:\Skyline DataMiner\Scripts* and then perform a force synchronization as follows:
 
-3.  - In **System Display**, right-click the top banner and select Admin Tools \> Force Synchronization \> File... In the "Force Synchronization" window, paste *C:\Skyline DataMiner\Scripts* and click OK.
+   - In **System Display**, right-click the top banner and select Admin Tools \> Force Synchronization \> File... In the "Force Synchronization" window, paste *C:\Skyline DataMiner\Scripts* and click OK.
 
 In addition, you must also add the report template. To do so, place the file *Node Switch Report.asp* in the folder *C:\Skyline DataMiner\Webpages\Reports\templates*, and then perform a force synchronization of this folder (in the same way as described above).
 
@@ -80,15 +82,11 @@ In addition, you can also configure the settings for the tasks:
 - **Allowed Deviation**: The deviation that is allowed between the optical parameters before and after the node switch.
 - **Waiting Time After Set**: The delay after the node has been switched before the optical parameters of the node are rechecked.
 
-There are three page buttons available on this page that can be used to fill in the master data. Each of these will open a pop-up page where the different settings can be filled in for the **Major Outage tickets** or the **Planned** **Maintenance tickets**. When these parameters are left blank, a standard value will be filled in.
+There are three page buttons available on this page that can be used to fill in the master data. Each of these will open a pop-up page where the different settings can be filled in for the **Major Outage tickets** or the **Planned Maintenance tickets**. When these parameters are left blank, a standard value will be filled in.
 
-There is also one button available, **Default** **Masterdata,** which can be used to reset the initial values of the master data.
+There is also one button available, **Default Masterdata,** which can be used to reset the initial values of the master data.
 
 Below this, there are two additional page buttons:
 
-- **Email**: Leads to a page where you can add email addresses to a table. All these email addresses wil receive the report once a job is finished. You can either add an email address manually, or add all the users in a group from the DMA.
+- **Email**: Leads to a page where you can add email addresses to a table. All these email addresses will receive the report once a job is finished. You can either add an email address manually, or add all the users in a group from the DMA.
 - **Headend**: Leads to a page where additional headend DMAs can be added. If the connection to the current DMA is lost, the element will then automatically select another headend DMA to connect to. You can force the application to use a certain connection by pressing the **Select** button in the row of the DMA that you want to connect to.
-
-## Notes
-
-N/A

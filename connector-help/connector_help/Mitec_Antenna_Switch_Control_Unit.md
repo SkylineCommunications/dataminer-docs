@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600 (default)
+  - **Baudrate**: 9600 (default)
   - **Databits**: 7 (default)
   - **Stopbits**: 1 (default)
   - **Parity**: Even (default)
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: 8013 (default)
   - **Bus address**: 30 (default)
 

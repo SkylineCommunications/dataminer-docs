@@ -50,7 +50,7 @@ SERIAL CONNECTION
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Required. By default: *52116*.
   - **Bus address**: The bus address of the device. Required. By default *1*; range: from 0 to 16.
 

@@ -31,33 +31,42 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 It is possible that some settings need to be configured on the device before the element will be able to set up the connection and start polling the data. The steps below briefly explain how to proceed if polling does not start automatically:
 
-1.  Open the web interface and select the tab *Configuration.*
+1. Open the web interface and select the tab *Configuration.*
 
-2.  Select the folder **SNMP** in the left section of the web interface.
+1. Select the folder **SNMP** in the left section of the web interface.
 
-3.  Enable all check boxes on this page and set the *Heartbeat Trap Interval* to 1 minute.
-    Note: you may need to click an *Edit* button first, before you will be able to change any settings.
-    Note: you may be prompted to enter administrator credentials to proceed.
-    Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
+1. Enable all check boxes on this page and set the *Heartbeat Trap Interval* to 1 minute.
 
-4.  In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
+   Note: you may need to click an *Edit* button first, before you will be able to change any settings.
 
-5.  Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
-    Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
+   Note: you may be prompted to enter administrator credentials to proceed.
 
-6.  In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click *Save* when finished.
+   Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
 
-7.  Add a trap entry, and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
-    Note: use the same *Community* as specified in the V1 Access table.
-    Note: also enable the *Heartbeat* for this entry.
-    Note: the default port *162* should be correct.
-    Click *Save* when finished. The device may notify you that a restart is required to apply the changes.
+1. In the left section of the web interface, select the folder **V1 Access** below the **SNMP** folder.
 
-8.  If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
+1. Add 2 entries in the table: one with read access, the other with write access. Use *0.0.0.0* as the network name for both entries.
 
-9.  1.  Click the **Restart** folder in the left section of the web interface.
-    2.  Click the *Restart* button on this new page.
-        Note: this should only restart the SNMP module and not the full device.
+   Click *Save* when finished. The device may notify you that a restart is required to apply the changes, however, ignore the restart for now.
+
+1. In the left section of the web interface, just below **V1 Access**, select the folder **V1 Traps**. Click *Save* when finished.
+
+1. Add a trap entry, and specify the IP of the DMA hosting the element. To be safe, you can also add one entry for each DMA in the cluster.
+
+   Note: use the same *Community* as specified in the V1 Access table.
+
+   Note: also enable the *Heartbeat* for this entry.
+
+   Note: the default port *162* should be correct.
+
+   Click *Save* when finished. The device may notify you that a restart is required to apply the changes.
+
+1. If the device displayed a pop-up message to notify you that a restart is required for the changes to take effect:
+
+   1. Click the **Restart** folder in the left section of the web interface.
+   1. Click the *Restart* button on this new page.
+
+      Note: this should only restart the SNMP module and not the full device.
 
 ## Usage
 
@@ -71,7 +80,7 @@ The main groups of parameters are:
 
 - **Device Info** parameters, such as:
 
-- **Manufacturer**
+  - **Manufacturer**
   - **Model**
   - **Software Version** and **Agent Version**
   - **System Up Time**
@@ -79,21 +88,21 @@ The main groups of parameters are:
 
 - **Module Status** parameters, such as:
 
-- **Inverter Ready**
+  - **Inverter Ready**
   - **Battery Charger**
   - **Automatic Battery Test**
   - ...
 
 - **Battery** parameters, such as:
 
-- **Estimated Minutes Remaining**
+  - **Estimated Minutes Remaining**
   - **Estimated Charge Remaining**
   - **Battery Status**
   - ...
 
 - **Input** and **Output** parameters, such as:
 
-- **Voltage**
+  - **Voltage**
   - **Current**
   - **Frequency**
   - **Source**
@@ -110,8 +119,11 @@ Finally, there is also a button to reset the statistics. These statistics includ
 Note:
 
 - **System Up Time** is not polled, instead it is set by the heartbeat trap. This can be used to verify if traps are configured correctly.
+
 - The **Last Shutdown Cause** parameter is calculated by the driver, based on the values of the parameters behind the **Shutdown Cause** page button.
+
   In short, the last shutdown cause will be the last parameter set to *Yes*. These parameters are also saved, but as long as all parameters are *No*, the cause will be *Unknown*.
+
   Note that it is possible that this cause is not correct. If for instance the device was rebooted when it was not monitored, and the shutdown parameters were reset again by the time the element was started, then the device will not be aware of this shutdown. Also, if for some reason multiple parameters are set to *Yes*, the summary could be wrong, because it will take the last received parameter, which is defined by polling order.
 
 ### Alarms
@@ -124,9 +136,13 @@ Some devices could generate some extra alarms depending on the installed configu
 The available columns in the driver are:
 
 - **Alarm ID:** This is a 'hidden' column. It is the first column in the table and can be made visible by positioning the mouse pointer in the top left corner of the table and, when the cursor changes, dragging the columns to the right. The content of this column is a unique ID for the alarm. In fact it is the OID (Object IDentifier) of a node in the MIB of the device. The description of that node is the description of the alarm.
-- **Alarm Description:** This column should contain a unique and user-friendly description of the alarm. For well-known alarms, this will be set after startup (though it is overridable), but for custom alarms, this will be the OID of the node in the MIB. Because this OID is very difficult to understand, it is possible to change the alarm description to make it more user-friendly.
+
+- **Alarm Description:** This column should contain a unique and user-friendly description of the alarm. For well-known alarms, this will be set after startup (though it can be overridden), but for custom alarms, this will be the OID of the node in the MIB. Because this OID is very difficult to understand, it is possible to change the alarm description to make it more user-friendly.
+
   Note that the row (and therefore the alarm description) will not be removed when the alarm is cleared. Instead the **Alarm Status** column will just change to *OK*.
+
 - **Alarm Status:** This column indicates whether the alarm is currently active. (Active = *Alarm*, not active = *Ok*). The benefit of not removing the alarms is that, when using trending, it becomes easy to check when a certain alarm has occurred in the past.
+
 - **Alarm Time:** This column contains the value of the **System Up Time** parameter when the alarm occurred.
 
 ### Conditions
@@ -144,7 +160,9 @@ Available columns are:
 - **Condition Time:** Contains the value of the **System Up Time** parameter when the condition was met.
 - **Condition Type:** *Warning*, *Alarm*, *Fault*, or *Not Specified.*
 - **Condition Current State:** *Active* or *Inactive*.
+
   Note: Some conditions need to be acknowledged first before they are removed from the table. So even though normally rows are automatically removed and therefore never have the value *Inactive*, some entries could remain and have this value if they still need to be acknowledged. Note also that acknowledging a condition will not remove the condition if the current state is still active.
+
 - **Condition Severity:** *Not Applicable*, *Minor*, *Major*, or *Critical.*
 - **Condition Acknowledged:** Indicates whether the condition was acknowledged by an operator.
 - **Condition Ack Req.:** Indicates if acknowledgement is required before the entry will be removed.
@@ -195,19 +213,19 @@ This page will display the web interface of the device.
 
 Note: The client machine has to be able to access the device. If not, it will not be possible to open the web interface.
 
-### Pop-up: Reboot ...
+### Pop-up: Reboot
 
 Accessible from the **General** page.
 
 This page contains parameters to (re)boot the UPS, and makes it possible to define how a shutdown should be done (**Shutdown Type** *Output* or *System*.) It is also possible to start/stop the device after a specified time, to reboot the system with a specified delay and to cancel countdown timers.
 
-### Pop-up: Shutdown Cause ...
+### Pop-up: Shutdown Cause
 
 Accessible from the **General** page.
 
 This page contains parameters indicating what the cause was of the last shutdown. There is one parameter, **Last Shutdown Cause**, which is calculated by the driver using a best-effort mechanism. For more information, see the section about the General page above.
 
-### Pop-up: Tests ...
+### Pop-up: Tests
 
 Accessible from the **General** page.
 
@@ -222,7 +240,7 @@ Other available parameters are:
 - **Test Start Time** (This is the value of **System Up Time** at the time when the test began.)
 - **Test Elapsed Time**
 
-### Pop-up: Descriptions ...
+### Pop-up: Descriptions
 
 Accessible from the **Conditions** page.
 

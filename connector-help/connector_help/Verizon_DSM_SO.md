@@ -78,28 +78,28 @@ The following functionalities are available on this page:
 
 - Adding an entry to the subscriber table:
 
-1.  1.  Right-click anywhere within the table.
-    2.  Select **Add New Row** in the context menu.
-    3.  Fill in the necessary information in the pop-up window.
-    4.  Click OK.
+  1. Right-click anywhere within the table.
+  1. Select **Add New Row** in the context menu.
+  1. Fill in the necessary information in the pop-up window.
+  1. Click OK.
 
 - Editing an entry in the subscriber table:
 
-1.  1.  Right-click the entry you want to edit.
-    2.  Select **Edit ES Subscriber** in the context menu.
-    3.  Edit the necessary information in the pop-up window.
-    4.  Click OK.
+  1. Right-click the entry you want to edit.
+  1. Select **Edit ES Subscriber** in the context menu.
+  1. Edit the necessary information in the pop-up window.
+  1. Click OK.
 
 - Deleting entries from the subscriber table:
 
-1.  1.  Select the entries you want to delete.
-    2.  Right-click the entries.
-    3.  Select **Delete selected row(s)** in the context menu.
+  1. Select the entries you want to delete.
+  1. Right-click the entries.
+  1. Select **Delete selected row(s)** in the context menu.
 
 - Clearing all entries from the table:
 
-1.  1.  Right-click anywhere within the table.
-    2.  Select **Clear Table** in the context menu.
+  1. Right-click anywhere within the table.
+  1. Select **Clear Table** in the context menu.
 
 - Updating the table: Click the update button at the bottom of the table to update it with the latest information from Profile Manager.
 
@@ -109,28 +109,28 @@ The following functionalities are available on this page:
 
 - Adding an entry to the subscriber table:
 
-1.  1.  Right-click anywhere within the table.
-    2.  Select **Add New Row** in the context menu.
-    3.  Fill in the necessary information in the pop-up window.
-    4.  Click OK.
+  1. Right-click anywhere within the table.
+  1. Select **Add New Row** in the context menu.
+  1. Fill in the necessary information in the pop-up window.
+  1. Click OK.
 
 - Editing an entry in the subscriber table:
 
-1.  1.  Right-click the entry you want to edit.
-    2.  Select **Edit Sat Subscriber** in the context menu.
-    3.  Edit the necessary information in the pop-up window.
-    4.  Click OK.
+  1. Right-click the entry you want to edit.
+  1. Select **Edit Sat Subscriber** in the context menu.
+  1. Edit the necessary information in the pop-up window.
+  1. Click OK.
 
 - Deleting entries from the subscriber table:
 
-1.  1.  Select the entries you want to delete
-    2.  Right-click the entries.
-    3.  Select **Delete selected row(s)** in the context menu.
+  1. Select the entries you want to delete
+  1. Right-click the entries.
+  1. Select **Delete selected row(s)** in the context menu.
 
 - Clearing all entries from table:
 
-1.  1.  Right-click anywhere within the table.
-    2.  Click **Clear Table**
+  1. Right-click anywhere within the table.
+  1. Click **Clear Table**
 
 - Updating the table: Click the update button at the bottom of the table to update it with the latest information from Profile Manager.
 
@@ -140,7 +140,7 @@ The driver requires the following additional configuration in order to be fully 
 
 - A **Correlation rule** needs to be set up that captures **information events** and executes a script. The following parameters should be used in this Correlation rule:
 
-- Earth Station Subscribers OnChange Event
+  - Earth Station Subscribers OnChange Event
   - Earth Station Subscribers OnUpdate Event
   - Satellite Subscribers OnChange Event
   - Satellite Station Subscribers OnUpdate Event

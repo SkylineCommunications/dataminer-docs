@@ -43,14 +43,6 @@ Any incoming job is registered in the Message Log table where the primary key is
 
 The possible values for the Type column are: Activate, Replace or Deactivate, whereas for the State column are: Error or OK.
 
-
-
 ### Configuration
 
-The user is able to configure the number of rows of the Message Log table by using the 'Maximum Number of Rows' or the 'Kepp Record for' parameters.
-
-![]()
-
-
-
-
+You can configure the number of rows of the Message Log table by using the "Maximum Number of Rows" or the "Keep Record for" parameters.

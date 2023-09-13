@@ -120,7 +120,7 @@ On this page, you can configure the **IP Input Dejitter Algorithm**, **Flow FEC 
 
 The **1.0.0.x** driver range of the Cisco D9854 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

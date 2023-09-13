@@ -7,13 +7,17 @@ uid: Connector_help_Castlerock_SNMPc
 The Castlerock SNMPc is a device that monitors and catches events from connected devices. Depending on how this independent network management device is configured, the information of the connected devices can be used in several ways:
 
 - The events can be stored in an SQL database. The driver range **1.0.x.x** makes a connection with the database and allows you to manage what to do with it.
+
 - The events can be gathered and sent as traps to our driver. The driver range **2.0.0.x** collects traps and processes these according to the settings on the driver's Configuration page.
 
 ## About
 
 - Regarding **range 1.0.x.x**:
+
   This driver makes an SQL connection with the SNMPc database of the device. It reads the **Node Table** and **EventLog Table** in the SNMPc database, processes the information, and displays the processed information on three pages. The **Devices page** shows the available information concerning the connected devices, the **Events** **page** shows the events captured by the device, and the **Info Events page** shows the information events. With the settings on the **Configuration page**, you can clean the database to e.g. only keep records that are less than one year old.
+
 - Regarding **range 2.0.0.x**:
+
   This driver makes a simple SNMP connection with the device, collects traps originating from trap OID 1.3.6.1.4.1.56.12.1.7.0.1.0.1, and displays these on the **Traps page**. In addition, information concerning the devices connected to the Castlerock SNMPc can be imported and displayed on the **Known IP Addresses page.** With the settings on the **Configuration page**, you can configure how traps should be processed and limited, and manage the creation of DVEs.
 
 This driver can export different drivers based on the retrieved data. A list can be found in the section 'Exported Drivers'.
@@ -128,14 +132,14 @@ The **Events Filter Table** contains the following columns:
 
 - **Message Filter**: Regular expression to filter an ID from the message in the events table. Example:
 
-- Input: "OSPF - 1.2.3.4 5.6.7.8 0 5 ospfTraps"
+  - Input: "OSPF - 1.2.3.4 5.6.7.8 0 5 ospfTraps"
 
   - Pattern: "OSPF - \S\* (?\<ID\>\S\*) (?\<ID\>\S\*) 5 ospfTraps"
 
   - Will filter the following IDs:
 
-  - 1.  5.6.7.8
-    2.  0
+    1. 5.6.7.8
+    2. 0
 
 Via the **Add Row** button, you can open a pop-up page where you can specify a new filter to add to the Events Filter Table.
 
@@ -145,7 +149,8 @@ This page displays the **Events Table**, which contains the events from the Even
 
 Aside from the raw data from the database, this table also contains the columns **Device Label**, **Device Description** and **Delete Event**. The information in the Device Label and Device Description columns is extracted from the Node Table, based on the Map ID, to show more information about the device that generated the event. The Delete Event column can be used to remove separate events from the table.
 
-> Note: An entry in the Events Table can be the result of the overwriting of several entries in the database. The decision to overwrite an existing event or to add a new event to the table depends on the calculated key of every event, which is in essence a hashing operation (see below). The overview in the Events Table should only contain the most recent events, so in case a device for example first generates a message with high severity and then a message with low severity, both of which are stored in the SNMPc database, only the most recent event will be relevant for the Events Table, so it will be overwritten. However, to see a historical overview of the alarm, you can enable alarm monitoring on the Priority parameter of this table.
+> [!NOTE]
+> An entry in the Events Table can be the result of the overwriting of several entries in the database. The decision to overwrite an existing event or to add a new event to the table depends on the calculated key of every event, which is in essence a hashing operation (see below). The overview in the Events Table should only contain the most recent events, so in case a device for example first generates a message with high severity and then a message with low severity, both of which are stored in the SNMPc database, only the most recent event will be relevant for the Events Table, so it will be overwritten. However, to see a historical overview of the alarm, you can enable alarm monitoring on the Priority parameter of this table.
 
 If the Events table is fully up to date with the SNMPc Database, the **Processing Status** parameter will display *Done*. If it is not fully up to date, this is because the Maximum Processing Speed of Events (see Configuration section below) is making sure that not too many events of the EventLog Table are queried at once. Particularly when the element is created, it can occur that it takes some time before the table is fully up to date.
 
@@ -204,20 +209,23 @@ The decision to see if an event can overwrite an existing event in the Events Ta
 
 The normal hash key consists of four parts, delimited by semicolons:
 
-1.  **Map ID** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events coming from the same node can overwrite each other.
-2.  **From_address** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events with the same from_addres can overwrite each other.
-3.  **IP addresses in the Event Message** Through the use of a regular expression, the IP addresses (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the IP addresses included in the message.
-4.  **Slot:port-combinations in the Event Message** Through the use of a regular expression, the Slot:Port combinations (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the Slot:Port combinations in the message.
+1. **Map ID** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events coming from the same node can overwrite each other.
 
-#### Examples of calculated hash keys:
+1. **From_address** This is equal to the raw data of that specific cell of an entry. Including this in the hash key ensures that only events with the same from_addres can overwrite each other.
+
+1. **IP addresses in the Event Message** Through the use of a regular expression, the IP addresses (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the IP addresses included in the message.
+
+1. **Slot:port-combinations in the Event Message** Through the use of a regular expression, the Slot:Port combinations (several types and occurrences in one message are possible, delimited by an '\*') are extracted from the raw message, which also correspond to a specific cell of the entry. This check is necessary as sometimes a node is connected to several devices, and the difference between these can be seen based on the Slot:Port combinations in the message.
+
+#### Examples of calculated hash keys
 
 eska-\[ER\];192.168.3.242;192.168.7.234; cn-go-wp1-cr90;192.168.255.61;192.168.255.61\*0.0.0.0\*192.168.255.65\*192.168.255.65; eska-\[ER\];192.168.3.242;192.168.6.82;2:12 dtv-nawij-is-dcm71;192.168.23.151;;
 
 In version 1.0.1.x, the hash key consists of the following parts, delimited by semicolons, if an **Events Filter** is applied:
 
-1.  **Device Label**
-2.  **Trap OID**
-3.  ID groups found by applying the message filter regular expression of the applied **Events Filter**. Multiple IDs are separated by ampersands.
+1. **Device Label**
+1. **Trap OID**
+1. ID groups found by applying the message filter regular expression of the applied **Events Filter**. Multiple IDs are separated by ampersands.
 
 ## Usage: Range 2.0.0.x
 
@@ -296,19 +304,19 @@ The traps collected by this driver need to have a particular format for the driv
 
 - Four bindings:
 
-- Binding 1: Trap message (from the connected device, not changed by the Castlerock SNMPc).
+  - Binding 1: Trap message (from the connected device, not changed by the Castlerock SNMPc).
 
   - Binding 2: Trap severity (from the connected device, not changed by the Castlerock SNMPc)
 
-  - - This is a number that corresponds with a certain severity:
+    - This is a number that corresponds with a certain severity:
 
-    - 1.  Critical
-      2.  Severe
-      3.  Major
-      4.  Minor
-      5.  Warning
-      6.  Normal
-      7.  Info
+      1. Critical
+      1. Severe
+      1. Major
+      1. Minor
+      1. Warning
+      1. Normal
+      1. Info
 
   - Binding 3: IP address (real source IP of the trap, i.e. the IP address of the connected trap)
 
@@ -317,7 +325,9 @@ The traps collected by this driver need to have a particular format for the driv
 ### General Hardcoded Rules
 
 - Only incoming traps with an IP address that is known will be processed. It is therefore very important to import all the IP addresses of your connected devices.
+
 - Only traps originating from the same IP address can overwrite each other.
+
 - Normal traps stored in the Traps Table cannot be overwritten. This would make no sense. The timestamp of such a trap will remain unchanged, and eventually the trap will be deleted from the Traps Table, but not updated.
 
 ### Trim Rules
@@ -326,9 +336,11 @@ Trim Rules are useful in case you want to trim trap messages before storing them
 
 The fields of an imported trim rule detail the following information:
 
-- IP Address: You can specify to which source IPs the trim rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
-- RegEX Incoming Trap: You can specify to which words of the trap message the trim rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the trap. If so, the matching part is trimmed off the trap message.
-- Severity Incoming Trap: You can specify to which severities the trim rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by the corresponding number (1:Critical, 2:Severe, 3:Major, 4:Minor, 5:Warning, 6:Normal, 7:Info).
+- **IP Address**: You can specify to which source IPs the trim rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
+
+- **RegEX Incoming Trap**: You can specify to which words of the trap message the trim rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the trap. If so, the matching part is trimmed off the trap message.
+
+- **Severity Incoming Trap**: You can specify to which severities the trim rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by the corresponding number (1:Critical, 2:Severe, 3:Major, 4:Minor, 5:Warning, 6:Normal, 7:Info).
 
 #### Example of Trim Rule Mechanism
 
@@ -343,14 +355,18 @@ Consider the following trim rules table:
 Consider the following incoming trap, with the first three bindings equal to:
 
 - Trap message: 2015-11-25,09:40:15 Connection not working. Failed
+
 - Severity: 2 (Severe)
+
 - Source IP: 10.10.10.10
 
 The trim rules will then be applied one by one, from the first to the last ID:
 
-1.  Both the IP address and the severity are wildcards, so we can try to find a match for the regular expression. A match is found, and the matched part will be trimmed off the message. The intermediate result is a trimmed trap message: 'Connection not working. Failed'. The regular expression made sure that the datetime in front of the trap message was deleted.
-2.  The IP address is a wildcard, so this has no further effect. However, the severity check fails, as the trim rule can only be applied to traps of type normal and the incoming trap is of severity 'Severe'. As such, the word 'working' is not trimmed from the message.
-3.  The IP address of the incoming trap, 10.10.10.10, is part of the 10.x.10.x range and the severity check also matches, so we can try to find a match for the regular expression. A match is found, and the matched part will be trimmed off the message.
+1. Both the IP address and the severity are wildcards, so we can try to find a match for the regular expression. A match is found, and the matched part will be trimmed off the message. The intermediate result is a trimmed trap message: 'Connection not working. Failed'. The regular expression made sure that the datetime in front of the trap message was deleted.
+
+1. The IP address is a wildcard, so this has no further effect. However, the severity check fails, as the trim rule can only be applied to traps of type normal and the incoming trap is of severity 'Severe'. As such, the word 'working' is not trimmed from the message.
+
+1. The IP address of the incoming trap, 10.10.10.10, is part of the 10.x.10.x range and the severity check also matches, so we can try to find a match for the regular expression. A match is found, and the matched part will be trimmed off the message.
 
 The result is the following trimmed trap message: 'Connection not working.' In the logging of the element, you will be able to find a message in the format "*TrapMessage \<trap message\> was trimmed to \<trimmed trap message\> by Trim Rule \<ID of the trim rule\>*".
 
@@ -362,15 +378,20 @@ Update rules are useful to make sure that traps that are related to each other u
 
 The fields of an imported update rule detail the following information:
 
-- IP Address: You can specify to which source IPs the update rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
-- RegEX Updated Trap: You can specify to which words of the older trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the older trap. If so, the matching part is trimmed off the older trap message before it is compared to the new trap. Note that this trimming is temporary and only done to compare if the trap messages are equal after applying both this regular expression and that for the new trap (see below).
-- Severity Updated Trap: You can specify to which severities of the older trap the rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only be updated via this update rule if the severity of the older trap matches this check.
-- RegEX Updating Trap: You can specify to which words of the new trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the new trap. If so, the matching part is trimmed off the new trap message before it is compared to the older trap. Note that this trimming is temporary and only done to compare if trap messages are equal after applying both this regular expression and that for the older trap (see above).
-- <u>Severity Updating Trap:</u> You can specify to which severities of the new trap the rule should be applied. ft it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only update other traps via this update rule if the severity of the new trap matches this check.
+- **IP Address**: You can specify to which source IPs the update rule should be applied. If it should be applied to all IP addresses, use the wildcard value '\*'. Choosing a specific range like 192.168.10.x (with x between 0 and 255) is also allowed.
+
+- **RegEX Updated Trap**: You can specify to which words of the older trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the older trap. If so, the matching part is trimmed off the older trap message before it is compared to the new trap. Note that this trimming is temporary and only done to compare if the trap messages are equal after applying both this regular expression and that for the new trap (see below).
+
+- **Severity Updated Trap**: You can specify to which severities of the older trap the rule should be applied. If it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only be updated via this update rule if the severity of the older trap matches this check.
+
+- **RegEX Updating Trap**: You can specify to which words of the new trap message the update rule should be applied. This works via regular expressions. The rule will search if there is a match between the regular expression and the message in the new trap. If so, the matching part is trimmed off the new trap message before it is compared to the older trap. Note that this trimming is temporary and only done to compare if trap messages are equal after applying both this regular expression and that for the older trap (see above).
+
+- **Severity Updating Trap**: You can specify to which severities of the new trap the rule should be applied. ft it should be applied to all severities, use the wildcard value '0'. Specify other severities by their corresponding number. A trap can only update other traps via this update rule if the severity of the new trap matches this check.
 
 Additional remarks:
 
 - To add multiple regular expressions in one rule, use '//-//' as a delimiter in your input CSV file.
+
 - To use a semicolon (';') in the regular expression, use '//sc//' in your input CSV file. The result in your update rules table will be a normal semicolon. It is not possible to use a regular semicolon in the CSV file, as it would be mistaken for a new colum.
 
 #### Example of Update Rule Mechanism
@@ -395,21 +416,26 @@ Consider the current content of the Traps Table. Some columns were hidden becaus
 Consider the following incoming trap on 2010/01/01 15:00:00.000 (so more recent than the traps in the table), with the first three bindings equal to:
 
 - Trapmessage: asxLinkUp Q8
+
 - Severity: 6 (Normal)
+
 - Source IP: 10.10.10.10
 
 When the trap is received, the update rules will be evaluated one by one:
 
-1.  First rule: The incoming trap does not match the "RegEx Updating Trap" part of the update rule (the trap message does not contain 'alcorClearTrap'). Moreover, the source IP does not match, so this update rule cannot be applied and we move on to the next rule.
+1. First rule: The incoming trap does not match the "RegEx Updating Trap" part of the update rule (the trap message does not contain 'alcorClearTrap'). Moreover, the source IP does not match, so this update rule cannot be applied and we move on to the next rule.
 
-2.  Second rule: The incoming trap does match the "RegEx Updating Trap" part of the update rule (the trap message contains 'Up'). Moreover, it has severity 6 (Normal) and the source IP matches, so the trap table is checked to see if any traps match the conditions for the "updated" trap:
+1. Second rule: The incoming trap does match the "RegEx Updating Trap" part of the update rule (the trap message contains 'Up'). Moreover, it has severity 6 (Normal) and the source IP matches, so the trap table is checked to see if any traps match the conditions for the "updated" trap:
 
-3.  - Trap with shortkey 1: The IP address of the updated trap matches, but the severity of the updated trap does not match. The update rule was made for normal traps to clear Critical traps, not Severe traps.
-    - Trap with shortkey 2: The IP address and severity of the updated trap match, but after temporary trimming the trap messages are not equal. ('asxLink A7' and 'asxLink Q8'). The new trap is therefore not related to the old trap, and is probably related to an different problem (of the A7 instead of the Q8).
-    - Trap with shortkey 3: The severity of the updated trap matches, but the IP address does not match. The update rule was made for traps coming from 10.10.10.10.
-    - Trap with shortkey 4: The IP address and severity of the updated trap match. After temporary trimming ('asxLink Q8'), the trap messages are equal. So this is a match.
+   - Trap with shortkey 1: The IP address of the updated trap matches, but the severity of the updated trap does not match. The update rule was made for normal traps to clear Critical traps, not Severe traps.
 
-4.  Third rule: This rule will not longer be evaluated, as a match was found for the second rule. However, even if it was evaluated, no match would be found.
+   - Trap with shortkey 2: The IP address and severity of the updated trap match, but after temporary trimming the trap messages are not equal. ('asxLink A7' and 'asxLink Q8'). The new trap is therefore not related to the old trap, and is probably related to an different problem (of the A7 instead of the Q8).
+
+   - Trap with shortkey 3: The severity of the updated trap matches, but the IP address does not match. The update rule was made for traps coming from 10.10.10.10.
+
+   - Trap with shortkey 4: The IP address and severity of the updated trap match. After temporary trimming ('asxLink Q8'), the trap messages are equal. So this is a match.
+
+1. Third rule: This rule will not longer be evaluated, as a match was found for the second rule. However, even if it was evaluated, no match would be found.
 
 The result of evaluating the update rules will be that the incoming trap will update the trap with shortkey 4 and will not be added as a new trap.
 
@@ -424,11 +450,11 @@ Imagine the following two traps, arriving in this order:
 
 Importing the following .csv file for the rules would be enough to make sure that the incoming trap updates the correct old trap, because the regular expression trims the first word from the updated and updating trap:
 
-*TRIM RULES* *UPDATE RULES* *10.237.150.41;^\s+\[^\s\]+;1;^\s+\[^\s\]+;6*
+*TRIM RULES*<br/>*UPDATE RULES*<br/>*10.237.150.41;^\s+\[^\s\]+;1;^\s+\[^\s\]+;6*
 
 This more specific .csv file would also do the job:
 
-*TRIM RULES* *UPDATE RULES* *10.237.150.41;alarmSetTrap//sc//;1;alarmClearTrap//sc//;6*
+*TRIM RULES*<br/>*UPDATE RULES*<br/>*10.237.150.41;alarmSetTrap//sc//;1;alarmClearTrap//sc//;6*
 
 #### Example 2 of Choosing an Update Rule
 
@@ -441,7 +467,7 @@ Imagine the following two traps, arriving in this order:
 
 Importing the following .csv file for the rules would be enough to make sure that the incoming trap updates the correct old trap and is stored without the timestamp at the beginning:
 
-*TRIM RULES* *\*;^(?:\b\[0-9\]{4})-(?:0\*\[1-9\]\|1\[0-2\])-(?:3\[0-1\]\|\[1-2\]\[0-9\]\|0\*\[1-9\]),(?:2\[0-3\]\|1\[0-9\]\|0\*\[1-9\]):(?:\[0-5\]\*\[0-9\]):(?:\[0-5\]\*\[0-9\])\b;0* *UPDATE RULES* *\*;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;1;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;6*
+*TRIM RULES*<br/>*\*;^(?:\b\[0-9\]{4})-(?:0\*\[1-9\]\|1\[0-2\])-(?:3\[0-1\]\|\[1-2\]\[0-9\]\|0\*\[1-9\]),(?:2\[0-3\]\|1\[0-9\]\|0\*\[1-9\]):(?:\[0-5\]\*\[0-9\]):(?:\[0-5\]\*\[0-9\])\b;0*<br/>*UPDATE RULES*<br/>*\*;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;1;\d\s+(?=Trib)//-//(?\<=uncommissioned\straffic)\s\*\d;6*
 
 Note that the trim rule used a wildcard for the severity and IP address and will therefore be applied to ALL incoming traps starting with a datetime, regardless of their severity and IP address.
 
@@ -449,7 +475,7 @@ Note that the trim rule used a wildcard for the severity and IP address and will
 
 You can even add the general case of traps updating older traps if the trap message is exactly the same as an update rule, because the regular expression can also have a wildcard value. In that case, there is no temporary trimming and the raw messages (after applying the trim rules) will be compared. Importing this file would add the required rule:
 
-*TRIM RULES* *UPDATE RULES* *\*;\*;0;\*;0*
+*TRIM RULES*<br/>*UPDATE RULES*<br/>*\*;\*;0;\*;0*
 
 | **IP Address**        | **Trap Message** | **Severity**            |            |
 |-----------------------|------------------|-------------------------|------------|
@@ -462,5 +488,4 @@ Imagine there is a certain range of devices that all have a source IP belonging 
 
 Importing this file would add the required rule:
 
-*TRIM RULES* *UPDATE RULES* *192.16.5.x;.\*;7;.\*;7*
-
+*TRIM RULES*<br/>*UPDATE RULES*<br/>*192.16.5.x;.\*;7;.\*;7*

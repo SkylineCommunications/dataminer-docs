@@ -63,7 +63,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
+- **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: \[The IP port of the destination. (default: *443*)\]
 - **Device address**: \[The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.\]
 

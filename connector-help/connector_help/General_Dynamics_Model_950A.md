@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: 10.52.25.161
+  - **IP address/host**: 10.52.25.161
   - **IP port**: 5001
 
 ### Initialization (Range 2.0.0.x)
@@ -70,7 +70,7 @@ Known issues when the incorrect model is applied:
 
 The web interface is only accessible when the client machine has network access to the product. To use this functionality, you must enter a port on the **General** page.
 
-**NOTE:** This functionality also requires that the Chromium plugin is activated. To activate this, in DataMiner Cube, go to *System Center* \> *System settings* \> *Plugins*, and set the web browser engine to Chromium. You can do so for the entire system or create an exception to do so for this protocol only.
+**NOTE:** This functionality also requires that the Chromium plugin is activated. To activate this, in DataMiner Cube, go to *System Center* > *System settings* > *Plugins*, and set the web browser engine to Chromium. You can do so for the entire system or create an exception to do so for this protocol only.
 
 ## Usage (Range 2.0.0.x)
 
@@ -105,27 +105,28 @@ To make a message supported:
 
 - Adjust the *Protocol.xml* file:
 
-- If the unsupported message is a **status** message, add the following *Discreet* tag under the Protocol.Params.Param.Measurement.Discreets tag of parameter ID **5102**.
+  - If the unsupported message is a **status** message, add the following *Discreet* tag under the Protocol.Params.Param.Measurement.Discreets tag of parameter ID **5102**.
+
   - If the unsupported message is a **fault** message, add the following *Discreet* tag under the Protocol.Params.Param.Measurement.Discreets tag of parameter ID **5002**.
 
-> *\<Discreet\>
-> *\<Display\>MY MESSAGE\</Display\>
-> *\<Value\>MY MESSAGE\</Value\>
-> *\</Discreet\>****
->
-> Replace "MY MESSAGE" with the message you logged earlier.
+    ```xml
+    <Discreet>
+       <Display>MY MESSAGE</Display>
+       <Value>MY MESSAGE</Value>
+    </Discreet>
+    ```
+
+    Replace "MY MESSAGE" with the message you logged earlier.
 
 - Adjust *QAction_3161.cs*: Add a new MessageData object in the GetAllSupportedUndocumentedMessages property of the BinaryMessageParser class.
 
-- For default messages, the byte and bit numbers are set to -1 as they are not part of the vendor documentation:
+  - For default messages, the byte and bit numbers are set to -1 as they are not part of the vendor documentation:
 
-  - - *new MessageData { ByteNumber = -1, BitNumber = -1, Message = "MY MESSAGE", Type = MessageType.Fault },*
+    - *new MessageData { ByteNumber = -1, BitNumber = -1, Message = "MY MESSAGE", Type = MessageType.Fault },*
 
-<!-- -->
+  - For detailed messages, set the byte and bit number to the value that is printed, and provide a message that you want to see when this bit is returned by the ACU:
 
-- For detailed messages, set the byte and bit number to the value that is printed, and provide a message that you want to see when this bit is returned by the ACU:
-
-  - - *new MessageData { ByteNumber = 5, BitNumber = 0, Message = "MY MESSAGE", Type = MessageType.Fault },*
+    - *new MessageData { ByteNumber = 5, BitNumber = 0, Message = "MY MESSAGE", Type = MessageType.Fault },*
 
 If you have any questions about modifications to the code, contact <squad.deploy-sphinx@skyline.be>
 

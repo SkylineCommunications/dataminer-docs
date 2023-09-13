@@ -99,7 +99,7 @@ The **2.0.0.15** range of the Rohde Schwarz NetCCU800 1+1 driver supports the us
 
 Connectivity for all exported drivers is managed by this driver.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

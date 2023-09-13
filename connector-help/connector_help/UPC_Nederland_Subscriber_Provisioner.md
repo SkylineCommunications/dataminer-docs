@@ -23,53 +23,53 @@ The following information is exported:
 
 - **Arris E6000** (from version 2.0.0.1 onwards):
 
-- **RF Ports** Table:
+  - **RF Ports** Table:
 
-  - - DTV subscribers
+    - DTV subscribers
     - Custom description
 
   - **QAM Streams** Table:
 
-  - - HFC segment
+    - HFC segment
     - QAM VOD cluster
     - DTV subscribers
     - HFC segment group ID
 
 - **Arris D5** (from version 1.0.0.15 onwards):
 
-- **RF Ports** Table:
+  - **RF Ports** Table:
 
-  - - DTV subscribers
+    - DTV subscribers
     - Custom description
 
   - Extra HFC segment info
 
 - **Cisco RFGW-1-D** (from version 2.0.0.1 onwards):
 
-- **Global RF Port Configuration**
+  - **Global RF Port Configuration**
 
-  - - DTV subscribers
+    - DTV subscribers
     - DTV custom description
 
   - Extra HFC segment info
 
 - **Casa Systems C100G** (ranges 1.1.0.x and 3.0.0.x):
 
-- **RF Ports** Table:
+  - **RF Ports** Table:
 
-  - - DTV subscribers
+    - DTV subscribers
     - Custom description
 
 - **Cisco CBR-8** (from version 1.0.0.16 onwards):
 
-- **RF Ports** Table:
+  - **RF Ports** Table:
 
-  - - DTV subscribers
+    - DTV subscribers
     - Custom description
 
   - **QAM Streams** Table:
 
-  - - HFC segment
+    - HFC segment
     - VOD cluster
     - DTV subscribers
     - HFC segment group ID

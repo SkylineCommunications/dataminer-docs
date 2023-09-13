@@ -89,7 +89,7 @@ This page shows the name of the antenna.
 
 ## DataMiner Connectivity Framework
 
-The 1.0.2.x range of the Generic Satellite Antenna Simulation protocol supports the usage of DCF and can only be used on a DMA with **9.0 CU9** as the minimum version. DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+The 1.0.2.x range of the Generic Satellite Antenna Simulation protocol supports the usage of DCF and can only be used on a DMA with **9.0 CU9** as the minimum version. DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

@@ -160,4 +160,4 @@ This page contains the hard disk information of the Super micro device. This inc
 
 ### Web Access
 
-This page provides access to the web interface of the device by navigating to [*http://\[pollingip\]/*](). However, note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page provides access to the web interface of the device by navigating to *http://\[pollingip\]/*. However, note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

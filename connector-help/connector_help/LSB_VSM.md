@@ -40,7 +40,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The main IP of the VSM.
+  - **IP address/host**: The main IP of the VSM.
   - **IP port**: The TCP port used to connect to VSM.
 
 #### Serial Redundant connection
@@ -51,7 +51,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The redundant IP of the VSM.
+  - **IP address/host**: The redundant IP of the VSM.
   - **IP port**: The TCP port used to connect to VSM.
 
 ### Configuration of matrix layers
@@ -88,7 +88,7 @@ Note that these are only available when the **Matrix State** is *Enabled*.
 
 The 2.0.1.x driver range of the LSB VSM protocol supports the usage of DCF.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

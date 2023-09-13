@@ -76,7 +76,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: Restricts the interfaces that can be listened to. Use "any" if you do not want to apply any restrictions.
+  - **IP address/host**: Restricts the interfaces that can be listened to. Use "any" if you do not want to apply any restrictions.
   - **IP port**: The IP port (default: *8013).*
 
 ### Initialization

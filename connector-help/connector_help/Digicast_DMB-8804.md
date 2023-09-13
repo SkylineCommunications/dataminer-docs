@@ -38,8 +38,8 @@ This driver uses an HTTP connection and requires the following input during elem
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination.\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination.
 - **Bus address**: N/A
 
 ### Initialization

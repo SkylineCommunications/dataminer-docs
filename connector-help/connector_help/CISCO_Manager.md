@@ -39,43 +39,43 @@ In addition to polling values, you can configure settings such as the ping funct
 
 As version range 4.1.1.x and 6.1.1.x use SNMPv3, extra settings are needed for these. The following steps must be executed before data can be retrieved.
 
-1.  In **System Display**, go to **Admin** \> **Elements**.
+1. In **System Display**, go to **Admin** \> **Elements**.
 
-2.  In the **Element List** header, click **Export**.
+1. In the **Element List** header, click **Export**.
 
-3.  In the **Export** dialog box, select **All Element data** and **Save** as CSV file.
+1. In the **Export** dialog box, select **All Element data** and **Save** as CSV file.
 
-4.  Open the CSV file and specify the additional settings for the SNMPv3 elements in the columns:
+1. Open the CSV file and specify the additional settings for the SNMPv3 elements in the columns:
 
-5.  - DataBits: Contains the username.
+   - DataBits: Contains the username.
 
-    - StopBits: Contains the security level. Possible values:
+   - StopBits: Contains the security level. Possible values:
 
-    - - 0: NOAUTH_NOPRIV
-      - 1: AUTH_NOPRIV
-      - 2: AUTH_PRIV
+     - 0: NOAUTH_NOPRIV
+     - 1: AUTH_NOPRIV
+     - 2: AUTH_PRIV
 
-    - Parity: Contains the authentication type. Possible values:
+   - Parity: Contains the authentication type. Possible values:
 
-    - - 0: NONE
-      - 1: MD5
-      - 2: SHA1
+     - 0: NONE
+     - 1: MD5
+     - 2: SHA1
 
-    - GetCommunity: Contains the authentication password.
+   - GetCommunity: Contains the authentication password.
 
-    - FlowControl: Contains the privacy type. Possible values:
+   - FlowControl: Contains the privacy type. Possible values:
 
-    - - 0: NONE
-      - 1: DES
-      - 2: AES128
+     - 0: NONE
+     - 1: DES
+     - 2: AES128
 
-    - SetCommunity: Contains the privacy password.
+   - SetCommunity: Contains the privacy password.
 
-6.  **Save** the CSV file.
+1. **Save** the CSV file.
 
-7.  In the **Element List** header, click **Import**.
+1. In the **Element List** header, click **Import**.
 
-8.  In the **Open dialog box**, select the CSV file and click **Open**.
+1. In the **Open dialog box**, select the CSV file and click **Open**.
 
 Version range 2.1.x.x, 3.1.x.x, and 5.x.x.x do not require any extra settings.
 
@@ -167,20 +167,26 @@ In the **3.1.1.x** and **4.1.1.x** ranges, you can use the **Measurement Configu
 
 - SCP
 
-- **SCP Local Folder**: This parameter defines the path where the local folder should be created. This folder will contain the private keys and known host file.
-  - **SCP Host**: This parameter defines the IP of the switch to connect to.
-  - **SCP Port**: The port to be used for SCP connections.
-  - **SCP Username**: The username used to login.
-  - **SCP Password**: The password used to login.
-  - **SCP Known Host File**: This parameter defines the name that should be given to the known host file, or the file that needs to be used. (If no file exists with the specified name, a new file with that name will be created.)
-  - **Private Key File Name**: The name of the private key file to be used when authenticating the connection. **Note that to be able to use private key files, both the .ppk (used to connect with SCP) and .txt file (used to connect with Jsh) need to be present in the SCP Local Folder and have the same name.**
+  - **SCP Local Folder**: This parameter defines the path where the local folder should be created. This folder will contain the private keys and known host file.
 
-<!-- -->
+  - **SCP Host**: This parameter defines the IP of the switch to connect to.
+
+  - **SCP Port**: The port to be used for SCP connections.
+
+  - **SCP Username**: The username used to login.
+
+  - **SCP Password**: The password used to login.
+
+  - **SCP Known Host File**: This parameter defines the name that should be given to the known host file, or the file that needs to be used. (If no file exists with the specified name, a new file with that name will be created.)
+
+  - **Private Key File Name**: The name of the private key file to be used when authenticating the connection. **Note that to be able to use private key files, both the .ppk (used to connect with SCP) and .txt file (used to connect with Jsh) need to be present in the SCP Local Folder and have the same name.**
 
 - Download
 
-- **Download Directory**: This parameter defines the directory where the downloaded files will be stored.
+  - **Download Directory**: This parameter defines the directory where the downloaded files will be stored.
+
   - **Configuration File**: This parameter defines the possible configuration file to be downloaded from the device/switch.
+
   - **Download Status**: The status of the download process.
 
 The **SCP functionality is only supported from DataMiner v9.5.3.0 - 6487 onwards**, as this relies on the SLSsh.dll library. When the connector is run on an older DMA, the log files will indicate a problem when DataMiner tries to build QAction 52000 and SCP will not work. This does not affect the rest of the connector.
@@ -215,19 +221,20 @@ Physical dynamic interfaces:
 
 On the DCF Config page, you can select 2 different sources for creating internal connections:
 
-1.  VLAN
+1. VLAN
 
-2.  - Start Topology: For each VLAN, a virtual IF is created in the DCF table. The IFs are connected with their corresponding VLAN(s).
-    - Full Mesh: The IFs are connected directly to each other. This can generate a lot of connections if a VLAN contains multiple IFs (n(n-1)/2 connections).
+   - Start Topology: For each VLAN, a virtual IF is created in the DCF table. The IFs are connected with their corresponding VLAN(s).
 
-3.  Multicast
+   - Full Mesh: The IFs are connected directly to each other. This can generate a lot of connections if a VLAN contains multiple IFs (n(n-1)/2 connections).
 
-4.  - Connections are created based on the multicast flows from the **Multicast Next Hop** table.
+1. Multicast
 
-- Between interfaces, an internal connection is created with the following properties (if enabled):
+   - Connections are created based on the multicast flows from the **Multicast Next Hop** table.
+
+Between interfaces, an internal connection is created with the following properties (if enabled):
 
 - **VLAN** connection property of type **inout** with value **VLAN ID**.
-  - **MC** connection property of type **inout** with value **Multicast IPs** (separated by ";").
+- **MC** connection property of type **inout** with value **Multicast IPs** (separated by ";").
 
 ## Notes
 
@@ -237,9 +244,9 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
 - Load configuration
 
-- Network\>RAM
+  - Network\>RAM
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: Network File
     - Copy Config Destination File Type: Startup Config
     - Copy Config Server Address: The IP address of the server from which to copy the configuration file (e.g. 192.168.1.1)
@@ -247,7 +254,7 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
   - Network\>NVRAM
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: Network File
     - Copy Config Destination File Type: Running Config
     - Copy Config Server Address: The IP address of the server from which to copy the configuration file (e.g. 192.168.1.1)
@@ -255,7 +262,7 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
   - RAM\>NVRAM
 
-  - - Copy Config Protocol: NA
+    - Copy Config Protocol: NA
     - Copy Config Source File Type: Startup Config
     - Copy Config Destination File Type: Running Config
     - Copy Config Server Address: NA
@@ -263,9 +270,9 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
 - Save configuration
 
-- NVRAM\>RAM
+  - NVRAM\>RAM
 
-  - - Copy Config Protocol: NA
+    - Copy Config Protocol: NA
     - Copy Config Source File Type: Running Config
     - Copy Config Destination File Type: Startup Config
     - Copy Config Server Address: NA
@@ -273,9 +280,9 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
 - Backup configuration
 
-- RAM\>Network
+  - RAM\>Network
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: Startup Config
     - Copy Config Destination File Type: Network File
     - Copy Config Server Address: The IP address of the server to which to copy the configuration file (e.g. 192.168.1.1)
@@ -283,7 +290,7 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
   - NVRAM\>Network
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: Running Config
     - Copy Config Destination File Type: Network File
     - Copy Config Server Address: The IP address of the server to which to copy the configuration file (e.g. 192.168.1.1)
@@ -291,9 +298,9 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
 - Load IOS
 
-- Network\>FLASH
+  - Network\>FLASH
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: Network File
     - Copy Config Destination File Type: IOS File
     - Copy Config Server Address: The IP address of the server from which to copy the IOS file (e.g. 192.168.1.1)
@@ -301,9 +308,9 @@ The configuration is stored in two locations, RAM and NVRAM. The running configu
 
 - Backup IOS
 
-- FLASH\>Network
+  - FLASH\>Network
 
-  - - Copy Config Protocol: TFTP
+    - Copy Config Protocol: TFTP
     - Copy Config Source File Type: IOS File
     - Copy Config Destination File Type: Network File
     - Copy Config Server Address: The IP address of the server to which to copy the IOS file (e.g. 192.168.1.1)

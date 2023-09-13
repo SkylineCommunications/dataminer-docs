@@ -30,7 +30,7 @@ This page displays the **IP Address**, the **Gateway** and the **MAC address** o
 
 ### Config - MBT
 
-This page alows the user to adjust settings from the main unit such as:
+This page allows the user to adjust settings from the main unit such as:
 
 - **Serial Remote Address**
 - **Serial Baud Rate**
@@ -41,7 +41,7 @@ Some converter specific configuration can also be changed from this page:
 - **Attenuation**
 - **Attenuation Offset**
 - **Mute State**
-- **Opperating RF Frequency**
+- **Operating RF Frequency**
 - **LNA Current Source**
 
 ### Config - Utility
@@ -50,17 +50,17 @@ This page displays the **System Date** and **Time** and allows the user to modif
 
 The setting "**Local/Remote State**" should be on "**Serial**" to be able to write to the device. (The Local/Remote state can be changed if Local/Rmote State is not on Serial)
 
-With the "Time Sync..." page button, **time syncronization** can be configured to keep the time of the device in sync with the Dataminer time.
+With the "Time Sync..." page button, **time synchronization** can be configured to keep the time of the device in sync with the DataMiner time.
 
 ### Config - Redundancy
 
-This page alows the user to adjust some **redundancy** settings.
+This page allows the user to adjust some **redundancy** settings.
 
 ### Status - Events
 
-This page displays events information and alows the user to mask alarms.
+This page displays events information and allows the user to mask alarms.
 
-The event log can be cleared from dataminer with the "**Clear Event Log**" button. To get all stored events on the device, reset the Events Pointer by clicking the "**Initialtize Events Pointer**" button.
+The event log can be cleared from dataminer with the "**Clear Event Log**" button. To get all stored events on the device, reset the Events Pointer by clicking the "**Initialize Events Pointer**" button.
 To clear all events on the device, click the "**Clear all Stored Events**" button.
 
 ### Status - Status

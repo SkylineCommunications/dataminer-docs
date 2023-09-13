@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: *9600*
+  - **Baudrate**: *9600*
   - **Databits**: 6
   - **Stopbits**: 1
   - **Parity**: None
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: 192.168.52.10
+  - **IP address/host**: 192.168.52.10
   - **IP port**: 4001
   - **Bus address**: 49
 

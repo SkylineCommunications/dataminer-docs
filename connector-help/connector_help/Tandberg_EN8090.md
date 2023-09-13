@@ -71,7 +71,7 @@ Finally, the **Features** page button opens a table listing all the features and
 
 ### General Settings Page
 
-This page contains general Dataminer settings, as well as the **DCF** settings.
+This page contains general DataMiner settings, as well as the **DCF** settings.
 
 To configure the DCF settings, in the **DataMiner Connectivity Framework** section, click the **Configure...** button.
 

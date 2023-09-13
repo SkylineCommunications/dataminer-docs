@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: *localhost* (DataMiner acts as server)
+  - **IP address/host**: *localhost* (DataMiner acts as server)
   - **IP port**: \[The DataMiner IP port used by Sittig DVA to send requests to. *Default 7531*.\]
 
 ### Configuration of files

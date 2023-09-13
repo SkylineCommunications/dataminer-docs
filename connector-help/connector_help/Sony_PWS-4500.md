@@ -60,7 +60,7 @@ SERIAL CONNECTION: (see "Initialization")
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, e.g. *port 21.*
 
 ### Initialization

@@ -10,9 +10,9 @@ With the **Skyline Protocol Overview** driver you can parse multiple protocol fi
 
 ### Version Info
 
-| **Range**                    | **Key Features**                                                                                                                                                                                                                                                                                         | **Based on** | **System Impact** |
-|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.X \[SLC Main\] 1.0.1.X | Initial Version Parse XML versionhistory; Metric on number of found matches; Support for XPath filters; Refresh more Efficient; CancelButtons; Search case-insensitive; Support code library in detection for manipulates external elements; Add indexed items - Class Library & Community Class Library | \- 1.0.0.5   | \- -              |
+| Range | Key Features | Based on | System Impact |
+|--|--|--|--|
+| 1.0.0.x [SLC Main]<br/> 1.0.1.X | Initial version. Parse XML version history; Metric on number of found matches; Support for XPath filters; Refresh more efficient; Cancel buttons; Search case-insensitive; Support code library in detection for manipulation external elements; Add indexed items - Class Library & Community Class Library | \-<br/> 1.0.0.5 | \-<br/> - |
 
 ### Product Info
 
@@ -48,40 +48,40 @@ Workflow on startup:
 
 (step 1 & 2 are executed automatically every 15 minutes, cancel in Protocols page)
 
-1.  Directories, select a directory that has an SVN structure. (Note: default is filled in. Pointing at a directory that is updated every 15 minutes)
-2.  Protocols, Click Refresh & Wait
-3.  Create a Filter in Filters... and Apply
-4.  Protocols Table should now show the filtered results.
+1. Directories, select a directory that has an SVN structure. (Note: default is filled in. Pointing at a directory that is updated every 15 minutes)
+1. Protocols, Click Refresh & Wait
+1. Create a Filter in Filters... and Apply
+1. Protocols Table should now show the filtered results.
 
 Notes:
 
-1.  Some of the files found in the directory may have parsing errors. These files are indicated in the Files Table.
-2.  The Files page contains the Export functionality for the hidden full table of Protocols (Raw)
-3.  The driver does not force an SVN Update, it only parses the file system.
-4.  The driver does executes automatically parses all directories & files every 15 minutes.
-5.  Files that were not modified after the last parse are not parsed again.
+1. Some of the files found in the directory may have parsing errors. These files are indicated in the Files Table.
+1. The Files page contains the Export functionality for the hidden full table of Protocols (Raw)
+1. The driver does not force an SVN Update, it only parses the file system.
+1. The driver does executes automatically parses all directories & files every 15 minutes.
+1. Files that were not modified after the last parse are not parsed again.
 
 Features:
 
 - Directories
 
-- Selection of one or multiple directories on any server of your network that holds the full or a partial SVN Protocol file structure.
+  - Selection of one or multiple directories on any server of your network that holds the full or a partial SVN Protocol file structure.
   - Selection of only parsing the last version of every major range.
   - Selection of a Filter to filter out specific files or folders.
   - Parsing can be done parallel or serial (Enabling/ Disabling happens on General page)
 
 - Files
 
-- Individual status of every File, indicating correct or incorrect parsing, last parsed time and last modified time of the file.
+  - Individual status of every File, indicating correct or incorrect parsing, last parsed time and last modified time of the file.
   - Files where Date Last Parsed is later than Date Modified are not parsed again. Old parsing information is reused.
 
 - Protocols
 
-- The results of the filters will be shown in the Protocols Table
+  - The results of the filters will be shown in the Protocols Table
 
   - The refresh button consists of 4 stages:
 
-  - - Parse All Directories
+    - Parse All Directories
     - Parse All Files
     - Calculate Weights
     - Calculate Metrics
@@ -90,13 +90,13 @@ Features:
 
 - Protocols Filters
 
-- You can apply multiple filters at the same time (with and/or operators).
+  - You can apply multiple filters at the same time (with and/or operators).
 
   - Search Locations
 
-  - - Indexed: The values of the indexed filters are generated while parsing the files.
+    - Indexed: The values of the indexed filters are generated while parsing the files.
 
-    - - Identifier
+      - Identifier
 
       - Name
 
@@ -106,7 +106,7 @@ Features:
 
       - Many columns indicating the presence of specific protocol features:
 
-      - - Connection Types (SNMP, Serial, http, ...)
+        - Connection Types (SNMP, Serial, http, ...)
 
         - If the driver is a Spectrum Analyzer
 
@@ -120,15 +120,15 @@ Features:
 
         - The presence of:
 
-        - - DCF
-          - DVE's
-          - Treecontrols
+          - DCF
+          - DVEs
+          - Tree controls
           - Matrices
           - SLNet subscriptions
           - External Element Communication
-          - Datadistribution
+          - Data distribution
           - Element Connections
-          - Treecontrols
+          - Tree controls
           - SNMP Traps
           - CSV Parsing
           - Database SQL Parsing
@@ -142,17 +142,17 @@ Features:
           - Base Packages
           - Custom Packages
 
-    - Not Index: The values of the not indexed filters are generated while applying the filter, so the driverfiles are read again then.
+    - Not Index: The values of the not indexed filters are generated while applying the filter, so the driver files are read again then.
 
-    - - The results will show the rulenumbers and the context where the filter found its matches in the driverfiles.
+      - The results will show the rule numbers and the context where the filter found its matches in the driver files.
       - You can use the cancel button for the not indexed searches.
 
   - Usage of Search Type:
 
-  - - Think about which search type you could use for which search location (e.g. greater than only with numeric search locations)
+    - Think about which search type you could use for which search location (e.g. greater than only with numeric search locations)
 
     - XPath:
 
-    - - Can only be used with the '--Full Driver-- (Not Indexed)' search location. When clicking the XPath Search Type, an XPath example is filled in in the Search Value Cell.
+      - Can only be used with the '--Full Driver-- (Not Indexed)' search location. When clicking the XPath Search Type, an XPath example is filled in in the Search Value Cell.
       - Example: */Protocol/Params/Param\[@id='1'\]*
       - Case Sensitivity only applies to the text after *='* and before *'*

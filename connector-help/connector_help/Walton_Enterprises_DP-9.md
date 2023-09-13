@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *18000*.
   - **Bus address**: Used to choose which output of the device is needed. For more information, refer to the **Notes** section below.
 

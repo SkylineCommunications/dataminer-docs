@@ -38,9 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-<!-- -->
-
-- **IP address/host**: The polling IP of the device.
+  -**IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device (default: 473).
   - **Bus address:** The RTU ID used for messaging the device.
 

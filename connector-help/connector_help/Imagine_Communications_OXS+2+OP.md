@@ -18,15 +18,15 @@ Current Version: 1.0.0.1
 
 This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
-#### SERIAL MAIN CONNECTION:
+#### SERIAL MAIN CONNECTION
 
 - **IP address/host**: **UDP/IP**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, set to the fixed value *4050.*
 - **Bus address**: This is a combination of the frame number and slot number/ID: "\<frameNumber\>**.**\<slotID\>" (e.g. frame 1 and slot 12 = bus address *1.12).*
 
-#### SMART-SERIAL PORTDEV CONNECTION:
+#### SMART-SERIAL PORTDEV CONNECTION
 
-- **IP address/host**: **UDP/IP**: The local Dataminer IP to receive responses, e.g. *172.0.0.50.*
+- **IP address/host**: **UDP/IP**: The local DataMiner IP to receive responses, e.g. *172.0.0.50.*
 - **IP port**: The IP port of the DMA, set to the fixed value *4000.*
 
 ## Usage

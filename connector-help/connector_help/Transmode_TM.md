@@ -106,7 +106,7 @@ This page displays the web interface of the device. Note that the client machine
 
 The **1.0.1.1** driver range of the Transmode TM protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.5.7.2**.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 
@@ -118,11 +118,11 @@ Physical dynamic interfaces:
 
 - **Client**: inout type
 
-- Board Table (depending on Type, see below)
+  - Board Table (depending on Type, see below)
 
 - **Line**: inout type
 
-- Board Table (depending on Type, see below)
+  - Board Table (depending on Type, see below)
 
 ### Connections
 
@@ -130,32 +130,32 @@ Physical dynamic interfaces:
 
 - From **Client** to **Line**
 
-- Connections differ depending on the **Type** of the row in the **Board Table**. (Not all types are implemented. See below for a list of the implemented types.)
+  - Connections differ depending on the **Type** of the row in the **Board Table**. (Not all types are implemented. See below for a list of the implemented types.)
 
   - **Types:**
 
-  - - **TPQMRI:**
+    - **TPQMRI:**
 
-    - - Client x:y:1-2 \<-\> Line x:y:3-4
+      - Client x:y:1-2 \<-\> Line x:y:3-4
       - Client x:y:5-6 \<-\> Line x:y:7-8
       - Client x:y:9-10 \<-\> Line x:y:11-12
       - Client x:y:13-14 \<-\> Line x:y:15-16
 
     - **TPDDGBE:**
 
-    - - Client x:y:1-2 \<-\> Line x:y:13-14
+      - Client x:y:1-2 \<-\> Line x:y:13-14
       - Client x:y:3-4 \<-\> Line x:y:13-14
       - Client x:y:5-6 \<-\> Line x:y:15-16
       - Client x:y:7-8 \<-\> Line x:y:15-16
 
     - **TPD10GL:**
 
-    - - Client x:y:1-2 \<-\> Line x:y:3-4
+      - Client x:y:1-2 \<-\> Line x:y:3-4
       - Client x:y:5-6 \<-\> Line x:y:7-8
 
     - **MSMXP10G:**
 
-    - - Client x:y:1-2 \<-\> Line x:y:21-22
+      - Client x:y:1-2 \<-\> Line x:y:21-22
       - Client x:y:3-4 \<-\> Line x:y:21-22
       - Client x:y:5-6 \<-\> Line x:y:21-22
       - Client x:y:7-8 \<-\> Line x:y:21-22
@@ -168,7 +168,7 @@ Physical dynamic interfaces:
 
     - **GBE10EMXP10II:**
 
-    - - Client x:y:1-2 \<-\> Line x:y:21-22
+      - Client x:y:1-2 \<-\> Line x:y:21-22
       - Client x:y:3-4 \<-\> Line x:y:21-22
       - Client x:y:5-6 \<-\> Line x:y:21-22
       - Client x:y:7-8 \<-\> Line x:y:21-22
@@ -181,7 +181,7 @@ Physical dynamic interfaces:
 
     - **MDU4EXT2F:**
 
-    - - Client x:y:1-5 \<-\> Line x:y:9-10
+      - Client x:y:1-5 \<-\> Line x:y:9-10
       - Client x:y:2-6 \<-\> Line x:y:9-10
       - Client x:y:3-7 \<-\> Line x:y:9-10
       - Client x:y:4-8 \<-\> Line x:y:9-10
@@ -189,7 +189,7 @@ Physical dynamic interfaces:
 
     - **MDU4TERM2F:**
 
-    - - Client x:y:1-5 \<-\> Line x:y:9-10
+      - Client x:y:1-5 \<-\> Line x:y:9-10
       - Client x:y:2-6 \<-\> Line x:y:9-10
       - Client x:y:3-7 \<-\> Line x:y:9-10
       - Client x:y:4-8 \<-\> Line x:y:9-10

@@ -34,11 +34,11 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 SNMP CONNECTION:
 
-- **IP address/host**: \[The polling IP of the device.\]
+- **IP address/host**: The polling IP of the device.
 
 SNMP Settings:
 
-- **Port number**: \[The port of the connected device, by default *161*.\]
+- **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: \[The community string used when reading values from the device (default: *public*).\]
 - **Set community string**: \[The community string used when setting values on the device (default: private).\]
 

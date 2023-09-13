@@ -50,33 +50,36 @@ This page displays an overview of the system, including the number of **Active**
 
 In the PLM Overview table, you can create PLM items directly from the connector interface:
 
-1.  Right-click the PLM Overview table.
+1. Right-click the PLM Overview table.
 
-2.  Select **Add PLM Item** in the context menu.
+1. Select **Add PLM Item** in the context menu.
 
-3.  In the pop-up window (which is an interactive Automation script), enter the following information:
+1. In the pop-up window (which is an interactive Automation script), enter the following information:
 
-4.  - **Title**: Provide a descriptive title for the PLM item (reservation).
+   - **Title**: Provide a descriptive title for the PLM item (reservation).
 
-    - **Resource Type**
+   - **Resource Type**
 
-    - **Resource**: Specify the name of the resource to assign the PLM item to.
+   - **Resource**: Specify the name of the resource to assign the PLM item to.
 
-    - **Start Time**
+   - **Start Time**
 
-    - **End Time**
+   - **End Time**
 
-    - **Recurrence**: Select the recurrence pattern: *Once*, *Daily*, *Weekly*, or *Monthly*.
+   - **Recurrence**: Select the recurrence pattern: *Once*, *Daily*, *Weekly*, or *Monthly*.
 
-    - - If you select *Once*, enter the date of the one-time PLM activity.
-      - If you select *Daily*, specify the interval: *Every \_\_ day(s)*.
-      - If you select *Weekly*, specify the interval: *Every \_\_ week(s)*. Also select the days of the week.
-      - If you select *Monthly*, specify the interval: *Every \_\_ month(s)*. Also specify which day of the month: *Day\_\_*.
+     - If you select *Once*, enter the date of the one-time PLM activity.
 
-    - **Range of Recurrence**: Specify the range of dates in which the recurrence should apply.
+     - If you select *Daily*, specify the interval: *Every \_\_ day(s)*.
 
-    - - **Start**: Enter the start date of the recurrence.
-      - **End**: Enter the end date of the recurrence.
+     - If you select *Weekly*, specify the interval: *Every \_\_ week(s)*. Also select the days of the week.
+
+     - If you select *Monthly*, specify the interval: *Every \_\_ month(s)*. Also specify which day of the month: *Day\_\_*.
+
+   - **Range of Recurrence**: Specify the range of dates in which the recurrence should apply.
+
+     - **Start**: Enter the start date of the recurrence.
+     - **End**: Enter the end date of the recurrence.
 
 You can also edit or delete PLM items directly via the right-click menu. When delete an item, a confirmation box will be displayed.
 
@@ -90,17 +93,20 @@ The connector contains several configuration sections to customize its behavior:
 
 - **Processing Configuration:**
 
-- **PLM Status**: Enable or disable the updating of PLM activity statuses.
+  - **PLM Status**: Enable or disable the updating of PLM activity statuses.
+
   - **PLM Timer**: Specify the frequency at which the PLM activity statuses are calculated and updated.
 
 - **PLM Overview Table Auto Delete Options**
 
-- **Auto Delete**: Enable or disable the automatic deletion of completed or expired PLM activities from the PLM Overview table.
+  - **Auto Delete**: Enable or disable the automatic deletion of completed or expired PLM activities from the PLM Overview table.
+
   - **Auto Delete Delay**: Specify for how long completed or expired PLM activities should be stored in the PLM Overview table before they are deleted.
 
 - **PLM Records Table Auto Delete Options**
 
-- **Auto Delete**: Enable or disable the automatic deletion of PLM records.
+  - **Auto Delete**: Enable or disable the automatic deletion of PLM records.
+
   - **Auto Delete Delay**: Specify for how long PLM records should be stored in the PLM Records table before they are automatically deleted.
 
 ### Resource Subscription
@@ -108,9 +114,15 @@ The connector contains several configuration sections to customize its behavior:
 The EPM PLM Solution contains two configuration tables that are necessary to validate if the entered resource is a valid EPM entity during the creation operation.
 
 - **Resource Subscribers Table**: Allows the EPM PLM Solution to reference the EPM back-end elements.
+
 - **Resource Types**: Delimits the supported EPM resources.
 
 ## Notes
 
 A PLM entry can have 5 different statuses:
 
+- **Scheduled**: One-time activities that have been created but are yet to occur.
+- **Completed**: One-time PLM activities that have already been completed.
+- **Active**: PLM activities that are currently happening, including both one-time and recurrent activities that are within their recurrence range.
+- **Inactive**: Recurrent PLM activities that are not currently active but are within their recurrence range.
+- **Expired**: Recurrent PLM activities that are outside the recurrence range, as the current date is beyond the specified range.

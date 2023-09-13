@@ -53,21 +53,21 @@ Required configurations are:
 
 - The linked inputs for the main and/or backups (**VLB**, **VHM**, .)
 
-- The column headers indicate what it represents:
+  - The column headers indicate what it represents:
 
-  - - 1st character:
+    - 1st character:
 
-    - - V = Vertical
+      - V = Vertical
       - H = Horizontal
 
     - 2nd character:
 
-    - - L = Low
+      - L = Low
       - H = High
 
     - 3rd character:
 
-    - - M = Main (= Primary)
+      - M = Main (= Primary)
       - B = Backup (= Secondary)
 
 The **Polarization Table** will automatically be updated with these settings, and the configured inputs will be added in the **Input Table**.
@@ -96,6 +96,7 @@ Each of them needs to be configured using one of the following formats:
 
 - **Parameter** ID of the **read**
 - **Parameter** ID of the **write** (=**Column** ID) / **parameter** ID of the **read** (= **Table** ID) : **Column** Index : Key
+
   e.g. 110/100:2:1_A
 
 When one of the items in the format does not exist it may be left empty.

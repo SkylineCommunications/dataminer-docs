@@ -8,11 +8,11 @@ The 5160 provides exceptional 10GE density in a small 1RU form factor, with the 
 
 ## About
 
-This driver is used to establish comunication between Skyline' Dataminer Software and the Ciena 5160 Service Aggregation Switch.
+This driver is used to establish communication between Skyline's DatMminer Software and the Ciena 5160 Service Aggregation Switch.
 
-The comunication with this device is established via SNMPv2.
+The communication with this device is established via SNMPv2.
 
-This driver supports features accross all device layers.
+This driver supports features across all device layers.
 
 ### Ranges of the driver
 
@@ -60,7 +60,7 @@ SNMP Settings:
 
 ## Usage
 
-This device usage is in all similar to the Ciena CN6500 Platform where the user may dinamically assing polling for each page, and respective sub-pages a polling time, wheter fast or slow.
+This device usage is in all similar to the Ciena CN6500 Platform where the user may dynamically assign polling for each page, and respective sub-pages a polling time, whether fast or slow.
 
 In all main pages a Refresh button is available to make it possible for the user to reload the data from the current page and all sub-pages underneath the current page.
 
@@ -80,7 +80,7 @@ The Chassis page displays information about the device's **Chassis**, **Temperat
 
 ### Dataplane
 
-The Dataplane page implementes the wwpLeos Dataplane Mib which provides a set of functionalities related with **Class of Service, DSCP, Congestion Avoidance, Port Queues,** **Group Queues** and **Port Forwarding**.
+The Dataplane page implements the wwpLeos Dataplane MIB, which provides a set of functionalities related with **Class of Service, DSCP, Congestion Avoidance, Port Queues,** **Group Queues** and **Port Forwarding**.
 
 ### System
 
@@ -124,7 +124,7 @@ The Ring Auto Protection Switching allows a user to check generic information re
 
 ### Traffic Profile
 
-This page displays information regarding the Traffic Profiles and assign a traffic profile configuration to a specfic Port.
+This page displays information regarding the Traffic Profiles and assign a traffic profile configuration to a specific Port.
 
 ### VLANs
 
@@ -132,7 +132,7 @@ The **Virtual Local Area Network** page displays all the configured **VLANs** as
 
 ### VPLS
 
-The Virtual Private Local Area Network Switch displays infromation regarding the configured **Vitual Circuits.**
+The Virtual Private Local Area Network Switch displays information regarding the configured **Virtual Circuits.**
 
 ### IP
 
@@ -144,15 +144,15 @@ This page allows a user to check **ICMP statistics.**
 
 ### ISIS
 
-This page allows a user to verifiy and setup the ISIS configurations for this device. The user may find information regarding the **ISIS Router, ISIS LSP Summary, ISIS LSP TLV and ISIS System Statistics.**
+This page allows a user to verify and setup the ISIS configurations for this device. The user may find information regarding the **ISIS Router, ISIS LSP Summary, ISIS LSP TLV and ISIS System Statistics.**
 
 ### OSPF
 
-This page allows a user to verifiy and setup the OSPF configurations for this device. The user may two tables related with the configured **OSPF Interfaces** and the configured **OSPF Areas**.
+This page allows a user to verify and setup the OSPF configurations for this device. The user may two tables related with the configured **OSPF Interfaces** and the configured **OSPF Areas**.
 
 ### RSVP-TE
 
-This page displays infromation regarding the **Resource Reservation Protocol - Traffic Enginnering**.
+This page displays information regarding the **Resource Reservation Protocol - Traffic Engineering**.
 
 ### CFM
 
@@ -186,7 +186,3 @@ This page displays information regarding the **management interfaces**.
 ### Alarms
 
 This page contains tables regarding alarm data. namely, **Active Alarm** **data** and **Cleared Alarm data.**
-
-
-
-

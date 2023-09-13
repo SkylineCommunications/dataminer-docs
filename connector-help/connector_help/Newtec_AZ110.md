@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **Bus address**: The bus address of the device, with a default of 100.
 
 ### Web Interface

@@ -86,14 +86,12 @@ Some important parameters are available at the end of the first column:
 
 - **Communication Type**:
 
-- *Direct Communication*: The element sends the requests directly to the Astro module.
+  - *Direct Communication*: The element sends the requests directly to the Astro module.
   - *U100C Proxy*: The element sends the requests to the Astro U100 Controller, which will forward them to the Astro module. The controller acts as a proxy.
-
-<!-- -->
 
 - **Connection Method**: This parameter is only available in Direct Communication mode, up to version 1.0.0.24. From version 1.0.1.1 onward, it is no longer available.
 
-- *Login*: The element logs in to the device before every request (read and write requests).
+  - *Login*: The element logs in to the device before every request (read and write requests).
   - *Anonymous*: The element only logs in to the device for write requests. The device does not log in for read requests.
 
 ### Status

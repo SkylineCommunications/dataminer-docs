@@ -15,21 +15,22 @@ Before using this protocol, make sure you have read and understand the following
 Please note the following:
 
 - This connector was developed for DataMiner Cube, so it may not function correctly if you use the legacy application Element Display instead.
+
 - Firmware upgrades are usually backwards compatible, so there are generally no problems upgrading to most of the more recent versions. See "Supported Firmware Versions" section below.
 
 ### Version Info
 
-| **Range**            | **Description**                                                                 | **DCF Integration** | **Cassandra Compliant** |
-|----------------------|---------------------------------------------------------------------------------|---------------------|-------------------------|
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
 | 1.0.0.x              | Initial version, based on "SA DCM 2.0.0.36" connector.                          | Yes                 | Yes                     |
 | 1.0.1.x              | Added partial tables.                                                           | Yes                 | Yes                     |
 | 1.0.2.x              | Based on 1.0.0.104, but with partial tables.                                    | Yes                 | Yes                     |
 | 1.0.3.x \[SLC Main\] | SRM compatible. Major change because of display key change. Based on 1.0.0.107. | Yes                 | Yes                     |
 
-### Supported Firmware Versions
+### Product Info
 
-| **Range**               | **Supported Firmware**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|-------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Range | Supported Firmware |
+|--|--|
 | 1.0.0.x 1.0.2.x 1.0.3.x | Supported firmware depends on each command. To check the minimum version necessary to run a command, refer to the **Minimum Required FW** column on the **Manager** page. If this column has the value "any", there is no information in the document "DCM_IDL.pdf" about the minimum version to run that command, so it is assumed to be compatible with all firmware versions. E.g. Command **Get Boards** requires firmware 6.9 or later. ![versions3.JPG](~/connector-help/images/CISCO_DCM_versions3.JPG) |
 
 ## Configuration
@@ -47,9 +48,11 @@ Unlike most protocols, the CISCO DCM connector is not just a plain XML protocol 
 
 To install the protocol package:
 
-1.  Copy the upgrade package to one of the DMAs and double-click it. This will start the upgrade procedure.
-2.  Do not change any of the default settings.
-3.  Upload the protocol or, if available, install the protocol package. All required files should now be installed and ready for use.
+1. Copy the upgrade package to one of the DMAs and double-click it. This will start the upgrade procedure.
+
+1. Do not change any of the default settings.
+
+1. Upload the protocol or, if available, install the protocol package. All required files should now be installed and ready for use.
 
 Note: The DMUpgrade package does not install the XML protocol itself, but only the extra DLLs.
 
@@ -61,20 +64,22 @@ From version 1.0.0.27 onwards, assemblies are supported in protocol packages. In
 
 The procedure below describes how you can set up your first element. To create further elements, the same steps can be used, though some of the steps can be omitted.
 
-1.  In DataMiner Cube, right-click in the Surveyor and select **New** \> **Element**.
+1. In DataMiner Cube, right-click in the Surveyor and select **New** \> **Element**.
 
-2.  Specify a unique name for the element.
+1. Specify a unique name for the element.
 
-3.  Optionally, add a description.
+1. Optionally, add a description.
 
-4.  Optionally, assign an alarm template and/or a trend template.
+1. Optionally, assign an alarm template and/or a trend template.
 
-5.  Specify the main IP address.
-    Note: double-polling one DCM on the same DMA is not possible.
+1. Specify the main IP address.
 
-6.  More TCP/IP settings: specify the port. (Default: 161 -\> used to receive SNMP traps).
+   > [!NOTE]
+   > Double-polling one DCM on the same DMA is not possible.
 
-7.  Click **Create** to finish element creation.
+1. More TCP/IP settings: specify the port. (Default: 161 -\> used to receive SNMP traps).
+
+1. Click **Create** to finish element creation.
 
 > **Note**:
 > In versions before 1.0.0.14, the default port was 5003, but this setting was ignored by the connector. 5003 is the port used for IIOP communication, which is the main communication protocol used to poll the device. However, this setting has always been ignored by the connector and instead the port could be changed inside the connector (though this was not likely to be necessary). When you update a pre-14 version to version 14 or later, the port settings must be updated, otherwise the SNMP traps will not be received by the connector.
@@ -87,14 +92,15 @@ Note that the first time an element is created using a protocol on a DMA, it can
 
 To test the connection:
 
-1.  Restart the element
+1. Restart the element
 
-2.  Open the element card
+1. Open the element card
 
-3.  Check on the **Overview** page if there are icons in the tree view.
+1. Check on the **Overview** page if there are icons in the tree view.
 
-4.  1.  If yes -\> Test succeeded.
-    2.  If no -\> Test failed.
+   1. If yes -\> Test succeeded.
+
+   1. If no -\> Test failed.
 
 If the test failed, continue with the next step.
 
@@ -102,9 +108,11 @@ If the test failed, continue with the next step.
 
 To verify the IP address:
 
-1.  Go to the **Driver Settings** page and check if the **Management IP Address 1** is correct.
-2.  Verify if the **Port** parameters are set to *5003*.
-3.  Optionally, supply the IP address of the second management port. A DCM usually has two management ports, located next to the power supply.
+1. Go to the **Driver Settings** page and check if the **Management IP Address 1** is correct.
+
+1. Verify if the **Port** parameters are set to *5003*.
+
+1. Optionally, supply the IP address of the second management port. A DCM usually has two management ports, located next to the power supply.
 
 Note: The first IP address is not configurable in Data Display. To change it, right-click the element in the Surveyor, select Edit, and then define a new IP address in the element editor.
 
@@ -114,11 +122,15 @@ Test the connection again before you continue.
 
 To verify the IIOP credentials:
 
-1.  Go to the webpage of the DCM device and log on as Administrator.
-2.  Open the page **Security** and select the tab **OS Accounts**. A list should appear with available OS accounts.
-3.  Make a new user account or edit an existing one. It is advisable to use the username *guest* and password *guest* and to make sure the option **IIOP** is enabled.
-4.  Go to the element card and open the **IIOP** page. You can find this page by clicking the corresponding page button on the **Driver Settings** page.
-5.  If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No*; otherwise set this parameter to *Yes* and fill in the username and password.
+1. Go to the webpage of the DCM device and log on as Administrator.
+
+1. Open the page **Security** and select the tab **OS Accounts**. A list should appear with available OS accounts.
+
+1. Make a new user account or edit an existing one. It is advisable to use the username *guest* and password *guest* and to make sure the option **IIOP** is enabled.
+
+1. Go to the element card and open the **IIOP** page. You can find this page by clicking the corresponding page button on the **Driver Settings** page.
+
+1. If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No*; otherwise set this parameter to *Yes* and fill in the username and password.
 
 Note:
 
@@ -177,8 +189,9 @@ If you have tried all the previous steps and there is still no data in the DCM, 
 The log file can be found in "*C:\Skyline DataMiner\Logging\\ElementName\].txt*".
 You can also find it in Cube:
 
-1.  in the **Surveyor**, go to **Apps** \> **Logging**. This will open a new card.
-2.  Select **Elements** and select the name of the element in the list.
+1. in the **Surveyor**, go to **Apps** \> **Logging**. This will open a new card.
+
+1. Select **Elements** and select the name of the element in the list.
 
 ### Advanced Setup
 
@@ -285,8 +298,9 @@ Since version 1.0.0.17, some settings are (or can be) shared between several DCM
 
 There are two categories of settings:
 
-1.  System Settings: Contain parameters which must be the same on all elements.
-2.  Group Settings: More user-configurable than the system settings.
+1. System Settings: Contain parameters which must be the same on all elements.
+
+1. Group Settings: More user-configurable than the system settings.
 
 Each DCM element can optionally be assigned to a group. When this is done, it will copy the settings defined for that group. To create a new group, simply type a new name in the **Group Config** parameter.
 
@@ -359,12 +373,12 @@ Note:
 
 This page contains a tree view and is one of the most important pages in the connector. The main structure of the tree view is:
 
-1.  Board
-2.  Port
-3.  Input/Output branch
-4.  Transport Streams
-5.  Services
-6.  PIDs
+1. Board
+1. Port
+1. Input/Output branch
+1. Transport Streams
+1. Services
+1. PIDs
 
 Each level has its own set of specific tabs. Some are generic, like the **Alarms** tab, where the alarms can be viewed that were generated by the DCM and are related to that Board, Port, TS, etc. Others are more specific, such as information about ECM PIDs.
 
@@ -435,15 +449,15 @@ When a backup is restored, the full path of the file to restore is a combination
 
 To take a backup:
 
-1.  Click the **Take Backup** button.
-2.  Verify the **BS Backup Save Path Validation** parameter and the **BS Backup Status** parameter to follow up the status/progress of the backup, and to get more information in case there is an error.
-3.  In case of errors, check the element's log file for more information.
+1. Click the **Take Backup** button.
+1. Verify the **BS Backup Save Path Validation** parameter and the **BS Backup Status** parameter to follow up the status/progress of the backup, and to get more information in case there is an error.
+1. In case of errors, check the element's log file for more information.
 
 To restore a backup:
 
-1.  Click the **Restore Backup** button.
-2.  Check the **BS Backup File Valid** and **BS Restore Status** parameters.
-3.  In case of errors, verify the log file for more information.
+1. Click the **Restore Backup** button.
+1. Check the **BS Backup File Valid** and **BS Restore Status** parameters.
+1. In case of errors, verify the log file for more information.
 
 Note:
 
@@ -462,9 +476,9 @@ The page also contains page buttons that lead to the raw data tables used to cre
 
 This page contains a tree view displaying information about Cisco D9036 (Statmux DCMs) devices connected to the DCM. The structure of the tree is:
 
-1.  Controller
-2.  Pool
-3.  VSE
+1. Controller
+1. Pool
+1. VSE
 
 Note: There is a dummy node for the Controller and Pool level, so that a list of VSEs can be shown that are not part of a pool.
 
@@ -472,8 +486,8 @@ Note: There is a dummy node for the Controller and Pool level, so that a list of
 
 This page is closely related to the **Statmux Pools** page and contains some of the same information, presented in a different manner. Here, the structure of the tree is:
 
-1.  Encoder
-2.  VSE
+1. Encoder
+1. VSE
 
 ### Driver Settings
 
@@ -489,24 +503,24 @@ When the device becomes unreachable, commands will take a long time to go into t
 
 The difference between the two choices is explained below.
 
-- #### Continue Normal Operation: When you select this option and a network error is detected, the connector will continue to try to execute each command that needs to be polled according to the Poll Manager. This will fail over and over again until the connection is restored. When a command fails due to a network error, the command will be considered to be "not executed" and will remain in the execution queue. This means that every time the poll group is triggered, the command will be executed again. Theoretically, this is every second. In practice, it can take up to 10 seconds before the IIOP engine detects a network. But when many commands are scheduled, this could lead to an RTE.
+- **Continue Normal Operation**: When you select this option and a network error is detected, the connector will continue to try to execute each command that needs to be polled according to the Poll Manager. This will fail over and over again until the connection is restored. When a command fails due to a network error, the command will be considered to be "not executed" and will remain in the execution queue. This means that every time the poll group is triggered, the command will be executed again. Theoretically, this is every second. In practice, it can take up to 10 seconds before the IIOP engine detects a network. But when many commands are scheduled, this could lead to an RTE.
 
-- #### Start Ping Procedure: This option was introduced to counter the symptoms described in the default option. It stops polling commands the moment a network error has been detected. The connector will then start sending Ping messages to the Management IP Address 1 until they return with success. The advantage of this option is that RTEs are avoided and the connector becomes more responsive. The disadvantage, however, is that it only polls on one of the IP addresses instead of both and that the connector will not recover when a firewall blocks ping messages. This is why this is not the default option. So before you select this option, make absolutely sure that ping messages are not blocked by a firewall.
+- **Start Ping Procedure**: This option was introduced to counter the symptoms described in the default option. It stops polling commands the moment a network error has been detected. The connector will then start sending Ping messages to the Management IP Address 1 until they return with success. The advantage of this option is that RTEs are avoided and the connector becomes more responsive. The disadvantage, however, is that it only polls on one of the IP addresses instead of both and that the connector will not recover when a firewall blocks ping messages. This is why this is not the default option. So before you select this option, make absolutely sure that ping messages are not blocked by a firewall.
 
-Note:
-
-- When for some reason IIOP messages are blocked, but ping messages succeed, pinging is preferred over continuing normal polling, because not all commands will be tried in every poll cycle. (Only one will be tried.)
-- It is also possible to set the interval to ping the device in the **Poll Manager**. To do so, set the **PM - Poll Interval** for the *Ping Procedure* command to a custom value. The maximum interval is 10 minutes, and the minimum interval is 5 seconds (= default).
+> [!NOTE]
+>
+> - When for some reason IIOP messages are blocked, but ping messages succeed, pinging is preferred over continuing normal polling, because not all commands will be tried in every poll cycle. (Only one will be tried.)
+> - It is also possible to set the interval to ping the device in the **Poll Manager**. To do so, set the **PM - Poll Interval** for the *Ping Procedure* command to a custom value. The maximum interval is 10 minutes, and the minimum interval is 5 seconds (= default).
 
 #### IIOP Login
 
 This subpage can be used to set the credentials required to communicate with the DCM over IIOP. By default, for devices using firmware versions prior to 8.5, the connector will use the username and password *guest/guest.* However, in more recent firmware versions, the default security settings have changed, so that an IIOP-enabled account is no longer available by default. This means that an account has to be created manually before the connector can be used to poll data. For more information on how to create the account, refer to the section "*Verify IIOP Credentials"* above.
 
-Note:
-
-- **Up to version 1.0.0.87** all DCM elements on the same DMA must use the **same credentials**!
-- From **version 1.0.0.87 onwards**, the parameter **IIOP Share Credentials Between all Elements in DMA** controls the credentials synchronization. If this is set to ***Enabled**,* all elements on the same DMA will use the same **credentials** (similar to the behavior with previous versions of the connector). If this is set to ***Disabled***, each element will have its own credentials.
-- The password is sent to the device in plain text, so a simple Wireshark session can easily reveal the password. Consequently, it is advisable not to use a password that is also used for other (more secured) resources. This is also the reason why only one password is used.
+> [!NOTE]
+>
+> - **Up to version 1.0.0.87** all DCM elements on the same DMA must use the **same credentials**!
+> - From **version 1.0.0.87 onwards**, the parameter **IIOP Share Credentials Between all Elements in DMA** controls the credentials synchronization. If this is set to ***Enabled**,* all elements on the same DMA will use the same **credentials** (similar to the behavior with previous versions of the connector). If this is set to ***Disabled***, each element will have its own credentials.
+> - The password is sent to the device in plain text, so a simple Wireshark session can easily reveal the password. Consequently, it is advisable not to use a password that is also used for other (more secured) resources. This is also the reason why only one password is used.
 
 #### Web API Login
 
@@ -640,17 +654,21 @@ There are some columns in the **Poll Manager table** that are hidden by default.
 
 To do so, using a DataMiner version prior to DataMiner 9.6.4:
 
-1.  Place the mouse cursor between the column headers of **Description** and **Status**.
+1. Place the mouse cursor between the column headers of **Description** and **Status**.
 
-2.  When the cursor changes into an indicator like this, "\<-\|\|-\>", double-click to reveal the first hidden column.
+1. When the cursor changes into an indicator like this, "\<-\|\|-\>", double-click to reveal the first hidden column.
 
-3.  Repeat this procedure to show more columns, until the following columns are displayed:
+1. Repeat this procedure to show more columns, until the following columns are displayed:
 
-4.  - PM - Default Interval
-    - PM - Min Interval
-    - PM - Max Interval
-    - PM - Default State
-    - PM - Required Commands
+   - PM - Default Interval
+
+   - PM - Min Interval
+
+   - PM - Max Interval
+
+   - PM - Default State
+
+   - PM - Required Commands
 
 To do so, from DataMiner 9.6.4 onwards:
 
@@ -689,9 +707,11 @@ Note: The alarms used for this feature are not those from the alarm table, but t
 
 To activate this feature:
 
-1.  Enable the **Master Enable Polling** parameter.
-2.  Activate the specific event in the **Event Forwarding Table**.
-3.  In order to configure the elements to which the event must be sent, set the **Targets** field to *DMA\EID\PID.* Multiple targets can be separated by a semicolon (";").
+1. Enable the **Master Enable Polling** parameter.
+
+1. Activate the specific event in the **Event Forwarding Table**.
+
+1. In order to configure the elements to which the event must be sent, set the **Targets** field to *DMA\EID\PID.* Multiple targets can be separated by a semicolon (";").
 
 When the event is forwarded, a remote parameter set will be executed on the targeted parameters. For alarm changes, the set will have the format "*DMA\EID\PID\LEVEL\INDEX*", where the DMA, EID and PID are of the local (\source) element. In case of a backup, the format will be either "*DMA\EID\ERROR \[Backup Not Saved\]*" or "*DMA\EID\\PATH\]*", where PATH is the full path to the file on the DMA.
 
@@ -830,39 +850,41 @@ There are a few rules that the import file must comply with, and some things tha
 </tbody>
 </table>
 
-Note:
-
-- Optionally, cell values can be enclosed in double quotations marks ('"').
-- If one of the time columns contains *Always On Air* or *Never On Air,* all columns should.
+> [!NOTE]
+>
+> - Optionally, cell values can be enclosed in double quotations marks ('"').
+> - If one of the time columns contains *Always On Air* or *Never On Air,* all columns should.
 
 #### Example CSV file for import
 
 Below is an example of a .csv file used for import. The text in red consists of comments, which have no actual effect on the import.
 
-> INDEX;Service Name;Start Day;Start Time;End Day;End Time \<- First row: contains more semicolons (;) than commas (,) so the rest of the file will be parsed using the ';' separator
-> ------------------------------------------------------------------------------------- \<- this line is completely ignored
-> BBC: \<- first data line, but ignored here because it contains a comment.
-> "0";"BBC 1";"Wednesday";"14:00";"Wednesday";"14:50"; \<- this is how it would be formatted if exported.
-> ;BBC 2;0;0:0;0;0:0; \<- This is probably the shortest possible valid record. Note that start and end time are the same; therefore the service is always online.
-> 1;BBC 3;monday;08:00;friday;16:00; \<- The index '1' will be ignored and is therefore optional
-> \<empty line: is ignored\>
-> National Geographic Channel: \<- a comment, is ignored
-> ;Nat GC;monday;08:00;monday;16:00 \<- again a valid line
-> ;Nat GC;tuesday;08:00;monday;16:00
-> ;Nat GC;3;08:00;3;16:00; \<- day names are replaced by numbers
-> ;Nat GC;4;08:00;4;16:00
-> ;Nat GC;5;08:00;5;16:00
->
-> Info channel
-> ;Info;Always On-Air;Always On-Air;Always On-Air;Always On-Air\<- All columns are required, otherwise the row will be ignored.
->
->
-> File Made By Skyline @\[15:30 PM 17/09/2014\]
->
-> Designed for import in Cisco DCM connector.
-> Will tell the element when a service is online.
->
-> END OF FILE
+```
+INDEX;Service Name;Start Day;Start Time;End Day;End Time <- First row: contains more semicolons (;) than commas (,) so the rest of the file will be parsed using the ';' separator
+------------------------------------------------------------------------------------- <- this line is completely ignored
+BBC: <- first data line, but ignored here because it contains a comment.
+"0";"BBC 1";"Wednesday";"14:00";"Wednesday";"14:50"; <- this is how it would be formatted if exported.
+;BBC 2;0;0:0;0;0:0; <- This is probably the shortest possible valid record. Note that start and end time are the same; therefore the service is always online.
+1;BBC 3;monday;08:00;friday;16:00; <- The index '1' will be ignored and is therefore optional
+<empty line: is ignored>
+National Geographic Channel: <- a comment, is ignored
+;Nat GC;monday;08:00;monday;16:00 <- again a valid line
+;Nat GC;tuesday;08:00;monday;16:00
+;Nat GC;3;08:00;3;16:00; <- day names are replaced by numbers
+;Nat GC;4;08:00;4;16:00
+;Nat GC;5;08:00;5;16:00
+
+Info channel
+;Info;Always On-Air;Always On-Air;Always On-Air;Always On-Air<- All columns are required, otherwise the row will be ignored.
+
+
+File Made By Skyline @[15:30 PM 17/09/2014]
+
+Designed for import in Cisco DCM connector.
+Will tell the element when a service is online.
+
+END OF FILE
+```
 
 ## DCF
 
@@ -889,10 +911,13 @@ Polling for these tables will need to be activated in the Poll Manager before th
 
 To enable the optional data sources:
 
-1.  Go to **Driver Settings**.
-2.  Click the **DCF** button.
-    A pop-up page will be displayed.
-3.  Set the parameter **DCF: Include xxx Sources** to *Yes*.
+1. Go to **Driver Settings**.
+
+1. Click the **DCF** button.
+
+   A pop-up page will be displayed.
+
+1. Set the parameter **DCF: Include xxx Sources** to *Yes*.
 
 Note that all DCF-related settings are automatically propagated to all elements using the same group config. (See Section: *Driver Settings* \> *Group Config.*)
 
@@ -954,115 +979,149 @@ Below, you can find what kind of connections can be made from each interface and
 Note: For connections of which the name ends with *\[KEY\]*, *KEY* is replaced with the primary key of the destination interface.
 
 - Physical Ports
-  Linking other elements should be done using these interfaces.
+
+  **Linking other elements should be done using these interfaces.**
+
   The keys are formatted as XY.Z, where X = "I" for input-only ports, "B" for IO ports (Bidirectional) and "O" for output-only ports. Y is the board number (1-based, 0=Main board), Z is the port number (zero-based).
 
-- To "Ports" name: ./InputPort
+  - To "Ports" name: ./InputPort
+
     (Only for Input or IO ports)
 
 - Ports
 
-- To "Physical Ports" name *./OutputPort*
+  - To "Physical Ports" name *./OutputPort*
+
     (Only for Output or IO ports)
 
   - To "Ports" name *./Mirrored*
+
     (For ports that are configured in a port pair and send the same signals.)
 
-  - - Attribute: **Mirrored**, format: *Yes*
+    - Attribute: **Mirrored**, format: *Yes*
 
   - To "Input TS" name *./InputTS*
 
-  - - Attribute: **MC**, format: *x.x.x.x:y*
+    - Attribute: **MC**, format: *x.x.x.x:y*
+
     - Attribute: **VLAN**, format: *x* if available, *NA* if not available
+
     - Attribute: **ONID**, format: *x*
 
 - Input TS
 
-- To "Input Service" name *./InputService*
+  - To "Input Service" name *./InputService*
 
-  - - Attribute: **Name** (= System Name column)
+    - Attribute: **Name** (= System Name column)
 
 - Input Service
 
-- To "Output Service" name *./ActiveSource\[KEY\]*
+  - To "Output Service" name *./ActiveSource\[KEY\]*
 
   - To "Input Component" name *./InputComponent\[KEY\]*
 
-  - To "Alternate Sources" name *./MainSource\[KEY\]
+  - To "Alternate Sources" name *./MainSource\[KEY\]*
+
     (Optional; must be enabled)*
 
-  - - Attribute: **IsBackup**, format: *False*
-    - Attribute: **IsActive**, format: *True* or *False*
-
-  - To "Merged Sources" name *./MergedSource\[KEY\]
-    *(Optional; must be enabled)**
     - Attribute: **IsBackup**, format: *False*
+
     - Attribute: **IsActive**, format: *True* or *False*
 
-  - To "Backup Sources" name *./BackupSource\[KEY\]
-    *(Optional; must be enabled)**
+  - To "Merged Sources" name *./MergedSource\[KEY\]*
+
+    *(Optional; must be enabled)*
+
+    - Attribute: **IsBackup**, format: *False*
+
+    - Attribute: **IsActive**, format: *True* or *False*
+
+  - To "Backup Sources" name *./BackupSource\[KEY\]*
+
+    *(Optional; must be enabled)*
+
     - Attribute: **IsBackup**, format: *True*
+
     - Attribute: **IsActive**, format: *True* or *False*
 
 - Input Component
+
   *(Optional; must be enabled:* *DCF: Include Component Sources)*
 
 - To "Output Component" name *./SourceComponent\[KEY\]*
 
 - Output Component
+
   *(Optional; must be enabled:* *DCF: Include Component Sources)*
 
 - To "Output Service" name *./OutputComponent*
+
   - To "Output Component" name *./SourceComponent\[KEY\]*
 
 - Output Service
 
-- To "Output TS" name *./OutputService*
+  - To "Output TS" name *./OutputService*
 
-  - - Attribute: **Name** (= Output Service Name column)
+    - Attribute: **Name** (= Output Service Name column)
 
   - To "Output Service" name *./ActiveSource\[KEY\]*
 
-  - To "Alternate Sources" name *./MainSource\[KEY\]
-    *(Optional; must be enabled)**
+  - To "Alternate Sources" name *./MainSource\[KEY\]*
 
-  - - Attribute: **IsBackup**, format: *False*
-    - Attribute: **IsActive**, format: *True* or *False*
+    *(Optional; must be enabled)*
 
-  - To "Merged Sources" name *./MergedSource\[KEY\]
-    *(Optional; must be enabled)**
     - Attribute: **IsBackup**, format: *False*
+
     - Attribute: **IsActive**, format: *True* or *False*
 
-  - To "Backup Sources" name *./BackupSource\[KEY\]
-    *(Optional; must be enabled)**
+  - To "Merged Sources" name *./MergedSource\[KEY\]*
+
+    *(Optional; must be enabled)*
+
+    - Attribute: **IsBackup**, format: *False*
+
+    - Attribute: **IsActive**, format: *True* or *False*
+
+  - To "Backup Sources" name *./BackupSource\[KEY\]*
+
+    *(Optional; must be enabled)*
+
     - Attribute: **IsBackup**, format: *True*
+
     - Attribute: **IsActive**, format: *True* or *False*
 
 - Output TS
 
-- To "Ports" name ./OutputTS
+  - To "Ports" name ./OutputTS
 
-  - - Attribute: **MC**
+    - Attribute: **MC**
+
     - Attribute: **VLAN**
+
     - Attribute: **ONID**
 
 - Alternate Sources
+
   *(Optional; must be enabled:* *DCF: Include Alternate Sources)*
 
-- To "Output Service" name *./Alternate*
+  - To "Output Service" name *./Alternate*
 
-  - - Attribute: **IsActive**, format *True* or *False*
+    - Attribute: **IsActive**, format *True* or *False*
 
 - Merged Sources
+  
   *(Optional; must be enabled: DCF: Include Merged Sources)*
 
-- To "Alternate Sources" name *./Merged*
+  - To "Alternate Sources" name *./Merged*
 
 - Backup Sources
+
   *(Optional; must be enabled: DCF: Include Backup Sources)*
 
-- To "Merged Sources" name *./Backup*
+  - To "Merged Sources" name *./Backup*
+
     If this connection exists, the connection to the alternate source will not exist.
+
   - To "Alternate Sources" name *./Backup*
+
     If this connection exists, the connection to the merged source will not exist.

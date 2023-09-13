@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: 9600 baud
+  - **Baudrate**: 9600 baud
   - **Databits**: 7 bits
   - **Stopbits**: 1 bit
   - **Parity**: Even
@@ -42,8 +42,8 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP address of the intermediate serial gateway.
-    **IP port**: The port specified by the intermediate serial gateway.
+  - **IP address/host**: The IP address of the intermediate serial gateway.
+  - **IP port**: The port specified by the intermediate serial gateway.
   - **Bus address**: The address of the amplifier connected to the control unit.
     You can find this address on the physical display of the control unit, in hexadecimal value (0x30 - 0x6F). This value has to be converted to a decimal before it is entered in DataMiner. For example: 0x30 is 48, 0x6F is 111.
 

@@ -4,23 +4,33 @@ uid: Connector_help_Generic_Inter_Dataminer_Feedback
 
 # Generic Inter Dataminer Feedback
 
-This is a virtual protocol that is used to receive messages and mark them as read.
+This is a virtual connector that is used to receive messages and mark them as read.
+
+This connector can catch incoming messages via a parameter set. The only communication method used is inter-element communication.
 
 ## About
 
-This driver can catch incoming messages via a parameter set. The only communication method used is inter-element communication.
+### Version Info
 
-### Ranges of the driver
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x | Initial version | No | Yes |
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version | No                  | Yes                     |
+## Configuration
 
-## Installation and configuration
+### Connections
 
-### Creation
+This connector uses a **virtual connection** and does not require any input during element creation.
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+### Initialization
+
+To make sure that incoming messages cannot lead to an endlessly growing table, you should configure:
+
+- Whether or not you want to **Keep Read Messages**.
+
+- The **Maximum Number of Read Messages** in the Messages Table (set to 1000 by default). When this number is reached, the oldest half of the messages will be deleted.
+
+The **Number of Read Messages** represents the number of messages with status *Read* stored in the **Messages Table**.
 
 ## Usage
 
@@ -28,17 +38,15 @@ There are two **parameters** that can be **set** from **another element** or fro
 
 - Parameter ID: 60 - EXTERNAL_InconingMessages
 
-- This parameter should be set with the format ***To****{SOH}ValueofTo{SOH}****From{SOH}****ValueOfFrom{SOH}****Message****{SOH}ValueOfMessage*, and separated with the char ***SOH***:
-    |     |     |         |                  |                                      |
-    |-----|-----|---------|------------------|--------------------------------------|
-    | Dec | Hex | Acronym | Name             | Description                          |
-    | 01  | 01  | SOH     | Start of Heading | First character of a message header. |
+  - This parameter should be set with the format ***To****{SOH}ValueofTo{SOH}****From{SOH}****ValueOfFrom{SOH}****Message****{SOH}ValueOfMessage*, and separated with the char ***SOH***:
 
-<!-- -->
+    | Dec | Hex | Acronym | Name             | Description                          |
+    |-----|-----|---------|------------------|--------------------------------------|
+    | 01  | 01  | SOH     | Start of Heading | First character of a message header. |
 
 - Parameter ID: 61 - EXTERNAL_InconingIDtoMarkAsRead
 
-- This parameter should be set with the ID of the row of which the status should be changed to *Read*.
+  - This parameter should be set with the ID of the row of which the status should be changed to *Read*.
 
 ### General
 
@@ -52,12 +60,3 @@ The table has the following columns:
 - **Status**: The status of the message. This can be *New* or *Read*. (When a message is received, the status is set as *New*).
 - **Message**: Content of the message.
 - **Mark as Read**: Button to change the status of the message from *New* to *Read*.
-
-### Configuration
-
-To make sure that incoming messages cannot lead to an endlessly growing table, you should configure:
-
-- Whether or not you want to **Keep Read Messsages**.
-- The **Maximum Number of Read Messages** in the Messages Table (set to 1000 by default). When this number is reached, the oldest half of the messages will be deleted.
-
-The **Number of Read Messages** represents the number of messages with status *Read* stored in the **Messages Table**.

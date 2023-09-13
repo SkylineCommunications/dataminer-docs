@@ -55,11 +55,15 @@ The SA DCM connector is more than just an XML protocol file. It comes with multi
 
 To install the DataMiner package:
 
-1.  Copy the upgrade package to one of the DMAs and double-click it.
-    This will start the upgrade procedure.
-2.  Do not modify the standard upgrade settings.
-3.  Upload the protocol or, if available, install the protocol package.
-    All required files should now be installed and ready for use.
+1. Copy the upgrade package to one of the DMAs and double-click it.
+
+   This will start the upgrade procedure.
+
+1. Do not modify the standard upgrade settings.
+
+1. Upload the protocol or, if available, install the protocol package.
+
+   All required files should now be installed and ready for use.
 
 Note: The .dmupgrade package does not install the XML protocol itself, only the extra DLLs. The Protocol.xml file will be delivered along with the package and can be installed in the same way as any other protocol.
 
@@ -88,14 +92,15 @@ Follow the procedures below to find and resolve any problems. Always test the co
 
 To test the connection:
 
-1.  Restart the element.
+1. Restart the element.
 
-2.  Open the element card.
+1. Open the element card.
 
-3.  On the **Overview** page, check if there are icons in the tree view.
+1. On the **Overview** page, check if there are icons in the tree view.
 
-4.  - If yes -\> Test succeeded.
-    - If no -\> Test failed.
+   - If yes -\> Test succeeded.
+
+   - If no -\> Test failed.
 
 If the test failed, continue with the next procedure.
 
@@ -103,7 +108,7 @@ If the test failed, continue with the next procedure.
 
 To verify the IP address:
 
-1.  Open the element wizard and check the **IP address/host** under *SNMP CONNECTION*.
+1. Open the element wizard and check the **IP address/host** under *SNMP CONNECTION*.
 
 Test the connection again before you continue.
 
@@ -114,11 +119,11 @@ Older versions (V8) have IIOP automatically enabled and use "guest" as username 
 
 To verify the IIOP credentials:
 
-1.  Go to the webpage of the DCM device and log on as Administrator.
-2.  Open the page **Security** and select the tab **OS Accounts**. A list should appear with available OS accounts.
-3.  Make a new user account or edit an existing one. We recommend that you use the username *guest* and password *guest* and make sure the option **IIOP** is enabled.
-4.  Go to the element card and open the **IIOP** page. You can find this page by clicking the corresponding page button on the **connector Settings** page.
-5.  If you have an OS account with the username and password *guest*, you can set **IIOP Use Credentials** to *No*; otherwise set this parameter to *Yes* and fill in the username and password.
+1. Go to the webpage of the DCM device and log on as Administrator.
+1. Open the page **Security** and select the tab **OS Accounts**. A list should appear with available OS accounts.
+1. Make a new user account or edit an existing one. We recommend that you use the username *guest* and password *guest* and make sure the option **IIOP** is enabled.
+1. Go to the element card and open the **IIOP** page. You can find this page by clicking the corresponding page button on the **connector Settings** page.
+1. If you have an OS account with the username and password *guest*, you can set **IIOP Use Credentials** to *No*; otherwise set this parameter to *Yes* and fill in the username and password.
 
 Note: Keep in mind that the password is sent to the DCM in plain text, so a simple Wireshark capture can easily reveal the password (by filtering on IP and port 5003 and searching for logon). Also, the username and password must be the same for all elements on the same DMA.
 
@@ -131,20 +136,26 @@ Check if all files mentioned below are in the correct location in the system.
 
 - In the folder "*C:\Skyline DataMiner\Files*":
 
-- omniORB416_vc10_rt.dll
+  - omniORB416_vc10_rt.dll
+
   - omnithread34_vc10_rt.dll
+
   - SLDCM Full 2.0.0.X .dll
+
     or
+
     SLDCM L 1.0.0.X .dll
 
-> In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/result/driver/2048).
-> Not all records specify all required DLLs; usually they contain only the DLLs that have a version number. If even these are not mentioned, there were no changes to the DLLs. If so, you should look for the previous version of the connector until you find a record mentioning the DLL names. However, you should only look for versions in the same range.
+  In the above, "X" can be found on [catalog.dataminer.services](https://catalog.dataminer.services/result/driver/2048).
+
+  Not all records specify all required DLLs; usually they contain only the DLLs that have a version number. If even these are not mentioned, there were no changes to the DLLs. If so, you should look for the previous version of the connector until you find a record mentioning the DLL names. However, you should only look for versions in the same range.
 
 The newest version may also need the following files:
 
 - In the folder "*C:\Skyline DataMiner\ProtocolScripts*":
 
-- IIOPChannel.dll
+  - IIOPChannel.dll
+
   - SL_API_CISCO_D9900_IIOP.NET.dll
 
 If a file is missing, run the upgrade package again and verify if the DLLs are present.
@@ -164,11 +175,11 @@ Verify if the prerequisites are installed: Visual C++ 2008 (or 2010) Redistribut
 
 If you have tried all the previous steps and there is still no data in the DCM, check the log file. It is possible that the reason for the problem is clearly indicated in the log file. Usually it can be found somewhere at the end and is repeated several times. If there are no errors or it is not clear how to fix the errors, contact your Skyline Communications Technical Account Manager and send them the log file.
 
-The log file can be found in "*C:\Skyline Dataminer\Logging\\ElementName\].txt*".
+The log file can be found in "*C:\Skyline DataMiner\Logging\\ElementName\].txt*".
 You can also find it in Cube:
 
-1.  In the **Surveyor**, click **Start \>** **Apps** \> **Logging**. This will open a new card.
-2.  Select **Elements** and select the name of the element in the list.
+1. In the **Surveyor**, click **Start \>** **Apps** \> **Logging**. This will open a new card.
+1. Select **Elements** and select the name of the element in the list.
 
 ## Usage
 
@@ -188,14 +199,18 @@ In this version, the page also contains two other important parameters:
 
 - **IIOP Network Error Detected:**
 
-- *Yes* means that there is no communication with the device at all. This can be because a firewall blocks all traffic, the IP address is wrong, the device is offline, or the Ethernet cable is unplugged.
+  - *Yes* means that there is no communication with the device at all. This can be because a firewall blocks all traffic, the IP address is wrong, the device is offline, or the Ethernet cable is unplugged.
+
   - *No* means that there is an IIOP-enabled device at the specified end point. If the device does not seem to work, and there is no network error, the problem is usually caused by wrong credentials.
 
 - **Action After Network Error:**
+
   Network errors are typically not solved quickly and require manual interaction to fix the problem. This means that continuing the normal poll cycle can cause an avoidable, unnecessary use of resources. Especially in older versions, a network error could severely affect the polling of other elements. For instance, because of bad locking policies, all elements could wait for the timeout of an element during logon, which could take 20 seconds. This would entail that all other elements would not poll during those 20 seconds. In more recent versions, all communication to the device is **asynchronous**, so that this problem cannot occur.
 
-- *None* is the default value. This means that the device will keep polling as usual.
+  - *None* is the default value. This means that the device will keep polling as usual.
+
   - *Reduce Polling* is an alternative where only the alarms are polled until the network problem is solved.
+
   - *Ping* is the most effective choice: polling will stop temporarily, until a successful ping message is returned. However, the main problem with this option is that the connector will never recover if ping messages are blocked by a firewall. So before you enable this option, make sure to test if ping messages do work.
 
 ### Transrater (2.0.1.x)
@@ -269,9 +284,12 @@ On this page, a table lists the following information about IGMP:
 
 - **Filter Type:**
 
-- *Include*: An Include source list contains the IP addresses from which multi-cast reception is allowed.
+  - *Include*: An Include source list contains the IP addresses from which multi-cast reception is allowed.
+
   - *Exclude*: An Exclude source list contains the IP addresses from which multi-cast reception is not allowed.
-    Note: In an **IGMPv2** environment, the **Filter** parameter must be set to ***Exclude***.
+
+    > [!NOTE]
+    > In an **IGMPv2** environment, the **Filter** parameter must be set to ***Exclude***.
 
 - **Filter List:** A list containing comma-separated filter items.
 

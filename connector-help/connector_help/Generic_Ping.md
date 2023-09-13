@@ -93,15 +93,13 @@ The older available operations are:
 
 - **AddPings**: This command sets the ping **Add New Entry: Destination Address** (PID = 200) and **Add New Entry: Description** (PID = 201) and adds one or more entries (pings) to the **Ping Table**, by triggering the "Add Ping with Options" QAction (ID = 11).
 
-- Example (underlined values are mandatory for this operation):
+  - Example (underlined values are mandatory for this operation):
 
-  -
-
-<!-- -->
+    ![Example](~/connector-help/images/Generic_Ping_example.png)
 
 - **EditConfigs**: This command can update the follow configuration:
 
-- **Add New Entry: Interval** (PID = 202)
+  - **Add New Entry: Interval** (PID = 202)
 
   - **Add New Entry: Pings per Cycle** (PID = 212)
 
@@ -117,6 +115,6 @@ The older available operations are:
 
   - **Add New Entry: Jitter Admin Status** (PID = 210)
 
-  - - Example (underlined values are mandatory for this operation; configuration values must be within the specific parameter's range):
+    - Example (underlined values are mandatory for this operation; configuration values must be within the specific parameter's range):
 
-    -
+      ![Example](~/connector-help/images/Generic_Ping_example2.png)

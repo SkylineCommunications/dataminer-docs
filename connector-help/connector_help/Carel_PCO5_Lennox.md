@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Bus address:** between 0 and 255
+  - **Bus address:** between 0 and 255
   - **Baudrate**: Should match the settings on the pCO5 and application.
   - **Databits**: Should match the settings on the pCO5 and application.
   - **Stopbits**: Should match the settings on the pCO5 and application.
@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
   - **Bus address**: The bus address of the device. Range: *0-255*.
 

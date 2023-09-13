@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
   - **Bus address**: The bus address of the device. If the bus address is empty, communication goes through the RS-232 protocol, otherwise RS-485 is used.
 

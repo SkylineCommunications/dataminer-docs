@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (default: *2050*).
   - **Bus address**: The bus address of the device. The format is *NNNN.UU.PP* (all hex values), where NNNN is the network route/address, UU is the unit address and PP is the port address of the unit.
 
@@ -148,7 +148,7 @@ In the Hardware Configuration section of this page, you can select the supported
 
 The **1.0.0.x** driver range (since version 1.0.0.2) of the **Grass Valley Alchemist Live** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

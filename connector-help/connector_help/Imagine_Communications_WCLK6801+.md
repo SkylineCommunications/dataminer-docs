@@ -18,15 +18,15 @@ Current Version: 1.0.0.1
 
 This a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
-#### SERIAL MAIN CONNECTION:
+#### SERIAL MAIN CONNECTION
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, fixed value: *4050.*
 - **Bus address**: This is a combination of the frame number and slot number/ID: \<frameNumber\>**.**\<slotID\>. E.g. frame 1 and slot 12 = bus address *1.12.*
 
-#### SMART-SERIAL PORTDEV CONNECTION:
+#### SMART-SERIAL PORTDEV CONNECTION
 
-- **IP address/host**: The local Dataminer IP used to receive responses, e.g. *172.0.0.50* or keyword "*any".*
+- **IP address/host**: The local DataMiner IP used to receive responses, e.g. *172.0.0.50* or keyword "*any".*
 - **IP port**: The IP port of the DMA, fixed value: *4000.*
 
 ## Usage
@@ -43,7 +43,7 @@ On this page, four parameters are available: **Serial Number** and **Signal Pres
 
 ### Web Interface Page
 
-On this page, you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to acces the device, as otherwise it will not be possible to open the web interface.
+On this page, you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ## Notes
 

@@ -75,12 +75,13 @@ Some important parameters are available on the General page:
 
 - **Controller Name**: This parameter shows the name of the **Astro Virtual Controller** element that manages this device. If no such element is used, the parameter will show the exception value *No Virtual Controller Found*.
 
-<!-- -->
-
 - **Communication Type**:
+
   - *Direct Communication*: The element sends the requests directly to the Astro module device.
   - *U100C Proxy*: The element sends the requests to the Astro U100 Controller, which will forward them to the Astro module. The controller acts as a proxy.
+
 - **Communication Method**:
+
   - *Login*: The element logs in to the device for every request (read and write requests).
   - *Anonymous*: The element only logs in to the device for write requests. The device does not log in for read requests.
 

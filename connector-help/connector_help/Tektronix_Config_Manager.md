@@ -32,11 +32,11 @@ For the configuration input, **.csv files** must be exported from a **Cisco DCM*
 
 To do so:
 
-1.  Open a **Cisco DCM** element in DataMiner Cube.
-2.  Go to the **Table Data** page, and click the **Output** page buttons for **TS** and **Services**.
-3.  Create a .csv export for the **Output TS Table** and the **Output Service Table**.
-4.  Add two extra columns to the export of the **Output TS Table**: the **Source IP Main** and **Source IP Backup** columns**.**
-5.  Place these exported .csv files in the **Documents** **folder** of the **Tektronix Config Manager**.
+1. Open a **Cisco DCM** element in DataMiner Cube.
+1. Go to the **Table Data** page, and click the **Output** page buttons for **TS** and **Services**.
+1. Create a .csv export for the **Output TS Table** and the **Output Service Table**.
+1. Add two extra columns to the export of the **Output TS Table**: the **Source IP Main** and **Source IP Backup** columns**.**
+1. Place these exported .csv files in the **Documents** **folder** of the **Tektronix Config Manager**.
 
 ## Usage (Range 1.0.0.x)
 
@@ -50,11 +50,15 @@ The **Probe Elements** **Table** displays all the elements found in the cluster 
 
 You can configure the elements via the context menu:
 
-1.  Select one or multiple rows, right-click, and select **Load Configuration**.
-2.  In the dialog box, select the applicable .csv files in the drop-down lists. These are the .csv files found in the **Documents folder** of the **Tektronix Config Manager** directory.
-    Alternatively, you can also enter a complete file path or a file path starting from a subfolder in the Documents folder, and select the appropriate **TS Config File** and **Service Config File**. Note that the file path may not start with "\\.
-3.  Click *OK*.
-    The configuration will now be applied to the selected elements.
+1. Select one or multiple rows, right-click, and select **Load Configuration**.
+
+1. In the dialog box, select the applicable .csv files in the drop-down lists. These are the .csv files found in the **Documents folder** of the **Tektronix Config Manager** directory.
+
+   Alternatively, you can also enter a complete file path or a file path starting from a subfolder in the Documents folder, and select the appropriate **TS Config File** and **Service Config File**. Note that the file path may not start with "\\.
+
+1. Click *OK*.
+
+   The configuration will now be applied to the selected elements.
 
 The current status can be found in the **Probe Last Load State** column parameter. This parameter can have the following values:
 
@@ -232,8 +236,8 @@ To configure streams in the Tektronix Sentry probes mentioned above, right-click
 
 To apply a detected transport stream:
 
-1.  Select one or more rows in the table.
-2.  Right-click the selected row(s) and select **Apply** in the context menu to push the change to the probe(s).
+1. Select one or more rows in the table.
+1. Right-click the selected row(s) and select **Apply** in the context menu to push the change to the probe(s).
 
 ### DCM Configuration
 
@@ -247,117 +251,128 @@ Both of these tables can be exported and imported.
 
 To add a DCM configuration:
 
-1.  Right-click the DCM Configuration table, and select **Add** in the context menu.
+1. Right-click the DCM Configuration table, and select **Add** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Element Name**: Select a Cisco DCM in the list.
-    - **Board**: Specify the board inside the DCM.
-    - **IP Port 1**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 2**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 3**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 4**: Specify the IP address for this specific port. Can optionally be NA.
+   - **Element Name**: Select a Cisco DCM in the list.
+   - **Board**: Specify the board inside the DCM.
+   - **IP Port 1**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 2**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 3**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 4**: Specify the IP address for this specific port. Can optionally be NA.
 
-4.  Click **OK** to add the DCM configuration to the table.
+1. Click **OK** to add the DCM configuration to the table.
 
 To edit a DCM configuration:
 
-1.  Right-click on a row in the DCM Configuration table and select **Edit** in the context menu.
+1. Right-click on a row in the DCM Configuration table and select **Edit** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **IP Port 1**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 2**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 3**: Specify the IP address for this specific port. Can optionally be NA.
-    - **IP Port 4**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 1**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 2**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 3**: Specify the IP address for this specific port. Can optionally be NA.
+   - **IP Port 4**: Specify the IP address for this specific port. Can optionally be NA.
 
-4.  Click **OK** to update the row.
+1. Click **OK** to update the row.
 
 To remove one or more DCM configurations:
 
-1.  Select one or more rows in the DCM Configuration table.
-2.  Right-click the selected row(s) and select **Remove** in the context menu.
-    All the selected rows will be removed from the table.
+1. Select one or more rows in the DCM Configuration table.
+
+1. Right-click the selected row(s) and select **Remove** in the context menu.
+
+   All the selected rows will be removed from the table.
 
 To export the DCM Configuration table:
 
-1.  Right-click the DCM Configuration table and select **Export** in the context menu.
-2.  In the pop-up window, specify the **File Name** of the export file.
-3.  Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\DCM Configuration\DCM Configuration Table\\*.
+1. Right-click the DCM Configuration table and select **Export** in the context menu.
+
+1. In the pop-up window, specify the **File Name** of the export file.
+
+1. Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\DCM Configuration\DCM Configuration Table\\*.
 
 To import a DCM Configuration table:
 
-1.  Right-click the DCM Configuration table and select **Import** in the context menu.
-2.  In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\DCM Configuration\DCM Configuration Table\\*.
-3.  Clicking **OK** to import the table from the CSV file.
+1. Right-click the DCM Configuration table and select **Import** in the context menu.
+
+1. In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\DCM Configuration\DCM Configuration Table\\*.
+
+1. Clicking **OK** to import the table from the CSV file.
 
 To add a probe configuration:
 
-1.  Right-click the Probe Configuration table and select **Add** in the context menu.
+1. Right-click the Probe Configuration table and select **Add** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Linked Probe**: Select a probe from the list.
-    - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
-    - **Main Board**: Specify the board inside the DCM.
-    - **Main Port**: Specify the port inside the DCM.
-    - **Backup** **DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
-    - **Backup Board**: Specify the board inside the backup DCM. Can optionally be NA.
-    - **Backup Port**: Specify the port inside the backup DCM. Can optionally be NA.
-    - **Source Splitting**: Allows you to enable source splitting.
+   - **Linked Probe**: Select a probe from the list.
+   - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
+   - **Main Board**: Specify the board inside the DCM.
+   - **Main Port**: Specify the port inside the DCM.
+   - **Backup** **DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
+   - **Backup Board**: Specify the board inside the backup DCM. Can optionally be NA.
+   - **Backup Port**: Specify the port inside the backup DCM. Can optionally be NA.
+   - **Source Splitting**: Allows you to enable source splitting.
 
-4.  Click **OK** to add the probe configuration to the table.
+1. Click **OK** to add the probe configuration to the table.
 
 To duplicate a probe configuration:
 
-1.  Right-click a row in the Probe Configuration table and select **Duplicate** in the context menu.
+1. Right-click a row in the Probe Configuration table and select **Duplicate** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Linked Probe**: Select a probe from the list.
-    - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
-    - **Main Board**: Specify the board inside the DCM.
-    - **Main Port**: Specify the port inside the DCM.
-    - **Backup DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
-    - **Backup Board**: Specify the board inside the backup DCM. Can optionally be NA.
-    - **Backup Port**: Specify the port inside the backup DCM. Can optionally be NA.
-    - **Source Splitting**: Allows you to enable source splitting.
+   - **Linked Probe**: Select a probe from the list.
+   - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
+   - **Main Board**: Specify the board inside the DCM.
+   - **Main Port**: Specify the port inside the DCM.
+   - **Backup DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
+   - **Backup Board**: Specify the board inside the backup DCM. Can optionally be NA.
+   - **Backup Port**: Specify the port inside the backup DCM. Can optionally be NA.
+   - **Source Splitting**: Allows you to enable source splitting.
 
-4.  Click **OK** to add the probe configuration to the table.
+1. Click **OK** to add the probe configuration to the table.
 
 To edit a probe configuration:
 
-1.  Right-click a row in the Probe Configuration table and select **Edit** in the context menu.
+1. Right-click a row in the Probe Configuration table and select **Edit** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Linked Probe**: Select a probe from the list.
-    - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
-    - **Main Board**: Specify the board inside the DCM.
-    - **Main Port**: Specify the port inside the DCM.
-    - **Backup DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
-    - **Backup Board**: Specify the board inside the DCM. Can optionally be NA.
-    - **Backup Port**: Specify the port inside the DCM. Can optionally be NA.
-    - **Source Splitting**: Allows you to enable source splitting.
+   - **Linked Probe**: Select a probe from the list.
+   - **Main DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table).
+   - **Main Board**: Specify the board inside the DCM.
+   - **Main Port**: Specify the port inside the DCM.
+   - **Backup DCM**: Select a Cisco DCM from the list (based on the DCM Configuration table). Can optionally be NA.
+   - **Backup Board**: Specify the board inside the DCM. Can optionally be NA.
+   - **Backup Port**: Specify the port inside the DCM. Can optionally be NA.
+   - **Source Splitting**: Allows you to enable source splitting.
 
-4.  Click **OK** to update the row.
+1. Click **OK** to update the row.
 
 To remove a probe configuration:
 
-1.  Select one or more rows in the Probe Configuration table.
-2.  Right-click the row(s) and select **Remove** in the context menu.
+1. Select one or more rows in the Probe Configuration table.
+
+1. Right-click the row(s) and select **Remove** in the context menu.
 
 To export the Probe Configuration table:
 
-1.  Right-click the Probe Configuration table and select **Export** in the context menu.
-2.  In the pop-up window, specify the **File Name** of the export file.
-3.  Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\DCM Configuration\Probe Configuration Table\\*.
+1. Right-click the Probe Configuration table and select **Export** in the context menu.
+
+1. In the pop-up window, specify the **File Name** of the export file.
+
+1. Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\DCM Configuration\Probe Configuration Table\\*.
 
 To import a Probe Configuration table:
 
-1.  Right-click the Probe Configuration table and select **Import** in the context menu.
-2.  In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\DCM Configuration\Probe Configuration Table\\*.
-3.  Click **OK** to import the table from the CSV file.
+1. Right-click the Probe Configuration table and select **Import** in the context menu.
+
+1. In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\DCM Configuration\Probe Configuration Table\\*.
+
+1. Click **OK** to import the table from the CSV file.
 
 ### RF Ports Detection
 
@@ -367,8 +382,9 @@ It displays the **Detected Ports Table**, with data read out from the defined Ci
 
 To apply one or more detected RF ports:
 
-1.  Select one or more rows in the table.
-2.  Right-click the row(s) and select **Apply Selected Row(s)** in the context menu to push the change to the RF probe(s).
+1. Select one or more rows in the table.
+
+1. Right-click the row(s) and select **Apply Selected Row(s)** in the context menu to push the change to the RF probe(s).
 
 ### RF Configuration
 
@@ -378,49 +394,54 @@ This table can be exported and imported.
 
 To add an RF pair:
 
-1.  Right-click the table and select **Add Pair** in the context menu.
+1. Right-click the table and select **Add Pair** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Probe Name**: Select one of the Tektronix Sentry Edge probes from the list.
-    - **RF Gateway 1**: Select one of the Cisco RFGW elements from the list.
-    - **RF Gatew**ay** 2**: Select one of the Cisco RFGW elements from the list.
-    - **RF Gateway 3**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
-    - **RF Gateway 4**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
-    - **Reconfiguration Mode**: Determines whether changes will be pushed to the probe when a refresh occurs.
+   - **Probe Name**: Select one of the Tektronix Sentry Edge probes from the list.
+   - **RF Gateway 1**: Select one of the Cisco RFGW elements from the list.
+   - **RF Gatew**ay** 2**: Select one of the Cisco RFGW elements from the list.
+   - **RF Gateway 3**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
+   - **RF Gateway 4**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
+   - **Reconfiguration Mode**: Determines whether changes will be pushed to the probe when a refresh occurs.
 
-4.  Click **OK** to add it to the table.
+1. Click **OK** to add it to the table.
 
 To edit an RF pair:
 
-1.  Right-click the table and select **Edit Pair** in the context menu.
+1. Right-click the table and select **Edit Pair** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **RF Gateway 1**: Select one of the Cisco RFGW elements from the list.
-    - **RF Gateway 2**: Select one of the Cisco RFGW elements from the list.
-    - **RF Gateway 3**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
-    - **RF Gateway 4**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
-    - **Reconfiguration Mode**: Determines whether changes will be pushed to the probe when a refresh occurs.
+   - **RF Gateway 1**: Select one of the Cisco RFGW elements from the list.
+   - **RF Gateway 2**: Select one of the Cisco RFGW elements from the list.
+   - **RF Gateway 3**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
+   - **RF Gateway 4**: Select one of the Cisco RFGW elements from the list. Optionally, you can also select NA if no more RFGWs are available.
+   - **Reconfiguration Mode**: Determines whether changes will be pushed to the probe when a refresh occurs.
 
-4.  Click **OK** to update the row.
+1. Click **OK** to update the row.
 
 To remove one or more RF pairs:
 
-1.  Select one or more rows in the table.
-2.  Right-click the selected row(s) and select **Remove Pair(s)** in the context menu to remove all the selected rows from the table.
+1. Select one or more rows in the table.
+
+1. Right-click the selected row(s) and select **Remove Pair(s)** in the context menu to remove all the selected rows from the table.
 
 To export the RF Pairs Table:
 
-1.  Right-click the table and select **Export** in the context menu.
-2.  In the pop-up window, specify the **File Name** of the export file.
-3.  Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\RF Configuration\RF Pairs Table\\*.
+1. Right-click the table and select **Export** in the context menu.
+
+1. In the pop-up window, specify the **File Name** of the export file.
+
+1. Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\RF Configuration\RF Pairs Table\\*.
 
 To import an RF Pairs Table:
 
-1.  Right-click the table and select **Import** in the context menu.
-2.  In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\RF Configuration\RF Pairs Table\\*.
-3.  Click **OK** to import the table from the CSV file.
+1. Right-click the table and select **Import** in the context menu.
+
+1. In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\RF Configuration\RF Pairs Table\\*.
+
+1. Click **OK** to import the table from the CSV file.
 
 ### Service Detection
 
@@ -432,43 +453,50 @@ When a service is no longer used in the entire system, you can remove it from th
 
 To configure a service:
 
-1.  Via a button in the row:
+1. Via a button in the row:
 
-2.  1.  Click the **Apply** button for the specific service you want to configure.
-    2.  In the confirmation box, click **OK** to push the alert template configuration to all the probes that contain that service.
+   1. Click the **Apply** button for the specific service you want to configure.
 
-3.  Via the context menu:
+   1. In the confirmation box, click **OK** to push the alert template configuration to all the probes that contain that service.
 
-4.  1.  Select one or more rows in the table and right-click them.
-    2.  In the context menu, select **Configure** to push the alert template configurations to the probes that contain these services.
+1. Via the context menu:
+
+   1. Select one or more rows in the table and right-click them.
+
+   1. In the context menu, select **Configure** to push the alert template configurations to the probes that contain these services.
 
 To remove empty services (i.e. services that are no longer in any probe):
 
-1.  Via a button in the row:
+1. Via a button in the row:
 
-2.  1.  Click the **Remove** button for the specific service you want to remove. This button is disabled as long as the service is somewhere on a probe (which is shown in the **Associated Probes** column).
-    2.  In the confirmation box, click **OK** to remove the service from the table.
+   1. Click the **Remove** button for the specific service you want to remove. This button is disabled as long as the service is somewhere on a probe (which is shown in the **Associated Probes** column).
 
-3.  Via the context menu:
+   1. In the confirmation box, click **OK** to remove the service from the table.
 
-4.  1.  Select one or more rows in the table and right-click them.
-    2.  In the context menu, select **Remove Row(s)** to remove the selected empty service(s) from the table.
+1. Via the context menu:
 
-5.  With the **Remove Empty** button:
+   1. Select one or more rows in the table and right-click them.
+   1. In the context menu, select **Remove Row(s)** to remove the selected empty service(s) from the table.
 
-6.  - Click the **Remove Empty** button to remove all the empty services from the table.
+1. With the **Remove Empty** button:
+
+   - Click the **Remove Empty** button to remove all the empty services from the table.
 
 To export the table:
 
-1.  Right-click the table and select Export in the context menu.
-2.  In the pop-up window, specify the **File Name** of the export file.
-3.  Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\Service Configuration\Service Configuration Table*.
+1. Right-click the table and select Export in the context menu.
+
+1. In the pop-up window, specify the **File Name** of the export file.
+
+1. Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\Service Configuration\Service Configuration Table*.
 
 To import a table:
 
-1.  Right-click the table and select **Import** in the context menu.
-2.  In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\Service Configuration\Service Configuration Table.*
-3.  Click **OK** to import the table from the CSV file.
+1. Right-click the table and select **Import** in the context menu.
+
+1. In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\Service Configuration\Service Configuration Table.*
+
+1. Click **OK** to import the table from the CSV file.
 
 ### Service Configuration
 
@@ -484,30 +512,30 @@ This page also displays the **Service Name Separator**. This will split the serv
 
 To add an alert template:
 
-1.  Make sure that there are **alert template configurations** in the folder *Documents\Tektronix Config Manager\Alert Template Configurations\\*.
+1. Make sure that there are **alert template configurations** in the folder *Documents\Tektronix Config Manager\Alert Template Configurations\\*.
 
-2.  Right-click the Alert Template Configuration Table and click **Add**.
+1. Right-click the Alert Template Configuration Table and click **Add**.
 
-3.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-4.  - **Alert Template Name**: Specify a name for the alert template.
-    - **Configuration File Sentry**: Specify which JSON file is used with the alert template for the Tektronix Sentry probes.
-    - **Configuration File Sentry Edge**: Specify which JSON file is used with the alert template for the Tektronix Sentry Edge probes.
-    - **Configuration File Sentry PVQ**: Specify which JSON file is used with the alert template for the Tektronix Sentry PVQ probes.
+   - **Alert Template Name**: Specify a name for the alert template.
+   - **Configuration File Sentry**: Specify which JSON file is used with the alert template for the Tektronix Sentry probes.
+   - **Configuration File Sentry Edge**: Specify which JSON file is used with the alert template for the Tektronix Sentry Edge probes.
+   - **Configuration File Sentry PVQ**: Specify which JSON file is used with the alert template for the Tektronix Sentry PVQ probes.
 
-5.  Click **OK** to add it to the table.
+1. Click **OK** to add it to the table.
 
 To edit an alert template:
 
-1.  Right-click a row in the table and select **Edit** in the context menu.
+1. Right-click a row in the table and select **Edit** in the context menu.
 
-2.  Configure the following parameters in the pop-up window:
+1. Configure the following parameters in the pop-up window:
 
-3.  - **Configuration File Sentry**: Specify which JSON file is used with the alert template for the Tektronix Sentry probes.
-    - **Configuration File Sentry Edge**: Specify which JSON file is used with the alert template for the Tektronix Sentry Edge probes.
-    - **Configuration File Sentry PVQ**: Specify which JSON file is used with the alert template for the Tektronix Sentry PVQ probes.
+   - **Configuration File Sentry**: Specify which JSON file is used with the alert template for the Tektronix Sentry probes.
+   - **Configuration File Sentry Edge**: Specify which JSON file is used with the alert template for the Tektronix Sentry Edge probes.
+   - **Configuration File Sentry PVQ**: Specify which JSON file is used with the alert template for the Tektronix Sentry PVQ probes.
 
-4.  Click **OK** to update the row.
+1. Click **OK** to update the row.
 
 To remove one or more alert templates:
 
@@ -516,15 +544,15 @@ To remove one or more alert templates:
 
 To export the Alert Template Configuration Table:
 
-1.  Right-click the table and select **Export** in the context menu.
-2.  In the pop-up window, specify the **File Name** of the export file.
-3.  Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\Service Configuration\Alert Template Configuration Table\\*.
+1. Right-click the table and select **Export** in the context menu.
+1. In the pop-up window, specify the **File Name** of the export file.
+1. Click **OK** to export the table to a CSV file in the folder *Documents\Tektronix Config Manager\Service Configuration\Alert Template Configuration Table\\*.
 
 To import the Alert Template Configuration Table:
 
-1.  Right-click the table and select **Import** in the context menu.
-2.  In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\Service Configuration\Alert Template Configuration Table\\*.
-3.  Click **OK** to import the table from the CSV file.
+1. Right-click the table and select **Import** in the context menu.
+1. In the pop-up window, specify the **Import File Name**, i.e. the name of one of the files in the folder *Documents\Tektronix Config Manager\Service Configuration\Alert Template Configuration Table\\*.
+1. Click **OK** to import the table from the CSV file.
 
 To configure an alert template to all probes:
 

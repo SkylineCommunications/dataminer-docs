@@ -35,23 +35,24 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 All data gets retrieved from the device in three ways.
 
-1.  **Timers**
+1. **Timers**
 
-2.  - **Slow Timer**: Triggers every hour and retrieves non-essential and configurable parameters.
-    - **Medium Timer**: Triggers every 15 minutes and retrieves status parameters.
-    - **Alarm Slow Timer**: Triggers every 30 seconds and retrieves alarm information (see note below).
-    - **Fast Timer**: Triggers every 10 seconds and retrieves slot information (state, temperature, protection).
-    - **Very Fast Timer**: Triggers every 3 seconds and retrieves dirty changes and alarm information (see note below).
+   - **Slow Timer**: Triggers every hour and retrieves non-essential and configurable parameters.
+   - **Medium Timer**: Triggers every 15 minutes and retrieves status parameters.
+   - **Alarm Slow Timer**: Triggers every 30 seconds and retrieves alarm information (see note below).
+   - **Fast Timer**: Triggers every 10 seconds and retrieves slot information (state, temperature, protection).
+   - **Very Fast Timer**: Triggers every 3 seconds and retrieves dirty changes and alarm information (see note below).
 
-3.  **Dirty changes**
+1. **Dirty changes**
 
-4.  - Every 3 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. (If the change concerns a table cell, the complete table is refreshed.) After a change is detected, the check occurs faster and is performed every 0.5 seconds until no more changes are detected.
+   - Every 3 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. (If the change concerns a table cell, the complete table is refreshed.) After a change is detected, the check occurs faster and is performed every 0.5 seconds until no more changes are detected.
 
-5.  **Traps**
+1. **Traps**
 
-6.  - When enabled and set up on the chassis, traps can be sent to DataMiner whenever an alarm occurs. The traps are accepted and processed.
+   - When enabled and set up on the chassis, traps can be sent to DataMiner whenever an alarm occurs. The traps are accepted and processed.
 
-Note: You can toggle alarm information to be received either every 30 seconds or every 3 seconds. The default value is every 3 seconds. It is recommended to only change this to 30 seconds when you enable traps to be sent to DataMiner.
+> [!NOTE]
+> You can toggle alarm information to be received either every 30 seconds or every 3 seconds. The default value is every 3 seconds. It is recommended to only change this to 30 seconds when you enable traps to be sent to DataMiner.
 
 ## Usage
 

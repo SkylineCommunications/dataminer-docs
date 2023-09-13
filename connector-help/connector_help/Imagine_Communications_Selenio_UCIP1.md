@@ -103,7 +103,7 @@ This page displays the web interface of the device. Note that the client machine
 
 Available in range 1.1.0.x.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

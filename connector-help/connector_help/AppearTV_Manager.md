@@ -7,8 +7,6 @@ uid: Connector_help_AppearTV_Manager
 The **AppearTV Manager** is an Application for managing and creating elements using the **AppearTV General Platform**.
 The application is used to have an overview of all the devices and services. On top of this application there is a visio layer to visualize all the elements, DVE Map & services.
 
-
-
 ## About
 
 The **AppearTV Manager** application makes it possible to search the network for AppearTV Chassis. Therefore you need the **Skyline IP Network Discovery** protocol be installed.
@@ -19,15 +17,13 @@ When the Chassis elements are already created on the DMA, you can also use the s
 
 ### Creation
 
-The AppearTV Manager is a virtual driver, so you don't have to fill in any configuration parameters.
-
-
+The AppearTV Manager is a virtual driver, so you do not have to fill in any configuration parameters.
 
 VISIO Usage
 
 ### Devices/Map page
 
-All DVE's (slot cards) of all the AppearTV Chassis elements in the system are mapped out in categories. Those categories are: Input, Decoding, (pre-) Processing, Encoding/Transcoding, (post-) Processing & Mux/Output.
+All DVEs (slot cards) of all the AppearTV Chassis elements in the system are mapped out in categories. Those categories are: Input, Decoding, (pre-) Processing, Encoding/Transcoding, (post-) Processing & Mux/Output.
 
 In each shape you have some additional KPI's such as **Chassis Name**, **Slot Number** and **Number of Ports**. When clicking a DVE shape, the DVE will be opened.
 
@@ -45,7 +41,7 @@ When clicking a Device in the rack overview, the Chassis element will be opened.
 
 ### Services/Overview page
 
-An overview is available with all created Dataminer services. For each services you can see the amount of alarms. Critical (Cr), Major (Ma), Minor (Mi) & Warning (Wa).
+An overview is available with all created DataMiner services. For each services you can see the amount of alarms. Critical (Cr), Major (Ma), Minor (Mi) & Warning (Wa).
 
 When clicking on a Service shape, The Service card will be opened.
 
@@ -57,7 +53,6 @@ Here you will find a list of all the created services. The service names are con
 
 This page is used for configuration of the network search for Chassis devices.
 
-
 General:
 
 **Progress** & **Detected Devices** are parameters that will update while the Scan is running.
@@ -68,17 +63,15 @@ Note that an element should be running with the **Skyline IP Network Discovery**
 
 (extra information about the Detection driver: see ****Skyline IP Network Discovery****)
 
-
-
 Settings:
 
-Before you start the scan, you need to make sure the iprange is configured. The scan will check all the IP's in the range if there are devices available.
+Before you start the scan, you need to make sure the IP range is configured. The scan will check all the IPs in the range if there are devices available.
 
-You can edit the range by suplying the **IP Address** and **Subnet Mask** or you can fill in the **Start-** and **Stop Ip Address**.
+You can edit the range by supplying the **IP Address** and **Subnet Mask** or you can fill in the **Start-** and **Stop Ip Address**.
 
-The parameter **Elementname Prefix** is used to supply a prefix for all the deteceted devices. Default: *AppearTV*.
+The parameter **Elementname Prefix** is used to supply a prefix for all the detected devices. Default: *AppearTV*.
 
-The pagebutton **Racks...** opens the Rack Configuration table. You can Add/Delete Racks and change the name, description and Rack dimension. (These racks are visible on the Visio page **Devices/Racks**)
+The page button **Racks...** opens the Rack Configuration table. You can Add/Delete Racks and change the name, description and Rack dimension. (These racks are visible on the Visio page **Devices/Racks**)
 
 ### Discovery/List page
 
@@ -90,13 +83,11 @@ When an element is not created, you can also remove the entry from the list by u
 
 On Top of the page we have the **Create**- and **Delete All Elements** buttons. Using these buttons, alle elements will be created/deleted. The elements will be created with protocol **AppearTV General Platform** version: **production**.
 
-There is also the **Synchronize** button which can be usefull if this application is installed on a system that already contains a lot of **AppearTV General Platform** Chassis elements.
+There is also the **Synchronize** button which can be useful if this application is installed on a system that already contains a lot of **AppearTV General Platform** Chassis elements.
 
+Element card Usage
 
-
-Elementcard Usage
-
-When rotating the application you have acces to the elementcard. In here you can configure some additional parameters.
+When rotating the application you have access to the element card. In here you can configure some additional parameters.
 
 ### Device Detection page
 
@@ -122,11 +113,11 @@ Below is an overview of the different filter types combined with their Filter Va
 
 1\) Disabled: The filter is inactive, Filter value is not needed.
 
-2\) Property: when this type is selected, the property from the chassis (provide propertyname in Filter Value) will be in the Filter.
+2\) Property: when this type is selected, the property from the chassis (provide property name in Filter Value) will be in the Filter.
 
 3\) Card: when this type is selected, the filter result value will contain a self defined value when a filter matches in the Card types. Format: "*Satellite:\*Sat\*;Analog:\*Analog\*;Other:\**"
 
-The format is a ';' separated string each time containg a 'filter-value' (\* is used as wildcard) : the value that you want in the filter.
+The format is a ';' separated string each time containing a 'filter-value' (\* is used as wildcard) : the value that you want in the filter.
 
 4\) Service Name: This is the same behavior as type *Card*. except now the filtering is looking in the service name instead of the Card types.
 

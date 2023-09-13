@@ -55,15 +55,15 @@ SNMP Settings:
 
 All data gets retrieved from the device in two ways:
 
-1.  **Timers**
+1. **Timers**
 
-2.  - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
-    - Medium timer that triggers every 15 minutes and retrieves status parameters.
-    - Fast timer that triggers every 3 seconds and retrieves slot information (state, temperature, protection).
+   - Slow timer that triggers every hour and retrieves non-essential and configurable parameters.
+   - Medium timer that triggers every 15 minutes and retrieves status parameters.
+   - Fast timer that triggers every 3 seconds and retrieves slot information (state, temperature, protection).
 
-3.  **Dirty changes**
+1. **Dirty changes**
 
-4.  - Every 3 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
+   - Every 3 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
 
 ## Usage
 

@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *9600*).
+  - **Baudrate**: Baudrate specified in the manual of the device, e.g. *9600* (default: *9600*).
   - **Databits**: Databits specified in the manual of the device, e.g. *7* (default: *8*).
   - **Stopbits**: Stopbits specified in the manual of the device, e.g. *1* (default: *1*).
   - **Parity**: Parity specified in the manual of the device, e.g. *No* (default: *even*).
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
   - **Bus address**: The bus address of the device. This is also the slave ID of the monitored device. Make sure this is filled in, as it is used to determine which device the connector should communicate with.
 

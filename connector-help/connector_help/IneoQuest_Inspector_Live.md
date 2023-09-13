@@ -99,15 +99,15 @@ You can make modifications with the following page buttons:
 
 - **Comparison Flow Aliases**:
 
-- Tables can be cleared and content can be copied from the Aliases page.
+  - Tables can be cleared and content can be copied from the Aliases page.
   - You can also select just some rows from the **Flow Aliases** table and copy them to these tables
   - When a flow's **Availability** is *Missing,* you can create it again using the button **Create**. This is only possible when a file is selected under the **Used Backup File Name**. If this is set to *None,* this will not work.
 
 - **Comparison Backup File Names**:
 
-- Two locations can be set:
+  - Two locations can be set:
 
-  - - The **Local Archive Location** will be used to store the current backup file when changing from one **Used Backup File Name** to the other.
+    - The **Local Archive Location** will be used to store the current backup file when changing from one **Used Backup File Name** to the other.
     - The **Used Backup File Name Location** is used to store a backup from the current Used Backup File Name.
 
   - To be able to select a **Used Backup File Name**, you first need to generate the files using the **Generate Files** button. This will store the contents of the **Comparison Flow Aliases** table and **Comparison Program Aliases** table in different files. The file name will by default be set with the *name of the element* followed by the *name of the table*. If there are programs, 2 files will be created.

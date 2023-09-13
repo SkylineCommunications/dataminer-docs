@@ -44,15 +44,15 @@ Get operations will happen:
 
 The Solution allows you to create PLM items directly from the driver interface. The following workflow can be used to create a PLM item:
 
-1.  Right-click and select **Add PLM** in the context menu.
+1. Right-click and select **Add PLM** in the context menu.
 
-2.  Fill in the following fields in the pop-up window:
+1. Fill in the following fields in the pop-up window:
 
-3.  - Title: The title of the PLM item.
-    - Start date and time
-    - End date and time
-    - Resource: The resource name to assign the PLM item to.
-    - Resource Type: The type associated with the resource.
+   - Title: The title of the PLM item.
+   - Start date and time
+   - End date and time
+   - Resource: The resource name to assign the PLM item to.
+   - Resource Type: The type associated with the resource.
 
 The Solution also allows you to delete PLM items directly from the driver interface. This is possible via the context menu, using the following options:
 

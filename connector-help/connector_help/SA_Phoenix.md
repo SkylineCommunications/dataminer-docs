@@ -140,7 +140,7 @@ Below these page buttons, you can find the following buttons:
 - **Reset all Devices**: Clears the **Device Settings** table.
 - **Load**: Loads every whitelisted device into the same table.
 
-Finally, the **Create...** page button can be used to create Dataminer elements based on the **Device Settings** table.
+Finally, the **Create...** page button can be used to create DataMiner elements based on the **Device Settings** table.
 
 ### Statistics
 

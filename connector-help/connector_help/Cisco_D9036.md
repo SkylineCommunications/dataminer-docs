@@ -32,9 +32,10 @@ Fom version 1.0.0.10 onwards, you can install the driver along with the necessar
 
 For older versions, however, the installation requires two steps:
 
-1.  Install the protocol (.xml file) as usual.
-2.  Run a "**.dmupgrade**" package containing the extra DLLs by copying it to one of your DMAs and double-clicking it.
-    Settings for the upgrade can be ignored: whatever you choose, the DMA will not be restarted and Internet Explorer will not be closed.
+1. Install the protocol (.xml file) as usual.
+1. Run a "**.dmupgrade**" package containing the extra DLLs by copying it to one of your DMAs and double-clicking it.
+
+   Settings for the upgrade can be ignored: whatever you choose, the DMA will not be restarted and Internet Explorer will not be closed.
 
 ### Element Creation
 
@@ -55,14 +56,14 @@ Note that the first time an element is created using a protocol on a DMA, it can
 
 To test the connection:
 
-1.  Restart the element
+1. Restart the element
 
-2.  Open the element card
+1. Open the element card
 
-3.  Check on the **Overview** page if there are icons in the tree view.
+1. Check on the **Overview** page if there are icons in the tree view.
 
-4.  1.  If yes -\> Test succeeded.
-    2.  If no -\> Test failed.
+   - If yes -\> Test succeeded.
+   - If no -\> Test failed.
 
 If the test failed, continue with the next step.
 
@@ -70,8 +71,8 @@ If the test failed, continue with the next step.
 
 To verify the IP address:
 
-1.  Go to the **Communication** page and check if the **Management IP Address 1** is correct. Verify if the Port parameters are set to 5003.
-2.  Optionally, supply the IP address of the second management port. A DCM usually has two management ports, located next to the power supply.
+1. Go to the **Communication** page and check if the **Management IP Address 1** is correct. Verify if the Port parameters are set to 5003.
+1. Optionally, supply the IP address of the second management port. A DCM usually has two management ports, located next to the power supply.
 
 Note: The first IP address is not configurable from data display. To change it, edit the element itself and define a new IP address.
 
@@ -81,12 +82,13 @@ Note: The first IP address is not configurable from data display. To change it, 
 
 To verify the IIOP credentials:
 
-1.  Go to the webpage of the DCM device and log on as Administrator.
-2.  Open the page Security and select the tab OS Accounts. A list should appear with available OS accounts.
-3.  Make a new user account or edit an existing one. It is advisable to use the username *guest* and password *guest* and to make sure the option IIOP is enabled.
-4.  Go to the element card and click the **IIOP Login ...** button on the **Communication** page.
-5.  If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No
-    *Otherwise set this parameter to *Yes* and fill in the correct username and password.
+1. Go to the webpage of the DCM device and log on as Administrator.
+1. Open the page Security and select the tab OS Accounts. A list should appear with available OS accounts.
+1. Make a new user account or edit an existing one. It is advisable to use the username *guest* and password *guest* and to make sure the option IIOP is enabled.
+1. Go to the element card and click the **IIOP Login ...** button on the **Communication** page.
+1. If you have an OS account with the username and password *guest*, you can set the **IIOP Use Credentials** to *No
+
+   Otherwise, set this parameter to *Yes* and fill in the correct username and password.
 
 Notes:
 
@@ -100,7 +102,7 @@ Notes:
 
 The driver requires several DLLs in order to function properly. Check if all files mentioned below are in the correct location in the system.
 
-In the folder "*C:\Skyline Dataminer\Files*":
+In the folder "*C:\Skyline DataMiner\Files*":
 
 - omniORB416_vc10_rt.dll
 - omnithread34_vc10_rt.dll
@@ -159,12 +161,12 @@ The functionality of the various pages of the driver is explained below.
 This page contains a tree view representing the device. It is a mix of the input/output and processing trees in the web interface under the **Services** tab with the information in the **VSE** tab.
 The main structure is:
 
-1.  Board
-2.  Port
-3.  Input/Output branch
-4.  Transport Streams
-5.  Services
-6.  Programs (/PIDs/Components)
+1. Board
+1. Port
+1. Input/Output branch
+1. Transport Streams
+1. Services
+1. Programs (/PIDs/Components)
 
 Corner Cases:
 
@@ -172,11 +174,15 @@ The "Chassis" is represented as the "Main Board" and does not have any children.
 
 The data shown in the VSE tab in the web interface is shown below a virtual board named **Virtual Service Encoder**. This 'card' also follows a different structure:
 
-1.  Board (= *Virtual Service Encoder*)
-2.  Transport Stream
-    To this level an extra tab page is added to include 'service' parameters. such as PCR and PMT PID.
+1. Board (= *Virtual Service Encoder*)
+
+1. Transport Stream
+
+    To this level, an extra tab page is added to include 'service' parameters, such as PCR and PMT PID.
+
     We currently assume that every transport stream holds exactly one service.
-3.  Component
+
+1. Component
 
 VSE Cards (= Cards listed in table **VSE Encoder Cards**) may not have any ports attached to them. This will be the case when they are also not visible under the Service tab in the web interface.
 
@@ -235,15 +241,15 @@ When a backup is restored, the full path of the file to restore is a combination
 
 To take a backup:
 
-1.  Click the Take Backup button.
-2.  Verify the **BS Backup Save Path Validation** parameter and the **BS Backup Status** parameter to follow up the status/progress of the backup, and to get more information in case there is an error.
-3.  In case of errors, check the element's log file for more information.
+1. Click the Take Backup button.
+1. Verify the **BS Backup Save Path Validation** parameter and the **BS Backup Status** parameter to follow up the status/progress of the backup, and to get more information in case there is an error.
+1. In case of errors, check the element's log file for more information.
 
 To restore a backup:
 
-1.  Click the Restore Backup button.
-2.  Check the **BS Backup File Valid** and **BS Restore Status** parameters.
-3.  In case of errors, verify the log file for more information.
+1. Click the Restore Backup button.
+1. Check the **BS Backup File Valid** and **BS Restore Status** parameters.
+1. In case of errors, verify the log file for more information.
 
 Note:
 
@@ -363,7 +369,7 @@ Notes:
 - Because these features are usually tightly integrated with other components (Visio, alarm filters, Automation scripts) changes to these features can only be requested by the customer who requested them. Other customers should not use them or rely on them. The requesting customer may at any point request additional changes that may not be backwards compatible, and no effort will be done to keep changes backwards compatible or to consider other customers using the feature even though they did not request it.
 - These features are not always fully documented in the driver help file. Customers who specifically requested a feature are expected to know what it does.
 
-#### TV2 Norway ...
+#### TV2 Norway
 
 **Feature: Alarm Summary** \[added in version 1.0.0.9\]: Extracts alarms from the active alarms table to get a summary of the worst active severity on Video Input Signal status and Embedded audio status. For this feature, it is assumed that there will be no more than 1 SDI board and that it has 8 inputs.
 

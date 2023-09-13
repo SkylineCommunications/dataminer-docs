@@ -13,19 +13,19 @@ On the Task Manager page, a button allows you to normalize alarms in order to se
 
 ### Version Info
 
-| **Range**                                            | **Description**                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
-|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x \[obsolete\]                                 | Microsoft WMI interface implementation.                                                                                                                                                                                                              | Yes                 | Yes                     |
-| 1.1.0.x                                              | Microsoft WMI interface implementation.                                                                                                                                                                                                              | Yes                 | No                      |
-| 1.1.1.x \[move to 1.1.2.x\]                          | Branched from 1.1.0.89: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                               | Yes                 | Yes                     |
-| 1.1.2.x \[obsolete\]                                 | Branched from 1.1.1.x: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters.                                                                                                                                                | Yes                 | Yes                     |
-| 1.1.3.x \[SLC Main - Virtual Machine Environment\]   | Branched from 1.1.0.97: Contains partitionedTrending database option. Difference between 1.1.3.x and 1.1.0.x branch will not be noticeable with Cassandra general database, only with MySQL general database. Version 1.1.3.5 merged with 1.1.0.106. | Yes                 | Yes                     |
-| 1.2.0.x                                              | Multiple tables now use naming instead of displayColumn to make the database for these tables Cassandra-compliant.                                                                                                                                   | Yes                 | Yes                     |
-| 2.1.0.x                                              | Branched from 1.1.0.41: Network Interface table adjustments.                                                                                                                                                                                         | Yes                 | Yes                     |
-| 3.0.0.x                                              | Branched from 1.1.0.71: Implemented a workaround for a WMI bug in the network adapter table.                                                                                                                                                         | Yes                 | Yes                     |
-| 4.0.0.x                                              | Branched from 1.1.0.78: Customer-specific branch including functionality to see if the element is running on the active DMA (Failover) with specific security configuration settings in the elements.                                                | Yes                 | Yes                     |
-| 5.0.0.x                                              | Branched from 1.1.1.5: Temporary branch to be used as workaround for a problem with retrieving the service table via WMI calls.                                                                                                                      | Yes                 | Yes                     |
-| 6.0.0.x \[SLC Main - Physical Hardware Environment\] | Branched from 1.1.2.31: Microsoft WMI interface + interface for DELL-, HP- and Supermicro-specific SNMP parameters.                                                                                                                                  | Yes                 | Yes                     |
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x \[obsolete\] | Microsoft WMI interface implementation. | Yes | Yes |
+| 1.1.0.x | Microsoft WMI interface implementation. | Yes | No |
+| 1.1.1.x \[move to 1.1.2.x\] | Branched from 1.1.0.89: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters. | Yes | Yes |
+| 1.1.2.x \[obsolete\] | Branched from 1.1.1.x: Microsoft WMI interface + interface for DELL- and HP-specific SNMP parameters. | Yes | Yes |
+| 1.1.3.x \[SLC Main - Virtual Machine Environment\] | Branched from 1.1.0.97: Contains partitionedTrending database option. Difference between 1.1.3.x and 1.1.0.x branch will not be noticeable with Cassandra general database, only with MySQL general database. Version 1.1.3.5 merged with 1.1.0.106. | Yes | Yes |
+| 1.2.0.x | Multiple tables now use naming instead of displayColumn to make the database for these tables Cassandra-compliant. | Yes | Yes |
+| 2.1.0.x | Branched from 1.1.0.41: Network Interface table adjustments. | Yes | Yes |
+| 3.0.0.x | Branched from 1.1.0.71: Implemented a workaround for a WMI bug in the network adapter table. | Yes | Yes |
+| 4.0.0.x | Branched from 1.1.0.78: Customer-specific branch including functionality to see if the element is running on the active DMA (Failover) with specific security configuration settings in the elements. | Yes | Yes |
+| 5.0.0.x | Branched from 1.1.1.5: Temporary branch to be used as workaround for a problem with retrieving the service table via WMI calls. | Yes | Yes |
+| 6.0.0.x \[SLC Main - Physical Hardware Environment\] | Branched from 1.1.2.31: Microsoft WMI interface + interface for DELL-, HP- and Supermicro-specific SNMP parameters. | Yes | Yes |
 
 ## Configuration
 
@@ -33,20 +33,20 @@ The polling IP of the Microsoft server must be defined when the element is creat
 
 ### WMI configuration
 
-1.  To go to WMI Control Properties, go to **Start** \> **Run** and enter *wmimgmt.msc*.
-2.  Right-click **WMI Control (Local)** and select **Properties**.
-3.  On the **Security** tab page, go to \\Root\CIMV2 and click the **Security** button.
-4.  Add your local user to the list and give the user all rights.
-5.  Apply all.
+1. To go to WMI Control Properties, go to **Start** \> **Run** and enter *wmimgmt.msc*.
+1. Right-click **WMI Control (Local)** and select **Properties**.
+1. On the **Security** tab page, go to \\Root\CIMV2 and click the **Security** button.
+1. Add your local user to the list and give the user all rights.
+1. Apply all.
 
 ### DCOM configuration
 
-1.  Go to **Start** \> **Run** and enter *dcomcnfg*.
-2.  Select **My Computer** and click the **Properties** button.
-3.  Go to the tab **COM Security**.
-4.  Under **Launch and Activation Permissions**, choose **Edit Limits**.
-5.  Add your local user and give the user the Local Launch, Remote Launch, and Remote Activation permissions.
-6.  Apply all.
+1. Go to **Start** \> **Run** and enter *dcomcnfg*.
+1. Select **My Computer** and click the **Properties** button.
+1. Go to the tab **COM Security**.
+1. Under **Launch and Activation Permissions**, choose **Edit Limits**.
+1. Add your local user and give the user the Local Launch, Remote Launch, and Remote Activation permissions.
+1. Apply all.
 
 **Note:**
 
@@ -60,19 +60,20 @@ The polling IP of the Microsoft server must be defined when the element is creat
 ### Performance
 
 - **Security**: Opens the **Security Settings** window, where the **Domain name**, **User Name** and **Password** can be configured. The status shows if the DMA is connected to the server you want to monitor.
+
 - **Port monitoring:** Opens a window where port monitoring can be enabled and configured. To enable port monitoring:
 
-1.  1.  On the **Performance** page, click the **Port monitoring** button.
-    2.  Define a **Polling Period.**
-    3.  Use the **Add Port** box to add one or more ports that need to be monitored in the **Port List**.
-    4.  Enable polling by clicking the toggle button next to **Port Monitoring Status**.
+  1. On the **Performance** page, click the **Port monitoring** button.
+  1. Define a **Polling Period.**
+  1. Use the **Add Port** box to add one or more ports that need to be monitored in the **Port List**.
+  1. Enable polling by clicking the toggle button next to **Port Monitoring Status**.
 
 - **Ping monitoring:** Opens a window where ping monitoring can be enabled and configured. To enable ping monitoring:
 
-1.  1.  On the **Performance** page, click the **Ping monitoring**... button.
-    2.  Click the toggle button next to **Ping Query** to execute the ping.
-    3.  Configure the **Ping Cycle**, i.e. the interval between each ping. The default value is *60 s*.
-    4.  Configure the **Ping Timeout** and **Ping Number**. The default values are *1500 ms* and *4* respectively.
+  1. On the **Performance** page, click the **Ping monitoring**... button.
+  1. Click the toggle button next to **Ping Query** to execute the ping.
+  1. Configure the **Ping Cycle**, i.e. the interval between each ping. The default value is *60 s*.
+  1. Configure the **Ping Timeout** and **Ping Number**. The default values are *1500 ms* and *4* respectively.
 
 ### Task Manager
 
@@ -82,9 +83,22 @@ To set the current values in the table as the normal reference for alarms, click
 
 It is also possible to add a filter to calculate the sum of the memory usage of all processes that match this filter. To do so:
 
-1.  Click the button **Cumulated Memory** at the bottom of the page.
-2.  Enter a filter in the box **Add Filter Param**. An asterisk ("\*") wildcard is supported in this filter. You can also use an exclamation mark ("!") to return the opposite cumulated memory of the filter parameter. (cf. examples below)
-3.  If necessary, add more filters or delete filters using the **Delete** button next to the filtered parameter.
+1. Click the button **Cumulated Memory** at the bottom of the page.
+
+1. Enter a filter in the box **Add Filter Param**. An asterisk ("\*") wildcard is supported in this filter. You can also use an exclamation mark ("!") to return the opposite cumulated memory of the filter parameter. (cf. examples below)
+
+   | Examples | Description |
+   |--|--|
+   | `SLDatam*` | Searches for processes that begin with "SLDatam". |
+   | `*Dataminer*` | Searches for processes that contain the word "DataMiner". |
+   | `miner:0*` | Searches for processes that end with "miner:0". |
+   | `SLDataminer:0` | Searches for the process "SLDataminer:0". |
+   | `!SLDatam*` | Searches for processes that do not begin with "SLDatam". |
+   | `!*Dataminer*` | Searches for processes that do not contain the word "DataMiner". |
+   | `!miner:0*` | Searches for processes that do not end with "miner:0". |
+   | `!SLDataminer:0` | Searches for processes that are not equal to "SLDataminer:0". |
+
+1. If necessary, add more filters or delete filters using the **Delete** button next to the filtered parameter.
 
 On the **Task Manager Measurement** page, you can disable processes to remove them from the **Task Manager** Table. The **Task Manager Default Measurement State** will enable/disable the measurement of new processes. The **Clear** button will remove all deleted processes from the **Task Manager Measurement Config** table. The **Refresh** button can be used to manually refresh the list of processes when Auto Refresh is disabled.
 
@@ -118,7 +132,7 @@ When the configured **Alarm Type** equals ***Normal*** and an event occurs that 
 
 From version 1.1.0.100 onwards, it is possible to get all events except those with a specific **Event ID**. In each row of the table, a toggle button **Exclude Event ID** has been added:
 
-- If it is set to the default setting ***Include***, you can insert a **single event ID** or the value ***"****\*"*** to **get all event IDs** for the relevant source/category (= **equal to all previous versions**).
+- If it is set to the default setting ***Include***, you can insert a **single event ID** or the value **"\*"** to **get all event IDs** for the relevant source/category (= **equal to all previous versions**).
 - If it is set to ***Exclude***, you can select a **single event ID**, which will be omitted from the results. All other event IDs will be selected.
 
 ### Performance Monitor
@@ -166,10 +180,10 @@ From Windows 2000 onwards, WMI is installed by default.
 Except in Windows Vista, WMI uses random ports.
 To configure a fixed port in Windows Vista:
 
-1.  In the command prompt window, type *winmgmt -standalonehost.*
-2.  Stop the WMI service by typing the command *net stop "Windows Management Instrumentation"*.
-3.  Restart the WMI service in a new service host by typing *net start "Windows Management Instrumentation"*.
-4.  Establish a new port number for the WMI service by typing *netsh firewall add portopening port=24158 name=WMIFixedPort*.
+1. In the command prompt window, type *winmgmt -standalonehost.*
+1. Stop the WMI service by typing the command *net stop "Windows Management Instrumentation"*.
+1. Restart the WMI service in a new service host by typing *net start "Windows Management Instrumentation"*.
+1. Establish a new port number for the WMI service by typing *netsh firewall add portopening port=24158 name=WMIFixedPort*.
 
 If you want to have access to the WMI interface of a Windows XP computer, you can work with a local user (a group user, not an administrator) that has the necessary Windows security rights, so extra configuration is necessary on the client computers.
 
@@ -177,8 +191,8 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 ### Global configuration
 
-1.  Create a user and add the user in the user group.
-2.  If the firewall is enabled, open a command prompt and execute "*netsh firewall set service RemoteAdmin enable*".
+1. Create a user and add the user in the user group.
+1. If the firewall is enabled, open a command prompt and execute "*netsh firewall set service RemoteAdmin enable*".
 
 ### Troubleshooting
 
@@ -186,99 +200,108 @@ As this is a Microsoft configuration, nothing has to be configured within DataMi
 
 - Remote WMI queries for non-admin users:
 
-> - Access is denied with error code 0x80070005 -\> **Solution**: DCOM configuration (see installation and configuration).
->
-> - Access is denied with error code 0x80041003 -\> **Solution**: WMI configuration (see installation and configuration).
->
-> - To check whether access is denied, the following two procedures are possible:
->
-> - - The first procedure:
->
->   - 1.  Click **Start** \> **Run** and enter *wmimgmt.msc*.
->     2.  Right-click **WMI Control (Local)** and select **Connect to another computer**.
->     3.  Select **Actions** \> **More Actions** \> **Properties**.
->         At this point, you will receive the following error: Failed to connect to [\\%RemoteIP%](file:///) because "Win32 Access is denied".
->
->   - The second procedure:
->
->   - - Run "wmimgmt.msc" directly on server.
->       You will receive the following error: Microsoft Management Console "An attempt was made to reference a token that does not exist".
+  - Access is denied with error code 0x80070005 -\> **Solution**: DCOM configuration (see installation and configuration).
+
+  - Access is denied with error code 0x80041003 -\> **Solution**: WMI configuration (see installation and configuration).
+
+  - To check whether access is denied, the following two procedures are possible:
+
+    - The first procedure:
+
+      1. Click **Start** \> **Run** and enter *wmimgmt.msc*.
+      1. Right-click **WMI Control (Local)** and select **Connect to another computer**.
+      1. Select **Actions** \> **More Actions** \> **Properties**.
+
+         At this point, you will receive the following error: Failed to connect to [\\%RemoteIP%](file:///) because "Win32 Access is denied".
+
+    - The second procedure:
+
+      - Run "wmimgmt.msc" directly on server.
+
+        You will receive the following error: Microsoft Management Console "An attempt was made to reference a token that does not exist".
 
 **Problem:**
 
 - Access is denied, even when the username and the password are correct.
 
-> **Solution**:
->
-> - Try to open Windows Explorer on that machine, using the login that you want to use in the Microsoft element. If it is not possible to connect to the server because you have to log on with the account "guest", execute the following steps:
->
-> 1.  1.  Go to **Control Panel** \> **Administrative Tools** \> **Local Security Policy**.
->     2.  Go to **Local Policies** \> **Security Options**.
->     3.  Double-click **Network access: Sharing and security model for local accounts**.
->     4.  Select **Classic- local users authenticate as themselves**.
+  **Solution**:
+
+  - Try to open Windows Explorer on that machine, using the login that you want to use in the Microsoft element. If it is not possible to connect to the server because you have to log on with the account "guest", execute the following steps:
+
+    1. Go to **Control Panel** \> **Administrative Tools** \> **Local Security Policy**.
+    1. Go to **Local Policies** \> **Security Options**.
+    1. Double-click **Network access: Sharing and security model for local accounts**.
+    1. Select **Classic- local users authenticate as themselves**.
 
 **Problem:**
 
 - A Microsoft element displays only some of the data. Data like Local Time, Total Physical Memory, etc. are filled in, while other data, like Total Processor Load, Total Handles, etc. remain empty. In the stream, you see that no answer is received on some queries.
 
-> **Solution:**
->
-> - Execute the following command prompt: *c:\\winmgmt.exe /resyncperf PID_OF_WINMGMT_AS_SERVICE*
+  **Solution:**
+
+  - Execute the following command prompt: *c:\\winmgmt.exe /resyncperf PID_OF_WINMGMT_AS_SERVICE*
 
 **Problem:**
 
 - Possible memory leak on remote machines that are running 2008/Vista:
   <http://support.microsoft.com/kb/970520/en-us>
 
-> **Solution:**
->
-> - When the remote server is running Vista, UAC must be disabled.
+  **Solution:**
+
+  - When the remote server is running Vista, UAC must be disabled.
 
 **Re-registering the WMI components on the monitored server:**
 
 - The .DLL and .EXE files used by WMI are located in %windir%\system32\wbem. You may need to re-register all the .DLL and .EXE files in this directory.
+
   If you are running a 64-bit system you may also need to check for DLLs and EXE files in %windir%\sysWOW64\wbem.
+
 - To re-register the WMI components, run the following commands with the command prompt:
-  *cd /d %windir%\system32\wbem*
-  *for %i in (\*.dll) do RegSvr32 -s %i*
-  *for %i in (\*.exe) do %i /RegServer*
+
+  ```
+  cd /d %windir%\system32\wbem*
+  for %i in (*.dll) do RegSvr32 -s %i
+  for %i in (*.exe) do %i /RegServer
+  ```
 
 **Problem:**
 
 - Task Manager data through WMI cannot be retrieved. This can be related to missing "Process Performance Counters".
   Refer to this technet post for more info: <http://blogs.technet.com/b/mscom/archive/2008/12/18/the-mystery-of-the-missing-process-performance-counter-in-perfmon.aspx>
 
-> **Solution**:
->
-> - Disable a specific flag on the Windows Register. Set the "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance\Disable Performance Counters" to *0*.
+  **Solution**:
+
+  - Disable a specific flag on the Windows Register. Set the "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PerfProc\Performance\Disable Performance Counters" to *0*.
 
 **Problem:**
 
 - StreamViewer mentions the following: Query failed : Retrieving the data failed. (hr = 0x80041010) for numerous WQL SELECT queries.
+
   When wbemtest is used and these queries are performed or the classes are listed, this results in similar errors mentioning "Invalid class".
 
-> **Solution**:
->
-> - Most likely some or all related Disable Performance Counters in regedit for PerfDisk, PerfNet, PerfOS, PerfProc, Tcpip or W3SVC are set to 1 (see Problem/Solution above for information on regedit).
-> - Set all these to 0, and after a couple of minutes the query errors should disappear and the related data should get filled in.
+  **Solution**:
+
+  - Most likely some or all related Disable Performance Counters in regedit for PerfDisk, PerfNet, PerfOS, PerfProc, Tcpip or W3SVC are set to 1 (see Problem/Solution above for information on regedit).
+  - Set all these to 0, and after a couple of minutes the query errors should disappear and the related data should get filled in.
 
 **Problem:**
 
 - The following error occurs: *Contacting server failed: Connection to \[//tns1216.inet.telenet.be/root/cimv2\] failed. The RPC server is unavailable. (hr = 0x800706BA).*
 
-> **Solution**:
->
-> - Make sure tcp/135 and tcp/49000-65535 (WMI) are open.
-> - Make sure the user is created on server and host.
+  **Solution**:
+
+  - Make sure tcp/135 and tcp/49000-65535 (WMI) are open.
+  - Make sure the user is created on server and host.
 
 **Problem:**
 
 - WMI is working and everything gets filled in, but Performance Monitor does not work. Pressing Refresh Categories provides the following error in element logging:
+
   Exception Perf Counters The network path was not found.
 
-> **Solution:**
->
-> - Check if the destination computer has the "Remote Registry" service running. If not, start this service. (Note that you may need to adjust the Startup Type from *Disabled* to *Manual/automatic* first.)
+  **Solution:**
+
+  - Check if the destination computer has the "Remote Registry" service running. If not, start this service. (Note that you may need to adjust the Startup Type from *Disabled* to *Manual/automatic* first.)
 
 ### Information Resources
 

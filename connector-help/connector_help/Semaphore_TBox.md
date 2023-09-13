@@ -25,7 +25,7 @@ Creation
 This driver uses a **Simple Network Management Protocol** (**SNMP**) connection and needs the following user information:
 **SNMP CONNECTION:**
 
-- **I**P** address/host**: \[The polling IP of the device\]
+- **I**P** address/host**: The polling IP of the device
 
 **SNMP Settings:**
 

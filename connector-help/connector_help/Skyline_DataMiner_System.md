@@ -35,8 +35,8 @@ This driver uses an HTTP connection and requires the following input during elem
 HTTP CONNECTION:
 
 - **IP address/host**: \[The polling IP or URL of the destination DMA.\] (The polled DMA needs to have a valid Web API v1 license)
-- **IP port**: \[The IP port of the destination.\]
-- **Bus address**: \[If the proxy server has to be bypassed, specify *bypassproxy.*\]
+- **IP port**: The IP port of the destination.
+- **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 ### Configuration of the HTTP Main connection
 

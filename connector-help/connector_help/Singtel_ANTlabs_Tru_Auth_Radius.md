@@ -2,13 +2,13 @@
 uid: Connector_help_Singtel_ANTlabs_Tru_Auth_Radius
 ---
 
-Singtel ANTlabs Tru Auth Radius
+# Singtel ANTlabs Tru Auth Radius
 
 The ANTlabs Tru Auth Radius keeps track of the usage of the satellite network for each vessel. For each user, trend and alarm data are available, separated in DVEs.
 
 ## About
 
-The ANTlabs Tru Auth Radius driver makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by Dataminer. Global statistics such as Auth and ACCT statistics are also available in the driver.
+The ANTlabs Tru Auth Radius driver makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by DataMiner. Global statistics such as Auth and ACCT statistics are also available in the driver.
 
 ## Installation and configuration
 
@@ -57,9 +57,3 @@ You can also upload a single file manually. (This functionality has been impleme
 ### DVE page
 
 The **DVE** page displays all the DVEs created. You can enable the DVE for each user, in the users table on the **Users** Page. For each user in this table, a DVE will be created, containing only user-specific information.
-
-## Notes
-
-N/A
-
-

@@ -8,7 +8,7 @@ This is a **virtual** driver that retrieves data from an FTP drive and stores it
 
 ## About
 
-This driver reads TXT files in CSV format from an FTP drive with geographic coordinates gathered from PTT trackers. The driver is integrated with Dataminer Maps, in order to show the current geographical location of the trackers.
+This driver reads TXT files in CSV format from an FTP drive with geographic coordinates gathered from PTT trackers. The driver is integrated with DataMiner Maps, in order to show the current geographical location of the trackers.
 
 ### Ranges of the driver
 

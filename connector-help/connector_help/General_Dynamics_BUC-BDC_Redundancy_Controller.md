@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device.
 
 ## Usage
@@ -68,4 +68,3 @@ In order to make the driver functional for BUC and BDC devices, the RF switches 
 | RF Switch \# 16 | RF Switch \# 3     | RF Switch \# 24 |
 | RF Switch \# 18 | RF Switch \# 5     | RF Switch \# 26 |
 | RF Switch \# 20 | RF Switch \# 7     | RF Switch \# 28 |
-

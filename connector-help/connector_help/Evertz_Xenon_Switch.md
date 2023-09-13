@@ -50,6 +50,7 @@ This driver uses a serial connection and requires the following input during ele
 SERIAL CONNECTION (**TCP/IP**):
 
 - Direct connection:
+
   - **Baudrate**: Baudrate specified in the manual of the device.
   - **Databits**: Databits specified in the manual of the device.
   - **Stopbits**: Stopbits specified in the manual of the device.
@@ -58,29 +59,28 @@ SERIAL CONNECTION (**TCP/IP**):
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device (port *23*).
   - **Bus address**: The bus address of the device (range: *16 - 1*). The bus address is used as the **Matrix Level**:
 
-> > |                        |                  |
-> > |------------------------|------------------|
-> > | **Bus Address number** | **Matrix Level** |
-> > | 1                      | V                |
-> > | 2                      | A                |
-> > | 3                      | B                |
-> > | 4                      | C                |
-> > | 5                      | D                |
-> > | 6                      | E                |
-> > | 7                      | F                |
-> > | 8                      | G                |
-> > | 9                      | H                |
-> > | 10                     | I                |
-> > | 11                     | J                |
-> > | 12                     | K                |
-> > | 13                     | L                |
-> > | 14                     | M                |
-> > | 15                     | N                |
-> > | 16                     | O                |
+    | Bus Address number | Matrix Level |
+    |--------------------|--------------|
+    | 1                  | V            |
+    | 2                  | A            |
+    | 3                  | B            |
+    | 4                  | C            |
+    | 5                  | D            |
+    | 6                  | E            |
+    | 7                  | F            |
+    | 8                  | G            |
+    | 9                  | H            |
+    | 10                 | I            |
+    | 11                 | J            |
+    | 12                 | K            |
+    | 13                 | L            |
+    | 14                 | M            |
+    | 15                 | N            |
+    | 16                 | O            |
 
 #### Serial SerialPortBackup Connection (2.0.2.x and 2.1.2.x)
 
@@ -90,7 +90,7 @@ SERIAL CONNECTION (**TCP/IP**):
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device.
+  - **Baudrate**: Baudrate specified in the manual of the device.
   - **Databits**: Databits specified in the manual of the device.
   - **Stopbits**: Stopbits specified in the manual of the device.
   - **Parity**: Parity specified in the manual of the device.
@@ -98,7 +98,7 @@ SERIAL CONNECTION (**TCP/IP**):
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device (port *23*).
 
 ## Usage

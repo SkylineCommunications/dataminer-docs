@@ -77,7 +77,7 @@ The first part, **Statistics**, contains regularly updated data about the intern
 
 - **Manager - Waiting Commands**: Indicates how many commands are waiting to be executed (at the time of the update).
 - **Manager - Executing Commands**: Indicates how many commands are currently being executed (at the time of the update).
-  The maximum value of this parameter is defined by **Manager - Max Processes**, but will often be less due to limitations by **Manager - Max Background** **Processes**.
+  The maximum value of this parameter is defined by **Manager - Max Processes**, but will often be less due to limitations by **Manager - Max Background Processes**.
 - **Manager - Finished Commands**: Indicates how many commands have finished since the previous update.
   Note that this could be more than the number of commands that was shown in the **Executing Commands** parameter. This is because if several commands take only 2 seconds, they will be started and finished without any indication in the **Waiting** and **Executing** parameters.
 
@@ -125,7 +125,7 @@ This page contains one table with all logged system events. There is also a page
 
 ### Field Replaceable Units
 
-This page contains two major parts. At the top, the **FRU** table displays all available units and some columns containing the more generic fields of such records, such as **Manufacturer**, **Name**, **Version** and **Serial** **Nr**. The last column contains a button that, when clicked, will copy the details of this FRU to the parameter **FRU Detailed Info** below the table.
+This page contains two major parts. At the top, the **FRU** table displays all available units and some columns containing the more generic fields of such records, such as **Manufacturer**, **Name**, **Version** and **Serial Nr**. The last column contains a button that, when clicked, will copy the details of this FRU to the parameter **FRU Detailed Info** below the table.
 
 The parameter **FRU Detailed Info** is the second major part of the page. As the available fields and details in the table above are very vendor- and even device- or FRU-specific, this way of displaying the detailed info was deemed more practical than to create columns for each possible info field.
 
@@ -137,11 +137,10 @@ This page contains several tables, each displaying a subset of the sensor values
 ### Power
 
 This page contains several tables, each displaying a subset of the sensor values on the **Sensors** page. For more information, refer to the **Sensors** section above.
-(Tables: **Power**, **Voltages** and **Current**, units are fixed to respectively *Watt*, *Volts* and *Ampere* )
+(Tables: **Power**, **Voltages** and **Current**, units are fixed to respectively *Watt*, *Volts*, and *Ampere* )
 
 ### Web Access
 
-Not all devices will provide web access. This page will try to navigate to [*http://\[pollingip\]/*]() .
+Not all devices will provide web access. This page will try to navigate to *http://\[pollingip\]/* .
 
-Note:
-The client machine has to be able to access the device. If not, it will not be possible to open the web interface.
+Note: The client machine has to be able to access the device. If not, it will not be possible to open the web interface.

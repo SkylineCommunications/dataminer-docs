@@ -56,11 +56,9 @@ Contains the system general parameters such as the device IP address and the sys
 
 Here you can find the system **Interfaces** status, configurations and **communication statistics** (Bandwidth, Input/Output Throughput, In/Out Utilization, ..).
 
-Here you can also find the **Measurement Configuration** and the **DCF Info** pagebuttons.
+Here you can also find the **Measurement Configuration** and the **DCF Info** page buttons.
 
-The first can be used to enable\disable the display and the calculation of communications KPIs, while the second contains information on the interfaces used by the Dataminer Conectivity Framework.
-
-
+The first can be used to enable\disable the display and the calculation of communications KPIs, while the second contains information on the interfaces used by the DataMiner Connectivity Framework.
 
 ### WAN Configurations
 
@@ -97,7 +95,7 @@ These tables will be empty if no CDMA modules are installed.
 
 This page you will find information about the available **LBS** (**Location Based Services**) **capabilities**.
 
-The first table, the **WAN LNBS Common table** displays general purpose informatio, such as the **LBS state**, the **location**, and **uncertainty** correction factors such as **GPS Uncertainty**, **Uncertainty Angle**, **HEPE** and **Horizontal** and **Vertical velocities**.
+The first table, the **WAN LNBS Common table** displays general purpose information, such as the **LBS state**, the **location**, and **uncertainty** correction factors such as **GPS Uncertainty**, **Uncertainty Angle**, **HEPE** and **Horizontal** and **Vertical velocities**.
 
 The second one, the **Satellite Info table** display information about the available satellites, if a GPS is installed. This table contains columns such as **Satellite Number**, **Elevation**, **Azimuth** and **Signal to Noise Ratio.**
 
@@ -111,9 +109,9 @@ LTE Profile settings such as the IPv4/6 address can be changed in the table of t
 
 This page displays the **Radio metrics** used to evaluate LTE wireless communications, such as RSRP (Reference Signals Received Power) and SNR (Signal-to-noise Ratio).
 
-You can also configurate the **threshold settings** associated to these metric parameters, that will trigger **system notifications**.
+You can also configure the **threshold settings** associated to these metric parameters, that will trigger **system notifications**.
 
-By opening the EPS Bearers QoS pagebutton you access the system **LTE EPS** **Bearers** (connection between two endpoints) **QoS** (Quality of Serivce) **metrics**.
+By opening the EPS Bearers QoS page button you access the system **LTE EPS** **Bearers** (connection between two endpoints) **QoS** (Quality of Service) **metrics**.
 
 ### Ping Function
 

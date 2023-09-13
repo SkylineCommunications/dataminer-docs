@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **Type of port:** Select UDP or TCP.
+  - **Type of port:** Select UDP or TCP.
   - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination.
 

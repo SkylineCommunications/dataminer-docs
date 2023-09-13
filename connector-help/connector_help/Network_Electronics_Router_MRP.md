@@ -291,7 +291,7 @@ On this page, you can change the options for the **Matrix**.
 
 On this page, you can edit the **input** and **output labels** or synchronize them with the device.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 ### Interfaces
 

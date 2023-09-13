@@ -31,14 +31,14 @@ This driver is used to monitor and configure Aperi's APP-S22-12567 (SDI) module.
 
 ### Connections
 
-#### HTTP \[Name of the connection\] Connection
+#### HTTP Connection - Main
 
 This driver uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
-- **IP address/host**: \[The polling IP or URL of the destination.\]
-- **IP port**: \[The IP port of the destination.\] (default: *443*)
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination. (default: *443*)
 - **Bus address**: The app slot number
 
 ### Initialization

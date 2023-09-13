@@ -106,11 +106,11 @@ On this page, you can configure general settings of the device.
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.1.x** driver range of the **Meinberg Lantime M300** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

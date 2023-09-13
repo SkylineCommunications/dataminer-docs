@@ -2,7 +2,8 @@
 uid: Connector_help_TrippLite_ATS_Switched_PDU_WEBCARDLX
 ---
 
-TrippLite ATS Switched PDU WEBCARDLX
+# TrippLite ATS Switched PDU WEBCARDLX
+
 The PDU line of devices from TrippLite allow for the use of multiple outlets, but does not guard against surge or line noise protection for connected equipment.
 
 ## About
@@ -36,7 +37,7 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Security level and protocol**: The level of security used for the SNMPv3 communication, either no authroization or privacy (noAuthNoPriv), authorization but no privacy (authNoPriv), or authorization and privacy (authPriv).
+- **Security level and protocol**: The level of security used for the SNMPv3 communication, either no authorization or privacy (noAuthNoPriv), authorization but no privacy (authNoPriv), or authorization and privacy (authPriv).
 - **User name**: The user name used for the connection with the device.
 - **Authentication password:** The password used during the authorization process.
 - **Encryption password:** The password used for decryption private information
@@ -57,11 +58,11 @@ All of the information regarding the ATS devices can be found using this page.
 
 The **ATS** **Device Info** table contains mostly the status of the ATS device but also allows for commanding the **Main Load** and the configuration of the **Power On** **Delay**.
 
-The ****ATS** Display Info** table allows for configuration of the ATS **Scheme, Orientation, Auto Scrolling, Intensity,** and **Units.**
+The ****ATS** Display Info** table allows for configuration of the ATS **Scheme, Orientation, Auto Scrolling, Intensity**, and **Units.**
 
-The ****ATS** Identity Info** table displays the amount of connections to the ATS, including the **Inputs, Ouputs** and **Outlets**.
+The ****ATS** Identity Info** table displays the amount of connections to the ATS, including the **Inputs**, **Outputs**, and **Outlets**.
 
-Using pagebuttons, the following can be accessed:
+Using page buttons, the following can be accessed:
 
 - **Outlets:** contains information on the ATS outlets in the **Outlets** and **Outlet Groups** tables.
 - **Inputs:** contains information on the ATS inputs in the **Inputs** and **Input Phase Info** tables.
@@ -76,13 +77,13 @@ Using pagebuttons, the following can be accessed:
 
 ### EnviroSense Page
 
-All of the information regarding the EnviroSense devices can be found using this page. Polling of the EnviroSense information can be enabled or disabled using the **Poll EnviroSense Info** togglebutton.
+All of the information regarding the EnviroSense devices can be found using this page. Polling of the EnviroSense information can be enabled or disabled using the **Poll EnviroSense Info** toggle button.
 
-The **EnviroSense Identity Info** table displays if the **Temperature** and **Humidity** is supported and the number of **Input** and **Ouput Contacts.**
+The **EnviroSense Identity Info** table displays if the **Temperature** and **Humidity** is supported and the number of **Input** and **Output Contacts.**
 
 The **EnviroSense Configuration** table allows for configuration of the **Temperature** and **Humidity Limits.**
 
-Using pagebuttons, the following can be accessed:
+Using page buttons, the following can be accessed:
 
 - **Contacts:** contains the **Input** and **Output Contacts** table.
 - **Temperature:** the temperature status of the EnviroSense device is displayed in the **Temperature Info** table.

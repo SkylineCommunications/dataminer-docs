@@ -38,7 +38,7 @@ SNMP CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: Default: *161.*
   - **Device Address**: The slot ID of the card.
 

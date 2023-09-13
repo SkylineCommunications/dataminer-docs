@@ -12,9 +12,9 @@ The information displayed in this driver is divided over seven pages:
 
 - **For the controller:**
 
-- **GeneralMain**: Contains general information about the loaded transmitters, and the available modes to put these in. Also displays a summary of the cooling, with three subpages:
+  - **GeneralMain**: Contains general information about the loaded transmitters, and the available modes to put these in. Also displays a summary of the cooling, with three subpages:
 
-  - - Notifications
+    - Notifications
     - Pumps
     - Fans
 
@@ -24,15 +24,13 @@ The information displayed in this driver is divided over seven pages:
 
   - **DVE Module**: Contains the DVE Table, which is used to create the corresponding transmitters (only the columns BusAddress, Name and element ID are displayed).
 
-<!-- -->
-
 - **For the transmitters:**
 
-- **General***:* Contains general information about the most important parameters and different modes.
+  - **General***:* Contains general information about the most important parameters and different modes.
 
   - **Transmitter Information**: Contains detailed information about the transmitter and the available exciters. When only one exciter is available, only the left exciter (ExA) will be filled in. When both exciters are available, both exciters will be filled in (ExA and ExB).
 
-  - - Amplifiers: Subpage displaying the state of the amplifiers
+    - Amplifiers: Subpage displaying the state of the amplifiers
 
   - **Status**: Displays the state of the available parameters. When only one exciter is available, some parameters (ExB parameters) will not be filled in.
 

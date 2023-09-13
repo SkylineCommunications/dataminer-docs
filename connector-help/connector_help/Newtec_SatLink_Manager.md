@@ -20,43 +20,29 @@ Currently, the following calls are implemented:
 
 - **Session interface**:
 
-  \- BookSession (contribution, distribution, dual hop, single hop and bidirectional)
-
-  \- CheckSession
-
-  \- StartSession
-
-  \- StopSession
-
-  \- CancelSession
-
-  \- FindSession and FindSessions
-
-  \- UpdateSession (3.0.0.5 and higher)
-
-  \- RequestModulatorAvailability (3.0.0.\* - 4.0.0.\*)
-
-  \- RequestTransmitAvailability (replaces RequestModulatorAvailability 4.1.0.\* and higher)
-
-  \- RequestDemodulatorAvailability (3.0.0.\* - 4.0.0.\*)
-
-  \- RequestReceiveAvailability (replaces RequestModulatorAvailability 4.1.0.\* and higher)
+  - BookSession (contribution, distribution, dual hop, single hop and bidirectional)
+  - CheckSession
+  - StartSession
+  - StopSession
+  - CancelSession
+  - FindSession and FindSessions
+  - UpdateSession (3.0.0.5 and higher)
+  - RequestModulatorAvailability (3.0.0.\* - 4.0.0.\*)
+  - RequestTransmitAvailability (replaces RequestModulatorAvailability 4.1.0.\* and higher)
+  - RequestDemodulatorAvailability (3.0.0.\* - 4.0.0.\*)
+  - RequestReceiveAvailability (replaces RequestModulatorAvailability 4.1.0.\* and higher)
 
 - **Reservation interface**:
 
-  \- FindReservations
+  - FindReservations
 
 - **Provisioning interface**:
 
-  \- GetAllTerminals
-
-  \- GetAllModulators (4.1.0.\* and higher)
-
-  \- GetAllDemodulators (4.1.0.\* and higher)
-
-  \- GetAllVirtualNetworks
-
-  \- GetAllSessionProfiles
+  - GetAllTerminals
+  - GetAllModulators (4.1.0.\* and higher)
+  - GetAllDemodulators (4.1.0.\* and higher)
+  - GetAllVirtualNetworks
+  - GetAllSessionProfiles
 
 ## Installation and configuration
 
@@ -104,57 +90,50 @@ An overview of the commands that can be triggered from an external source and th
 
 - **Book session:**
 
-- Format: *booksession\|virtualnetwork=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;sessionprofile=xxx;link=src1:dst1,dst2\|src2:dst3,dst4*
+  - Format: *booksession\|virtualnetwork=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;sessionprofile=xxx;link=src1:dst1,dst2\|src2:dst3,dst4*
 
   - If there are 2 links, then they need to be separated by a '\|' character
 
-  - There are extra parameters that can optionally be passed: serviceid, servicename and servicedescription
+  - There are extra parameters that can optionally be passed: serviceid, servicename, and servicedescription
 
 - **Start session:**
 
-- Format: *startsession\|id=xxx;multicastaddress=xxx*
+  - Format: *startsession\|id=xxx;multicastaddress=xxx*
 
 - **Stop session:**
 
-- Format: *stopsession\|id=xxx*
+  - Format: *stopsession\|id=xxx*
 
 - **Cancel session:**
 
-- Format: *cancelsession\|id=xxx*
+  - Format: *cancelsession\|id=xxx*
 
 - **Check session:**
 
-- Format: *checksession\|virtualnetwork=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;sessionprofile=xxx;link=src1:dst1,dst2\|src2:dst3,dst4*
+  - Format: *checksession\|virtualnetwork=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;sessionprofile=xxx;link=src1:dst1,dst2\|src2:dst3,dst4*
 
   - Similar remarks as for booksession
 
 - **Find session:**
 
-- Format: *findsession\|id=xxx*
+  - Format: *findsession\|id=xxx*
 
 - **Find sessions:**
 
-- Format: *findsessions\|*
+  - Format: *findsessions\|*
 
 - **Find reservations:**
 
-- Format: *findreservations\|* or *findreservations\|start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss*
+  - Format: *findreservations\|* or *findreservations\|start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss*
 
 - **Request Modulator/Transmit Availability:**
 
-- Format: requestmodulatoravailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
+  - Format: requestmodulatoravailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
 
   - Format: requesttransmitavailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
 
 - **Request Demodulator/Receive Availability:**
 
-<!-- -->
+  - Format: requestdemodulatoravailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
 
-- Format: requestdemodulatoravailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
-
-<!-- -->
-
-- Format: requestreceiveavailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx
-
-
-
+  - Format: requestreceiveavailability\|sessionprofile=xxx;start=yyyy-MM-dd HH:mm:ss;stop=yyyy-MM-dd HH:mm:ss;virtualnetwork:xxx

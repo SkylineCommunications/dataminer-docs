@@ -91,10 +91,13 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The IP of the DMA where the Syslog Messages are sent.
+  - **IP address/host**: The IP of the DMA where the Syslog Messages are sent.
 
-  - - **IMPORTANT**: Starting from version **1.0.1.7 (and only within this range)**, the keyword ***"any"*** should be specified instead of the IP of the DMA where the Syslog Messages are sent. This is necessary for compatibility when a DMS is operating in a Failover setup. When this is the case, the device only needs to send the messages to the virtual IP, and the main and backup elements will process them accordingly.
-    - **Note:** For a **standalone DMA** without Failover setup, in order to receive syslog messages, use the **IP of the server** instead of "any".
+  > [!IMPORTANT]
+  > Starting from version **1.0.1.7 (and only within this range)**, the keyword ***any*** should be specified instead of the IP of the DMA where the Syslog Messages are sent. This is necessary for compatibility when a DMS is operating in a Failover setup. When this is the case, the device only needs to send the messages to the virtual IP, and the main and backup elements will process them accordingly.
+
+  > [!NOTE]
+  > For a **standalone DMA** without Failover setup, in order to receive syslog messages, use the **IP of the server** instead of "any".
 
   - **IP port**: 514
 
@@ -263,7 +266,7 @@ This page displays the web interface of the device. Note that the client machine
 
 The **1.0.1.6** range of the Arista Manager connector supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

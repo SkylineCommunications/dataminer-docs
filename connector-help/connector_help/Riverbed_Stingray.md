@@ -4,7 +4,7 @@ uid: Connector_help_Riverbed_Stingray
 
 # Riverbed Stingray
 
-This driver enables Dataminer to monitor the Riverbed Stingray device, which is a traffic manager/shaper.
+This driver enables DataMiner to monitor the Riverbed Stingray device, which is a traffic manager/shaper.
 
 ## About
 

@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **Bus address**: The slot number/position of the card in the frame.
 
 #### Serial IP Connection - Broadcast Connection
@@ -51,7 +51,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: *any*
+  - **IP address/host**: *any*
   - **Bus address**: The slot number/position of the card in the frame.
 
 ### Initialization

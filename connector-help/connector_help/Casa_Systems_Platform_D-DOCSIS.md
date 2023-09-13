@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination. **Default port: 22.**
   - **Bus address**: The bus address of the device.
 
@@ -65,7 +65,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination. **Default port: 830.**
   - **Bus address**: The bus address of the device.
 
@@ -109,7 +109,7 @@ With larger devices/large data sets the polling performance may vary. You can co
 
 The **1.0.0.x** range of the CISCO CBR-8 CCAP Platform Collector protocol supports the usage of DCF.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

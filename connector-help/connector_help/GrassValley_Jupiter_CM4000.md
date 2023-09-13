@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 Only applicable for versions prior to 1.0.1.1.
 
-For versions prior to 1.0.1.1, an external DLL is used by the driver to contact the device. For this purpose, when you are using such an older version, add *es-lan-communication.dll* to the folder "C:\Skyline Dataminer\ProtocolScripts". If the folder already contains this file, follow the **Clean Shutdown** procedure described below and overwrite the old *es-lan-communication.dll* with the new file during step 4 of the procedure.
+For versions prior to 1.0.1.1, an external DLL is used by the driver to contact the device. For this purpose, when you are using such an older version, add *es-lan-communication.dll* to the folder "C:\Skyline DataMiner\ProtocolScripts". If the folder already contains this file, follow the **Clean Shutdown** procedure described below and overwrite the old *es-lan-communication.dll* with the new file during step 4 of the procedure.
 
 Note: If you are using a redundancy setup, make sure to add or update this DLL on both DMAs.
 
@@ -110,7 +110,7 @@ The revert operation will set the connection back to the source as indicated in 
 
 Available in range 1.0.2.x.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

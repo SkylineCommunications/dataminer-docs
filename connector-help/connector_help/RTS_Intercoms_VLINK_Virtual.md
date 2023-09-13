@@ -36,7 +36,7 @@ This connector uses an HTTP connection and requires the following input during e
 
 HTTP CONNECTION:
 
-- **IP address/host**: The VLINK Virtua requires the URL [http://{{rts}}/api/v1/]().
+- **IP address/host**: The VLINK Virtua requires the URL *http://{{rts}}/api/v1/*.
 - **IP port**: The IP default port is 80.
 
 ### Initialization

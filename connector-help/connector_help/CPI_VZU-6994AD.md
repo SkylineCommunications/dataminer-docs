@@ -8,7 +8,7 @@ The **CPI VZU-6994AD** is a 400W compact medium power amplifier (CMPA) designed 
 
 ## About
 
-The driver uses the serial interface to retrieve information from the device and sends configuration commands every time a user changes a setting through Dataminer's interface. More information: <http://www.cpii.com/product.cfm/4/10/23>
+The driver uses the serial interface to retrieve information from the device and sends configuration commands every time a user changes a setting through DataMiner's interface. More information: <http://www.cpii.com/product.cfm/4/10/23>
 
 ### Ranges of the driver
 
@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Default: *9600*
+  - **Baudrate**: Default: *9600*
   - **Databits**: Default: *7*
   - **Stopbits**: Default: *1*
   - **Parity**: Default: *No*
@@ -46,8 +46,8 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: \[The polling IP of the device\]
-  - **IP port**: \[The IP port of the device\]
+  - **IP address/host**: The polling IP of the device.
+  - **IP port**: The IP port of the device.
   - **Bus address**: Range: 48-111
 
 ## Usage
@@ -64,11 +64,11 @@ On this page is possible to set the **High/Low Alarm/Fault Trip-Points** as well
 
 On this page are shown the **Fault**, **Information** and **Error** status.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The 1.1.1.x driver range of the CPI VZU-6994AD protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

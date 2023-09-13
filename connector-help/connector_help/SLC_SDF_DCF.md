@@ -32,7 +32,7 @@ There is no redundancy defined.
 
 
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.0.x** range of the SLC SDF DCF connector supports the usage of DCF and can only be used on a DMA with DataMiner version **8.5.4** or higher.
 

@@ -35,7 +35,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 SNMP CONNECTION:
 
-- **IP address/host:** \[The polling IP of the device\]
+- **IP address/host:** The polling IP of the device
 
 SNMP Settings:
 

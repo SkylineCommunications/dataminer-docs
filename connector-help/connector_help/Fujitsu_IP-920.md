@@ -52,62 +52,62 @@ The data is retrieved using multiple timers having polling intervals of 30 secon
 
 ## Usage
 
-The **Driver** contains different pages divided into different sections using separators:
+The **Driver** contains different pages divided into different sections using separators.
 
-> ### System Overview:
->
-> The System Overview Page displays a general overview on system status, system management, system control.
->
-> - **System Settings:** Displays the management of the actual information for System Configuration Settings and System Common Settings.
-> - **Time Settings:** Displays the management of the actual information for System Date/Time Settings and Time Server Settings (SNTP).
->
-> ### Ports Overview
->
-> The Ports Overview Page displays a general overview relative to the Data Port and Usb .
->
-> - **USB Settings:** Displays the management and configuration for Usb Settings, allow to enable/disable the usb service.
-> - **Data Port Settings:** Displays the management and configuration for Ethernet and Serial RS232 Port Settings, allowing the user to enable/disable the data port service.
->
-> ### Encoder Overview
->
-> The Encoder Overview Page displays the actual state of encoder 1 and 2, and handles internal counters for ARQ Packets. On the left, in the **Decode Information** box the user can find the raw data polled from the device. On the right, there is the **Internal Counters** box, with internal counters that are updated on every poll cycle, but can be reset by the **Reset Counters**. These vales are local. Below, there is a box **Rate Calculation**. It keeps track of the packets that are lost and recovered and the decode errors, since the last poll. This is than used to calculate rates. As these params are normally polled every 5 seconds, these rates are recalculated (and thus overwritten) every 5 seconds. If you enable trending on these params via a Trend Template, a history of this rates can be stored in the Dataminer Database.
->
-> Encoder Management
->
-> The Encoder Management Page displays the encoder status values and general control management.
->
-> - **Encoder Video Input:** Displays the encoder video input general management.
->
-> - **Encoder Audio Input:** Displays the encoder audio input general management.
->
-> - **Main Encoder:** Displays the configuration and allows the management relative to main encoder IP, main encoder IP Port and main encoder PIDs.
->
-> - - **Main Encode:** Displays information and allows the management for Common Main Encoder Encode, SD and HD Encoding configuration.
->   - **Main Superimpose:** Displays information and allows the management for Main Encoder Superimpose Encoding configuration.
->
-> - **Sub Encoder:** Displays the configuration and allows the management relative to sub encoder IP, sub encoder IP Port and sub encoder PIDs.
->
-> - - **Sub Encode:** Displays information and allows the management for Common Sub Encoder Encode, SD and HD Encoding configuration.
->   - **Sub Superimpose:** Displays information and allows the management for Sub Encoder Superimpose Encoding configuration.
->
-> ### Decoder Overview
->
-> The Decoder Overview Page displays decoder general information, and handles internal counters, the page has a Reset button that clears the internal counters as well as the device web page internal counters.
->
-> ### Decoder Management
->
-> The Decoder Management Page displays the decoder status values and PID control management.
->
-> - **Decoder Settings:** Displays the configuration and allows the management for Decoder Control, Decoder Reference Settings, Decoder IP, Decoder IP Port.
-> - **Decoder Video Output:** Displays the configuration and allows the management for Decoder Video Ouput.
-> - **Decoder Audio Output:** Displays the configuration and allows the management for Decoder Audio Output.
->
-> ### Record Management
->
-> The Record Management Page displays the recorder status values and Recorder Control and Settings management.
->
-> ### Device Web Page
->
-> The Device Web Page gives access to the device web portal.
->
-> \* Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+### System Overview
+
+The System Overview Page displays a general overview on system status, system management, system control.
+
+- **System Settings:** Displays the management of the actual information for System Configuration Settings and System Common Settings.
+- **Time Settings:** Displays the management of the actual information for System Date/Time Settings and Time Server Settings (SNTP).
+
+### Ports Overview
+
+The Ports Overview Page displays a general overview relative to the Data Port and Usb .
+
+- **USB Settings:** Displays the management and configuration for Usb Settings, allow to enable/disable the usb service.
+- **Data Port Settings:** Displays the management and configuration for Ethernet and Serial RS232 Port Settings, allowing the user to enable/disable the data port service.
+
+### Encoder Overview
+
+The Encoder Overview Page displays the actual state of encoder 1 and 2, and handles internal counters for ARQ Packets. On the left, in the **Decode Information** box the user can find the raw data polled from the device. On the right, there is the **Internal Counters** box, with internal counters that are updated on every poll cycle, but can be reset by the **Reset Counters**. These vales are local. Below, there is a box **Rate Calculation**. It keeps track of the packets that are lost and recovered and the decode errors, since the last poll. This is than used to calculate rates. As these params are normally polled every 5 seconds, these rates are recalculated (and thus overwritten) every 5 seconds. If you enable trending on these params via a Trend Template, a history of this rates can be stored in the DataMiner Database.
+
+#### Encoder Management
+
+The Encoder Management Page displays the encoder status values and general control management.
+
+- **Encoder Video Input:** Displays the encoder video input general management.
+
+- **Encoder Audio Input:** Displays the encoder audio input general management.
+
+- **Main Encoder:** Displays the configuration and allows the management relative to main encoder IP, main encoder IP Port and main encoder PIDs.
+
+  - **Main Encode:** Displays information and allows the management for Common Main Encoder Encode, SD and HD Encoding configuration.
+  - **Main Superimpose:** Displays information and allows the management for Main Encoder Superimpose Encoding configuration.
+
+- **Sub Encoder:** Displays the configuration and allows the management relative to sub encoder IP, sub encoder IP Port and sub encoder PIDs.
+
+  - **Sub Encode:** Displays information and allows the management for Common Sub Encoder Encode, SD and HD Encoding configuration.
+  - **Sub Superimpose:** Displays information and allows the management for Sub Encoder Superimpose Encoding configuration.
+
+### Decoder Overview
+
+The Decoder Overview Page displays decoder general information, and handles internal counters, the page has a Reset button that clears the internal counters as well as the device web page internal counters.
+
+### Decoder Management
+
+The Decoder Management Page displays the decoder status values and PID control management.
+
+- **Decoder Settings:** Displays the configuration and allows the management for Decoder Control, Decoder Reference Settings, Decoder IP, Decoder IP Port.
+- **Decoder Video Output:** Displays the configuration and allows the management for Decoder Video Ouput.
+- **Decoder Audio Output:** Displays the configuration and allows the management for Decoder Audio Output.
+
+### Record Management
+
+The Record Management Page displays the recorder status values and Recorder Control and Settings management.
+
+### Device Web Page
+
+The Device Web Page gives access to the device web portal.
+
+Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

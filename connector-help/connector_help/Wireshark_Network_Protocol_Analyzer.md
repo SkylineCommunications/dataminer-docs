@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the server.
+  - **IP address/host**: The polling IP of the server.
   - **IP port**: The SSH IP port of the server. The default SSH port is *22*.
 
 ### Linux Server configuration

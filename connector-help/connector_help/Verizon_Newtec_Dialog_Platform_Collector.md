@@ -74,13 +74,13 @@ The overview table on this page contains among others the **Modem Type**, **Moni
 
 ### Advanced Remotes Instance
 
-This page contains critical information regarding the **Advanced** **Remotes** within the **Circuits**. This information is retrieved via the **SOAP API**.
+This page contains critical information regarding the **Advanced Remotes** within the **Circuits**. This information is retrieved via the **SOAP API**.
 
 The overview table on this page contains among others the **Modem Operational Mode**, **Active Beam**, **Latitude** and **Longitude** columns.
 
 ### Standard Remotes Instance
 
-This page contains critical information regarding the **Standard** **Remotes** within the **Circuits**. This information is retrieved via the **SOAP API**.
+This page contains critical information regarding the **Standard Remotes** within the **Circuits**. This information is retrieved via the **SOAP API**.
 
 The overview table on this page contains among others the **Operational State**, **Critical Data Forward Throughput** and **Real-Time Return Throughput** columns.
 
@@ -96,7 +96,7 @@ The page contains a table displaying the **Primary Spectrum**, **Primary LBand S
 
 ### RCRT Alarms
 
-This page contains a table listing all the alarms related to the **Remotes** **Certification** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Remotes Certification** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Remotes Mobility
 
@@ -106,7 +106,7 @@ The page contains the **Remotes Mobility**, **Remotes Mobility Terminal** and **
 
 ### RM Alarms
 
-This page contains a table listing all the alarms related to the **Remotes** **Mobility** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Remotes Mobility** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Hub Networks
 
@@ -133,7 +133,7 @@ The table on this page displays the **Hub Forward Traffic**, **Hub Return C/No**
 This page allows you to configure the following critical functionality of the driver:
 
 - **Authentication:** In this section, the username and password must be specified that allow the data to be retrieved from the **Newtec Dialog System**.
-- **Import/export configuration**: Allows you to export a configuration file to the **VSAT Database**, which will then create a **provisioning** **file**. This file can then be imported using the **import** feature, so that specific fields within the **Circuits Table** can be populated.
+- **Import/export configuration**: Allows you to export a configuration file to the **VSAT Database**, which will then create a **provisioning file**. This file can then be imported using the **import** feature, so that specific fields within the **Circuits Table** can be populated.
 - **Ping configuration**: Allows you to enable the ping feature, which pings each **Remote** present in the driver. You can also select the **VLAN** that you want to ping and the **Processing Time**, in order to determine how often the ping will occur.
 - **Other settings:** Includes the **File Handling**, which is associated with the **Import/Export Configuration** feature. This allows you to control whether the **import** and **export file** are processed by the driver. The **Circuit Request Size** allows you to specify how many **Circuits** will be retrieved in a single call.
 - **SLA & fault configuration:** Allows you to enable or disable the ability to update SLA & fault configuration parameters automatically. This section also includes a timer that allows you to select how frequently the updates should occur.
@@ -148,7 +148,7 @@ This page contains the **Faults Overview** table, which includes the **Alarm Con
 
 ### SLA Settings
 
-This page contains the **SLA** **Overview** table, which includes the **Maintenance Option**, **Timer Group,** and **Ticket TM Workgroup Field** columns.
+This page contains the **SLA Overview** table, which includes the **Maintenance Option**, **Timer Group,** and **Ticket TM Workgroup Field** columns.
 
 ### Beam
 
@@ -164,19 +164,19 @@ The overview table on this page contains among others the **Total Bandwidth**, *
 
 ### HRC MXDMA RCG
 
-This page contains information regarding the **HRC-MXDMA** **Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
+This page contains information regarding the **HRC-MXDMA Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
 The overview table on this page contains among others the **Login Symbol Rate**, **Logon Mode** and **Max Bandwidth** columns.
 
 ### HRC SCPC RCG
 
-This page contains information regarding the **HRC SCPC** **Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
+This page contains information regarding the **HRC SCPC Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
 The overview table on this page contains among others the **EIRP Tracking Static Margin**, **Max MODCOD,** and **Locked** columns.
 
 ### S2 RCG
 
-This page contains information regarding the **S2** **Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
+This page contains information regarding the **S2 Return Capacity Group** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
 The overview table on this page contains among others the **Name**, **Return Link Name** and **Locked** columns.
 
@@ -194,11 +194,11 @@ In the table on this page, you can among others find the **Forward Class Pool**,
 
 ### FP Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool ** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPL Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool L1 ** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool L1** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPCI Alarms
 
@@ -226,15 +226,15 @@ This page contains a table listing all the alarms related to the **CPM Return Po
 
 ### HRC MXDMA RPI Alarms
 
-This page contains a table listing all the alarms related to the **HRC MXDMA** **Return** **Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **HRC MXDMA Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### HRC SCPC RPI Alarms
 
-This page contains a table listing all the alarms related to the **HRC SCPC** **Return** **Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **HRC SCPC Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### S2 RPI Alarms
 
-This page contains a table listing all the alarms related to the **S2** **Return** **Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **S2 Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Forward Link
 
@@ -244,17 +244,17 @@ The overview table on this page contains among others the **Linear Predistortion
 
 ### Forward Link Instance
 
-This page contains critical information regarding the **Forward** **Link** of the **Newtec Dialog System**. This information is retrieved via the **SOAP API**.
+This page contains critical information regarding the **Forward Link** of the **Newtec Dialog System**. This information is retrieved via the **SOAP API**.
 
 In the table on this page, you can among others find the **Control Symbol Rate**, **Unicast Send Bitrate** and **Unicast Dropped Bitrate** columns.
 
 ### FLI Alarms
 
-This page contains a table listing all the alarms related to the **Forward** **Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### RLI Alarms
 
-This page contains a table listing all the alarms related to the **Return** **Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Return Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Service Profile
 
@@ -466,7 +466,7 @@ This page contains a table listing all the alarms related to the **TCS Monitorin
 
 This page contains critical information regarding the **Hub Multicast Circuit** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
-This page contains the **Hub** **Multicast Circuit** and **Satellite Network Hub Multicast Circuit** tables, which include parameters such as **Locked**, **Multicast Address** and **Name.**
+This page contains the **Hub Multicast Circuit** and **Satellite Network Hub Multicast Circuit** tables, which include parameters such as **Locked**, **Multicast Address** and **Name.**
 
 ### Satellite Network
 
@@ -484,7 +484,7 @@ The overview table on this page contains among others the **Server Address**, **
 
 This page contains critical information regarding the **Transponder** of the **Newtec Dialog System**. This information is retrieved via the **Restful API**.
 
-The overview table on this page contains among others the **Transponder** **Delta Frequency**, **Name** and **Locked** columns.
+The overview table on this page contains among others the **Transponder Delta Frequency**, **Name** and **Locked** columns.
 
 ### Device Role
 

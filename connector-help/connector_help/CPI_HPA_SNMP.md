@@ -82,11 +82,11 @@ This page displays an overview of the inhibits.
 
 This page displays configurable parameters for the device, including **Band** **Select**, **Life** **Extender** **Option**, **Run** **Life** **Extender**, and **Life** **Extender** **Auto** **Timer**.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.0.0.x** driver range of the CPI HPA SNMP protocol supports the usage of DCF and can only be used on a **DMA with 8.5.7** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

@@ -28,7 +28,7 @@ HTTP CONNECTION:
 
 - **IP address/host**: \[The polling IP or URL of the destination, default: localhost\]
 - **IP port**: \[The IP port of the destination, default: port 80\]
-- **Bus address**: \[If the proxy server has to be bypassed, specify *bypassproxy.*\]
+- **Bus address**: If the proxy server has to be bypassed, specify *bypassproxy.*
 
 ## Usage
 

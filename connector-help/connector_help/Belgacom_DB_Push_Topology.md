@@ -8,35 +8,37 @@ The **Belgacom DB Push Topology** element will upload CSV files that were create
 
 ## About
 
-This driver can load CSV files that were created by **Belgacom CPE Manager** elements into an Oracle database. Oracle client software (SQLLDR) needs to be installed for this to work.
+This connector can load CSV files that were created by **Belgacom CPE Manager** elements into an Oracle database. Oracle client software (SQLLDR) needs to be installed for this to work.
 
-### Ranges of the driver
+### Version Info
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
 To configure the element:
 
-1.  Open the **Oracle** page.
-2.  In the parameters **DB Host**, **Port**, **Username**, **Password** and **Service Name**, fill in the credentials to be able to connect to the database.
-3.  Configure the necessary settings:
+1. Open the **Oracle** page.
 
-<!-- -->
+1. In the parameters **DB Host**, **Port**, **Username**, **Password** and **Service Name**, fill in the credentials to be able to connect to the database.
 
-1.  - **SQLLDR Arguments** are arguments that can be used to pass to SQLLDR (example *BINDSIZE=5242880*).
-    - **Oracle Folder** is the folder where sqlldr.exe is located (e.g. *C:\oracle\product\10.2.0\client_1\BIN\\*). The element will create the Oracle control files, which describe the offload CSV structures, and will place these control files in this folder.
-    - **Data Folder** is the folder where the extended offload CSV files are located.
+1. Configure the necessary settings:
+
+   - **SQLLDR Arguments** are arguments that can be used to pass to SQLLDR (example *BINDSIZE=5242880*).
+
+   - **Oracle Folder** is the folder where sqlldr.exe is located (e.g. *C:\oracle\product\10.2.0\client_1\BIN\\*). The element will create the Oracle control files, which describe the offload CSV structures, and will place these control files in this folder.
+
+   - **Data Folder** is the folder where the extended offload CSV files are located.
 
 ## Usage
 

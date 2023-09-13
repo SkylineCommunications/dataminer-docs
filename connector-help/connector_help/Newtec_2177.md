@@ -69,11 +69,11 @@ This page illustrates all the system alarms, with the parameters **Actual** and 
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.1.36.x** range of the **Newtec 2177** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

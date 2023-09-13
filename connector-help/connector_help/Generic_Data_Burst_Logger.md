@@ -64,17 +64,17 @@ The **Port** **Status** page only displays one table, where you can add LAN swit
 
 In this page you can also define the **Log Speed Period** that defines the period that the log files are updated (reports).
 
-You can also define a csv import file from where you can import the table from the previous version of the driver. To do this you need do define teh **Import File Path**, the **Import File Name** and click **Import**.
+You can also define a csv import file from where you can import the table from the previous version of the driver. To do this you need do define the **Import File Path**, the **Import File Name** and click **Import**.
 
 ### Settings page
 
 On the **Settings** page, in the **Log File Settings** you can choose the decimal format (dot or comma) to be included in the Log files.
 
-In the **Mail settings** you can define the list of email addresses to send the report to separed by ";", you can also enter a **Mail** **Subject**, and a **Mail** **Body**.
+In the **Mail settings** you can define the list of email addresses to send the report to separated by ";", you can also enter a **Mail** **Subject**, and a **Mail** **Body**.
 
-In the **Send Mail** section you can select the respective label of the device you want to send the report by email form the **Selected Label in Attachment,** clicking in **Send E-mail** it will send an E-mail to all adresses with the selected LAN Switch Log File in attachment**.**
+In the **Send Mail** section you can select the respective label of the device you want to send the report by email form the **Selected Label in Attachment,** clicking in **Send E-mail** it will send an E-mail to all addresses with the selected LAN Switch Log File in attachment**.**
 
-The **Refresh Labels** button is to update the list of available lables in the table if it didn't updated automatically.
+The **Refresh Labels** button is to update the list of available labels in the table if it did not update automatically.
 
 #### Multi-Threaded Timer sub-page
 
@@ -82,4 +82,4 @@ In this sub-page you can check all the debug parameters of the Multi-Threaded ti
 
 ## Notes
 
-The SMTP tag in Dataminer.xml must be correctly configured if you want to receive the E-mails.
+The SMTP tag in DataMiner.xml must be correctly configured if you want to receive the emails.

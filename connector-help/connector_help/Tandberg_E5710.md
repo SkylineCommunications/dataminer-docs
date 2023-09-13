@@ -6,22 +6,22 @@ uid: Connector_help_Tandberg_E5710
 
 The **Tandberg E5710** is an MPEG2 SD Encoder that can be upgraded to MPEG4 AVC SD (EN8030) and HD encoding (EN8090).
 
+This is an **SNMP** connector that is used to display the status of the different parameters of a **Tandberg E5710 Encoder**.
+
 ## About
 
-This is an **SNMP** driver that is used to display the status of the different parameters of a **Tandberg E5710 Encoder**.
+### Version Info
 
-### Ranges of the driver
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.1.0.x | Release version. Added embedded web page. Enabled backup on all parameters. | No | Yes |
+| 1.1.1.x | Dynamic table used for the audio params. New MIBs implemented. **DCF** form version 1.1.1.20 implemented. | Yes | Yes |
 
-| **Driver Range** | **Description**                                                                                           | **DCF Integration** | **Cassandra Compliant** |
-|------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.1.0.x          | Release version. Added embedded web page. Enabled backup on all parameters.                               | No                  | Yes                     |
-| 1.1.1.x          | Dynamic table used for the audio params. New MIBs implemented. **DCF** form version 1.1.1.20 implemented. | Yes                 | Yes                     |
+## Configuration
 
-## Installation and Configuration
+### Connections
 
-### Creation
-
-This driver uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime, and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection, as well as an HTTP connection to retrieve the system uptime, and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -53,7 +53,7 @@ In addition, the following page buttons are available:
 
 - **Remote Settings**: Allows you to fill in the **IP Address**, **MAC Address**, **Subnet Mask**, **MIB Version** and **Bus settings** of the device.
 - **Build:** Allows you to get extra hardware and software information such as the **Build Version**, **Model Number**, **Board Reference**, etc.
-- **Licence Info:** Allows you to poll the list of licenses of the device.
+- **License Info:** Allows you to poll the list of licenses of the device.
 - **Port Info:** Allows you to view the configuration of the ports in the system.
 - **Board Info:** Displays information about the system's hardware, such as the **Slot Number**, **Type**, **Channel**, **Hardware Version**, etc.
 
@@ -125,7 +125,7 @@ There are several subpages:
 
 - The **Remux** subpage contains parameters such as **Remux Software Release**, **Remux Mode** and **Remux HostBitrate 188**. It also contains the following three tables:
 
-- The **Remux Service Information PID Table** contains parameters such as the **Remux PID Entry Index**, the **Remux Service Type**, and the **Remux Original PID**.
+  - The **Remux Service Information PID Table** contains parameters such as the **Remux PID Entry Index**, the **Remux Service Type**, and the **Remux Original PID**.
   - The **Remux Service Information Table** contains parameters such as the **Remux SI PAT Filter Version**, the **Remux SI SDT Filter Version**, and the **Remux SI PMT Filter Version**.
   - The **Remux Service Information Audio Table** contains parameters such as the **Remux Audio Entry Index** and the **Remux Audio Language Left**.
 
@@ -150,11 +150,11 @@ The page contains parameters such as the **Remote Location**, **Upload Status**,
 
 This page allows you to view the original web interface of the device itself. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
-## Dataminer Connectivity Framework
+## DataMiner Connectivity Framework
 
 The **1.1.1.x** driver range of the Tandberg E5710 protocol supports the usage of DCF and can only be used on a DMA with **9.0.0 \[CU5\]** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 
@@ -167,7 +167,7 @@ Virtual dynamic interfaces:
 Physical dynamic interfaces:
 
 - Inputs: Every input from the Port Table will create an input.
-- Ouputs: Every output from the Port Table will create an output.
+- Outputs: Every output from the Port Table will create an output.
 
 ### Connections
 
@@ -175,16 +175,15 @@ Physical dynamic interfaces:
 
 - Video:
 
-- Serial Digital: connection between \[Serial Video Input\] and the \[DVB ASI Outputs\].
+  - Serial Digital: connection between \[Serial Video Input\] and the \[DVB ASI Outputs\].
   - Analogue/Parallel 656: connection between \[Composite Video Input\] and the \[DVB ASI Outputs\].
 
 - Audio:
 
-- Connection between \[Serial Video Input\] and the \[DVB ASI Outputs\].
+  - Connection between \[Serial Video Input\] and the \[DVB ASI Outputs\].
   - Connection between \[Composite Audio Input\] and the \[DVB ASI Outputs\].
 
-<!-- -->
-
 - Data:
+
   - RS 232: connection between \[Data Input with PortDataType = RS 232\] and the \[DVB ASI Outputs\].
   - RS 422: connection between \[Data Input with PortDataType = RS 422\] and the \[DVB ASI Outputs\].

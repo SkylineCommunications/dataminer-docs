@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination. Fixed value: *2071*.
   - **Bus address**: The bus address of the device.
 
@@ -52,7 +52,7 @@ SMART SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: Set the string "any" in this field.
+  - **IP address/host**: Set the string "any" in this field.
   - **IP port**: The IP port of the destination. Fixed value: *2071.*
   - **Bus address**: The bus address of the device.
 

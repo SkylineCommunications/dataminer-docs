@@ -65,7 +65,7 @@ This page displays reclocker information, such as the reclocker configuration, b
 
 The **1.0.1.x** driver range of the Nevion Flashlink HDSDI-CHO-2x1 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

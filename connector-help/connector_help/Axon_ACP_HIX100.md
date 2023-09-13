@@ -55,7 +55,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: any
+  - **IP address/host**: any
   - **Bus address**: The bus address of the device is the slot number/position of the card in the frame.
 
 ## Usage
@@ -85,7 +85,7 @@ The element has the following data pages:
 
 The **1.0.0.x** driver range of the Axon ACP HIX100 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

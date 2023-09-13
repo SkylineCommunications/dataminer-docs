@@ -56,7 +56,7 @@ This page contains information about the properties of the image that is being b
 
 This driver supports DCF connections since version **1.0.0.2** and requires a DMA with at least DataMiner version **9.0.0.5**.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

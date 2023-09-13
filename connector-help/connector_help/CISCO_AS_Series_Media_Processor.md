@@ -54,7 +54,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. This is the device port to which **synchronous** messages must be sent.
 
 #### Smart Serial connection
@@ -65,7 +65,7 @@ SMART SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the DataMiner Agent to which the **asynchronous** responses must be sent.
+  - **IP address/host**: The polling IP of the DataMiner Agent to which the **asynchronous** responses must be sent.
   - **IP port**: The IP port of the device that will listen for the asynchronous responses (typically *8089*).
 
 Note: The current implementation does not process the asynchronous responses.

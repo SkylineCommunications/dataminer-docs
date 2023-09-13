@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual and the web interface of the device. Default: *9600.*
+  - **Baudrate**: Baudrate specified in the manual and the web interface of the device. Default: *9600.*
   - **Databits**: Databits specified in the manual and the web interface of the device. Default: *7.*
   - **Stopbits**: Stopbits specified in the manual and the web interface of the device. Default: *1.*
   - **Parity**: Parity specified in the manual and the web interface. Default: Even*.*
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device. Default: *4005*.
   - **Bus address**: The bus address of the device. Default: *A*.
 

@@ -61,8 +61,6 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device (default: *public*).
 - **Set community string**: The community string used when setting values on the device (default: *private*).
 
-## How to use
-
 ### Initialization
 
 The connector uses custom properties to configure the Network, Market, and Hub of the CCAP, so ensure that these are configured to link the views to the EPM data cards and full EPM functionality.
@@ -71,15 +69,13 @@ When you have created the element, configure the following settings:
 
 - **Entity Export/Import Settings**: These sections allow the exporting of the configuration files and importing of the provisioning files.
 
-- **Entity Export** and **Entity Import**: These parameters allow you to enable/disable the exporting and importing feature.
+  - **Entity Export** and **Entity Import**: These parameters allow you to enable/disable the exporting and importing feature.
   - **Export Directory** and **Entity Import Directory**: It is necessary to specify the paths where the files will be exported and imported.
   - **Entity Export Directory Type** and **Entity Import Directory Type**: Specify whether the export/import paths are **local or remote**. Note that for the remote file handling to work, you must enter the credentials for the system in the System Credentials section and enter the path to the remote directory in the Export Directory or Import Directory parameter. The path must be shared/accessible, or this feature will not work.
 
-<!-- -->
-
 - **System Credentials**: This section is to be used if the element is configured to a remote file location.
 
-- **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
+  - **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
   - **System Password**: The password of the user to access the remote directory.
 
 In range **1.0.0.x**, also configure the following settings:
@@ -94,21 +90,17 @@ Once the initial setup is done, the connector can function without further confi
 
 - In range **1.0.0.x**:
 
-- **Export Topology**: When you click the **Apply** button in the **Entity Export Settings** section, the element's topology files will be exported. These files will be processed by the Skyline EPM Solution.
+  - **Export Topology**: When you click the **Apply** button in the **Entity Export Settings** section, the element's topology files will be exported. These files will be processed by the Skyline EPM Solution.
   - **Import Topology**: When you click the **Apply** button in the **Entity Import Settings** section, the element will import the corresponding topology files created by the Skyline EPM Solution. These new files are based on the files originally exported by the CISCO CBR-8 CCAP Platform element.
   - **Topology Update Time Interval**: This parameter allows you to configure the frequency at which the topology files are automatically exported. This parameter is set to one hour by default.
 
-<!-- -->
-
 - In range **1.0.1.x**:
 
-- **Export Topology**: When you click the **Apply** button in the **Entity Export Settings** section, the element's topology files will be exported. These files will be processed by the Skyline EPM Solution.
+  - **Export Topology**: When you click the **Apply** button in the **Entity Export Settings** section, the element's topology files will be exported. These files will be processed by the Skyline EPM Solution.
   - **Import Topology**: When you click the **Apply** button in the **Entity** **Import Settings** section, the element will import the corresponding topology files created by the Skyline EPM Solution. These new files are based on the files originally exported by the CISCO CBR-8 CCAP Platform element.
   - **SNMP Fast Interval**: Define how often the information related to the status of the CCAP should be polled. By default, the parameter is set to 15 minutes.
   - **SNMP Slow Interval**: Define how often the information related to the configuration of the CCAP should be polled. By default, the parameter is set to 4 hours.
   - **Virtual Interval**: Define how often the topology will be synced with EPM. By default, the parameter is set to 2 hours.
-
-<!-- -->
 
 - In range **1.0.3.x**, the **Script Name** parameter is added, which allows you to specify the Automation script to be executed.
 

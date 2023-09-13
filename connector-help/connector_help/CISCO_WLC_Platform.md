@@ -42,8 +42,6 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device, by default *public*.
 - **Set community string**: The community string used when setting values on the device, by default *private*.
 
-<!-- -->
-
 - **Security level and protocol**: Only applicable for **1.1.0.x.**
 - **User name**: Only applicable for **1.1.0.x.**
 - **Authentication password**: Only applicable for **1.0.1.x** and if "Security level and protocol" is not *noAuthNoPriv.*

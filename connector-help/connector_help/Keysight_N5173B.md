@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 Interface connection:
 
-- **Type of port:** TCP/IP
+  - **Type of port:** TCP/IP
 - **IP address/host**: The polling IP of the device.
 - **IP port**: The IP port of the device. Default: *5025.*
 

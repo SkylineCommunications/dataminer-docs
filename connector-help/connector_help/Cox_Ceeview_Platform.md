@@ -54,16 +54,14 @@ The connector contains a number of settings that allow you to customize its beha
 
 - **Interface Settings**: A toggle button allows you to enable/disable the **polling from an interface (HTTP)**. You can also specify an interval to configure **how frequently the interface will be polled**. Finally, you can also select which of the following operating modes should be used:
 
-- **Distributed**: Only requests data associated with elements hosted by the same DataMiner Agent.
+  - **Distributed**: Only requests data associated with elements hosted by the same DataMiner Agent.
   - **Centralized**: Requests data associated with all elements within the DMS.
   - **Generic**: Request all data from the interface. Import/export logic does not apply.
-
-<!-- -->
 
 - **Entity Export/Import Settings**: These sections handle the exporting of configuration files and importing of provisioning files.
   You can:
 
-- **Enable/disable** the exporting/importing feature with the toggle buttons **Entity Export** and **Entity Import**, respectively.
+  - **Enable/disable** the exporting/importing feature with the toggle buttons **Entity Export** and **Entity Import**, respectively.
   - Configure the path where files will be exported and imported, with the **Entity Export Directory** and **Entity Import Directory** parameters.
   - Select whether to export/import to a local or to a remote location with the toggle buttons **Entity Export Directory Type** and **Entity Import Directory Type**, respectively.
     Note that for the **remote** file handling feature to work, you need to enter the credentials for the system in the **System Credentials** section and enter the path to the remote directory in the **Entity Export/Import Directory** parameter. The **path** **must be shared/accessible**.
@@ -71,6 +69,6 @@ The connector contains a number of settings that allow you to customize its beha
 
 - **Polling Config:**
 
-- **Max RPDs per Page**: The maximum number of RPDs that will be included per page as part of the API response.
+  - **Max RPDs per Page**: The maximum number of RPDs that will be included per page as part of the API response.
   - **Request Wait Time**: The time the connector will wait before trying to retrieve results for a given request.
   - **Request Max Wait Time**: The maximum time the connector will wait for a request to be completed before marking it as *Completed* or *Failed* accordingly.

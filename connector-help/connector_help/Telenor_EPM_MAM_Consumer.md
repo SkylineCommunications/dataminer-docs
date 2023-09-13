@@ -42,9 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-<!-- -->
-
-- **IP address/host**: The IP address is irrelevant because the connector uses multi-threaded serial communication. The field can be set to *127.0.0.1*.
+  -**IP address/host**: The IP address is irrelevant because the connector uses multi-threaded serial communication. The field can be set to *127.0.0.1*.
   - **IP port**: The port is irrelevant because the connector uses multi-threaded serial communication. The field can be set to the default value *8935*.
 
 ## How to Use

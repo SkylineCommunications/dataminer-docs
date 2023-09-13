@@ -41,7 +41,7 @@ SMART SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: *any*
+  - **IP address/host**: *any*
   - **IP port**: *3000*
 
 #### HTTP Connection

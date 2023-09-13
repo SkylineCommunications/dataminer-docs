@@ -41,7 +41,7 @@ SMART-SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: To set the DMA for this element in server mode, set this to ***any***.
+  - **IP address/host**: To set the DMA for this element in server mode, set this to ***any***.
   - **IP port**: The IP port of the destination.
 
 #### SNMP Connection - SNMP

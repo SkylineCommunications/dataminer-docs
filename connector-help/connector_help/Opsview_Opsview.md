@@ -38,7 +38,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the database (MySQL)
+  - **IP address/host**: The polling IP of the database (MySQL)
   - **IP Port**: default port 3306 is used.
 
 ### Configuration of the database settings
@@ -83,33 +83,33 @@ Three modes are available:
 
 - **Manual (default):**
 
-- When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a host is replaced by a host of a different type:
 
-  - - The existing DVE will be deleted if the configuration settings allow it.
+    - The existing DVE will be deleted if the configuration settings allow it.
     - A new DVE will be created if the configuration settings allow it.
 
   - When a host is removed, the existing DVE will not be deleted.
 
 - **Semi-Automatic:**
 
-- When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a host is replaced by a host of a different type:
 
-  - - The existing DVE will be deleted
+    - The existing DVE will be deleted
     - A new DVE will be created if the configuration settings allow it.
 
   - When a host is removed, the existing DVE will not be deleted.
 
 - **Automatic:**
 
-- When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
+  - When a new host is added, the corresponding DVE will be created if the configuration settings allow it.
 
   - When a host is replaced by a host of a different type:
 
-  - - The existing DVE will be deleted
+    - The existing DVE will be deleted
     - A new DVE will be created if the configuration settings allow it.
 
   - When a host is removed, the existing DVE will be deleted.
@@ -135,7 +135,7 @@ In that case, by using the **Reflect** or **Reflect All** buttons, you can run t
 
 The **1.0.0.x** driver range of the Opsview Opsview driver supports the usage of DCF and can only be used on a DMA with **9.0 CU9** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

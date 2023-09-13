@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **IP port**: The IP port of the destination (fixed value: *2071*).
   - **Bus address**: The bus address/slot number of the device/card in the frame.
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination. Specify "any".
+  - **IP address/host**: The polling IP or URL of the destination. Specify "any".
   - **IP port**: The IP port of the destination (fixed value: *2071*).
   - **Bus address**: The bus address/slot number of the device/card in the frame.
 

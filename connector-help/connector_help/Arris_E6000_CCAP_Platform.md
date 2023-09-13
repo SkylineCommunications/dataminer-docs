@@ -75,32 +75,27 @@ In range **1.0.0.x**:
 
 - **Entity Export/Import Settings**: These sections allow the exporting of configuration files and importing of provisioning files. You can:
 
-- **Enable or disable** the exporting and importing feature with toggle buttons (Entity Export and Entity Import, respectively).
+  - **Enable or disable** the exporting and importing feature with toggle buttons (Entity Export and Entity Import, respectively).
   - Specify the **file paths** where files can be exported and imported (with the Entity Export Directory and Entity Import Directory, respectively).
   - Specify whether to export/import to/from a **local or remote** location via a toggle button (Entity Export Directory Type and Entity Import Directory Type, respectively). Note that for the remote file handling to work, you must enter the credentials for the system in the System Credentials section and enter the path to the remote directory in the Entity Export or Import Directory parameter. The path must be shared/accessible, or this feature will not work.
   - Start the export or import by clicking the **Apply** button in the relevant section.
 
-<!-- -->
-
 - **System Credentials**: This section is to be used if the element is configured to use a remote location for file import/export.
 
-- **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
-  - **System Password**: The password of the user to access the remote directory.
+  - **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
 
-<!-- -->
+  - **System Password**: The password of the user to access the remote directory.
 
 - **Other Settings**: Additional settings to ensure proper data transfer and additional information.
 
-- **Collector:** Fill this out with the DMA ID/element ID of the Generic CM Collector used to provision the CMs of the CCAP.
+  - **Collector:** Fill this out with the DMA ID/element ID of the Generic CM Collector used to provision the CMs of the CCAP.
 
 In range **1.0.1.x**:
 
 - **System Credentials**: This section is to be used if the element is configured to use a remote location for file import/export.
 
-- **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
+  - **System Username**: The username of the user that has access to the directory. If no domain is specified, the domain from the element's DMA location will be used.
   - **System Password**: The password of the user to access the remote directory.
-
-<!-- -->
 
 - **Export Topology**: When you click the **Apply** button in the **Entity Export Settings** section, the element's topology files will be exported. These files will be processed by the Skyline EPM Solution.
 - **Import Topology**: When you click the **Apply** button in the **Entity Import Settings** section, the element will import the corresponding topology files created by the Skyline EPM Solution. These new files are based on the files originally exported by the Casa Systems CCAP Platform element.

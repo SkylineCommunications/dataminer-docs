@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **Bus address**: The bus address of the device, being the slot number of the card.
 
 #### Serial Broadcast Connection
@@ -59,7 +59,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination.
+  - **IP address/host**: The polling IP or URL of the destination.
   - **Bus address**: The bus address of the device.
 
 ## Usage
@@ -74,7 +74,7 @@ The element has the following data pages:
 
 The Axon ACP protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 
@@ -105,9 +105,7 @@ Depending on the state of the **Input Selection A**, the following connections a
 
 - Fixed Connections:
 
-<!-- -->
-
-- Between **SDI Input A** and **Reclocker A.**
+  - Between **SDI Input A** and **Reclocker A.**
   - Between **Reclocker** **A** and **Output A1.**
   - Between **Reclocker** **A** and **Output A2.**
   - Between **Reclocker** **A** and **Output A3.**

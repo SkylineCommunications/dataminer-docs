@@ -10,7 +10,7 @@ The **Haivision Kulabyte** makes it possible to manage one or more encoder proce
 
 The **Haivision Kulabyte** sends **REST** commands every minute in order to obtain its data. For each encoder process, a **Dynamic Virtual Element (DVE)** will automatically be created.
 
-Note: For version 1.1.0.x there is no DVE creation. This protocol version communicates directly with the encoder.
+Note: For version 1.1.0.x, there is no DVE creation. This protocol version communicates directly with the encoder.
 
 ### Ranges of the driver
 
@@ -102,42 +102,52 @@ Note: This requires that some presets have been loaded. See the "Presets page" s
 
 ### Presets page
 
-Presets must be loaded from .xml files that you have either manually downloaded from the Kulabyte encoder of that you have created yourself using Haivision preset creation tools. The .xml files must be placed in a folder that is accessible from the Dataminer server. If no path is entered, the default path is created on the DataMiner server: *C:\Skyline DataMiner\Documents\Haivision Kulabyte\Presets XML Files*. Also, a UNC path may be used.
+Presets must be loaded from .xml files that you have either manually downloaded from the Kulabyte encoder of that you have created yourself using Haivision preset creation tools. The .xml files must be placed in a folder that is accessible from the DataMiner server. If no path is entered, the default path is created on the DataMiner server: *C:\Skyline DataMiner\Documents\Haivision Kulabyte\Presets XML Files*. Also, a UNC path may be used.
 
 After the presets have been imported, the **Remove** button can be used to delete the preset from the **Presets** table. Clicking the **Details** button will show the contents of the preset .xml file in the **Preset Details** field.
 
 The **Remove All** button will delete all the presets from the **Presets** table.
 
-### Inputs page.
+### Inputs page
 
 This page displays a tree control with the following structure:
 
-> 1\. Channel 2
-> a. Input 1
-> b. Input 2
->
-> 2\. Channel 2
-> a. Input 1
-> b. Input 2
+1. Channel 2
+
+   1. Input 1
+   1. Input 2
+
+1. Channel 2
+
+   1. Input 1
+   1. Input 2
 
 ### Outputs page
 
 This page displays a tree control with the following structure:
 
-1.  1.  Channel 1
-        a. Output 1
-        i. Stream 1
-        ii. Stream 2
-        b. Output 2
-        i. Stream 1
-        ii. Stream 2
-    2.  Channel 2
-        a. Output 1
-        i. Stream 1
-        ii. Stream 2
-        b. Output 2
-        i. Stream 1
-        ii. Stream 2
+1. Channel 1
+
+   1. Output 1
+
+      1. Stream 1
+      1. Stream 2
+
+   1. Output 2
+
+      1. Stream 1
+      1. Stream 2
+
+1. Channel 2
+
+   1. Output 1
+
+      1. Stream 1
+      1. Stream 2
+
+   1. Output 2
+      1. Stream 1
+      1. Stream 2
 
 ### Events page
 

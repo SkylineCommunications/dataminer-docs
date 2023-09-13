@@ -41,10 +41,8 @@ SMART SERIAL CONNECTION:
 
 - Interface connection:
 
-<!-- -->
-
-- **IP address/host**: any
-- **IP port**: Default: *3000*.
+  - **IP address/host**: any
+  - **IP port**: Default: *3000*.
 
 #### HTTP Connection
 

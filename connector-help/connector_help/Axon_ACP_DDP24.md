@@ -48,7 +48,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address**: The polling IP of the destination, containing four digits.
+  - **IP address**: The polling IP of the destination, containing four digits.
   - **Bus address**: The bus address of the device, being the slot number of the card.
 
 #### Serial Broadcast Connection
@@ -59,7 +59,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address**: The polling IP of the destination, containing four digits.
+  - **IP address**: The polling IP of the destination, containing four digits.
   - **Bus address**: The bus address of the device.
 
 ### Initialization

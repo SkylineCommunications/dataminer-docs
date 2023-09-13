@@ -37,7 +37,7 @@ This driver uses an HTTPS connection and requires the following input during ele
 
 HTTPS CONNECTION:
 
-- **IP address/host**: [https://\[PollingIp\]](). Note that you must specify the "https://" prefix in the address field, as a different port than 443 is polled. For more information, refer to the [DataMiner Development Library](https://help.dataminer.services/development/#t=DataMinerDevelopmentLibrary_Customer/part1PDG/PDGConnections/HTTPS.htm).
+- **IP address/host**: *https://\[PollingIp\]*. Note that you must specify the "https://" prefix in the address field, as a different port than 443 is polled. For more information, refer to the [DataMiner Development Guide](xref:DevelopmentGuide).
 - **IP port**: *9440*
 - **Device address**: *BypassProxy*
 

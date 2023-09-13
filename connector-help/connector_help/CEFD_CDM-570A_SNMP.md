@@ -6,34 +6,32 @@ uid: Connector_help_CEFD_CDM-570A_SNMP
 
 The **CDM-570** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downcoverters (LNBs).
 
-## About
-
 This driver implements the available parameters present in the device's MIB. The driver layout is implemented as much as possible like the device's web interface. There are some menus that are not present because they are not available in the MIB and there are some functions that are present in the MIB but not in the web interface.
 
-Ranges of the driver
+## About
 
-| **Driver Range** | **Description**     | **DCF Integration** | **Cassandra Compliant** |
+# Version Info
+
+| **Range** | **Description**     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version     | No                  | No                      |
 | 1.0.1.x          | Cassandra compliant | No                  | Yes                     |
 
+## Configuration
 
-
-## Installation and configuration
-
-### Creation
+### Connections
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+- **IP address/host**: The polling IP of the device eg *10.11.12.13*
 
 **SNMP Settings**:
 
-\- **Port number**: the port of the connected device, default *161*
+- **Port number**: The port of the connected device, default *161*
 
-\- **Get community string**: the community string in order to read from the device. The default value is *public*.
+- **Get community string**: The community string in order to read from the device. The default value is *public*.
 
-\- **Set community string**: the community string in order to set to the device. The default value is *private.*
+- **Set community string**: The community string in order to set to the device. The default value is *private.*
 
 ## Usage
 
@@ -58,7 +56,7 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as Date and Time and Circuit ID, and to Load or Store Configuration presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** to toggle the Unit Fail relay to the "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+- **Force 1:1 Switch:** to toggle the Unit Fail relay to the "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* unit, this forces a switchover so the unit is then placed in *standby* mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
 - Load/Store Configuration: To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
 - Date and Time: Use the format *MM/DD/YY* to enter the **date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*).
 
@@ -72,7 +70,7 @@ Use **Time Sync** page button to set the Time Synchronization related parameters
 
 - Internal Reference:
 
-- **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
+  - **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
   - **Warm Up Countdown**: Used to truncate the Warm-up delay period to zero, forcing the unit into '*instant-on*' mode. As a query, returns the Warm-up Delay countdown, in seconds remaining. Range is from 000 to 200 seconds.
 
 ### Modem - Status
@@ -91,52 +89,43 @@ Use this read-only page to view Faults and Alarms (i.e., Modem Events) as logged
 
 Use this page to configure Block Up Converter parameters, and to display the BUC status for L-Band operation and to configure Low-Noise Block Down Converter parameters, and to display the LNB status for L-Band operation.
 
-BUC Configuration
+**BUC Configuration**:
 
 - Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** *Enabled* or *Disabled*.
-
-<!-- -->
-
 - **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
-
-<!-- -->
-
 - **BUC Address** from *0* to *15*.
 
-BUC Status
-The values displayed in this section are read-only **** and cannot be changed.
+**BUC Status**: The values displayed in this section are read-only  and cannot be changed.
 
-LNB Control
+**LNB Control**:
 
 - **DC Supply Voltage:***Off* or On with *13*, *18* or *24* V
 - **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a **HIGH (+)** or **LOW (**-**)** limit.
 
-LNB Status
-
-The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### IP - Interface
 
 Use this page to view the MAC address, set the IP address and mask of the IP Module.
 
-Interfaces Table
+**Interfaces Table**
 
 Resume and detail about the device's interfaces.
 
-Ethernet (LAN)
+**Ethernet (LAN)**
 
 - **MAC Address (*read-only*)** - This is set at the factory to a guaranteed unique address that cannot be modified.
 - **Mode & Speed** - Use the drop-down menu to select Auto, 10 Mbps Half Duplex, 100Mbps Half Duplex, 10 Mbps Full Duplex, or 100 Mbps Full Duplex.
 - **IP Address/Mask** - Enter the IP Address/Mask for the IP Module Ethernet Interface.
 
-Managed Switch Mode
+**Managed Switch Mode**
 
 - The **Gateway IP Address** may be entered when *Managed Switch Mode* is *active*.
 
-Terrestrial Interface
+**Terrestrial Interface**
 
 - Use the **Interface Type** drop-down menu to select the operating terrestrial interface: *EIA-422/EIA530 DEC*, *V.35 DCE*, *EIA-232 (sync)*, *G.703 T1 AMI*, *G.703 T1 B8ZS*, *G.703 E1 Unbal AMI*, *G.703 E1 Unbal HDB3*, *G.703 E1 Bal AMI* and *G.703 E1 Bal HDB3*
 
@@ -160,14 +149,14 @@ Use this page to specify how the modem/Packet Processor is to function in Vipers
 
 ### PaP - Admin - Features
 
-Features - Standard
+**Features - Standard**
 
 - **Telnet/Ping Reply -** Use the toggle button to **Enabled** or **Disabled** **Telnet** or **Ping** **Reply** functionality.
 - **Managed Switch Multicast Option -** Use the toggle button to **Enable** or **Disable** **Managed Switch Multicast Option**.
 - **L2 Tx/Rx Header Compression -** Use the toggle button to **Enabled** or **Disabled** **L2Tx/Rx** **Header** **Compression**.
 - **Downlink Route All Available Multicast -** Use the toggle button to **Enabled** or **Disabled** **Downlink** **Route** **Multicast**.
 
-Features - Optional
+**Features - Optional**
 
 - **IGMP -** Use the toggle button to **Enabled** or **Disabled** **IGMP** option.
 - **Vipersat Auto Switching -** Use the toggle button to **Enabled** or **Disabled** **Vipersat** **AutoS witching** feature.
@@ -179,30 +168,29 @@ Features - Optional
 
 PaP - Admin - Firmware page displays the information about the optional Packet Processor's Bootrom and two operational firmware images, and allows the user to configure the unit's handling of firmware upon bootup.
 
-Firmware
+**Firmware**
 
 - **Boot From-** Determines which firmware version will be loaded upon bootup. Use the drop-down list to select:
 
-- **Latest -** Boots the newest firmware load based upon date.
+  - **Latest -** Boots the newest firmware load based upon date.
   - **Image1 -** Boots the firmware loaded into the first slot in permanent storage.
   - **Image2 -** Boots the firmware loaded into the second slot in permanent storage.
 
-<!-- -->
-
 - **Upgrade To -** Determines which installed firmware will be use to overwrite when upgrading with a new firmware download. Use the drop-down list to select:
 
-- **Oldest -** Overwrites the oldest firmware based upon date.
+  - **Oldest -** Overwrites the oldest firmware based upon date.
   - **Image1 -** Overwrites the firmware loaded into the first slot in permanent storage
   - **Image2 -** Overwrites the firmware loaded into the second slot in permanent storage.
 
-Save Packet Processor parameters to flash
+**Save Packet Processor parameters to flash**
 
 - **Save PaP Parameters -** Causes all configuration changes made during this operational session to the unit to be save to permanent storage. These updates are permanent until the user either initiates and saves a new round of settings updates, or restores all settings to the original factory defaults.
 
 ### PaP - Config - LAN
 
 Use this page to configure LAN IP related parameters.
-Network Configuration
+
+**Network Configuration**
 
 - **IP Address/Mask -** Use this field to configure the modem's Management IP Address.
 - **Managed Switch Gateway IP -** Use this field to configure this IP Address.
@@ -210,11 +198,11 @@ Network Configuration
 - **MAC Address -** This parameter is read-only and cannot be changed.
 - **Dedicated Management Port -** This feature will be supported in future releases.
 
-Port Configuration
+**Port Configuration**
 
 - **Traffic Port Mode & Speed** - Use the drop-down menu to select the speed port: *Auto*, *10 Mbps Half-Duplex, 100 Mbps Half-Duplex, 10 Mbps Full-Duplex, 100 Mbps Full-Duplex*.
 
-VLAN Brouter Configuration
+**VLAN Brouter Configuration**
 
 - **VLAN Brouter Mode -** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Brouter** **Mode**.
 - **VLAN** **Brouter** **Tx** **Payload** **Compression-** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Brouter** **Tx** **Payload** **Compression**.
@@ -222,37 +210,37 @@ VLAN Brouter Configuration
 - **VLAN** **Remote** **Mode -** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Remote** **Mode**.
 - **VLAN** **Filtering** **-** Use the toggle button to **Enabled** or **Disabled** **VLAN** **Filtering**
 
-In this page it is also available the pagebutton **VLAN IDs ...** where it is possible to assign up to *10* **VLAN** **ID** addresses within the range from *1* to *4095*. In this page it is also possible to find a **VLAN** **table**. For the **VLAN** **table** the user can create new entries by clicking on the **Create New Entry...** pagebutton and fill in the required fields on the pop-up page. It is also possible to delete a VLAN entry from **VLAN table** by pressing the button **Delete**.
+This page also contains the page button **VLAN IDs ...**, which opens a page where you can assign up to *10* **VLAN** **ID** addresses within the range from *1* to *4095*. On this page, it is also possible to find a **VLAN table**. For the **VLAN table**, you can create new entries by clicking on the **Create New Entry...** page button and filling in the required fields on the pop-up page. It is also possible to delete a VLAN entry from **VLAN table** by pressing the button **Delete**.
 
 ## PaP - Config - ARP
 
-**The PaP - Config - ARP** page displays an **ARP** **table**. For the **ARP** **table** the user can create new entries by clicking on the **Create New Entry.** pagebutton and fill in the required fields on the pop-up page. If it's needed to clean all the dynamic entries than the user can click on the **Flush Dynamic ARP**.
+**The PaP - Config - ARP** page displays an **ARP** **table**. For the **ARP** **table** the user can create new entries by clicking on the **Create New Entry.** page button and fill in the required fields on the pop-up page. If it's needed to clean all the dynamic entries than the user can click on the **Flush Dynamic ARP**.
 
 ### PaP - Config - Routing
 
-Route configuration
+**Route configuration**
 
-The PaP - Config - Routes page displays the **Routing** **table**. For the **Route** **table** the user can create new entries by clicking on the **Route Table Entry.** pagebutton and fill in the required fields on the pop-up page. It's also possible to delete a route entry from the **Route table** by pressing the button **Delete**.
+The PaP - Config - Routes page displays the **Routing** **table**. For the **Route** **table** the user can create new entries by clicking on the **Route Table Entry.** page button and fill in the required fields on the pop-up page. It's also possible to delete a route entry from the **Route table** by pressing the button **Delete**.
 
-IGMP - CDM-570A as Client
+**IGMP - CDM-570A as Client**
 
 - **Recognize IGMP Queries -** Use the toggle button to **Enabled** or **Disabled** **IGMP** Queries.
 - **IGMP Version for Unsolicited Reports -** Use the drop-down list to select **V1** or **V2**.
 - **Unsolicited Report Interval -** This is the maximum response time inserted into group-specific queries that are set in response to Leave Group messages, and it is also the amount of time between group-specific query messages. This value may be tuned to modify the "leave latency" of the network; a reduced value results in reduced time to detect the loss of the last member of a group - values from *1* to *25*.
 - **Force Router Alert Option Sending V1 Reports -** Use the toggle button to **Enabled** or **Disabled** **ForceRouter Alert Option Sending V1 Reports**.
 
-IGMP - CDM-570A as Server
+**IGMP - CDM-570A as Server**
 
 - **Enable IGMP -** Use the toggle-button to select **Enabled** or **Disabled**. If enabled, the IP Module responds to IGMP queries for the configured multicast routes on the transmit side and generates IGMP queries on the receive side.
 - **IGMP Query Period -** This is the interval between general queries sent by the modem - values from *1* to *600 seconds*.
 - **IGMP Maximum Response Time -** This is the maximum response time inserted into the periodic general queries - values from *1* to *600 seconds*.
 - **Missed Responses Before Leaving IGMP Group -** Enter the number of desired missed responses - values from *1* to *30*.
 
-IGMP Table
+**IGMP Table**
 
 This *read-only* table lists the IGMP Groups that are active on the unit. This includes the **TTL** (*Time to Live*) for the entry; the **Client State** (*Idle, Active*, or *Closing*); and the **SRC** and **Group Entries**. Click **Refresh** button to update **IGMP Table** with its latest available information.
 
-DHCP Relay
+**DHCP Relay**
 
 - **DHCP Server IP Address -** Enter the IP Address to be used for the **DHCP** server at the hub in the form XXX.XXX.XXX.XXX. Enter 0.0.0.0 to **disable** this feature.
 
@@ -264,14 +252,14 @@ DHCP Relay
 
 ### PaP - Config - WAN
 
-QoS Configuration
+**QoS Configuration**
 
 - **QoS Feature -** Use the toggle button to Enabled or Disabled QoS feature.
 - **QoS Mode -** Use the drop-down list to set the **QoS Mode as** *Rule - Max Priority Mode; Rule - Min/Max Mode; Diff Serv Mode*, or *VLAN - Priority Max Mode*.
 - **QoS Typical System Latency** - Enter a value, in milliseconds, from *200* to *5000*.
 - **WAN Segmentation and Reassembly (SAR) Feature** - Use the toggle button to **Enabled** or **Disabled** **WAN** **SAR** feature.
 
-Compression Configuration
+**Compression Configuration**
 
 - **Header Comp. Refresh Rate UDP/RTP1 -** Enter the number of packets, from *1* to *600*, required to trigger the Header Compression's User Datagram Protocol/Real Time Protocol refresh rate.
 - **Header Comp. Refresh Rate for UDP -** Enter the number of packets, from *1* to *600*, required to trigger the Header Compression's User Datagram Protocol refresh rate.
@@ -300,9 +288,6 @@ Use this read-only page to obtain information for the assigned **MAC** and **IP 
 
 - **MAC Address (read-only)** - This is set at the factory to a guaranteed unique address that cannot be modified. The MAC address for the Ethernet interface.
 - **IP Address/Mask**: The IP Address/Mask for the IP Module Ethernet Interface.
-
-<!-- -->
-
 - Toggle Polling Speed: Switch between *Fast Polling* and *Normal Polling* of the parameters.
 
 ### Modem
@@ -323,11 +308,14 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as **Date** and **Time** and **Circuit ID**, and to **Load** or **Store Configuration** presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+
+- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* unit, this forces a switchover so the unit is then placed in *standby* mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+
 - **Load/Store Configuration:** To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
+
 - Date & Time: Use the format *MM/DD/YY* to enter the **Date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*). Use the international format *HH:MM:SS* to enter the **Time** (where *HH = hour \[00 to 23\]*, *MM = minutes \[00 to 59\]*, and *SS = seconds \[00 to 59\]*).
 
-> Use **Time Sync** page button to set the Time Synchronization related parameters.
+  Use **Time Sync** page button to set the Time Synchronization related parameters.
 
 - Circuit ID Configuration: Create a **Circuit ID** string of up to *24 alphanumeric characters*.
 
@@ -335,12 +323,12 @@ Use this page to set utilities such as **Date** and **Time** and **Circuit ID**,
 
 - Internal Reference:
 
-- **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
+  - **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
   - **Warm Up Countdown**: Used to truncate the Warm-up delay period to zero, forcing the unit into '*instant-on*' mode. As a query, returns the Warm-up Delay countdown, in seconds remaining. Range is from *000* to *200* seconds.
 
 - Terrestrial Interface:
 
-- **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
+  - **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
   - **RTS**: Defines how RTS/CTS will operate at the main data interface.
   - **Line Build Out**: Valid only for T1 interface.
 
@@ -348,7 +336,7 @@ Use this page to set utilities such as **Date** and **Time** and **Circuit ID**,
 
 Use this read-only page to view information about the modem's general operating status and configuration parameters.
 
-> Installed Options: This read-only section provides information for additional installed options.
+- **Installed Options**: This read-only section provides information for additional installed options.
 
 ### Modem - Logs
 
@@ -365,26 +353,23 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 
 - **BUC/LNB Enabled** used to *Enabled* or *Disabled* polling the BUC and LNB values.
 
-> BUC Configuration
+**BUC Configuration**
 
 - Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled* or *Disabled*.
-
-<!-- -->
-
 - **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 - **BUC Address** from *0* to *15*.
 
-> BUC Status: The values displayed in this section are read-only **** and cannot be changed.
->
-> LNB Control
+**BUC Status**: The values displayed in this section are read-only **** and cannot be changed.
+
+**LNB Control**
 
 - **DC Supply Voltage:***Off* or On with *13*, *18* or *24* V.
 - **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### FTP
 

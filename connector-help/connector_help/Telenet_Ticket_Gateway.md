@@ -37,10 +37,10 @@ To reduce the logging in the element log, the driver will generate an extended l
 MO CleanUp:
 When a **CleanUp** request is received from the **MailProc**, the Gateway will execute a series of requests in order to update/close the requested case with the provided MasterData from the MailProc. All this data can be found in the CleanUp request. The following is needed to fulfill the **MO** **Cleanup**:
 
-1.  Search the Case, in order to retrieve the current condition / networkElement / . needed for the Update.
-2.  Update of the Case with provided master data.
-3.  Close the Case with the provided master data.
-4.  Update Ninas Counters if the counter itself is higher than the current open Cases.
+1. Search the Case, in order to retrieve the current condition / networkElement / . needed for the Update.
+1. Update of the Case with provided master data.
+1. Close the Case with the provided master data.
+1. Update Ninas Counters if the counter itself is higher than the current open Cases.
 
 Whenever an error occurs, it is returned to the MailProc. After finishing the MO CleanUp an *OK state* is returned to the MailProc.
 
@@ -58,7 +58,7 @@ This driver uses a **Serial** connection and needs the following user informatio
 **RFC**:
 
 - **IP address/host**: The polling IP of the device, e.g. *at.inet.telenet.be.*
-- **IP port**: The port of the connected device, e.g. *8126.*
+- **IP port**: The port of the connected device, e.g. *8126*.
 
 ### Configuration
 
@@ -78,15 +78,15 @@ This driver uses a **Serial** connection and needs the following user informatio
 
 - Communication settings on the **OffloadConfig** pop-up page of the **Communications** page:
 
-- **Offload** **OSB**:
+  - **Offload** **OSB**:
 
-  - - Path
+    - Path
     - File
     - Enable/Disable
 
   - **Offload** **RFC**:
 
-  - - RFC Uri = dynamic polling second connection
+    - RFC Uri = dynamic polling second connection
     - Enable/Disable
     - Communication Log file path
     - Retry
@@ -140,7 +140,3 @@ On this page, the **Ninas** **Counters** can be received and edited. The page al
 ### Logging page
 
 On this page, you can save the **Log** **Buffer** table by pressing the **Save** **Log** button.
-
-## Notes
-
-N/A

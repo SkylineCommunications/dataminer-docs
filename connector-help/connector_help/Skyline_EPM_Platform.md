@@ -14,7 +14,7 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
 
 - **DOCSIS Network**
 
-- Network
+  - Network
   - Market
   - Hub
   - CCAP Core
@@ -23,11 +23,9 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
   - Node Segment
   - CM
 
-<!-- -->
-
 - **DOCSIS Service**
 
-- DOCSIS Network
+  - DOCSIS Network
   - DOCSIS Market
   - DOCSIS Hub
   - CCAP Core
@@ -35,20 +33,16 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
   - DS Service Group - US Service Group
   - CM
 
-<!-- -->
-
 - **DOCSIS Passives**
 
-- Node
+  - Node
   - Amplifier
   - Tap
   - CM
 
-<!-- -->
-
 - **GPON Service**
 
-- GPON Network
+  - GPON Network
   - GPON Market
   - GPON Hub
   - OLT
@@ -56,40 +50,34 @@ Different **topologies** are presented in the Skyline EPM Platform. These topolo
   - Port
   - ONT
 
-<!-- -->
-
 - **DOCSIS Quick**
 
-- Allows you to quickly access the **DOCSIS** topology level by selecting the desired filter.
-
-<!-- -->
+  - Allows you to quickly access the **DOCSIS** topology level by selecting the desired filter.
 
 - **GPON Quick**
 
-- Allows you to quickly access the **GPON** topology level by selecting the desired filter (Including Split Route, Split Distribution, Split FAT).
-
-<!-- -->
+  - Allows you to quickly access the **GPON** topology level by selecting the desired filter (Including Split Route, Split Distribution, Split FAT).
 
 - **Configuration**
 
-- Allows you to place Visual Overview layouts on a separate chain.
+  - Allows you to place Visual Overview layouts on a separate chain.
 
 ## About
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                                                                                       | **Based on** | **System Impact** |
-|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version.                                                                                                                                                                                                                                                       | \-           | \-                |
-| 1.0.1.x              | Integration of PNM KPIs.                                                                                                                                                                                                                                               | \-           | \-                |
-| 1.0.2.x              | Decoupling and enhancements.                                                                                                                                                                                                                                           | \-           | \-                |
-| 1.0.3.x              | Remote view tables retrieve information from multiple source elements.                                                                                                                                                                                                 | \-           | \-                |
-| 1.0.4.x              | \- Partial table option enabled on several tables to improve loading time of the filter box for the EPM topology. - Parameter added that lets the user change the name of the Automation script that notifies the CCAPs/CM collector pairs of new data to be ingested. | \-           | \-                |
-| 1.0.5.x              | \- New exceptions added for the correction of the default value for average percentage US and DS utilization.                                                                                                                                                          | \-           | \-                |
-| 1.0.6.x              | \- Quick topology for GPON now contains Split Route, Split Distribution, and Split FAT. Generic Split level was removed.                                                                                                                                               | \-           | \-                |
-| 1.0.7.x              | Remote views removed from DOCSIS CPE level (Cable Modem, QAM Channels).                                                                                                                                                                                                | \-           | \-                |
-| 1.0.8.x              | Remote views removed from GPON CPE level (ONT).                                                                                                                                                                                                                        | \-           | \-                |
-| 1.0.9.x \[SLC Main\] | Organization and grouping for KPIs through GPON Service, DOCSIS Network, and DOCSIS Service topologies.                                                                                                                                                                | \-           | \-                |
+| **Range** | **Key Features** | **Based on** | **System Impact** |
+|--|--|--|--|
+| 1.0.0.x | Initial version. | \- | \- |
+| 1.0.1.x | Integration of PNM KPIs. | \- | \- |
+| 1.0.2.x | Decoupling and enhancements. | \- | \- |
+| 1.0.3.x | Remote view tables retrieve information from multiple source elements. | \- | \- |
+| 1.0.4.x | \- Partial table option enabled on several tables to improve loading time of the filter box for the EPM topology. - Parameter added that lets the user change the name of the Automation script that notifies the CCAPs/CM collector pairs of new data to be ingested. | \- | \- |
+| 1.0.5.x | \- New exceptions added for the correction of the default value for average percentage US and DS utilization. | \- | \- |
+| 1.0.6.x | \- Quick topology for GPON now contains Split Route, Split Distribution, and Split FAT. Generic Split level was removed. | \- | \- |
+| 1.0.7.x | Remote views removed from DOCSIS CPE level (Cable Modem, QAM Channels). | \- | \- |
+| 1.0.8.x | Remote views removed from GPON CPE level (ONT). | \- | \- |
+| 1.0.9.x \[SLC Main\] | Organization and grouping for KPIs through GPON Service, DOCSIS Network, and DOCSIS Service topologies. | \- | \- |
 
 ### Product Info
 

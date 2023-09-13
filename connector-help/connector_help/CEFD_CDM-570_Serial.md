@@ -38,20 +38,21 @@ Note: This driver will export a different driver based on button **FSK Enabled**
 |---------------------------|---------------------------------|
 | CEFD CDM-570 Serial (FSK) | BUC and LNB parameters exported |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
-***Serial Main connection***
-This driver uses a Serial connection and needs the following user information:
+#### Serial Connection - Main
+
+This driver uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
-- IP address/host: \[The polling IP of the device\]
-  - IP port: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
-  - Bus address: \[The bus address of the device. Indicate if required or not. If so, specify default value, range and format.\]
+  - IP address/host: The polling IP of the device.
+  - IP port: The IP port of the device.
+  - Bus address: The bus address of the device.
 
 ## Usage
 
@@ -59,22 +60,19 @@ SERIAL CONNECTION:
 
 ### Start Page
 
-In the Start Page is possible to have access to some of the device's parameters. Some of them can be set and others are of type read-only.
+On the Start page, you can access some of the device's parameters. Some of them can be set and others are of type read-only.
 
 - **Equipment ID .** - Shows available hardware and functionality options installed on the device.
 - **Alarm Mask .** - Alarm mask conditions.
 - **Interface Settings .** - **RTS** and **Line Build Out** configuration.
 - **Utilities .** - Some others options.
-
-<!-- -->
-
 - **Normalized Value .** - Set a value to normalize **Rx Eb/No**.
 
 ### Configuration
 
 Use this page to configure the modem operating **Modulator** and **Demodulator** parameters.
 
-After setting the desired values you must enter the **Send Conguration .** page button. If the values are correct press the **Send Config** button. Back to the **Configuration** page if you want to see again the values present in the device, press the **Refresh** button.
+After setting the desired values you must enter the **Send Configuration** page button. If the values are correct press the **Send Config** button. Back to the **Configuration** page if you want to see again the values present in the device, press the **Refresh** button.
 
 ### Modem Lineup
 
@@ -110,10 +108,9 @@ If device parameters **Rx Coded**, **Rx** **Modulation** and **Rx** **FEC** are 
 
 Use this read-only page to obtain information for the assigned **MAC** and **IP Addresses** and the currently available standard and optional operational features.
 
-- **MAC Address (read-only)** - This is set at the factory to a guaranteed unique address that cannot be modified. The MAC address for the Ethernet interface.
-- **IP Address/Mask**: The IP Address/Mask for the IP Module Ethernet Interface.
+- **MAC Address (read-only)**: This is set at the factory to a guaranteed unique address that cannot be modified. The MAC address for the Ethernet interface.
 
-<!-- -->
+- **IP Address/Mask**: The IP address/mask for the IP Module Ethernet Interface.
 
 - Toggle Polling Speed: Switch between *Fast Polling* and *Normal Polling* of the parameters.
 
@@ -135,11 +132,14 @@ With AUPC, a local modem is permitted to adjust its own output power level in or
 Use this page to set utilities such as **Date** and **Time** and **Circuit ID**, and to **Load** or **Store Configuration** presets.
 
 - **Re-Center Buffer**: To force the re-centering of the Plesiochronous/Doppler buffer.
-- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* ** unit, this forces a switchover so the unit is then placed in *standby* ** mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+
+- **Force 1:1 Switch:** To toggle the Unit Fail relay to "fail" state for approx. 500ms. If the unit is one in a 1:1 redundant pair and it is currently the *online* unit, this forces a switchover so the unit is then placed in *standby* mode. The command is always executed by the unit, regardless of whether it is standalone, in a 1:1 pair, or part of a 1:N system.
+
 - **Load/Store Configuration:** To **Load** (recall) and/or **Store** up to 10 configuration sets numbered *0* through *9*.
+
 - Date & Time: Use the format *MM/DD/YY* to enter the **Date** (where *MM = month \[01 to 12\]*, *DD = day \[01 to 31\]* and *YY = year \[00 to 99\]*). Use the international format *HH:MM:SS* to enter the **Time** (where *HH = hour \[00 to 23\]*, *MM = minutes \[00 to 59\]*, and *SS = seconds \[00 to 59\]*).
 
-> Use **Time Sync** page button to set the Time Synchronization related parameters.
+  Use **Time Sync** page button to set the Time Synchronization related parameters.
 
 - Circuit ID Configuration: Create a **Circuit ID** string of up to *24 alphanumeric characters*.
 
@@ -147,20 +147,23 @@ Use this page to set utilities such as **Date** and **Time** and **Circuit ID**,
 
 - Internal Reference:
 
-- **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
+  - **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
+
   - **Warm Up Countdown**: Used to truncate the Warm-up delay period to zero, forcing the unit into '*instant-on*' mode. As a query, returns the Warm-up Delay countdown, in seconds remaining. Range is from *000* to *200* seconds.
 
 - Terrestrial Interface:
 
-- **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
+  - **Interface Type**: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
+
   - **RTS**: Defines how RTS/CTS will operate at the main data interface.
+
   - **Line Build Out**: Valid only for T1 interface.
 
 ### Modem - Status
 
 Use this read-only page to view information about the modem's general operating status and configuration parameters.
 
-> Installed Options: This read-only section provides information for additional installed options.
+- **Installed Options**: This read-only section provides information for additional installed options.
 
 ### Modem - Logs
 
@@ -177,32 +180,29 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 
 - **BUC/LNB Enabled** used to *Enabled* or *Disabled* polling the BUC and LNB values.
 
-> BUC Configuration
+**BUC Configuration**:
 
 - Use the provided toggle buttons to turn **BUC DC Power Control**, **10 MHz Reference**, **RF** **Output** and **Communication** to *Enabled* or *Disabled*.
-
-<!-- -->
-
 - **BUC Low** and **High Current Limit** value ranging from *0* to *4000* mA.
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 - **BUC Address** from *0* to *15*.
 
-> BUC Status: The values displayed in this section are read-only **** and cannot be changed.
->
-> LNB Control
+**BUC Status**: The values displayed in this section are read-only **** and cannot be changed.
+
+**LNB Control**:
 
 - **DC Supply Voltage:** *Off* or On with *13*, *18* or *24* V.
 - **LNB 10MHz Reference:** Enable operations *Disabled* or *Enabled*.
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-> LNB Status: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
 
 ### Maint - Unit Info
 
-> Unit Information: In this section it is possible to find the **Serial Number** and the **Software Revision**.
->
-> Firmware: The **Active Firmware Image** and the **Next Reboot Image** are available here for configuration.
+**Unit Information**: In this section it is possible to find the **Serial Number** and the **Software Revision**.
+
+**Firmware**: The **Active Firmware Image** and the **Next Reboot Image** are available here for configuration.
 
 ### FTP
 

@@ -43,15 +43,16 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-1.  Create the SDN element with the desired name and set its state to "Active"
+1. Create the SDN element with the desired name and set its state to "Active"
 
-2.  Upload or create the Connection and Disconnection scripts. The SDN controller can handle one script for each activity. Specify their names on the **SDN Controller General page**.
+1. Upload or create the Connection and Disconnection scripts. The SDN controller can handle one script for each activity. Specify their names on the **SDN Controller General page**.
 
-3.  - **IMPORTANT:** These scripts need to be tailored to the environment where your controller will reside. They need to be modified according to the used elements. This applies to the Metadata Editor as well as the SDN Connection Action Script.
+   > [!IMPORTANT]
+   > These scripts need to be tailored to the environment where your controller will reside. They need to be modified according to the used elements. This applies to the Metadata Editor as well as the SDN Connection Action Script.
 
-4.  Define which parameters will be used to connect the different elements.
+1. Define which parameters will be used to connect the different elements.
 
-5.  For each parameter, create a profile in the Profiles module. Only the parameter must be included in this profile; the definitions and instances can be empty.
+1. For each parameter, create a profile in the Profiles module. Only the parameter must be included in this profile; the definitions and instances can be empty.
 
 ### Redundancy
 
@@ -61,14 +62,18 @@ There is no redundancy defined.
 
 Once you have executed all initialization steps, do the following to use the SDN controller:
 
-1.  Open the SDN element.
-2.  In Visual Overview, use the fields to create an association between elements. This will execute the script **Metadata Editor** (which should be adjusted to your environment, as described above).
-3.  Once the script has finished, you can verify your changes on the **SDN Controller Table View page** in the columns Metadata and Linked Element.
-4.  If all changes are as expected, you can start using the **Matrix view page** to create connections between elements.
+1. Open the SDN element.
+
+1. In Visual Overview, use the fields to create an association between elements. This will execute the script **Metadata Editor** (which should be adjusted to your environment, as described above).
+
+1. Once the script has finished, you can verify your changes on the **SDN Controller Table View page** in the columns Metadata and Linked Element.
+
+1. If all changes are as expected, you can start using the **Matrix view page** to create connections between elements.
 
 ## Notes
 
 The solution does not have any way of knowing if the connection fails from external sources, such as:
 
 - Inputs changed directly in the element after the connection is made in the SDN matrix.
+
 - Element misconfiguration.

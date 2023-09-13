@@ -13,21 +13,17 @@ To get more detailed information consult the website <http://www.comtechefdata.c
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                    | **Based on** | **System Impact** |
-|----------------------|---------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.x              | Initial version                                                                                                     | \-           | \-                |
-| 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.22     | \-                |
-
-
+| **Range** | **Key Features** | **Based on** | **System Impact** |
+|--|--|--|--|
+| 1.0.0.x | Initial version | \- | \- |
+| 1.0.1.x \[SLC Main\] | Multiple tables now uses naming instead of displayColumn to make the database for these tables Cassandra-compliant. | 1.0.0.22 | \- |
 
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | Unknown                |
-| 1.0.1.x   | Unknown                |
-
-
+| 1.0.0.x   | -                |
+| 1.0.1.x   | -                |
 
 ### System Info
 
@@ -36,25 +32,23 @@ To get more detailed information consult the website <http://www.comtechefdata.c
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 | 1.0.1.x   | No                  | Yes                     | \-                    | \-                      |
 
+## Configuration
 
+### Connections
 
-## Installation and configuration
+#### SNMP Connection - Main
 
-### Creation
+SNMP CONNECTION:
 
-**SNMP CONNECTION**:
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*.
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+SNMP Settings:
 
-\- **Device address**: (define if needed or not + the default / range if any)
+- **Port number**: The port of the connected device, default *161*.
 
-**SNMP Settings**:
+- **Get community string**: The community string in order to read from the device. The default value is *public*.
 
-\- **Port number**: the port of the connected device, default *161*
-
-\- **Get community string**: the community string in order to read from the device. The default value is *public*.
-
-\- **Set community string**: the community string in order to set to the device. The default value is *private.*
+- **Set community string**: The community string in order to set to the device. The default value is *private.*
 
 ## Usage
 
@@ -84,14 +78,11 @@ Use this page to set the **LNB**'s **Control** configurations and also to check 
 
 ### Configuration - Network
 
-In his page several configurations can be done:
+On this page, several configurations can be done:
 
 - **ARP Table** to set ARP configurations;
 - **Working Mode** to set the Working Mode to *Router* or *BPM*.
 - **PTP Configuration** and **Status**.
-
-<!-- -->
-
 - Encryption ... - To set the 8 **Encryption Keys**.
 
 ### Configuration - Network - Routing
@@ -112,7 +103,7 @@ In this page is available the **Ethernet Stats Table**, the **Demod Stats Table*
 
 ### Status - Stats - Demod
 
-Several status tables related to the demodualotor are available in this page:
+Several status tables related to the demodulator are available in this page:
 
 - **Demod Status Table**
 - **Link Adaptation Status Table**
@@ -132,23 +123,20 @@ In this page are available the **Managed Switch** and the **Managed Switch LAN S
 
 ### Status - Monitor - Alarms
 
-Several information about alarms can be found here:
+Various information about alarms can be found here:
 
 - Alarms - **Unit**, **LNB**, **Traffic** **Ethernet** and **PTP** general **Alarms**.
 - Rx Alarms - Related to the Demodulators.
-
-<!-- -->
-
 - **Demodulator Alarms** - In depth information about **Demod Alarm State**/**Mask**.
 - **Unit Alarms** - In depth information about **Unit** **Alarm States**/**Masks**.
 
 ### Status - Monitor - Events
 
-If there's an event on the device it will be shown in the **Event Table**. Use the **Clear** button to clean the buffer.
+If there is an event on the device it will be shown in the **Event Table**. Use the **Clear** button to clean the buffer.
 
 ### Utility
 
-In this page are present some utility functions:
+This page contains some utility functions:
 
 - **Modem** - Some modem settings and general information.
 - **Save/Load Configuration** - To save current settings in the device's memory or by the other hand, to load settings from one of the 10 available memory's indexes.

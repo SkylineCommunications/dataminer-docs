@@ -30,15 +30,19 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-To be able to import data from Microsoft Excel files, place the *EPPlus.dll* file in the *C:\Skyline Dataminer\ProtocolScripts\\* folder.
+To be able to import data from Microsoft Excel files, place the *EPPlus.dll* file in the *C:\Skyline DataMiner\ProtocolScripts\\* folder.
 
 When a new element is created, all parameters and tables will initially be empty. To fill these in, import an Excel file containing the master data on the Import page:
 
-1.  Upload the .xlsx file to the documents folder of this protocol.
-2.  Go to the **Import** page of the element and click the **Refresh Files** button.
-3.  Select the .xlsx file.
-4.  Click the **Import** button.
-    You will be able to follow the import process in the displayed logging, which will also indicate if any data is invalid.
+1. Upload the .xlsx file to the documents folder of this protocol.
+
+1. Go to the **Import** page of the element and click the **Refresh Files** button.
+
+1. Select the .xlsx file.
+
+1. Click the **Import** button.
+
+   You will be able to follow the import process in the displayed logging, which will also indicate if any data is invalid.
 
 The imported file needs to contain at least the following worksheets with the correct columns:
 

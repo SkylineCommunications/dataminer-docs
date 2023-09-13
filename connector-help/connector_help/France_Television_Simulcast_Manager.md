@@ -45,14 +45,15 @@ There can be **Manual Occultation**, **Duration Occultation** and **Schedule Occ
 
 - If **Duration Time** is filled in, and the **Schedule Time** \< NOW:
 
-- If the Duration End Time is before the Schedule Start Time: The occultation will stay ON until the Duration Time ends or you set the occultation back to OFF manually.
+  - If the Duration End Time is before the Schedule Start Time: The occultation will stay ON until the Duration Time ends or you set the occultation back to OFF manually.
 
   - If the Duration End Time is after or at the same time as the Schedule Start Time: The occultation will stay ON even after the Duration Time ends, because the Schedule Time takes priority.
 
-  - - Manual **Occultation OFF** outside of the Schedule Time: The occultation is set to OFF, the Duration Time is cleared.
+    - Manual **Occultation OFF** outside of the Schedule Time: The occultation is set to OFF, the Duration Time is cleared.
     - Manual **Occultation OFF** inside of the Schedule Time: The occultation is set to OFF, the Duration Time is cleared and the Schedule Time is cleared.
 
 - When **Schedule Time** is entered: occultation will be set to ON and set back to OFF either once the Schedule Time is over, or when it is manually set back to OFF.
 
   In short, this means that if occultation is turned off manually, it is always set to OFF, but turning off occultation only clears the Schedule Time if this is done within the Schedule Time.
+
   If occultation is turned on manually, or turned on with duration time, the schedule time always takes over as soon as the current time that occultation is on is within the Schedule Time.

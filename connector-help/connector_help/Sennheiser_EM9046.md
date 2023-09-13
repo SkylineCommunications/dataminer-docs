@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *192.168.56.201*.
+  - **IP address/host**: The polling IP of the device, e.g. *192.168.56.201*.
   - **Type of port**: By default *UDP/IP*.
   - **IP Port**: By default *45*.
 

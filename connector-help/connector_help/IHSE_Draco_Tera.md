@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: Baudrate specified in the manual of the device, by default *115200*.
+  - **Baudrate**: Baudrate specified in the manual of the device, by default *115200*.
   - **Databits**: Databits specified in the manual of the device, by default *8*.
   - **Stopbits**: Stopbits specified in the manual of the device, by default *1*.
   - **Parity**: Parity specified in the manual of the device, by default *no*.
@@ -54,7 +54,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *5555*.
 
 #### SNMP Connection

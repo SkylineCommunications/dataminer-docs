@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: Required. By default, the driver will use the port 3000, CORTEX Monitoring data (MON).
   - **Bus address**: Not required. By default, the bus address of the device is disabled.
 
@@ -54,7 +54,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: Required. By default, the driver will use the port 3001, CORTEX Control data (CRTL).
   - **Bus address**: Not required. By default, the bus address of the device is disabled.
 

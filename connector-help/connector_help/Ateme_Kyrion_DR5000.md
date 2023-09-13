@@ -139,7 +139,7 @@ This page displays the web interface of the device. Note that the client machine
 
 The **3.0.0.x** driver range of the protocol supports the usage of DCF, starting at version **3.0.0.14**, and can only be used on a DMA with **8.5.4** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 In range **3.0.2.x** of the driver, DCF has been re-implemented, with a change to the number of available inputs and outputs.
 
@@ -153,8 +153,6 @@ Physical fixed interfaces:
 - **Input: IP Input 1**
 - **Input: RF Input 1**
 - **Input: ZIXI Input 1**
-
-<!-- -->
 
 - **Output: ASI Output 1**
 - **Output: ASI Output 2**
@@ -189,15 +187,11 @@ Physical fixed interfaces:
 - **Input: VPSC Clock**
 - **Input: ZIXI Input**
 
-<!-- -->
-
 - **Output: ASI Output 1**
 - **Output: ASI Output 2**
 - **Output: SDI Output 1**
 - **Output: SDI Output 2**
 - **Output: SDI Output 3**
-
-<!-- -->
 
 - **Input/Output: IP Stream 1**
 - **Input/Output: IP Stream 2**

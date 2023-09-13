@@ -24,7 +24,7 @@ In addition to the previous, the driver uses three timers: 1) one polling every 
 
 This driver uses a Serial connection and needs the following user information:
 
-- IP address/host: \[The polling IP of the device\]
+- IP address/host: The polling IP of the device
 - IP port: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
 - Bus address: \[The bus address of the device. Indicate if required or not. If so, specify default value, range and format.\]
 

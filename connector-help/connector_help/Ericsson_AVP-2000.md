@@ -100,24 +100,29 @@ Example: *\[22354\] SNMP*
 
 There are two exceptions to this rule.
 
-1.  The **Alarm Table (AT)**.
-    Here the naming is formatted as "\[ \[ALARMID\] \] \[UFNAME\] (\[SOURCE\]: \[TYPE\])", where
+1. The **Alarm Table (AT)**.
 
-2.  - \[ALARMID\] is the value of column **AT - Alarm ID.**
-    - \[UFNAME\] is the value of column **AT : UF Name.**
-    - \[SOURCE\] is the value of column **AT - Source Text.**
-    - \[TYPE\] is the value of column **AT - Alarm Type.**
+   Here the naming is formatted as "\[ \[ALARMID\] \] \[UFNAME\] (\[SOURCE\]: \[TYPE\])", where
 
-> Example: *\[411\] Data Interface Group 3-4: Data Network Lost (Base Unit: output)*
+   - \[ALARMID\] is the value of column **AT - Alarm ID.**
 
-1.  The **License Table (LT)**.
-    Here the naming is formatted as "\[ \[FEATUREID\] \] \[CODE\] (\[DESCRIPTION\])", where
+   - \[UFNAME\] is the value of column **AT : UF Name.**
 
-2.  - \[FEATUREID\] is the value of column **LT - Feature ID.**
-    - \[CODE\] is the value of column **LT - Code.**
-    - \[DESCRIPTION\] is the value of column **LT - Description.**
+   - \[SOURCE\] is the value of column **AT - Source Text.**
 
-> Example: *\[22\] CE/SWO/3D (This enables 3D operation.)*
+   - \[TYPE\] is the value of column **AT - Alarm Type.**
+
+   Example: *\[411\] Data Interface Group 3-4: Data Network Lost (Base Unit: output)*
+
+1. The **License Table (LT)**.
+
+   Here the naming is formatted as "\[ \[FEATUREID\] \] \[CODE\] (\[DESCRIPTION\])", where
+
+   - \[FEATUREID\] is the value of column **LT - Feature ID.**
+   - \[CODE\] is the value of column **LT - Code.**
+   - \[DESCRIPTION\] is the value of column **LT - Description.**
+
+   Example: *\[22\] CE/SWO/3D (This enables 3D operation.)*
 
 ### Device Tree Page
 
@@ -152,10 +157,13 @@ On this page, you can upload or download a configuration file.
 
 To do so:
 
-1.  Configure the folder where the config should be located and indicate the name of the config file.
-2.  Specify whether the management IP configuration should be included in the download.
-3.  Click the **Upload** or **Download** button.
-    This will result in an update of the **Upload Status** and **Download Status** parameters.
+1. Configure the folder where the config should be located and indicate the name of the config file.
+
+1. Specify whether the management IP configuration should be included in the download.
+
+1. Click the **Upload** or **Download** button.
+
+   This will result in an update of the **Upload Status** and **Download Status** parameters.
 
 ### Table Data Page
 
@@ -187,11 +195,11 @@ Note that the client machine has to be able to access the device. Otherwise, it 
 
 Ericsson advises a polling scheme where the active alarms are polled every 6 seconds and a parameter request is made with at least a 15 seconds interval. This results in the following sequence:
 
-1.  Startup - Poll parameters
-2.  Poll alarms
-3.  Poll alarms
-4.  Poll parameters
-5.  ...
+1. Startup - Poll parameters
+1. Poll alarms
+1. Poll alarms
+1. Poll parameters
+1. ...
 
 However, since the entire data XML is quite large and causes a lot of delay and load for the device, we split it into sections. Every parameter cycle, the queue is checked for sections that are waiting to be polled. Those that are larger than the threshold will be polled separately, smaller ones will be combined. The items waiting in the queue will have a counter to indicate their wait time, giving them a higher priority over time.
 
@@ -209,15 +217,15 @@ This page displays a tree view with the card information, the input settings and
 
 - Root: **Device Cards**
 
-- Extra tab: **Temperatures**
+  - Extra tab: **Temperatures**
 
   - Subnode: In-between table to consolidate the sibling tables
 
-  - - Subnode: **Input Transport Streams**
+    - Subnode: **Input Transport Streams**
 
-    - - Subnode: **Input Services**
+      - Subnode: **Input Services**
 
-      - - Subnode: **Input components**
+        - Subnode: **Input components**
 
     - Subnode: **Input Components**
 
@@ -225,9 +233,9 @@ This page displays a tree view with the card information, the input settings and
 
     - Subnode: **Video Input**
 
-    - - **Subnode: Teletext**
+      - Subnode: **Teletext**
 
-      - - **Subnode: Teletext Pages**
+        - Subnode: **Teletext Pages**
 
     - Subnode: **Audio Input**
 
@@ -235,11 +243,11 @@ This page displays a tree view with the card information, the input settings and
 
     - Subnode: **Output Transport Streams**
 
-    - - Extra tab: **Destinations**
+      - Extra tab: **Destinations**
 
       - Subnode: **Output Services**
 
-      - - Subnode: **Output Components**
+        - Subnode: **Output Components**
 
 ### Device
 
@@ -263,11 +271,11 @@ This tree view contains the information of output transport streams and is struc
 
 - Root: **Output Transport Streams**
 
-- Extra tab: **Destinations**
+  - Extra tab: **Destinations**
 
   - Subnode: **Output Services**
 
-  - - Subnode: **Output Components**
+    - Subnode: **Output Components**
 
 ### Output Tables
 
@@ -284,9 +292,9 @@ This tree view shows the input transport streams and their components and is str
 
 - Root: **Input Transport Streams**
 
-- Subnode: **Input Services**
+  - Subnode: **Input Services**
 
-  - - Subnode: **Input Components**
+    - Subnode: **Input Components**
 
 ### Input Tables
 
@@ -319,9 +327,13 @@ This tree view shows the network setup, using the following structure:
 - Root: **Port Groups**
 
 - Extra tab: **Output Transport Streams**
+
   - Extra tab: **Input Transport Streams**
+
   - Subnode: **Ethernet Ports**
+
   - Subnode: **ASI Input Ports**
+
   - Subnode: **ASI Output Ports**
 
 ### Physical Ports Configuration
@@ -337,7 +349,7 @@ This page contains the tables with physical interfaces used in the network tree.
 
 The **Poll Queue** table contains the fragments and other commands to keep track of communication. The flow of the communication is explained in the introduction of this "Usage" section. To decide which fragments need to be polled separately to reduce the device's response delay, there is a threshold that can be set: **Fragment Separation Threshold Load**. The **Fragment Load (Queue)** holds the current load of each fragment, and needs to be below the threshold in order to be combined with other fragments into a single request.
 
-It's possible to enqueue a single fragment using the **Enqueue** button or hit **Force Refresh** below the table.
+It is possible to enqueue a single fragment using the **Enqueue** button or hit **Force Refresh** below the table.
 
 **Write Comm...** opens the **Write Communication** pop-up page.
 

@@ -180,24 +180,26 @@ This page displays the **Panel Table,** **Key Table**, and **Functions Table** t
 
 There are two ways to add panels and keys:
 
-1.  Manually add one panel/key at a time.
-2.  Import a CSV file with all the keys or panels.
+1. Manually add one panel/key at a time.
+
+1. Import a CSV file with all the keys or panels.
 
 To use the CSV import feature:
 
-1.  Define the full file path in **Path of the Files** (e.g. C:\Users\\User)\Desktop).
+1. Define the full file path in **Path of the Files** (e.g. C:\Users\\User)\Desktop).
 
-2.  Choose a file name:
+1. Choose a file name:
 
-3.  - Important: If you want to import a key table or a panel table, the file name must contain "Key Table" or "Panel Table" (e.g. "Key Table 2017-09-25").
+   > [!IMPORTANT]
+   > If you want to import a key table or a panel table, the file name must contain "Key Table" or "Panel Table" (e.g. "Key Table 2017-09-25").
 
-4.  Make sure the columns in the CSV file are correctly ordered and have the correct names. Refer to the examples below.
+1. Make sure the columns in the CSV file are correctly ordered and have the correct names. Refer to the examples below.
 
 **Panel Table**
 
 | Panel Table.Name \[IDX\] (Panel) | Panel Table.Main/Extension (Panel) | Panel Table.Model (Panel) | Panel Table.Node (Panel) | Panel Table.Port (Panel) |
-|----------------------------------|------------------------------------|---------------------------|--------------------------|--------------------------|
-|                                  |                                    |                           |                          |                          |
+|--|--|--|--|--|
+|  |  |  |  |  |
 
 - **Panel Table.Name \[IDX\] (Panel)**: Panel identifier (must be unique).
 - **Panel Table.Main/Extension (Panel)**: 7 possible values ranging from 0 (Main), 1 (Extension 1), ..., to 6 (Extension 6).
@@ -208,8 +210,8 @@ To use the CSV import feature:
 **Key Table**
 
 | Key Table.Key ID \[IDX\] (Key) | Key Table.Page (Key) | Key Table.Key Number (Key) | Key Table.Call Status (Key) | Key Table.Panel ID (Key) |
-|--------------------------------|----------------------|----------------------------|-----------------------------|--------------------------|
-|                                |                      |                            |                             |                          |
+|--|--|--|--|--|
+|  |  |  |  |  |
 
 For the Key table data, you only need to fill in **Panel ID**, **Number**, **Page**, and **Call Status**.
 
@@ -221,11 +223,12 @@ For the Key table data, you only need to fill in **Panel ID**, **Number**, **Pag
 
 **Functions Table (only available on range 2.0.1.x)**
 
-Note: This table is automatically filled in after the Key Table CSV file is imported.
+> [!NOTE]
+> This table is automatically filled in after the Key Table CSV file is imported.
 
 | Functions Table.ID \[IDX\] (Functions) | Functions Table.Key ID (Functions) | Functions Table.Port ID (Functions) | Functions Table.IFB ID (Functions) | Functions Table.Trunk Port ID (Functions) | Functions Table.Trunk IFB ID (Functions) | Functions Table.Delete (Functions) | Functions Table.Label (Functions) |
-|----------------------------------------|------------------------------------|-------------------------------------|------------------------------------|-------------------------------------------|------------------------------------------|------------------------------------|-----------------------------------|
-|                                        |                                    |                                     |                                    |                                           |                                          |                                    |                                   |
+|--|--|--|--|--|--|--|--|
+|  |  |  |  |  |  |  |  |
 
 - **Functions Table.ID \[IDX\] (Functions)**: Function identifier. This is a combination of the key ID and an auto-increment number.
 - **Functions Table.Key ID (Functions)**: Key ID number defined in the Key Table. This value will link the key to the corresponding key in the tree control view.

@@ -193,7 +193,7 @@ This page allows you to configure horizontal and vertical references.
 
 The 1.0.1.x driver range of the **Snell Wilcox Alchemist Ph.C - HD3G** protocol supports the usage of DCF and can only be used on a DMA with **8.5.14** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 ### Interfaces
 

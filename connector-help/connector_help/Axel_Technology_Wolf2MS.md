@@ -14,24 +14,29 @@ The driver communicates with the device via **SNMP**. It also uses traps in orde
 
 All data gets retrieved from the device in 3 different ways.
 
-1.  **Timers**:
+- **Timers**:
 
-2.  - Slow timer that triggers every hour and polls a few general parameters.
-    - Fast timer that triggers every minute and polls Tuner 1 status parameters.
-    - Some tables can be made to update faster. (Refer to the information on the different tables below for more details).
+  - Slow timer that triggers every hour and polls a few general parameters.
 
-3.  **Traps**:
+  - Fast timer that triggers every minute and polls Tuner 1 status parameters.
 
-4.  - Status parameters can be received through traps from the device. As soon as a trap is received, the parameter is updated in the element.
-      Note: When a trap is received, the default time in the trap is used to display the time of the alarm in the Alarm Console.
-    - The driver has a setting (**Trap Polling**) on the General page that will cause the relevant parameters to be polled again when a trap is received.
+  - Some tables can be made to update faster. (Refer to the information on the different tables below for more details).
 
-5.  **Refresh All** button (on the General page):
+- **Traps**:
 
-6.  - This button refreshes all necessary parameters.
-    - Some parameters are not polled by default. They will only be polled when the **Refresh All** button is clicked (more details below).
+  - Status parameters can be received through traps from the device. As soon as a trap is received, the parameter is updated in the element.
 
-### Ranges of the driver
+    Note: When a trap is received, the default time in the trap is used to display the time of the alarm in the Alarm Console.
+
+  - The driver has a setting (**Trap Polling**) on the General page that will cause the relevant parameters to be polled again when a trap is received.
+
+- **Refresh All** button (on the General page):
+
+  - This button refreshes all necessary parameters.
+
+  - Some parameters are not polled by default. They will only be polled when the **Refresh All** button is clicked (more details below).
+
+### Version Info
 
 | **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
@@ -205,5 +210,3 @@ The following tables provide additional information on the processed traps.
 | 1.3.6.1.4.1.27295.1.3.6.4.2.2.0.13 | Tuner 2 Data Scan Tp Status Notify             | Tuner 2 Data Scan Tp Val         | Tuner 2 Data Scan Tp Status            | Tuner 2 RDS Time        |                         |                                          |                                   |                                   |                                      |
 | 1.3.6.1.4.1.27295.1.3.6.4.2.2.0.14 | Tuner 2 Data Scan Ih Status Notify             | Tuner 2 Data Scan Ih Status      | Tuner 2 RDS Time                       |                         |                         |                                          |                                   |                                   |                                      |
 | 1.3.6.1.4.1.27295.1.3.6.4.3.0.10   | Tuner 2 Mono Silence Alarm Status Notify       | Tuner 2 Audio Silence Mask       | Tuner 2 Audio Silence Trap Label       | Tuner 2 Tuned Frequency | Audio Tuner 2 Mono Rms  | Audio Tuner 2 Mono Silence Alarm Status  | Tuner 2 Time                      | Tuner 2 Configuration Update Time |                                      |
-
-

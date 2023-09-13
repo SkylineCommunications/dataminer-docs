@@ -70,6 +70,6 @@ This page provides access to the equipment's web interface. Note that the client
 
 The **1.0.2.x** driver range of the **Grass Valley 8900 General Platform** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for all exported protocols is managed by this protocol.

@@ -8,7 +8,7 @@ Virtual splitter helper driver just for DCF support.
 
 ## About
 
-Dataminer protocol with no displayed parameters, just to be used for DCF purposes. Splitter with one Input interface and two output interfaces. Input interface connects to both Outputs internally.
+DataMiner protocol with no displayed parameters, just to be used for DCF purposes. Splitter with one Input interface and two output interfaces. Input interface connects to both Outputs internally.
 
 ### Ranges of the driver
 

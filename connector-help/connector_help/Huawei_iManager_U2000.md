@@ -115,7 +115,7 @@ The **username** and **password** need to be configured on this page in order to
 
 The 1.0.0.x driver range of the Huawei iManager U2000 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5\[DCF\]** as the minimum version.
 
-DCF can also be implemented through the DataMiner DCF user interface and through DataMiner Third Party protocols (for instance a manager).
+DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
 Connectivity for all exported protocols is managed by this protocol.
 

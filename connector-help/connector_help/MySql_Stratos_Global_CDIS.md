@@ -27,7 +27,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device (e.g. *10.24.4.15*).
+  - **IP address/host**: The polling IP of the device (e.g. *10.24.4.15*).
   - **IP port**: Not required.
   - **Bus address**: Not required.
 

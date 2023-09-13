@@ -47,7 +47,7 @@ SMART SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: 192.168.17.46 (the factory default IP of the controller)
+  - **IP address/host**: 192.168.17.46 (the factory default IP of the controller)
   - **IP port**: 4000
   - **Bus address**: Not required
 

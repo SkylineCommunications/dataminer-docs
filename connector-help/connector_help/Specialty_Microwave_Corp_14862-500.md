@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Direct connection:
 
-- **Baudrate**: *9600*
+  - **Baudrate**: *9600*
   - **Databits**: 8, eighth bit is the parity bit or 0 when the parity is set to "none"
   - **Stopbits**: 1
   - **Parity**: None
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: 192.168.52.10
+  - **IP address/host**: 192.168.52.10
   - **IP port**: 4008
   - **Bus address**: 49
 

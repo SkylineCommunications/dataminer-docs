@@ -34,7 +34,7 @@ GPIB CONNECTION:
 
 - Interface connection:
 
-- **Device address**: The polling device address of the device.
+  - **Device address**: The polling device address of the device.
   - **I/O API**: The I/O API of the device.
 
 ## Usage

@@ -34,27 +34,25 @@ This protocol uses a serial connection to monitor and control the **Double D Ele
 
 This driver uses a serial connection and needs the following user information:
 
-- #### Serial \[Name of the connection\] Connection
+#### Serial Connection - Main
 
-  Style: Heading 4 Intense Quote
+This driver uses a serial connection and requires the following input during element creation:
 
-  This driver uses a serial connection and requires the following input during element creation:
+SERIAL CONNECTION:
 
-  SERIAL CONNECTION:
+- Direct connection:
 
-  - Direct connection:
-    - **Baudrate**: \[Baudrate specified in the manual of the device, default 9600. Range from: 1200, to: 115200\]
-    - **Databits**: \[Databits specified in the manual of the device, default *7*.\]
-    - **Stopbits**: \[Stopbits specified in the manual of the device, default *1*.\]
-    - **Parity**: \[Parity specified in the manual of the device, default *even*.\]
-    - **FlowControl**: \[FlowControl specified in the manual of the device, default *No*.\]
-  - Interface connection:
+  - **Baudrate**: Baudrate specified in the manual of the device, default 9600. Range from: 1200, to: 115200.
+  - **Databits**: Databits specified in the manual of the device, default *7*.
+  - **Stopbits**: Stopbits specified in the manual of the device, default *1*.
+  - **Parity**: Parity specified in the manual of the device, default *even*.
+  - **FlowControl**: FlowControl specified in the manual of the device, default *No*.
 
-  <!-- -->
+- Interface connection:
 
-  - **IP address/host**: \[The polling IP of the device.\]
-  - **IP port**: \[The IP port of the device. Indicate if required or not. If so, specify default value and range.\]
-  - **Bus address**: \[The bus address of the device. Indicate if required or not. If so, specify default value, range and format.\]
+  - **IP address/host**: The polling IP of the device.
+  - **IP port**: The IP port of the device.
+  - **Bus address**: The bus address of the device.
 
 ## How to Use
 

@@ -36,7 +36,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: As the element needs to listen to incoming streams, this is the IP of the DMA itself. In case there are multiple network cards, this is the IP of the network card where the stream will enter.
+  - **IP address/host**: As the element needs to listen to incoming streams, this is the IP of the DMA itself. In case there are multiple network cards, this is the IP of the network card where the stream will enter.
   - **IP port**: This is the TCP port that the element has to listen to for incoming streams.
 
 ### Configuration of Collector Type

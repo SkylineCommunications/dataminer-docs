@@ -43,10 +43,12 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device.
+  - **IP address/host**: The polling IP of the device.
   - **IP port**: The IP port of the device, by default *502*.
   - **Bus address**: The bus address of the device. Range: *0-7*.
-    Note: This module is typically mounted in a 4- or 8-slot ADAM-5000 rack module and the bus address is determined by the slot position.
+
+    > [!NOTE]
+    > This module is typically mounted in a 4- or 8-slot ADAM-5000 rack module and the bus address is determined by the slot position.
 
 ## Usage
 

@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP of the device, e.g. *127.0.0.1*.
+  - **IP address/host**: The polling IP of the device, e.g. *127.0.0.1*.
   - **IP port**: The IP port of the device, e.g. *4016.* Required.
   - **Bus address**: The bus address of the device. Required. Uses the format *\<Node\>\<Destination\>*, e.g. *3031* for Node 0x30, Destination 0x31, or *\<Destination\>,* e.g. *31* for Destination 0x31. The node refers to the controller (e.g. Mitec 17345), the destination refers to the HPA itself.
 

@@ -34,7 +34,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: The polling IP or URL of the destination. If you specify "any" as the host address, DataMiner listens on all IP addresses on the specified port.
+  - **IP address/host**: The polling IP or URL of the destination. If you specify "any" as the host address, DataMiner listens on all IP addresses on the specified port.
   - **IP port**: Default: *8080*.
   - **Accepted address**: Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
 

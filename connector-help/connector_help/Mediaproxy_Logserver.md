@@ -61,7 +61,7 @@ SERIAL CONNECTION:
 
 - Interface connection:
 
-- **IP address/host**: Set this to "any".
+  - **IP address/host**: Set this to "any".
   - **IP port:** Set this to "any".
 
 Push API:
