@@ -61,8 +61,8 @@ From version **2.0.0.17** onwards, sets can be made to cards using the Oxtel pro
 | [Miranda IControl General - WDA-1001](xref:Connector_help_Miranda_IControl_General_-_WDA-1001)                 | Word clock distribution amplifier (prior to version 2.0.0.x)                          |
 | [Miranda IControl General - ADA-1033](xref:Connector_help_Miranda_IControl_General_-_ADA-1033)                 | Audio distribution amplifier (prior to version 2.0.0.x)                               |
 | [Miranda IControl General - ADX-102](xref:Connector_help_Miranda_IControl_General_-_ADX-102)                   | Imaging card (prior to version 2.0.0.x)                                               |
-| [Miranda IControl General - KMX-3901 OUT](xref:Connector_help_Miranda_IControl_General_-_KMX-3901_OUT)       | Dual-head output (prior to version 2.0.0.x)                                           |
-| [Miranda IControl General - KMX-3901 IN](xref:Connector_help_Miranda_IControl_General_-_KMX-3901_IN)         | IP input module (prior to version 2.0.0.x)                                            |
+| [Miranda IControl General - KMX-3901 OUT](xref:Connector_help_Miranda_IControl_General_-_KMX-3901-OUT)       | Dual-head output (prior to version 2.0.0.x)                                           |
+| [Miranda IControl General - KMX-3901 IN](xref:Connector_help_Miranda_IControl_General_-_KMX-3901-IN)         | IP input module (prior to version 2.0.0.x)                                            |
 | [Miranda IControl General - DSK-3901](xref:Connector_help_Miranda_IControl_General_-_DSK-3901)                 | 3G/HD/SD downstream keyer (prior to version 2.0.0.x)                                  |
 | [Miranda IControl General - HCO-3901](xref:Connector_help_Miranda_IControl_General_-_HCO-3901)                 | 3G/HD/SD/ASI changeover with clean Switch and ALC (prior to version 2.0.0.x)          |
 | [Miranda IControl General - REF-1801](xref:Connector_help_Miranda_IControl_General_-_REF-1801)                 | Reference module with optional sync pulse generator (prior to version 2.0.0.x)        |

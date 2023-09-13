@@ -4,31 +4,29 @@ uid: Connector_help_Cellent_EMS
 
 # Cellent EMS
 
-The cellent EMS makes it possible to send text messages with an automation script using an http request.
+The Cellent EMS makes it possible to send text messages with an Automation script using an HTTP request.
 
 ## About
 
-With an automation script the number and message separated by an '\|' can be given to this driver.
-After which the driver will process this information together with the information set on the driver itself like the username, password, etc. to make the http request.
+With an Automation script, the number and message separated by an '\|' can be given to this connector.
+
+After this, the connector will process this information together with the information set in the element like the username, password, etc. to make the HTTP request.
+
 Statistics of the request and responses are kept next to a history table of the last messages.
 
-Ranges of the driver
+### Version Info
 
-**This subsection can only be omitted in case of an exported driver**
-
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
 #### HTTP main connection
 
-Style: Heading 4 Intense Quote
-
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,13 +38,12 @@ HTTP CONNECTION:
 
 ### General
 
-On the **General** page the configuration of the http request can be made. Next to these parameters there are also some statistics.
+On the **General** page, the configuration of the HTTP request can be done. Next to these parameters, there are also some statistics.
 
 ### History
 
-On this page a **History Table** is shown with the last 100 messages. The amount of rows in the history table can be changed.
+On this page, a **History Table** is shown with the last 100 messages. The number of rows in the history table can be changed.
 
 ## Notes
 
-Special characters like '\[', '\]', '{', '}', 'æ', etc. can cause problems in the message. Http response gives an acknowledgment that text message has been send, but text message never arrives at cellphone.
-Best to check if the API of Cellent supports special characters.
+Special characters like '\[', '\]', '{', '}', 'æ', etc. can cause problems in the message. A HTTP response acknowledges that a text message has been sent, but the text message never arrives. Check if the API of Cellent supports the special characters.

@@ -54,14 +54,14 @@ This page allows you to **enable or disable automatic provisioning** of the dete
 
 The **automatic provisioning** **process** consists of the following steps:
 
-1.  The **SCTE UPS Manager** element receives a Warm or Cold Trap from a UPS device. The trap is registered in the **Traps Table**.
+1. The **SCTE UPS Manager** element receives a Warm or Cold Trap from a UPS device. The trap is registered in the **Traps Table**.
 
-2.  The manager processes the Traps Table (every 30 seconds) to verify if the device that sent the trap is responding to SNMP requests.
+1. The manager processes the Traps Table (every 30 seconds) to verify if the device that sent the trap is responding to SNMP requests.
 
-3.  If the device responds to the SNMP requests, the manager verifies if the device has already been provisioned in a **SCTE UPS Collector**.
+1. If the device responds to the SNMP requests, the manager verifies if the device has already been provisioned in a **SCTE UPS Collector**.
 
-4.  - If the UPS device has already been provisioned, the manager verifies if the IP address has changed, and modifies it if necessary.
-    - If the UPS device does not exist, it will be provisioned in the next available **SCTE UPS Collector**.
+   - If the UPS device has already been provisioned, the manager verifies if the IP address has changed, and modifies it if necessary.
+   - If the UPS device does not exist, it will be provisioned in the next available **SCTE UPS Collector**.
 
 Points to consider:
 
@@ -72,14 +72,14 @@ Points to consider:
 
 The **manual provisioning process** consists of the following steps:
 
-1.  The **SCTE UPS Manager** element receives a Warm or Cold Trap from a UPS device. The trap is registered in the **Traps Table**.
+1. The **SCTE UPS Manager** element receives a Warm or Cold Trap from a UPS device. The trap is registered in the **Traps Table**.
 
-2.  The manager processes the Traps Table (every 30 seconds) to verify if the device that sent the trap is responding to SNMP requests.
+1. The manager processes the Traps Table (every 30 seconds) to verify if the device that sent the trap is responding to SNMP requests.
 
-3.  If the device responds to the SNMP requests, the manager verifies if the device has already been provisioned in a **SCTE UPS Collector**.
+1. If the device responds to the SNMP requests, the manager verifies if the device has already been provisioned in a **SCTE UPS Collector**.
 
-4.  - If the UPS device has already been provisioned, the manager verifies if the IP address has changed, and modifies it if necessary.
-    - If the device is new, an entry is created in the **Detected Devices Table**. From this table, you can manually provision the UPS device (see **[Detected Devices](#detecteddevices)** section below).
+   - If the UPS device has already been provisioned, the manager verifies if the IP address has changed, and modifies it if necessary.
+   - If the device is new, an entry is created in the **Detected Devices Table**. From this table, you can manually provision the UPS device (see **[Detected Devices](#detected-devices)** section below).
 
 Points to consider:
 
@@ -120,7 +120,7 @@ Below the table, a **Deletion Prefix** can be defined. If the name of a UPS devi
 
 ### Detected Devices
 
-The SCTE UPS Manager is capable of detecting Warm and Cold Traps sent by UPS devices (see [Traps](#trapssection) section). With this information, the manager verifies if these devices have already been provisioned in a collector (based on the serial number).
+The SCTE UPS Manager is capable of detecting Warm and Cold Traps sent by UPS devices (see [Traps](#traps)). With this information, the manager verifies if these devices have already been provisioned in a collector (based on the serial number).
 
 If a device has already been provisioned, the manager will verify if the IP address is still the same and update it in case it is not the same.
 
@@ -128,15 +128,15 @@ If a device has not been provisioned, the manager will determine if **Automatic 
 
 - If **Automatic Provisioning** is *Disabled*, an entry will be created in the **Detected Devices** table.
 
-> ![Detected devices.jpg](~/connector-help/images/SCTE_UPS_Manager_Detected_devices.jpg)
->
-> This table displays basic information about the detected device, such as the **System Name**, **System Location**, **Serial Number** and the reason why the device was not automatically provisioned (e.g. because Manual mode was active, like in the image above).
->
-> You can manually provision the devices in this table by right-clicking a specific entry and selecting **Provision**. A pop-up window will then be displayed where you can fill in the basic information of the device. The **DMS View** and **Collector** must always be specified.
->
-> ![Provision Device.jpg](~/connector-help/images/SCTE_UPS_Manager_Provision_Device.jpg)
+  ![Detected devices.jpg](~/connector-help/images/SCTE_UPS_Manager_Detected_devices.jpg)
 
-> When you click **OK**, the manager will provision the device in the selected collector. If an error occurs during this process, the details will appear in the **Failure Description** of the corresponding entry in the table.
+  This table displays basic information about the detected device, such as the **System Name**, **System Location**, **Serial Number** and the reason why the device was not automatically provisioned (e.g. because Manual mode was active, like in the image above).
+
+  You can manually provision the devices in this table by right-clicking a specific entry and selecting **Provision**. A pop-up window will then be displayed where you can fill in the basic information of the device. The **DMS View** and **Collector** must always be specified.
+
+  ![Provision Device.jpg](~/connector-help/images/SCTE_UPS_Manager_Provision_Device.jpg)
+
+  When you click **OK**, the manager will provision the device in the selected collector. If an error occurs during this process, the details will appear in the **Failure Description** of the corresponding entry in the table.
 
 - When **Automatic Provisioning** is *Enabled*, the manager will provision the device in an available SCTE UPS Collector element (taking into account the maximum of 250 UPS devices per collector). If an error occurs during this process, an entry will be created in the **Detected Devices** table with the corresponding error in the **Failure Description**.
 
@@ -170,49 +170,52 @@ This page contains the **Scheduled Test** table.
 
 In this table, you can configure the tests that will be created in bulk in all the SCTE UPS Collector elements. To do so, follow the steps below.
 
-1.  Click the **Add** button at the bottom of the page. An entry will be created in the **Scheduled Test Table**.
+1. Click the **Add** button at the bottom of the page. An entry will be created in the **Scheduled Test Table**.
 
-2.  Define a unique **Name** for the test (mandatory), and then define the type of test (*Yearly*/*Monthly*/*One Time*).
+1. Define a unique **Name** for the test (mandatory), and then define the type of test (*Yearly*/*Monthly*/*One Time*).
 
-3.  When you have selected the type of test, the entry will be filled in with default values for **Start Time**, **Duration**, **Minimum Voltage Threshold**, and **Maximum Voltage Difference**, but you can fine-tune these if necessary. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected)
-    You also need to define the **End Date**, which determines until when the test will be valid. If the test is of type *One Time*, the end date should be *Not Configured*.
+1. When you have selected the type of test, the entry will be filled in with default values for **Start Time**, **Duration**, **Minimum Voltage Threshold**, and **Maximum Voltage Difference**, but you can fine-tune these if necessary. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected)
 
-4.  Configure the **Automatic Provisioning**. If this is enabled, the test will be created in the automatically provisioned UPS.
+   You also need to define the **End Date**, which determines until when the test will be valid. If the test is of type *One Time*, the end date should be *Not Configured*.
 
-5.  Click the button **Update UPS Tests**. This will replicate the tests in all the available UPS elements. The following logic will be applied in order to avoid all tests getting executed at the same time:
+1. Configure the **Automatic Provisioning**. If this is enabled, the test will be created in the automatically provisioned UPS.
 
-6.  - If a test is of type **One Time**, the **Start Date** of the replicated tests in the collectors will be spread out over the **7 days** following the configured date in the manager.
-    - If a test is of type **Monthly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **30 days** following the configured date in the manager.
-    - If a test is of type **Yearly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **365 days** following the configured date in the manager.
+1. Click the button **Update UPS Tests**. This will replicate the tests in all the available UPS elements. The following logic will be applied in order to avoid all tests getting executed at the same time:
+
+   - If a test is of type **One Time**, the **Start Date** of the replicated tests in the collectors will be spread out over the **7 days** following the configured date in the manager.
+   - If a test is of type **Monthly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **30 days** following the configured date in the manager.
+   - If a test is of type **Yearly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **365 days** following the configured date in the manager.
 
 ### Scheduled Tests (connector version \>= 2.0.0.12)
 
 In version **2.0.0.12** of the connector, the Scheduler module is integrated with the UPS tests. As a consequence, the test creation procedure is different:
 
-1.  Right-click the Scheduled Test table and select **Add**. A pop-up window will be displayed where you can fill in the test information.
+1. Right-click the Scheduled Test table and select **Add**. A pop-up window will be displayed where you can fill in the test information.
 
-2.  Define a unique **Name** for the test (mandatory), and then define the type of test (*Yearly*/*Monthly*/*One Time*).
+1. Define a unique **Name** for the test (mandatory), and then define the type of test (*Yearly*/*Monthly*/*One Time*).
 
-3.  Define the **Start** and **End Date** of the test. If the test is *Yearly* or *Monthly*, the End Date is mandatory; if the type is *One Time*, set the End Date to *Not Configured*.
+1. Define the **Start** and **End Date** of the test. If the test is *Yearly* or *Monthly*, the End Date is mandatory; if the type is *One Time*, set the End Date to *Not Configured*.
 
-4.  Set the **Duration**, **Duration Unit** and **Maximum Voltage Difference**. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected.
+1. Set the **Duration**, **Duration Unit** and **Maximum Voltage Difference**. You can also define if the test must take into account the **Minimum Voltage Threshold** or the **Full Drain Minimum Voltage Threshold**. These are mutually exclusive, so only one can be selected.
 
-5.  Configure the **Automatic Provisioning**. If this is enabled, the test will be created in the automatically provisioned UPS. Take into account that tests with **Replicate Mode** set to *Custom Group* cannot have this option enabled.
+1. Configure the **Automatic Provisioning**. If this is enabled, the test will be created in the automatically provisioned UPS. Take into account that tests with **Replicate Mode** set to *Custom Group* cannot have this option enabled.
 
-6.  Configure the **Replicate Test Mode** and **Custom Value**.
-    From version **2.0.0.12** of the connector onwards, the test replication feature is available, so you can also select where the tests should be replicated:
+1. Configure the **Replicate Test Mode** and **Custom Value**.
 
-7.  - **All Collectors**: The test is applied to all UPS elements. Set the **Replicate Test Mode** to *All Collectors* and the **Custom Value** to *Not Configured*.
-    - **Custom View**: The test is applied to the UPS elements that are located in a specific view. Set the **Replicate Test Mode** to *Custom View* and the **Custom Value** to the name of the view.
-    - **Custom Group**: The test is applied to the UPS elements that are part of a specific group. Set the **Replicate Test Mode** to *Custom Group* and the **Custom Value** to the name of the group. (The group configuration is done in the SCTE UPS Collector elements).
+   From version **2.0.0.12** of the connector onwards, the test replication feature is available, so you can also select where the tests should be replicated:
 
-8.  Click **OK**.
-    ![Create Test Manager.jpg](~/connector-help/images/SCTE_UPS_Manager_Create_Test_Manager.jpg)
+   - **All Collectors**: The test is applied to all UPS elements. Set the **Replicate Test Mode** to *All Collectors* and the **Custom Value** to *Not Configured*.
+   - **Custom View**: The test is applied to the UPS elements that are located in a specific view. Set the **Replicate Test Mode** to *Custom View* and the **Custom Value** to the name of the view.
+   - **Custom Group**: The test is applied to the UPS elements that are part of a specific group. Set the **Replicate Test Mode** to *Custom Group* and the **Custom Value** to the name of the group. (The group configuration is done in the SCTE UPS Collector elements).
 
-9.  Once all the tests have been created, click **Update UPS Tests**. This will replicate the tests in all the available UPS elements. The following logic will be applied in order to avoid all tests getting executed at the same time:
+1. Click **OK**.
 
-10. - If a test is of type **One Time**, the **Start Date** of the replicated tests in the collectors will be spread out over the **7 days** following the configured date in the manager.
-    - If a test is of type **Monthly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **30 days** following the configured date in the manager.
-    - If a test is of type **Yearly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **365 days** following the configured date in the manager.
+   ![Create Test Manager.jpg](~/connector-help/images/SCTE_UPS_Manager_Create_Test_Manager.jpg)
+
+1. Once all the tests have been created, click **Update UPS Tests**. This will replicate the tests in all the available UPS elements. The following logic will be applied in order to avoid all tests getting executed at the same time:
+
+   - If a test is of type **One Time**, the **Start Date** of the replicated tests in the collectors will be spread out over the **7 days** following the configured date in the manager.
+   - If a test is of type **Monthly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **30 days** following the configured date in the manager.
+   - If a test is of type **Yearly**, the **Start Date** of the replicated tests in the collectors will be spread out over the **365 days** following the configured date in the manager.
 
 The button **Sync Tests** is also available from version 2.0.0.12 onwards. It can be used to integrate tests that were created with connector versions lower than 2.0.0.12 of the SCTE UPS Manager and 1.0.2.21 of the SCTE UPS Collector in the Schedule module of DataMiner. This action should only be performed once.
