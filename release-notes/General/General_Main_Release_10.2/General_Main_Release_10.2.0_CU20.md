@@ -45,15 +45,21 @@ From now on, the number of backups you specify will be the number of backups tha
 
 #### Inventory & Asset Management: Problem when synchronizing between the DMA and the database [ID_37177]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 The Asset Manager would add NullReference exceptions to the SLNet log file when trying to synchronize between the DMA and the database.
 
 When a view or an element was deleted on the DMA before a synchronization was performed from the database to the DMA, the deleted items would not get recreated unless the DMA had been restarted before the synchronization, and when a mediation configuration file was adapted and reloaded, the view configuration would not be reloaded.
 
+#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
+
+<!-- MR 10.2.0 [CU20] - FR 10.3.10 -->
+
+When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
+
 #### DataMiner Cube - Alarm Console : Problem when a correlation/incident alarm got cleared [ID_37231]
 
-<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
 
 On a system with a large number of correlation/incident alarms, in some cases, an error could occur when one of those alarms was cleared. That alarm would then incorrectly remain visible in the Alarm Console.
 
