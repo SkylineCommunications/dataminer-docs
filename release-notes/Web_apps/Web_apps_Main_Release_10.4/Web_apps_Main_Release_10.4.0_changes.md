@@ -779,12 +779,6 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
-#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
-
 #### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->

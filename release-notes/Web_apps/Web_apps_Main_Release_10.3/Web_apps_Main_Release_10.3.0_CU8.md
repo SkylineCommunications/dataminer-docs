@@ -22,6 +22,12 @@ uid: Web_apps_Main_Release_10.3.0_CU8
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 
+#### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
+
+Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+
 #### Dashboards app/Low-Code Apps: Problem with custom time zones [ID_37278]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
