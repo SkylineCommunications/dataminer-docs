@@ -42,39 +42,27 @@ Other detected inconsistencies are logged by a BPA. These are usually non-critic
 
 This approach is designed to give administrators the opportunity to explore and understand the root cause of issues before undertaking a reconfiguration, fostering a more educated approach to system adjustments and mitigating potential disruptions to active operations. The detection of incorrect routes will trigger a Nats restart to reestablish the correct routes to the local Nats server.
 
-
 ```mermaid
 flowchart TD
-    Start((Start)) --> S1
-    S1[/DataMiner system agents/] --> S2
-    S2[Collect Nodes] --> S3
-    S3[Build Nats configuration] --> S4
-    S4[/New Nats configuration/] --> S5
-    S4A[/Current Nats configuration/] --> S5
-    S4B[/Nats Monitoring API/] --> S5
-    S5[Check for configuration changes] --> S6
-    S6[Identify new nodes] --> S7
-    S7[Detect deleted nodes] --> S8
-    S8[Validate config differences] --> S9
-    S9[Ensure Nats operational] --> S10
-    S10[Identify unavailable nodes] --> S11
-    S11[Detect incorrect routes] --> Q1
-    Q1{Detected changes for <br/> automatic Nats reconfiguration?} -->|Yes| A1
-    Q1 -->|No| Q2
-    A1[Automatic Nats reconfiguration] --> A1S1
-    A1S1[Reconfigure Nats] --> A1S2
-    A1S2[Restart Nats] --> Q2
-    Q2{Detected changes for<br/>manual Nats reconfiguration?} -->|Yes| A2
-    Q2 -->|No| Q3
-    A2[Manual Nats reconfiguration] --> Q3
-    Q3{Detected changes for Nats restart?} -->|No| End
-    Q3 -->|Yes| A3
-    A3[Restart Nats] --> End
+Start((Start)) --> S1
+S1[/DataMiner system agents/] --> S2
+S2[Collect Nodes] --> S3
+S3[Build Nats configuration] --> S4
+S4[/New Nats configuration/] --> S5
+S4A[/Current Nats configuration/] --> S5
+S4B[/Nats Monitoring API/] --> S5
+S5[Check for configuration changes] --> S6
+S6[Identify new nodes] --> S7
+S7[Detect deleted nodes] --> S8
+S8[Validate config differences] --> S9
+S9[Ensure Nats operational] --> S10
+S10[Identify unreachable nodes] --> Q1
+Q1{Detected changes for
+automatic Nats reconfiguration?} -->|Yes| A1
+Q1 -->|No| End
+A1[Reconfigure Nats configuration] --> A1S2
+A1S2[Restart Nats] --> End
 ```
-
-## Manual Nats Reconfiguration
-
-TODO: Document the BPA
 
 ### Triggering Nats Reconfiguration
 
