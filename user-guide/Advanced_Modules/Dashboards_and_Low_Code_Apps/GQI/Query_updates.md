@@ -22,7 +22,7 @@ This setting will enable updates for all queries executed by that component.
 A GQI query can offer various levels of support for updates:
 
 1. It can support updates through [real-time events](#real-time-events)
-1. It can support updates through [notify events](#notification-events)
+1. It can support updates through [notification events](#notification-events)
 1. It might not provide any support for updates.
 
 > [!IMPORTANT]

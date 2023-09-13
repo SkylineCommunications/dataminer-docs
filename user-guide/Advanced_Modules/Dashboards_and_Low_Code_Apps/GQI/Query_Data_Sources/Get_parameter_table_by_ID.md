@@ -12,12 +12,15 @@ From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in th
 
 ## Updates
 
-From DataMiner 10.3.11 onwards, this data source also supports real-time updates.
+From DataMiner 10.3.10 onwards, this data source also supports real-time updates.
 
 Refer to [query updates](xref:Query_updates#query-update-support) for a more detailed explanation on the different ways you can automatically update your query result.
 
 > [!WARNING]
-> There are no real-time updates yet for **partial** tables.
+> There are no real-time updates yet for **partial** tables and **view** tables.
+
+> [!WARNING]
+> There is no metadata yet on added rows, so you won't be able to use those as a parameter or index feed.
 
 > [!TIP]
 > [Filters](xref:GQI_Filter) applied directly on this data source will also support real-time updates.
