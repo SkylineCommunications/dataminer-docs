@@ -25,3 +25,10 @@ Use this action to upload a report to an FTP server:
    > - If you want to specify multiple indices for one table parameter, use a semicolon “;” as separator.
    > - If you want to specify multiple parameters for one element, service, or protocol version, assign them all within a single line.
    > - From DataMiner 9.6.13 onwards, you can select to include a dashboard from the new Dashboards app. The dashboards are listed in the drop-down list along with the reports. The icon in front of each item in the list shows whether the item is a dashboard or a report. From DataMiner 10.0.13 onwards, a *Configure* button is available that allows you to further configure a report based on a dashboard. See [Generating a PDF report based on a dashboard using DataMiner Cube](xref:Generating_a_report_based_on_a_dashboard_Cube).
+
+## Example configuration
+
+**Example 1:** A user wants to upload a report/dashboard named _Versions_ to the _root_ folder of an FTP server with IP _10.200.10.20_ (port _21_), using _JohnDoe_'s account credentials. The configuration would look like this:
+
+![image](https://github.com/SkylineCommunications/dataminer-docs/assets/121097704/b5809428-2ada-4d00-b833-3839aeaa3ac5)
+
