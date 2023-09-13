@@ -14,5 +14,6 @@ This chapter consists of the following sections:
 - [Plugins](xref:DisPlugins)
 - [Development using DIS](xref:DisVisualStudioSolutions)
 - [Debugging connectors and Automation scripts](xref:Debugging_connectors_and_Automation_scripts)
+- [Tutorials](xref:DisTutorials_MibBrowser)
 - [Troubleshooting](xref:Troubleshooting)
 - [DIS reference](xref:DIS_reference)
