@@ -55,6 +55,14 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
 #### Security enhancements [ID_37267]
 
 <!-- 37267: MR 10.4.0 - FR 10.3.11 -->
