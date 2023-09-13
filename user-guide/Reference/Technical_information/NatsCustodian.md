@@ -33,14 +33,11 @@ flowchart TD
 
 ## NatsCustodian workflow: Starting from DataMiner 10.2.0-CU18 / 10.3.0-CU6 / 10.3.9
 
-NatsCustodian acquires the IP addresses of DataMiner agents in the DataMiner system/cluster. It then creates a NATS configuration using these addresses, and cross-verifies this against the existing NATS Additionally, the NATS Monitoring API, which provides various endpoints for assessing the NATS server's status, is employed to check the current status of NATS nodes. This functionality is particularly advantageous as the NATS server and its Monitoring API operate independently of the DataMiner server, thus enhancing cluster stability and reducing potential downtime.
-The system incorporates several checks, including the detection of new nodes, tracking of deleted nodes, identification of unavailable nodes, verification of configuration accuracy, validation of NATS process operations, and detection of incorrect routes.
+NatsCustodian acquires the IP addresses of DataMiner agents in the DataMiner system/cluster. It then creates a NATS configuration using these addresses and cross-verifies this against the existing NATS setup. Additionally, the NATS Monitoring API, which provides various endpoints for assessing the NATS server's status, is employed to check the current status of NATS nodes. This functionality is particularly advantageous as the NATS server and its Monitoring API operate independently of the DataMiner server, thus enhancing cluster stability and reducing potential downtime.
 
-If any inconsistencies are identified during these checks, a NATS reconfiguration or restart is triggered. A Nats reconfiguration can be either manual or automatic, depending on the type of anomaly detected. The appearance of new nodes or removal of existing ones triggers an automatic reconfiguration. 
+The system incorporates several checks, including identification of new nodes, detection of deleted nodes, tracking of unreachable nodes, validation of configuration correctness, and ensuring the running status of the NATS process.
 
-Other detected inconsistencies are logged by a BPA. These are usually non-critical and do not trigger an automatic reconfiguration.
-
-This approach is designed to give administrators the opportunity to explore and understand the root cause of issues before undertaking a reconfiguration, fostering a more educated approach to system adjustments and mitigating potential disruptions to active operations. The detection of incorrect routes will trigger a Nats restart to reestablish the correct routes to the local Nats server.
+Should NatsCustodian identify any inconsistency, except for unreachable nodes, an automatic NATS reconfiguration is initiated.
 
 ```mermaid
 flowchart TD
