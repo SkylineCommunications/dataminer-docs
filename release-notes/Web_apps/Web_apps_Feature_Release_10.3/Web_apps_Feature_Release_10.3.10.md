@@ -201,7 +201,7 @@ After you had published an app, the *View published app* option would still be p
 
 #### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU20] - FR 10.3.10 -->
 
 When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
 

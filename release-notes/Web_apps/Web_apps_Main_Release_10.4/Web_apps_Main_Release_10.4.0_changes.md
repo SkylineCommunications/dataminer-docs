@@ -761,12 +761,6 @@ In some cases, an error could occur when migrating a GQI component:
 
 - When the query used ad hoc data with multiple arguments, and one argument linked to query rows came after an argument linked to something other than query rows, the migration would not succeed and would cause the app to no longer be editable.
 
-#### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
-
-<!-- MR 10.4.0 - FR 10.3.10 -->
-
-When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
-
 #### Dashboards app/Low-Code Apps: Label of 'Icon' setting of 'Icon' component would incorrectly be in lower case [ID_37199]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
@@ -784,3 +778,9 @@ When, on a dashboard, a website was embedded using a Web component, in some case
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
+
+#### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In some cases, an error could occur in the IIS web server when redirecting the user to the login page.

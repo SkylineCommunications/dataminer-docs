@@ -55,13 +55,35 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
 #### Security enhancements [ID_37267]
 
 <!-- 37267: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
+#### SLAnalytics - Trend predictions: Enhanced trend prediction models [ID_37280]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
+
 ### Fixes
+
+#### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
+
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+When the backup agent is the online agent while a Failover pair is being migrated to Cassandra Cluster, data generated during the migration can get lost.
+
+From now on, when you start a Cassandra Cluster migration, a warning message will appear if, for any of the Failover pairs in the cluster, the backup agent is the online agent. This warning message will advise you to make sure that, for all Failover pairs in the cluster, the main agent is the online agent.
 
 #### Not all Protocol.Params.Param.Interprete.Others tags would be read out [ID_36797]
 
@@ -115,6 +137,12 @@ In some cases, SLElement could read and write to the same memory blocks on diffe
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Problem when masking a DVE child element or a virtual function [ID_37240]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+When you masked a DVE child element or a virtual function, not all alarms of all parameters would be masked.
 
 #### Service & Resource Management: Resources that were still in use could be deactivated [ID_37244]
 
