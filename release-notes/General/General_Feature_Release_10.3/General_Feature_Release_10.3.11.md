@@ -138,6 +138,12 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
 
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
 #### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
