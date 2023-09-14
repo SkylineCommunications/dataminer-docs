@@ -31,9 +31,9 @@ After installation, we recommend that you do the following checks in order to be
   - Under *Internet Information Services > World Wide Web Services > Application Development Features*, the following features must be enabled:
 
     - ASP.NET (3.5)
-    - ASP.NET 4.5 (On Windows 8 and Windows 2012 Server)
+    - ASP.NET 4.5 (On Windows 2012 Server)
     - .NET (3.5) Extensibility
-    - .NET 4.5 Extensibility (On Windows 8 and Windows 2012 Server)
+    - .NET 4.5 Extensibility (On Windows 2012 Server)
     - ASP
     - ISAPI Extensions
     - ISAPI Filters

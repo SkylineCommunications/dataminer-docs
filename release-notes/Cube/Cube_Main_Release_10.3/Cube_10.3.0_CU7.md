@@ -8,7 +8,7 @@ uid: Cube_Main_Release_10.3.0_CU7
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
 > [!TIP]
-> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU6](xref:General_Main_Release_10.3.0_CU6).
+> For release notes for this release that are not related to DataMiner Cube, see [General Main Release 10.3.0 CU7](xref:General_Main_Release_10.3.0_CU7).
 
 ### Enhancements
 

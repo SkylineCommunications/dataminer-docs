@@ -12,9 +12,9 @@ uid: Web_apps_Feature_Release_10.3.10
 
 ## Highlights
 
-*No highlights have been added to this release yet.*
+- [Dashboards app & Low-Code Apps: New Stepper component [ID_37200]](#dashboards-app--low-code-apps-new-stepper-component-id_37200)
 
-## Other features
+## New features
 
 #### Dashboards app & Low-Code Apps - GQI: Table visualizations now support real-time query updates [ID_36789]
 
@@ -131,7 +131,7 @@ A number of date/time picker issues have been fixed.
 
 #### Dashboards app: 'Loading...' indicator would appear when trying to save a folder of which the name consists of spaces [ID_37046]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- 10.2.0 [CU20]/MR 10.3.0 [CU7] - FR 10.3.10 -->
 
 When, in the *Create folder* or *Create dashboard* window, you clicked inside the *Location* box, clicked "+" to add a new folder, entered a series of spaces, and then clicked the checkmark button, a "Loading..." indicator would appear at the top of the window but nothing would happen.
 
@@ -201,7 +201,7 @@ After you had published an app, the *View published app* option would still be p
 
 #### Dashboards app/Low-Code Apps: Seconds of multiple clock components would not be in sync [ID_37193]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.2.0 [CU20] - FR 10.3.10 -->
 
 When you enabled the *Show seconds* option of multiple clock components on the same dashboard or app panel, the seconds would incorrectly not all be in sync.
 
@@ -219,12 +219,12 @@ The label of the *Icon* setting of an *Icon* component would incorrectly be in l
 
 #### Low-Code Apps: Problem when two State components were fed the same query row data with a column filter applied [ID_37206]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 When two *State* components were fed the same query row data and had a column filter applied, the app would become unresponsive.
 
 #### Dashboards app/Low-Code Apps: Problem when migrating a query containing only a 'start from' node linking to another query with only a 'start from' node [ID_37224]
 
-<!-- MR 10.4.0 - FR 10.3.10 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
