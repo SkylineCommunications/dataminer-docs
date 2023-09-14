@@ -69,9 +69,9 @@ Up to now, a run-time error would be thrown when the `<AzureAD>` element in the 
 
 This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
 
-#### Security enhancements [ID_37267]
+#### Security enhancements [ID_37267] [ID_37291]
 
-<!-- 37267: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37267/37291: MR 10.4.0 - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
