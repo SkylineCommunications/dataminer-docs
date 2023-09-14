@@ -71,7 +71,8 @@ This `objectId` attribute will now be considered optional. Hence, no run-time er
 
 #### Security enhancements [ID_37267] [ID_37291]
 
-<!-- 37267/37291: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37267: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 

@@ -51,6 +51,12 @@ Also, in case of a Failover setup, the above-mentioned list of IP addresses will
 
 A number of enhancements have been made to the trend prediction models, especially with regard to detecting daily trend recurrences.
 
+#### Security enhancements [ID_37291]
+
+<!-- 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Failover: Data can get lost when the backup agent is the online agent during a Cassandra Cluster migration [ID_34018]
