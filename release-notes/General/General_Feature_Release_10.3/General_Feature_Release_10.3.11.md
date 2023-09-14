@@ -47,6 +47,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
+
 #### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
