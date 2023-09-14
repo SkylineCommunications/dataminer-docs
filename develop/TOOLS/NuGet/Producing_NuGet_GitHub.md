@@ -45,7 +45,7 @@ Follow the instructions in [the official GitHub Docs](https://docs.github.com/en
 
 - **Secret**: Enter your personal access token.
 
-#### Creating a tag
+#### Publishing the package
 
 After creating the tag and running the workflow, you can find your package on the *Packages* page on [GitHub](https://github.com/orgs/SkylineCommunications/packages).
 
