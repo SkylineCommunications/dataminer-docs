@@ -634,3 +634,9 @@ When you deleted a trend pattern when connected to a DataMiner Agent running an 
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 Up to now, the MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialized, causing other exceptions to be thrown.
+
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.

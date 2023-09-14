@@ -158,8 +158,20 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+
+#### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in the SLAnalytics process due to some features not starting up correctly.
