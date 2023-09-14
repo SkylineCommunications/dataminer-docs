@@ -4,23 +4,23 @@ uid: Connector_help_Work_Microwave_Converter_SNMP
 
 # Work Microwave Converter SNMP
 
-This SNMP driver is used to monitor and configure the various Work Microwave Converters that use the conv2 MIB.
+This SNMP connector is used to monitor and configure the various Work Microwave Converters that use the conv2 MIB.
 
 ## About
 
-The **Work Microwave Converter SNMP** driver is a full implementation of the conv2 MIB from Work. As such, this driver can be used for any Work Microwave that uses the conv2 MIB.
-The driver allows the user to monitor the converter and to configure the system and converter.
+The **Work Microwave Converter SNMP** connector is a full implementation of the conv2 MIB from Work. As such, this connector can be used for any Work Microwave that uses the conv2 MIB.
+The connector allows the user to monitor the converter and to configure the system and converter.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                                                | No                  | Yes                     |
 | 1.1.0.x \[SLC Main\] | Added frequency and attenuation channel band parameters that will replace the existing ones. Changed snmpSet to snmpSetAndGet. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x              | Unknown                     |
 | 1.1.0.x \[SLC Main\] | XNA01.73                    |
@@ -31,12 +31,12 @@ The driver allows the user to monitor the converter and to configure the system 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Not required for this driver.
+- **Device address**: Not required for this connector.
 
 SNMP Settings:
 

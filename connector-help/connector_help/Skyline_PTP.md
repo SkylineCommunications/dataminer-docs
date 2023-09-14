@@ -4,9 +4,9 @@ uid: Connector_help_Skyline_PTP
 
 # Skyline PTP
 
-The **Skyline PTP** driver is used as an **application** in the **DataMiner PTP Solution** to monitor the different PTP devices in a network.
+The **Skyline PTP** connector is used as an **application** in the **DataMiner PTP Solution** to monitor the different PTP devices in a network.
 
-A **Visio** file is provided along with this driver and provides full access to all functionality of the PTP Solution.
+A **Visio** file is provided along with this connector and provides full access to all functionality of the PTP Solution.
 
 ## About
 
@@ -34,7 +34,7 @@ A **Visio** file is provided along with this driver and provides full access to 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 Note that this element should not be created manually, but should instead be created using the **PTP_SetupWizard** Automation script. For more information, refer to the Initialization section below.
 

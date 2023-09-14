@@ -4,25 +4,25 @@ uid: Connector_help_Evertz_7880DM4-LB-IP
 
 # Evertz 7880DM4-LB-IP
 
-The **Evertz 7880DM4-LB-IP** driver is used to monitor and control an Evertz chassis containing different Evertz 7700/7800 series cards.
+The **Evertz 7880DM4-LB-IP** connector is used to monitor and control an Evertz chassis containing different Evertz 7700/7800 series cards.
 
 ## About
 
 The chassis must include an **Evertz 7800-FC** card in order to be functional. Data about the location of other cards is polled from this card. The **Evertz 7800-FC** is placed in slot 1; other cards are inserted into slots 2 to 15. A DVE will be created for each (supported) card. Data is polled via **SNMP** and **HTTP**. Traps are supported to reduce the amount of polling. When a trap is received, the corresponding parameter is polled again to update its value.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0.109                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                | **Description**                   |
 |--------------------------------------|-----------------------------------|
@@ -34,7 +34,7 @@ The chassis must include an **Evertz 7800-FC** card in order to be functional. D
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### HTTP Web API Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -58,7 +58,7 @@ HTTP CONNECTION:
 
 ## Usage
 
-This driver displays information about the Frame Controller (**Evertz 7800-FC**) and the inserted cards.
+This connector displays information about the Frame Controller (**Evertz 7800-FC**) and the inserted cards.
 
 ### General
 

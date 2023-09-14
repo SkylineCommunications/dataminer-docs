@@ -28,7 +28,7 @@ The SES S.A. SSG Report driver gathers data from selected elements in a DMS and 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -40,7 +40,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has only one data page, the **General** page. This page contains the **Element Monitoring** table, which must be filled in with information on the elements from which data should be gathered, primarily the **Element Name** and **Parameter ID**.
+The element created with this connector has only one data page, the **General** page. This page contains the **Element Monitoring** table, which must be filled in with information on the elements from which data should be gathered, primarily the **Element Name** and **Parameter ID**.
 
 To add rows, right-click the table and select **Add item** in the context menu. You will then be able to enter a **Custom Name** for the new row, describing the data to be polled. Via the context menu, you can also **duplicate a row** or **delete a row**.
 
@@ -54,4 +54,4 @@ At the bottom of the **General** page, the **Import/Export** page button can be 
 
 In order to automatically poll the data, a Scheduler task and Automation script are required.
 
-The frequency when data should be gathered can be set in the Scheduler task, and the Automation script only has to set the **Poll Information** button of the driver to any value.
+The frequency when data should be gathered can be set in the Scheduler task, and the Automation script only has to set the **Poll Information** button of the connector to any value.

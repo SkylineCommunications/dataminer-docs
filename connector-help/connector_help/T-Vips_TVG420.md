@@ -4,19 +4,19 @@ uid: Connector_help_T-Vips_TVG420
 
 # T-Vips TVG420
 
-The **T-Vips TVG420** driver is an SNMP-based driver used to monitor and configure the **T-Vips TVG420**. The device settings can be monitored and changed using the **TVG420** driver.
+The **T-Vips TVG420** connector is an SNMP-based connector used to monitor and configure the **T-Vips TVG420**. The device settings can be monitored and changed using the **TVG420** driver.
 
 ## About
 
 The **TVG420** provides a monitoring interface to the **T-Vips TVG420** IP Video Gateway device.
 
-### Supported firmware versions
+### Product Info
 
 Firmware version 3.26.12 has been tested to return the majority of the parameters implemented in the below versions of the protocol.
 
 Other firmware versions, such as 1.4.0 and 3.6.38, may also be used but will only return a limited number of parameters.
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.26.12                     |
 | 1.1.0.x          | 3.26.12                     |
@@ -28,7 +28,7 @@ Other firmware versions, such as 1.4.0 and 3.6.38, may also be used but will onl
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

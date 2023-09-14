@@ -10,9 +10,9 @@ This protocol is specifically customized to connect with a particular **database
 
 The protocol allows you to select an **RF switch** and a **spectrum analyzer**. The main page shows a logic tree view on the left, and on the right it shows the spectrum trace corresponding with the selected tree node.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                   | No                  | Yes                     |
 | 2.0.0.x          | Specific version for Globecomm DB | No                  | Yes                     |
@@ -23,7 +23,7 @@ The protocol allows you to select an **RF switch** and a **spectrum analyzer**. 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage (range 1.0.0.x)
 

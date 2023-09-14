@@ -8,7 +8,7 @@ The Rohde Schwarz DVM100L is a device used to monitor digital TV distribution an
 
 ## About
 
-This driver connects to the DVM100L and allows the configuration and monitoring of all streams, services and PIDs.
+This connector connects to the DVM100L and allows the configuration and monitoring of all streams, services and PIDs.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver connects to the DVM100L and allows the configuration and monitoring 
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -32,7 +32,7 @@ SNMP Settings:
 
 ### Tree Overview
 
-The **tree overview** on this page is the most important part of the driver. It provides a clear overview of all the **analyzers, ports, services and their PIDs**. Specifically of importance are the different **max and min bitrates.**
+The **tree overview** on this page is the most important part of the connector. It provides a clear overview of all the **analyzers, ports, services and their PIDs**. Specifically of importance are the different **max and min bitrates.**
 
 ### General
 
@@ -66,6 +66,6 @@ The following subjects are displayed in this section:
 - **DVB-S Configuration**
 - **DVB-T Configuration**
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

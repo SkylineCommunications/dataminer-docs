@@ -8,18 +8,18 @@ The **Harmonic Proview PVR8130** is an advanced Integrated Receiver Decoder (IRD
 
 ## About
 
-The driver is used to control and monitor the Harmonic Proview PVR8000.
+The connector is used to control and monitor the Harmonic Proview PVR8000.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                 | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Combine DVB-S2 port receiver and carrier parameters into a table | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x 1.0.1.x  | Unknown                     |
 
@@ -29,7 +29,7 @@ The driver is used to control and monitor the Harmonic Proview PVR8000.
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

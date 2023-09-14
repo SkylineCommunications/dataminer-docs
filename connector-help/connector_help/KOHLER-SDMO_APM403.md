@@ -4,7 +4,7 @@ uid: Connector_help_KOHLER-SDMO_APM403
 
 # KOHLER-SDMO APM403
 
-This driver monitors the activity of the KOHLER-SDMO APM403.
+This connector monitors the activity of the KOHLER-SDMO APM403.
 
 ## About
 
@@ -59,7 +59,7 @@ This control panel is designed for low voltage industrial diesel generator sets 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

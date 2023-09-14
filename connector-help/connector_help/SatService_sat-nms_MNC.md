@@ -4,29 +4,29 @@ uid: Connector_help_SatService_sat-nms_MNC
 
 # SatService sat-nms MNC
 
-With this driver, you can gather and view information from the device **SatService sat-nms MNC** and from the devices connected to it.
+With this connector, you can gather and view information from the device **SatService sat-nms MNC** and from the devices connected to it.
 
 ## About
 
-This driver is used to gather information from the **SatService sat-nms MNC** device, as well as any connected devices.
+This connector is used to gather information from the **SatService sat-nms MNC** device, as well as any connected devices.
 
-The driver displays several tables with general information for each device type.
+The connector displays several tables with general information for each device type.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**        | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**        | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version        | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | New range without DVEs | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
 
-### Exported drivers (only for range 1.0.0.x)
+### Exported connectors (only for range 1.0.0.x)
 
 | **Exported Protocol**                           | **Description**               |
 |-------------------------------------------------|-------------------------------|
@@ -53,7 +53,7 @@ The driver displays several tables with general information for each device type
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

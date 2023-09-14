@@ -10,15 +10,15 @@ This protocol has been made for an **Evertz EQT-1616** device. The EQT is a rout
 
 This protocol helps the user to monitor the Evertz EQT-1616 device and to configure all the right inputs and outputs, so an efficient way to configure every parameter is provided. The protocol contains a matrix.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This protocol helps the user to monitor the Evertz EQT-1616 device and to config
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

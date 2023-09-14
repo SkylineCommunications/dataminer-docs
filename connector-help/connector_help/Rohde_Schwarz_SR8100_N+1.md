@@ -4,17 +4,17 @@ uid: Connector_help_Rohde_Schwarz_SR8100_N+1
 
 # Rohde Schwarz SR8100 N+1
 
-With this driver, you can gather and view information from the device **Rohde Schwarz SR8100 N+1**, as well as configure the device.
+With this connector, you can gather and view information from the device **Rohde Schwarz SR8100 N+1**, as well as configure the device.
 
 ## About
 
-This SNMP driver is used to monitor the **Rohde Schwarz SR8100 N+1** device.
+This SNMP connector is used to monitor the **Rohde Schwarz SR8100 N+1** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

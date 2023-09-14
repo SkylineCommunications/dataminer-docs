@@ -4,7 +4,7 @@ uid: Connector_help_MX1_Scheduler
 
 # MX1 Scheduler
 
-This driver exposes a REST API that can be used to manage tasks in the Scheduler app.
+This connector exposes a REST API that can be used to manage tasks in the Scheduler app.
 
 The following methods are currently supported by the API:
 
@@ -54,7 +54,7 @@ The following methods are currently supported by the API:
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
@@ -78,7 +78,7 @@ This page displays the default WCF help page that describes the available method
 
 ## Notes
 
-Specific information about every request or response is displayed on the API Help page of the driver.
+Specific information about every request or response is displayed on the API Help page of the connector.
 To create or update a task, specific guidelines for the request body must be followed. Below, you can find these guidelines, as well as two examples (in JSON and XML).
 
 ### Guidelines
@@ -100,7 +100,7 @@ To create or update a task, specific guidelines for the request body must be fol
 
 - **Enabled**: "True" or "False".
 
-- **DmaId**: String containing the ID of the DMA where the task will be scheduled. This field can be omitted, in which case the default DMA ID will be used (i.e. the DMA ID of the driver).
+- **DmaId**: String containing the ID of the DMA where the task will be scheduled. This field can be omitted, in which case the default DMA ID will be used (i.e. the DMA ID of the connector).
 
 - **Script:**
 

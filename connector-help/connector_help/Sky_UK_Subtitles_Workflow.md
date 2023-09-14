@@ -4,11 +4,11 @@ uid: Connector_help_Sky_UK_Subtitles_Workflow
 
 # Sky UK Subtitles Workflow
 
-This driver can be used to create an enhanced service that allows you to monitor issues in subtitles for a specific channel. Alarms can be triggered depending on the conditions in the Workflow Logic Table.
+This connector can be used to create an enhanced service that allows you to monitor issues in subtitles for a specific channel. Alarms can be triggered depending on the conditions in the Workflow Logic Table.
 
 Any parameter from any element can be included in the service and used in the Workflow Logic Table.
 
-This driver uses a subscription mechanism that will update the Parameter Value column in the Subscription Table every time a parameter changes in a child element. These parameters must be selected when the service is created.
+This connector uses a subscription mechanism that will update the Parameter Value column in the Subscription Table every time a parameter changes in a child element. These parameters must be selected when the service is created.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver uses a subscription mechanism that will update the Parameter Value c
 
 ## Configuration
 
-To use this driver, create a service that uses it as its service definition. Then select the child elements and the parameters of these elements that should be included in the service. You can select any parameter according to your preferences. This service needs the VICC element for the target channel to monitor and also SSR and Axon HSI10 elements.
+To use this connector, create a service that uses it as its service definition. Then select the child elements and the parameters of these elements that should be included in the service. You can select any parameter according to your preferences. This service needs the VICC element for the target channel to monitor and also SSR and Axon HSI10 elements.
 
 This is the default service configuration:
 
@@ -46,7 +46,7 @@ This is the default service configuration:
 | Cavena Subtitle Unit                   | Status (Event)                                                     | SubtitleUnitOnAir              |
 | Cavena Subtitle Unit                   | Message (Event)                                                    | SubtitleUnitMessage            |
 
-The driver will automatically assign a subscription name to specific parameters. This subscription name works as an alias that can be used in the Condition column of the Workflow Logic Table and Input Faults Table. Every subscription name that is used in the Workflow Logic Table should be also present in the Subscriptions Table. If this is not the case, the driver will assume that the condition is invalid and it will be considered false in the workflow. If you include a parameter that is not listed above, the driver will set a generic subscription name (e.g. S1).
+The connector will automatically assign a subscription name to specific parameters. This subscription name works as an alias that can be used in the Condition column of the Workflow Logic Table and Input Faults Table. Every subscription name that is used in the Workflow Logic Table should be also present in the Subscriptions Table. If this is not the case, the connector will assume that the condition is invalid and it will be considered false in the workflow. If you include a parameter that is not listed above, the connector will set a generic subscription name (e.g. S1).
 
 If the **Service Status** parameter from BSS Schedule Data - Bus is added, this workflow will not trigger any alarms if this parameter is set to *Off-Air*. If it is set to *NA* or *On-Air*, or if this parameter is not included, the workflow will run as expected.
 
@@ -54,7 +54,7 @@ Axon ACP - HSI10 parameters can be omitted in case there is no HSI10 card presen
 
 ## How to Use
 
-A service created using this driver will have the data pages detailed below.
+A service created using this connector will have the data pages detailed below.
 
 ### Alarms
 

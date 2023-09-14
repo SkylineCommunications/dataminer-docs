@@ -8,7 +8,7 @@ The CRS-500 is Comtech EF Data's next generation 1:N Redundancy System. It is co
 
 ## About
 
-The CEFD CRS-500 SNMP driver is designed to monitor and control a CEFD CRS -500 device via SNMP. The different parameters of this device are available on different pages. The layout is based on the webinterface of the device.
+The CEFD CRS-500 SNMP connector is designed to monitor and control a CEFD CRS -500 device via SNMP. The different parameters of this device are available on different pages. The layout is based on the webinterface of the device.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ The CEFD CRS-500 SNMP driver is designed to monitor and control a CEFD CRS -500 
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 \- **Device address**: n/a
 
@@ -85,8 +85,4 @@ The device can also be rebooted by clicking on the **Reboot** button.
 
 ### Webpage
 
-Here the webinterface of the device can be viewed.
-
-## Notes
-
-N/A
+Here the web interface of the device can be viewed.

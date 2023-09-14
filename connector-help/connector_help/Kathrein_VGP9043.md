@@ -8,17 +8,17 @@ The **Kathrein** **VGP9043** is an optical receiver.
 
 ## About
 
-With this driver you can manage the Kathrein VGP9043 device using the **SNMP** protocol.
+With this connector you can manage the Kathrein VGP9043 device using the **SNMP** protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | VGP 9042D -1G (HW_REV: 1A)  |
 
@@ -28,7 +28,7 @@ With this driver you can manage the Kathrein VGP9043 device using the **SNMP** p
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -56,4 +56,4 @@ This page consists of a number of different sections:
 
 ### Configuration Page
 
-This page contains this driver's configurable parameters for the **Ingres Control**.
+This page contains this connector's configurable parameters for the **Ingres Control**.

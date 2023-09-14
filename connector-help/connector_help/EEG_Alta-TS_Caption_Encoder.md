@@ -4,7 +4,7 @@ uid: Connector_help_EEG_Alta-TS_Caption_Encoder
 
 # EEG Alta-TS Caption Encoder
 
-This driver is designed to monitor the EEG Alta-TS for use with MPEG Transport Streams as the input and output format. The iCap Alta software is packaged on a virtual machine for placement inside a customer video facility. The virtual machine "guest" operating system is 64-bit Debian 8 Linux. The VM can be hosted on VirtualBox, Cisco, or Microsoft HyperV controllers. The default distribution format is an "OVA" file, though alternative disk image formats can often be provided on request. Once the iCap Alta virtual machine is running and reachable on a local network, all interaction with the software can be performed over HTTP on the network, as a web service or in a browser.
+This connector is designed to monitor the EEG Alta-TS for use with MPEG Transport Streams as the input and output format. The iCap Alta software is packaged on a virtual machine for placement inside a customer video facility. The virtual machine "guest" operating system is 64-bit Debian 8 Linux. The VM can be hosted on VirtualBox, Cisco, or Microsoft HyperV controllers. The default distribution format is an "OVA" file, though alternative disk image formats can often be provided on request. Once the iCap Alta virtual machine is running and reachable on a local network, all interaction with the software can be performed over HTTP on the network, as a web service or in a browser.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is designed to monitor the EEG Alta-TS for use with MPEG Transport S
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General** page of this driver contains the username and password to access the device.
+The **General** page of this connector contains the username and password to access the device.
 
 The **Instance Settings** page contains a table with basic information about the existing instances, as well as logs for every instance. This page has multiple subpages, which can among others be used to add new instances or edit existing ones:
 

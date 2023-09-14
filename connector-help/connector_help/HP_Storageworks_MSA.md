@@ -8,18 +8,18 @@ The **HP Storageworks MSA** is a storage area network (SAN) and direct-attached 
 
 ## About
 
-The **HP Storageworks MSA** driver is used to monitor and control the HP Storageworks MSA device. The information is divided over different pages, and the settings can be modified.
+The **HP Storageworks MSA** connector is used to monitor and control the HP Storageworks MSA device. The information is divided over different pages, and the settings can be modified.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 2.0.0.x              | Changed driver to new MIBs                                                                                                                                                                                                                                                                           | No                  | True                    |
+| 2.0.0.x              | Changed connector to new MIBs                                                                                                                                                                                                                                                                           | No                  | True                    |
 | 3.0.0.x \[SLC Main\] | HTTP only version, Note that this version is not compatible with the previous versions.Features Implemented: + Features General Info, Controllers, Enclosures, Fans, Power Supplies, Volumes, Disks, Hosts and Event Log. + Implemented Physical and Logical Tree Control to resemble the device UI. | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | GL200                       |
 | 3.0.0.x          | GL220 or above.             |
@@ -28,7 +28,7 @@ The **HP Storageworks MSA** driver is used to monitor and control the HP Storage
 
 Creation for v2.0.0.x
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -45,13 +45,13 @@ Creation for v3.0.0.x
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP Settings:
 
 - **IP address/host**: The polling IP of the device, eg 10.11.12.13
 
-## Usage for Driver Range v2.0.0.x
+## Usage for connector Range v2.0.0.x
 
 ### General page
 
@@ -80,7 +80,7 @@ On this page, the **Connectivity** **Unit** **Sensor** **Table** is displayed.
 
 This page displays the web interface of the device.
 
-## Usage for Driver Range v3.0.0.x
+## Usage for connector Range v3.0.0.x
 
 ### General
 

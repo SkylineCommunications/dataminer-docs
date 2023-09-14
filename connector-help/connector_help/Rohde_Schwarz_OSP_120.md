@@ -6,7 +6,7 @@ uid: Connector_help_Rohde_Schwarz_OSP_120
 
 The Rohde Schwarz OSP 120 is a modular switch and control platform that enables users to perform RF switch and control tasks quickly. The flexibility of the Rohde Schwarz OSP 120 permits a broad scope of applications ranging from simple RF switch functions to the RF wiring of complex systems such as EMC systems.
 
-The driver for the Rohde Schwarz OSP 120 uses serial communication to poll and control the equipment, allowing the user to enable (switch) a given path and have an overview of the modules at hand.
+The connector for the Rohde Schwarz OSP 120 uses serial communication to poll and control the equipment, allowing the user to enable (switch) a given path and have an overview of the modules at hand.
 
 Two timers are used to poll the information from the device: one that polls every ten seconds for fast-varying information and another that polls every hour for semi-static information.
 
@@ -36,7 +36,7 @@ Two timers are used to poll the information from the device: one that polls ever
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -63,7 +63,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

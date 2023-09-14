@@ -4,15 +4,15 @@ uid: Connector_help_PDU_eXperts_SW-16-08H
 
 # PDU eXperts SW-16-08H
 
-The **PDU eXperts SW-16-08H** driver monitors and controls the Power Switch unit of the same name through **SNMP**.
+The **PDU eXperts SW-16-08H** connector monitors and controls the Power Switch unit of the same name through **SNMP**.
 
 ## About
 
-The driver polls relevant information from the device every 10 seconds or every hour.
+The connector polls relevant information from the device every 10 seconds or every hour.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -26,7 +26,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver has several data display pages:
+This connector has several data display pages:
 
 ### General Page
 

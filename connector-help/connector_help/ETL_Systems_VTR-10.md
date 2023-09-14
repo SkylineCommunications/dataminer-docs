@@ -4,13 +4,13 @@ uid: Connector_help_ETL_Systems_VTR-10
 
 # ETL Systems VTR-10
 
-The **ETL Systems VTR-10** driver is used to configure and display information of the ETL Systems VTR-10 device.
+The **ETL Systems VTR-10** connector is used to configure and display information of the ETL Systems VTR-10 device.
 
 ## About
 
-This driver can be used to monitor and control the **ETL Systems VTR-10** device.
+This connector can be used to monitor and control the **ETL Systems VTR-10** device.
 
-**Alarm monitoring** and **trending** can be enabled for parameters in the driver.
+**Alarm monitoring** and **trending** can be enabled for parameters in the connector.
 
 ## Configuration
 
@@ -38,7 +38,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver consists of the following page:
+The element created with this connector consists of the following page:
 
 - **General**: Displays general information about the device such as SummaryAlarm, CPU Temperature and Fan Status.
 - **Matrix**: Displays the matrix containing the connections present on the device.

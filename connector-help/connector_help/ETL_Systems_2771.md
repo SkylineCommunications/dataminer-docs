@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_2771
 
 # ETL Systems 2771
 
-This driver is used to monitor an ETL Systems 2771 device.
+This connector is used to monitor an ETL Systems 2771 device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor an ETL Systems 2771 device.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -59,7 +59,7 @@ There is no redundancy defined.
 
 ## How to Use
 
-This driver contains the following pages:
+This connector contains the following pages:
 
 - **General**: Displays general information about the device such as the **Version** and **IP Address**, as well as some monitored values of the chassis such as **Temperature**, **PSU Voltage**, etc.
 - **Control**: Displays the current and voltage measured by the device.

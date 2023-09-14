@@ -8,7 +8,7 @@ The **Imagine Communications Selenio DAEX** is a type of card that can be slotte
 
 ## About
 
-The **Versioning** for the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. E.g.: *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*
+The **Versioning** for the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. E.g.: *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
 
 The current version is *1.4.0.2.*
 
@@ -16,7 +16,7 @@ The current version is *1.4.0.2.*
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

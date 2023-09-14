@@ -4,17 +4,17 @@ uid: Connector_help_Ziggo_HFC_Node_Manager
 
 # Ziggo HFC Node Manager
 
-This driver can be used to provision and maintain all node elements in a DataMiner System.
+This connector can be used to provision and maintain all node elements in a DataMiner System.
 
 ## About
 
-This driver will make sure all node elements are present and have an up-to-date configuration in the DataMiner System.
+This connector will make sure all node elements are present and have an up-to-date configuration in the DataMiner System.
 
 All required information will be loaded from an import file. Currently only **Teleste AC9000** protocols are supported.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ All required information will be loaded from an import file. Currently only **Te
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Import File
 

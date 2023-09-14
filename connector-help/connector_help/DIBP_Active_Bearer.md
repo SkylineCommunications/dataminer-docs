@@ -8,17 +8,17 @@ Via configurable element connections, the **DIBP Active Bearer** connects with m
 
 ## About
 
-This is a virtual driver that uses element connections to receive values from **EBEM** and **Cobra** devices and an **average ping-based latency** driver.
+This is a virtual connector that uses element connections to receive values from **EBEM** and **Cobra** devices and an **average ping-based latency** connector.
 
-The received parameter values are used in a series of checks that help the driver to determine the **Active Bearer** of the vessel.
+The received parameter values are used in a series of checks that help the connector to determine the **Active Bearer** of the vessel.
 
-The **Active Bearer** is determined by first checking the **latency** value. The expected values for latency for GX or WGS should fall between the lower and higher threshold values. The driver will then check if GX or WGS is configured to be active, based on the parameters from the EBEM and/or Cobra devices, in order to determine if the active bearer is **GX, WGS, Unknown, Blocked, Down** or **Off**.
+The **Active Bearer** is determined by first checking the **latency** value. The expected values for latency for GX or WGS should fall between the lower and higher threshold values. The connector will then check if GX or WGS is configured to be active, based on the parameters from the EBEM and/or Cobra devices, in order to determine if the active bearer is **GX, WGS, Unknown, Blocked, Down** or **Off**.
 
 The EBEM and/or Cobra parameter values are then used to determine if **Statistics** parameters should be started, such as **Uptime**, **Downtime** and **Outage Time**. Basically, if the EBEM and/or the Cobra are configured to transmit as GX and/or WGS, but the measured latency indicates that this is not the case (i.e. the latency is outside of the expected lower or upper ranges for GX or WGS), this is considered to be an outage.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -26,7 +26,7 @@ The EBEM and/or Cobra parameter values are then used to determine if **Statistic
 
 ### Creation
 
-This driver uses element connections which need to be configured during element creation (or in **DataMiner Cube**, using the **Element Connections** app).
+This connector uses element connections which need to be configured during element creation (or in **DataMiner Cube**, using the **Element Connections** app).
 
 ## Usage
 
@@ -59,15 +59,15 @@ The parameters on this page are:
 
 The vessel can have several different active bearers. The active bearer is determined based on the state of several different parameters:
 
-1. The first step to determine the active bearer checks the value of the latency that is received from the **average ping-based latency** **element.
+1. The first step to determine the active bearer checks the value of the latency that is received from the **average ping-based latency** element.
 
-   **The possible values of the **Active Bearer** parameter can be limited based on the received value:
+   The possible values of the **Active Bearer** parameter can be limited based on the received value:
 
-   - If the value is **between the** **lower and higher** threshold, the active bearer is expected to be ***GX*, *WGS*** or ***Blocked*****.**
+   - If the value is **between the lower and higher** threshold, the active bearer is expected to be ***GX*, *WGS*** or ***Blocked***.
 
-   - If the value is **above the** **higher threshold**, the active bearer is expected to be ***FB500*** or ***Blocked*.**
+   - If the value is **above the higher threshold**, the active bearer is expected to be ***FB500*** or ***Blocked*.**
 
-   - If the value is **below the** **lower threshold**, the active bearer is expected to be ***3G/4G*** or ***Blocked*.**
+   - If the value is **below the lower threshold**, the active bearer is expected to be ***3G/4G*** or ***Blocked*.**
 
    - if the latency is **not available** or **does not exist**, the active bearer is ***Down***.
 

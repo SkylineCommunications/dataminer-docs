@@ -4,7 +4,7 @@ uid: Connector_help_Nevion_Flashlink_Frame_-_3GHD-EO-SFP
 
 # Nevion Flashlink Frame - 3GHD-EO-SFP
 
-This exported driver shows data from a **3GHD-EO-SFP** module in a Nevion Flashlink frame. This module is a single or dual multi bit-rate electrical to optical converter, providing high-performance media conversion for various signal formats from 19.4 Mbps up to 2970 Mbps.
+This exported connector shows data from a **3GHD-EO-SFP** module in a Nevion Flashlink frame. This module is a single or dual multi bit-rate electrical to optical converter, providing high-performance media conversion for various signal formats from 19.4 Mbps up to 2970 Mbps.
 
 ## About
 
@@ -16,11 +16,11 @@ This exported driver shows data from a **3GHD-EO-SFP** module in a Nevion Flashl
 
 ## Configuration
 
-This **SNMP** driver is used by DVE child elements that are **automatically created** by the parent driver [Nevion Flashlink Frame](xref:Connector_help_Nevion_Flashlink_Frame).
+This **SNMP** connector is used by DVE child elements that are **automatically created** by the parent connector [Nevion Flashlink Frame](xref:Connector_help_Nevion_Flashlink_Frame).
 
 ## How to use
 
-The element created using this driver consists of the data pages detailed below.
+The element created using this connector consists of the data pages detailed below.
 
 ### General
 

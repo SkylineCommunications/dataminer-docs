@@ -8,7 +8,7 @@ The CMD-N transponder provides the ability to manage fiber nodes through an exis
 
 ## About
 
-This driver maps SNMP parameters from DOCSIS MIBs in order to collect measured analog signals and digital SCTE/HMS data from fiber nodes.
+This connector maps SNMP parameters from DOCSIS MIBs in order to collect measured analog signals and digital SCTE/HMS data from fiber nodes.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver maps SNMP parameters from DOCSIS MIBs in order to collect measured a
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to connect to the transponder and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to connect to the transponder and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### DDNS functionality
 
-The driver is capable of polling from an IP resolved via a DDNS mechanism. To enable this, when the element is created/edited, you need to specify a string that will be parsed. The DNS will translate the enclosed MAC address into the polling IP to be used.
+The connector is capable of polling from an IP resolved via a DDNS mechanism. To enable this, when the element is created/edited, you need to specify a string that will be parsed. The DNS will translate the enclosed MAC address into the polling IP to be used.
 This following input must be specified during element creation/editing:
 
 - **IP address**: 0.0.0.0

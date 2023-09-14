@@ -8,7 +8,7 @@ The **ARRIS Versatile Telecommunications Node (VTN) 244** is designed to act as 
 
 ## About
 
-This driver is intended to get/set information from/to the device via an **Element** in a **DataMiner** System, using **SNMP** commands.
+This connector is intended to get/set information from/to the device via an **Element** in a **DataMiner** System, using **SNMP** commands.
 
 To get more detailed information access the website <http://arristest.arris.co/product_catalog/at/nodes.asp>.
 
@@ -16,7 +16,7 @@ To get more detailed information access the website <http://arristest.arris.co/p
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

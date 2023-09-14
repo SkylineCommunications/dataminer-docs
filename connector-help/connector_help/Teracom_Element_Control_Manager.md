@@ -31,7 +31,7 @@ The protocol only communicates with the DMS in order to be able to retrieve/conf
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

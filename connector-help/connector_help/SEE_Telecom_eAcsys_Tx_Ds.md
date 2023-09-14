@@ -4,7 +4,7 @@ uid: Connector_help_SEE_Telecom_eAcsys_Tx_Ds
 
 # SEE Telecom eAcsys Tx Ds
 
-The SEE Telecom eAcsys Tx DS is a transmitter. This driver allows you to monitor and control this device via SNMP communication. The native web interface of the device is also available through the driver.
+The SEE Telecom eAcsys Tx DS is a transmitter. This connector allows you to monitor and control this device via SNMP communication. The native web interface of the device is also available through the connector.
 
 ## About
 
@@ -41,7 +41,7 @@ The SEE Telecom eAcsys Tx DS is a transmitter. This driver allows you to monitor
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,7 +68,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the device, such as the Serial Number, Software Version, and Temperature.
 - **Optical**: Displays information about the optical functionality of the device, such as the Laser Bias Current, the Measured Laser Output Power, and the Laser Temperature.

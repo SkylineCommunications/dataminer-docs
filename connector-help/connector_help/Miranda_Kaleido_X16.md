@@ -4,13 +4,13 @@ uid: Connector_help_Miranda_Kaleido_X16
 
 # Miranda Kaleido X16
 
-The Kaleido X16 driver is used to display information related to the **Kaleido X16** device. The driver is also used to retrieve and set specific characteristics of the device using RCP (Gateway) commands.
+The Kaleido X16 connector is used to display information related to the **Kaleido X16** device. The connector is also used to retrieve and set specific characteristics of the device using RCP (Gateway) commands.
 
-The driver uses two protocols to communicate with the Kaleido device: the SNMP protocol is used to retrieve information concerning the device and the TCP protocol is used to execute RCP commands.
+The connector uses two protocols to communicate with the Kaleido device: the SNMP protocol is used to retrieve information concerning the device and the TCP protocol is used to execute RCP commands.
 
 ## About
 
-This driver has five pages: the **General** page contains general information related to this device, the **Card List** page contains information about the slots connected to the frame, the **Video** page contains information about the frame's video inputs, the **Embedded Audio** page contains information about the frame's video-embedded audio, and finally the **Discrete Audio** page contains information about discrete audio of the device.
+This connector has five pages: the **General** page contains general information related to this device, the **Card List** page contains information about the slots connected to the frame, the **Video** page contains information about the frame's video inputs, the **Embedded Audio** page contains information about the frame's video-embedded audio, and finally the **Discrete Audio** page contains information about discrete audio of the device.
 
 ## Configuration and Installation
 
@@ -18,7 +18,7 @@ This driver has five pages: the **General** page contains general information re
 
 SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -32,7 +32,7 @@ SNMP Settings:
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -47,7 +47,7 @@ SERIAL CONNECTION:
 
 This page contains general information about the device such as the frame model, layouts defined in the Kaleido X16 device, software version, number of inputs, slot count, card count and frame, fan and power supply status.
 
-In a drop-down list, the parameter **Layout List** displays all the layouts defined in the Kaleido X16 device. Each layout displayed in the list has the following format: *RoomName/LayoutName.kg2*. When a layout is selected, an RCP command is sent by the driver to set the selected layout in the Kaleido X16 device.
+In a drop-down list, the parameter **Layout List** displays all the layouts defined in the Kaleido X16 device. Each layout displayed in the list has the following format: *RoomName/LayoutName.kg2*. When a layout is selected, an RCP command is sent by the connector to set the selected layout in the Kaleido X16 device.
 
 The button **Set Channel** can be used to set the channel of the Kaleido X16 device according to the values set in **Channel Name** and **Monitor Name**. The parameter Channel Name will contain a drop-down list with all the available channels obtained from the Video table. Note that the RCP command will not be sent to the device unless both parameters (Channel Name and Monitor Name) are filled in.
 
@@ -63,7 +63,7 @@ This page displays one table with the frame's video inputs. This table contains 
 
 This page displays the **Embedded Audio Table**. This table contains all the frame's video-embedded audio.
 
-In version **1.0.0.7** of the driver, the **Config EA Table** page button was added to this page along with two **Embedded Audio Table** parameters (**EA Service Channel** and **DisplayKey (Embedded Audio) \[IDX\])**.
+In version **1.0.0.7** of the connector, the **Config EA Table** page button was added to this page along with two **Embedded Audio Table** parameters (**EA Service Channel** and **DisplayKey (Embedded Audio) \[IDX\])**.
 
 #### Config EA Table
 
@@ -79,7 +79,7 @@ This is a custom read/write column, similar to that in the DA Service Channel. T
 
 This is a hidden retrieved column. The value in this column changes based on the option selected in the parameter **EA DisplayKey**.
 
-Note that the \[IDX\] was added to this column in spite of a pre-existing \[IDX\] from version **1.0.0.6** for parameter **EA Input Index \[IDX\]**. It was not removed to ensure that this driver version does not affect alarming/trending.
+Note that the \[IDX\] was added to this column in spite of a pre-existing \[IDX\] from version **1.0.0.6** for parameter **EA Input Index \[IDX\]**. It was not removed to ensure that this connector version does not affect alarming/trending.
 
 ### Discrete Audio Page
 

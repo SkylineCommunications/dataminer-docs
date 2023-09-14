@@ -4,27 +4,27 @@ uid: Connector_help_CEFD_CDM-625A_SNMP
 
 # CEFD CDM-625A SNMP
 
-The CEFD CDM-625A SNMP is intended to communicate with CDM-625A Comtech devices. The driver is based on the CDM 625 SNMP MIB.
+The CEFD CDM-625A SNMP is intended to communicate with CDM-625A Comtech devices. The connector is based on the CDM 625 SNMP MIB.
 
 ## About
 
-The driver layout is designed to look similar to the web interface of the device.
+The connector layout is designed to look similar to the web interface of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**      | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.     | No                  | No                      |
 | 1.0.1.x \[SLC Main\] | Cassandra compliant. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                    |
+| **Range** | **Device Firmware Version**                                                    |
 |------------------|--------------------------------------------------------------------------------|
 | 1.0.0.x 1.0.0.8  | Firmware version 1.2.4 (based on manuals of the device) Firmware version 1.4.2 |
 | 1.0.1.x          | Firmware version 1.2.4 (based on manuals of the device) Firmware version 1.4.2 |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**    | **Description**          |
 |--------------------------|--------------------------|
@@ -36,7 +36,7 @@ The driver layout is designed to look similar to the web interface of the device
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -204,7 +204,7 @@ This page allows you to configure a number of the CDM-625A's utility functions.
 
 - **Unit**: This section allows you to configure Unit Test Mode, RTS/CTS Control, HSSI Handshake Control and Local/Distant mode. The **Soft Reboot** button can be used to reboot the device.
 
-- **Clocks**: This section allows you to configure Tx/Rx Clock Sources, Rx Buffer Size, External Clock, External Frequency Reference and G.703 Clock Extended Mode/Interface. In the serial version of this driver, some parameters are unavailable, such as Rx Clock External and Rx External Clock Type.
+- **Clocks**: This section allows you to configure Tx/Rx Clock Sources, Rx Buffer Size, External Clock, External Frequency Reference and G.703 Clock Extended Mode/Interface. In the serial version of this connector, some parameters are unavailable, such as Rx Clock External and Rx External Clock Type.
 
 - **Circuit ID**: Enter a Circuit ID string of up to 40 characters. The Circuit ID you specify here will be displayed in the title bar of compatible web browsers for easy unit identification. A carrier ID can also be enabled or disabled in this section.
 

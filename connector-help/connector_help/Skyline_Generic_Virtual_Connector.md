@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Generic_Virtual_Connector
 
 # Skyline Generic Virtual Connector
 
-This is a generic driver with a master table in which rows can be added, deleted and edited via a context menu. Multiple rows can be deleted at the same time.
+This is a generic connector with a master table in which rows can be added, deleted and edited via a context menu. Multiple rows can be deleted at the same time.
 
 The display key is generated using the auto-incremented primary key (calculated in the table logic), column 1 value and column 2 value, so these are the only required data when a row is added.
 
@@ -28,7 +28,7 @@ The display key is generated using the auto-incremented primary key (calculated 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

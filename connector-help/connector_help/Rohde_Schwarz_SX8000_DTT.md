@@ -4,22 +4,22 @@ uid: Connector_help_Rohde_Schwarz_SX8000_DTT
 
 # Rohde & Schwarz SX8000 DTT
 
-This driver monitors and manages transmitters such as the **Rohde & Schwarz SX8000 DTT**. It polls and sets parameters on the device.
+This connector monitors and manages transmitters such as the **Rohde & Schwarz SX8000 DTT**. It polls and sets parameters on the device.
 
 ## About
 
-With three different timers, all parameters related to the transmitter are polled. It is also possible to set up the device via the driver.
+With three different timers, all parameters related to the transmitter are polled. It is also possible to set up the device via the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version         | Yes                 | Yes                     |
 | 2.0.0.x          | Added serial connection | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ With three different timers, all parameters related to the transmitter are polle
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### Serial Connection
 
-This driver uses a serial connection. The following configuration will be set by the driver:
+This connector uses a serial connection. The following configuration will be set by the connector:
 
 SERIAL CONNECTION:
 
@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The driver consists of several pages:
+The connector consists of several pages:
 
 - **General:** Displays general information about the product software and hardware.
 - **Transmitter:** Contains summary information about the transmitter.

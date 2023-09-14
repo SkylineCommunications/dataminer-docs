@@ -4,15 +4,15 @@ uid: Connector_help_Globosat_Canais_Quality_Control_Resources
 
 # Globosat Canais Quality Control Resources
 
-The **Globosat Canais Quality Control Resources** driver displays a table with different resources for quality control.
+The **Globosat Canais Quality Control Resources** connector displays a table with different resources for quality control.
 
 ## About
 
-This driver makes use of DCF integration per resource (inputs).
+This connector makes use of DCF integration per resource (inputs).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | No                      |
 
@@ -20,7 +20,7 @@ This driver makes use of DCF integration per resource (inputs).
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

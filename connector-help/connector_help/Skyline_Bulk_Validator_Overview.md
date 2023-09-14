@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Bulk_Validator_Overview
 
 # Skyline Bulk Validator Overview
 
-This driver is used to show the results of an execution of the validator on all selected protocols. It counts the number of detected validator check errors per check for all the validated protocols.
+This connector is used to show the results of an execution of the validator on all selected protocols. It counts the number of detected validator check errors per check for all the validated protocols.
 
 ## About
 

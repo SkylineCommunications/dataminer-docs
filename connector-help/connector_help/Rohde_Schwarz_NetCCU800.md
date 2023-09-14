@@ -8,7 +8,7 @@ The **Rohde & Schwarz NetCCU800** is a common control unit for FM and TV transmi
 
 ## About
 
-This driver allows you to access various information on the device. It is possible to **get and set** **data** on the many modules listed below. In addition, the driver also acts as an event receiver for **SNMP** **traps**.
+This connector allows you to access various information on the device. It is possible to **get and set** **data** on the many modules listed below. In addition, the connector also acts as an event receiver for **SNMP** **traps**.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver allows you to access various information on the device. It is possib
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

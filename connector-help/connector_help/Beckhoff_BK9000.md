@@ -4,25 +4,25 @@ uid: Connector_help_Beckhoff_BK9000
 
 # Beckhoff BK9000
 
-The Beckhoff BK9000 is a virtual driver that is used to provide information about the type and position of modules.
+The Beckhoff BK9000 is a virtual connector that is used to provide information about the type and position of modules.
 
 ## About
 
-The driver provides an overview of the different modules and allows the user to edit module types. Via a virtual connection, the Beckhoff BK9000 provides other elements with position information. This includes the module type and start and stop position.
+The connector provides an overview of the different modules and allows the user to edit module types. Via a virtual connection, the Beckhoff BK9000 provides other elements with position information. This includes the module type and start and stop position.
 
-### Driver range 2.0.0
+### connector range 2.0.0
 
-This driver help describes the 2.0.0 range of the driver. In this range, it is possible to change the number of modules dynamically by using a table.
+This connector help describes the 2.0.0 range of the connector. In this range, it is possible to change the number of modules dynamically by using a table.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 
-The **PositionInfo** of the **Module Table** entries needs to be configured with a virtual connection to the **PositionInfo from BK9000** parameter of the relevant module drivers, e.g. the KL2622 driver.
+The **PositionInfo** of the **Module Table** entries needs to be configured with a virtual connection to the **PositionInfo from BK9000** parameter of the relevant module connectors, e.g. the KL2622 connector.
 
 ## Usage
 
@@ -49,7 +49,3 @@ The total number of entries in the table is shown underneath the table as **Numb
 With the two buttons, **Add module** and **Remove module**, you can respectively add a new entry to or remove the last entry from the Module Table.
 
 If you enter a number in the **Wanted Number of Modules** parameter, the total number of entries in the table is changed to this new number. If this new number is smaller than the existing number of entries, the last entries are deleted. If the entered number is larger than the existing number of entries, new entries are added and the existing entries and their values are kept. Both the type and positionInfo of new entries in the table are initialized as 'None'. It is possible to delete all the entries, by entering the number "*0"*.
-
-## Notes
-
-N/A

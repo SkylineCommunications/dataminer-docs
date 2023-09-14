@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_23198_-_e278
 
 # ETL Systems 23198 - e278
 
-This driver can be used to monitor an ETL Systems 23198 switch device.
+This connector can be used to monitor an ETL Systems 23198 switch device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor an ETL Systems 23198 switch device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver uses the **SNMP** protocol to retrieve data from the device.
+The connector uses the **SNMP** protocol to retrieve data from the device.
 
 The **General** page displays configuration parameters, the current **Channel** and the 2 **PSU Status.**
 

@@ -4,7 +4,7 @@ uid: Connector_help_Teracom_Site_View_Manager
 
 # Teracom Site View Manager
 
-This virtual driver reads and processes data from an .xlsx file in order to make Site Views Visio drawings.
+This virtual connector reads and processes data from an .xlsx file in order to make Site Views Visio drawings.
 
 ## About
 
@@ -22,7 +22,7 @@ This virtual driver reads and processes data from an .xlsx file in order to make
 
 ## Configuration
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ## How to Use
 
@@ -33,4 +33,4 @@ On the **General** page, two buttons are available:
 
 On this page, you can also see the current **Processing Task** and the **Current Task Status**.
 
-The other data pages of the driver contain tables with the data used to created specific types of Visio drawings.
+The other data pages of the connector contain tables with the data used to created specific types of Visio drawings.

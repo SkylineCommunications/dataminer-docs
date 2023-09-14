@@ -10,15 +10,15 @@ The Audinate Netspander is a infrastructure device that provides services to ena
 
 A CSV config file can be used to load a set of unicast devices into the Dante network.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 
@@ -28,7 +28,7 @@ A CSV config file can be used to load a set of unicast devices into the Dante ne
 
 #### Serial connection
 
-This driver requires the polling IP of the Audinate Netspander.
+This connector requires the polling IP of the Audinate Netspander.
 
 ### Configuration of ...
 

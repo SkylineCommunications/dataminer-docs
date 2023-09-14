@@ -4,17 +4,17 @@ uid: Connector_help_CPI_VZC-6967V7
 
 # CPI VZC-6967V7
 
-The **CPI VZC-6967V7** driver is a serial driver used to monitor and configure the **CPI VZC-6967V7** device.
+The **CPI VZC-6967V7** connector is a serial connector used to monitor and configure the **CPI VZC-6967V7** device.
 
 ## About
 
-The **CPI VZC-6967V7** is an amplifier. The driver uses serial communication to monitor and configure the device. This means that it sends commands to the device and receives a response for every command.
+The **CPI VZC-6967V7** is an amplifier. The connector uses serial communication to monitor and configure the device. This means that it sends commands to the device and receives a response for every command.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

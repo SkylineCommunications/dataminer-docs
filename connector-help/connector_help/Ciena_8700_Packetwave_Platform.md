@@ -8,18 +8,18 @@ The **Ciena 8700 Packetwave Platform** is a multi-terabit programmable Ethernet-
 
 ## About
 
-This driver uses an SNMP connection to obtain relevant information from **Ciena 8700 Packetwave Platform** devices.
+This connector uses an SNMP connection to obtain relevant information from **Ciena 8700 Packetwave Platform** devices.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version              | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Correct bit rate calculation | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ This driver uses an SNMP connection to obtain relevant information from **Ciena 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

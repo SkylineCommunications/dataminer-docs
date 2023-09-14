@@ -4,21 +4,21 @@ uid: Connector_help_2WCOM_FM2TS_MPEG_Encoding_Gateway
 
 # 2WCOM FM2TS MPEG Encoding Gateway
 
-This driver monitors the status of the **2WCOM FM2TS MPEG Encoding Gateway**.
+This connector monitors the status of the **2WCOM FM2TS MPEG Encoding Gateway**.
 
 ## About
 
-This driver uses **SNMP** to retrieve information from the device, to monitor the temperature, fans, power supplies and Gateway tuner status.
+This connector uses **SNMP** to retrieve information from the device, to monitor the temperature, fans, power supplies and Gateway tuner status.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** to retrieve information from the device, to monitor th
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

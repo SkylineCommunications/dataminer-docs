@@ -8,13 +8,13 @@ The ANTlabs Tru Auth Radius keeps track of the usage of the satellite network fo
 
 ## About
 
-The ANTlabs Tru Auth Radius driver makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by DataMiner. Global statistics such as Auth and ACCT statistics are also available in the driver.
+The ANTlabs Tru Auth Radius connector makes it possible to monitor the usage of the satellite network. The data is located on an SFTP server, and is parsed by DataMiner. Global statistics such as Auth and ACCT statistics are also available in the connector.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -22,7 +22,7 @@ This driver uses an HTTP connection and needs the following user information:
 - **IP port**: The port of the destination, e.g. *443*.
 - **Bus address**: This field can be used to bypass the proxy. To do so, fill in the value *bypassproxy*.
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and needs following user information:
 
 **SNMP CONNECTION**:
 
@@ -65,7 +65,3 @@ You can also upload a single file manually. (This functionality has been impleme
 ### DVE page
 
 The **DVE** page displays all the DVEs created. You can enable the DVE for each user, in the users table on the **Users** Page. For each user in this table, a DVE will be created, containing only user-specific information.
-
-## Notes
-
-N/A

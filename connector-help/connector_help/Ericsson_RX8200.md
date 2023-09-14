@@ -4,17 +4,17 @@ uid: Connector_help_Ericsson_RX8200
 
 # Ericsson RX8200
 
-This is an SNMP driver that shows the status of the different parameters of an **Ericsson RX8200 receiver**.
+This is an SNMP connector that shows the status of the different parameters of an **Ericsson RX8200 receiver**.
 
 ## About
 
 The **Ericsson RX8200** is a very versatile piece of equipment. It comes in many different configurations, in which input and output options vary between IP, satellite, combo (satellite and IP), VSB, and ASI. In case of a combo type, a primary and secondary input can be specified.
 
-This driver allows the capturing of **traps** of type "**No TS Lock"**. The info related to the TS lock status is used to update the **TS Lock** **status** **parameter**. The IP to which the trap messages are sent can be configured in the **Trap Server** **table**, which contains the list of servers supporting the device.
+This connector allows the capturing of **traps** of type "**No TS Lock"**. The info related to the TS lock status is used to update the **TS Lock** **status** **parameter**. The IP to which the trap messages are sent can be configured in the **Trap Server** **table**, which contains the list of servers supporting the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version (SNMP only).                                                                                                                     | No                  | Yes                     |
 | 1.0.1.x              | Evolution from the 1.0.0.x range (extends firmware compatibility).                                                                               | No                  | Yes                     |
@@ -26,9 +26,9 @@ This driver allows the capturing of **traps** of type "**No TS Lock"**. The info
 | 3.0.1.x              | Specific version made for customer BeIn. Based on version 3.0.0.18, but uses discreets for AudioEmbedding as they were until 3.0.0.9.            | Yes                 | Yes                     |
 | 3.1.0.x \[SLC Main\] | Supports new firmware 7.x and beyond. Not fully downwards compatible: some trending/alarm history may be lost. New hardware (DVB-S2X) supported. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Software Version** |
+| **Range** | **Device Software Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          | Under 5.0.0                 |
 | 1.0.1.x          | 5.0.0 onwards               |
@@ -46,7 +46,7 @@ This driver allows the capturing of **traps** of type "**No TS Lock"**. The info
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -98,7 +98,7 @@ The **Features** page button opens a table listing all the features with the lic
 
 This page displays configuration parameters for the alarm messages, such as **TS Lock Alarm Delay** and **No Primary Input Lock (Relay Mapping)**.
 
-This page is only available in the **2.0.1.x** driver range from **2.0.1.14** onwards, in the **2.1.0.x** driver range (**all versions**), the **2.2.0.x** range (**all versions**), the **3.0.0.x** range (**all versions**), and the **3.0.1.x** range (**all versions**)
+This page is only available in the **2.0.1.x** connector range from **2.0.1.14** onwards, in the **2.1.0.x** connector range (**all versions**), the **2.2.0.x** range (**all versions**), the **3.0.0.x** range (**all versions**), and the **3.0.1.x** range (**all versions**)
 
 ### Input Page
 
@@ -156,13 +156,13 @@ Another table displays the **Audio Embedding status**, with **Audio Embedding De
 
 This page contains an overview of all the **PIDs** for the active service, with their **PID Name**, **PID Full Name**, and **PID Type**.
 
-It is only available in the **3.0.0.x** driver range from **3.0.0.15** onwards, and in the **3.1.0.x** driver range from **3.1.0.26** onwards.
+It is only available in the **3.0.0.x** connector range from **3.0.0.15** onwards, and in the **3.1.0.x** connector range from **3.1.0.26** onwards.
 
 ### Presets Page
 
 This page contains a table with **Presets** of settings, which can be saved and restored.
 
-It is only available in the **2.0.1.x** driver range from **2.0.1.14** onwards, in the **2.1.0.x** range (**all versions**), in the **2.2.0.x** range (**all versions**), in the **3.0.0.x** range (**all versions**), and in the **3.1.0.x** driver range (**all versions**).
+It is only available in the **2.0.1.x** connector range from **2.0.1.14** onwards, in the **2.1.0.x** range (**all versions**), in the **2.2.0.x** range (**all versions**), in the **3.0.0.x** range (**all versions**), and in the **3.1.0.x** connector range (**all versions**).
 
 ### SNMP Page
 
@@ -174,13 +174,13 @@ This page contains parameters related to redundancy, such as **CA Detection Mode
 
 ### Service List Page
 
-This page contains a table that shows a list of the services. It is only available in the **3.1.0.x** driver range.
+This page contains a table that shows a list of the services. It is only available in the **3.1.0.x** connector range.
 
 The table lists the following parameters: **Type**, **ID**, **Name** and **Encryption**.
 
 ### Service Split Page
 
-This page contains a table that shows a list of service splits. It is only available in the **3.1.0.x** driver range.
+This page contains a table that shows a list of service splits. It is only available in the **3.1.0.x** connector range.
 
 The table lists the following parameters: **Program Number**, **Service Name**, **Status**, **Ethernet Port 1**, **Ethernet Port 2**, **VBR**, **CBR Rate**, **Source IP**, **Source UDP Port**, **Destination IP**, **Destination UDP Port** and **TTL**.
 
@@ -190,7 +190,7 @@ This page contains the **Alarms Current** table, a table that shows all currentl
 
 ### Polling Configuration Page
 
-This page allows you to set the timer intervals. It is only available in the **3.1.0.x** driver range, from **3.1.0.20** onwards.
+This page allows you to set the timer intervals. It is only available in the **3.1.0.x** connector range, from **3.1.0.20** onwards.
 
 ### Web Interface Page
 
@@ -198,7 +198,7 @@ This page contains a link to the web page of the actual device. Note that the cl
 
 ## DataMiner Connectivity Framework
 
-The **3.0.0.x** and **3.1.0.x** driver range of the **Ericsson Rx8200** protocol support the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **3.0.0.x** and **3.1.0.x** connector range of the **Ericsson Rx8200** protocol support the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

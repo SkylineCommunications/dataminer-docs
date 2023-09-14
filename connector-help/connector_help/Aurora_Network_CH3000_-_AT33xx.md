@@ -12,7 +12,7 @@ AT33xx is a transmitter module.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Aurora Network CH3000](xref:Connector_help_Aurora_Network_CH3000), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Aurora Network CH3000](xref:Connector_help_Aurora_Network_CH3000), from version 1.0.0.1 onwards.
 
 ## Usage
 

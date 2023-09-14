@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_IDP_Connectivity
 
 # Skyline IDP Connectivity
 
-This driver is part of DataMiner IDP. It is used to manage DCF connections between elements.
+This connector is part of DataMiner IDP. It is used to manage DCF connections between elements.
 
 ## About
 
@@ -33,7 +33,7 @@ This driver is part of DataMiner IDP. It is used to manage DCF connections betwe
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -45,11 +45,11 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver can only be used as part of **DataMiner IDP**.
+This connector can only be used as part of **DataMiner IDP**.
 
-Use the **IDP_Example_Custom_ConnectivityDiscovery** script as a starting point to start using this driver. The script will get the interfaces/ports information of the elements and send it to the Skyline IDP Connectivity element. This element will then process the data and start creating DCF connections between elements.
+Use the **IDP_Example_Custom_ConnectivityDiscovery** script as a starting point to start using this connector. The script will get the interfaces/ports information of the elements and send it to the Skyline IDP Connectivity element. This element will then process the data and start creating DCF connections between elements.
 
-The driver contains two main tables:
+The connector contains two main tables:
 
 - The **Mapping** table, which contains element information (Chassis ID, Agent ID, Element ID).
 - The **Connections** table, which contains interfaces/ports information (Port ID, DCF ID).

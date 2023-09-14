@@ -4,27 +4,27 @@ uid: Connector_help_Evertz_7700_General_Platform
 
 # Evertz 7700 General Platform
 
-The **Evertz 7700 General Platform** driver is used to monitor and control an Evertz chassis containing different Evertz 7700 series cards.
+The **Evertz 7700 General Platform** connector is used to monitor and control an Evertz chassis containing different Evertz 7700 series cards.
 
 ## About
 
 The chassis must include an **Evertz 7700-FC** card to be functional. Data about the location of other cards is polled from this card. Evertz 7700-FC is placed in slot 1, other cards are inserted in slots 2 to 15. A DVE will be created for each (supported) card. Data is polled via **SNMP**. Traps are supported to reduce the amount of polling. When a trap is received, the corresponding parameter is polled again to update its value.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-The driver should be compatible with all firmware versions. It has been tested with the following firmware versions (the version number is the value of the SNMP parameter 'Software Build'):
+The connector should be compatible with all firmware versions. It has been tested with the following firmware versions (the version number is the value of the SNMP parameter 'Software Build'):
 
-| **Driver Range** | **Device Firmware Version**               |
+| **Range** | **Device Firmware Version**               |
 |------------------|-------------------------------------------|
 | 1.0.0.x          | v3.07 Build 2 v4.02 Build 9 v4.02 Build15 |
 
-### Exported drivers
+### Exported connectors
 
 Details about the supported cards can be found at the end of this document.
 
@@ -58,7 +58,7 @@ Details about the supported cards can be found at the end of this document.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -72,7 +72,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver displays information about the Frame Controller (**Evertz 7700-FC**) and the list of inserted cards. The element has three pages:
+This connector displays information about the Frame Controller (**Evertz 7700-FC**) and the list of inserted cards. The element has three pages:
 
 ### Input Cards
 

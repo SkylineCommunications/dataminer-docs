@@ -4,7 +4,7 @@ uid: Connector_help_Teleste_AC3210_Manager_-_Child
 
 # Teleste AC3210 Manager - Child
 
-This driver displays information that is exported from the parent driver Teleste AC3210 Manager. It also allows normalization of the ingress switches.
+This connector displays information that is exported from the parent connector Teleste AC3210 Manager. It also allows normalization of the ingress switches.
 
 ## About
 
@@ -22,8 +22,8 @@ This driver displays information that is exported from the parent driver Teleste
 
 ## Configuration
 
-This **SNMP** driver is used by DVE child elements that are **automatically created** by the parent driver [Teleste AC3210 Manager](xref:Connector_help_Teleste_AC3210_Manager).
+This **SNMP** connector is used by DVE child elements that are **automatically created** by the parent connector [Teleste AC3210 Manager](xref:Connector_help_Teleste_AC3210_Manager).
 
 ## How to use
 
-The element using this driver displays data that is polled from the device. It also includes action buttons, including a button that can be used to normalize the ingress switches.
+The element using this connector displays data that is polled from the device. It also includes action buttons, including a button that can be used to normalize the ingress switches.

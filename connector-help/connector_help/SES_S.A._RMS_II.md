@@ -4,21 +4,21 @@ uid: Connector_help_SES_S.A._RMS_II
 
 # SES S.A. RMS II
 
-The SES S.A. RMS II driver can be used to monitor the attenuation calculated by RMS II devices.
+The SES S.A. RMS II connector can be used to monitor the attenuation calculated by RMS II devices.
 
 ## About
 
 The Radiometer Server II offers the possibility to receive atmospheric attenuation calculated for a specific frequency and radiometer using TCP/IP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ The Radiometer Server II offers the possibility to receive atmospheric attenuati
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

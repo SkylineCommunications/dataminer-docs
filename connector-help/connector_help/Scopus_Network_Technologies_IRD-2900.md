@@ -8,20 +8,20 @@ The IRD-2900 is a broadcast-quality decoder, decryptor and interface converter t
 
 ## About
 
-The **Scopus Network Technologies IRD-2900** driver is used to monitor and control the Scopus Network Technologies Integrated Receiver decoder 2900.
+The **Scopus Network Technologies IRD-2900** connector is used to monitor and control the Scopus Network Technologies Integrated Receiver decoder 2900.
 
 The data for monitoring and controlling the device can be found on different pages, each pertaining to a specific part of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.1.2.1          | Driver Review: Update from 'displaycolumn' to 'naming'. Changed Name/Description/Displaying values. | No                  | No                      |
 | 1.1.2.2          | Sets Reviewed. Added SNMP type tags.                                                                | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.2.x          | 4.6                         |
 
@@ -31,7 +31,7 @@ The data for monitoring and controlling the device can be found on different pag
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

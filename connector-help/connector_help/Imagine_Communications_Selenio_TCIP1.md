@@ -6,21 +6,21 @@ uid: Connector_help_Imagine_Communications_Selenio_TCIP1
 
 The **Imagine Communications Selenio TCIP1** single-channel module for the Selenio MCP1 and MCP3 platform supports TICO Mezzanine Format for UHD over 3G-SDI and 10 Gig-E. TICO is low-latency, lightweight compression technology from IntoPIX.
 
-This driver allows you to monitor the transmitters and receivers in the module.
+This connector allows you to monitor the transmitters and receivers in the module.
 
 ## About
 
-This driver provides access to various information on the device. Data is retrieved using SNMP. The driver can be configured to operate either as **Encoder** or **Decoder**.
+This connector provides access to various information on the device. Data is retrieved using SNMP. The connector can be configured to operate either as **Encoder** or **Decoder**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -30,7 +30,7 @@ This driver provides access to various information on the device. Data is retrie
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

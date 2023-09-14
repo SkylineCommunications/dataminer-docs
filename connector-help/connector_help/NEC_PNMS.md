@@ -6,7 +6,7 @@ uid: Connector_help_NEC_PNMS
 
 The NEC PNMS manages all PASOLINK/PASOLINK+ radio equipment under it and reports the summary status in the PASOLINK/PASOLINK+ radio network to the upper (higher-level) manager.
 
-With this driver, it is possible to monitor a NEC PNMS. The driver creates a **DVE** for each different **source** it finds inside the received traps.
+With this connector, it is possible to monitor a NEC PNMS. The connector creates a **DVE** for each different **source** it finds inside the received traps.
 
 ## About
 
@@ -35,7 +35,7 @@ With this driver, it is possible to monitor a NEC PNMS. The driver creates a **D
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,9 +56,9 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver displays a DVE table. DVE elements can be removed with the **Delete Element** button.
+This connector displays a DVE table. DVE elements can be removed with the **Delete Element** button.
 
-By default, the driver will make 100 DVE elements for the first 100 source IDs it finds in the received traps. You can customize this amount.
+By default, the connector will make 100 DVE elements for the first 100 source IDs it finds in the received traps. You can customize this amount.
 
 If the number of elements reaches 90 % of the maximum number of elements, a warning alarm can be created. If the maximum number of elements is reached, the alarm will go in critical state and no more elements will be created.
 

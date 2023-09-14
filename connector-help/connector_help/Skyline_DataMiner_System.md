@@ -4,23 +4,23 @@ uid: Connector_help_Skyline_DataMiner_System
 
 # Skyline DataMiner System
 
-This driver can be used to monitor a DataMiner System from another DataMiner System.
+This connector can be used to monitor a DataMiner System from another DataMiner System.
 
 ## About
 
-This driver uses the DataMiner Web API v0 and v1 to monitor a DataMiner System.
+This connector uses the DataMiner Web API v0 and v1 to monitor a DataMiner System.
 
 The DataMiner Agent that is polled needs to have a valid Web API v1 license.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.5 and up                  |
 
@@ -30,7 +30,7 @@ The DataMiner Agent that is polled needs to have a valid Web API v1 license.
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### Configuration of the HTTP Main connection
 
-The driver needs the credentials of the DataMiner system to poll configured on the General\>Security" page.
+The connector needs the credentials of the DataMiner system to poll configured on the General\>Security" page.
 The configured user needs to have the "Modules\>System Configuration\>Mobile Gateway\>Allow access to Mobile UI" permission.
 
 ## Usage
@@ -65,7 +65,7 @@ There are page buttons to list an overview of all elements/Services in the clust
 
 ### Redundancy Groups
 
-Redundancy groups can be configured to be monitored by the driver.
+Redundancy groups can be configured to be monitored by the connector.
 Monitored Redundancy groups will list virtual elements and Included elements.
 
 There is an overview table with all redundancy groups on the page button page.

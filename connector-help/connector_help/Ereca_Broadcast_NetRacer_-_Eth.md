@@ -4,22 +4,22 @@ uid: Connector_help_Ereca_Broadcast_NetRacer_-_Eth
 
 # Ereca Broadcast NetRacer - Eth
 
-An exported driver from **Ereca Broadcast NetRacer**, representing one ethernet card in the chassis.
+An exported connector from **Ereca Broadcast NetRacer**, representing one ethernet card in the chassis.
 
 ## About
 
 An automatically generated driver by the **Ereca Broadcast NetRacer**, range 1.0.0.x representing a single card.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1.1                       |
 | 1.0.1.x          | 1.1.1                       |
 
 ## Installation and configuration
 
-A **DVE** using this driver can be created by an element using the parent driver. Toggle the DVE creation in the **Ethernet** **Cards** table of the parent element.
+A **DVE** using this connector can be created by an element using the parent connector. Toggle the DVE creation in the **Ethernet** **Cards** table of the parent element.
 
 ## Usage
 

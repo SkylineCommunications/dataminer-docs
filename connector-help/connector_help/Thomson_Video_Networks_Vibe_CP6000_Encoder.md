@@ -8,22 +8,22 @@ The Vibe CP6000 is a contribution platform that enables users to transport up to
 
 ## About
 
-This driver is designed to monitor the state of the audio and video for the **CP6000** **Encoder module**. It also monitors the values of the different parameters present in the input(s) and output(s) for the encoder. The driver also features transport management and profile selection for the encoder module. The different parameters of the device are displayed on multiple pages grouped by function.
+This connector is designed to monitor the state of the audio and video for the **CP6000** **Encoder module**. It also monitors the values of the different parameters present in the input(s) and output(s) for the encoder. The connector also features transport management and profile selection for the encoder module. The different parameters of the device are displayed on multiple pages grouped by function.
 
-This driver is generated automatically by the driver **Thomson Video Networks Vibe CP6000**.
+This connector is generated automatically by the connector **Thomson Video Networks Vibe CP6000**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                                                           | No                  | No                      |
 | 1.0.1.x          | New feature - translated table for multicast IP address and port + fixed problem with Alarm Table.                         | Yes                 | Yes                     |
 | 1.0.2.x          | \- Changed layout. - Fixed linking between tables. - Alarm monitoring on PID bitrates returns a user-friendly description. | Yes                 | Yes                     |
 | 1.0.3.x          | Table display keys changed to avoid duplicate naming.                                                                      | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | CP6000 04.20.02             |
 
@@ -31,7 +31,7 @@ This driver is generated automatically by the driver **Thomson Video Networks Vi
 
 ### Creation
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ## Usage
 

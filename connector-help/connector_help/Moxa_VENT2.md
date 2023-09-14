@@ -4,15 +4,15 @@ uid: Connector_help_Moxa_VENT2
 
 # Moxa VENT2
 
-The **Moxa VENT2** driver monitors and controls the unit through **SNMP**.
+The **Moxa VENT2** connector monitors and controls the unit through **SNMP**.
 
 ## About
 
-The driver polls relevant information from the device every 30 seconds and every half hour.
+The connector polls relevant information from the device every 30 seconds and every half hour.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -26,7 +26,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver has several data display pages:
+This connector has several data display pages:
 
 ### General Page
 

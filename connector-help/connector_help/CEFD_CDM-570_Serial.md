@@ -4,17 +4,17 @@ uid: Connector_help_CEFD_CDM-570_Serial
 
 # CEFD CDM-570 Serial
 
-The **CDM-570 Serial** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downcoverters (LNBs).
+The **CDM-570 Serial** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downconverters (LNBs).
 
 ## About
 
-This driver is intended to communicate with CDM-570 Serial devices using serial commands as described in the device manual.
+This connector is intended to communicate with CDM-570 Serial devices using serial commands as described in the device manual.
 
-Note: This driver will export a different driver based on button **FSK Enabled**. A list can be found in the section 'Exported Drivers'.
+Note: This connector will export a different connector based on button **FSK Enabled**. A list can be found in the section 'Exported Connectors'.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                             | No                  | No                      |
 | 2.0.0.x              | Customer Specific                                                                           | No                  | No                      |
@@ -22,9 +22,9 @@ Note: This driver will export a different driver based on button **FSK Enabled**
 | 3.0.1.x \[Obsolete\] | Cassandra compliant                                                                         | No                  | Yes                     |
 | 3.0.2.x              | IP Address was splitted up into a separate IP Address parameter and a Subnet Mask parameter | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**          |
+| **Range** | **Device Firmware Version**          |
 |------------------|--------------------------------------|
 | 1.0.0.x          | Boot:1.1.1 Bulk1:1.6.16 Bulk2:1.6.16 |
 | 2.0.0.x          | Boot:1.1.1 Bulk1:1.6.16 Bulk2:1.6.16 |
@@ -32,7 +32,7 @@ Note: This driver will export a different driver based on button **FSK Enabled**
 | 3.0.1.x          | Boot:1.1.1 Bulk1:1.6.16 Bulk2:1.6.16 |
 | 3.0.2.x          | Boot:1.1.1 Bulk1:1.6.16 Bulk2:1.6.16 |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol**     | **Description**                 |
 |---------------------------|---------------------------------|
@@ -44,7 +44,7 @@ Note: This driver will export a different driver based on button **FSK Enabled**
 
 #### Serial Connection - Main
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -187,7 +187,7 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 - **BUC Address** from *0* to *15*.
 
-**BUC Status**: The values displayed in this section are read-only **** and cannot be changed.
+**BUC Status**: The values displayed in this section are read-only and cannot be changed.
 
 **LNB Control**:
 
@@ -196,7 +196,7 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only and cannot be changed.
 
 ### Maint - Unit Info
 

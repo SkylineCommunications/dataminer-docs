@@ -8,17 +8,17 @@ The **RX1290** is an MPEG2 and MPEG4-AVC integrated receiver decoder that can al
 
 ## About
 
-This is an **SNMP** driver that is used to display the status of the different parameters of a **Tandberg RX1290 SNMP receiver**.
+This is an **SNMP** connector that is used to display the status of the different parameters of a **Tandberg RX1290 SNMP receiver**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------|---------------------|-------------------------|
 | 3.0.0.x          | New range to support DCF internal connections | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.0.0.x          | 3.0.0                       |
 
@@ -28,7 +28,7 @@ This is an **SNMP** driver that is used to display the status of the different p
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -115,7 +115,7 @@ The following page buttons are available:
 
 - **Teletext**: Displays the status of and lets you change the parameters for Teletext, such as **Teletext Status, Teletext Reason** and **Teletext PID**.
 
-The page also contains a **buffer mechanism** for services that need to be set. This mechanism can be **triggered** **externally** (e.g. via Automation scripts) or from within the driver.
+The page also contains a **buffer mechanism** for services that need to be set. This mechanism can be **triggered** **externally** (e.g. via Automation scripts) or from within the connector.
 
 ### Video Page
 

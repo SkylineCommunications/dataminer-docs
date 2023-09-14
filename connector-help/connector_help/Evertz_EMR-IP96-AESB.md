@@ -8,7 +8,7 @@ The EMR is a multi-format modular router that provides a high density solution w
 
 ## About
 
-This **SNMP** driver is used to monitor and configure the **Evertz EMR-IP96-AESB** Audio Processor.
+This **SNMP** connector is used to monitor and configure the **Evertz EMR-IP96-AESB** Audio Processor.
 
 ### Version Info
 
@@ -57,7 +57,7 @@ This **SNMP** driver is used to monitor and configure the **Evertz EMR-IP96-AESB
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

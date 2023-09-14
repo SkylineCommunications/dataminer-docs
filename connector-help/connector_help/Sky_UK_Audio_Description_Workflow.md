@@ -4,9 +4,9 @@ uid: Connector_help_Sky_UK_Audio_Description_Workflow
 
 # Sky UK Audio Description Workflow
 
-This driver can be used to create an enhanced service containing elements using the driver Imagine Communications EPIC MV, Axon ACP - GDR26, [Sky UK SSR](/Driver%20Help/Sky%20UK%20SSR.aspx) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
+This connector can be used to create an enhanced service containing elements using the connector Imagine Communications EPIC MV, Axon ACP - GDR26, [Sky UK SSR](/Driver%20Help/Sky%20UK%20SSR.aspx) and [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
 
-With this driver, alarms can be generated according to predefined rules.
+With this connector, alarms can be generated according to predefined rules.
 
 ## About
 
@@ -24,9 +24,9 @@ With this driver, alarms can be generated according to predefined rules.
 
 ## Configuration
 
-To use this driver, create a service that uses it as its service definition. Then configure the following child element/parameters.
+To use this connector, create a service that uses it as its service definition. Then configure the following child element/parameters.
 
-When you create a service using this driver, configure the following child elements/parameters:
+When you create a service using this connector, configure the following child elements/parameters:
 
 - Imagine Communications EPIC MV
 
@@ -49,9 +49,9 @@ When you create a service using this driver, configure the following child eleme
 
 Once the service has been created, DataMiner will check if there is a control track, if it is the chain in reserve, if it is the slot expecting Audio Description and if it is a programme on air.
 
-The driver will then trigger alarms according to Audio Description Workflow V4.
+The connector will then trigger alarms according to Audio Description Workflow V4.
 
-A service created using this driver will have the data pages detailed below.
+A service created using this connector will have the data pages detailed below.
 
 ### Alarms
 

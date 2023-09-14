@@ -10,16 +10,16 @@ VMware vCenter Server provides a centralized platform for managing your VMware v
 
 The VMWare vCenter driver enables DataMiner to communicate with a VMWare vCenter Server allowing a user to remotly monitor and operate a vCenter server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version                                                              | No                  | True                    |
 | 1.0.1.x          | Improve perfomance when polling big amounts of data (multi-threaded timers). | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | API Version 6.5             |
 | 1.0.1.x          | API Version 6.5             |
@@ -30,7 +30,7 @@ The VMWare vCenter driver enables DataMiner to communicate with a VMWare vCenter
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -57,7 +57,7 @@ This page and all subpages are populated using the **Appliance API**.
 
 ### Polling Configurations
 
-In this page it is possible to setup the login credentials so that the driver can communicate successfully with the VMWare vCenter Server.
+In this page it is possible to setup the login credentials so that the connector can communicate successfully with the VMWare vCenter Server.
 
 At first run it is advised to setup **Username** and **Password** and then press the Authenticate button.
 
@@ -65,9 +65,9 @@ If the login is successfull the REST vCenter API Status, REST Appliance API Stat
 
 **An adequate toogle button is provided for enabling each API.**
 
-The user must enable the APIs that he would like to enable polling. Currently the driver supports the **vCenter API** (Datacenters, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data) and the **Web Services API** (Performances Data).
+The user must enable the APIs that he would like to enable polling. Currently the connector supports the **vCenter API** (Datacenters, Clusters, Hosts, Virtual Machines, Datastores and Networks), **Appliance API** (General Data) and the **Web Services API** (Performances Data).
 
-Refer to the driver log if the login is unsuccessfull.
+Refer to the connector log if the login is unsuccessfull.
 
 ### Datacenter Topology
 

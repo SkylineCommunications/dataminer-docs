@@ -4,7 +4,7 @@ uid: Connector_help_SSL_System-T_S500
 
 # SSL System-T S500
 
-This is a smart-serial driver (Ember+) that is used to monitor and configure the SSL System-T S500.
+This is a smart-serial connector (Ember+) that is used to monitor and configure the SSL System-T S500.
 
 ## About
 
@@ -35,7 +35,7 @@ This is a smart-serial driver (Ember+) that is used to monitor and configure the
 
 #### Serial Main Connection
 
-This driver uses a serial connection for Ember+ and requires the following input during element creation:
+This connector uses a serial connection for Ember+ and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### SNMP SNMP Connection Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

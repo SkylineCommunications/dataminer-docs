@@ -32,7 +32,7 @@ This protocol allows you to monitor the power supply unit of the SEE Telecom eAc
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays device information such as device type, serial number and software version, as well as the current temperature of the power supply unit.
 - **Main View**: Contains an overview of all monitored parameters, including the input voltage status, the output voltage, the output current, and the current temperature.

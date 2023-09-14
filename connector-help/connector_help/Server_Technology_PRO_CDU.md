@@ -6,22 +6,22 @@ uid: Connector_help_Server_Technology_PRO_CDU
 
 The Server Technology Sentry family CDU is a cabinet power distribution unit that enables network access for remote power management in data centers. It can be used to monitor and control cabinet power remotely. It can also monitor the input current and the environment.
 
-The Server Technology PRO CDU driver is used to monitor and control the power, current and voltage of Sentry Switched PDUs. It also monitors the environment.
+The Server Technology PRO CDU connector is used to monitor and control the power, current and voltage of Sentry Switched PDUs. It also monitors the environment.
 
 ## About
 
-The driver (periodically) collects information from the device and sets changes on the device via SNMP. The driver implements and processes traps. When traps are received from the device, the changed parameters are updated with the new values from the traps.
+The connector (periodically) collects information from the device and sets changes on the device via SNMP. The connector implements and processes traps. When traps are received from the device, the changed parameters are updated with the new values from the traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Naming applied  | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 8.0i                        |
 | 1.0.1.x          | 8.0i                        |
@@ -32,7 +32,7 @@ The driver (periodically) collects information from the device and sets changes 
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

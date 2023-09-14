@@ -4,24 +4,24 @@ uid: Connector_help_TSL_MDU12-PM
 
 # TSL MDU12-PM
 
-With this driver, you can monitor information on the **TSL MDU12-PM** device, a power management system.
+With this connector, you can monitor information on the **TSL MDU12-PM** device, a power management system.
 
 ## About
 
-The TSL MDU12-PM driver is used to monitor and control a TSL MDU12-PM device. It displays both general information and specific information on inputs and outputs. In addition, it allows you to configure certain settings on the device.
+The TSL MDU12-PM connector is used to monitor and control a TSL MDU12-PM device. It displays both general information and specific information on inputs and outputs. In addition, it allows you to configure certain settings on the device.
 
 ### Ranges of the Driver
 
-| **Driver Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version, based on "SA DCM 2.0.0.36" driver. | No                  | Yes                     |
 | 1.0.1.x          | Driver review.                                      | No                  | Yes                     |
 
 ### Supported Firmware Versions
 
-Features in this driver are added by request. As it is possible to disable features in the poll manager so that they are not available, the driver is backwards compatible with older firmware. Very few features are no longer supported in newer firmware versions, so the driver is generally also forwards compatible.
+Features in this connector are added by request. As it is possible to disable features in the poll manager so that they are not available, the connector is backwards compatible with older firmware. Very few features are no longer supported in newer firmware versions, so the connector is generally also forwards compatible.
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0x           | 5.10                        |
 | 1.0.1.x          | 5.10                        |
@@ -32,7 +32,7 @@ Features in this driver are added by request. As it is possible to disable featu
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

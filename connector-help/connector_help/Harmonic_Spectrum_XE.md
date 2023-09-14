@@ -6,7 +6,7 @@ uid: Connector_help_Harmonic_Spectrum_XE
 
 The Harmonic Spectrum XE is a compressed playout system. It integrates a Channel-in-a-Box (CiaB) playout with transcoding and encoding. It is also built for scalability in manipulation and automation.
 
-This driver allows you to manage the jobs and workflows associated with the channel streams.
+This connector allows you to manage the jobs and workflows associated with the channel streams.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to manage the jobs and workflows associated with the chan
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-A user name and password are required for this driver to work. Specify these on the **General** page.
+A user name and password are required for this connector to work. Specify these on the **General** page.
 
 ### Redundancy
 
@@ -56,7 +56,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following pages:
+The element created with this connector consists of the following pages:
 
 - **General**: Allows you to configure the user name and password for the polling, and provides information regarding **Time Management** and **Mount Points**.
 - **Workflows**: Displays information on each workflow in the system, which consists mainly of **versioning** and **permissions**.

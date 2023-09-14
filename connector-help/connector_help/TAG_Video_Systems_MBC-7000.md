@@ -6,7 +6,7 @@ uid: Connector_help_TAG_Video_Systems_MBC-7000
 
 The MBC-7000 IP multiviewer enables creation of a broadcast-quality mosaic channel from a mixture of sources in a variety of layouts.
 
-This driver uses an HTTP connection to poll data from the MBC-7000 device. The driver can update the channel and system events in real time based on received traps.
+This connector uses an HTTP connection to poll data from the MBC-7000 device. The connector can update the channel and system events in real time based on received traps.
 
 ## About
 
@@ -20,7 +20,7 @@ This driver uses an HTTP connection to poll data from the MBC-7000 device. The d
 
 | **Range** | **Supported Firmware**                                                                                  |
 |-----------|---------------------------------------------------------------------------------------------------------|
-| 1.0.0.x   | V-2.0.6 (from version 1.0.0.11 of the driver onwards; previous supported firmware versions are unknown) |
+| 1.0.0.x   | V-2.0.6 (from version 1.0.0.11 of the connector onwards; previous supported firmware versions are unknown) |
 
 ### System Info
 
@@ -34,7 +34,7 @@ This driver uses an HTTP connection to poll data from the MBC-7000 device. The d
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 #### SNMP TRAPS Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection for incoming traps received by DataMiner.
+This connector uses a Simple Network Management Protocol (SNMP) connection for incoming traps received by DataMiner.
 
 SNMP CONNECTION:
 

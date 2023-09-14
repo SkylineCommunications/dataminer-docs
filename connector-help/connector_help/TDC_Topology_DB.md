@@ -19,7 +19,7 @@ The connector will create DSL files from data available in the following tables:
 
 The **offload cycle** for these tables, which determines when they should be polled and offloaded, can be configured in the connector. The same goes for the location where these DSL files should be stored.
 
-When an offload is started, the data will be stored in a **temporary file**, and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataminerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
+When an offload is started, the data will be stored in a **temporary file**, and when all data is available in that file, the temporary file will be renamed to the following format: "*\[StoredProcedureName\]\_\[DataMinerID\]\_\[ElementID\]\_\[dd_MM_yyyy_HH_mm_ss\].csv*". After that, the file can be picked up to handle the data.
 
 ## About
 

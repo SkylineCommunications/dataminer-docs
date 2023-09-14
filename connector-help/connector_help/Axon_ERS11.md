@@ -4,7 +4,7 @@ uid: Connector_help_Axon_ERS11
 
 # Axon ERS11
 
-The **Axon ERS11** driver can be used to display and configure informaton of the Axon ERS11 central controller and the attached card types located in its different slots.
+The **Axon ERS11** connector can be used to display and configure informaton of the Axon ERS11 central controller and the attached card types located in its different slots.
 
 ## About
 
@@ -46,7 +46,7 @@ There are different pages for the **Main Element**:
 
 ### Virtual Elements
 
-The driver contains different virtual elements (*ERS11*, *HAF90*, *SDR08*, *SDR09*) which contain specific information and settings related to the virtual element type:
+The connector contains different virtual elements (*ERS11*, *HAF90*, *SDR08*, *SDR09*) which contain specific information and settings related to the virtual element type:
 
 - **ERS11**: the **ERS11** virtual element contains information and settings that are **ERS11** related. The virtual element contains the following pages:
 

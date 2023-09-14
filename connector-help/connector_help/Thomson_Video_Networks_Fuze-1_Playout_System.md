@@ -4,21 +4,21 @@ uid: Connector_help_Thomson_Video_Networks_Fuze-1_Playout_System
 
 # Thomson Video Networks FUZE-1 Playout System
 
-This driver will be use to monitor FUZE-1 Playout System. FUZE-1 Playout is a completely new approach that integrates the traditional playout functions of a channel in a box (CiaB) with premium-quality encoding and transcoding for broadcast and OTT delivery. Ideal for applications such as ad insertion, branding, disaster recovery, and EAS insertion, FUZE-1 provides a rich playout infrastructure together with the ability to process audio and video either directly in the compressed domain or by going back to baseband and re-encoding.
+This connector will be use to monitor FUZE-1 Playout System. FUZE-1 Playout is a completely new approach that integrates the traditional playout functions of a channel in a box (CiaB) with premium-quality encoding and transcoding for broadcast and OTT delivery. Ideal for applications such as ad insertion, branding, disaster recovery, and EAS insertion, FUZE-1 provides a rich playout infrastructure together with the ability to process audio and video either directly in the compressed domain or by going back to baseband and re-encoding.
 
 ## About
 
-This driver was designed to work with model **FUZE-1.** It will be possible to monitor the Alarms on this device via **SNMP.**
+This connector was designed to work with model **FUZE-1.** It will be possible to monitor the Alarms on this device via **SNMP.**
 
-### Range of the driver
+### Range of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Complaint** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Complaint** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
 ### Supported firmware version
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 01.05.02                    |
 

@@ -4,15 +4,15 @@ uid: Connector_help_Generic_DataMiner_Log_Reader
 
 # Generic DataMiner Log Reader
 
-The Generic DataMiner Log Reader protocol is a DataMiner driver that is used to analyze DataMiner logs and check if a log does or does not contain a specific string.
+The Generic DataMiner Log Reader protocol is a DataMiner connector that is used to analyze DataMiner logs and check if a log does or does not contain a specific string.
 
 ## About
 
-This is a virtual DataMiner driver that was developed to analyze DataMiner logs. The driver searches through a configurable list of DataMiner logs and checks whether a certain string is present in the log files during a certain period of time. Depending on the configuration, it can raise an alarm if the string is or is not present. The log file, the filter and the maximum or minimum age of the filter string in the log file can be configured.
+This is a virtual DataMiner connector that was developed to analyze DataMiner logs. The connector searches through a configurable list of DataMiner logs and checks whether a certain string is present in the log files during a certain period of time. Depending on the configuration, it can raise an alarm if the string is or is not present. The log file, the filter and the maximum or minimum age of the filter string in the log file can be configured.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This is a virtual DataMiner driver that was developed to analyze DataMiner logs.
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

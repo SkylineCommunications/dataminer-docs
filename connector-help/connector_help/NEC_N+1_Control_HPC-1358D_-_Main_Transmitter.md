@@ -4,15 +4,15 @@ uid: Connector_help_NEC_N+1_Control_HPC-1358D_-_Main_Transmitter
 
 # NEC N+1 Control HPC-1358D - Main Transmitter
 
-The main transmitter consists of eight Mux transmitters that are responsible for the distribution of TV signals. This driver can be used to monitor and control this device.
+The main transmitter consists of eight Mux transmitters that are responsible for the distribution of TV signals. This connector can be used to monitor and control this device.
 
 ## About
 
-The elements using this driver are DVEs created by the **NEC N+1 Control HPC-1358D** controller element.
+The elements using this connector are DVEs created by the **NEC N+1 Control HPC-1358D** controller element.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.3                       |
 
@@ -20,7 +20,7 @@ The elements using this driver are DVEs created by the **NEC N+1 Control HPC-135
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the [NEC N+1 Control HPC-1358D](xref:Connector_help_NEC_N%2B1_Control_HPC-1358D) controller element.
+This connector is used by DVE child elements that are **automatically created** by the [NEC N+1 Control HPC-1358D](xref:Connector_help_NEC_N%2B1_Control_HPC-1358D) controller element.
 
 ## Usage
 

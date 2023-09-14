@@ -8,17 +8,17 @@ This is a snmp protocol for the **Novelsat NS3000** device and can be used to di
 
 ## about
 
-The driver needs a snmp connection to retrieve and set information from the device.
+The connector needs a snmp connection to retrieve and set information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2011.3 (Build 4377)         |
 
@@ -26,9 +26,9 @@ The driver needs a snmp connection to retrieve and set information from the devi
 
 ### Creation
 
-#### SNMP \[Main\] connection
+#### SNMP connection - Main
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -37,16 +37,12 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: \[The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
-- **Set community string**: \[The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
+- **Get community string**: The community string used when reading values from the device, by default: *public*.
+- **Set community string**: The community string used when setting values on the device, by default: *private*.
 
-#### HTTP \[Secondary\] connection
+#### HTTP connection - Secondary
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -103,7 +99,7 @@ User Changeable parameters will include **Command Regions** for changes and upda
 
 ### Demodulator Channel Config
 
-Here you find 4 parameters where you can configure the demodulator channel 1 and 2 range for ISI by defining their Lower Limir (From) and Upper Limit (To) values.
+Here you find 4 parameters where you can configure the demodulator channel 1 and 2 range for ISI by defining their Lower Limit (From) and Upper Limit (To) values.
 
 ### Demodulator Interface Config
 
@@ -131,7 +127,7 @@ Here you find 2 parameters about the modulator system: Board Temperature and Clo
 
 ### Modulator ACM Monitoring
 
-This page contains a table that monitors several **Adaptive Coding and Modulation (ACM)** parameters. At the bottom of the paga, there is a button that allows the table to be cleared.
+This page contains a table that monitors several **Adaptive Coding and Modulation (ACM)** parameters. At the bottom of the page, there is a button that allows the table to be cleared.
 
 ### Modulator AUPC Monitoring
 
@@ -139,7 +135,7 @@ This page contains multiple AUPC values that are being monitored.
 
 ### Demodulator Line Monitoring
 
-This page displays a lot of information about the demulator line, in the bottom right corner there is a button to reset the counters.
+This page displays a lot of information about the demodulator line, in the bottom right corner there is a button to reset the counters.
 
 ### Demodulator Interface Monitoring
 
@@ -161,7 +157,7 @@ Here are 2 tables displayed:
 
 ### Web Interface
 
-If available, provides acces via a Web Interface (http:// Port 80) into the specific device instance.
+If available, provides access via a Web Interface (http:// Port 80) into the specific device instance.
 
 Note: May only be available when accessing from the actual DataMiner DMA (Not all Clients).
 

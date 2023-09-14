@@ -4,7 +4,7 @@ uid: Connector_help_Eaton_Remote_Power_Panel
 
 # Eaton Remote Power Panel
 
-The Eaton RPP driver is used to monitor the Eaton Remote Power Panel.
+The Eaton RPP connector is used to monitor the Eaton Remote Power Panel.
 
 ## About
 
@@ -32,7 +32,7 @@ The Eaton RPP driver is used to monitor the Eaton Remote Power Panel.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

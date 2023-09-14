@@ -8,17 +8,17 @@ The **Eutelsat Data Collector** is a custom made driver for Eutelsat that allows
 
 About
 
-The **E**utelsat Data Collector is a driver that was tailor-made for monitoring Eutelsat DMA cluster. This driver collects data from the external cluster through the DataMiner Web API and displays the alarm state of the DataMiner Views and Services.
+The **E**utelsat Data Collector is a connector that was tailor-made for monitoring Eutelsat DMA cluster. This connector collects data from the external cluster through the DataMiner Web API and displays the alarm state of the DataMiner Views and Services.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
 Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DataMiner Web API V1        |
 
@@ -29,7 +29,7 @@ Creation
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

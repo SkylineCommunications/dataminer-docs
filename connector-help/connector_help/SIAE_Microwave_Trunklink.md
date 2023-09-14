@@ -8,11 +8,11 @@ The **SIAE Microwave Trunklink** series provides Native IP and Native SDH connec
 
 ## About
 
-This driver connects to the device and allows you to configure and monitor all features available in its MIB.
+This connector connects to the device and allows you to configure and monitor all features available in its MIB.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version               | No                  | Yes                     |
 | 1.0.1.x          | Lite polling, DCF integration | Yes                 | Yes                     |
@@ -23,7 +23,7 @@ This driver connects to the device and allows you to configure and monitor all f
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,13 +58,13 @@ This page displays information on the performance of the device.
 
 On this page, traps sent by the device are displayed in the **Trap Table** and in the **Notification History Table**.
 
-### Webinterface
+### Web Interface
 
 This page provides access to the web interface of the device. However, note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the **SIAE Microwave TrunkLink** protocol supports the usage of DCF from version **1.0.1.1** onwards, and can only be used on a DMA with **9.0 CU5** as the minimum version.
+The **1.0.0.x** connector range of the **SIAE Microwave TrunkLink** protocol supports the usage of DCF from version **1.0.1.1** onwards, and can only be used on a DMA with **9.0 CU5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

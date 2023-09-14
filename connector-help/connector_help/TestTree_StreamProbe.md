@@ -4,23 +4,17 @@ uid: Connector_help_TestTree_StreamProbe
 
 # TestTree StreamProbe
 
-The **TestTree StreamProbe** driver uses **JSON** and **SNMP** to communicate with the probe. JSON is used to monitor the status of the probe, streams, programs and alarms of the **TestTree StreamProbe MPEG-2 Monitor**. SNMP is used by the device to send traps about alarms.
+The **TestTree StreamProbe** connector uses **JSON** and **SNMP** to communicate with the probe. JSON is used to monitor the status of the probe, streams, programs and alarms of the **TestTree StreamProbe MPEG-2 Monitor**. SNMP is used by the device to send traps about alarms.
 
 ## About
 
-The **TestTree StreamProbe** is an **MPEG-2 Monitoring** device. It is used to monitor probes, transport streams and its individual components (programs and PIDs). This driver allows the user to monitor the TestTree StreamProbe via DataMiner.
+The **TestTree StreamProbe** is an **MPEG-2 Monitoring** device. It is used to monitor probes, transport streams and its individual components (programs and PIDs). This connector allows the user to monitor the TestTree StreamProbe via DataMiner.
 
 | **Range**            | **Key Features**                                                        | **Based on**                       | **System Impact** |
 |----------------------|-------------------------------------------------------------------------|------------------------------------|-------------------|
 | 1.0.0.x \[SLC Main\] | Initial version **Automatic Removal Delay** - \[see Usage -\> General\] | 1.0.0.24 (AJIMI TSAFT Live driver) | \-                |
 
 ### Product Info
-
-Style: Heading 3 Accent 1
-
-**This subsection can only be omitted for a virtual driver**
-
-In this subsection, insert a table with two columns. In the table, list the firmware versions that are fully compatible with the driver, together with the driver ranges. If multiple firmware versions are compatible with one driver range, add them in the same row, but on different lines. See the following example:
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
@@ -30,7 +24,7 @@ In this subsection, insert a table with two columns. In the table, list the firm
 
 ### Creation
 
-This driver uses an **HTTP** connection (for the JSON commands) and needs the following user information:
+This connector uses an **HTTP** connection (for the JSON commands) and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -38,7 +32,7 @@ This driver uses an **HTTP** connection (for the JSON commands) and needs the fo
 - **IP port**: The port of the destination, e.g. *80.*
 - **Bus address**: This field can be used to bypass the proxy, if the value *bypassproxy* is filled in (filled in by default)*.*
 
-This driver also uses a Simple Network Management Protocol (**SNMP**) connection (for traps) and needs the following user information:
+This connector also uses a Simple Network Management Protocol (**SNMP**) connection (for traps) and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -104,10 +98,8 @@ This page displays a **tree view** of for the entire device. The tree contains a
 
 ### Web Interface
 
-This page can be used to access the web interface of the ****TestTree StreamProbe****. Note that the web interface of this device needs to be accessible from the client PC for DataMiner to be able to display it.
+This page can be used to access the web interface of the **TestTree StreamProbe**. Note that the web interface of this device needs to be accessible from the client PC for DataMiner to be able to display it.
 
 ## Notes
 
 Only users with **security level '1'** will be able to remove streams, programs or PIDs. It's also impossible for other users to automatically remove missing streams, programs or PIDs from the respective tables.
-
-

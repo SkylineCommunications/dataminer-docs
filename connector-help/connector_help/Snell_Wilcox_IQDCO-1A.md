@@ -8,19 +8,19 @@ This protocol monitors and controls any **Snell Wilcox IQDCO-1A** equipment. It 
 
 ## About
 
-The driver works with **SNMP**, though no traps are supported.
+The connector works with **SNMP**, though no traps are supported.
 
 Two timers are used to poll information: one for short-to-medium term operations every 30 seconds, and another for long-term/static information every minute.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**             |
+| **Range** | **Device Firmware Version**             |
 |------------------|-----------------------------------------|
 | 1.0.0.x          | Compatible with software version 5.2.6. |
 
@@ -30,7 +30,7 @@ Two timers are used to poll information: one for short-to-medium term operations
 
 #### SNMP Main Connection:
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -45,7 +45,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains three pages: **General, Control** and **GPI**.
+The connector contains three pages: **General, Control** and **GPI**.
 
 ### General
 

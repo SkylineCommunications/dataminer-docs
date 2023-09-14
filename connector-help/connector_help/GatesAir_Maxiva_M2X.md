@@ -32,7 +32,7 @@ The **GatesAir** **Maxiva M2X** is a standalone multimedia exciter for the FM tr
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays basic SNMP information, such as **Description**, **Uptime**, **Contact**, **Name,** and **Location**. Also displays exciter-related parameters such as **Input 1 Status**, **Input 2 Status**, **Exciter** **Status**, etc.
 - **System**: Allows you to set up traps and configure the **Exciter Frequency**, **Exciter** **Frequency** **Offset** and **Active** **Input**.

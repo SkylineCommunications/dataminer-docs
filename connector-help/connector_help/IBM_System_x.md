@@ -4,19 +4,19 @@ uid: Connector_help_IBM_System_x
 
 # IBM System x
 
-The **IBM System x** driver can be used to display and configure information of any IBM System device.
+The **IBM System x** connector can be used to display and configure information of any IBM System device.
 
 ## About
 
 This protocol can be used to monitor and control an IBM System x device. An **SNMP** connection is used in order to successfully retrieve and configure the information of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 <table>
 <colgroup>
@@ -43,7 +43,7 @@ This protocol can be used to monitor and control an IBM System x device. An **SN
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

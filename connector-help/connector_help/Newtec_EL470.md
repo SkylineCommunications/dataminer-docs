@@ -12,16 +12,16 @@ This protocol can be used to monitor and control a Newtec EL470 device. A **seri
 
 The web interface can be accessed if the client machine has access to it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.7.2.x          | Initial version                           | No                  | Yes                     |
 | 1.8.25.x         | New firmware based on 1.7.2.x (see below) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**            |
+| **Range** | **Device Firmware Version**            |
 |------------------|----------------------------------------|
 | 1.7.2.x          | Software version 7.02 software id 6279 |
 | 1.8.25.x         | Software version 8.25 software id 6281 |
@@ -30,7 +30,7 @@ The web interface can be accessed if the client machine has access to it.
 
 Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Broadpeak_CDN_Mediator_BkM100
 
 # Broadpeak CDN Mediator BkM100
 
-The **Broadpeak CDN Mediator BkM100** driver can be used to display information of any related device. This protocol can be used to monitor the Broadpeak CDN Mediator BkM100. An **SNMP** connection and **SNMP TRAPS** are used to successfully retrieve the device's information.
+The **Broadpeak CDN Mediator BkM100** connector can be used to display information of any related device. This protocol can be used to monitor the Broadpeak CDN Mediator BkM100. An **SNMP** connection and **SNMP TRAPS** are used to successfully retrieve the device's information.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Broadpeak CDN Mediator BkM100** driver can be used to display information 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Overview
 

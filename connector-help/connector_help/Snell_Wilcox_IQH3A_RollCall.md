@@ -8,17 +8,17 @@ The **Snell Wilcox IQH3A RollCall** is a 3U rack unit accepting up to 16 modules
 
 ## About
 
-This driver is an application-specific protocol for control and operation of units. The **Snell Wilcox IQH3A RollCall** driver uses a smart-serial connection.
+This connector is an application-specific protocol for control and operation of units. The **Snell Wilcox IQH3A RollCall** connector uses a smart-serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.30.21                     |
 
@@ -28,7 +28,7 @@ This driver is an application-specific protocol for control and operation of uni
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

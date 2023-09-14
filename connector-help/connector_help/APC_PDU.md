@@ -8,19 +8,19 @@ This power bar device measures the power used by all attached devices and can be
 
 ## About
 
-The driver uses an **SNMP** connection to retrieve the status of the APC PDU device.
+The connector uses an **SNMP** connection to retrieve the status of the APC PDU device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                        | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Added additional traps.                                | No                  | No                      |
 | 1.0.1.x \[SLC Main\] | Added missing OIDs; removed displayColumn from tables. | No                  | Yes                     |
 | 1.0.2.x              | Added support for SNMPv3.                              | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.4.0                       |
 | 1.0.1.x          | 6.4.0                       |
@@ -32,7 +32,7 @@ The driver uses an **SNMP** connection to retrieve the status of the APC PDU dev
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

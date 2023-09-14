@@ -4,22 +4,22 @@ uid: Connector_help_Aperi_Ethernet_Pass_Through
 
 # Aperi Ethernet Pass Through
 
-This is an **HTTP** driver that is used to monitor and configure the **Aperi Ethernet Pass Through** equipment.
+This is an **HTTP** connector that is used to monitor and configure the **Aperi Ethernet Pass Through** equipment.
 
 ## About
 
 The information on tables and parameters is retrieved via **HTTP** communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.               | No                  | Yes                     |
-| 1.0.1.x \[SLC Main\] | Streamlined all Aperi drivers. | No                  | Yes                     |
+| 1.0.1.x \[SLC Main\] | Streamlined all Aperi connectors. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.3                       |
 | 1.0.1.x          | 1.0.3                       |
@@ -30,7 +30,7 @@ The information on tables and parameters is retrieved via **HTTP** communication
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

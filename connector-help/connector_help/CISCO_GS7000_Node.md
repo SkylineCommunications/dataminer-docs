@@ -8,19 +8,19 @@ The **CISCO GS7000 Node** four-port node is designed to enable broadband video n
 
 ## About
 
-This driver was designed to monitor **optical information and RF cable modem information** for the node.
+This connector was designed to monitor **optical information and RF cable modem information** for the node.
 
-For most of the tables in the driver, a control is available to enable or disable polling.
+For most of the tables in the connector, a control is available to enable or disable polling.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.7.0 Build 26 CxC 3.9.17   |
 
@@ -30,7 +30,7 @@ For most of the tables in the driver, a control is available to enable or disabl
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

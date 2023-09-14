@@ -16,41 +16,25 @@ Broadband Command Center is a combination of the following key components:
 
 ## About
 
-This driver was designed to work with the **Incognito BCC** device. With it, you can check the parameters of the different services of the BCC and keep track of the performance of the equipment. The different parameters of the device are displayed on multiple pages grouped by function.
+This connector was designed to work with the **Incognito BCC** device. With it, you can check the parameters of the different services of the BCC and keep track of the performance of the equipment. The different parameters of the device are displayed on multiple pages grouped by function.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | No                      |
+| 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Driver Range</strong></td>
-<td><strong>Device Firmware Version</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.1</td>
-<td><p><strong>[CFM]</strong> 6.4.5.1</p>
-<p><strong>[CFM Proxy]</strong> 6.4.4.3</p>
-<p><strong>[DHCP]</strong> 6.4.5.7</p>
-<p><strong>[MPS]</strong> 6.4.6.5</p></td>
-</tr>
-</tbody>
-</table>
+| Range | Supported Firmware Version |
+|--|--|
+| 1.0.0.1 | **[CFM]** 6.4.5.1<br>**[CFM Proxy]** 6.4.4.3<br>**[DHCP]** 6.4.5.7<br>**[MPS]** 6.4.6.5 |
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMPv3 connection and requires the following input during element creation:
+This connector uses an SNMPv3 connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

@@ -4,22 +4,22 @@ uid: Connector_help_Miteq_UPC2-L_Site_Diversity_Switching
 
 # Miteq UPC2-L Site Diversity Switching
 
-The **Miteq UPC2-L** is a unit designed for satellite communications systems. This driver can be used to monitor and configure the upconverter (UPC).
+The **Miteq UPC2-L** is a unit designed for satellite communications systems. This connector can be used to monitor and configure the upconverter (UPC).
 
 ## About
 
-This is a **serial** or **SNMP** driver used to monitor and control the **Miteq UPC2-L upconverter**.
+This is a **serial** or **SNMP** connector used to monitor and control the **Miteq UPC2-L upconverter**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                | Yes                 | Yes                     |
 | 2.0.0.x          | Serial connection replaced by SNMP connection. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                         |
+| **Range** | **Device Firmware Version**                                         |
 |------------------|---------------------------------------------------------------------|
 | 1.0.0.x          | D205620V1.06 (System Controller), D206501V1.02 (Display Controller) |
 | 2.0.0.x          | 209768 v1.15 (System Controller), 209769 v1.03 (Display Controller) |
@@ -30,7 +30,7 @@ This is a **serial** or **SNMP** driver used to monitor and control the **Miteq 
 
 #### Serial main connection (1.0.0.x range)
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 #### SNMP main connection (1.0.1.x range)
 
-This driver uses an SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ This page displays all information and configuration settings related to the ent
 
 This page can be used to check the overall status of the device, for example, the **Algorithm** the device is using or the currently **Active Receiver**.
 
-The **Mode Status** parameter displays whether the device is in *local* or *remote* mode. *Local mode* means that settings can only be done via the front panel of the device, while *Remote mode* means that the settings can be done remotely. As such, it is important that the device's **Mode Status** is set to *Remote* if you want to change settings via the driver.
+The **Mode Status** parameter displays whether the device is in *local* or *remote* mode. *Local mode* means that settings can only be done via the front panel of the device, while *Remote mode* means that the settings can be done remotely. As such, it is important that the device's **Mode Status** is set to *Remote* if you want to change settings via the connector.
 
 ### Channels
 
@@ -63,7 +63,7 @@ This page displays information related to channels 1 to 10, with status paramete
 
 For each channel, you can configure certain settings, for example, the **Attenuator Operation Mode**, **Attenuation**, **Switch State** or **Switch Threshold Setting.** To do so, click the relevant page button to open the subpage with the settings.
 
-Note that the **Ch XX Attenuation** parameters can only be set if **Ch XX Attenuator Operating Mode** is set to *Manual****.*** Furthermore, the **Attenuator** and **Switch** parameters are meaningless if **Ch XX Attenuator Operating Mode** and **Ch XX Switch Operating Mode** have the value *Not Present*.
+Note that the **Ch XX Attenuation** parameters can only be set if **Ch XX Attenuator Operating Mode** is set to *Manual*. Furthermore, the **Attenuator** and **Switch** parameters are meaningless if **Ch XX Attenuator Operating Mode** and **Ch XX Switch Operating Mode** have the value *Not Present*.
 
 ### Receiver A/B
 
@@ -73,7 +73,7 @@ These pages can be used to configure certain settings for the receiver, for exam
 
 In addition, you can also access the **Downlink Signal Strength** and some other monitoring data via these pages.
 
-One important point is the relation between the General page's **Algorithm** and this page's **Receiver Mode**. In case the algorithm used is *Diversity* or *Open-Loop*, only one receiver should be active at a time. As of version **1.0.0.4** of this driver, a pop-up message will be generated when one of these algorithms is used and an attempt is made to activate a second receiver. The second receiver will also **not be set as active** in this case. The standby mode is not affected by this, though.
+One important point is the relation between the General page's **Algorithm** and this page's **Receiver Mode**. In case the algorithm used is *Diversity* or *Open-Loop*, only one receiver should be active at a time. As of version **1.0.0.4** of this connector, a pop-up message will be generated when one of these algorithms is used and an attempt is made to activate a second receiver. The second receiver will also **not be set as active** in this case. The standby mode is not affected by this, though.
 
 ### Ethernet
 
@@ -100,12 +100,17 @@ This page consists of three sections:
 - The **Firmware** section contains the **Specification Number** and **Version** of the **System Controller** and **Display Controller**.
 
 - The **UPC Algorithm** section is used to configure the algorithm used by the UPC. Here you can choose the desired algorithm and the sample time.
+
   Please note the following:
 
-- The **Closed-Loop Feedback Attenuation Channel** and **Closed-Loop Idle Time** settings are only applicable when the *Closed-Loop* algorithm is used.
+  - The **Closed-Loop Feedback Attenuation Channel** and **Closed-Loop Idle Time** settings are only applicable when the *Closed-Loop* algorithm is used.
+
   - The **Comparison Multiplier** and **Comparison Tolerance** settings are only applicable for the *Comparison* algorithm.
+
     Setting these values may fail if the applicable algorithm is not enabled.
+
   - The **Dual-Track Receiver Levels** and **Settings Mismatch** alarm will indicate a problem in the configuration if the *Dual-Track* algorithm is used.
+
   - The **Diversity Remote UPC Link** alarm will indicate a problem in the communication with the second receiver if the *Diversity Beacon* algorithm is used.
 
 ### Ethernet Interface
@@ -149,9 +154,9 @@ Note that when the alarm value displays "Fail", this does not always mean that t
 
 ### SNMP Configuration
 
-On this page, you can set the **SMNP Communities** and the **SNMP Trap Configuration**. Note that when the SNMP Communities are updated, the driver could be unable to perform any sets or gets on the device.
+On this page, you can set the **SMNP Communities** and the **SNMP Trap Configuration**. Note that when the SNMP Communities are updated, the connector could be unable to perform any sets or gets on the device.
 
-The **Trap Destination Address** should be set to the IP of the DMA in order for the driver to handle any traps sent by the UPC. The **Trap Repeat** setting is used to define the frequency at which uncleared traps are repeated. When this value is set to 0, the trap will only be sent when it occurs. The **Refresh Timer** is used to set the frequency at which traps are identified by the UPC.
+The **Trap Destination Address** should be set to the IP of the DMA in order for the connector to handle any traps sent by the UPC. The **Trap Repeat** setting is used to define the frequency at which uncleared traps are repeated. When this value is set to 0, the trap will only be sent when it occurs. The **Refresh Timer** is used to set the frequency at which traps are identified by the UPC.
 
 Finally, the **Trap Test** button will can be used to test traps. It will cause the UPC to send a trap with the value "False Alarm".
 

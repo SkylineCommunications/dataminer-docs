@@ -10,17 +10,17 @@ The Socomec UPS version is a snmp driver that communicate with Socomec UPS to ge
 
 A SNMP connection is used in order to succesfully retrieve and configure the device's information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 | 1.1.0.x          | Version Update  | No                  | No                      |
 | 1.2.0.x          | Version Update  | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | 2.06                        |
 | 1.2.0.x          | 2.08                        |

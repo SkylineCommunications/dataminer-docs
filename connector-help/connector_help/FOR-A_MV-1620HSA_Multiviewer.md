@@ -4,21 +4,21 @@ uid: Connector_help_FOR-A_MV-1620HSA_Multiviewer
 
 # FOR-A MV-1620HSA Multiviewer
 
-This driver is used to monitor a 3G/HD/SD/Analog Mixed High-Resolution Multi-Viewer (16 Channels, Dual-Screen Output).
+This connector is used to monitor a 3G/HD/SD/Analog Mixed High-Resolution Multi-Viewer (16 Channels, Dual-Screen Output).
 
 ## About
 
 The MV-1620HSA 3G/HD/SD/Analog Mixed High-Resolution Multi-Viewer from For-A is a multi-viewer that accepts up to 16 channels of mixed 3G/HD/SD-SDI or analog composite signals for monitoring on one or two screens. It can be cascaded with other units to display up to 64 sources at once.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The MV-1620HSA 3G/HD/SD/Analog Mixed High-Resolution Multi-Viewer from For-A is 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

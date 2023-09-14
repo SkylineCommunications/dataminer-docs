@@ -4,23 +4,23 @@ uid: Connector_help_Audemat_Aztec_Golden_Eagle_DVB-T-H
 
 # Audemat Aztec Golden Eagle DVB-T-H
 
-This driver is used to monitor the **GOLDENEAGLE DVB-T**, a standalone DVB-T monitoring device used at the transmitter site or in the coverage area. The unit sequentially monitors a set list of channels and continuously verifies that the DVB-T network complies with requirements.
+This connector is used to monitor the **GOLDENEAGLE DVB-T**, a standalone DVB-T monitoring device used at the transmitter site or in the coverage area. The unit sequentially monitors a set list of channels and continuously verifies that the DVB-T network complies with requirements.
 
 ## About
 
-This driver uses an **SNMP** connection to monitor the Audemat GOLDENEAGLE DVB-T.
+This connector uses an **SNMP** connection to monitor the Audemat GOLDENEAGLE DVB-T.
 
 Polling happens at different intervals, as described in the "Usage" section below. Note that all mentioned time intervals are applicable with the **Timer base** equal to *1* (default), but this can be changed on the default DataMiner page "General Parameters".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.1.0                       |
 
@@ -30,7 +30,7 @@ Polling happens at different intervals, as described in the "Usage" section belo
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

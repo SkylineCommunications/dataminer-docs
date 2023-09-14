@@ -4,7 +4,7 @@ uid: Connector_help_Sony_Professional_Video_Monitor
 
 # Sony Professional Video Monitor
 
-This is a serial driver that is used to monitor and configure the **Sony Professional Video Monitor** (BVM-E171 / BVM-E251 / BVM-X300 / BVM-HX310 / PVM-X550 / PVM-A250 / PVM-A170 / LMD-A240 / LMD-A220 / LMD-A170) equipment.
+This is a serial connector that is used to monitor and configure the **Sony Professional Video Monitor** (BVM-E171 / BVM-E251 / BVM-X300 / BVM-HX310 / PVM-X550 / PVM-A250 / PVM-A170 / LMD-A240 / LMD-A220 / LMD-A170) equipment.
 
 ## About
 
@@ -32,7 +32,7 @@ This is a serial driver that is used to monitor and configure the **Sony Profess
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 #### Serial SDAP Connection
 
-This driver uses a serial connection for SDAP and requires the following input during element creation:
+This connector uses a serial connection for SDAP and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-No extra configuration is needed to use this driver. However, we advise you to check if the **Group ID** and **Unit ID** are correct to communicate with your device.
+No extra configuration is needed to use this connector. However, we advise you to check if the **Group ID** and **Unit ID** are correct to communicate with your device.
 
 ### Redundancy
 
@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created using this driver has two data pages, as detailed below.
+The element created using this connector has two data pages, as detailed below.
 
 ### General
 

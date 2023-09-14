@@ -6,7 +6,7 @@ uid: Connector_help_ETL_Systems_Genus_-_22544
 
 This module displays information about the ETL Systems Genus Hybrid 22544. The 22544 L-Band VSAT shelf is intended to operate over the frequency band of 850-2150 MHz. It features an 18 V LNB PSU, switchable 24 V or 48 V BUC, active or passive TX/RX amplifiers and selectable internal 10 MHz oscillator or external 10 MHz oscillator input.
 
-This driver is exported by the parent driver [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus).
+This connector is exported by the parent connector [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus).
 
 ## About
 
@@ -24,11 +24,11 @@ This driver is exported by the parent driver [ETL Systems Genus](xref:Connector_
 
 ## Configuration
 
-The element using this driver is automatically created by the parent element using the [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus) driver. No user input is required.
+The element using this connector is automatically created by the parent element using the [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus) driver. No user input is required.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays system information such as the **Summary Alarm** and the **Operation Time** of the board.
 - **Control**: Allows you to set multiple control parameters of the board.

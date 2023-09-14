@@ -4,15 +4,15 @@ uid: Connector_help_France_Television_Simulcast_Manager
 
 # France T‚l‚vision Simulcast Manager
 
-The **France T‚l‚vision Simulcast Manager** driver is an Element Manager used for job occultation.
+The **France T‚l‚vision Simulcast Manager** connector is an Element Manager used for job occultation.
 
 ## About
 
-With this driver, you can **occult** jobs shown by the element. Only the jobs linked to the element name are visible. You can occult **Manually**, with **Duration** time or with a **Schedule** time.
+With this connector, you can **occult** jobs shown by the element. Only the jobs linked to the element name are visible. You can occult **Manually**, with **Duration** time or with a **Schedule** time.
 
 ## Installation and configuration
 
-The **France T‚l‚vision Simulcast Manager** driver is a **Virtual** driver, and needs the following user information:
+The **France T‚l‚vision Simulcast Manager** connector is a **Virtual** connector, and requires the following input during element creation:
 
 - **Element name:** yourchoice_France 0
 

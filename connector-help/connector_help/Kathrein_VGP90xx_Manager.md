@@ -23,10 +23,15 @@ This connector uses a Simple Network Management Protocol (SNMP) connection and r
 SNMP Settings:
 
 - **Port number**: The default port number to connect with the devices.
+
   The default value is *161*. You can override this field per device by adding the port in the IP address column of the .csv import file.
+
 - **Get community string:** The community string in order to read from the device. The default value is *public*.
+
   Note: This must be the same for all elements.
+
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
+
   Note: this must be the same for all elements.
 
 Note: It is not necessary to supply an IP address for the SNMP connection, since these addresses must be defined for each element in the .csv file.
@@ -35,13 +40,19 @@ Note: It is not necessary to supply an IP address for the SNMP connection, since
 
 In order for the connector to start polling devices, they have to be imported through a .csv file. This is done on the **Management** page, using the following steps:
 
-1.  Click the **Import...** button on the **Management** page.
-2.  Make sure the **Manager Name** is set to the same value as in the .csv file.
-    This name is used to select only some rows in the import file, so that the same file can be used for all managers.
-3.  In the **Import File** path, select the file to import from the drop-down menu, or fill in the full path to the file.
-    The drop-down menu contains all .csv files in the protocol document folder (prefixed with "\[P\] ") and all the files in the element protocol folder (prefixed with "\[E\] ".
-4.  Click the **Import** button to read the file and create the elements.
-5.  Check the **Import File State** and **Import File Error** fields to see if the import was successful, or else why it failed.
+1. Click the **Import...** button on the **Management** page.
+
+1. Make sure the **Manager Name** is set to the same value as in the .csv file.
+
+   This name is used to select only some rows in the import file, so that the same file can be used for all managers.
+
+1. In the **Import File** path, select the file to import from the drop-down menu, or fill in the full path to the file.
+
+   The drop-down menu contains all .csv files in the protocol document folder (prefixed with "\[P\] ") and all the files in the element protocol folder (prefixed with "\[E\] ".
+
+1. Click the **Import** button to read the file and create the elements.
+
+1. Check the **Import File State** and **Import File Error** fields to see if the import was successful, or else why it failed.
 
 ### The CSV File
 
@@ -110,7 +121,6 @@ The following table provides more information on the different columns:
 </tbody>
 </table>
 
-
 Note: If a field is optional, this means that the column does not need to contain any data, not that all other columns shift one position to the left.
 
 #### Comments
@@ -129,6 +139,7 @@ The table contains:
 - The **Management Index**, which should be used to update the record. This row is hidden but can be made visible.
 
 - The **Polling IP Address**: This can be an IPv4, an IPv6, or a name, which will be resolved to an IP address every time the device is polled.
+
   Optionally, it can also contain the port number that should be used for SNMP communication. The default port number is defined during element creation or editing (usually *161*).
 
 - The **Manager Name:** This row is hidden but can be made visible. The row usually contains the same value as the **Manager Name** at the top of the page (unless this is changed after importing).
@@ -141,7 +152,7 @@ The table contains:
 
 - The **Polling Status**.: This column can contain three possible values:
 
-- *Enabled*: The device is polled and before each poll, the connector checks if the IP address of the device can be resolved. If it cannot be resolved, the DVE of the device will be put into timeout, the **Poll Status** will be set to *Stopped (Error),* and the **Timeout State Device** will be set to *DNS Error* to indicate that there is a DNS error.
+  - *Enabled*: The device is polled and before each poll, the connector checks if the IP address of the device can be resolved. If it cannot be resolved, the DVE of the device will be put into timeout, the **Poll Status** will be set to *Stopped (Error),* and the **Timeout State Device** will be set to *DNS Error* to indicate that there is a DNS error.
   - *Disabled*: The device will not be polled. Its values and timeout state remain unchanged. No DNS checks are performed in this state. This value remains the same after an element restart but is discarded after a file import.
   - *Stopped (Error)*: The device is not polled but there will be regular checks (every hour) to see if the address remains unknown to the DNS server. When it can be resolved, polling will continue.
 
@@ -178,6 +189,7 @@ On this page, it is possible to:
 The **Import File Path** parameter has a drop-down list containing all .csv files in the element's protocol document folder or the element document folder. Those files are prefixed with a "*\[P\]* " and an *"\[E\]* " respectively. Any other file can also be selected but requires the full path instead of just the file name.
 
 Note:
+
 - Protocol Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]*
 - Element Document Folder = *C:\Skyline DataMiner\Documents\\ProtocolName\]\\ElementName\]*
 

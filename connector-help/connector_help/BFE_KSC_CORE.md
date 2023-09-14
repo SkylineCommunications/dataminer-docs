@@ -4,7 +4,7 @@ uid: Connector_help_BFE_KSC_CORE
 
 # BFE KSC CORE
 
-This is a DataMiner driver for the **BFE KSC CORE**, a highly available, adaptable control and monitoring system that allows fast and flexible control of an entire broadcast chain.
+This is a DataMiner connector for the **BFE KSC CORE**, a highly available, adaptable control and monitoring system that allows fast and flexible control of an entire broadcast chain.
 
 ## About
 
@@ -32,7 +32,7 @@ This is a DataMiner driver for the **BFE KSC CORE**, a highly available, adaptab
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Allows you to monitor and configure basic information about the device, e.g. **System Description, Controller Status**.
 - **Interfaces**: Displays the Interfaces table.

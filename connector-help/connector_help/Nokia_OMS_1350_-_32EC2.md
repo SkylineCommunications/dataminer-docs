@@ -6,7 +6,7 @@ uid: Connector_help_Nokia_OMS_1350_-_32EC2
 
 The **Nokia** **Optical** **Management** **System** (OMS) **1350** centralizes multiple network management functions in one unified management system for the entire Nokia optics portfolio.
 
-This driver uses the CORBA protocol to communicate with **Nokia** **OMS** **1350**.
+This connector uses the CORBA protocol to communicate with **Nokia** **OMS** **1350**.
 
 This type of Nokia OMS DVE is a representation of an installed 32EC2 card.
 
@@ -36,7 +36,7 @@ This type of Nokia OMS DVE is a representation of an installed 32EC2 card.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -52,4 +52,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of a page with general parameters and a page with an alarm table. This table can be used to monitor the state of the module.
+The element created with this connector consists of a page with general parameters and a page with an alarm table. This table can be used to monitor the state of the module.

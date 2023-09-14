@@ -8,17 +8,17 @@ Building on the SpaceTrack 4000 platform, the SpaceTrack 4000E continues to serv
 
 ## About
 
-The **Harris Spacetrack 4000E** driver is intended to communicate with this device using the SNMP protocol.
+The **Harris Spacetrack 4000E** connector is intended to communicate with this device using the SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**            |
+| **Range** | **Device Firmware Version**            |
 |------------------|----------------------------------------|
 | 1.0.0.x          | Harris CapRock One Aug 1 2015 20:06:24 |
 
@@ -28,7 +28,7 @@ The **Harris Spacetrack 4000E** driver is intended to communicate with this devi
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ On the **General** page, there are two parameters that must be set in order to p
 
 ### General
 
-This is the default page of the driver. It displays general information about the device.
+This is the default page of the connector. It displays general information about the device.
 
 ### Monitor Control
 

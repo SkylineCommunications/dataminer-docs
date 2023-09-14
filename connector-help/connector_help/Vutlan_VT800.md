@@ -10,17 +10,17 @@ The Vutlan VT800 unit is used to control temperature, humidity, voltage, leakage
 
 The device has built-in servers and agents like HTTP, HTTPS, SNMP v1, 2c, 3, SMTP, Radius, Syslog, FTP, DHCP, and Watchdog.
 
-This driver uses an **SNMP** connection to monitor the device.
+This connector uses an **SNMP** connection to monitor the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.3.6.1.4.1.8072.3.2.10     |
 
@@ -30,7 +30,7 @@ This driver uses an **SNMP** connection to monitor the device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver consists of a number of pages, divided into groups.
+The connector consists of a number of pages, divided into groups.
 
 ### Information page
 

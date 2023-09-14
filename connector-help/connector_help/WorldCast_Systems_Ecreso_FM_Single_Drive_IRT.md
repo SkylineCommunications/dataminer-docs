@@ -32,7 +32,7 @@ The WorldCast Systems Ecreso FM Single Drive IRT is an FM transmitter.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

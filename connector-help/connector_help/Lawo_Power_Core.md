@@ -4,7 +4,7 @@ uid: Connector_help_Lawo_Power_Core
 
 # Lawo Power Core
 
-This driver is used to monitor a Lawo Power Core device. This device is a remote production solution for audio consoles with integrated modular I/O, DSP and IP streaming capabilities and uses Ember+ as its communication protocol.
+This connector is used to monitor a Lawo Power Core device. This device is a remote production solution for audio consoles with integrated modular I/O, DSP and IP streaming capabilities and uses Ember+ as its communication protocol.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor a Lawo Power Core device. This device is a remote
 
 #### Smart-Serial Main Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -55,4 +55,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver sends requests for all parameters it wants to poll and listens to all incoming messages. It then filters and processes the useful messages. This information is then displayed on the appropriate page of the driver. The name of each page indicates which kind of parameters can be found on that page.
+The connector sends requests for all parameters it wants to poll and listens to all incoming messages. It then filters and processes the useful messages. This information is then displayed on the appropriate page of the connector. The name of each page indicates which kind of parameters can be found on that page.

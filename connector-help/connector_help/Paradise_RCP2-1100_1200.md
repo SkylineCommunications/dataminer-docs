@@ -4,11 +4,11 @@ uid: Connector_help_Paradise_RCP2-1100_1200
 
 # Paradise RCP2-1100/1200
 
-The **Paradise RCP2-1100/1200** driver is used to display and configure information of the Paradise RCP2-1100 device.
+The **Paradise RCP2-1100/1200** connector is used to display and configure information of the Paradise RCP2-1100 device.
 
 ## About
 
-This protocol can be used to monitor and control the **Paradise RCP2-1100/1200** device. The driver supports one serial connection to communicate with the device.
+This protocol can be used to monitor and control the **Paradise RCP2-1100/1200** device. The connector supports one serial connection to communicate with the device.
 
 **Alarming** and **trending** are enabled for parameters in the protocol.
 

@@ -4,19 +4,19 @@ uid: Connector_help_Harris_X50
 
 # Harris X50
 
-With this driver it is possible to monitor **Harris X50** devices with **SNMP**.
+With this connector it is possible to monitor **Harris X50** devices with **SNMP**.
 
 ## About
 
-This driver is used to monitor the **Harris X50** Frame Synchronizer and Converter.
+This connector is used to monitor the **Harris X50** Frame Synchronizer and Converter.
 
-In addition to the normal **SNMP** **polling**, the device also sends **traps** (**notifications**) when an alarm occurs on the system. If a trap is received, the driver will update the **Alarms Page** with the new alarms.
+In addition to the normal **SNMP** **polling**, the device also sends **traps** (**notifications**) when an alarm occurs on the system. If a trap is received, the connector will update the **Alarms Page** with the new alarms.
 
 ## Installation and configuration
 
 ### Creation
 
-This is an SNMP driver. The IP and Bus Address need to be configured during creation of the element.
+This is an SNMP connector. The IP and Bus Address need to be configured during creation of the element.
 
 **SNMP CONNECTION**:
 

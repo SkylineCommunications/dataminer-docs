@@ -32,7 +32,7 @@ This protocol can be used to display information from the Advantech AMT Intrac 4
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -77,7 +77,7 @@ Page buttons provide access to additional parameters related to **Search Paramet
 
 The **Goto Satellite** page button opens a subpage that allows you to lock the device onto a given predefined satellite from the **Satellite Presets**. On the same subpage, you can also define how many samples the protocol needs to collect before the frequency and the polarization angle are adjusted. In case the device cannot adjust to a specific satellite in time, you can also define a sliding window that discards the initial samples that do not belong to it.
 
-In version 1.0.0.25 of the driver, the **Positions** subpage is added, which allows you to change the azimuth, elevation and polarization separately. These separate buttons were added for older devices that have difficulty processing the 3 parameter values at the same time. However, the functionality is the same as on the main Positioning page.
+In version 1.0.0.25 of the connector, the **Positions** subpage is added, which allows you to change the azimuth, elevation and polarization separately. These separate buttons were added for older devices that have difficulty processing the 3 parameter values at the same time. However, the functionality is the same as on the main Positioning page.
 
 ### Satellite Presets
 

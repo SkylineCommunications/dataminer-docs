@@ -4,7 +4,7 @@ uid: Connector_help_Avid_Interplay_PAM
 
 # Avid Interplay PAM
 
-This driver retrieves the folder structure from the Avid Interplay Production Asset Manager (PAM) solution and allows the user to define the access rules of the DataMiner user groups for these folders.
+This connector retrieves the folder structure from the Avid Interplay Production Asset Manager (PAM) solution and allows the user to define the access rules of the DataMiner user groups for these folders.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver retrieves the folder structure from the Avid Interplay Production As
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ When a new element is created, the **username and password** of the Avid Interpl
 
 ### Redundancy
 
-No redundancy is defined in the driver.
+No redundancy is defined in the connector.
 
 ## How to Use
 
@@ -54,11 +54,11 @@ There are two ways to retrieve folders from the Avid Interplay Production Asset 
 
 ### Active Polling
 
-With active polling, the driver will request the **folder structure** of the Avid Interplay PAM service at 30-minute intervals using HTTP POST requests. Each request contains the Avid Interplay user credentials and the path of an Avid Interplay folder. The response then contains the subfolders of the provided folder.
+With active polling, the connector will request the **folder structure** of the Avid Interplay PAM service at 30-minute intervals using HTTP POST requests. Each request contains the Avid Interplay user credentials and the path of an Avid Interplay folder. The response then contains the subfolders of the provided folder.
 
-Every 30 minutes, the driver will request the DataMiner **users and user groups**. These can be used to **assign access** of a user group to a specific folder in the form of access rules. When a user group has access to a folder, they also have access to all underlying folders.
+Every 30 minutes, the connector will request the DataMiner **users and user groups**. These can be used to **assign access** of a user group to a specific folder in the form of access rules. When a user group has access to a folder, they also have access to all underlying folders.
 
-The folder structure that a **specific user** has access to can be retrieved via an **Automation script** by sending a JSON request to the **External Access Rules Request** parameter (PID 1621). An entry is added to the Access Rules Requests table with the status *Pending* when the request is received. When the request is handled by the driver, the status is updated to either *Completed* or *Failed* and the response becomes available in the Response column of the table. The requests and responses should have the following structure:
+The folder structure that a **specific user** has access to can be retrieved via an **Automation script** by sending a JSON request to the **External Access Rules Request** parameter (PID 1621). An entry is added to the Access Rules Requests table with the status *Pending* when the request is received. When the request is handled by the connector, the status is updated to either *Completed* or *Failed* and the response becomes available in the Response column of the table. The requests and responses should have the following structure:
 
 | **Request**                         | **Response**                                                                                                                                        |
 |-------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -66,5 +66,5 @@ The folder structure that a **specific user** has access to can be retrieved via
 
 ### Request Based
 
-The folder structure that a **specific user** has access to (filtering based on the user group the user belongs to) can be retrieved via an **Automation script** by sending a JSON request to the **External Folder Request** parameter (PID 1720). An entry is added to the Folder Requests table with the status *Pending* when the request is received. When the request is handled by the driver, the status is updated to either *Completed* or *Failed* and the response becomes available in the Response column of the table. The requests and responses should have the following structure:
+The folder structure that a **specific user** has access to (filtering based on the user group the user belongs to) can be retrieved via an **Automation script** by sending a JSON request to the **External Folder Request** parameter (PID 1720). An entry is added to the Folder Requests table with the status *Pending* when the request is received. When the request is handled by the connector, the status is updated to either *Completed* or *Failed* and the response becomes available in the Response column of the table. The requests and responses should have the following structure:
 

@@ -4,21 +4,21 @@ uid: Connector_help_Apple_OSX_Platform
 
 # Apple OSX Platform
 
-With this driver, it is possible to monitor Apple OSX platforms with **SNMP**.
+With this connector, it is possible to monitor Apple OSX platforms with **SNMP**.
 
 ## About
 
-The Apple OSX Platform driver retrieves basic information about the system.
+The Apple OSX Platform connector retrieves basic information about the system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Apple OSX Platform driver retrieves basic information about the system.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

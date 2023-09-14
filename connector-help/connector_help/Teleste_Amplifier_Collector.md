@@ -4,24 +4,24 @@ uid: Connector_help_Teleste_Amplifier_Collector
 
 # Teleste Amplifier Collector
 
-With this driver, you can poll a set of Teleste amplifiers (that all support the same MIBs) and collect all the data in one driver.
+With this connector, you can poll a set of Teleste amplifiers (that all support the same MIBs) and collect all the data in one driver.
 
 ## About
 
-The driver can be provisioned via the import of CSV files with IP addresses and names. The driver then makes sure that all single SNMP parameters and SNMP tables of every amplifier are polled once every 15 minutes, by using multiple threads.
+The connector can be provisioned via the import of CSV files with IP addresses and names. The connector then makes sure that all single SNMP parameters and SNMP tables of every amplifier are polled once every 15 minutes, by using multiple threads.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|----------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version                  | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Updated spectrum analyzer tables | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-The driver was tested with three different types of Teleste amplifiers, listed in the table below, and can also be used with other types of Teleste amplifiers that support the same MIBs.
+The connector was tested with three different types of Teleste amplifiers, listed in the table below, and can also be used with other types of Teleste amplifiers that support the same MIBs.
 
-| **Driver Range** | **Device Firmware Version**                                                                               |
+| **Range** | **Device Firmware Version**                                                                               |
 |------------------|-----------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Teleste AC3010 Teleste AC3210 Teleste ACE3 (Other types of Teleste amplifiers that support the same MIBs) |
 | 1.0.1.x          | Teleste AC3010 Teleste AC3210 Teleste ACE3 (Other types of Teleste amplifiers that support the same MIBs) |
@@ -32,7 +32,7 @@ The driver was tested with three different types of Teleste amplifiers, listed i
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 ### Configuration of the amplifiers to poll
 
-You need to configure the set of amplifiers to make the driver work. This can be done via the **Configure Provisioning** page. Please refer to the section "Configure Provisioning" below for further details.
+You need to configure the set of amplifiers to make the connector work. This can be done via the **Configure Provisioning** page. Please refer to the section "Configure Provisioning" below for further details.
 
 ### Offload configuration
 
@@ -145,14 +145,14 @@ The **Amplified Reductions** table makes use of the information specified in the
 
 ### SNMP Table Pages
 
-The driver can poll 12 different SNMP tables. For every amplifier, the SNMP table can contain multiple rows. As a real collector driver, this driver collects all rows of a certain SNMP table in one table, regardless of which amplifier it refers to.
+The connector can poll 12 different SNMP tables. For every amplifier, the SNMP table can contain multiple rows. As a real collector driver, this connector collects all rows of a certain SNMP table in one table, regardless of which amplifier it refers to.
 
 Before the columns of the SNMP table itself, you will find four columns that are always the same:
 
 - **Index \[IDX\]:** This is the index of the row. It is a concatenation of the amplifier name and raw row instance.
 - **Amplifier Name:** The name of the amplifier this row refers to.
 - **Row Instance:** The raw row instance of the row.
-- **Validity:** Whether or not the data is "Valid". If the amplifier goes into timeout, the rows corresponding with that amplifier are considered "Old". With this mechanism, a manager driver using this information can know that this data is no longer 100 percent reliable.
+- **Validity:** Whether or not the data is "Valid". If the amplifier goes into timeout, the rows corresponding with that amplifier are considered "Old". With this mechanism, a manager connector using this information can know that this data is no longer 100 percent reliable.
 
 The 12 different SNMP tables, which all have a separate page, are:
 
@@ -185,7 +185,7 @@ This page contains all the parameters needed to configure the provisioning via C
 
 > In this section, the **Directory Path Name** should contain the directory where the CSV file(s) you want to import are located. For example, if your files are in the Downloads folder of your local C:\\ drive, specify *C:\Downloads*. If the directory containing the files is accessed remotely (e.g. if you specify '*\\80.62.121.234'*), you also need to specify a **Network Share User Name** (can contain a domain name, but not always needed) and a **Network Share Password**.
 >
-> With this provisioning tool, the driver can immediately synchronize with the amplifier configuration that the Huawei iManager U2000 dumped in the specified directory. The **Expected File Name** and **Expected File Format** indicate the kind of files the driver expects. This way, the driver is adapted to the way the Huawei iManager U2000 dumps the information that this driver needs. It can synchronize the configuration daily, if you enable this via the toggle button **Automatic Refresh of the Amplifier CSV Provisioning**. You can also force a refresh by clicking the button **Force Refresh** or by setting this parameter (with ID 3101) via an Automation script.
+> With this provisioning tool, the connector can immediately synchronize with the amplifier configuration that the Huawei iManager U2000 dumped in the specified directory. The **Expected File Name** and **Expected File Format** indicate the kind of files the connector expects. This way, the connector is adapted to the way the Huawei iManager U2000 dumps the information that this connector needs. It can synchronize the configuration daily, if you enable this via the toggle button **Automatic Refresh of the Amplifier CSV Provisioning**. You can also force a refresh by clicking the button **Force Refresh** or by setting this parameter (with ID 3101) via an Automation script.
 >
 > All imported data will be used to populate the **Main Poll Table**: The first two columns will be imported in the first two columns of the Main Table (**Amplifier Name** and **IP Address**) and are the most important for polling. The other 11 columns contain additional information (such as the hardware or software version of the amplifier), which is added to the table after the Table Instances. The IP addresses are the addresses that DataMiner will use to communicate with the amplifiers.
 
@@ -194,7 +194,7 @@ This page contains all the parameters needed to configure the provisioning via C
 Note:
 
 - **Not all files** that pass the **Expected File Name** check will be **imported**. In the files that pass the first check and are considered valid, the algorithm searches for the **most recent timestamp**. It will then only import the files that contain this most recent timestamp and ignore the other, older files. This way, when the Huawei iManager U2000 dumps a new CSV file with a more recent timestamp, that file will be prioritized and updates of the IP addresses will be detected correctly. You can see which files have been imported and what their timestamp was in the CSV Response Message.
-- The **Amplifier Name** is the **unique key** used. The driver will therefore not allow the import of two amplifiers with the same Amplifier Name. Note that when the iManager U2000 element detects that an amplifier has changed IP addresses, it can dump a new CSV file in the directory with the same Amplifier Name and another IP address. The driver will then detect this and adjust the IP address. As a consequence, this collector driver will dynamically adapt to the new IP address.
+- The **Amplifier Name** is the **unique key** used. The connector will therefore not allow the import of two amplifiers with the same Amplifier Name. Note that when the iManager U2000 element detects that an amplifier has changed IP addresses, it can dump a new CSV file in the directory with the same Amplifier Name and another IP address. The connector will then detect this and adjust the IP address. As a consequence, this collector driver will dynamically adapt to the new IP address.
 - The validity of every row of the CSV file is checked before it is processed, e.g. a check if the IP address is a valid IPv4 address.
 - Each primary key will be unique, but the IP address does not have to be unique. Two amplifiers with another primary key can have the same IP address at the same time.
 
@@ -202,7 +202,7 @@ Note:
 
 This page contains all the parameters to configure the provisioning via DB of amplifiers for the polling of the collector.
 
-In the upper left corner of the page, the **Collector Device ID** is displayed, which is needed to search for the corresponding amplifiers in the IAM database. The driver gets this value on startup from a custom property of the element, called "DEVICE_ID".
+In the upper left corner of the page, the **Collector Device ID** is displayed, which is needed to search for the corresponding amplifiers in the IAM database. The connector gets this value on startup from a custom property of the element, called "DEVICE_ID".
 
 On this page, you need to configure the credentials to connect with the SQL database.
 
@@ -219,7 +219,7 @@ Note: The **fast provisioning changes** **require an update of the GetAmpCollect
 
 ### Thread Pool Info Page
 
-This page contains statistics regarding the multithreaded timer, which this driver uses to poll the amplifiers as efficiently as possible.
+This page contains statistics regarding the multithreaded timer, which this connector uses to poll the amplifiers as efficiently as possible.
 
 - **Thread Pool Usage:** Indicates how many threads are in use.
 - **Thread Pool Waiting:** Indicates how many threads are waiting because all the threads of the thread pool are in use.
@@ -230,6 +230,6 @@ This page contains statistics regarding the multithreaded timer, which this driv
 
 ## Notes
 
-Version 1.0.0.1 of the driver does not support any SNMP traps.
+Version 1.0.0.1 of the connector does not support any SNMP traps.
 
-Version 1.0.0.2 of the driver does support SNMP traps.
+Version 1.0.0.2 of the connector does support SNMP traps.

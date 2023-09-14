@@ -8,21 +8,21 @@ With the **Novel-Supertv MIS** (Media Information System) driver, it is possible
 
 ## About
 
-The driver retrieves information via **SNMP** and displays it in the element on two pages:
+The connector retrieves information via **SNMP** and displays it in the element on two pages:
 
 - The **General** page contains CPU, memory and disk usage information, as well as information concerning the operating system, the application and the database.
 - The **Alarms** page contains information about alarms that occurred on the server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                          | No                  | No                      |
 | 1.1.0.x          | Updated parameters based on the new MIBs because of new device firmware. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -33,7 +33,7 @@ The driver retrieves information via **SNMP** and displays it in the element on 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,7 +64,3 @@ On this page, an overview is displayed of the alarms that have occurred.
 This page contains a subpage:
 
 - **SNMP Traps**: On this page, you can configure the necessary settings to receive SNMP Traps.
-
-## Notes
-
-N/A

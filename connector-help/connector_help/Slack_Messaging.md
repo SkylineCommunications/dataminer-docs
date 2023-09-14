@@ -4,15 +4,15 @@ uid: Connector_help_Slack_Messaging
 
 # Slack Messaging
 
-This driver can be used to integrate Skyline DataMiner with a **Slack workspace**. It will communicate with Slack and ensure that the configured list of actions is executed. In order to keep this driver as general as possible, these actions are defined in **Automation scripts**.
+This connector can be used to integrate Skyline DataMiner with a **Slack workspace**. It will communicate with Slack and ensure that the configured list of actions is executed. In order to keep this connector as general as possible, these actions are defined in **Automation scripts**.
 
-When commands are sent into a Slack channel, these will be picked up by the element running this driver. When the element detects a known command, it will execute the Automation script linked to that command.
+When commands are sent into a Slack channel, these will be picked up by the element running this connector. When the element detects a known command, it will execute the Automation script linked to that command.
 
 ## About
 
 **HTTP communication** is used to communicate with the Slack API ([http://api.slack.com](http://api.slack.com/)). Two separate connections are made: one connection to the WEB API, and a second (web socket) connection to the RTM API.
 
-The driver periodically retrieves the list of users and conversations via the WEB API (using polling), while messages that users send in a channel are pushed to the driver via the web socket interface.
+The connector periodically retrieves the list of users and conversations via the WEB API (using polling), while messages that users send in a channel are pushed to the connector via the web socket interface.
 
 **Access tokens** are used to authenticate on the API. Such a token can be obtained from the app configuration webpage. For more information, refer to the "Installation and configuration" section below.
 
@@ -25,17 +25,17 @@ Automation scripts that can be executed via Slack must have the following **spec
 
 Users can use the "!list" command to retrieve an overview of all compatible and enabled scripts that can be executed. The command for each script can be customized on the "Automation Scripts" page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | Unknown                     |
+| 1.0.0.x          | Unknown                     |
 
 ## Installation and configuration
 
@@ -43,7 +43,7 @@ Users can use the "!list" command to retrieve an overview of all compatible and 
 
 #### HTTP WEB API connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -53,7 +53,7 @@ HTTP CONNECTION:
 
 #### HTTP RTM API connection
 
-This driver uses an HTTP (web socket) connection and requires the following input during element creation:
+This connector uses an HTTP (web socket) connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -65,16 +65,17 @@ HTTP CONNECTION:
 
 This integration works based on a Slack bot that must be preconfigured via the Slack API website. Follow the following steps in order to do this configuration:
 
-1.  Go to <https://api.slack.com/apps>.
-2.  Click "Create New App".
-3.  Provide a name for the app (i.e. DataMiner), and select the workspace in which you want to integrate the app.
-4.  Click "Create App".
-5.  Go to the "Bot Users" page and select "Add Bot User".
-6.  Give the bot user a name (i.e. DataMiner), and make sure that "Always Show My Bot as Online" option is turned off. The bot user will automatically be online when the driver is connected to the web socket connection.
-7.  Click "Add Bot User".
-8.  Install the application in your workspace, in order to receive the bot authentication token that can be used in the element.
-9.  Copy the "Bot User Oauth Access Token", and paste it in the "OAuth Access Token" parameter on the Authentication page of the Slack element in DataMiner.
-    The driver will now connect to the Slack API, and shortly afterwards the bot user will come online.
+1. Go to <https://api.slack.com/apps>.
+2. Click "Create New App".
+3. Provide a name for the app (i.e. DataMiner), and select the workspace in which you want to integrate the app.
+4. Click "Create App".
+5. Go to the "Bot Users" page and select "Add Bot User".
+6. Give the bot user a name (i.e. DataMiner), and make sure that "Always Show My Bot as Online" option is turned off. The bot user will automatically be online when the connector is connected to the web socket connection.
+7. Click "Add Bot User".
+8. Install the application in your workspace, in order to receive the bot authentication token that can be used in the element.
+9. Copy the "Bot User Oauth Access Token", and paste it in the "OAuth Access Token" parameter on the Authentication page of the Slack element in DataMiner.
+
+   The connector will now connect to the Slack API, and shortly afterwards the bot user will come online.
 
 ## Usage
 
@@ -104,7 +105,7 @@ To refresh the content of this table, use the **Refresh** button.
 
 The **Description** column contains user-defined text that is presented when the list command is requested from a conversation.
 
-A **Command** can be assigned to each Automation script. When a user sends one of these commands in one of the channels that include the bot, the driver will run the linked Automation script. This allows the administrator to freely configure the name of the commands associated with each Automation script.
+A **Command** can be assigned to each Automation script. When a user sends one of these commands in one of the channels that include the bot, the connector will run the linked Automation script. This allows the administrator to freely configure the name of the commands associated with each Automation script.
 
 The **State** column allows you to enable or disable the possibility to execute a particular script.
 
@@ -141,7 +142,7 @@ This page displays the app configuration page on the Slack API website. Note tha
 
 ### External sets
 
-The driver provides the functionality to send a message from an external source in DataMiner (i.e. an Automation script) to a channel in Slack. This can be done in two different ways:
+The connector provides the functionality to send a message from an external source in DataMiner (i.e. an Automation script) to a channel in Slack. This can be done in two different ways:
 
 - Simple XML:
 

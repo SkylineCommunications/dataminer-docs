@@ -4,21 +4,21 @@ uid: Connector_help_UPC_Nederland_B2B_CPE_Provisioning
 
 # UPC Nederland B2B CPE Provisioning
 
-This driver will be used to automatically create and configure elements of the **CISCO ISR** protocol.
+This connector will be used to automatically create and configure elements of the **CISCO ISR** protocol.
 
 ## About
 
-This driver will execute soap calls to retrieve data. Every 5 minutes there will be a version check. If there is a newer version then the other soap calls will be executed. The **Get Devices** soap command will create the missing **CISCO ISR** elements in the correct views in the Surveyor or reconfigure existing elements, e.g. if the alarm template has changed. The **Get Interfaces** and **Get QoS** soap commands will contain the interfaces for which the polling does or does not need to be enabled in the **CISCO ISR Measurement Configuration Table**.
+This connector will execute soap calls to retrieve data. Every 5 minutes there will be a version check. If there is a newer version then the other soap calls will be executed. The **Get Devices** soap command will create the missing **CISCO ISR** elements in the correct views in the Surveyor or reconfigure existing elements, e.g. if the alarm template has changed. The **Get Interfaces** and **Get QoS** soap commands will contain the interfaces for which the polling does or does not need to be enabled in the **CISCO ISR Measurement Configuration Table**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ This driver will execute soap calls to retrieve data. Every 5 minutes there will
 
 #### Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -61,7 +61,7 @@ The **Configuration** page button can be used to access the **Configuration** pa
 
 ## Notes
 
-This element creates **CISCO ISR** elements. Please make sure that the **CISCO ISR** protocol driver is present on the DMA and is set as production.
+This element creates **CISCO ISR** elements. Please make sure that the **CISCO ISR** connector is present on the DMA and is set as production.
 
 The alarm templates that are in the soap response need to be created on the DMA, as otherwise the created element will not be monitored.
 

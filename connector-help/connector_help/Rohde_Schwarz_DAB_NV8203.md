@@ -4,21 +4,21 @@ uid: Connector_help_Rohde_Schwarz_DAB_NV8203
 
 # Rohde Schwarz DAB NV8203
 
-This driver is used to monitor the DAB transmitter (including power values, exciter and amplifier states, input signal states, CCU monitoring, summary faults and logbook). It also allows automatic input selection and configuration.
+This connector is used to monitor the DAB transmitter (including power values, exciter and amplifier states, input signal states, CCU monitoring, summary faults and logbook). It also allows automatic input selection and configuration.
 
 ## About
 
 This is an **SNMPv2** protocol. Traps are not implemented.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                  |
+| **Range** | **Device Firmware Version**                                                  |
 |------------------|------------------------------------------------------------------------------|
 | 1.0.0.x          | Software Identification Number: 2095.8613.00 Software Version Number: 1.33.0 |
 
@@ -28,7 +28,7 @@ This is an **SNMPv2** protocol. Traps are not implemented.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -90,4 +90,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-In version **1.0.0.2** of this driver, the **Nominal Power** parameter (PID 100), which had to be configured manually, is removed and **replaced** by parameter **Rf Probes Ant Fwd Nominal** (PID: 2000). This parameter is retrieved from the device, so that no extra configuration is required.
+In version **1.0.0.2** of this connector, the **Nominal Power** parameter (PID 100), which had to be configured manually, is removed and **replaced** by parameter **Rf Probes Ant Fwd Nominal** (PID: 2000). This parameter is retrieved from the device, so that no extra configuration is required.

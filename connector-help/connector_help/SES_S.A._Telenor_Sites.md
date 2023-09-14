@@ -8,11 +8,11 @@ SES makes use of uplink sites at Telenor and wants to see uplink information fro
 
 ## About
 
-This driver takes uplink status data from Telenor and retrieves it for monitoring on the SES DMS.
+This connector takes uplink status data from Telenor and retrieves it for monitoring on the SES DMS.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This driver takes uplink status data from Telenor and retrieves it for monitorin
 
 #### HTTP main connection:
 
-This driver uses the DataMiner SOAP HTTP interface and requires the following input during element creation:
+This connector uses the DataMiner SOAP HTTP interface and requires the following input during element creation:
 
 HTTP CONNECTION:
 

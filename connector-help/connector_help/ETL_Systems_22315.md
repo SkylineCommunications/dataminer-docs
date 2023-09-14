@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_22315
 
 # ETL Systems 22315
 
-This driver is used to monitor the **ETL Systems 22315** Splitter/Combiner.
+This connector is used to monitor the **ETL Systems 22315** Splitter/Combiner.
 
 ## About
 
@@ -12,7 +12,7 @@ This device contains a combiner and a splitter, which both feature a redundant a
 
 The device can be monitored by **SNMP** and via a native web interface. If the device is in failure (because a PSU failed or an amplifier failed), a **trap** is sent to the DataMiner element. When the trap is received, DataMiner will immediately poll the data from the device to update the status. No alarms are shown when a trap is received.
 
-Information from this driver is displayed on 2 main pages (see "Usage" section below).
+Information from this connector is displayed on 2 main pages (see "Usage" section below).
 
 ## Installation and Configuration
 
@@ -20,7 +20,7 @@ Information from this driver is displayed on 2 main pages (see "Usage" section b
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

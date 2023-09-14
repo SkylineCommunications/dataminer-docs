@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_SX_Pro_Multiviewer
 
 # Imagine Communications SX Pro Multiviewer
 
-This driver uses the **SNMP** protocol to gather status information from the **SX Pro Multiviewer** card, which is usually installed inside a Platinum router or matrix. The driver also receives SNMP **traps** from the multiviewer card.
+This connector uses the **SNMP** protocol to gather status information from the **SX Pro Multiviewer** card, which is usually installed inside a Platinum router or matrix. The connector also receives SNMP **traps** from the multiviewer card.
 
 ## About
 
@@ -12,15 +12,15 @@ The **Platinum SX Pro Multiviewer** is designed for baseband applications. Integ
 
 The Platinum SX Pro hardware is installed in the output section of a Platinum or IP3 router frame. It takes inputs from the router where it is installed and combines those inputs on three or six different output displays. The size of the various options determines the number of outputs (three or six) and the number of inputs (8 to 64, with optional redundancy when installed in a 5RU, 9RU or 15RU frame).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0.76                      |
 
@@ -30,7 +30,7 @@ The Platinum SX Pro hardware is installed in the output section of a Platinum or
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

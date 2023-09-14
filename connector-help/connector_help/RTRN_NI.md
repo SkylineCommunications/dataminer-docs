@@ -12,9 +12,9 @@ This protocol is a virtual DMS configuration setup application, which reads out 
 
 The RTRN NI driver will periodically poll the DB for changes. A button can also be used to manually trigger a full reprovisioning.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,7 +22,7 @@ The RTRN NI driver will periodically poll the DB for changes. A button can also 
 
 ### Creation
 
-This driver uses a **virtual connection** and does not need any user input during element creation.
+This connector uses a **virtual connection** and does not need any user input during element creation.
 
 ## Usage
 

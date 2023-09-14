@@ -4,17 +4,17 @@ uid: Connector_help_Specialty_Microwave_Corp_8315-50X
 
 # Specialty Microwave Corp 8315-50X
 
-With this driver it is possible to monitor a **Specialty Microwave Corp 8315-50X** serial device.
+With this connector it is possible to monitor a **Specialty Microwave Corp 8315-50X** serial device.
 
 ## About
 
-The ********Specialty Microwave Corp **8315-50X********** will monitor and configure a Specialty Microwave Corp 8315-50X 1:2 HPA Protection switch.
+The **Specialty Microwave Corp 8315-50X** will monitor and configure a Specialty Microwave Corp 8315-50X 1:2 HPA Protection switch.
 
 ## Installation and configuration
 
 ### Creation
 
-The ************Specialty Microwave Corp **8315-50X************** is a serial driver. The IP address, Port and Bus address need to be configured during creation of the element.
+The **Specialty Microwave Corp 8315-50X** is a serial connector. The IP address, Port and Bus address need to be configured during creation of the element.
 
 **SERIAL CONNECTION**:
 

@@ -32,7 +32,7 @@ This connector can be used to communicate with an Innotech IG04 weather station 
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

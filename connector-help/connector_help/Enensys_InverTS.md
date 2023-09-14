@@ -4,7 +4,7 @@ uid: Connector_help_Enensys_InverTS
 
 # Enensys InverTS
 
-This driver retrieves and monitors data from the device. The **Enensys InverTS** is a DVB-T2 Gateway reverse function designed to receive up to two T2-MI streams over satellite, ASI or IP, containing either a single PLP or multiple PLP, and capable of de-encapsulating the T2-MI streams into one or several MPEG-2 TS over ASI and IP.
+This connector retrieves and monitors data from the device. The **Enensys InverTS** is a DVB-T2 Gateway reverse function designed to receive up to two T2-MI streams over satellite, ASI or IP, containing either a single PLP or multiple PLP, and capable of de-encapsulating the T2-MI streams into one or several MPEG-2 TS over ASI and IP.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver retrieves and monitors data from the device. The **Enensys InverTS**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver allows you to configure general parameters such as **Date Time**, **Device Name, Device Location**, **Network Interfaces** and **Alarms.**
+The connector allows you to configure general parameters such as **Date Time**, **Device Name, Device Location**, **Network Interfaces** and **Alarms.**
 
 It is also possible to configure the **Network Interfaces**. Specifically, you can update parameters like the **Speed**, **Duplex** mode, **IPv4 Address**, **Netmask** and **Gateway**.
 

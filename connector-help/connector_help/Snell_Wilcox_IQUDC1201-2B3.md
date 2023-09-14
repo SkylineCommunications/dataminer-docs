@@ -4,11 +4,11 @@ uid: Connector_help_Snell_Wilcox_IQUDC1201-2B3
 
 # Snell Wilcox IQUDC1201-2B3
 
-The aim of this driver is to monitor and control amongst others the Video and Audio Inputs and Outputs, Audio Routing, Mixers, and Dolby Decoder/Encoder of the **IQUDC1201-2B3** device.
+The aim of this connector is to monitor and control amongst others the Video and Audio Inputs and Outputs, Audio Routing, Mixers, and Dolby Decoder/Encoder of the **IQUDC1201-2B3** device.
 
 ## About
 
-This driver implements the RollCall protocol (serial protocol) for all communication with the device.
+This connector implements the RollCall protocol (serial protocol) for all communication with the device.
 
 It is a smart-serial single driver, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
 
@@ -18,7 +18,7 @@ The version 1.0.0.1 was built for the firmware *0713007125.*
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**
 

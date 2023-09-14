@@ -4,22 +4,22 @@ uid: Connector_help_NTT_Electronics_MVD5000
 
 # NTT Electronics MVD5000
 
-This driver is used to monitor and configure the **MVD5000** decoder from **NTT Electronics**.
+This connector is used to monitor and configure the **MVD5000** decoder from **NTT Electronics**.
 
 ## About
 
-This driver contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document. The driver uses the **SNMP** protocol to communicate with the device.
+This connector contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document. The connector uses the **SNMP** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | DCF Integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MVD5000 FirmVersion.04.30   |
 | 1.0.1.x          | MVD5000 FirmVersion.04.30   |
@@ -30,7 +30,7 @@ This driver contains different pages with information and settings. More detaile
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -86,7 +86,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **NTT Electronics MVD5000** protocol supports the usage of DCF and can only be used on a DMA with **8.5.7.2** as the minimum version.
+The **1.0.1.x** connector range of the **NTT Electronics MVD5000** protocol supports the usage of DCF and can only be used on a DMA with **8.5.7.2** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

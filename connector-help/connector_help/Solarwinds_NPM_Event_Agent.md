@@ -4,7 +4,7 @@ uid: Connector_help_Solarwinds_NPM_Event_Agent
 
 # Solarwinds NPM Event Agent
 
-This driver is used to retrieve events from a SolarWinds database system.
+This connector is used to retrieve events from a SolarWinds database system.
 
 ## About
 
@@ -38,7 +38,7 @@ This driver is used to retrieve events from a SolarWinds database system.
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -46,7 +46,7 @@ When creating a new element, you will need to enter the SQL database configurati
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ### Web Interface
 

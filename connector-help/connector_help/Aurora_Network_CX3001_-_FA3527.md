@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_CX3001_-_FA3527
 
 # Aurora Network CX3001 - FA3527
 
-The Aurora Network Node FA3527M driver is used by DVEs created by the Aurora Network CX3001 driver. A DVE is created for each high power EDFA module.
+The Aurora Network Node FA3527M connector is used by DVEs created by the Aurora Network CX3001 connector. A DVE is created for each high power EDFA module.
 
 ## About
 
@@ -15,9 +15,9 @@ The Dynamic Virtual Element has four pages:
 - The **User Setup** page contains information regarding the mode selection, laser setup and alarm setup.
 - The **Module Info** page contains information about the module itself.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.1.x          | Unknown                     |
 
@@ -25,7 +25,7 @@ The Dynamic Virtual Element has four pages:
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each high power EDFA found in the system, a virtual element will be created.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Aurora Network CX3001](xref:Connector_help_Aurora_Network_CX3001), from version 2.0.1.x onwards. For each high power EDFA found in the system, a virtual element will be created.
 
 ## Usage
 

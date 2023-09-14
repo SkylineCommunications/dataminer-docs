@@ -4,7 +4,7 @@ uid: Connector_help_Splunk_Enterprise
 
 # Splunk Enterprise
 
-The Splunk Enterprise driver is an HTTP driver that implements the Splunk API. The REST API provides methods for accessing every feature available in the Splunk platform.
+The Splunk Enterprise connector is an HTTP connector that implements the Splunk API. The REST API provides methods for accessing every feature available in the Splunk platform.
 
 Splunk is an application that captures, indexes, and correlates high volumes of machine-generated data in a searchable repository from which it can generate graphs, reports, alerts, dashboards, and visualizations.
 
@@ -12,15 +12,15 @@ Splunk is an application that captures, indexes, and correlates high volumes of 
 
 The Splunk Enterprise driver focuses on monitoring jobs created based on saved searches configured in the Splunk platform.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.6.0 (API)                 |
 
@@ -30,7 +30,7 @@ The Splunk Enterprise driver focuses on monitoring jobs created based on saved s
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -41,13 +41,13 @@ HTTP CONNECTION:
 
 ### Saved Search
 
-In order to retrieve job results configured in the Splunk platform for saved searches, these saved searches need to be configured manually in the driver. For this purpose, the **Saved Searches Table** provides the option to manually add saved searches. This can be done by right-clicking in the table and selecting **Add new**).
+In order to retrieve job results configured in the Splunk platform for saved searches, these saved searches need to be configured manually in the connector. For this purpose, the **Saved Searches Table** provides the option to manually add saved searches. This can be done by right-clicking in the table and selecting **Add new**).
 
 The following information needs to be specified when a new saved search is added:
 
 - **Saved Search**: The name of the saved search as defined in the Splunk platform (case sensitive).
 
-- **Result Type**: Since the results of saved searches don't have a specific format, the driver supports the following 5 format types:
+- **Result Type**: Since the results of saved searches don't have a specific format, the connector supports the following 5 format types:
 
 - **Type I**: One field retrieved (Type Integer)
   - **Type II**: Two fields retrieved (Type String, Type Integer)
@@ -61,7 +61,7 @@ Finally, a **Request Searches** button is also available, which allows you to po
 
 ### Job Results
 
-The **Job Results Table** will display the job results depending on the saved searches configured in the **Saved Searches Table**. For each saved search, multiple job results can be added to the Job Results Table. The number of rows depends on the **host** field found in the job result. In case a saved search contains more than one Job ID (that corresponds to the same *host* field but with different timestamps), the driver will process the latest job result in the Job Results Table.
+The **Job Results Table** will display the job results depending on the saved searches configured in the **Saved Searches Table**. For each saved search, multiple job results can be added to the Job Results Table. The number of rows depends on the **host** field found in the job result. In case a saved search contains more than one Job ID (that corresponds to the same *host* field but with different timestamps), the connector will process the latest job result in the Job Results Table.
 
 The following is an example of a job result (Type I) with only one field:
 
@@ -94,14 +94,14 @@ The job result will be displayed in the **Job Results Table** as follows:
 In order to limit the number of rows, the following two parameters are available:
 
 - **Maximum Number of Job Results**: Defines the maximum number of rows allowed in the Job Results Table.
-- **Automatic Removal of Job Results**: Once enabled, the driver will take the maximum number of job results into account and limit the number of rows in the Job Results Table.
+- **Automatic Removal of Job Results**: Once enabled, the connector will take the maximum number of job results into account and limit the number of rows in the Job Results Table.
 
 In addition, two extra parameters are available on this page to manually remove rows from the Job Results table:
 
 - The **Remove All** button will remove all the rows from the Job Results Table.
 - Each row in the Job Results Table contains a column with a **Remove** button. Clicking this button will remove the corresponding row.
 
-Finally, an extra parameter is available at the bottom of this page, which will dynamically define the format of the display key of the Job Results Table. This **Job Result Table Naming Suffix** parameter allows you to concatenate the column values of the **Job Results Table** using any separator. This parameter implements the same format processing as the **C# String Format** method. In order to avoid a duplicate display key, the driver will always include the index of the table as part of the display key.
+Finally, an extra parameter is available at the bottom of this page, which will dynamically define the format of the display key of the Job Results Table. This **Job Result Table Naming Suffix** parameter allows you to concatenate the column values of the **Job Results Table** using any separator. This parameter implements the same format processing as the **C# String Format** method. In order to avoid a duplicate display key, the connector will always include the index of the table as part of the display key.
 
 ### Dashboards
 
@@ -109,13 +109,13 @@ This page contains the **Dashboard URL** parameter.
 
 ### Configuration
 
-This page contains the following parameters, which will be used by the driver to authenticate against the Splunk platform:
+This page contains the following parameters, which will be used by the connector to authenticate against the Splunk platform:
 
 - **Username**: The username for the Splunk platform
 - **Password**: The password for the specified username.
 - **User Node**: The user node required for HTTP requests
 - **App Node**: The app node required for HTTP requests
 
-The Splunk Enterprise driver renews the authentication session key every 10 minutes. After a session key renewal, the driver will poll the saved searches configured in the Saved Search Table.
+The Splunk Enterprise driver renews the authentication session key every 10 minutes. After a session key renewal, the connector will poll the saved searches configured in the Saved Search Table.
 
 This page also contains a **Login** button, which can be used to force an authentication request.

@@ -58,21 +58,21 @@ The iDirect X7 Satellite Router is a multi-core hardware system that enables ser
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. (default: *443*)\]
+- **IP port**: The IP port of the destination (default: *443*).
 
 #### Serial Telnet Connection Connection
 
-This driver uses a serial connection to execute Telnet commands and requires the following input during element creation:
+This connector uses a serial connection to execute Telnet commands and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. (default: *23*)\]
+- **IP port**: The IP port of the destination (default: *23*).
 
 Usage
 

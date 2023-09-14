@@ -4,15 +4,15 @@ uid: Connector_help_DVEO_Streamer
 
 # DVEO Streamer
 
-The **DVEO Streamer** driver allows the monitoring of the input and output streams of a **DVEO Streamer** device
+The **DVEO Streamer** connector allows the monitoring of the input and output streams of a **DVEO Streamer** device
 
 ## About
 
-This driver monitors the input and output streams of a **DVEO Streamer**.
+This connector monitors the input and output streams of a **DVEO Streamer**.
 
 All the data is retrieved via **HTTP-SOAP** protocol.
 
-The driver displays information on 5 main pages :
+The connector displays information on 5 main pages :
 
 - **Connection**: Allows users to enter their credentials and to start/stop polling the device.
 - **General** **Input**: Lists all the input streams of the device and allows the user to start/stop the streams.
@@ -24,7 +24,7 @@ The driver displays information on 5 main pages :
 
 ### Creation
 
-This Driver uses an HTTP connection and needs the following user information:
+This Driver uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection**
 
@@ -42,7 +42,7 @@ Note that the **User Name** and **Password** are saved in the database. If the d
 
 ## Usage
 
-This driver contains 5 pages.
+This connector contains 5 pages.
 
 ### Connection
 

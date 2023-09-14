@@ -8,19 +8,19 @@ The **Eltek WebPower** is an **adapter** that makes it possible to monitor and c
 
 ## About
 
-The driver consists of different pages representing the different aspects of this device that can be monitored and controlled, for example **Inputs**, **Outputs**, **Voltage,** etc.
+The connector consists of different pages representing the different aspects of this device that can be monitored and controlled, for example **Inputs**, **Outputs**, **Voltage,** etc.
 
-Information is polled from the device using **SNMP** calls. In addition, the original web interface of the device is available through the driver.
+Information is polled from the device using **SNMP** calls. In addition, the original web interface of the device is available through the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ Information is polled from the device using **SNMP** calls. In addition, the ori
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

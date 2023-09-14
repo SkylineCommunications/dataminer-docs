@@ -4,23 +4,23 @@ uid: Connector_help_Sofia_Digital_Playout_Manager
 
 # Sofia Digital Playout Manager
 
-This driver uses an **SNMP** connection to monitor a **Sofia Digital** **Playout Manager**.
+This connector uses an **SNMP** connection to monitor a **Sofia Digital** **Playout Manager**.
 
 ## About
 
 The Sofia Backstage Playout Manager can be used to manage EPG information on all DVB-compliant digital networks. Service information, specifically Event Information Tables (EIT), is used to populate the EPG, which provides information about different services provided on DVB networks.
 
-The driver supports both the **Sofia Digital EPG System** and **HBBTV plugin** servers.
+The connector supports both the **Sofia Digital EPG System** and **HBBTV plugin** servers.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The driver supports both the **Sofia Digital EPG System** and **HBBTV plugin** s
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

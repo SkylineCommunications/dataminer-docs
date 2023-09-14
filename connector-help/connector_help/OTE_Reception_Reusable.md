@@ -8,21 +8,21 @@ The basic driver for enhanced services.
 
 ## About
 
-This driver is the basic service definition used to create enhanced services. Other enhanced services are derived from this driver.
+This connector is the basic service definition used to create enhanced services. Other enhanced services are derived from this connector.
 
-The driver makes active alarms and subscribed elements available in the service.
+The connector makes active alarms and subscribed elements available in the service.
 
 Enhanced services require a DataMiner version of **9.0.3.0** or higher.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes (1.0.0.6+)          |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DataMiner 9.0.3.0           |
 

@@ -34,7 +34,7 @@ Using an SNMP connection, the Snell Wilcox IQSYN31 protocol can retrieve, set, a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays basic information about the device and licenses, and information on default settings.
 - **Misc. Logging**: Displays the system uptime and the hardware and firmware versions.

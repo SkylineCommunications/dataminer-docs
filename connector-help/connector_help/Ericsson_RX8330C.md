@@ -4,25 +4,25 @@ uid: Connector_help_Ericsson_RX8330C
 
 # Ericsson RX8330C
 
-This is an **HTTP** driver that is used to retrieve status information from the **Ericsson RX8330C** device. The RX8330C is based on the existing RX8330 Integrator Receiver Decoders (IRD) and supports the embedded Conax Conditional Access system.
+This is an **HTTP** connector that is used to retrieve status information from the **Ericsson RX8330C** device. The RX8330C is based on the existing RX8330 Integrator Receiver Decoders (IRD) and supports the embedded Conax Conditional Access system.
 
 ## About
 
-This driver retrieves the information on tables and parameters by HTTP polling. However, to make this possible, you must specify the necessary credentials (username and password) on the **General** page.
+This connector retrieves the information on tables and parameters by HTTP polling. However, to make this possible, you must specify the necessary credentials (username and password) on the **General** page.
 
-The driver also contains an **overview of the active alarms, modules, CA Service Status** and **CA Subscription Status**.
+The connector also contains an **overview of the active alarms, modules, CA Service Status** and **CA Subscription Status**.
 
-The driver requires at least **.NET 4.0**.
+The connector requires at least **.NET 4.0**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 10.0.0                      |
 
@@ -32,7 +32,7 @@ The driver requires at least **.NET 4.0**.
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

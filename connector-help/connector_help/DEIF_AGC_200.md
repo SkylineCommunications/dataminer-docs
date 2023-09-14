@@ -4,21 +4,21 @@ uid: Connector_help_DEIF_AGC_200
 
 # DEIF AGC 200
 
-This serial driver can be used to monitor the DEIF Advanced Genset Controller 200 series, a power generator interface controller.
+This serial connector can be used to monitor the DEIF Advanced Genset Controller 200 series, a power generator interface controller.
 
 ## About
 
 The advanced controller series integrates all necessary functions for genset protection and control, and stands out for its reliability and operator-friendliness. The AGC 200 applies asymmetric load sharing to ensure optimal load on the genset, in order to cut operation costs and reduce harmful emissions. It arrests cooling at pre-programmed cooldown temperatures and features automatic priority selection, setting the optimum combination of gensets for optimized fuel consumption.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.59                        |
 
@@ -28,7 +28,7 @@ The advanced controller series integrates all necessary functions for genset pro
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,13 +4,13 @@ uid: Connector_help_Evertz_FC3000
 
 # Evertz FC3000
 
-This driver monitors the **Evertz FC3000**, a controller card.
+This connector monitors the **Evertz FC3000**, a controller card.
 
 ## About
 
 The module provides a single point of access to communicate with the entire 3000MVP series of cards. All the monitoring and control information is retrieved via SNMP.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -36,9 +36,9 @@ The module provides a single point of access to communicate with the entire 3000
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.8                         |
 
@@ -48,7 +48,7 @@ The module provides a single point of access to communicate with the entire 3000
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -62,7 +62,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-The driver contains only one page.
+The connector contains only one page.
 
 ### General
 

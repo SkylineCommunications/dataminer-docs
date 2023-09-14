@@ -4,27 +4,27 @@ uid: Connector_help_Satcom_Technologies_NetMAC
 
 # Satcom Technologies NetMAC
 
-The NetMAC driver is designed to collect data from the NetMAC device, which is a management tool for telecommunication systems.
+The NetMAC connector is designed to collect data from the NetMAC device, which is a management tool for telecommunication systems.
 The relevant information is contained in data points, associated to different SCUs, owned by nodes of different systems.
 
 ## About
 
-The aim of this driver is to collect data from the NetMAC device and to allow the user some control, both through SNMP. The data is structured by means of a tree control.
+The aim of this connector is to collect data from the NetMAC device and to allow the user some control, both through SNMP. The data is structured by means of a tree control.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version, with optional DVE creation.      | No                  | Yes                     |
-| 2.0.0.1          | Implementation based on traps instead of polling. | No                  | Yes                     |
-| 2.0.0.2          | Only processes traps of Primary FEP.              | No                  | Yes                     |
+| 1.0.0.x          | Initial version, with optional DVE creation.      | No                  | Yes                     |
+| 2.0.0.x          | Implementation based on traps instead of polling. | No                  | Yes                     |
+| 2.0.0.x          | Only processes traps of Primary FEP.              | No                  | Yes                     |
 | 2.0.1.x          | Added connection for Primary FEP state polling    | No                  | Yes                     |
 
 ## Installation and configuration
 
 ### Creation: Range 1.0.0.1 to 2.0.0.2
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -39,7 +39,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ### Creation: Range 2.0.1.x
 
-This driver uses 2 Simple Network Management Protocol (SNMP) connections (one for each FEP) and requires the following input during element creation:
+This connector uses 2 Simple Network Management Protocol (SNMP) connections (one for each FEP) and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

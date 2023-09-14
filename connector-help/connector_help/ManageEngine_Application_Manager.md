@@ -14,7 +14,7 @@ The **ManageEngine Application Manager** allows a user to receive and process da
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION**:
 

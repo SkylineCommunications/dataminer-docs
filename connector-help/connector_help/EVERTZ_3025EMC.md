@@ -8,11 +8,11 @@ The **Evertz 3025EMC** Master Control Switcher is a solution for facilities conv
 
 ## About
 
-This driver is used to monitor faults in the Evertz 3025EMC device. The information is retrieved via an **SNMP** connection.
+This connector is used to monitor faults in the Evertz 3025EMC device. The information is retrieved via an **SNMP** connection.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -28,4 +28,4 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### Faults Page
 
-The **Faults** page is the only page provided on this driver. It allows **Send Trap** configuration and **Fault Status** monitoring for each type of fault, designated by its **Fault Name**.
+The **Faults** page is the only page provided on this connector. It allows **Send Trap** configuration and **Fault Status** monitoring for each type of fault, designated by its **Fault Name**.

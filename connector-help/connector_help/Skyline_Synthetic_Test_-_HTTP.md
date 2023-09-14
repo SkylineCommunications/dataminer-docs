@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Synthetic_Test_-_HTTP
 
 # Skyline Synthetic Test - HTTP
 
-This driver is used in the Synthetic Test Solution and is intended to be the central location where all information related to HTTP testing is stored.
+This connector is used in the Synthetic Test Solution and is intended to be the central location where all information related to HTTP testing is stored.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used in the Synthetic Test Solution and is intended to be the cen
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,4 +44,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver can only be used as part of the Synthetic Test Solution. It requires all the components from this solution in order to work.
+This connector can only be used as part of the Synthetic Test Solution. It requires all the components from this solution in order to work.

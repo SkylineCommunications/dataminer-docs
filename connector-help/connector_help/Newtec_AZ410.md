@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_AZ410
 
 # Newtec AZ410
 
-This driver allows you to monitor and operate the Newtec AZ410 satellite modem via SNMP.
+This connector allows you to monitor and operate the Newtec AZ410 satellite modem via SNMP.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to monitor and operate the Newtec AZ410 satellite modem v
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

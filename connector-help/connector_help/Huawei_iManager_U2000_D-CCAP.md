@@ -10,19 +10,19 @@ The Huawei iManager U2000 D-CCAP is a device that contains all topology info of 
 
 SNMP is used to retrieve general parameters and alarms entering through traps.
 
-Through SFTP, the topology files will be retrieved. These files will be split per OLT by the driver.
+Through SFTP, the topology files will be retrieved. These files will be split per OLT by the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                        | No                  | Yes                     |
 | 2.0.0.x          | Virtual Protocol. SNMP pages are gone. | No                  | Yes                     |
 | 2.0.1.x          | Based on 2.0.0.x; Alarms Page.         | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V200R015C50                 |
 | 2.0.0.x          | V200R015C50                 |
@@ -34,7 +34,7 @@ Through SFTP, the topology files will be retrieved. These files will be split pe
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

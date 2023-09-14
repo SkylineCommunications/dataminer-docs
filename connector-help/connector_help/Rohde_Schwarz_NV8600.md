@@ -8,19 +8,19 @@ The **Rohde Schwarz NV8600** is a device used as DVB-T2 transmitter, composed of
 
 ## About
 
-The driver communicates with the Rohde Schwarz equipment through **SNMP** communication using **three distinct polling timers**: one every hour for semi-static configuration, one every 30 seconds for configurable input from the end user that is not strictly time-bound, and one every 10 seconds for time-sensitive displayed parameters such as event logs or fault-related parameters.
+The connector communicates with the Rohde Schwarz equipment through **SNMP** communication using **three distinct polling timers**: one every hour for semi-static configuration, one every 30 seconds for configurable input from the end user that is not strictly time-bound, and one every 10 seconds for time-sensitive displayed parameters such as event logs or fault-related parameters.
 
 SNMP traps can be retrieved, if this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  |
+| **Range** | **Description**  |
 |------------------|------------------|
-| 1.0.0.1          | Initial Version. |
+| 1.0.0.x          | Initial version. |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                   |
+| **Range** | **Device Firmware Version**                                                                   |
 |------------------|-----------------------------------------------------------------------------------------------|
 | 1.0.0.x          | NetCCU800 1.44.1 (could be compatible with later/earlier software versions of the NetCCU800). |
 
@@ -28,7 +28,7 @@ SNMP traps can be retrieved, if this is enabled on the device.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -43,7 +43,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-The driver has several pages, which can be categorized in the following five categories: General, Transmitter, Pump, Exciter, and Web Interface.
+The connector has several pages, which can be categorized in the following five categories: General, Transmitter, Pump, Exciter, and Web Interface.
 
 For each category, the following pages have been configured:
 

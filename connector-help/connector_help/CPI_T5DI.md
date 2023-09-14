@@ -8,17 +8,17 @@ The **CPI T5DI** is a High Power Amplifier (HPA).
 
 ## About
 
-This driver uses **serial** communication to manage the **CPI T5DI** device.
+This connector uses **serial** communication to manage the **CPI T5DI** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 01.00.15                    |
 
@@ -28,7 +28,7 @@ This driver uses **serial** communication to manage the **CPI T5DI** device.
 
 #### Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

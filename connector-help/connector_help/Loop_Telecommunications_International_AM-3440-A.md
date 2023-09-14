@@ -8,25 +8,25 @@ The Loop-AM3440-A/B/C series are Access DCS-MUXs that combine various digital ac
 
 ## About
 
-This is an SNMP driver. It gets the information from the chassis and the connected cards. The chassis has 12 standard slots and 4 mini slots. The slot indexes range from 1 to 16, starting with the mini slots. The mini slots from 1 to 4 are named A, B, C and D, and the standard slots from 5 to 16 are named by number, starting at 1.
+This is an SNMP connector. It gets the information from the chassis and the connected cards. The chassis has 12 standard slots and 4 mini slots. The slot indexes range from 1 to 16, starting with the mini slots. The mini slots from 1 to 4 are named A, B, C and D, and the standard slots from 5 to 16 are named by number, starting at 1.
 
 The communication method used is SNMP version 1.
 
-Note: This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers" below.
+Note: This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 0062                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                                                              | **Description**               |
 |----------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------|
@@ -41,7 +41,7 @@ Note: This driver will export different drivers based on the retrieved data. A l
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

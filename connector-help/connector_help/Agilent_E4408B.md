@@ -8,17 +8,17 @@ The **Agilent E4408B** is an ESA-L basic spectrum analyzer that can go up to 26.
 
 ## About
 
-This driver retrieves data via **TCP/IP** **serial communication**. Commands are sent to the device with or without a response in return.
+This connector retrieves data via **TCP/IP** **serial communication**. Commands are sent to the device with or without a response in return.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | A.14.06                     |
 
@@ -28,7 +28,7 @@ This driver retrieves data via **TCP/IP** **serial communication**. Commands are
 
 #### GPIB main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 GPIB CONNECTION:
 

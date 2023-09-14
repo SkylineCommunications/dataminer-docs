@@ -32,7 +32,7 @@ The Grass Valley Sirius 800 Series products are hybrid video, audio, IP and 12G-
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,12 +55,12 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains general status parameters and a table with all available matrix levels.
   Via the **Configurations** page button, you can configure driver polling settings such as the matrix level and the active polling IP.
 - **Matrix**: Displays the matrix.
-- **Router Control**: Displays the tables used by the driver to communicate with the Router Control application.
+- **Router Control**: Displays the tables used by the connector to communicate with the Router Control application.
 - **Routing**: Displays the **Inputs** and **Outputs** tables of the matrix.
 - **Controller**: Displays the current device controller(s) status.
 - **Alarms**: Contains a table where the device alarm events are logged.

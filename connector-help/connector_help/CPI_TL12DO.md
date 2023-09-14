@@ -8,17 +8,17 @@ The **CPI TL12DO** is a 1.2 kW "SuperLinear" outdoor TWT amplifier designed for 
 
 ## About
 
-This driver is intended to communicate with the device using serial commands as described in the manual of the device. For more information, see <https://www.cpii.com/product.cfm/4/15/255>.
+This connector is intended to communicate with the device using serial commands as described in the manual of the device. For more information, see <https://www.cpii.com/product.cfm/4/15/255>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver is intended to communicate with the device using serial commands as 
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,11 +4,11 @@ uid: Connector_help_Ateme_SR1000
 
 # Ateme SR1000
 
-This is an SNMP driver responsible for the control and the monitoring of a statistical bitrate allocator.
+This is an SNMP connector responsible for the control and the monitoring of a statistical bitrate allocator.
 
 ## About
 
-This driver retrieves status information and allows the user to configure system parameters and change the network configuration of the device, both through SNMP.
+This connector retrieves status information and allows the user to configure system parameters and change the network configuration of the device, both through SNMP.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver retrieves status information and allows the user to configure system
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -37,9 +37,9 @@ This page displays general system information, such as the **System Time**, **Na
 
 ### Configuration
 
-On this page, you can manage configurations by **loading** or **storing** them (**SR Configuration Management** section). The page contains a table displaying all the **Configuration** **names**. You can also configure the pools through page buttons.
+On this page, you can manage configurations by **loading** or **storing** them (**SR Configuration Management** section). The page contains a table displaying all the **Configuration names**. You can also configure the pools through page buttons.
 
-In the **New Channel** pagebutton, you can perform the following operations: specify on which pool you which to make a change through the **New Channel to Pool** parameter. Then, you can add channels one by one by filling in the **New Channel** parameters. Then, when all the information is correct, you can press the **Add** button to create a channel. The minimum information to provide to create a channel is the **New Channel Minimum Bitrate, New Channel Maximum Bitrate** and **New Channel Fallback Bitrate**. The New **Channel Status** and **New Channel Error** indicate you if the operation succeeded. With the **New Configuration** parameter you can provide a full pool configuration (the one selected in the **New Channel to Pool Parameter**). The information must be a *pipe* and *semi-column* separated list: pipes split the channels and semi-columns split the fields for a particular channel.
+Via the **New Channel** page button, you can perform the following operations: specify on which pool you which to make a change through the **New Channel to Pool** parameter. Then, you can add channels one by one by filling in the **New Channel** parameters. Then, when all the information is correct, you can press the **Add** button to create a channel. The minimum information to provide to create a channel is the **New Channel Minimum Bitrate, New Channel Maximum Bitrate** and **New Channel Fallback Bitrate**. The New **Channel Status** and **New Channel Error** indicate you if the operation succeeded. With the **New Configuration** parameter you can provide a full pool configuration (the one selected in the **New Channel to Pool Parameter**). The information must be a *pipe* and *semi-column* separated list: pipes split the channels and semi-columns split the fields for a particular channel.
 
 Here is an example to configure a pool with 2 channels:
 
@@ -56,7 +56,7 @@ channel 1 will be configured with the following information:
 - **Channel IP Backup:** *7.8.9.10*
 - **Channel Port Backup:** *600*
 - **Channel Number Backup:** *12*
-- **Minimum Bitrate:** **100000 bps**
+- **Minimum Bitrate: 100000 bps**
 - **Maximum Bitrate:** *500000bps*
 - **Fallback Bitrate:** *300000bps*
 - **Quality:** *50%*
@@ -66,7 +66,7 @@ channel 1 will be configured with the following information:
 
 ### Network
 
-This page contains two tables that display information about the **Ethernet** (**DHCP**, **Address**, **Netmask**, **MTU**, **VLAN**, ...) and **Route** configuration (**Type, VLAN ID, Address, Netmask, Gateway,** ...). All the parameters on this page can be configured.
+This page contains two tables that display information about the **Ethernet** (**DHCP**, **Address**, **Netmask**, **MTU**, **VLAN**, ...) and **Route** configuration (**Type, VLAN ID, Address, Netmask, Gateway,** etc.). All the parameters on this page can be configured.
 
 ### Status
 

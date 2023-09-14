@@ -4,9 +4,9 @@ uid: Connector_help_Comcast_LRM
 
 # Comcast LRM
 
-The purpose of this driver is to receive messages from the Comcast LRM system. It will act as a server using the smart-serial protocol. It can log received messages and determine when two messages refer to the same situation with a different status.
+The purpose of this connector is to receive messages from the Comcast LRM system. It will act as a server using the smart-serial protocol. It can log received messages and determine when two messages refer to the same situation with a different status.
 
-This driver should use TLS encryption in combination with basic HTTP authentication.
+This connector should use TLS encryption in combination with basic HTTP authentication.
 
 ## About
 
@@ -34,13 +34,13 @@ This driver should use TLS encryption in combination with basic HTTP authenticat
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
-  - **IP address/host**: The driver will act as a server. Set this field to "*Any*".
+  - **IP address/host**: The connector will act as a server. Set this field to "*Any*".
   - **IP port**: By default *3000*. A different port can be specified.
 
 ### Initialization

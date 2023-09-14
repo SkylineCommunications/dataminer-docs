@@ -8,13 +8,13 @@ The DAW88 is an audio watermarking embedder for Audience Measurement, Second Scr
 
 ## About
 
-The Axon DAW88 driver makes it possible to monitor and control a selected card. The preferred settings can be set for each channel of this card.
+The Axon DAW88 connector makes it possible to monitor and control a selected card. The preferred settings can be set for each channel of this card.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -59,7 +59,3 @@ On this page, you can modify the settings for **channels** **13** **to** **16**.
 ### Slots page
 
 This page displays information about all the available slots. You can also perform sets on each slot to select the preferred setting.
-
-## Notes
-
-N/A

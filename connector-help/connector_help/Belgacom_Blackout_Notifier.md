@@ -4,11 +4,11 @@ uid: Connector_help_Belgacom_Blackout_Notifier
 
 # Belgacom Blackout Notifier
 
-With this driver it is possible to gather information regarding monitored blackouts.
+With this connector it is possible to gather information regarding monitored blackouts.
 
 ## About
 
-This driver will read an FTP file containing the information regarding the blackouts, process that information, and show it to the user.
+This connector will read an FTP file containing the information regarding the blackouts, process that information, and show it to the user.
 
 ## Installation and configuration
 

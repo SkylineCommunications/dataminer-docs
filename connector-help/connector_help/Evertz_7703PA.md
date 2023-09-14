@@ -4,15 +4,15 @@ uid: Connector_help_Evertz_7703PA
 
 # Evertz 7703PA
 
-With this driver, you can monitor **Evertz 7703PA** devices with SNMP.
+With this connector, you can monitor **Evertz 7703PA** devices with SNMP.
 
 ## About
 
 The **Evertz 7703PA** can be used to monitor the Evertz 7703PA amplifier device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Revision** |
+| **Range** | **Device Revision** |
 |------------------|---------------------|
 | 1.0.0.x          | Unknown             |
 
@@ -22,7 +22,7 @@ The **Evertz 7703PA** can be used to monitor the Evertz 7703PA amplifier device.
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

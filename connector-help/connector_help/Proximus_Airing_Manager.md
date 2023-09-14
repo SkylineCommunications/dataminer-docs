@@ -20,9 +20,9 @@ When a new synopsis is polled by the EBU Synopsis Web Service and retrieved by t
 
 When transmissions are exported, the Proximus Airing Manager will check if they can be grouped together in **airings** (all transmissions will by default be included in an airing) and a (**Resource Manager**) **reservation** will be created for each of these airings.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                          | No                  | Yes                     |
 | 1.0.1.x          | Support multiple technicalSystems instances (in same synopsis) Primary key change in Transmissions table | No                  | Yes                     |
@@ -33,7 +33,7 @@ When transmissions are exported, the Proximus Airing Manager will check if they 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -87,7 +87,10 @@ When upgrading from the **1.0.0.x** range to the **1.0.1.x** range, some actions
 
 To make sure that the airing manager is correctly updated, follow the following procedure:
 
-1.  Clear the current transmissions and airings, using the **Clear** button on the **Configurations** page.
-    Note that this will not clear the configurations.
-2.  Enable Synopses Processing, via **Process Synopses** on the **Synopses** page.
-    This will reenable the processing of synopses and the transmissions and airings will be generated again.
+1. Clear the current transmissions and airings, using the **Clear** button on the **Configurations** page.
+
+   Note that this will not clear the configurations.
+
+1. Enable Synopses Processing, via **Process Synopses** on the **Synopses** page.
+
+   This will reenable the processing of synopses and the transmissions and airings will be generated again.

@@ -14,7 +14,7 @@ This protocol is used to control and monitor the **Snell Willcox IQVDA00** via *
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

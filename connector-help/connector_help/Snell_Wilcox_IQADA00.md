@@ -8,18 +8,18 @@ The IQADA00 is a single/dual-channel analog audio distribution amplifier. It pro
 
 ## About
 
-This driver provides status data for input 1 and input 2. It is also possible to set certain control parameters.
+This connector provides status data for input 1 and input 2. It is also possible to set certain control parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | This version treats the boards contained within the chassis as DVEs.                                                           | No                  | Yes                     |
 | 2.0.0.x          | This version should be used to monitor each board separately (i.e. each board is represented by a single independent element). | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | 5.3. .6                     |
@@ -41,7 +41,7 @@ This driver provides status data for input 1 and input 2. It is also possible to
 <tr class="even">
 <td>1.0.0.x</td>
 <td><h4 id="snmp-main-connection">SNMP main connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -57,7 +57,7 @@ This driver provides status data for input 1 and input 2. It is also possible to
 <tr class="odd">
 <td>2.0.0.x</td>
 <td><h4 id="snmp-main-connection-1">SNMP main connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>

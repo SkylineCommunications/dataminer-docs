@@ -8,18 +8,18 @@ The **Egatel TE9000-E6** is a digital transmitter. With its integrated modulator
 
 ## About
 
-This driver was designed to work with the model **TE9000E6**. With it, you can monitor the state of the input and output of the transmitter and the GPS internal behavior. It displays the different parameters for the amplifiers and can be used to supervise the parameters configured for the DVB-T2, RF, QoS and pre-correction techniques.
+This connector was designed to work with the model **TE9000E6**. With it, you can monitor the state of the input and output of the transmitter and the GPS internal behavior. It displays the different parameters for the amplifiers and can be used to supervise the parameters configured for the DVB-T2, RF, QoS and pre-correction techniques.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                  | No                  | No                      |
 | 1.1.0.x          | New firmware for model E6 based on range 1.0.0.x | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | E5                          |
 | 1.1.0.x          | v4.9                        |
@@ -30,7 +30,7 @@ This driver was designed to work with the model **TE9000E6**. With it, you can m
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,18 +8,18 @@ uid: Connector_help_OpenStack_Manager
 
 ## About
 
-This driver uses HTTP to monitor and configure any OpenStack cloud. It currently supports the main OpenStack modules, such as Keystone, Glance, Nova, Cinder and Neutron. Currently, only Nova has read-write capabilities, allowing the creation and management of virtual machines in an IaaS fashion.
+This connector uses HTTP to monitor and configure any OpenStack cloud. It currently supports the main OpenStack modules, such as Keystone, Glance, Nova, Cinder and Neutron. Currently, only Nova has read-write capabilities, allowing the creation and management of virtual machines in an IaaS fashion.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version              | No                  | Yes                     |
 | 1.0.1.x          | Multi-tenant support version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                           |
+| **Range** | **Device Firmware Version**                                           |
 |------------------|-----------------------------------------------------------------------|
 | 1.0.0.x          | Nova: v2.x, Neutron: v2.0, Cinder: v3.0, Keystone: v3.0, Glance: v2.0 |
 | 1.0.1.x          | Nova: v2.x, Neutron: v2.0, Cinder: v3.0, Keystone: v3.0, Glance: v2.0 |
@@ -30,7 +30,7 @@ This driver uses HTTP to monitor and configure any OpenStack cloud. It currently
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -141,7 +141,7 @@ This page allows you to consult the amount of available and used IPs for every a
 
 ### Projects
 
-This page is the main page to **boot and control this driver**. This table allows **full management of projects** within OpenStack, as well as **DVE management** within the DataMiner domain. You can manually configure the **credentials** of each project, as well as request the **authentication**. You can also **disable** or enable the project **polling**, or **delete** the project. The project can be deleted without deleting the DVE, and the DVE can be deleted without deleting the project. However, an option at the bottom of the page also allows you to toggle whether or not to automatically **delete the DVE on project deletion**.
+This page is the main page to **boot and control this connector**. This table allows **full management of projects** within OpenStack, as well as **DVE management** within the DataMiner domain. You can manually configure the **credentials** of each project, as well as request the **authentication**. You can also **disable** or enable the project **polling**, or **delete** the project. The project can be deleted without deleting the DVE, and the DVE can be deleted without deleting the project. However, an option at the bottom of the page also allows you to toggle whether or not to automatically **delete the DVE on project deletion**.
 
 The page also contains a button that can be used to **create** **new projects.** When creating a new project, you must give it a name and select the **users**, **groups** and **quotas**.
 

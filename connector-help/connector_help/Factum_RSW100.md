@@ -4,21 +4,21 @@ uid: Connector_help_Factum_RSW100
 
 # Factum RSW100
 
-The **Factum RSW100** driver displays information related to the **Factum RSW100 Redundancy Switch** device.
+The **Factum RSW100** connector displays information related to the **Factum RSW100 Redundancy Switch** device.
 
 ## About
 
-This driver uses an SNMP connection to communicate with the **Factum RSW100** device.
+This connector uses an SNMP connection to communicate with the **Factum RSW100** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.6.02                      |
 
@@ -28,7 +28,7 @@ This driver uses an SNMP connection to communicate with the **Factum RSW100** de
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

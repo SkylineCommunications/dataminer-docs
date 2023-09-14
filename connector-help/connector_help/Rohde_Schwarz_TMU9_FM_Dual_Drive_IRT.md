@@ -4,7 +4,7 @@ uid: Connector_help_Rohde_Schwarz_TMU9_FM_Dual_Drive_IRT
 
 # Rohde Schwarz TMU9 FM Dual Drive IRT
 
-The Rohde Schwarz TMU9 FM Dual Drive IRT is a redundant FM transmission system. This driver can be used to monitor and control this system. The driver has a page with general information and two pop-up pages for the configuration of traps. The driver uses SNMP to retrieve and configure data.
+The Rohde Schwarz TMU9 FM Dual Drive IRT is a redundant FM transmission system. This connector can be used to monitor and control this system. The connector has a page with general information and two pop-up pages for the configuration of traps. The connector uses SNMP to retrieve and configure data.
 
 ## About
 
@@ -32,7 +32,7 @@ The Rohde Schwarz TMU9 FM Dual Drive IRT is a redundant FM transmission system. 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

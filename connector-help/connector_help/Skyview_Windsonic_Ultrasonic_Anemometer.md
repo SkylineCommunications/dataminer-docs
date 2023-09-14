@@ -4,7 +4,7 @@ uid: Connector_help_Skyview_Windsonic_Ultrasonic_Anemometer
 
 # Skyview WindSonic Ultrasonic Anemometer
 
-The driver is a smart-serial driver used to monitor the Skyview Windsonic Ultrasonic Anemometer device.
+The connector is a smart-serial connector used to monitor the Skyview Windsonic Ultrasonic Anemometer device.
 
 ## About
 
@@ -14,7 +14,7 @@ The Skyview Windsonic Ultrasonic Anemometer is used to continuously monitor the 
 
 ### Creation
 
-This driver is a smart-serial driver, and upon creating an element you need to define only the IP address and the port on which the Anemometer is configured.
+This connector is a smart-serial connector, and upon creating an element you need to define only the IP address and the port on which the Anemometer is configured.
 
 ## Usage
 

@@ -8,16 +8,16 @@ The AC3200 is an intelligent broadband amp from Teleste.
 
 ## About
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Revision** |
+| **Range** | **Device Revision** |
 |------------------|---------------------|
 | 1.0.1.x          | \-                  |
 
 ## Configuration
 
-This driver is used by DVE child elements that are automatically created by the parent driver [Teleste HDM100](https://catalog.dataminer.services/?q=Teleste%20HDM100). No user input is required.
+This connector is used by DVE child elements that are automatically created by the parent connector [Teleste HDM100](https://catalog.dataminer.services/?q=Teleste%20HDM100). No user input is required.
 
 ## How to use
 
-On the **General** page of the driver, general information about the device is displayed. On the **Alarms** page, you can find alarm information.
+On the **General** page of the connector, general information about the device is displayed. On the **Alarms** page, you can find alarm information.

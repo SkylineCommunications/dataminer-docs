@@ -4,7 +4,7 @@ uid: Connector_help_EVE_Compliancy_Solutions
 
 # EVE Compliancy Solutions
 
-This driver implements a trap receiver for the EVE Compliancy Solutions device.
+This connector implements a trap receiver for the EVE Compliancy Solutions device.
 
 ## About
 
@@ -20,7 +20,7 @@ EVE Compliancy Solution consists of a number of building blocks, each designed w
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
-| 1.0.0.x   | Unkown                 |
+| 1.0.0.x   | -                 |
 
 ### System Info
 
@@ -34,17 +34,16 @@ EVE Compliancy Solution consists of a number of building blocks, each designed w
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
-> **IP address/host**: The polling IP or URL of the destination. **IP port**: The IP port of the destination.
+- **IP address/host**: The polling IP or URL of the destination. **IP port**: The IP port of the destination.
 
 SNMP Settings:
 
-> **Get community string**: \[The community string used when reading values from the device. (default: *public*)\] **Set community string**: \[The community string used when setting values on the device. (default: *private*)\]
-
-
+- **Get community string**: The community string used when reading values from the device (default: *public*).
+- **Set community string**: The community string used when setting values on the device (default: *private*).
 
 ## How to Use
 
@@ -59,5 +58,3 @@ Displays a table with the latest received traps.
 ### Active Trap
 
 Displays a table with last trap received.
-
-

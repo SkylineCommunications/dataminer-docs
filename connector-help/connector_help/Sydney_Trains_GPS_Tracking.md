@@ -8,7 +8,7 @@ The **Sydney Trains GPS Tracking** driver reads out one of the **XML** files wit
 
 ## About
 
-There are 2 XML files that are used by this driver to check when an announcement should be made in which station:
+There are 2 XML files that are used by this connector to check when an announcement should be made in which station:
 
 - **Real time running file**: is the prefered file to use, but is only when it has been updated within the last 10 minutes
 - **Station time table file**: is used when the real time running file was not update in the last 10 minutes
@@ -20,15 +20,15 @@ The **Sydney Trains GPS Tracking** driver will read these files and will send an
 - A train arrives to a station in the **next 10 minutes**
 - **Every 10 minutes** until a train has left the station
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Sittig DVA v0202            |
 
@@ -38,7 +38,7 @@ The **Sydney Trains GPS Tracking** driver will read these files and will send an
 
 #### Smart-Serial Main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -49,14 +49,14 @@ SERIAL CONNECTION:
 
 ### Configuration of files
 
-Before the driver can start reading the files, they first need to be configured. The entire **path** to the file needs to be specified for the driver to be able to read the file.
+Before the connector can start reading the files, they first need to be configured. The entire **path** to the file needs to be specified for the connector to be able to read the file.
 
 The files need to be configured on the **Configuration** page:
 
 - **Static Timetable File**
 - **Real Time Running File**
 
-If there are any errors reading the files, then this error will be displayed in the **status** of each file. Note that the driver will always try to first read and process the real time file, before trying the static one.
+If there are any errors reading the files, then this error will be displayed in the **status** of each file. Note that the connector will always try to first read and process the real time file, before trying the static one.
 
 ### Configuration of stations
 
@@ -82,4 +82,4 @@ The **Connections** page displays the **state** of the connection to the Sittig 
 
 ### Configuration
 
-The **Configuration** page is used to configure the files, stations and some extra configurations available in the driver.
+The **Configuration** page is used to configure the files, stations and some extra configurations available in the connector.

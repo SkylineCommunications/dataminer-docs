@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_HZ914
 
 # Newtec HZ914
 
-The Newtec HZ914 is a DVB-S2 satellite demodulator with up to 4 ASI outputs, designed for the primary distribution of terrestrial television and mobile television over satellite. This driver uses a serial connection to communicate with the device. It makes use of the RMCP communication protocol.
+The Newtec HZ914 is a DVB-S2 satellite demodulator with up to 4 ASI outputs, designed for the primary distribution of terrestrial television and mobile television over satellite. This connector uses a serial connection to communicate with the device. It makes use of the RMCP communication protocol.
 
 ## About
 
@@ -38,7 +38,7 @@ The Newtec HZ914 is a DVB-S2 satellite demodulator with up to 4 ASI outputs, des
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

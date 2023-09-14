@@ -6,7 +6,7 @@ uid: Connector_help_Vitec_MGW_Prism
 
 The Vitec MGW Prism is an IPTV transcoder for over-the-top services and mobile streaming.
 
-This driver allows you to monitor general parameters of the Vitec MGW Prism as well as detailed information about each channel included in the network. It also allows you to configure settings such as the current Source IP Address, Port Number, SSMP State, the running state of the channels, and more.
+This connector allows you to monitor general parameters of the Vitec MGW Prism as well as detailed information about each channel included in the network. It also allows you to configure settings such as the current Source IP Address, Port Number, SSMP State, the running state of the channels, and more.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to monitor general parameters of the Vitec MGW Prism as w
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

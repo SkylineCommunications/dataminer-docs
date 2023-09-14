@@ -8,17 +8,17 @@ This device is an **Analogue KVM Switch Matrix System**. It is a hardware device
 
 ## About
 
-With this driver, it is possible to monitor the status parameters, get the device information and receive the sent traps.
+With this connector, it is possible to monitor the status parameters, get the device information and receive the sent traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.3.002 (00585)             |
 
@@ -28,7 +28,7 @@ With this driver, it is possible to monitor the status parameters, get the devic
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ This page displays four boxes of information.
 
 - In the top-left corner, the **Status box** displays the parameters **Main Power**, **Redundant Power**, **Temperature**, **Network Interface 0** and **Network Interface 1**.
 - In the lower left corner, the **Device Information** box displays the **Device ID**, **Device Class**, **Device Type**, **Serial Number**, **Ethernet Address 1**, **Ethernet Address 2** and **Firmware Version**.
-- In the top-right corner, the **System Information** box shows information related to the system, rather than specifically to this device. These parameters are **System Description, System Object ID, System Up Time, System Contact, System Name, System Location** and **System Services.** Unlike most other SNMP drivers, this driver does not allow you to change the System Contact, System Name and System Location parameters directly in DataMiner. This is only possible via the web interface (see below).
+- In the top-right corner, the **System Information** box shows information related to the system, rather than specifically to this device. These parameters are **System Description, System Object ID, System Up Time, System Contact, System Name, System Location** and **System Services.** Unlike most other SNMP connectors, this connector does not allow you to change the System Contact, System Name and System Location parameters directly in DataMiner. This is only possible via the web interface (see below).
 - In the lower right corner, the **Error Status** box shows a **General Error Message** provided by the device and a **General Error Code**.
 
 The Status and Error Status boxes are updated every 5 seconds. The Device and System Information is only updated once per hour.
@@ -71,9 +71,9 @@ The **Traps table** itself displays the following information for each trap: the
 
 ### Web Interface
 
-This page displays the web interface of the device itself, embedded within a frame in the driver.
+This page displays the web interface of the device itself, embedded within a frame in the connector.
 
-In the web interface, you can change the **System Contact**, **System Name** and **System** **Location**. These parameters are also displayed on the General page of the driver but can only be changed via the web interface. To find these parameters, in the tree structure left, click **KVM Matrix systems** \> **KVM-DU-Samacom** \> **Matrix switches**. The device and its status parameters will be displayed on the right side of the page. Double-click the row of the device to open a menu. In this menu, select **Network** \> **SNMP Agent**. The three variables will be displayed in the Global section of this page. Do not forget to click Apply or OK after changing.
+In the web interface, you can change the **System Contact**, **System Name** and **System** **Location**. These parameters are also displayed on the General page of the connector but can only be changed via the web interface. To find these parameters, in the tree structure left, click **KVM Matrix systems** \> **KVM-DU-Samacom** \> **Matrix switches**. The device and its status parameters will be displayed on the right side of the page. Double-click the row of the device to open a menu. In this menu, select **Network** \> **SNMP Agent**. The three variables will be displayed in the Global section of this page. Do not forget to click Apply or OK after changing.
 
 Of course, it is also possible to configure other settings via the web interface, or even to send a test trap.
 

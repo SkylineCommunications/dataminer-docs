@@ -12,9 +12,9 @@ This application can be used to configure probe elements. The following drivers 
 
 Configuration input must be specified manually or by importing a file from previous configurations.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                                                                                  | No                  | No                      |
 | 1.0.1.x          | Added support for source-to-probe linking.                                                                                                        | No                  | Yes                     |
@@ -24,7 +24,7 @@ Configuration input must be specified manually or by importing a file from previ
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration (prior to 1.1.0.x)
 
@@ -171,13 +171,13 @@ In this table:
 
 The **Probe Elements Table** is automatically refreshed every 30 minutes. You can also refresh the table manually by pressing the **Refresh** button.
 
-Each probe has a certain capacity (indicated in the **Capacity** column). The driver allows you to define a maximum limit on the allowed capacity for a probe. You can do so by setting the **Percentage Allowed** parameter. The **Allowed Capacity** is checked when new configurations are added to a probe.
+Each probe has a certain capacity (indicated in the **Capacity** column). The connector allows you to define a maximum limit on the allowed capacity for a probe. You can do so by setting the **Percentage Allowed** parameter. The **Allowed Capacity** is checked when new configurations are added to a probe.
 
 ### TS Detection
 
 When a message arrives from a DCM indicating a newly detected TS, the configuration manager will determine which probes could be monitoring it according to the configuration that has been provided on the **Configuration** page:
 
-- If the configuration manager driver can find the stream on one of the probes, this means the stream is already configured and no other action is needed.
+- If the configuration manager connector can find the stream on one of the probes, this means the stream is already configured and no other action is needed.
 - If the configuration manager cannot find the stream on one of the probes, a new row will be added to the **Detected Transport Streams Table** (in case it is not already present and it is not present in the **Masked Transport Streams Table**).
 
 The **Detected Transport Streams Table** will show the possible probe configuration options (if any) from which you can choose.
@@ -191,7 +191,7 @@ A stream can be masked until a certain time or until further notice. In both cas
 When a message arrives from a probe reporting that a transport stream is down (i.e. the Port Status parameter is down for a given transport stream), a new row will be added to the **Transport Stream Reconfiguration Table**.
 
 - In case of manual reconfiguration, the possible configuration options will be displayed in the **Manual Reconfiguration Selection** column. When you select one of these options, a new message will be added to the message queue.
-- In case of automatic reconfiguration, if there are reconfiguration options available, the driver will automatically start reconfiguring. The driver will try all possible configurations until a reconfiguration succeeds. Note that between every reconfiguration, the driver will wait for a certain amount of time (configurable via the **Delay** parameter on the **Options** page). When every possible configuration has been tried and has failed, the driver will wait for an additional amount of time (configurable via the **Sliding Window** parameter on the **Options** page).
+- In case of automatic reconfiguration, if there are reconfiguration options available, the connector will automatically start reconfiguring. The connector will try all possible configurations until a reconfiguration succeeds. Note that between every reconfiguration, the connector will wait for a certain amount of time (configurable via the **Delay** parameter on the **Options** page). When every possible configuration has been tried and has failed, the connector will wait for an additional amount of time (configurable via the **Sliding Window** parameter on the **Options** page).
 
 ### Configuration
 
@@ -201,7 +201,7 @@ The **Output Ports Table** provides an overview of the output ports that have be
 
 The **Output Pairs Table** provides an overview of the defined output pairs in the current configuration. Each output pair is a combination of two output ports defined in the **Output Ports Table**. Note that a port can only be part of one output pair.
 
-The **Reconfiguration Mode** toggle button allows you to choose between *Manual* or *Automatic* reconfiguration. In case of automatic reconfiguration, the manager driver automatically selects and applies a reconfiguration. If manual reconfiguration is selected, you will need to select the preferred reconfiguration from a list of possible configurations and then apply it.
+The **Reconfiguration Mode** toggle button allows you to choose between *Manual* or *Automatic* reconfiguration. In case of automatic reconfiguration, the manager connector automatically selects and applies a reconfiguration. If manual reconfiguration is selected, you will need to select the preferred reconfiguration from a list of possible configurations and then apply it.
 
 The **Links Table** provides an overview of the links defined in the current configuration. A link is defined as a connection between an output pair (defined in the **Output Pairs Table**) and one or two monitoring probes (defined in the **Probe Elements Table**).
 
@@ -574,7 +574,7 @@ In this table, the **State** column indicates whether each probe is *Active, Sto
 
 The table is automatically refreshed every 30 minutes, but can also be refreshed manually with the **Refresh** button.
 
-Each probe has a certain capacity (indicated in the **Capacity** column). The driver allows you to define a maximum limit on the allowed capacity for a probe. You can do so by setting the **Percentage Allowed** parameter. The **Allowed Capacity** is checked when new configurations are added to a probe.
+Each probe has a certain capacity (indicated in the **Capacity** column). The connector allows you to define a maximum limit on the allowed capacity for a probe. You can do so by setting the **Percentage Allowed** parameter. The **Allowed Capacity** is checked when new configurations are added to a probe.
 
 If you want to configure the probe completely at once, you can make use of the **Set MPEG Ports** column, **Initial Config Ports** column and the **Initial Config Services** column.
 

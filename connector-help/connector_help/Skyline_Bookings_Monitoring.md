@@ -57,7 +57,7 @@ The **Skyline Bookings Monitoring** is a virtual connector that allows **SRM Sol
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

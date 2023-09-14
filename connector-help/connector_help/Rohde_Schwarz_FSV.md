@@ -8,17 +8,17 @@ The **Rohde Schwarz FSV** is a spectrum analyzer driver.
 
 ## About
 
-The **Rohde Schwarz FSV** driver interfaces with the spectrum analyzer using serial commands implementing the SCPI protocol.
+The **Rohde Schwarz FSV** connector interfaces with the spectrum analyzer using serial commands implementing the SCPI protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.30                        |
 
@@ -28,7 +28,7 @@ The **Rohde Schwarz FSV** driver interfaces with the spectrum analyzer using ser
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

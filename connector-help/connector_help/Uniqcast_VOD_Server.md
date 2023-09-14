@@ -4,21 +4,21 @@ uid: Connector_help_Uniqcast_VOD_Server
 
 # Uniqcast VOD Server
 
-With this driver, you can monitor a Video-on-Demand (VOD) server solution from Uniqcast.
+With this connector, you can monitor a Video-on-Demand (VOD) server solution from Uniqcast.
 
 ## About
 
-This driver uses **SNMP** in order to monitor a VOD server.
+This connector uses **SNMP** in order to monitor a VOD server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MIB Version v1.1            |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** in order to monitor a VOD server.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

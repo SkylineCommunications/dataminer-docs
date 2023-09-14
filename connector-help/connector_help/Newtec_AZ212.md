@@ -4,15 +4,15 @@ uid: Connector_help_Newtec_AZ212
 
 # Newtec AZ212
 
-This driver uses an **SNMP** connection to monitor and configure a Newtec **1+1 Modulator Redundancy Switch**, which provides a 1+1 protection scheme for satellite modulators. The AZ210-2 simultaneously switches the input data signals and output IF/RF signals.
+This connector uses an **SNMP** connection to monitor and configure a Newtec **1+1 Modulator Redundancy Switch**, which provides a 1+1 protection scheme for satellite modulators. The AZ210-2 simultaneously switches the input data signals and output IF/RF signals.
 
 ## About
 
-With this driver, you can configure the main networking options and receive traps to display alarms, as well as configure the switches available in the device.
+With this connector, you can configure the main networking options and receive traps to display alarms, as well as configure the switches available in the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                  | No                  | No                      |
 | 1.2.0.2(.x)      | For software version 2.0.2, based on 1.0.0.1. \[Obsolete: Use range 1.3.0.x.\]    | No                  | No                      |
@@ -27,9 +27,9 @@ Note:
 - Driver ranges with additional numbers for firmware versions existed at some point in time, but the current rule requires 4 numbers.
 - Not Cassandra-compliant prior to range 1.3.1.x, because table PID 400 has the option **displayColumn**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**            | **Device Firmware Version**                |
+| **Range**            | **Device Firmware Version**                |
 |-----------------------------|--------------------------------------------|
 | 1.0.0.x                     | Bucket Name: AZ212-1.1.2 SW version: 1.1.0 |
 | 1.2.0.2(.x) 1.3.0.x 1.3.1.x | Bucket Name: AZ212-2.0.2                   |
@@ -41,7 +41,7 @@ Note:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

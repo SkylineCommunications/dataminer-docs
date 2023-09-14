@@ -4,22 +4,22 @@ uid: Connector_help_Axon_Smart
 
 # Axon SMART
 
-The Axon SMART monitors, reports and analyzes live transport streams. This driver can be used to monitor this device.
+The Axon SMART monitors, reports and analyzes live transport streams. This connector can be used to monitor this device.
 
 ## About
 
-This driver monitors the state of each of the transport streams. The driver uses **SNMP** and **DCF** integration.
+This connector monitors the state of each of the transport streams. The connector uses **SNMP** and **DCF** integration.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                         | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                         | Yes                 | Yes                     |
 | 1.0.1.X \[SLC Main\] | Auto clear functionality for TS, Service and PID tables | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Version 2.3.0.21            |
 
@@ -29,7 +29,7 @@ This driver monitors the state of each of the transport streams. The driver uses
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -79,13 +79,14 @@ On this page, the **Alarm Presets** table displays a list of the presets. You ca
 
 Alternatively, you can also import and export a CSV file to update the table. The **Import/Export Status** displays the status of this operation. The list of CSV files that can be imported is in the **Configurations** folder. An exported CSV file will be stored in the generic DataMiner Documents folder, in a subfolder with the name **Configurations**. The **Refresh** button will refresh the CSV file list and the alarm presets displayed in the table columns.
 
-> **Note**: In version 1.0.0.9, the file type was changed from CSV to XML.
+> [!NOTE]
+> In version 1.0.0.9, the file type is changed from CSV to XML.
 
 Once an alarm preset has been assigned to a certain TS, Service or PID, this preset name can be used as a filter when creating alarm templates in DataMiner. This way, different thresholds can be configured for one and the same parameter (e.g. PID bitrate), depending on the selected alarm preset filter.
 
 ### Debug
 
-This page displays the **Traps** table, where all the received traps are retrieved, as a debug option for the driver. It also allows you to define the source IP address sending the traps.
+This page displays the **Traps** table, where all the received traps are retrieved, as a debug option for the connector. It also allows you to define the source IP address sending the traps.
 
 ### Web Page
 
@@ -93,7 +94,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ### DataMiner Connectivity Framework
 
-This driver does not make any connections, but it does have interfaces.
+This connector does not make any connections, but it does have interfaces.
 
 ### Interfaces
 
@@ -102,4 +103,4 @@ The dynamic interfaces are created based on the number of rows in **Table 73 Tra
 **Table 73** will contain all the DCF input interfaces. The total number of rows depends on the number of rows in **Table 73 (Transport Stream Table)**.
 
 - **TS ASI\_***instance value*\_*Interface Type*: dynamic interface with type **in**.
-- ****TS IP**\_***instance value*\_*Interface Type*: dynamic interface with type **in**
+- **TS IP\_***instance value*\_*Interface Type*: dynamic interface with type **in**

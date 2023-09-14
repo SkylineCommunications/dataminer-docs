@@ -8,17 +8,17 @@ The PTR50 is an L-band Tracking Receiver designed by Peak Communications. The PT
 
 ## About
 
-This driver uses **SNMP** commands to get information from or set information to the device.
+This connector uses **SNMP** commands to get information from or set information to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.25                        |
 

@@ -4,13 +4,13 @@ uid: Connector_help_Microsoft_SCOM_Universal_Connector
 
 # Microsoft SCOM Universal Connector
 
-This driver is used to retrieve the alarms from the **Microsoft SCOM Universal Connector**.
+This connector is used to retrieve the alarms from the **Microsoft SCOM Universal Connector**.
 
 ## About
 
-This driver communicates with the Microsoft SCOM Universal Connector to retrieve the alarms from the Microsoft SCOM system. The alarms are displayed in a table. Users can acknowledge and edit those alarms.
+This connector communicates with the Microsoft SCOM Universal Connector to retrieve the alarms from the Microsoft SCOM system. The alarms are displayed in a table. Users can acknowledge and edit those alarms.
 
-The SCOM 2007 Universal Interop Provider must be installed on the DMA for this driver to be operational.
+The SCOM 2007 Universal Interop Provider must be installed on the DMA for this connector to be operational.
 
 ## Installation and Configuration
 
@@ -18,11 +18,11 @@ The SCOM 2007 Universal Interop Provider must be installed on the DMA for this d
 
 **Virtual Connection**
 
-This driver uses a virtual connection and does not need any user input.
+This connector uses a virtual connection and does not need any user input.
 
 ## Usage
 
-This driver contains two pages.
+This connector contains two pages.
 
 ### General
 

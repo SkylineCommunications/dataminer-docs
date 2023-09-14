@@ -4,7 +4,7 @@ uid: Connector_help_ADVA_Optical_Networking_FSP150CC
 
 # ADVA Optical Networking FSP150CC
 
-This is an **SNMP** driver that is used to monitor and configure the **ADVA Optical Networking FSP150CC** equipment.
+This is an **SNMP** connector that is used to monitor and configure the **ADVA Optical Networking FSP150CC** equipment.
 
 ## About
 
@@ -51,7 +51,7 @@ The current traps implemented in version 1.0.2.6 and above are LinkUp, LinkDown,
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -225,9 +225,9 @@ On this page, the **IP Info** group displays the **Polling**, **Main** and **Bac
 
 This page displays the **IP Address**, **IP Interface** and **IP Management** tables. A page button in the lower right corner displays the information from the **IP Info** group, with the **Switchback Delay** and **Switch Mode** parameters.
 
-The **Switchback Delay** is the amount of time the driver should wait before switching back to the main IP in case polling is currently done from the backup IP.
+The **Switchback Delay** is the amount of time the connector should wait before switching back to the main IP in case polling is currently done from the backup IP.
 
-The **Switch Mode** is the parameter that enables or disables the switchback delay. If the value of this parameter is *Automatic,* the driver will check if the main IP is stable for the amount of time specified in the Switchback Delay before switching to the main IP. To keep polling from the backup IP, you first need to disable the Switch Mode parameter, as otherwise the driver will switch back to the main IP after the delay.
+The **Switch Mode** is the parameter that enables or disables the switchback delay. If the value of this parameter is *Automatic,* the connector will check if the main IP is stable for the amount of time specified in the Switchback Delay before switching to the main IP. To keep polling from the backup IP, you first need to disable the Switch Mode parameter, as otherwise the connector will switch back to the main IP after the delay.
 
 Finally, the page also contains the **Static Route** table, with information such as the **Destination**, **Subnet Mask**, **Gateway**, type of **Interface** and **Metric**.
 

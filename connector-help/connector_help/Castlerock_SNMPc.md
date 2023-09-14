@@ -6,43 +6,43 @@ uid: Connector_help_Castlerock_SNMPc
 
 The Castlerock SNMPc is a device that monitors and catches events from connected devices. Depending on how this independent network management device is configured, the information of the connected devices can be used in several ways:
 
-- The events can be stored in an SQL database. The driver range **1.0.x.x** makes a connection with the database and allows you to manage what to do with it.
+- The events can be stored in an SQL database. The connector range **1.0.x.x** makes a connection with the database and allows you to manage what to do with it.
 
-- The events can be gathered and sent as traps to our driver. The driver range **2.0.0.x** collects traps and processes these according to the settings on the driver's Configuration page.
+- The events can be gathered and sent as traps to the connector. The connector range **2.0.0.x** collects traps and processes these according to the settings on the connector's Configuration page.
 
 ## About
 
 - Regarding **range 1.0.x.x**:
 
-  This driver makes an SQL connection with the SNMPc database of the device. It reads the **Node Table** and **EventLog Table** in the SNMPc database, processes the information, and displays the processed information on three pages. The **Devices page** shows the available information concerning the connected devices, the **Events** **page** shows the events captured by the device, and the **Info Events page** shows the information events. With the settings on the **Configuration page**, you can clean the database to e.g. only keep records that are less than one year old.
+  This connector makes an SQL connection with the SNMPc database of the device. It reads the **Node Table** and **EventLog Table** in the SNMPc database, processes the information, and displays the processed information on three pages. The **Devices page** shows the available information concerning the connected devices, the **Events** **page** shows the events captured by the device, and the **Info Events page** shows the information events. With the settings on the **Configuration page**, you can clean the database to e.g. only keep records that are less than one year old.
 
 - Regarding **range 2.0.0.x**:
 
-  This driver makes a simple SNMP connection with the device, collects traps originating from trap OID 1.3.6.1.4.1.56.12.1.7.0.1.0.1, and displays these on the **Traps page**. In addition, information concerning the devices connected to the Castlerock SNMPc can be imported and displayed on the **Known IP Addresses page.** With the settings on the **Configuration page**, you can configure how traps should be processed and limited, and manage the creation of DVEs.
+  This connector makes a simple SNMP connection with the device, collects traps originating from trap OID 1.3.6.1.4.1.56.12.1.7.0.1.0.1, and displays these on the **Traps page**. In addition, information concerning the devices connected to the Castlerock SNMPc can be imported and displayed on the **Known IP Addresses page.** With the settings on the **Configuration page**, you can configure how traps should be processed and limited, and manage the creation of DVEs.
 
-This driver can export different drivers based on the retrieved data. A list can be found in the section 'Exported Drivers'.
+This connector can export different connectors based on the retrieved data. A list can be found in the section 'Exported Connectors'.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version with connection to SQL Database.                                                          | No                  | No                      |
 | 1.0.1.x          | New alarm clearing system implemented. Update tables reviewed.                                            | No                  | Yes                     |
-| 2.0.0.x          | New driver range retrieving information from traps and from the import of rules and IP addresses via CSV. | No                  | No                      |
+| 2.0.0.x          | New connector range retrieving information from traps and from the import of rules and IP addresses via CSV. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                  | **Description**                                                                                                                                      |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Castlerock SNMPc Node (in 1.0.0.x and 2.0.0.x) Castlerock SNMPc - Node (since 1.0.1.x) | A separate driver showing only the database or traps information for that specific node, connected to the Castlerock SNMPc. Supported in all ranges. |
+| Castlerock SNMPc Node (in 1.0.0.x and 2.0.0.x) Castlerock SNMPc - Node (since 1.0.1.x) | A separate connector showing only the database or traps information for that specific node, connected to the Castlerock SNMPc. Supported in all ranges. |
 
 ## Installation and configuration
 
@@ -57,12 +57,12 @@ This driver can export different drivers based on the retrieved data. A list can
 <tr class="odd">
 <td><strong>Range 1.0.0.x/1.0.1.x</strong></td>
 <td><h4 id="virtual-sql-database-connection">Virtual SQL Database connection</h4>
-<p>This driver uses a virtual connection and does not require any input during element creation. The configuration of the connection is done on the Configuration page of the driver (see below).</p></td>
+<p>This connector uses a virtual connection and does not require any input during element creation. The configuration of the connection is done on the Configuration page of the connector (see below).</p></td>
 </tr>
 <tr class="even">
 <td><strong>Range 2.0.0.x</strong></td>
 <td><h4 id="snmp-trap-input-connection">SNMP Trap Input connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>
@@ -96,7 +96,7 @@ This driver can export different drivers based on the retrieved data. A list can
 <li><strong>User Name:</strong> The user name to connect.</li>
 <li><strong>Password:</strong> The password that is required to login.</li>
 </ul>
-<p>The driver does a credential check on these parameters before trying to connect to the database. If the default alarm template is used, not filling in these parameters will result in a critical alarm.</p></td>
+<p>The connector does a credential check on these parameters before trying to connect to the database. If the default alarm template is used, not filling in these parameters will result in a critical alarm.</p></td>
 </tr>
 <tr class="even">
 <td><strong>Range 2.0.0.x</strong></td>
@@ -110,7 +110,7 @@ This driver can export different drivers based on the retrieved data. A list can
 
 ### Devices
 
-On this page, the **Node Table** lists all the connected nodes. The driver updates this table every hour by querying the SNMPc database.
+On this page, the **Node Table** lists all the connected nodes. The connector updates this table every hour by querying the SNMPc database.
 
 The toggle buttons in the **Create DVE** column of the table allow you to create a DVE for each node, or remove existing DVEs.
 
@@ -178,7 +178,7 @@ This section determines the limitations for events stored in the Events table:
 - **Maximum Age of Events**: Indicates the maximum age events can have in the Events table before they are automatically removed.
 - **Event Types That Can Be Cleared**: Indicates which types of events can automatically be removed from the table. If this is set to '*Only normals*' or '*Only normals and minors*', it could occur that the table contains more events than indicated in the Maximum Number of Events parameter. If this happens, a message will be logged in the logging for the element.
 - **Remove Normal or Cleared Traps**: Determines whether cleared alarms are automatically deleted from the Events Table or if this should be done manually.
-- **Also Delete Alarm Events in Database:** Can be used to synchronize the automatic cleaning of the Events Table with the EventLog Table of the device in the background. If this is enabled, queries of type DELETE are sent to the database. Note that this setting also takes into account if the driver is up to date with the device. This check is done to make sure that events that were not yet processed by the driver (more recent than the Datetime of the Youngest Processed Event) are not deleted from the SNMPc database before they are processed by the driver. When this setting is toggled to enabled, the synchronization is immediately executed in the background. While it remains enabled, the driver synchronizes once every minute.
+- **Also Delete Alarm Events in Database:** Can be used to synchronize the automatic cleaning of the Events Table with the EventLog Table of the device in the background. If this is enabled, queries of type DELETE are sent to the database. Note that this setting also takes into account if the connector is up to date with the device. This check is done to make sure that events that were not yet processed by the connector (more recent than the Datetime of the Youngest Processed Event) are not deleted from the SNMPc database before they are processed by the connector. When this setting is toggled to enabled, the synchronization is immediately executed in the background. While it remains enabled, the connector synchronizes once every minute.
 
 The checks on the number of events and the age of the events in the table are done whenever the Maximum Number of Events or Maximum Age of Events parameters are updated, whenever the Events table is updated, and during startup. The limitations deliver a list of events that is cleaned up automatically, although only event types that can be cleared will be removed, as determined by the Event Types That Can Be Cleared parameter.
 
@@ -199,13 +199,13 @@ As mentioned above, these credentials are needed to set up a connection with the
 - **Database Name:** The name of the database of the device, by default '*SNMPc*'.
 - **Server IP:** The IP address where the device can be found.
 - **User Name** and **Password**: The credentials to log in to the database.
-- **Credential** **Check:** Indicates if the credentials are filled in and is used as a flag to allow the driver to connect and send queries.
+- **Credential** **Check:** Indicates if the credentials are filled in and is used as a flag to allow the connector to connect and send queries.
 
 ## Notes: Range 1.0.0.x/1.0.1.x
 
 ### Hashing operation
 
-The decision to see if an event can overwrite an existing event in the Events Table is based on hashing. An event is overwritten by another event if the other processed event has the same hash key as the one already in the Events table. As such, the hash key helps the driver to decide if two events belong together and the new event is actually an update of the information of the old event. The hash key is stored in the Events Table, but not displayed to the user.
+The decision to see if an event can overwrite an existing event in the Events Table is based on hashing. An event is overwritten by another event if the other processed event has the same hash key as the one already in the Events table. As such, the hash key helps the connector to decide if two events belong together and the new event is actually an update of the information of the old event. The hash key is stored in the Events Table, but not displayed to the user.
 
 The normal hash key consists of four parts, delimited by semicolons:
 
@@ -235,11 +235,11 @@ This page contains the **Traps Table**, which lists the stored traps, ordered fr
 
 ### Known IP Addresses
 
-This page displays the **Devices Table**, which lists all the devices known to the driver. Note that every incoming trap has a source IP (see below) and that this source IP address is used to match the trap to a specific device. Only traps with a source IP address known by the driver will be processed, the others will be discarded.
+This page displays the **Devices Table**, which lists all the devices known to the connector. Note that every incoming trap has a source IP (see below) and that this source IP address is used to match the trap to a specific device. Only traps with a source IP address known by the connector will be processed, the others will be discarded.
 
-In the one but last column of the table, **Create DVE**, you can enable or disable the creation of a single Dynamic Virtual Element. Note that enabling DVE creation will only be possible if there is a view with a name equal to the Site Name of the device. The created DVE will then use the exported driver Castlerock SNMPc Node. For more information on this driver, refer to its specific Help page.
+In the one but last column of the table, **Create DVE**, you can enable or disable the creation of a single Dynamic Virtual Element. Note that enabling DVE creation will only be possible if there is a view with a name equal to the Site Name of the device. The created DVE will then use the exported connector Castlerock SNMPc Node. For more information on this connector, refer to its specific Help page.
 
-To delete a single device from the Devices Table, use the **Delete Device** button in the relevant row. Note that the traps originating from that device will also immediately be deleted, as the driver only stores traps originating from known IP addresses.
+To delete a single device from the Devices Table, use the **Delete Device** button in the relevant row. Note that the traps originating from that device will also immediately be deleted, as the connector only stores traps originating from known IP addresses.
 
 The **Number of** **Known IP Addresses** parameter at the top of the page shows the total number of rows in the Device Table. The **Number of DVEs** parameter below it shows how many DVEs are currently enabled. To further manage devices, e.g. to delete multiple devices or to create or delete all DVEs at once, go to the Configuration page (see below).
 
@@ -263,14 +263,14 @@ In this section, you can configure how traps are processed, so that the received
 
 The toggle button **Automatically Remove Cleared Traps** is used for traps that clear existing traps. For example, if a trap of severity Critical is received, mentioning that the CPU Load of a certain device is very high, and soon after another trap of severity Normal is received, mentioning the same parameter and device, an update rule can make sure that the second trap updates the first trap, so that the trap in the table will now have severity Normal. In such a case, **Automatically Remove Cleared Traps** determines whether this cleared alarm is automatically removed.
 
-The toggle button **Store Not-Updating Normal Traps** is used to toggle whether traps with severity Normal that may not be relevant are stored. For example, if a connected device sends a trap every 5 minutes telling that the connection is OK, it might not be useful to store these traps. Note that this parameter is enabled by default, because disabling it could have undesirable effects. For example, if a trap of severity Major is received, followed by a trap of severity Normal indicating that the problem is solved, but the driver could not find a link to that first trap because of a mistake in the update rule (see below), the second trap would not be stored. However, if storing were enabled, you could simply correct and apply the update rule (via Apply Rules in History) to link the two traps.
+The toggle button **Store Not-Updating Normal Traps** is used to toggle whether traps with severity Normal that may not be relevant are stored. For example, if a connected device sends a trap every 5 minutes telling that the connection is OK, it might not be useful to store these traps. Note that this parameter is enabled by default, because disabling it could have undesirable effects. For example, if a trap of severity Major is received, followed by a trap of severity Normal indicating that the problem is solved, but the connector could not find a link to that first trap because of a mistake in the update rule (see below), the second trap would not be stored. However, if storing were enabled, you could simply correct and apply the update rule (via Apply Rules in History) to link the two traps.
 
 The button **Delete All Rules** can be used to manually delete all old rules.
 
 The **Import Rules** and **Show Rules** page buttons are used to manage update rules. (Refer to the Notes section for more information on how these rules work.)
 
 - **Import Rules**: This subpage contains the necessary parameters to import custom rules. The imported files must be CSV files with a specific format, as detailed in the Notes section below. Two kinds of rules are separated in the file with the keywords 'TRIM RULES' and 'UPDATE RULES'. It is also possible to specify if you want to delete the old rules on importing, or keep the old rules and just add the new rules, with the toggle button **Clear Old Rules on Importing**. At the right side of the page, you can also find a report of the import, mentioning which rows were imported and which were considered invalid (e.g. the severity was not recognized or the row did not contain the expected number of values).
-- **Show Rules**: This page displays an overview of all trim rules and update rules that are currently imported in the driver, in the **Trim Rules Table** and **Update Rules Table**. The total **Number of Trim Rules** and the **Number of Update Rules** are also specified. Please also note that the order of the rules matters, as the rules are executed in that specific order (see Notes below).
+- **Show Rules**: This page displays an overview of all trim rules and update rules that are currently imported in the connector, in the **Trim Rules Table** and **Update Rules Table**. The total **Number of Trim Rules** and the **Number of Update Rules** are also specified. Please also note that the order of the rules matters, as the rules are executed in that specific order (see Notes below).
 
 Finally, the button **Apply Rules in History** can be used to apply all current rules on the full content of the Traps Table. This can for example be useful when you notice that an older trap was not updated by a new trap because the update rule was not correct. In that case, you can adjust the update rule and apply the rules in history. This mechanism will start from the oldest traps, and will check for every trap if the current rules require the update of an older trap. Note that this mechanism can take more time if the number of rules and the number of stored traps are high.
 
@@ -280,7 +280,7 @@ In this section, you can manage the known IP addresses shown on the Known IP Add
 
 With the **Delete All** button, you can manually delete all known IP addresses. Please note that this button will not only delete the known IP addresses in the table, but also the DVEs made for these addresses and the stored traps coming from the addresses. This means that, in essence, this button resets all stored information except for the rules.
 
-The page button **Import IP Addresses** opens a subpage where you can import IP addresses into the driver, using a CSV file with a specific format (detailed on this subpage). With the toggle button **Create DVEs on Adding/Updating IP Addresses**, you can specify whether the driver should by default try to create DVEs when importing. A report of the import is displayed on the right-hand side of the subpage, mentioning which rows were imported and which were considered invalid (e.g. the IP address had already been imported before, the IP address was not a valid IP address, there was already a previous row mentioning that IP address, etc.). If you want to change the Device Name related to a certain IP address, it is also possible to do this via importing. However, unlike with the importing of rules, you cannot delete old addresses by importing, as this would delete all stored traps as well (similar to if the IP addresses were removed with the Delete All button).
+The page button **Import IP Addresses** opens a subpage where you can import IP addresses into the connector, using a CSV file with a specific format (detailed on this subpage). With the toggle button **Create DVEs on Adding/Updating IP Addresses**, you can specify whether the connector should by default try to create DVEs when importing. A report of the import is displayed on the right-hand side of the subpage, mentioning which rows were imported and which were considered invalid (e.g. the IP address had already been imported before, the IP address was not a valid IP address, there was already a previous row mentioning that IP address, etc.). If you want to change the Device Name related to a certain IP address, it is also possible to do this via importing. However, unlike with the importing of rules, you cannot delete old addresses by importing, as this would delete all stored traps as well (similar to if the IP addresses were removed with the Delete All button).
 
 #### Dynamic Virtual Elements
 
@@ -294,7 +294,7 @@ These notes provide information on the mechanisms implemented to make sure that 
 
 ### Incoming trap format
 
-The traps collected by this driver need to have a particular format for the driver to be able to process them. In the trap structure illustrated below, items indicated in green are of particular importance for trap processing.
+The traps collected by this connector need to have a particular format for the connector to be able to process them. In the trap structure illustrated below, items indicated in green are of particular importance for trap processing.
 
 - Timestamp: Provided by the Castlerock SNMPc
 
@@ -372,7 +372,7 @@ The result is the following trimmed trap message: 'Connection not working.' In t
 
 ### Update Rules
 
-After the trim rules have been applied, the driver will check if the trimmed message can update an older trap in the Trap Table. This depends on the update rules. If it cannot update an older trap, the incoming trap will be added as a new trap. It is possible that a trap updates multiple older traps based on that one update rule. In the logging of the element, you will be able to find log messages specifying that a trap was updated, with a message in the format "*Due to Update Rule \<ID of the update rule\>, the trap from source IP \<IPAddress\> has overwritten \<#\> older trap(s), (with shortkey(s) : \<shortkeys of updated traps\>.* "
+After the trim rules have been applied, the connector will check if the trimmed message can update an older trap in the Trap Table. This depends on the update rules. If it cannot update an older trap, the incoming trap will be added as a new trap. It is possible that a trap updates multiple older traps based on that one update rule. In the logging of the element, you will be able to find log messages specifying that a trap was updated, with a message in the format "*Due to Update Rule \<ID of the update rule\>, the trap from source IP \<IPAddress\> has overwritten \<#\> older trap(s), (with shortkey(s) : \<shortkeys of updated traps\>.* "
 
 Update rules are useful to make sure that traps that are related to each other update each other. Having the same source IP is not enough for a trap to update another trap, as there should also be a match between the trap messages. Very often, trap messages are closely related to each other, but not exactly the same. As such, it is possible to trim parts of the messages of the traps before checking if a new and older trap are equal. Note that only one update rule can be applied on an incoming trap. When an incoming trap is processed, all update rules are evaluated one by one, but as soon as a match is found, the other update rules are no longer evaluated. Keep this in mind when specifying update rules.
 

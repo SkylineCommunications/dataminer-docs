@@ -4,19 +4,19 @@ uid: Connector_help_SFN_Nim_Data_Reader
 
 # SFN Nim Data Reader
 
-The **SFN Nim Data Reader** driver is a CSV parser that can be used to generate specific output strings.
+The **SFN Nim Data Reader** connector is a CSV parser that can be used to generate specific output strings.
 
 ## About
 
-The driver parses a pre-formatted CSV file into the **Import Data Table***.* The user can then set up the configuration for the creation of the output strings. These strings will then be saved to the **Output Data Table***.*
+The connector parses a pre-formatted CSV file into the **Import Data Table***.* The user can then set up the configuration for the creation of the output strings. These strings will then be saved to the **Output Data Table***.*
 
-An SFN (Single Frequency Network) is a network where multiple transmitters simultaneously send the same signal over the same frequency. The **SFN Nim Data Reader** driver is used to create a list of all SFN transmitters that are present at the selected site. The output result will also hold the name of all other sites with SFN transmitters that are transmitting the same signal and frequency as the ones located at the selected site.
+An SFN (Single Frequency Network) is a network where multiple transmitters simultaneously send the same signal over the same frequency. The **SFN Nim Data Reader** connector is used to create a list of all SFN transmitters that are present at the selected site. The output result will also hold the name of all other sites with SFN transmitters that are transmitting the same signal and frequency as the ones located at the selected site.
 
 ## Installation and configuration
 
 ### Creation
 
-The **SFN Nim Data Reader** driver is a virtual protocol. As such, only the name, protocol and protocol version need to be configured during the creation process.
+The **SFN Nim Data Reader** connector is a virtual protocol. As such, only the name, protocol and protocol version need to be configured during the creation process.
 
 ## Usage
 

@@ -4,22 +4,22 @@ uid: Connector_help_SES_S.A._Global_Telemetry_System
 
 # SES S.A. Global Telemetry System
 
-The SES S.A. Global Telemetry System is a system at SES S.A. that provides telemetry data of specific satellites. This driver displays the telemetry data in a table.
+The SES S.A. Global Telemetry System is a system at SES S.A. that provides telemetry data of specific satellites. This connector displays the telemetry data in a table.
 
 ## About
 
 For each satellite available, one element must be created using an IP address and a specific port. Each port receives a continuous UDP stream with the relevant telemetry data of a specific satellite.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version (obsolete)                                               | No                  | Yes                     |
 | 1.0.1.x          | \- Added RF Out Column to the Telemetry Table - Auto clear functionality | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ For each satellite available, one element must be created using an IP address an
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

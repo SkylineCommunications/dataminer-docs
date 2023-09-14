@@ -4,25 +4,25 @@ uid: Connector_help_Schneider_Electric_StruxureWare
 
 # Schneider Electric StruxureWare
 
-The **Schneider Electric StruxureWare DCIM** (Data Center Infrastructure Management) platform is a management software suite designed to collect and manage data about a data center's assets, resource use and operation status throughout the data center lifecycle. This information is then distributed, integrated and applied in ways that help to manage and optimize the data center's performance. The **Schneider Electric StruxureWare** driver is the solution designed to monitor this platform.
+The **Schneider Electric StruxureWare DCIM** (Data Center Infrastructure Management) platform is a management software suite designed to collect and manage data about a data center's assets, resource use and operation status throughout the data center lifecycle. This information is then distributed, integrated and applied in ways that help to manage and optimize the data center's performance. The **Schneider Electric StruxureWare** connector is the solution designed to monitor this platform.
 
 ## About
 
-This driver was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API information. This driver is also a **DVE manager**, containing a DVE table that is used to export other drivers, each of them representing a device. The list of exported drivers can be found in the "Exported Drivers" section of this page.
+This connector was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API information. This connector is also a **DVE manager**, containing a DVE table that is used to export other drivers, each of them representing a device. The list of exported connectors can be found in the "Exported Connectors" section of this page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**          |
+| **Range** | **Device Firmware Version**          |
 |------------------|--------------------------------------|
 | 1.0.0.x          | StruxureWare Data Center Expert v7.2 |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                            | **Description** |
 |------------------------------------------------------------------------------------------------------------------|-----------------|
@@ -34,7 +34,7 @@ This driver was designed to interact with a SOAP interface. An **HTTP** connecti
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ## Usage
 
-The driver consists of six pages.
+The connector consists of six pages.
 
 ### General
 

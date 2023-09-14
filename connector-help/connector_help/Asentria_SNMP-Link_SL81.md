@@ -10,7 +10,7 @@ The **SNMP-Link SL81** is a device that performs three basic functions to facili
 - Monitoring of serial and environmental event conditions
 - Monitoring of connected sensor devices (contact inputs, voltage inputs, relay outputs, temperature sensor)
 
-The SNMP-Link SL81 driver monitors the sensors and their events.
+The SNMP-Link SL81 connector monitors the sensors and their events.
 
 ## About
 
@@ -38,7 +38,7 @@ The SNMP-Link SL81 driver monitors the sensors and their events.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,4 +61,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver lists the sensors in a table per sensor class.
+This connector lists the sensors in a table per sensor class.

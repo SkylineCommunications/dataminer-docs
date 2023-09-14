@@ -8,15 +8,15 @@ The Ericsson IP Transport NMS/Ericsson ServiceOn Element Management System (SO-E
 
 ## About
 
-This driver is exported by the **Ericsson IP Transport NMS** parent driver. The driver polls information from the **Ericsson SO-EM** (EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The driver handles parameters such as network element information, alarm event details, and all system reference catalogs.
+This connector is exported by the **Ericsson IP Transport NMS** parent connector. The connector polls information from the **Ericsson SO-EM** (EMS) through the **PF-SNMP** northbound interface via SNMP. Control over the device will depend on the access type of the SNMP parameters available in the Management Information Base (MIB). The connector handles parameters such as network element information, alarm event details, and all system reference catalogs.
 
 For each Network Element (NE) that is managed by the NMS, a corresponding DVE can be exported, containing alarm event information for this NE.
 
 DVEs are created by switching the value of the parameter **NE State** to *Enabled* in the **Device Table** of the parent element (**Ericsson IP Transport NMS**). The deletion of a DVE is executed in a similar fashion, by changing the NE State to *Disabled*. Generated DVEs will receive the name of the NE, without any parent element name suffix.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                       |
+| **Range** | **Device Firmware Version**                       |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | Performance Management System (PFM) version 18.3. |
 | 1.0.1.x          | Performance Management System (PFM) version 18.3. |
@@ -25,7 +25,7 @@ DVEs are created by switching the value of the parameter **NE State** to *Enable
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Ericsson IP Transport NMS](xref:Connector_help_Ericsson_IP_Transport_NMS).
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Ericsson IP Transport NMS](xref:Connector_help_Ericsson_IP_Transport_NMS).
 
 ## Usage (1.0.0.x onwards)
 

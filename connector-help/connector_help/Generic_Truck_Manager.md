@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Truck_Manager
 
 # Generic Truck Manager
 
-This is a virtual driver that can be used to manage and monitor trucks.
+This is a virtual connector that can be used to manage and monitor trucks.
 
 ## About
 
 The truck manager is capable of creating and editing existing truck properties. You can manually connect or disconnect trucks from a venue through a single interface to facilitate the monitoring of all existing trucks. The manager can also automatically detect if a truck is connected or disconnected to a venue via the switch LLDP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ The truck manager is capable of creating and editing existing truck properties. 
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 

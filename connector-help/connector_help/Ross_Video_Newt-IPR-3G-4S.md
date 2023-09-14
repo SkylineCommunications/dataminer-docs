@@ -4,17 +4,17 @@ uid: Connector_help_Ross_Video_Newt-IPR-3G-4S
 
 # Ross Video NEWT IPR-3G-4S
 
-This driver can be used to manage and control the Ross Video Newt IPR-3G-4S.
+This connector can be used to manage and control the Ross Video Newt IPR-3G-4S.
 
-The driver only supports the Newt IPR-3G-4S IP to 4 SDI output configuration mode. Other Newt configuration modes require a separate driver.
+The connector only supports the Newt IPR-3G-4S IP to 4 SDI output configuration mode. Other Newt configuration modes require a separate driver.
 
 ## About
 
-The user interface of this driver is similar to that of the Ross Video dashboard.
+The user interface of this connector is similar to that of the Ross Video dashboard.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The user interface of this driver is similar to that of the Ross Video dashboard
 
 #### HTTP CommandAPI connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -59,7 +59,7 @@ It also includes the **Network Stream Groups** table, which adds a group for eve
 Via the **Add Stream** page button, you can access the **Add Network Stream** subpage, where you can configure and send a stream via the **Stream Configuration** table, and configure the additional group parameters. When a stream is added, it is also added to the **Network Stream Groups Table**. There are two ways to send a stream: via this subpage or via the **Network Stream Groups** table.
 
 - Note that to add a stream, you must fill in all of the individual parameters as well as the stream configuration columns for the stream you want to add (except for Video Format for audio streams and Number of Audio Streams (1 or 2 groups of 8 channels)).
-- This driver only supports assignment of Audio Streams in 8 channel blocks.
+- This connector only supports assignment of Audio Streams in 8 channel blocks.
 
 ### PattGen
 

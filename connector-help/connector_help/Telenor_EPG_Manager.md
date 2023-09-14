@@ -4,9 +4,9 @@ uid: Connector_help_Telenor_EPG_Manager
 
 # Telenor EPG Manager
 
-This is a virtual driver that creates **Telenor EPG Channel** **elements for every channel** detected in the Telenor system.
+This is a virtual connector that creates **Telenor EPG Channel** **elements for every channel** detected in the Telenor system.
 
-To detect a channel, the driver compares the channels listed in a CSV file and the list of XML TV files contained in a folder. If a channel is listed in the CSV file and a matching XML TV file is present in the folder, an element is created.
+To detect a channel, the connector compares the channels listed in a CSV file and the list of XML TV files contained in a folder. If a channel is listed in the CSV file and a matching XML TV file is present in the folder, an element is created.
 
 ## About
 
@@ -34,7 +34,7 @@ To detect a channel, the driver compares the channels listed in a CSV file and t
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 

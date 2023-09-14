@@ -4,9 +4,9 @@ uid: Connector_help_Ross_Video_NEWT-HDMI-RX
 
 # Ross Video HDMI-RX
 
-This driver manages and controls the Ross Video Newt HDMI-RX. The driver only supports the Newt UHD-over-IP to HDMI 2.0 Gateway configuration mode. Other Newt configuration modes require a separate driver.
+This connector manages and controls the Ross Video Newt HDMI-RX. The connector only supports the Newt UHD-over-IP to HDMI 2.0 Gateway configuration mode. Other Newt configuration modes require a separate driver.
 
-The user interface of this driver is similar to that of the Ross Video dashboard.
+The user interface of this connector is similar to that of the Ross Video dashboard.
 
 ## About
 
@@ -34,7 +34,7 @@ The user interface of this driver is similar to that of the Ross Video dashboard
 
 #### HTTP CommandAPI connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,7 +48,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 
@@ -83,7 +83,7 @@ Via the **Add Stream** page button, you can access the **Add Network Stream** su
 Note:
 
 - To add a stream, you must fill in all of the individual parameters as well as the stream configuration columns for the stream you want to add (except for Video Format for audio streams and Number of Audio Streams (1 or 2 groups of 8 channels)).
-- This driver only supports assignment of Audio Streams in 8 channel blocks.
+- This connector only supports assignment of Audio Streams in 8 channel blocks.
 
 Via the **X-Connect** page button, you can access the **X-Connect** subpage, where you can view the cross-connection matrix.
 

@@ -8,17 +8,17 @@ This is an SNMP-based protocol for the Benu Networks MEG Platform. Benu Networks
 
 ## About
 
-This driver was designed to work with Benu's MEG-400 platform. You can monitor the platform with it and receive numerous statistics about the platform and the WAG. **SNMP Get** commands are used to read information from the device. **SNMP Set** commands are used to write information to the device. The driver also receives unsolicited messages from the device via **SNMP** **Traps**.
+This connector was designed to work with Benu's MEG-400 platform. You can monitor the platform with it and receive numerous statistics about the platform and the WAG. **SNMP Get** commands are used to read information from the device. **SNMP Set** commands are used to write information to the device. The connector also receives unsolicited messages from the device via **SNMP** **Traps**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | BW-2.2.4.3                  |
 
@@ -28,7 +28,7 @@ This driver was designed to work with Benu's MEG-400 platform. You can monitor t
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 ## Usage
 
-Once created, the element can be used immediately. There are 16 pages available in the driver.
+Once created, the element can be used immediately. There are 16 pages available in the connector.
 
 It is important to note that many of the tables show historical statistics information from the last 24 hours. Each 60-minute interval is represented as a row in the tables.
 
@@ -113,7 +113,3 @@ These two pages display statistical information about the IPv4/IPv6 address pool
 ### Cgnat Auth/Unauth Subscribers
 
 These two pages display statistical information about the **CGNAT Authenticated/Unauthenticated Subscribers** profiles.
-
-## Notes
-
-N/A

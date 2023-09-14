@@ -104,15 +104,19 @@ These configuration files are:
 
 To create a configuration file with the current settings applied to the PWS-110PR1:
 
-1.  Set the **Configuration File Name** parameter to the name of the configuration file you want to create.
-2.  Click the **Get Config** button.
-    When the configuration file has been created correctly, the **Get Status** parameter will be set to *Finished.* In addition, the **Last Set Status Timestamp** parameter will be updated accordingly. If the value of this parameter is set to *Error*, additional information about the error can be found in the element log file.
+1. Set the **Configuration File Name** parameter to the name of the configuration file you want to create.
+
+1. Click the **Get Config** button.
+
+   When the configuration file has been created correctly, the **Get Status** parameter will be set to *Finished.* In addition, the **Last Set Status Timestamp** parameter will be updated accordingly. If the value of this parameter is set to *Error*, additional information about the error can be found in the element log file.
 
 To apply a configuration file to the PWS-110PR1:
 
-1.  Select the configuration file in the **Configuration File Name** drop-down list. Then set the value of this parameter with the selected file name.
-2.  Click the **Set Config** button.
-    When the configuration file has been applied correctly, the **Set Status** parameter will be set to *Finished*. In addition, the **Last Set Status Timestamp** parameter will be updated accordingly. If the value of this parameter is set to *Error*, additional information about the error can be found in the element log file.
+1. Select the configuration file in the **Configuration File Name** drop-down list. Then set the value of this parameter with the selected file name.
+
+1. Click the **Set Config** button.
+
+   When the configuration file has been applied correctly, the **Set Status** parameter will be set to *Finished*. In addition, the **Last Set Status Timestamp** parameter will be updated accordingly. If the value of this parameter is set to *Error*, additional information about the error can be found in the element log file.
 
 #### Reset Timer Subpage
 

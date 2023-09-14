@@ -8,17 +8,17 @@ The SED Decimator 8 port enables low-cost spectrum measurement and analysis. It 
 
 ## About
 
-This driver is used to monitor and control the spectrum analyzer using the proprietary SED Decimator API, which makes use of a **TCP/IP** connection.
+This connector is used to monitor and control the spectrum analyzer using the proprietary SED Decimator API, which makes use of a **TCP/IP** connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.8          | Span frequencies bigger than 52 MHz up to 1200 MHz are supported. | No                  | Yes                     |
 
 ### Supported firmware version
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.0.19-1                    |
 
@@ -28,7 +28,7 @@ This driver is used to monitor and control the spectrum analyzer using the propr
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

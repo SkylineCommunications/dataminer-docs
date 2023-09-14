@@ -8,18 +8,18 @@ The Kronback Tracers B16 is capable of measuring up to 256 return path signals (
 
 ## About
 
-This driver displays the spectrum analyzer UI for the Kronback Tracers B16.
+This connector displays the spectrum analyzer UI for the Kronback Tracers B16.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                             | No                  | No                      |
 | 1.0.1.x          | Several adjustments and added functionality | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ This driver displays the spectrum analyzer UI for the Kronback Tracers B16.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

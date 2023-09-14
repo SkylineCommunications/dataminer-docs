@@ -4,11 +4,11 @@ uid: Connector_help_Evertz_570IPG-X19-10G
 
 # Evertz 570IPG-X19-10G
 
-This driver is used to monitor and control the Evertz 570IPG-X19-10G card, which is a video gateway.
+This connector is used to monitor and control the Evertz 570IPG-X19-10G card, which is a video gateway.
 
 An SNMP connection is used in order to successfully retrieve and configure the device's information. There are also different possibilities available for alarm monitoring and trending.
 
-This driver is a standalone driver, **not** an exported driver for the **Evertz 7x00 General Platform** driver.
+This connector is a standalone connector, **not** an exported connector for the **Evertz 7x00 General Platform** connector.
 
 ## About
 
@@ -36,7 +36,7 @@ This driver is a standalone driver, **not** an exported driver for the **Evertz 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **System**: This page contains several general settings, including ports configuration and time source configuration. It also contains three tables with data port, SPF and external reference monitoring information.
 - **Product Features**: This page lists the product features. It also shows the serial number and MAC address of the card.

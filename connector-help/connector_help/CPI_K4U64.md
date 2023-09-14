@@ -4,17 +4,17 @@ uid: Connector_help_CPI_K4U64
 
 # CPI K4U64
 
-With this driver, you can monitor a **CPI K4U64** amplifier.
+With this connector, you can monitor a **CPI K4U64** amplifier.
 
 ## About
 
-The **CPI K4U64** driver uses a serial connection in order to monitor and configure a **CPI K4U64** 1:2 LNA protection switch.
+The **CPI K4U64** connector uses a serial connection in order to monitor and configure a **CPI K4U64** 1:2 LNA protection switch.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

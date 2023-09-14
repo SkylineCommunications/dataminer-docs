@@ -4,21 +4,21 @@ uid: Connector_help_Wellav_UMH_160_T2
 
 # Wellav UMH 160 T2
 
-The **Wellav UMH 160 T2** driver can be used to display information of any related device.
+The **Wellav UMH 160 T2** connector can be used to display information of any related device.
 
 ## About
 
 This protocol can be used to monitor the Wellav UMH 160 T2 devices. WellAV UMH 160 S2 and WellAV UMH 160 IP devices are monitored by their own protocol. A **SNMP** connection is used to successfully retrieve the device's information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor the Wellav UMH 160 T2 devices. WellAV UMH 1
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains 10 pages.
+The connector contains 10 pages.
 
 ### Status
 
@@ -130,7 +130,3 @@ This page displays six alarms: **LNB Connection Short, Signal Unlock, CAM 1** an
 ### Web Interface
 
 On this page, you can view the web interface of the device. However, the client machine has to be able to access the device. Otherwise, it will not be possible to open the web interface.
-
-## Notes
-
-N/A

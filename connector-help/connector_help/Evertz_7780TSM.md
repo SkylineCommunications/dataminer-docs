@@ -4,23 +4,21 @@ uid: Connector_help_Evertz_7780TSM
 
 # Evertz 7780TSM
 
-This driver is used to monitor and control the Evertz 7780TSM.
+This connector is used to monitor and control the Evertz 7780TSM.
 
 ## About
 
 All the monitoring and control information is retrieved via SNMP and displayed in tables.
 
-**This subsection can only be omitted in case of an exported driver**
+### Range of the connector
 
-### Range of the driver
-
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          |                             |
 
@@ -28,7 +26,7 @@ All the monitoring and control information is retrieved via SNMP and displayed i
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -53,7 +51,7 @@ This page contains three tables:
 
 - The **Input Control Table** displays general information about each input: the **IP Mode, the IP Address, the Port Number,** different **Bit Rates, ...**
 - **Input Monitor Table** shows data for parameters such as the **Input state, Number of Programs, Number of know PIDs, TS ID, Network ID, ...**
-- The **MDI Monitor Table** displays data regarding the MDI. The table has nine columns and displays the **Delay Factor, Media Loss Rate,** their limites, maximums and ideals.
+- The **MDI Monitor Table** displays data regarding the MDI. The table has nine columns and displays the **Delay Factor, Media Loss Rate,** their limits, maximums and ideals.
 
 ### Output
 
@@ -61,13 +59,13 @@ The **Output Control Table** on this page provides the following information: **
 
 ### PID
 
-This page has one table, the **PID Monitor Table.** This table shows, amongst others, the **PID Number, Type** **and** **Info,** the **Program Number** and **Name,** the **Bit Rate** and this **Minimum, Maximum, Thresholds** and **Limit.**
+This page has one table, the **PID Monitor Table.** This table shows, amongst others, the **PID Number, Type and Info,** the **Program Number** and **Name,** the **Bit Rate** and this **Minimum, Maximum, Thresholds** and **Limit.**
 
 ### Switch Control
 
 There are two tables on this page.
 
-- The **Switch Mode** and **Methode,** different **Delays (Switch Minimum, Switch Low, Switch Current) and PCR Tolerance** are some columns from the **Clean Switches Table.**
+- The **Switch Mode** and **Method,** different **Delays (Switch Minimum, Switch Low, Switch Current) and PCR Tolerance** are some columns from the **Clean Switches Table.**
 - The **Auto Reset Criteria Table** consists of the **Auto Rest PMT Version, Auto Reste TS ID** and the **Auto Reset Bit Rate.**
 
 ### Alarm
@@ -78,7 +76,7 @@ The four tables on this page, the **MGMT Faults Table**, **Trigger Faults Table*
 - **Send Trap** (used to decide if a trap must be sent)
 - **Fault Present**
 
-The first three tables each have a togglebutton to enable or disable the polling of the table.
+The first three tables each have a toggle button to enable or disable the polling of the table.
 A pop-up page with the **Priority Error Monitor Table** will be displayed after the user presses the '**Alarm Configuration..**' button.
 
 ### Error Monitoring
@@ -87,9 +85,9 @@ The **Error Monitor Table** shows the **Input Status, IP Layer Status, Syntrax E
 
 ### CCA and DPI Monitoring Control
 
-On this page two **Monitoring Control Tabels** can be found: one for the **CCA** and one for the **DPI.** The columns of these tables are all in function of the monitoring. Examples are the **Start** and **Stop Monitoring, Traps Notify** and different **DPI Message Buffers.**
+On this page two **Monitoring Control Tables** can be found: one for the **CCA** and one for the **DPI.** The columns of these tables are all in function of the monitoring. Examples are the **Start** and **Stop Monitoring, Traps Notify** and different **DPI Message Buffers.**
 
-Two pagebuttons can be found on this page: '**Packet Loss...'** and **'Misc Control'.**
+Two page buttons can be found on this page: '**Packet Loss...'** and **'Misc Control'.**
 
 ### SNMP and Trap Configuration
 
@@ -98,7 +96,7 @@ This page contains two tables:
 - The **Trap Dest Table** displays the **Trap Dest Index** , **Remove Trap Dest** and **Trap Dest Address**.
 - For the card faults, the **Card Faults Table** displays the **Frame Status Index, Send Trap** (to turn trap sending off/on) and the **Fault Present**.
 
-The last table again has a togglebutton to enable or disable the polling of the table.
+The last table again has a toggle button to enable or disable the polling of the table.
 
 ### Port Configuration
 
@@ -113,4 +111,4 @@ On this page, you can view the web interface of the device. However, the client 
 
 ## Notes
 
-Tables 60, 70, 100, 180, 190, 230, 320, 330, 340 and 430 needed to be polled with bulk:1.MultipleGetNext gave error 'To Big' and GetNext + MultipleGet gave 'TimeOut' error for table 60 and 70.
+Tables 60, 70, 100, 180, 190, 230, 320, 330, 340 and 430 needed to be polled with bulk:1.MultipleGetNext gave error 'Too Big' and GetNext + MultipleGet gave 'TimeOut' error for table 60 and 70.

@@ -8,17 +8,17 @@ The **Avcom of Virginia RSA-6500** is used as a **spectrum analyzer** that measu
 
 ## About
 
-This driver uses a **serial** connection to gather data from the device. Critical information related to the **spectrum analyzer** is displayed on a dedicated Spectrum Analyzer page, where advanced configuration is possible, e.g. adjusting the **Center Frequency** and **Resolution Bandwidth**.
+This connector uses a **serial** connection to gather data from the device. Critical information related to the **spectrum analyzer** is displayed on a dedicated Spectrum Analyzer page, where advanced configuration is possible, e.g. adjusting the **Center Frequency** and **Resolution Bandwidth**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version, based on version 1.0.0.4 Avcom of Virginia RSA-2500B | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.6                         |
 
@@ -28,7 +28,7 @@ This driver uses a **serial** connection to gather data from the device. Critica
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

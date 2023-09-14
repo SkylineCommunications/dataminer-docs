@@ -8,13 +8,13 @@ The **ETL Systems M0808C2UFL** is an 8x8 L-band matrix with dual redundant PSUs,
 
 ## About
 
-With this driver, it is possible to manage general information about the device, and to modify the networking configuration and the matrix configuration itself. The driver also supports traps to detect alarms.
+With this connector, it is possible to manage general information about the device, and to modify the networking configuration and the matrix configuration itself. The connector also supports traps to detect alarms.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection**
 
@@ -40,7 +40,7 @@ This page contains the relevant information coming from the standard MIB-2, such
 
 ### Alarms
 
-This page displays the alarms of the power supply units, alarms of the matrix itself and VTR-10 alarms. These alarms are detected through standard polling or receiving traps. The device sends traps every 5 seconds when one of the components is in alarm state, and stops when the component gets back to normal. The driver sets the alarm state when a trap arrives and checks 5 seconds later if the alarm status was cleared.
+This page displays the alarms of the power supply units, alarms of the matrix itself and VTR-10 alarms. These alarms are detected through standard polling or receiving traps. The device sends traps every 5 seconds when one of the components is in alarm state, and stops when the component gets back to normal. The connector sets the alarm state when a trap arrives and checks 5 seconds later if the alarm status was cleared.
 
 ### Settings
 

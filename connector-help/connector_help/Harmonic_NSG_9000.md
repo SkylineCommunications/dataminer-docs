@@ -12,16 +12,16 @@ The number of delivered transport streams depends on the device configuration an
 
 Each QAM may serve a different application, allowing a single device to concurrently support multiple applications.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version                           | No                  | No                      |
 | 2.0.0.x              | Customer-specific version for Unity Media | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 01.06.08.001                |
 | 2.0.0.x          | 01.06.08.001                |
@@ -32,7 +32,7 @@ Each QAM may serve a different application, allowing a single device to concurre
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

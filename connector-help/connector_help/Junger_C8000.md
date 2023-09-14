@@ -4,22 +4,22 @@ uid: Connector_help_Junger_C8000
 
 # Junger C8000
 
-With this driver, it is possible to monitor **Junger C8000** devices with **SNMP**.
+With this connector, it is possible to monitor **Junger C8000** devices with **SNMP**.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                                           | No                  | No                      |
 | 2.0.0.x              | SNMP traps; DVE; status: metadata, encoder, decoder, SDI input, etc.                       | No                  | No                      |
 | 2.0.1.x \[Obsolete\] | Added support for C8492 module. Fixed several issues, renamed Authentication Failure trap. | No                  | No                      |
 | 2.0.3.x \[SLC Main\] | Redesigned driver and added modules.                                                       | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -32,7 +32,7 @@ With this driver, it is possible to monitor **Junger C8000** devices with **SNMP
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -8,9 +8,9 @@ uid: Connector_help_Standard_Information_Platform
 
 This is a base driver for "**Microsoft Platform**" (2.1.0.68), "**Microsoft Platform SNMP**" (1.1.0.15), "**Linux Platform SNMP**" (1.1.0.46) and "**Linux Platform SSH**" (1.0.0.33). Note that the versions are relevant as mediation components refer to particular parameter ids.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
@@ -18,7 +18,7 @@ This is a base driver for "**Microsoft Platform**" (2.1.0.68), "**Microsoft Plat
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation. In fact, you don't have to create any element because the base protocol will be detected and included into the child protocol options.
+This connector uses a virtual connection and does not require any input during element creation. In fact, you don't have to create any element because the base protocol will be detected and included into the child protocol options.
 
 ## Usage
 

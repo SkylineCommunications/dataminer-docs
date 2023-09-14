@@ -4,17 +4,17 @@ uid: Connector_help_iDirect_Multihub_Manager
 
 # iDirect Multihub Manager
 
-This is a manager driver that operates on top of the **iDirect Platform** driver, to spread remote, linecard and network DVEs over multiple hub elements
+This is a manager connector that operates on top of the **iDirect Platform** connector, to spread remote, linecard and network DVEs over multiple hub elements
 
 ## About
 
-This driver gathers all available remotes, linecards and networks on the configured iDirect hub elements. The detected items are then assigned to one of the hub elements.
+This connector gathers all available remotes, linecards and networks on the configured iDirect hub elements. The detected items are then assigned to one of the hub elements.
 
 The purpose of this is to distribute the remote, linecard and network DVEs to multiple hub elements, to assure a good performance when retrieving trending, alarms, etc.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,18 +24,18 @@ The purpose of this is to distribute the remote, linecard and network DVEs to mu
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the managed iDirect elements
 
-After a new element has been created using this driver, the iDirect hub elements that must be managed need to be selected.
+After a new element has been created using this connector, the iDirect hub elements that must be managed need to be selected.
 
 To do so:
 
-1.  Go to the **iDirect Elements** page.
-2.  Click the **Refresh Elements** button to refresh the list of iDirect elements.
-3.  Use the drop-down list to select the element. All elements using the driver "iDirect Platform" will be shown.
-4.  Apply your selection to add the element to the table.
+1. Go to the **iDirect Elements** page.
+1. Click the **Refresh Elements** button to refresh the list of iDirect elements.
+1. Use the drop-down list to select the element. All elements using the connector "iDirect Platform" will be shown.
+1. Apply your selection to add the element to the table.
 
 ## Usage
 

@@ -4,25 +4,25 @@ uid: Connector_help_ViaLite_ViaLiteHD
 
 # ViaLite ViaLiteHD
 
-The **ViaLite ViaLiteHD** driver is used to display and configure information of the attached modules.
+The **ViaLite ViaLiteHD** connector is used to display and configure information of the attached modules.
 
 ## About
 
 The ViaLiteHD system comprises up to 13 rack-mounted cards and an SNMP card, all of which are plugged into a 19" 3U chassis with dual power supplies.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V1.04.21                    |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                        | **Description**      |
 |--------------------------------------------------------------------------------------------------------------|----------------------|
@@ -41,7 +41,7 @@ The ViaLiteHD system comprises up to 13 rack-mounted cards and an SNMP card, all
 
 #### SNMP main connection
 
-This driver uses an SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -65,7 +65,7 @@ The ViaLite ViaLiteHD protocol creates a main element and virtual elements for e
 
 ### Main Element
 
-The driver's main element has the following pages:
+The connector's main element has the following pages:
 
 - **General**: General system parameters of the chassis. The **System Details** page button provides access to more detailed information.
 - **Modules**: For every module slot, an entry is created in the **Module Table**. The **Invalid DVE Table** page button provides access to a table that tracks the hanging/invalid DVEs, with an option to remove them.
@@ -82,4 +82,4 @@ Every supported module type of the ViaLiteHD also has specific module informatio
 
 ## Notes
 
-This driver does not support traps.
+This connector does not support traps.

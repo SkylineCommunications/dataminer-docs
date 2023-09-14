@@ -4,7 +4,7 @@ uid: Connector_help_UPC_Nederland_VOD_Schedule_Importer
 
 UPC Nederland VOD Schedule Importer
 
-With this driver it is possible to import VOD (Video On Demand) schedules.
+With this connector it is possible to import VOD (Video On Demand) schedules.
 
 # About
 

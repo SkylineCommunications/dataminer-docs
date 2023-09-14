@@ -13,7 +13,7 @@ The 7882 Decoder H264 features:
 - 4x HD/SD-SDI outputs
 - Baseband outputs with embedded audio an ancillary data
 
-This driver uses **SNMP** to poll data from the Evertz DEC7882H264 based on the decoder web interface layout.
+This connector uses **SNMP** to poll data from the Evertz DEC7882H264 based on the decoder web interface layout.
 
 ## About
 
@@ -41,7 +41,7 @@ This driver uses **SNMP** to poll data from the Evertz DEC7882H264 based on the 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -67,7 +67,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains general system information.
 - **System**: Allows you to configure and monitor several system-related tables and parameters, including SysLog configuration and temperature parameters. Also includes tables with data port settings and information.

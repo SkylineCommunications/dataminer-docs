@@ -8,11 +8,11 @@ The CHP-DDF0 card is a group of transmitter cards, which have a system naming of
 
 ## About
 
-This is an **SNMP** driver, which uses SNMP polling to communicate with the physical devices.
+This is an **SNMP** connector, which uses SNMP polling to communicate with the physical devices.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0.6.0                     |
 
@@ -20,7 +20,7 @@ This is an **SNMP** driver, which uses SNMP polling to communicate with the phys
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.1 onwards.
 
 ## Usage
 
@@ -47,4 +47,4 @@ The page also contains specific card configuration options:
 - **Transmitter Distortion Table:** Allows the configuration of the **fiber length** and **filter slope**, to allow distance-related signal compensation.
 - **Slot Test Point Table:** Allows you to determine which channel will be used for test points.
 
-Version 1.0.0.3 of the driver introduces several large changes, including the addition of tables related to the optical transmitters. Because of this, this page looks different from that version onwards. It now displays the system configuration, including the **Date/Time**, the **Alarm Detection** and a **Software Reset**. While the **Slot Test Point Table** remains on this page, the other RF tables from version 1.0.0.1 have been moved to a specific subpage, accessible via the **RF Transmitters...** page button. Their functionality remains the same. An additional page button allows access to the **Optical Transmitters**' new tables, allowing you to turn them on/off, and to change the card's input configuration.
+Version 1.0.0.3 of the connector introduces several large changes, including the addition of tables related to the optical transmitters. Because of this, this page looks different from that version onwards. It now displays the system configuration, including the **Date/Time**, the **Alarm Detection** and a **Software Reset**. While the **Slot Test Point Table** remains on this page, the other RF tables from version 1.0.0.1 have been moved to a specific subpage, accessible via the **RF Transmitters...** page button. Their functionality remains the same. An additional page button allows access to the **Optical Transmitters**' new tables, allowing you to turn them on/off, and to change the card's input configuration.

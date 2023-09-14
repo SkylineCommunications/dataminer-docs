@@ -4,7 +4,7 @@ uid: Connector_help_Cox_HP_Network_Automation
 
 # COX HP Network Automation
 
-The Cox HP Network Automation driver communicates with COX's Apigee API to fetch device configuration information. HPNA information is displayed in tables, depending on the configured settings.
+The Cox HP Network Automation connector communicates with COX's Apigee API to fetch device configuration information. HPNA information is displayed in tables, depending on the configured settings.
 
 ## About
 
@@ -32,7 +32,7 @@ The Cox HP Network Automation driver communicates with COX's Apigee API to fetch
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-To make sure the driver can connect to the API, specify the **API Key**, **Username** and **Password** on the Configuration page.
+To make sure the connector can connect to the API, specify the **API Key**, **Username** and **Password** on the Configuration page.
 
 ### Redundancy
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver contains a number of settings that allow you to customize its behavior:
+The connector contains a number of settings that allow you to customize its behavior:
 
 - **Interface Settings**: A toggle button allows you to enable/disable the **polling from an interface (HTTP)**. You can also specify an interval to configure **how frequently the interface will be polled**. Finally, you can also select which of the following operating modes should be used:
 

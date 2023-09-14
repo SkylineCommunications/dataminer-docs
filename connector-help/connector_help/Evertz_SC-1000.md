@@ -4,22 +4,22 @@ uid: Connector_help_Evertz_SC-1000
 
 # Evertz SC-1000
 
-The aim of this driver is mainly to control and monitor a matrix.
+The aim of this connector is mainly to control and monitor a matrix.
 
 ## About
 
-The driver uses 2 connections. The main connection (*smart-serial*) implements the *Quartz* communication protocol to monitor and control a matrix. The second connection (SNMP) is used to get general device information.
+The connector uses 2 connections. The main connection (*smart-serial*) implements the *Quartz* communication protocol to monitor and control a matrix. The second connection (SNMP) is used to get general device information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                   | No                  | Yes                     |
 | 2.0.0.x          | New Smart-Serial connection to support the Quartz protocol, needed for the matrix | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**   |
+| **Range** | **Device Firmware Version**   |
 |------------------|-------------------------------|
 | 1.0.0.x          | N/A                           |
 | 2.0.0.x          | Software: 2.43 Hardware: 2.03 |
@@ -32,7 +32,7 @@ The driver uses 2 connections. The main connection (*smart-serial*) implements t
 
 Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 SNMP Polling connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

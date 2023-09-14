@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Enhanced_Service
 
 # Skyline Enhanced Service
 
-This driver allows you to detect and monitor the root cause of alarms found in a service. To do so, you need to indicate which alarms have which root cause.
+This connector allows you to detect and monitor the root cause of alarms found in a service. To do so, you need to indicate which alarms have which root cause.
 You can also combine multiple alarms, by configuring which alarms are required and which are forbidden for a certain root cause.
 
 ## About
@@ -27,7 +27,7 @@ You can also combine multiple alarms, by configuring which alarms are required a
 
 ### Creating the enhanced service
 
-Once the driver has been installed on the DMA, you can activate it as follows:
+Once the connector has been installed on the DMA, you can activate it as follows:
 
 1. Right-click in the Surveyor and select *New* \> *Service*.
 

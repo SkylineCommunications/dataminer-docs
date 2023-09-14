@@ -30,11 +30,11 @@ The Telenet BGP Trap Receiver is a solution designed for Telenet that receives B
 
 ### Connections
 
-The driver uses two connections: SNMP to receive alarm traps and HTTP to perform REST API requests.
+The connector uses two connections: SNMP to receive alarm traps and HTTP to perform REST API requests.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 #### HTTP Extra Connection 1 Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -76,9 +76,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver only polls information per request of the user, i.e. whenever you click the button to retrieve information from Telenet's Network Inventory Management system. Apart from that, the driver also receives information via SNMP traps.
+The connector only polls information per request of the user, i.e. whenever you click the button to retrieve information from Telenet's Network Inventory Management system. Apart from that, the connector also receives information via SNMP traps.
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### BGP Events
 

@@ -15,7 +15,7 @@ This is a WDM based device, that can hold multiple modules, used for optical tra
 ### Creation
 
 ***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,7 +64,7 @@ The information is listed in a Table, and contains parameters such as **Interfac
 This shows information about the Protection Groups (redundancy).
 It shows information such as the **Switch Type**, Whether or not the protection group is **Revertable**, etc.
 
-### Webinterface
+### Web Interface
 
 This shows the native web interface of the device.
 This page is only available if the client has access to the device.

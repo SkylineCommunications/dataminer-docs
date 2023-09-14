@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Dynamic_Table
 
 # Generic Dynamic Table
 
-This driver keeps a list of entries with a unique key and text and/or numeric value.
+This connector keeps a list of entries with a unique key and text and/or numeric value.
 
 ## About
 
-This generic driver allows you to keep a list of data entries defined by a unique key name. Each entry can have a text value (on which alarm monitoring can be activated) and a numeric value (on which both alarm monitoring and trending can be activated). Each entry contains a column with the time when it was last updated. By default, 1000 entries will be saved. An automatic cleanup mechanism will check to remove expired entries when a maximum age is defined.
+This generic connector allows you to keep a list of data entries defined by a unique key name. Each entry can have a text value (on which alarm monitoring can be activated) and a numeric value (on which both alarm monitoring and trending can be activated). Each entry contains a column with the time when it was last updated. By default, 1000 entries will be saved. An automatic cleanup mechanism will check to remove expired entries when a maximum age is defined.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This generic driver allows you to keep a list of data entries defined by a uniqu
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Entries
 

@@ -10,94 +10,72 @@ The **Moxa CN2650-8-2AC** is a Serial Gateway.
 
 **SNMP Protocol** is used for communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.3 Build 14052214          |
 
-## Installation and configuration
+## Configuration
 
-### Creation
+### Connections
 
-SNMP Main connection
-
-SNMP CONNECTION:
-
-- **IP address/host**: The polling IP of the device.
-- **Device address**: \[Indicate if required or not. If it is, specify default value and range.\]
-
-SNMP Settings:
-
-- **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: \[The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
-- **Set community string**: \[The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
-
-SNMP Redundancy connection
+#### SNMP Main connection
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: \[Indicate if required or not. If it is, specify default value and range.\]
 
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: \[The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
-- **Set community string**: \[The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
-  Note: If you have specified a default value in the driver, then specify that custom value.\]
+- **Get community string**: The community string used when reading values from the device, by default: *public*.
+- **Set community string**: The community string used when setting values on the device, by default: *private*.
 
+#### SNMP Redundancy connection
 
+SNMP CONNECTION:
+
+- **IP address/host**: The polling IP of the device.
+
+SNMP Settings:
+
+- **Port number**: The port of the connected device, by default *161*.
+- **Get community string**: The community string used when reading values from the device, by default: *public*.
+- **Set community string**: The community string used when setting values on the device, by default: *private*.
 
 ### Overview
 
 This page displays: **Model Name, Serial Number, Firmware Version, Up Time, Power 1 Status,** and **Power 2 Status**.
 
-
-
 ### Basic Settings
 
-This page allows the user to set: **Server Name,** and **Server Location.**
-
-**
-**
+On this page, you can set the **Server Name,** and **Server Location.**
 
 ### LAN
 
 This page displays: **IP Address, NetMask, Default Gateway,** and **Speed** for both LAN Interfaces.
 
-It also contains a pagebutton to **LAN Settings.**
-
-
+It also contains a page button to **LAN Settings.**
 
 ### LAN Settings
 
-This page allows the user to set: **IP Configuration, IP Address,** **NetMask, Default Gateway,** **Speed, PPPoE User Account, PPPoE User Password,** and **DNS Server IP Address** for both LAN Interfaces.
+On this page, you can set the **IP Configuration, IP Address**, **NetMask, Default Gateway**, **Speed, PPPoE User Account, PPPoE User Password,** and **DNS Server IP Address** for both LAN Interfaces.
 
-It also allows the user to set: **Wins Function, Wins Server, Routing Protocol, Gratuitous ARP**, and **Gratuitous ARP Seind Period.**
+You can also set the **Wins Function, Wins Server, Routing Protocol, Gratuitous ARP**, and **Gratuitous ARP Send Period.**
 
-Note: The User \*must\* press the **Set Network Parameters** Button in order for the settings to take effect!
-
-
+> [!IMPORTANT]
+> You need to click the **Set Network Parameters** button in order for the settings to take effect.
 
 ### Restart
 
 This page allows the user to Restart any individual Serial Port on the device, or the device itself.
-
-
 
 ### Web Interface
 

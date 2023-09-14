@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_Selenio_J2K1_ENC
 
 # Imagine Communications Selenio J2K1 ENC
 
-This driver can be used to monitor and control the **encoder** functionality of the **Imagine Communications Selenio JPEG2000**.
+This connector can be used to monitor and control the **encoder** functionality of the **Imagine Communications Selenio JPEG2000**.
 
 The Imagine Communications Selenio JPEG2000 is a is a multichannel encoder/decoder solution, offering real-time, high-quality JPEG2000 compression over IP.
 
@@ -12,33 +12,33 @@ The Imagine Communications Selenio JPEG2000 is a is a multichannel encoder/decod
 
 There are 2 drivers that can be used to monitor and control the **Imagine Communications Selenio JPEG2000** card.
 
-This driver only supports the **encoder** functionality. The [Imagine Communications Selenio J2K1 DEC](xref:Connector_help_Imagine_Communications_Selenio_J2K1_DEC) driver can be used to monitor and control the decoder functionality of the card.
+This connector only supports the **encoder** functionality. The [Imagine Communications Selenio J2K1 DEC](xref:Connector_help_Imagine_Communications_Selenio_J2K1_DEC) connector can be used to monitor and control the decoder functionality of the card.
 
 Starting from version **3.0.0.1**, **DVEs** can be created for the 4 encoder channels.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**    | **Description**                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range**    | **Description**                                                                                                              | **DCF Integration** | **Cassandra Compliant** |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.90.x            | Initial range.                                                                                                               | No                  | No                      |
 | 1.1.0.x             | Updated for firmware 2.0.13.                                                                                                 | No                  | No                      |
 | 2.2.0.x             | Updated for firmware 2.0.                                                                                                    | No                  | No                      |
 | 3.0.0.x             | DVEs for each encoder.                                                                                                       | No                  | Yes                     |
-| \<10.0.0.x \[Main\] | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. | No                  | Yes                     |
+| \<10.0.0.x \[Main\] | The versioning of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. | No                  | Yes                     |
 | 10.0.0.x            | Replaced "dynamic snmp get" with "dynamicSnmpGet="true"" under parameter type tag.                                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                  |
+| **Range** | **Device Firmware Version**                                                                                                  |
 |------------------|------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.90.x         | 1.0.90                                                                                                                       |
 | 1.1.0.x          | 2.0.13                                                                                                                       |
 | 2.2.0.x          | 2.0                                                                                                                          |
 | 3.0.0.x          | 2.0                                                                                                                          |
-| \<10.0.0.x       | The versioning of the driver is specifically engineered to tie in with the firmware version of the card the driver supports. |
+| \<10.0.0.x       | The versioning of the connector is specifically engineered to tie in with the firmware version of the card the connector supports. |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work on older firmware.                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                            | **Description** |
 |--------------------------------------------------|-----------------|
@@ -50,7 +50,7 @@ Starting from version **3.0.0.1**, **DVEs** can be created for the 4 encoder cha
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (**SNMPv2**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMPv2**) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -153,7 +153,7 @@ All data gets retrieved from the device in three ways.
 
 1. Dirty changes
 
-   - Every 3 seconds, the driver checks if any configurable values have changed. If it detects such a change, it instantly updates the displayed information with the new value. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
+   - Every 3 seconds, the connector checks if any configurable values have changed. If it detects such a change, it instantly updates the displayed information with the new value. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
 
 1. Traps
 

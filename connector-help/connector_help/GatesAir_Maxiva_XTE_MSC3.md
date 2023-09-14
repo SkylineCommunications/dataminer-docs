@@ -32,7 +32,7 @@ The GatesAir Maxiva XTE Multi-System Controller (MSC3) monitors and controls the
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays information about the **System**, the **Transmitter** and the **Exciter**.
 - **Alarms**: Allows you to check the current state of the alarm parameters. On the **Events** **Configuration** subpage, you can enable or disable the alarm events.

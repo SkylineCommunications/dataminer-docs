@@ -4,23 +4,23 @@ uid: Connector_help_Wireshark_Network_Protocol_Analyzer
 
 # Wireshark Network Protocol Analyzer
 
-The **Wireshark Network Protocol Analyzer** is a driver that can be used to take captures on a remote Linux server.
+The **Wireshark Network Protocol Analyzer** is a connector that can be used to take captures on a remote Linux server.
 
 ## About
 
-This driver uses a serial connection to allow the user to take captures on a Linux server. Tshark CLI commands are used to start the captures.
+This connector uses a serial connection to allow the user to take captures on a Linux server. Tshark CLI commands are used to start the captures.
 
 After the captures are taken, they are moved to a configurable remote destination. This way, the disk space usage on the remote Linux wireshark server is kept low.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Linux Server                |
 
@@ -30,7 +30,7 @@ After the captures are taken, they are moved to a configurable remote destinatio
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

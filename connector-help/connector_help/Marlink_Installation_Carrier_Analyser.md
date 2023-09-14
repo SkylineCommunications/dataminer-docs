@@ -6,14 +6,14 @@ uid: Connector_help_Marlink_Installation_Carrier_Analyser
 
 ## About
 
-This protocol driver will query the routing table of the main router that is responsible of establishing connection with all the remote carriers used by the installation.
+This connector will query the routing table of the main router that is responsible of establishing connection with all the remote carriers used by the installation.
 This way we're able to analyze which installations are using which carriers.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

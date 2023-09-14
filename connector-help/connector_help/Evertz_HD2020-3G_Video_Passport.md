@@ -10,15 +10,15 @@ The Evertz HD2020-3G Video PassPort is a high-performance 1RU video conversion a
 
 This protocol uses an **SNMP** connection to monitor and configure the Evertz 2020-3G Video PassPort device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | hd2020_3g-20101029-1104     |
 
@@ -28,7 +28,7 @@ This protocol uses an **SNMP** connection to monitor and configure the Evertz 20
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

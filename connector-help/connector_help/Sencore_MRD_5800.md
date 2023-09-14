@@ -4,26 +4,26 @@ uid: Connector_help_Sencore_MRD_5800
 
 # Sencore MRD 5800
 
-The **Sencore MRD 5800** driver is used to monitor and control the Sencore 5800 modular decoder.
+The **Sencore MRD 5800** connector is used to monitor and control the Sencore 5800 modular decoder.
 
 ## About
 
-This driver uses **SNMP** to retrieve data about the inputs and outputs of the device.
+This connector uses **SNMP** to retrieve data about the inputs and outputs of the device.
 
-The driver is very similar to the **Sencore MRD 4400**. In fact, the layout of both drivers is almost identical.
+The connector is very similar to the **Sencore MRD 4400**. In fact, the layout of both drivers is almost identical.
 
 It is also possible to **download** a profile to a local file and to **upload** a profile.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                | No                  | Yes                     |
 | 1.0.1.x          | Added functionality to download and upload configuration files | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -34,7 +34,7 @@ Framework version: 3.5.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -46,7 +46,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string:** The community string used when reading values from the device. The default value is *public*.
 - **Set community string:** The community string used when setting values on the device. The default value is *private*.
 
-This driver uses an HTTP connection (to download and upload profiles) and requires the following input during element creation:
+This connector uses an HTTP connection (to download and upload profiles) and requires the following input during element creation:
 
 **HTTP Connection:**
 
@@ -68,7 +68,7 @@ This page displays the different inputs available in the device. In the **Config
 
 This page provides more details about the different inputs. Five kinds of inputs are available: **ASI**, **MPEG/IP**, **DVB-S**, **VSB** and **Turbo PSK**.
 
-From driver version 1.0.1.2 onwards, this page contains a subpage, **IP - Name**, where destination names are used to resolve an IP address in the MPEG/IP table on the main Input page.
+From connector version 1.0.1.2 onwards, this page contains a subpage, **IP - Name**, where destination names are used to resolve an IP address in the MPEG/IP table on the main Input page.
 
 On the **IP - Name** subpage, lines can be added one by one or **imported** from a semicolon-separated CSV file. They may also be **exported** directly to a suitable format and then imported again later. In the CSV file, the destination name should be the first column, and the destination IP the second column. You can confirm the format by trying an export of a number of test lines. All exported and imported files are stored in the folder "C:\Skyline DataMiner\Documents". In the text boxes defining these files, only the file names and the extension ".csv" must be entered. All lines can also easily be removed. All of this can be done via the right-click menu of the subpage.
 

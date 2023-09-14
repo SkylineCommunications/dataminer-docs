@@ -4,7 +4,7 @@ uid: Connector_help_Nagios_Connector
 
 # Nagios Connector
 
-This DataMiner driver can be used to retrieve status information for all hosts and services available on a Nagios XI platform.
+This DataMiner connector can be used to retrieve status information for all hosts and services available on a Nagios XI platform.
 
 ## About
 
@@ -32,7 +32,7 @@ This DataMiner driver can be used to retrieve status information for all hosts a
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

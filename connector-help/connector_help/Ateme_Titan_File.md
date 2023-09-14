@@ -10,15 +10,15 @@ The **Ateme Titan File** is a multi-codec/format video transcoding software, for
 
 An HTTP connection is used to retrieve information from the software. Data is received in XML format.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**  |
+| **Range** | **Device Firmware Version**  |
 |------------------|------------------------------|
 | 1.0.0.x          | Firmware: 3.8.22 API: 1.10.2 |
 
@@ -28,7 +28,7 @@ An HTTP connection is used to retrieve information from the software. Data is re
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### General
 
-The **General** page, which is the default landing page, provides an overview of the **System** and the **Integration**. This page contains information about the firmware the device is running and its compatibility with the driver.
+The **General** page, which is the default landing page, provides an overview of the **System** and the **Integration**. This page contains information about the firmware the device is running and its compatibility with the connector.
 
 ### Server Health
 

@@ -8,13 +8,13 @@ With this drive, you can gather and view general information from the **Promise 
 
 ## About
 
-The Promise Technology VTrak E-J Class driver is used to monitor a RAID Array. The driver gives the user an overview of the different paramaters of the array along with its status. The driver uses SNMP protocol to retrieve the data from the device. All tables are polled every 30 seconds.
+The Promise Technology VTrak E-J Class connector is used to monitor a RAID Array. The connector gives the user an overview of the different paramaters of the array along with its status. The connector uses SNMP protocol to retrieve the data from the device. All tables are polled every 30 seconds.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -100,7 +100,3 @@ This page displays information about received traps, such as the **Trap Sequence
 ### Web Interface page
 
 On this page, you can view the web interface of the device. However, the client machine has to be able to access the device. If not, it will not be possible to open the web interface.
-
-## Notes
-
-N/A

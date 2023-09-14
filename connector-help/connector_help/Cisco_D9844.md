@@ -8,17 +8,17 @@ The **Cisco D9844** is designed to receive broadcasts using **MPEG-2 4:2:0 digit
 
 ## About
 
-The **Cisco D9844** driver polls values in order to display information about the device, and allows you to configure certain parameters.
+The **Cisco D9844** connector polls values in order to display information about the device, and allows you to configure certain parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.9.5.9                     |
 
@@ -28,7 +28,7 @@ The **Cisco D9844** driver polls values in order to display information about th
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

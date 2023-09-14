@@ -4,17 +4,17 @@ uid: Connector_help_Specialty_Microwave_Corp_6612B
 
 # Specialty Microwave Corp 6612B
 
-With this driver it is possible to monitor a **Specialty Microwave Corp 6612B** serial device.
+With this connector it is possible to monitor a **Specialty Microwave Corp 6612B** serial device.
 
 ## About
 
-The ********Specialty Microwave Corp 6612B******** will monitor and configure a Specialty Microwave Corp 6612B 1:2 LNA Protection switch.
+The **Specialty Microwave Corp 6612B** will monitor and configure a Specialty Microwave Corp 6612B 1:2 LNA Protection switch.
 
 ## Installation and configuration
 
 ### Creation
 
-The ************Specialty Microwave Corp 6612B************ is a serial driver. The IP address, Port and Bus address need to be configured during creation of the element.
+The **Specialty Microwave Corp 6612B** is a serial connector. The IP address, Port and Bus address need to be configured during creation of the element.
 
 **SERIAL CONNECTION**:
 

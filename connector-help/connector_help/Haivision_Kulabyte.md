@@ -12,16 +12,16 @@ The **Haivision Kulabyte** sends **REST** commands every minute in order to obta
 
 Note: For version 1.1.0.x, there is no DVE creation. This protocol version communicates directly with the encoder.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**     |
+| **Range** | **Description**     |
 |------------------|---------------------|
 | 1.0.0.x          | Initial version     |
 | 1.1.0.x          | HTTPS communication |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Kulabyte API v 3            |
 | 1.1.0.x          | Kulabyte API v 4.4          |
@@ -32,7 +32,7 @@ Note: For version 1.1.0.x, there is no DVE creation. This protocol version commu
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ Note: The 1.1.0.x version must use the path *https://\[polling IP\]:1080* as the
 
 ### Configuration: Additional files
 
-In order for this driver to be fully functional, the file "System.Web.Helpers.dll" must be available in the following folder: *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
+In order for this connector to be fully functional, the file "System.Web.Helpers.dll" must be available in the following folder: *C:\Windows\Microsoft.NET\Framework\v4.0.30319*.
 
 Note: This is not required for the 1.1.0.x version.
 
@@ -58,7 +58,7 @@ The **Haivision Kulabyte** protocol delivers two types of **DataMiner Elements**
 
 ### Main Element
 
-The driver's main element contains the following pages:
+The connector's main element contains the following pages:
 
 - **Log In**: This page contains the credentials that must be filled in in order to have communication with the API.
 - **Manage**: Overview of the encoders and the ECS. It's possible to add a new ECS to the table, which will generate a new **Dynamic Virtual Element**.
@@ -86,7 +86,7 @@ This page contains encoder system information. If there are Decklink cards detec
 
 The page also contains the following page buttons:
 
-- **HTTP Response Codes**: Displays all the response codes for the driver polling.
+- **HTTP Response Codes**: Displays all the response codes for the connector polling.
 - **ECS Version**: Displays version information for the encoder.
 - **License Info**: Displays license information for the encoder.
 

@@ -4,22 +4,22 @@ uid: Connector_help_Motorola_GX2-LM1000-E
 
 # Motorola GX2-LM1000-E
 
-The **Motorola GX2-LM1000-E** driver is an SNMP-based driver used to monitor and configure the **Motorola GX2-LM1000-E**.
+The **Motorola GX2-LM1000-E** connector is an SNMP-based connector used to monitor and configure the **Motorola GX2-LM1000-E**.
 
 ## About
 
-This driver is exported from the Motorola GX2-CM100 B and provides a monitoring interface for the **Motorola** **GX2-LM1000-E** card.
+This connector is exported from the Motorola GX2-CM100 B and provides a monitoring interface for the **Motorola** **GX2-LM1000-E** card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 | 2.0.0.x          | DVE focused     | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | D                           |

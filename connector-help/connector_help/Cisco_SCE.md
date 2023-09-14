@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_SCE
 
 # Cisco SCE
 
-The **Cisco SCE** driver can be used to display and configure information of the Cisco SCE platform.
+The **Cisco SCE** connector can be used to display and configure information of the Cisco SCE platform.
 
 ## About
 

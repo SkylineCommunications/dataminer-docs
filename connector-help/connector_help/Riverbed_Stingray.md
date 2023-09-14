@@ -4,21 +4,21 @@ uid: Connector_help_Riverbed_Stingray
 
 # Riverbed Stingray
 
-This driver enables DataMiner to monitor the Riverbed Stingray device, which is a traffic manager/shaper.
+This connector enables DataMiner to monitor the Riverbed Stingray device, which is a traffic manager/shaper.
 
 ## About
 
-This driver works via SNMP. The data it retrieves can be found on several pages and all numeric parameters can be monitored and trended.
+This connector works via SNMP. The data it retrieves can be found on several pages and all numeric parameters can be monitored and trended.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 10.0r1                      |
 
@@ -28,7 +28,7 @@ This driver works via SNMP. The data it retrieves can be found on several pages 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -82,12 +82,8 @@ Click the page button below the table to see the data of the **Generic Interface
 
 This page shows the **Location Table**, which contains information on statics for GLB services on a per location basis.
 
-### Webinterface
+### Web Interface
 
-Opening this page opens the web interface of the device. With this web interface, you can for example configure for which events the device needs to send SNMP traps, which can be intercepted by this driver. The driver detects the type of the trap and makes sure that the parameters mentioned in the trap will be repolled immediately.
+Opening this page opens the web interface of the device. With this web interface, you can for example configure for which events the device needs to send SNMP traps, which can be intercepted by this connector. The connector detects the type of the trap and makes sure that the parameters mentioned in the trap will be repolled immediately.
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

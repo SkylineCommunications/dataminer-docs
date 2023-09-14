@@ -4,7 +4,7 @@ uid: Connector_help_Teleste_DVX002
 
 # Teleste DVX002
 
-The **Teleste DVX002** driver can be used to display and configure information of the attached modules.
+The **Teleste DVX002** connector can be used to display and configure information of the attached modules.
 
 ## About
 
@@ -33,7 +33,7 @@ The protocol supports the following types:
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -50,7 +50,7 @@ The Teleste DVX protocol creates a main element (rack configuration and module o
 
 ### Main Element
 
-The driver's main element contains the following pages:
+The connector's main element contains the following pages:
 
 - **General**: Configuration of rack layout. Only an active rack that is set active will be polled. A new rack can be added with the **Add New Rack** button.
 - **Module Overview**: For every card type of the active DVX frames, an entry is created in the **Devices Table**. With the **Remove Missing Modules** dropdown menu you can select **Remove All** or select a specific missing module. Setting this value will respectively remove all the missing modules or only remove the selected module. The missing module(s) will be removed from the device table and the related DVE(s) will be deleted.

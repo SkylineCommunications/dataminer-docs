@@ -35,7 +35,7 @@ The Eddystone Broadcast RMU enabled FM transmitters can enable your network oper
 
 #### SNMP main connection
 
-This driver uses an SNMPv1 connection and requires the following input during element creation:
+This connector uses an SNMPv1 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use (1.0.0.x)
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general **system information** as well as the IRMU **device information**. Also allows you to configure general **device settings**.
 - **Inputs/Outputs/Sensors/Exciters/Amplifiers/Triggers**: These pages contain information about the Boolean inputs, Boolean outputs, sensors, exciters, transmitters, amplifiers and triggers, respectively

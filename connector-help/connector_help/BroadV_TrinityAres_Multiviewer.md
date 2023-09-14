@@ -4,21 +4,21 @@ uid: Connector_help_BroadV_TrinityAres_Multiviewer
 
 # BroadV TrinityAres Multiviewer
 
-The **BroadV TrinityAres Multiviewer** system is a multi-screen mosaic synthesis system for broadcasting regulators, video conferencing and security surveillance. It supports a variety of common input stream formats, and outputs different multiplexer streams to meet the different possible application requirements. This driver is a solution designed to monitor this system.
+The **BroadV TrinityAres Multiviewer** system is a multi-screen mosaic synthesis system for broadcasting regulators, video conferencing and security surveillance. It supports a variety of common input stream formats, and outputs different multiplexer streams to meet the different possible application requirements. This connector is a solution designed to monitor this system.
 
 ## About
 
-The **BroadV TrinityAres Multiviewer** driver captures **SNMP** traps from an IP source and displays them in tables.
+The **BroadV TrinityAres Multiviewer** connector captures **SNMP** traps from an IP source and displays them in tables.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The **BroadV TrinityAres Multiviewer** driver captures **SNMP** traps from an IP
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

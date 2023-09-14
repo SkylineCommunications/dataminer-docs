@@ -32,7 +32,7 @@ The GateSwitch N+1 provides automated switchover operations between multiple tra
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ There is no redundancy defined.
 
 ## How to Use
 
-The driver polls the device's general information and monitors its current status. Settings related to the device's operation are available as well. These functionalities are available on the following pages:
+The connector polls the device's general information and monitors its current status. Settings related to the device's operation are available as well. These functionalities are available on the following pages:
 
 - **General:** Provides information related to the device's firmware, serial number and name. Information such as the point of contact, number of switches and driver on spare are available as well.
 
@@ -63,7 +63,7 @@ The driver polls the device's general information and monitors its current statu
 - **Unit:** Allows you to view and configure the system date and network settings (IP address, gateway and NPT server).
 
 - **Switch Configuration:** Contains settings related to the logic operation (e.g. Logic State and RF Tx threshold) and time (e.g. system restore time and protection time). In addition, the **Test System** functionality is available if the **Logic State** parameter is set to *Manual*.
-  - **System Configuration:** Displays a system configuration table with information related to the switch enablement, IP address, Address 485, Priority and whether it is a driver or a spare.
+  - **System Configuration:** Displays a system configuration table with information related to the switch enablement, IP address, Address 485, Priority and whether it is a connector or a spare.
   - **SNMP Trap Managers:** Allows you to configure SNMP trap managers.
   - **Password:** Allows you to configure the user name, password and role.
 

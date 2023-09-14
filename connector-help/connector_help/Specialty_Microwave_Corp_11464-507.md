@@ -4,7 +4,7 @@ uid: Connector_help_Specialty_Microwave_Corp_11464-507
 
 # Specialty Microwave Corp 11464-507
 
-This driver uses serial communication to communicate with a switching module. This module powers to up to four low-noise amplifiers (LNB) and provides redundancy protection switching logic for the LNBs.
+This connector uses serial communication to communicate with a switching module. This module powers to up to four low-noise amplifiers (LNB) and provides redundancy protection switching logic for the LNBs.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver uses serial communication to communicate with a switching module. Th
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -6,7 +6,7 @@ uid: Connector_help_Sumavision_IPQAM_3.3
 
 Sumavision IPQAM 3.3 is a modulator for all-IP networking transmission and VOD (Video-On-Demand) systems. It can be placed directly in the headend of the system, the sub-headend, and any HUB node of an optical fiber trunk network in a residential quarter for the reception, routing, multiplexing, scrambling, modulation and up-conversion to a RF cable television band of GbE (Gigabit Ethernet) data of MPEG over IP.
 
-This driver uses **SNMP** to poll data from the Sumavision IPQAM 3.3.
+This connector uses **SNMP** to poll data from the Sumavision IPQAM 3.3.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver uses **SNMP** to poll data from the Sumavision IPQAM 3.3.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

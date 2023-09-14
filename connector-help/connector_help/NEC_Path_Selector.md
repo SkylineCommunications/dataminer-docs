@@ -8,11 +8,11 @@ The NEC Path Selector is a virtual which connects to other element(s).
 
 ## About
 
-This virtual driver gets and sets parameters from/to the desired elements.
+This virtual connector gets and sets parameters from/to the desired elements.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This virtual driver gets and sets parameters from/to the desired elements.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -32,4 +32,4 @@ This page contains the parameters related to the transmission, such as: **Tx Sum
 
 ### RX
 
-This page contains the parameters related to the reception, such as: **Rx Summary Alarm**, ****Rx** Auto/Manual Mode**, ****Rx** Local/Remote Mode**, **RSC/RSW Switches 1 and 2** and **LNA A**, **B** and **C States**.
+This page contains the parameters related to the reception, such as: **Rx Summary Alarm**, **Rx Auto/Manual Mode**, **Rx Local/Remote Mode**, **RSC/RSW Switches 1 and 2** and **LNA A**, **B** and **C States**.

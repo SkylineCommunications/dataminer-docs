@@ -4,7 +4,7 @@ uid: Connector_help_Sky_UK_SSR
 
 # Sky UK SSR
 
-This driver can be used to obtain a list of "services" (e.g. TV shows, movies, etc.), each with its own information about duration, genre, name and subtitle.
+This connector can be used to obtain a list of "services" (e.g. TV shows, movies, etc.), each with its own information about duration, genre, name and subtitle.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to obtain a list of "services" (e.g. TV shows, movies, e
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -41,11 +41,11 @@ HTTP CONNECTION:
 
 ### Configuration
 
-Make sure .NET 4.0 is installed. This is required for the driver to be able to function correctly.
+Make sure .NET 4.0 is installed. This is required for the connector to be able to function correctly.
 
 ## How to Use
 
-If you click the **Retrieve Events** button on the **SSR** page, the driver will create an HTTP request to obtain the information through a JSON configuration and fill the SSR table with the retrieved elements. Because of the size of the data, it can take several seconds for the table to be filled after the request is sent.
+If you click the **Retrieve Events** button on the **SSR** page, the connector will create an HTTP request to obtain the information through a JSON configuration and fill the SSR table with the retrieved elements. Because of the size of the data, it can take several seconds for the table to be filled after the request is sent.
 
 The following data pages are available in the element:
 

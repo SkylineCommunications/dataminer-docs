@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_USS0202
 
 # Newtec USS0202
 
-Short paragraph (style: Paragraph) in which you describe the **function of the protocol**. As the driver will be used for monitoring purposes, also try to include some **information about the device**.
+Short paragraph (style: Paragraph) in which you describe the **function of the protocol**. As the connector will be used for monitoring purposes, also try to include some **information about the device**.
 
 ## About
 
@@ -52,7 +52,7 @@ Short paragraph (style: Paragraph) in which you describe the **function of the p
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -81,7 +81,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Notes
 
-In this section, you can provide additional information about the driver. If, for example, custom Visio files are needed, mention it here.
+In this section, you can provide additional information about the connector. If, for example, custom Visio files are needed, mention it here.
 
 Provide detailed information on the impact of a specific Driver Range.
 

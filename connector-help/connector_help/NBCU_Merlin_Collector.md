@@ -4,7 +4,7 @@ uid: Connector_help_NBCU_Merlin_Collector
 
 # NBCU Merlin Collector
 
-This driver collects asset information, including program data. This information is then sent to the NBCU VOD Manager.
+This connector collects asset information, including program data. This information is then sent to the NBCU VOD Manager.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver collects asset information, including program data. This information
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### HTTP HTTP Connection - Merlin Token Request Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -52,7 +52,7 @@ HTTP CONNECTION:
 
 #### HTTP HTTP Connection - Merlin Info Request Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -62,7 +62,7 @@ HTTP CONNECTION:
 
 #### HTTP HTTP Connection - Media Token Request Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -4,11 +4,11 @@ uid: Connector_help_Agama_Technologies_OTT_Analyzer
 
 # Agama Technologies OTT Analyzer
 
-This driver is used to monitor and control an **Agama Technologies Analyzer OTT** device. This device monitors a set of QoS parameters from the physical layer to the transport stream, even up to the level of the audio and video content.
+This connector is used to monitor and control an **Agama Technologies Analyzer OTT** device. This device monitors a set of QoS parameters from the physical layer to the transport stream, even up to the level of the audio and video content.
 
 ## About
 
-With this driver, you can monitor and control Agama Technologies Analyzer devices. This is a serial driver. Communication goes through SSH.
+With this connector, you can monitor and control Agama Technologies Analyzer devices. This is a serial connector. Communication goes through SSH.
 
 In an element using this protocol, all the tested assets are displayed, and there is also more detailed status information for each test quality. Assets can be added or removed, and individual tests can be removed. Other elements can send commands to add or remove assets on the analyzer.
 
@@ -16,7 +16,7 @@ In an element using this protocol, all the tested assets are displayed, and ther
 
 ### Creation
 
-This is an SSH driver. The IP address needs to be configured during creation of the element.
+This is an SSH connector. The IP address needs to be configured during creation of the element.
 
 **SSH CONNECTION**:
 
@@ -82,7 +82,7 @@ The client machine has to be able to access the device. Otherwise, it will not b
 
 ## Notes
 
-For the execution of some SSH commands used by this driver, root privileges are required, though it is not necessary to log in as root.
+For the execution of some SSH commands used by this connector, root privileges are required, though it is not necessary to log in as root.
 
 To allow the execution of those commands as a normal user, configure the device to allow sudo without password for the following commands:
 

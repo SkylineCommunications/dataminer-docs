@@ -4,25 +4,25 @@ uid: Connector_help_Intellian_ACU_SNMP
 
 # Intellian ACU SNMP
 
-The Intellian ACU SNMP driver is used to monitor Intellian ACU devices with SNMP.
+The Intellian ACU SNMP connector is used to monitor Intellian ACU devices with SNMP.
 
 ## About
 
-This driver can be used to monitor the status of satellite tracking with the Intellian ACU device.
+This connector can be used to monitor the status of satellite tracking with the Intellian ACU device.
 
 The protocol range 2.1.0.x is only compatible with the device firmware version 3.14.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Old range.                                                         | No                  | Yes                     |
 | 2.0.0.x              | New range for firmware v3.14.                                      | No                  | Yes                     |
 | 2.1.0.x \[SLC MAIN\] | New range based on version 2.0.0.x. Major impacting changes added. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | 3.14                        |
@@ -34,7 +34,7 @@ The protocol range 2.1.0.x is only compatible with the device firmware version 3
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -87,4 +87,4 @@ This page displays the web interface of the device. However, note that the clien
 
 ## Notes
 
-This driver is accompanied by a **custom Visio file** containing a compass scheme on the left, which shows the **ship heading** (compass needle), the **satellite positioning** and the **satellite communication blocked areas** (blue semi-circles).
+This connector is accompanied by a **custom Visio file** containing a compass scheme on the left, which shows the **ship heading** (compass needle), the **satellite positioning** and the **satellite communication blocked areas** (blue semi-circles).

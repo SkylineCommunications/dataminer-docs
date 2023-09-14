@@ -8,17 +8,17 @@ This device is a bulk IP MPEG decoding/monitoring input solution for the MVPr Sy
 
 ## About
 
-This driver allows you to monitor and configure the Evertz MVP-DEC-4-IP device using an SNMP connection.
+This connector allows you to monitor and configure the Evertz MVP-DEC-4-IP device using an SNMP connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver allows you to monitor and configure the Evertz MVP-DEC-4-IP device u
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -74,4 +74,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-This driver does not have a "General" page, as the available MIB files do not show general purpose information.
+This connector does not have a "General" page, as the available MIB files do not show general purpose information.

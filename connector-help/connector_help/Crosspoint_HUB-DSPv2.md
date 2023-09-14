@@ -14,7 +14,7 @@ The **Crosspoint HUB-DSPv2** is a read-only protocol containing the general and 
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION:**
 

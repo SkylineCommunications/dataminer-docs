@@ -8,7 +8,7 @@ RAMOS (**Rack Monitoring System**) is designed to be deployed within a rack to m
 
 ## About
 
-This driver uses SNMP in order to retrieve values from a **Conteg Ramos Mini**.
+This connector uses SNMP in order to retrieve values from a **Conteg Ramos Mini**.
 
 All parameters are retrieved and set in several pages depending on the kind of parameter.
 
@@ -16,7 +16,7 @@ All parameters are retrieved and set in several pages depending on the kind of p
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -30,7 +30,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver consists of the following pages:
+This connector consists of the following pages:
 
 - **General**
 - **Input Dry Contacts**

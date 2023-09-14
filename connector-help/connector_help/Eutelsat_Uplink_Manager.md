@@ -8,25 +8,25 @@ The **Eutelsat Uplink Manager** is a custom made driver for Eutelsat that allows
 
 ## About
 
-The **Eutelsat Uplink Manager** is a driver that was tailor-made for Eutelsat, and which allows them to monitor the current Uplink Station for 6 different devices (REU01, REU02, REU03, REU04, REU05, FTVo).
+The **Eutelsat Uplink Manager** is a connector that was tailor-made for Eutelsat, and which allows them to monitor the current Uplink Station for 6 different devices (REU01, REU02, REU03, REU04, REU05, FTVo).
 It uses fixed presets for the **DMA** and **element IDs**.
-The driver also allows to start or stop a connection to an uplink, or to swap the uplink station for a particular device, or for devices at once.
-Before any action can be made, the user has to enter a password within the driver, and this password has to match the Administrator password.
+The connector also allows to start or stop a connection to an uplink, or to swap the uplink station for a particular device, or for devices at once.
+Before any action can be made, the user has to enter a password within the connector, and this password has to match the Administrator password.
 All actions are logged in an **Actions Table**.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a **virtual** connection and does not need any user information.
+This connector uses a **virtual** connection and does not need any user information.
 
 Element Configuration
 For each of the uplink stations, the current status is derived from 3 parameters that exist in 2 SNMP elements, so apart from creating an element you need to define 3 connections for each parameter.
-Eg. REU01 Combiner 1 is connected to Linked Element REU01 GCL (the driver will only let you select among elements with **"Generic CGL Equipments"** driver, and within that element needs to be linked to a parameter Combiner 1 - Input 5 (read).
-Again the driver will only let you select within the range of parameters that matches the driver specifications.
+Eg. REU01 Combiner 1 is connected to Linked Element REU01 GCL (the connector will only let you select among elements with **"Generic CGL Equipments"** connector, and within that element needs to be linked to a parameter Combiner 1 - Input 5 (read).
+Again the connector will only let you select within the range of parameters that matches the connector specifications.
 The third parameter is always connected to a **Newtec AZ210 element**, **Modem Redundancy (Read)** parameter.
 
-## Configuration within the driver
+## Configuration within the connector
 
 ### Administrator side
 

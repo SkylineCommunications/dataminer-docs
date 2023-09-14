@@ -51,14 +51,14 @@ uid: Connector_help_Skyline_DMP_Replication_Umbrella
 <h2 id="configuration">Configuration</h2>
 <h3 id="connections">Connections</h3>
 <h4 id="virtual-main-connection">Virtual Main Connection</h4>
-<p>This driver uses a <strong>virtual connection</strong> and does not require any input during element creation.</p>
+<p>This connector uses a <strong>virtual connection</strong> and does not require any input during element creation.</p>
 <h3 id="initialization">Initialization</h3>
 <p>As the element retrieves data from the Microsoft Platform element, make sure the latter is running and has trending enabled on <strong>Total Processor Load</strong> and <strong>Total Commit Charge</strong>.</p>
-<p>At startup, the driver collects all the different DMP elements using the Skyline Replication DMP driver. A table with the columns Element Name and State is displayed in the Configuration sub-tab under the General page. By default, the state of each element is set to 'Disabled'.</p>
+<p>At startup, the connector collects all the different DMP elements using the Skyline Replication DMP driver. A table with the columns Element Name and State is displayed in the Configuration sub-tab under the General page. By default, the state of each element is set to 'Disabled'.</p>
 <h3 id="general">General</h3>
 <p>This page displays general information from the DMPs, such as <strong>Total Amount of Elements, Total Amount of Active Elements</strong>, and multiple alarm counters.</p>
-<p>A 'Configuration' pagebutton is also displayed and it may be used to enable/disable which probe the driver should retrieve information from.</p>
-<p>A 'Polling Time' button indicates how often the driver should poll DMP information of elements, active alarms, services and views.</p>
+<p>A 'Configuration' page button is also displayed and it may be used to enable/disable which probe the connector should retrieve information from.</p>
+<p>A 'Polling Time' button indicates how often the connector should poll DMP information of elements, active alarms, services and views.</p>
 <h3 id="dmp-elements">DMP Elements</h3>
 <p>This page displays a table containing all the elements defined in the system with their <strong>ID</strong>, <strong>Name,</strong> <strong>Overall State, Communication State</strong> and <strong>Element State.</strong></p>
 <h3 id="dmp-active-alarms">DMP Active Alarms</h3>

@@ -6,7 +6,7 @@ uid: Connector_help_Telos_Systems_Omnia.9sg
 
 The Omnia.9sg is based on the same limiter, clipper, and stereo generator technology incorporated in the Omnia.9 and is ideal for applications where the final limiter and stereo generator must be separate from the main audio processor.
 
-This driver monitors specific Omnia parameters as well as general status parameters via **HTTP**. **SNMP** **traps** can be retrieved when this is enabled on the device.
+This connector monitors specific Omnia parameters as well as general status parameters via **HTTP**. **SNMP** **traps** can be retrieved when this is enabled on the device.
 
 ## About
 
@@ -28,7 +28,7 @@ This driver monitors specific Omnia parameters as well as general status paramet
 
 #### HTTP connection
 
-This driver uses an HTTP connection to receive traps and requires the following input during element creation:
+This connector uses an HTTP connection to receive traps and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -37,7 +37,7 @@ HTTP CONNECTION:
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to receive traps and requires the following input during element creation:
 
 SNMP CONNECTION:
 

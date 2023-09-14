@@ -5,7 +5,7 @@ uid: Connector_help_Javit_Alarm_Monitoring
 # Javit Alarm Monitoring
 
 The Javit Alarm Monitoring system collects sound alarms from various monitoring computers and forwards the alarms as SNMP traps to a central monitoring application.
-The Javit Alarm Monitoring driver displays a list of all monitoring computers with their current alarm status and delay times.
+The Javit Alarm Monitoring connector displays a list of all monitoring computers with their current alarm status and delay times.
 
 ## About
 
@@ -33,7 +33,7 @@ The Javit Alarm Monitoring driver displays a list of all monitoring computers wi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,6 +55,6 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver consists of one page, the **General** page, which contains the **Alarm Contact Table**.
+The connector consists of one page, the **General** page, which contains the **Alarm Contact Table**.
 
 This table displays a list of all connected monitoring systems with their status parameters, such as **System Name**, **Alarm status**, **First Delay**, **Resend Delay** and **Clear Delay**.

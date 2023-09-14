@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Trap_Processor
 
 # Generic Trap Processor
 
-This driver will receive traps on a DMA. It allows you to specify rules that received traps need to match. Traps matching these rules will be logged with information that is generated based on the rule and trap data.
+This connector will receive traps on a DMA. It allows you to specify rules that received traps need to match. Traps matching these rules will be logged with information that is generated based on the rule and trap data.
 
 ## About
 
@@ -32,15 +32,15 @@ This driver will receive traps on a DMA. It allows you to specify rules that rec
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
-- **IP address/host**: The polling IP of the device. For this driver, typically 127.0.0.1 is specified.
+- **IP address/host**: The polling IP of the device. For this connector, typically 127.0.0.1 is specified.
 
 ## How to Use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Contains 3 tables:
 

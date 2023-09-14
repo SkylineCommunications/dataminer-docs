@@ -32,7 +32,7 @@ The Audemat DAB Probe is a complete DAB radio monitoring solution to perform adv
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,4 +68,4 @@ The element consists of the following data pages:
 
 ## Notes
 
-The 1.0.0.x driver range was created according to TDF requirements and must be compatible with DataMiner 7.5.
+The 1.0.0.x connector range was created according to TDF requirements and must be compatible with DataMiner 7.5.

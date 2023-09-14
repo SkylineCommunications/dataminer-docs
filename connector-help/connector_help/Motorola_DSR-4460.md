@@ -4,17 +4,17 @@ uid: Connector_help_Motorola_DSR-4460
 
 # Motorola DSR-4460
 
-The Motorola DSR-4460 driver is used to monitor and control the **Motorola DSR-4460** satellite receiver.
+The Motorola DSR-4460 connector is used to monitor and control the **Motorola DSR-4460** satellite receiver.
 
 ## About
 
-This driver uses an SNMP connection to communicate with the device.
+This connector uses an SNMP connection to communicate with the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -60,6 +60,6 @@ On this page, the output settings can be configured.
 
 This page shows the current alarm condition. It is also possible to configure a trigger when the alarm should be raised.
 
-### Webinterface page
+### Web Interface page
 
 The native web interface of the device. The client machine has to be able to access the device. If not, it will not be possible to open the web interface.

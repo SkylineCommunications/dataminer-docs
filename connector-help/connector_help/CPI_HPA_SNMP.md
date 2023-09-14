@@ -8,17 +8,17 @@ The TouchPower HPA is part of a comprehensive line of communication amplifiers c
 
 ## About
 
-Standard SNMP driver.
+Standard SNMP connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Not specified.              |
 
@@ -28,7 +28,7 @@ Standard SNMP driver.
 
 #### SNMP main connection
 
-This driver uses an SNMP connection and requires the following input during element creation:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -84,7 +84,7 @@ This page displays configurable parameters for the device, including **Band** **
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the CPI HPA SNMP protocol supports the usage of DCF and can only be used on a **DMA with 8.5.7** as the minimum version.
+The **1.0.0.x** connector range of the CPI HPA SNMP protocol supports the usage of DCF and can only be used on a **DMA with 8.5.7** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

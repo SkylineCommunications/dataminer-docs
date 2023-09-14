@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_7880DM4-ISDBT-IP
 
 # Evertz 7880DM4-ISDBT-IP
 
-This driver is used to monitor and control the **Evertz 7880DM4-ISDBT-IP** card. The Evertz 7880DM4-ISDBT-IP is used to demodulate digital terrestrial ATSC/8VSB/ISDB-Tb, QAM/ DVBC/ DVB-C2 cable signals, DTV signals or digital DVB-S/S2 satellite signals.
+This connector is used to monitor and control the **Evertz 7880DM4-ISDBT-IP** card. The Evertz 7880DM4-ISDBT-IP is used to demodulate digital terrestrial ATSC/8VSB/ISDB-Tb, QAM/ DVBC/ DVB-C2 cable signals, DTV signals or digital DVB-S/S2 satellite signals.
 
 An **SNMP** connection is used in order to successfully retrieve and configure the information of the device. There are also different possibilities available for **alarm monitoring** and **trending**.
 
@@ -51,7 +51,7 @@ An **SNMP** connection is used in order to successfully retrieve and configure t
 <tr class="even">
 <td>All ranges</td>
 <td><h4 id="snmp-main-connection">SNMP Main Connection</h4>
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP or URL of the destination.</li>
@@ -66,7 +66,7 @@ An **SNMP** connection is used in order to successfully retrieve and configure t
 <tr class="odd">
 <td>1.0.2.x</td>
 <td><h4 id="http-main-connection">HTTP Main Connection</h4>
-<p>This driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>This connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP or URL of the destination.</li>
@@ -78,7 +78,7 @@ An **SNMP** connection is used in order to successfully retrieve and configure t
 
 ## How to use
 
-Depending on the driver range, the element created with this driver consists of the data pages detailed below.
+Depending on the connector range, the element created with this connector consists of the data pages detailed below.
 
 ### General
 

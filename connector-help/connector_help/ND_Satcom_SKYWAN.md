@@ -8,18 +8,18 @@ The **ND Satcom SKYWAN** is a bidirectional MF-TDMA modem system that supports v
 
 ## About
 
-This is an **SNMP-based driver** for the ND Satcom Skywan.
+This is an **SNMP-based connector** for the ND Satcom Skywan.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                | No                  | Yes                     |
 | 1.1.0.x          | Firmware update to version 1.3 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                        |
+| **Range** | **Device Firmware Version**                                        |
 |------------------|--------------------------------------------------------------------|
 | 1.0.0.x          | IDU7000 (hardware version) / 7.200.73 (software version)           |
 | 1.1.0.x          | Release 5G-IDU-1.3x / 1.3.83.85-full-1502181226 (software version) |
@@ -30,7 +30,7 @@ This is an **SNMP-based driver** for the ND Satcom Skywan.
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

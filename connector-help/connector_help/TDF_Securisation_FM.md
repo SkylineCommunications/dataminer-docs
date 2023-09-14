@@ -4,19 +4,19 @@ uid: Connector_help_TDF_Securisation_FM
 
 # TDF Securisation FM
 
-With this driver, it is possible to monitor an I/O device.
+With this connector, it is possible to monitor an I/O device.
 
 ## About
 
 The **TDF Securisation FM** displays parameters on an I/O device and makes it possible to set these.
 
-This driver also has the alarm functionality enabled, so that if one parameter changes to an alarm value, one alarm will be raised.
+This connector also has the alarm functionality enabled, so that if one parameter changes to an alarm value, one alarm will be raised.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a virtual connection and does not need any further user information.
+This connector uses a virtual connection and does not need any further user information.
 
 ## Usage
 

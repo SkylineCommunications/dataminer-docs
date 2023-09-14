@@ -6,7 +6,7 @@ uid: Connector_help_Snell_Wilcox_IQSRT10
 
 The **Snell Wilcox IQSRT10** is an eight-input router/switcher for HD-SDI 1.5 Gbit/s, SD-SDI 270 Mbit/s, DVB-ASI and wide-band signals.
 
-This driver allows you to manage this device using a smart-serial connection.
+This connector allows you to manage this device using a smart-serial connection.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to manage this device using a smart-serial connection.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains the **Display** parameter and gives an overview of device properties such as **Version**, **Build**, **Serial** and **Firmware**. Also contains buttons that allow you to do a **Restart** and a **Factory Reset.**
 - **Crosspoint**: Allows you to set up the input/output routing by changing the source and destination channels. You can also enable the changes to the routing matrix on the template without actually configuring the crosspoint until the **Take** button is pressed. There are four buttons that allow different **Take** configurations.

@@ -8,17 +8,17 @@ NEPTUNE is a 1RU DVB-S2X satellite demodulator that supports all advanced DVB-S2
 
 ## About
 
-This driver for the **TeamCast Neptune** displays the demodulator configuration and outputs for inputs, outputs and channels.
+This connector for the **TeamCast Neptune** displays the demodulator configuration and outputs for inputs, outputs and channels.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 100                         |
 
@@ -28,7 +28,7 @@ This driver for the **TeamCast Neptune** displays the demodulator configuration 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to communicate with the device, and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to communicate with the device, and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -86,4 +86,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-This driver supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+This connector supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.

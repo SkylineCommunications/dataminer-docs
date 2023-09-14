@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._Siemens_Logo
 
 # SES S.A. Siemens Logo
 
-This driver communicates with the Siemens Logo, which is a **PLC.** It uses **serial** communication via the **Modbus** **TCP** protocol.
+This connector communicates with the Siemens Logo, which is a **PLC.** It uses **serial** communication via the **Modbus** **TCP** protocol.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver communicates with the Siemens Logo, which is a **PLC.** It uses **se
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -80,9 +80,9 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver uses the MODBUS type of commands via a serial interface. The parameters are polled at a fixed interval.
+The connector uses the MODBUS type of commands via a serial interface. The parameters are polled at a fixed interval.
 
-For more information on how to configure the parameters of this driver, refer to the Initialization section above.
+For more information on how to configure the parameters of this connector, refer to the Initialization section above.
 
 ## Notes
 

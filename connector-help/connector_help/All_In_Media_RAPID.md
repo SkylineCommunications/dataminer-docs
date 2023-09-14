@@ -4,21 +4,21 @@ uid: Connector_help_All_In_Media_RAPID
 
 # All In Media RAPID
 
-The **All In Media RAPID** driver displays the alarm table of the corresponding device.
+The **All In Media RAPID** connector displays the alarm table of the corresponding device.
 
 ## About
 
-The driver uses **HTTP** to retrieve the content of the alarm table.
+The connector uses **HTTP** to retrieve the content of the alarm table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.5.0.7469                  |
 
@@ -28,7 +28,7 @@ The driver uses **HTTP** to retrieve the content of the alarm table.
 
 #### HTTP \[Main\] connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

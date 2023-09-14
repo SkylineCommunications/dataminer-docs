@@ -13,13 +13,13 @@ The Sony PWS-110SC1 is a Vision Mixer Controller, to which different cards can b
 
 ## About
 
-This driver is designed to monitor the state of the Vision Mixer System Interface Unit that can be connected to a Sony PWS-110SC1, using **SNMP** communication.
+This connector is designed to monitor the state of the Vision Mixer System Interface Unit that can be connected to a Sony PWS-110SC1, using **SNMP** communication.
 
-This driver is exported by the parent driver **Sony PWS-110SC1**, from version 1.0.0.x onwards.
+This connector is exported by the parent connector **Sony PWS-110SC1**, from version 1.0.0.x onwards.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V2.60                       |
 
@@ -27,7 +27,7 @@ This driver is exported by the parent driver **Sony PWS-110SC1**, from version 1
 
 ### Creation
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ## Usage
 

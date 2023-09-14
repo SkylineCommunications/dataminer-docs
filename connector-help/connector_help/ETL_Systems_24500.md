@@ -8,17 +8,17 @@ The **ETL Systems 24500** is a 16-channel dual 10MHz source housed in a rack-mou
 
 ## About
 
-This driver uses **SNMP** to enable the configuration of the **ETL Systems 24500**, including hot and cold standby, local control via push buttons and display, and remote control and monitoring via Ethernet port. Independent level control is available on each channel.
+This connector uses **SNMP** to enable the configuration of the **ETL Systems 24500**, including hot and cold standby, local control via push buttons and display, and remote control and monitoring via Ethernet port. Independent level control is available on each channel.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.3 (06/05/2015)            |
 
@@ -26,7 +26,7 @@ This driver uses **SNMP** to enable the configuration of the **ETL Systems 24500
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -40,7 +40,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-The driver contains 3 pages.
+The connector contains 3 pages.
 
 ### Status
 

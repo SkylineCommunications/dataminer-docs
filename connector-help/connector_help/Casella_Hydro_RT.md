@@ -4,23 +4,23 @@ uid: Connector_help_Casella_Hydro_RT
 
 # Casella Hydro RT
 
-The **Casella Hydro RT** driver is a serial driver that is used to communicate with a **Telemetry Logger** measuring rainfall.
+The **Casella Hydro RT** connector is a serial connector that is used to communicate with a **Telemetry Logger** measuring rainfall.
 
 ## About
 
-The objective of the **Casella Hydro RT** driver is to retrieve rainfall information from a **Isodaq Telemetry Logger** and to display it according to the preferences of the user. The data consists of the number of times a bucket with a known capacity tips. This way, the amount of rain can be computed for a certain period of time.
+The objective of the **Casella Hydro RT** connector is to retrieve rainfall information from a **Isodaq Telemetry Logger** and to display it according to the preferences of the user. The data consists of the number of times a bucket with a known capacity tips. This way, the amount of rain can be computed for a certain period of time.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38*.
 - **IP port**: The IP port of the device, e.g. *4001.*
-- **Bus address**: The bus address of the device. This configuration parameter is not required for this driver.
+- **Bus address**: The bus address of the device. This configuration parameter is not required for this connector.
 
 ## Usage
 

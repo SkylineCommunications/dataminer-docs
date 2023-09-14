@@ -8,23 +8,23 @@ The Elber Cleber (RK610) driver offers a powerful, flexible and modular hardware
 
 ## About
 
-This driver exports driver of type RFSW04A and creates elements for each card in it's chassis. Data is polled via **SNMP** and traps are used.
+This connector exports driver of type RFSW04A and creates elements for each card in it's chassis. Data is polled via **SNMP** and traps are used.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version              | No                  | Yes                     |
 | 1.0.1.x          | Update DVE removal mechanism | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**  | **Description**              |
 |------------------------|------------------------------|
@@ -32,7 +32,7 @@ This driver exports driver of type RFSW04A and creates elements for each card in
 
 ## Installation and configuration
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,13 +48,13 @@ SNMP Settings:
 
 ### Modules
 
-This page contains the **Modules Info** Table. This table contains all the cards and offers the ability to display these cards or make them invisible. The pagebutton **Modules \[DEL\]** contains a table with the cards that have been removed from the chassis. In case a card broke and has to be removed from the chassis then this card is moved to this table. When a new card of the same type is plugged in then this will move back. This ensures that trending/alarming history is not deleted. If you do not want to keep this history you can delete this card in the **Modules Info \[DEL\]** table.
+This page contains the **Modules Info** Table. This table contains all the cards and offers the ability to display these cards or make them invisible. The page button **Modules \[DEL\]** contains a table with the cards that have been removed from the chassis. In case a card broke and has to be removed from the chassis then this card is moved to this table. When a new card of the same type is plugged in then this will move back. This ensures that trending/alarming history is not deleted. If you do not want to keep this history you can delete this card in the **Modules Info \[DEL\]** table.
 
-From 1.0.1.x onwards, the **Modules \[DEL\]** table is removed. and this logic is transfered into the **Modules Info** table. When modules are no longer existing, these rows will be marked as deleted. And the Delete button will be enabled. The togglebutton to auto delete these DVE's remains the same.
+From 1.0.1.x onwards, the **Modules \[DEL\]** table is removed. and this logic is transferred into the **Modules Info** table. When modules are no longer existing, these rows will be marked as deleted. And the Delete button will be enabled. The toggle button to auto delete these DVEs remains the same.
 
 ### General
 
-This page contains the general parameters: e.g. **Customer Name**, **Customer Location**, ...
+This page contains the general parameters: e.g. **Customer Name**, **Customer Location**, etc.
 
 ### Controller
 
@@ -64,7 +64,7 @@ This page contains the parameters for the controller. This page is divided in th
 
 This page contains all the traps.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
@@ -73,7 +73,3 @@ Note that the client machine has to be able to access the device, as otherwise i
 ### RFSW04A
 
 The RFSW04A card is an advanced L-band switch (RFSW-04) that can be used with both Elber MS2 and third-part Modulator
-
-## Notes
-
-N/A

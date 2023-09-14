@@ -4,21 +4,21 @@ uid: Connector_help_Mitsubishi_FX3U-ENET-ADP
 
 # Mitsubishi FX3U-ENET-ADP
 
-This driver can be used to monitor and configure an Ethernet interface block FX3U-ENET.
+This connector can be used to monitor and configure an Ethernet interface block FX3U-ENET.
 
 ## About
 
 The Mitsubishi FX3U-ENET-ADP Ethernet module is an interface module on the PLC side for connecting the FX3G/FX3U/FX3UC series PLC with the host system, such as a personal computer workstation, and other PLCs using the TCP/IP or UDP/IP communication protocol via Ethernet (100BASE-TX, 10BASE-T).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The Mitsubishi FX3U-ENET-ADP Ethernet module is an interface module on the PLC s
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

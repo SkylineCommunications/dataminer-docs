@@ -4,21 +4,21 @@ uid: Connector_help_CPI_VZC-6967
 
 # CPI VZC-6967
 
-The CPI VZC-6967 driver is a **serial** driver used to monitor and configure the CPI VZC-6967 device.
+The CPI VZC-6967 connector is a **serial** connector used to monitor and configure the CPI VZC-6967 device.
 
 ## About
 
-The CPI VZC-6967 is an **amplifier**. The driver uses serial communication to monitor and configure the device. This means that it sends commands to the device and receives a response for every command.
+The CPI VZC-6967 is an **amplifier**. The connector uses serial communication to monitor and configure the device. This means that it sends commands to the device and receives a response for every command.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Not available               |
 
@@ -28,7 +28,7 @@ The CPI VZC-6967 is an **amplifier**. The driver uses serial communication to mo
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -68,7 +68,7 @@ This page displays the web interface of the amplifier. Note that the client mach
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the protocol CPI VZC-6967 supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the protocol CPI VZC-6967 supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

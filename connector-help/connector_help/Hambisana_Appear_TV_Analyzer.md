@@ -8,13 +8,13 @@ With this protocol, the alarms created by the **Hambisana Appear TV Analyzer** s
 
 ## About
 
-This driver makes a connection to the Hambisana database and retrieves the information from the log tables. The log tables are parsed and entries about the same error are matched. The result is a table with all the current unresolved issues.
+This connector makes a connection to the Hambisana database and retrieves the information from the log tables. The log tables are parsed and entries about the same error are matched. The result is a table with all the current unresolved issues.
 
 ## Configuration and Installation
 
 ### Creation
 
-This driver uses a **virtual** connection and does not require any input during element creation.
+This connector uses a **virtual** connection and does not require any input during element creation.
 
 ### Configuration
 

@@ -32,7 +32,7 @@ The Vertiv Watchdog 100-PNPS is a self-contained environmental monitor with onbo
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

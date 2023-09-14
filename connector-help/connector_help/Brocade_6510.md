@@ -8,17 +8,17 @@ The Brocade 6510 is a 48-port, high-performance, enterprise-class switch that me
 
 ## About
 
-TheBrocade 6510 driver enables Skyline Communication DataMiner to communicate with a Brocade 6510 Switch allowing a user to remotely monitor and operate in the such device via SNMP.
+TheBrocade 6510 connector enables Skyline Communication DataMiner to communicate with a Brocade 6510 Switch allowing a user to remotely monitor and operate in the such device via SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.1.x \[SLC Main\] | Full Driver review in order to comply with Skyline standards. | No                  | True                    |
+| 1.0.1.x \[SLC Main\] | Full connector review in order to comply with Skyline standards. | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 7.4.1d                      |
 
@@ -28,7 +28,7 @@ TheBrocade 6510 driver enables Skyline Communication DataMiner to communicate wi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

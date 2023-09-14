@@ -8,13 +8,13 @@ This device is an **Optical Amplifier** designed to provide a cost-effective opt
 
 ## About
 
-This driver is used to monitor the major parameters (inputs and outputs) and makes it possible to configure these.
+This connector is used to monitor the major parameters (inputs and outputs) and makes it possible to configure these.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

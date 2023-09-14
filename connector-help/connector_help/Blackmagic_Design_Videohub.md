@@ -4,26 +4,26 @@ uid: Connector_help_Blackmagic_Design_Videohub
 
 # Blackmagic Design Videohub
 
-This driver can be used to monitor and control a **Blackmagic Design Videohub** router frame.
+This connector can be used to monitor and control a **Blackmagic Design Videohub** router frame.
 
 ## About
 
-The Blackmagic Design Videohub device is a video router. Frames come in a choice of two sizes that let you expand your router up to either a 72 x 72 or a 288 x 288 crosspoint size. The driver automatically detects the size of the matrix, and the user controls are adjusted accordingly.
+The Blackmagic Design Videohub device is a video router. Frames come in a choice of two sizes that let you expand your router up to either a 72 x 72 or a 288 x 288 crosspoint size. The connector automatically detects the size of the matrix, and the user controls are adjusted accordingly.
 
-The driver provides read-write access to the matrix. It is possible to view and change crosspoints, labels of the inputs and outputs, and the lock status.
+The connector provides read-write access to the matrix. It is possible to view and change crosspoints, labels of the inputs and outputs, and the lock status.
 
 A smart-serial connection is used to retrieve the data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version    | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | DCF implementation | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -34,7 +34,7 @@ A smart-serial connection is used to retrieve the data from the device.
 
 #### Smart-serial main connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

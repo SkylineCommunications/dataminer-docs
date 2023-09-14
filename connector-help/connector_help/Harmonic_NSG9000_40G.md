@@ -4,15 +4,15 @@ uid: Connector_help_Harmonic_NSG9000_40G
 
 # Harmonic NSG9000 40G
 
-The Harmonic NSG9000 40G is an HTTP driver that is used to control and monitor NSG9000 40G devices.
+The Harmonic NSG9000 40G is an HTTP connector that is used to control and monitor NSG9000 40G devices.
 
 ## About
 
 This EdgeQAM device supports up to 9 modules, which house 2 RFs with 8 QAMs each. This results in a lot of parameters to monitor. Therefore, an additional page, **Overview**, groups all the parts together in a tree view. Where possible, the web interface is mimicked to provide a low threshold between both interfaces.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.1          | Initial version                                                               | No                  | Yes                     |
 | 1.0.0.2          | Added MPTS Grooming; fixed issue with treeview                                | No                  | Yes                     |
@@ -20,9 +20,9 @@ This EdgeQAM device supports up to 9 modules, which house 2 RFs with 8 QAMs each
 | 1.0.0.4          | 3rd Line Driver: Changed Start-Stop timers, debug logging, exception handling | No                  | Yes                     |
 | 1.0.0.5          | Alarm overview table: implemented alarm storm feature                         | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \[Not determined yet\]      |
 
@@ -32,7 +32,7 @@ This EdgeQAM device supports up to 9 modules, which house 2 RFs with 8 QAMs each
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

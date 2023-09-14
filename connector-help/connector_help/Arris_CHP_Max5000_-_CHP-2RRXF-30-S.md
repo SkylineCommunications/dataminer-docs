@@ -6,13 +6,13 @@ uid: Connector_help_Arris_CHP_Max5000_-_CHP-2RRXF-30-S
 
 The CHP-2RRXF-30-S are a group of cards with the system naming format 2RRXF. These cards are redundant or non-redundant dual return path receivers.
 
-This driver uses SNMP to communicate with these devices.
+This connector uses SNMP to communicate with these devices.
 
 ## About
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Boot v001.008               |
 
@@ -20,7 +20,7 @@ This driver uses SNMP to communicate with these devices.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.2 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Arris CHP Max5000](xref:Connector_help_Arris_CHP_Max5000), from version 1.0.0.2 onwards.
 
 ## Usage
 

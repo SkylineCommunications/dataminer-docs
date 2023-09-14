@@ -19,7 +19,7 @@ Regardless of conversion, all processing is done in real time with minimal laten
 
 | **Range** | **Supported Firmware**                                       |
 |-----------|--------------------------------------------------------------|
-| 1.0.0.x   | This driver only supports Teranex AV Protocol Preamble: 3.22 |
+| 1.0.0.x   | This connector only supports Teranex AV Protocol Preamble: 3.22 |
 
 ### System Info
 
@@ -33,7 +33,7 @@ Regardless of conversion, all processing is done in real time with minimal laten
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

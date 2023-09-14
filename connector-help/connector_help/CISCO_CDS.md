@@ -4,11 +4,11 @@ uid: Connector_help_CISCO_CDS
 
 # Cisco CDS
 
-The **Cisco CDS** driver monitors a Cisco Systems manager unit through **SNMP**.
+The **Cisco CDS** connector monitors a Cisco Systems manager unit through **SNMP**.
 
 ## About
 
-The driver polls relevant information from the device every 10 seconds.
+The connector polls relevant information from the device every 10 seconds.
 
 ## Installation and Configuration
 
@@ -16,7 +16,7 @@ The driver polls relevant information from the device every 10 seconds.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -30,7 +30,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver has three data display pages.
+This connector has three data display pages.
 
 ### Health Page
 

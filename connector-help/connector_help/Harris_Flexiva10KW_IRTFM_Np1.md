@@ -4,22 +4,22 @@ uid: Connector_help_Harris_Flexiva10KW_IRTFM_Np1
 
 # Harris Flexiva10KW IRTFM Np1
 
-With this driver, information can be gathered and viewed from the device **Harris Flexiva10KW IRTFM Np1**. The driver also makes it possible to set values on the device.
+With this connector, information can be gathered and viewed from the device **Harris Flexiva10KW IRTFM Np1**. The connector also makes it possible to set values on the device.
 
 ## About
 
-This driver is used to gather information from the **Harris Flexiva10KW IRTFM Np1** device.
+This connector is used to gather information from the **Harris Flexiva10KW IRTFM Np1** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**        |
+| **Range** | **Description**        |
 |------------------|------------------------|
 | 1.0.0.x          | Initial version        |
 | 1.0.1.x          | Added support for DVEs |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.0.1.x          | N/A                         |
@@ -30,7 +30,7 @@ This driver is used to gather information from the **Harris Flexiva10KW IRTFM Np
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

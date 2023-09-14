@@ -48,7 +48,7 @@ Output options include 4x3G-SDI (two sample interleave & four quadrant), 12G-SDI
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

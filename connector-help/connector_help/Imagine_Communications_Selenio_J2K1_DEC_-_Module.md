@@ -4,23 +4,23 @@ uid: Connector_help_Imagine_Communications_Selenio_J2K1_DEC_-_Module
 
 # Imagine Communications Selenio J2K1 DEC - Module
 
-The **Imagine Communications Selenio J2K1 DEC - Module** driver is a **DVE** that is generated from the **Imagine Communications Selenio J2K1 DEC** driver and contains the data for 1 decoder channel.
+The **Imagine Communications Selenio J2K1 DEC - Module** connector is a **DVE** that is generated from the **Imagine Communications Selenio J2K1 DEC** driver and contains the data for 1 decoder channel.
 
 ## About
 
-This driver displays information about 1 of the 4 decoder channels in the **Imagine Communications Selenio JPEG2000** card.
+This connector displays information about 1 of the 4 decoder channels in the **Imagine Communications Selenio JPEG2000** card.
 
-Starting from version **3.0.0.1** of the **Imagine Communications Selenio J2K1 DEC** driver, this protocol is exported.
+Starting from version **3.0.0.1** of the **Imagine Communications Selenio J2K1 DEC** connector, this protocol is exported.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------|---------------------|-------------------------|
-| 3.0.0.x          | DVE's for each decoder | No                  | Yes                     |
+| 3.0.0.x          | DVEs for each decoder | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.0.0.x          | 2.0                         |
 
@@ -28,7 +28,7 @@ Ranges of the driver
 
 ### Creation
 
-This driver is generated from the **Imagine Communications Selenio J2K1 DEC** driver.
+This connector is generated from the **Imagine Communications Selenio J2K1 DEC** driver.
 
 ## Usage
 
@@ -58,4 +58,4 @@ Contains the access to review the information relative to video and audio demux,
 
 ### Sync
 
-Contains information and management of video veritcal and horizontal phases of genlock.
+Contains information and management of video vertical and horizontal phases of genlock.

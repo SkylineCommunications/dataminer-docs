@@ -4,7 +4,7 @@ uid: Connector_help_Newtec_AZ210
 
 # Newtec AZ210
 
-This driver allows you to monitor and control a Newtec AZ210 1+1 modulator redundancy switch. General information about the device can be retrieved, alarms are retrieved and modulator redundancy can be viewed and set. The information is polled over a serial connection using the RMCP protocol.
+This connector allows you to monitor and control a Newtec AZ210 1+1 modulator redundancy switch. General information about the device can be retrieved, alarms are retrieved and modulator redundancy can be viewed and set. The information is polled over a serial connection using the RMCP protocol.
 
 ## About
 
@@ -47,7 +47,7 @@ This driver allows you to monitor and control a Newtec AZ210 1+1 modulator redun
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

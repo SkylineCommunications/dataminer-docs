@@ -4,7 +4,7 @@ uid: Connector_help_MX1_Developed_Playout_Engine
 
 # MX1 Developed Playout Engine
 
-The MX1 Developed Playout Engine is a driver used to **monitor the operations of Channel Playout Servers**.
+The MX1 Developed Playout Engine is a connector used to **monitor the operations of Channel Playout Servers**.
 
 These servers are called **hosts** and can be of three different types, according to their function in the playout scheme:
 
@@ -14,7 +14,7 @@ These servers are called **hosts** and can be of three different types, accordin
 
 ## About
 
-The MX1 Developed Playout Engine driver uses SNMP communication to poll the different host DNS/host IPs.
+The MX1 Developed Playout Engine connector uses SNMP communication to poll the different host DNS/host IPs.
 
 ### Version Info
 
@@ -66,7 +66,7 @@ The MX1 Developed Playout Engine driver uses SNMP communication to poll the diff
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -89,7 +89,7 @@ When you add such a new entry, you will need to specify the host name and the DN
 
 For each added host, a new **virtual element** (Playout, Ingest or TS Monitoring DVE, depending on the host type) will be created and the polled information will be exported.
 
-The driver will try to execute a new polling cycle (each host type has an independent cycle) every minute. A new cycle will only start if the previous one is finished.
+The connector will try to execute a new polling cycle (each host type has an independent cycle) every minute. A new cycle will only start if the previous one is finished.
 
 For the transport streams, you can find an overview of the available information via the tree control of the **TS Monitoring** page.
 

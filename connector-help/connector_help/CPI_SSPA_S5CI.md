@@ -8,17 +8,17 @@ The **CPI SSPA S5CI** is a C-Band Solid State Power Amplifier.
 
 ## About
 
-This driver allows you to manage the **CPI SSPA S5CI** via a serial connection.
+This connector allows you to manage the **CPI SSPA S5CI** via a serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                        |
+| **Range** | **Device Firmware Version**                        |
 |------------------|----------------------------------------------------|
 | 1.0.0.x          | 01.01.05 (Main Controller Kernel Software Version) |
 
@@ -28,7 +28,7 @@ This driver allows you to manage the **CPI SSPA S5CI** via a serial connection.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

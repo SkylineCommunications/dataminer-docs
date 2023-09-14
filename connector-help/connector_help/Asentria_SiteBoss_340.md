@@ -35,7 +35,7 @@ The **SiteBoss 340** is a small site controller. It is a versatile and powerful 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,4 +63,4 @@ The web interface is only accessible when the client machine has network access 
 
 On the **General** page, you can find general device statuses and settings such as the System Name, System Location, System Services. Via a page button, you can open a subpage showing the **Event Sensors** table.
 
-For each of the different sensor types (Temperature, Contact Closures, Humidity, Noise, Analog Inputs and Relay), the driver has a page with detailed information. In addition, the **AC Power Monitoring** page contains a table with AC power status information.
+For each of the different sensor types (Temperature, Contact Closures, Humidity, Noise, Analog Inputs and Relay), the connector has a page with detailed information. In addition, the **AC Power Monitoring** page contains a table with AC power status information.

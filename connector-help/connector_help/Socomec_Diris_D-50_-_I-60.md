@@ -4,7 +4,7 @@ uid: Connector_help_Socomec_Diris_D-50_-_I-60
 
 # Socomec Diris D-50 - I-60
 
-The Socomec Diris I-60 is a Current Measurement Module. This driver can be used to monitor and control this device.
+The Socomec Diris I-60 is a Current Measurement Module. This connector can be used to monitor and control this device.
 
 ## About
 
@@ -14,7 +14,7 @@ The Socomec Diris I-60 is a panel mounted multifunction meter which incorporates
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

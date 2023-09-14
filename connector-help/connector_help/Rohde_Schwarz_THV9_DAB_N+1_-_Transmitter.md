@@ -24,7 +24,7 @@ The R&S THV9 transmitter is used for multiplexed Digital Audio Broadcasting in a
 
 ### Connections
 
-#### This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+#### This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 #### SNMP CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Satellite_Antenna_Simulation
 
 # Generic Satellite Antenna Simulation
 
-This driver simulates a satellite antenna. The antenna can be fixed or steerable (linked to an ACU element). If the simulated signal is locked, an internal DCF connection is created to simulate the antenna signal flow.
+This connector simulates a satellite antenna. The antenna can be fixed or steerable (linked to an ACU element). If the simulated signal is locked, an internal DCF connection is created to simulate the antenna signal flow.
 
 You can create DCF output signal interfaces by adding entries in the **Polarization Settings** table. You can simulate a signal flow by indicating whether the antenna is fixed or defining a linked ACU element.
 
@@ -34,7 +34,7 @@ Several ACU protocols are supported by means of the **ACU Protocol Parameters** 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to Use
 

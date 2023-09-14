@@ -4,28 +4,28 @@ uid: Connector_help_Huawei_iManager_U2000
 
 # Huawei iManager U2000
 
-The **Huawei iManager U2000** driver communicates with a Huawei iManager U2000 device to gather information about all **managed elements** in the network and the **links** between them.
+The **Huawei iManager U2000** connector communicates with a Huawei iManager U2000 device to gather information about all **managed elements** in the network and the **links** between them.
 
 ## About
 
 **HTTP SOAP** calls are used to retrieve all information.
 
-This driver will create **dynamic virtual elements** for each managed element in the Huawei network.
+This connector will create **dynamic virtual elements** for each managed element in the Huawei network.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                             | Yes                 | Yes                     |
 | 1.0.1.x          | DVEs are now generated on a per shelf basis | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | U2000V100R009C00SPC301      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**         | **Description** |
 |-------------------------------|-----------------|
@@ -37,7 +37,7 @@ This driver will create **dynamic virtual elements** for each managed element in
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -113,7 +113,7 @@ The **username** and **password** need to be configured on this page in order to
 
 ## DataMiner Connectivity Framework
 
-The 1.0.0.x driver range of the Huawei iManager U2000 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5\[DCF\]** as the minimum version.
+The 1.0.0.x connector range of the Huawei iManager U2000 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5\[DCF\]** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -145,9 +145,9 @@ Physical dynamic interfaces:
 
 ## Notes
 
-The driver does not allow the user to configure anything on the device. Only requesting information is supported.
+The connector does not allow the user to configure anything on the device. Only requesting information is supported.
 
-The driver does not support multiple management domains.
+The connector does not support multiple management domains.
 
 **Custom Visio files** are available for the main element and the DVEs.
 The Visio image for the **main element** displays all managed elements and connects them with DCF.

@@ -8,9 +8,9 @@ The **CDM-760** can retrieve **Configuration** information, **Status** informati
 
 ## About
 
-The driver runs three **Timers** every *10 seconds*, every *1 minute,* and every *24 hours.* Always polling information accordently and if modules are not *installed* then it won't poll those groups. The new version *(1.5.7)* supports all *66* **ModCods** and the **Packet Processo**r.
+The connector runs three **Timers** every *10 seconds*, every *1 minute,* and every *24 hours.* Always polling information accordently and if modules are not *installed* then it won't poll those groups. The new version *(1.5.7)* supports all *66* **ModCods** and the **Packet Processo**r.
 
-Ranges of the driver
+Ranges of the connector
 
 <table>
 <colgroup>
@@ -56,7 +56,7 @@ Ranges of the driver
 
 Supported firmware versions
 
-| **Driver Range** | **Device Firmware Version**                   |
+| **Range** | **Device Firmware Version**                   |
 |------------------|-----------------------------------------------|
 | 1.0.0.x          | 1.1.1                                         |
 | 1.1.0.x          | 1.5.71.2.2 - If Packet Processor is installed |
@@ -65,7 +65,7 @@ Supported firmware versions
 
 ## Installation and configuration
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and needs following user information:
 
 **SNMP CONNECTION**:
 

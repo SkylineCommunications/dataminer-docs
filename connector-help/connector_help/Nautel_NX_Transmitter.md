@@ -4,7 +4,7 @@ uid: Connector_help_Nautel_NX_Transmitter
 
 # Nautel NX Transmitter
 
-**Nautel NX** series transmitters are solid-state high-power broadcast transmitters. This driver allows you to monitor these transmitters.
+**Nautel NX** series transmitters are solid-state high-power broadcast transmitters. This connector allows you to monitor these transmitters.
 
 ## About
 
@@ -32,7 +32,7 @@ uid: Connector_help_Nautel_NX_Transmitter
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The **General** page of this driver displays general system information.
+The **General** page of this connector displays general system information.
 
 The various **Meters** pages display readings of the different meters of the controller, exciter A/B, the active exciter and rack 1 to 4.
 

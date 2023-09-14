@@ -4,7 +4,7 @@ uid: Connector_help_Touchstream_VirtualNOC
 
 # Touchstream VirtualNOC
 
-Touchstream VirtualNOC is a driver used to communicate with the Touchstream API. The virtualNOC is an end-to-end monitoring solution that collects data from all endpoints of the video delivery chain and monitors it 24/7. This allows operators to visualize issues clearly and take action before these affect viewers.
+Touchstream VirtualNOC is a connector used to communicate with the Touchstream API. The virtualNOC is an end-to-end monitoring solution that collects data from all endpoints of the video delivery chain and monitors it 24/7. This allows operators to visualize issues clearly and take action before these affect viewers.
 
 ## About
 
@@ -30,7 +30,7 @@ Touchstream VirtualNOC is a driver used to communicate with the Touchstream API.
 
 #### HTTP Main Connection
 
-This driver uses an HTTPS connection to communicate with the Touchstream API.
+This connector uses an HTTPS connection to communicate with the Touchstream API.
 
 HTTP CONNECTION:
 
@@ -39,7 +39,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-The driver requires an **API Key** (X-TS-ID header) and a **Bearer Key** (oauth Authorization header) in order to start the polling. These should be specified on the **General** page.
+The connector requires an **API Key** (X-TS-ID header) and a **Bearer Key** (oauth Authorization header) in order to start the polling. These should be specified on the **General** page.
 When this information has been added, the **Connection State** is "OK" if the device replies with "*HTTP/1.1 200 OK"* or "Error" for other HTTP responses.
 
 ### Web Interface

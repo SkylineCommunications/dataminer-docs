@@ -4,7 +4,7 @@ uid: Connector_help_Finnish_Broadcasting_Company_Statistics_Manager
 
 # Finnish Broadcasting Company Statistics Manager
 
-The Finnish Broadcasting Company Statistics Manager driver retrieves and calculates statistics of the YLE booking system (jobs, bookings, tickets, etc.).
+The Finnish Broadcasting Company Statistics Manager connector retrieves and calculates statistics of the YLE booking system (jobs, bookings, tickets, etc.).
 
 ## About
 
@@ -32,7 +32,7 @@ The Finnish Broadcasting Company Statistics Manager driver retrieves and calcula
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The **General** page displays all statistics that are retrieved by this driver. These statistics can be visualized in a dashboard for monitoring purposes.
+The **General** page displays all statistics that are retrieved by this connector. These statistics can be visualized in a dashboard for monitoring purposes.
 
 There are two different kinds of statistics:
 

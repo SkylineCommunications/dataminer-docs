@@ -10,16 +10,16 @@ The **ETL Systems ALT-C300** is a dual redundant variable gain L-band amplifier.
 
 The model **ALT-C300** is a redundant ALTO amplifier chassis with auto switch before and after the amplifiers. The 1RU chassis holds 2 modules.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                   | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                                                  | Yes                 | Yes                     |
 | 1.0.1.x \[SLC main\] | Based on 1.0.0.3. Fixed validator error regarding table index using discreet as measurement type. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                         |
+| **Range** | **Device Firmware Version**                         |
 |------------------|-----------------------------------------------------|
 | 1.0.1.x          | ETL Systems Ltd, ALTO Amplifier, e333 Version 04.31 |
 
@@ -29,7 +29,7 @@ Ranges of the driver
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

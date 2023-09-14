@@ -8,17 +8,17 @@ Smart-UPS devices provide high density, true double-conversion on-line power pro
 
 ## About
 
-This driver can be used with all APC Smart-UPS models. It makes it possible to monitor the state of the battery, power status and alarms, as well as to configure different parameters and functionalities. The different parameters from the device are displayed on multiple pages grouped by function.
+This connector can be used with all APC Smart-UPS models. It makes it possible to monitor the state of the battery, power status and alarms, as well as to configure different parameters and functionalities. The different parameters from the device are displayed on multiple pages grouped by function.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version, added traps | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | UPS 07.4 (ID1003)           |
 
@@ -40,7 +40,7 @@ Follow the standard procedure for SNMP managed devices. No additional informatio
 
 ## Usage
 
-Once created, the element can be used immediately. The driver has 8 pages, plus a page with the web interface.
+Once created, the element can be used immediately. The connector has 8 pages, plus a page with the web interface.
 
 ### General
 

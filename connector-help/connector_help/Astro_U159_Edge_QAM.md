@@ -4,7 +4,7 @@ uid: Connector_help_Astro_U159_Edge_QAM
 
 # Astro U159 Edge QAM
 
-With this driver, it is possible to gather and view information from the device **Astro U159 Edge QAM**, as well to configure the device. The Astro U159 Edge QAM device is an IP-to-QAM signal converter.
+With this connector, it is possible to gather and view information from the device **Astro U159 Edge QAM**, as well to configure the device. The Astro U159 Edge QAM device is an IP-to-QAM signal converter.
 
 ## About
 
@@ -32,7 +32,7 @@ With this driver, it is possible to gather and view information from the device 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 #### SNMP Extra Connection 2 Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -88,4 +88,4 @@ Some important parameters are available on the General page:
 To most tables a row/new entry can be added by right-clicking the table and selecting **Add New Entry**. This action will display a pop-up window with the required parameters to add a new entry.
 
 Downloaded files can be found under *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*.
-To upload a file, the file must be located in the following folder: *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*. The driver will display a list of available files in that location to upload.
+To upload a file, the file must be located in the following folder: *C:\Skyline DataMiner\Documents\\protocol name"\\element name"\\file name"*. The connector will display a list of available files in that location to upload.

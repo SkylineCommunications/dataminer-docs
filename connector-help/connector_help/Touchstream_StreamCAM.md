@@ -8,18 +8,18 @@ Touchstream StreamCAM is a cloud-based stream monitoring solution.
 
 ## About
 
-This driver uses an HTTPS connection to retrieve data from Touchstream StreamCAM, allowing users to monitor and configure streams.
+This connector uses an HTTPS connection to retrieve data from Touchstream StreamCAM, allowing users to monitor and configure streams.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                  | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Restructured Live Status Detail table (2200) to support unlimited Stream Status Detail elements. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V5                          |
 | 1.0.1.x          | API V9                      |
@@ -30,7 +30,7 @@ This driver uses an HTTPS connection to retrieve data from Touchstream StreamCAM
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 ### Configuration of authentication
 
-To start using this driver, you need to specify the **Authorization Token** and **X-TS-ID Token** on the **General** page.
+To start using this connector, you need to specify the **Authorization Token** and **X-TS-ID Token** on the **General** page.
 
 ## Usage
 
@@ -133,7 +133,7 @@ It is possible to add, edit or delete a stream in the table. To add a stream, cl
 
 These three pages apply to data sources that have VOD services.
 
-In the **1.0.1.x** range of the driver, you can **enable/disable** VOD-related data polling using the **VOD Polling** toggle button. In case the data source does not support VOD, disabling the polling will help to prevent the element from going into timeout (404 NOT FOUND status).
+In the **1.0.1.x** range of the connector, you can **enable/disable** VOD-related data polling using the **VOD Polling** toggle button. In case the data source does not support VOD, disabling the polling will help to prevent the element from going into timeout (404 NOT FOUND status).
 
 ### Planned Outages
 

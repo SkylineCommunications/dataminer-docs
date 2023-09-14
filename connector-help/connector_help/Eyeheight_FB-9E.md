@@ -8,13 +8,13 @@ With the **Eyeheight FB-9E** driver you can monitor and control the settings of 
 
 ## About
 
-This driver provides an overview of the setup of each card in the slots of the chassis. The **Slot Configuration** page displays the different occupied slots, and the **RGB/YCC** and **Composite** page contain the setup values. All settings can be modified.
+This connector provides an overview of the setup of each card in the slots of the chassis. The **Slot Configuration** page displays the different occupied slots, and the **RGB/YCC** and **Composite** page contain the setup values. All settings can be modified.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 
@@ -47,7 +47,3 @@ The **Legaliser Mode** can have the following values: *off*, *RGB*, *YCC*, *comp
 The *Ring Suppression setup* has three parameters: the **Ring Suppression Status** (*off*, *on* or *auto*), the **Ring Suppression High Clip** and the **Ring Suppression Low Clip**. The High and Low Clip are displayed as percentages.
 
 There are eight parameters for the **Composite Setup**. The four parameters for both composite Luma and Chroma are **High and Low Clip** and **High and Low Knee**. These eight parameters are displayed in mV.
-
-## Notes
-
-N/A

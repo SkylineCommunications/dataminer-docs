@@ -4,25 +4,25 @@ uid: Connector_help_SES_S.A._TEMOS
 
 # SES S.A. TEMOS
 
-TEMOS is a system at SES S.A. that is able to retrieve satellite telemetry data from a server named TLMCore. The TLMCore is a socket server that handles XML requests. This driver allows users to view the telemetry data in a table of channels.
+TEMOS is a system at SES S.A. that is able to retrieve satellite telemetry data from a server named TLMCore. The TLMCore is a socket server that handles XML requests. This connector allows users to view the telemetry data in a table of channels.
 
 ## About
 
-Depending on the version, this driver functions in a very different way:
+Depending on the version, this connector functions in a very different way:
 
-- Version **1.0.0.x** of the driver uses a **serial** connection to obtain the telemetry data from the TLMCore server.
-- Version **1.0.1.x** of the driver uses a **virtual** connection to display satellite telemetry data. The driver obtains the data by creating an **SES S.A. TEMOS Probe** element per satellite to retrieve the information from the TLMCore server.
+- Version **1.0.0.x** of the connector uses a **serial** connection to obtain the telemetry data from the TLMCore server.
+- Version **1.0.1.x** of the connector uses a **virtual** connection to display satellite telemetry data. The connector obtains the data by creating an **SES S.A. TEMOS Probe** element per satellite to retrieve the information from the TLMCore server.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                     | No                  | Yes                     |
-| 1.0.1.x          | Initial version as a virtual driver | No                  | Yes                     |
+| 1.0.1.x          | Initial version as a virtual connector | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -44,7 +44,7 @@ Depending on the version, this driver functions in a very different way:
 <tr class="even">
 <td>1.0.0.x</td>
 <td>Serial Main Connection
-<p>This driver range uses a serial connection and requires the following input during element creation:</p>
+<p>This connector range uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Direct connection:
@@ -65,7 +65,7 @@ Depending on the version, this driver functions in a very different way:
 <tr class="odd">
 <td>1.0.1.x</td>
 <td><h4 id="virtual-connection">Virtual Connection</h4>
-<p>This driver range uses a virtual connection and does not require any input during element creation.</p></td>
+<p>This connector range uses a virtual connection and does not require any input during element creation.</p></td>
 </tr>
 </tbody>
 </table>
@@ -88,39 +88,39 @@ The CSV files must contain the following data, in the same order as specified be
 
 - **Channel:**
 
-- 1.  Orbital Position
-  2.  Tube
-  3.  BW
-  4.  ULF
-  5.  UL Pol
-  6.  DLF
-  7.  DL Pol
-  8.  L
-  9.  Uplink
-  10. Uplink Chain
-  11. Customer
-  12. Modulation
-  13. Satellite
-  14. DCMS Name
-  15. DCMS Display Key
+  1. Orbital Position
+  1. Tube
+  1. BW
+  1. ULF
+  1. UL Pol
+  1. DLF
+  1. DL Pol
+  1. L
+  1. Uplink
+  1. Uplink Chain
+  1. Customer
+  1. Modulation
+  1. Satellite
+  1. DCMS Name
+  1. DCMS Display Key
 
 - **LRV:**
 
-- 1.  Satellite
-  2.  Tube
-  3.  Sat I/P LRV
-  4.  Mode LRV
-  5.  Nominal ALC LRV
-  6.  Nominal FG LRV
-  7.  TWT Status LRV
-  8.  High Voltage Status LRV
-  9.  DCC Status LRV
-  10. RF Status LRV
-  11. FCA LRV
-  12. GCA LRV
-  13. Helix LRV
+  1. Satellite
+  1. Tube
+  1. Sat I/P LRV
+  1. Mode LRV
+  1. Nominal ALC LRV
+  1. Nominal FG LRV
+  1. TWT Status LRV
+  1. High Voltage Status LRV
+  1. DCC Status LRV
+  1. RF Status LRV
+  1. FCA LRV
+  1. GCA LRV
+  1. Helix LRV
 
-> Note:
+> [!NOTE]
 >
 > - If any value does not exist, it must be left empty in the CSV file.
 > - The names of the **Satellites** and **Tubes** must be exactly the same in both CSV files.
@@ -143,7 +143,8 @@ In the **Polling** column of the table, you can select one of the following opti
 - *Fast*: This option indicates that all the parameters will be polled every 5 seconds.
 - *Inactive*: The tube will not be polled.
 
-> Note: Slow is the default option.
+> [!NOTE]
+> Slow is the default option.
 
 ### Satellite Connections
 
@@ -179,11 +180,12 @@ In the **Polling** column of the table, you can select one of the following opti
 - *Fast*: This option indicates that SAT I/P, Mode, Nominal ALC, Nominal FG and Helix are polled every 5, 10, 15 or 20 seconds and the rest of the parameters every hour.
 - *Inactive*: The tube will not be polled.
 
-> Note: Slow is the default option.
+> [!NOTE]
+> Slow is the default option.
 
 ### Satellite Information
 
-This page displays the **Satellite Information Table**. This table contains information related to the **SES S.A. Probe** elements that where created by the driver.
+This page displays the **Satellite Information Table**. This table contains information related to the **SES S.A. Probe** elements that where created by the connector.
 
 The table contains the following columns:
 
@@ -209,9 +211,11 @@ To facilitate the process of creating alarm templates, the **Channel** table has
 
 Configuring presets in the **Alarm Preset Table** can be done by importing a CSV file. To do so:
 
-1.  Select the CSV file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.
-    The driver looks for the CSV files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. TEMOS\Configuration Alarm Presets"*
-2.  Click the button **Import File**.
+1. Select the CSV file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.
+
+   The connector looks for the CSV files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. TEMOS\Configuration Alarm Presets"*
+
+1. Click the button **Import File**.
 
 You can also add a preset in the table by selecting **Create Preset** in the table's context menu. This way, you can add the presets one by one. To delete a preset, right-click the entry in the table and select **Delete Preset**. The **Remove All** button can be used to delete all the entries from the table at once. To save an alarm preset in a CSV file, click the button **Export Alarm Preset**.
 
@@ -223,41 +227,41 @@ The Channel CSV and LRV CSV files must contain the following data, in the same o
 
 - **Channel:**
 
-- 1.  Orbital Position
-  2.  Tube
-  3.  BW
-  4.  ULF
-  5.  UL Pol
-  6.  DLF
-  7.  DL Pol
-  8.  L
-  9.  Uplink
-  10. Uplink Chain
-  11. Customer
-  12. Modulation
-  13. Satellite
-  14. DCMS Name
-  15. DCMS Display Key
+  1. Orbital Position
+  1. Tube
+  1. BW
+  1. ULF
+  1. UL Pol
+  1. DLF
+  1. DL Pol
+  1. L
+  1. Uplink
+  1. Uplink Chain
+  1. Customer
+  1. Modulation
+  1. Satellite
+  1. DCMS Name
+  1. DCMS Display Key
 
 - **LRV:**
 
-- 1.  Satellite
-  2.  Tube
-  3.  Sat I/P LRV
-  4.  Mode LRV
-  5.  Nominal ALC LRV
-  6.  Nominal FG LRV
-  7.  TWT Status LRV
-  8.  High Voltage Status LRV
-  9.  DCC Status LRV
-  10. RF Status LRV
-  11. FCA LRV
-  12. GCA LRV
-  13. Helix LRV
-  14. Custom Nominal ALC
-  15. Custom Nominal FG
-  16. Mode Nominal ALC
-  17. Mode Nominal FG
+  1. Satellite
+  1. Tube
+  1. Sat I/P LRV
+  1. Mode LRV
+  1. Nominal ALC LRV
+  1. Nominal FG LRV
+  1. TWT Status LRV
+  1. High Voltage Status LRV
+  1. DCC Status LRV
+  1. RF Status LRV
+  1. FCA LRV
+  1. GCA LRV
+  1. Helix LRV
+  1. Custom Nominal ALC
+  1. Custom Nominal FG
+  1. Mode Nominal ALC
+  1. Mode Nominal FG
 
 Note:
 

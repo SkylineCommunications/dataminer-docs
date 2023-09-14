@@ -10,15 +10,15 @@ Racktivity's power distribution energy switch provides advanced metering and swi
 
 This protocol can be used to monitor and control any Racktivity Energy Switch ES6124-16. An **SNMP** connection is used in order to successfully retrieve and configure the settings of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0.3.4                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor and control any Racktivity Energy Switch ES
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The following page buttons lead to subpages with additional information and sett
 - **Scheduler:** Displays the **Scheduler Table**, which contains information about the port name, the port state and the port on and off time, and allows you to enable or disable ports by outlet.
 - **Energy:** Displays the **Energy Table**, which contains the outlets names, Port State, Active Energy, Resettable Active Energy, reset buttons, Apparent Energy and Resettable Apparent Energy. This provides an overview of the complete energy status of the device, along with the possibility to set changes to the relevant parameters.
 - **Power:** Displays the **Power Table**, with the columns Port State, Actual Power, Min Power, Max Power, Reset Values, Power Warning, Switch Off, Apparent, etc.
-  Note that **minimum and maximum values are calculated by the driver itself**. Because of this, it is strongly recommended to **reset the values of the device when the driver starts**.
+  Note that **minimum and maximum values are calculated by the connector itself**. Because of this, it is strongly recommended to **reset the values of the device when the connector starts**.
 - **Current:** Displays the **Current Table**, which allows you to set thresholds for the currents, view maximum and minimum values, and set the Current Off value.
 
 ### Environment
@@ -77,7 +77,7 @@ In the **E2 Analog Table**, you can find information (including minimum and maxi
 
 The **E2 Management Table** contains information about the **Firmware Version** and **IUD.**
 
-Note that **minimum and maximum values are calculated by the driver itself**. Because of this, it is strongly recommended to **reset the values of the device when the driver starts.**
+Note that **minimum and maximum values are calculated by the connector itself**. Because of this, it is strongly recommended to **reset the values of the device when the connector starts.**
 
 ### Web Interface
 

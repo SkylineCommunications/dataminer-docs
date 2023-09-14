@@ -26,7 +26,7 @@ This service protocol makes it possible to generate alarms based on the alarm st
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

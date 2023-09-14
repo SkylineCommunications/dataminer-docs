@@ -8,7 +8,7 @@ This module displays information about the ETL Systems Genus Splitter-Combiner.
 
 ## About
 
-This driver is exported by the parent driver [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus).
+This connector is exported by the parent connector [ETL Systems Genus](xref:Connector_help_ETL_Systems_Genus).
 
 ### Version Info
 
@@ -24,7 +24,7 @@ This driver is exported by the parent driver [ETL Systems Genus](xref:Connector_
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays system information such as the **Summary Alarm** and the **Operation Time** of the board.
 - **Control**: Allows you to set multiple control parameters of the board.

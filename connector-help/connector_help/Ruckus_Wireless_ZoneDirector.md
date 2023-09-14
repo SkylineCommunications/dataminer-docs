@@ -8,7 +8,7 @@ The Ruckus Wireless ZoneDirector is a **wireless LAN controller** to configure a
 
 ## About
 
-The Ruckus Wireless ZoneDirector **SNMP** driver controls and monitors the WLAN controller.
+The Ruckus Wireless ZoneDirector **SNMP** connector controls and monitors the WLAN controller.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ The Ruckus Wireless ZoneDirector **SNMP** driver controls and monitors the WLAN 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

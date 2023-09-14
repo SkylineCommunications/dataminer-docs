@@ -8,11 +8,11 @@ The **Audemat Aztec Control Silver** is a controller device.
 
 ## About
 
-This driver allows the management of the Audemat Aztec Control Silver device using the **SNMP** protocol.
+This connector allows the management of the Audemat Aztec Control Silver device using the **SNMP** protocol.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

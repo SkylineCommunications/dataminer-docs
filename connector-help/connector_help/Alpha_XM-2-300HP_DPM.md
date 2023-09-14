@@ -8,13 +8,13 @@ The **Alpha XM-2-300HP DPM** monitors an Alpha UPS device of type XM-2-300HP DPM
 
 ## About
 
-The **Alpha XM-2-300HP DPM** driver uses SNMP to retrieve data from the device. Tests are automatically executed to determine the health of the UPS and its batteries.
+The **Alpha XM-2-300HP DPM** connector uses SNMP to retrieve data from the device. Tests are automatically executed to determine the health of the UPS and its batteries.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Settings**:
 
@@ -67,7 +67,7 @@ The alarms page, contains the alarms that are available on the SNMP agent.
 
 ### Battery Test page
 
-This page displays a summary of the last test result of the tests performed by this driver or device. The UPS can run a local test and a remote test which causes the batteries to unload. Both local and remote tests are monitored. By clicking the **Start test** button, you can start a new test on the device.
+This page displays a summary of the last test result of the tests performed by this connector or device. The UPS can run a local test and a remote test which causes the batteries to unload. Both local and remote tests are monitored. By clicking the **Start test** button, you can start a new test on the device.
 
 ### Battery Health page
 
@@ -77,7 +77,7 @@ This page allows the operator to determine the health of the UPS and its batteri
 
 The input failure registration table keeps track of all input failure occurrences. It displays when a failure starts, ends, for how long it occurred and how big the impact on the network was. The UPS loses contact with the network when the batteries are fully depleted during an AC Failure. The number of minutes is displayed in the **Impact on Network** parameter. The **Input Failure Registration Summary** table displays a monthly summary. It contains the total duration for the input failure, impact on network and availability parameters for input failure and impact on network.
 
-### Webinterface page
+### Web Interface page
 
 This page displays the web interface of the device.
 
@@ -87,7 +87,7 @@ This page displays the web interface of the modem.
 
 ## Notes
 
-The driver executes some tests on the retrieved data. The results are visible in the element.
+The connector executes some tests on the retrieved data. The results are visible in the element.
 
 ### Float State test
 

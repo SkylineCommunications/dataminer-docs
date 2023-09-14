@@ -8,7 +8,7 @@ The **DVBLoudness** is part of the DVBControl software toolset which enables pow
 
 ## About
 
-This driver is intended to communicate with the DVBLoudness toolset using SNMP commands.
+This connector is intended to communicate with the DVBLoudness toolset using SNMP commands.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver is intended to communicate with the DVBLoudness toolset using SNMP c
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+\- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*
 
 \- **Device address**: not used
 

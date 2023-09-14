@@ -4,7 +4,7 @@ uid: Connector_help_Audemat_Aztec_Goldeneagle_AM
 
 # Audemat Aztec Goldeneagle AM
 
-The **Audemat Aztec Goldeneagle AM** driver can be used to display and configure information regarding the related device.
+The **Audemat Aztec Goldeneagle AM** connector can be used to display and configure information regarding the related device.
 
 ## About
 
@@ -21,8 +21,8 @@ This protocol can be used to monitor and control the Audemat Aztec Goldeneagle A
 **SNMP Settings:**
 
 - **Port Number:** The port of the connection device, by default *161*.
-- **Get community string:** The community string used when reading values from the device. The default value, unless overridden in the driver, is *public*.
-- **Set community string:** The community string used when setting values on the device. The default value, unless overridden in the driver, is *private*.
+- **Get community string:** The community string used when reading values from the device. The default value, unless overridden in the connector, is *public*.
+- **Set community string:** The community string used when setting values on the device. The default value, unless overridden in the connector, is *private*.
 
 ## Usage
 

@@ -32,7 +32,7 @@ The TSI via T2S ETH connector allows you to monitor a TSI inverter with up to 32
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

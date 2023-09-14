@@ -4,20 +4,20 @@ uid: Connector_help_Verizon_Data_Subscription_Manager
 
 # Verizon Data Subscription Manager
 
-The Verizon Data Subscription Manager is a DataMiner driver that is intended to gather information from the Entity Subscribers and interact with the DataMiner SRM (Service & Resource Management) module in order to retrieve, add, update and delete pools and resources.
+The Verizon Data Subscription Manager is a DataMiner connector that is intended to gather information from the Entity Subscribers and interact with the DataMiner SRM (Service & Resource Management) module in order to retrieve, add, update and delete pools and resources.
 
 ## About
 
-This driver implements the logic to:
+This connector implements the logic to:
 
 - Import and export files.
 - Retrieve, add, update and delete SRM pools.
 - Retrieve, add, update and delete resources.
 - Manage custom ID assignment for pools and resources.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -27,7 +27,7 @@ This driver implements the logic to:
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -51,7 +51,7 @@ This page displays the SRM overview parameters, such as the **Last Thread Action
 
 Pools are created by the SRM module in order to perform the logical grouping of resources that belong to the same category. The table on this page displays the available pools. A context menu allows you to add, update and delete pools.
 
-The driver retrieves the available SRM pools:
+The connector retrieves the available SRM pools:
 
 - After startup, if **SRM Update Status** is enabled (on the Configuration page).
 - According to the **SRM Update Timer** cycle, if **SRM Update Status** is enabled (on the Configuration page).
@@ -61,25 +61,25 @@ The driver retrieves the available SRM pools:
 
 Subscribers are drivers that allow for the automatic provisioning of SRM resources. Subscribers are retrieved from, added to, and updated in the SRM module in the form of resources. A context menu allows you to add, update and delete subscribers in the table on this page.
 
-The driver retrieves the available SRM subscribers:
+The connector retrieves the available SRM subscribers:
 
 - After startup, if **SRM Update Status** is enabled (on the Configuration page).
 - According to the **SRM Update Timer** cycle, if **SRM Update Status** is enabled (on the Configuration page).
 - Whenever the SRM **Update** button is used (on the Configuration page).
 
-Only subscribers with the same name as an existing DataMiner driver may be added. Subscribers will always be added to the VSAT-SUBSCRIBER-POOL. If this pool does not exist, it must be created upon the first subscriber addition request.
+Only subscribers with the same name as an existing DataMiner connector may be added. Subscribers will always be added to the VSAT-SUBSCRIBER-POOL. If this pool does not exist, it must be created upon the first subscriber addition request.
 
 ### Resources
 
-The management of resources is the ultimate goal of the DataMiner SRM module. This driver will perform the dynamic retrieval, addition, and update of resources towards their integration in the Verizon DataMiner SRM system.
+The management of resources is the ultimate goal of the DataMiner SRM module. This connector will perform the dynamic retrieval, addition, and update of resources towards their integration in the Verizon DataMiner SRM system.
 
-The driver retrieves the available SRM resources:
+The connector retrieves the available SRM resources:
 
 - After startup, if **SRM Update Status** is enabled (on the Configuration page).
 - According to the **SRM Update Timer** cycle, if **SRM Update Status** is enabled (on the Configuration page).
 - Whenever the SRM **Update** button is used (on the Configuration page).
 
-Note that the driver will only retrieve the resources in the VSAT-RESOURCE-TYPE-POOL, as these represent the many different categories of resources to be targeted within the system.
+Note that the connector will only retrieve the resources in the VSAT-RESOURCE-TYPE-POOL, as these represent the many different categories of resources to be targeted within the system.
 
 Via the **Add Resource** page button, you can add resources types and their corresponding properties. Additions are first performed in the SRM VSAT-RESOURCE-TYPE-POOL. After a successful SRM resource type addition, the requesting element will then update its different sections accordingly.
 

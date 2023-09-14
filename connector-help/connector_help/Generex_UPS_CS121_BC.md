@@ -4,17 +4,17 @@ uid: Connector_help_Generex_UPS_CS121_BC
 
 # Generex UPS CS121 BC
 
-The **Generex UPS CS121 BC** driver is an SNMP-based driver used for the management of UPS systems, to get UPS data via SNMP and display all available data and failures.
+The **Generex UPS CS121 BC** connector is an SNMP-based connector used for the management of UPS systems, to get UPS data via SNMP and display all available data and failures.
 
 ## About
 
-This driver provides a monitoring interface to the **Generex UPS CS121 BC** device. It is based on the standard UPS MIB RFC 1628 MIB. The driver reacts to the 4 different traps that this device can send.
+This connector provides a monitoring interface to the **Generex UPS CS121 BC** device. It is based on the standard UPS MIB RFC 1628 MIB. The connector reacts to the 4 different traps that this device can send.
 
 For more detailed information, see: <http://www.generex.de/generex/download/manuals/manual_CS121_en.pdf>
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
@@ -22,7 +22,7 @@ For more detailed information, see: <http://www.generex.de/generex/download/manu
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

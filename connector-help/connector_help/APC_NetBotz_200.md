@@ -4,7 +4,7 @@ uid: Connector_help_APC_NetBotz_200
 
 # APC NetBotz 200
 
-The American Power Conversion (APC) NetBotz Rack Monitor 200 is a central hardware appliance for an APC environmental monitoring and control system. The rack-mountable NetBotz 200 includes six sensor ports for connecting temperature and humidity sensors, door switch sensors, and third-party dry contact sensors. Using other ports on the NetBotz 200, you can connect up to eight temperature and humidity sensors with digital display. This driver uses **SNMP polling** to retrieve sensor information.
+The American Power Conversion (APC) NetBotz Rack Monitor 200 is a central hardware appliance for an APC environmental monitoring and control system. The rack-mountable NetBotz 200 includes six sensor ports for connecting temperature and humidity sensors, door switch sensors, and third-party dry contact sensors. Using other ports on the NetBotz 200, you can connect up to eight temperature and humidity sensors with digital display. This connector uses **SNMP polling** to retrieve sensor information.
 
 ## About
 
@@ -32,7 +32,7 @@ The American Power Conversion (APC) NetBotz Rack Monitor 200 is a central hardwa
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General Page
 

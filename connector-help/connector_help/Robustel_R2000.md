@@ -4,7 +4,7 @@ uid: Connector_help_Robustel_R2000
 
 # Robustel R2000
 
-The Robustel R2000 is a cellular router offering mobile connectivity for machine-to-machine (M2M) applications. This driver uses an SNMP connection to communicate with this device.
+The Robustel R2000 is a cellular router offering mobile connectivity for machine-to-machine (M2M) applications. This connector uses an SNMP connection to communicate with this device.
 
 ## About
 
@@ -32,7 +32,7 @@ The Robustel R2000 is a cellular router offering mobile connectivity for machine
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

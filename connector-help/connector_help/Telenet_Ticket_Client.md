@@ -4,7 +4,7 @@ uid: Connector_help_Telenet_Ticket_Client
 
 # Telenet Ticket Client
 
-The **Telenet Ticket Client** is part of the **SAM Ticketing Project**. It works as an interface between the automatic flows started by **alarms** and the **Telenet Ticket Gateway** driver that will send requests to the ticketing service (OSB) provided by Telenet.
+The **Telenet Ticket Client** is part of the **SAM Ticketing Project**. It works as an interface between the automatic flows started by **alarms** and the **Telenet Ticket Gateway** connector that will send requests to the ticketing service (OSB) provided by Telenet.
 
 ## About
 
@@ -13,7 +13,7 @@ The communication of these search requests is stored in an overview table. This 
 
 The information needed to make these request comes either from a search as mentioned above or from a topology database generated with the **Telenet Topology Database** driver.
 
-As this driver is used as an interface between the automatic flow and the sending of commands to the ticketing service, more than one element can be generated in the DataMiner System. The number of **Ticket Clients** represents the number of automatic flows that can run at the same time. For example, if two tickets need to be created, and there are two or more Ticket Clients, the flow to create a ticket will run at the same time for both tickets. The actual request to the ticketing system, however, is buffered in the **Telenet Ticket Gateway** and thus handled in a sequential order.
+As this connector is used as an interface between the automatic flow and the sending of commands to the ticketing service, more than one element can be generated in the DataMiner System. The number of **Ticket Clients** represents the number of automatic flows that can run at the same time. For example, if two tickets need to be created, and there are two or more Ticket Clients, the flow to create a ticket will run at the same time for both tickets. The actual request to the ticketing system, however, is buffered in the **Telenet Ticket Gateway** and thus handled in a sequential order.
 
 As an extra check to monitor the correct operation of the entire ticketing flow, a heartbeat is sent to the **Generic Dynamic Heartbeat Receiver** driver.
 
@@ -41,7 +41,7 @@ As an extra check to monitor the correct operation of the entire ticketing flow,
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ As this info needs to be the same as defined in the **Telenet Ticket Gateway**, 
 
 #### Configuration of related elements
 
-This driver communicates with different drivers. The names of the elements using these drivers need to be filled in via the **Configuration** page button of the **Connection Details** page.
+This connector communicates with different connectors. The names of the elements using these drivers need to be filled in via the **Configuration** page button of the **Connection Details** page.
 
 It is also possible to set the maximum number of rows in the **Communication - Response Table**.
 

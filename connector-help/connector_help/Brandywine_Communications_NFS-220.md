@@ -4,15 +4,15 @@ uid: Connector_help_Brandywine_Communications_NFS-220
 
 # Brandywine Communications NFS-220
 
-The **Brandywine Communications NFS-220** driver monitors and controls the unit through **SNMP**.
+The **Brandywine Communications NFS-220** connector monitors and controls the unit through **SNMP**.
 
 ## About
 
-The driver polls relevant information from the device every 10 seconds, every 10 minutes or every hour.
+The connector polls relevant information from the device every 10 seconds, every 10 minutes or every hour.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -26,7 +26,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver has several data display pages:
+This connector has several data display pages:
 
 ### General Page
 

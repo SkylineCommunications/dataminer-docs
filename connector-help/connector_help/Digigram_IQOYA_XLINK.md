@@ -85,6 +85,6 @@ The element has the following data pages:
 
 From range **1.0.1.x** onwards, additional pages are available that make the connector more similar to the web interface: the **Receive**, **Send** and **Audio** pages.
 
-The **Display All "*****Table Name*****"** toggle buttons allow you to select if unused table entries should be hidden. If this toggle button is disabled, only the active table entries are displayed.
+The **Display All "*Table Name*"** toggle buttons allow you to select if unused table entries should be hidden. If this toggle button is disabled, only the active table entries are displayed.
 
 From range **1.0.2.x** onwards, an **Receive** configuration page is available, containing the HTTP authentication parameters and a toggle button to enable/disable the Multicast HTTP set.

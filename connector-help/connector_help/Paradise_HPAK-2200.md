@@ -8,17 +8,17 @@ The Compact Outdoor SSPA is a one-piece integrated Satcom amplifier system.
 
 ## About
 
-This driver is used to retrieve all data information and control the HPAK-2200 amplifier system.
+This connector is used to retrieve all data information and control the HPAK-2200 amplifier system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                  |
+| **Range** | **Device Firmware Version**                                                  |
 |------------------|------------------------------------------------------------------------------|
 | 2.0.0.x          | Unknown. Possibly 3.5 or 3.6. Based on HPA_2250_20160425101307840 datasheet. |
 
@@ -26,7 +26,7 @@ This driver is used to retrieve all data information and control the HPAK-2200 a
 
 ### Creation
 
-This driver uses a TCP/IP or serial connection and requires the following input during element creation:
+This connector uses a TCP/IP or serial connection and requires the following input during element creation:
 
 **TCP/IP Connection**:
 
@@ -37,7 +37,7 @@ This driver uses a TCP/IP or serial connection and requires the following input 
 
 ## Usage
 
-The driver contains 3 pages.
+The connector contains 3 pages.
 
 ### General
 

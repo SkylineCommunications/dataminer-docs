@@ -6,7 +6,7 @@ uid: Connector_help_Lawo_V_Matrix_IP_Streaming
 
 The V\_\_matrix vm_streaming virtual module is a versatile audio and video processing software application that provides routing, processing and glue functionality for the V\_\_matrix ecosystem when loaded on a C100 processing blade.
 
-This driver monitors the main functionalities of the IP Streaming application.
+This connector monitors the main functionalities of the IP Streaming application.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver monitors the main functionalities of the IP Streaming application.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -56,6 +56,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-With this driver, you can monitor the general and system information for your Lawo V_Matrix IP Streaming.
+With this connector, you can monitor the general and system information for your Lawo V_Matrix IP Streaming.
 
 You can also look for the Rx and Tx traffic information and the Ethernet statistics.

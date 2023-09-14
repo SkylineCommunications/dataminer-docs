@@ -4,11 +4,11 @@ uid: Connector_help_2WCOM_Flex_Xtract
 
 # 2WCOM Flex Xtract
 
-This driver can be used to monitor the DVB-S/DVB-S2 Flex Xtract receiver through status parameters and to configure its network and alarm settings.
+This connector can be used to monitor the DVB-S/DVB-S2 Flex Xtract receiver through status parameters and to configure its network and alarm settings.
 
 ## About
 
-To retrieve data and configure settings, SNMP is used. The driver allows you to configure alarm thresholds, network configuration parameters, and so on, so that the status of important parameters can be monitored.
+To retrieve data and configure settings, SNMP is used. The connector allows you to configure alarm thresholds, network configuration parameters, and so on, so that the status of important parameters can be monitored.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ To retrieve data and configure settings, SNMP is used. The driver allows you to 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

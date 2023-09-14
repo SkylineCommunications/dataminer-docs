@@ -4,17 +4,17 @@ uid: Connector_help_VOO_App_Store_Monitor
 
 # VOO App Store Monitor
 
-This driver is used to retrieve status information from the **VOO App Store**.
+This connector is used to retrieve status information from the **VOO App Store**.
 
 ## About
 
-This is an HTTP driver that retrieves JSON-formatted status information from an HTTP server to provide monitoring.
+This is an HTTP connector that retrieves JSON-formatted status information from an HTTP server to provide monitoring.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION:**
 

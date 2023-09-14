@@ -4,21 +4,21 @@ uid: Connector_help_Dell_M1000e
 
 # Dell M1000e
 
-The **Dell M1000e** driver is designed to monitor a Dell M1000e blade server
+The **Dell M1000e** connector is designed to monitor a Dell M1000e blade server
 
 ## About
 
-The driver uses **SNMP** to retrieve data from the device.
+The connector uses **SNMP** to retrieve data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.30                        |
 
@@ -28,7 +28,7 @@ The driver uses **SNMP** to retrieve data from the device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

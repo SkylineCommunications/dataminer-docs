@@ -10,7 +10,7 @@ Based on the received alarms, the different customer types and the different typ
 
 ## About
 
-This driver should be used together with the **Telenet BO Provision driver**.
+This connector should be used together with the **Telenet BO Provision driver**.
 
 The **Telenet BO Manager** elements are automatically created during the provisioning cycle. For each provisioned BO customer that is not in the Excluded Customer list, an **element** is created.
 

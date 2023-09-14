@@ -12,11 +12,11 @@ The Generic Uplink Power Controller acts as a replacement for a hardware-based U
 
 ### Creation
 
-This driver uses a virtual connection and does not need any user input during creation.
+This connector uses a virtual connection and does not need any user input during creation.
 
 ### Configuration
 
-This driver makes use of HPA elements that it needs to be linked to. This linking is done on the **General** page of the driver. By clicking on the **Add** **HPA** **Backup** or **Add** **HPA** button, you can add a new row to the **HPA** table. For each row, you can then select in the drop-down list which **HPA** **Element** to set. Configurations up to a 3+1 (redundant) system are supported.
+This connector makes use of HPA elements that it needs to be linked to. This linking is done on the **General** page of the connector. By clicking on the **Add** **HPA** **Backup** or **Add** **HPA** button, you can add a new row to the **HPA** table. For each row, you can then select in the drop-down list which **HPA** **Element** to set. Configurations up to a 3+1 (redundant) system are supported.
 
 ## Usage
 

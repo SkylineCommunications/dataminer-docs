@@ -8,17 +8,17 @@ The AudioCodes Mediant 2000 Media Gateway is designed to provide connectivity be
 
 ## About
 
-With this driver, it is possible to monitor the state of the interfaces and to monitor the performance KPIs related to the IP-to-PSTN and PSTN-to-IP conversion. The structure of the driver pages mirrors that of the web interface of the device.
+With this connector, it is possible to monitor the state of the interfaces and to monitor the performance KPIs related to the IP-to-PSTN and PSTN-to-IP conversion. The structure of the connector pages mirrors that of the web interface of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ With this driver, it is possible to monitor the state of the interfaces and to m
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

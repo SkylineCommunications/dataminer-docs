@@ -8,11 +8,11 @@ This is a virtual protocol that is used to subscribe to several items on a remot
 
 ## About
 
-This driver is used as an OPC DA (Data Access) client. You can specify the host address of one or more OPC servers. When the connection is established with a certain server, you can specify for which items you want to receive updates from the server. It is also possible to import or export the current subscription group.
+This connector is used as an OPC DA (Data Access) client. You can specify the host address of one or more OPC servers. When the connection is established with a certain server, you can specify for which items you want to receive updates from the server. It is also possible to import or export the current subscription group.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                      | No                  | No                      |
 | 1.0.1.x          | Added Signal Name, Analog Value and Text Value to Subscription Table | No                  | No                      |
@@ -21,7 +21,7 @@ This driver is used as an OPC DA (Data Access) client. You can specify the host 
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration of OPC server and client
 

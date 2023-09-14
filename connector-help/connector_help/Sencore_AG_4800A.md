@@ -8,17 +8,17 @@ Sencore AG 4800A is a high-density modular frame designed to accommodate up to 2
 
 ## About
 
-This driver contains information about the frame and the installed cards. However, because of the way the MIB is constructed and the way Sencore handles each of the cards, it is not possible to control them from within this driver. Instead, individual elements representing the cards can be created if the appropriate protocols are available.
+This connector contains information about the frame and the installed cards. However, because of the way the MIB is constructed and the way Sencore handles each of the cards, it is not possible to control them from within this connector. Instead, individual elements representing the cards can be created if the appropriate protocols are available.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver contains information about the frame and the installed cards. Howeve
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

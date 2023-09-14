@@ -4,13 +4,13 @@ uid: Connector_help_Siemens_Netviewer
 
 # Siemens Netviewer
 
-This driver provides an overview of the information from the Siemens Netviewer device, a management system.
+This connector provides an overview of the information from the Siemens Netviewer device, a management system.
 
 ## About
 
-The Siemens Netview driver provides an overview of the different network elements connected to the management system. The driver has several pages with general information about the management system and information regarding the status and alarms of the network element.
+The Siemens Netview driver provides an overview of the different network elements connected to the management system. The connector has several pages with general information about the management system and information regarding the status and alarms of the network element.
 
-The driver uses **SNMP** to retrieve data from the device. All data is polled every 30 seconds, except for the alarm table, which is polled every 30 minutes.
+The connector uses **SNMP** to retrieve data from the device. All data is polled every 30 seconds, except for the alarm table, which is polled every 30 minutes.
 
 ## Installation and configuration
 
@@ -18,7 +18,7 @@ The driver uses **SNMP** to retrieve data from the device. All data is polled ev
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -73,7 +73,3 @@ This page displays information about the **Netviewer Server Trap**, like its **C
 ### Web Interface page
 
 On this page, you can view the web interface of the device. However, note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

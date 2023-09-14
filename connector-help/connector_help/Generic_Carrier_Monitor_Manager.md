@@ -8,20 +8,20 @@ The **Generic Carrier Monitor Manager** automatically performs sets on demodulat
 
 ## About
 
-This driver can load measurement settings for carriers from a .csv file or database. Then these settings are executed on demodulator elements. When the demodulator can lock the signal, the measurement results are returned to the manager element. After that, the manager performs the settings for the next carrier to be measured on the demodulator element and so on.
+This connector can load measurement settings for carriers from a .csv file or database. Then these settings are executed on demodulator elements. When the demodulator can lock the signal, the measurement results are returned to the manager element. After that, the manager performs the settings for the next carrier to be measured on the demodulator element and so on.
 
-In the 2.x.x.x range of the driver, DVEs are created using the **Generic Carrier Monitor Manager Device** protocol, which contain the measurements per demodulator element.
+In the 2.x.x.x range of the connector, DVEs are created using the **Generic Carrier Monitor Manager Device** protocol, which contain the measurements per demodulator element.
 
-Current supported demodulator protocol drivers are: Tandberg RX1290, Ericsson RX8330 and Newtec EL970.
+Current supported demodulator connectors are: Tandberg RX1290, Ericsson RX8330 and Newtec EL970.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                 |
+| **Range** | **Description**                 |
 |------------------|---------------------------------|
 | 1.0.0.x          | Initial version                 |
 | 2.0.0.x          | Import through DB, creates DVEs |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                  | **Description**                 |
 |----------------------------------------|---------------------------------|
@@ -31,7 +31,7 @@ Current supported demodulator protocol drivers are: Tandberg RX1290, Ericsson RX
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration of the demodulator elements
 

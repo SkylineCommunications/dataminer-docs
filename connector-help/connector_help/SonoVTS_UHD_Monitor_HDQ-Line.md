@@ -8,17 +8,17 @@ This device is a multi-monitor controller with support for UHD broadcasting.
 
 ## About
 
-This driver allows you to monitor the parameters of the media stream connected to the device. This driver implements the Ember+ protocol to fetch the relevant information from the device.
+This connector allows you to monitor the parameters of the media stream connected to the device. This connector implements the Ember+ protocol to fetch the relevant information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V0.9022                     |
 
@@ -28,7 +28,7 @@ This driver allows you to monitor the parameters of the media stream connected t
 
 #### Smart-serial Main Connection
 
-This driver uses a serial-over-IP connection implementing the Ember+ protocol, and requires the following input during element creation:
+This connector uses a serial-over-IP connection implementing the Ember+ protocol, and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -54,7 +54,7 @@ This page contains information about the properties of the image that is being b
 
 ## DataMiner Connectivity Framework
 
-This driver supports DCF connections since version **1.0.0.2** and requires a DMA with at least DataMiner version **9.0.0.5**.
+This connector supports DCF connections since version **1.0.0.2** and requires a DMA with at least DataMiner version **9.0.0.5**.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

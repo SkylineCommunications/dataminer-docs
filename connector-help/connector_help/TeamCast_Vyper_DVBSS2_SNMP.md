@@ -4,11 +4,11 @@ uid: Connector_help_TeamCast_Vyper_DVBSS2_SNMP
 
 # TeamCast Vyper DVBS/S2 SNMP
 
-This driver retrieves information from a **DVB-S/DSNG/S2** modulator via **SNMP** and makes it possible to configure certain parameters.
+This connector retrieves information from a **DVB-S/DSNG/S2** modulator via **SNMP** and makes it possible to configure certain parameters.
 
 ## About
 
-With the **TeamCast Vyper DVBS/S2 SNMP** driver, you can retrieve status information from a **TeamCast Vyper DVBS/S2** modulator and set configuration parameters.
+With the **TeamCast Vyper DVBS/S2 SNMP** connector, you can retrieve status information from a **TeamCast Vyper DVBS/S2** modulator and set configuration parameters.
 
 ### Version info
 
@@ -43,7 +43,7 @@ With the **TeamCast Vyper DVBS/S2 SNMP** driver, you can retrieve status informa
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

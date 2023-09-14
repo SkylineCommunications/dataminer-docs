@@ -4,7 +4,7 @@ uid: Connector_help_Wellav_UMH_160_IP
 
 # Wellav UMH 160 IP
 
-This driver can be used to display information from a **Wellav UMH 160 IP** device.
+This connector can be used to display information from a **Wellav UMH 160 IP** device.
 
 ## About
 
@@ -12,15 +12,15 @@ This protocol is used to monitor Wellav UMH 160 **IP** devices. WellAV UMH 160 *
 
 An **SNMP** connection is used to successfully retrieve information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ An **SNMP** connection is used to successfully retrieve information from the dev
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

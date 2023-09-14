@@ -36,7 +36,7 @@ After the DSR-6000 unit is properly configured, it is ready to receive authoriza
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-The driver uses an HTTP connection and requires the following input during element creation:
+The connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

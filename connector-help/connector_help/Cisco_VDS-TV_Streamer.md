@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_VDS-TV_Streamer
 
 # Cisco VDS-TV Streamer
 
-The **Cisco VDS-TV Streamer** is used to stream the content stored on the **Cisco VDS-TV vault** to the set-top box. This driver allows the user to **monitor** and **configure** the Cisco VDS-TV Streamer.
+The **Cisco VDS-TV Streamer** is used to stream the content stored on the **Cisco VDS-TV vault** to the set-top box. This connector allows the user to **monitor** and **configure** the Cisco VDS-TV Streamer.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Cisco VDS-TV Streamer** is used to stream the content stored on the **Cisc
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

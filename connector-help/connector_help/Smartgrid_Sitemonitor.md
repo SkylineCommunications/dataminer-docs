@@ -4,11 +4,11 @@ uid: Connector_help_Smartgrid_Sitemonitor
 
 # Smartgrid Sitemonitor
 
-With this driver, it is possible to gather and view information from the device **Smartgrid Sitemonitor**.
+With this connector, it is possible to gather and view information from the device **Smartgrid Sitemonitor**.
 
 ## About
 
-This driver uses **SNMP** to monitor the Smartgrid Sitemonitor device. It also receives and processes **traps** from the device.
+This connector uses **SNMP** to monitor the Smartgrid Sitemonitor device. It also receives and processes **traps** from the device.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver uses **SNMP** to monitor the Smartgrid Sitemonitor device. It also r
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,4 +56,4 @@ This page displays a table with the outlet information.
 
 ### Web Interface Page
 
-This page shows the web interface of the device. Note that the client machine has to be able to acces the device, as otherwise it will not be possible to open the web interface.
+This page shows the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

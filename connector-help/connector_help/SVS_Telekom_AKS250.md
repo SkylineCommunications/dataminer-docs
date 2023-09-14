@@ -6,17 +6,17 @@ uid: Connector_help_SVS_Telekom_AKS250
 
 ## About
 
-With this driver it is possible to monitor and command **SVS Telekom AKS250** devices with SNMP.
+With this connector it is possible to monitor and command **SVS Telekom AKS250** devices with SNMP.
 
 The different parameters from the device are displayed on multiple pages according to the subject of the parameters.
 
-The driver implements all the different methods to move the antenna connected to the device.
+The connector implements all the different methods to move the antenna connected to the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

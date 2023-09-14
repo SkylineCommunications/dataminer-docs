@@ -8,19 +8,19 @@ The **Ericsson SPR1100** is a high-density broadcast video processor that allows
 
 ## About
 
-This driver is used to monitor and control an **Ericsson SPR1100** device. The driver uses **HTTP** requests to communicate with the device. The information of the device is shown on different pages. Some of the parameters can be set to a custom value. The driver uses tree views, tables and individual parameters to present its data.
+This connector is used to monitor and control an **Ericsson SPR1100** device. The connector uses **HTTP** requests to communicate with the device. The information of the device is shown on different pages. Some of the parameters can be set to a custom value. The connector uses tree views, tables and individual parameters to present its data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**            | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range**            | **Description**                                     | **DCF Integration** | **Cassandra Compliant** |
 |-----------------------------|-----------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                     | Initial version for firmware 6.20.0.120456 or lower | No                  | No                      |
 | 2.0.0.x                     | New version based on firmware above 6.20.0.120456   | Yes                 | No                      |
 | 3.0.0.x (see Notes section) | Corrected naming for several tables.                | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**            | **Device Firmware Version** |
+| **Range**            | **Device Firmware Version** |
 |-----------------------------|-----------------------------|
 | 1.0.0.x                     | 6.20.0.120456 or lower      |
 | 2.0.0.x                     | Above 6.20.0.120456         |
@@ -32,7 +32,7 @@ This driver is used to monitor and control an **Ericsson SPR1100** device. The d
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 All data gets retrieved from the device with a minimum delay of 6 seconds between each command sent to the device. This is according to specifications provided by Ericsson.
 
-The driver has **6** **timers**:
+The connector has **6** **timers**:
 
 - **Cisco Parameters**: Every 2 seconds, all switching parameters of Cisco elements in the DMS are retrieved.
 - **Boosted Status Timer**: This timer is only run when the device is rebooted. It polls for the device status every 7 seconds to see whether the device is up again.
@@ -73,7 +73,7 @@ There are nine buttons available on this page:
 - **Software Version**: Displays information about the current software version.
 - **Redundancy**: Displays the IP address, name and status of the primary and secondary devices.
 - **Clean ElementStorage**: Cleans the element storage.
-  Note: Before you **delete an element**, it is advisable to press this button. The driver uses a technique called element storage to keep the active configuration file stored in memory. Cleaning ElementStorage will remove this configuration for a short time.
+  Note: Before you **delete an element**, it is advisable to press this button. The connector uses a technique called element storage to keep the active configuration file stored in memory. Cleaning ElementStorage will remove this configuration for a short time.
 
 ### Board Overview
 
@@ -156,7 +156,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-Starting from driver range **2.0.0.x**, the Ericsson SPR1100 driver supports the usage of DCF and can only be used on a DMA with **9.0.0.0** as the minimum version.
+Starting from connector range **2.0.0.x**, the Ericsson SPR1100 driver supports the usage of DCF and can only be used on a DMA with **9.0.0.0** as the minimum version.
 
 ### Connections
 
@@ -169,7 +169,7 @@ Starting from driver range **2.0.0.x**, the Ericsson SPR1100 driver supports the
 
 ## Notes
 
-The tree controls in this driver can only be displayed in DataMiner Cube.
+The tree controls in this connector can only be displayed in DataMiner Cube.
 
 Changing the element name will not automatically push the changes to the redundancy information of other elements, which means that a manual restart of the element with the name change is currently still necessary.
 

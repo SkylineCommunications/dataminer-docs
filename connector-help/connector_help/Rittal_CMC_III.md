@@ -4,22 +4,22 @@ uid: Connector_help_Rittal_CMC_III
 
 # Rittal CMC III
 
-The Rittal CMC III is a processing unit for a network with sensors/CAN bus. This driver will allow the user to view everything the Rittal CMC III monitors.
+The Rittal CMC III is a processing unit for a network with sensors/CAN bus. This connector will allow the user to view everything the Rittal CMC III monitors.
 
 ## About
 
-The driver gets the information from the Rittal CMC III through SNMP.
+The connector gets the information from the Rittal CMC III through SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                            | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                            | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Discreet value for Status changed from 45 to 4 for Off 60s | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V5.13.00_8                  |
 | 1.0.1.x          | V5.1300_8                   |
@@ -30,7 +30,7 @@ The driver gets the information from the Rittal CMC III through SNMP.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

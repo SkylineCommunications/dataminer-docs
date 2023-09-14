@@ -8,13 +8,13 @@ The MCL MSC44PC is a VPC redundant TWTA system by MCL (licensed by Miteq).
 
 ## About
 
-With this driver it is possible to configure and monitor the positions of the switches, the main parameters of the two HPAs, the PSU state and the current alarms on the device.
+With this connector it is possible to configure and monitor the positions of the switches, the main parameters of the two HPAs, the PSU state and the current alarms on the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP connection**
 

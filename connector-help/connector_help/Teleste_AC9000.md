@@ -4,11 +4,11 @@ uid: Connector_help_Teleste_AC9000
 
 # Teleste AC9000
 
-This driver can be used to monitor Teleste AC9000 devices using **SNMP**.
+This connector can be used to monitor Teleste AC9000 devices using **SNMP**.
 
 ## About
 
-The Teleste AC9000 driver monitors the Teleste AC9000 node.
+The Teleste AC9000 connector monitors the Teleste AC9000 node.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ The Teleste AC9000 driver monitors the Teleste AC9000 node.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

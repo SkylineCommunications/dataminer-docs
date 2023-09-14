@@ -6,7 +6,7 @@ uid: Connector_help_Paradise_vBUC
 
 Teledyne Paradise Datacom's second-generation VSAT Block Up Converters (vBUCs) have been designed to offer the maximum utility in VSAT systems while maintaining the highest possible reliability.
 
-This driver polls the status and power information from the Paradise vBUC using the RS485 serial interface.
+This connector polls the status and power information from the Paradise vBUC using the RS485 serial interface.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver polls the status and power information from the Paradise vBUC using 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

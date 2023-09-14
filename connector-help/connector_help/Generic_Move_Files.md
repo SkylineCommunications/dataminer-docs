@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Move_Files
 
 # Generic Move Files
 
-With this driver, files can be moved from local folders to remote folders.
+With this connector, files can be moved from local folders to remote folders.
 
 ## About
 
@@ -14,7 +14,7 @@ The **Generic Move File** driver gives the user the possibility to move files fr
 
 ### Creation
 
-This driver uses a **virtual** connection and does not need any user information.
+This connector uses a **virtual** connection and does not need any user information.
 
 ## Usage
 

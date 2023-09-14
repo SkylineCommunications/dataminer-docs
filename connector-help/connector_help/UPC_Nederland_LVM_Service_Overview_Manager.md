@@ -17,9 +17,9 @@ The SOM subscribes to the probes that are found in the system. The following pro
 
 Every change in the **Service Overview Table** of the probes will be forwarded to the SOM and the different tables in the SOM will be updated. Which tables are updated is described further on in this document.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** |
+| **Range**     | **Description** |
 |----------------------|-----------------|
 | 1.0.0.x \[SLC Main\] | Initial version |
 
@@ -29,7 +29,7 @@ Every change in the **Service Overview Table** of the probes will be forwarded t
 
 #### Virtual connection
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration of subscriptions
 

@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_Scorpion_18_MIO-HDMI-2-4K-IP
 
 # Evertz Scorpion 18 MIO-HDMI-2-4K-IP
 
-This driver is used to monitor the Evertz Scorpion 18 MIO-HDMI-2-4K-IP microservice module.
+This connector is used to monitor the Evertz Scorpion 18 MIO-HDMI-2-4K-IP microservice module.
 
 ## About
 

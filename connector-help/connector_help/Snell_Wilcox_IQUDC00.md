@@ -14,23 +14,21 @@ At startup, the element establishes the connection with the device and, afterwar
 
 The communication is based on the RollCall serial protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                               | No                  | Yes                     |
 | 2.0.0.x          | Smart-serial implementation instead of serial | No                  | Yes                     |
 | 3.0.0.x          | RollCall version.                             | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | All                         |
 | 2.0.0.x          | All                         |
 | 3.0.0.x          | 2.213                       |
-
-
 
 ## Installation and configuration
 
@@ -38,7 +36,7 @@ The communication is based on the RollCall serial protocol.
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -50,7 +48,7 @@ SERIAL CONNECTION:
 
 Serial Secondary connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -78,7 +76,7 @@ Here, you can find the **Information Window, Unit Status, Unit Ref Status** or *
 
 Following parameters can be found on this page: **Audio Delay Select-A Manuel, Audio Delay Select-A Rolltrack 16, Audio Delay Select-A Total Delay, Audio Delay Select-B Rolltrack 14,** ...
 
-In the **Delay Selection ...** pagebutton, following parameters are editable: **EMB Delay-1** to **EMB Delay-8**.
+In the **Delay Selection** page button, following parameters are editable: **EMB Delay-1** to **EMB Delay-8**.
 
 ### Audio Status
 
@@ -96,21 +94,21 @@ Here, you can access the following parameters, among others: **Recall Memory, AR
 
 Here you can change the following parameters: **V Enhance, Colorimetry, Film/Video, Border Right, Border Top**.
 
-In the **Adv. H Enhance ...** pagebutton, these parameters are present: **AHE Status, AHE Freq Band, AHE Presets, AHE Gain, AHE Noise Rejection**.
+In the **Adv. H Enhance** page button, these parameters are present: **AHE Status, AHE Freq Band, AHE Presets, AHE Gain, AHE Noise Rejection**.
 
 ### Input
 
 **Select Input, Valid Standard 1080/25i, Valid Standard 625/25i** or **Valid Standard 525/29i** are some of the parameters accessible on the Input page.
 
-In the **Input Information ...** pagebutton, you can find the **Input 1 Standard, Input 1 Status, Input 2 Standard** and **Input 2 Status** parameters.
+In the **Input Information** page button, you can find the **Input 1 Standard, Input 1 Status, Input 2 Standard** and **Input 2 Status** parameters.
 
-The **Define Inputs ...** pagebutton allows the edition of several parameters such as the **Input 1 Valid Std, Input 1 Audio Pair 6, Input 2 Audio Pair 3,** ...
+The **Define Inputs** page button allows the edition of several parameters such as the **Input 1 Valid Std, Input 1 Audio Pair 6, Input 2 Audio Pair 3,** ...
 
-In the **Backup Rules ...** pagebutton, you can find parameters **Rule 1** to **Rule 5, Rule 1 Select Input** to **Rule 5 Select Input** and **Rule 1 Time Delay** to **Rule 5 Time Delay**.
+In the **Backup Rules** page button, you can find parameters **Rule 1** to **Rule 5, Rule 1 Select Input** to **Rule 5 Select Input** and **Rule 1 Time Delay** to **Rule 5 Time Delay**.
 
 ### Output
 
-This page gives you the following parameters: **Output Standard, Master Gain, Y Gain, C Gain, Black Level, Default Ouput** and **Force Freeze**.
+This page gives you the following parameters: **Output Standard, Master Gain, Y Gain, C Gain, Black Level, Default Output** and **Force Freeze**.
 
 ### Emb Proc Amps Groups 1-2
 
@@ -128,7 +126,7 @@ Some of the embed parameters editable on this page are: **Group 1 Active,** **Gr
 
 This page shows the **Session Status** parameter and gives the ability to force a manual polling of all the parameters through the **Refresh** button.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
@@ -136,7 +134,7 @@ Note that the client machine has to be able to access the device, as otherwise i
 
 ### General
 
-This page contains various device-related parameters such as producet, serial number, PCB, release, Build number, MIO, MV, and MH. It also contains the Information Display and 2 buttons + a pagebutton:
+This page contains various device-related parameters such as producer, serial number, PCB, release, Build number, MIO, MV, and MH. It also contains the Information Display and 2 buttons + a page button:
 
 - Connection Info... - Opens up a pop-up page containing connection and session parameters such as the local session number, assigned session number, and more.
 - Restart - restarts the device.
@@ -230,7 +228,7 @@ This page contains RollTrack Output controls: Disable all, Index, and Source. It
 
 This page includes the Recall Memory, Select Memory, Memory Name, Last Display Memory parameters and one button:
 
-- Save Memory- saves the curent memory.
+- Save Memory- saves the current memory.
 
 ### Logging Video Input
 
@@ -246,7 +244,7 @@ This page allows the user to include/exclude Audio Type Input 1 and 2 parameters
 
 ### Logging Miscellaneous
 
-This page allows the user to include/exclude various sytem parameters (versions, build number, up time)in logging. It also provides those parameters' values.
+This page allows the user to include/exclude various system parameters (versions, build number, up time)in logging. It also provides those parameters' values.
 
 ### Logging Output Audio Level
 
@@ -258,7 +256,7 @@ This page allows the user to include/exclude Output Audio State parameters in lo
 
 ### Logging Output Audio Type
 
-This page allows the user to include/exclude Ouput Audio Type parameters in logging. It also provides those parameters' values.
+This page allows the user to include/exclude Output Audio Type parameters in logging. It also provides those parameters' values.
 
 ### Logging Output Dolby E
 
@@ -279,8 +277,6 @@ This page contains various Diagnostic test controls such as Run Test (user picks
 - Run All Tests - Runs all tests, instead of just one.
 - Stop Tests - Stops all running tests.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-

@@ -4,7 +4,7 @@ uid: Connector_help_Panasonic_Super_Hi-Vision_Recorder
 
 # Panasonic Super Hi-Vision Recorder
 
-The Panasonic Super Hi-Vision Recorder driver allows the user to remotely operate, control, and monitor the device.
+The Panasonic Super Hi-Vision Recorder connector allows the user to remotely operate, control, and monitor the device.
 
 ## About
 
@@ -32,7 +32,7 @@ The Panasonic Super Hi-Vision Recorder driver allows the user to remotely operat
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -56,7 +56,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use (1.0.0.x)
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General:** Displays general device information as well as vital operation elements and their status.
 - **Status:** Contains status information of important parameters, including information on the operating status and cueing details.

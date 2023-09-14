@@ -4,7 +4,7 @@ uid: Connector_help_VizionR_Pandore_HbbTV
 
 # VizionR Pandora HbbTV
 
-The VizionR Pandora HbbTV enables the monitoring of MPEG-2 transport streams. This driver uses the SNMP interface to receive data from the device and updates critical parameters using SNMPv2 traps.
+The VizionR Pandora HbbTV enables the monitoring of MPEG-2 transport streams. This connector uses the SNMP interface to receive data from the device and updates critical parameters using SNMPv2 traps.
 
 ## About
 
@@ -32,7 +32,7 @@ The VizionR Pandora HbbTV enables the monitoring of MPEG-2 transport streams. Th
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,4 +54,4 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver allows you to monitor general information and status information of the device. It also allows you to control the entire SNMP configuration. It contains a list of the possible alarm types and the status of the different signals. Finally, it also allows you to send commands to the device.
+This connector allows you to monitor general information and status information of the device. It also allows you to control the entire SNMP configuration. It contains a list of the possible alarm types and the status of the different signals. Finally, it also allows you to send commands to the device.

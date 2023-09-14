@@ -4,13 +4,13 @@ uid: Connector_help_Elemental_Live
 
 # Elemental Live
 
-This driver polls information from an **Elemental Live** server, namely the status of streamed live events and of the encoding of live events. The driver also enables the user to create new output streams on the server.
+This connector polls information from an **Elemental Live** server, namely the status of streamed live events and of the encoding of live events. The connector also enables the user to create new output streams on the server.
 
 An **Elemental Live** system can stream multiple video outputs through the following three input types: HD-SDI, IP or local files.
 
 ## About
 
-The driver retrieves the following information from an **Elemental Live** system:
+The connector retrieves the following information from an **Elemental Live** system:
 
 - On-going live events
 - Physical inputs
@@ -20,20 +20,20 @@ The driver retrieves the following information from an **Elemental Live** system
 - Alarms/Messages
 - Settings pre-defined by the user, such as event profiles and media presets
 
-Most of these items can also be added or deleted in the driver.
+Most of these items can also be added or deleted in the connector.
 
-The driver uses **HTTP REST** commands to perform GET/POST commands based on the Elemental Live API. In addition, **SNMP** is used for the Elemental Live's traps and basic settings.
+The connector uses **HTTP REST** commands to perform GET/POST commands based on the Elemental Live API. In addition, **SNMP** is used for the Elemental Live's traps and basic settings.
 Each polling request (HTTP/SNMP) command is performed every 10 seconds.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                          |
+| **Range** | **Device Firmware Version**                          |
 |------------------|------------------------------------------------------|
 | 1.0.0.x          | Software version 2.7.0.30234 Software version 2.12.6 |
 
@@ -43,7 +43,7 @@ Each polling request (HTTP/SNMP) command is performed every 10 seconds.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 - **IP Address**: The polling IP of the HTTP server.
 - **Port**: The server's HTTP IP port.
@@ -51,7 +51,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 #### SNMP Traps/General Settings Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 - **IP Address:** The SNMP polling IP of the server.
 - **Port:** The server's SNMP port, by default *161*.

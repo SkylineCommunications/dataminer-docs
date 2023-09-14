@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Automation_Script
 
 # Generic Automation Script
 
-This driver can be used to launch Automation scripts and get status information for those Automation scripts.
+This connector can be used to launch Automation scripts and get status information for those Automation scripts.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver can be used to launch Automation scripts and get status information 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -38,9 +38,9 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver allows you to launch Automation scripts and check information on those Automation scripts.
+This connector allows you to launch Automation scripts and check information on those Automation scripts.
 
-To use the driver, set the parameter **Request** with a block of JSON code to start the script, for example:
+To use the connector, set the parameter **Request** with a block of JSON code to start the script, for example:
 *{"ScriptName": "ExtractMaterials","ScriptParams": {"ContentXml": "Test"},"ScriptDummies":{"FunctionDve":{"DmaId":123,"ElementId":456}}}*
 
 ## Notes

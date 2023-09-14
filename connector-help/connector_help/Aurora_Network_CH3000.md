@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_CH3000
 
 # Aurora Network CH3000
 
-The Aurora Network CH3000 is a driver of the type Management Element. It gathers information from the Aurora Networks CH3000 chassis and the connected cards, allowing the user to check the position of a card, the type of card and specific card information, including the status and alarms.
+The Aurora Network CH3000 is a connector of the type Management Element. It gathers information from the Aurora Networks CH3000 chassis and the connected cards, allowing the user to check the position of a card, the type of card and specific card information, including the status and alarms.
 
 ## About
 
@@ -12,27 +12,27 @@ The Aurora Network CH3000 is a chassis capable of storing 32 modules. It support
 
 The communication method used is **SNMPv1**.
 
-Note: This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers" below.
+Note: This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version.                                                                                                                                          | No                  | Yes                     |
 | 1.0.1.x              | Some parameters descriptions have been modified, which can cause the loss of alarms and trend data for these parameters.                                  | No                  | Yes                     |
 | 1.0.2.x              | Added support for HT35xxH & HT330xH.                                                                                                                      | No                  | Yes                     |
 | 1.0.3.x              | Fixed DVE creation for HT35xxH & HT330xH. Added AT Status Unsupported Cards table. Renamed HT330xH to HT33xxH. **Impact**: The element must be recreated. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
 | 1.0.2.x          | Unknown                     |
 | 1.0.3.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                                                            | **Description**     |
 |--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
@@ -64,7 +64,7 @@ Note: This driver will export different drivers based on the retrieved data. A l
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

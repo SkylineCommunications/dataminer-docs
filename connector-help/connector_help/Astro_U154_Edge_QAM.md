@@ -4,21 +4,21 @@ uid: Connector_help_Astro_U154_Edge_QAM
 
 # Astro U154 Edge QAM
 
-With this driver, you can gather and view information from the device **Astro U154 Edge QAM**, as well as configure the device.
+With this connector, you can gather and view information from the device **Astro U154 Edge QAM**, as well as configure the device.
 
 ## About
 
-This driver uses HTTP to monitor the **Astro U154 Edge QAM** device. The driver also has an SNMP interface to receive traps from the device.
+This connector uses HTTP to monitor the **Astro U154 Edge QAM** device. The connector also has an SNMP interface to receive traps from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5595                        |
 
@@ -26,9 +26,9 @@ This driver uses HTTP to monitor the **Astro U154 Edge QAM** device. The driver 
 
 ### Creation
 
-This driver uses both an HTTP and an SNMP connection.
+This connector uses both an HTTP and an SNMP connection.
 
-Depending on the setup, the **HTTP** configuration differs: this driver can communicate directly with the **U154**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
+Depending on the setup, the **HTTP** configuration differs: this connector can communicate directly with the **U154**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy.
 
 In either case, the **SNMP** interface collects the traps emitted by the device, so the SNMP IP address must be the IP address of the **U154** (not the controller).
 
@@ -158,7 +158,7 @@ The following table provides more information on how to upload/download configur
 
 #### Software Update
 
-The driver allows you to upload a firmware archive from the local disk of the DMA:
+The connector allows you to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U154_Edge_QAM_SoftwareUpdate.PNG)
 

@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_Memotec_Netperformer_SDM8400
 
 # CEFD Memotec Netperformer SDM8400
 
-The Memotec Netperformer SDM8400 version is a SNMP driver intended to communicate with SDM8400 Netperformer devices.
+The Memotec Netperformer SDM8400 version is a SNMP connector intended to communicate with SDM8400 Netperformer devices.
 
 ## About
 
@@ -21,12 +21,12 @@ A SNMP connection is used in order to succesfully retrieve and configure the dev
 **SNMP Settings:**
 
 - **Port Number:** \[*The port of the connection device (default: 161).*\]
-- **Get community string:** \[*The community string used when reading values from the device (default value is not overridden in the driver: public).*\]
-- **Set community string:** \[*The community string used when setting values on the device (*default value is not overridden in the driver: public*).*\]
+- **Get community string:** \[*The community string used when reading values from the device (default value is not overridden in the connector: public).*\]
+- **Set community string:** \[*The community string used when setting values on the device (*default value is not overridden in the connector: public*).*\]
 
 ## Usage
 
-In this section of the driver help, some general info is available about the usage of the Memotec Netperformer driver.
+In this section of the connector help, some general info is available about the usage of the Memotec Netperformer connector.
 
 ### Main Menu
 
@@ -113,7 +113,7 @@ This page provides an overview of all various types of states:
 
 
 
-### Webinterface
+### Web Interface
 
 Use this page to have access to the **Web Interface** provided by the device's web server. Only in a LAN environment it's possible to have access to this page.
 

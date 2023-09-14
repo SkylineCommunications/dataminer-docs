@@ -4,21 +4,21 @@ uid: Connector_help_Amino_A140_STB
 
 # Amino A140 STB
 
-With this driver you can configure an **Amino A140** set-top box.
+With this connector you can configure an **Amino A140** set-top box.
 
 ## About
 
-The driver uses a Telnet connection to communicate with the device.
+The connector uses a Telnet connection to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.3-Ax4x-opera10          |
 
@@ -28,7 +28,7 @@ The driver uses a Telnet connection to communicate with the device.
 
 #### Main connection
 
-This driver uses a serial (Telnet) connection and requires the following input during element creation:
+This connector uses a serial (Telnet) connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -37,7 +37,7 @@ SERIAL CONNECTION:
 
 ### Configuration of Telnet connection
 
-After you have created the element, the Telnet credentials need to be configured on the **Configuration** page of the driver.
+After you have created the element, the Telnet credentials need to be configured on the **Configuration** page of the connector.
 
 ## Usage
 

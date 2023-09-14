@@ -4,7 +4,7 @@ uid: Connector_help_Satcom_Technologies_SCR14000BU_Ku-Band_Up_Converter
 
 # Satcom Technologies SCR14000BU Ku-Band Up Converter
 
-The SCR14000BU is a KU-Band upconverter. This driver allows you to monitor and configure such devices. The device is comprised of several modules, which include a Reference Module, Radio Frequency Module, Synthesizer Module and Converter Module.
+The SCR14000BU is a KU-Band upconverter. This connector allows you to monitor and configure such devices. The device is comprised of several modules, which include a Reference Module, Radio Frequency Module, Synthesizer Module and Converter Module.
 
 ## About
 
@@ -32,7 +32,7 @@ The SCR14000BU is a KU-Band upconverter. This driver allows you to monitor and c
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

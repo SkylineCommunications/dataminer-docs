@@ -4,9 +4,9 @@ uid: Connector_help_Telenor_EPM_Manager
 
 # Telenor EPM Manager
 
-This driver is used to aggregate information coming from one or more collectors (see [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx)). These in turn aggregate their data through MAM events and Agama FireHouse export files (see [Telenor EPM Agama Consumer](xref:Connector_help_Telenor_EPM_Agama_Consumer) and Telenor EPM MAM Consumer). The driver then presents this information to the end user.
+This connector is used to aggregate information coming from one or more collectors (see [Telenor EPM Collector](/Driver%20Help/Telenor%20EPM%20Collector.aspx)). These in turn aggregate their data through MAM events and Agama FireHouse export files (see [Telenor EPM Agama Consumer](xref:Connector_help_Telenor_EPM_Agama_Consumer) and Telenor EPM MAM Consumer). The connector then presents this information to the end user.
 
-The driver has two levels of complexity:
+The connector has two levels of complexity:
 
 - On the back-end (BE) level, the **BE Manager** is responsible for a specific **county**. At this level, you can define how many collectors there are. The BE Manager is responsible for managing the load balance between these elements, as well as aggregating information from the county to the front-end level.
 - On the front-end (FE) level, the **FE Manager** is responsible for aggregating the information from all BE Managers (i.e. from all the counties) and presenting the result to the end user. It is the FE Manager that creates and controls the BE Manager elements.
@@ -37,7 +37,7 @@ The driver has two levels of complexity:
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -53,13 +53,13 @@ First you need to configure an **FE Manager**. To do this, follow these steps:
 
    - **Period Length**: Indicates how long a period takes (e.g. 4 minutes). This period should be seen as the periodicity for the generation of Agama files.
 
-   - **Period Margin**: Indicates how long the driver should wait before starting the aggregation cycle. There are two different margins, depending on the type of the element you are configuring (FE or BE). After the period margin has passed, data will be written into the parameter tables.
+   - **Period Margin**: Indicates how long the connector should wait before starting the aggregation cycle. There are two different margins, depending on the type of the element you are configuring (FE or BE). After the period margin has passed, data will be written into the parameter tables.
 
 1. Also on the **Configurations** page, specify the **Provisioning Share Location LPI Folder** and **Provisioning Share Location SDP Folder** and add the credentials to access these folders.
 
 1. On the **Configurations** page, you can also define the path where the FE Manager can create **logging files**. These will contain information on the inconsistencies that the FE Manager encounters when trying to build the infrastructure topology diagram.
 
-When you have configured the FE Manager element, you can configure a **BE Manager**. The driver includes logic to facilitate the creation of a BE Manager. To do this, follow these steps:
+When you have configured the FE Manager element, you can configure a **BE Manager**. The connector includes logic to facilitate the creation of a BE Manager. To do this, follow these steps:
 
 1. Restart the element. After the restart, the FE Manager will check the paths where provisioning is configured and read how many counties there are at most. It will then check if any have already been configured.
 
@@ -85,7 +85,7 @@ As this is an EPM Manager, most users should only ever use the **visual pages**.
 
 This page shows as which kind of manager the element is used: FE or BE. If the element type is set to BE, the page also shows for which county the element is responsible.
 
-The **Telenor Propaganda** driver is used to monitor EPM Manager information, such as alarms, active devices, etc. at the end of an aggregation cycle (FE Manager). If you want to use this driver with the EPM Manager, fill in the parameter **Propaganda Element ID** in the **FE Manager** element.
+The **Telenor Propaganda** connector is used to monitor EPM Manager information, such as alarms, active devices, etc. at the end of an aggregation cycle (FE Manager). If you want to use this connector with the EPM Manager, fill in the parameter **Propaganda Element ID** in the **FE Manager** element.
 There is also a button to force the synchronization between the two drivers (**Propaganda Synchronization**).
 
 **Note:** Some parameters on the General page are read-only, but these can be changed on the **Configurations** page.

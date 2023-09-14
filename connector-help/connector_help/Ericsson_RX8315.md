@@ -4,24 +4,24 @@ uid: Connector_help_Ericsson_RX8315
 
 # Ericsson RX8315
 
-This is an SNMP driver that shows the status of the different parameters of an **Ericsson RX8315 receiver**.
+This is an SNMP connector that shows the status of the different parameters of an **Ericsson RX8315 receiver**.
 
 ## About
 
 The **Ericsson RX8315** is a very versatile piece of equipment. It comes in many different configurations, in which input and output options vary between IP, Satellite, Combo (satellite and IP), VSB, and ASI. For a combo type, a primary and secondary input can be specified.
 
-This driver is intended to be usable with as many variations of the product as possible.
+This connector is intended to be usable with as many variations of the product as possible.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.         | No                  | Yes                     |
 | 1.1.0.x          | New firmware. Added DCF. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Software Version** |
+| **Range** | **Device Software Version** |
 |------------------|-----------------------------|
 | 1.0.0.x          | Under 8.10                  |
 | 1.1.0.x          | New firmware version 8.10   |
@@ -32,7 +32,7 @@ This driver is intended to be usable with as many variations of the product as p
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -145,7 +145,7 @@ This page contains a link to the web page of the actual device. Note that the cl
 
 ## DataMiner Connectivity Framework
 
-The **1.1.0.x** driver range of the Ericsson RX8315 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.1.0.x** connector range of the Ericsson RX8315 protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

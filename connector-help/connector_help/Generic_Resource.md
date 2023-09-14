@@ -4,13 +4,13 @@ uid: Connector_help_Generic_Resource
 
 # Generic Resource
 
-The Generic Resource driver allows you to combine alarm states of different elements through element connections. It also allows the creation of virtual interfaces that are supported by DCF.
+The Generic Resource connector allows you to combine alarm states of different elements through element connections. It also allows the creation of virtual interfaces that are supported by DCF.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                 | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.1              | Initial version                                                 | Yes                 | Yes                     |
 | 1.0.1.x \[SLC Main\] | Implementation of custom Input/Output table. Added DCF support. | Yes                 | Yes                     |
@@ -21,7 +21,7 @@ The Generic Resource driver allows you to combine alarm states of different elem
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

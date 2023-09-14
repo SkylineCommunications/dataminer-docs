@@ -4,7 +4,7 @@ uid: Connector_help_Tandberg_SM6620
 
 # Tandberg SM6620
 
-The **Tandberg SM6620** driver can be used to display and configure information via SNMP.
+The **Tandberg SM6620** connector can be used to display and configure information via SNMP.
 
 ## About
 
@@ -14,7 +14,7 @@ The SM6620 modulator provides a feature-rich modulation solution while maintaini
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

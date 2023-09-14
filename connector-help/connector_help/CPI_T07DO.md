@@ -6,7 +6,7 @@ uid: Connector_help_CPI_T07DO
 
 The CPI T07DO is a 750 W outdoor TWT amplifier for satellite communication, designed for outdoor operation.
 
-This driver communicates with the device using serial commands as described in the manual of the device.
+This connector communicates with the device using serial commands as described in the manual of the device.
 
 ## About
 
@@ -38,7 +38,7 @@ This driver communicates with the device using serial commands as described in t
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -75,6 +75,6 @@ The element has the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.2.0.x** driver range of the CPI T07DO protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.2.0.x** connector range of the CPI T07DO protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_CDMR_Task_Manager
 
 # Skyline CDMR Task Manager
 
-The driver can be used to display and control data on the Skyline Collaboration Platform.
+The connector can be used to display and control data on the Skyline Collaboration Platform.
 
 ## About
 
@@ -32,7 +32,7 @@ The driver can be used to display and control data on the Skyline Collaboration 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

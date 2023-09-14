@@ -35,7 +35,7 @@ The ev6-FR's architecture enables modules with advanced functionality because of
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has the following pages:
+The element created with this connector has the following pages:
 
 - **General**: Contains general information, including the system description, uptime, contact, location and more.
 - **Notify Faults**: Contains a table listing each fault name with each status, detailing whether it was sent as a trap or not.

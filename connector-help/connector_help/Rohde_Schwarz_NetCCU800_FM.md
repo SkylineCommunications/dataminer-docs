@@ -4,7 +4,7 @@ uid: Connector_help_Rohde_Schwarz_NetCCU800_FM
 
 # Rohde Schwarz NetCCU800 FM
 
-This driver is developed for devices such as the **Rohde Schwarz NetCCU800 FM**. It polls several SNMP parameters and displays them on different pages. It also allows the user to configure certain settings. Traps are intercepted to update program and status information.
+This connector is developed for devices such as the **Rohde Schwarz NetCCU800 FM**. It polls several SNMP parameters and displays them on different pages. It also allows the user to configure certain settings. Traps are intercepted to update program and status information.
 
 ## About
 
@@ -16,7 +16,7 @@ With three timers, all the SNMP parameters are polled and displayed on several p
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

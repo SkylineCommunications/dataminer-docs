@@ -10,9 +10,9 @@ SQM-DemoSubscriberData Driver to offload data in DSL format. Latitude, longitude
 
 This protocol is pure for CRM simulation.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 0.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This protocol is pure for CRM simulation.
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

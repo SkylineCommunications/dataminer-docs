@@ -4,7 +4,7 @@ uid: Connector_help_ViaSat_VPCMA
 
 # ViaSat VPCMA
 
-This driver is used to monitor the ViaSat VPCMA device.
+This connector is used to monitor the ViaSat VPCMA device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor the ViaSat VPCMA device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ No extra configuration is needed.
 
 ## How to Use
 
-The driver uses the **SNMP** protocol to retrieve data from the device.
+The connector uses the **SNMP** protocol to retrieve data from the device.
 
 The **General** page lists the device info and the main status parameters (Lock, SNR, etc.).
 

@@ -4,7 +4,7 @@ uid: Connector_help_ONATi_delair_Etsiline_32
 
 # ONATi delair Etsiline 32
 
-The ONATi delair Etsiline 32 is a virtual driver that is used to monitor the output of **Advantech ADAM6050** elements.
+The ONATi delair Etsiline 32 is a virtual connector that is used to monitor the output of **Advantech ADAM6050** elements.
 
 ## About
 
@@ -30,7 +30,7 @@ The ONATi delair Etsiline 32 is a virtual driver that is used to monitor the out
 
 ### Connections
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

@@ -4,27 +4,27 @@ uid: Connector_help_opVision_OPV9000
 
 # opVision OPV9000
 
-This driver monitors and controls the state of the **opVision OPV9000** rack controller through a serial connection. The information of the device is polled with one single timer every five seconds.
+This connector monitors and controls the state of the **opVision OPV9000** rack controller through a serial connection. The information of the device is polled with one single timer every five seconds.
 
 ## About
 
 The protocol uses serial communication to retrieve information and to control the device.
 
-The driver will export other drivers depending on the installed racks at the device. The exported drivers are described in the exported drivers section.
+The connector will export other drivers depending on the installed racks at the device. The exported connectors are described in the exported connectors section.
 
 ### Ranges of the Driver
 
-| **Driver Range** | **Description**  |
+| **Range** | **Description**  |
 |------------------|------------------|
 | 1.0.0.x          | Initial version. |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                |
+| **Range** | **Device Firmware Version**                                                                                |
 |------------------|------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | No available information, except for the Network Manager Card version, which is OPVNM-1.0 for the OPV9000. |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol** | **Description**                                                       |
 |-----------------------|-----------------------------------------------------------------------|
@@ -36,7 +36,7 @@ The driver will export other drivers depending on the installed racks at the dev
 
 #### Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The opVision OPV9000 parent driver has several different pages: **General Information, Video, Optical, Hardware,** **Channel Control State** and **Custom Serial Command**.
+The opVision OPV9000 parent connector has several different pages: **General Information, Video, Optical, Hardware,** **Channel Control State** and **Custom Serial Command**.
 
 ### General Information
 

@@ -4,17 +4,17 @@ uid: Connector_help_STS_LNA_Monitor_and_Control
 
 # STS LNA Monitor and Control
 
-DataMiner driver to monitor and control an STS LNA Controller.
+DataMiner connector to monitor and control an STS LNA Controller.
 
 ## About
 
-This driver doesn't communicate directly with a device. Element connections are used to link parameters from this driver with contacts of an IO box driver.
+This connector doesn't communicate directly with a device. Element connections are used to link parameters from this connector with contacts of an IO box driver.
 
 Some parameters show the combined status of multiple IO contacts as a single parameter.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ Some parameters show the combined status of multiple IO contacts as a single par
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the remote contacts.
 

@@ -4,21 +4,21 @@ uid: Connector_help_Mitec_WTX-5964xx-70-ES-xx
 
 # Mitec WTX - 5964xx-70-ES-xx
 
-The Mitec WTX-5964xx-70-ES-xx driver can be used to read information from the High Power Transmitter Unit and to configure its settings. The communication between the protocol and the device is established using a serial connection.
+The Mitec WTX-5964xx-70-ES-xx connector can be used to read information from the High Power Transmitter Unit and to configure its settings. The communication between the protocol and the device is established using a serial connection.
 
 ## About
 
 Using **serial** communication, the protocol retrieves settings, telemetry, and alarm information from the unit. Some of these parameters are: Temperature, L-Band Frequency (also called IF Frequency), Output Power, and Mute Status. The protocol also sets some of the parameters on the Mitec WTX-5964xx-70-ES-xx, for example the Device Address and IF Frequency.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | Yes                 | Yes                     |
+| 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3900040-00-Rxx              |
 

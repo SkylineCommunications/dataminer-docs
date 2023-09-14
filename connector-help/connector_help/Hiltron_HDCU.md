@@ -4,11 +4,11 @@ uid: Connector_help_Hiltron_HDCU
 
 # Hiltron HDCU
 
-This driver is designed to monitor an HDCU (Hiltron De-icing Control Unit) device through SNMP. The device has a de-icing sensor and a dish heating system that can be monitored with this driver. The HDCU is present on satellite antenna dishes.
+This connector is designed to monitor an HDCU (Hiltron De-icing Control Unit) device through SNMP. The device has a de-icing sensor and a dish heating system that can be monitored with this connector. The HDCU is present on satellite antenna dishes.
 
 ## About
 
-This driver retrieves the temperatures and the currents on the device to give an overview of the device state, particularly in critical cases (*sensor fails*, *critical temperatures* or *currents*).
+This connector retrieves the temperatures and the currents on the device to give an overview of the device state, particularly in critical cases (*sensor fails*, *critical temperatures* or *currents*).
 
 It allows the user to modify some parameters such as the heating fallback time when the heating request is no longer active. The device can send traps to announce a state change, which is immediately echoed to the relevant driver parameters. It is also possible to change the names of the different control entities directly in the device, and to change general system information, which will be used in sent traps.
 
@@ -16,7 +16,7 @@ It allows the user to modify some parameters such as the heating fallback time w
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

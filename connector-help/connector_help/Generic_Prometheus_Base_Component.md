@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Prometheus_Base_Component
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to either aggregate and record new time series from existing data, or generate alerts.
 
-The **Generic Prometheus Collector** driver executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a driver derived from this **Generic Prometheus Base Component** driver, which will display the data. This driver is **NOT** intended to be used as is. It should be considered as a starting point to which parameters should still be added, which will then be automatically filled in.
+The **Generic Prometheus Collector** connector executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a connector derived from this **Generic Prometheus Base Component** connector, which will display the data. This connector is **NOT** intended to be used as is. It should be considered as a starting point to which parameters should still be added, which will then be automatically filled in.
 
 ## About
 
@@ -28,7 +28,7 @@ The **Generic Prometheus Collector** driver executes queries via HTTP to retriev
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -36,15 +36,15 @@ No additional configuration of parameters is needed in a newly created element.
 
 ## How to Use
 
-Data is pushed to this driver by an element using the **Generic Prometheus Collector** driver, which means that no data traffic will be seen in the **Stream Viewer**.
+Data is pushed to this connector by an element using the **Generic Prometheus Collector** connector, which means that no data traffic will be seen in the **Stream Viewer**.
 
-The parameter name determines in which parameter the data will be placed. The idea of this driver is that new drivers are created based on it, and these kinds of destination data parameters are added to them. For more information about the format, refer to the Notes section below.
+The parameter name determines in which parameter the data will be placed. The idea of this connector is that new connectors are created based on it, and these kinds of destination data parameters are added to them. For more information about the format, refer to the Notes section below.
 
-A number of parameters in the driver are used for the correct functioning of the driver and must not be removed. It is clearly indicated in the comments that these should not be removed or modified. There are also some example parameters present to demonstrate the structure; these can be removed when a new driver is created.
+A number of parameters in the connector are used for the correct functioning of the connector and must not be removed. It is clearly indicated in the comments that these should not be removed or modified. There are also some example parameters present to demonstrate the structure; these can be removed when a new connector is created.
 
 ### Configuration
 
-The parameters on the **Configuration** page are needed for the driver to function correctly. Do not remove these.
+The parameters on the **Configuration** page are needed for the connector to function correctly. Do not remove these.
 
 If the destination parameter is a table column, these rows will be added automatically, but they will not be removed by default. With the **Remove Old Rows After** parameter, you can configure after how much time a row will be removed if no new data has arrived for this row.
 
@@ -54,9 +54,9 @@ The **Executed Parameter Sets** will by default be refreshed every 5 minutes (de
 
 ## Notes
 
-Parameters that should contain the data need to be added to the driver manually.
+Parameters that should contain the data need to be added to the connector manually.
 
-The driver has been created in such way that no extra QAction logic or modification is needed; only adding parameters with the correct name should suffice to have data filled in.
+The connector has been created in such way that no extra QAction logic or modification is needed; only adding parameters with the correct name should suffice to have data filled in.
 
 ### Single Numeric Parameters
 

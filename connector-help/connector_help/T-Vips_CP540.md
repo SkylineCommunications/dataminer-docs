@@ -4,22 +4,22 @@ uid: Connector_help_T-Vips_CP540
 
 # T-Vips CP540
 
-This driver is used to retrieve status parameters, mainly alarms, via SNMP.
+This connector is used to retrieve status parameters, mainly alarms, via SNMP.
 
 ## About
 
-This driver fetches status information via SNMP and displays it in simple parameters and tables.
+This connector fetches status information via SNMP and displays it in simple parameters and tables.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version          | Yes                 | Yes                     |
 | 1.1.0.x          | New firmware (see below) | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Before v3.1                 |
 | 1.1.0.x          | v3.1                        |
@@ -30,7 +30,7 @@ This driver fetches status information via SNMP and displays it in simple parame
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

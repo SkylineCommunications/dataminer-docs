@@ -8,13 +8,13 @@ The **T-VIPS CP560** is a DVB-T2 Gateway. It provides a central point of control
 
 ## About
 
-With this driver, you can monitor and configure the T-VIPS CP560 device, using an SNMP connection.
+With this connector, you can monitor and configure the T-VIPS CP560 device, using an SNMP connection.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

@@ -4,19 +4,19 @@ uid: Connector_help_Argus_Alpha
 
 # Argus Alpha
 
-The **Argus Alpha** driver uses SNMP to communicate with the **Argus Alpha controller**.
+The **Argus Alpha** connector uses SNMP to communicate with the **Argus Alpha controller**.
 
 ## About
 
-The **Argus Alpha** driver can be used to monitor the **Argus Alpha controller**. This device only supports monitoring via SNMP, which means that configuration settings still need to be done on the interface of the device itself.
+The **Argus Alpha** connector can be used to monitor the **Argus Alpha controller**. This device only supports monitoring via SNMP, which means that configuration settings still need to be done on the interface of the device itself.
 
-On top of the normal SNMP polling, the device also sends traps (notifications) when an alarm occurs on the system. The driver will then update the **Alarms Table** with the new alarms.
+On top of the normal SNMP polling, the device also sends traps (notifications) when an alarm occurs on the system. The connector will then update the **Alarms Table** with the new alarms.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -50,7 +50,7 @@ The **Alarms** table is a custom table that contains an entry for every possible
 
 ### Web Interface
 
-This page can be used to access the web interface for the device. Note that the web interface of the device must be accessible from the client PC if you want to access it via the driver.
+This page can be used to access the web interface for the device. Note that the web interface of the device must be accessible from the client PC if you want to access it via the connector.
 
 ## Notes
 

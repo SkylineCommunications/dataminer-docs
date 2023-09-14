@@ -4,17 +4,17 @@ uid: Connector_help_DEVA_Broadcast_DB44
 
 # DEVA Broadcast DB44
 
-The **DEVA Broadcast DB44** driver displays information related to the **DEVA Broadcast DB44** Receiver device.
+The **DEVA Broadcast DB44** connector displays information related to the **DEVA Broadcast DB44** Receiver device.
 
 ## About
 
-This driver uses an SNMP connection to communicate with the **DEVA Broadcast DB44** device.
+This connector uses an SNMP connection to communicate with the **DEVA Broadcast DB44** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_DMDP6802+D
 
 # Imagine Communications DMDP6802+D
 
-The Imagine Communications DMDP6802+D is a data and metadata processing module, supporting 3G, HD, and SD-SDI signals. It converts GPI trigger bit inputs into VANC and/or GPI outputs from VANC. Additionally, it supports the insertion and extraction of metadata in one card and provides dual independent metadata processing channels. This driver can be used to monitor, trend, and control the DMDP6802+D.
+The Imagine Communications DMDP6802+D is a data and metadata processing module, supporting 3G, HD, and SD-SDI signals. It converts GPI trigger bit inputs into VANC and/or GPI outputs from VANC. Additionally, it supports the insertion and extraction of metadata in one card and provides dual independent metadata processing channels. This connector can be used to monitor, trend, and control the DMDP6802+D.
 
 ## About
 
@@ -32,7 +32,7 @@ The Imagine Communications DMDP6802+D is a data and metadata processing module, 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

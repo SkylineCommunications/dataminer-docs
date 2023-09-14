@@ -8,7 +8,7 @@ The CDM-880 Multi Receiver Router serves as the hub expansion utility component 
 
 ## About
 
-This driver is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
+This connector is intended to get/set information from/to the device via an Element in a DataMiner System, using SNMP commands.
 To get more detailed information consult the website <http://www.comtechefdata.com/support/docs/advancedvsatdocs>.
 
 ### Version Info

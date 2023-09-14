@@ -4,24 +4,24 @@ uid: Connector_help_Ceragon_Networks_FibeAir_IP-20
 
 # Ceragon Networks FibeAir IP-20
 
-This driver retrieves information from a Ceragon Networks FibeAir IP-20 via SNMP.
+This connector retrieves information from a Ceragon Networks FibeAir IP-20 via SNMP.
 
 Ceragon FiberAir IP-20G is a hybrid, split-mount hauling solution for edge and ring node. Supporting all common features of the IP-20 platform. FibeAir IP-20G boosts performance in today's networks while providing a cost-effective path to the furure network requirements. It offers full support for TDM services, as well as rich set of advanced carrier ethernet services providing a wide range of new capabilities that address the diverse and evolving needs of mobile backhaul, ISPs, utilities, government and private networks.
 
 ## About
 
-The **FiberAir IP-20G** driver displays the general information, available interfaces, radio and ethernet configuration of the device. All information is retrieved using SNMP.
+The **FiberAir IP-20G** connector displays the general information, available interfaces, radio and ethernet configuration of the device. All information is retrieved using SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Yes                 | Yes                     |
 | 1.0.1.x          | Based On: 1.0.0.4 Range Impact: Changed column displayed layout for the Interfaces table due to adding new rate parameters. Range Actions to Take: Verify external applications e.g. Reporter Templates that take the order of columns into account. Range Impact: Changed displaykey for the Interfaces table because previous format was not unique. Format consists now of "\[Description\].\[Index\] - \[Alias\]" Range Actions to Take: Verify any configured alarm filter in the DMS to match the new format. NF: Added Bitrate on Ethernet Statistics table. NF: Added rate parameters for Discarded , Broadcast, Unicast (in/out) packets. NF: Added rate parameters for all Counters available in Interface Physical Port RMON Statistics table. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -31,7 +31,7 @@ The **FiberAir IP-20G** driver displays the general information, available inter
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -14,7 +14,7 @@ In version 2.1.2.29, an extra feature is introduced that allows the use of a POS
 
 ### Ranges of the Driver
 
-| **Driver Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------|---------------------|-------------------------|
 | 1.1.0.x              | Release version              | No                  | No                      |
 | 2.1.0.x              | Adjusts Float and Delta Test | No                  | No                      |
@@ -94,7 +94,7 @@ This page displays information about the batteries, such as the Total Battery Vo
 
 ### Test Page
 
-This page displays a summary of the last test result of the tests performed by this driver or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
+This page displays a summary of the last test result of the tests performed by this connector or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
 
 To start a new test on the device, click the **Start test** button.
 

@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Networks_Node_NC4000_Single_DT_REV_A
 
 # Aurora Network Node NC 4000 Single DT REV A
 
-The Aurora Network Node NC4000 Single DT REV A driver is a DVE created by the Aurora Network CX3001 driver.
+The Aurora Network Node NC4000 Single DT REV A connector is a DVE created by the Aurora Network CX3001 connector.
 
 It is created for every Digital Transceiver Module Revision A Type that is part of the NC 4000 chassis.
 The types that are defined as Type A are:
@@ -27,7 +27,7 @@ The information displayed in the main element is delivered in four pages:
 
 ### Creation
 
-This driver is automatically created by the Aurora CX3001 driver. For each digital transceiver found in the system, a virtual element will be created.
+This connector is automatically created by the Aurora CX3001 connector. For each digital transceiver found in the system, a virtual element will be created.
 
 ## Usage
 
@@ -58,7 +58,3 @@ This page contains information regarding voltages, power and currents.
 ### Converters Page
 
 This page displays information related to the **Slot D Converters** and **Slot E Converters**.
-
-## Notes
-
-N/A

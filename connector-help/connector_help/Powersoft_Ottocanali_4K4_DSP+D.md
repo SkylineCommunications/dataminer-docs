@@ -10,15 +10,15 @@ The **Ottocanali 4K4** is a flexible and reliable 8-channel power amplifiers wit
 
 Protocol to monitor **Ottocanali 4K4** 8-channel power amplifiers, that uses a **Serial** connection. It is also required the **Local IP Por**t as 61001 (set by default).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.7.6.36                    |
 
@@ -28,7 +28,7 @@ Protocol to monitor **Ottocanali 4K4** 8-channel power amplifiers, that uses a *
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

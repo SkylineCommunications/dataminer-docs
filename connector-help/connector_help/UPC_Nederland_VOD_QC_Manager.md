@@ -8,7 +8,7 @@ The **UPCN VOD QC Manager** is a **virtual** driver. It's used to manage the dat
 
 ## About
 
-The driver will receive asset data from the **workflow manager**, these assets are sent to an **Aurora** server for a quality check (QC). Once the QC is done the results are sent back to the **workflow manager**.
+The connector will receive asset data from the **workflow manager**, these assets are sent to an **Aurora** server for a quality check (QC). Once the QC is done the results are sent back to the **workflow manager**.
 
 Incoming assets are sorted on 4 values: Queue Priority, Date, Category Priority and Name. The asset with the highest priority will be scheduled first. Each assets also has a certain template linked to it, which defines which QC is used.
 
@@ -16,11 +16,11 @@ Incoming assets are sorted on 4 values: Queue Priority, Date, Category Priority 
 
 ### Creation
 
-This driver uses a **virtual** connection and does not need any user information.
+This connector uses a **virtual** connection and does not need any user information.
 
 ### Extra configurations
 
-There are some extra **configurations** that need to be done before the driver can work correctly. These **configurations** need to be set on the **General-** and the **Template** page. The settings that need to be done, are explained in more detail on the **Usage \> General** and **Usage \> Template** section of this document.
+There are some extra **configurations** that need to be done before the connector can work correctly. These **configurations** need to be set on the **General-** and the **Template** page. The settings that need to be done, are explained in more detail on the **Usage \> General** and **Usage \> Template** section of this document.
 
 ## Usage
 

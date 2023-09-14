@@ -4,23 +4,23 @@ uid: Connector_help_Riverbed_Steelhead
 
 # Riverbed Steelhead
 
-This driver can be used to monitor the Riverbed Steelhead management system.
+This connector can be used to monitor the Riverbed Steelhead management system.
 
 ## About
 
-The driver uses the **SNMP** protocol to communicate with the device.
+The connector uses the **SNMP** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                 | No                  | No                      |
 | 1.1.0.x          | Driver changed to use new MIBs.                                  | No                  | No                      |
 | 2.0.0.x          | New range for SNMP version 3, based on previous version 1.1.0.1. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 8.6.2b \#6                  |
 | 1.1.0.x          | 9.2.1b \#1 x86_64           |
@@ -32,7 +32,7 @@ The driver uses the **SNMP** protocol to communicate with the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

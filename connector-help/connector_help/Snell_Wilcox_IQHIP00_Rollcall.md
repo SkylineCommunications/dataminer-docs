@@ -4,7 +4,7 @@ uid: Connector_help_Snell_Wilcox_IQHIP00_Rollcall
 
 # Snell Wilcox IQHIP00 Rollcall
 
-This is a Rollcall-based driver that allows you to monitor and configure the Snell Wilcox IQHIP00 video server device.
+This is a Rollcall-based connector that allows you to monitor and configure the Snell Wilcox IQHIP00 video server device.
 
 ## About
 
@@ -32,7 +32,7 @@ This is a Rollcall-based driver that allows you to monitor and configure the Sne
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_ServiceHeroes_ServiceHighway
 
 # ServiceHeroes ServiceHighway
 
-This driver supports different controls for the **ServiceHighway ticketing system**.
+This connector supports different controls for the **ServiceHighway ticketing system**.
 
 ## About
 
 The ServiceHighway uses **SOAP** calls to retrieve the device information. Minimum required framework: .NET 4.5
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The ServiceHighway uses **SOAP** calls to retrieve the device information. Minim
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

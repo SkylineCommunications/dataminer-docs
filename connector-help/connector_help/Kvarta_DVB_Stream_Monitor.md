@@ -36,7 +36,7 @@ The DVB Stream Monitor is a solution for DVB-C and/or IPTV monitoring for unicas
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

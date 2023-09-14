@@ -4,21 +4,21 @@ uid: Connector_help_Vertex_DTR
 
 # Vertex DTR
 
-The **Vertex DTR** is a tracking receiver developed for satellite tracking and uplink power control applications. This driver can be used to monitor and control any Vertex DTR device.
+The **Vertex DTR** is a tracking receiver developed for satellite tracking and uplink power control applications. This connector can be used to monitor and control any Vertex DTR device.
 
 ## About
 
-A **TCP/IP connection** is used to retrieve data from the device. The driver uses the "Remote Monitor and Control (M&C)" protocol as described in the user manual.
+A **TCP/IP connection** is used to retrieve data from the device. The connector uses the "Remote Monitor and Control (M&C)" protocol as described in the user manual.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 3.1.0.X          | Firmware version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.1.0.x          | V5.13.00_6                  |
 
@@ -28,7 +28,7 @@ A **TCP/IP connection** is used to retrieve data from the device. The driver use
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

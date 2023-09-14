@@ -8,17 +8,17 @@ uid: Connector_help_Imagine_Communications_MKE_3901
 
 ## About
 
-This driver allows you to access various information on the device. The data is retrieved using SNMP. There are different possibilities available for alarm monitoring and trending.
+This connector allows you to access various information on the device. The data is retrieved using SNMP. There are different possibilities available for alarm monitoring and trending.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver allows you to access various information on the device. The data is 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

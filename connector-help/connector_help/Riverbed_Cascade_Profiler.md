@@ -8,13 +8,13 @@ The **Riverbed Cascade Profiler** reports data collected by other Cascade device
 
 ## About
 
-This driver uses SNMP to collect resources, consumption information and sensor data.
+This connector uses SNMP to collect resources, consumption information and sensor data.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

@@ -4,11 +4,11 @@ uid: Connector_help_UHP_Networks_NMS
 
 # UHP Networks NMS
 
-The **UHP Networks NMS** DataMiner driver can be used to retrieve information from a UHP Networks Network Monitoring System.
+The **UHP Networks NMS** DataMiner connector can be used to retrieve information from a UHP Networks Network Monitoring System.
 
 ## About
 
-This driver makes it possible to monitor the UHP Networks NMS, hubs and remote modems. The driver uses the **HTTP** protocol as a primary connection to retrieve data from the remote platform API.
+This connector makes it possible to monitor the UHP Networks NMS, hubs and remote modems. The connector uses the **HTTP** protocol as a primary connection to retrieve data from the remote platform API.
 
 All data in the element is read-only. It is not possible to configure the UHP Networks NMS via DataMiner.
 
@@ -36,7 +36,7 @@ All data in the element is read-only. It is not possible to configure the UHP Ne
 
 #### HTTP Primary connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -46,7 +46,7 @@ HTTP CONNECTION:
 
 #### SNMP connection
 
-The driver only uses this SNMP connection when the Management IP is selected for controllers and stations. This connection requires no input during element creation.
+The connector only uses this SNMP connection when the Management IP is selected for controllers and stations. This connection requires no input during element creation.
 
 ### Initialization
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 
@@ -77,7 +77,7 @@ Via the **Controllers** and the **Routes** page buttons, you can access the foll
 
 - **Controller Enable/Disable**: Displays a table where you can **enable/disable DVE creation** for each controller. The following settings are also available:
 
-- **Auto Enable Controllers**: When this is enabled, if the driver detects a new controller, a new DVE element will automatically be created.
+- **Auto Enable Controllers**: When this is enabled, if the connector detects a new controller, a new DVE element will automatically be created.
   - **Auto Delete Controller DVEs**: When this is enabled, if the controller is removed from the UHP NMS, the DVE element will automatically be deleted in DataMiner. When this is disabled, you can delete the DVE manually by clicking the **Disable** toggle button in the DVE.
   - **Auto Delete Controller Delay:** Specifies the amount of time a DVE stays enabled after it is removed from the NMS.
   - **Create DVE for Deactivated Remotes**: When this is disabled, controllers that are not enabled are treated the same way as removed controllers: no DVE element will be created if the **Auto Enable Controllers** option is enabled. Enable this setting if you also want an element for controllers that are not enabled.
@@ -90,7 +90,7 @@ Via the **Remotes** and the **Routes** page buttons, you can access the followin
 
 - **Station Routes**: Displays a table with all defined IP packet routes on all stations. The **Management IP** for each station can be defined in this table.
 - **Remotes Enable/Disable**: Displays a table where you can **enable/disable DVE creation** for each remote station. The following settings are also available:
-  - **Auto Enable Remotes**: When this is enabled, if the driver detects a new remote, a new DVE element will automatically be created.
+  - **Auto Enable Remotes**: When this is enabled, if the connector detects a new remote, a new DVE element will automatically be created.
   - **Auto Delete Remote DVEs**: When this is enabled, if the remote is removed from the UHP NMS, the DVE element will automatically be deleted in DataMiner. When this is disabled, you can delete the DVE manually by clicking the **Disable** toggle button in the DVE.
   - **Auto Delete Remote Delay:** Specifies the amount of time a DVE stays enabled after it is removed from the NMS.
   - **Create DVE for Deactivated Remotes:** When this is disabled, Remotes that have the state "Down" are treated the same way as removed remotes: no DVE element will be created if the **Auto Enable Controllers** option is enabled. Enable this setting if you also want an element for remotes that have the state "Down".

@@ -17,17 +17,17 @@ This protocol monitors and controls an **SA Phoenix** device through SNMP calls.
 
 SNMP traps can be retrieved if this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                        | No                  | No                      |
 | 1.1.0.x          | Device Settings Table edited, trap receiver added, display time in UTC | No                  | No                      |
 | 1.1.1.x          | Auto Discovery Function and Data Distribution Duplex added.            | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                |
+| **Range** | **Device Firmware Version**                |
 |------------------|--------------------------------------------|
 | 1.0.0.x          | Compatible with software version 01.05.00. |
 | 1.1.0.x          | Compatible with software version 01.05.00. |
@@ -39,7 +39,7 @@ SNMP traps can be retrieved if this is enabled on the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

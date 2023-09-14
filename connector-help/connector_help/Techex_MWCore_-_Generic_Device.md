@@ -4,7 +4,7 @@ uid: Connector_help_Techex_MWCore_-_Generic_Device
 
 # Techex MWCore - Generic Device
 
-This driver is used by Dynamic Virtual Elements (DVEs) exported by the Techex MWCore parent driver.
+This connector is used by Dynamic Virtual Elements (DVEs) exported by the Techex MWCore parent connector.
 
 ## About
 
@@ -22,7 +22,7 @@ This driver is used by Dynamic Virtual Elements (DVEs) exported by the Techex MW
 
 ## Configuration
 
-This driver is automatically created by the parent driver [Techex MWCore](xref:Connector_help_Techex_MWCore).
+This connector is automatically created by the parent connector [Techex MWCore](xref:Connector_help_Techex_MWCore).
 
 ### Web Interface
 
@@ -34,7 +34,7 @@ The element contains general information, network information and settings for a
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Techex MWCore - Generic Device protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Techex MWCore - Generic Device protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

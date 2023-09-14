@@ -8,7 +8,7 @@ The General Electronics UPS is an uninterruptible power supply that works with t
 
 ## About
 
-The General Electronics UPS driver makes it possible to monitor and control a selected UPS. The driver was made to resemble the existing web interface.
+The General Electronics UPS connector makes it possible to monitor and control a selected UPS. The connector was made to resemble the existing web interface.
 
 ## Installation and configuration
 
@@ -92,4 +92,4 @@ This page displays the webpage of this device.
 
 ## Notes
 
-Note that if you use firmware version "GEDE CP5 SNMP/Web Interface Ver.1.0 (2008/05/09)", the driver will not be able to set parameters.
+Note that if you use firmware version "GEDE CP5 SNMP/Web Interface Ver.1.0 (2008/05/09)", the connector will not be able to set parameters.

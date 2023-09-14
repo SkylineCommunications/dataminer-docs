@@ -8,19 +8,19 @@ The **NetInsight Nimbra VA** is used to encode, decode and transport live video 
 
 ## About
 
-The driver uses an SNMP connection to monitor **NetInsight Nimbra VA** devices. In the driver it is possible to observe tables that contain information about encoding, decoding, transportation, statistics and alarms.
+The connector uses an SNMP connection to monitor **NetInsight Nimbra VA** devices. In the connector it is possible to observe tables that contain information about encoding, decoding, transportation, statistics and alarms.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                             | No                  | Yes                     |
 | 1.1.0.x          | Initial version                                                                             | No                  | Yes                     |
 | 1.2.0.x          | New firmware version (NOTE: version 1.2.0.3 is considered obsolete, and should not be used) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 | 1.1.0.x          | FX-VA200.10                 |
@@ -32,7 +32,7 @@ The driver uses an SNMP connection to monitor **NetInsight Nimbra VA** devices. 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

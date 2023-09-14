@@ -4,11 +4,11 @@ uid: Connector_help_British_Telecom_Strobe_Manager
 
 # British Telecom Strobe Manager
 
-This is a virtual driver for the British Telecom Strobe Manager.
+This is a virtual connector for the British Telecom Strobe Manager.
 
-It can be used to configure IneoQuest Surveyor probes to the British Telecom Strobe element to one of four paths (**BTT X**, **BTT Y**, **CH X**, and **CH Y**). When the driver has been correctly configured, it will retrieve and show the channels with their status in an overview in the **Channel Table**. Based on the mode a channel is in, the Strobe Manager can automatically send updates to the respective CISCO Nexus devices (CLI commands to route or unroute certain channels). It is also possible to perform manual actions on selections made across paths and across channels to *Force On* or *Force Off* the path signal for selected channels.
+It can be used to configure IneoQuest Surveyor probes to the British Telecom Strobe element to one of four paths (**BTT X**, **BTT Y**, **CH X**, and **CH Y**). When the connector has been correctly configured, it will retrieve and show the channels with their status in an overview in the **Channel Table**. Based on the mode a channel is in, the Strobe Manager can automatically send updates to the respective CISCO Nexus devices (CLI commands to route or unroute certain channels). It is also possible to perform manual actions on selections made across paths and across channels to *Force On* or *Force Off* the path signal for selected channels.
 
-It is important that this driver is used in combination with the **Visio drawing** that was designed for this purpose.
+It is important that this connector is used in combination with the **Visio drawing** that was designed for this purpose.
 
 ## About
 
@@ -34,7 +34,7 @@ It is important that this driver is used in combination with the **Visio drawing
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

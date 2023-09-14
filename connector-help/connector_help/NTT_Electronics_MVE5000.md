@@ -4,22 +4,22 @@ uid: Connector_help_NTT_Electronics_MVE5000
 
 # NTT Electronics MVE5000
 
-This driver is used to monitor and configure the **MVE5000** Encoder from **NTT Electronics**.
+This connector is used to monitor and configure the **MVE5000** Encoder from **NTT Electronics**.
 
 ## About
 
-This driver contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document. The driver uses the **SNMP** protocol to communicate with the device.
+This connector contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document. The connector uses the **SNMP** protocol to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | DCF integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MVE5000 FirmVersion.04.30   |
 | 1.0.1.x          | MVE5000 FirmVersion.04.30   |
@@ -30,7 +30,7 @@ This driver contains different pages with information and settings. More detaile
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -114,7 +114,7 @@ This page shows the web interface of the device. Note that the client machine ha
 
 ## DataMiner Connectivity Framework
 
-The **1**.**0.1.x** driver range of the **NTT Electronics MVE5000** protocol supports the usage of DCF and can only be used on a DMA with **8.5.7.2** as the minimum version.
+The **1**.**0.1.x** connector range of the **NTT Electronics MVE5000** protocol supports the usage of DCF and can only be used on a DMA with **8.5.7.2** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -134,7 +134,7 @@ Physical fixed interfaces:
 #### Internal Connections
 
 - Connections are made based on the condition of **Interface Audio/Video** on the **Input** page, and the condition of the **Transmission Stream 1, Transmission Stream 2, Transmit Interface Stream 1** and **Transmit Interface Stream 2** on the **Stream** page.
-  The connection(s) start from the selected input interface and go to the **IP Output FE** and/or **IP Output GbE**. If the selected input is not an SDI interface, the DCF connections will not be made, since these interfaces are not supported for DCF in this driver.
+  The connection(s) start from the selected input interface and go to the **IP Output FE** and/or **IP Output GbE**. If the selected input is not an SDI interface, the DCF connections will not be made, since these interfaces are not supported for DCF in this connector.
 - Example 1: Input **SDI** is selected for the **Interface Audio/Video, Transmission Stream 1** is **Enabled**, **Transmission Stream 2** is **Enabled, PPPoE \#1 (GbE)** is selected for **Transmit Interface Stream 1** and **FE** is selected for **Transmit Interface Stream 2**.
   Two connections will be made from the **SDI** **Input** interface to the **IP Output FE** and **IP Output GbE** interfaces.
 - Example 2: Input **SDI Analog Audio** is selected, both transport streams are enabled and have the same transmit interface selected (**GbE**).

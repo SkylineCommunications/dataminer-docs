@@ -8,17 +8,17 @@ The Ateme DR2100 is an integrated receiver for video distribution services.
 
 ## About
 
-The **Ateme DR2100 SNMP** driver controls and monitors the video receiver.
+The **Ateme DR2100 SNMP** connector controls and monitors the video receiver.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.6.30                      |
 
@@ -26,7 +26,7 @@ The **Ateme DR2100 SNMP** driver controls and monitors the video receiver.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 #### SNMPv2 main connection
 

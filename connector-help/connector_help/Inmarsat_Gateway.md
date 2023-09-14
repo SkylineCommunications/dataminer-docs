@@ -4,37 +4,37 @@ uid: Connector_help_Inmarsat_Gateway
 
 # Inmarsat Gateway
 
-Inmarsat Gateway is an implementation of the iDirect API provided by Inmarsat. This driver is mainly used to monitor data depending on the user credentials.
+Inmarsat Gateway is an implementation of the iDirect API provided by Inmarsat. This connector is mainly used to monitor data depending on the user credentials.
 
 ## About
 
-This driver uses the **HTTP** protocol to create sessions and request data from the server. The data is received in a JSON format which is then parsed and displayed.
+This connector uses the **HTTP** protocol to create sessions and request data from the server. The data is received in a JSON format which is then parsed and displayed.
 
-Note: The driver only polls data for terminals that have been assigned to the protocol by the **Inmarsat Gateway Director protocol**.
+Note: The connector only polls data for terminals that have been assigned to the protocol by the **Inmarsat Gateway Director protocol**.
 
-This driver can be configured to request additional data via SSH.
+This connector can be configured to request additional data via SSH.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers".
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                               | No                  | Yes                     |
-| 1.0.1.x          | Added second connection to the driver                         | No                  | Yes                     |
+| 1.0.1.x          | Added second connection to the connector                         | No                  | Yes                     |
 | 2.0.0.x          | Master/slave functionality with the Inmarsat Gateway Director | No                  | Yes                     |
 | 2.1.0.x          | Support for the new Inmarsat API                              | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | API ICD V2.07               |
+| 1.0.0.x          | API ICD V2.07               |
 | 1.0.1.x          | API ICD V2.07               |
 | 2.0.0.x          | API ICD V2.07               |
 | 2.1.0.x          | API SDD V0.8                |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**       | **Description** |
 |-----------------------------|-----------------|
@@ -57,7 +57,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 <tr class="even">
 <td>Versions 1.0.0.x to 2.0.0.x</td>
 <td>HTTP main connection
-<p>This driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>This connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: <a href="https://api.inmarsat.com/">https://api.inmarsat.com</a></li>
@@ -65,7 +65,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 <li><strong>Bus address</strong>: byPassProxy</li>
 </ul>
 Serial SSH connection
-<p>This driver also uses a serial connection and requires the following input during element creation:</p>
+<p>This connector also uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:</li>
@@ -78,7 +78,7 @@ Serial SSH connection
 <tr class="odd">
 <td>Version 2.0.0.x</td>
 <td>HTTP main connection
-<p>This driver uses an HTTP connection and requires the following input during element creation:</p>
+<p>This connector uses an HTTP connection and requires the following input during element creation:</p>
 <p>HTTP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: <a href="https://inmarsat-prod.apigee.net/">https://inmarsat-prod.apigee.net</a></li>

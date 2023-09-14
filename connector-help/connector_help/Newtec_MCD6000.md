@@ -8,11 +8,11 @@ The **Newtec MCD6000** is multi-carrier demodulator.
 
 ## About
 
-This driver allows the management of the Newtec MCD6000 device using the **SNMP** protocol.
+This connector allows the management of the Newtec MCD6000 device using the **SNMP** protocol.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -44,13 +44,13 @@ This page contains the **Redundancy**, **Redundancy Operational State** and the 
 
 ### Device Setup Page
 
-This page contains parameters related to configuring **SNMP**, **Logging**, **GUI**, **CLI**, **FTP**, In addition, a number of pagebuttons are present, allowing to consult more information related to
+This page contains parameters related to configuring **SNMP**, **Logging**, **GUI**, **CLI**, **FTP**, In addition, a number of page buttons are present, allowing to consult more information related to
 
 - Date and Time: Contains the **Device Date** and **Device Time**, **NTP** status and **NTP Peer Table**
-- Mgmt Interface: Contains the **Ethernet Link Management Table**, **Management Gataway**, **IP Management Interface Table** and link redundancy parameters (**Redundancy Management Switch Order**, **Redundancy Management Switch Count** and **Redundancy Management Active Interface**)
-- Conrol Plane: Contains control plane parameters such as **Terminal ID**, **Control Plane**, and Encapsulation Cofiguration parameters such as **Nominal S2 ModCod**, **Frame Type**, **ISI**, **CIR**, **PIR** and **Rate Priority**.
+- Mgmt Interface: Contains the **Ethernet Link Management Table**, **Management Gateway**, **IP Management Interface Table** and link redundancy parameters (**Redundancy Management Switch Order**, **Redundancy Management Switch Count** and **Redundancy Management Active Interface**)
+- Conrol Plane: Contains control plane parameters such as **Terminal ID**, **Control Plane**, and Encapsulation Configuration parameters such as **Nominal S2 ModCod**, **Frame Type**, **ISI**, **CIR**, **PIR** and **Rate Priority**.
 - Monitor: Gives an overview of monitored parameters such as **Temperature, Power Supply, CPU Load, Memory Usage, Device Uptime** and the **Device Sensors Table**.
-- Frontpanel: Contains the **Frontpanel** and **Device Frontpanl Access Level** parameters.
+- Frontpanel: Contains the **Frontpanel** and **Device Frontpanel Access Level** parameters.
 - Identification: Gives an overview of parameters related to identification of the device, such as **Label, Serial Number, Unique Id, Product Id, Device Description, Device Type, Hardware Revision, Software Id, Device Software Version** and the **Device Options Table**.
 
 ### Alarms Page

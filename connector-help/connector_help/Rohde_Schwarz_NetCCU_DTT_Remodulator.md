@@ -4,21 +4,21 @@ uid: Connector_help_Rohde_Schwarz_NetCCU_DTT_Remodulator
 
 # Rohde Schwarz NetCCU DTT Remodulator
 
-This driver is developed for devices such as the **Rohde Schwarz NetCCU DTT** **Remodulator**. It polls several SNMP parameters and displays them on different pages.
+This connector is developed for devices such as the **Rohde Schwarz NetCCU DTT** **Remodulator**. It polls several SNMP parameters and displays them on different pages.
 
 ## About
 
 The SNMP parameters are polled using three timers, and displayed on several pages.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.20.0                      |
 
@@ -28,7 +28,7 @@ The SNMP parameters are polled using three timers, and displayed on several page
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -85,7 +85,7 @@ This page contains general settings for the exciter.
 
 ## DataMiner Connectivity Framework
 
-From version **1.0.0.4** of this driver onwards, the usage of DCF is supported and the driver can only be used on a DMA with **8.5.8.5** as the minimum version.
+From version **1.0.0.4** of this connector onwards, the usage of DCF is supported and the connector can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

@@ -4,17 +4,17 @@ uid: Connector_help_Marlink_Geofence
 
 # Marlink Geofence
 
-This driver can be used to subscribe to two parameters of any element in the DMS and view their current value. Furthermore, with KML processing you can check whether these values are inside or outside of a particular area.
+This connector can be used to subscribe to two parameters of any element in the DMS and view their current value. Furthermore, with KML processing you can check whether these values are inside or outside of a particular area.
 
 ## About
 
-The driver allows the user to create entries in a **Remote Elements Configuration Table**. For the creation of an entry, the user can choose one of the available protocols in the DMS, a protocol version and an element using that protocol. Lastly, the user can select two parameters from this element of which the current values are to be monitored. For each entry in the **Remote Elements Configuration Table**, one or more rows can be created in the **Remote Status Table**.
+The connector allows the user to create entries in a **Remote Elements Configuration Table**. For the creation of an entry, the user can choose one of the available protocols in the DMS, a protocol version and an element using that protocol. Lastly, the user can select two parameters from this element of which the current values are to be monitored. For each entry in the **Remote Elements Configuration Table**, one or more rows can be created in the **Remote Status Table**.
 
 An entry in the **Remote Status Table** shows the current values of the two parameters, but also allows the user to select a KML file. If the two parameter values represent latitude and longitude values, the KML file can be used to check whether the current latitude/longitude combination is inside or outside of the boundaries defined in the KML file. Based on the Inside/Outside setting in the table, an alarm is generated if the values are not inside or outside of the boundaries.
 
-## Ranges of the driver
+## Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ An entry in the **Remote Status Table** shows the current values of the two para
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of remote elements
 
@@ -32,12 +32,12 @@ This driver uses a virtual connection and does not require any input during elem
 
 In order to add a new row to this table:
 
-1.  Click the **Provisioning** button. A pop-up page will open.
-2.  Select the protocol and protocol version
-3.  Select the element.
-4.  Select the first and second parameter.
-5.  Select the KML file to use.
-6.  Click the **Add Elements** button.
+1. Click the **Provisioning** button. A pop-up page will open.
+1. Select the protocol and protocol version
+1. Select the element.
+1. Select the first and second parameter.
+1. Select the KML file to use.
+1. Click the **Add Elements** button.
 
 You can add multiple elements at once using "\*" and "?" wildcards. Except for the description, the rows can no longer be modified after creation. If changes have to be done to a particular row, that row has to be deleted and recreated.
 
@@ -75,4 +75,4 @@ With the **Remote Elements Configuration Table** on this page, remote elements c
 
 - Only protocols that are assigned to elements can be selected in order to create a remote element in the **Configuration table**.
 - The description in both the **Configuration** and the **Status table** is used in generated alarms and therefore has to be unique.
-- This driver requires **DataMiner version 8** in order to work.
+- This connector requires **DataMiner version 8** in order to work.

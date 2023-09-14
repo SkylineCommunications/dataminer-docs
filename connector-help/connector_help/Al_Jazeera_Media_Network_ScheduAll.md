@@ -34,7 +34,7 @@ A custom restful API was developed on the ScheduAll side to retrieve certain inf
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

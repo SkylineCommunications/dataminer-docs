@@ -10,17 +10,17 @@ This device series is divided into two main product lines: the STA Series and th
 
 ## About
 
-The SpacePath Communications STx Series driver uses SNMPv2 in order to communicate with the whole STx range of HPAs.
+The SpacePath Communications STx Series connector uses SNMPv2 in order to communicate with the whole STx range of HPAs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The SpacePath Communications STx Series driver uses SNMPv2 in order to communica
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -38,7 +38,7 @@ More details can be found in the notes below.
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -64,10 +64,10 @@ Note that there is only a single .csv file specifying the module configuration o
 
 This range no longer requires a configuration file. The modules are now **retrieved** from the controller itself. However, the controller reports analog and digital modules differently:
 
-- For **analog** modules, only the type of the module is returned, so the driver contains a mapping of the different types and how many inputs/outputs this module has.
+- For **analog** modules, only the type of the module is returned, so the connector contains a mapping of the different types and how many inputs/outputs this module has.
 - For **digital** modules, the type is not returned. Instead the number of inputs/outputs for this module is returned. For these modules, the type can be linked to the module entry manually (but this is not required to correctly poll the data).
 
-The driver contains a table with all the known modules, how many inputs/outputs they have and which unit should be used for their values. This is all configurable and in case a module is not yet known by the protocol, no driver update is initially required, as new entries can be added to this **mapping** table manually.
+The connector contains a table with all the known modules, how many inputs/outputs they have and which unit should be used for their values. This is all configurable and in case a module is not yet known by the protocol, no driver update is initially required, as new entries can be added to this **mapping** table manually.
 
 ### Web Interface
 
@@ -75,7 +75,7 @@ The **web interface** is only accessible when the client machine has network acc
 
 ## How to Use
 
-This driver uses **modbus** and needs to request all data from the modules through the controller. To do this correctly, the element first needs to know which modules are connected to the **controller** and it is important that the number of modules and the number of interfaces (inputs/outputs) per module is correct.
+This connector uses **modbus** and needs to request all data from the modules through the controller. To do this correctly, the element first needs to know which modules are connected to the **controller** and it is important that the number of modules and the number of interfaces (inputs/outputs) per module is correct.
 The element will read out all interfaces from the controller and when all modules are correctly configured in the element, it will be able to display the values and map them to the correct module. If this is not the case, input and output values could get **shifted** and displayed for the wrong module.
 
 Not all information is available through modbus, but it can be made available using a **custom program on the PLC**. More information about this is available in the Notes section below.
@@ -86,4 +86,4 @@ Also, in some cases, you can modify **the format of the display keys** (used in 
 
 The WAGO Kontakttechnik 750-x controller **does not allow all values to be read or set via** **modbus**. Certain values can only be read out and manipulated by running a custom program on the PLC itself. To read out and set these values, **custom** **markers** can be used by the program running in the PLC. These markers can then be read out by the element in DataMiner. To read and set these, you can add an entry in the **Markers** table (in range **2.0.0.x**). Each entry in that table will be read out every 5 seconds.
 
-This driver is **not able to automatically retrieve the number of inputs/outputs of 750-8100 (PFC100) modules** because this type does not support the same API as the other module types. In this case, you can manually add the registers you want to poll to the **Markers** table. These values will be retrieved every five seconds.
+This connector is **not able to automatically retrieve the number of inputs/outputs of 750-8100 (PFC100) modules** because this type does not support the same API as the other module types. In this case, you can manually add the registers you want to poll to the **Markers** table. These values will be retrieved every five seconds.

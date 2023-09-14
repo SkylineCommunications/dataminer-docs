@@ -4,31 +4,31 @@ uid: Connector_help_Snell_Wilcox_RollCall_Logserver
 
 # Snell Wilcox RollCall Logserver
 
-This driver will collect and parse logs, filling in a table with the parameters found in those logs.
+This connector will collect and parse logs, filling in a table with the parameters found in those logs.
 
 ## About
 
-This is a **smart-serial** driver, which will receive log entries from a log server. The driver will parse those logs, creating DVEs for each different device referred to in the log entries.
+This is a **smart-serial** connector, which will receive log entries from a log server. The connector will parse those logs, creating DVEs for each different device referred to in the log entries.
 
-This driver will export different drivers based on the retrieved data. Refer to the section "Exported drivers" below for more information.
+This connector will export different connectors based on the retrieved data. Refer to the section "Exported connectors" below for more information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Not available.              |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                                | **Description**                               |
 |----------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-| [Snell Wilcox RollCall Logserver - Element](xref:Connector_help_Snell_Wilcox_RollCall_Logserver_-_Element) | Represents a device monitored by this driver. |
+| [Snell Wilcox RollCall Logserver - Element](xref:Connector_help_Snell_Wilcox_RollCall_Logserver_-_Element) | Represents a device monitored by this connector. |
 
 ## Installation and configuration
 
@@ -36,7 +36,7 @@ This driver will export different drivers based on the retrieved data. Refer to 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -57,11 +57,11 @@ This page displays the available devices, as well as their slots and parameters.
 
 ### Configuration Page
 
-On this page, you can configure the units present in the log entries. The driver will then search for these, and if they are present, the corresponding parameters will have the configured units.
+On this page, you can configure the units present in the log entries. The connector will then search for these, and if they are present, the corresponding parameters will have the configured units.
 
 It is also possible to discard parameters from the log entries. To improve performance, it is advised to discard unused parameters in large systems. Discarding the "TIME" parameter, for example, can result in a large performance increase.
 
 ## Note
 
-Be careful when enabling this driver on elements for large log servers: this could cause a large number of messages to be sent to DataMiner (especially during element startup; this can even go up to over half a million messages).
+Be careful when enabling this connector on elements for large log servers: this could cause a large number of messages to be sent to DataMiner (especially during element startup; this can even go up to over half a million messages).
 This can lead to increased memory usage and slow behavior of the DataMiner system. A correct configuration of the **Parameters to Discard Table** is essential to avoid this.

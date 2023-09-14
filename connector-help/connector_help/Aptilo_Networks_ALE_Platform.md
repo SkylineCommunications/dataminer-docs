@@ -8,17 +8,17 @@ The **Aptilo Networks ALE Platform** is used to monitor the ALE Architecture. Th
 
 ## About
 
-The **Aptilo Networks ALE Platform** protocol is used to monitor the services via **SNMPv2**. SNMP **Get** commands are used to read information from the device. The driver also receives unsolicited messages from the device via SNMP **Traps**.
+The **Aptilo Networks ALE Platform** protocol is used to monitor the services via **SNMPv2**. SNMP **Get** commands are used to read information from the device. The connector also receives unsolicited messages from the device via SNMP **Traps**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | ALE 4.1 build 41324         |
 
@@ -28,7 +28,7 @@ The **Aptilo Networks ALE Platform** protocol is used to monitor the services vi
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

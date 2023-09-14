@@ -4,17 +4,17 @@ uid: Connector_help_ETL_M0808D2UFL-B7
 
 # ETL M0808D2UFL-B7
 
-The **ETL M0808D2UFL-B7** driver monitors and controls changes on the 8x8 matrix-switch L-band unit through a single serial protocol.
+The **ETL M0808D2UFL-B7** connector monitors and controls changes on the 8x8 matrix-switch L-band unit through a single serial protocol.
 
 ## About
 
-The driver has one timer that polls every 500 seconds for slow-changing information. Nonetheless, the protocol actively seeks the device's information.
+The connector has one timer that polls every 500 seconds for slow-changing information. Nonetheless, the protocol actively seeks the device's information.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

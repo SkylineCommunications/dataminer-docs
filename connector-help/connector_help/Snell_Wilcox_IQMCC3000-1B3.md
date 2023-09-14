@@ -4,21 +4,21 @@ uid: Connector_help_Snell_Wilcox_IQMCC3000-1B3
 
 # Snell Wilcox IQMCC3000-1B3
 
-The **Snell Wilcox IQMCC3000-1B3** is a motion-compensated frame rate converter that provides multi-rate and format conversion for 3Gbps SDI and HD-SDI digital video signals. The **Snell Wilcox IQMCC3000-1B3** driver is the solution designed to monitor this converter.
+The **Snell Wilcox IQMCC3000-1B3** is a motion-compensated frame rate converter that provides multi-rate and format conversion for 3Gbps SDI and HD-SDI digital video signals. The **Snell Wilcox IQMCC3000-1B3** connector is the solution designed to monitor this converter.
 
 ## About
 
-With this driver, you can manage the **Snell Wilcox IQMCC3000-1B3** device using a smart-serial connection.
+With this connector, you can manage the **Snell Wilcox IQMCC3000-1B3** device using a smart-serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.15.3                      |
 
@@ -28,7 +28,7 @@ With this driver, you can manage the **Snell Wilcox IQMCC3000-1B3** device using
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

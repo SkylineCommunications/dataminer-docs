@@ -4,22 +4,22 @@ uid: Connector_help_CISCO_WLC_Platform
 
 # CISCO WLC Platform
 
-This driver is a generic driver that can be used to **monitor** and **control** the different types (series) of **CISCO Wireless Controllers**.
+This connector is a generic connector that can be used to **monitor** and **control** the different types (series) of **CISCO Wireless Controllers**.
 
 ## About
 
-The CISCO WLC Platform driver uses **SNMP** to retrieve the data from the CISCO Wireless Controller.
+The CISCO WLC Platform connector uses **SNMP** to retrieve the data from the CISCO Wireless Controller.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                               | No                  | Yes                     |
 | 1.0.1.x          | This range supports SNMPv3 (based on 1.0.0.1) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 8.0                         |
 | 1.0.1.x          | 8.0                         |
@@ -30,7 +30,7 @@ The CISCO WLC Platform driver uses **SNMP** to retrieve the data from the CISCO 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,11 +55,11 @@ SNMP Settings:
 
 This page contains general information about the controller.
 
-Via the **Polling** page button, you can access the **Table Polling** page, which contains toggle buttons that allow you to *enable* or *disable* the polling for each **SNMP table** in the driver. Note that such a toggle button is also available above each of these tables on the same page as the table itself.
+Via the **Polling** page button, you can access the **Table Polling** page, which contains toggle buttons that allow you to *enable* or *disable* the polling for each **SNMP table** in the connector. Note that such a toggle button is also available above each of these tables on the same page as the table itself.
 
 ### Configuration
 
-This driver contains many configuration parameters. On this page, you can find the **general** **configuration** parameters for the **controller**.
+This connector contains many configuration parameters. On this page, you can find the **general** **configuration** parameters for the **controller**.
 
 ### Ping Function
 

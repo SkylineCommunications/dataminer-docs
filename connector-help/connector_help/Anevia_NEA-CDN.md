@@ -32,7 +32,7 @@ The NEA-CDN product is a caching server designed to extend streaming capabilitie
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-To make sure the driver can work properly, specify the parameters **Login** and **Password** on the **Authentication** page.
+To make sure the connector can work properly, specify the parameters **Login** and **Password** on the **Authentication** page.
 
 ### Web Interface
 
@@ -58,4 +58,4 @@ The element consists of the following data pages:
 - **CDN**: Contains two tables listing the CDN clusters and CDN instances, respectively.
 - **Assets**: Contains a table listing the available instance types, and a table that displays the available algorithms in the system.
 - **Sources Groups/Conditions/Operations**: These pages all contain a table listing the information relevant to the page name.
-- **Authentication**: Contains the Login and Password parameters as well as the Login button. These parameters are needed for the driver to access the API of the device.
+- **Authentication**: Contains the Login and Password parameters as well as the Login button. These parameters are needed for the connector to access the API of the device.

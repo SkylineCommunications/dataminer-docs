@@ -4,7 +4,7 @@ uid: Connector_help_Papouch_TME
 
 # Papouch TME
 
-With this driver it is possible to gather and view information from the device **Papouch TME.**
+With this connector it is possible to gather and view information from the device **Papouch TME.**
 
 ## About
 

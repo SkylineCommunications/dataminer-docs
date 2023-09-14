@@ -4,7 +4,7 @@ uid: Connector_help_Sky_Italia_Transmission_Manager
 
 # Sky Italia Transmission Manager
 
-This driver retrieves the status of the different transponders, using a serial connection.
+This connector retrieves the status of the different transponders, using a serial connection.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver retrieves the status of the different transponders, using a serial c
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

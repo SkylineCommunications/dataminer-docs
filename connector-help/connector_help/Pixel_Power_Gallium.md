@@ -6,7 +6,7 @@ uid: Connector_help_Pixel_Power_Gallium
 
 Pixel Power Gallium is a highly integrated and scalable scheduling, asset management and automation system. It hosts web services that provide asset, data, playout, render, report, schedule and schedule emitter functions.
 
-The **Pixel Power Gallium** driver is used to retrieve and monitor channels, alarm reports and asset availability reports.
+The **Pixel Power Gallium** connector is used to retrieve and monitor channels, alarm reports and asset availability reports.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Pixel Power Gallium** driver is used to retrieve and monitor channels, ala
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

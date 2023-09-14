@@ -8,13 +8,13 @@ The HOA70xx module belongs to a family of transmitters and optical amplifiers de
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the corresponding device.
+This connector uses **SNMP** polling to communicate with the corresponding device.
 
-The driver is exported by the parent element **Harmonic HLP4800** if DVE creation is enabled. In that case, a child element using this driver will be created for each row in the **Physical Entities** table of the parent element.
+The connector is exported by the parent element **Harmonic HLP4800** if DVE creation is enabled. In that case, a child element using this connector will be created for each row in the **Physical Entities** table of the parent element.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                          |
+| **Range** | **Device Firmware Version**                          |
 |------------------|------------------------------------------------------|
 | 1.0.1.x          | Module version: unknown Controller version: 4.1.0.24 |
 
@@ -22,7 +22,7 @@ The driver is exported by the parent element **Harmonic HLP4800** if DVE creatio
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the parent driver [Harmonic HLP4800](xref:Connector_help_Harmonic_HLP4800), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the parent connector [Harmonic HLP4800](xref:Connector_help_Harmonic_HLP4800), from version 1.0.0.1 onwards.
 
 ## Usage
 

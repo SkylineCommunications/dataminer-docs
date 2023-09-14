@@ -10,19 +10,19 @@ The Switched ePDUs employ multiple configurations, available in 0U and 2U rack m
 
 ## About
 
-This driver contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
+This connector contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
 
-The driver uses the SNMP protocol to communicate with the device. SNMP traps can be retrieved when this is enabled on the device.
+The connector uses the SNMP protocol to communicate with the device. SNMP traps can be retrieved when this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCP Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCP Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -30,7 +30,7 @@ The driver uses the SNMP protocol to communicate with the device. SNMP traps can
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -51,7 +51,7 @@ All data gets retrieved from the device in two ways.
 
 ## Usage
 
-This driver contains a number of different pages.
+This connector contains a number of different pages.
 
 ### Unit Configuration
 

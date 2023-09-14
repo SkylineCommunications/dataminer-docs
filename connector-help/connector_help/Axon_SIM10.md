@@ -4,15 +4,15 @@ uid: Connector_help_Axon_SIM10
 
 # Axon SIM10
 
-The **Axon SIM10** is a signal integrity monitor. The driver monitors and controls the device via **SNMP**.
+The **Axon SIM10** is a signal integrity monitor. The connector monitors and controls the device via **SNMP**.
 
 ## About
 
-The driver polls the device every hour for non-varying information, every ten minutes for slow-varying information and every 30 seconds for fast-varying information .
+The connector polls the device every hour for non-varying information, every ten minutes for slow-varying information and every 30 seconds for fast-varying information .
 
 ### Creation
 
-The driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+The connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -27,7 +27,7 @@ The driver uses a Simple Network Management Protocol (SNMP) connection and requi
 
 ## Usage
 
-This driver consists of the following pages: **Main View,** **General, Settings** and **Events.**
+This connector consists of the following pages: **Main View,** **General, Settings** and **Events.**
 
 ### Main View Page
 

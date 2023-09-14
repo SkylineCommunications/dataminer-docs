@@ -4,17 +4,17 @@ uid: Connector_help_France_Televisions_InHouse
 
 # France Televisions InHouse
 
-This driver is used to monitor an FTP daemon, the **France Televisions InHouse** File Transfer System.
+This connector is used to monitor an FTP daemon, the **France Televisions InHouse** File Transfer System.
 
 ## About
 
-This driver uses HTTP to monitor the state of the daemon and the status of its current jobs.
+This connector uses HTTP to monitor the state of the daemon and the status of its current jobs.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection:**
 
@@ -24,7 +24,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 ## Usage
 
-This driver contains only one page.
+This connector contains only one page.
 
 ### General
 

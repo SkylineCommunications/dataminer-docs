@@ -35,7 +35,7 @@ The 7880IPG-NAT-6-10GE2 is a high-density, multi-port, multi-flow hardware Netwo
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,7 +64,7 @@ The web interface is only accessible when the client machine has network access 
 
 SNMP gets and sets are used to retrieve information from the device and display it in tables, as well as to modify values.
 
-The table information in this driver is shown in the same format as the native user interface of the device.
+The table information in this connector is shown in the same format as the native user interface of the device.
 
 - The **General** page shows the IP address of the device, with two buttons that allow you to perform a system reboot or a factory reset.
 - The **Traffic Monitoring** page shows the total bitrate received by WAN and LAN ports and also reports the temperature on the FPGA of the card.

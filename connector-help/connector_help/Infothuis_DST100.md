@@ -8,13 +8,13 @@ The Infothuis DST100 is used to restamp timing data and to model subtitles.
 
 ## About
 
-The Infothuis DST100 driver is used to monitor a DST100 device. This driver uses SNMP communication to retrieve data from the device.
+The Infothuis DST100 connector is used to monitor a DST100 device. This connector uses SNMP communication to retrieve data from the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

@@ -4,7 +4,7 @@ uid: Connector_help_Castwin_DME-9724HM_encoder
 
 # Castwin DME-9724HM encoder
 
-This driver can be used to manage the Castwin DME-9724HM encoder. This is a video encoder, which enables the transmission of more video channels and audio channels at the available bandwidth.
+This connector can be used to manage the Castwin DME-9724HM encoder. This is a video encoder, which enables the transmission of more video channels and audio channels at the available bandwidth.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to manage the Castwin DME-9724HM encoder. This is a vide
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,4 +58,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This is a standard SNMP driver.
+This is a standard SNMP connector.

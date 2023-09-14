@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_Meraki
 
 # CISCO Meraki
 
-The **Cisco Meraki Cloud Controller** is a managed Wi-Fi solution, managing switches, routers and access points. This driver allows you to manage this device via **SNMP**.
+The **Cisco Meraki Cloud Controller** is a managed Wi-Fi solution, managing switches, routers and access points. This connector allows you to manage this device via **SNMP**.
 
 ## About
 
@@ -13,7 +13,7 @@ The **Cisco Meraki Cloud Controller** is a managed Wi-Fi solution, managing swit
 | **Range** | **Key Features**                                     | **Based on** | **System Impact** |
 |-----------|------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x   | Initial version                                      | \-           | \-                |
-| 2.0.0.x   | New driver range only polling interfaces over SNMPv1 | \-           | \-                |
+| 2.0.0.x   | New connector range only polling interfaces over SNMPv1 | \-           | \-                |
 
 ### Product Info
 
@@ -35,7 +35,7 @@ The **Cisco Meraki Cloud Controller** is a managed Wi-Fi solution, managing swit
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 ### 1.0.0.x range
 
-In the 1.0.0.x range of the driver, the element consists of the following data pages:
+In the 1.0.0.x range of the connector, the element consists of the following data pages:
 
 - **General**: Contains the System Description, Up Time, Contact and other such parameters. Also displays the Organization Name and the Organization Status.
 - **Network**: Contains the Network Table, which allows you to monitor the networks in the organization.
@@ -61,7 +61,7 @@ In the 1.0.0.x range of the driver, the element consists of the following data p
 
 ### 2.0.0.x range
 
-In the 2.0.0.x range of the driver, the element consists of the following data pages:
+In the 2.0.0.x range of the connector, the element consists of the following data pages:
 
 - **General**: Mainly contains system information about the managed device, such as the **Description** and **Interfaces Number**.
 - **Interfaces**: Contains the **Interfaces Details** table.

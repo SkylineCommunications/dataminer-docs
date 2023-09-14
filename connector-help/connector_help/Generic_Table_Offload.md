@@ -4,17 +4,17 @@ uid: Connector_help_Generic_Table_Offload
 
 # Generic Table Offload
 
-This driver can be used to offload table data to CSV files.
+This connector can be used to offload table data to CSV files.
 
 ## About
 
-This driver will offload table data from any element to CSV files. The commands with the data that needs to be offloaded has to be set on parameter 10 of the Generic Table Offload element.
+This connector will offload table data from any element to CSV files. The commands with the data that needs to be offloaded has to be set on parameter 10 of the Generic Table Offload element.
 
 For more information about the format of the command (xsd), refer to the Notes section below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ For more information about the format of the command (xsd), refer to the Notes s
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Directory
 
@@ -34,7 +34,7 @@ The directory path needs to be configured before an element can start offloading
 
 ### General
 
-There is only one page in this driver. This page is used for the configuration and to check the amount of data still in the buffer awaiting execution.
+There is only one page in this connector. This page is used for the configuration and to check the amount of data still in the buffer awaiting execution.
 
 The **Directory Path Name** should contain the directory where the CSV file(s) you want to import are located. For example, if this is the Downloads folder of your local C:\\ drive, specify *C:\Downloads*. If the directory containing the files is accessed remotely (e.g. if you specify '*\\80.62.121.234'*), you also need to specify a **Network Share User Name** (can contain a domain name, but not always needed) and a **Network Share Password**.
 
@@ -45,7 +45,7 @@ Offload issues can have two main causes:
 
 There is also a **Buffer Handling** pop-up page. This page contains the following settings and button:
 
-- **Accept Commands**: Enable this parameter if you want the driver to accept commands, offload table data and send responses. By default *enabled.*
+- **Accept Commands**: Enable this parameter if you want the connector to accept commands, offload table data and send responses. By default *enabled.*
 - **Retry Interval**: When an offload fails, it is retried 3 times. After that, it will only be retried again after this interval. By default set to *30 minutes*.
 - **Delete From Buffer After Exceeding TTL**: With this toggle button, you can enable deletion of commands from the buffer when they exceed their time to live. This makes sure that the buffer does not keep growing endlessly. If you disable this setting, you can be sure that no data will be lost, but you run the risk of using a endlessly growing amount of memory to store the buffer. By default *enabled*.
 - **Time To Live**: In order to avoid an endlessly growing buffer, there should be a limit to how long commands can be retried. With this parameter, you can set the maximum time that a command can stay in the buffer and be retried again. By default set to *1 day.* This parameter cannot be set if the **Delete From Buffer After Exceeding TTL** setting is *disabled*.

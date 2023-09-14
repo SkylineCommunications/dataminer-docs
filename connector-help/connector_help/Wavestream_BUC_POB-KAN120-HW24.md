@@ -37,7 +37,7 @@ The Wavestream BUC POB-KAN120-HW24 connector can be used to monitor the followin
 
 ### Connections
 
-This driver uses two Simple Network Management Protocol (SNMPv3) connections, one for SNMP GET and SET operations and one for traps.
+This connector uses two Simple Network Management Protocol (SNMPv3) connections, one for SNMP GET and SET operations and one for traps.
 
 #### SNMP Connection - Main
 

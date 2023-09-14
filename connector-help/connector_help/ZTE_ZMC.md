@@ -32,7 +32,7 @@ This connector can be used to integrate the alarms from the ZTE ZMC monitoring p
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

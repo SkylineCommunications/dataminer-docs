@@ -38,7 +38,7 @@ There are two **parameters** that can be **set** from **another element** or fro
 
 - Parameter ID: 60 - EXTERNAL_InconingMessages
 
-  - This parameter should be set with the format ***To****{SOH}ValueofTo{SOH}****From{SOH}****ValueOfFrom{SOH}****Message****{SOH}ValueOfMessage*, and separated with the char ***SOH***:
+  - This parameter should be set with the format *To*ValueofTo*From*ValueOfFrom*Message*ValueOfMessage, and separated with the char ***SOH***:
 
     | Dec | Hex | Acronym | Name             | Description                          |
     |-----|-----|---------|------------------|--------------------------------------|

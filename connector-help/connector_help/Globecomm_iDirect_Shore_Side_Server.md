@@ -4,7 +4,7 @@ uid: Connector_help_Globecomm_iDirect_Shore_Side_Server
 
 # Globecomm iDirect Shore Side Server
 
-This DataMiner driver can be used to monitor remotes that are available through the Globecomm iDirect Shore Side Server web API.
+This DataMiner connector can be used to monitor remotes that are available through the Globecomm iDirect Shore Side Server web API.
 
 ## About
 
@@ -12,11 +12,11 @@ The Globecomm Shore Side Server groups together data from a number of remotes, e
 
 Multiple shore side servers can be added for system scaling or to partition remotes across business needs. In that case, an element will be created for each server.
 
-The shore side server provides a Web API for use with an NMS. This driver uses that API to retrieve all the data.
+The shore side server provides a Web API for use with an NMS. This connector uses that API to retrieve all the data.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers".
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors".
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -43,21 +43,21 @@ This driver will export different drivers based on the retrieved data. A list ca
 <td><p>Based on version 1.0.0.5</p>
 <p>Added tables for each device type in order to export new standalone parameters: device type and communication state.</p>
 <p>Changed device names (page names of exported elements) to generic names.</p>
-<p>Removed static data sections in the driver.</p></td>
+<p>Removed static data sections in the connector.</p></td>
 <td>No</td>
 <td>Yes</td>
 </tr>
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | API v1                      |
 | 1.0.1.x          | API v1                      |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                        | **Description**                       |
 |----------------------------------------------|---------------------------------------|
@@ -69,7 +69,7 @@ This driver will export different drivers based on the retrieved data. A list ca
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -128,7 +128,7 @@ Added tables for each device type in order to export new standalone parameters: 
 
 Changed device names (page names of exported elements) to generic names.
 
-Removed static data sections in the driver.
+Removed static data sections in the connector.
 
 Modified/improved some code in QActions.
 

@@ -4,22 +4,22 @@ uid: Connector_help_Quintech_Matrix_SNMP
 
 # Quintech Matrix SNMP
 
-This driver allows you to view and control the Quintech matrix crosspoints.
+This connector allows you to view and control the Quintech matrix crosspoints.
 
 ## About
 
-This driver uses an SNMP connection to display information on a Quintech matrix and allows the user to configure the matrix.
+This connector uses an SNMP connection to display information on a Quintech matrix and allows the user to configure the matrix.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                 | No                  | Yes                     |
 | 1.1.0.x          | Updated to support new firmware. | No                  | Yes                     |
 
 ### Supported Firmware Versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.5.9:2201                  |
 | 1.1.0.x          | 7.5.9:2201                  |
@@ -30,7 +30,7 @@ This driver uses an SNMP connection to display information on a Quintech matrix 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

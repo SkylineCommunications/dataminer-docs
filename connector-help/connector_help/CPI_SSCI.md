@@ -8,17 +8,17 @@ The CPI SSCI is a C-Band Solid State Power Amplifier (SSPA) designed for satelli
 
 ## About
 
-This driver uses a single **serial** connection, with a maximum response time of 200 ms.
+This connector uses a single **serial** connection, with a maximum response time of 200 ms.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 01.00.16                    |
 
@@ -28,7 +28,7 @@ This driver uses a single **serial** connection, with a maximum response time of
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -67,7 +67,7 @@ This page contains all settings for alarms, faults, etc.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.1** driver range of the CPI SSCI protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.1** connector range of the CPI SSCI protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

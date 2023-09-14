@@ -8,17 +8,17 @@ The **Elemental Delta** device is a video delivery platform designed to optimize
 
 ## About
 
-This driver makes it possible to monitor and control an Elemental Delta platform. The platform provides a complete solution for time-shifted TV and just-in-time video packaging while enabling real-time content delivery with advanced levels of personalization, customization and control. All data is retrieved using an **HTTP** and **SNMP** connection.
+This connector makes it possible to monitor and control an Elemental Delta platform. The platform provides a complete solution for time-shifted TV and just-in-time video packaging while enabling real-time content delivery with advanced levels of personalization, customization and control. All data is retrieved using an **HTTP** and **SNMP** connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.1.200046                |
 
@@ -28,7 +28,7 @@ This driver makes it possible to monitor and control an Elemental Delta platform
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -38,7 +38,7 @@ HTTP CONNECTION:
 
 #### SNMP connection
 
-This driver also uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector also uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -74,7 +74,7 @@ Content defines the source input received by the system. Content can be either *
 
 **Output filters** allow the operator to manipulate content before it is served to a requesting end user. Output filters can be chained together to create more complicated workflows. For example, an operator can add an **Ad Removal** filter after a **Live to VOD** filter to create an endpoint that delivers a complete program without advertisements as a VOD asset to the end user.
 
-The content status is added in version 1.0.0.4 of this driver, but is only available on devices running software version 1.7.0 or higher.
+The content status is added in version 1.0.0.4 of this connector, but is only available on devices running software version 1.7.0 or higher.
 
 This page also contains the **Tracks Table**, with parameters such as **Bitrate**, **Stream Index**, **Sample Rate**, **Bits Per Sample**, etc.
 

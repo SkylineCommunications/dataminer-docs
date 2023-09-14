@@ -4,7 +4,7 @@ uid: Connector_help_Prometheus_Data_Exporter
 
 # Prometheus Data Exporter
 
-This driver can be used to subscribe to table columns of other elements and return those metrics using the built-in web service.
+This connector can be used to subscribe to table columns of other elements and return those metrics using the built-in web service.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to subscribe to table columns of other elements and retu
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: From here you can enable or disable the web service feature. (***This will be implemented in a future update.***)
 - **Configuration:** From the **Subscription Parameters** table, you can add entries that can represent single or multiple parameters subscriptions (**Currently only supported for table columns**).

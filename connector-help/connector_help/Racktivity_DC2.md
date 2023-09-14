@@ -4,24 +4,24 @@ uid: Connector_help_Racktivity_DC2
 
 # RACKTIVITY DC2
 
-The Racktivity DC2 meter driver is used to monitor and control a **RACKTIVITY DC2 METER** device.
+The Racktivity DC2 meter connector is used to monitor and control a **RACKTIVITY DC2 METER** device.
 
 ## About
 
-This driver displays the information of the device on different pages, grouping parameters in different categories.
+This connector displays the information of the device on different pages, grouping parameters in different categories.
 
-The driver uses **SNMP** to retrieve and update the data of the device. The Racktivity DC2 meter has the ability to send out SNMP traps when certain events occur in the sensor. Traps will result in instant updates in the corresponding DataMiner element.
+The connector uses **SNMP** to retrieve and update the data of the device. The Racktivity DC2 meter has the ability to send out SNMP traps when certain events occur in the sensor. Traps will result in instant updates in the corresponding DataMiner element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version                                                                    | No                  | Yes                     |
-| 1.0.1.1          | Corrected Displayed Items. Reset Max/Min Values function. Improved Polling timing. | No                  | Yes                     |
+| 1.0.0.x          | Initial version                                                                    | No                  | Yes                     |
+| 1.0.1.x          | Corrected Displayed Items. Reset Max/Min Values function. Improved Polling timing. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**        |
+| **Range** | **Device Firmware Version**        |
 |------------------|------------------------------------|
 | 1.0.0.x          | RTF0035 v2.1.1.1 Version v0.1.2.67 |
 
@@ -31,7 +31,7 @@ The driver uses **SNMP** to retrieve and update the data of the device. The Rack
 
 SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

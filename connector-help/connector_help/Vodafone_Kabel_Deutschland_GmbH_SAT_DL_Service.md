@@ -32,10 +32,10 @@ The Vodafone Deutschland SAT DL service protocol monitors the streaming states o
 
 This is a service protocol. To create a service using this protocol:
 
-1.  In DataMiner Cube, right-click a view in the Surveyor and select *Create service*.
-2.  Specify the name for the service.
-3.  Open the advanced options and select the service protocol, *Vodafone Kabel Deutschland GmbH SAT DL Service,* with the latest version or production version.
-4.  Go to the *parameters* tab and include the service you want to monitor.
+1. In DataMiner Cube, right-click a view in the Surveyor and select *Create service*.
+2. Specify the name for the service.
+3. Open the advanced options and select the service protocol, *Vodafone Kabel Deutschland GmbH SAT DL Service,* with the latest version or production version.
+4. Go to the *parameters* tab and include the service you want to monitor.
 
 ### Initialization
 

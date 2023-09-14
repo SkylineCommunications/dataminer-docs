@@ -4,29 +4,29 @@ uid: Connector_help_Check_Point_1100_Firewall
 
 # Check Point 1100 Firewall
 
-With this driver, information can be gathered and viewed from the **Check Point 1100 Firewall**.
+With this connector, information can be gathered and viewed from the **Check Point 1100 Firewall**.
 
 ## About
 
-This driver is used to interface with the **Check Point 1100 Firewall**.
+This connector is used to interface with the **Check Point 1100 Firewall**.
 
-Range 1.0.0.x of the driver uses SNMPv1 to communicate with the device. From range 1.0.1.x onwards, the driver uses SNMPv3 and has full support for SNMPv3 contexts.
+Range 1.0.0.x of the connector uses SNMPv1 to communicate with the device. From range 1.0.1.x onwards, the connector uses SNMPv3 and has full support for SNMPv3 contexts.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version             | No                  | Yes                     |
 | 1.0.1.x          | Support for SNMPv3 contexts | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 9                           |
 | 1.0.1.x          | 9                           |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                      | **Description**                                |
 |--------------------------------------------|------------------------------------------------|
@@ -39,7 +39,7 @@ Range 1.0.0.x of the driver uses SNMPv1 to communicate with the device. From ran
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

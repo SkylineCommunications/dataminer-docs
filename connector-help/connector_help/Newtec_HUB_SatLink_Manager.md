@@ -10,18 +10,18 @@ The **Newtec HUB SatLink Manager** driver implements a small subset of requests 
 
 The Newtec HUB SatLink Manager uses the **SOAP** API to request and provision information. Only a small subset of requests from the API is implemented.
 
-This driver can specifically be used to **book**, **start** and **cancel** **reservations** (SLM 1.0) or **links** (SLM 2.1), which is part of the **reservation interface** or **link interface** (depending on the API version). The driver also implements a subset of the provisioning interface to retrieve the **terminals** and their available **modulators** and **demodulators**. Only the modulators can be provisioned (edited) using the driver.
+This connector can specifically be used to **book**, **start** and **cancel** **reservations** (SLM 1.0) or **links** (SLM 2.1), which is part of the **reservation interface** or **link interface** (depending on the API version). The connector also implements a subset of the provisioning interface to retrieve the **terminals** and their available **modulators** and **demodulators**. Only the modulators can be provisioned (edited) using the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | No                  | No                      |
 | 1.1.0.x          | New firmware based on 1.0.0.5 (see below) | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | SLM 1.0                     |
 | 1.1.0.x          | SLM 2.1                     |
@@ -32,7 +32,7 @@ This driver can specifically be used to **book**, **start** and **cancel** **res
 
 #### Main connection
 
-This driver uses an **HTTP** connection and requires the following input during element creation:
+This connector uses an **HTTP** connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -44,7 +44,7 @@ HTTP CONNECTION:
 
 ### Book Reservation (1.0.0.x only)
 
-This page is only available in the 1.0.0.x range of the driver and can be used to **book** and **start** a **reservation**. This was added as a test and has been omitted in the later versions of the driver.
+This page is only available in the 1.0.0.x range of the connector and can be used to **book** and **start** a **reservation**. This was added as a test and has been omitted in the later versions of the connector.
 
 ### Reservations (1.0.0.x only)
 
@@ -62,6 +62,6 @@ The **Service Classes** table on this page is used to map a more user-friendly n
 
 ## Notes
 
-The **Newtec HUB SatLink Manager** driver is created to be used in combination with the **EBU FNRMN HUB Manager** driver.
+The **Newtec HUB SatLink Manager** connector is created to be used in combination with the **EBU FNRMN HUB Manager** driver.
 
 The EBU FNRMN HUB Manager element will perform sets on the Newtec HUB SatLink Manager element to book and start reservations/links and the result will be passed back.

@@ -4,7 +4,7 @@ uid: Connector_help_General_Dynamics_SW-1000
 
 # General Dynamics SW-1000
 
-The is a virtual driver used to monitor and configure the General Dynamics SW-1000.
+The is a virtual connector used to monitor and configure the General Dynamics SW-1000.
 
 ## About
 
@@ -14,7 +14,7 @@ The General Dynamics SW-1000 Switch Controller is used in conjunction with a red
 
 ### Creation
 
-This is a virtual driver. When you create an element, you need to define for each of the 4 input parameters from which DataMiner element and from which parameter the Status information will be received, and also for the 2 output parameters, to which DataMiner element and to which parameter the data will be sent.
+This is a virtual connector. When you create an element, you need to define for each of the 4 input parameters from which DataMiner element and from which parameter the Status information will be received, and also for the 2 output parameters, to which DataMiner element and to which parameter the data will be sent.
 
 These parameters are linked to:
 

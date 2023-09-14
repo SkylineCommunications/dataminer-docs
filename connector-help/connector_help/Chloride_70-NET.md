@@ -8,13 +8,13 @@ The **Chloride 70-NET** is a UPS Power Protection Battery. It makes sure that de
 
 ## About
 
-This driver allows the monitoring of attached devices, the health of the battery, and input and output parameters.
+This connector allows the monitoring of attached devices, the health of the battery, and input and output parameters.
 
 ## Installation
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

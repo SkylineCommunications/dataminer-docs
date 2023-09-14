@@ -4,7 +4,7 @@ uid: Connector_help_Xicom_Technology_XTC-114_VPC
 
 # Xicom Technology XTC-114 VPC
 
-This driver allows you to monitor Xicom's high power amplifier model XTC-114. These amplifiers are typically used in antennas for satellite communication. The driver displays information on the unit itself, the status of its main systems, and a basic VPC configuration.
+This connector allows you to monitor Xicom's high power amplifier model XTC-114. These amplifiers are typically used in antennas for satellite communication. The connector displays information on the unit itself, the status of its main systems, and a basic VPC configuration.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver allows you to monitor Xicom's high power amplifier model XTC-114. Th
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

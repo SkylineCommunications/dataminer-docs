@@ -32,7 +32,7 @@ The CSS600 is a device for monitoring and replacing a primary MPX/RDS signal wit
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

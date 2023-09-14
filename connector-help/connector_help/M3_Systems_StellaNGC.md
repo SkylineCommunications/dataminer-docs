@@ -4,7 +4,7 @@ uid: Connector_help_M3_Systems_StellaNGC
 
 # M3 Systems StellaNGC
 
-This driver is used to manage the M3 Systems StellaNGC device.
+This connector is used to manage the M3 Systems StellaNGC device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to manage the M3 Systems StellaNGC device.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,7 +51,7 @@ There is no redundancy defined.
 
 ## How to Use
 
-This driver consists of the following pages:
+This connector consists of the following pages:
 
 - **General**: Displays general information about the device, such as the **Version**, **Disk Occupation,** **Session Status**, etc.
 - **KPI Values**: Contains two tables, the **L1 KPI Table** and the **L5 KPI Table**. Each table displays the current values and the limits of the KPIs monitored by the device.

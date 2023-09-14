@@ -4,21 +4,21 @@ uid: Connector_help_CPI_T22C1
 
 # CPI T22C1
 
-With this **serial** driver you can retrieve status information and update the configuration of **CPI 2.25KW TWT amplifiers**.
+With this **serial** connector you can retrieve status information and update the configuration of **CPI 2.25KW TWT amplifiers**.
 
 ## About
 
-This driver uses a serial protocol developed by CPI. Two communication modes are available on the 2.25KW TWT amplifiers: **ASCII Based Serial Computer Interface Protocol** **(ACIP)** and **Binary Based Serial Computer Interface Protocol (BCIP)**. This protocol implements the **BCIP** mode, which gives more reliable and complete information.
+This connector uses a serial protocol developed by CPI. Two communication modes are available on the 2.25KW TWT amplifiers: **ASCII Based Serial Computer Interface Protocol** **(ACIP)** and **Binary Based Serial Computer Interface Protocol (BCIP)**. This protocol implements the **BCIP** mode, which gives more reliable and complete information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| **Range** | **Device Firmware Version**                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | \- Front Panel Boot Kernel Software Version: *03.00.19* - Front Main Program Software Version: *01.00.80* - Power Supply Boot Kernel Software Version: *03.00.03* - Power Supply Main Program Software Version: *01.00.47* - RF Controller Boot Kernel Software Version: *03.00.03* - RF Controller Main Program Software Version: *01.00.33* - External Interface Boot Kernel Software Version: *03.00.03* - External Interface Main Program Software Version: *01.00.40* |
 
@@ -28,7 +28,7 @@ This driver uses a serial protocol developed by CPI. Two communication modes are
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

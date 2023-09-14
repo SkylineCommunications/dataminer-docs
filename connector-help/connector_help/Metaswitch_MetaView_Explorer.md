@@ -4,7 +4,7 @@ uid: Connector_help_Metaswitch_MetaView_Explorer
 
 # Metaswitch MetaView Explorer
 
-The Metaswitch MetaView Explorer is a network management application that monitors a variety of Metaswitch components and products providing voice telephony services in a network. This driver retrieves specific MetaView Explorer statistics and displays all active alarms on the MetaView Explorer system based on incoming SNMP traps.
+The Metaswitch MetaView Explorer is a network management application that monitors a variety of Metaswitch components and products providing voice telephony services in a network. This connector retrieves specific MetaView Explorer statistics and displays all active alarms on the MetaView Explorer system based on incoming SNMP traps.
 
 ## About
 
@@ -32,7 +32,7 @@ The Metaswitch MetaView Explorer is a network management application that monito
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ There is no redundancy defined.
 
 ## How to use
 
-- When the **SNMP Settings** are filled in, the driver is ready to poll the data from the device. No extra configuration is needed.
+- When the **SNMP Settings** are filled in, the connector is ready to poll the data from the device. No extra configuration is needed.
 - It is possible to limit the size of the **Trap** table, by configuring the maximum number of rows or configuring the maximum age of the traps via **Alarms** \> **Trap Config**.
 - The **Server Statistics** and **MetaSwitch Statistics Table** contain column headers indicating the **maximum** value for that column.
   All other tables containing column headers are configured to show the **sum** of the column values.

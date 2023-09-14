@@ -4,21 +4,21 @@ uid: Connector_help_VOO_CMTS_Collector
 
 # VOO CMTS Collector
 
-The **VOO CMTS Collector** is a combination of a smart-serial driver, SNMPv2 and serial driver.
+The **VOO CMTS Collector** is a combination of a smart-serial connector, SNMPv2 and serial connector.
 
 ## About
 
-This driver is used to collect data from the CMTS devices at VOO. This data is polled by using SNMP and IPDR commands and is sent to the relevant **CPE Manager** and **MTA Collector.** In other words, the driver is used as a control center to parse and distribute information from approximately 60 000 **CPEs**.
+This connector is used to collect data from the CMTS devices at VOO. This data is polled by using SNMP and IPDR commands and is sent to the relevant **CPE Manager** and **MTA Collector.** In other words, the connector is used as a control center to parse and distribute information from approximately 60 000 **CPEs**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This driver is used to collect data from the CMTS devices at VOO. This data is p
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) and a smart-serial connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) and a smart-serial connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

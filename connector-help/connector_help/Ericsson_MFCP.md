@@ -34,7 +34,7 @@ This MFCP Application can decode UHD (4K) HEVC compressed streams, whether 4:2:0
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,9 +48,9 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-This driver is capable of fully monitoring the Ericsson MediaFirst Content Processing platform, including alarms and servers. The driver uses a REST Web API to send and receive data to and from the system, using the JSON or XML formats.
+This connector is capable of fully monitoring the Ericsson MediaFirst Content Processing platform, including alarms and servers. The connector uses a REST Web API to send and receive data to and from the system, using the JSON or XML formats.
 
-Below you can find more detailed information about specific pages of the driver.
+Below you can find more detailed information about specific pages of the connector.
 
 ### Servers
 

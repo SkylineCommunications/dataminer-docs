@@ -13,19 +13,19 @@ The CATV/GGA transponders, TVT 10 and TVL 40L, are used in the CATV 862 MHz syst
 
 The transponders are frequency agile and include, along with alarm messages, so-called inventory data such as unit type, order number and construction year. They allow remotely controlled functions and measurements. All configuration data is securely saved in all Kathrein transponders. Each transponder is equipped with a virtual IP address and is managed by a Phoenix Gateway.
 
-This driver can be used to monitor parameters of the transmitter and configure it.
+This connector can be used to monitor parameters of the transmitter and configure it.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial protocol                                 | No                  | Yes                     |
 | 1.1.0.x          | No                                               | Yes                 |                         |
 | 1.1.1.x          | VGR09C instead of VGR09D, separated Pilot module | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | Unknown                     |
@@ -37,7 +37,7 @@ This driver can be used to monitor parameters of the transmitter and configure i
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

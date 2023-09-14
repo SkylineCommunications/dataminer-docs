@@ -4,15 +4,15 @@ uid: Connector_help_Axon_SEB10
 
 # Axon SEB10
 
-The **Axon SEB10** is a digital audio embedder. The driver monitors and controls the device via **SNMP**.
+The **Axon SEB10** is a digital audio embedder. The connector monitors and controls the device via **SNMP**.
 
 ## About
 
-The driver polls the device every 30 seconds for fast-varying information and every 10 minutes for slow-varying information.
+The connector polls the device every 30 seconds for fast-varying information and every 10 minutes for slow-varying information.
 
 ### Creation
 
-The driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+The connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -27,7 +27,7 @@ The driver uses a Simple Network Management Protocol (SNMP) connection and requi
 
 ## Usage
 
-This driver has four pages: **Main View, General Info, Settings** and **Events**.
+This connector has four pages: **Main View, General Info, Settings** and **Events**.
 
 ### Main View Page
 

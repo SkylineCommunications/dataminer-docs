@@ -4,22 +4,22 @@ uid: Connector_help_Edge-Core_Networks_Data_Center_Switch
 
 # Edge-Core Networks Data Center Switch
 
-With this driver, information can be gathered and viewed from the device **Edge-Core Networks Data Center Switch**, and certain parameters can be configured.
+With this connector, information can be gathered and viewed from the device **Edge-Core Networks Data Center Switch**, and certain parameters can be configured.
 
 ## About
 
 This device uses the **SNMP** protocol for the communication with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version  | No                  | Yes                     |
 | 1.1.0.x \[SLC Main\] | Firmware changes | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | 1.0.2.2                     |
@@ -28,7 +28,7 @@ This device uses the **SNMP** protocol for the communication with the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

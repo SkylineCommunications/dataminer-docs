@@ -6,7 +6,7 @@ uid: Connector_help_Eltek_Smartpack_2
 
 The Eltek Smartpack 2 is a controller that allows you to monitor and control DC power systems.
 
-Information is polled from the device using SNMP calls. In addition, the original web interface of the device is available through the driver.
+Information is polled from the device using SNMP calls. In addition, the original web interface of the device is available through the connector.
 
 ## About
 
@@ -34,7 +34,7 @@ Information is polled from the device using SNMP calls. In addition, the origina
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The driver consists of different pages that cover the various subsections that can be monitored/controlled for this device. You can find more information on these below.
+The connector consists of different pages that cover the various subsections that can be monitored/controlled for this device. You can find more information on these below.
 
 ### System Overview
 

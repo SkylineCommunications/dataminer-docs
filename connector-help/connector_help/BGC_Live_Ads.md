@@ -4,7 +4,7 @@ uid: Connector_help_BGC_Live_Ads
 
 # BGC Live Ads
 
-**BGC Live Ads** is a data collector driver. This driver allows the user to monitor jobs and their related clients. An SNMP connection is used to retrieve information from the device.
+**BGC Live Ads** is a data collector connector. This connector allows the user to monitor jobs and their related clients. An SNMP connection is used to retrieve information from the device.
 
 ## About
 
@@ -32,7 +32,7 @@ uid: Connector_help_BGC_Live_Ads
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains a tree control displaying the different **jobs** and their **related** **clients**. The information displayed in this tree control can also be viewed in the tables on the Jobs, Clients and Clarity pages.
 - **Jobs**: Contains the Jobs Table, which has an Instance and Name column. The page also displays the Job Path.

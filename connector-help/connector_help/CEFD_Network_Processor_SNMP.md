@@ -8,17 +8,17 @@ This series of Outdoor Block Upconverters provides one RF composite output cover
 
 ## About
 
-The **CEFD Network Processor SNMP** driver controls and monitors the slope and attenuation of the device.
+The **CEFD Network Processor SNMP** connector controls and monitors the slope and attenuation of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.12.1A                     |
 
@@ -28,7 +28,7 @@ The **CEFD Network Processor SNMP** driver controls and monitors the slope and a
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

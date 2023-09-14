@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_IDP_Discovery
 
 # Skyline IDP Discovery
 
-This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP). It is used to discover inventory in the network using highly user-configurable profiles relying on SNMP, HTTP(S) and serial communication.
+This connector is part of DataMiner Infrastructure Discovery and Provisioning (IDP). It is used to discover inventory in the network using highly user-configurable profiles relying on SNMP, HTTP(S) and serial communication.
 
 ## About
 
@@ -20,7 +20,7 @@ This driver is part of DataMiner Infrastructure Discovery and Provisioning (IDP)
 
 | **Range**       | **DCF Integration** | **Cassandra Compliant** | **Linked Components**                                                    | **Exported Components** |
 |-----------------|---------------------|-------------------------|--------------------------------------------------------------------------|-------------------------|
-| 1.0.0.x 1.0.1.x | No                  | Yes                     | This driver will only work when it is deployed as part of DataMiner IDP. | \-                      |
+| 1.0.0.x 1.0.1.x | No                  | Yes                     | This connector will only work when it is deployed as part of DataMiner IDP. | \-                      |
 
 ## Configuration
 
@@ -34,10 +34,10 @@ Element initialization is done automatically during the setup of DataMiner IDP.
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ## How to Use
 
-This driver is only intended to be used as part of DataMiner IDP.
+This connector is only intended to be used as part of DataMiner IDP.
 
 For more information on how to use DataMiner IDP, refer to the DataMiner Help.

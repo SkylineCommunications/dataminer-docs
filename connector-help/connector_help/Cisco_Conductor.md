@@ -4,17 +4,17 @@ uid: Connector_help_Cisco_Conductor
 
 # Cisco Conductor
 
-This driver is used to monitor the **Cisco Conductor** device.
+This connector is used to monitor the **Cisco Conductor** device.
 
 ## About
 
-This driver uses **SNMP** to retrieve basic information from the device (processors, disk storage, etc.).
+This connector uses **SNMP** to retrieve basic information from the device (processors, disk storage, etc.).
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-This driver contains 4 pages.
+This connector contains 4 pages.
 
 ### Device
 

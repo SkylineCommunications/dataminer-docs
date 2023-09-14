@@ -8,14 +8,14 @@ The **Enensys Gateway NN6-T2** is a DVB-T2 Gateway that is used to deliver TV se
 
 ## About
 
-This driver is mainly used to monitor the device, but also allows the configuration of certain parameters, such as the general device information and the date and time settings.
+This connector is mainly used to monitor the device, but also allows the configuration of certain parameters, such as the general device information and the date and time settings.
 
 ### Version Info
 
 | **Range**            | **Key Features** | **Based on** | **System Impact**                                                                                                                                                   |
 |----------------------|------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x              | Initial version  | \-           | \-                                                                                                                                                                  |
-| 1.0.1.x \[SLC Main\] | Driver review    | 1.0.0.1      | The entire driver was updated considering the newest DMA features. Furthermore, the vendor discontinued the main MIB and the driver suffered a considerable change. |
+| 1.0.1.x \[SLC Main\] | Driver review    | 1.0.0.1      | The entire driver was updated considering the newest DMA features. Furthermore, the vendor discontinued the main MIB and the connector suffered a considerable change. |
 
 ### Product Info
 
@@ -37,7 +37,7 @@ This driver is mainly used to monitor the device, but also allows the configurat
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ SNMP Settings:
 
 This page displays standard parameters and the device temperature. In the **Control** section, you can configure and control the device.
 
-The **Clock Reference** displays the **source** of the device's clock and also displays the **GPS Status.** Note that in driver versions **prior to 1.0.1.1**, these parameters were **on the Monitoring page**.
+The **Clock Reference** displays the **source** of the device's clock and also displays the **GPS Status.** Note that in connector versions **prior to 1.0.1.1**, these parameters were **on the Monitoring page**.
 
 There are buttons that can be used to make the **LED blink**, to **Reboot** the device and to reset the device to factory settings (**Factory Reset**).
 

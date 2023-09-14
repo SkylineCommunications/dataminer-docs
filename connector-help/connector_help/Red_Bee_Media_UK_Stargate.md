@@ -4,7 +4,7 @@ uid: Connector_help_Red_Bee_Media_UK_Stargate
 
 # Red Bee Media UK Stargate
 
-This driver can be used to communicate with an HTTP API and gather information about the alarms and synchronization status of various devices. It is capable of both reading incoming data from the API and sending data based on user input (in the form of an alarm acknowledgement).
+This connector can be used to communicate with an HTTP API and gather information about the alarms and synchronization status of various devices. It is capable of both reading incoming data from the API and sending data based on user input (in the form of an alarm acknowledgement).
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to communicate with an HTTP API and gather information a
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## Usage
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

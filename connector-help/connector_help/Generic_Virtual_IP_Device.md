@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Virtual_IP_Device
 
 # Generic Virtual IP Device
 
-This driver is used to create virtual elements and connect these to IP Cloud elements. It allows you to indicate if a device is a single- or dual-IP device.
+This connector is used to create virtual elements and connect these to IP Cloud elements. It allows you to indicate if a device is a single- or dual-IP device.
 
 The parameters that indicate the values of the IP addresses are used both for configuration purposes and to provide the necessary info to communicate with the device address and port.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
@@ -28,7 +28,7 @@ The parameters that indicate the values of the IP addresses are used both for co
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -42,7 +42,7 @@ There are also two source addresses **Source Address A** and **Source Address B*
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the **Generic Virtual IP Device** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.0.x** connector range of the **Generic Virtual IP Device** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

@@ -4,11 +4,11 @@ uid: Connector_help_Axel_Technology_Wolf2MS
 
 # Axel Technology Wolf2MS
 
-The Wolf2MS driver is an FM Controller. The device monitors FM transmissions. This driver can be used to process this data and configure the device.
+The Wolf2MS connector is an FM Controller. The device monitors FM transmissions. This connector can be used to process this data and configure the device.
 
 ## About
 
-The driver communicates with the device via **SNMP**. It also uses traps in order to save bandwidth.
+The connector communicates with the device via **SNMP**. It also uses traps in order to save bandwidth.
 
 ### Timing
 
@@ -28,7 +28,7 @@ All data gets retrieved from the device in 3 different ways.
 
     Note: When a trap is received, the default time in the trap is used to display the time of the alarm in the Alarm Console.
 
-  - The driver has a setting (**Trap Polling**) on the General page that will cause the relevant parameters to be polled again when a trap is received.
+  - The connector has a setting (**Trap Polling**) on the General page that will cause the relevant parameters to be polled again when a trap is received.
 
 - **Refresh All** button (on the General page):
 
@@ -38,13 +38,13 @@ All data gets retrieved from the device in 3 different ways.
 
 ### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 0.8.5                       |
 
@@ -54,7 +54,7 @@ All data gets retrieved from the device in 3 different ways.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -147,7 +147,7 @@ The **Audio Analog** page contains the **Audio Analog Setup** table and the **Au
 - The **Audio Analog** table contains parameters such as **Audio Analog Left Silence Mask** and **Audio Analog Left Silence Thr**. This table is **not polled** during element startup. It is only polled when the **Refresh Values** button is clicked on the **General** page.
 - The **Audio Analog Data** table contains parameters such as **Audio Analog Left Peak** and **Audio Analog Right Silence Alarm Status**. This table is **not polled** during element startup. It is only polled when the **Refresh Values** button is clicked on the **General** page. If a trap is received that is related to this table, the related parameters will be updated with the information from the trap, unless **Trap Polling** is enabled, in which case those parameters are repolled.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the original device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 

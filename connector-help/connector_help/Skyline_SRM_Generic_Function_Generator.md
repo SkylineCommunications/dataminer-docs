@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_SRM_Generic_Function_Generator
 
 # Skyline SRM Generic Function Generator
 
-This driver can be used to generate resources for an SRM environment. It is intended for use in an environment with one or more matrices. An element will represent a product that is not monitored by DataMiner (an output and input in the matrix). Based on this element, a resource can then be created.
+This connector can be used to generate resources for an SRM environment. It is intended for use in an environment with one or more matrices. An element will represent a product that is not monitored by DataMiner (an output and input in the matrix). Based on this element, a resource can then be created.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to generate resources for an SRM environment. It is inte
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,4 +44,4 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of only one parameter, which allows you to specify the name of the product. This name will then be used to create a resource.
+The element created with this connector consists of only one parameter, which allows you to specify the name of the product. This name will then be used to create a resource.

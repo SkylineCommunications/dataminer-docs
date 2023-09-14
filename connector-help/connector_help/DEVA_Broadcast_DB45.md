@@ -35,7 +35,7 @@ The DEVA Broadcast DB45 protocol can be used to monitor the FM signals analyzed 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,7 +63,7 @@ The web interface is only accessible when the client machine has network access 
 
 ### Channel Measurements
 
-This driver can be used to measure the **signals** for **multiple frequencies**. This can be configured in the **Channel Measurements** table.
+This connector can be used to measure the **signals** for **multiple frequencies**. This can be configured in the **Channel Measurements** table.
 
 Depending on the configured **Round Robin Interval**, every x seconds, the signals for a frequency in the Channel Measurements table will be retrieved. When a time interval has elapsed, the next frequency will be set and polled during a next interval.
 

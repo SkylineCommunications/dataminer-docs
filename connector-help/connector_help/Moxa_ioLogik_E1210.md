@@ -4,7 +4,7 @@ uid: Connector_help_Moxa_ioLogik_E1210
 
 # Moxa ioLogik E1210
 
-This driver allows you to monitor a configured Moxa ioLogik E1210 device via SNMP. It displays basic information about the device, as well as the status of the existing DI channels. For each DI channel, some settings can also be configured.
+This connector allows you to monitor a configured Moxa ioLogik E1210 device via SNMP. It displays basic information about the device, as well as the status of the existing DI channels. For each DI channel, some settings can also be configured.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to monitor a configured Moxa ioLogik E1210 device via SNM
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

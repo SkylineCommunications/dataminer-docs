@@ -4,11 +4,11 @@ uid: Connector_help_Ziggo_IPVPN_Collector
 
 # Ziggo IPVPN Collector
 
-The **Ziggo IPVPN Collector** driver collects data from different types of cable modems. The following modems are currently supported: **Ciena 3900 series**, **Cisco ME 3400**, **Cisco 1941**, **Cisco 887**, **Cisco ASR920**, **Cisco ISR1100 series**, **Huawei AR161**, **Huawei AR169**, **Telco Systems T-Marc 254** and **Juniper Networks SRX100/200**.
+The **Ziggo IPVPN Collector** connector collects data from different types of cable modems. The following modems are currently supported: **Ciena 3900 series**, **Cisco ME 3400**, **Cisco 1941**, **Cisco 887**, **Cisco ASR920**, **Cisco ISR1100 series**, **Huawei AR161**, **Huawei AR169**, **Telco Systems T-Marc 254** and **Juniper Networks SRX100/200**.
 
 ## About
 
-This driver is part of a larger setup and works together with the **Ziggo IPVPN CPE Manager**, **Ziggo IPVPN Provisioning**, **Ziggo Modem Outage Check**, **Skyline IAM DB** and **Skyline IAM DB Provision** drivers. As part of this setup, an extra database (IAM DB) is required. This extra database contains tables and storage procedures that, together with the aforementioned drivers, form the complete Ziggo CPE solution.
+This connector is part of a larger setup and works together with the **Ziggo IPVPN CPE Manager**, **Ziggo IPVPN Provisioning**, **Ziggo Modem Outage Check**, **Skyline IAM DB** and **Skyline IAM DB Provision** drivers. As part of this setup, an extra database (IAM DB) is required. This extra database contains tables and storage procedures that, together with the aforementioned drivers, form the complete Ziggo CPE solution.
 
 An element will poll multiple modems at the same time through SNMP. Every modem gets polled once every 5 minutes to retrieve rapidly changing data and once every 24 hours to retrieve slowly changing data.
 
@@ -22,16 +22,16 @@ An outage check will be performed on a polled CPE if the following conditions ar
 - The CPE is of **access type** "*HFC*".
 - The **CPE State** is equal to "*In Service*".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**       | **Description**                                                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range**       | **Description**                                                                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------------|----------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Deprecated\] | Initial version.                                                                       | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\]   | Primary and Secondary BGP parameters are now called BGP Neighbor 1 and BGP Neighbor 2. | No                  | Yes                     |
 
 ### Supported modems
 
-| **Driver Range** | **Device**                                                                                                                                                            |
+| **Range** | **Device**                                                                                                                                                            |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Ciena 3900 series Cisco ME 3400 Cisco 1941 Cisco 887 Cisco ASR920 Cisco ISR1100 series Huawei AR161 Huawei AR169 Telco Systems T-Marc 254 Juniper Networks SRX100/200 |
 
@@ -41,9 +41,9 @@ An outage check will be performed on a polled CPE if the following conditions ar
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection.
+This connector uses a Simple Network Management Protocol (SNMP) connection.
 
-The elements using this driver will automatically be created by the **Skyline IAM DB Provision** driver, so you will not need to specify anything during element creation. However, for the sake of completeness, the below fields are explained:
+The elements using this connector will automatically be created by the **Skyline IAM DB Provision** connector, so you will not need to specify anything during element creation. However, for the sake of completeness, the below fields are explained:
 
 SNMP CONNECTION:
 
@@ -67,11 +67,12 @@ The fields in the CSV file are separated with a semicolon (";"). The order of a 
 
 To upload an alarm configuration:
 
-1.  Go to the **Settings** page.
-2.  Click the **Refresh List** button to see the currently available files.
-3.  Select a file via the **Alarm Config File Name** parameter.
-4.  Click the **Import** button to load the file into the **Alarm Config** table.
-    However, note that alarms will not necessarily immediately change when a new config is loaded. Alarm validation is only done when the modem is polled again.
+1. Go to the **Settings** page.
+2. Click the **Refresh List** button to see the currently available files.
+3. Select a file via the **Alarm Config File Name** parameter.
+4. Click the **Import** button to load the file into the **Alarm Config** table.
+
+   However, note that alarms will not necessarily immediately change when a new config is loaded. Alarm validation is only done when the modem is polled again.
 
 The current alarm configuration can also be exported using the **Export** button. The exported file can then be found in the Ziggo IPVPN Collector documents folder. The file name consists of "*AlarmConfig\_*" followed by the current timestamp.
 

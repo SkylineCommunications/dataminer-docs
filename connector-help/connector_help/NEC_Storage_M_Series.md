@@ -4,21 +4,21 @@ uid: Connector_help_NEC_Storage_M_Series
 
 # NEC Storage M Series
 
-The NEC Storage M Series is a highly efficient storage solution that reduces the ever-growing cost of storing business-critical data. This driver can be used to monitor this device.
+The NEC Storage M Series is a highly efficient storage solution that reduces the ever-growing cost of storing business-critical data. This connector can be used to monitor this device.
 
 ## About
 
-The driver uses an **SNMP** connection to monitor **NEC Storage M Series** devices. SNMP traps can be retrieved when this is enabled on the device. The driver displays information about the connectivity units present in the system.
+The connector uses an **SNMP** connection to monitor **NEC Storage M Series** devices. SNMP traps can be retrieved when this is enabled on the device. The connector displays information about the connectivity units present in the system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The driver uses an **SNMP** connection to monitor **NEC Storage M Series** devic
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

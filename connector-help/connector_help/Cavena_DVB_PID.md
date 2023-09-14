@@ -6,7 +6,7 @@ uid: Connector_help_Cavena_DVB_PID
 
 The **Cavena DVB** is a subtitling system for TV channels.
 
-The **Cavena DVB PID** driver can be used to monitor Cavena DVB products.
+The **Cavena DVB PID** connector can be used to monitor Cavena DVB products.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Cavena DVB PID** driver can be used to monitor Cavena DVB products.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver has the following data pages:
+The connector has the following data pages:
 
 - **General:** This page contains general information about the system such as **Name**, **Description**, **Uptime**, etc.
 - **Products:** This page contains the **Products**, **Hardware** and **License** tables.

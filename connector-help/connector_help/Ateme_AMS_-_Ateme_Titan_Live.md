@@ -4,7 +4,7 @@ uid: Connector_help_Ateme_AMS_-_Ateme_Titan_Live
 
 # Ateme AMS - Ateme Titan Live
 
-This driver is exported by the [Ateme AMS](xref:Connector_help_Ateme_AMS) driver and contains a limited number of parameters defined in the parent driver.
+This connector is exported by the [Ateme AMS](xref:Connector_help_Ateme_AMS) connector and contains a limited number of parameters defined in the parent connector.
 
 ## About
 

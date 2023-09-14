@@ -6,7 +6,7 @@ uid: Connector_help_Enensys_T2_Edge
 
 The **Enensys T2 Edge** device is a standalone product that enables the delivery of regional/local TV services over SFN DVB-T2 networks.
 
-With this driver the user is able to monitor multiple KPIs and configure various settings of the abovementioned device.
+With this connector the user is able to monitor multiple KPIs and configure various settings of the abovementioned device.
 
 ## About
 
@@ -36,7 +36,7 @@ With this driver the user is able to monitor multiple KPIs and configure various
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

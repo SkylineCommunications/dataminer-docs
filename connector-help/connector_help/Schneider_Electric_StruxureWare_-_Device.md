@@ -4,9 +4,9 @@ uid: Connector_help_Schneider_Electric_StruxureWare_-_Device
 
 # Schneider Electric StruxureWare - Device
 
-This driver is exported from the [Schneider Electric StruxureWare](xref:Connector_help_Schneider_Electric_StruxureWare) parent driver. It provides specific monitoring information for each device.
+This connector is exported from the [Schneider Electric StruxureWare](xref:Connector_help_Schneider_Electric_StruxureWare) parent connector. It provides specific monitoring information for each device.
 
-The driver was designed to interact with a SOAP interface. An HTTP connection is used to successfully retrieve the API information.
+The connector was designed to interact with a SOAP interface. An HTTP connection is used to successfully retrieve the API information.
 
 ## About
 
@@ -30,7 +30,7 @@ The driver was designed to interact with a SOAP interface. An HTTP connection is
 
 ## Configuration
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ## How to use
 

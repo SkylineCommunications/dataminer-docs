@@ -4,7 +4,7 @@ uid: Connector_help_TDF_ALLISS_Analog_Transmitter
 
 # TDF ALLISS Analog Transmitter
 
-The TDF ALLISS Analog Transmitter driver is a virtual driver that maps the parameters of the transmitter system via the TDF Jbus PLC driver.
+The TDF ALLISS Analog Transmitter connector is a virtual connector that maps the parameters of the transmitter system via the TDF Jbus PLC driver.
 
 ## About
 
@@ -32,7 +32,7 @@ The TDF ALLISS Analog Transmitter driver is a virtual driver that maps the param
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to use
 
@@ -45,4 +45,4 @@ This driver uses a virtual connection and does not require any input during elem
 
 ## Notes
 
-The names and descriptions of the parameters are in French, since this driver is intended only for TDF.
+The names and descriptions of the parameters are in French, since this connector is intended only for TDF.

@@ -32,7 +32,7 @@ The Ross Matrix Router is a routing, multi-viewer and signal processing platform
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Allows you to define the matrix size using the **Number of Inputs** and **Number of Outputs** parameters. Also displays the **Last KeepAlive Timestamp**, which shows the last keep alive timestamp sent by the matrix.
 - **Matrix**: Displays the **Matrix**.

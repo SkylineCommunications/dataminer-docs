@@ -4,11 +4,11 @@ uid: Connector_help_Skyline_SLA_Definition_Basic
 
 # Skyline SLA Definition Basic
 
-With this driver, you can track **Service Level Agreement (SLA)** compliance in real time.
+With this connector, you can track **Service Level Agreement (SLA)** compliance in real time.
 
 ## About
 
-This driver allows the real-time tracking of SLAs. When a new alarm occurs on the underlying service, a new outage is added to the list. Other parameters are automatically updated to reflect the outages in the current time frame. This time frame can be either a fixed window or a sliding window. This way, early warnings can be generated when SLAs degrade, so that penalties can be prevented.
+This connector allows the real-time tracking of SLAs. When a new alarm occurs on the underlying service, a new outage is added to the list. Other parameters are automatically updated to reflect the outages in the current time frame. This time frame can be either a fixed window or a sliding window. This way, early warnings can be generated when SLAs degrade, so that penalties can be prevented.
 
 ### Version Info
 
@@ -34,10 +34,10 @@ This driver allows the real-time tracking of SLAs. When a new alarm occurs on th
 
 Create a new SLA:
 
-1.  Give the SLA a unique **Name**.
-2.  Select the **Service** that has to be tracked by the SLA.
-3.  Select the **Protocol** "*Skyline SLA Definition Basic*". For the **Version**, it is recommended to select "*Production*".
-4.  Select an **Alarm** and **Trend template** to monitor the SLA.
+1. Give the SLA a unique **Name**.
+2. Select the **Service** that has to be tracked by the SLA.
+3. Select the **Protocol** "*Skyline SLA Definition Basic*". For the **Version**, it is recommended to select "*Production*".
+4. Select an **Alarm** and **Trend template** to monitor the SLA.
 
 ### Configuration
 
@@ -45,19 +45,19 @@ Once the SLA element has been created, go to the **SLA Configuration** page to c
 
 - **Window settings**
 
-- **Type**: *Fixed Time Window* or *Sliding Time Window.*
+  - **Type**: *Fixed Time Window* or *Sliding Time Window.*
   - **Time** and **Unit**: e.g. *1 month*.
 
 - **Alarm settings**
 
-- **Violation level**: Defines from which service alarm level the SLA must indicate that it has been violated.
+  - **Violation level**: Defines from which service alarm level the SLA must indicate that it has been violated.
   - **Delay time**: A delay (in seconds) before the SLA starts indicating that it has been violated (e.g. for backup delays).
   - **Minimum outage threshold**: An initial timespan during which a new alarm is not taken into account.
   - **Violation settings**: Optional filters to modify the impact of certain types of alarms.
 
 - **Extra settings**
 
-- **Admin State**: Activate or deactivate tracking of the SLA.
+  - **Admin State**: Activate or deactivate tracking of the SLA.
   - **Reset** of the counters of the SLA.
   - **Base timestamp**: Can be customized to define a fixed window that does not start at e.g. the beginning of the month.
   - **Time to keep outages**: Determines how long outages are kept in the SLA outage list.
@@ -79,14 +79,14 @@ In the Compliance Info section, the following parameters are displayed:
 
 - **Compliance**, with the following possible values:
 
-- *Compliant*: The SLA has never been violated and is currently not being violated.
+  - *Compliant*: The SLA has never been violated and is currently not being violated.
   - *Breached*: The SLA has been violated beyond the acceptable limits, i.e. penalties could be due.
   - *Compliant (degraded)*: The SLA has been violated, but not beyond the acceptable limits.
   - *Compliant (degrading)*: The SLA is currently being violated.
 
 - **Predicted Compliance**
 
-- Violation info, such as the **Total** **and** **Single violation time left** and the **Number of violations left**.
+  - Violation info, such as the **Total** **and** **Single violation time left** and the **Number of violations left**.
 
 In the Performance Indicators section, you can find the following information:
 

@@ -32,7 +32,7 @@ The PBI DCH-5220P is an IRD. It has several options, the most important being th
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver uses **SNMP** commands to communicate with the device. The driver layout generally corresponds with that of the web interface of the device.
+The connector uses **SNMP** commands to communicate with the device. The connector layout generally corresponds with that of the web interface of the device.
 
 The first part of a page corresponds with the top level of the web interface (Status, Configuration, System). The second part corresponds with the relevant subsection (E.g. Status - Decoder, Configuration - DVB-S2 Tuner, System - Device).
 

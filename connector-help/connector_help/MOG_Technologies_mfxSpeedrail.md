@@ -4,21 +4,21 @@ uid: Connector_help_MOG_Technologies_mfxSpeedrail
 
 # MOG Technologies mfxSpeedrail
 
-The **MOG Technologies mxfSpeedrail** driver is used to monitor the MOG Technologies centralized ingest solution. This solution was designed to control file-based production workflows for broadcast environments.
+The **MOG Technologies mxfSpeedrail** connector is used to monitor the MOG Technologies centralized ingest solution. This solution was designed to control file-based production workflows for broadcast environments.
 
 ## About
 
-This driver was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API's information.
+This connector was designed to interact with a SOAP interface. An **HTTP** connection is used to successfully retrieve the API's information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.1.7600.0                  |
 
@@ -28,7 +28,7 @@ This driver was designed to interact with a SOAP interface. An **HTTP** connecti
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -38,7 +38,7 @@ HTTP CONNECTION:
 
 ## Usage
 
-The driver contains 10 pages.
+The connector contains 10 pages.
 
 ### General Page
 
@@ -69,7 +69,3 @@ This page displays the **Notifications Table**, which shows detailed information
 ### System Settings Page
 
 This page provides information about the current values for the system settings. In order to add a system setting to the **System Settings Table**, you must add it using the write parameter located at the top of the page.
-
-## Notes
-
-N/A

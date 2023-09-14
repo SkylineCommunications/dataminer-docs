@@ -8,20 +8,20 @@ The **Verizon Newtec Dialog Platform Collector** collects and organizes the data
 
 ## About
 
-This is an **HTTP** driver that communicates with the **Newtec Dialog System** via the **Restful API** provided by the system and via the native **SOAP API** provided by DataMiner. The data collected from both sources are placed strategically within the driver, allowing users to easily monitor the different systems controlled by the **Newtec Dialog Platform**.
+This is an **HTTP** connector that communicates with the **Newtec Dialog System** via the **Restful API** provided by the system and via the native **SOAP API** provided by DataMiner. The data collected from both sources are placed strategically within the connector, allowing users to easily monitor the different systems controlled by the **Newtec Dialog Platform**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                 | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version The initial version in this range is deprecated. Use version **1.0.0.2** of this range instead. | No                  | Yes                     |
 | 1.0.1.x              | Improvements to the faults functionality                                                                        | No                  | Yes                     |
 | 1.1.1.x              | Driver has been adapted to new firmware version 2.1.2.                                                          | No                  | Yes                     |
 | 1.1.2.x \[SLC Main\] | Driver has been adapted to work with DMS.                                                                       | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.1                       |
 | 1.0.1.x          | 2.1.1                       |
@@ -34,7 +34,7 @@ This is an **HTTP** driver that communicates with the **Newtec Dialog System** v
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION 0:
 
@@ -62,13 +62,13 @@ Note: In **version 1.1.2.x** of this protocol, the **IP address specified in the
 
 ### General
 
-This page contains basic information on what is going on in the driver, such as **Active Remotes**, **Networks** and **Hub Forward**.
+This page contains basic information on what is going on in the connector, such as **Active Remotes**, **Networks** and **Hub Forward**.
 
 ### Remotes
 
 This page contains critical information regarding the **Remotes** within the **Circuits**. This information is retrieved via the **Restful API**.
 
-Remotes are important as they are used in the driver's **import/export** feature, which populates some of the fields in the Circuits Overview Table. They are the main part of the Circuits.
+Remotes are important as they are used in the connector's **import/export** feature, which populates some of the fields in the Circuits Overview Table. They are the main part of the Circuits.
 
 The overview table on this page contains among others the **Modem Type**, **Monitoring Type** and **Lock State** columns.
 
@@ -86,56 +86,56 @@ The overview table on this page contains among others the **Operational State**,
 
 ### RI Alarms
 
-This page contains a table listing all the alarms related to the **Remotes** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Remotes** within the connector. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Remotes Certification Instance
 
-This page contains information regarding the **Remotes Certification** corresponding with the **Remotes** within the driver. This information is retrieved via the **SOAP API**.
+This page contains information regarding the **Remotes Certification** corresponding with the **Remotes** within the connector. This information is retrieved via the **SOAP API**.
 
 The page contains a table displaying the **Primary Spectrum**, **Primary LBand Switch**, **Measurement Channel**, etc.
 
 ### RCRT Alarms
 
-This page contains a table listing all the alarms related to the **Remotes Certification** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Remotes Certification** within the connector. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Remotes Mobility
 
-This page contains critical information regarding the **Remotes Mobility** corresponding with the **Remotes** within the driver. This information is retrieved via the **SOAP API**.
+This page contains critical information regarding the **Remotes Mobility** corresponding with the **Remotes** within the connector. This information is retrieved via the **SOAP API**.
 
 The page contains the **Remotes Mobility**, **Remotes Mobility Terminal** and **Remotes Mobility Satellite Network** tables, which include parameters such as **Accessible**, **Ongoing** and **Located**.
 
 ### RM Alarms
 
-This page contains a table listing all the alarms related to the **Remotes Mobility** within the driver. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Remotes Mobility** within the connector. The information in the table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Hub Networks
 
-This page contains a table that collects information from different tables in the driver such as **Hub Forward**, **Hub Return**, **Satellite Network**, **Hub Module**, and **Remotes.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Networks** within the driver. The table on this page displays the **Hub Return Symbol Rate**, **Hub Forward Booked Bandwidth**, **Nominal MODCOD**, etc.
+This page contains a table that collects information from different tables in the connector such as **Hub Forward**, **Hub Return**, **Satellite Network**, **Hub Module**, and **Remotes.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Networks** within the connector. The table on this page displays the **Hub Return Symbol Rate**, **Hub Forward Booked Bandwidth**, **Nominal MODCOD**, etc.
 
 ### Hub Forward
 
-This page contains a table that collects information from different tables in the driver such as **Forward Link**, **Forward Carrier** and **Forward Pool.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Forward** within the driver. The table on this page displays the **Symbol Rate**, **Uplink Center Frequency**, **Power**, etc.
+This page contains a table that collects information from different tables in the connector such as **Forward Link**, **Forward Carrier** and **Forward Pool.** The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Forward** within the connector. The table on this page displays the **Symbol Rate**, **Uplink Center Frequency**, **Power**, etc.
 
 ### Hub Return
 
-This page contains a table that collects information from different tables in the driver such as **Return Link**, **Return Carrier**, and **Return Pool**. The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Return** within the driver. The table on this page displays the **Free Slots**, **Booked Bandwidth**, **Slot Usage**, etc.
+This page contains a table that collects information from different tables in the connector such as **Return Link**, **Return Carrier**, and **Return Pool**. The collected information is then used in calculations that are placed in a table that provides an overview of the **Hub Return** within the connector. The table on this page displays the **Free Slots**, **Booked Bandwidth**, **Slot Usage**, etc.
 
 ### Circuits
 
-This page contains a table that collects information from the **import/export** feature, which exports a configuration file with a list of **Remotes** present in the driver to the **VSAT Database** and imports a provisioning file from the **VSAT Database** based on the exported file.
+This page contains a table that collects information from the **import/export** feature, which exports a configuration file with a list of **Remotes** present in the connector to the **VSAT Database** and imports a provisioning file from the **VSAT Database** based on the exported file.
 
-This table also collects information from different tables within the driver such as **Hub Forward**, **Hub Return** and **Hub Network**, which provides an overview of the **Circuits** within the driver.
+This table also collects information from different tables within the connector such as **Hub Forward**, **Hub Return** and **Hub Network**, which provides an overview of the **Circuits** within the connector.
 
 The table on this page displays the **Hub Forward Traffic**, **Hub Return C/No**, **Antenna Size**, etc.
 
 ### Configuration
 
-This page allows you to configure the following critical functionality of the driver:
+This page allows you to configure the following critical functionality of the connector:
 
 - **Authentication:** In this section, the username and password must be specified that allow the data to be retrieved from the **Newtec Dialog System**.
 - **Import/export configuration**: Allows you to export a configuration file to the **VSAT Database**, which will then create a **provisioning file**. This file can then be imported using the **import** feature, so that specific fields within the **Circuits Table** can be populated.
-- **Ping configuration**: Allows you to enable the ping feature, which pings each **Remote** present in the driver. You can also select the **VLAN** that you want to ping and the **Processing Time**, in order to determine how often the ping will occur.
-- **Other settings:** Includes the **File Handling**, which is associated with the **Import/Export Configuration** feature. This allows you to control whether the **import** and **export file** are processed by the driver. The **Circuit Request Size** allows you to specify how many **Circuits** will be retrieved in a single call.
+- **Ping configuration**: Allows you to enable the ping feature, which pings each **Remote** present in the connector. You can also select the **VLAN** that you want to ping and the **Processing Time**, in order to determine how often the ping will occur.
+- **Other settings:** Includes the **File Handling**, which is associated with the **Import/Export Configuration** feature. This allows you to control whether the **import** and **export file** are processed by the connector. The **Circuit Request Size** allows you to specify how many **Circuits** will be retrieved in a single call.
 - **SLA & fault configuration:** Allows you to enable or disable the ability to update SLA & fault configuration parameters automatically. This section also includes a timer that allows you to select how frequently the updates should occur.
 
 #### Version 1.1.2.x and higher
@@ -194,15 +194,15 @@ In the table on this page, you can among others find the **Forward Class Pool**,
 
 ### FP Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPL Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool L1** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool L1** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### L1 FPCI Alarms
 
-This page contains a table listing all the alarms related to the **Forward Pool Class L1** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Pool Class L1** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Return Pool
 
@@ -218,23 +218,23 @@ The page contains the **CPM Return Class Pools** and **HRC MXDMA Class Pools tab
 
 ### RPI Alarms
 
-This page contains a table listing all the alarms related to the **Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Return Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### CPM RPI Alarms
 
-This page contains a table listing all the alarms related to the **CPM Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **CPM Return Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### HRC MXDMA RPI Alarms
 
-This page contains a table listing all the alarms related to the **HRC MXDMA Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **HRC MXDMA Return Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### HRC SCPC RPI Alarms
 
-This page contains a table listing all the alarms related to the **HRC SCPC Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **HRC SCPC Return Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### S2 RPI Alarms
 
-This page contains a table listing all the alarms related to the **S2 Return Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **S2 Return Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Forward Link
 
@@ -250,11 +250,11 @@ In the table on this page, you can among others find the **Control Symbol Rate**
 
 ### FLI Alarms
 
-This page contains a table listing all the alarms related to the **Forward Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Forward Link** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### RLI Alarms
 
-This page contains a table listing all the alarms related to the **Return Link** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Return Link** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Service Profile
 
@@ -288,7 +288,7 @@ The page contains the **Terminals Unicast Traffic**, **Terminal Multicast Circui
 
 ### Accounting Alarms
 
-This page contains a table listing all the alarms related to the **Accounting** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Accounting** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Accounting Aggregator
 
@@ -298,7 +298,7 @@ In the table on this page, you can among others find the **File Name**, **Status
 
 ### AA Alarms
 
-This page contains a table listing all the alarms related to the **Accounting Aggregator** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Accounting Aggregator** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Redundancy Controller
 
@@ -308,7 +308,7 @@ The page contains the **Single Device** and **Server Redundancy** tables, which 
 
 ### RC Alarms
 
-This page contains a table listing all the alarms related to the **Redundancy Controller** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Redundancy Controller** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Hub Module
 
@@ -324,7 +324,7 @@ In the table on this page, you can among others find the **Asset Tag**, **Spare 
 
 ### Enclosure Device Alarms
 
-This page contains a table listing all the alarms related to the **Enclosure Device** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Enclosure Device** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### MS Servers
 
@@ -334,7 +334,7 @@ The page contains the **MS Server**, **Processors**, and **Ports List tables**, 
 
 ### MSS Alarms
 
-This page contains a table listing all the alarms related to the **Microsoft Server** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Microsoft Server** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### LX Servers
 
@@ -344,7 +344,7 @@ The page contains the **Linux Server** and **Storage Table** tables, which inclu
 
 ### LXS Alarms
 
-This page contains a table listing all the alarms related to the **Linux Server** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Linux Server** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Modulator
 
@@ -354,7 +354,7 @@ The overview table on this page contains among others the **Data Active Interfac
 
 ### Modulator Alarms
 
-This page contains a table listing all the alarms related to the **Modulator** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Modulator** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### MCD6000 Demodulator
 
@@ -370,7 +370,7 @@ The overview table on this page contains among others the **Product**, **CPU Loa
 
 ### Demodulator Alarms
 
-This page contains a table listing all the alarms related to the **Demodulator** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Demodulator** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Switch
 
@@ -380,7 +380,7 @@ The overview table on this page contains among others the **CPU Usage**, **Memor
 
 ### Switch Alarms
 
-This page contains a table listing all the alarms related to the **Switch** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Switch** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### RF Switch
 
@@ -390,7 +390,7 @@ The page contains the **RF Switch Overview**, **Network Interface Settings** and
 
 ### RF Switch Alarms
 
-This page contains a table listing all the alarms related to the **RF Switch** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **RF Switch** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### CSE Shaper
 
@@ -400,7 +400,7 @@ In the table on this page, you can among others find the **Receive Bitrate**, **
 
 ### CSES Alarms
 
-This page contains a table listing all the alarms related to the **CSE Shaper** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **CSE Shaper** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### CPMCTL Controller
 
@@ -410,7 +410,7 @@ The page contains the **CPMCTL Controller**, **Shaping Nodes** and **Slot Pool C
 
 ### CPMCTLC Alarms
 
-This page contains a table listing all the alarms related to the **CPMCTL Controller** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **CPMCTL Controller** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### HRCCTL Controller
 
@@ -420,7 +420,7 @@ The page contains the **HRCCTL Controller** and **HRCCTL Shaping Nodes** tables,
 
 ### HRCCTLC Alarms
 
-This page contains a table listing all the alarms related to the **HRCCTL Controller** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **HRCCTL Controller** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### DCP Decapsulator
 
@@ -430,7 +430,7 @@ In the table on this page, you can among others find the **Receive Bitrate**, **
 
 ### DCPD Alarms
 
-This page contains a table listing all the alarms related to the **DCP Decapsulator** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **DCP Decapsulator** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### DEM Application
 
@@ -440,7 +440,7 @@ The page contains the **DEM Application**, **External Interface Statistics**, **
 
 ### DEMA Alarms
 
-This page contains a table listing all the alarms related to the **DEM Application** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **DEM Application** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Tellinet
 
@@ -450,7 +450,7 @@ The page contains the **Tellinet** and **Tellinet Statistics** tables, which inc
 
 ### Tellinet Alarms
 
-This page contains a table listing all the alarms related to the **Tellinet** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Tellinet** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### TCS Monitoring
 
@@ -460,7 +460,7 @@ In the table on this page, you can among others find the **Protobuf Version**, *
 
 ### TCSM Alarms
 
-This page contains a table listing all the alarms related to the **TCS Monitoring** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **TCS Monitoring** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Hub Multicast Circuit
 
@@ -506,7 +506,7 @@ The overview table on this page contains among others the **MTU**, **Routing Pro
 
 ### Network Alarms
 
-This page contains a table listing all the alarms related to the **Network** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **Network** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### Domain
 
@@ -534,7 +534,7 @@ The overview table on this page contains among others the **Locked**, **Service 
 
 ### IPv4 API Alarms
 
-This page contains a table listing all the alarms related to the **IPv4 Address Pool** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
+This page contains a table listing all the alarms related to the **IPv4 Address Pool** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value.**
 
 ### IPv6 Address Pool
 
@@ -562,7 +562,7 @@ The overview table on this page contains among others the **Max Advanced Modems*
 
 ### Dialog Integration
 
-This page contains information about the **integration of protocols and elements** within the driver.
+This page contains information about the **integration of protocols and elements** within the connector.
 
 ### Dialog Config Instance
 
@@ -572,7 +572,7 @@ The table on this page contains among others a **Name** column.
 
 ### DCI Alarms
 
-This page contains a table listing all the alarms related to the **dialog config** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value**.
+This page contains a table listing all the alarms related to the **dialog config** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value**.
 
 ### Dialog Provisioning Instance
 
@@ -582,4 +582,4 @@ The page contains the **Functionality Overview**, **DMA**, **Provisioning Progre
 
 ### DPI Alarms
 
-This page contains a table listing all the alarms related to the **dialog provisioning** within the driver. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value**.
+This page contains a table listing all the alarms related to the **dialog provisioning** within the connector. The information in this table includes the **Element Name**, **Parameter ID** and **Display Value**.

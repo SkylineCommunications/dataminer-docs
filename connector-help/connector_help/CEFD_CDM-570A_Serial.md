@@ -4,20 +4,20 @@ uid: Connector_help_CEFD_CDM-570A_Serial
 
 # CEFD CDM-570A Serial
 
-The **CDM-570** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downcoverters (LNBs).
+The **CDM-570** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downconverters (LNBs).
 
 ## About
 
-This driver implements the parameters like in the previous **CEFD CDM-570 Serial** driver which was based on the previous web interface.
+This connector implements the parameters like in the previous **CEFD CDM-570 Serial** connector which was based on the previous web interface.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                            | **Based on** | **System Impact**                                                          |
-|----------------------|-----------------------------------------------------------------------------------------------------------------------------|--------------|----------------------------------------------------------------------------|
-| 1.0.0.x \[obsolete\] | Initial version                                                                                                             | \-           | \-                                                                         |
-| 1.0.1.x \[obsolete\] | Added the Bus to the driver                                                                                                 | 1.0.0.5      | Communication via Bus enabled.                                             |
-| 1.0.2.x \[obsolete\] | Table FSK now uses naming instead of displayColumn to make the database for this table Cassandra-compliant.                 | 1.0.0.6      | Old trend data will be lost for this table.                                |
-| 1.0.3.x \[SLC Main\] | Serial single + Table FSK now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. | 1.0.1.5      | Change type of communication + Old trend data will be lost for this table. |
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x \[obsolete\] | Initial version | \- | \- |
+| 1.0.1.x \[obsolete\] | Added the Bus to the connector | 1.0.0.5 | Communication via Bus enabled. |
+| 1.0.2.x \[obsolete\] | Table FSK now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. | 1.0.0.6 | Old trend data will be lost for this table. |
+| 1.0.3.x \[SLC Main\] | Serial single + Table FSK now uses naming instead of displayColumn to make the database for this table Cassandra-compliant. | 1.0.1.5 | Change type of communication + Old trend data will be lost for this table. |
 
 ### Product Info
 
@@ -37,21 +37,18 @@ This driver implements the parameters like in the previous **CEFD CDM-570 Serial
 | 1.0.2.x   | No                  | Yes                     | \-                    | [CEFD CDM-570A Serial (FSK)](xref:Connector_help_CEFD_CDM-570A_Serial_(FSK)) |
 | 1.0.3.x   | No                  | Yes                     | \-                    | [CEFD CDM-570A Serial (FSK)](xref:Connector_help_CEFD_CDM-570A_Serial_(FSK)) |
 
-
-
 ## Configuration
 
 ### Connections
 
 **SNMP CONNECTION**:
 
-\- **IP address/host**: the polling IP of the device eg *10.11.12.13*
+- **IP address/host**: The polling IP of the device, e.g. *10.11.12.13*.
 
 **SNMP Settings**:
 
-\- **Port number**: the port of the connected device, default *161*
-
-\- **Bus address**: the bus address, is the address that will be used for the serial communication.
+- **Port number**: The port of the connected device, default *161*.
+- **Bus address**: The bus address. This is the address that will be used for the serial communication.
 
 ## How to Use
 
@@ -89,12 +86,12 @@ Use the international format *HH:MM:SS* to enter the **time** (where *HH = hour 
 
 - Internal Reference:
 
-- **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
+  - **Warm Up Delay**: For internal frequency reference (OCXO). *Disabled* (instant on - no delay for OCXO to reach temperature) or *Enabled* (unit waits until OCXO reaches correct temperature)
   - **Warm Up Countdown**: Used to truncate the Warm-up delay period to zero, forcing the unit into '*instant-on*' mode. As a query, returns the Warm-up Delay countdown, in seconds remaining. Range is from 000 to 200 seconds.
 
 - **Terrestrial Interface:**
 
-- Interface Type: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
+  - Interface Type: Used to define which electrical interface type is active at the data connectors. If *RS422*, *V.35*, or *RS232* is selected, the menu also indicates the operation of RTS/CTS.
   - RTS: Defines how RTS/CTS will operate at the main data interface
   - Line Build Out: Valid only for T1 interface.
 
@@ -134,14 +131,13 @@ Use this page to configure Block Up Converter parameters and to display the BUC 
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only and cannot be changed.
 
 ### Maint - Unit Info
 
 This page contains the information of the device.
 
 - **Unit Information**: In this section it is possible to find the **Serial Number** and the **Software Revision**.
-
 - **Firmware**: The **Active Firmware Image** and the **Next Reboot Image** are available.
 
 ### FSK

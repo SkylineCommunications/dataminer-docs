@@ -4,23 +4,23 @@ uid: Connector_help_Atlassian_Jira
 
 # Atlassian Jira
 
-The **Atlassian Jira** driver is used to **create and update tickets** on the **Atlassian Jira ticketing system**.
+The **Atlassian Jira** connector is used to **create and update tickets** on the **Atlassian Jira ticketing system**.
 
 ## About
 
-The Atlassian Jira driver uses the official JSON REST API to create and update tickets in the ticketing interface.
+The Atlassian Jira connector uses the official JSON REST API to create and update tickets in the ticketing interface.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                     | No                  | Yes                     |
 | 1.0.1.x          | Driver review.                                       | No                  | Yes                     |
 | 3.0.0.x          | Based on 1.0.0.x. Dedicated branch for costumer VOO. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.2.11                      |
 | 1.0.1.x          | 5.2.11 7.3.6                |
@@ -32,7 +32,7 @@ The Atlassian Jira driver uses the official JSON REST API to create and update t
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Configuration of authentication
 
-This driver uses **HTTPS** and needs credentials to create and update tickets. These credentials can be set on the **Advanced** page, which can be accessed via a page button on the **Configuration** page.
+This connector uses **HTTPS** and needs credentials to create and update tickets. These credentials can be set on the **Advanced** page, which can be accessed via a page button on the **Configuration** page.
 You can either configure **Username** and **Password**, or configure the **Authorization Key**.
 
 ## Usage
@@ -63,7 +63,7 @@ The **Add Field** button at the bottom of the page opens the **Add Field** page,
 
 This page contains additional configuration parameters.
 
-On the left side of the page, you can find the **Update Settings** and **Log Settings**. These settings do not necessarily have to be specified, but they can be used to manage certain aspects of the driver.
+On the left side of the page, you can find the **Update Settings** and **Log Settings**. These settings do not necessarily have to be specified, but they can be used to manage certain aspects of the connector.
 
 - The **Update settings** are only used for tickets that are **updated automatically** with the **Advanced** parameter, for example from an Automation script. These settings make sure that there are **not too many ticket updates** in the specified period of time. When the **maximum is reached**, the ticket updates will be updated later once the interval has passed.
 - The **Log Settings** can be used to manage the **number of entries** in the **Ticket Log Table**.
@@ -72,7 +72,7 @@ On the right side of the page, you can find the settings **necessary** **to crea
 
 The **Advanced** button can be used to immediately set certain values in the JSON command and send the command to the Atlassian Jira interface. The syntax for the Advanced parameter must be **\<GUID\>\|\<Action\>(*CREATE* or *UPDATE*)\|field;value\|field n;value n\|.** The fields specified in this parameter will be added to the existing fields in the **Ticket Creation Table** and the command will be sent immediately. This parameter can for example be used in combination with an Automation script that **generates tickets automatically**.
 
-In range 3.0.0.x of the driver, the following features are added on this page:
+In range 3.0.0.x of the connector, the following features are added on this page:
 
 - The **Alarms** table to add the alarms that are being processed by operators.
 - The **Get Eligible Ticket** subpage to search incidents.
@@ -81,7 +81,7 @@ In range 3.0.0.x of the driver, the following features are added on this page:
 
 ### Log
 
-On this page, you can check if the JSON commands that were sent by the driver were successful or not.
+On this page, you can check if the JSON commands that were sent by the connector were successful or not.
 
 The **Create Log Table** contains information about the latest commands that have been sent. When a JSON command is sent to the device, a new row is added to this table.
 

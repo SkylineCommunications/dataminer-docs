@@ -4,11 +4,11 @@ uid: Connector_help_MX1_Developed_Playout_Engine_-_Ingest
 
 # MX1 Developed Playout Engine - Ingest
 
-This exported driver is used to **monitor the media ingest channels**.
+This exported connector is used to **monitor the media ingest channels**.
 
 ## About
 
-This driver is exported from the MX1 Developed Playout Engine driver.
+This connector is exported from the MX1 Developed Playout Engine driver.
 
 ### Version Info
 

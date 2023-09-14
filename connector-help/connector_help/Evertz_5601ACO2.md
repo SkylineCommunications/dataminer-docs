@@ -8,13 +8,13 @@ The 5601ACO2 Automatic Changeovers are intended for use with two 5601MSC Master 
 
 ## About
 
-This driver uses SNMP to monitor the **Evertz 5601ACO2** device.
+This connector uses SNMP to monitor the **Evertz 5601ACO2** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

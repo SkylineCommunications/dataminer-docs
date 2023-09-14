@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_U4T200
 
 The U4T200 is 4K (4-wire) production toolbox. It has an audio de-embedder and embedder with full audio shuffling. It also does LUT-based color space and dynamic range conversion.
 
-The Axon ACP U4T200 driver is used to monitor this card.
+The Axon ACP U4T200 connector is used to monitor this card.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP U4T200 driver is used to monitor this card.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ The setting of some parameters depends on other parameters' current value. For e
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP U4T200 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP U4T200 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -112,6 +112,6 @@ Physical fixed interfaces:
 
 ## Notes
 
-This driver is best combined with the Axon ACP Frame Manager driver but can be used as a standalone driver as well.
+This connector is best combined with the Axon ACP Frame Manager connector but can be used as a standalone connector as well.
 
 In the **Connections** section above, all the possible input/output combinations for the internal connections are listed. This means that, for example, SDI Input 1 can be connected to SDI Output 1 or 2 or 3 or 4. If the device allows simultaneous connection of one input to more than one output, that is also an option.

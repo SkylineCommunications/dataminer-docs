@@ -4,15 +4,15 @@ uid: Connector_help_Bryant_eyePower_MDU
 
 # Bryant eyePower MDU
 
-The Bryant eyePower MDU is a serial driver that is used to monitor and control the mains distribution unit of Bryant of the same name.
+The Bryant eyePower MDU is a serial connector that is used to monitor and control the mains distribution unit of Bryant of the same name.
 
 ## About
 
-This driver allows the user to read all the given measurements of this unit. Derived values are also calculated and displayed much the same as in the web interface, although with the addition of the apparent power and power factor for each outlet. These outlets can be toggled and monitored on their page. GPIs are displayed separately with their own controls.
+This connector allows the user to read all the given measurements of this unit. Derived values are also calculated and displayed much the same as in the web interface, although with the addition of the apparent power and power factor for each outlet. These outlets can be toggled and monitored on their page. GPIs are displayed separately with their own controls.
 
 ### Relay version 1.2.5 (January 10th, 2014)
 
-This firmware made several changes to the command and response structure, which causes some commands to fail in the 1.0.0.1 driver version. Please use driver version 1.0.0.2 from this point onwards.
+This firmware made several changes to the command and response structure, which causes some commands to fail in the 1.0.0.1 connector version. Please use connector version 1.0.0.2 from this point onwards.
 
 ### Driver version 1.0.0.2
 
@@ -24,7 +24,7 @@ The environmental readings are now available as well. See Usage-General-Environm
 
 ## Installation and configuration
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -36,7 +36,7 @@ This driver uses a serial connection and needs the following user information:
 
 ### General
 
-This is the default page of the driver and shows the main measurements:
+This is the default page of the connector and shows the main measurements:
 
 - **Measurements Main/Backup Power Supply**
 

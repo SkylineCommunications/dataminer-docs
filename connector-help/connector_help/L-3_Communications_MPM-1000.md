@@ -32,7 +32,7 @@ The MPM-1000 modem provides WIN-T and other users with the specialized IP SATCOM
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMPv2) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has two sets of data pages. The first set allows you to configure parameters for the satellite, while the second allows you to configure waveform parameters. you can find more information about these pages below.
+The element created with this connector has two sets of data pages. The first set allows you to configure parameters for the satellite, while the second allows you to configure waveform parameters. you can find more information about these pages below.
 
 - **General**: Displays general system parameters for the MPM equipment. Several page buttons are available, which display information regarding the **Ethernet Switch**, **Serial Hub**, **Network Members**, and (if present) **Multiple MPM**.
 

@@ -4,19 +4,19 @@ uid: Connector_help_RGB_Networks_TransAct_Transcoder
 
 # RGB Networks TransAct Transcoder
 
-This driver is used to monitor an **RGB Networks TransAct Transcoder**.
+This connector is used to monitor an **RGB Networks TransAct Transcoder**.
 
 ## About
 
 The TransAct transcoder is a software transcoder that supports both stream-to-stream (live) and file-to-file transcoding operations. It supports both IP and SDI inputs, and a wide variety of input and output formats
 
-Two external APIs are supported by the VMG2: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface for detailed configuration. This driver only uses the XML-RPC interface.
+Two external APIs are supported by the VMG2: there is SNMP support for traps and basic configuration information, and a full-featured XML-RPC interface for detailed configuration. This connector only uses the XML-RPC interface.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection**
 
@@ -26,11 +26,11 @@ This driver uses an HTTP connection and needs the following user information:
 
 ## Usage
 
-This driver contains 23 pages.
+This connector contains 23 pages.
 
 ### General
 
-This page displays general information about the drivers: **Software** **Version**, **Time**, **CPU**, etc.
+This page displays general information about the connectors: **Software** **Version**, **Time**, **CPU**, etc.
 
 The page also contains **Controls** to manage the device (**Restart**, **Shutdown,** etc.).
 

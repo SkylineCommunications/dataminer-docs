@@ -35,7 +35,7 @@ The Ericsson VSPP is a **Management System**.
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver also uses a HyperText Transfer Protocol (HTTP) connection to the management node:
+This connector also uses a HyperText Transfer Protocol (HTTP) connection to the management node:
 
 HTTP CONNECTION:
 
@@ -67,7 +67,7 @@ You can configure this by adding the DataMiner IP to the "Manager authorized lis
 
 ## Usage
 
-The element created using this driver has the following data pages:
+The element created using this connector has the following data pages:
 
 - **General**: Displays information regarding the device itself, such as the System Description, Uptime, Contact, Name and Location.
 

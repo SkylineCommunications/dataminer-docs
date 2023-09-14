@@ -8,17 +8,17 @@ The **UMH160** IRD is broadcast-quality MPEG-4 AVC video/audio decoder that perf
 
 ## About
 
-The UMH160R-IP driver was designed to monitor all the inputs and outputs of the device. It can also read all the channels running in the device and there is a special configuration page where you can configure the channels. The driver is based on the Wellav UMH 160 IP driver, but supports DCF and uses better, updated code.
+The UMH160R-IP driver was designed to monitor all the inputs and outputs of the device. It can also read all the channels running in the device and there is a special configuration page where you can configure the channels. The connector is based on the Wellav UMH 160 IP driver, but supports DCF and uses better, updated code.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The UMH160R-IP driver was designed to monitor all the inputs and outputs of the 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ This page contains status information for the device, including all general info
 
 On this page, you can select the source with the **Source Select** parameter, as well as monitor all the programs currently running on the device.
 
-The **Service Info Configuration** page button allows you to configure the programs, which will influence the DCF connections in the driver.
+The **Service Info Configuration** page button allows you to configure the programs, which will influence the DCF connections in the connector.
 
 ### Input Receiver
 
@@ -92,7 +92,7 @@ This page displays the name of the alarms received via traps. The traps themselv
 
 This page displays a table with all traps sent by the device, listing the **Time**, **Type**, **IP**, and **OID** for each trap.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface
 
@@ -128,20 +128,20 @@ The dynamic interfaces are created based on **Table 2000 (Service Info Table).**
 
 The connections are made following these conditions:
 
-Once the driver is running:
+Once the connector is running:
 
-1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** --\> **SDI DECODER OUT (ID:5)**
-2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** --\> **SDI DECODER OUT (ID:5)**
-3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **SDI DECODER OUT (ID:5)**
+1. If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** --\> **SDI DECODER OUT (ID:5)**
+1. If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** --\> **SDI DECODER OUT (ID:5)**
+1. If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **SDI DECODER OUT (ID:5)**
 
 If the **ASI Bypass** is **disabled**:
 
-1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> ASI** **OUT (ID:4)**
-2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\> ASI** **OUT (ID:4)**
-3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **ASI OUT (ID:4)**
+1. If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> ASI** **OUT (ID:4)**
+1. If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\> ASI** **OUT (ID:4)**
+1. If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **ASI OUT (ID:4)**
 
 If the **IP Bypass** is **disabled**:
 
-1.  If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> IP** **OUT (ID:6)**
-2.  If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\>** **IP** **OUT (ID:6)**
-3.  If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **IP OUT (ID:6)**
+1. If **Decoder Input** is type **Turner**: **TURNER** **IN (ID:1)** **--\> IP** **OUT (ID:6)**
+1. If **Decoder Input** is type **ASI**: **ASI** **IN (ID:3)** **--\>** **IP** **OUT (ID:6)**
+1. If **Decoder Input** is type **IP**: **IP IN (ID:2)** **--\>** **IP OUT (ID:6)**

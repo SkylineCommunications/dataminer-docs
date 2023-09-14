@@ -4,16 +4,16 @@ uid: Connector_help_A10_Networks_AX_Series
 
 # A10 Networks AX Series
 
-The **A10 Networks AX Series** driver can be used for displaying and configuring information of the A10 Networks AX Series platform.
+The **A10 Networks AX Series** connector can be used for displaying and configuring information of the A10 Networks AX Series platform.
 
 ## About
 
-This protocol can be used to monitor and control the **A10 Networks AX Series** platform. The device supports two different types of connections:
+This connector can be used to monitor and control the **A10 Networks AX Series** platform. The device supports two different types of connections:
 
 - An **SNMP** connection, used to retrieve the information of the device.
 - An **HTTP** connection, used to retrieve and configure the device.
 
-The protocol also features **alarm monitoring** and **trending**.
+The connector also features **alarm monitoring** and **trending**.
 
 ## Installation and configuration
 
@@ -21,7 +21,7 @@ The protocol also features **alarm monitoring** and **trending**.
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -35,7 +35,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL Connection:**
 
@@ -47,10 +47,10 @@ This driver uses an HTTP connection and requires the following input during elem
 
 The HTTP connection requires authentication. To authenticate yourself:
 
-1.  Go to the **General Page.**
-2.  Click the page button **Login...**
-3.  Fill in the **Username** and **Password**
-4.  Click the button **Login.**
+1. Go to the **General Page.**
+1. Click the page button **Login...**
+1. Fill in the **Username** and **Password**
+1. Click the button **Login.**
 
 ## Usage
 
@@ -87,8 +87,8 @@ This page also contains two page buttons:
 
 The **Create Server** page button allows you to create a new server. To do so:
 
-1.  Fill in the **mandatory attributes** and at least **one port**. The values that are already filled in when you click the page button are the default values for that parameter.
-2.  Click the **Create Server** button to create the server. The result of this query will be shown on the **Create Server Result** parameter.
+1. Fill in the **mandatory attributes** and at least **one port**. The values that are already filled in when you click the page button are the default values for that parameter.
+1. Click the **Create Server** button to create the server. The result of this query will be shown on the **Create Server Result** parameter.
 
 With the **Delete Server** page button, it is possible to delete **Servers** and **Ports.** To delete:
 
@@ -108,9 +108,9 @@ This page also contains two page buttons:
 
 The **Create Virtual Server** page button allows you to create a new virtual server. To do so:
 
-1.  Fill in the **mandatory attributes** and at least **one service**.
-2.  Click the **Configure Services.** page button to configure the services further. This page has a tree control with the virtual server's services.
-3.  When these values are filled in, click the **Create Virtual Server** button to create the virtual server. The result of this query will be shown on the **Create Virtual Server Result** parameter.
+1. Fill in the **mandatory attributes** and at least **one service**.
+1. Click the **Configure Services.** page button to configure the services further. This page has a tree control with the virtual server's services.
+1. When these values are filled in, click the **Create Virtual Server** button to create the virtual server. The result of this query will be shown on the **Create Virtual Server Result** parameter.
 
 The **Delete Virtual Server** page button allows you to delete **Virtual Servers** and **Members.** To delete:
 
@@ -130,8 +130,8 @@ This page also contains two page buttons:
 
 The **Create Group** page button allows you to create a new server. To do so:
 
-1.  Fill in the **mandatory attributes** and at least **one member**.
-2.  Click the **Create Group** button to create the server. The result of this query will be shown on the **Create Group Result** parameter.
+1. Fill in the **mandatory attributes** and at least **one member**.
+1. Click the **Create Group** button to create the server. The result of this query will be shown on the **Create Group Result** parameter.
 
 The **Delete Group** page button allows you to delete **Groups** and **Members.** To delete:
 

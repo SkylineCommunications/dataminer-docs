@@ -6,17 +6,17 @@ uid: Connector_help_Riverbed_Cascade_Gateway
 
 The **Riverbed Cascade Gateway** collects traffic information from different network devices such as routers or switches. It transmits its processed flow data through MNMP to Riverbed Cascade Profiler devices.
 
-This driver monitors the device status regarding CPU, memory and disk usage, and monitors its network interfaces.
+This connector monitors the device status regarding CPU, memory and disk usage, and monitors its network interfaces.
 
 ## About
 
-This driver polls SNMP tables and parameters.
+This connector polls SNMP tables and parameters.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

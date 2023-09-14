@@ -30,10 +30,10 @@ The Vodafone Kabel Deutschland GmbH Transcoding TS Service protocol monitors the
 
 To create a service using this service protocol:
 
-1.  In DataMiner Cube, right-click a view in the Surveyor and select **Create service**.
-2.  Specify the name for the service.
-3.  Open the advanced options and select the service protocol **Vodafone Kabel Deutschland GmbH DVB-T2 Service**, with the latest version or production version.
-4.  Go to the **parameters** tab and include the service you want to monitor.
+1. In DataMiner Cube, right-click a view in the Surveyor and select **Create service**.
+2. Specify the name for the service.
+3. Open the advanced options and select the service protocol **Vodafone Kabel Deutschland GmbH DVB-T2 Service**, with the latest version or production version.
+4. Go to the **parameters** tab and include the service you want to monitor.
 
 ## How to use
 

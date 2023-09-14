@@ -8,7 +8,7 @@ The **Imagine Communications OXS+2+OP** driver combines a **serial** and **smart
 
 ## About
 
-With this driver, you can monitor and configure the Imagine Communications card.
+With this connector, you can monitor and configure the Imagine Communications card.
 
 Current Version: 1.0.0.1
 
@@ -16,7 +16,7 @@ Current Version: 1.0.0.1
 
 ### Creation
 
-This is a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This is a serial connector combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 #### SERIAL MAIN CONNECTION
 
@@ -50,9 +50,9 @@ This page contains one page button, **Other**. On this page you can view the fol
 
 ### Web Interface Page
 
-On this page you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to acces the device, as otherwise it will not be possible to open the web interface.
+On this page you can access the web interface of the Imagine Communications frame. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
 ## Notes
 
-A **serial** driver with **smart-serial** connection means that there has to be a connection to a real device.
+A **serial** connector with **smart-serial** connection means that there has to be a connection to a real device.
 If there is a change on the device, a response will be pushed to the DMA even if no poll request is sent.

@@ -30,7 +30,7 @@ Wowza Streaming Engine is customizable, scalable server software that powers rel
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -43,7 +43,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The driver requests the list of server applications that are going to be monitored by the element.
+The connector requests the list of server applications that are going to be monitored by the element.
 
 In the **Applications** table, you can configure which of the applications should be monitored.
 

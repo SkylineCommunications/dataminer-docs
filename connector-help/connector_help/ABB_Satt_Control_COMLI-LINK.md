@@ -4,7 +4,7 @@ uid: Connector_help_ABB_Satt_Control_COMLI-LINK
 
 # ABB Satt Control COMLI-LINK
 
-This driver makes it possible to monitor and gather information from an **ABB** **Satt Control COMLI-LINK** controller.
+This connector makes it possible to monitor and gather information from an **ABB** **Satt Control COMLI-LINK** controller.
 
 ## About
 
@@ -24,13 +24,13 @@ Two types of **messages** are supported:
 
 **DVEs** are created for each unique combination of **sign** and **service**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol** | **Description**           |
 |-----------------------|---------------------------|
@@ -48,7 +48,7 @@ Two types of **messages** are supported:
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -82,9 +82,9 @@ This page provides a table with the results of each command address. The value c
 
 On this page, you can check the current connection status (**Serial Status**) of the device, along with information (**IP Address**, **Port** and **Bus Address**) concerning the serial connection. The page can also be used to check if the device is reachable via the ping address (**Ping Status**) configured in the element editor.
 
-In version 1.0.0.10 of the driver, the **Reboot UDS button** is added on this page. When you click this button, a confirmation window will appear. If you then confirm the action, the IP of the element is dynamically retrieved and a Telnet connection is established on port 9999. Then option 9 is picked from the Telnet CLI Menu.
+In version 1.0.0.10 of the connector, the **Reboot UDS button** is added on this page. When you click this button, a confirmation window will appear. If you then confirm the action, the IP of the element is dynamically retrieved and a Telnet connection is established on port 9999. Then option 9 is picked from the Telnet CLI Menu.
 
-In version 1.0.0.11 of the driver, the 'Serial Status' parameter, which is located on the parent element, has alarm monitoring enabled and is exported to the DVEs.
+In version 1.0.0.11 of the connector, the 'Serial Status' parameter, which is located on the parent element, has alarm monitoring enabled and is exported to the DVEs.
 
 ### Import
 
@@ -104,7 +104,7 @@ From version 1.0.0.2 onwards, you can also establish DCF connections of the DVEs
 
 ## Notes
 
-For the driver to function correctly, **Microsoft Access Database Engine 2010** must be installed:
+For the connector to function correctly, **Microsoft Access Database Engine 2010** must be installed:
 
 <http://www.microsoft.com/en-us/download/details.aspx?id=13255>
 

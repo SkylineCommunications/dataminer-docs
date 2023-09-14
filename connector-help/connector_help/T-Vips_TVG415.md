@@ -4,7 +4,7 @@ uid: Connector_help_T-Vips_TVG415
 
 # T-VIPS TVG415
 
-The **T-VIPS TVG415** driver is an SNMP-based driver used to monitor and configure the **T-VIPS TVG415**.
+The **T-VIPS TVG415** connector is an SNMP-based connector used to monitor and configure the **T-VIPS TVG415**.
 
 ## About
 
@@ -14,7 +14,7 @@ The **TVG415** provides a monitoring interface to the **T-VIPS TVG415** IP Video
 
 ### Creation
 
-The **T-VIPS TVG415** is an SNMP driver. The IP needs to be configured during creation of the element.
+The **T-VIPS TVG415** is an SNMP connector. The IP needs to be configured during creation of the element.
 
 **SNMP CONNECTION**:
 

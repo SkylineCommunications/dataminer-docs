@@ -4,11 +4,11 @@ uid: Connector_help_Evertz_7880TSM
 
 # Evertz 7880TSM
 
-The **Evertz 7880TSM** protocol driver is used to monitor and control different kinds of **Evertz 7880TSM** cards.
+The **Evertz 7880TSM** connector is used to monitor and control different kinds of **Evertz 7880TSM** cards.
 
 ## About
 
-This driver supports different types of cards. Depending on the **Card Type**, the number of inputs changes :
+This connector supports different types of cards. Depending on the **Card Type**, the number of inputs changes :
 
 - 7880TSM-IP: 1 input
 - other types: 2 inputs
@@ -19,7 +19,7 @@ If the card contains only one input, the parameters related to the second input 
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -33,7 +33,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver contains 9 pages.
+This connector contains 9 pages.
 
 ### General
 

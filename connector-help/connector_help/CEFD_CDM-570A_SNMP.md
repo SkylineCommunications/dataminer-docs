@@ -6,7 +6,7 @@ uid: Connector_help_CEFD_CDM-570A_SNMP
 
 The **CDM-570** is a Comtech EF Data's entry-level satellite modems and operates at L-band and includes support for externally connected Block Upconverters (BUCs) and Low-Noise Block Downcoverters (LNBs).
 
-This driver implements the available parameters present in the device's MIB. The driver layout is implemented as much as possible like the device's web interface. There are some menus that are not present because they are not available in the MIB and there are some functions that are present in the MIB but not in the web interface.
+This connector implements the available parameters present in the device's MIB. The connector layout is implemented as much as possible like the device's web interface. There are some menus that are not present because they are not available in the MIB and there are some functions that are present in the MIB but not in the web interface.
 
 ## About
 
@@ -105,7 +105,7 @@ Use this page to configure Block Up Converter parameters, and to display the BUC
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a **HIGH (+)** or **LOW (**-**)** limit.
 
-**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only and cannot be changed.
 
 ### IP - Interface
 
@@ -360,7 +360,7 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 - **BUC Lockout Frequency** from *3000* to *65000* MHz and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 - **BUC Address** from *0* to *15*.
 
-**BUC Status**: The values displayed in this section are read-only **** and cannot be changed.
+**BUC Status**: The values displayed in this section are read-only and cannot be changed.
 
 **LNB Control**
 
@@ -369,7 +369,7 @@ Use this page to configure Block Up Converter/Low-Noise Block Down Converter par
 - Assign **LNB Current Lower** and **Current Upper Alarm Limit** values ranging from *10* to *600* mA.
 - Assign an **Rx Lockout Frequency** and designate the value as a *HIGH (+)* or *LOW (-)* limit.
 
-**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only **** and cannot be changed.
+**LNB Status**: The **LNB Current** and **LNB Voltage** values displayed in this section are read-only and cannot be changed.
 
 ### FTP
 

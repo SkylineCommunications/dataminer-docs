@@ -4,15 +4,15 @@ uid: Connector_help_Ericsson_AVP-2000
 
 # Ericsson AVP-2000
 
-The **Ericsson AVP-2000** driver is an HTTP driver that is used to monitor the **Advanced Video Processor** configuration.
+The **Ericsson AVP-2000** connector is an HTTP connector that is used to monitor the **Advanced Video Processor** configuration.
 
 ## About
 
-With this **HTTP** **Advanced Video Processor** driver, you can monitor and change the configuration where possible and even restore the configuration if necessary.
+With this **HTTP** **Advanced Video Processor** connector, you can monitor and change the configuration where possible and even restore the configuration if necessary.
 
 Range 3.0.0.x contains the most important or requested parameters and displays them in an orderly fashion. This does mean that not every parameter is implemented. Parameters found in the newest firmware version are added to the implemented tables.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -36,7 +36,7 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 </tr>
 <tr class="odd">
 <td>2.0.0.x</td>
-<td><p>The driver was made for version 10.13.3.0.0 (xmlVersion attribute on the XML config file of the device). Contains the config XML as one large tree view. Focuses on the following cards:</p>
+<td><p>The connector was made for version 10.13.3.0.0 (xmlVersion attribute on the XML config file of the device). Contains the config XML as one large tree view. Focuses on the following cards:</p>
 <ul>
 <li>CE-x Analogue</li>
 <li>CE-x Encoder</li>
@@ -65,9 +65,9 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**        |
+| **Range** | **Device Firmware Version**        |
 |------------------|------------------------------------|
 | 1.0.0.x          | Prior to 10.13.3.0.0               |
 | 2.0.0.x          | 10.13.3.0.0                        |
@@ -80,7 +80,7 @@ Range 3.0.0.x contains the most important or requested parameters and displays t
 
 *HTTP main connection:*
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 - **IP address/host**: The polling IP of the device.
 - **Port**: The IP port of the device, by default *80.*
@@ -171,7 +171,7 @@ This page contains the tables with all the parameters in the tree view, parsed f
 
 ### Driver (Internal) Page
 
-This page contains parameters that are required by DataMiner or are necessary to validate the correct functioning of the driver.
+This page contains parameters that are required by DataMiner or are necessary to validate the correct functioning of the connector.
 
 It contains:
 

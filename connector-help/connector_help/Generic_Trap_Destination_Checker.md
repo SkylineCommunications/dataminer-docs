@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Trap_Destination_Checker
 
 # Generic Trap Destination Checker
 
-This is an SNMP driver that will process all traps received on a DMA, checking whether they were received from a known IP address or not.
+This is an SNMP connector that will process all traps received on a DMA, checking whether they were received from a known IP address or not.
 
 ## About
 
-When a trap is received, the driver will check if it came from an IP address that corresponds to an existing element. If this is the case, the corresponding entry in the **Element Table** will be updated with the current date. Otherwise, an entry will be added to the **Unprocessed Trap Table**, indicating that a trap was received and discarded.
+When a trap is received, the connector will check if it came from an IP address that corresponds to an existing element. If this is the case, the corresponding entry in the **Element Table** will be updated with the current date. Otherwise, an entry will be added to the **Unprocessed Trap Table**, indicating that a trap was received and discarded.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ When a trap is received, the driver will check if it came from an IP address tha
 
 #### SNMP main connection
 
-This driver uses an SNMP connection, but does not require any specific input during element creation.
+This connector uses an SNMP connection, but does not require any specific input during element creation.
 
 SNMP CONNECTION:
 

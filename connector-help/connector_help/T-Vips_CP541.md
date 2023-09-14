@@ -4,28 +4,28 @@ uid: Connector_help_T-Vips_CP541
 
 # T-Vips CP541
 
-The **T-Vips CP541** driver uses an SNMP connection to communicate with the **CP541** **Monitoring** **Switch**. This driver can not only be used to monitor the **CP541**, but also to update part of its configuration.
+The **T-Vips CP541** connector uses an SNMP connection to communicate with the **CP541** **Monitoring** **Switch**. This connector can not only be used to monitor the **CP541**, but also to update part of its configuration.
 
-Note that the T-Vips CP541 device is also known as **Nevion TNS541**. This is the alternative name for the device after the acquisition of T-Vips by Nevion. As such, this driver can also be used for the Nevion TNS541.
+Note that the T-Vips CP541 device is also known as **Nevion TNS541**. This is the alternative name for the device after the acquisition of T-Vips by Nevion. As such, this connector can also be used for the Nevion TNS541.
 
 ## About
 
-The **CP541** is part of the T-VIPS cProcessor product family, a line of products designed for processing and handling MPEG transport streams. This driver is consequently very similar to other drivers for the T-VIPS cProcessor product family, such as the **CP540** or **CP546** drivers.
+The **CP541** is part of the T-VIPS cProcessor product family, a line of products designed for processing and handling MPEG transport streams. This connector is consequently very similar to other drivers for the T-VIPS cProcessor product family, such as the **CP540** or **CP546** drivers.
 
-The driver uses SNMP to poll information from the device, but it also handles alarm traps. The **CP541 driver** can also be used to configure the relay controller(s).
+The connector uses SNMP to poll information from the device, but it also handles alarm traps. The **CP541 driver** can also be used to configure the relay controller(s).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                           | No                  | No                      |
 | 2.0.0.x          | Branch version based on 1.0.0.x using serial communication                | No                  | No                      |
 | 3.0.0.x          | Branch version based on 1.0.0.x                                           | Yes                 | No                      |
 | 3.1.0.x          | Version based on 3.0.0.x and adapted to alarm changes in FW version 2.2.2 | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -38,7 +38,7 @@ The driver uses SNMP to poll information from the device, but it also handles al
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ SNMP Settings:
 
 #### Serial connection (in version 2.0.0.x only)
 
-Version 2.0.0.x of this driver uses a serial connection, which requires the following input during element creation:
+Version 2.0.0.x of this connector uses a serial connection, which requires the following input during element creation:
 
 SERIAL CONNECTION:
 

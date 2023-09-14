@@ -8,17 +8,17 @@ The SYes P75-04 UHF Transmitter is a high power, liquid-cooled transmitter syste
 
 ## About
 
-The **SYes P75-04 UHF Transmitter SNMP** driver controls and monitors the transmitter rack.
+The **SYes P75-04 UHF Transmitter SNMP** connector controls and monitors the transmitter rack.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 469180171-20                |
 
@@ -28,7 +28,7 @@ The **SYes P75-04 UHF Transmitter SNMP** driver controls and monitors the transm
 
 #### SNMPv1 main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ There are also 2 page buttons that navigate to the **Tx A Amplifier Table** and 
 
 ### Driver
 
-This page contains the driver-specific tables: **Driver General Info Table**, **Driver Status Table** and the **Driver Measure Table**.
+This page contains the connector-specific tables: **Driver General Info Table**, **Driver Status Table** and the **Driver Measure Table**.
 
 There are also 3 page buttons that navigate to the **Driver Output Table**, **ASI Input Table** and **Driver Configuration Table**.
 

@@ -4,11 +4,11 @@ uid: Connector_help_MX1_Developed_Playout_Engine_-_TS_Monitoring
 
 # MX1 Developed Playout Engine - TS Monitoring
 
-This exported driver is used to **monitor the overall state of the media transport streams**.
+This exported connector is used to **monitor the overall state of the media transport streams**.
 
 ## About
 
-This driver is exported from the MX1 Developed Playout Engine driver.
+This connector is exported from the MX1 Developed Playout Engine driver.
 
 ### Version Info
 

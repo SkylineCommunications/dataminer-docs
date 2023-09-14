@@ -4,21 +4,21 @@ uid: Connector_help_CEFD_LPOD-R_SNMP
 
 # CEFD LPOD-R SNMP
 
-This driver is used to control and monitor CEFD LPOD-R amplifiers.
+This connector is used to control and monitor CEFD LPOD-R amplifiers.
 
 ## About
 
 With this protocol, an LPOD-R amplifier can be monitored and configured as described below. Events and statistics are also loaded from the device and displayed in close resemblance to the device's webpage. This webpage is also accessible when opened within the same network as the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2.3                       |
 
@@ -28,7 +28,7 @@ With this protocol, an LPOD-R amplifier can be monitored and configured as descr
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -95,6 +95,6 @@ You can view unread stored statistics on this page. It also has two buttons: **C
 
 The table containing all the FTP rules that can be individually edited.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

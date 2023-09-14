@@ -8,7 +8,7 @@ The Liebert UPStation GXT2U is a compact, on-line UPS. It continuously condition
 
 ## About
 
-The Liebert UPStation GXT2-700RT230 driver uses SNMP to poll data from the device. The data will be displayed on different pages, each related to a different subject.
+The Liebert UPStation GXT2-700RT230 connector uses SNMP to poll data from the device. The data will be displayed on different pages, each related to a different subject.
 
 For some of the parameters, the value can be changed. The rate at which the data is polled can also be configured: *High* or *Slow*.
 
@@ -16,7 +16,7 @@ For some of the parameters, the value can be changed. The rate at which the data
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and needs following user information:
 
 **SNMP CONNECTION**:
 
@@ -64,7 +64,3 @@ On this page, you can set the polling speed to *Slow* or *High.* By default, it 
 ### Web Interface
 
 On this page, the web interface of the device is displayed. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

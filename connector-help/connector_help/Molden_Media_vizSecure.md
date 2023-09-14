@@ -8,17 +8,17 @@ The **Molden Media vizSecure** is a monitoring platform.
 
 ## About
 
-This driver can be used to monitor **Molden Media vizSecure**-enabled devices using the **HTTP** protocol.
+This connector can be used to monitor **Molden Media vizSecure**-enabled devices using the **HTTP** protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver can be used to monitor **Molden Media vizSecure**-enabled devices us
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -10,15 +10,15 @@ The Huawei OceanStor 9000 features a symmetric distributed architecture that del
 
 OceanStor 9000 is a scale-out storage system specifically designed for massive unstructured data storage. It allows SNMP communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ OceanStor 9000 is a scale-out storage system specifically designed for massive u
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -45,7 +45,7 @@ SNMP Settings:
 
 ### General
 
-This is the default page of the driver. It contains several standard parameters, including the **Description**, **Object ID**, **Up Time** and **Name**.
+This is the default page of the connector. It contains several standard parameters, including the **Description**, **Object ID**, **Up Time** and **Name**.
 
 The page also includes **Services** parameters, which identify the active OSI layers, as well as the **System Performance Table**.
 

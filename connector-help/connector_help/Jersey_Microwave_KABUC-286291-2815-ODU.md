@@ -4,9 +4,9 @@ uid: Connector_help_Jersey_Microwave_KABUC-286291-2815-ODU
 
 # Jersey Microwave KABUC-286291-2815-ODU
 
-The Jersey Microwave KABUC-286291-2815-ODU driver displays all the operational properties of a Jersey Microwave Ka-Band Block Up Converter system, referred to as "parameters" in the driver. This redundancy switch system embodies multiple Jersey Microwave converters, an indoor controller and an outdoor controller referred to as the switch. It monitors the alarm output from the converters and the status of the latching transfer switches to provide complete status information to the user. Using the serial interface, the driver allows you to control the most important properties. You can for example adjust the switch state, set the attenuation or tune the reference frequency.
+The Jersey Microwave KABUC-286291-2815-ODU connector displays all the operational properties of a Jersey Microwave Ka-Band Block Up Converter system, referred to as "parameters" in the connector. This redundancy switch system embodies multiple Jersey Microwave converters, an indoor controller and an outdoor controller referred to as the switch. It monitors the alarm output from the converters and the status of the latching transfer switches to provide complete status information to the user. Using the serial interface, the connector allows you to control the most important properties. You can for example adjust the switch state, set the attenuation or tune the reference frequency.
 
-This driver was designed to be as generic as possible. This way, you can use it for a complete KABUC system or for any individual unit of a KABUC system.
+This connector was designed to be as generic as possible. This way, you can use it for a complete KABUC system or for any individual unit of a KABUC system.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver was designed to be as generic as possible. This way, you can use it 
 
 #### Smart-Serial Main Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -56,21 +56,21 @@ SMART SERIAL CONNECTION:
 
 At the top of the Alarms page, you can find a virtual DataMiner parameter that is intended to monitor the Power Supply Status. This placeholder will show "Not Initialized" by default. To be able to monitor the Power Supply Status, you need to have an active element using the Advantech ADAM IO driver. You then need to link the Power Supply Status parameter to the corresponding DataMiner parameter of the Advantech ADAM IO element. You can do so using the Element Connections module. For more information, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
 
-Other than that, no additional configuration is necessary in a newly created element. The driver will start to poll the factory default switch address (S). Based on the switch status response, the number of connected converters is retrieved. Empty rows (equal to the number of converters) will be filled in in the Outdoor Units Table, with the factory default address in each row (converter 1: A, converter 2: B, etc.). Finally, the converter status polling will start, using the factory default addresses.
+Other than that, no additional configuration is necessary in a newly created element. The connector will start to poll the factory default switch address (S). Based on the switch status response, the number of connected converters is retrieved. Empty rows (equal to the number of converters) will be filled in in the Outdoor Units Table, with the factory default address in each row (converter 1: A, converter 2: B, etc.). Finally, the converter status polling will start, using the factory default addresses.
 
 ### Redundancy
 
-No redundancy is defined in the driver.
+No redundancy is defined in the connector.
 
 ## How to Use
 
 ### Monitor and Control Complete System
 
-When a new element is created, the driver will be initialized to monitor and control a complete KABUC system by default.
+When a new element is created, the connector will be initialized to monitor and control a complete KABUC system by default.
 
 ### Monitor and Control Individual Unit
 
-If you select the *Not Applicable* check box for the **Switch Address** selector at the top of the **General** page, switch polling will be disabled. All corresponding DataMiner parameters will then have the value "N/A". You will only be able to use the driver to monitor and control one or more converters.
+If you select the *Not Applicable* check box for the **Switch Address** selector at the top of the **General** page, switch polling will be disabled. All corresponding DataMiner parameters will then have the value "N/A". You will only be able to use the connector to monitor and control one or more converters.
 
 The **Outdoor Units Table** has options to delete a row (in the Table Options column) and add a row (with the Add Row button). When you add a row, it will include a default polling address, which you can adjust if needed.
 

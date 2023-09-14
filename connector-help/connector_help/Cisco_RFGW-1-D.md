@@ -8,9 +8,9 @@ The Cisco RF Gateway 1 is a standards-based universal edge QAM (U-EQAM) solution
 
 ## About
 
-The Cisco RFGW-1-D driver allows to monitor and control a Cisco RF Gateway 1 device. Different parameters of the device can be viewed and different settings can be set to a preferred value.
+The Cisco RFGW-1-D connector allows to monitor and control a Cisco RF Gateway 1 device. Different parameters of the device can be viewed and different settings can be set to a preferred value.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -60,9 +60,9 @@ The Cisco RFGW-1-D driver allows to monitor and control a Cisco RF Gateway 1 dev
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                 |
+| **Range** | **Device Firmware Version**                 |
 |------------------|---------------------------------------------|
 | 1.0.0.x          | 05.02.06                                    |
 | 1.0.1.x          | 05.02.06                                    |
@@ -76,7 +76,7 @@ The Cisco RFGW-1-D driver allows to monitor and control a Cisco RF Gateway 1 dev
 
 SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -86,9 +86,9 @@ SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: \[The community string used when reading values from the device
-  (default value if not overridden in the driver: *public*).
+  (default value if not overridden in the connector: *public*).
 - **Set community string**: \[The community string used when setting values on the device
-  (default value if not overridden in the driver: *private*).
+  (default value if not overridden in the connector: *private*).
 
 ## Usage
 
@@ -98,49 +98,47 @@ The **General** page displays some general parameters of the device.
 
 The **Configuration** page button will save the **QAMs** configuration, it will allows to confirm the last **File Management Command**, the **File Management Last Result**, the **File Configuration File Name**, **Last Backup File Name** and the **Refresh** button will refresh these parameters after clicking on it.
 
-There is also one pagebutton (**IF Table.**) available on the page. This will display a pop-up page where the **IF Table** can be viewed.
+There is also one page button (**IF Table.**) available on the page. This will display a pop-up page where the **IF Table** can be viewed.
 
 ### Resources
 
-The **Resources** page displays the **FPGA** **temperatures** on the left-hand side of the page. On the right-hand side there is a Table that displays the **QAM** **Cards**.
+The **Resources** page displays the **FPGA temperatures** on the left-hand side of the page. On the right-hand side there is a Table that displays the **QAM Cards**.
 
-Underneath this table there are two pagebuttons (**PS Status.**, **Fan** **Status.**) that each take you to a pop-up page that will displays extra parameters.
+Underneath this table there are two page buttons (**PS Status.**, **Fan Status.**) that each take you to a pop-up page that will displays extra parameters.
 
 ### IP Network
 
-The **IP** **Network** page displays data regarding the network. There is one button (**Norm. With Current IP**) available on this page, this button will set the normalizations set on the **Normalize Values** pop-up page as the normal value for the alarms.
+The **IP Network** page displays data regarding the network. There is one button (**Norm. With Current IP**) available on this page, this button will set the normalizations set on the **Normalize Values** pop-up page as the normal value for the alarms.
 
-Three pagebuttons are also available on this page (**Normalize Values.**, **IP Network More.** and **GbE Input Ports.**), each pagebutton will display a pop-up page with additional parameters.
+Three page buttons are also available on this page (**Normalize Values.**, **IP Network More.** and **GbE Input Ports.**), each page button will display a pop-up page with additional parameters.
 
 ### GbE Interfaces
 
-This page displays data regarding the **GbE** **Interface**. There is one pagebutton available (**Nominal Inputs.**), that will display a pop-up page where the normalized values can be set for the four GbE Inputs. By pressing the button (**Normalize Inputs**) these values will be set as the normal for the alarms.
+This page displays data regarding the **GbE Interface**. There is one page button available (**Nominal Inputs.**), that will display a pop-up page where the normalized values can be set for the four GbE Inputs. By pressing the button (**Normalize Inputs**) these values will be set as the normal for the alarms.
 
 ### QAMs
 
-The QAMs page displays two tables (**Global RF Port Configuration** and **Global QAM Channel Configuration**). There are two pagebutton available (**Normalize RF Ports.** and **Normalize TS ID.**), each of these pagebuttons will open a pop-up page where the normalized values can be set. By pressing the respectable button (**Normalize** **RF** **Ports** or **Normalize** **TS** **ID**), the normalized values will be set as the normal value for the alarms.
+The QAMs page displays two tables (**Global RF Port Configuration** and **Global QAM Channel Configuration**). There are two page button available (**Normalize RF Ports.** and **Normalize TS ID.**), each of these page buttons will open a pop-up page where the normalized values can be set. By pressing the respectable button (**Normalize RF Ports** or **Normalize TS ID**), the normalized values will be set as the normal value for the alarms.
 
 ### Output
 
-This page displays the **Output** **Overview** Table. The pagebutton (**Norm. BW Sessions.**) will open the **Normalized** **with Sessions Values** pop up. Here the normalized values can be set as preferred. By clicking the button (**Norm. BW Sessions**) the set values will be used as the normal values for the alarms.
+This page displays the **Output Overview** Table. The page button (**Norm. BW Sessions.**) will open the **Normalized with Sessions Values** pop up. Here the normalized values can be set as preferred. By clicking the button (**Norm. BW Sessions**) the set values will be used as the normal values for the alarms.
 
 ### Alarm
 
-This page displays the **Active** **Alarms** Table. There is one pagebutton (**Filters.**) available where the user can add/remove filters. This is done by entering a value for the **Filter** **Name** and then pressing either the **Add** **Filter** or **Delete** **Filter** button.
+This page displays the **Active Alarms** Table. There is one page button (**Filters.**) available where the user can add/remove filters. This is done by entering a value for the **Filter Name** and then pressing either the **Add Filter** or **Delete Filter** button.
 
 ### Stream Map
 
-This page displays the stream **Map** **Monitoring** Table. Above this table the user can choose to set the **Stream** **Map** **Poll** *On* or *Off*.
+This page displays the stream **Map Monitoring** Table. Above this table the user can choose to set the **Stream Map Poll** *On* or *Off*.
 
 ### Monitor Input
 
 This page is related to the new *Cisco RF Gateway 1 Software Release 5.02.09* and shows the **RFGW-1 Input Streams** and the **Input Redundancy** commands.
 
-### Webinterface
+### Web Interface
 
 Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-
 
 ## Usage (Range 3.0.0.x)
 
@@ -156,12 +154,12 @@ The **Interface Table** shows information for each interface, such as the **Desc
 
 The page shows the **Number of Displayed Interfaces,** based on how many interfaces are currently being displayed in the table.
 
-It contains the **Interface Selection pagebutton** with the **Interface Selection Table.**
+It contains the **Interface Selection page button** with the **Interface Selection Table.**
 
 > The **Interface Selection Table** controls the displayed interfaces on the Interface Table:
 >
 > - It has two parameters in order to filter the Interfaces and Enable or Disable interfaces being displayed (**Description Filter** and **Type Filter**) once clicked on the correspondent **Enable/Disable** button.
-> - The Interface Selection Table has a **Displayed** column as **togglebutton** Enable/Disabled.
+> - The Interface Selection Table has a **Displayed** column as **toggle button** Enable/Disabled.
 
 ### QAMs Page
 

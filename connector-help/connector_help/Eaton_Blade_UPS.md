@@ -4,24 +4,24 @@ uid: Connector_help_Eaton_Blade_UPS
 
 # EATON Blade UPS
 
-The **Eaton Blade UPS** driver can be used to display and configure information of the Eaton Blade UPS models ranging from 5 to 60 kW.
+The **Eaton Blade UPS** connector can be used to display and configure information of the Eaton Blade UPS models ranging from 5 to 60 kW.
 
 ## About
 
 An **SNMP** connection is used in order to retrieve and configure the information of the device.
 
-In addition, the driver offers several possibilities for **alarm monitoring** and **trending** of the supported Eaton UPS.
+In addition, the connector offers several possibilities for **alarm monitoring** and **trending** of the supported Eaton UPS.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version               | No                  | No                      |
 | 2.0.0.x          | Adaptation for SNMP version 1 | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.6.0.5a                    |
 | 2.0.0.x          | 1.3                         |
@@ -32,7 +32,7 @@ In addition, the driver offers several possibilities for **alarm monitoring** an
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

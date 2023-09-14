@@ -4,17 +4,17 @@ uid: Connector_help_NEC_iPasolink_200
 
 # NEC iPasolink 200
 
-With this driver, you can gather and view information from the device **NEC iPasolink 200**, as well as configure the device.
+With this connector, you can gather and view information from the device **NEC iPasolink 200**, as well as configure the device.
 
 ## About
 
-This driver uses an SNMP connection to monitor the **NEC iPasolink 200** device.
+This connector uses an SNMP connection to monitor the **NEC iPasolink 200** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

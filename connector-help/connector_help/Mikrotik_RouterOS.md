@@ -4,21 +4,21 @@ uid: Connector_help_Mikrotik_RouterOS
 
 # Mikrotik RouterOS
 
-This is an **SNMP** driver that is used to monitor and configure the **Mikrotik Router** equipment.
+This is an **SNMP** connector that is used to monitor and configure the **Mikrotik Router** equipment.
 
 ## About
 
-This driver retrieves the information on tables and parameters via SNMP polling.
+This connector retrieves the information on tables and parameters via SNMP polling.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver retrieves the information on tables and parameters via SNMP polling.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

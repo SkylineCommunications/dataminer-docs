@@ -8,17 +8,17 @@ This device can monitor and control 6 digital inputs and 6 digital outputs throu
 
 ## About
 
-This driver displays information on the 6 digital inputs and 6 digital outputs. The information is requested using the Modbus protocol.
+This connector displays information on the 6 digital inputs and 6 digital outputs. The information is requested using the Modbus protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.1.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver displays information on the 6 digital inputs and 6 digital outputs. 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

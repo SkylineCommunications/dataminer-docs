@@ -6,29 +6,29 @@ uid: Connector_help_Anevia_Flamingo_400A
 
 **Anevia Flamingo** streamers are designed to transmit TV and radio channels from DVB sources to an IP network.
 
-With this driver, you can monitor the inputs, services and broadcasts, as well as manage configurations.
+With this connector, you can monitor the inputs, services and broadcasts, as well as manage configurations.
 
 ## About
 
-The driver uses a **SOAP interface** and was designed using the **Live SOAP API** and the **System API**.
+The connector uses a **SOAP interface** and was designed using the **Live SOAP API** and the **System API**.
 
-Please check the **Supported firmware versions** table below to select which driver corresponds to the device's software.
+Please check the **Supported firmware versions** table below to select which connector corresponds to the device's software.
 
 Note that certain older versions may not function properly, because there is no backwards compatibility as of API version 2.2.5.
 
-Backward compatibility is not guaranteed between different driver ranges.
+Backward compatibility is not guaranteed between different connector ranges.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version. SNMP driver, basic information, support for traps. | No                  | No                      |
+| 1.0.0.x          | Initial version. SNMP connector, basic information, support for traps. | No                  | No                      |
 | 2.0.0.x          | HTTP version using the element's SOAP interface.                    | No                  | No                      |
 | 2.1.0.x          | Support for new firmware SOAP Live 2.5.1.                           | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**      |
+| **Range** | **Device Firmware Version**      |
 |------------------|----------------------------------|
 | 1.0.0.x          | N/A                              |
 | 2.0.0.x          | Live API 2.3.0, System API 1.2.0 |
@@ -40,7 +40,7 @@ Backward compatibility is not guaranteed between different driver ranges.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 - **IP address/host**: The polling IP of the device.
 - **Timeout per parameter**: By default: *5000* (5 seconds). Increase this value if you experience problems with the services. For large systems, retrieving the service configuration information can take a while and timeouts can occur, affecting the table presentation. To avoid these timeouts (and retransmissions), increase this value.
@@ -98,4 +98,4 @@ To be able to work with these configuration files, make sure a **default locatio
 
 ### General Settings
 
-On this page, you can **reboot the server** and configure the basic driver settings. The latter include the **default location** where configuration files are exported and the credentials to access the **SOAP interface**.
+On this page, you can **reboot the server** and configure the basic connector settings. The latter include the **default location** where configuration files are exported and the credentials to access the **SOAP interface**.

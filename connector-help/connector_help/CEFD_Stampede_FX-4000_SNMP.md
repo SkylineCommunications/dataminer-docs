@@ -8,13 +8,13 @@ The **CEFD Stampede FX-4000 SNMP** combines one-sided application delivery and t
 
 ## About
 
-This driver uses SNMP commands to display information and set the settings on the device. SNMP traps can be retrieved when this is enabled.
+This connector uses SNMP commands to display information and set the settings on the device. SNMP traps can be retrieved when this is enabled.
 
 Further information can be found on the following website: <http://www.comtechefdata.com/products/ran-wan-optimization/stampede-fx-series>
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                    | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                   | No                  | No                      |
 | 1.1.0.x              | Firmware change.                                                   | No                  | Yes                     |
@@ -22,9 +22,9 @@ Further information can be found on the following website: <http://www.comtechef
 | 1.2.0.x              | New MIB and new design document provided by customer.              | No                  | Yes                     |
 | 1.2.1.x \[SLC Main\] | New document provided by customer. Required removal of parameters. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                     |
+| **Range** | **Device Firmware Version**                                     |
 |------------------|-----------------------------------------------------------------|
 | 1.0.0.x          | Firmware: 6.3.0aD-201512032235E4-3.10.62-FX30 EN MIB: Rev 6.2.3 |
 | 1.1.0.x          | Firmware updated. taken from 1.0.0.3 MIB: REV 7.1               |
@@ -38,7 +38,7 @@ Further information can be found on the following website: <http://www.comtechef
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

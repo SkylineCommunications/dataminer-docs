@@ -4,18 +4,18 @@ uid: Connector_help_Sydney_Trains_NSW_Announcement_Manager
 
 # Sydney Trains NSW Announcement Manager
 
-The **Sydney Trains NSW Announcement Manager** is used to make **live announcements** to the NSW train stations. This driver is similar to the Sydney Trains Announcement Manager, but is used to announce to the NSW disctrict of Sydney Trains.
+The **Sydney Trains NSW Announcement Manager** is used to make **live announcements** to the NSW train stations. This connector is similar to the Sydney Trains Announcement Manager, but is used to announce to the NSW disctrict of Sydney Trains.
 
 ## About
 
-This manager driver is designed to be used in combination with the **Sydney Trains NSW Announcement Manager Visio** file. The **Visio** will be used to select the **station** to which the user wants to announce. The driver is designed to allow multiple announcements by different users at the same time.
+This manager connector is designed to be used in combination with the **Sydney Trains NSW Announcement Manager Visio** file. The **Visio** will be used to select the **station** to which the user wants to announce. The connector is designed to allow multiple announcements by different users at the same time.
 
-This manager driver is similar to the **Sydney Trains Announcement Manager**, but the biggest difference is, that the stations that will be announced to by this driver are **no longer available via IP**.
-This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This driver still interfaces with the *Delec Oratis Matrix System* driver to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
+This manager connector is similar to the **Sydney Trains Announcement Manager**, but the biggest difference is, that the stations that will be announced to by this connector are **no longer available via IP**.
+This means that instead of configuring the node crosspoint to the specific station, a **PBX call** needs to be set up to the selected station's **phone number**. For that the *Sydney Trains PBX Manager* is used. This connector still interfaces with the *Delec Oratis Matrix System* driver to configure the crosspoint of the NMS matrix, that is used to enable the sound of the microphone.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -25,11 +25,11 @@ This means that instead of configuring the node crosspoint to the specific stati
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Stations
 
-The **Lines**, **Nodes** and **Stations** tables must first be populated, before a user can select the destination for the announcement in the Visio file. These tables can be found on the **Stations** page of the driver and can be populated by importing a **CSV** file.
+The **Lines**, **Nodes** and **Stations** tables must first be populated, before a user can select the destination for the announcement in the Visio file. These tables can be found on the **Stations** page of the connector and can be populated by importing a **CSV** file.
 
 To import the CSV file, click the **"Import..."** button at the bottom of the **Stations** page. This will open the **Import** page where the available **CSV** files can be selected and imported. The CSV files need to be stored in *"C:\Skyline DataMiner\Documents\Sydney Trains NSW Announcement Manager"* and have the following headers: *"zone id, zone name, zone type, station, station acronym, station type, node, node acronym, line, telephone"*.
 
@@ -45,7 +45,7 @@ This will log all **announcements** (datetime, state, user, stations/zones \[and
 
 ### General configurations
 
-There is an extra Configuration page available with some general configurations that are used by the driver:
+There is an extra Configuration page available with some general configurations that are used by the connector:
 
 - **Debug Logging**: if enabled, all steps will be logged (only use when necessary)
 - **Crosspoint dB Value**: this value is used to open the crosspoints in a matrix (default: -*20 dB*)

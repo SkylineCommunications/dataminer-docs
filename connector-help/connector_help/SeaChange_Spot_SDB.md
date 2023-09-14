@@ -14,7 +14,7 @@ The Spot SDB driver periodically polls an SDB server to retrieve status informat
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 
@@ -41,7 +41,7 @@ The **Export/Import** page button leads to a page where the current configuratio
 
 ### Task Manager
 
-This page displays the **Task Manager** for this server. It contains **process identifiers, CPU and memory data.** By default, the driver will not remove deleted processes from the table. However, you can change this by toggling the **Auto Clear button**.
+This page displays the **Task Manager** for this server. It contains **process identifiers, CPU and memory data.** By default, the connector will not remove deleted processes from the table. However, you can change this by toggling the **Auto Clear button**.
 
 ### Service List
 

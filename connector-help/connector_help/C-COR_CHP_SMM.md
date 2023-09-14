@@ -10,11 +10,11 @@ Trending and alarm monitoring are available on many important parameters.
 
 ## About
 
-This driver is used to monitor a C-COR CHP frame. It displays the state of the cards, and all the parameters and card configurations.
+This connector is used to monitor a C-COR CHP frame. It displays the state of the cards, and all the parameters and card configurations.
 
-All the data is polled by **SNMP**. For each module, a **DVE** will be created, which provides an overview of all the information of the connected modules. A list can be found in the section "Exported Drivers".
+All the data is polled by **SNMP**. For each module, a **DVE** will be created, which provides an overview of all the information of the connected modules. A list can be found in the section "Exported Connectors".
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -38,7 +38,7 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 </tr>
 <tr class="odd">
 <td>2.0.0.39</td>
-<td>Driver reviewing: - Params 30958/30959 and 30965/30966 discreets reviewed; - Removing of normalize pagebuttons and parameters from pages Normalize; - Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs; - Introduction of disable conditions to parameters 30960-30963 and 30967-30970; - Qaction 301 reviewed.</td>
+<td>Driver reviewing: - Params 30958/30959 and 30965/30966 discreets reviewed; - Removing of normalize page buttons and parameters from pages Normalize; - Added a button 'Load Names' to load nodes page for setting the Alias parameters from the modules table to the Modules property of the DVEs; - Introduction of disable conditions to parameters 30960-30963 and 30967-30970; - Qaction 301 reviewed.</td>
 <td>No</td>
 <td>Yes</td>
 </tr>
@@ -71,13 +71,13 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Kernel v1.0.6.0             |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol** | **Description**                      |
 |-----------------------|--------------------------------------|
@@ -96,7 +96,7 @@ All the data is polled by **SNMP**. For each module, a **DVE** will be created, 
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -110,7 +110,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and requ
 
 ## Usage
 
-***Initial reference:** There* *is a functionality that allows the driver to only display and poll information for a chosen chassis, by entering a bus address during creation of the element.*
+***Initial reference:** There* *is a functionality that allows the connector to only display and poll information for a chosen chassis, by entering a bus address during creation of the element.*
 
 ### Main View page
 

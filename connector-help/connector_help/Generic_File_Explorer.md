@@ -4,7 +4,7 @@ uid: Connector_help_Generic_File_Explorer
 
 # Generic File Explorer
 
-This driver can be used to move, copy and delete files from local or remote folders.
+This connector can be used to move, copy and delete files from local or remote folders.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver can be used to move, copy and delete files from local or remote fold
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

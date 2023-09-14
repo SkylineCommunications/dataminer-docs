@@ -10,18 +10,18 @@ This protocol is used to set the input/output connections of the router. It also
 
 ## About
 
-The driver first retrieves the destination-specific information, which includes which output ports are connected to which input ports. It then fills in and displays the connection information in the matrix. When a new connection is set by the user, the protocol updates the destination-specific information table and and displays the new connection information in the Matrix.
+The connector first retrieves the destination-specific information, which includes which output ports are connected to which input ports. It then fills in and displays the connection information in the matrix. When a new connection is set by the user, the protocol updates the destination-specific information table and and displays the new connection information in the Matrix.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                               | No                  | Yes                     |
 | 2.0.0.x          | Based on 1.0.0.1. Changed the matrix size to 1024x1024. Added redundant polling. Improved the delay when setting crosspoints. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -32,7 +32,7 @@ The driver first retrieves the destination-specific information, which includes 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,7 +47,7 @@ SNMP Settings:
 
 #### SNMP Redundant Connection
 
-This driver supports **redundant polling** and requires the following input during element creation:
+This connector supports **redundant polling** and requires the following input during element creation:
 
 SNMP CONNECTION:
 

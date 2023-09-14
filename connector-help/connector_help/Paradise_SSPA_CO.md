@@ -4,11 +4,11 @@ uid: Connector_help_Paradise_SSPA_CO
 
 # Paradise SSPA CO
 
-The **Paradise SSPA CO** driver is used to display and configure information of the Paradise SSPA CO device.
+The **Paradise SSPA CO** connector is used to display and configure information of the Paradise SSPA CO device.
 
 ## About
 
-This driver can be used to monitor and control the **Paradise SSPA CO** device. The driver supports one serial connection to communicate with the device. It also allows alarming and trending of parameters.
+This connector can be used to monitor and control the **Paradise SSPA CO** device. The connector supports one serial connection to communicate with the device. It also allows alarming and trending of parameters.
 
 ## Installation and configuration
 

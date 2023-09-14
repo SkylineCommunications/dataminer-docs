@@ -12,19 +12,19 @@ With the **WISI General Platform**, any module can be mounted into any slot, so 
 
 For each card inserted into one of the available slots, a corresponding **Dynamic Virtual Element** (**DVE**) will be generated, allowing the user to consult detailed information regarding the module.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V01.00.00.00b               |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**         | **Description**    |
 |-------------------------------|--------------------|
@@ -39,7 +39,7 @@ For each card inserted into one of the available slots, a corresponding **Dynami
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

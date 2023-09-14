@@ -8,17 +8,17 @@ The Barracuda Email Security Gateway is an email security gateway that manages a
 
 ## About
 
-This driver uses an **SNMP** connection to retrieve the status of the gateway.
+This connector uses an **SNMP** connection to retrieve the status of the gateway.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.1                         |
 
@@ -28,7 +28,7 @@ This driver uses an **SNMP** connection to retrieve the status of the gateway.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

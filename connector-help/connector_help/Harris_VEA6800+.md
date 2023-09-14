@@ -8,17 +8,17 @@ The **Harris VEA6800+** driver has an **SNMP** connection towards the 6800+ fram
 
 ## About
 
-With this driver, you can monitor the Harris amplifier card. This driver supports monitoring of both ETH cards and ICE cards depending on the element configuration.
+With this connector, you can monitor the Harris amplifier card. This connector supports monitoring of both ETH cards and ICE cards depending on the element configuration.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,13 +28,13 @@ With this driver, you can monitor the Harris amplifier card. This driver support
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during the creation of the element:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device, e.g. *172.32.65.38.*
 - **IP port**: The IP port of the device, by default *161.*
-- **Bus address**: This is a combination of the frame number, slot number and card type (ETH or ICE): "*\<frameNumber\>****.\<****slotID\>.\<cardType\>*" (e.g. frame 1, slot 12, ETH Card = bus address *1.12.ETH).*
+- **Bus address**: This is a combination of the frame number, slot number and card type (ETH or ICE): "*\<frameNumber\>.\<slotID\>.\<cardType\>*" (e.g. frame 1, slot 12, ETH Card = bus address *1.12.ETH).*
 
 ## Usage
 

@@ -4,25 +4,25 @@ uid: Connector_help_Woodward_EasyGen-3000
 
 # Woodward EasyGen-3000
 
-This driver monitors the activity of **Woodward EasyGen-3000** Genset controllers.
+This connector monitors the activity of **Woodward EasyGen-3000** Genset controllers.
 
 The easYgen-3000 series are control units for engine-generator system management applications. The control units can be used in applications such as co-generation, standby, AMF, peak shaving, import/export and distributed generation.
 
 ## About
 
-The driver uses **serial** communication with the device. It makes use of the "Modbus" communication protocol.
+The connector uses **serial** communication with the device. It makes use of the "Modbus" communication protocol.
 
 The information from the device that is displayed depends on the configuration of imported CSV files.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2004                      |
 
@@ -32,7 +32,7 @@ The information from the device that is displayed depends on the configuration o
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

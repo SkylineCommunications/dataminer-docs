@@ -4,7 +4,7 @@ uid: Connector_help_Socomec_Diris_D-50_-_U-30
 
 # Socomec Diris D-50 - U-30
 
-The Socomec Diris U-30 is Voltage Measurement Module. This driver can be used to control and monitor this device.
+The Socomec Diris U-30 is Voltage Measurement Module. This connector can be used to control and monitor this device.
 
 ## About
 
@@ -14,7 +14,7 @@ The Diris U-30 is a Voltage Measurement Device that is part of the DIRIS Digiwar
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

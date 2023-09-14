@@ -32,7 +32,7 @@ This connector is used to monitor and configure the Evertz 570DSK-4K-25G device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ The **General** page shows the device health status as well as some general para
 
 You can change the device configuration on the **Device** **Configuration** page.
 
-The driver has 6 main tables:
+The connector has 6 main tables:
 
 - **PTP Port Status**
 - **QSFP Status**

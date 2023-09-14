@@ -37,7 +37,7 @@ This connector uses a serial connection to communicate with this satellite modem
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -47,7 +47,7 @@ HTTP CONNECTION:
 
 #### Serial Extra Connection 1 Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

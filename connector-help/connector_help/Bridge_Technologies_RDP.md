@@ -4,11 +4,11 @@ uid: Connector_help_Bridge_Technologies_RDP
 
 # Bridge Technologies RDP
 
-Driver for Skyline DataMiner that can be used to configure a Bridge Technologies probe to take a stream, that is available on the video network, and do Relay over IP through the operations network using the RTP protocol or record it.
+This connector can be used to configure a Bridge Technologies probe to take a stream, that is available on the video network, and do Relay over IP through the operations network using the RTP protocol or record it.
 
 ## About
 
-This is a small driver with only the Return Data Path (RDP) feature impemented for Bridgetech probes. This feature makes it possible to configure a probe to forward a specific stream to a specific destination. This functionality is available in probes with software version 4.2 and higher. From version 5.0 and higher, it is also possible to make the probe record locally via the Eii.
+This is a small connector with only the Return Data Path (RDP) feature impemented for Bridgetech probes. This feature makes it possible to configure a probe to forward a specific stream to a specific destination. This functionality is available in probes with software version 4.2 and higher. From version 5.0 and higher, it is also possible to make the probe record locally via the Eii.
 
 If the requested stream is not already monitored by the probe, a temporary stream called RTP_STREAM is created provided all 260 probe slots are not used already.
 
@@ -16,19 +16,19 @@ All communication with the device is done via the HTTP protocol.
 
 Note:
 
-- This driver is intended to be used in combination with an automation script or a manager driver.
+- This connector is intended to be used in combination with an automation script or a manager connector.
 - There are two RDP engines in each probe. The element bus address is used to specify the engine to use.
 - Only the RDP Status parameter is being polled from the device. The configuration parameters can only be used to perform sets and are not being retrieved from the probe.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                             |
+| **Range** | **Device Firmware Version**                                             |
 |------------------|-------------------------------------------------------------------------|
 | 1.0.0.x          | Software version 4.2 and higher. For recording: version 5.0 and higher. |
 
@@ -38,13 +38,13 @@ Note:
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. Default: *80*\]
-- **Bus address**: \[Specifies which of the available RDP engines this element refers to. If the proxy server has to be bypassed, specify *bypassproxy*. Format: "*bypassproxy;\<engine id\>*"\]
+- **IP port**: The IP port of the destination. Default: *80*.
+- **Bus address**: Specifies which of the available RDP engines this element refers to. If the proxy server has to be bypassed, specify *bypassproxy*. Format: "*bypassproxy;\<engine id\>*"
 
 ### Configuration
 
@@ -112,8 +112,6 @@ Format: *engine=1&dst_ipa=10:0:30:216&src_ipa=239:255:0:4&src_port=5500&src_ssm=
 | size         | File size for recording.                                                                                                |
 | protect      | How many seconds to protect recording from being overwritten. If the value is -1, it will never be overwritten.         |
 
-### Webinterface
+### Web Interface
 
 Displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes

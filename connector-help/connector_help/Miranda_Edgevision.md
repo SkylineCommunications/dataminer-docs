@@ -8,20 +8,20 @@ The **Miranda Edgevision** is a video monitor with a web interface.
 
 ## About
 
-The device has a web interface that is split up into an applet for advanced functionality and a webpage for general statuses and settings. Since the entire interface is obfuscated and no API is available, only the JSON messages are currently being scraped. The readable information is available in this driver.
+The device has a web interface that is split up into an applet for advanced functionality and a webpage for general statuses and settings. Since the entire interface is obfuscated and no API is available, only the JSON messages are currently being scraped. The readable information is available in this connector.
 
-When a webpage can be safely executed inside DataMiner to scrape the contents, improvements to this driver will be possible.
+When a webpage can be safely executed inside DataMiner to scrape the contents, improvements to this connector will be possible.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | No                  | Yes                     |
 | 1.1.0.x          | New firmware based on 1.0.0.x (see below) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.21 build 1096             |
 | 1.1.0.x          | 1.44 build 1223             |
@@ -32,7 +32,7 @@ When a webpage can be safely executed inside DataMiner to scrape the contents, i
 
 #### Serial main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -42,7 +42,7 @@ This driver uses an HTTP connection and requires the following input during elem
 
 ## Usage
 
-The interface of this driver mimics the interface of the Admin webpage. This means that there are 2 pages: **System Configuration** and **Status and Options.** These hold the information that could be scraped from the messages sent between the web interface and the device.
+The interface of this connector mimics the interface of the Admin webpage. This means that there are 2 pages: **System Configuration** and **Status and Options.** These hold the information that could be scraped from the messages sent between the web interface and the device.
 
 ### System Configuration
 

@@ -4,7 +4,7 @@ uid: Connector_help_ASC_Signal_APC400
 
 # ASC Signal APC400
 
-With this driver, you can retrieve status information from and send control commands to an **APC400 Antenna Control Unit**.
+With this connector, you can retrieve status information from and send control commands to an **APC400 Antenna Control Unit**.
 
 This unit provides maintenance functionality and, if available, the ability to track small- and medium-sized station antennas.
 
@@ -12,15 +12,15 @@ This unit provides maintenance functionality and, if available, the ability to t
 
 This is an **SNMP** protocol that polls single and table parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
 ### Supported Firmware versions
 
-| **Driver Range** | **Device Firmware Version**          |
+| **Range** | **Device Firmware Version**          |
 |------------------|--------------------------------------|
 | 1.0.0.x          | RPI software version: ACS468K.C.3 03 |
 
@@ -30,7 +30,7 @@ This is an **SNMP** protocol that polls single and table parameters.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

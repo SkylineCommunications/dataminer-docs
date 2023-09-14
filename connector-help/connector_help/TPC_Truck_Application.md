@@ -12,9 +12,9 @@ The application comes with an interactive Visio drawing. You need this drawing i
 
 The visual page of the element is the main page to be used for the application. The data pages contain settings for the configuration of the application.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
@@ -24,7 +24,7 @@ The visual page of the element is the main page to be used for the application. 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 

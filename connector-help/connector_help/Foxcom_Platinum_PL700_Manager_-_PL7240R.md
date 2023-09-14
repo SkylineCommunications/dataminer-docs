@@ -4,15 +4,15 @@ uid: Connector_help_Foxcom_Platinum_PL700_Manager_-_PL7240R
 
 # Foxcom Platinum PL700 Manager - PL7240R
 
-The Foxcom Platinum PL700 Manager - PL7240R driver represents a group of cards with the system naming format PL7240R.
+The Foxcom Platinum PL700 Manager - PL7240R connector represents a group of cards with the system naming format PL7240R.
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the device.
+This connector uses **SNMP** polling to communicate with the device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.05.48                     |
 
@@ -20,7 +20,7 @@ This driver uses **SNMP** polling to communicate with the device.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Platinum PL700 Manager](xref:Connector_help_Foxcom_Platinum_PL700_Manager), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Platinum PL700 Manager](xref:Connector_help_Foxcom_Platinum_PL700_Manager), from version 1.0.0.1 onwards.
 
 ## Usage
 

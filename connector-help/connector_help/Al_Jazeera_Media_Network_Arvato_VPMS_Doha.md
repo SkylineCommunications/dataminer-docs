@@ -4,21 +4,21 @@ uid: Connector_help_Al_Jazeera_Media_Network_Arvato_VPMS_Doha
 
 # Al Jazeera Media Network Arvato VPMS Doha
 
-The Arvato System's VPMS (Video Production Management System) is a solution designed to create, manage and process digital video content. With this solution, every integrated workflow, from ingest and production, transcoding and quality management to distribution, playout and archiving, can be managed. The Al Jazeera Media Network Arvato VPMS Doha driver enables the monitoring of this solution.
+The Arvato System's VPMS (Video Production Management System) is a solution designed to create, manage and process digital video content. With this solution, every integrated workflow, from ingest and production, transcoding and quality management to distribution, playout and archiving, can be managed. The Al Jazeera Media Network Arvato VPMS Doha connector enables the monitoring of this solution.
 
 ## About
 
-An **SNMP** connection is used in order to retrieve the necessary information. In addition, this driver can process SNMP traps in order to update the monitored parameters.
+An **SNMP** connection is used in order to retrieve the necessary information. In addition, this connector can process SNMP traps in order to update the monitored parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ An **SNMP** connection is used in order to retrieve the necessary information. I
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

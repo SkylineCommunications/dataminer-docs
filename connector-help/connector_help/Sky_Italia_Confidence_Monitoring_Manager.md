@@ -4,15 +4,15 @@ uid: Connector_help_Sky_Italia_Confidence_Monitoring_Manager
 
 # Sky Italia Confidence Monitoring Manager
 
-The driver detects and lists into a table the Services in a DMA.
+The connector detects and lists into a table the Services in a DMA.
 
 ## About
 
-This is a **Virtual** driver, that **every 12h** detects every Service (excluding the ones containing "Main", "Backup" or "All Services") and lists them and the defined properties in the Service Table.
+This is a **Virtual** connector, that **every 12h** detects every Service (excluding the ones containing "Main", "Backup" or "All Services") and lists them and the defined properties in the Service Table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,11 +22,11 @@ This is a **Virtual** driver, that **every 12h** detects every Service (excludin
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
-The driver contains only 1 page.
+The connector contains only 1 page.
 
 ### General
 
@@ -45,4 +45,4 @@ The General page shows the **Service Table** with the following properties (colu
 - Multicast C
 - Multicast D
 
-The page also contains a **Refresh** button, which allows to perform a service detection whenever the user clicks on it, and an **Auto Remove** togglebutton which if set to On, removes automatically services that are no longer being detected.
+The page also contains a **Refresh** button, which allows to perform a service detection whenever the user clicks on it, and an **Auto Remove** toggle button which if set to On, removes automatically services that are no longer being detected.

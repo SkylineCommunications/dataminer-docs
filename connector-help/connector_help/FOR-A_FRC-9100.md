@@ -4,9 +4,9 @@ uid: Connector_help_FOR-A_FRC-9100
 
 # FOR-A FRC-9100
 
-This driver is used to monitor a FOR-A FRC-9100 frame rate converter.
+This connector is used to monitor a FOR-A FRC-9100 frame rate converter.
 
-The driver uses an **SNMP connection** to communicate with a FOR-A FRC-9100 device.
+The connector uses an **SNMP connection** to communicate with a FOR-A FRC-9100 device.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses an **SNMP connection** to communicate with a FOR-A FRC-9100 devi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver allows you to configure and monitor two channels, A and B, for video frame-rate conversion.
+This connector allows you to configure and monitor two channels, A and B, for video frame-rate conversion.
 
 ## Notes
 

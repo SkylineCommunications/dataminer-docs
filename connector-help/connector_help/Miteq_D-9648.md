@@ -8,11 +8,11 @@ The Miteq D-9648 is a downconverter.
 
 ## About
 
-The driver for the Miteq D-9648 allows for the monitoring and configuration of the **Frequency, Attenuation, Channels and Alarms.**
+The connector for the Miteq D-9648 allows for the monitoring and configuration of the **Frequency, Attenuation, Channels and Alarms.**
 
 ## Installation and configuration
 
-### CreationThis driver uses a Serial connection and needs the following user information:
+### CreationThis connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

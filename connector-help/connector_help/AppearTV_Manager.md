@@ -5,7 +5,7 @@ uid: Connector_help_AppearTV_Manager
 # AppearTV Manager
 
 The **AppearTV Manager** is an Application for managing and creating elements using the **AppearTV General Platform**.
-The application is used to have an overview of all the devices and services. On top of this application there is a visio layer to visualize all the elements, DVE Map & services.
+The application is used to have an overview of all the devices and services. On top of this application there is a Visio layer to visualize all the elements, DVE Map & services.
 
 ## About
 
@@ -13,19 +13,17 @@ The **AppearTV Manager** application makes it possible to search the network for
 
 When the Chassis elements are already created on the DMA, you can also use the sync option to sync the Application with the DMA.
 
-## Installation and configuration
+## Configuration
 
-### Creation
+The AppearTV Manager is a virtual connector, so you do not have to fill in any configuration parameters during element creation.
 
-The AppearTV Manager is a virtual driver, so you do not have to fill in any configuration parameters.
-
-VISIO Usage
+## Visual Overview
 
 ### Devices/Map page
 
 All DVEs (slot cards) of all the AppearTV Chassis elements in the system are mapped out in categories. Those categories are: Input, Decoding, (pre-) Processing, Encoding/Transcoding, (post-) Processing & Mux/Output.
 
-In each shape you have some additional KPI's such as **Chassis Name**, **Slot Number** and **Number of Ports**. When clicking a DVE shape, the DVE will be opened.
+In each shape you have some additional KPIs such as **Chassis Name**, **Slot Number** and **Number of Ports**. When clicking a DVE shape, the DVE will be opened.
 
 ### Devices/Rack page
 
@@ -37,7 +35,7 @@ This way you can create a visual rack overview that matches the physical setup a
 
 The **Rack Names** can be configured ont the Visio page Discovery/Settings Racks...
 
-When clicking a Device in the rack overview, the Chassis element will be opened. (extra information about the chassis driver: see **AppearTV General Platform** )
+When clicking a Device in the rack overview, the Chassis element will be opened. (extra information about the chassis connector: see **AppearTV General Platform** )
 
 ### Services/Overview page
 
@@ -53,7 +51,7 @@ Here you will find a list of all the created services. The service names are con
 
 This page is used for configuration of the network search for Chassis devices.
 
-General:
+#### General
 
 **Progress** & **Detected Devices** are parameters that will update while the Scan is running.
 
@@ -61,9 +59,9 @@ General:
 
 Note that an element should be running with the **Skyline IP Network Discovery** protocol in order to be able to use the Detection mechanism.
 
-(extra information about the Detection driver: see ****Skyline IP Network Discovery****)
+(extra information about the Detection connector: see **Skyline IP Network Discovery**)
 
-Settings:
+#### Settings
 
 Before you start the scan, you need to make sure the IP range is configured. The scan will check all the IPs in the range if there are devices available.
 
@@ -85,23 +83,23 @@ On Top of the page we have the **Create**- and **Delete All Elements** buttons. 
 
 There is also the **Synchronize** button which can be useful if this application is installed on a system that already contains a lot of **AppearTV General Platform** Chassis elements.
 
-Element card Usage
+## Data Display
 
-When rotating the application you have access to the element card. In here you can configure some additional parameters.
+On the data pages of the element, you can configure some additional parameters.
 
 ### Device Detection page
 
 With **Elements View** you can choose in which view the generated elements will be placed.
 
-All other parameters are also available in the visio layer.
+All other parameters are also available in the Visual Overview layer.
 
 ### Services page
 
-With **Service Visio** you can choose if a visio needs to be assigned to the the service. The visio name can be configured in **Service Visio Name**.
+With **Service Visio** you can choose if a Visio file needs to be assigned to the the service. The Visio file name can be configured in **Service Visio Name**.
 
 The **Service View** will let you select in which view the services should be placed after they are created.
 
-In the **service Table** you can see extra columns **Filter 1**, **2** and **3**. These columns are not available in the visio layer, but they are just to see the result of the **Filter Config...**
+In the **service Table** you can see extra columns **Filter 1**, **2** and **3**. These columns are not available in the Visual Overview layer, but they are just to see the result of the **Filter Config...**
 
 When opening the **Filter Config...** popup page you see a table with configurations for the extra filters.
 

@@ -34,7 +34,7 @@ The iControl Router Manager is a graphical user interface that provides advanced
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

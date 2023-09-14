@@ -4,7 +4,7 @@ uid: Connector_help_International_Datacasting_Star3
 
 # International Datacasting Star3
 
-The International Datacasting Star3 is an integrated receiver/decoder device (IRD). This driver allows complete monitoring of such devices.
+The International Datacasting Star3 is an integrated receiver/decoder device (IRD). This connector allows complete monitoring of such devices.
 
 ## About
 
@@ -32,7 +32,7 @@ The International Datacasting Star3 is an integrated receiver/decoder device (IR
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

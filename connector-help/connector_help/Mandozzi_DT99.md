@@ -4,11 +4,11 @@ uid: Connector_help_Mandozzi_DT99
 
 # Mandozzi DT99
 
-With this driver, information can be gathered and viewed from the combimux **Mandozzi DT99**. The driver also makes it possible to set values on the device.
+With this connector, information can be gathered and viewed from the combimux **Mandozzi DT99**. The connector also makes it possible to set values on the device.
 
 ## About
 
-This driver uses SNMP to interface with the **Mandozzi DT99** combimux.
+This connector uses SNMP to interface with the **Mandozzi DT99** combimux.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver uses SNMP to interface with the **Mandozzi DT99** combimux.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

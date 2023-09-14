@@ -8,13 +8,13 @@ The **Trilogy Gemini** frame can be fitted with up to 32 local ports for panels,
 
 ## About
 
-The driver provides an overview of general states as well as the panel status of 32 panels.
+The connector provides an overview of general states as well as the panel status of 32 panels.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

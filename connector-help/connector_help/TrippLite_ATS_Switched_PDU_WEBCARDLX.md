@@ -8,17 +8,17 @@ The PDU line of devices from TrippLite allow for the use of multiple outlets, bu
 
 ## About
 
-The TrippLite ATS Switched PDU WEBCARDLX driver allows for configuration and monitoring of several ATS and EnviroSense devices.
+The TrippLite ATS Switched PDU WEBCARDLX connector allows for configuration and monitoring of several ATS and EnviroSense devices.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial Version | No                  | Yes                     |
+| 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 15.5.1                      |
 
@@ -28,7 +28,7 @@ The TrippLite ATS Switched PDU WEBCARDLX driver allows for configuration and mon
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) version 3 connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) version 3 connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,9 +58,9 @@ All of the information regarding the ATS devices can be found using this page.
 
 The **ATS** **Device Info** table contains mostly the status of the ATS device but also allows for commanding the **Main Load** and the configuration of the **Power On** **Delay**.
 
-The ****ATS** Display Info** table allows for configuration of the ATS **Scheme, Orientation, Auto Scrolling, Intensity**, and **Units.**
+The **ATS Display Info** table allows for configuration of the ATS **Scheme, Orientation, Auto Scrolling, Intensity**, and **Units.**
 
-The ****ATS** Identity Info** table displays the amount of connections to the ATS, including the **Inputs**, **Outputs**, and **Outlets**.
+The **ATS Identity Info** table displays the amount of connections to the ATS, including the **Inputs**, **Outputs**, and **Outlets**.
 
 Using page buttons, the following can be accessed:
 
@@ -68,7 +68,7 @@ Using page buttons, the following can be accessed:
 - **Inputs:** contains information on the ATS inputs in the **Inputs** and **Input Phase Info** tables.
 - **Outputs:** displays the **Outputs** table with data on the outputs of the ATS.
 - **Breakers**: displays the **Breakers** table with data on the breakers of the ATS.
-- **Heak Sinks:** displays the **Heat Sinks** table with data on the heat sinks of the ATS.
+- **Heat Sinks:** displays the **Heat Sinks** table with data on the heat sinks of the ATS.
 - **Circuits:** displays the **Circuits** table with data on the circuits on the ATS.
 - **Supports:** displays the **ATS Supports** table with the various supported functions of a ATS.
 - **Controls:** allows the user to run several commands via buttons in the **Controls** table.

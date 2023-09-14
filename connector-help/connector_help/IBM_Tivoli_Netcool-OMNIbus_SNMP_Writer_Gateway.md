@@ -4,25 +4,25 @@ uid: Connector_help_IBM_Tivoli_Netcool-OMNIbus_SNMP_Writer_Gateway
 
 # IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway
 
-The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway driver acts as a **trapreceiver** and **orchestrator**. With this driver it is possible to retrieve traps via **SNMP or TCP (Smart-Serial).** Furthermore the driver is able to create **DVE**'s based on location or subdomain, which in terms show the events for the selected location/subdomain. It is also possible to forward the incoming events to other DMAs that use this driver via TCP based on the event domain configurations.
+The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway driver acts as a **trap receiver** and **orchestrator**. With this connector it is possible to retrieve traps via **SNMP or TCP (Smart-Serial).** Furthermore the connector is able to create **DVE**'s based on location or subdomain, which in terms show the events for the selected location/subdomain. It is also possible to forward the incoming events to other DMAs that use this connector via TCP based on the event domain configurations.
 
 ## About
 
 The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway device is a **monitoring platform** that is able to **forward Netcool alerts**. The alerts are forwarded as **SNMP traps** to an SNMP reader. This allows Tivoli Netcool-OMNIbus to generate traps that are forwarded to other management platforms such as **DataMiner**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.6.0.0                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                    | **Description**                                                   |
 |----------------------------------------------------------|-------------------------------------------------------------------|
@@ -35,22 +35,21 @@ The IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway device is a **monitoring plat
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Indicate if required or not. If it is, specify default value and range.
 
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, the default value is public.
-- **Set community string**: \[The community string used when setting values on the device, the default value is private.
+- **Set community string**: The community string used when setting values on the device, the default value is private.
 
 Smart-Serial smart connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -65,26 +64,26 @@ SERIAL CONNECTION:
 - Interface connection:
 
   - **IP address/host**: The polling IP of the device.
-  - **IP port**: The IP port of the device. Indicate if required or not. If so, specify default value and range.
-  - **Bus address**: The bus address of the device. Indicate if required or not. If so, specify default value, range and format.
+  - **IP port**: The IP port of the device.
+  - **Bus address**: The bus address of the device.
 
 ## Usage
 
 ### General
 
-The "General" page contains the **Orchestrator Table**. For every incoming event the **domain** of the event is checked and if it is not present in the Orchestrator table it will get added to the table. Each domain in the Orchestrator table has a matching **function**. The functions are explained in following table. It is also possible to manually add domains and functions by rightclicking the Orchestrator table and selecting "Add Domain(s)".
+The "General" page contains the **Orchestrator Table**. For every incoming event the **domain** of the event is checked and if it is not present in the Orchestrator table it will get added to the table. Each domain in the Orchestrator table has a matching **function**. The functions are explained in following table. It is also possible to manually add domains and functions by right-clicking the Orchestrator table and selecting "Add Domain(s)".
 
 | Function                     | Description                                                                                                                                                                                                                                                                                                          |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Not Configured (Default)** | When an incoming event has a Domain value which is not already registered, the value gets added to the orchestrator table with the default function of not configured. When a domain is not configured, all incoming events for that domain are stored into a configuration buffer until the domain gets configured. |
-| **Show per Subdomain**       | Creates DVE's for this domain based on the subdomain value of the incoming events.                                                                                                                                                                                                                                   |
-| **Show per Location**        | Creates DVE's for this domain based on the location value of the incoming events.                                                                                                                                                                                                                                    |
+| **Show per Subdomain**       | Creates DVEs for this domain based on the subdomain value of the incoming events.                                                                                                                                                                                                                                   |
+| **Show per Location**        | Creates DVEs for this domain based on the location value of the incoming events.                                                                                                                                                                                                                                    |
 | **Forward**                  | Forward the incoming event via a TCP connection with the destination that is specified in the **IP:Port column** of the orchestrator table. If the connection fails, the events are stored in the connectivity buffer. After a configured amount of minutes, the events in the connectivity buffer are re-forwarded. |
 | **Discard**                  | Drops the incoming events for this domain.                                                                                                                                                                                                                                                                           |
 
 ### DVE Table
 
-When for a certain domain the functions "**Show per Subdomain**" or "**Show per Location**" are selected, **DVE**'s will be created for these traps based on the selected function. On the "DVE Tables" there is a table "**Sub Domain Table**" which list all existing DVE's based on subdomain and a tabeme "**Location Table**" which lists all the DVE's based on location. It it also possible to add DVE's manually by rightclicking one of the table and selecting Add Subdomain\[or Location\].
+When for a certain domain the functions "**Show per Subdomain**" or "**Show per Location**" are selected, **DVE**'s will be created for these traps based on the selected function. On the "DVE Tables" there is a table "**Sub Domain Table**" which list all existing DVEs based on subdomain and a table "**Location Table**" which lists all the DVEs based on location. It it also possible to add DVEs manually by right-clicking one of the table and selecting Add Subdomain\[or Location\].
 
 ### Events
 

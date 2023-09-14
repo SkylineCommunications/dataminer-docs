@@ -4,7 +4,7 @@ uid: Connector_help_Andrew_APC100
 
 # Andrew APC100
 
-With this driver, it is possible to monitor and control the positioning of the **Andrew APC100** device. In addition, the positioning of the satellites can be configured in a memory and loaded to the device at any desired time.
+With this connector, it is possible to monitor and control the positioning of the **Andrew APC100** device. In addition, the positioning of the satellites can be configured in a memory and loaded to the device at any desired time.
 
 Alarms on the current position can be normalized.
 
@@ -20,7 +20,7 @@ In order to control the positioning of the **APC100**, it is possible to set sma
 
 ### Creation
 
-The **Andrew APC100** is a serial driver. The following device details need to be set:
+The **Andrew APC100** is a serial connector. The following device details need to be set:
 
 - **IP address**
 - **IP port**

@@ -10,25 +10,25 @@ The **Vertex 7200** is an antenna pointing system that positions the antenna to 
 
 The **Vertex 7200** driver will update its monitoring and configuration parameters by sending serial commands to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                            | No                  | Yes                     |
 | 1.1.0.x          | Release version, requires CRC                                                              | Yes                 | Yes                     |
 | 1.2.0.x          | Release version, based on 1.1.0.16, disabled CRC                                           | No                  | No                      |
 | 2.0.0.x          | Release version. Layout based on 1.1.0.18. Requires MT M&C protocol to be the serial mode. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.1.0.x          | N/A                         |
 | 1.2.0.x          | N/A                         |
 | 2.0.0.x          | N/A                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description** |
 |-----------------------|-----------------|
@@ -40,7 +40,7 @@ The **Vertex 7200** driver will update its monitoring and configuration paramete
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -49,7 +49,7 @@ SERIAL CONNECTION:
 
 ### Configuration of the device
 
-Depending on the driver version, the following settings need to be configured on the device for successful communication with the driver.
+Depending on the connector version, the following settings need to be configured on the device for successful communication with the connector.
 
 For all versions before 2.0.0.1:
 
@@ -79,7 +79,7 @@ This page contains the parameters mentioned above, as well as parameters for the
 
 Further configuration is possible with the **Clear Alarm**, **Stop Antenna**, **Resume Tracking**, **Stop Tracking** and **Auto Continue** buttons, as well as a number of buttons that control the **Azimuth**, **Elevation** and **Polarization** **Positions**.
 
-In version 2.0.0.x of the driver, the following additional parameters are available: **OPT Tracking Status**, **Track/Target Scheduler Status** and **Steptrack Cycle.**
+In version 2.0.0.x of the connector, the following additional parameters are available: **OPT Tracking Status**, **Track/Target Scheduler Status** and **Steptrack Cycle.**
 
 The page contains the following page buttons:
 
@@ -108,7 +108,7 @@ The page contains the following page buttons:
 - **Set Soft Limit**: Shows the **Lower CCW** and **Upper CW** **Soft Limits** for Azimuth, Elevation and Polarization. Two additional page buttons on this subpage (**Set Lower Soft Limit** and **Set Upper Soft Limit**) allow you to set these parameters.
 - **Immobile/Reversed**: Allows you to set the **Timeout** and **Tolerance** (Azimuth, Elevation and Polarization).
 - **Encoder Settings**: Contains encoder settings regarding **Counting Direction** and **Offset** (Azimuth, Elevation and Polarization).
-- **Port Settings**: **Baudrate**, **Parity**, **Databits**, **Stopbits**, **Checksum**, **Security** **Level** and **Password**. In version 2.0.0.x of the driver, the **Port Number** and **High Security Port Number** are also available here.
+- **Port Settings**: **Baudrate**, **Parity**, **Databits**, **Stopbits**, **Checksum**, **Security** **Level** and **Password**. In version 2.0.0.x of the connector, the **Port Number** and **High Security Port Number** are also available here.
 - **More Settings**: **Position Loop Deadband** and **Inching on Time**.
 
 ### DTR
@@ -129,5 +129,5 @@ The device contains two ports from which set commands can be done: the front pan
 #### Passwords
 
 On the device, there is a setting to disable passwords. The device documentation details the following information: "*Passwords are a one to nine digit number. Setting a password to 0 disables protection for that security level. To completely disable passwords, set both Operator and Supervisor passwords to 0.*"
-In case passwords are disabled, in the driver, the password should be set to "0" instead of "" (empty string). Otherwise, the driver would still try to calculate CRC on the password, but it would not find any value and take the following byte, resulting in a bad CRC. This would result in not being able to change the security level from "Monitor" to "Operator" or "Supervisor".
+In case passwords are disabled, in the connector, the password should be set to "0" instead of "" (empty string). Otherwise, the connector would still try to calculate CRC on the password, but it would not find any value and take the following byte, resulting in a bad CRC. This would result in not being able to change the security level from "Monitor" to "Operator" or "Supervisor".
 Version range 1.1.0.x, version 1.1.0.22 and up will have the functionality to work with this implemented.

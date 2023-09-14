@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Ticketing_Gateway
 
 # Generic Ticketing Gateway
 
-This is a DataMiner driver that allows for the polling of tickets created in the **DataMiner Ticketing App** for a given ticketing domain. This driver is generic so that any custom column is able to be retrieved from the configured domain.
+This is a DataMiner connector that allows for the polling of tickets created in the **DataMiner Ticketing App** for a given ticketing domain. This connector is generic so that any custom column is able to be retrieved from the configured domain.
 
 About
 
@@ -26,7 +26,7 @@ About
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -42,7 +42,7 @@ This page contains the table that displays all tickets and their respective colu
 
 ### Configuration
 
-This is the configuration page for the driver. Here we can find:
+This is the configuration page for the connector. Here we can find:
 
 - **Ticket Domain:** name of the ticket domain to poll tickets for;
 - **Owner Support Configuration:** allows reassigning the ticket to someone else (Email notifications have to be enabled). When a ticket is reassigned, the new owner is automatically added to the mailing list (the **To** field of the e-mails). The **Ticket Owner Email** should be configured with the index of the column that is mapped (in the **Column Mapping** table) to the field that holds that information for each ticket.
@@ -55,7 +55,7 @@ This page allows configuring the notifications to be sent by the element. Notifi
 
 The fields **Email to**, **Email CC** and **SMS to** should be configured with the index of the column that is mapped (in the **Column Mapping** table) to the field that holds that information for each ticket.. The field **Email Structure** should contain a semicolon-separated list of column indexes to be sent in the e-mail.
 
-If the **Title in Email** parameter is enabled, the driver will include the value in the 'Title' Column in the email subject.
+If the **Title in Email** parameter is enabled, the connector will include the value in the 'Title' Column in the email subject.
 
 ### Add Tickets
 

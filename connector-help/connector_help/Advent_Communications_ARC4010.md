@@ -6,19 +6,19 @@ uid: Connector_help_Advent_Communications_ARC4010
 
 The **ARC4010** is a redundancy controller capable of monitoring the status of 10 units and controlling 10 wave guide.
 
-The driver uses a **serial connection** to communicate with the device.
+The connector uses a **serial connection** to communicate with the device.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | A.19                        |
 
@@ -28,7 +28,7 @@ The driver uses a **serial connection** to communicate with the device.
 
 #### Serial Connection - Main
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

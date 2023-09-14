@@ -6,21 +6,21 @@ uid: Connector_help_Imagine_Communications_SelenioFlex
 
 **SelenioFlex live-to-file ingest** solutions provide efficient multiformat capture and **encoding** from live sources or tapes and **transcoding** from file-based sources. Combining superior output quality, format flexibility and the industry's deepest feature set, the SelenioFlex ingest system is the ideal gateway to **file-based** production and archive workflows and today's vast array of multi-screen distribution opportunities.
 
-This driver can be used to monitor, trend and control the encoder.
+This connector can be used to monitor, trend and control the encoder.
 
 ## About
 
-The driver uses an **HTTP connection** to communicate with the encoder.
+The connector uses an **HTTP connection** to communicate with the encoder.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.6                         |
 
@@ -30,7 +30,7 @@ The driver uses an **HTTP connection** to communicate with the encoder.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

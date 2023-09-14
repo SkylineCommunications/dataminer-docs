@@ -4,7 +4,7 @@ uid: Connector_help_Axon_ACP_ERS11
 
 # Axon ACP ERS11
 
-The **Axon ACP ERS11** driver can be used to display information and configure settings of the related device.
+The **Axon ACP ERS11** connector can be used to display information and configure settings of the related device.
 
 ## About
 
@@ -12,22 +12,22 @@ A **serial** connection is used in order to retrieve information from the device
 
 In addition, there are different possibilities for alarm monitoring and trending of the supported Axon card types.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version      | No                  | No                      |
 | 2.0.0.x          | Override DVE timeout | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-This driver supports multiple firmware versions for multiple card types.
+This connector supports multiple firmware versions for multiple card types.
 
-An overview of the supported card types can be found in the "Exported drivers" section below.
+An overview of the supported card types can be found in the "Exported connectors" section below.
 
-The implemented firmware versions for each supported card type are described in the "Supported firmware versions" sections of the driver help pages of these cards.
+The implemented firmware versions for each supported card type are described in the "Supported firmware versions" sections of the connector help pages of these cards.
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**  | **Description**                                                                                                                |
 |------------------------|--------------------------------------------------------------------------------------------------------------------------------|
@@ -60,7 +60,7 @@ The implemented firmware versions for each supported card type are described in 
 
 #### Serial Main Connection
 
-The driver uses a serial connection and requires the following input during element creation:
+The connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

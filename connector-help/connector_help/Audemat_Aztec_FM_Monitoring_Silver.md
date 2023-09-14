@@ -4,23 +4,23 @@ uid: Connector_help_Audemat_Aztec_FM_Monitoring_Silver
 
 # Audemat Aztec FM Monitoring Silver
 
-The **Audemat Aztec FM Monitoring Silver** driver can be used to display and configure information regarding the related device.
+The **Audemat Aztec FM Monitoring Silver** connector can be used to display and configure information regarding the related device.
 
 ## About
 
 This protocol can be used to monitor and control the Audemat Aztec FM Monitoring Silver device. An SNMP connection is used in order to successfully retrieve and configure the information of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                     | No                  | Yes                     |
 | 2.0.0.x          | New firmware based on 1.0.0.x                                                                                                                                                       | No                  | Yes                     |
 | 3.0.0.x          | Driver rebuilt based on Audemat Aztec GoldenEagle FM v2.1.0.4. UI totally rebuilt. Support for all previous firmware versions. Added HTTP connection in order to create Tuner page. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**           |
+| **Range** | **Device Firmware Version**           |
 |------------------|---------------------------------------|
 | 1.0.0.x          | N/A                                   |
 | 2.0.0.x          | 2.5.1                                 |
@@ -32,7 +32,7 @@ This protocol can be used to monitor and control the Audemat Aztec FM Monitoring
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

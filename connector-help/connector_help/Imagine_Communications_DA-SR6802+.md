@@ -4,7 +4,7 @@ uid: Connector_help_Imagine_Communications_DA-SR6802+
 
 # Imagine Communications DA-SR6802+
 
-The Imagine Communications DA-SR6802+ driver uses both serial and smart-serial communication. It can be used to monitor and configure an amplifier card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
+The Imagine Communications DA-SR6802+ connector uses both serial and smart-serial communication. It can be used to monitor and configure an amplifier card in an Imagine Communications frame. It allows alarm monitoring of all important parameters.
 
 ## About
 
@@ -32,7 +32,7 @@ The Imagine Communications DA-SR6802+ driver uses both serial and smart-serial c
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 #### Serial PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -71,4 +71,4 @@ On the **Processing** page, you can find the **Serial Number** and configure the
 
 ## Notes
 
-As this is a serial driver with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.
+As this is a serial connector with a smart-serial connection, there has to be a connection to a real device. If there is a change on the device, a response will be pushed to the DMA, without the need to send a poll request.

@@ -4,15 +4,15 @@ uid: Connector_help_SES_S.A._Channel_Manager
 
 # SES S.A. Channel Manager
 
-The SES S.A. Channel Manager is a virtual driver that provides an overview of all the available satellite channels. The information is provided by multiple monitoring systems.
+The SES S.A. Channel Manager is a virtual connector that provides an overview of all the available satellite channels. The information is provided by multiple monitoring systems.
 
 ## About
 
-The SES S.A. Channel Manager uses **inter-element communication** to obtain information about all satellite channels. The driver communicates with **SES S.A. TEMOS**, **SES S.A. DCMS** and **Integral Systems Monics Automon UDP** elements using remote gets and sets. It also communicates with **IRD** elements by using element connections.
+The SES S.A. Channel Manager uses **inter-element communication** to obtain information about all satellite channels. The connector communicates with **SES S.A. TEMOS**, **SES S.A. DCMS** and **Integral Systems Monics Automon UDP** elements using remote gets and sets. It also communicates with **IRD** elements by using element connections.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | Initial version | No                  | Yes                     |
@@ -23,7 +23,7 @@ The SES S.A. Channel Manager uses **inter-element communication** to obtain info
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -31,7 +31,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 This page contains the **Configuration File** drop-down menu. This menu displays the **CSV** files that contain the configuration of the **inter-element communication** between the SES S.A. Channel Manager and the other elements. The files must be located in the folder "*C:\Skyline DataMiner\Documents\SES S.A. Channel Manager\Configuration\\.* The button **Refresh File** refreshes the drop-down menu.
 
-The configuration files must contain the exact name of the drivers and the PIDs of the parameters that the SES S.A. Channel Manager will obtain. The following table shows the order in which the information must be filled in:
+The configuration files must contain the exact name of the connectors and the PIDs of the parameters that the SES S.A. Channel Manager will obtain. The following table shows the order in which the information must be filled in:
 
 | **Driver**                           | **Channel** | **Orbital Position** | **Satellite** | **Tube** | **Uplink** | **Customer** | **Deviation** | **ULF** | **ULPol** | **DLF** | **DLFPol** | **ChainUplink** | **Modulation** | **DCMS Name** | **DCMS Channel Key** | **EIRP DCMS** | **EIRP CSM** | **C/N** | **Eb/No** | **TsLock** | **Monics CM Updates** | **Time Since Last EIRP Update** | **Last Modified EIRP** | **Time since last update** |
 |--------------------------------------|-------------|----------------------|---------------|----------|------------|--------------|---------------|---------|-----------|---------|------------|-----------------|----------------|---------------|----------------------|---------------|--------------|---------|-----------|------------|-----------------------|---------------------------------|------------------------|----------------------------|
@@ -71,9 +71,11 @@ To facilitate the process of creating alarm templates, the **Channel** table has
 
 Configuring presets in the **Alarm Preset Table** can be done by importing an XML file. To do so:
 
-1.  Select the XML file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.
-    The driver looks for the XML files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. Channel Manager\Configuration Alarm Presets".*
-2.  Click the button **Import File**.
+1. Select the XML file using the **Select Alarm Preset File** drop-down list. Use the **Refresh** button to update the **Select Alarm Preset File** drop-down list if necessary.
+
+   The connector looks for the XML files in the following directory: "*C:\Skyline DataMiner\Documents\SES S.A. Channel Manager\Configuration Alarm Presets".*
+
+1. Click the button **Import File**.
 
 You can also add a preset in the table by selecting **Create Preset** in the table's context menu. This way, you can add the presets one by one. To delete a preset, click the **Delete** button in the **Alarm Presets Table**. The **Remove All** button can be used to delete all the entries from the table at once. To save an alarm preset in an XML file, click the button **Export Alarm Preset**.
 

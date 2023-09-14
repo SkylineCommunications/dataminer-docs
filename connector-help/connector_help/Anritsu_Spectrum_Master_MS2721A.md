@@ -8,17 +8,17 @@ The MS2721A was the first fully-functional handheld spectrum analyzer designed t
 
 ## About
 
-This driver retrieves data via **GPIB**. Commands are sent to the device with or without a response in return.
+This connector retrieves data via **GPIB**. Commands are sent to the device with or without a response in return.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.1.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.1.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver retrieves data via **GPIB**. Commands are sent to the device with or
 
 #### GPIB main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 GPIB CONNECTION:
 

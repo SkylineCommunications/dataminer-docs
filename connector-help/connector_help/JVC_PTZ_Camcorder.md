@@ -5,21 +5,21 @@ uid: Connector_help_JVC_PTZ_Camcorder
 # JVC PTZ Camcorder
 
 JVC PTZ Camrecorder KY-PZ100 is a robotic pan, tilt and zoom video production camera, it can be used as a single camera or part of a multi-camera shoot. In addition to its 3G-SDI and HDMI outputs, it is also capable of reliably streaming 1080i/60, 1080p, 720p, and 360p video with 2-channel audio-all.
-The **JVC PTZ Camrecorder** driver can be used to display and configure information related to this device.
+The **JVC PTZ Camrecorder** connector can be used to display and configure information related to this device.
 
 ## About
 
-This driver allows you to access various information on the device. Data is retrieved using HTTP. There are different possibilities available for alarm monitoring and trending.
+This connector allows you to access various information on the device. Data is retrieved using HTTP. There are different possibilities available for alarm monitoring and trending.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V0102-0103                  |
 
@@ -29,7 +29,7 @@ This driver allows you to access various information on the device. Data is retr
 
 #### HTTP Main Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

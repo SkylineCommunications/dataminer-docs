@@ -10,15 +10,15 @@ AudioCodes' MediaPack 1xx series of analog VoIP gateways are cost-effective, sta
 
 This is an SNMP-based protocol for Audiocodes MediaPack 118 telephone gateways.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | GW 8 FXS                    |
 
@@ -28,7 +28,7 @@ This is an SNMP-based protocol for Audiocodes MediaPack 118 telephone gateways.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

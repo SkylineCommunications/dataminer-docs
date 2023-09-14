@@ -32,7 +32,7 @@ Audio Live is a multi-channel audio routing and processing solution for the IP d
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_Cisco_Compression_System
 
 # Cisco Compression System
 
-The **Cisco Compression System** driver is a SNMP driver displaying some generic parameters of the Copernicus Server and also capturing specific traps that are being sent out by the device.
+The **Cisco Compression System** connector is a SNMP connector displaying some generic parameters of the Copernicus Server and also capturing specific traps that are being sent out by the device.
 
 ## About
 
 The SNMP Agent Task Driver for Copernicus NMS (Network Management System) allows integrating the Copernicus NMS server and the devices managed and controlled by these servers in a SNMP management system. The SNMP Agent task sends traps referring to events on the Copernicus NMS server to managing clients on the network and allows full or partial control of particular devices connected to the Copernicus NMS server.
 
-Ranges of the driver
+Ranges of the connector
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.0.0                       |
 
@@ -28,7 +28,7 @@ Ranges of the driver
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains 3 pages.
+The connector contains 3 pages.
 
 ### General
 

@@ -4,17 +4,17 @@ uid: Connector_help_Miteq_UPC-L
 
 # Miteq UPC-L
 
-The **Miteq UPC-L** driver is a serial driver used to monitor and control the **Miteq UPC-L upconverter**.
+The **Miteq UPC-L** connector is a serial connector used to monitor and control the **Miteq UPC-L upconverter**.
 
 ## About
 
-The **Miteq UPC-L** is a unit designed for geostationary satellite communications systems. This driver can be used to monitor and configure the upconverter.
+The **Miteq UPC-L** is a unit designed for geostationary satellite communications systems. This connector can be used to monitor and configure the upconverter.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -30,7 +30,7 @@ The **General** page displays all information and configuration settings related
 
 This page can be used to check the overall status of the device, for example which **Algorithm** the device is using or which receiver is currently active.
 
-The **Mode Status** parameter displays if the device is in *local* or *remote* mode. *Local mode* means that settings can only be done via the front panel of the device, while *remote mode* means that the settings can be done remotely. As such, it is important that the device's **Mode Status** is set to *Remote* if you want to change settings via the driver.
+The **Mode Status** parameter displays if the device is in *local* or *remote* mode. *Local mode* means that settings can only be done via the front panel of the device, while *remote mode* means that the settings can be done remotely. As such, it is important that the device's **Mode Status** is set to *Remote* if you want to change settings via the connector.
 
 ### Channel
 

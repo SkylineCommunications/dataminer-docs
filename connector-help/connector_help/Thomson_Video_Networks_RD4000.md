@@ -8,18 +8,18 @@ The **Thomson Video Networks RD4000** driver has been designed to monitor and ma
 
 ## About
 
-With this driver, the device can be managed directly. The driver displays information on several pages, as described in the "Usage" section below. The driver uses **SNMP** to establish communication with the device.
+With this connector, the device can be managed directly. The connector displays information on several pages, as described in the "Usage" section below. The connector uses **SNMP** to establish communication with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                                  | No                  | No                      |
 | 1.0.1.x \[SLC Main\] | Based on: 1.0.0.2 Names and descriptions were changed for the new range. UX improvements based on web interface. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 | 1.0.1.x          | 1.0                         |
@@ -30,7 +30,7 @@ With this driver, the device can be managed directly. The driver displays inform
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_DEE28
 
 The DEE28 is a next-generation Dolby multi-format decoder and Dolby E encoder with quad-speed ADD-ON audio bus.
 
-The Axon ACP DEE28 driver is a serial driver used to control the Axon DEE28 card.
+The Axon ACP DEE28 connector is a serial connector used to control the Axon DEE28 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP DEE28 driver is a serial driver used to control the Axon DEE28 card
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 #### Serial Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 

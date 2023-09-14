@@ -4,7 +4,7 @@ uid: Connector_help_Keysight_U2040_X-Series
 
 # Keysight U2040 X-Series
 
-The Keysight U2040 X-Series is a device capable of executing power measurements over multiple measurement points. This driver can be used to monitor the power measurements collected by this device.
+The Keysight U2040 X-Series is a device capable of executing power measurements over multiple measurement points. This connector can be used to monitor the power measurements collected by this device.
 
 ## About
 
@@ -20,15 +20,15 @@ The U2040 X-Series is capable of measuring the average and peak power of modulat
 
 The U2049XA is capable of long-distance remote monitoring of up to 100 meters via the Power over Ethernet (PoE)/LAN connectivity. The PoE connectivity complies with the IEEE 3 W, 802.3af or 802.3at Type 1 standard.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | A.02.04                     |
 
@@ -38,7 +38,7 @@ The U2049XA is capable of long-distance remote monitoring of up to 100 meters vi
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

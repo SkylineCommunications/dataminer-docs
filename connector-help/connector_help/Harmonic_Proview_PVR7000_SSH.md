@@ -8,17 +8,17 @@ The **Harmonic Proview PVR7000 SSH** is a single-rack-unit scalable receiver, DV
 
 ## About
 
-This driver is used for controlling and monitoring the Harmonic Proview PVR7000 via SSH.
+This connector is used for controlling and monitoring the Harmonic Proview PVR7000 via SSH.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. Uses serial connection to retrieve alarm and input information | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -26,7 +26,7 @@ This driver is used for controlling and monitoring the Harmonic Proview PVR7000 
 
 ### Creation
 
-This driver uses an **SNMP** and/or **serial** connection and requires the following input during element creation:
+This connector uses an **SNMP** and/or **serial** connection and requires the following input during element creation:
 
 #### SNMP connection
 

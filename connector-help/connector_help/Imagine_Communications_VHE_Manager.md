@@ -14,11 +14,11 @@ The module-related information depends on the model of each discovered card, wit
 
 ## About
 
-The driver uses the SNMP protocol to discover the modules of a frame controller and then creates the specific DataMiner elements with the corresponding protocol and IP addresses based on the IP of the found controller and the slot position.
+The connector uses the SNMP protocol to discover the modules of a frame controller and then creates the specific DataMiner elements with the corresponding protocol and IP addresses based on the IP of the found controller and the slot position.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -32,20 +32,23 @@ The IP address that you configure during the creation of this manager is not rea
 
 ### Discovery of Selenio frames
 
-1.  Open the **Imagine Communications VHE Manager** and go to the data category **Settings**.
-2.  Configure the IP address, network mask and read community string to be used for the discovery process.
-3.  Once these are configured, go to the data category **Devices** and press the button **Scan Network** to begin the discovery process over the configured IP address and network mask.
-    Note that this process could find more than one Selenio frame in the network. In that case, the Device table will contain each of these frames, identified by their specific IP addresses.
+1. Open the **Imagine Communications VHE Manager** and go to the data category **Settings**.
+
+1. Configure the IP address, network mask and read community string to be used for the discovery process.
+
+1. Once these are configured, go to the data category **Devices** and press the button **Scan Network** to begin the discovery process over the configured IP address and network mask.
+
+   Note that this process could find more than one Selenio frame in the network. In that case, the Device table will contain each of these frames, identified by their specific IP addresses.
 
 ## Usage
 
 ### Creation of the modules in a frame
 
-For each device in the **Device** table, the driver will automatically create the corresponding module of each slot in the **Module** table. It will also create the corresponding DataMiner element, provided that the model of the card has been defined in the driver.
+For each device in the **Device** table, the connector will automatically create the corresponding module of each slot in the **Module** table. It will also create the corresponding DataMiner element, provided that the model of the card has been defined in the connector.
 
 However, it is possible to create or delete a complete frame using the buttons **Create** and **Delete** in the **Device** table.
 
-**WARNING:** Due to the discovery and automatic synchronization process, the driver will **remove** any manually created module not recognized by the VHE Manager driver. As such, any new Selenio model driver will also be included in the VHE Manager protocol.
+**WARNING:** Due to the discovery and automatic synchronization process, the connector will **remove** any manually created module not recognized by the VHE Manager connector. As such, any new Selenio model driver will also be included in the VHE Manager protocol.
 
 ### Connections
 

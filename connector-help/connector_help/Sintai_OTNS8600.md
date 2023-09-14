@@ -6,7 +6,7 @@ uid: Connector_help_Sintai_OTNS8600
 
 The OTNS8600 is a 2U chassis that works with optical cards to enable the operation of an optical transmission network system.
 
-The Sintai OTNS8600 SNMP driver can be used to monitor the transmission power, currents, voltages, etc.
+The Sintai OTNS8600 SNMP connector can be used to monitor the transmission power, currents, voltages, etc.
 
 ## About
 
@@ -34,7 +34,7 @@ The Sintai OTNS8600 SNMP driver can be used to monitor the transmission power, c
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

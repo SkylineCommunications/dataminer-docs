@@ -4,15 +4,15 @@ uid: Connector_help_Tektronix_Sentry_Redundancy_Analyzer
 
 # Tektronix Sentry Redundancy Analyzer
 
-This driver will read out other Tektronix Sentry and Tektronix Sentry PVQ elements and compare the statistics to see which has the biggest differences.
+This connector will read out other Tektronix Sentry and Tektronix Sentry PVQ elements and compare the statistics to see which has the biggest differences.
 
 ## About
 
-This driver will compare two or more Tektronix Sentry or Tektronix Sentry PVQ elements and compare the Port Statistics Table, Program Statistics Table, ETR-290 Status Table and ETR-290 Summary Table to calculate their differences.
+This connector will compare two or more Tektronix Sentry or Tektronix Sentry PVQ elements and compare the Port Statistics Table, Program Statistics Table, ETR-290 Status Table and ETR-290 Summary Table to calculate their differences.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -22,10 +22,10 @@ This driver will compare two or more Tektronix Sentry or Tektronix Sentry PVQ el
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
-Note: If you use a version of this driver **prior to 1.0.0.3**, create **only one element per DMA**!
-If there are multiple elements using this driver on the same DMA, there may be conflicting data and elements may overwrite the data of other elements. This is no longer the case from version 1.0.0.3 onwards.
+Note: If you use a version of this connector **prior to 1.0.0.3**, create **only one element per DMA**!
+If there are multiple elements using this connector on the same DMA, there may be conflicting data and elements may overwrite the data of other elements. This is no longer the case from version 1.0.0.3 onwards.
 
 ### Configuration of Probe Groups
 

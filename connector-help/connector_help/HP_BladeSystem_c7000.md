@@ -4,9 +4,9 @@ uid: Connector_help_HP_BladeSystem_c7000
 
 # HP BladeSystem c7000
 
-The HP BladeSystem c7000 enclosure can hold up to 16 server blades. This driver allows you to monitor and configure the racks from the HP BladeSystem c7000.
+The HP BladeSystem c7000 enclosure can hold up to 16 server blades. This connector allows you to monitor and configure the racks from the HP BladeSystem c7000.
 
-An **SNMP** connection is needed for the driver so that it can retrieve and send information from/to the device.
+An **SNMP** connection is needed for the connector so that it can retrieve and send information from/to the device.
 
 ## About
 
@@ -36,7 +36,7 @@ An **SNMP** connection is needed for the driver so that it can retrieve and send
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,7 +66,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

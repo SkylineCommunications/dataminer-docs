@@ -4,7 +4,7 @@ uid: Connector_help_CibredSud_Dehydrator_LAB9.50
 
 # CibredSud Dehydrator LAB9.50
 
-This driver monitors the activity of the CibredSud Dehydrator LAB9.50 device.
+This connector monitors the activity of the CibredSud Dehydrator LAB9.50 device.
 
 ## About
 
@@ -34,7 +34,7 @@ The LAB9.50 dehydrator is designed for continuous operation and automatic duty. 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

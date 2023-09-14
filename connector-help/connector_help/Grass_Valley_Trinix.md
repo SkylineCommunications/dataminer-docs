@@ -101,30 +101,30 @@ The **Matrix** page (available in the 1.0.0.x range) contains the full matrix of
 
 The **Sources** page contains the **Sources Table**, which lists all the sources in the Trinix router, with the following columns:
 
-1.  **Full Source Index:** A concatenation of the area index, a delimiting colon, and the source index.
-2.  **Area Index:** The index of the area to which the source belongs.
-3.  **Source Index:** The index of the source.
-4.  **Full Source Name:** A concatenation of the area name, a delimiting colon, and the source name.
-5.  **Area Name:** The name of the area to which the source belongs.
-6.  **Source Name:** The name of the source. This name will also be used to initialize the input labels in the matrix view.
-7.  **Tieline:** Discrete value indicating whether the source is tieline-related.
-8.  **Present levels:** Indicates on which levels the source is (between level 0 and level 31).
+1. **Full Source Index:** A concatenation of the area index, a delimiting colon, and the source index.
+1. **Area Index:** The index of the area to which the source belongs.
+1. **Source Index:** The index of the source.
+1. **Full Source Name:** A concatenation of the area name, a delimiting colon, and the source name.
+1. **Area Name:** The name of the area to which the source belongs.
+1. **Source Name:** The name of the source. This name will also be used to initialize the input labels in the matrix view.
+1. **Tieline:** Discrete value indicating whether the source is tieline-related.
+1. **Present levels:** Indicates on which levels the source is (between level 0 and level 31).
 
 ### Destinations
 
 The **Destinations** page contains the **Destinations Table** which lists all the sources in the Trinix router, with the following columns:
 
-1.  **Full Destination Index:** A concatenation of the area index, a delimiting colon, and the destination index.
-2.  **Area Index:** The index of the area to which the destination belongs.
-3.  **Destination Index:** The index of the destination.
-4.  **Destination Full Name:** A concatenation of the area name, a delimiting colon, and the destination name.
-5.  **Area Name:** The name of the area to which the destination belongs.
-6.  **Destination Name:** The name of the destination. This name will also be used to initialize the input labels in the matrix view.
-7.  **Tieline:** Discrete value indicating whether the destination is tieline-related.
-8.  **Present levels**: Indicates on which levels the destination is (between level 0 and level 31).
-9.  **Connected Sources Last Updated On:** The date and time when the destination status was last polled. With the destination status, the connector knows how many and which sources are connected to this specific destination.
-10. **Number of Connected Sources:** The number of sources the destination is connected to.
-11. **Connected Source(s):** A concatenation of the full source indexes (delimited by a semicolon) of the connected sources.
+1. **Full Destination Index:** A concatenation of the area index, a delimiting colon, and the destination index.
+1. **Area Index:** The index of the area to which the destination belongs.
+1. **Destination Index:** The index of the destination.
+1. **Destination Full Name:** A concatenation of the area name, a delimiting colon, and the destination name.
+1. **Area Name:** The name of the area to which the destination belongs.
+1. **Destination Name:** The name of the destination. This name will also be used to initialize the input labels in the matrix view.
+1. **Tieline:** Discrete value indicating whether the destination is tieline-related.
+1. **Present levels**: Indicates on which levels the destination is (between level 0 and level 31).
+1. **Connected Sources Last Updated On:** The date and time when the destination status was last polled. With the destination status, the connector knows how many and which sources are connected to this specific destination.
+1. **Number of Connected Sources:** The number of sources the destination is connected to.
+1. **Connected Source(s):** A concatenation of the full source indexes (delimited by a semicolon) of the connected sources.
 
 ## Notes
 
@@ -140,33 +140,33 @@ Within every section, the commands are delimited by a semicolon (";"). Within ev
 
 - **Subscribe for asynchronous destination statuses**: SB, *Message-ID Suffix*
 
-- The subscription is renewed every hour.
+  - The subscription is renewed every hour.
 
 - **Take Destination:** TD, *Matrix Input Number, Full Source Index, Full Source Name, Matrix Output Number, Full Destination Index, Full Destination Name, Message-ID Suffix*
 
-- This is the only set command, which is added to the stack every time you click a crosspoint in the matrix view.
+  - This is the only set command, which is added to the stack every time you click a crosspoint in the matrix view.
   - This command will set the input to the new output and disconnect other inputs that were previously connected to the output.
 
 - **Query Destination Status (of one destination at a time):** QDS, *Full Destination Index, Message-ID Suffix*
 
-- This get command is added for every destination every three hours. If a set command is done, to double-check, a QDS command of that specific destination is added into the front of this section in the buffer.
+  - This get command is added for every destination every three hours. If a set command is done, to double-check, a QDS command of that specific destination is added into the front of this section in the buffer.
 
 - **Query Destinations:** QD, *Message-ID Suffix*
 
-- This get command is added to the buffer once every day and queries all destinations, with their full destination names and full destination indexes. The corresponding response typically consists of multiple parts.
+  - This get command is added to the buffer once every day and queries all destinations, with their full destination names and full destination indexes. The corresponding response typically consists of multiple parts.
 
 - **Query Sources:** QS, *Message-ID Suffix*
 
-- This get command is added to the buffer once every day and queries all sources, with their full source names and full source indexes. The corresponding response typically consists of multiple parts.
+  - This get command is added to the buffer once every day and queries all sources, with their full source names and full source indexes. The corresponding response typically consists of multiple parts.
 
 - **Query Software Version:** QSW, *Message-ID Suffix*
 
-- This get command is added to the buffer once every day and queries the software version.
+  - This get command is added to the buffer once every day and queries the software version.
 
 - **Query System Name:** QSN, *Message-ID Suffix*
 
-- This get command is added to the buffer once every day and queries the system name.
+  - This get command is added to the buffer once every day and queries the system name.
 
 - **Router Connect:** RC, *Message-ID Suffix*
 
-- This get command is added to the buffer once every 5 minutes as long as the connector is not connected to the device. When the connector is connected to the device, this command is no longer executed.
+  - This get command is added to the buffer once every 5 minutes as long as the connector is not connected to the device. When the connector is connected to the device, this command is no longer executed.

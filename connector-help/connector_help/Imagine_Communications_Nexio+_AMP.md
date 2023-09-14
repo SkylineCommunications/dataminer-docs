@@ -10,15 +10,15 @@ This protol is meant to work with the Imagine Communications Nexio+ AMP video se
 
 Nexio+T AMPr is the next step in the evolution of the acclaimed Nexio AMPr video server. Now combining industry-leading Hewlett Packard Enterprise standard server models and Imagine software/hardware bundle kits, Nexio+ AMP truly enables software-defined applications and delivers the exceptional reliability, flexibility and format transparency that broadcast operations demand. The Nexio+ AMP Advanced Media Platform is an efficient and integrated server platform for managing digital content from ingest to playout.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ Nexio+T AMPr is the next step in the evolution of the acclaimed Nexio AMPr video
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

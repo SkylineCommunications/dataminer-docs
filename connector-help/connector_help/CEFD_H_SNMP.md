@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_H_SNMP
 
 # CEFD H SNMP
 
-The CEFD H SNMP driver is an SNMP driver intended to communicate with the Advanced VSAT Series Remote Router devices named CEFD H, from Comtech.
+The CEFD H SNMP connector is an SNMP connector intended to communicate with the Advanced VSAT Series Remote Router devices named CEFD H, from Comtech.
 
 ## About
 
@@ -19,9 +19,9 @@ The most important features of the **Heights Networking Platform** are:
 - **Bi-directional ACM** (Adapting Code and Modulation), enabling throughput maximization depending on traffic-affecting conditions and the required SLAs (Service Level Agreements).
 - **QoE** (Quality of Experience) **maximization** by providing different layers of intelligence through network design tools and powerful analytics.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|--------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial Comtech Netvue-specific branch                                                                                         | No                  | Yes                     |
 | 1.1.0.x                  | Comtech Netvue: Branched from 1.0.0.13 - supports firmware 2.4.1                                                               | No                  | Yes                     |
@@ -32,12 +32,12 @@ The most important features of the **Heights Networking Platform** are:
 | 1.4.1.x                  | Pico.                                                                                                                          | No                  | Yes                     |
 | 1.5.0.x                  | General changes. NetVue 4.0.x.                                                                                                 | No                  | Yes                     |
 | 1.5.1.x                  | Mobility/PICO changes for NV 4.3.x                                                                                             | No                  | Yes                     |
-| 2.0.0.x                  | Branched from 1.2.0.2: Removed Netvue-specific functionality in order to let the driver function outside a Netvue environment. | No                  | Yes                     |
+| 2.0.0.x                  | Branched from 1.2.0.2: Removed Netvue-specific functionality in order to let the connector function outside a Netvue environment. | No                  | Yes                     |
 | 2.0.1.x **\[SLC Main\]** | Initial generic customer branch.                                                                                               | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | 2.4.1                       |
@@ -50,7 +50,7 @@ The most important features of the **Heights Networking Platform** are:
 | 2.0.0.x          | 2.6.1                       |
 | 2.0.1.x          | 2.6.1                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                              | **Description**           |
 |--------------------------------------------------------------------|---------------------------|
@@ -62,7 +62,7 @@ The most important features of the **Heights Networking Platform** are:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

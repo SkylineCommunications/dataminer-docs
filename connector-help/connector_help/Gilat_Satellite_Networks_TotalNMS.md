@@ -151,9 +151,9 @@ An element that runs this connector is able to communicate with a different elem
 
 To set this up, follow these steps:
 
-1.  Enable the **Generic Ping Connection** toggle button.
-2.  Fill in the **Generic Ping Element ID**. You can find this ID by right-clicking the Generic Ping element name in the Surveyor and selecting *Properties*. The ID, e.g. 772/914, will be displayed in the Properties window.
-3.  Select the **VLAN ID** assigned to the CPE devices you want to know ping information about.
+1. Enable the **Generic Ping Connection** toggle button.
+1. Fill in the **Generic Ping Element ID**. You can find this ID by right-clicking the Generic Ping element name in the Surveyor and selecting *Properties*. The ID, e.g. 772/914, will be displayed in the Properties window.
+1. Select the **VLAN ID** assigned to the CPE devices you want to know ping information about.
 
 When you have done so, new entries will be added to the Ping table of the element that runs the Generic Ping connector. Each entry represents a CPE device. If you want to retrieve the ping information for all CPE devices, select the VLAN ID that is assigned to all CPE devices. To do so, check the VLAN ID column of the CPEs table.
 

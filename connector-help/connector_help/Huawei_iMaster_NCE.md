@@ -32,7 +32,7 @@ The Huawei iMaster NCE provides centralized management, control, and analysis of
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -42,7 +42,7 @@ HTTP CONNECTION:
 
 ### Initialization
 
-To initialize the driver, go to the **Configuration** page of the element, fill in the **Username** and **Password** parameters, and click the **Authentication** button.
+To initialize the connector, go to the **Configuration** page of the element, fill in the **Username** and **Password** parameters, and click the **Authentication** button.
 
 ### Redundancy
 

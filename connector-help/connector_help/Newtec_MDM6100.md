@@ -4,24 +4,24 @@ uid: Connector_help_Newtec_MDM6100
 
 # Newtec MDM6100
 
-This driver is used to monitor and control the **Newtec MDM6100** modem.
+This connector is used to monitor and control the **Newtec MDM6100** modem.
 
 ## About
 
 Information from the Newtec MDM6100 modem is retrieved via **SNMPv2**.
 
-The device can also be fully **configured** using this driver. SNMPv2 commands are also used for this.
+The device can also be fully **configured** using this connector. SNMPv2 commands are also used for this.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                              | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                              | No                  | Yes                     |
 | 2.0.0.x          | Custom version for Newtec (based on 1.0.0.9) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MDM6100_2.1.51.53886        |
 | 2.0.0.x          | MDM6100_2.8                 |
@@ -33,7 +33,7 @@ The device can also be fully **configured** using this driver. SNMPv2 commands a
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol version 2 (SNMPv2) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol version 2 (SNMPv2) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -117,4 +117,4 @@ It is also possible to **configure** the **impact** of the alarms on the device 
 
 ### Web Interface
 
-This page provides acces to the web interface of the device. Note that client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
+This page provides access to the web interface of the device. Note that client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

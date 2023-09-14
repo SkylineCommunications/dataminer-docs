@@ -35,7 +35,7 @@ This protocol allows you to obtain the base data that is used to generate the us
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

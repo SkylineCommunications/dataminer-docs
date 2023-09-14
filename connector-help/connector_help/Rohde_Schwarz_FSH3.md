@@ -38,7 +38,7 @@ The Rohde Schwarz FSH3 is a remote spectrum analyzer. The frequency ranges from1
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### Spectrum Analyzer Page
 

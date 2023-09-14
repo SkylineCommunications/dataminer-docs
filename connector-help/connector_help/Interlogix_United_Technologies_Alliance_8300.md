@@ -4,17 +4,17 @@ uid: Connector_help_Interlogix_United_Technologies_Alliance_8300
 
 # Interlogix United Technologies Alliance 8300
 
-The Interlogix United Technologies Alliance 8300 virtual driver is a driver made to read and track log files from **Aritech Access** devices.
+The Interlogix United Technologies Alliance 8300 virtual connector is a connector made to read and track log files from **Aritech Access** devices.
 
 ## About
 
-The **Interlogix United Technologies Alliance 8300** is a virtual driver that reads the access history database and reports the last time someone passed through each location defined in **Location** parameters.
+The **Interlogix United Technologies Alliance 8300** is a virtual connector that reads the access history database and reports the last time someone passed through each location defined in **Location** parameters.
 
 Because of the large number of entries in the table, the table is divided over several pages that contain up to 500 entries. In order to see the latest entries in the table, you must re-open the element.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ Because of the large number of entries in the table, the table is divided over s
 
 #### Virtual connection
 
-This driver uses a virtual connection. No user input is required during element creation.
+This connector uses a virtual connection. No user input is required during element creation.
 
 ### Configuration of Database Connection
 

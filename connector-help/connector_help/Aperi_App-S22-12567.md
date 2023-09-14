@@ -4,7 +4,7 @@ uid: Connector_help_Aperi_App-S22-12567
 
 # Aperi App-S22-12567
 
-This driver is used to monitor and configure Aperi's APP-S22-12567 (SDI) module. Using the **HTTP API**, the driver collects information from the device.
+This connector is used to monitor and configure Aperi's APP-S22-12567 (SDI) module. Using the **HTTP API**, the connector collects information from the device.
 
 ## About
 
@@ -33,7 +33,7 @@ This driver is used to monitor and configure Aperi's APP-S22-12567 (SDI) module.
 
 #### HTTP Connection - Main
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -55,7 +55,7 @@ The web interface is only accessible when the client machine has network access 
 
 This page mainly displays **system information**. This includes information about the **Device Name**, **Vendor** and **Version**.
 
-On this page, you can also define the **Username** and **Password** to connect to the device. This must be done to be able to retrieve any data with the driver.
+On this page, you can also define the **Username** and **Password** to connect to the device. This must be done to be able to retrieve any data with the connector.
 
 Pressing the **Login** button will force a refresh of the element's data.
 

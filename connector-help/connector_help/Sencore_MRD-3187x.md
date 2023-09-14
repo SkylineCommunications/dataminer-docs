@@ -4,21 +4,21 @@ uid: Connector_help_Sencore_MRD-3187x
 
 # Sencore MRD-3187x
 
-The Sencore MRD-3187x driver can be used to view real-time parameters from the device and to configure parameters of the device.
+The Sencore MRD-3187x connector can be used to view real-time parameters from the device and to configure parameters of the device.
 
 ## About
 
-This driver needs an SNMP connection to retrieve data from the device and to perform sets on it. The driver also provides information about cards installed in slots. In case slots are empty, it can occur that certain parameters remain "not initialized".
+This connector needs an SNMP connection to retrieve data from the device and to perform sets on it. The connector also provides information about cards installed in slots. In case slots are empty, it can occur that certain parameters remain "not initialized".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | New version for Sencore MRD-3187x based on 3187a version 1.2.0.13. VsbTable and Decoders Table added from MIB files. General review according to development rules. Supported by MRD-3187A and MRD-3187B since version 1.2.0.12. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.4.0 base 22               |
 
@@ -28,7 +28,7 @@ This driver needs an SNMP connection to retrieve data from the device and to per
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

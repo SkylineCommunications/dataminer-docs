@@ -4,7 +4,7 @@ uid: Connector_help_Tata_Booking_Manager
 
 # Tata Communications Booking Manager
 
-The Tata Booking Manager is a custom application designed to fully manage bookings using the DataMiner SRM Solution. It is based on a custom driver (Skyline Booking Manager, version 1.0.0.5_HF1_START) that was previously created for Tata Communications.
+The Tata Booking Manager is a custom application designed to fully manage bookings using the DataMiner SRM Solution. It is based on a custom connector (Skyline Booking Manager, version 1.0.0.5_HF1_START) that was previously created for Tata Communications.
 
 ## About
 
@@ -26,11 +26,11 @@ The Tata Booking Manager is a custom application designed to fully manage bookin
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## How to Use
 
-This driver consists of the following pages:
+This connector consists of the following pages:
 
 - **Bookings**: Contains the **list of active bookings**, which includes running, partial and confirmed bookings. Also contains three page buttons that can be used to set booking **details**, **areas** and **statistics**.
 - **Contacts**: Provides an overview of the contacts that can be assigned to a booking. Also contains two page buttons that can be used to view **types of contacts** as well as **import** selected contacts through a CSV file.

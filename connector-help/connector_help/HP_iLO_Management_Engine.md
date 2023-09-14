@@ -8,24 +8,24 @@ This device is a remote server management processor embedded on the system board
 
 ## About
 
-This driver is used to retrieve the required data from the HP iLO Management Engine device.
+This connector is used to retrieve the required data from the HP iLO Management Engine device.
 
 It uses the REST API to get and set all the associated parameters for this type of device.
 
 
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**                                                                | **Description**                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range**                                                                | **Description**                                 | **DCF Integration** | **Cassandra Compliant** |
 |---------------------------------------------------------------------------------|-------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[not to be used - no monitoring capabilities due to undocumented API\] | Initial Version                                 | No                  | Yes                     |
 | 1.0.1.x **\[SLC Main\]**                                                        | Using the RedFish API - iLO 4                   | No                  | Yes                     |
 | 1.1.0.x **\[Obsolete\]**                                                        | Using the Redfish API - iLO 5                   | No                  | Yes                     |
 | 1.1.1.x **\[SLC Main\]**                                                        | Using the Redfish API - iLO 5 with SNMP polling | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.55                        |
 | 1.0.1.x          | 2.55 - iLO 4                |
@@ -38,7 +38,7 @@ It uses the REST API to get and set all the associated parameters for this type 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and an SNMP connection and requires the following input during element creation:
+This connector uses an HTTP connection and an SNMP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

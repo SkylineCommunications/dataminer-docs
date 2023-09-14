@@ -4,23 +4,23 @@ uid: Connector_help_Barnfind_BTF1
 
 # Barnfind BTF1
 
-The **Barnfind BTF1** driver is an **SNMP** driver that is used in order to monitor an **Input and Output Port Table** with **Matrix** layout.
+The **Barnfind BTF1** connector is an **SNMP** connector that is used in order to monitor an **Input and Output Port Table** with **Matrix** layout.
 
 ## About
 
-This driver displays an **Input Port Table** and **Output Port Table**. The link between the two is set in the **Output Port Table** as **InputPortOutputPort**. These two tables make it possible to generate a **Matrix** with the necessary **crosspoints**.
+This connector displays an **Input Port Table** and **Output Port Table**. The link between the two is set in the **Output Port Table** as **InputPortOutputPort**. These two tables make it possible to generate a **Matrix** with the necessary **crosspoints**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                    | No                  | Yes                     |
 | 1.0.1.x          | Current version                    | No                  | Yes                     |
 | 1.1.0.x          | Compatible with firmware v. 0.2.96 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -32,7 +32,7 @@ This driver displays an **Input Port Table** and **Output Port Table**. The link
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 - **IP address/host:** The polling IP of the device.
 - **Port:** The port of the connected device, by default *161*.

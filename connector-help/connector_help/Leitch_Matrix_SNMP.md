@@ -4,9 +4,9 @@ uid: Connector_help_Leitch_Matrix_SNMP
 
 # Leitch Matrix SNMP
 
-This driver can be used to monitor and control Leitch Matrix SNMP equipment. It allows you to monitor the existing matrix connections and the status of each input and output, and also to alter the connections, lock the outputs and label the inputs and outputs.
+This connector can be used to monitor and control Leitch Matrix SNMP equipment. It allows you to monitor the existing matrix connections and the status of each input and output, and also to alter the connections, lock the outputs and label the inputs and outputs.
 
-For short-term monitoring, the driver polls the status of the inputs and the outputs every 30 seconds. For medium to long-term monitoring, it polls every minute, 10 minutes, and hour. The driver uses SNMP to poll and control the current matrix connections, the physical state of the inputs and outputs, the labels assigned to the inputs and outputs, and the lock status of the outputs.
+For short-term monitoring, the connector polls the status of the inputs and the outputs every 30 seconds. For medium to long-term monitoring, it polls every minute, 10 minutes, and hour. The connector uses SNMP to poll and control the current matrix connections, the physical state of the inputs and outputs, the labels assigned to the inputs and outputs, and the lock status of the outputs.
 
 ## About
 
@@ -34,7 +34,7 @@ For short-term monitoring, the driver polls the status of the inputs and the out
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Main View
 
@@ -102,7 +102,7 @@ At the top of this page, you can set the Monitoring Output Level and ID. Below t
 
 ## DataMiner Connectivity Framework
 
-The **1.1.0.x** driver range of the Leitch Matrix SNMP protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.1.0.x** connector range of the Leitch Matrix SNMP protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

@@ -34,7 +34,7 @@ This DataMiner protocol allows you to monitor a General Dynamics RSC1111 dual re
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,21 +4,21 @@ uid: Connector_help_IMP_Telekom_PAP-D
 
 # IMP Telekom PAP-D
 
-The **IMP Telekom PAP-D** driver monitors and configures the **IMP DVB_T PAP-D ChangeOver Unit**.
+The **IMP Telekom PAP-D** connector monitors and configures the **IMP DVB_T PAP-D ChangeOver Unit**.
 
 ## About
 
-The **IMP Telekom PAP-D** driver gets and sets the changeover configuration between several transmitterss. The driver uses SNMP (including traps) to retrieve data.
+The **IMP Telekom PAP-D** driver gets and sets the changeover configuration between several transmitterss. The connector uses SNMP (including traps) to retrieve data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V2.0                        |
 
@@ -28,7 +28,7 @@ The **IMP Telekom PAP-D** driver gets and sets the changeover configuration betw
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

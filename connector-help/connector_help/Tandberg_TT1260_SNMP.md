@@ -2,19 +2,19 @@
 uid: Connector_help_Tandberg_TT1260_SNMP
 ---
 
-Tandberg TT1260 SNMP
+# Tandberg TT1260 SNMP
 
-The **Tandberg TT1260 SNMP** driver is an SNMP based driver used to monitor and configure the ****Tandberg TT1260****. The device settings can be monitored and changed using the ****TT1260 SNMP**** driver.
+The **Tandberg TT1260 SNMP** connector is an SNMP based connector used to monitor and configure the **Tandberg TT1260**. The device settings can be monitored and changed using the **TT1260 SNMP** connector.
 
 # About
 
-The ****TT1260 SNMP**** provides a monitoring interface to the ****Tandberg TT1260**** IRD device.
+The **TT1260 SNMP** provides a monitoring interface to the **Tandberg TT1260** IRD device.
 
 # Installation and configuration
 
 ## Creation
 
-The ****Tandberg TT1260 SNMP**** is a **SNMP** driver. The **IP** need to be configured during creation of the **element**.
+This is an **SNMP** connector. The **IP** need to be configured during creation of the **element**.
 
 **SNMP CONNECTION:**
 
@@ -34,7 +34,7 @@ The **General** page displays the general status information of the device, for 
 
 ## Quick Configuration Page
 
-This page allows to configure parameters like **Input** **Frequency**, **Input** **Search Range**, **Input** **Symbol Rate**....
+This page allows to configure parameters like **Input** **Frequency**, **Input** **Search Range**, **Input** **Symbol Rate**, etc.
 
 ## General
 
@@ -60,6 +60,6 @@ This page presents tables with information regarding **Audio**.
 
 This page presents tables with information regarding the **IP Module**, such as **Gateway**, **RTP Protocol**, **Encapsulation...**
 
-## Webinterface
+## Web Interface
 
-This page can be used to access the **webinterface** of the device.
+This page can be used to access the **web interface** of the device.

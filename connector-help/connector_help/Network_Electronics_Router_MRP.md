@@ -4,11 +4,11 @@ uid: Connector_help_Network_Electronics_Router_MRP
 
 # Network Electronics Router MRP
 
-The Network Electronics MRP matrix routers can be controlled and monitored using this driver.
+The Network Electronics MRP matrix routers can be controlled and monitored using this connector.
 
 ## About
 
-Range 2.1.0.x uses serial communication and introduces virtual matrixes. It works with MRP rev3.0, syntax v3. The driver allows you to manage connections of logical routers (i.e. levels) that are partitions of the physical device. Virtual routers allow you to manage connections on multiple levels at the same time.
+Range 2.1.0.x uses serial communication and introduces virtual matrixes. It works with MRP rev3.0, syntax v3. The connector allows you to manage connections of logical routers (i.e. levels) that are partitions of the physical device. Virtual routers allow you to manage connections on multiple levels at the same time.
 
 The Network Electronics MRP matrix routers are polled with SNMP from version 3.0.0.x onwards, and can connect each output with a single input. In addition, they allow the user to monitor fans, voltages, temperatures, etc.
 
@@ -23,18 +23,18 @@ Version 3.0.0.8 and higher:
 - Note that there might be compatibility issues for the 1.x.x.x range due to some shifts in parameter IDs. The matrix write parameter currently has parameter ID 1060; labels were moved to 4000 and 5000.
 - Please also read the additional configuration section regarding SNMP- and MRP-compatible controllers.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                   | No                  | Yes                     |
 | 1.0.1.x          | Virtual Matrix                                    | No                  | No                      |
 | 2.1.0.x          | Main Matrix, Virtual Matrix, Serial, Smart Serial | No                  | Yes                     |
 | 3.0.0.x          | MRP (+SNMP) version                               | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | MRP                         |
 | 1.0.1.x          | MRP                         |
@@ -58,7 +58,7 @@ Version 3.0.0.8 and higher:
 <tr class="even">
 <td>Range 1.0.0.x</td>
 <td>Serial Main Connection
-<p>This driver uses a serial connection and requires the following input during element creation:</p>
+<p>This connector uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:</li>
@@ -72,7 +72,7 @@ Version 3.0.0.8 and higher:
 <tr class="odd">
 <td>Range 1.0.1.x</td>
 <td>Serial Main Connection
-<p>This driver uses a serial connection and requires the following input during element creation:</p>
+<p>This connector uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:</li>
@@ -86,7 +86,7 @@ Version 3.0.0.8 and higher:
 <tr class="even">
 <td>Range 2.1.0.x</td>
 <td>Serial Main Connection
-<p>This driver uses a serial connection and requires the following input during element creation:</p>
+<p>This connector uses a serial connection and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:
@@ -97,7 +97,7 @@ Version 3.0.0.8 and higher:
 </ul></li>
 </ul>
 <h4 id="serial-statusmessages-connection">Serial StatusMessages Connection</h4>
-<p>This driver uses a smart serial connection to retrieve spontaneous status messages and requires the following input during element creation:</p>
+<p>This connector uses a smart serial connection to retrieve spontaneous status messages and requires the following input during element creation:</p>
 <p>SERIAL CONNECTION:</p>
 <ul>
 <li>Interface connection:
@@ -111,7 +111,7 @@ Version 3.0.0.8 and higher:
 <tr class="odd">
 <td>Range 3.0.0.x</td>
 <td>SNMP main connection
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device, e.g. <em>10.11.12.13.</em></li>
@@ -257,15 +257,15 @@ On this page, you can manually set the number of **inputs** and **outputs**.
 
 The following settings are possible for the **Request Matrix Data** parameter:
 
-- *Sublime *-* Poll Crosspoints*
+- *Sublime - Poll Crosspoints*
 - *Compact - Poll Crosspoints* and *Labels Only*
 - *Modular - Enable Additional Tables and Poll all Others*.
 
 When **Request Matrix** **Data** is set to *Modular*, the following toggle buttons will decide if those tables will be polled as well:
 
-1.  **Modular - Poll Cable Equalizers Table**
-2.  **Modular - Poll Reclockers Table**
-3.  **Modular - Poll Cable Drivers Table**
+1. **Modular - Poll Cable Equalizers Table**
+1. **Modular - Poll Reclockers Table**
+1. **Modular - Poll Cable Drivers Table**
 
 The following table provides an overview of which data will be polled under which setting.
 

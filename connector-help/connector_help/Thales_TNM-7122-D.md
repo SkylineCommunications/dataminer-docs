@@ -4,7 +4,7 @@ uid: Connector_help_Thales_TNM-7122-D
 
 # Thales TNM-7122-D
 
-This is an SNMP driver that can be used to monitor and configure Thales TNM-7122-D equipment.
+This is an SNMP connector that can be used to monitor and configure Thales TNM-7122-D equipment.
 
 ## About
 
@@ -14,7 +14,7 @@ This is an SNMP driver that can be used to monitor and configure Thales TNM-7122
 |----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x \[Obsolete\] | Development version.                                                                                                                                                                | \-           | \-                                                                                                                                                                                                                                                                                         |
 | 1.1.0.x \[Obsolete\] | Development version.                                                                                                                                                                | \-           | \-                                                                                                                                                                                                                                                                                         |
-| 1.0.5.x              | Limited driver version for units with firmware version 01.05x.xx.                                                                                                                   | \-           | \-                                                                                                                                                                                                                                                                                         |
+| 1.0.5.x              | Limited connector version for units with firmware version 01.05x.xx.                                                                                                                   | \-           | \-                                                                                                                                                                                                                                                                                         |
 | 2.0.0.x              | Initial release range.                                                                                                                                                              | \-           | \-                                                                                                                                                                                                                                                                                         |
 | 2.0.1.x \[SLC Main\] | Initial release range with fix to avoid overwritten active alarms caused by the device itself.                                                                                      | 2.0.0.x      | The Active Alarms table with PID 6000 is no longer available. Its data will now be shown in a new Active Alarms table with PID 6500. This table has a new primary key and display key. The primary key is the hashed concatenation of the module, the input, the description and the date. |
 | 3.0.0.x \[Obsolete\] | SNMP2 version based on range 2.0.0.x. This range is no longer maintained, as it is now possible to select the SNMP version in the element configuration. Use range 2.0.1.x instead. | 2.0.0.x      | \-                                                                                                                                                                                                                                                                                         |
@@ -47,7 +47,7 @@ This is an SNMP driver that can be used to monitor and configure Thales TNM-7122
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

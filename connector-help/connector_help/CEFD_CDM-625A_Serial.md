@@ -4,29 +4,29 @@ uid: Connector_help_CEFD_CDM-625A_Serial
 
 # CEFD CDM-625A Serial
 
-The CEFD CDM-625A Serial is a serial driver intended to communicate with CDM-625A Comtech devices. The driver is based on the CDM 625 serial driver (version 3.0.0.3), but contains certain additions.
+The CEFD CDM-625A Serial is a serial connector intended to communicate with CDM-625A Comtech devices. The connector is based on the CDM 625 serial connector (version 3.0.0.3), but contains certain additions.
 
 ## About
 
-The driver layout has been configured to look as much like the web interface of the device as possible. The layout is also very **similar to** that of the **625A SNMP** driver. However, as certain parameters cannot be retrieved using serial commands even though they are available in the MIB, these parameters are not available in this version of the driver.
+The connector layout has been configured to look as much like the web interface of the device as possible. The layout is also very **similar to** that of the **625A SNMP** connector. However, as certain parameters cannot be retrieved using serial commands even though they are available in the MIB, these parameters are not available in this version of the connector.
 
-This driver will export different drivers based on the retrieved data. A list can be found in the section "Exported Drivers" below.
+This connector will export different connectors based on the retrieved data. A list can be found in the section "Exported Connectors" below.
 
-### Ranges on the driver
+### Ranges on the connector
 
-| **Driver Range**     | **Description**     | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**     | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version     | No                  | No                      |
 | 1.0.1.x \[SLC Main\] | Cassandra compliant | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.4.1                       |
 | 1.0.1.x          | 1.4.1                       |
 
-### Exported Drivers
+### Exported Connectors
 
 | **Exported Protocol** | **Description**               |
 |-----------------------|-------------------------------|
@@ -76,7 +76,7 @@ The CDM-625 has a number of optional features that may be activated after the un
 This page provides three sections with parameters related to this:
 
 - **Equipment ID**: This **read-only** section displays the operational status for a number of FAST-enabled features.
-- **Hardware**: This list displays the **installed** and presently operational FAST-enabled features as well as **non-installed** FAST-enabled features that are available for purchase and activation from Comtech EF Data. Slot 1 and 2 have been replaced by future expansions and slot 5 (RAN Optimizer card) is no longer in the MIB. Three extra options are also displayed: Carrier ID, Audio Chips and CnC Activation. Note that some information about options is only available in the SNMP version of this driver.
+- **Hardware**: This list displays the **installed** and presently operational FAST-enabled features as well as **non-installed** FAST-enabled features that are available for purchase and activation from Comtech EF Data. Slot 1 and 2 have been replaced by future expansions and slot 5 (RAN Optimizer card) is no longer in the MIB. Three extra options are also displayed: Carrier ID, Audio Chips and CnC Activation. Note that some information about options is only available in the SNMP version of this connector.
 - **Demo**: Displays whether **Demo Mode** is enabled, and the **Demo Time** remaining.
 
 ### Config - Modem
@@ -84,7 +84,7 @@ This page provides three sections with parameters related to this:
 On this page, you can configure operating (Tx/Rx) parameters of the modem:
 
 - Tx/Rx Interfaces and Framing: The **Tx**/**Rx** **Interface Types** and **Framing Modes** have **higher priority** than other parameters. You should therefore configure these before setting other parameters.
-- Tx/Rx Operating Parameters: In version 625A of the driver, the **Tx Filter Rolloff Factor** has extra values, and the Rx Alpha value can be set. In the SNMP version, this can be selected via a separate parameter; however, in the serial version, this is grouped with the **Receive Equalizer** parameter.
+- Tx/Rx Operating Parameters: In version 625A of the connector, the **Tx Filter Rolloff Factor** has extra values, and the Rx Alpha value can be set. In the SNMP version, this can be selected via a separate parameter; however, in the serial version, this is grouped with the **Receive Equalizer** parameter.
 
 ### Config - LAN - IP
 
@@ -131,7 +131,7 @@ The use of this page depends on whether **Carrier-in-Carrier Automatic Power Con
 - ESC section: Includes the **Tx/Rx IDR Esc Type**, **Audio Volume** and **High Rate ESC**.
 - AUPC: Includes the **AUPC Rem Demod Unlock Action**, **AUPC ACM Tx Power Max Increase** and **AUPC ACM Mode**. These parameters can only be used when the Transmitter is in **IP-ACM mode**.
 - EDMAC Framing Mode and Slave Address
-- CnC-APC (page button): Carrier-in-Carrier Automatic Power Control - when *enabled*/*activated.* This version of the driver contains additional parameters compared to the SNMP version.
+- CnC-APC (page button): Carrier-in-Carrier Automatic Power Control - when *enabled*/*activated.* This version of the connector contains additional parameters compared to the SNMP version.
 - IDR Backward Alarms (page button): For **Tx 1-4** and **Rx 1-4** alarms.
 
 ### Config - Utilities
@@ -142,7 +142,7 @@ Use this page to configure a number of the utility functions of the device:
 
 - **Re-Center Buffer**: Click **Re-Center Buffer** to force the re-centering of the Plesiochronous/Doppler buffer.
 
-- **Unit**: Use the drop-down menus provided in this section to configure the **Unit** **Test Mode**, **RTS/CTS Control**, **HSSI Handshake Control** and **Remote Control** (Local/Distant in SNMP version) mode. Reboot the device using the **Soft Reboot** button. **Modem Emulation** is a feature that can only be configured using the serial version of the driver. The emulation mode cannot be set using SNMP.
+- **Unit**: Use the drop-down menus provided in this section to configure the **Unit** **Test Mode**, **RTS/CTS Control**, **HSSI Handshake Control** and **Remote Control** (Local/Distant in SNMP version) mode. Reboot the device using the **Soft Reboot** button. **Modem Emulation** is a feature that can only be configured using the serial version of the connector. The emulation mode cannot be set using SNMP.
 
 - **Clocks**: Use the drop-down menus provided in this section to configure **Tx/Rx Clock Sources**, **Rx Buffer Size**, **External Clock**, **External Frequency Reference** and **G.703 Clock Extended Mode/Interface**. Note that here the serial version does not contain some parameters that can be found in the SNMP version, such as Rx Clock External and Rx External Clock Type.
 
@@ -167,11 +167,11 @@ Use this page to configure a number of the utility functions of the device:
 - **Save** / **Load** (save takes precedence over load):
 
 - **Configuration Save / Configuration Load:** Use the drop-down menus to save or load up to 10 different modem configurations, *0* through *9*.
-  - In the serial version of the driver, the page button **Configuration slots**, which shows the available configuration slots, is not available.
+  - In the serial version of the connector, the page button **Configuration slots**, which shows the available configuration slots, is not available.
 
 ### Config - Drop and Insert
 
-On this page, you can configure the Drop and Insert functionality. The appropriate parameters should be set according to the framing mode selected on the **Config - Modem** page. Note that this page is different from the equivalent page in the SNMP version of the driver.
+On this page, you can configure the Drop and Insert functionality. The appropriate parameters should be set according to the framing mode selected on the **Config - Modem** page. Note that this page is different from the equivalent page in the SNMP version of the connector.
 
 ### Config - BUC / LNB
 
@@ -250,7 +250,7 @@ When redundant modems are used and the selected unit is currently the online uni
 
 Finally, the **Redundancy State and Offline Unit Status** allow you to monitor the redundancy setup - both the status of the active modem (i.e. *Online* or *Offline*) and the detected presence of a redundancy switch.
 
-Note that the SNMP version also contains the **New redundancy status**, with more information than the Redundancy State parameter, but this is **not available** in the serial version of the driver.
+Note that the SNMP version also contains the **New redundancy status**, with more information than the Redundancy State parameter, but this is **not available** in the serial version of the connector.
 
 ### FSK
 

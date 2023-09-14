@@ -4,24 +4,24 @@ uid: Connector_help_Lawo_V_pro8
 
 # Lawo V_pro8
 
-This driver can be used to monitor and control Lawo V_pro8 devices. Lawo describes this device as the complete 8 channel video processing toolkit.
+This connector can be used to monitor and control Lawo V_pro8 devices. Lawo describes this device as the complete 8 channel video processing toolkit.
 
 ## About
 
-All information is polled from the device over SNMP in driver range 1.x, or the smart-serial (Ember+) protocol in driver range 2.x.
+All information is polled from the device over SNMP in connector range 1.x, or the smart-serial (Ember+) protocol in connector range 2.x.
 
-The Ember+ version of the driver is much more extensive than the SNMP version. For example, it also contains matrix controls, that allows the operator to see and change crosspoints between inputs and outputs.
+The Ember+ version of the connector is much more extensive than the SNMP version. For example, it also contains matrix controls, that allows the operator to see and change crosspoints between inputs and outputs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version based on SNMP                  | No                  | Yes                     |
 | 2.0.0.x          | Initial version based on Ember+ (smart-serial) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | unknown                     |
 | 2.0.0.x          | unknown                     |
@@ -30,7 +30,7 @@ The Ember+ version of the driver is much more extensive than the SNMP version. F
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -95,7 +95,7 @@ Contains a table with the general purpose input (GPI) registers. The user can as
 
 Displays all preferences, such as the color schema that will be used on the front panel of the device.
 
-### Webinterface
+### Web Interface
 
 Displays the webinterface of the device. Note that the client machine has to be able to access the device, as otherwise it will no tbe possible to open the webinterface.
 

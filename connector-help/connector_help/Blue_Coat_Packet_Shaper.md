@@ -2,31 +2,33 @@
 uid: Connector_help_Blue_Coat_Packet_Shaper
 ---
 
-Blue Coat Packet Shaper
+# Blue Coat Packet Shaper
 
 The **Blue Coat Packet Shaper** is a Traffic Shaper used for network monitoring and management.
 
-About
+## About
 
-SNMP driver for the **Blue Coat Packet Shaper.**
+SNMP connector for the **Blue Coat Packet Shaper.**
 
-Creation
+## Configuration
 
-SNMP
+### Creation
 
-**SNMP Connection:**
+#### SNMP Connection - Main
+
+SNMP Connection:
 
 - **IP Address/host**: The polling IP of the device, e.g. *10.145.1.12*.
 
-**SNMP Settings:**
+SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string required to read from the device. The default value is *public*.
 - **Set community string**: The community string required to set to the device. The default value is *public*.
 
-Usage
+## Usage
 
-Monitor
+### Monitor
 
 The **Monitor** page displays a tree view of the following tables:
 
@@ -34,7 +36,7 @@ The **Monitor** page displays a tree view of the following tables:
 - **Partitions Table**
 - **Classes Table**
 
-Links
+### Links
 
 The **Links** page displays the Links Table with parameters such as:
 
@@ -42,7 +44,7 @@ The **Links** page displays the Links Table with parameters such as:
 - **Link Total Rx Bytes**
 - **Link Total Tx Bytes** etc.
 
-Partitions
+### Partitions
 
 The **Partitions** page display the Partitions table with parameters such as:
 
@@ -50,7 +52,7 @@ The **Partitions** page display the Partitions table with parameters such as:
 - **Partition Pkts**
 - **Partition Data Pkts** etc.
 
-Classes
+### Classes
 
 The **Classes** page displays the Classes Table with parameters such as:
 
@@ -58,7 +60,7 @@ The **Classes** page displays the Classes Table with parameters such as:
 - **Class Rate**
 - **Class Current Rate** etc.
 
-Alarms
+### Alarms
 
 The **Alarms** page displays all alarm related parameters, such as:
 
@@ -66,6 +68,6 @@ The **Alarms** page displays all alarm related parameters, such as:
 - **Alarm Config File Status**
 - **Alarm Measurement Engine Status** etc.
 
-Webpage
+### Webpage
 
 Displays the device's Webpage.

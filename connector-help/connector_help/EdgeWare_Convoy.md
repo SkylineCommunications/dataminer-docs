@@ -4,11 +4,11 @@ uid: Connector_help_EdgeWare_Convoy
 
 # Edgeware Convoy
 
-The **Edgeware Convoy** driver is used to retrieve info from an Edgeware Convoy Device.
+The **Edgeware Convoy** connector is used to retrieve info from an Edgeware Convoy Device.
 
 ## About
 
-This driver supports two different APIs, both using HTTP connections:
+This connector supports two different APIs, both using HTTP connections:
 
 - The Operator API is used for basic monitoring of the device (hosts, fault reports, etc.).
 - The Account API is used to manage the content of the device (content, channel, recordings, etc.).
@@ -17,7 +17,7 @@ This driver supports two different APIs, both using HTTP connections:
 
 ### Creation
 
-This driver uses 3 connections:
+This connector uses 3 connections:
 
 **Serial Connection**
 
@@ -40,13 +40,13 @@ This is an SSH connection, which is used to retrieved the keys needed for both A
 
 ## Usage
 
-This driver contains 6 pages.
+This connector contains 6 pages.
 
 ### Login
 
 On this page, the credentials required for the communication must be filled in: **SSH Username**, **SSH Password**, **Operator Username**, **Account Username**.
 
-When these data have been filled in, the driver will try to retrieve the API key for the specified Operator and Account users. The user will be created if necessary.
+When these data have been filled in, the connector will try to retrieve the API key for the specified Operator and Account users. The user will be created if necessary.
 
 ### Operations
 

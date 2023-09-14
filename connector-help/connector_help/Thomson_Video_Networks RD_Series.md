@@ -8,17 +8,17 @@ The **Thomson Video Networks RD Series** unit is an encoder for SD and HD signal
 
 ## About
 
-This driver is used to manage and monitor Thomson Video Networks RD2000 and RD5000 MPEG-4 Multi-Format Receiver devices via SNMP protocol.
+This connector is used to manage and monitor Thomson Video Networks RD2000 and RD5000 MPEG-4 Multi-Format Receiver devices via SNMP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.5.2                       |
 
@@ -28,7 +28,7 @@ This driver is used to manage and monitor Thomson Video Networks RD2000 and RD50
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

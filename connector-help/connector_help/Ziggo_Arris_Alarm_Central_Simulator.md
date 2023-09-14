@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_Arris_Alarm_Central_Simulator
 
 # Ziggo Arris Alarm Central Simulator
 
-This driver is used to simulate specific use case scenarios, on Ziggo systems, and test if functionalities work as expected.
+This connector is used to simulate specific use case scenarios, on Ziggo systems, and test if functionalities work as expected.
 
 ## About
 
@@ -14,9 +14,9 @@ A list of **events** can be orderly saved as a **Scenario**, so, multiple **even
 
 **AlarmId** placeholders are available that, when used, generate a random GUID ending with "aacsim" to be easily tracked. These placeholders can be used by setting '\[' and '\]' in the beginning and end of the *\<AlarmId\>* tag value. This means that, within the same scenario run, alarm IDs with the same placeholder will have the same value.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
@@ -26,7 +26,7 @@ A list of **events** can be orderly saved as a **Scenario**, so, multiple **even
 
 #### HTTP Main Connection
 
-This driver requires a HTTP connection to send events, and, by default, asks for an **IP address/host** upon element creation. This parameter is mandatory but irrelevant, because all the addresses are set on the **Scenario** table in the element. Therefore, "localhost" is enough.
+This connector requires a HTTP connection to send events, and, by default, asks for an **IP address/host** upon element creation. This parameter is mandatory but irrelevant, because all the addresses are set on the **Scenario** table in the element. Therefore, "localhost" is enough.
 
 ## Usage
 
@@ -147,7 +147,7 @@ To import an event:
 
    - The name of the event will be the name of the file, and it is unchangeable.
 
-The content of the xml file is not loaded into the element, only the file location is stored. When an event is ready to be sent, the driver reads the xml content using the filepath value set on the **Events Table** upon "*event import*".
+The content of the xml file is not loaded into the element, only the file location is stored. When an event is ready to be sent, the connector reads the xml content using the filepath value set on the **Events Table** upon "*event import*".
 
 - Therefore, the user can change the content of the **event** without the need to import it again.
 

@@ -32,7 +32,7 @@ The 570-NAT-X19-25G is a high-density, multi-port, multi-flow hardware Network A
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 SNMP gets and sets are used to retrieve information from the device and display it in tables, as well as to modify values.
 
-The table information in this driver is shown in the same format as the native user interface of the device.
+The table information in this connector is shown in the same format as the native user interface of the device.
 
 - The **General** page shows the system information and two buttons that allow you to perform a system reboot or a factory reset.
 - The **Control Port Configuration** page shows the IP, MAC, Net-Mask, and Gateway address of the device.

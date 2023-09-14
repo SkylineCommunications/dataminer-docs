@@ -331,7 +331,7 @@ The following example illustrates both options:
 
 **SITE B - Matrix**
 
-****Inputs****
+***Inputs***
 
 | **ID** | **Label**  |
 |--------|------------|

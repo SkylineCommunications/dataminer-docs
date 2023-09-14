@@ -6,36 +6,36 @@ uid: Connector_help_SEE_Telecom_eAcsys_NMS
 
 The **SEE Telecom eAcsys NMS** is a management system that manages other elements that are used for Optical/RF transmission/reception. Other than that, it also monitors the state of the network element's chassis and the status of its PSU.
 
-This driver monitors and controls an **SEE Telecom eAcsys NMS** management system, allowing the end user to assess Optical/RF measurements performed by the device, and to perform actions on the devices controlled by the device*.*
+This connector monitors and controls an **SEE Telecom eAcsys NMS** management system, allowing the end user to assess Optical/RF measurements performed by the device, and to perform actions on the devices controlled by the device*.*
 
 ## About
 
-This driver uses SNMP and polls the following information every five minutes:
+This connector uses SNMP and polls the following information every five minutes:
 
 - Device uptime
 - Transmission/reception statistics
 - PSU and chassis information
 - EEPROM information
 
-In addition, the driver polls generic information every 24 hours.
+In addition, the connector polls generic information every 24 hours.
 
-Finally, this driver will export different drivers based on the retrieved data. A list can be found in the section *"*Exported Drivers" below*.*
+Finally, this connector will export different connectors based on the retrieved data. A list can be found in the section *"*Exported Connectors" below*.*
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                            | No                  | No                      |
 | 2.0.0.x          | Dynamic Virtual elements are created for the modules available in the eACSYS Devices Table. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**            |
+| **Range** | **Device Firmware Version**            |
 |------------------|----------------------------------------|
 | 1.0.0.x          | Compatible with eAcsys Release R_0.2.6 |
 | 2.0.0.x          | Compatible with eAcsys Release R_0.2.6 |
 
-### Exported drivers
+### Exported connectors
 
 The protocol only supports DVEs for range 2.0.0.x
 
@@ -51,7 +51,7 @@ The protocol only supports DVEs for range 2.0.0.x
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -66,7 +66,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver has the following pages: **General**, **Interfaces**, **Module Overview** and **DVE Tables**.
+This connector has the following pages: **General**, **Interfaces**, **Module Overview** and **DVE Tables**.
 
 ### General
 
@@ -114,11 +114,11 @@ On the right-hand side of the page, you can find the following parameters:
 
 ### Module Overview
 
-This page displays the connected modules in the **eAcsys Devices** table. It is possible to remove missing modules using the drop-down menu **Remove Missing Modules**. With the **Configuration...** page button, the driver can be configured.
+This page displays the connected modules in the **eAcsys Devices** table. It is possible to remove missing modules using the drop-down menu **Remove Missing Modules**. With the **Configuration...** page button, the connector can be configured.
 
 ### DVE Tables
 
-This page displays information regarding every exported driver, i.e.:
+This page displays information regarding every exported connector, i.e.:
 
 - The transmitter modules
 - The receiver modules

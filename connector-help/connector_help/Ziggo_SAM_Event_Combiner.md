@@ -4,7 +4,7 @@ uid: Connector_help_Ziggo_SAM_Event_Combiner
 
 # Ziggo SAM Event Combiner
 
-This driver is used to correlate alarms of specific trap receivers
+This connector is used to correlate alarms of specific trap receivers
 
 ## About
 
@@ -14,9 +14,9 @@ The correlation is based on the technical path (**Trigger IVR** parameter) of th
 
 The result of the correlation will be sent back to the respective trap receiver elements that will (via correlation rule) create a correlated alarm involving all grouped base alarms and edit the **B2B_impact** and **Event Tag** properties, accordingly.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ The result of the correlation will be sent back to the respective trap receiver 
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

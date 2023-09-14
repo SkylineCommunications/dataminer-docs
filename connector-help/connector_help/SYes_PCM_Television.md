@@ -8,18 +8,18 @@ The **SYes PCM Television** is a multistandard RF transmitter.
 
 ## About
 
-This is an **SNMP** driver for the SYes PCM Television device.
+This is an **SNMP** connector for the SYes PCM Television device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version         | No                  | Yes                     |
 | 1.1.0.x          | New firmware version 40 | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | version 29                  |
 | 1.1.0.x          | version 40                  |
@@ -30,7 +30,7 @@ This is an **SNMP** driver for the SYes PCM Television device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

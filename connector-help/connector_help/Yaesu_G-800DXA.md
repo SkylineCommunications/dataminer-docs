@@ -8,19 +8,19 @@ The **Yaesu G-800DXA** is an **antenna rotator**.
 
 ## About
 
-This driver uses **serial communication** in order to send commands to the device and receive its current status.
+This connector uses **serial communication** in order to send commands to the device and receive its current status.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | GS-232B                     |
+| 1.0.0.x          | GS-232B                     |
 
 ## Installation and configuration
 
@@ -28,7 +28,7 @@ This driver uses **serial communication** in order to send commands to the devic
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -39,7 +39,7 @@ SERIAL CONNECTION:
 
 #### Serial Redundancy connection
 
-This driver uses a second serial connection for redundancy purposes, which requires the following input during element creation:
+This connector uses a second serial connection for redundancy purposes, which requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 ### General
 
-This page contains all of the parameters in the driver.
+This page contains all of the parameters in the connector.
 
 It displays the current **Azimuth Angle** and **Elevation Angle** and allows you to set the **Azimuth Angle**, **Rotation Direction** and **Rotation Speed.**
 

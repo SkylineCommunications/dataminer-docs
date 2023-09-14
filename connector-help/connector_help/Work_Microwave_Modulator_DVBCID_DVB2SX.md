@@ -4,23 +4,23 @@ uid: Connector_help_Work_Microwave_Modulator_DVBCID_DVB2SX
 
 # Work Microwave Modulator DVBCID/DVB2SX
 
-This driver polls status parameters and allows you to edit the configuration of **Work Microwave Modulator DVBCID/DVB2SX** devices.
+This connector polls status parameters and allows you to edit the configuration of **Work Microwave Modulator DVBCID/DVB2SX** devices.
 
 ## About
 
 Communication happens via **SNMP**. The main method used for table polling is *multipleGetBulk*.
 
-This driver is compatible with "XNA" software units (base firmware starts with XNA).
+This connector is compatible with "XNA" software units (base firmware starts with XNA).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version**                                                           |
+| **Range**     | **Device Firmware Version**                                                           |
 |----------------------|---------------------------------------------------------------------------------------|
 | 1.0.0.x \[SLC Main\] | MCU Base Firmware: XNA01.65 MCU Device ID: FNA00.00 MCU Modulator Module ID: BBA01.25 |
 | 1.0.0.2              | MCU Base Firmware: XNA01.73                                                           |
@@ -31,7 +31,7 @@ This driver is compatible with "XNA" software units (base firmware starts with X
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

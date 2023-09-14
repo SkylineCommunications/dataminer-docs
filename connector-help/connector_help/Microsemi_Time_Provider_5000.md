@@ -10,15 +10,15 @@ The Microsemi TimeProvider 5000 is a carrier grade IEEE 1588 Precision Time Prot
 
 The TimeProvider 5000 is an independent timing reference that enables telecommunication providers to build a more stable, robust and reliable network infrastructure, combining hardware-based time stamping with the highest level of timing and frequency accuracy for a broad range of wireline and wireless applications.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ The TimeProvider 5000 is an independent timing reference that enables telecommun
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

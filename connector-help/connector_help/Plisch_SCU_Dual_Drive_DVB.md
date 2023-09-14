@@ -4,7 +4,7 @@ uid: Connector_help_Plisch_SCU_Dual_Drive_DVB
 
 # Plisch SCU Dual Drive DVB
 
-Plisch SCU Dual Drive DVB is a transmitter that can broadcast live 4K (Ultra HD). This driver allows you to monitor information related to different aspects of the device, and also to control the entire device.
+Plisch SCU Dual Drive DVB is a transmitter that can broadcast live 4K (Ultra HD). This connector allows you to monitor information related to different aspects of the device, and also to control the entire device.
 
 ## About
 
@@ -32,7 +32,7 @@ Plisch SCU Dual Drive DVB is a transmitter that can broadcast live 4K (Ultra HD)
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

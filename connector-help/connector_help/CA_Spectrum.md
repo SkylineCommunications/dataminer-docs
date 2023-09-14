@@ -4,32 +4,32 @@ uid: Connector_help_CA_Spectrum
 
 # CA Spectrum
 
-The **CA Spectrum** driver can be used to retrieve the **devices** and **device alarms** available in the **CA Spectrum Infrastructure Manager**.
+The **CA Spectrum** connector can be used to retrieve the **devices** and **device alarms** available in the **CA Spectrum Infrastructure Manager**.
 
 ## About
 
-This is a **distributed manager** driver, which means that it can be used to (automatically) create multiple elements. Each element will manage a subset of the devices available in the **CA Spectrum Infrastructure Manager** and will retrieve the alarms for those devices. Each CA Spectrum can (if enabled) create **DVEs** for each device (**CA Spectrum Device** protocol). These elements will then display the alarms for that particular device. Note that alarms are not displayed in the main CA Spectrum element itself.
+This is a **distributed manager** connector, which means that it can be used to (automatically) create multiple elements. Each element will manage a subset of the devices available in the **CA Spectrum Infrastructure Manager** and will retrieve the alarms for those devices. Each CA Spectrum can (if enabled) create **DVEs** for each device (**CA Spectrum Device** protocol). These elements will then display the alarms for that particular device. Note that alarms are not displayed in the main CA Spectrum element itself.
 
-Because the CA Spectrum is a distributed manager driver, 1 element needs to act as the master element, while the other elements act as slaves. The master element decides which element will retrieve and manage the alarms for the different devices in the CA Spectrum Infrastructure Manager. Even if no extra CA Spectrum elements are necessary, the CA Spectrum element still needs to be configured as the master, as otherwise no devices and alarms will be retrieved.
+Because the CA Spectrum is a distributed manager connector, 1 element needs to act as the master element, while the other elements act as slaves. The master element decides which element will retrieve and manage the alarms for the different devices in the CA Spectrum Infrastructure Manager. Even if no extra CA Spectrum elements are necessary, the CA Spectrum element still needs to be configured as the master, as otherwise no devices and alarms will be retrieved.
 
 The **CA Spectrum master** element will **sync its data to an XML file** (C:\Skyline DataMiner\Documents\CA Spectrum\MasterSyncFile.xml). This file is used when a new master element needs to be selected.
 
 The devices and alarms are retrieved using the **RESTful HTTP Web Service API** in CA Spectrum.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                               | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                               | No                  | Yes                     |
 | 2.0.0.x          | Alarms are received on port instead of via polling. Possibility to get devices from CSV file. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 10.0                        |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description**       |
 |-----------------------|-----------------------|
@@ -41,7 +41,7 @@ The devices and alarms are retrieved using the **RESTful HTTP Web Service API** 
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

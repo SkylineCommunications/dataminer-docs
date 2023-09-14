@@ -4,22 +4,22 @@ uid: Connector_help_HP_3PAR_StoreServ
 
 # HP 3PAR StoreServ
 
-The **HP 3PAR StoreServ** driver monitors a unit using SNMP and an HTTP connection.
+The **HP 3PAR StoreServ** connector monitors a unit using SNMP and an HTTP connection.
 
 ## About
 
 The **HP 3PAR StoreServ** driver updates an alarm table every 5 seconds, receives traps from the device and displays them in three tables.
 It also monitors several parameters and tables using an HTTP connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.1.x          | Initial version | Yes                 | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ It also monitors several parameters and tables using an HTTP connection.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -43,7 +43,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

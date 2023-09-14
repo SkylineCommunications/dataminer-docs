@@ -8,18 +8,18 @@ The **Verimatrix OTT** is a video monitor.
 
 ## About
 
-This driver uses **SNMP** to monitor the **Verimatrix OTT** device.
+This connector uses **SNMP** to monitor the **Verimatrix OTT** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                          | No                  | Yes                     |
 | 1.1.0.x          | Based on 1.0.0.1. Added support for firmware version 4.1. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.1.0.x          | 4.1                         |
@@ -30,7 +30,7 @@ This driver uses **SNMP** to monitor the **Verimatrix OTT** device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

@@ -10,17 +10,17 @@ The GDR216 is a dual-channel 3GB/s, HD, SD SDI reclocking distribution amplifier
 
 ## About
 
-This driver uses **SNMP** to retrieve data from the device, and allows alarm monitoring and trending of parameters.
+This connector uses **SNMP** to retrieve data from the device, and allows alarm monitoring and trending of parameters.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Software Revision: 0600     |
 
@@ -30,7 +30,7 @@ This driver uses **SNMP** to retrieve data from the device, and allows alarm mon
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,3 @@ In addition, you can also find information about **CVBS**, **HDMI**, **Ports** e
 ### Alarms
 
 On this page, you can set the different alarm priorities.
-
-## Notes
-
-N/A

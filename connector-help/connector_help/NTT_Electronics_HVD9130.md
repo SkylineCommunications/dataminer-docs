@@ -4,21 +4,21 @@ uid: Connector_help_NTT_Electronics_HVD9130
 
 # NTT ELECTRONICS HVD9130
 
-The **NTT ELECTRONICS HVD9130** driver uses SNMP to communicate with the high performance MPEG-2 decoder of the same name. It retrieves information about the status, video, programs and alarms reported by the device.
+The **NTT ELECTRONICS HVD9130** connector uses SNMP to communicate with the high performance MPEG-2 decoder of the same name. It retrieves information about the status, video, programs and alarms reported by the device.
 
 ## About
 
-With this driver, it is possible to both monitor the decoder and set parameters of the decoder.
+With this connector, it is possible to both monitor the decoder and set parameters of the decoder.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.00                        |
 
@@ -28,7 +28,7 @@ With this driver, it is possible to both monitor the decoder and set parameters 
 
 *SNMP Main Connection*
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

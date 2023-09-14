@@ -22,13 +22,13 @@ The database of the Service Overview Manager contains a service monitoring sched
 | **Range**            | **Key Features**                                                    | **Based on** | **System Impact**                             |
 |----------------------|---------------------------------------------------------------------|--------------|-----------------------------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version.                                                    | \-           | \-                                            |
-| 1.0.1.x \[SLC Main\] | Removed all BridgeTech references and functionality from the driver | 1.0.0.30     | All BridgeTech data tables have been removed. |
+| 1.0.1.x \[SLC Main\] | Removed all BridgeTech references and functionality from the connector | 1.0.0.30     | All BridgeTech data tables have been removed. |
 
 ## Configuration
 
 ### Connections
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Database connection
 
@@ -108,4 +108,4 @@ The information above is still valid for this range. However, BridgeTech tables 
 
 ## Notes
 
-This driver should be used in DataMiner Cube with Visio files.
+This connector should be used in DataMiner Cube with Visio files.

@@ -8,7 +8,7 @@ The **HP Fibre Channel Switch** is used to share the capacity of fiber channel s
 
 ## About
 
-This driver allows the user to monitor and configure the HP Fibre Channel Switch.
+This connector allows the user to monitor and configure the HP Fibre Channel Switch.
 
 ## Installation and Configuration
 
@@ -16,7 +16,7 @@ This driver allows the user to monitor and configure the HP Fibre Channel Switch
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

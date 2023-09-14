@@ -4,11 +4,11 @@ uid: Connector_help_Snell_Wilcox_IQHCO3193-1A
 
 # Snell Wilcox IQHCO3193-1A
 
-The aim of this driver is to monitor and control the **IQHCO3193-1A** device and mainly to configure the logical conditions that are used by the device for auto-switching.
+The aim of this connector is to monitor and control the **IQHCO3193-1A** device and mainly to configure the logical conditions that are used by the device for auto-switching.
 
 ## About
 
-This driver implements the RollCall protocol (serial protocol) for all communication with the device.
+This connector implements the RollCall protocol (serial protocol) for all communication with the device.
 
 It is a smart-serial single driver, so all the updates are sent by the device asynchronously, which reduces the network load and improves performance.
 
@@ -18,7 +18,7 @@ The version 1.0.0.1 was built for the firmware *4668*.
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**
 

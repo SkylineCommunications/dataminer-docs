@@ -8,7 +8,7 @@ L-band splitter. Modular system chassis for matrix systems that holds up to 32 h
 
 ## About
 
-This driver requests **System**, **CPU**, **PSU** and **Module** information from the device. It is possible to configure the traps and **RF Detector** Settings.
+This connector requests **System**, **CPU**, **PSU** and **Module** information from the device. It is possible to configure the traps and **RF Detector** Settings.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver requests **System**, **CPU**, **PSU** and **Module** information fro
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

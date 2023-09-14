@@ -4,13 +4,13 @@ uid: Connector_help_Harris_Selenio_DEM1
 
 # Harris Selenio DEM1
 
-The **Harris Selenio DEM1** is one of the types of cards that can be slotted into a Harris Selenio Chassis. This driver contains a full overview of all the data available in such a card. Specifically, it contains information for Audio, Video and Data Decoding.
+The **Harris Selenio DEM1** is one of the types of cards that can be slotted into a Harris Selenio Chassis. This connector contains a full overview of all the data available in such a card. Specifically, it contains information for Audio, Video and Data Decoding.
 
 ## About
 
-The information displayed in this driver is divided over different pages. The displayed information and settings of each page are described in the "Usage" section of this document.
+The information displayed in this connector is divided over different pages. The displayed information and settings of each page are described in the "Usage" section of this document.
 
-The different **versions** of the driver tie in with the firmware version of the card the driver supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific driver iteration for this firmware. (E.g. *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*)
+The different **versions** of the connector tie in with the firmware version of the card the connector supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific driver iteration for this firmware. (E.g. *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*)
 
 The current version is *1.0.36.1.*
 
@@ -18,7 +18,7 @@ The current version is *1.0.36.1.*
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -55,7 +55,7 @@ Note: You can toggle alarm information to be received either every 30 seconds or
 
 ## Usage
 
-This driver contains different pages, divided into different sections using separators.
+This connector contains different pages, divided into different sections using separators.
 
 ### General section
 

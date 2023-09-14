@@ -4,7 +4,7 @@ uid: Connector_help_SeaChange_Stagis
 
 # SeaChange Stagis
 
-This driver can be used for basic KPI monitoring for **SeaChange Stagis** devices: interfaces, storage, software and more generic info.
+This connector can be used for basic KPI monitoring for **SeaChange Stagis** devices: interfaces, storage, software and more generic info.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used for basic KPI monitoring for **SeaChange Stagis** device
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver contains four main data pages to monitor Stagis devices:
+This connector contains four main data pages to monitor Stagis devices:
 
 - **General**: Displays general information about the server and the system. Contains the following page buttons:
 

@@ -14,7 +14,7 @@ The MaxTech SSPA Driver allows for monitoring and basic configuration of the SSP
 
 Style: Heading 2
 
-### CreationThis driver uses a Serial connection and needs the following user information:
+### CreationThis connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

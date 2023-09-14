@@ -4,15 +4,15 @@ uid: Connector_help_DIBP_Active_Bearer_History
 
 # DIBP Active Bearer History
 
-**DIBP Active Bearer History** driver is used to store the changes of the **Active Bearer** **parameter** from a **DIBP Active Bearer** element.
+**DIBP Active Bearer History** connector is used to store the changes of the **Active Bearer** **parameter** from a **DIBP Active Bearer** element.
 
 ## About
 
-This is a virtual driver that captures changes in the **DIBP Active Bearer** element. The **active bearer** will be determined based on a combination of **Cobra/EBEM parameters (GX or WGS)** and **average ping-based latency** measurements towards **onshore devices (DMA, Gateway Router)**. These changes are captured via remote sets that include information on what time the active bearer changed, what the active bearer changed to and if there is an outage. This information is then processed and placed in a log table, which includes information on the **Active Bearer**, **Start Time**, **Stop Time**, **Duration** and **Outage**.
+This is a virtual connector that captures changes in the **DIBP Active Bearer** element. The **active bearer** will be determined based on a combination of **Cobra/EBEM parameters (GX or WGS)** and **average ping-based latency** measurements towards **onshore devices (DMA, Gateway Router)**. These changes are captured via remote sets that include information on what time the active bearer changed, what the active bearer changed to and if there is an outage. This information is then processed and placed in a log table, which includes information on the **Active Bearer**, **Start Time**, **Stop Time**, **Duration** and **Outage**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This is a virtual driver that captures changes in the **DIBP Active Bearer** ele
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -52,4 +52,4 @@ This page contains parameters to configure the **automatic removal feature** tha
 
 ## Notes
 
-This driver is intended to be used together with the **DIBP Active Bearer** driver. It gathers information from the DIBP Active Bearer driver every time there is a change to the active bearer in the driver, and allows users to view previous active bearers, the time they started, the time they ended, how long they were active and if there was an outage during their active time.
+This connector is intended to be used together with the **DIBP Active Bearer** connector. It gathers information from the DIBP Active Bearer connector every time there is a change to the active bearer in the connector, and allows users to view previous active bearers, the time they started, the time they ended, how long they were active and if there was an outage during their active time.

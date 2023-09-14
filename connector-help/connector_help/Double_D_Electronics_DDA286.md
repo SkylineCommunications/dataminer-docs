@@ -8,17 +8,17 @@ The DDA286 is a family of units and modules for switching controllers (including
 
 ## About
 
-This driver monitors the activity of **DDA286** Networkable Switching Controller using a serial connection.
+This connector monitors the activity of **DDA286** Networkable Switching Controller using a serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x \[SLC Main\] | Initial Version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver monitors the activity of **DDA286** Networkable Switching Controller
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

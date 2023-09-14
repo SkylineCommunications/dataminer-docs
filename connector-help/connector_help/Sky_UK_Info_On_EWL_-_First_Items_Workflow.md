@@ -4,9 +4,9 @@ uid: Connector_help_Sky_UK_Info_On_EWL_-_First_Items_Workflow
 
 # Sky UK Info On EWL - First Items Workflow
 
-This driver can be used to create an enhanced service containing elements using the driver [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
+This connector can be used to create an enhanced service containing elements using the connector [Sky UK VICC](xref:Connector_help_Sky_UK_VICC).
 
-With this driver, alarms can be generated according to predefined rules.
+With this connector, alarms can be generated according to predefined rules.
 
 ## About
 
@@ -24,7 +24,7 @@ With this driver, alarms can be generated according to predefined rules.
 
 ## Configuration
 
-To use this driver, create a service that uses it as its service definition. Then configure the following child elements/parameters:
+To use this connector, create a service that uses it as its service definition. Then configure the following child elements/parameters:
 
 - [Sky UK VICC](xref:Connector_help_Sky_UK_VICC)
 
@@ -32,7 +32,7 @@ To use this driver, create a service that uses it as its service definition. The
 
 ## How to Use
 
-A service created using this driver will have the data pages detailed below.
+A service created using this connector will have the data pages detailed below.
 
 ### Alarms
 

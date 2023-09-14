@@ -4,21 +4,21 @@ uid: Connector_help_Newtec_2177
 
 # Newtec 2177
 
-The Newtec 2177 is a variable-rate DVB satellite modulator. This driver can be used to monitor and control this device.
+The Newtec 2177 is a variable-rate DVB satellite modulator. This connector can be used to monitor and control this device.
 
 ## About
 
 The Newtec 2177 is the successor of the well-established NTC/2077. It has been designed for both DVB and Skyplex contribution and distribution, as well as for the telco and IP world. It can be used where high product flexibility is required for interfacing with other equipment. One of the main applications is the use on medium to high data rate DVB broadcast transmissions for distribution (QPSK) and contribution (QPSK + 8PSK + 16QAM) and for DVB-IP satellite backbones with existing IF upconverters (70-140 MHz) and HPAs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.1.36.x         | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.36.x         | Unknown                     |
 
@@ -28,7 +28,7 @@ The Newtec 2177 is the successor of the well-established NTC/2077. It has been d
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,7 +45,7 @@ SERIAL CONNECTION:
 
 ### Configuration
 
-To ensure that the driver works correctly, make sure that the **RMCP version** on the device itself is set to **v2.0**. This can only be done via the web interface of the device.
+To ensure that the connector works correctly, make sure that the **RMCP version** on the device itself is set to **v2.0**. This can only be done via the web interface of the device.
 
 ## Usage
 
@@ -65,7 +65,7 @@ It also contains several subpages with additional information: **NCR**, **Rate A
 
 This page illustrates all the system alarms, with the parameters **Actual** and **Memorized Alarm Status**, **Device Reset Flag**, **Self Test**, **Incompatibility**, **General Device**, **Interface**, **Reference Clock**, **Device Temperature**, **Power Supply Voltage**, **ASI Code Violation**, **LVDS Signal Detect**, **NCR Inserter GPS 1pps**, **Buffer Underflow and Overflow**, **Clock PLL**, **Synthesizer**, **Input Framing**, **Timebase Sync**, **RF Phase Lock DRO**, **BISS Summary**, **Internal M&C Module**, **Interface Module**, **Internal Modulator** and **Device Architecture**.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 
@@ -97,4 +97,4 @@ Fixed interfaces
 
 ### Notes
 
-For this driver to be fully functional, the RMCP version needs to be v2.0. With version v1.0, several Missing Header errors such as err023 will be received.
+For this connector to be fully functional, the RMCP version needs to be v2.0. With version v1.0, several Missing Header errors such as err023 will be received.

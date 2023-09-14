@@ -4,19 +4,19 @@ uid: Connector_help_RGB_Networks_TransAct_Packager
 
 # RGB Networks TransAct Packager
 
-This driver is used to monitor an RGB Networks TransAct Packager.
+This connector is used to monitor an RGB Networks TransAct Packager.
 
 ## About
 
 The RGB TransAct Packager segments streams using adaptive streaming technology to deliver video and audio to computers, mobile devices and set-top boxes. The TransAct Packager ingests H.264 encoded video streams carried in an MPEG-2 transport stream (TS) and produces segmented output in multiple formats (RTMP, HLS, Microsoft Smooth Streaming,... ). The TransAct Packager can also ingest file-based content from RGB's TransAct Encoder/Transcoder to deliver just-in-time output for video-on-demand (VOD) or network digital video recorders.
 
-Two external APIs are supported by the Packager: there is SNMP support for traps and basic configuration, and a full-featured XML-RPC interface for detailed configuration status and control. This driver only uses the XML-RPC interface.
+Two external APIs are supported by the Packager: there is SNMP support for traps and basic configuration, and a full-featured XML-RPC interface for detailed configuration status and control. This connector only uses the XML-RPC interface.
 
 ## Installation and Configuration
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP Connection**
 
@@ -26,11 +26,11 @@ This driver uses an HTTP connection and needs the following user information:
 
 ## Usage
 
-This driver contains 23 pages.
+This connector contains 23 pages.
 
 ### General
 
-This page displays general information about the driver: **Software** **Version**, **Time**, **CPU**, .
+This page displays general information about the connector: **Software** **Version**, **Time**, **CPU**, .
 
 Controls are present on the page to manage the device: **Restart**, **Shutdown,** .
 
@@ -83,7 +83,7 @@ This page displays the license feature on this packager. The **Update.** button 
 The license can be updated in two ways:
 
 - By directly filling in the string key in the **License File** text box.
-- By uploading a file containing the license. This file must be located in the following Dataminer Documents folder: *Documents/RGB Networks TransAct Packager/\[Element Name\]/License*.
+- By uploading a file containing the license. This file must be located in the following DataMiner Documents folder: *Documents/RGB Networks TransAct Packager/\[Element Name\]/License*.
 
 ### Network
 
@@ -105,9 +105,9 @@ This page displays parameters related to the SNMP Protocol, such as **Trap Serve
 
 This page allows you to update the Packager.
 
-The upload file must be located in the following Dataminer Documents folder: "*Documents/RGB Networks TransAct Packager/\[Element Name\]/Update*".
+The upload file must be located in the following DataMiner Documents folder: "*Documents/RGB Networks TransAct Packager/\[Element Name\]/Update*".
 
-You will need to specify the **Username** and **Password** of a Dataminer user. In order to do this, it is recommended to create a user with minimal rights, dedicated to this task (e.g. Update/Update).
+You will need to specify the **Username** and **Password** of a DataMiner user. In order to do this, it is recommended to create a user with minimal rights, dedicated to this task (e.g. Update/Update).
 
 ### Syslog Servers
 

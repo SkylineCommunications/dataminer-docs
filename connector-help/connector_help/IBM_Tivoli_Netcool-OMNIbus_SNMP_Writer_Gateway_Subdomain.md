@@ -8,19 +8,19 @@ This protocol represents one subdomain of the IBM Tivoli Netcool-OMNIbus SNMP Wr
 
 ## About
 
-This driver is **automatically generated** by the driver IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway, range 1.0.0.1.
+This connector is **automatically generated** by the connector IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway, range 1.0.0.x.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | 1.6.0.0                     |
+| 1.0.0.x          | 1.6.0.0                     |
 
 ## Installation and configuration
 
 ### Creation
 
-This protocol is created by the parent driver IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway, range 1.0.0.1.
+This protocol is created by the parent connector IBM Tivoli Netcool-OMNIbus SNMP Writer Gateway, range 1.0.0.x.
 
 ## Usage
 

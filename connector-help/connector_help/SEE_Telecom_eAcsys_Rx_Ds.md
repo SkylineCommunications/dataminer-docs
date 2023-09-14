@@ -6,13 +6,13 @@ uid: Connector_help_SEE_Telecom_eAcsys_Rx_Ds
 
 ## About
 
-This driver makes it possible to monitor a **SEE Telecom eAcsys Rx Ds Receiver** with **SNMP**. The retrieved parameters are displayed on several pages, depending on the kind of parameter.
+This connector makes it possible to monitor a **SEE Telecom eAcsys Rx Ds Receiver** with **SNMP**. The retrieved parameters are displayed on several pages, depending on the kind of parameter.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

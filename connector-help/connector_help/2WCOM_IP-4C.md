@@ -4,7 +4,7 @@ uid: Connector_help_2WCOM_IP-4C
 
 # 2WCOM IP-4C
 
-This is an SNMP driver that is used to monitor and configure the **2WCOM IP-4C** audio-over-IP codec equipment.
+This is an SNMP connector that is used to monitor and configure the **2WCOM IP-4C** audio-over-IP codec equipment.
 
 ## About
 
@@ -43,7 +43,7 @@ The information in the element is retrieved via **SNMP** communication.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,11 +55,11 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device (default: *public*).
 - **Set community string**: The community string used when setting values on the device (default: *private*).
 
-The driver also uses traps to receive alarm status updates.
+The connector also uses traps to receive alarm status updates.
 
 ### Initialization
 
-The driver does not require credentials, so setting it up is rather straightforward. To make sure the device can be polled, define the port where the device can be found.
+The connector does not require credentials, so setting it up is rather straightforward. To make sure the device can be polled, define the port where the device can be found.
 
 The port setting can be found on the General page and is called **Web Interface Port**.
 
@@ -73,11 +73,11 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-Most tables in the driver contain the following buttons:
+Most tables in the connector contain the following buttons:
 
 - **Save**: After you have made changes to a table, it is important that you click the "Save" button. This process is linked to the inner workings of the device:
 
-- Every change you make in the table will be sent to the device. The device will save this change in its front-end SNMP table.
+  - Every change you make in the table will be sent to the device. The device will save this change in its front-end SNMP table.
   - After the changes are done, the device requires a signal, telling it to save and deploy all front-end changes.
   - As long as the save button has not been clicked, the changes will only reside in the front-end table and they will not be deployed.
 
@@ -85,7 +85,7 @@ Most tables in the driver contain the following buttons:
 
 - **Remove**: This will remove the selected row.
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays system information, including the System Description, System Location, System Name, System Contact and System Up Time. This is also where you can configure a **port** to be used to access the web interface.
 - **Audio Decoder Status:** Displays the overview of audio decoders.

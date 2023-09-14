@@ -4,13 +4,13 @@ uid: Connector_help_Newtec_Dialog_Platform_VSAT
 
 # Newtec Dialog Platform VSAT
 
-The **Newtec Dialog Platform VSAT** driver collects and organizes data from a Newtec Dialog platform that stores its metrics in a Time Series Database (TSDB, i.e. Influx DB). This driver was designed to work with the DataMiner EPM Solution.
+The **Newtec Dialog Platform VSAT** driver collects and organizes data from a Newtec Dialog platform that stores its metrics in a Time Series Database (TSDB, i.e. Influx DB). This connector was designed to work with the DataMiner EPM Solution.
 
 ## About
 
-The Newtec Dialog monitoring system collects metrics from the Newtec dialog platform and stores them in a Time Series Database. This driver retrieves data from the Newtec Dialog Platform via its **REST API** and via the **TSDB API**. Data from both sources is aggregated into the driver.
+The Newtec Dialog monitoring system collects metrics from the Newtec dialog platform and stores them in a Time Series Database. This connector retrieves data from the Newtec Dialog Platform via its **REST API** and via the **TSDB API**. Data from both sources is aggregated into the connector.
 
-The driver uses the following APIs:
+The connector uses the following APIs:
 
 - Newtec Dialog Restful Standard API (Central Dialog NMS): Configuration data of the Dialog system is retrieved using this API.
 - Newtec Dialog TSDB API (Hub Gateway Database): Statistics, metrics of terminals and Sat Networks are retrieved using the Time Series Database API.
@@ -37,7 +37,7 @@ The driver uses the following APIs:
 
 ### Connections
 
-This driver uses three HTTP connections and requires the following input during element creation.
+This connector uses three HTTP connections and requires the following input during element creation.
 
 #### HTTP Connection 1, 2 & 3
 
@@ -61,6 +61,6 @@ There is no redundancy defined.
 
 ## How to use
 
-This driver was designed to follow the other collectors and to work with the DataMiner EPM Solution.
+This connector was designed to follow the other collectors and to work with the DataMiner EPM Solution.
 
-Before data can be displayed by the driver, the credentials and TSDBs must be configured, as detailed in the "Initialization" section above.
+Before data can be displayed by the connector, the credentials and TSDBs must be configured, as detailed in the "Initialization" section above.

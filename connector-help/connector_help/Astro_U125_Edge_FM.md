@@ -4,9 +4,9 @@ uid: Connector_help_Astro_U125_Edge_FM
 
 # Astro U125 Edge FM
 
-With this driver, you can monitor and control an **Astro U125 Edge FM** module, which is part of the Astro U100 Series.
+With this connector, you can monitor and control an **Astro U125 Edge FM** module, which is part of the Astro U100 Series.
 
-The driver uses the HTTP API of the Astro U125 Edge FM device in order to communicate. It also uses an SNMP interface to receive SNMP traps from the device.
+The connector uses the HTTP API of the Astro U125 Edge FM device in order to communicate. It also uses an SNMP interface to receive SNMP traps from the device.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses the HTTP API of the Astro U125 Edge FM device in order to commun
 
 #### Serial connection
 
-This driver can communicate directly with the **U125 module**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on whether direct communication is used or not, the **HTTP** configuration differs, as shown below.
+This connector can communicate directly with the **U125 module**, but it can also be configured to send the requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on whether direct communication is used or not, the **HTTP** configuration differs, as shown below.
 
 - #### A) Communication with U100C as proxy
 
@@ -144,7 +144,7 @@ The file to be uploaded is in the following location: *C:\Skyline DataMiner\Docu
 
 #### Performing a software update
 
-The driver allows you to upload a firmware archive from the local disk of the DMA:
+The connector allows you to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U125_Edge_FM_SoftwareUpdate.PNG)
 

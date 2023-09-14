@@ -4,21 +4,21 @@ uid: Connector_help_UPC_Nederland_VOD_SLA
 
 # UPC Nederland VOD SLA
 
-Via this driver it is possible to monitor the SLA of various services.
+Via this connector it is possible to monitor the SLA of various services.
 
 # About
 
 The **UPC Nederland VOD SLA** stores the information about a specific SLA service.
 
-This driver has a parameter (**ElementID**) that makes possible to other drivers to know the elementID, making then possible for other drivers to use the information stored on this driver.
+This connector has a parameter (**ElementID**) that makes possible to other drivers to know the elementID, making then possible for other drivers to use the information stored on this connector.
 
-This driver also read and parse a command that allow to create, edit or delete a SLA Service.
+This connector also read and parse a command that allow to create, edit or delete a SLA Service.
 
 # Installation and configuration
 
 ## Creation
 
-## This driver uses a virtual connection and does not need any user information.
+## This connector uses a virtual connection and does not need any user information.
 
 # Usage
 

@@ -4,21 +4,21 @@ uid: Connector_help_Open_Daylight_Controller
 
 # Open Daylight Controller
 
-OpenDaylight (ODL) is an open source framework for migrating to an SDN network architecture. It has been deployed in data center, enterprise and carrier networks, supporting a broad range of use cases. OpenDaylight provides the abstraction, programmability, and openness that paves the way towards an intelligent, software-defined infrastructure. The driver is used to send the PUT commands to the HTTP URL of the software, which in turn controls the switches of the OpenFlow in Arista Manager.
+OpenDaylight (ODL) is an open source framework for migrating to an SDN network architecture. It has been deployed in data center, enterprise and carrier networks, supporting a broad range of use cases. OpenDaylight provides the abstraction, programmability, and openness that paves the way towards an intelligent, software-defined infrastructure. The connector is used to send the PUT commands to the HTTP URL of the software, which in turn controls the switches of the OpenFlow in Arista Manager.
 
 ## About
 
-The driver communicates through an HTTP protocol.
+The connector communicates through an HTTP protocol.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------|---------------------|-------------------------|
 | 0.0.0.x          | Initial version (proof of concept) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Firmware Version** |
+| **Range** | **Firmware Version** |
 |------------------|----------------------|
 | 0.0.0.x          | Unknown              |
 
@@ -28,7 +28,7 @@ The driver communicates through an HTTP protocol.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

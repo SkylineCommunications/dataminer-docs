@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Prometheus_HAProxy
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to either aggregate and record new time series from existing data or generate alerts.
 
-The **Generic Prometheus Collector** driver executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a driver derived from this **Generic Prometheus HAProxy** driver, where the data regarding HAProxy will be displayed.
+The **Generic Prometheus Collector** connector executes queries via HTTP to retrieve the data. This data will then be forwarded to an element created with a connector derived from this **Generic Prometheus HAProxy** connector, where the data regarding HAProxy will be displayed.
 
 HAProxy is a free, fast and reliable solution offering high availability, load balancing, and proxying for TCP and HTTP-based applications. It is particularly suited for very high-traffic websites, and powers quite a number of the world's most visited ones. Over the years, it has become the de-facto standard open-source load balancer.
 
@@ -36,7 +36,7 @@ HAProxy is a free, fast and reliable solution offering high availability, load b
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -48,11 +48,11 @@ There is no redundancy defined.
 
 ## How to Use
 
-This driver gets its data via an element using the **Generic Prometheus Collector** driver, which means that no data traffic will be seen in the **Stream Viewer**.
+This connector gets its data via an element using the **Generic Prometheus Collector** connector, which means that no data traffic will be seen in the **Stream Viewer**.
 
-The parameter name determines where specific data is displayed. This driver is meant to be used as a basis for the creation of new drivers where these kinds of destination data parameters are added. For more information about the format, refer to the Notes section below.
+The parameter name determines where specific data is displayed. This connector is meant to be used as a basis for the creation of new connectors where these kinds of destination data parameters are added. For more information about the format, refer to the Notes section below.
 
-There are a number of parameters in the driver that are used for the correct functioning of the driver and must not be removed. This is clearly indicated in the comments. There are also several example parameters in the driver that are intended to demonstrate the structure. You can remove these when you create a new driver.
+There are a number of parameters in the connector that are used for the correct functioning of the connector and must not be removed. This is clearly indicated in the comments. There are also several example parameters in the connector that are intended to demonstrate the structure. You can remove these when you create a new connector.
 
 ### General
 
@@ -73,9 +73,9 @@ This page also contains a page button that leads to two additional subpages:
 
 ### Configuration
 
-The parameters on the **Configuration** page are needed for the correct functioning of the driver and must not be removed.
+The parameters on the **Configuration** page are needed for the correct functioning of the connector and must not be removed.
 
-The **Prometheus Collector Element Name** indicates the element selected to populate this driver.
+The **Prometheus Collector Element Name** indicates the element selected to populate this connector.
 
 There is also an **Instance Name Filter** that defines the instance that the queries are targeting:
 
@@ -92,9 +92,9 @@ The **Executed Parameter Sets** parameter is by default refreshed every 5 minute
 
 ## Notes
 
-The parameters that should display the data need to be manually added to the driver.
+The parameters that should display the data need to be manually added to the connector.
 
-The driver has been created in such way that no extra QAction logic or modification is needed. It is sufficient to add parameters with the correct name in order to have data filled in.
+The connector has been created in such way that no extra QAction logic or modification is needed. It is sufficient to add parameters with the correct name in order to have data filled in.
 
 ### Single Numeric Parameters
 
@@ -112,6 +112,6 @@ The primary key will be constructed by the mapped label columns. The label value
 
 ### Add Custom Queries (Details for Developers)
 
-When the **Instance Name Filter** is changed, the driver pushes the default queries with all the necessary data to allow the driver to be populated completely by the selected **Generic Prometheus Collector** element. However, if you want to add a new parameter to the driver, you will need to also add the necessary information to a collector element. If you fill in the *additionalUserDefinedQueries* list in QAction 5 (After Startup) with the targeted parameter ID, the poll speed, the query you wish to use and, if necessary, the additional labels, you will be able to push them to the **Generic Prometheus Collector Query Table.**
+When the **Instance Name Filter** is changed, the connector pushes the default queries with all the necessary data to allow the connector to be populated completely by the selected **Generic Prometheus Collector** element. However, if you want to add a new parameter to the connector, you will need to also add the necessary information to a collector element. If you fill in the *additionalUserDefinedQueries* list in QAction 5 (After Startup) with the targeted parameter ID, the poll speed, the query you wish to use and, if necessary, the additional labels, you will be able to push them to the **Generic Prometheus Collector Query Table.**
 
 Examples can be found commented in the code in QAction 5.

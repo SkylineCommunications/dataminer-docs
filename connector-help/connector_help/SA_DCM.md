@@ -71,7 +71,7 @@ Note: The .dmupgrade package does not install the XML protocol itself, only the 
 
 #### SNMP Connection - Main
 
-This connector uses a Simple Network Management Protocol connection and needs the following user information:
+This connector uses a Simple Network Management Protocol connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_CPI_VZU-6998VY
 
 # CPI VZU-6998VY
 
-The CPI VZU-6998VY is a 750 W High-Power Amplifier (HPA). This driver uses serial communication to communicate with the device.
+The CPI VZU-6998VY is a 750 W High-Power Amplifier (HPA). This connector uses serial communication to communicate with the device.
 
 ## About
 
@@ -35,7 +35,7 @@ The CPI VZU-6998VY is a 750 W High-Power Amplifier (HPA). This driver uses seria
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

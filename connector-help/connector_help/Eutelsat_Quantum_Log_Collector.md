@@ -32,7 +32,7 @@ The **Eutelsat Quantum Log Collector** retrieves a log file from the Quantum Cal
 
 #### Serial Main Connection
 
-This driver uses an SSH connection and requires the following input during element creation:
+This connector uses an SSH connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -32,7 +32,7 @@ The 3080IPX is an integrated multicast label switching fabric that allows 10GE a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### SNMP Secondary Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,7 +68,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The **General** page of this driver shows the version running on the device. You can also see and configure the alias name there.
+The **General** page of this connector shows the version running on the device. You can also see and configure the alias name there.
 
 The **Ports** page contains information about the ports, such as the Maximum Ports, the Port Config Table, and the Port Status Table. This page also contains a Port Measurement subpage, where you can enable or disable the measurement of each port. If the measurement of the port is disabled, it will not be displayed in the Port Config, Port Status, and IGMP Ports tables.
 

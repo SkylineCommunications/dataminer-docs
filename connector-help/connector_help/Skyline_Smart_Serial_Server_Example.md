@@ -4,7 +4,7 @@ uid: Connector_help_Skyline_Smart_Serial_Server_Example
 
 # Skyline Smart Serial Server Example
 
-This is a smart serial example protocol, which can be used to simulate a serial device. This driver receives incoming serial commands and, if configured to do so, replies with the corresponding outgoing serial response. This driver can be used in conjunction with the "Skyline Example Serial Client" (Basic or Advanced) to test its functionality. It is also possible to use the "Skyline Example Smart Serial Client" protocol for this; however, some additional prerequisites apply in that case.
+This is a smart serial example protocol, which can be used to simulate a serial device. This connector receives incoming serial commands and, if configured to do so, replies with the corresponding outgoing serial response. This connector can be used in conjunction with the "Skyline Example Serial Client" (Basic or Advanced) to test its functionality. It is also possible to use the "Skyline Example Smart Serial Client" protocol for this; however, some additional prerequisites apply in that case.
 
 ## About
 
@@ -20,7 +20,7 @@ There is also a "Serial Protocol Description" document available with this proto
 
 #### Smart Serial Connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ In addition, make sure to import the *Data.xml* file and make sure that the corr
 
 ### Help Page
 
-This page displays information about the driver and its functionality.
+This page displays information about the connector and its functionality.
 
 ### Command Info Page
 

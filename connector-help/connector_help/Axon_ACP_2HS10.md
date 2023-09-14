@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_2HS10
 
 The 2HS10 is a dual channel ultra high-quality down converter.
 
-The **Axon ACP 2HS10** driver is used to configure and monitor the 2HS10 card.
+The **Axon ACP 2HS10** connector is used to configure and monitor the 2HS10 card.
 
 ## About
 
@@ -57,27 +57,27 @@ The **Axon ACP 2HS10** driver is used to configure and monitor the 2HS10 card.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 Interface connection:
 
-  - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: \[The IP port of the destination. (fixed value: *2071*)\]
-- **Bus address**: \[The bus address or slot number/position of the card in the frame.\]
+- **IP address/host**: The polling IP or URL of the destination.
+- **IP port**: The IP port of the destination (fixed value: *2071*).
+- **Bus address**: The bus address or slot number/position of the card in the frame.
 
 #### Serial Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
 Interface connection:
 
-  - **IP address/host**: \[The polling IP or URL of the destination. Specify "any".\]
-- **IP port**: \[The IP port of the destination. (fixed value: *2071*)\]
-- **Bus address**: \[The bus address of the device.\]
+- **IP address/host**: The polling IP or URL of the destination. Specify "any".
+- **IP port**: The IP port of the destination (fixed value: *2071*).
+- **Bus address**: The bus address of the device.
 
 ### Initialization
 
@@ -101,7 +101,7 @@ The element has the following pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP 2HS10 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP 2HS10 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

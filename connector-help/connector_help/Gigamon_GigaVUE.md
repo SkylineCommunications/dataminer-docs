@@ -4,13 +4,13 @@ uid: Connector_help_Gigamon_GigaVUE
 
 # Gigamon GigaVUE
 
-The Gigamon GigaVUE driver is used to monitor GigaVUE devices.
+The Gigamon GigaVUE connector is used to monitor GigaVUE devices.
 
 ## About
 
-The driver communicates with the device by using SNMP requests and it also allows incoming asynchronous data as trap notifications.
+The connector communicates with the device by using SNMP requests and it also allows incoming asynchronous data as trap notifications.
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -42,9 +42,9 @@ The driver communicates with the device by using SNMP requests and it also allow
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.0.0                       |
 | 1.0.1.x          | 5.0.0                       |
@@ -55,7 +55,7 @@ The driver communicates with the device by using SNMP requests and it also allow
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

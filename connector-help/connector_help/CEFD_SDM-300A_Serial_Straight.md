@@ -6,15 +6,15 @@ uid: Connector_help_CEFD_SDM-300A_Serial_Straight
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial Version | No                  | False                   |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Unknown                     |
 
@@ -24,7 +24,7 @@ uid: Connector_help_CEFD_SDM-300A_Serial_Straight
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -65,7 +65,7 @@ Here you can see the information from the demodulator.
 
 ### Interface
 
-On this page you find more information about the interface and driver type for the Rx and Tx.
+On this page you find more information about the interface and connector type for the Rx and Tx.
 
 ### AUPC
 

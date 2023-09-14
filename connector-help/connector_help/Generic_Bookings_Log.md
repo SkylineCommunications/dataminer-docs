@@ -4,19 +4,19 @@ uid: Connector_help_Generic_Bookings_Log
 
 # Generic Bookings Log
 
-This driver manages log files linked to a booking application of the Service & Resource Management (SRM) framework.
+This connector manages log files linked to a booking application of the Service & Resource Management (SRM) framework.
 
 ## About
 
-This driver will create/update log files for an SRM booking application. If a request is sent to the **Request Message** parameter, the driver will create or update a log file.
+This connector will create/update log files for an SRM booking application. If a request is sent to the **Request Message** parameter, the connector will create or update a log file.
 
-If a folder is selected where the files need to be created or updated, the driver will monitor its size and the number of files it contains.
+If a folder is selected where the files need to be created or updated, the connector will monitor its size and the number of files it contains.
 
-Note that **no data traffic** will be visible for this driver in the **Stream Viewer**.
+Note that **no data traffic** will be visible for this connector in the **Stream Viewer**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**               | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range**               | **Description**                                                        | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------------|------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\]           | Initial version (22/12/2017)                                           | No                  | Yes                     |
 | 1.0.1.x \[Standard Solutions\] | Log message request format changed. Not compatible with range 1.0.0.x. | No                  | Yes                     |
@@ -27,11 +27,11 @@ Note that **no data traffic** will be visible for this driver in the **Stream Vi
 
 #### Main Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of Path Parameter
 
-For the driver to work correctly, the **Path** parameter on the **Configuration** page must be set to an existing folder on the server or it should have **Cluster Mode** selected in order to
+For the connector to work correctly, the **Path** parameter on the **Configuration** page must be set to an existing folder on the server or it should have **Cluster Mode** selected in order to
 replicate the logging files on all the DMAs in the DMS.
 
 ## Usage

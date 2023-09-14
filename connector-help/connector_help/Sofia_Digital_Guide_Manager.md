@@ -4,21 +4,21 @@ uid: Connector_help_Sofia_Digital_Guide_Manager
 
 # Sofia Digital Guide Manager
 
-With this driver, you can monitor the Sofia Digital Guide Manager and view events and informations about the available serversand channels.
+With this connector, you can monitor the Sofia Digital Guide Manager and view events and informations about the available serversand channels.
 
 ## About
 
-This driver uses **SNMP** in order to monitor a Sofia Digital Guide Manager. The **SNMP** is used to retrieve system specific informations.
+This connector uses **SNMP** in order to monitor a Sofia Digital Guide Manager. The **SNMP** is used to retrieve system specific informations.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.16.7                      |
 
@@ -26,7 +26,7 @@ This driver uses **SNMP** in order to monitor a Sofia Digital Guide Manager. The
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

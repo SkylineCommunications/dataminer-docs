@@ -4,21 +4,21 @@ uid: Connector_help_Telos_Alliance_xNode
 
 # Telos Alliance xNode
 
-The Telos Alliance xNode is an audio converter. This driver can be used to monitor and control this device.
+The Telos Alliance xNode is an audio converter. This connector can be used to monitor and control this device.
 
 ## About
 
-Since the device can be either AES or GPIO, the driver uses SNMP and serial communication to retrieve information from the device.
+Since the device can be either AES or GPIO, the connector uses SNMP and serial communication to retrieve information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ Since the device can be either AES or GPIO, the driver uses SNMP and serial comm
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 #### Serial GPIO Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -62,7 +62,7 @@ SERIAL CONNECTION:
 
 This page contains general information on the **Telos Alliance xNode**.
 
-At the top of the page, the **Device Type** option allows you to select the type of device. Note that the **correct type must be selected** in order for the driver to poll the related information.
+At the top of the page, the **Device Type** option allows you to select the type of device. Note that the **correct type must be selected** in order for the connector to poll the related information.
 
 If the type of device is **GPIO**, the login password must be entered in order to be able to make changes in the GPO ports.
 

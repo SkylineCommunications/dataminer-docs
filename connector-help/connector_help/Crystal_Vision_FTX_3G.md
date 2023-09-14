@@ -4,14 +4,14 @@ uid: Connector_help_Crystal_Vision_FTX_3G
 
 # Crystal Vision FTX 3G
 
-This driver monitores some parameters of the FTX 3G, a HD or SD to fibre optic transmitter.
+This connector monitores some parameters of the FTX 3G, a HD or SD to fibre optic transmitter.
 
 ## Installation and configuration
 
 ### Creation
 
 ***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

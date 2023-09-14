@@ -123,9 +123,11 @@ Tests can be scheduled for the robot in different ways.
 
 You can **manually** schedule a test by adding it via the **Add Test page**:
 
-1.  On the **Tests** page, click the **Add Test** button.
-2.  Specify a name for the test, select the script to run and set the input test parameters.
-    The input test parameters must have the following format: *param1:value1,param2:value2, ... ,paramN:valueN*
+1. On the **Tests** page, click the **Add Test** button.
+
+1. Specify a name for the test, select the script to run and set the input test parameters.
+
+   The input test parameters must have the following format: *param1:value1,param2:value2, ... ,paramN:valueN*
 
 Tests can also be **automatically** scheduled by an element with the **WitBe Robot Manager connector**. Refer to the connector help page of the WitBe Robot Manager for more information.
 

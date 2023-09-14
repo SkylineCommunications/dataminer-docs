@@ -8,18 +8,18 @@ The **HP Insight** allows you to manage hardware across a wide variety of HP ser
 
 ## About
 
-This driver can be used to manage contracts and warranties, and to automate remote support via **HP Insight** Remote Support. It allows you to monitor the health of HP ProLiant Servers and HP Integrity Servers, and also provides you with basic support for non-HP servers. When you integrate HP SIM with HP Insight Control and the HP Matrix Operating Environment, you can proactively manage your physical and virtual server health, deploy servers quickly, decrease power consumption, and improve your infrastructure with capacity planning.
+This connector can be used to manage contracts and warranties, and to automate remote support via **HP Insight** Remote Support. It allows you to monitor the health of HP ProLiant Servers and HP Integrity Servers, and also provides you with basic support for non-HP servers. When you integrate HP SIM with HP Insight Control and the HP Matrix Operating Environment, you can proactively manage your physical and virtual server health, deploy servers quickly, decrease power consumption, and improve your infrastructure with capacity planning.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                         | No                  | Yes                     |
 | 1.0.1.x          | Major change; key of table 3000 changed | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x \[Main\] | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ This driver can be used to manage contracts and warranties, and to automate remo
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 - **IP Address/Host**: The device IP address.
 - **Port Number**: The port of the connected device, by default *161*.

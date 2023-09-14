@@ -16,7 +16,7 @@ This protocol monitors the Digidia FlexiDAB multiplexer over **SNMP**, with the 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

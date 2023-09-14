@@ -4,13 +4,13 @@ uid: Connector_help_Harris_Selenio_J2K1_DEC
 
 # Harris Selenio J2K1 DEC
 
-The **Harris Selenio J2K1 DEC** is one of the types of cards that can be slotted into a Selenio chassis. This driver contains a full overview of all the data available in such a card. Specifically, it contains information regarding audio, video and data encoding for up to 4 encoders.
+The **Harris Selenio J2K1 DEC** is one of the types of cards that can be slotted into a Selenio chassis. This connector contains a full overview of all the data available in such a card. Specifically, it contains information regarding audio, video and data encoding for up to 4 encoders.
 
 ## About
 
-The information in this driver is displayed on different pages, described in the "Usage" section of this document.
+The information in this connector is displayed on different pages, described in the "Usage" section of this document.
 
-The different **versions** of the driver tie in with the firmware version of the card the driver supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*
+The different **versions** of the connector tie in with the firmware version of the card the connector supports. The format "X.X.X.Y" is used, where "X.X.X" corresponds to the firmware version of the card and "Y" corresponds to the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
 
 The current version is *1.0.90.1*
 
@@ -18,7 +18,7 @@ The current version is *1.0.90.1*
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -55,7 +55,7 @@ Note: You can toggle alarm information to be received either every 30 seconds or
 
 ## Usage
 
-The driver contains different pages, divided into different sections using separators.
+The connector contains different pages, divided into different sections using separators.
 
 ### General section
 

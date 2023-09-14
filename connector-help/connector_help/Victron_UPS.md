@@ -8,19 +8,19 @@ The **Victron UPS** is an Uninterruptible Power Supply made by Victron.
 
 ## About
 
-The **Victron UPS** operates in the **SNMP** protocol and in the serial **Modbus TCP** protocol. The driver implements two ranges: one range is used with **SNMP**, the second range is used for **serial Modbus**.
+The **Victron UPS** operates in the **SNMP** protocol and in the serial **Modbus TCP** protocol. The connector implements two ranges: one range is used with **SNMP**, the second range is used for **serial Modbus**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version (SNMP)   | No                  | Yes                     |
 | 1.0.1.x          | Initial version (SNMP)   | No                  | Yes                     |
 | 2.0.0.x          | Initial version (Modbus) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 | 1.0.1.x          | \-                          |
@@ -32,7 +32,7 @@ The **Victron UPS** operates in the **SNMP** protocol and in the serial **Modbus
 
 #### 1.0.x.x.: SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### 2.0.0.x: Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -79,7 +79,7 @@ This page allows you to **shut down** or **reboot** the device with a configurab
 
 ### General
 
-This is the default page of the driver. It contains all the parameters related to com.victronenergy.system, such as MAC Address, Relay State, System Battery Voltage, etc.
+This is the default page of the connector. It contains all the parameters related to com.victronenergy.system, such as MAC Address, Relay State, System Battery Voltage, etc.
 
 ### VE.Bus
 

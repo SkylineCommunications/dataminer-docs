@@ -12,19 +12,19 @@ The **Verimatrix CSM** provides certificate authority through its **VCA** module
 
 ## About
 
-This driver uses **SNMP** to monitor and control **Verimatrix CSM** device.
+This connector uses **SNMP** to monitor and control **Verimatrix CSM** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                          | No                  | Yes                     |
 | 1.3.6.x          | Based on 1.0.0.1 Added support for firmware version 3.6. | No                  | Yes                     |
 | 1.4.0.x          | Based on 1.3.6.1 Added support for firmware version 4.1. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.3.6.x          | 3.6                         |
@@ -36,7 +36,7 @@ This driver uses **SNMP** to monitor and control **Verimatrix CSM** device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

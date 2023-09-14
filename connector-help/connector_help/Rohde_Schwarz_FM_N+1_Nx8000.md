@@ -4,7 +4,7 @@ uid: Connector_help_Rohde_Schwarz_FM_N+1_Nx8000
 
 # Rohde Schwarz FM N+1 Nx8000
 
-The **Rohde Schwarz FM N+1 Nx8000** driver is used to display and configure information of the related device.
+The **Rohde Schwarz FM N+1 Nx8000** connector is used to display and configure information of the related device.
 
 ## About
 
@@ -14,7 +14,7 @@ This protocol can be used to monitor and control the Rohde Schwarz FM N+1 Nx8000
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -28,11 +28,11 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-This driver delivers two types of DataMiner elements: a parent element representing the device, and a virtual element for each configured transmitter.
+This connector delivers two types of DataMiner elements: a parent element representing the device, and a virtual element for each configured transmitter.
 
 ### Main Element
 
-The driver's main element contains the following pages:
+The connector's main element contains the following pages:
 
 - **Switchover Unit:** General switchover unit statuses and configuration. Two sub-pages are available:
 

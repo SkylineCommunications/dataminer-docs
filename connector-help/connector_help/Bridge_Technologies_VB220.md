@@ -8,14 +8,14 @@ The VB220 IP-PROBE is a monitoring platform for applications in networks where d
 
 ## About
 
-This driver is used to collect data from the web interface of the device. This data is polled through HTTP commands sent via a serial connection.
+This connector is used to collect data from the web interface of the device. This data is polled through HTTP commands sent via a serial connection.
 
-The following modules are supported by the driver: VB120, 220, 330, 440, 252, 260, 262, and 273.
-VB280 is supported in a separate version of the driver.
+The following modules are supported by the connector: VB120, 220, 330, 440, 252, 260, 262, and 273.
+VB280 is supported in a separate version of the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                                                                                                                                                                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Obsolete                                                                                                                                                                                                                                                                                                                                                                             |                     |                         |
 | 2.0.0.x          | Obsolete                                                                                                                                                                                                                                                                                                                                                                             |                     |                         |
@@ -34,7 +34,7 @@ VB280 is supported in a separate version of the driver.
 | 5.0.0.x          | Obsolete                                                                                                                                                                                                                                                                                                                                                                             |                     |                         |
 | 6.0.0.x          | Obsolete Based on 3.2.0.X, but display keys use the naming options of before 3.2.0.67.                                                                                                                                                                                                                                                                                               | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 The minimum required firmware version is **4.5**.
 
@@ -46,7 +46,7 @@ This is required in order to have the detailed ETR Data information.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ SNMP Settings:
 
 #### Serial Xmldata Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -121,7 +121,7 @@ Several page buttons are available:
 
 - The **Ethernet Multicast** page button displays an overview of the **Ethernet multicasts**. Depending on the software version of the device, you can switch between two different types of **multicasts**.
 - The **COFDM Tuning** page button displays an overview of the **COFDM Tuning Setups**.
-- The **SAT Tuning** page button (in the **4.3.0.x driver range)**, displays the **SAT Tuning Setup** table, which allows you to **Add**, **Duplicate**, **Edit** and **Delete** SAT streams. To add a new SAT stream, right-click anywhere inside the table, select **Add Stream** and fill in all the fields in the pop-up window. To duplicate, edit or delete an SAT stream, right-click the **row (stream)** on which you want to perform the action, select the action you want to perform, and follow the ensuing steps.
+- The **SAT Tuning** page button (in the **4.3.0.x connector range)**, displays the **SAT Tuning Setup** table, which allows you to **Add**, **Duplicate**, **Edit** and **Delete** SAT streams. To add a new SAT stream, right-click anywhere inside the table, select **Add Stream** and fill in all the fields in the pop-up window. To duplicate, edit or delete an SAT stream, right-click the **row (stream)** on which you want to perform the action, select the action you want to perform, and follow the ensuing steps.
 
 ### Services
 
@@ -191,7 +191,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **3.2.1.x** driver range of the Bridge Technologies VB220 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **3.2.1.x** connector range of the Bridge Technologies VB220 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

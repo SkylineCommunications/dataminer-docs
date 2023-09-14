@@ -4,11 +4,11 @@ uid: Connector_help_Xicom_Technology_XTCT-124D
 
 # Xicom Technology XTCT-124D
 
-The **Xicom Technology XTCT-124D** driver can be used to display and configure information of the Xicom amplifiers and the switch controller (Controller/HPA A/HPA B).
+The **Xicom Technology XTCT-124D** connector can be used to display and configure information of the Xicom amplifiers and the switch controller (Controller/HPA A/HPA B).
 
 The device is a rack-mount controller that is used to control external high-power amplifiers (HPAs). It replaces the need for separate controllers in case of TWTAs or SSPAs.
 
-The driver is set up for 3 amplifiers and 2 HPAs.
+The connector is set up for 3 amplifiers and 2 HPAs.
 
 ## About
 
@@ -16,18 +16,18 @@ A **smart-serial** connection is used to retrieve the information of the HPA via
 
 A **serial** connection is used to display the settings of the controller.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                                               | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version.                                                                                                                              | No                  | No                      |
 | 1.1.0.x \[SLC Main\] | Based on 1.0.0.3. Implemented support for new firmware (cf. "Supported firmware versions" table). **UDP Broadcast** status messages (Rev. L). | No                  | Yes                     |
 | 1.1.1.x              | Third serial connection (HPA sets).                                                                                                           | No                  | Yes                     |
 | 2.0.0.x              | Initial version updated range.                                                                                                                | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | V.23 (1.4.0+)               |
@@ -40,7 +40,7 @@ A **serial** connection is used to display the settings of the controller.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ SERIAL CONNECTION:
 
 #### Serial Smart Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

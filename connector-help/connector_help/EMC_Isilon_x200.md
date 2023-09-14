@@ -6,27 +6,27 @@ uid: Connector_help_EMC_Isilon_x200
 
 The **EMC Isilon x200**, powered by the OneFS operating system, uses a versatile but simple scale-out storage architecture to allow rapid access to massive amounts of data, while reducing cost and complexity.
 
-This driver was designed to make the current statistics provided by the device available in an element.
+This connector was designed to make the current statistics provided by the device available in an element.
 
 ## About
 
-This driver makes use of **HTTP** commands to retrieve information about the current statistics. The information is retrieved using the Isilon **OneFS API Reference**.
+This connector makes use of **HTTP** commands to retrieve information about the current statistics. The information is retrieved using the Isilon **OneFS API Reference**.
 
 Data is polled at 15-second intervals. The **Session Cookie** will be renewed automatically after the **Session Timeout Absolute** has expired.
 
 For more information, refer to <https://store.emc.com/us/Product-Family/ISILON-PRODUCTS/EMC-Isilon-X210/p/EMC-Isilon-X210>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                        | No                  | Yes                     |
 | 1.0.1.x          | Based on 1.0.0.4. Uses dynamic IP for redundancy.                       | No                  | Yes                     |
 | 2.0.0.x          | Based on 1.0.0.4. Adds a second HTTP connection, for manual redundancy. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**    |
+| **Range** | **Device Firmware Version**    |
 |------------------|--------------------------------|
 | 1.0.0.x          | B_7_2_0_061R (Cluster version) |
 | 1.0.1.x          | B_7_2_0_061R (Cluster version) |
@@ -38,7 +38,7 @@ For more information, refer to <https://store.emc.com/us/Product-Family/ISILON-P
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,7 +48,7 @@ HTTP CONNECTION:
 
 #### HTTP secondary connection
 
-In branch 2.0.0.x, this driver uses a secondary HTTP connection, which requires the following input during element creation:
+In branch 2.0.0.x, this connector uses a secondary HTTP connection, which requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -10,9 +10,9 @@ The **Marconi Deicer S58** is an anti-icing system.
 
 The **Marconi Deicer S58** will update its monitoring parameters by receiving **Smart-Serial** data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** |
+| **Range** | **Description** |
 |------------------|-----------------|
 | 1.0.0.x          | Initial version |
 
@@ -20,7 +20,7 @@ The **Marconi Deicer S58** will update its monitoring parameters by receiving **
 
 ### Creation
 
-This driver uses a Smart-Serial connection and needs the following user information:
+This connector uses a Smart-Serial connection and requires the following input during element creation:
 
 **SMART-SERIAL CONNECTION:**
 

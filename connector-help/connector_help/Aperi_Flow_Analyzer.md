@@ -34,7 +34,7 @@ It can also be configured to trigger an alarm if a flow goes missing.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -48,7 +48,7 @@ To make sure the device can access the flows, you need to log in on the **Securi
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains information about all the **detected and missing flows**. You can also enable or disable the function to **automatically remove missing flows.** The last update parameter shows when the last successful poll happened.
 - **Security Settings**: Contains information on the **current network connection.** It also allows you to **log in.**

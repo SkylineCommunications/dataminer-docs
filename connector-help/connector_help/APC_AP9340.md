@@ -10,17 +10,17 @@ The APC AP9340 is an environmental management system that uses several probes an
 
 The AP9340 uses probes to manage several parameters of the environment, namely the temperature and humidity. It allows the user to configure the thresholds, time variance and alarm monitoring associated with those parameters.
 
-The driver communicates with the AP9340 through SNMP polling, if the correct IP and port are configured during element creation.
+The connector communicates with the AP9340 through SNMP polling, if the correct IP and port are configured during element creation.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.5.6                       |
 
@@ -30,7 +30,7 @@ The driver communicates with the AP9340 through SNMP polling, if the correct IP 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -53,7 +53,7 @@ This page displays the identification information of the unit, including the nam
 
 On this page, you can configure basic unit data, such as its name, time, TFTP and traps.
 
-The page also contains page buttons to access more parameters related to the two cores of the driver: the **Environmental Management System** (EMS) and the **Modular Event Manager** (MEM). There are page buttons related to **Inputs**, **Probes**, **Sensors**, **Alarm Devices**, **Outlets** and **Outputs.**
+The page also contains page buttons to access more parameters related to the two cores of the connector: the **Environmental Management System** (EMS) and the **Modular Event Manager** (MEM). There are page buttons related to **Inputs**, **Probes**, **Sensors**, **Alarm Devices**, **Outlets** and **Outputs.**
 
 ### Web Interface
 

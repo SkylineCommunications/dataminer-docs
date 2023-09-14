@@ -8,17 +8,17 @@ The **Tryo Communications SDA+15W Outdoor** is used as a transmitter that transm
 
 ## About
 
-This driver polls data from the **Tryo Communications SDA+15W Outdoor** via **SNMP** and displays the information on multiple pages with various tables and standalone parameters. Some parameters can be used to update data within the device by means of an SNMP set. The driver also handles traps, by parsing a trap for the OID of the parameter that caused the trap and repolling the parameter for an updated value.
+This connector polls data from the **Tryo Communications SDA+15W Outdoor** via **SNMP** and displays the information on multiple pages with various tables and standalone parameters. Some parameters can be used to update data within the device by means of an SNMP set. The connector also handles traps, by parsing a trap for the OID of the parameter that caused the trap and repolling the parameter for an updated value.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.1                         |
 
@@ -28,7 +28,7 @@ This driver polls data from the **Tryo Communications SDA+15W Outdoor** via **SN
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

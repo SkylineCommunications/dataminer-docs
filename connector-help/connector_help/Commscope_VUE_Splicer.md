@@ -4,7 +4,7 @@ uid: Connector_help_Commscope_VUE_Splicer
 
 # Commscope VUE Splicer
 
-This SNMP driver allows the user to monitor the Commscope VUE Splicer device. Its main feature is the composed alarm information coming from three different tables parsed into the Alarms and Alarm Variables tables.
+This SNMP connector allows the user to monitor the Commscope VUE Splicer device. Its main feature is the composed alarm information coming from three different tables parsed into the Alarms and Alarm Variables tables.
 
 ## About
 
@@ -32,7 +32,7 @@ This SNMP driver allows the user to monitor the Commscope VUE Splicer device. It
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -64,6 +64,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## Notes
 
-This driver does not perform any SET.
+This connector does not perform any SET.
 
 

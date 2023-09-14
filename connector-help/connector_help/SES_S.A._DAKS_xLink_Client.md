@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._DAKS_xLink_Client
 
 # SES S.A. DAKS xLink Client
 
-This is a smart-serial driver which receives messages from clients that are using xlink communication.
+This is a smart-serial connector which receives messages from clients that are using xlink communication.
 
 ## About
 
@@ -32,7 +32,7 @@ This is a smart-serial driver which receives messages from clients that are usin
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,4 +51,4 @@ There is no redundancy defined.
 
 ## How to use
 
-The driver retrieves all the serial communication and places the responses in a table on the General page. It will also send the responses to the Tetronik DAKS driver.
+The connector retrieves all the serial communication and places the responses in a table on the General page. It will also send the responses to the Tetronik DAKS driver.

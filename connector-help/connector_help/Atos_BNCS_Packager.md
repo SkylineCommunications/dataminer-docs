@@ -4,23 +4,23 @@ uid: Connector_help_Atos_BNCS_Packager
 
 # Atos BNCS Packager
 
-This driver allows you to monitor and manage router and packager instances of BNCS, using the API developed by Atos.
+This connector allows you to monitor and manage router and packager instances of BNCS, using the API developed by Atos.
 
 The router can be used to switch several SDI signals. The packager can be used to logically route signals in different qualities from a source (e.g. grouped per booking) to the required destination.
 
 ## About
 
-The driver will poll the API using HTTP requests with JSON documents. Some updates are available using asynchronous notifications via WebSockets containing JSON documents.
+The connector will poll the API using HTTP requests with JSON documents. Some updates are available using asynchronous notifications via WebSockets containing JSON documents.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Atos BNCS API Draft 2.0.2   |
 
@@ -30,7 +30,7 @@ The driver will poll the API using HTTP requests with JSON documents. Some updat
 
 #### HTTP "WebSocket Notifications" connection
 
-This driver uses an HTTP WebSocket connection to be able to receive notifications from the device. It requires the following input during element creation:
+This connector uses an HTTP WebSocket connection to be able to receive notifications from the device. It requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -40,7 +40,7 @@ HTTP CONNECTION:
 
 #### HTTP "HTTP Polling" connection
 
-This driver uses an HTTP connection to enable polling and configuration of the device. It requires the following input during element creation:
+This connector uses an HTTP connection to enable polling and configuration of the device. It requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ HTTP CONNECTION:
 
 #### HTTP "HTTP Notification Requests" connection
 
-This driver uses an HTTP connection to maintain the notification subscriptions of the WebSocket connection. It requires the following input during element creation:
+This connector uses an HTTP connection to maintain the notification subscriptions of the WebSocket connection. It requires the following input during element creation:
 
 HTTP CONNECTION:
 

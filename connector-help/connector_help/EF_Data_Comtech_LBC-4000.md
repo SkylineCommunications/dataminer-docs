@@ -4,11 +4,11 @@ uid: Connector_help_EF_Data_Comtech_LBC-4000
 
 # EF Data Comtech LBC-4000
 
-The **EF Data Comtech LBC-4000** driver can be used for displaying and configuring information of the EF Data Comtech LBC-4000 device.
+The **EF Data Comtech LBC-4000** connector can be used for displaying and configuring information of the EF Data Comtech LBC-4000 device.
 
 ## About
 
-This protocol can be used to monitor and control the EF Data Comtech LBC-4000 device. The driver supports one serial connection to communicate with the device.
+This protocol can be used to monitor and control the EF Data Comtech LBC-4000 device. The connector supports one serial connection to communicate with the device.
 
 The protocol also has **alarming** and **trending**.
 

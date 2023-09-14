@@ -10,17 +10,17 @@ This device is a rack-sized expandable matrix. The **Platinum IP3** provides mat
 
 ## About
 
-This is a dual SNMP/smart-serial driver. For the smart-serial connection, a proprietary Imagine Communications protocol is used, called LRC. This driver uses the same serial logic base as the Imagine Communications Platinum Router driver.
+This is a dual SNMP/smart-serial connector. For the smart-serial connection, a proprietary Imagine Communications protocol is used, called LRC. This connector uses the same serial logic base as the Imagine Communications Platinum Router driver.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.160.0.268                 |
 
@@ -30,7 +30,7 @@ This is a dual SNMP/smart-serial driver. For the smart-serial connection, a prop
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -44,7 +44,7 @@ SNMP Settings:
 
 #### Serial LRC Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION
 

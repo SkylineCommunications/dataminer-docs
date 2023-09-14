@@ -10,7 +10,7 @@ The **Evertz 500DA2Q-3G** is a Dual 3G Reclocking Distribution Amplifier. This m
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

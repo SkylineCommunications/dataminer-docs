@@ -8,18 +8,18 @@ The **Snell Wilcox** **IQHIP10** is a multiplexer for audio streams.
 
 ## About
 
-The driver allows the management of the **Snell Wilcox IQHIP10** using a smart-serial connection.
+The connector allows the management of the **Snell Wilcox IQHIP10** using a smart-serial connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version    | No                  | Yes                     |
 | 1.0.1.x          | DCF Implementation | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V167                        |
 | 1.0.1.x          | V167                        |
@@ -30,7 +30,7 @@ The driver allows the management of the **Snell Wilcox IQHIP10** using a smart-s
 
 #### Serial \[Main\] connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

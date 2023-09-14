@@ -6,7 +6,7 @@ uid: Connector_help_Campbell_Scientific_CS125
 
 The Campbell Scientific CS125 is a forward-scatter visibility and present weather sensor for automatic weather stations, including road, marine and airport-based stations.
 
-Via serial communication, this driver allows you to monitor the weather sensor, including its configuration and the specific message type (METAR), which contains parameters such as the Sensor ID, System Status, Visibility, Relative Humidity, User Alarms, etc.
+Via serial communication, this connector allows you to monitor the weather sensor, including its configuration and the specific message type (METAR), which contains parameters such as the Sensor ID, System Status, Visibility, Relative Humidity, User Alarms, etc.
 
 ## About
 
@@ -34,7 +34,7 @@ Via serial communication, this driver allows you to monitor the weather sensor, 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

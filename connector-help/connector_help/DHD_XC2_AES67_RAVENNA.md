@@ -4,7 +4,7 @@ uid: Connector_help_DHD_XC2_AES67_RAVENNA
 
 # DHD XC2 AES67 RAVENNA
 
-This driver monitors the audio-over-IP streams sent and received by the AES67 RAVENNA interface.
+This connector monitors the audio-over-IP streams sent and received by the AES67 RAVENNA interface.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver monitors the audio-over-IP streams sent and received by the AES67 RA
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver has three different pages:
+This connector has three different pages:
 
 - **General:** Displays general information about the device.
 - **Streams -TX**: Displays a table with the current transmission streams of the device.

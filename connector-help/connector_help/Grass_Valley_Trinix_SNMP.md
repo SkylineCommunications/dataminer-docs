@@ -8,20 +8,20 @@ The Trinix device offers standard and high-quality routing of digital video serv
 
 ## About
 
-This driver uses an SNMP connection to monitor the power, fan, and signal status of the Trinix device.
+This connector uses an SNMP connection to monitor the power, fan, and signal status of the Trinix device.
 
-Traps can be received by the driver for asynchronous status updates from the device.
+Traps can be received by the connector for asynchronous status updates from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | Added DCF       | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x 1.0.1.x  | 07                          |
 
@@ -31,7 +31,7 @@ Traps can be received by the driver for asynchronous status updates from the dev
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection to communicate with the Trinix device, and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection to communicate with the Trinix device, and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,6 +62,6 @@ This page displays the web interface of the device. However, note that the clien
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Grass Valley Trinix** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
+The **1.0.1.x** connector range of the **Grass Valley Trinix** protocol supports the usage of DCF and can only be used on a DMA with **8.5.8.5** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_SVD10
 
 The Axon SVD10 is a frame synchronizer, with auto phaser and video delay of 24 frames.
 
-This driver allows you to monitor status information and configure control parameters of the Axon SVD10 card.
+This connector allows you to monitor status information and configure control parameters of the Axon SVD10 card.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to monitor status information and configure control param
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -76,7 +76,7 @@ The element has the following pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP SVD10 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP SVD10 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

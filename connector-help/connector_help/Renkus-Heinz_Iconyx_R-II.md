@@ -4,7 +4,7 @@ uid: Connector_help_Renkus-Heinz_Iconyx_R-II
 
 # Renkus-Heinz Iconyx R-II
 
-With this driver you can monitor the **Renkus-Heinz Iconyx R-II** loudspeaker via SNMP (based on the MIB file).
+With this connector you can monitor the **Renkus-Heinz Iconyx R-II** loudspeaker via SNMP (based on the MIB file).
 
 ## About
 
@@ -32,7 +32,7 @@ With this driver you can monitor the **Renkus-Heinz Iconyx R-II** loudspeaker vi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element generated with this driver consists of the following data pages:
+The element generated with this connector consists of the following data pages:
 
 - **General**: Displays the main system information, including the **System Description**, with the full name and version identification of the system's hardware type, software operating-system, and networking software. It also displays the **System Up Time**, **System Contact**, **System Name** and **System Location**.
 - **Summary Data**: Displays the status for Fault Relay, Alarm Pin, Remote Power, RS485 Mode, Mute and Slave 1, 2 and 3 Communications State.
@@ -67,4 +67,4 @@ The element generated with this driver consists of the following data pages:
 
 ## Notes
 
-During the driver implementation atypical behavior from the device was noticed. The only possible way to retrieve the SNMP values was by deleting the last .0 which is typically added in other SNMP drivers.
+During the connector implementation atypical behavior from the device was noticed. The only possible way to retrieve the SNMP values was by deleting the last .0 which is typically added in other SNMP connectors.

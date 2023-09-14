@@ -32,7 +32,7 @@ The Geist Upgradeable PDU incorporates an Interchangeable Monitoring Device (IMD
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the product. This includes the **Device Name**, **Version**, **Friendly Name**, **MAC Address**, **URL**, **Device Count** and **Temperature Units**.
 

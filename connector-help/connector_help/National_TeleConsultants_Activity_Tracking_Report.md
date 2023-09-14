@@ -4,21 +4,21 @@ uid: Connector_help_National_TeleConsultants_Activity_Tracking_Report
 
 # National TeleConsultants Activity Tracking Report
 
-This driver retrieves information from the database about the actions performed by users on the current alarms, and generates **manual** or **automated** reports according to some configurable parameters. In order to correctly schedule the automated **reports**, an automation script has to be created (can be downloaded along with the driver).
+This connector retrieves information from the database about the actions performed by users on the current alarms, and generates **manual** or **automated** reports according to some configurable parameters. In order to correctly schedule the automated **reports**, an automation script has to be created (can be downloaded along with the connector).
 
 ## About
 
-The driver uses SLNet calls to run an SQL query with configurable parameters that either outputs as a table that can be exported to a .CSV file or to a .CSV directly via an automation. The driver allows to configure the list of DMAs that will be monitored (in case of a cluster) and the list of users and actions that will be included in the report.
+The connector uses SLNet calls to run an SQL query with configurable parameters that either outputs as a table that can be exported to a .CSV file or to a .CSV directly via an automation. The connector allows to configure the list of DMAs that will be monitored (in case of a cluster) and the list of users and actions that will be included in the report.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**           |
+| **Range** | **Device Firmware Version**           |
 |------------------|---------------------------------------|
 | 1.0.0.x          | DataMiner db schema for version 8.5.x |
 

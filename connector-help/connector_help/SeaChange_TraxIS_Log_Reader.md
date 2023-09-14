@@ -10,9 +10,9 @@ The SeaChange VoD Platform is used by broadband and broadcast television operato
 
 The SeaChange TraxIS Log Reader driver **processes log files** from the video-on-demand (VoD) platform in order to mitigate platform issues.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The SeaChange TraxIS Log Reader driver **processes log files** from the video-on
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation. The driver only supports shared folders.
+This connector uses a virtual connection and does not require any input during element creation. The connector only supports shared folders.
 
 ## Usage
 
@@ -32,7 +32,7 @@ This page consists of three sections:
 
 - **Server**: To use a shared folder, fill in the necessary credentials in the parameters **Username**, **Password**, **Network Domain** and **Network Drive Path**.
 
-- **Offload**: Allows you to define whether the driver should look for new files in the shared folder, using the **Offload Enabled** parameter. Also allows you to define the **Amount Of Files to Process At Once** as well as the **Offload Directory**.
+- **Offload**: Allows you to define whether the connector should look for new files in the shared folder, using the **Offload Enabled** parameter. Also allows you to define the **Amount Of Files to Process At Once** as well as the **Offload Directory**.
 
 - **Traxis Settings**:
 
@@ -47,7 +47,7 @@ The following monitoring parameters are available:
 
 - **Last Copied Date**: The date of the last copied file.
 - **Last Read Date**: The date of the last processed file.
-- **Processing Task**: The current status of the driver, which can be *Looking For New Files*, *Processing Files* or *Decompressing Files*.
+- **Processing Task**: The current status of the connector, which can be *Looking For New Files*, *Processing Files* or *Decompressing Files*.
 - **Files To Be Decompressed**: The total number of gzip files present in the default folder *C:\Skyline DataMiner\Documents\Traxis\Offload*.
 - **Decompressed Files**: The total number of decompressed files.
 - **Process GZip Files**: This button can be used to search for new files.

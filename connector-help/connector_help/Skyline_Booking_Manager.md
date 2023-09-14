@@ -8,9 +8,9 @@ uid: Connector_help_Skyline_Booking_Manager
 
 The Skyline Booking Manager is the generic application to fully manage bookings under the SRM module.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                 | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                 | **DCF Integration** | **Cassandra Compliant** |
 |------------------|---------------------------------------------------------------------------------|---------------------|-------------------------|
 | 2.0.1.x          | Initial Version                                                                 | No                  | True                    |
 | 2.0.2.x          | Removed Booking Manager Tables. A Visio is provided To enable CRUD of Bookings. | No                  | True                    |
@@ -19,7 +19,7 @@ The Skyline Booking Manager is the generic application to fully manage bookings 
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

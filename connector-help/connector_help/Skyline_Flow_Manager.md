@@ -4,17 +4,17 @@ uid: Connector_help_Skyline_Flow_Manager
 
 # Skyline Flow Manager
 
-The **Skyline Flow Manager** driver can be used to manage multiple **Skyline Flow Collector** elements.
+The **Skyline Flow Manager** connector can be used to manage multiple **Skyline Flow Collector** elements.
 
 ## About
 
-With this driver, you add an extra layer on top of multiple Netflow collector elements. It makes the configuration and management of a cluster with multiple collector elements easier. All configuration and other information is combined in one single element, which is used as an application.
+With this connector, you add an extra layer on top of multiple Netflow collector elements. It makes the configuration and management of a cluster with multiple collector elements easier. All configuration and other information is combined in one single element, which is used as an application.
 
-This is a virtual driver that does not communicate with devices, and because of that no traffic will be seen in the **Stream Viewer** for elements using this driver.
+This is a virtual connector that does not communicate with devices, and because of that no traffic will be seen in the **Stream Viewer** for elements using this connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ This is a virtual driver that does not communicate with devices, and because of 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -72,7 +72,7 @@ To send the configuration to all configured collector elements, press the **Sync
 
 This page provides an overview of the mapping between the Autonomous System Number (ASN) and its name.
 
-The driver also keeps track of the conversations between source and destinations. These conversations are stored in the **AS Conversation Mapping Table**.
+The connector also keeps track of the conversations between source and destinations. These conversations are stored in the **AS Conversation Mapping Table**.
 
 The direction is not taken into account: traffic from AS 1 to AS2 is considered the same conversation as traffic from AS2 to AS1.
 

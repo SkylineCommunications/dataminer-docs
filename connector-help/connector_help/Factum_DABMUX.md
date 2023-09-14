@@ -4,11 +4,11 @@ uid: Connector_help_Factum_DABMUX
 
 # Factum DABMUX
 
-The **DABMUX** driver displays information related to the **DABMUX** multiplexer device.
+The **DABMUX** connector displays information related to the **DABMUX** multiplexer device.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the **DABMUX** device.
+This connector uses an **SNMP** interface to communicate with the **DABMUX** device.
 
 ## Installation and configuration
 

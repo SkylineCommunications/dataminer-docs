@@ -32,7 +32,7 @@ The FTTMax is an optical amplifier that offers optical amplification solutions u
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the pages detailed below.
+The element created with this connector consists of the pages detailed below.
 
 ### General
 

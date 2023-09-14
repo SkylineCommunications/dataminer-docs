@@ -4,7 +4,7 @@ uid: Connector_help_TDF_Jbus_PLC
 
 # TDF Jbus PLC
 
-The TDF Jbus PLC is a driver built for the TDF Short Wave project in order to interact with PLC devices.
+The TDF Jbus PLC is a connector built for the TDF Short Wave project in order to interact with PLC devices.
 
 ## About
 
@@ -32,7 +32,7 @@ The TDF Jbus PLC is a driver built for the TDF Short Wave project in order to in
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Allows you to configure which device the element should poll, as well as other polling settings.
 - **Device Data**: Displays a table with the data from the device. A subpage is available for the set commands.

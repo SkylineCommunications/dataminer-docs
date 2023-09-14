@@ -4,21 +4,21 @@ uid: Connector_help_Red_Hat_Enterprise_Cluster_Suite
 
 # Red Hat Enterprise Cluster Suite
 
-Red Hat Cluster Suite (RHCS) is an integrated set of software components that can be deployed in a variety of configurations for performance, high availability, load balancing, scalability and file sharing. This driver monitors the components related to this cluster suite.
+Red Hat Cluster Suite (RHCS) is an integrated set of software components that can be deployed in a variety of configurations for performance, high availability, load balancing, scalability and file sharing. This connector monitors the components related to this cluster suite.
 
 ## About
 
-This driver uses SNMP in order to monitor a cluster and its nodes.
+This connector uses SNMP in order to monitor a cluster and its nodes.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                       |
+| **Range** | **Device Firmware Version**                       |
 |------------------|---------------------------------------------------|
 | 1.0.0.x          | MIB Version: 2 Cluster Configuration Version: 133 |
 
@@ -28,7 +28,7 @@ This driver uses SNMP in order to monitor a cluster and its nodes.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -32,7 +32,7 @@ The **MIT-xperts iSIMS** is a single-rack unit server designed to play out all S
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,4 +61,4 @@ The web interface is only accessible when the client machine has network access 
 
 This is a basic driver displaying general information about the device as well as several tables with more specific information.
 
-There are no specific restrictions to the use of this driver.
+There are no specific restrictions to the use of this connector.

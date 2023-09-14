@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_IQUCP25
 
 # Grass Valley IQUCP25
 
-This driver is used to monitor and configure the Grass Valley IQUCP25. The IQUCP25 is a user-configurable multi-channel video-over-IP transceiver developed for use within low-latency and high-bandwidth Ethernet IP networks. It can encapsulate or decapsulate up to 16 SDI signals (depending on the format) using either SMPTE ST 2110 or SMPTE ST 2022-6 encapsulation standards and transport them over 2 x 25 GbE links (SMPTE ST 2022-7) providing "hitless" redundancy switching.
+This connector is used to monitor and configure the Grass Valley IQUCP25. The IQUCP25 is a user-configurable multi-channel video-over-IP transceiver developed for use within low-latency and high-bandwidth Ethernet IP networks. It can encapsulate or decapsulate up to 16 SDI signals (depending on the format) using either SMPTE ST 2110 or SMPTE ST 2022-6 encapsulation standards and transport them over 2 x 25 GbE links (SMPTE ST 2022-7) providing "hitless" redundancy switching.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is used to monitor and configure the Grass Valley IQUCP25. The IQUCP
 
 #### Serial Main Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,12 +44,12 @@ SERIAL CONNECTION:
 
 ### Initialization
 
-While no additional configuration is needed during initialization, on the **General** page, you can find a **progress bar** that shows how long the driver is taking to request all the information from the device during the initial polling.
+While no additional configuration is needed during initialization, on the **General** page, you can find a **progress bar** that shows how long the connector is taking to request all the information from the device during the initial polling.
 
 ## How to use
 
 A vendor-specific communication protocol (RollCall) is used to retrieve and send data to the device over TCP. As RollCall is a binary protocol, you will not be able to easily trace the communication via Stream Viewer. However, when you enable the **Debug** toggle button on the **General** page, a human-readable version of all messages that are sent and received will be added in the **element log**. Note that enabling this option will put additional strain on the DataMiner Agent. It is recommended to turn it off when it is no longer needed.
 
-To save bandwidth, this driver does not rely on polling to retrieve data from the device. Instead, it relies on unsolicited update messages that the device sends. Only at the creation of the RollCall session will the driver poll all parameters. Because there is a huge number of parameters, it can take around 15 minutes before all parameters are polled. A progress bar on the general page will indicate the progress.
+To save bandwidth, this connector does not rely on polling to retrieve data from the device. Instead, it relies on unsolicited update messages that the device sends. Only at the creation of the RollCall session will the connector poll all parameters. Because there is a huge number of parameters, it can take around 15 minutes before all parameters are polled. A progress bar on the general page will indicate the progress.
 
-Most pages and parameters of the driver deal with device configuration. Health/status monitoring information can be found on the **Logging** pages. Bitrates can be found on the **Ethernet** pages and the **Spigot** page.
+Most pages and parameters of the connector deal with device configuration. Health/status monitoring information can be found on the **Logging** pages. Bitrates can be found on the **Ethernet** pages and the **Spigot** page.

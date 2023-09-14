@@ -8,7 +8,7 @@ The **Barrowa Sundial** is an EPG management system.
 
 ## About
 
-This driver uses an SNMP connection to retrieve data from a **Barrowa Sundial** device.
+This connector uses an SNMP connection to retrieve data from a **Barrowa Sundial** device.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver uses an SNMP connection to retrieve data from a **Barrowa Sundial** 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,7 +48,7 @@ SNMP Settings:
 
 ## How to Use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Displays product and server information.
 - **Cluster**: Displays the main and backup connection status and the **Region Connections** table.

@@ -4,25 +4,23 @@ uid: Connector_help_CISCO_D9859
 
 # CISCO D9859
 
-This driver has *control/monitoring* purposes. The **Cisco D9859** device is an *Advanced Receiver Transcoder* that allows to deliver MPEG-4 HD services to MPEG-2 CATV headends.
+This connector has *control/monitoring* purposes. The **Cisco D9859** device is an *Advanced Receiver Transcoder* that allows to deliver MPEG-4 HD services to MPEG-2 CATV headends.
 
 ## About
 
-This is an SNMPv2 driver. Traps can be retrieved if they are enabled on the device.
+This is an SNMPv2 connector. Traps can be retrieved if they are enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.11                        |
-
-
 
 ## Installation and configuration
 
@@ -30,7 +28,7 @@ This is an SNMPv2 driver. Traps can be retrieved if they are enabled on the devi
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -65,7 +63,7 @@ The **Muting Thresholds ...** page button contains the **Muting Thresholds Table
 
 The **Channel Status ...** page button contains the **Program Entry Status Table** and the **Conditional Access ...** page button, the **CA ADP Table.**
 
-In the **BISS ...** page button the available parameters are; **BISS Mode, BISS Mode 1 Session Word, **BISS Mode**-E Session Word, **BISS Mode**-E Injected ID.**
+In the **BISS ...** page button the available parameters are; **BISS Mode, BISS Mode 1 Session Word, BISS Mode-E Session Word, BISS Mode-E Injected ID**.
 
 In the **Stream Details** **...** page button are the following tables displayed: **SI Info RX Table, SI Info TS Table, SI Info VC Info Table, Program Entry PID Table.**
 
@@ -75,15 +73,13 @@ In the Video Decoding section, you can find the **Video Control Table** and the 
 
 In the **Subtitles ...** page button of this section, subtitles related parameters are shown: **Subtitles OP Mode, Subtitles Foreground, Subtitles Manual Entry, ...**
 
-In the same section, the **VBI ...** page button shows, among others: **VBI VITS Flag 17,** **VBI VITS Flag 18, **VBI VITS Flag 330, ****VBI VITS Flag 331, ...********
+In the same section, the **VBI ...** page button shows, among others: **VBI VITS Flag 17, VBI VITS Flag 18, VBI VITS Flag 330, VBI VITS Flag 331**, etc.
 
 In the Audio Decoding section, you can find 2 tables: **Audio CTRL Table** and **Audio Status Table.**
 
+2 page buttons are also available: **Cueing ... and Decode Enables ...**
 
-
-2 page buttons are also available: **Cueing ...** **and** **Decode Enables ...**
-
-In the **Cueing ...** page button, you can find the **Cueing Tone, Cueing Relay Mode, Cueing Tone Sequence Table, ...**
+In the **Cueing ...** page button, you can find the **Cueing Tone, Cueing Relay Mode, Cueing Tone Sequence Table**, etc.
 
 The **Decode Enables ...** page button displays the **Decode Table.**
 
@@ -135,7 +131,7 @@ The **Alarm History ...** page button contains the **AW Fault History Table**.
 
 ### Miscellaneous
 
-This page contains the **Program Entry Table,** the **MPE Configuration Table** or wether the **DPM PE Mapping Table**.
+This page contains the **Program Entry Table,** the **MPE Configuration Table** or whether the **DPM PE Mapping Table**.
 
 The **CI ...** page button contains inter alia, the **CI Configuration Table** and **CI** **Program Decrypt Table.**
 

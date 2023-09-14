@@ -4,7 +4,7 @@ uid: Connector_help_SpacePath_Communications_SPC1100
 
 # SpacePath Communications SPC1100
 
-This is an SNMP driver that is used to monitor and configure the SpacePath Communications SPC1100 equipment.
+This is an SNMP connector that is used to monitor and configure the SpacePath Communications SPC1100 equipment.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP driver that is used to monitor and configure the SpacePath Commu
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ### Initialization
 
-The driver does not require credentials, so setting it up is rather straightforward. To make sure the device can be polled, define the port where the device can be found.
+The connector does not require credentials, so setting it up is rather straightforward. To make sure the device can be polled, define the port where the device can be found.
 
 ### Redundancy
 

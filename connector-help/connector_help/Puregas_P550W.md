@@ -4,23 +4,23 @@ uid: Connector_help_Puregas_P550W
 
 # Puregas P550W
 
-With this driver, you can gather and view information from the **Puregas P550W** device, a dehydrator.
+With this connector, you can gather and view information from the **Puregas P550W** device, a dehydrator.
 
 ## About
 
-The Puregas P200W driver is used to monitor and control a Puregas P550W device. It provides an overview of the different parameters of the device along with its statuses and generated alarms.
+The Puregas P200W connector is used to monitor and control a Puregas P550W device. It provides an overview of the different parameters of the device along with its statuses and generated alarms.
 
-The driver uses **SNMP** to retrieve the data from the device. All parameters are polled every 15 seconds.
+The connector uses **SNMP** to retrieve the data from the device. All parameters are polled every 15 seconds.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**           |
+| **Range** | **Device Firmware Version**           |
 |------------------|---------------------------------------|
 | 1.0.0.x          | P550W(P012300V20) Dryer, Version 3.00 |
 
@@ -30,7 +30,7 @@ The driver uses **SNMP** to retrieve the data from the device. All parameters ar
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -40,8 +40,8 @@ SNMP CONNECTION:
 SNMP Settings:
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device. The default value in the driver is *public*.
-- **Set community string**: The community string used when setting values on the device. The default value in the driver is *private*.
+- **Get community string**: The community string used when reading values from the device. The default value in the connector is *public*.
+- **Set community string**: The community string used when setting values on the device. The default value in the connector is *private*.
 
 ## Usage
 

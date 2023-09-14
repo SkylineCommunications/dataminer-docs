@@ -55,9 +55,12 @@ On the **Configurations** page, several parameters need to be configured for the
 
 The currently implemented commands are:
 
-- *Get-DhcpServerv4Scope -ComputerName \<****DHCP Server****\>
-  *Default period: 1 hour. This command is used to fill in the **Scopes** Table
-- *Get-DhcpServerv4Lease -ComputerName* *\<****DHCP Server****\>* *-ScopeId \<Scope ID\>
-  *Default period: 1 hour. This command is used to fill in the **Leases** Table.
+- *Get-DhcpServerv4Scope -ComputerName \<**DHCP Server**\>*
+
+  Default period: 1 hour. This command is used to fill in the **Scopes** Table
+
+- *Get-DhcpServerv4Lease -ComputerName* *\<**DHCP Server**\>* *-ScopeId \<Scope ID\>*
+
+  Default period: 1 hour. This command is used to fill in the **Leases** Table.
 
 All the information about **Scopes** and **Leases** is displayed on the **General** page.

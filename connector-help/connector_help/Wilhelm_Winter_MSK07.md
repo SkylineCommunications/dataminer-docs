@@ -34,7 +34,7 @@ Serial communication is used to communicate with the device through a serial gat
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

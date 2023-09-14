@@ -18,7 +18,7 @@ This connector displays data related to the transmitter module. It is exported b
 
 ## Configuration
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Rohde Schwarz NSU](xref:Connector_help_Rohde_Schwarz_NSU), from version 2.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Rohde Schwarz NSU](xref:Connector_help_Rohde_Schwarz_NSU), from version 2.0.0.1 onwards.
 
 ## How to use
 

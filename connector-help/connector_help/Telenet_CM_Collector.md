@@ -4,11 +4,11 @@ uid: Connector_help_Telenet_CM_Collector
 
 # Telenet CM Collector
 
-The **Telenet CM Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet STB Collector** and **Telenet eMTA Collector** driver. This driver is responsible for the polling of the CMs.
+The **Telenet CM Collector** is part of the CPE setup, and works together with the **Telenet CPE Manager**, **Telenet STB Collector** and **Telenet eMTA Collector** connector. This connector is responsible for the polling of the CMs.
 
 ## About
 
-This driver will poll all the CMs in two poll cycles:
+This connector will poll all the CMs in two poll cycles:
 
 - one fast poll cycle that will poll all CMs over a 15-minute period.
 - one slow poll cycle that will poll all CMs over a 24-hour period.
@@ -19,7 +19,7 @@ In addition, there is another poll cycle that will poll the CMTS to request the 
 
 ### Creation
 
-This driver uses two Simple Network Management Protocol (SNMP) connections. The first SNMP connection is used to connect to the CM and the second one to connect to the CMTS.
+This connector uses two Simple Network Management Protocol (SNMP) connections. The first SNMP connection is used to connect to the CM and the second one to connect to the CMTS.
 
 The following input is required during element creation:
 
@@ -32,7 +32,7 @@ The following input is required during element creation:
 
 - **Port Number**: The port of the connected device, by default *161*.
 - **Get community string**: The community string used when reading values from the device, by default *public*.
-- **Set community string**: Not needed, because the driver will not perform sets.
+- **Set community string**: Not needed, because the connector will not perform sets.
 
 Note: All polled CMs will share the same settings, and all polled CMTSs will share the same settings.
 

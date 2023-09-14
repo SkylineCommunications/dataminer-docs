@@ -4,21 +4,21 @@ uid: Connector_help_Symmetricom_4370A
 
 # Symmetricom 4370A
 
-The Symmetricom 4370A driver can be used to monitor and control the Symmetricom 4370A master time generator.
+The Symmetricom 4370A connector can be used to monitor and control the Symmetricom 4370A master time generator.
 
-The driver polls data from the Symmetricom 4370A via SNMP. It also handles traps, by parsing a trap for the OID of the parameter that causes the trap and repolling the parameter for an updated value.
+The connector polls data from the Symmetricom 4370A via SNMP. It also handles traps, by parsing a trap for the OID of the parameter that causes the trap and repolling the parameter for an updated value.
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -28,7 +28,7 @@ The driver polls data from the Symmetricom 4370A via SNMP. It also handles traps
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

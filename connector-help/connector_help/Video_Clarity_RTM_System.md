@@ -8,17 +8,17 @@ The **Video Clarity Real Time Monitoring System** is a full reference broadcast 
 
 ## About
 
-This is an **SNMP**-based driver for the Video Clarity Real Time Monitoring System.
+This is an **SNMP**-based connector for the Video Clarity Real Time Monitoring System.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 
@@ -28,7 +28,7 @@ This is an **SNMP**-based driver for the Video Clarity Real Time Monitoring Syst
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -84,4 +84,4 @@ As the RTM creates average log files and error log files, three tables are avail
 
 ## Notes
 
-In order to communicate with this device, the programs RTMServer and RTMonitor must be running directly on the probe. The very first SNMP command after startup must be a set to rtmonConnectRTMControl with any value. The driver does this initial setting during the element startup, but a button is also available on the General Page to retry the command, in case this should be necessary.
+In order to communicate with this device, the programs RTMServer and RTMonitor must be running directly on the probe. The very first SNMP command after startup must be a set to rtmonConnectRTMControl with any value. The connector does this initial setting during the element startup, but a button is also available on the General Page to retry the command, in case this should be necessary.

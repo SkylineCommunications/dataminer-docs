@@ -4,22 +4,22 @@ uid: Connector_help_RF_Design_FlexLink_K7
 
 # RF Design FlexLink K7
 
-This driver is used to manage RF Design FlexLink K7 family switches.
+This connector is used to manage RF Design FlexLink K7 family switches.
 
 ## About
 
 The RF Design FlexLink K7 is a scalable L-Band switch matrix system in a 6RU/19" rack mount design, supporting extended L-Band frequency range (850 to 2450 MHz) and Ka-Band and HTS applications. It allows various switch/routing configurations from 8:8 to 256:256 (in increments of 8) with multiple outputs per input and one input per output.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|---------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                                                                                                     | Yes                 | Yes                     |
 | 1.0.1.x \[SLC Main\] | MatrixHelper class updated. Alarm Status and Threshold Alarm traps implemented. Changes in parameters descriptions. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.1.x          | Unknown                     |
@@ -30,7 +30,7 @@ The RF Design FlexLink K7 is a scalable L-Band switch matrix system in a 6RU/19"
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

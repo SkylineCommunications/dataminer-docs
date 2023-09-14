@@ -2,22 +2,23 @@
 uid: Connector_help_Bard_MC4000_Series
 ---
 
-Bard MC4000 Series
+# Bard MC4000 Series
+
 The MC4002 Air conditioner unit is for use with units with or without economizers, can be configured for use with heat pumps, and has a dehumidification control feature if an optional humidity controller is connected. Dehumidification control cannot be used with heat pump.
 
 ## About
 
-The **Bard MC4000 Series** driver monitors the temperatures and status of the air conditioner unit.
+The **Bard MC4000 Series** connector monitors the temperatures and status of the air conditioner unit.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.01                        |
 
@@ -27,7 +28,7 @@ The **Bard MC4000 Series** driver monitors the temperatures and status of the ai
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +50,7 @@ The **Local Room, Remote Sensor 1 and 2 Temperatures** are also displayed.
 
 ### System Status
 
-The state of the system's **Generator, Alarm Board, Comfort Mode, Controller, HVACs,** **Fans,** and **Cooling and Heating Stages** are all displayed on this page.
+The state of the system's **Generator, Alarm Board, Comfort Mode, Controller, HVACs, Fans,** and **Cooling and Heating Stages** are all displayed on this page.
 
 The status of the system alarms are also displayed.
 

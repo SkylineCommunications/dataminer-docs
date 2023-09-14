@@ -4,15 +4,15 @@ uid: Connector_help_Alpha_XM-3_UPS
 
 # Alpha XM-3 UPS
 
-The **Alpha XM-3 UPS** driver is a generic driver that can be used to monitor Alpha devices in the XM-3 family.
+The **Alpha XM-3 UPS** connector is a generic connector that can be used to monitor Alpha devices in the XM-3 family.
 
 ## About
 
-This driver uses **SNMP** to retrieve data from the device. An **HTTP** connection is used to retrieve the IP address of a second network interface. Tests are automatically executed to determine the health of the UPS and its batteries.
+This connector uses **SNMP** to retrieve data from the device. An **HTTP** connection is used to retrieve the IP address of a second network interface. Tests are automatically executed to determine the health of the UPS and its batteries.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version        | No                  | No                      |
 | 2.0.0.x          | Added support for DDNS | No                  | No                      |
@@ -23,7 +23,7 @@ This driver uses **SNMP** to retrieve data from the device. An **HTTP** connecti
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -107,7 +107,7 @@ This page contains the alarms that are available on the SNMP agent.
 
 ### Battery Test page
 
-This page displays a summary of the latest test result of the tests performed by this driver or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
+This page displays a summary of the latest test result of the tests performed by this connector or device. The UPS can run a local test and a remote test that causes the batteries to unload. Both the local and remote test are monitored.
 
 To start a new test on the device, click the **Start test** button.
 
@@ -137,7 +137,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Notes
 
-The driver executes some tests on the retrieved data, and displays the results in the element.
+The connector executes some tests on the retrieved data, and displays the results in the element.
 
 ### Float State test
 

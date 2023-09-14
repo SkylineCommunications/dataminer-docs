@@ -8,18 +8,18 @@ The **Evertz Xenon Switch** offers both the flexibility of multiformat operation
 
 ## About
 
-The **Evertz Xenon Switch** driver uses both SNMP and serial communication to monitor the Evertz switch. The device contains two controllers, but only one can be in control at a time. The controller in control will be interrogated using SNMP queries and Ethernet queries.
+The **Evertz Xenon Switch** connector uses both SNMP and serial communication to monitor the Evertz switch. The device contains two controllers, but only one can be in control at a time. The controller in control will be interrogated using SNMP queries and Ethernet queries.
 
 To avoid issues because of excessive polling, the device is polled at startup and whenever a message of type .UVxxx,xxx is received. In addition, in case the device is configured using a different tool so that such messages are not received, it is also polled daily.
 
 Between requests, there is a pause of 0.5 seconds. This prevents the loop from going too fast and keeps the device from going into error state. Note, however, that this does mean that it will take a while for the element to load the entire matrix (since version 1.0.0.7).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                                                | No                  | Yes                     |
-| 2.0.0.x          | Initial version (driver review)                                                | No                  | Yes                     |
+| 2.0.0.x          | Initial version (connector review)                                                | No                  | Yes                     |
 | 2.0.2.x          | Updates pushed from the device for the crosspoints (smart-serial) - to be used | Yes                 | Yes                     |
 | 2.1.0.x          | Hardware update SNMP v1                                                        | No                  | Yes                     |
 | 2.1.1.x          | DCF updated from matrix to tables                                              | Yes                 | Yes                     |
@@ -31,7 +31,7 @@ Between requests, there is a pause of 0.5 seconds. This prevents the loop from g
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -45,7 +45,7 @@ SNMP Settings:
 
 #### Serial SerialPort Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION (**TCP/IP**):
 
@@ -84,7 +84,7 @@ SERIAL CONNECTION (**TCP/IP**):
 
 #### Serial SerialPortBackup Connection (2.0.2.x and 2.1.2.x)
 
-This driver uses a second serial connection to configure the redundant controller and requires the following input during element creation:
+This connector uses a second serial connection to configure the redundant controller and requires the following input during element creation:
 
 SERIAL CONNECTION (**TCP/IP**):
 

@@ -4,17 +4,17 @@ uid: Connector_help_Aritech_Access
 
 # Aritech Access
 
-With this driver, it is possible to read log files from **Aritech Access** devices.
+With this connector, it is possible to read log files from **Aritech Access** devices.
 
 ## About
 
-The Aritech Access is a virtual driver that reads the access log file and reports that are in the last passage in each location defined in **Location** parameters.
+The Aritech Access is a virtual connector that reads the access log file and reports that are in the last passage in each location defined in **Location** parameters.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### File Reader
 

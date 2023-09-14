@@ -6,11 +6,11 @@ uid: Connector_help_Axon_ACP_U4T140
 
 The U4T140 is a 4K UHD 4-wire toolbox with optional Dolby-E processing.
 
-The **Axon ACP U4T140** driver can be used to display and configure information related to this device.
+The **Axon ACP U4T140** connector can be used to display and configure information related to this device.
 
 ## About
 
-The driver can be connected to the **Axon ACP Frame Manager**.
+The connector can be connected to the **Axon ACP Frame Manager**.
 
 There are different possibilities available for **alarm monitoring** and **trending**.
 
@@ -36,13 +36,13 @@ There are different possibilities available for **alarm monitoring** and **trend
 
 ### Creation
 
-The element using this driver can be automatically created by the parent element using the **Axon ACP Frame Manager** driver, but it can also be a standalone element.
+The element using this connector can be automatically created by the parent element using the **Axon ACP Frame Manager** connector, but it can also be a standalone element.
 
 ### Connections
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 #### Serial Broadcast Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

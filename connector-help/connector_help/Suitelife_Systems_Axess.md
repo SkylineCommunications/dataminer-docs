@@ -34,7 +34,7 @@ The Suitelife Systems Axess driver polls status and analog tables from the Axess
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,11 +61,11 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays the **Status Table**, with the Channel Numbers, States, Name, and Values, as well as the **Analog Table**, with the Channel Numbers, States, Name, and Values.
-- **Debug**: Contains parameters that can be used to debug the driver.
+- **Debug**: Contains parameters that can be used to debug the connector.
 
 ## Notes
 
-The driver polls the tables using a 30-second timer.
+The connector polls the tables using a 30-second timer.

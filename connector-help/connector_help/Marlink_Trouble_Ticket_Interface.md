@@ -8,15 +8,15 @@ The **Marlink Trouble Ticket Interface** element can create and resolve trouble 
 
 ## About
 
-The **Marlink Trouble Ticket Interface** driver makes it possible to create or resolve tickets by sending queries to the element via Automation, or by manually adding tickets in a table.
+The **Marlink Trouble Ticket Interface** connector makes it possible to create or resolve tickets by sending queries to the element via Automation, or by manually adding tickets in a table.
 
 The ticket data is sent via an HTTP POST command and the ticket response ID is parsed by DataMiner. In case ticket creation fails, the entry in question will be entered in the **Failed** table.
 
 With a tree control, you can navigate through the different SLAs and created tickets.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 1.0.1.x          | Driver review   | No                  | Yes                     |
@@ -27,7 +27,7 @@ With a tree control, you can navigate through the different SLAs and created tic
 
 #### HTTP main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -82,7 +82,7 @@ A number of other configuration parameters are also available on this page: **De
 
 ### Hidden
 
-This page contains internal parameters used by the driver, such as buffer parameters, which can be manually cleared using the buttons **Clear Buffer Stack** and **Clear Retry Stack**.
+This page contains internal parameters used by the connector, such as buffer parameters, which can be manually cleared using the buttons **Clear Buffer Stack** and **Clear Retry Stack**.
 
 ### Web Interface page
 

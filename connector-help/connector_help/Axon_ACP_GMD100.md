@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_GMD100
 
 The **GMD100** is a medium-time 3 Gb/s, HD and SD-SDI uncompressed baseband video delay. It can store and delay SDI video. It can store and delay up to 8 seconds in 3 Gb/s, 16 seconds in HD and 64 seconds in SD.
 
-The Axon ACP GMD100 driver is used to manage GMD100 cards.
+The Axon ACP GMD100 connector is used to manage GMD100 cards.
 
 ## About
 
@@ -34,7 +34,7 @@ The Axon ACP GMD100 driver is used to manage GMD100 cards.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART-SERIAL CONNECTION:
 
@@ -68,7 +68,7 @@ There is no redundancy defined.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP UXU410 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP UXU410 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -100,4 +100,4 @@ Physical fixed interfaces:
 
 ## Notes
 
-This driver is best combined with the Axon ACP Frame Manager driver, but can be used as a standalone driver as well.
+This connector is best combined with the Axon ACP Frame Manager connector, but can be used as a standalone connector as well.

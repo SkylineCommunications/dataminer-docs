@@ -4,17 +4,17 @@ uid: Connector_help_ETI_ADH_Netcom_SNMP
 
 # ETI ADH Netcom SNMP
 
-The **ETI ADH Netcom** device is an automatic air dehydrator that supplies low pressure air to keep waveguides and coaxial cables dry. The **ETI ADH Netcom SNMP** driver is the SNMP driver for this equipment, which also has a serial interface.
+The **ETI ADH Netcom** device is an automatic air dehydrator that supplies low pressure air to keep waveguides and coaxial cables dry. The **ETI ADH Netcom SNMP** connector is the SNMP connector for this equipment, which also has a serial interface.
 
 ## About
 
-With this driver it is possible to monitor the main environmental variables of the place where the device is installed, such as temperature and pressure. The driver also allows the user to configure the response of the equipment depending on the value of such parameters. It supports measurements in both the metric and the imperial system.
+With this connector it is possible to monitor the main environmental variables of the place where the device is installed, such as temperature and pressure. The connector also allows the user to configure the response of the equipment depending on the value of such parameters. It supports measurements in both the metric and the imperial system.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection**
 

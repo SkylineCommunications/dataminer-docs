@@ -12,15 +12,15 @@ The ACO6800+ is available as a single- or dual-channel module that provides swit
 
 ACO6800+ASID switches the signal between redundant signals at the point of ingest into a satellite DTH, mobile TV, or IPTV facility as well as switches the signal on redundant paths within a facility.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version. Full driver support for all feature of this specific card. Support for both ASI mode and SDI mode | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2                         |
 
@@ -30,7 +30,7 @@ ACO6800+ASID switches the signal between redundant signals at the point of inges
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -40,7 +40,7 @@ SERIAL CONNECTION:
 
 #### Serial PortDev Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

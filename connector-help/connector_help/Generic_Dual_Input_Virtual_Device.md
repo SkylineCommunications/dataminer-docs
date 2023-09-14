@@ -4,7 +4,7 @@ uid: Connector_help_Generic_Dual_Input_Virtual_Device
 
 # Generic Dual Input Virtual Device
 
-The main purpose of this driver is to have elements that provide DCF interfaces for the visual representation of services. Users can select the protocol name and the element they want to monitor.
+The main purpose of this connector is to have elements that provide DCF interfaces for the visual representation of services. Users can select the protocol name and the element they want to monitor.
 
 ## About
 
@@ -32,7 +32,7 @@ The main purpose of this driver is to have elements that provide DCF interfaces 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,10 +44,10 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of only one page, the **General** page. On this page, the **Web Interface URL** must be specified.
+The element created with this connector consists of only one page, the **General** page. On this page, the **Web Interface URL** must be specified.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Generic Dual Input Virtual Device protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Generic Dual Input Virtual Device protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).

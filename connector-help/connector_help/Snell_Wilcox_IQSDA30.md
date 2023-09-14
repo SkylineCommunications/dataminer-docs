@@ -4,9 +4,9 @@ uid: Connector_help_Snell_Wilcox_IQSDA30
 
 # Snell Wilcox IQSDA30
 
-The Snell Wilcox IQSDA30 driver monitors and controls changes on the amplifier unit through a **RollCall** **smart-serial** protocol. The card is used on the **IQ Modular Chassis**.
+The Snell Wilcox IQSDA30 connector monitors and controls changes on the amplifier unit through a **RollCall** **smart-serial** protocol. The card is used on the **IQ Modular Chassis**.
 
-The driver periodically polls relevant information from the device. This happens every 15 seconds for RollCall-protocol purposes and every two hours for back-channel purposes.
+The connector periodically polls relevant information from the device. This happens every 15 seconds for RollCall-protocol purposes and every two hours for back-channel purposes.
 
 ## About
 

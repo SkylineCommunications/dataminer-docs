@@ -10,13 +10,13 @@ If a primary unit fails, the backup unit will take over, on the condition that *
 
 ## About
 
-The driver can be used as a remote control for the **Miteq NSU1** device, and also monitors the device.
+The connector can be used as a remote control for the **Miteq NSU1** device, and also monitors the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

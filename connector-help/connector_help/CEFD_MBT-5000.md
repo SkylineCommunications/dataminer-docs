@@ -8,13 +8,13 @@ The **CEFD MBT-5000** is an SNMP-based protocol that is used to monitor and conf
 
 ## About
 
-The **Comtech EF Data (CEFD) MBT-5000** L-Band Up/Down Converter System provides frequency conversion between L-Band IF and C-/X-/Ku-Band RF frequencies. The **CEFD** **MBT-5000** driver can be used to monitor and configure this device.
+The **Comtech EF Data (CEFD) MBT-5000** L-Band Up/Down Converter System provides frequency conversion between L-Band IF and C-/X-/Ku-Band RF frequencies. The **CEFD** **MBT-5000** connector can be used to monitor and configure this device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### Extra configurations
 
-There are a lot of extra settings that can be configured for this driver/device. These settings can be found on the driver's **Config** page. For more information about this page, refer to the **Usage** section below.
+There are a lot of extra settings that can be configured for this connector/device. These settings can be found on the connector's **Config** page. For more information about this page, refer to the **Usage** section below.
 
 ## Usage
 

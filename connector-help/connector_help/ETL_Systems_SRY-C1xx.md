@@ -4,21 +4,21 @@ uid: Connector_help_ETL_Systems_SRY-C1xx
 
 # ETL Systems SRY-C1xx
 
-The **ETL Systems SRY-C1xx** driver can be used to monitor information regarding the chassis and the attached modules.
+The **ETL Systems SRY-C1xx** connector can be used to monitor information regarding the chassis and the attached modules.
 
 ## About
 
 This protocol can be used to monitor the **ETL Systems SRY-C1xx** main controller and its attached modules. An SNMP connection is used in order to successfully retrieve the device's information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor the **ETL Systems SRY-C1xx** main controlle
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

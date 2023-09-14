@@ -8,7 +8,7 @@ The SPG8000 is a precision multiformat video signal generator, suitable for mast
 
 ## About
 
-The driver polls information from the Tektronix SPG8000 via an SNMP connection. Traps are also implemented; the necessary data will be refreshed as soon as a trap is received.
+The connector polls information from the Tektronix SPG8000 via an SNMP connection. Traps are also implemented; the necessary data will be refreshed as soon as a trap is received.
 
 ### Version Info
 
@@ -40,7 +40,7 @@ The driver polls information from the Tektronix SPG8000 via an SNMP connection. 
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ SNMP Settings:
 
 #### Serial API connection \[1.0.1.x\]
 
-In range 1.0.1.x, this driver also uses a serial connection to poll the API.
+In range 1.0.1.x, this connector also uses a serial connection to poll the API.
 
 SERIAL CONNECTION:
 
@@ -71,7 +71,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

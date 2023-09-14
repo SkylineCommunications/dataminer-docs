@@ -8,13 +8,13 @@ This device is an IP Video Gateway that enables transmission of real-time video 
 
 ## About
 
-This driver is used to monitor and configure the transmission ports.
+This connector is used to monitor and configure the transmission ports.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -48,4 +48,4 @@ This page opens the web interface of the device. Note that the client machine ha
 
 ## Note
 
-From version 1.0.0.2 of this driver onwards, if the alarm table is empty, all alarm parameters on the **Main View** page will display *OK*.
+From version 1.0.0.2 of this connector onwards, if the alarm table is empty, all alarm parameters on the **Main View** page will display *OK*.

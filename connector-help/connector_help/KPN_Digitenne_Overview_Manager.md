@@ -26,7 +26,7 @@ This connector is used to aggregate the status of the different streams and loca
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

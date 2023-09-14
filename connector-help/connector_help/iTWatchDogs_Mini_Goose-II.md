@@ -8,17 +8,17 @@ ITWatchDogs MiniGoose-II is a climate monitor that supports up to 16 remote sens
 
 ## About
 
-The driver uses an **SNMP** connection to retrieve measurements from the remote sensors.
+The connector uses an **SNMP** connection to retrieve measurements from the remote sensors.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v3.12.7                     |
 
@@ -28,7 +28,7 @@ The driver uses an **SNMP** connection to retrieve measurements from the remote 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 
@@ -50,6 +50,6 @@ This page displays general information related to the climate monitor (**Name**,
 
 This page displays temperature, humidity and air flow measurements in the **Temperature Sensor Table** and **Air Flow Sensor Table**. Each row represents the measurements from a remote sensor.
 
-### Webinterface
+### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.

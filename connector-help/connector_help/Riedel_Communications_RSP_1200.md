@@ -83,9 +83,9 @@ The **General** page displays all functionality. The **Levers** table contains a
 
 Via the **Logo** page button, you can have an image displayed on the panel. To display an image file:
 
-1.  Click the *Refresh* button of the **File List** parameter.
-2.  Select an image file using the **File Location Logo** parameter. These image files are located under the Documents folder.
-3.  Click the *File* button of the **Logo Upload** parameter to actually load the image on the device.
+1. Click the *Refresh* button of the **File List** parameter.
+2. Select an image file using the **File Location Logo** parameter. These image files are located under the Documents folder.
+3. Click the *File* button of the **Logo Upload** parameter to actually load the image on the device.
 
 You can also upload the current Visio image that is assigned to the element. To do so, click the **Visio** button of the **Logo Upload** parameter. At startup, it can take up to 30 seconds to generate the Visio image. To avoid this delay, the **Fast Visio Loading** can be set to *Enabled*. To save resources, leave this parameter to *Disabled* if no Visio file needs to be loaded to the device or if this does not have to be loaded quickly.
 

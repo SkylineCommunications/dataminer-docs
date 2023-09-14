@@ -4,9 +4,9 @@ uid: Connector_help_Ateme_AMS
 
 # Ateme AMS
 
-The Ateme AMS driver get the data of a remote DataMiner System through the HTTP soap API.
+The Ateme AMS connector get the data of a remote DataMiner System through the HTTP soap API.
 
-The driver supports polling of a limited number of external drivers in order to create DVE elements.
+The connector supports polling of a limited number of external connectors in order to create DVE elements.
 
 ## About
 
@@ -46,12 +46,12 @@ The driver supports polling of a limited number of external drivers in order to 
 <td>Yes</td>
 <td>-</td>
 <td><ul>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20Ateme%20Titan%20Live.aspx">Ateme AMS - Ateme Titan Live</a></li>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20Ateme%20Titan%20Mux.aspx">Ateme AMS - Ateme Titan Mux</a></li>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20CISCO%20Manager.aspx">Ateme AMS - CISCO Manager</a></li>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20Microsoft%20Platform.aspx">Ateme AMS - Microsoft Platform</a></li>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20QBIT%20Q561.aspx">Ateme AMS - QBIT Q561</a></li>
-<li><a href="/Driver%20Help/Ateme%20AMS%20-%20T-Vips%20CP541.aspx">Ateme AMS - T-Vips CP541</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20Ateme%20Titan%20Live.aspx">Ateme AMS - Ateme Titan Live</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20Ateme%20Titan%20Mux.aspx">Ateme AMS - Ateme Titan Mux</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20CISCO%20Manager.aspx">Ateme AMS - CISCO Manager</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20Microsoft%20Platform.aspx">Ateme AMS - Microsoft Platform</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20QBIT%20Q561.aspx">Ateme AMS - QBIT Q561</a></li>
+<li><a href="/connector%20Help/Ateme%20AMS%20-%20T-Vips%20CP541.aspx">Ateme AMS - T-Vips CP541</a></li>
 </ul></td>
 </tr>
 </tbody>
@@ -63,7 +63,7 @@ The driver supports polling of a limited number of external drivers in order to 
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -76,6 +76,6 @@ Fill in the username and password of a user of the remote DMS.
 
 ## How to use
 
-The first time using the driver it's important to check the Protocols page to see which protocols and version are supported.
+The first time using the connector it's important to check the Protocols page to see which protocols and version are supported.
 
 The Elements page is also something you have to check to see if the DVEs are created for the elements that you want, here you can also disable DVEs for elements that you are less interested in.

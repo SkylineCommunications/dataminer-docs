@@ -10,9 +10,9 @@ The MSA-100 delivers awareness of system information and ancillary data, with th
 
 ## About
 
-This driver contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
+This connector contains different pages with information and settings. More detailed information on these can be found in the **Usage** section of this document.
 
-The driver uses the SNMP protocol to communicate with the device. SNMP traps modify the severity of the events in the alarm table.
+The connector uses the SNMP protocol to communicate with the device. SNMP traps modify the severity of the events in the alarm table.
 
 ### Timing
 
@@ -28,15 +28,15 @@ All data gets retrieved from the device with the following timing:
 
 - **Traps**: Traps can be sent to DataMiner whenever an alarm occurs and are used to update events in the alarm table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCP Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCP Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.0                         |
 
@@ -46,12 +46,11 @@ All data gets retrieved from the device with the following timing:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Indicate if required or not. If it is, specify default value and range.
 
 SNMP Settings:
 

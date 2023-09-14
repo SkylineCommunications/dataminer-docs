@@ -4,15 +4,15 @@ uid: Connector_help_Spectracom_GPS_Ageless_Master_Oscillator_819xB
 
 # Spectracom GPS Ageless Master Oscillator 819xB
 
-The Spectracom GPS Ageless Master Oscillator 819xB driver displays information related to the Spectracom GPS Ageless Master Oscillator 819xB device.
+The Spectracom GPS Ageless Master Oscillator 819xB connector displays information related to the Spectracom GPS Ageless Master Oscillator 819xB device.
 
 ## About
 
-This driver gathers information from the **Spectracom GPS Ageless Master Oscillator 819xB** device using a serial connection, and displays this information on five different pages.
+This connector gathers information from the **Spectracom GPS Ageless Master Oscillator 819xB** device using a serial connection, and displays this information on five different pages.
 
 ## Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL Connection:**
 

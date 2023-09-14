@@ -6,7 +6,7 @@ uid: Connector_help_ETL_Systems_22433
 
 The ETL Systems 22433 is an L-band hybrid splitter and combiner shelf designed to power and reference VSAT terminals, as well as facilitate the use of multiple modems.
 
-This driver can be used to monitor and control the device via SNMP. The driver layout is designed to be as similar as possible to the web interface of the device.
+This connector can be used to monitor and control the device via SNMP. The connector layout is designed to be as similar as possible to the web interface of the device.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver can be used to monitor and control the device via SNMP. The driver l
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -60,7 +60,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: This page displays information on the Module Status, Supply Voltages and Currents. It contains for example the **LNB Status**, **24V BUC Status**, **TX/RX Amplifier** and **18V PSU1 Status**.
 - **Configurations**: On this page, you can configure settings such as the **Polling time**, **RF Power Limits** and **Traps IP Destination** address, as well as **enable or disable traps** on the device.

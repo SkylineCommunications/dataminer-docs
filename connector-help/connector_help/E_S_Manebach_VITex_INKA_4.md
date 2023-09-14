@@ -8,13 +8,13 @@ The **VITex INKA 4** is a playout system for audio, video and videotext data. It
 
 ## About
 
-This driver communicates with the device using SNMP commands. It also deals with SNMP traps sent from the device.
+This connector communicates with the device using SNMP commands. It also deals with SNMP traps sent from the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

@@ -4,7 +4,7 @@ uid: Connector_help_MIT-xperts_iAnalyzer_EIT
 
 # MIT-xperts iAnalyzer EIT
 
-This driver has been designed to monitor the MIT-xperts iAnalyzer EIT with SNMP.
+This connector has been designed to monitor the MIT-xperts iAnalyzer EIT with SNMP.
 
 ## About
 
@@ -14,7 +14,7 @@ This device decodes and displays one or more input MPTS/SPTS, and especially ana
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -39,7 +39,3 @@ The **Services** page displays the **Service Table** and it has a page button to
 ### Webpage
 
 The webpage of the device.
-
-## Notes
-
-N/A

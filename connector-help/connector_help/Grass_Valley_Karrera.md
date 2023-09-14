@@ -8,17 +8,17 @@ The Grass Valley Karrera is a modular video production center/switcher.
 
 ## About
 
-With this driver, it is possible to monitor **Grass Valley Karrera** devices with SNMP.
+With this connector, it is possible to monitor **Grass Valley Karrera** devices with SNMP.
 
 The different parameters from the device are displayed on multiple pages according to the subject of the parameters.
 
-The driver implements all traps to update the corresponding values and to generate alarms immediately.
+The connector implements all traps to update the corresponding values and to generate alarms immediately.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

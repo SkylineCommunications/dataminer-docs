@@ -8,7 +8,7 @@ The **TPC Single Point of Failure Detector** can be used to execute queries to a
 
 ## About
 
-This driver is a virtual driver developed to execute queries on demand. It retrieves data from the query inserted in the corresponding tables. Also, there are some tables that are manually filled in by the user and used to search for specific data and add DCF connections.
+This connector is a virtual connector developed to execute queries on demand. It retrieves data from the query inserted in the corresponding tables. Also, there are some tables that are manually filled in by the user and used to search for specific data and add DCF connections.
 
 ### Version info
 
@@ -36,18 +36,18 @@ This driver is a virtual driver developed to execute queries on demand. It retri
 
 #### Virtual Connection - Main
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-To configure the element using this driver, go to the **Configuration** page, then fill in the **Server Address**, **Database Name**, **User Name** and **Password**.
+To configure the element using this connector, go to the **Configuration** page, then fill in the **Server Address**, **Database Name**, **User Name** and **Password**.
 Via the **Test Connection** page button, you can check if the connection has been established. Click the **Connect** button and then check the **Connection Result** field.
 
 
 
 ## How to use
 
-Aside from the **Configuration page**, which contains the connection parameters mentioned above, this driver has pages described below.
+Aside from the **Configuration page**, which contains the connection parameters mentioned above, this connector has pages described below.
 
 **Devices**, **Switches** and **Interfaces** pages contain the data **Execute State Query**, **Query Error Message**, **Query Rows Read**, **Query Last Updated**, as well as the button to execute the query and the table with the data of the executed query.
 

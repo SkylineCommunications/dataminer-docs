@@ -4,7 +4,7 @@ uid: Connector_help_Electrosys_G011_FM_N+1
 
 # Electrosys G011 FM N+1
 
-The Electrosys G011 FM N+1 can be used to monitor transmitters via a transmitter controller. This driver uses SNMP to connect to the transmitter controller.
+The Electrosys G011 FM N+1 can be used to monitor transmitters via a transmitter controller. This connector uses SNMP to connect to the transmitter controller.
 
 For each monitored transmitter, a DVE can be created.
 
@@ -34,7 +34,7 @@ For each monitored transmitter, a DVE can be created.
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -48,9 +48,9 @@ SNMP Settings:
 
 ### Initialization
 
-This protocol supports both MIB versions, which have slightly different OIDs. In some cases \*.1.\* is used, while in the other cases \*.255.\* is used in the OID. The driver will automatically try and select the correct OID when a new element is created.
+This protocol supports both MIB versions, which have slightly different OIDs. In some cases \*.1.\* is used, while in the other cases \*.255.\* is used in the OID. The connector will automatically try and select the correct OID when a new element is created.
 
-First it will try to poll a parameter using the \*.1.\* OID. If this fails, it will switch to \*.255.\*. If both fail, by default, the driver will only retry further with \*.255.\*. However, you can configure this using the **Device OID** parameter on the **General** page.
+First it will try to poll a parameter using the \*.1.\* OID. If this fails, it will switch to \*.255.\*. If both fail, by default, the connector will only retry further with \*.255.\*. However, you can configure this using the **Device OID** parameter on the **General** page.
 
 ### Web Interface
 

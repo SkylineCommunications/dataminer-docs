@@ -4,7 +4,7 @@ uid: Connector_help_Harmonic_NSG9000_6G
 
 # Harmonic NSG9000 6G
 
-The **Harmonic NSG9000 6G** v.1.0.0.3 is an HTTP driver that is used to control and monitor NSG9000 6G devices.
+The **Harmonic NSG9000 6G** v.1.0.0.3 is an HTTP connector that is used to control and monitor NSG9000 6G devices.
 
 ## About
 
@@ -14,7 +14,7 @@ This EdgeQAM device supports up to 9 modules, which house 2 RFs with 8 QAMs each
 
 ### Creation
 
-This driver uses an HTTP connection and needs the following user information:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

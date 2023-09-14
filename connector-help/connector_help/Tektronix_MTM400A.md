@@ -4,21 +4,21 @@ uid: Connector_help_Tektronix_MTM400A
 
 # Tektronix MTM-400A
 
-The Tektronix MTM-400A driver can be used to monitor and control the MTM400A transport stream monitor. It also provides a scheduler for monitoring.
+The Tektronix MTM-400A connector can be used to monitor and control the MTM400A transport stream monitor. It also provides a scheduler for monitoring.
 
 ## About
 
-This driver is used to control and monitor the MTM400A.
+This connector is used to control and monitor the MTM400A.
 
-A scheduler has also been implemented in the driver, which can be used to monitor different frequencies based on a weekly schedule.
+A scheduler has also been implemented in the connector, which can be used to monitor different frequencies based on a weekly schedule.
 
 ## Installation and configuration
 
 ### Creation
 
-This is an SNMP/HTTP over serial driver.
+This is an SNMP/HTTP over serial connector.
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -41,10 +41,10 @@ In order to use the Scheduler, you first have to upload a template configuration
 
 To do so:
 
-1.  On the **Scheduler Configuration** page, click the page button **Configure Slots**.
-2.  Fill in the location of the template configuration file. Example: "C:\Folder1\File.xml".
-3.  Save the parameter.
-4.  Click the button **Read File**.
+1. On the **Scheduler Configuration** page, click the page button **Configure Slots**.
+2. Fill in the location of the template configuration file. Example: "C:\Folder1\File.xml".
+3. Save the parameter.
+4. Click the button **Read File**.
 
 To verify if the upload was successful, check if the value of the parameter **XML Configuration File Template** is *File Loaded*.
 

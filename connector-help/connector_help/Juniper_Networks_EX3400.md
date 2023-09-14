@@ -4,7 +4,7 @@ uid: Connector_help_Juniper_Networks_EX3400
 
 # Juniper Networks EX3400
 
-The Juniper Networks EX4300 driver is an SNMP-based driver used to monitor and configure the Juniper Networks EX4300.
+The Juniper Networks EX4300 connector is an SNMP-based connector used to monitor and configure the Juniper Networks EX4300.
 
 ## About
 
@@ -32,7 +32,7 @@ The Juniper Networks EX4300 driver is an SNMP-based driver used to monitor and c
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-Several important settings can be found on the **Configuration** page, which allow you to enable/disable the polling of several tables. Those tables, located on other pages of the driver, contain different functional information about the device.
+Several important settings can be found on the **Configuration** page, which allow you to enable/disable the polling of several tables. Those tables, located on other pages of the connector, contain different functional information about the device.
 
 There is also an import/export file feature available on the **Operating States** page. **Import** makes it possible to set described data from the file into the desired table. Via **export** you can create a file that contains all the table data. Before you can execute an **import** or **export**, you first need to fill in the **file name** and the **file path**.
 

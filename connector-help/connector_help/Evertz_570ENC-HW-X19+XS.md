@@ -12,9 +12,9 @@ The 570J2K-HW-X19 will provide auto-timing time stamped Ethernet outputs, multi-
 
 The 570J2K-HW-X19 can be managed via integrated HTTP web interfaces as well as SNMP management via Frame Controller.
 
-This driver Evertz 570ENC-HW-X19+XS only monitors the **MIBs available for the Encoder** of the Evertz 570J2K-HW-X19 devices.
+This connector Evertz 570ENC-HW-X19+XS only monitors the **MIBs available for the Encoder** of the Evertz 570J2K-HW-X19 devices.
 
-This driver uses **SNMP** to poll data from Evertz 570ENC-HW-X19+XS based on the web interface layout.
+This connector uses **SNMP** to poll data from Evertz 570ENC-HW-X19+XS based on the web interface layout.
 
 ## About
 
@@ -42,7 +42,7 @@ This driver uses **SNMP** to poll data from Evertz 570ENC-HW-X19+XS based on the
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -68,4 +68,4 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver follows the layout of the web interface and features the same monitoring and configuration capabilities.
+This connector follows the layout of the web interface and features the same monitoring and configuration capabilities.

@@ -52,13 +52,13 @@ SERIAL CONNECTION:
 
 ## How to Use
 
-This driver is used to monitor the parameters of the Axon card.
+This connector is used to monitor the parameters of the Axon card.
 
 The parameter "Input Detection" makes it possible to detect if there is an input.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP SDN08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP SDN08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

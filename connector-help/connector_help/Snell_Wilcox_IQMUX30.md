@@ -4,7 +4,7 @@ uid: Connector_help_Snell_Wilcox_IQMUX30
 
 # Snell Wilcox IQMUX30
 
-The **Snell Wilcox IQMUX30** driver uses an SNMP connection to monitor and configure the **IQMUX30 multiplexer**.
+The **Snell Wilcox IQMUX30** connector uses an SNMP connection to monitor and configure the **IQMUX30 multiplexer**.
 
 ## About
 
@@ -14,7 +14,7 @@ This protocol is used to control and monitor the **Snell Willcox IQMUX30** via S
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -24,14 +24,14 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 **SNMP Settings**:
 
 - **Port number**: The port of the connected device, by default *161.*
-- **Get community string**: The community string in order to read from the device. The default value is *public*. However, if you have defined a different default value in the driver, then set this one.
-- **Set community string**: The community string in order to set to the device. The default value is *private.* However, if you have defined a different default value in the driver, then set this one.
+- **Get community string**: The community string in order to read from the device. The default value is *public*. However, if you have defined a different default value in the connector, then set this one.
+- **Set community string**: The community string in order to set to the device. The default value is *private.* However, if you have defined a different default value in the connector, then set this one.
 
 ## Usage
 
 ### General
 
-The **General Page** of this driver displays some general information (for example: **Slot Number**, **Serial Number**, etc.). It is also possible to **Restart the Unit** or to reset it to the **Default Settings** or **Factory Defaults**.
+The **General Page** of this connector displays some general information (for example: **Slot Number**, **Serial Number**, etc.). It is also possible to **Restart the Unit** or to reset it to the **Default Settings** or **Factory Defaults**.
 
 ### Setup
 

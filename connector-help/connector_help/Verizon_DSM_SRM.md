@@ -4,7 +4,7 @@ uid: Connector_help_Verizon_DSM_SRM
 
 # Verizon DSM SRM
 
-This driver will interface with the DataMiner SRM module in order to retrieve, add, update and delete pools and resources.
+This connector will interface with the DataMiner SRM module in order to retrieve, add, update and delete pools and resources.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver will interface with the DataMiner SRM module in order to retrieve, a
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,7 +44,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this is mainly a system driver, not much user interaction is needed. Below you can find the steps for the different functionalities in the driver.
+As this is mainly a system driver, not much user interaction is needed. Below you can find the steps for the different functionalities in the connector.
 
 ### General
 
@@ -61,22 +61,22 @@ This page contains the **SRM Pool Overview** table. You can perform the followin
 
 - Add:
 
-- 1.  Right-click anywhere within the table.
-  2.  Select **Add** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click anywhere within the table.
+  1. Select **Add** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Edit:
 
-- 1.  Right-click the entry you want to edit.
-  2.  Select **Edit** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click the entry you want to edit.
+  1. Select **Edit** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Delete:
 
-- 1.  Right-click the entry you want to delete.
-  2.  Select **Delete** in the context menu.
+  1. Right-click the entry you want to delete.
+  1. Select **Delete** in the context menu.
 
 ### Subscribers
 
@@ -84,22 +84,22 @@ This page contains the **SRM Subscriber Overview** table. You can perform the fo
 
 - Add
 
-- 1.  Right-click anywhere within the table.
-  2.  Select **Add** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click anywhere within the table.
+  1. Select **Add** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Edit.
 
-- 1.  Right-click the entry you want to edit.
-  2.  Select **Edit** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click the entry you want to edit.
+  1. Select **Edit** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Delete
 
-- 1.  Right-click the entry you want to delete.
-  2.  Select **Delete** in the context menu.
+  1. Right-click the entry you want to delete.
+  1. Select **Delete** in the context menu.
 
 ### Resources
 
@@ -107,30 +107,31 @@ This page contains the **SRM Resource Type** table. You can perform the followin
 
 - Add
 
-- 1.  Right-click anywhere within the table.
-  2.  Select **Add** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click anywhere within the table.
+  1. Select **Add** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Edit.
 
-- 1.  Right-click the entry you want to edit.
-  2.  Select **Edit** in the context menu.
-  3.  Fill in the necessary information.
-  4.  Click OK.
+  1. Right-click the entry you want to edit.
+  1. Select **Edit** in the context menu.
+  1. Fill in the necessary information.
+  1. Click OK.
 
 - Delete
 
-- 1.  Right-click the entry you want to delete.
-  2.  Select **Delete** in the context menu.
+  1. Right-click the entry you want to delete.
+  1. Select **Delete** in the context menu.
 
 ### Add Resource
 
 This page allows you to add resources to the **SRM Resource-Subscriber Relation** table via standalone parameters. To do so:
 
-1.  Fill in **all parameters.**
-2.  Click **Apply**.
-    If you made a mistake in one of the fields, click **Reset** to replace the values with default values.
+1. Fill in **all parameters.**
+1. Click **Apply**.
+
+   If you made a mistake in one of the fields, click **Reset** to replace the values with default values.
 
 ### Resource Relations
 
@@ -138,8 +139,8 @@ This page contains the **SRM Resource-Subscriber Relation** table. Only one acti
 
 - Delete:
 
-- 1.  Right-click the entry you want to delete.
-  2.  Select **Delete** in the context menu.
+  1. Right-click the entry you want to delete.
+  1. Select **Delete** in the context menu.
 
 ### Configuration
 
@@ -162,4 +163,4 @@ The following functionalities are available in this section:
 
 ## Notes
 
-The element that is running this driver should be linked to the **Verizon VSat Platform Manager** driver. For this purpose, enter the DMAID/ElementID in the **SRM Subscriber** parameter on the **Configuration** page in the **General tab.**
+The element that is running this connector should be linked to the **Verizon VSat Platform Manager** driver. For this purpose, enter the DMAID/ElementID in the **SRM Subscriber** parameter on the **Configuration** page in the **General tab.**

@@ -4,17 +4,17 @@ uid: Connector_help_Generic_Service_Data_Exchange
 
 # Generic Service Data Exchange
 
-The **Generic Service Data Exchange** driver can be used to gather all parameter values of all elements that are included in a **service**.
+The **Generic Service Data Exchange** connector can be used to gather all parameter values of all elements that are included in a **service**.
 
 ## About
 
-DataMiner currently doesn't support replication of a service in another DMS cluster. This driver gathers all parameter values of all elements that are included in a service. Then this element can be replicated in another cluster, allowing the users to access the service data in that other cluster.
+DataMiner currently doesn't support replication of a service in another DMS cluster. This connector gathers all parameter values of all elements that are included in a service. Then this element can be replicated in another cluster, allowing the users to access the service data in that other cluster.
 
-This driver uses a virtual connection, and doesn't poll any information from a device. **SLNet subscriptions** are used to be notified when a parameter value has changed.
+This connector uses a virtual connection, and doesn't poll any information from a device. **SLNet subscriptions** are used to be notified when a parameter value has changed.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,11 +24,11 @@ This driver uses a virtual connection, and doesn't poll any information from a d
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the linked service
 
-After creating an element with this protocol, a service needs to be selected on the configuration page. After selecting a service, the driver will load all elements and parameters that are included in the service.
+After creating an element with this protocol, a service needs to be selected on the configuration page. After selecting a service, the connector will load all elements and parameters that are included in the service.
 
 ## Usage
 
@@ -53,7 +53,3 @@ In the table on this page the current value of each parameter can be found. When
 ### Configuration
 
 On this page the user has the possibility to configure the service, from which all data is copied in this element. Use the **Update Service List** button, to update the list with available services in the cluster.
-
-## Notes
-
-N/A

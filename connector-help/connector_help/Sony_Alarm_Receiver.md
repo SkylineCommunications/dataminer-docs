@@ -4,7 +4,7 @@ uid: Connector_help_Sony_Alarm_Receiver
 
 # Sony Alarm Receiver
 
-The purpose of this driver is to aggregate alarms from Sony devices.
+The purpose of this connector is to aggregate alarms from Sony devices.
 
 ## About
 
@@ -32,7 +32,7 @@ The purpose of this driver is to aggregate alarms from Sony devices.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -44,6 +44,6 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **Aggregated Alarms**: Displays an Alarm Table which contains rows that will be used to aggregate alarms raised by Sony devices. Via the context menu of the table, rows can be added. To do so, right-click the table and select **Add row**.

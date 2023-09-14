@@ -4,7 +4,7 @@ uid: Connector_help_Juniper_Networks_Manager_CIN_Platform
 
 # Juniper Networks Manager CIN Platform
 
-This is an SNMP-based driver used to monitor and configure the Juniper Networks Manager. It allows you to monitor and change the device settings. The driver also uses an SSH connection to change the interface state of some ports. The data collected is centralized within the driver and used by DataMiner EPM for aggregation actions.
+This is an SNMP-based connector used to monitor and configure the Juniper Networks Manager. It allows you to monitor and change the device settings. The connector also uses an SSH connection to change the interface state of some ports. The data collected is centralized within the connector and used by DataMiner EPM for aggregation actions.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP-based driver used to monitor and configure the Juniper Networks 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### Serial SSH Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -89,11 +89,11 @@ The protocol has several configuration options that will change its behavior:
 
 - Perform an export or import by clicking the **Apply** button in the relevant section.
 
-This driver depends on Correlation rules and Automation scripts for communication with auxiliary drivers such as HP Network Automation and EPM drivers such as Skyline CCAP Platform EPM and Skyline CCAP Platform WM. To get the full functionality of this driver, make sure these Correlation rules and Automation scripts are configured and enabled.
+This connector depends on Correlation rules and Automation scripts for communication with auxiliary connectors such as HP Network Automation and EPM connectors such as Skyline CCAP Platform EPM and Skyline CCAP Platform WM. To get the full functionality of this connector, make sure these Correlation rules and Automation scripts are configured and enabled.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Juniper Networks Manager CIN Platform protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Juniper Networks Manager CIN Platform protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

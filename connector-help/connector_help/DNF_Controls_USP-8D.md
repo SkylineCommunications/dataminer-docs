@@ -8,19 +8,19 @@ The **DNF Controls USP-8D** can be configured by and can configure the DNF Contr
 
 ## About
 
-The DNF Controls USP-8D driver is polled by the DNF Controls USP-8D Control Console.
+The DNF Controls USP-8D connector is polled by the DNF Controls USP-8D Control Console.
 Since the latter device cannot be accessed by SNMP, the device polls the element instead of the other way around.
-Sets can be performed from the driver, and will be updated, depending on the interval between gets on the Control Console.
+Sets can be performed from the connector, and will be updated, depending on the interval between gets on the Control Console.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V 2.2                       |
 
@@ -30,7 +30,7 @@ Sets can be performed from the driver, and will be updated, depending on the int
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of ...
 

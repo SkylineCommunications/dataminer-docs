@@ -10,17 +10,17 @@ The P561 is an audio encoder for up to eight stereo channels, capable of transpo
 
 ## About
 
-The **IDC P561 Audio Encoder** driver is used to monitor and control a P561 Audio Encoder device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The driver uses **SNMP** to retrieve the data from the device.
+The **IDC P561 Audio Encoder** connector is used to monitor and control a P561 Audio Encoder device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The connector uses **SNMP** to retrieve the data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -30,7 +30,7 @@ The **IDC P561 Audio Encoder** driver is used to monitor and control a P561 Audi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

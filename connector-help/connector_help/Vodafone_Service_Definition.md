@@ -8,21 +8,21 @@ The basic driver for enhanced services specific for Vodafone.
 
 ## About
 
-This driver is based on the "Skyline Service Definition Basic" driver, but adds some specific functionallity for customer Vodafone.
+This connector is based on the "Skyline Service Definition Basic" driver, but adds some specific functionallity for customer Vodafone.
 
-The "Skyline Service Definition Basic" driver already contains a **Service Severity** parameter, but if alarming would be enabled on that parameter the service would always get "stuck" in an alarmed state. This is because the alarm state of all parameters in the service itself are also taken into account to calculate the summary state (loop). To solve that problem, this driver adds a new **Service Elements Summary Status** that only uses the severity states of the includes services and alarms to calculate the summary state. The parameters in this service itself are then ignored.
+The "Skyline Service Definition Basic" driver already contains a **Service Severity** parameter, but if alarming would be enabled on that parameter the service would always get "stuck" in an alarmed state. This is because the alarm state of all parameters in the service itself are also taken into account to calculate the summary state (loop). To solve that problem, this connector adds a new **Service Elements Summary Status** that only uses the severity states of the includes services and alarms to calculate the summary state. The parameters in this service itself are then ignored.
 
 Enhanced services require a DataMiner version of **9.0.3.0** or higher.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | DataMiner 9.0.3.0           |
 

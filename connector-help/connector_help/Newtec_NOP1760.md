@@ -8,11 +8,11 @@ The **Newtec NOP1760** is a traffic shaper.
 
 ## About
 
-This driver allows the management of the Newtec NOP1760 device using the **SNMP** protocol.
+This connector allows the management of the Newtec NOP1760 device using the **SNMP** protocol.
 
 ## Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -36,7 +36,7 @@ This page contains the **IGMP Version, Ethernet Link Data Table, Data Network Ga
 
 ### Encapsulation Page
 
-This page contains information related to the encapsulation using 5 pagebuttons. The General encapsulation page contains parameters related to the default encapsulation protocol (**Default Forwarding Mode**, **Default BBF Encapsulation Protocol**, **Default TS Encapsulation Protocol**), output settings (**BBF Type**, **BBF Destination IP Address**, **BBF Destination UDP Port**), carrier settings (**Modulation Standard**, **Symbol Rate**, **Pilots**) and link optimization settings (**Transponder Mode** and **Equalink**).
+This page contains information related to the encapsulation using 5 page buttons. The General encapsulation page contains parameters related to the default encapsulation protocol (**Default Forwarding Mode**, **Default BBF Encapsulation Protocol**, **Default TS Encapsulation Protocol**), output settings (**BBF Type**, **BBF Destination IP Address**, **BBF Destination UDP Port**), carrier settings (**Modulation Standard**, **Symbol Rate**, **Pilots**) and link optimization settings (**Transponder Mode** and **Equalink**).
 
 The BBF Encapsulation page contains the **BBF Encapsulation ISIs Table** and the **BBF Encapsulation Channels Table**.
 
@@ -48,9 +48,9 @@ The Encapsulation Monitor page contains monitoring parameters such a **Forwarded
 
 ### Decapsulation Page
 
-This page displays the **Default BBF Decapsulation Protocol** and the **Default TS Decapsulation Protocol**. In addition, four pagebuttons are present each grouping information related to the decapsulation.
+This page displays the **Default BBF Decapsulation Protocol** and the **Default TS Decapsulation Protocol**. In addition, four page buttons are present each grouping information related to the decapsulation.
 
-The general pagebutton groups displays the **Decapsulation BBF Input Enpoint Table** and the **GSE Decapsulation**, **Default Forwarding Mode** and **Enable ISI Filtering** parameters.
+The general page button groups displays the **Decapsulation BBF Input Enpoint Table** and the **GSE Decapsulation**, **Default Forwarding Mode** and **Enable ISI Filtering** parameters.
 
 The BBF Decapsulation page contains the **BBF Decapsulation ISIs Table** and the **BBF Decapsulation Channels Table**.
 
@@ -68,7 +68,7 @@ This page displays parameters related to the ACM controller such as **ACM Contro
 
 ### AUPC Controller
 
-This page displays parameters related to the AUPC controller such as **AUPC Controller Enable**, **ACM Controller Mode**, **ModCod Selection Algorithm**, **ModCod Tuning**, **Minimum Margin** and **Target Margin**. The Monitoring pagebutton allows to display some monitoring parameters related to the AUPC Controller, such as **Forward Configuration Counter**, **Client Feedback Count**, **Power Request Count**, **Requested Output Power** and **Current Output Power**.
+This page displays parameters related to the AUPC controller such as **AUPC Controller Enable**, **ACM Controller Mode**, **ModCod Selection Algorithm**, **ModCod Tuning**, **Minimum Margin** and **Target Margin**. The Monitoring page button allows to display some monitoring parameters related to the AUPC Controller, such as **Forward Configuration Counter**, **Client Feedback Count**, **Power Request Count**, **Requested Output Power** and **Current Output Power**.
 
 ### Redundancy
 
@@ -76,11 +76,11 @@ This page contains the **Redundancy**, **Redundancy Initial State** and the **Re
 
 ### Device Setup
 
-This page contains information related to the device, such as the **SNMP Notifications Destination Table**, **Device Reset**, **GUI**, **Remote CLI** and **FTP**. In addition, five pagebuttons are present allowing to display more information related to
+This page contains information related to the device, such as the **SNMP Notifications Destination Table**, **Device Reset**, **GUI**, **Remote CLI** and **FTP**. In addition, five page buttons are present allowing to display more information related to
 
 - Alarm Handling: Contains the **Alarm Configuration Table**.
 - Date and Time: Allows setting the **Device Date** and **Device Time**. This also contains the **NTP Peer Table**.
-- Conrol Plane: Contains control plane parameters such as **Terminal ID**, **Control Plane**, and Encapsulation Cofiguration parameters such as **Nominal S2 ModCod**, **Frame Type**, **ISI**, **CIR**, **PIR** and **Rate Priority**.
+- Conrol Plane: Contains control plane parameters such as **Terminal ID**, **Control Plane**, and Encapsulation Configuration parameters such as **Nominal S2 ModCod**, **Frame Type**, **ISI**, **CIR**, **PIR** and **Rate Priority**.
 - Mgmt Interface: Displays the **Ethernet Link Management Table** and the **IP Management Interface Table**. In addition, parameters related to Link Redundancy are displayed (**Mgmt Switch Order**, **Mgmt Switch Count** and **Mgmt Active Interface**).
 - Logging: Displays parameters related to logging, such as **Local Logging**, **Remote Logging**, **Remote IP Address** and **Remote UDP Port**. It also contains the **Log Filter Table**.
 

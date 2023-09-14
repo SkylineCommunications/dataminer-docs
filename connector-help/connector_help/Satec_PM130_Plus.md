@@ -32,7 +32,7 @@ The PM130 PLUS is a compact, multi-function, three-phase AC power meter, designe
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element generated with this driver consists of the following data pages:
+The element generated with this connector consists of the following data pages:
 
 - **General**: Displays the majority of the power meter parameters, such as parameters related to **tension**, **amperage**, **power**, **energy**, etc.
 - **Device Info**: Displays the **COM1** and **COM2** communication information, i.e. the **Protocol**, **Interface**, **Address** and **Baud** **Rate**. The **MAC** **Address**, **IP** **Address** and **Default** **Gateway** are also displayed on this page.

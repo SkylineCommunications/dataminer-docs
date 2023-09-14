@@ -4,15 +4,15 @@ uid: Connector_help_Evertz_VIP-X
 
 # Evertz VIP-X
 
-The **Evertz VIP-X** driver is used to monitor and control different kinds of Evertz VIP-X video cards.
+The **Evertz VIP-X** connector is used to monitor and control different kinds of Evertz VIP-X video cards.
 
 ## About
 
-This driver uses an SNMP connection to display information on an Evertz VIP-X video card and allow its configuration.
+This connector uses an SNMP connection to display information on an Evertz VIP-X video card and allow its configuration.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**              | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version              | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Fixed indexes, TOO BIG error | No                  | Yes                     |
@@ -23,7 +23,7 @@ This driver uses an SNMP connection to display information on an Evertz VIP-X vi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP Connection:
 

@@ -35,7 +35,7 @@ The 8200 ACU is compatible with industry-standard drive cabinet interfaces and l
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -57,7 +57,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages described below. Each page displays information about the **Actual Positions** of the antenna and **Receiver** parameters like the **Receiver Signal Level**.
+The element created with this connector consists of the data pages described below. Each page displays information about the **Actual Positions** of the antenna and **Receiver** parameters like the **Receiver Signal Level**.
 
 ### General
 

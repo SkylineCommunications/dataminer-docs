@@ -32,7 +32,7 @@ This connector uses the RollCall community library package to communicate with t
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,7 +51,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Allows you to check the polling state and enable/disable debug mode.
 - **Input**: Displays the summary of the input state and statistics.

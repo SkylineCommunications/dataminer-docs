@@ -4,7 +4,7 @@ uid: Connector_help_2WCOM_NC06_-_Device
 
 # 2WCOM NC06 - Device
 
-This driver allows you to monitor and configure specific devices connected to the device **2WCOM NC06**. It is exported by the parent driver [2WCOM NC06](xref:Connector_help_2WCOM_NC06).
+This connector allows you to monitor and configure specific devices connected to the device **2WCOM NC06**. It is exported by the parent connector [2WCOM NC06](xref:Connector_help_2WCOM_NC06).
 
 ## About
 
@@ -24,7 +24,7 @@ This driver allows you to monitor and configure specific devices connected to th
 
 ## Configuration
 
-This driver is used by DVEs that are **automatically created** by the parent element. No user input is required.
+This connector is used by DVEs that are **automatically created** by the parent element. No user input is required.
 
 ## How to use
 

@@ -8,17 +8,17 @@ The Videotek VSG-4MTG is a 3G/SD/HD master timing generator part of the Imagine 
 
 ## About
 
-SNMP driver to manage the Master Timing Generator.
+SNMP connector to manage the Master Timing Generator.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x          | New firmware changes, OIDs shift, removal and addition of new parameters | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 3.0                         |
 
@@ -28,7 +28,7 @@ SNMP driver to manage the Master Timing Generator.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -4,11 +4,11 @@ uid: Connector_help_Imagine_Communications_Selenio_MDX2
 
 # Imagine Communications Selenio MDX2
 
-The **Imagine Communications Selenio MDX2** is a type of card that can be slotted into a Selenio chassis. This driver contains a full overview of all the data available in this card. The Selenio MDX2 encapsulates streams for transport. It can multiplex, de-multiplex and re-multiplex transport streams and also provides a large host of options to adjust or add additional content to streams. Compared to the MDX1, the MDX2 provides more options concerning DVB-T2.
+The **Imagine Communications Selenio MDX2** is a type of card that can be slotted into a Selenio chassis. This connector contains a full overview of all the data available in this card. The Selenio MDX2 encapsulates streams for transport. It can multiplex, de-multiplex and re-multiplex transport streams and also provides a large host of options to adjust or add additional content to streams. Compared to the MDX1, the MDX2 provides more options concerning DVB-T2.
 
 ## About
 
-This driver displays information on different pages, described in the **Usage** section of this document, and it uses snmpv2 polling to get information from the device.
+This connector displays information on different pages, described in the **Usage** section of this document, and it uses snmpv2 polling to get information from the device.
 
 All data gets retrieved from the device in two ways.
 
@@ -22,9 +22,9 @@ All data gets retrieved from the device in two ways.
 
    - Every 7 seconds, a check is done for any changed configurable values. If such a change is detected, the new value is retrieved and instantly updated in the element. If the change is the cell of a table, the complete table is refreshed. After a change is detected, the check is boosted and performed every 0.5 seconds, until no more changes are detected.
 
-The **versioning** for the driver is specifically engineered to tie in with the firmware version of the card the driver supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the driver is the second iteration for firmware *5.0.28.*
+The **versioning** for the connector is specifically engineered to tie in with the firmware version of the card the connector supports. It uses the following format: X.X.X.Y, with X.X.X being the firmware version of the card, and .Y the specific driver iteration for this firmware. For example, *5.0.28.2* means the connector is the second iteration for firmware *5.0.28.*
 
-### Ranges of the driver
+### Version Info
 
 <table>
 <colgroup>
@@ -64,9 +64,9 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 </tbody>
 </table>
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                             |
+| **Range** | **Device Firmware Version**                                                                             |
 |------------------|---------------------------------------------------------------------------------------------------------|
 | 5.4.9.x          | Update for firmware 5.4.9                                                                               |
 | 10.0.0.x         | Requires controller firmware "S/W=7.0-38, H/W= rev 02" or higher and will not work with older firmware. |
@@ -77,7 +77,7 @@ The **versioning** for the driver is specifically engineered to tie in with the 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -92,7 +92,7 @@ SNMP Settings:
 
 ## Usage
 
-The driver contains different pages divided into several sections using separators. For each page, there is a togglebutton available to enable/disable polling of the section related to such page.
+The connector contains different pages divided into several sections using separators. For each page, there is a toggle button available to enable/disable polling of the section related to such page.
 
 ### General section
 
@@ -139,10 +139,10 @@ Control and monitoring of **Digital Video Broadcasting options** is available on
 
 ## Notes
 
-Because of the high amount of data present in tables for this device, the demands on the network, memory and CPU for this driver will be significantly higher than for the other Imagine Communications Selenio cards. As a consequence, even though sets are executed on the device within 2 to 5 seconds, it may take a few additional seconds for the changes to show in the element. This depends on the size of the table containing the changed value and on the current workload of the DMA.
+Because of the high amount of data present in tables for this device, the demands on the network, memory and CPU for this connector will be significantly higher than for the other Imagine Communications Selenio cards. As a consequence, even though sets are executed on the device within 2 to 5 seconds, it may take a few additional seconds for the changes to show in the element. This depends on the size of the table containing the changed value and on the current workload of the DMA.
 
 Changes from range 5.1.24.x to 5.4.9.x:
 
 \- Parameter IP LANs Selected Receive Interface (PID30003) is no longer available.
 
-\- Changes in Parameter IDs/descriptions aroud the driver.
+\- Changes in Parameter IDs/descriptions aroud the connector.

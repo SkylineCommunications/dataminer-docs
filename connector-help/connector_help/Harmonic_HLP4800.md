@@ -12,7 +12,7 @@ The HLP 4800 is powered by the CPS 4801 hot-swappable power supply, installed in
 
 ## About
 
-This driver retrieves data from the device(s) through SNMP and shows the modules that exist on each device address.
+This connector retrieves data from the device(s) through SNMP and shows the modules that exist on each device address.
 
 The data specific for each module is organized on the **Devices** page.
 
@@ -21,21 +21,21 @@ For each module, a **DVE** is created that includes the following pages:
 - **General page** (with all general data related to the module).
 - Specific pages for parameters specific to the device type of the generated DVE. Where possible, these parameters can also be set.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                                                      | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                                                                                     | No                  | Yes                     |
 | 1.0.1.x          | Added support for new module PWL4207C (HD PowerLink). New export rules for DVE descriptions were created. New naming format for DVE. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4.1.0.24                    |
 | 1.0.1.x          | 4.1.0.24                    |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                | **Description**                          |
 |--------------------------------------------------------------------------------------|------------------------------------------|
@@ -58,7 +58,7 @@ For each module, a **DVE** is created that includes the following pages:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -6,11 +6,11 @@ uid: Connector_help_Axon_ACP_MGG200
 
 The MGG200 is a building block of the Synapse multiviewer.
 
-The **Axon ACP MGG200** driver can be used to display and configure information related to this device.
+The **Axon ACP MGG200** connector can be used to display and configure information related to this device.
 
 ## About
 
-This driver can be connected to the **Axon ACP Frame Manager** to generate and update the MGG200 elements that are part of the frame.
+This connector can be connected to the **Axon ACP Frame Manager** to generate and update the MGG200 elements that are part of the frame.
 
 There are different possibilities available for **alarm monitoring** and **trending**.
 
@@ -36,13 +36,13 @@ There are different possibilities available for **alarm monitoring** and **trend
 
 ### Creation
 
-The element using this driver can be automatically created by the parent element using the **Axon ACP Frame Manager** driver, but it can also be created as a standalone element.
+The element using this connector can be automatically created by the parent element using the **Axon ACP Frame Manager** connector, but it can also be created as a standalone element.
 
 ### Connections
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -53,7 +53,7 @@ SERIAL CONNECTION:
 
 #### Serial Broadcast Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

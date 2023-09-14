@@ -44,10 +44,10 @@ HTTP CONNECTION:
 
 When the element has been created, do the following to make sure the connector can start polling data:
 
-1.  Go to the **General** page.
-2.  Click the **Login** button.
-3.  Fill in the **Username** and **Password**.
-4.  Click the **Connect** button and wait for the **Connection Status** to change to ***Connected***.
+1. Go to the **General** page.
+1. Click the **Login** button.
+1. Fill in the **Username** and **Password**.
+1. Click the **Connect** button and wait for the **Connection Status** to change to ***Connected***.
 
 ### Web Interface
 

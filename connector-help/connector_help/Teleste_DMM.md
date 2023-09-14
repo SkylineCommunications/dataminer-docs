@@ -4,29 +4,29 @@ uid: Connector_help_Teleste_DMM
 
 # Teleste DMM
 
-This driver monitors and manages controller devices like the Teleste DMM and all of its modules. It polls and sets parameters both of the controller device itself and of the attached modules.
+This connector monitors and manages controller devices like the Teleste DMM and all of its modules. It polls and sets parameters both of the controller device itself and of the attached modules.
 
 ## About
 
 Several parameters of the controller itself are polled with a timer. With a separate timer, all of the modules are polled one after another. When a set occurs on one of the attached modules, this polling cycle is interrupted (as soon as the current polling of the current module is finished) in order to give priority to the set.
 
-Every module has its own interface (i.e. IP address and port). This is the reason why 2 serial connections are used in the driver, one for the controller device and one for the modules. The modules connection changes for every module that needs to be polled/set.
+Every module has its own interface (i.e. IP address and port). This is the reason why 2 serial connections are used in the connector, one for the controller device and one for the modules. The modules connection changes for every module that needs to be polled/set.
 
-This driver exports different drivers based on the retrieved data. A list can be found in the section "Exported drivers" below.
+This connector exports different connectors based on the retrieved data. A list can be found in the section "Exported connectors" below.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 <table>
 <colgroup>
@@ -116,7 +116,7 @@ This driver exports different drivers based on the retrieved data. A list can be
 
 #### Serial Main connection
 
-This driver uses a serial connection to request data from the **controller**. This connection requires the following input during element creation:
+This connector uses a serial connection to request data from the **controller**. This connection requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -129,7 +129,7 @@ SERIAL CONNECTION:
 
 This additional serial connection is used to request data from the **modules**.
 
-No user configuration is required. The driver will dynamically set the IP address and IP port depending on which module is polled.
+No user configuration is required. The connector will dynamically set the IP address and IP port depending on which module is polled.
 
 ## Usage
 

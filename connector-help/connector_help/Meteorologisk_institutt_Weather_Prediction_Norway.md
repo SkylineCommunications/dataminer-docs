@@ -4,13 +4,13 @@ uid: Connector_help_Meteorologisk_institutt_Weather_Prediction_Norway
 
 # Meteorologisk Institutt Weather Prediction Norway
 
-The **Weather Prediction Norway** driver uses [https://api.met.no](http://api.met.no/) to request weather data.
+The **Weather Prediction Norway** connector uses [https://api.met.no](http://api.met.no/) to request weather data.
 
-Though this is a Norwegian weather service, it also provides weather information for outside Norway. The driver can therefore be useful at many sites, although it could occur that it provides more detailed information for locations inside Norway itself.
+Though this is a Norwegian weather service, it also provides weather information for outside Norway. The connector can therefore be useful at many sites, although it could occur that it provides more detailed information for locations inside Norway itself.
 
 ## About
 
-With this driver, important weather data can be retrieved based on **locations** specified with **longitude**, **latitude**, and optionally **height**. (Height is only necessary for locations outside of Norway.) The driver also provides an overview of any **API errors** and **textual forecasts**. All data can be retrieved for up to 10 days in the future.
+With this connector, important weather data can be retrieved based on **locations** specified with **longitude**, **latitude**, and optionally **height**. (Height is only necessary for locations outside of Norway.) The connector also provides an overview of any **API errors** and **textual forecasts**. All data can be retrieved for up to 10 days in the future.
 
 ### Version Info
 
@@ -42,7 +42,7 @@ With this driver, important weather data can be retrieved based on **locations**
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -56,7 +56,7 @@ In order to retrieve data for specific locations, specify the locations in the *
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### API Errors (range 1.0.0.x)
 
@@ -122,6 +122,6 @@ With the **Configuration** page button, a selection of **text forecast types** c
 
 ## Notes
 
-- For correct usage of the driver, **.NET 4.5** is recommended.
+- For correct usage of the connector, **.NET 4.5** is recommended.
 - Multi-client behavior is not supported. The configuration implemented by one client will be shared by all clients.
 - To add rows via an Automation script, use the **AS AddLocations** parameter.

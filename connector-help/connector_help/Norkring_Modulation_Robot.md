@@ -4,17 +4,17 @@ uid: Connector_help_Norkring_Modulation_Robot
 
 # Norkring Modulation Robot
 
-This driver is used to monitor a modulation robot and to set some configuration parameters.
+This connector is used to monitor a modulation robot and to set some configuration parameters.
 
 ## About
 
-The driver communicates with the device through SNMP in order to retrieve sources and status information and to configure sources and authorizations.
+The connector communicates with the device through SNMP in order to retrieve sources and status information and to configure sources and authorizations.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

@@ -8,17 +8,17 @@ The Nevion SDI Router is a modular router that can vary in size depending on how
 
 ## About
 
-This driver is used to monitor the Nevion SDI Modular Router.
+This connector is used to monitor the Nevion SDI Modular Router.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.6.27.10-nw1-svn24861      |
 
@@ -28,7 +28,7 @@ This driver is used to monitor the Nevion SDI Modular Router.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

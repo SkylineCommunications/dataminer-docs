@@ -4,7 +4,7 @@ uid: Connector_help_PacketLight_PL-2000
 
 # PacketLight PL-2000
 
-The PacketLight PL-2000 is an advanced multi-protocol, multi-rate muxponder. This driver is used to monitor/control this device via SNMP.
+The PacketLight PL-2000 is an advanced multi-protocol, multi-rate muxponder. This connector is used to monitor/control this device via SNMP.
 
 ## About
 
@@ -32,7 +32,7 @@ The PacketLight PL-2000 is an advanced multi-protocol, multi-rate muxponder. Thi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 ### General
 
@@ -79,7 +79,7 @@ The page also contains the **SNTP Servers** table, which displays the **Address,
 On this page, you can select the **Interface Naming format**. Many tables use this name in their display key, so that it is easy to see to which interface an alarm is related.
 
 It is possible to **import or export a CSV** with the buttons at the bottom of the page. The CSV file must have a header using the format *Index;Description;Alias*.
-Note that the driver only checks the key and sets the alias. The description is only there to make it more accessible for the user. When an alias is polled from the device, the device will have priority and the alias will not be set in DataMiner. Also note that the alias is only set in DataMiner and not on the device.
+Note that the connector only checks the key and sets the alias. The description is only there to make it more accessible for the user. When an alias is polled from the device, the device will have priority and the alias will not be set in DataMiner. Also note that the alias is only set in DataMiner and not on the device.
 
 ### Performance
 
@@ -111,7 +111,7 @@ This page contains the **Alarms Configuration** table.
 
 ### Events
 
-This page contains the **Events, Generic Events, Event Inventory** and **OPT APS Traps** table. These tables list the traps supported by the driver that have been received.
+This page contains the **Events, Generic Events, Event Inventory** and **OPT APS Traps** table. These tables list the traps supported by the connector that have been received.
 
 The following traps are supported:
 

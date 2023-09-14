@@ -6,7 +6,7 @@ uid: Connector_help_Advantech_ADAM5060
 
 The ADAM-5060 features six relay output channels. Each channel can be independently configured, and can also be used to control heaters, pumps and power equipment.
 
-This driver allows you to monitor these channels. The driver uses serial communication with the device. It is possible to invert the mode line.
+This connector allows you to monitor these channels. The connector uses serial communication with the device. It is possible to invert the mode line.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to monitor these channels. The driver uses serial communi
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -47,4 +47,4 @@ SERIAL CONNECTION:
 
 ## How to use
 
-This driver has only one data page, which allows you to monitor the **Real State** of each of the 6 channels.
+This connector has only one data page, which allows you to monitor the **Real State** of each of the 6 channels.

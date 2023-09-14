@@ -4,7 +4,7 @@ uid: Connector_help_Aeta_Audio_Systems_Scoop_5
 
 # Aeta Audio Systems Scoop 5
 
-The Aeta Audio Systems Scoop 5 driver can be used to display information of any related device. A serial and smart-serial connection are used to retrieve information from the device.
+The Aeta Audio Systems Scoop 5 connector can be used to display information of any related device. A serial and smart-serial connection are used to retrieve information from the device.
 
 ## About
 
@@ -32,7 +32,7 @@ The Aeta Audio Systems Scoop 5 driver can be used to display information of any 
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -52,7 +52,7 @@ SERIAL CONNECTION:
 
 #### Smart-Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

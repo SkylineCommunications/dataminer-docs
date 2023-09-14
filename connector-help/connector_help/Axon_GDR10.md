@@ -8,13 +8,13 @@ The **Axon GDR10** is a 3 GB/s, HD, SD 1 to 8 distribution amplifier with recloc
 
 ## About
 
-With this driver, you can monitor and configure the state, lock status, etc. of the cards available in the equipment.
+With this connector, you can monitor and configure the state, lock status, etc. of the cards available in the equipment.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection**
 

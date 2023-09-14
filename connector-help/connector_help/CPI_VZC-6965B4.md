@@ -9,17 +9,17 @@ The 2.25 kW TWT HPA utilizes a 2250 Watt rated power, wideband TWT to produce ra
 
 ## About
 
-This driver uses a serial connection to send data to and get data from the device.
+This connector uses a serial connection to send data to and get data from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | VZ2                         |
 
@@ -29,7 +29,7 @@ This driver uses a serial connection to send data to and get data from the devic
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

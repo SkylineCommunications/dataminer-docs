@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_IQASI25
 
 # Grass Valley IQASI25
 
-This driver monitors the activity of the Grass Valley IQASI25 device, an ASI Switch.
+This connector monitors the activity of the Grass Valley IQASI25 device, an ASI Switch.
 
 ## About
 
@@ -14,15 +14,11 @@ This driver monitors the activity of the Grass Valley IQASI25 device, an ASI Swi
 |----------------------|------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version  |
 
-
-
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | 5.0.5                  |
-
-
 
 ### System Info
 
@@ -30,23 +26,21 @@ This driver monitors the activity of the Grass Valley IQASI25 device, an ASI Swi
 |-----------|---------------------|-------------------------|
 | 1.0.0.x   | No                  | Yes                     |
 
-
-
 ## Configuration
 
 ### Connections
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
 - Interface connection:
 
   - **IP address/host**: The polling IP or URL of the destination.
-  - **IP port**: \[The IP port of the destination. (default: *2050*)\]
-  - **Bus address**: \[The bus address of the device. (default: *UU.PP (Hex)*)\]
+  - **IP port**: The IP port of the destination (default: *2050*).
+  - **Bus address**: The bus address of the device (default: *UU.PP (Hex)*).
 
 ## Usage
 
@@ -77,5 +71,3 @@ In this page the user can configure the Logging. There are subpages for specific
 ### Connection Info
 
 This page displays the configuration status.
-
-

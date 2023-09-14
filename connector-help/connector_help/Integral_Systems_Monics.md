@@ -4,22 +4,22 @@ uid: Connector_help_Integral_Systems_Monics
 
 # Integral Systems Monics
 
-This is a virtual driver that uses database queries to retrieve transponder, carrier and beacon measurements.
+This is a virtual connector that uses database queries to retrieve transponder, carrier and beacon measurements.
 
 ## About
 
-This driver has two ranges, each with their own table layout depending on customer requirements. Since SQL calls are made directly to a database, no DataMiner interface is used and the database information needs to be entered after the element is created. An important feature of the driver is the alarm monitoring of the **EIRP** values with normalization.
+This connector has two ranges, each with their own table layout depending on customer requirements. Since SQL calls are made directly to a database, no DataMiner interface is used and the database information needs to be entered after the element is created. An important feature of the connector is the alarm monitoring of the **EIRP** values with normalization.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x          | Initial version. In range 1.x.x.x, the minimum and maximum EIRP values are provided by a manager driver. | No                  | No                      |
+| 1.0.0.x          | Initial version. In range 1.x.x.x, the minimum and maximum EIRP values are provided by a manager connector. | No                  | No                      |
 | 2.0.0.x          | Different table design.                                                                                  | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-This driver is not associated with particular firmware, but does require the correct database setup.
+This connector is not associated with particular firmware, but does require the correct database setup.
 
 ## Installation and configuration
 
@@ -27,7 +27,7 @@ This driver is not associated with particular firmware, but does require the cor
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration
 

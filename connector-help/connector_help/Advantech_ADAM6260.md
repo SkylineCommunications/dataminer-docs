@@ -4,23 +4,23 @@ uid: Connector_help_Advantech_ADAM6260
 
 # Advantech ADAM6260
 
-This driver is a serial driver that controls the Digital Output device.
+This connector is a serial connector that controls the Digital Output device.
 
 You can configure the outputs and the streams from the device.
 
 ## About
 
-The driver communicates through a serial connection with the device to change its configuration and to monitor its outputs and streams.
+The connector communicates through a serial connection with the device to change its configuration and to monitor its outputs and streams.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | A1.05.B00                   |
 
@@ -30,7 +30,7 @@ The driver communicates through a serial connection with the device to change it
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

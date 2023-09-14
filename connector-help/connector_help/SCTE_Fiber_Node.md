@@ -8,15 +8,15 @@ The **SCTE Fiber Node** is an optical transmitter/receiver that can be used to m
 
 ## About
 
-This is an **SNMP**-based driver for the SCTE Fiber Node device.
+This is an **SNMP**-based connector for the SCTE Fiber Node device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 | **Device Range** | **Device Firmware Version** |
 |------------------|-----------------------------|
@@ -28,7 +28,7 @@ This is an **SNMP**-based driver for the SCTE Fiber Node device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -54,7 +54,7 @@ This page displays the **Frequency**, **Power** and **Width** for both **Down** 
 
 ### Polling Control
 
-This page allows you to enable or disable the polling for particular SNMP modules, in the same way as can be done above each individual table in the driver.
+This page allows you to enable or disable the polling for particular SNMP modules, in the same way as can be done above each individual table in the connector.
 
 ### Interfaces
 

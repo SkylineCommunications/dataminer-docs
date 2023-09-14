@@ -4,11 +4,11 @@ uid: Connector_help_Meinberg_SCU-XPT
 
 # Meinberg SCU-XPT
 
-The **Meinberg SCU-XPT** driver is an SNMP driver that is used to monitor **Meinberg SCU-XPT** devices with SNMP.
+The **Meinberg SCU-XPT** connector is an SNMP connector that is used to monitor **Meinberg SCU-XPT** devices with SNMP.
 
 ## About
 
-With this driver, you can monitor the status of satellite tracking with the **Meinberg SCU-XPT**.
+With this connector, you can monitor the status of satellite tracking with the **Meinberg SCU-XPT**.
 
 ## Installation and configuration
 

@@ -4,23 +4,23 @@ uid: Connector_help_Inverto_IDLV-5x00
 
 # Inverto IDLV-5x00
 
-This driver is used to manage and monitor the Inverto IDLV-5x00.
+This connector is used to manage and monitor the Inverto IDLV-5x00.
 
 ## About
 
-With this driver, you can manage and monitor the professional multi-format HDTV integrated receiver decoder Inverto IDLV-5x00 via **SNMP** polling.
+With this connector, you can manage and monitor the professional multi-format HDTV integrated receiver decoder Inverto IDLV-5x00 via **SNMP** polling.
 
 SNMP traps can be retrieved when this is enabled on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 51PR0022                    |
 
@@ -30,7 +30,7 @@ SNMP traps can be retrieved when this is enabled on the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

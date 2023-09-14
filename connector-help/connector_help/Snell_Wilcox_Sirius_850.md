@@ -40,7 +40,7 @@ This is an SNMP-based connector for the Snell and Wilcox Sirius 850 expandable r
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -123,7 +123,7 @@ From the **General** page, the following parameter groups or tables are availabl
 
 **Sources** and **Destinations** are on separate pages of the same name. The **Destinations** page contains the **Routed Source Label** column, where you can change crosspoints as mentioned in the "Crosspoints and Matrix" section above.
 
-The **Labels** page has both **Source** and **Destination Labels** of 4 different lengths. The 8-character-length label is the name used in the rest of the driver.
+The **Labels** page has both **Source** and **Destination Labels** of 4 different lengths. The 8-character-length label is the name used in the rest of the connector.
 
 The **Others** page contains the following tables:
 

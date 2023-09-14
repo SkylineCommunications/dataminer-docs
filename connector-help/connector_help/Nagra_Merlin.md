@@ -8,13 +8,13 @@ The **Nagra Merlin** is a conditional access system.
 
 ## About
 
-This driver uses SNMP to monitor the Nagra Merlin device. The retrieved information is displayed on different pages.
+This connector uses SNMP to monitor the Nagra Merlin device. The retrieved information is displayed on different pages.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -28,7 +28,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ## Usage
 
-You can find more information on the Main Page and General Page below. The driver contains a number of other pages, on which you can find a large number of individual alarm parameters. All parameters can be monitored and trended.
+You can find more information on the Main Page and General Page below. The connector contains a number of other pages, on which you can find a large number of individual alarm parameters. All parameters can be monitored and trended.
 
 ### Main Page
 

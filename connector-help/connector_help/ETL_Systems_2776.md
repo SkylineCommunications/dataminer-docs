@@ -8,17 +8,17 @@ The ETL Systems 2776 is a DC-LNB power supply.
 
 ## About
 
-This is an **SNMP** driver that can be used to poll the device for its current hardware status, including the temperature and the status of the power supply and LNB power supply.
+This is an **SNMP** connector that can be used to poll the device for its current hardware status, including the temperature and the status of the power supply and LNB power supply.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.2 e131                    |
 
@@ -28,7 +28,7 @@ This is an **SNMP** driver that can be used to poll the device for its current h
 
 #### SNMP Device connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

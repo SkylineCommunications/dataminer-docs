@@ -4,7 +4,7 @@ uid: Connector_help_Pixelmetrix_DVStor
 
 # Pixelmetrix DVStor
 
-The aim of this driver is to retrieve recording, playback and buffer information from a Pixelmetrix DVStor device with transport stream recording and playout capabilities.
+The aim of this connector is to retrieve recording, playback and buffer information from a Pixelmetrix DVStor device with transport stream recording and playout capabilities.
 
 ## About
 
@@ -16,7 +16,7 @@ This topic concerns version 2.7.2.2 of the **Pixelmetrix DVStor** driver.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -29,7 +29,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 - **Get community string:** The community string used when reading values from the device, e.g. *public*.
 - **Set community string:** The community string used when setting values on the device, e.g. *private*.
 
-This driver also uses a serial connection and needs the following user information:
+This connector also uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

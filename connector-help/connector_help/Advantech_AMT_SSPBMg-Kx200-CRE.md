@@ -4,9 +4,9 @@ uid: Connector_help_Advantech_AMT_SSPBMg-Kx200-CRE
 
 # Advantech AMT SSPB Mg-Kx200-CRE
 
-This driver is designed to poll data, set data and monitor alarms of an Advantech AMT SSPB Mg-Kx200-CRE. This is a redundant 200W extended Ku-band HUB-mount solid state block upconverter satellite transmitter, operating in the Ku-band. The device is used in conjunction with the L-band transceiver, and is intended to be mounted on an antenna hub.
+This connector is designed to poll data, set data and monitor alarms of an Advantech AMT SSPB Mg-Kx200-CRE. This is a redundant 200W extended Ku-band HUB-mount solid state block upconverter satellite transmitter, operating in the Ku-band. The device is used in conjunction with the L-band transceiver, and is intended to be mounted on an antenna hub.
 
-The main components of the device, which are monitored and polled by the driver, are the power supply, consisting of two power supply assemblies in the SSPB, the upconverter assembly, which converts and amplifies the incoming L-Band carrier signal into a Kx-band carrier, and the HPA assembly, which amplifies the RF signal from the upconverter to a power level sufficient for transmission. Integral to this module are three HPA stages and a power conditioner board. Other functionality includes internal power conditioning and overtemperature shutdown. There is also a controller board, where all of the controls, input/output communication and decision-making, with the exception of the critical module-level decisions, are managed by the microcontroller within the upconverter. Through the system control interface, the microcontroller board takes care of fault detection, monitoring, on/off switching, and changes in the unit's address.
+The main components of the device, which are monitored and polled by the connector, are the power supply, consisting of two power supply assemblies in the SSPB, the upconverter assembly, which converts and amplifies the incoming L-Band carrier signal into a Kx-band carrier, and the HPA assembly, which amplifies the RF signal from the upconverter to a power level sufficient for transmission. Integral to this module are three HPA stages and a power conditioner board. Other functionality includes internal power conditioning and overtemperature shutdown. There is also a controller board, where all of the controls, input/output communication and decision-making, with the exception of the critical module-level decisions, are managed by the microcontroller within the upconverter. Through the system control interface, the microcontroller board takes care of fault detection, monitoring, on/off switching, and changes in the unit's address.
 
 Finally, if an external 10 MHz reference signal is used, this signal must be supplied at the input of the unit along with the L-Band input signal.
 
@@ -14,22 +14,22 @@ Finally, if an external 10 MHz reference signal is used, this signal must be sup
 
 Protocol type: SNMP.
 
-This driver is divided into four sections:
+This connector is divided into four sections:
 
 - A read-only section that polls identification data of the device such as the serial number, software version used, power class, and so on.
 - A second read-only section, except for one parameter, that polls the uplink converter statuses, such as redundancy, gain, Tx frequency, Rx frequency, attenuation, and so on.
 - A read-only section that polls the device alarms, such as temperature alarms, voltage alarms, current alarms, and so on.
 - A read and write configuration section that allows the user to set different parameters, such as RF status, gain, attenuation, frequency (Tx and Rx), redundancy mode, and so on.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. DCF integration featured from version 1.0.0.2 onwards. | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -39,7 +39,7 @@ This driver is divided into four sections:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -89,7 +89,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The 1.0.0.2 driver range of the Advantech AMT SSPB Mg-Kx200-CRE protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The 1.0.0.2 connector range of the Advantech AMT SSPB Mg-Kx200-CRE protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

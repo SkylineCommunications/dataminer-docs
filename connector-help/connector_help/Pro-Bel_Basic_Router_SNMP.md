@@ -4,24 +4,24 @@ uid: Connector_help_Pro-Bel_Basic_Router_SNMP
 
 # Pro-Bel Basic Router SNMP
 
-This driver is used to monitor and control a **Pro-Bel router** device.
+This connector is used to monitor and control a **Pro-Bel router** device.
 
 ## About
 
-This driver is used to monitor and control matrix devices from the vendor Pro-Bel. The maximum supported size is 256 inputs and 256 outputs, but the size is automatically adjusted according to the device dimensions.
+This connector is used to monitor and control matrix devices from the vendor Pro-Bel. The maximum supported size is 256 inputs and 256 outputs, but the size is automatically adjusted according to the device dimensions.
 
 The SNMP protocol is used to retrieve information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                        | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                        | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                                        | No                  | Yes                     |
 | 1.1.0.x          | Name changed to Basic Router (old name: Sirius Router) | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | SNMP agent ver 3.04         |
 
@@ -31,7 +31,7 @@ The SNMP protocol is used to retrieve information from the device.
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

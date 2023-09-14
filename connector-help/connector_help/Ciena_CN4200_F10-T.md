@@ -8,7 +8,7 @@ This is a Transponder Module for the Ciena CN4200 Chassis.
 
 ## About
 
-There are two driver ranges for this driver. The 1.0.0.x range has a fixed number of ports and channels (2), and the port and channel settings are represented as individual parameters.
+There are two connector ranges for this connector. The 1.0.0.x range has a fixed number of ports and channels (2), and the port and channel settings are represented as individual parameters.
 In the 2.0.0.x range, the ports and channels are shown as tables, which allows for all ports and channels to be shown.
 
 ## Installation and configuration
@@ -16,7 +16,7 @@ In the 2.0.0.x range, the ports and channels are shown as tables, which allows f
 ### Creation
 
 ***SNMP connection***
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ Channels
 This shows information about the Channels either in individual parameters (only channel 1 and channel 2, protocol version 1.0.0.x) or in a table format (all channels on the device, protocol version 2.0.0.x).
 Information is shown, such as **Channel Type, Channle Primary State,** etc.
 
-### Webinterface
+### Web Interface
 
 This shows the native web interface of the device.
 This page is only available if the client has access to the device.

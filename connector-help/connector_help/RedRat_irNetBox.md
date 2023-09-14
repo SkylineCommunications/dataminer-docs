@@ -10,20 +10,20 @@ The **RedRat irNetBox-III** is a networked unit with 16 outputs, which allows yo
 
 The **RedRat irNetBox protocol** uses a simple TCP/IP connection to transmit **serial commands**.
 
-The purpose of this driver is to allow the user to import several **devices** and **definitions** from an **XML** file and then manually select which device is connected to each **output**.
+The purpose of this connector is to allow the user to import several **devices** and **definitions** from an **XML** file and then manually select which device is connected to each **output**.
 
 It is also possible to import **channel** information and then manually select to switch to a channel.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version | No                  | Yes                     |
 | 1.0.1.x \[SLC_Main\] | DCF integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                     |
+| **Range** | **Device Firmware Version**                                                                     |
 |------------------|-------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01- irNetBox Network Control Protocol V3.03 |
 | 1.0.1.x          | MKIII 2.1.2 'Saulire' (c) RedRat Ltd 2013, USB-IF 1.01- irNetBox Network Control Protocol V3.03 |
@@ -34,7 +34,7 @@ It is also possible to import **channel** information and then manually select t
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -61,7 +61,7 @@ Each device can be given a **custom name** to increase user-friendliness. Device
 
 This page also contains two page buttons:
 
-- **Import**: Can be used to import devices. When this subpage is opened, by default, the driver automatically checks for XML files in the Documents folder. You can customize the folder where the driver checks by specifying a different path. You can select a device file name in a drop-down menu. If you then click the **Import** button, the driver will process the XML file and add the information to the **Device Overview** table. The device definitions (commands) are added to the **Device Definitions** table. In case of errors, you will be notified with a message.
+- **Import**: Can be used to import devices. When this subpage is opened, by default, the connector automatically checks for XML files in the Documents folder. You can customize the folder where the connector checks by specifying a different path. You can select a device file name in a drop-down menu. If you then click the **Import** button, the connector will process the XML file and add the information to the **Device Overview** table. The device definitions (commands) are added to the **Device Definitions** table. In case of errors, you will be notified with a message.
 - **Definitions**: Opens a subpage with a **tree control** that can be used to easily navigate through all devices and definitions by clicking on the branches.
 
 ### Output Overview
@@ -81,7 +81,7 @@ This page contains a large **Channel Overview** table, which contains **imported
 
 This page also contains a page button:
 
-- **Import**: Can be used to import channels. When this subpage is opened, by default, the driver automatically checks for CSV files in the Documents folder. You can customize the folder where the driver checks by specifying a different path. You can select a channel file name in a drop-down menu. If you then click the **Import** button, the driver will process the CSV file and add the information to the **Channel Overview** table. In case of errors, you will be notified with a message. In addition, a channel list can be deleted via the parameter **Delete Device Channel List**. To do so, select the channel list in the drop-down box and click the save option. The channel list will then be deleted.
+- **Import**: Can be used to import channels. When this subpage is opened, by default, the connector automatically checks for CSV files in the Documents folder. You can customize the folder where the connector checks by specifying a different path. You can select a channel file name in a drop-down menu. If you then click the **Import** button, the connector will process the CSV file and add the information to the **Channel Overview** table. In case of errors, you will be notified with a message. In addition, a channel list can be deleted via the parameter **Delete Device Channel List**. To do so, select the channel list in the drop-down box and click the save option. The channel list will then be deleted.
 
 ### Web Interface
 
@@ -89,7 +89,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the RedRat irNetBox protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the RedRat irNetBox protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 Note that DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

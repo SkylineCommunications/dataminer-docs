@@ -4,7 +4,7 @@ uid: Connector_help_Walton_Enterprises_DP-8
 
 # Walton Enterprises DP-8
 
-This driver is used to monitor and configure a **Walton Enterprises DP-8** device.
+This connector is used to monitor and configure a **Walton Enterprises DP-8** device.
 
 The DP-8 is a remote control unit that communicates with a Local Control Power Distribution Panel (DS-15) that can be deployed near an antenna.
 
@@ -34,7 +34,7 @@ The DP-8 is a remote control unit that communicates with a Local Control Power D
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 ## How to Use
 
-This element created with this driver consists of the following data pages:
+This element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the system, including the **Device Type** and **Revision Level.**
 - **Advanced**: Displays more advanced information about both the DP-8 and the connected DS-15.

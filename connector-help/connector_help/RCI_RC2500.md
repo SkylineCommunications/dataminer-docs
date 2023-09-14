@@ -4,7 +4,7 @@ uid: Connector_help_RCI_RC2500
 
 # RCI RC2500
 
-The RCI RC2500 is a satellite antenna controller that allows a dish to find and track a satellite for communication. With this driver, you can monitor and manipulate the antenna.
+The RCI RC2500 is a satellite antenna controller that allows a dish to find and track a satellite for communication. With this connector, you can monitor and manipulate the antenna.
 
 ## About
 
@@ -32,7 +32,7 @@ The RCI RC2500 is a satellite antenna controller that allows a dish to find and 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### Main View
 

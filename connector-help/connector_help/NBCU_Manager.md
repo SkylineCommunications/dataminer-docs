@@ -4,14 +4,14 @@ uid: Connector_help_NBCU_Manager
 
 # NBCU Manager
 
-This driver will be used to:
+This connector will be used to:
 
 - Provide information for ScheduAll booking scheduling from/to NBCU affiliates
 - Control round-robin cycle to NBCU affiliates
 
 ## About
 
-This driver imports an excel file and fills the tables with the correct information. Each excel sheet contains information that needs to be stored in a certain table. This information will then be used by an automation script.
+This connector imports an excel file and fills the tables with the correct information. Each excel sheet contains information that needs to be stored in a certain table. This information will then be used by an automation script.
 
 ### Version Info
 
@@ -24,11 +24,11 @@ Installation and configuration
 
 ### Creation
 
-The creation of elements for this driver is very easy. Only the correct protocol and version need to be selected. After giving the element a unique name, the element will be created.
+The creation of elements for this connector is very easy. Only the correct protocol and version need to be selected. After giving the element a unique name, the element will be created.
 
 ## Spectrum
 
-Via the **Config SA**. pagebutton, the default values of the spectrum preset needs to be filled in before the spectrum option can be used. The supported spectrum analyzer protocol is Avcom of Verginia RSA-2150B. The elements can be found by using the **Search** button.
+Via the **Config SA**. page button, the default values of the spectrum preset needs to be filled in before the spectrum option can be used. The supported spectrum analyzer protocol is Avcom of Verginia RSA-2150B. The elements can be found by using the **Search** button.
 
 ## Usage
 
@@ -38,7 +38,7 @@ First, select the correct .xls file from the drop down menu and press the '**Imp
 
 The **status** and **error** parameters will display if the import was successful or not. The date and time of the **last successful import** is also displayed.
 
-The other pages of the driver display the different tables who have been imported.
+The other pages of the connector display the different tables who have been imported.
 
 There are 8 different options:
 
@@ -75,7 +75,3 @@ Tables changed:
 |--------------|---------------------------------|--------------------------|
 | 20000        | Work Order Overview             | options=";naming=/20002" |
 | 22000        | Work Order Overview - Completed | options=";naming=/22002" |
-
-
-
-

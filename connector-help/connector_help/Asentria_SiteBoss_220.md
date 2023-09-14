@@ -4,7 +4,7 @@ uid: Connector_help_Asentria_SiteBoss_220
 
 # Asentria SiteBoss 220
 
-The **Asentria SiteBoss 220** driver is an SNMP driver that is used to monitor **Assentria SiteBoss 220** appliance that is a device for monitoring in remote equipment locations.
+The **Asentria SiteBoss 220** connector is an SNMP connector that is used to monitor **Assentria SiteBoss 220** appliance that is a device for monitoring in remote equipment locations.
 
 The device supports remote environmental monitoring such as temperature, humidity, water, smoke, entry, motion, and airflow within remote locations through the use of a variety of external sensors. It delivers alarms either by SNMP Traps or by polling of **Assentria SiteBoss 220's** MIB.
 
@@ -36,7 +36,7 @@ The device supports remote environmental monitoring such as temperature, humidit
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

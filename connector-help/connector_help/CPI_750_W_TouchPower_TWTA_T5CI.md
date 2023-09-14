@@ -6,7 +6,7 @@ uid: Connector_help_CPI_750_W_TouchPower_TWTA_T5CI
 
 The Touch Power remote control panel can be used either as a remote controller or as a switch remote controller that interfaces specifically with CPI amplifiers.
 
-This driver allows you to control and monitor parameters of the controller via SNMPv2.
+This connector allows you to control and monitor parameters of the controller via SNMPv2.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver allows you to control and monitor parameters of the controller via S
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

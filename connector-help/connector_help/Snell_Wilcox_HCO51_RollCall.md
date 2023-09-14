@@ -32,7 +32,7 @@ The Snell Wilcox HCO51 protocol uses the RollCall community library package to c
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,7 +51,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Shows the Display, Information Selected to Display and Card in Mode values. Also allows you to check the polling state and enable/disable debug mode.
 - **Summary**: Displays the summary of the input state and statistics.

@@ -8,17 +8,17 @@ uid: Connector_help_Spirent_Lumos
 
 ## About
 
-This driver is used to handle SNMP traps from the device and will also send information from the retrieved Threshold Crossing traps to the CPE Collectors implemented for the IPVPN project.
+This connector is used to handle SNMP traps from the device and will also send information from the retrieved Threshold Crossing traps to the CPE Collectors implemented for the IPVPN project.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver is used to handle SNMP traps from the device and will also send info
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

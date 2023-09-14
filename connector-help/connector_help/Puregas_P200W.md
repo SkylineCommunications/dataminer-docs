@@ -4,17 +4,17 @@ uid: Connector_help_Puregas_P200W
 
 # Puregas P200W
 
-With this driver, you can gather and view information from the **Puregas P200W** device, a dehydrator.
+With this connector, you can gather and view information from the **Puregas P200W** device, a dehydrator.
 
 ## About
 
-The Puregas P200W driver is used to monitor and control a Puregas P200W device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The driver uses SNMP to retrieve the data from the device. All parameters are polled every 30 seconds.
+The Puregas P200W connector is used to monitor and control a Puregas P200W device. It provides an overview of the different parameters of the device along with its statuses and generated alarms. The connector uses SNMP to retrieve the data from the device. All parameters are polled every 30 seconds.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -24,8 +24,8 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 **SNMP Settings:**
 
 - **Port number**: The port of the connected device, by default *161*.
-- **Get community string**: The community string used when reading values from the device. The default value in the driver is *public*.
-- **Set community string**: The community string used when setting values on the device. The default value in the driver is *private*.
+- **Get community string**: The community string used when reading values from the device. The default value in the connector is *public*.
+- **Set community string**: The community string used when setting values on the device. The default value in the connector is *private*.
 
 ## Usage
 
@@ -75,7 +75,3 @@ It is possible specify the maximum number of traps to be displayed in the table,
 ### Web Interface
 
 This page provides access to the web interface provided by the device's web server. The client machine has to be able to access the device. If not, it will not be possible to open the web interface.
-
-## Notes
-
-N/A

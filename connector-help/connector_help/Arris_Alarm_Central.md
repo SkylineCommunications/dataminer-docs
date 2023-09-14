@@ -4,15 +4,15 @@ uid: Connector_help_Arris_Alarm_Central
 
 # Arris Alarm Central
 
-This driver is used to collect the alarms emitted by the **Arris Alarm Central** server.
+This connector is used to collect the alarms emitted by the **Arris Alarm Central** server.
 
 ## About
 
-The **Arris Alarm Central** sends notifications to DataMiner via HTTP POST requests. This driver has a web service embedded that listens to those requests on a configurable port. Each notification is stored in a table.
+The **Arris Alarm Central** sends notifications to DataMiner via HTTP POST requests. This connector has a web service embedded that listens to those requests on a configurable port. Each notification is stored in a table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                                        | No                  | Yes                     |
 | 2.0.0.x          | Changed protocol type to HTTP. The protocol can now forward HTTP posts. | No                  | Yes                     |
@@ -21,13 +21,13 @@ The **Arris Alarm Central** sends notifications to DataMiner via HTTP POST reque
 
 ### Creation
 
-#### Virtual connection (driver range 1.0.0.x)
+#### Virtual connection (range 1.0.0.x)
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
-#### HTTP connection (driver range 2.0.0.x)
+#### HTTP connection (range 2.0.0.x)
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 - **IP address/host**: IP of the server that receives the forwarded HTTP posts. If HTTP post forwarding is disabled, this setting is not used, and any value can be specified, e.g. *localhost*.
 - **IP Port**: Port of the web server at the server that receives the forwarded HTTP posts. If HTTP post forwarding is disabled, this setting is not used, and any value can be specified, e.g. *8080*. Default value: *8080*.
@@ -52,13 +52,13 @@ For example, if **Event Types Affected Devices** equals **USNOISE\|DSNOISE\|USFE
 
 #### Version 2.0.0.x only
 
-As of version 2.0.0.1, the Arris Alarm Central driver can forward the notifications received on the port configured on the **Webservice** subpage. These notifications are received as HTTP post notifications and are forwarded as such. The forwarding functionality can be enabled/disabled with the toggle button **HTTP Post Forwarding**.
+As of version 2.0.0.1, the Arris Alarm Central connector can forward the notifications received on the port configured on the **Webservice** subpage. These notifications are received as HTTP post notifications and are forwarded as such. The forwarding functionality can be enabled/disabled with the toggle button **HTTP Post Forwarding**.
 
 For the post forwarding to work, a port and IP need to be configured in the element settings (see Creation section above).
 
 The list defined in **Event Types Affected Devices** works as a filter to send new alarms northbound via HTTP post: if the received notification does not contain any of the defined event types, no HTTP post will be forwarded. However, when an already forwarded alarm receives an update, this update will also be forwarded, even if the event type linked to the alarm is different from the ones listed in the **Event Types Affected Devices**.
 
-From version 2.0.0.4 onwards, the Arris Alarm Central driver can forward notifications to a second destination defined with the **Upstream HTTP Destination** parameter on the **HTTP Forward** subpage. These notifications are forwarded using the list defined in **Upstream Event Types Affected Devices** as a filter, as mentioned above. If a received notification contains an event type defined in both lists, the notification is forwarded to both destinations.
+From version 2.0.0.4 onwards, the Arris Alarm Central connector can forward notifications to a second destination defined with the **Upstream HTTP Destination** parameter on the **HTTP Forward** subpage. These notifications are forwarded using the list defined in **Upstream Event Types Affected Devices** as a filter, as mentioned above. If a received notification contains an event type defined in both lists, the notification is forwarded to both destinations.
 The total count of the **Affected Devices Event Type** is now associated with both lists: **Event Types Affected Devices** and **Upstream Event Types Affected Devices.**
 
 ### Path

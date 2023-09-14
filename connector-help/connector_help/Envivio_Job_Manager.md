@@ -4,7 +4,7 @@ uid: Connector_help_Envivio_Job_Manager
 
 # Envivio Job Manager
 
-The **Envivio Job Manager** will schedule and configure resources needed to execute a desired broadcast. The driver will check the availability of resources and schedule them. At the time of execution the configuration of the resources will be done automatically.
+The **Envivio Job Manager** will schedule and configure resources needed to execute a desired broadcast. The connector will check the availability of resources and schedule them. At the time of execution the configuration of the resources will be done automatically.
 
 The details of the job can be configured in the user interface.
 
@@ -14,9 +14,9 @@ A job can be requested via a **SOAP** call or via the user interface on the **El
 
 The format of the **SOAP** call is user fixed.
 
-Via the user interface of the **Element** **Card** the details can easily be specified and once this is done the request to create the job can be send to the driver.
+Via the user interface of the **Element** **Card** the details can easily be specified and once this is done the request to create the job can be send to the connector.
 
-The driver will check the request information and return an error when something is missing. If not the availability of the resources will be checked and booked for the requested execute time.
+The connector will check the request information and return an error when something is missing. If not the availability of the resources will be checked and booked for the requested execute time.
 
 On execution the needed configuration will be done on the resources and they will be reset when the job has finished.
 
@@ -28,7 +28,7 @@ Available resources are automatically detected by the manager.
 
 Creation
 
-This driver uses a **HTTP** connection and needs following user information:
+This connector uses a **HTTP** connection and needs following user information:
 
 **SERIAL CONNECTION**:
 

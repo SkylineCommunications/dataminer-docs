@@ -4,23 +4,23 @@ uid: Connector_help_ETL_Systems_Vulcan_VCN-10
 
 # ETL Systems Vulcan VCN-10
 
-The **ETL Systems Vulcan VCN-10** driver can be used to display and configure information of the ETL Systems Vulcan VCN-10 device.
+The **ETL Systems Vulcan VCN-10** connector can be used to display and configure information of the ETL Systems Vulcan VCN-10 device.
 
 ## About
 
-This protocol can be used to monitor and control the **ETL Systems Vulcan VCN-10** device. The driver supports one serial connection to communicate with the device.
+This protocol can be used to monitor and control the **ETL Systems Vulcan VCN-10** device. The connector supports one serial connection to communicate with the device.
 
 The protocol also features alarm monitoring and trending.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.1.x          | Matrix size changed from 1024x1024 to 128x128. WARNING: ports.xml file will not longer be compatible. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | E405 Version 01.03          |
 
@@ -30,7 +30,7 @@ The protocol also features alarm monitoring and trending.
 
 Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

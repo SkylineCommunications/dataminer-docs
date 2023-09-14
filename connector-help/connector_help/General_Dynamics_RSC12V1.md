@@ -8,15 +8,15 @@ The **General Dynamics RSC12V1** is a redudundant system controller that is capa
 
 ## About
 
-The **Genaral Dynamics RSC12V1** will update its monitoring and configuration parameters by sending a **SNMP** command to the device.
+The **Genaral Dynamics RSC12V1** will update its monitoring and configuration parameters by sending an **SNMP** command to the device.
 
-This driver is based on RSC firmware version 3.00 and RCP Firmware Version 0.00.
+This connector is based on RSC firmware version 3.00 and RCP Firmware Version 0.00.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (**SNMP**) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (**SNMP**) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

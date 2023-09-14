@@ -34,11 +34,11 @@ The data can be used for a variety of purposes, including the insertion of comme
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
-- **IP address/host**: As the allowed IPs must be configured in the driver, you can set this field to "localhost" when you create the element.
+- **IP address/host**: As the allowed IPs must be configured in the connector, you can set this field to "localhost" when you create the element.
 - **IP port**: Default value: 161. Like the IP address/host field, this field will not actually affect the connection.
 
 SNMP Settings:
@@ -48,7 +48,7 @@ SNMP Settings:
 
 ## How to use
 
-Several things need to be configured in the element to make sure the driver can receive traps. On the **Filters** page, the **Trap Filtering** table describes the IPs and OIDs that are allowed to be processed from the incoming traps.
+Several things need to be configured in the element to make sure the connector can receive traps. On the **Filters** page, the **Trap Filtering** table describes the IPs and OIDs that are allowed to be processed from the incoming traps.
 Also, the SCTE Event Type table allows you to define what types of SCTE events should be monitored. If traps are received with a value of something other than a value on this list, they are ignored.
 
 After traps pass the filters above, they get processed. If all the bindings are correct, they are candidates to create a new event or update an existing one.

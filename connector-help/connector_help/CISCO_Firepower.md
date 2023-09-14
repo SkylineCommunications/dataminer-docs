@@ -46,7 +46,7 @@ This connector uses SNMP or HTTP communication in order to monitor a CISCO Firep
 <tr class="even">
 <td>1.0.0.x</td>
 <td>SNMP connection - Main
-<p>This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
+<p>This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:</p>
 <p>SNMP CONNECTION:</p>
 <ul>
 <li><strong>IP address/host</strong>: The polling IP of the device.</li>

@@ -4,11 +4,11 @@ uid: Connector_help_Comet_T8541
 
 # Comet T8541
 
-This driver can be used to display information related to the **T8541** temperature sensor.
+This connector can be used to display information related to the **T8541** temperature sensor.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the T8541 device.
+This connector uses an **SNMP** interface to communicate with the T8541 device.
 
 ## Installation and Configuration
 
@@ -16,7 +16,7 @@ This driver uses an **SNMP** interface to communicate with the T8541 device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

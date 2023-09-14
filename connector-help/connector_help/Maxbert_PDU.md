@@ -4,7 +4,7 @@ uid: Connector_help_Maxbert_PDU
 
 # Maxbert PDU
 
-This is an SNMP driver that monitors a Maxbert power distribution unit with monitoring capacity for 6 sockets.
+This is an SNMP connector that monitors a Maxbert power distribution unit with monitoring capacity for 6 sockets.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP driver that monitors a Maxbert power distribution unit with moni
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has one **General** data page, which contains:
+The element created with this connector has one **General** data page, which contains:
 
 - On the left, general system information parameters such as System Description, Name and Location.
 - On the right, the measured current for each socket and all phase states for each phase. If a temperature sensor is available, the temperature is also displayed.

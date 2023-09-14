@@ -4,21 +4,21 @@ uid: Connector_help_SES_Astra_CDN_Monitor
 
 # SES Astra CDN Monitor
 
-This driver displays service information, which is retrieved from an **XML file** via an **HTTP** connection.
+This connector displays service information, which is retrieved from an **XML file** via an **HTTP** connection.
 
 ## About
 
-This driver processes an XML file from a server and displays the data (service information) in a tree structure.
+This connector processes an XML file from a server and displays the data (service information) in a tree structure.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ This driver processes an XML file from a server and displays the data (service i
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

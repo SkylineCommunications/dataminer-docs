@@ -4,17 +4,17 @@ uid: Connector_help_Envivio_GURU
 
 # Envivio GURU
 
-The Envivio GURU driver is used to detect and create services.
+The Envivio GURU connector is used to detect and create services.
 
 ## About
 
-The Envivio GURU is a virtual driver that detects services with the use of service query files and can create services.
+The Envivio GURU is a virtual connector that detects services with the use of service query files and can create services.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **virtual** connection and does not need any user information.
+This connector uses a **virtual** connection and does not need any user information.
 
 ### Configuration of input files
 

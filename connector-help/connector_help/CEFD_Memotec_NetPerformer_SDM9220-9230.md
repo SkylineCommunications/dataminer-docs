@@ -4,11 +4,11 @@ uid: Connector_help_CEFD_Memotec_NetPerformer_SDM9220-9230
 
 # Memotec NetPerformer SDM9220-9230
 
-The Memotec Netperformer SDM9220-9230 version is a SNMP driver intended to communicate with SDM9220-9230 Netperformer devices.
+The Memotec Netperformer SDM9220-9230 version is a SNMP connector intended to communicate with SDM9220-9230 Netperformer devices.
 
 ## About
 
-This driver implements the available parameters present in the device's MIB. The driver layout is implemented as much as possible like the device's web interface. There are menus that are not 100% coincident.
+This connector implements the available parameters present in the device's MIB. The connector layout is implemented as much as possible like the device's web interface. There are menus that are not 100% coincident.
 A **SNMP** connection is used in order to successfully retrieve and configure the device's information.
 
 ## Installation and configuration
@@ -22,12 +22,12 @@ A **SNMP** connection is used in order to successfully retrieve and configure th
 **SNMP Settings:**
 
 - **Port Number:** \[*The port of the connection device (default: 161).*\]
-- **Get community string:** \[*The community string used when reading values from the device (default value is not overridden in the driver: public).*\]
-- **Set community string:** \[*The community string used when setting values on the device (*default value is not overridden in the driver: private*).*\]
+- **Get community string:** \[*The community string used when reading values from the device (default value is not overridden in the connector: public).*\]
+- **Set community string:** \[*The community string used when setting values on the device (*default value is not overridden in the connector: private*).*\]
 
 ## Usage
 
-In this section of the driver help, some general info is available about the usage of the Memotec NetPerformer driver.
+In this section of the connector help, some general info is available about the usage of the Memotec NetPerformer connector.
 
 ### Main Menu
 
@@ -115,6 +115,6 @@ This page provides an overview of all various types of states:
 
 The NetPerformer Routing provides access to various **Routing Table** selections.
 
-### Webinterface
+### Web Interface
 
 Use this page to have access to the **Web Interface** provided by the device's web server. Only in a LAN environment it's possible to have access to this page.

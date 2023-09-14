@@ -4,17 +4,17 @@ uid: Connector_help_Avid_System_Monitor
 
 # Avid System Monitor
 
-With this driver, you can gather and view information from the device **Avid System Monitor**, as well as configure the device.
+With this connector, you can gather and view information from the device **Avid System Monitor**, as well as configure the device.
 
 ## About
 
-This driver uses SNMP to monitor the **Avid System Monitor** device.
+This connector uses SNMP to monitor the **Avid System Monitor** device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

@@ -6,21 +6,21 @@ uid: Connector_help_Axon_ACP_GRB550
 
 The GRB550 is a 3 Gb/s, HD, SD digital or analog audio de-embedder, re-embedder and embedded domain shuffler.
 
-The **Axon ACP GRB550** driver can be used to display and configure information related to this device.
+The **Axon ACP GRB550** connector can be used to display and configure information related to this device.
 
 ## About
 
 There also different possibilities available for **alarm monitoring** and **trending**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1413                        |
 
@@ -28,7 +28,7 @@ There also different possibilities available for **alarm monitoring** and **tren
 
 ### Creation
 
-This element is automatically created by the element using the **Axon ACP Frame Manager** driver, but can be used as standalone driver.
+This element is automatically created by the element using the **Axon ACP Frame Manager** connector, but can be used as standalone connector.
 
 ## Usage
 
@@ -50,11 +50,11 @@ This element has the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The Axon ACP driver supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The Axon ACP connector supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
-Connectivity for this driver is managed by the driver itself, but creation can be done by the parent driver Axon ACP Frame Manager.
+Connectivity for this connector is managed by the connector itself, but creation can be done by the parent connector Axon ACP Frame Manager.
 
 ### Interfaces
 

@@ -8,13 +8,13 @@ The **Delta Electronics HEC 1004** is a transponder.
 
 ## About
 
-This driver monitors the **Delta Electronics HEC 1004** device via **SNMP**.
+This connector monitors the **Delta Electronics HEC 1004** device via **SNMP**.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

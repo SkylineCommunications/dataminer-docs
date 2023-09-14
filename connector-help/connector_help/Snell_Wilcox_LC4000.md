@@ -37,7 +37,7 @@ A smart-serial single protocol is used, so that connections from different eleme
 
 #### Smart Serial Single RollCall connection
 
-This driver uses a smart-serial single connection and requires the following input during element creation:
+This connector uses a smart-serial single connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

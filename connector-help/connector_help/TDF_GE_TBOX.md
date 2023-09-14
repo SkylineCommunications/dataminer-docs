@@ -4,7 +4,7 @@ uid: Connector_help_TDF_GE_TBOX
 
 # TDF GE TBOX
 
-This is a virtual driver. It retrieves parameters from elements using the **Semaphore TBox** driver. Via the Configuration Virtual Element toolbox, it is possible to link the driver parameters with parameters present in elements using the Semaphore TBox driver.
+This is a virtual connector. It retrieves parameters from elements using the **Semaphore TBox** driver. Via the Configuration Virtual Element toolbox, it is possible to link the connector parameters with parameters present in elements using the Semaphore TBox driver.
 
 ## About
 
@@ -26,7 +26,7 @@ This is a virtual driver. It retrieves parameters from elements using the **Sema
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -38,4 +38,4 @@ There is no redundancy defined.
 
 ## How to use
 
-In the element created with this driver, you will find the following parameters: Marche GE, GE en Manuel, Forcage Marche GE, Defaut GE, Marche Forcee GE Distante, and Arret Marche Forcee GE Distante.
+In the element created with this connector, you will find the following parameters: Marche GE, GE en Manuel, Forcage Marche GE, Defaut GE, Marche Forcee GE Distante, and Arret Marche Forcee GE Distante.

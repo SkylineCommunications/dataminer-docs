@@ -4,21 +4,21 @@ uid: Connector_help_CISCO_RFGW-10
 
 # CISCO RFGW-10
 
-With this driver, you can monitor the **Cisco RF Gateway 10**. The gateway allows concurrent support for standard and high-definition digital broadcast television, switched digital video (SDV), video-on-demand (VoD), and DOCSIS modular cable modem termination system (M-CMTS) services.
+With this connector, you can monitor the **Cisco RF Gateway 10**. The gateway allows concurrent support for standard and high-definition digital broadcast television, switched digital video (SDV), video-on-demand (VoD), and DOCSIS modular cable modem termination system (M-CMTS) services.
 
 ## About
 
-This **SNMP**-based driver is used to monitor and configure the **Cisco RF Gateway 10**.
+This **SNMP**-based connector is used to monitor and configure the **Cisco RF Gateway 10**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This **SNMP**-based driver is used to monitor and configure the **Cisco RF Gatew
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

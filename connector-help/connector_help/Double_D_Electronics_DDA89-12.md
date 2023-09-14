@@ -4,23 +4,23 @@ uid: Connector_help_Double_D_Electronics_DDA89-12
 
 # Double D Electronics DDA89-12
 
-The driver monitors the activity of the **Double D Electronics DDA89-12** controller.
+The connector monitors the activity of the **Double D Electronics DDA89-12** controller.
 
 ## About
 
-The driver has a serial communication to the **Double D Electronics DDA89-12** and allows the end user to control and monitor the switches/best route configuration, plus observe the status of the device's converters.
+The connector has a serial communication to the **Double D Electronics DDA89-12** and allows the end user to control and monitor the switches/best route configuration, plus observe the status of the device's converters.
 
-In addition to the previous, the driver uses three timers: 1) one polling every half second for fast varying information from the controllers; 2) one polling every five seconds that retrieves general information from the device and its switches as well; and 3) one that polls every hour for slowly varying information.
+In addition to the previous, the connector uses three timers: 1) one polling every half second for fast varying information from the controllers; 2) one polling every five seconds that retrieves general information from the device and its switches as well; and 3) one that polls every hour for slowly varying information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V0.00A 23.02.10             |
 
@@ -30,7 +30,7 @@ In addition to the previous, the driver uses three timers: 1) one polling every 
 
 Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -50,7 +50,7 @@ SERIAL CONNECTION:
 
 ## Usage
 
-The protocol driver has three pages: 1) General; 2) Switches; and 3) Converters.
+The connector has three pages: 1) General; 2) Switches; and 3) Converters.
 
 ### General Page
 

@@ -8,25 +8,25 @@ This standard configuration offers processing for FM or AM, with optional and si
 
 ## About
 
-This driver monitors general status parameters of the device and input status parameters of 4 inputs.
+This connector monitors general status parameters of the device and input status parameters of 4 inputs.
 
 **SNMP** is used to retrieve the device information. SNMP traps can be retrieved when this is enabled on the device.
 
-In driver range 1.0.1.1, an additional **HTTP** connection is used to read and write device information.
+In connector range 1.0.1.1, an additional **HTTP** connection is used to read and write device information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**       |
+| **Range** | **Description**       |
 |------------------|-----------------------|
-| 1.0.0.1          | Initial version       |
-| 1.0.1.1          | Added HTTP connection |
+| 1.0.0.x          | Initial version       |
+| 1.0.1.x          | Added HTTP connection |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
-| 1.0.0.1          | Unknown                     |
-| 1.0.1.1          | 3.19.51                     |
+| 1.0.0.x          | Unknown                     |
+| 1.0.1.x          | 3.19.51                     |
 
 ## Installation and configuration
 
@@ -34,7 +34,7 @@ In driver range 1.0.1.1, an additional **HTTP** connection is used to read and w
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -47,9 +47,9 @@ SNMP Settings:
 - **Get community string**: The community string used when reading values from the device, i.e. *public*.
 - **Set community string**: The community string used when setting values on the device, i.e. *private*.
 
-#### HTTP Connection \[driver range 1.0.1.1\]
+#### HTTP Connection \[range 1.0.1.1\]
 
-This driver uses a secondary HTTP connection and requires the following input during element creation:
+This connector uses a secondary HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

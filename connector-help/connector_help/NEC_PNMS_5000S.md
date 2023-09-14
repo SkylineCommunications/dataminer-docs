@@ -4,21 +4,21 @@ uid: Connector_help_NEC_PNMS_5000S
 
 # NEC PNMS 5000S
 
-This driver processes traps received from the NEC PMNS 5000S system.
+This connector processes traps received from the NEC PMNS 5000S system.
 
 ## About
 
-This driver can receive and process **traps** sent from the NEC PNMS 5000S system.
+This connector can receive and process **traps** sent from the NEC PNMS 5000S system.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.1.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver can receive and process **traps** sent from the NEC PNMS 5000S syste
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ This page displays the **Remote DCF Interface Table.**
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.1** driver range of the NEC PNMS 5000S protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.0.8**.
+The **1.0.1.1** connector range of the NEC PNMS 5000S protocol supports the usage of DCF and can be used on a DMA with a minimum version of **8.0.8**.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

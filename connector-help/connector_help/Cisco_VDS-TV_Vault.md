@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_VDS-TV_Vault
 
 # Cisco VDS-TV Vault
 
-The **Cisco VDS-TV Vault** is the main storage element in the Cisco VDS-TV system. This driver allows the user to **monitor** and **configure** the Cisco VDS-TV Vault.
+The **Cisco VDS-TV Vault** is the main storage element in the Cisco VDS-TV system. This connector allows the user to **monitor** and **configure** the Cisco VDS-TV Vault.
 
 ## About
 
@@ -32,7 +32,7 @@ The **Cisco VDS-TV Vault** is the main storage element in the Cisco VDS-TV syste
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

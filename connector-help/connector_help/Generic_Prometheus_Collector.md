@@ -6,7 +6,7 @@ uid: Connector_help_Generic_Prometheus_Collector
 
 Prometheus is an open-source systems monitoring and alerting toolkit. It scrapes metrics from instrumented jobs, either directly or via an intermediary push gateway for short-lived jobs. It stores all scraped samples locally and runs rules over this data to either aggregate and record new time series from existing data, or generate alerts.
 
-This **Generic Prometheus Collector** driver executes queries via HTTP to retrieve the data. This data will then be forwarded to an element using a driver derived from the **Generic Prometheus Base Component** driver.
+This **Generic Prometheus Collector** connector executes queries via HTTP to retrieve the data. This data will then be forwarded to an element using a connector derived from the **Generic Prometheus Base Component** connector.
 
 ## About
 
@@ -34,7 +34,7 @@ This **Generic Prometheus Collector** driver executes queries via HTTP to retrie
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -54,11 +54,11 @@ HTTP GET messages are used for the multi-threaded execution of the queries. On t
 
 To manually add a row to the **Query Table**, click the **Add Row** button and fill in the necessary fields:
 
-- Fill in a unique name in the **Name \[IDX\]** column. This is not needed for the correct functioning of the driver but will be handy in case the other columns have trending or alarm monitoring enabled. It will allow users to more easily recognize what is going wrong.
+- Fill in a unique name in the **Name \[IDX\]** column. This is not needed for the correct functioning of the connector but will be handy in case the other columns have trending or alarm monitoring enabled. It will allow users to more easily recognize what is going wrong.
 
 - Insert the query in the **Query** column. The value is the part that comes after "*query="* in the URL.
 
-- **Destination Element** should contain the name of the target element to which the query result should be forwarded. This is an element that is running a driver derived from the **Generic Prometheus Base Component** driver. The value can be hard-coded, referring to the name of the element, or can contain placeholders that can be dynamically filled in with the content of the labels. Labels can be referred to using the *\[label:\<labelName\>\]* placeholder and can be combined with hard-coded text, e.g. "*prefix \[label:labelName1\] second \[label:labelName2\] suffix*".
+- **Destination Element** should contain the name of the target element to which the query result should be forwarded. This is an element that is running a connector derived from the **Generic Prometheus Base Component** connector. The value can be hard-coded, referring to the name of the element, or can contain placeholders that can be dynamically filled in with the content of the labels. Labels can be referred to using the *\[label:\<labelName\>\]* placeholder and can be combined with hard-coded text, e.g. "*prefix \[label:labelName1\] second \[label:labelName2\] suffix*".
   RegexReplace can also be executed on the label value. Use *\[RegexReplace:x,y,z\]* with x being the regular expression, y being the input, and z containing the string that will replace each of the matches. RegexReplace can contain *\[label:\]* placeholders and can contain nested RegexReplace definitions. Note that a label placeholder cannot contain a RegexReplace. For example, for a label with content "*test (info) data that will be removed*", using "*\[RegexReplace:^(?\<start\>\[^\\\\\]+\\\[^()\]+\\)\[^()\]+\$,\[label:labelName\],\${start}\]\_some suffix*" will result in "*test (info)\_some suffix*".
   You can prefix RegexReplace with *\[Sep:,\<new_separator\>\]* to replace the comma separator with a different separator in case the label value were to contain spaces, e.g. "*\[Sep:,\]\[RegexReplace:xyz\]*".
 
@@ -84,11 +84,15 @@ To remove a query row, click the **Delete** button in the appropriate row.
 
 It is also possible to populate the **Query Table** by means of a CSV file import. To do so:
 
-1.  Click the **Configuration** page button. This will open a pop-up page.
-2.  On the pop-up page, check the specified **Folder Location** where the CSV files are located and adjust it if necessary. By default, this is set to the documents folder of the driver.
-3.  Click the **Refresh** button to refresh the list of CSV files with the files that are currently present in the specified Folder Location.
-4.  Select the file to import in the **Import File to Query Table** box and click **Execute** to populate the Query Table.
-    Note that existing rows in the **Query Table** will be removed when a file is imported.
+1. Click the **Configuration** page button. This will open a pop-up page.
+
+1. On the pop-up page, check the specified **Folder Location** where the CSV files are located and adjust it if necessary. By default, this is set to the documents folder of the connector.
+
+1. Click the **Refresh** button to refresh the list of CSV files with the files that are currently present in the specified Folder Location.
+
+1. Select the file to import in the **Import File to Query Table** box and click **Execute** to populate the Query Table.
+
+   Note that existing rows in the **Query Table** will be removed when a file is imported.
 
 You can also export the current content of the **Query Table** to a CSV file by clicking the **Export Query Table to File** button. The generated file will have the name of the element suffixed with the current datetime, and will be located in the configured **Folder Location**. Note that this folder needs to be present in case it is not the default location.
 

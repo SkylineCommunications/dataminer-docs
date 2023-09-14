@@ -4,19 +4,19 @@ uid: Connector_help_Harris_Platinum_Router
 
 # Harris Platinum Router
 
-This driver monitors a **Harris Platinum Router** (sometimes also referred to as a Leitch Router).
+This connector monitors a **Harris Platinum Router** (sometimes also referred to as a Leitch Router).
 
 ## About
 
-This driver is based on the **Leitch Matrix SNMP** driver (version 1.1.0.19) and should have the same features as that driver, though it is possible that deviations will occur in future versions. The difference between the **Harris Platinum Router** and the **Leitch Matrix SNMP** driver is mainly in the protocol used to communicate between DataMiner and the device. Where the Leitch driver only uses SNMP, the Platinum driver uses both SNMP and the LRC protocol. The LRC protocol allows for faster polling and event messages when changes of crosspoint settings occur.
+This connector is based on the **Leitch Matrix SNMP** connector (version 1.1.0.19) and should have the same features as that connector, though it is possible that deviations will occur in future versions. The difference between the **Harris Platinum Router** and the **Leitch Matrix SNMP** connector is mainly in the protocol used to communicate between DataMiner and the device. Where the Leitch connector only uses SNMP, the Platinum connector uses both SNMP and the LRC protocol. The LRC protocol allows for faster polling and event messages when changes of crosspoint settings occur.
 
-Note: The Harris Platinum Router can be configured to have several levels. In that case, only one level is monitored by the driver.
+Note: The Harris Platinum Router can be configured to have several levels. In that case, only one level is monitored by the connector.
 
 ## Installation and configuration
 
 ### Creation
 
-Two connections are required for this driver. The main connection, used for most of the communication, is an **SNMP** connection. In addition, there is also an **LRC** connection, which is used to get and set crosspoints in the matrix, and to receive notification messages of changes regarding the crosspoints.
+Two connections are required for this connector. The main connection, used for most of the communication, is an **SNMP** connection. In addition, there is also an **LRC** connection, which is used to get and set crosspoints in the matrix, and to receive notification messages of changes regarding the crosspoints.
 
 #### Main Connection
 
@@ -39,7 +39,7 @@ SNMP Settings:
 
 ## Usage
 
-Before you use this driver, please read the sections "[Main View](/Driver%20Help/Harris%20Platinum%20Router.aspx#MainView)" & "[Status](/Driver%20Help/Harris%20Platinum%20Router.aspx#Status)".
+Before you use this connector, please read the sections "[Main View](/connector%20Help/Harris%20Platinum%20Router.aspx#MainView)" & "[Status](/connector%20Help/Harris%20Platinum%20Router.aspx#Status)".
 
 ### Main View
 

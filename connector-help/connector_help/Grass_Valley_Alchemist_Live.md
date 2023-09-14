@@ -6,7 +6,7 @@ uid: Connector_help_Grass_Valley_Alchemist_Live
 
 Alchemist Live offers motion-compensated frame rate conversion for Live IP and SDI media streams. It supports SD, HD, 1080p, UHD, 4K and HDR formats. It offers native support for a single channel of UHD/4K, or up to three channels of 1080p.
 
-This driver is used to manage, monitor and configure Alchemist Live devices. It uses the proprietary Rollcall communication protocol.
+This connector is used to manage, monitor and configure Alchemist Live devices. It uses the proprietary Rollcall communication protocol.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver is used to manage, monitor and configure Alchemist Live devices. It 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 
@@ -111,7 +111,7 @@ This page contains RTP secondary output video and audio flow information. These 
 Alchemist Live relies on automatic standards detection of the incoming source signal. The **Scan Type** parameter reports the detected input video format.
 
 - When Progressive inputs are detected, the *Progressive* scan type will be selected and the *Interlaced* and *Segmented Frame* types cannot be selected.
-- When an interlaced input is detected, the driver will assume that the incoming signal is true high frame rate, and the *Interlaced* type will be selected.
+- When an interlaced input is detected, the connector will assume that the incoming signal is true high frame rate, and the *Interlaced* type will be selected.
 - If the input is actually **psf**, the option **Segmented Frame (psf)** has to be selected.
 
 In the **Video Output** section of this page, the output video format can be defined in terms of **Resolution**, **Frame/Scan Rate** and **Scan Type**. Note that when the output is configured to be **UHD/4K**, the options *Interlaced* and *PsF* cannot be selected.
@@ -146,7 +146,7 @@ In the Hardware Configuration section of this page, you can select the supported
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range (since version 1.0.0.2) of the **Grass Valley Alchemist Live** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range (since version 1.0.0.2) of the **Grass Valley Alchemist Live** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

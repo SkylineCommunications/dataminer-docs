@@ -4,7 +4,7 @@ uid: Connector_help_Snell_Wilcox_MACH-HD3
 
 # Snell Wilcox MACH-HD3
 
-The Snell Wilcox MACH-HD3 driver is used to monitor and control the **Mach-HD3 HD/SD motion-compensated standards converter.**
+The Snell Wilcox MACH-HD3 connector is used to monitor and control the **Mach-HD3 HD/SD motion-compensated standards converter.**
 
 ## About
 
@@ -32,7 +32,7 @@ The Snell Wilcox MACH-HD3 driver is used to monitor and control the **Mach-HD3 H
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has one data page, **User Memory**, which contains:
+The element created with this connector has one data page, **User Memory**, which contains:
 
 - The memory name drop-down list for both index and recall.
 - Save, clear, and reset buttons.

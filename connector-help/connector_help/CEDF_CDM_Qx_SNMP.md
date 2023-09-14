@@ -8,15 +8,15 @@ This protocol is used to control and monitor the CEFD CDM Qx SNMP device
 
 ## About
 
-This driver uses an **SNMP** connection and a **serial** connection to communicate with the device.
+This connector uses an **SNMP** connection and a **serial** connection to communicate with the device.
 
 The snmp connection will poll the device to retrieve the information and also allows sets to control the device.
 
 A serial connection is used to get and set the LSR state.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                       | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                       | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version                                       | No                  | Yes                     |
 | 2.0.0.x          | Usage of tables to handle all slots, based on 1.0.0.6 | No                  | Yes                     |
@@ -24,9 +24,9 @@ A serial connection is used to get and set the LSR state.
 | 3.0.0.x          | New protocol name, based on 2.0.1.5                   | No                  | Yes                     |
 | 3.1.0.x          | New firmware, based on 3.0.0.1                        | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 3.1.0.x          | FW-11247                    |
 
@@ -36,7 +36,7 @@ A serial connection is used to get and set the LSR state.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ SNMP Settings:
 
 #### Serial SerialPort Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -75,9 +75,9 @@ This page is the **default page**, and shows the Circuit ID, Unit Summary Alarm,
 
 This **page** allows the **monitoring** and **configuration** of the most important information, as the reference frequency, internal frequency, framing, AUPC, alarms and temperature.
 
-This page also includes this **pagebuttons**:
+This page also includes these **page buttons**:
 
-- **Grouping**: This **subpage** desplays information about the groups, as redundancy, online status and slots.
+- **Grouping**: This **subpage** displays information about the groups, as redundancy, online status and slots.
 - **Firmware Info**: This **subpage** displays a table with all the information about the firmware.
 - **Defice** **info**: This **subpage** shows the basic information about the device, as the serial number, model number, firmware revision, addresses, and traps.
 - **Access** **List**: This **subpage** shows a table with all the allowed addresses.
@@ -95,16 +95,16 @@ This **page** shows a table with the test configurations of the Tx
 
 ### Modulator
 
-This **page** shows tables with the Status, Primary Settings and Additionsl Settings of the Tx
+This **page** shows tables with the Status, Primary Settings and Additional Settings of the Tx
 
 ### Demodulator
 
-This **page** shows tables with the Status, Primary Settings and Additionsl Settings os the Rx
+This **page** shows tables with the Status, Primary Settings and Additional Settings of the Rx
 
 ### Monitor
 
 - **EventLog**: This **subpage** shows a table with all the Stored Events received
-- **Stat¡stics**: This **subpage** shows a table with all the Stored Stat¡stics, and allows the configuration of the receptios of the stat¡stics
+- **Stat¡stics**: This **subpage** shows a table with all the Stored Statistics, and allows the configuration of the reception of the statistics
 - **Rx**: This **subpage** shows the relevant information about the Rx, as the BER Multiplier, Buffer Fill State, Frequency Offset, Signal Level and Eb No
 - **CNC**: This **subpage** shows the Slot, the Ratio, the Delay and Offset Freq of the **CNC**
 
@@ -116,14 +116,14 @@ This **page** shows information with the monitoring parameters of the BIST BERT 
 
 This **page** shows information with the monitoring parameters of the BIST BERT Monitor
 
-### Spectrum Analyser
+### Spectrum Analyzer
 
-This **page** shows information with the monitoring parameters of the Spectrum Analyser
+This **page** shows information with the monitoring parameters of the Spectrum Analyzer
 
 ### Save / Load Configuration
 
-This **page** allows to Save or Load a configuration, by savig or loading a **csv file**
+This **page** allows to Save or Load a configuration, by saving or loading a **csv file**
 
-### Webinterface
+### Web Interface
 
 This **page** displays the web interface of the device. The client machine has to be able to access the device. If not, it will not be possible to open the web interface.

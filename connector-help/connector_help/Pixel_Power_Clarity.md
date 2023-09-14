@@ -4,21 +4,21 @@ uid: Connector_help_Pixel_Power_Clarity
 
 # Pixel Power Clarity
 
-This driver allows the user to view a report for each Clarity, describing the status of the loaded job and of any pending jobs.
+This connector allows the user to view a report for each Clarity, describing the status of the loaded job and of any pending jobs.
 
 ## About
 
-The driver presents its information in two tables, the **System Table** and the **Clarity Table**. There, you will find information about the overall status that can be used as a top-level indicator of whether or not there are any issues within the system. The data of these tables is polled via **SNMP** protocol every 10 seconds.
+The connector presents its information in two tables, the **System Table** and the **Clarity Table**. There, you will find information about the overall status that can be used as a top-level indicator of whether or not there are any issues within the system. The data of these tables is polled via **SNMP** protocol every 10 seconds.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | SKY22                       |
 
@@ -28,7 +28,7 @@ The driver presents its information in two tables, the **System Table** and the 
 
 SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

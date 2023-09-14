@@ -8,22 +8,22 @@ Adtec Digital's RD-71 is an SD, HD and 1080P59.94/50 IRD supporting MPEG-2 and M
 
 ## About
 
-This driver was designed for use with the device **Adtec RD-71**. The driver retrieves and sets information from/on the device via SNMP. To support profiles, the driver uses a serial connection (Telnet).
+This connector was designed for use with the device **Adtec RD-71**. The connector retrieves and sets information from/on the device via SNMP. To support profiles, the connector uses a serial connection (Telnet).
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**                        | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**                        | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x (Obsolete)                      | Initial version.                                                                                                                 | No                  | Yes                     |
-| 1.0.1.x (Obsolete)                      | Added DVE support to the driver.                                                                                                 | No                  | Yes                     |
+| 1.0.1.x (Obsolete)                      | Added DVE support to the connector.                                                                                                 | No                  | Yes                     |
 | 1.0.2.x (Obsolete)                      | Applied conditional pages instead of DVEs.                                                                                       | No                  | Yes                     |
 | 1.0.3.x (based on 1.0.2.x)              | Fixed PK duplicate issue in the 2050 table.                                                                                      | No                  | Yes                     |
 | 1.0.4.x (based on 1.0.3.2)              | Added support for profiles by adding a new serial connection (Telnet). For more information, refer to the "Notes" section below. | No                  | Yes                     |
 | 1.1.0.1 (based on 1.0.3.2) \[SLC Main\] | Compatible with new firmware 2.02.21 and higher. Added reset/reboot buttons.                                                     | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | v 2.02.06                   |
 | 1.0.1.x          | v 2.02.11                   |
@@ -32,9 +32,9 @@ This driver was designed for use with the device **Adtec RD-71**. The driver ret
 | 1.0.4.x          | v 2.02.11                   |
 | 1.1.0.x          | v 2.02.21                   |
 
-### Exported drivers (only in range 1.0.1.x)
+### Exported connectors (only in range 1.0.1.x)
 
-| **Exported Protocol**                                            | **Description**                                  |
+| **Exported Connector**                                            | **Description**                                  |
 |------------------------------------------------------------------|--------------------------------------------------|
 | [Adtec RD-71 - PRX](xref:Connector_help_Adtec_RD-71_-_PRX) | Adtec RD-71 with the PRX model demodulator board |
 | [Adtec RD-71 - LB](xref:Connector_help_Adtec_RD-71_-_LB)   | Adtec RD-71 with the LB model demodulator board  |
@@ -45,7 +45,7 @@ This driver was designed for use with the device **Adtec RD-71**. The driver ret
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ SNMP Settings:
 
 #### Serial Connection
 
-This driver uses a serial connection to set/retrieve profile information and requires the following input during element creation:
+This connector uses a serial connection to set/retrieve profile information and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -142,7 +142,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## Usage - 1.0.2.x/1.0.3.x/1.1.0.x
 
-In these versions of the driver, conditional pages are used. These pages are shown or hidden depending on the device type (L-band vs. PRX). The pages are the same for these different ranges, except that in range 1.1.0.x the suffix "L-Band" was renamed to "LB".
+In these versions of the connector, conditional pages are used. These pages are shown or hidden depending on the device type (L-band vs. PRX). The pages are the same for these different ranges, except that in range 1.1.0.x the suffix "L-Band" was renamed to "LB".
 
 ### Main View PRX / Main View L-Band / Main View LB
 

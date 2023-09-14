@@ -6,7 +6,7 @@ uid: Connector_help_PATLITE_Corporation_LA6_Series
 
 The LA6 Series signal tower can operate in Smart Mode or Signal Tower Mode. It can control the LED and buzzer like a standard tower. In Smart Mode, various displays can be shown, such as a slow flashing rate, simulating that of a firefly, and a display that can be used as a level meter.
 
-The PATLITE Corporation LA6 Series driver uses HTTP polling to retrieve information such as the mode, the Units table, Smart Mode parameters, etc.
+The PATLITE Corporation LA6 Series connector uses HTTP polling to retrieve information such as the mode, the Units table, Smart Mode parameters, etc.
 
 ## About
 
@@ -34,7 +34,7 @@ The PATLITE Corporation LA6 Series driver uses HTTP polling to retrieve informat
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -56,7 +56,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages described below.
+The element created with this connector consists of the data pages described below.
 
 - **General**: Displays the **Mode** (which can be *Signal Tower Mode* or *Smart Mode*), **LED Unit Firmware Version**, **LAN Unit** **Firmware Version** and **MAC Address.**
 - **Units**: Contains the Units table, displaying the **Status** and **Colors** for the units.

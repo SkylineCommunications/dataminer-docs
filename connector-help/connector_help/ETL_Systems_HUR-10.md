@@ -8,7 +8,7 @@ The Hurricane L-band matrix is used to provide flexibility in the routing of ant
 
 ## About
 
-This driver uses an SNMP connection to poll data from an ETL Systems HUR-10 device.
+This connector uses an SNMP connection to poll data from an ETL Systems HUR-10 device.
 
 ### Version Info
 
@@ -37,7 +37,7 @@ This driver uses an SNMP connection to poll data from an ETL Systems HUR-10 devi
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -51,7 +51,7 @@ SNMP Settings:
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

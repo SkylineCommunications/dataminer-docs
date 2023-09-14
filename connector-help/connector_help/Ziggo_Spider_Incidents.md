@@ -8,11 +8,11 @@ This is a virtual protocol that is used as a **Ticketing System** for the **Asse
 
 ## About
 
-This driver can catch incoming tickets via a parameter set. A possible source of tickets is the **Skyline VOD Workflow Application**. The only communication method used is inter-element communication.
+This connector can catch incoming tickets via a parameter set. A possible source of tickets is the **Skyline VOD Workflow Application**. The only communication method used is inter-element communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -20,7 +20,7 @@ This driver can catch incoming tickets via a parameter set. A possible source of
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration of Profiles
 
@@ -66,7 +66,7 @@ The table has the following columns:
 
 This page contains an overview of the closed incidents. The **Number of Closed Incidents** represents the number of incidents stored in the **Closed Incident Table**.
 
-When **open incidents** are closed and the incidents are **deleted** from the **Open Incident Table** as a consequence, the driver will not remove the data, but instead store the most important data in this table.
+When **open incidents** are closed and the incidents are **deleted** from the **Open Incident Table** as a consequence, the connector will not remove the data, but instead store the most important data in this table.
 
 This table has the following columns:
 
@@ -86,7 +86,7 @@ There are three levels of profiles:
 - **A Provider Profile:** This can be added by a user. A provider is identified with the Provider ID, so this makes it unique.
 - **An Offering Profile:** This can be added by a user. An offering always belongs to a particular provider, so the combination of Provider ID and Billing ID makes this unique.
 
-In order to find the applicable profile for an asset, the driver first looks for a matching offering profile to apply. If there is none, the driver will search for a provider profile that can be applied. If there is no provider profile either, the default profile (which is always there), will be used.
+In order to find the applicable profile for an asset, the connector first looks for a matching offering profile to apply. If there is none, the connector will search for a provider profile that can be applied. If there is no provider profile either, the default profile (which is always there), will be used.
 
 Note that only automatically created tickets need to pass this filter, manually created tickets can bypass this check.
 
@@ -109,10 +109,10 @@ On the right-hand side, you can manually close an Open Incident. Fill in the **T
 
 ### Configuration
 
-To make sure that incoming assets cannot lead to an endlessly growing table, you should configure a **Maximum Number of Stored Open Incidents** (set to 1000 by default). To avoid that open incidents disappear when this limit is reached, instead of deleting old open incidents, the driver will not store any new incidents. This way, the system of open and closed incidents stays intact. If the maximum capacity of the **Open Incident Table** is almost reached, you will be informed of this via the parameter **Usage of Open Incident Table Storage Space.** If this percentage is higher than e.g. 80%, you should consider re-evaluating the profiles that influence the creation of incidents or the Maximum Number of Stored Open Incidents.
+To make sure that incoming assets cannot lead to an endlessly growing table, you should configure a **Maximum Number of Stored Open Incidents** (set to 1000 by default). To avoid that open incidents disappear when this limit is reached, instead of deleting old open incidents, the connector will not store any new incidents. This way, the system of open and closed incidents stays intact. If the maximum capacity of the **Open Incident Table** is almost reached, you will be informed of this via the parameter **Usage of Open Incident Table Storage Space.** If this percentage is higher than e.g. 80%, you should consider re-evaluating the profiles that influence the creation of incidents or the Maximum Number of Stored Open Incidents.
 
-You can also choose to enable **Detailed Logging.** This does not change the functionality of the driver, but will only provide details about the flow of the driver in the logs of the file. This option can also be used for debugging purposes. In operational environments this setting should be disabled.
+You can also choose to enable **Detailed Logging.** This does not change the functionality of the connector, but will only provide details about the flow of the connector in the logs of the file. This option can also be used for debugging purposes. In operational environments this setting should be disabled.
 
 The page also offers the possibility to **Show Confirmation of a Manual Ticket.** If you enable this, a confirmation is displayed to the user when a manual ticket is successfully created. If the manual creation fails, a pop-up will always be displayed, regardless of this setting.
 
-Finally, the **SAM IP Address** can also be configured. Via traps, the SAM DMA is informed about new, updated or closed tickets in this driver. Only valid IPv4 addresses are accepted.
+Finally, the **SAM IP Address** can also be configured. Via traps, the SAM DMA is informed about new, updated or closed tickets in this connector. Only valid IPv4 addresses are accepted.

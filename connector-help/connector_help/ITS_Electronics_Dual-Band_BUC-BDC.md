@@ -8,11 +8,11 @@ The **ITS** **Electronics Dual-Band BUC-BDC** device is a Up/Down Converter prov
 
 ## About
 
-The **ITS** **Electronics Dual-Band BUC-BDC** driver is a **serial** driver that connects to the Monitor and Control application level Interface. The interface is intended for use by monitoring and control software running on a remote computer, but it is designed to still be readable by a human operator.
+The **ITS** **Electronics Dual-Band BUC-BDC** connector is a **serial** connector that connects to the Monitor and Control application level Interface. The interface is intended for use by monitoring and control software running on a remote computer, but it is designed to still be readable by a human operator.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The **ITS** **Electronics Dual-Band BUC-BDC** driver is a **serial** driver that
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

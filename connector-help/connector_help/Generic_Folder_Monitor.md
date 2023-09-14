@@ -4,15 +4,15 @@ uid: Connector_help_Generic_Folder_Monitor
 
 # Generic Folder Monitor
 
-This driver uses a virtual connection to monitor a directory and its subdirectories.
+This connector uses a virtual connection to monitor a directory and its subdirectories.
 
 ## About
 
-This virtual driver can check the content of a directory and its subdirectories on a regular basis. It provides details such as the time when the directory was created or last modified. It can also be used to monitor a folder where log files are dumped, for example by having an alarm triggered on the parameter that indicates how long ago the last modification or creation of a file in the directory occurred.
+This virtual connector can check the content of a directory and its subdirectories on a regular basis. It provides details such as the time when the directory was created or last modified. It can also be used to monitor a folder where log files are dumped, for example by having an alarm triggered on the parameter that indicates how long ago the last modification or creation of a file in the directory occurred.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version    | No                  | Yes                     |
 | 1.0.1.x          | Support to Unicode | No                  | Yes                     |
@@ -21,13 +21,13 @@ This virtual driver can check the content of a directory and its subdirectories 
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ### Configuration
 
-For this driver to work, you need to specify a **Directory Path Name** on the Configuration page. If the directory is on a network share and you do not use a local path name, you also need to specify a **Username** and **Password**.
+For this connector to work, you need to specify a **Directory Path Name** on the Configuration page. If the directory is on a network share and you do not use a local path name, you also need to specify a **Username** and **Password**.
 
-From **version 1.0.0.3** onwards, the driver supports **SFTP**. In order to connect to SFTP, you need to specify the **SFTP Host** and the **SFTP Port (default: 22)** in the **Directory Path Name**, using the syntax: *sftp://\<host\>:\<port\>/\<url-path\>*.
+From **version 1.0.0.3** onwards, the connector supports **SFTP**. In order to connect to SFTP, you need to specify the **SFTP Host** and the **SFTP Port (default: 22)** in the **Directory Path Name**, using the syntax: *sftp://\<host\>:\<port\>/\<url-path\>*.
 
 In **version 1.0.0.4**, the **Connect** button is used to establish the communication to the SFTP server. Note that any change of the **Directory Path Name** will initiate a connection as well. Moreover, from this version onwards, **Renci.SshNet.dll** is deployed as the supported DLL.
 
@@ -55,13 +55,13 @@ The parameter **Time Since Last Modification Or Creation** is also available for
 
 ### Configuration
 
-As mentioned in the "Installation and configuration" section above, the parameters **Location**, **Username** and **Password** must be configured correctly so that the driver can monitor the right folder. In order to connect to an **SFTP Server**, the parameters **Location**, **Username** and **Password** also have to be specified.
+As mentioned in the "Installation and configuration" section above, the parameters **Location**, **Username** and **Password** must be configured correctly so that the connector can monitor the right folder. In order to connect to an **SFTP Server**, the parameters **Location**, **Username** and **Password** also have to be specified.
 
-In addition, this page contains the **Directory Status**, which indicates whether the driver can access the directory. If the status is *Not OK*, more details can be found in the logging or in the **Summary of Last Check**.
+In addition, this page contains the **Directory Status**, which indicates whether the connector can access the directory. If the status is *Not OK*, more details can be found in the logging or in the **Summary of Last Check**.
 
 There is also a toggle button to switch off the **monitoring of the folder** and to specify the interval between different checks. The lower the interval, the more frequently the folder check will be executed.
 
-You can also choose to enable **Detailed Logging.** This does not change the functionality of the driver, but provides details about the flow of the driver in the logs of the file. This option should be used for debugging purposes only, and should be disabled in operational environments.
+You can also choose to enable **Detailed Logging.** This does not change the functionality of the connector, but provides details about the flow of the connector in the logs of the file. This option should be used for debugging purposes only, and should be disabled in operational environments.
 
 On the right-hand side of the page, the **Last Check** parameter indicates the date and time when the folder check was last executed. In addition, the **Summary of Last Check** details how many files were found, which files are new and which files disappeared compared to the previous check.
 
@@ -87,7 +87,7 @@ On the right-hand side of the page, the **Last Check** parameter indicates the d
 
 This integer is the result of converting every character of the Full File Name to an integer, concatenating this integer in a string and then converting it back to an integer.
 
-This was done because this integer will be used to check whether a file name was already there during the previous check. If the full file names were used instead, and a full file name contained a special character, the driver would ignore this special character when it saved the Full File Name to the table. In that case, when the check of the folder was done again, and the driver compared the found file names with the ones that were in the table, it would erroneously conclude that this is a new file because the character was ignored. **By converting all characters to integers and storing this here, we make sure that comparing old and new files can also handle special characters, even when these cannot be printed.**
+This was done because this integer will be used to check whether a file name was already there during the previous check. If the full file names were used instead, and a full file name contained a special character, the connector would ignore this special character when it saved the Full File Name to the table. In that case, when the check of the folder was done again, and the connector compared the found file names with the ones that were in the table, it would erroneously conclude that this is a new file because the character was ignored. **By converting all characters to integers and storing this here, we make sure that comparing old and new files can also handle special characters, even when these cannot be printed.**
 
 Example:
 

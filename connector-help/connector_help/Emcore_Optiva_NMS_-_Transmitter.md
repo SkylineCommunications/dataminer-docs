@@ -4,15 +4,15 @@ uid: Connector_help_Emcore_Optiva_NMS_-_Transmitter
 
 # Emcore Optiva NMS - Transmitter
 
-The **Emcore Optiva NMS - Transmitter** driver is a DVE child driver that makes it possible to retrieve information from a transmitter and to control its behavior.
+The **Emcore Optiva NMS - Transmitter** connector is a DVE child connector that makes it possible to retrieve information from a transmitter and to control its behavior.
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the device.
+This connector uses **SNMP** polling to communicate with the device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 1.1                         |
 
@@ -20,7 +20,7 @@ This driver uses **SNMP** polling to communicate with the device.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Emcore Optiva NMS](xref:Connector_help_Emcore_Optiva_NMS), from version 1.0.1.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Emcore Optiva NMS](xref:Connector_help_Emcore_Optiva_NMS), from version 1.0.1.1 onwards.
 
 ## Usage
 

@@ -4,21 +4,21 @@ uid: Connector_help_Trilithic_EASyCAP
 
 # Trilithic EASyCAP
 
-This driver can be used to display and configure information of the Trilithic EasyCap device. It also allows alarm monitoring of this device.
+This connector can be used to display and configure information of the Trilithic EasyCap device. It also allows alarm monitoring of this device.
 
 ## About
 
-This driver uses SNMP to communicate with the device.
+This connector uses SNMP to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 01.06                       |
 
@@ -28,7 +28,7 @@ This driver uses SNMP to communicate with the device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

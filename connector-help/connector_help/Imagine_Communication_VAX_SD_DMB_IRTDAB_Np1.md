@@ -4,11 +4,11 @@ uid: Connector_help_Imagine_Communication_VAX_SD_DMB_IRTDAB_Np1
 
 # Imagine Communication VAX SD DMB IRTDAB Np1
 
-This driver is used to monitor an Imagine Communications VAX SD DMB IRTDAB Np1 transmitter device.
+This connector is used to monitor an Imagine Communications VAX SD DMB IRTDAB Np1 transmitter device.
 
 ## About
 
-This driver retrieves 15 parameters from the device. Data is polled via **SNMP**. The driver supports traps: each parameter is associated with a trap and trap sending can be enabled/disabled for each parameter.
+This connector retrieves 15 parameters from the device. Data is polled via **SNMP**. The connector supports traps: each parameter is associated with a trap and trap sending can be enabled/disabled for each parameter.
 
 ## Installation and Configuration
 
@@ -16,7 +16,7 @@ This driver retrieves 15 parameters from the device. Data is polled via **SNMP**
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -30,7 +30,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver contains 2 pages.
+This connector contains 2 pages.
 
 ### General
 

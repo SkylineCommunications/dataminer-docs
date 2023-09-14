@@ -4,7 +4,7 @@ uid: Connector_help_Sun_Unified_Storage_7310
 
 # Sun Unified Storage 7310
 
-The **Sun Unified Storage 7310** driver can be used to display and configure information of the device.
+The **Sun Unified Storage 7310** connector can be used to display and configure information of the device.
 
 ## About
 

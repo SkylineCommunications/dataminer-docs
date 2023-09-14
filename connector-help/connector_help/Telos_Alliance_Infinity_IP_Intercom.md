@@ -4,7 +4,7 @@ uid: Connector_help_Telos_Alliance_Infinity_IP_Intercom
 
 # Telos Alliance Infinity IP Intercom
 
-The Telos Alliance Infinity IP Intercom is an Audio Gateway. This driver uses a serial communication in order to monitor and control the device.
+The Telos Alliance Infinity IP Intercom is an Audio Gateway. This connector uses a serial communication in order to monitor and control the device.
 
 ## About
 
@@ -32,7 +32,7 @@ The Telos Alliance Infinity IP Intercom is an Audio Gateway. This driver uses a 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

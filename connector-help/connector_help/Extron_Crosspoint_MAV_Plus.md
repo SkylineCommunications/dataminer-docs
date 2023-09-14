@@ -33,7 +33,7 @@ The switcher can route multiple input/output combinations simultaneously.
 
 #### Serial Telnet Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -43,7 +43,7 @@ SERIAL CONNECTION:
 
 ## How to use
 
-This driver contains the following pages:
+This connector contains the following pages:
 
 - **General**: Displays general parameters such as the **model**, **firmware version** and **number of inputs and outputs**. Also contains the **Security** page button.
 - **Operational Status**: Displays the operational status of BME 0. Note that other BMEs cannot be retrieved with the corresponding API command.

@@ -8,7 +8,7 @@ The **Miteq U-9600** is a frequency converter.
 
 ## About
 
-With this driver, you can monitor and configure the **Frequency**, **Attenuation**, **Channels** and **Alarms** for the Miteq U-9600.
+With this connector, you can monitor and configure the **Frequency**, **Attenuation**, **Channels** and **Alarms** for the Miteq U-9600.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ With this driver, you can monitor and configure the **Frequency**, **Attenuation
 
 Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

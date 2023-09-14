@@ -8,11 +8,11 @@ This drivers polls a MySQL database.
 
 ## About
 
-This driver sends MySQL queries to a MySQL database and fetches the returned rows.
+This connector sends MySQL queries to a MySQL database and fetches the returned rows.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**  | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version  | No                  | Yes                     |
 | 1.1.0.x          | Based on 1.0.0.x | No                  | Yes                     |
@@ -21,7 +21,7 @@ This driver sends MySQL queries to a MySQL database and fetches the returned row
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 - Interface connection:
 

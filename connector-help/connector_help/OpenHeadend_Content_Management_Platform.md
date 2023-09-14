@@ -4,17 +4,17 @@ uid: Connector_help_OpenHeadend_Content_Management_Platform
 
 # OpenHeadend Content Management Platform
 
-The **OpenHeadend Content Management Platform** driver monitors and controls the unit through **SNMP**.
+The **OpenHeadend Content Management Platform** connector monitors and controls the unit through **SNMP**.
 
 ## About
 
-The driver polls relevant information from the device every 2 seconds, 30 seconds or 1 hour. It also receives traps from the device and updates the values accordingly.
+The connector polls relevant information from the device every 2 seconds, 30 seconds or 1 hour. It also receives traps from the device and updates the values accordingly.
 
 ### Creation
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -28,7 +28,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver has several data display pages.
+This connector has several data display pages.
 
 ### System Page
 

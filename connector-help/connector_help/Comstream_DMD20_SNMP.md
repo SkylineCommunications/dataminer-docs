@@ -4,13 +4,13 @@ uid: Connector_help_Comstream_DMD20_SNMP
 
 # Comstream DMD20 SNMP
 
-Through this driver is possible to gather and view information from the device **Comstream DMD20SNMP**. It also gives the possibility to set values on the device.
+Through this connector is possible to gather and view information from the device **Comstream DMD20SNMP**. It also gives the possibility to set values on the device.
 
 # About
 
 Driver used to gather information from the **Comstream DMD20SNMP** device.
 
-The driver has several pages with general information, alarms, information regarding the modulator and the demodulator, etc.
+The connector has several pages with general information, alarms, information regarding the modulator and the demodulator, etc.
 
 ## Creation
 

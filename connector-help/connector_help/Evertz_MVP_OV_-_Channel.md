@@ -8,18 +8,18 @@ The MVP is a multi-image display and monitoring system. It provides a highly fle
 
 ## About
 
-This protocol is created by the **Evertz MVP OV** driver. For each busadress(1-8) the **Evertz MVP OV** creates a DVE.
+This protocol is created by the **Evertz MVP OV** driver. For each bus address (1-8), the **Evertz MVP OV** creates a DVE.
 
 ### Ranges of the Driver
 
-| **Driver Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                            | **DCF Integration** | **Cassandra Compliant** |
 |------------------|--------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | SNMP set not working                                                                       |                     |                         |
-| 2.0.0.x          | Use of DVE's for each busadress instead of using the busadress to look at a single channel | \-                  | \-                      |
+| 2.0.0.x          | Use of DVEs for each bus address instead of using the bus address to look at a single channel | \-                  | \-                      |
 
 ### Supported Firmware Versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -28,9 +28,10 @@ This protocol is created by the **Evertz MVP OV** driver. For each busadress(1-8
 
 ### Configuration
 
-The DVE is created by the parent driver protocol (**Evertz MVP OV**). It uses the name of the parent driver + the busadres + the busname.
+The DVE is created by the parent connector protocol (**Evertz MVP OV**). It uses the name of the parent connector + the bus addres + the bus name.
 e.g. **ParentName.1_BusName**
-You can change the busname at the HardwareControl Table on the parent driver.
+
+You can change the bus name in the HardwareControl Table on the parent connector.
 
 ## Usage
 
@@ -48,11 +49,11 @@ This page displays general parameters related to errors, such as **Error Duratio
 
 ### Audio Fault
 
-This page displays the **Audio Definition** and **Audio Pair Definition** **Tables**.
+This page displays the **Audio Definition** and **Audio Pair Definition Tables**.
 
 ### Hardware Control
 
-On this page, general parameters are consolidated: **System Status**, **Tag Selector**, **Input Tags (A and B)**, **Trap Tag** and **MVP IDs**. The Input + Busname is used to create the DVE.
+On this page, general parameters are consolidated: **System Status**, **Tag Selector**, **Input Tags (A and B)**, **Trap Tag** and **MVP IDs**. The input + bus name is used to create the DVE.
 
 ### Audio Loudness
 
@@ -60,39 +61,32 @@ On this page, you can configure the **Loudness Measure Audio Program** (1 to 8) 
 
 ### Audio Notifications
 
-This page displays the **Management Fault Audio 2** and **Management Audio 3** **Tables**.
+This page displays the **Management Fault Audio 2** and **Management Audio 3 Tables**.
 
 ### Dolby E
 
-This page displays the **Dolby E definition** **Table**.
+This page displays the **Dolby E definition Table**.
 
 ### Group 7 Notifications
 
-This page displays the **Group 7 Notifications** **Table**.
+This page displays the **Group 7 Notifications Table**.
 
 ### WST GPI
 
 On this page, you can configure the **WST GPI** parameters.
 
-EIA 708
+### EIA 708
 
-On this page, you can configure the **EIA** **708** fault definition parameters.
+On this page, you can configure the **EIA 708** fault definition parameters.
 
-Monitor Control
+### Monitor Control
 
 On this page, you can configure the **Monitor Control** parameters such as Start, Stop, Reset, ... of monitoring/reporting of faults.
 
-RCTL GPI
+### RCTL GPI
 
-On this page, you can configure the **RCTL** **GPI** Timecode parameters.
+On this page, you can configure the **RCTL GPI** Timecode parameters.
 
-SCTE 104 GPI
+### SCTE 104 GPI
 
-On this page, you can configure the **SCTE 104** **GPI** error on time.
-
-| SNMP set not working. |
-|-----------------------|
-
-| SNMP set not working. |
-|-----------------------|
-
+On this page, you can configure the **SCTE 104 GPI** error on time.

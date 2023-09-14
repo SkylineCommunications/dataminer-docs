@@ -10,15 +10,15 @@ The Ramiaudio Watchdog CSS404 is designed for continuous monitoring of mono or s
 
 The Ramiaudio Watchdog CS404 driver controls the inputs, listens for traps from the device, and reads the status and errors of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
-| 1.0.0.1          | Initial version | No                  | Yes                     |
+| 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**     | **Device Firmware Version** |
+| **Range**     | **Device Firmware Version** |
 |----------------------|-----------------------------|
 | 1.0.0.x \[SLC Main\] | 4.2                         |
 
@@ -28,7 +28,7 @@ The Ramiaudio Watchdog CS404 driver controls the inputs, listens for traps from 
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ Below the parameters, you can find the following buttons:
 - **Set Switch Mode**: Changes the **Switch Mode** of the device to either *Manual* or *Auto*.
 - **Force Active Input**: Changes the **Switch Mode** to *Manual*, and then sets the **Active Input** to either *Backup* or *Main*.
 - **Force SD**: Forces the **Switch Input** to *SD Card*, if the **SD Card** parameter is *Available*.
-- **Refresh All**: Polls every parameter in the driver again.
+- **Refresh All**: Polls every parameter in the connector again.
 
 ### System Page
 

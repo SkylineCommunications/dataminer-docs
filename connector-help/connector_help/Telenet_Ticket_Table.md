@@ -4,7 +4,7 @@ uid: Connector_help_Telenet_Ticket_Table
 
 # Telenet Ticket Table
 
-The **Telenet** **Ticket** **Table** driver is part of the **SAM** system. It is the link between alarms on **DataMiner** and other drivers that will generate tickets. This driver will retrieve an update of the current alarms and group them into tickets. It will trigger the Automation scripts to create, update or close a ticket.
+The **Telenet** **Ticket** **Table** connector is part of the **SAM** system. It is the link between alarms on **DataMiner** and other drivers that will generate tickets. This connector will retrieve an update of the current alarms and group them into tickets. It will trigger the Automation scripts to create, update or close a ticket.
 
 ## About
 
@@ -36,7 +36,7 @@ The **Telenet** **Ticket** **Table** will retrieve a list of the **current activ
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -50,7 +50,7 @@ In case of a specific **Not** **Owner** error on **creation** or **update** of a
 
 To run a flow, a **script** is started. This flow could take some time. To keep a limit on the currently running scripts, you can configure this in **Max** **Running** **Scripts**.
 
-To keep track of the life cycle of the driver, you can add the **DMA/Element** **ID** of the **heartbeat** **element**.
+To keep track of the life cycle of the connector, you can add the **DMA/Element** **ID** of the **heartbeat** **element**.
 
 There is a limit on the number of tickets that can be created or scheduled, i.e. the **Max Trouble Ticket Count.** This needs to be configured via the **Event Storm** page button.
 
@@ -60,8 +60,8 @@ There is no redundancy defined.
 
 ## How to use
 
-When the driver has been configured as detailed above, it will run automatically based on the input of the alarms. The current situation can be monitored.
+When the connector has been configured as detailed above, it will run automatically based on the input of the alarms. The current situation can be monitored.
 
 ## Notes
 
-The driver will only work in a **SAM** system containing extra drivers and **Automation** **scripts**
+The connector will only work in a **SAM** system containing extra drivers and **Automation** **scripts**

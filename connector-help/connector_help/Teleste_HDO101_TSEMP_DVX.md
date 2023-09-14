@@ -8,17 +8,17 @@ HDO101 is an RF measurement switch. This switch module has two inputs with RF wi
 
 ## About
 
-This driver is used to control and monitor the HDO101 module using the DVX bus.
+This connector is used to control and monitor the HDO101 module using the DVX bus.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.28                        |
 
@@ -28,7 +28,7 @@ This driver is used to control and monitor the HDO101 module using the DVX bus.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

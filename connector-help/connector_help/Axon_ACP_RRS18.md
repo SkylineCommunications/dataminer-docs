@@ -4,7 +4,7 @@ uid: Connector_help_Axon_ACP_RRS18
 
 # Axon ACP RRS18
 
-The **Axon ACP RRS18** driver can be used to display and configure information of the Axon RRS18 central controller and the attached card types located in its different slots.
+The **Axon ACP RRS18** connector can be used to display and configure information of the Axon RRS18 central controller and the attached card types located in its different slots.
 
 ## About
 
@@ -12,7 +12,7 @@ This protocol can be used to monitor and control the Axon RRS main controller an
 
 ### Card Types & Firmware
 
-The Axon RRS18 protocol can be used for different Axon cards. As there are sometimes small differences when it comes to indexes used by the Axon cards, the driver has been officially tested for the following firmware versions:
+The Axon RRS18 protocol can be used for different Axon cards. As there are sometimes small differences when it comes to indexes used by the Axon cards, the connector has been officially tested for the following firmware versions:
 
 - **2IX**-xx: *2IX08v24* and *2IX11v02*
 - **2TG**-xx: *2TG10v080*
@@ -46,7 +46,7 @@ The Axon ACP RRS18 protocol delivers two types of DataMiner Elements: a main ele
 
 ### Main Element
 
-The driver's main element contains the following pages:
+The connector's main element contains the following pages:
 
 - **RRS18**: The RRS18 page provides an overview of the Axon main rack controller. Aside from this, you can also specify a view in which the created virtual element for the main rack controller will be added.
 - **Cards**: For every supported card type of the Axon frame, a page is available. When you open a page for a card type, an overview is given of all slots for this selected type of card.

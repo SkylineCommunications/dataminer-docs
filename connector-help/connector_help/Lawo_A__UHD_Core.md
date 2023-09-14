@@ -11,7 +11,7 @@ The A\_\_UHD Core is an audio engine for Lawo mcý audio production consoles. It
 - Full redundancy: SPS stream redundancy (ST2022-7) and hardware redundancy via hot-spare redundancy unit
 - Scalable DSP performance via flexible licensing system and possibility to share DSP resources among multiple consoles
 
-This driver uses **smart-serial Ember+** communication to poll data from the Lawo A\_\_UHD Core.
+This connector uses **smart-serial Ember+** communication to poll data from the Lawo A\_\_UHD Core.
 
 ## About
 
@@ -39,7 +39,7 @@ This driver uses **smart-serial Ember+** communication to poll data from the Law
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -58,7 +58,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

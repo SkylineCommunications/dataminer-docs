@@ -4,7 +4,7 @@ uid: Connector_help_Cisco_ASA_5540
 
 # Cisco ASA 5540
 
-This driver can be used to monitor **Cisco ASA 5540** firewall devices via SNMP. The bitrate parameters are calculated from the octet counters. All other data is polled using SNMP.
+This connector can be used to monitor **Cisco ASA 5540** firewall devices via SNMP. The bitrate parameters are calculated from the octet counters. All other data is polled using SNMP.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor **Cisco ASA 5540** firewall devices via SNMP.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

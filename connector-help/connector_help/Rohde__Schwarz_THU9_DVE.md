@@ -8,7 +8,7 @@ The Rohde & Schwarz THU9 driver consists of two parts, the controller and the tr
 
 ## About
 
-The information displayed in this driver is divided over seven pages:
+The information displayed in this connector is divided over seven pages:
 
 - **For the controller:**
 
@@ -34,21 +34,21 @@ The information displayed in this driver is divided over seven pages:
 
   - **Status**: Displays the state of the available parameters. When only one exciter is available, some parameters (ExB parameters) will not be filled in.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                          | **DCF Integration** | **Cassandra Compliant** |
 |------------------|----------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version.                                         | No                  | No                      |
 | 1.1.0.1          | Branch version based on 1.0.0.x.DVE functionality added. | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Version** | **Device Firmware Version** |
+| **Connector Version** | **Device Firmware Version** |
 |--------------------|-----------------------------|
 | 1.0.0.1            | tce900-103250               |
 | 1.1.0.1            | tce900-103250               |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description**                                                                                                                                  |
 |-----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,7 +58,7 @@ The information displayed in this driver is divided over seven pages:
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection**:
 

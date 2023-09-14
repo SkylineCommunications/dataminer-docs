@@ -6,7 +6,7 @@ uid: Connector_help_Diversitel_Communications_UPC_12A
 
 This device is an **uplink power controller**. Its purpose is to compensate the rain fade effect in satellite communications by automatically adjusting the transmitting power. It provides a method of determining the rain attenuation along the path to the satellite and controlling the uplink transmitter power so that the power incident at the satellite remains nearly constant during rain attenuation events. Additional external gain control modules can be connected and configured.
 
-With this driver, you can monitor and configure this device via a serial connection.
+With this connector, you can monitor and configure this device via a serial connection.
 
 ## About
 
@@ -34,7 +34,7 @@ With this driver, you can monitor and configure this device via a serial connect
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -76,6 +76,6 @@ When the unit or channel is on, the current gain value can be monitored and a st
 
 ## Notes
 
-- The driver cannot detect the difference between an unused address and a gain unit that is powered off.
+- The connector cannot detect the difference between an unused address and a gain unit that is powered off.
 - The status message could possibly have a different format if a certain gain unit reached its limits. If you notice this, please take a [stream viewer](xref:Connecting_to_an_element_using_Stream_Viewer) capture and let us know.
 - The calibration command is not implemented.

@@ -10,12 +10,12 @@ This is a virtual protocol that will maintain the reservations and resource book
 
 ## About
 
-The Globo MCR Manager driver is used in conjunction with a Visio file, which is the Visual Overview layer of the corresponding element.
+The Globo MCR Manager connector is used in conjunction with a Visio file, which is the Visual Overview layer of the corresponding element.
 Commands are sent between the Visio file and the manager element in order to execute actions.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -25,7 +25,7 @@ Commands are sent between the Visio file and the manager element in order to exe
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Installation
 
@@ -56,4 +56,4 @@ On this page, there are three volatile tables, which contain all the resources p
 
 ## Notes
 
-This Manager driver is used together with a Visio file, Automation scripts and the Resource Manager Module. Please contact your TAM if you need more information about any of these items.
+This Manager connector is used together with a Visio file, Automation scripts and the Resource Manager Module. Please contact your TAM if you need more information about any of these items.

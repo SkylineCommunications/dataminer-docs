@@ -32,7 +32,7 @@ This **Uplink Power Control** (UPC) is designed to adjust the strength of uplink
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver contains the following pages:
+This connector contains the following pages:
 
 - **General**
 - **System** **Status**

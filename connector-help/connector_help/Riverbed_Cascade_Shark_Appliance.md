@@ -8,13 +8,13 @@ The purpose of the Cascade Shark device is to capture, store and analyze network
 
 ## About
 
-This driver uses SNMP to retrieve information about capture jobs and resource consumption. It also manages traps that report different kinds of status information.
+This connector uses SNMP to retrieve information about capture jobs and resource consumption. It also manages traps that report different kinds of status information.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 

@@ -4,7 +4,7 @@ uid: Connector_help_ONATi_Keysight_87106B_SP6T
 
 # ONATi Keysight 87106B SP6T
 
-The ONATi Keysight 87106B SP6T is a virtual driver that is used to monitor the outputs of **Advantech ADAM6050** elements.
+The ONATi Keysight 87106B SP6T is a virtual connector that is used to monitor the outputs of **Advantech ADAM6050** elements.
 
 ## About
 
@@ -32,7 +32,7 @@ The ONATi Keysight 87106B SP6T is a virtual driver that is used to monitor the o
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

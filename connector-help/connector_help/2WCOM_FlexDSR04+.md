@@ -4,7 +4,7 @@ uid: Connector_help_2WCOM_FlexDSR04+
 
 # 2WCOM FlexDSR04+
 
-The **2WCOM Flex DRS04+** is an integrated receiver-decoder (IRD). This driver allows the management of the 2WCOM Flex DSR04+ device using the **SNMP** protocol.
+The **2WCOM Flex DRS04+** is an integrated receiver-decoder (IRD). This connector allows the management of the 2WCOM Flex DSR04+ device using the **SNMP** protocol.
 
 ## About
 
@@ -32,7 +32,7 @@ The **2WCOM Flex DRS04+** is an integrated receiver-decoder (IRD). This driver a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

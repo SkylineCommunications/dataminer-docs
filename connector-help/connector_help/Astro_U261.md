@@ -4,21 +4,21 @@ uid: Connector_help_Astro_U261
 
 # Astro U261
 
-With this driver, it is possible to gather and view information from the Astro U261 and to configure this device.
+With this connector, it is possible to gather and view information from the Astro U261 and to configure this device.
 
 ## About
 
-This driver uses HTTP to monitor the Astro U261. The driver also has an SNMP interface to receive traps from the device.
+This connector uses HTTP to monitor the Astro U261. The connector also has an SNMP interface to receive traps from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 4881                        |
 
@@ -26,9 +26,9 @@ This driver uses HTTP to monitor the Astro U261. The driver also has an SNMP int
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
+This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
-The driver is implemented to support direct **HTTP** communication with the Astro **U261** device, but it also supports proxy communication if necessary.
+The connector is implemented to support direct **HTTP** communication with the Astro **U261** device, but it also supports proxy communication if necessary.
 
 In either case, the **SNMP** interface collects the traps sent by the device, so the SNMP IP address must be the IP address of the device.
 
@@ -123,7 +123,7 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-DCF is supported in the driver range 1.0.0.x, from the initial version onwards. The driver can only be used on a DMA with **9.0.0 \[CU6\]** as the minimum version.
+DCF is supported in the connector range 1.0.0.x, from the initial version onwards. The connector can only be used on a DMA with **9.0.0 \[CU6\]** as the minimum version.
 
 ### Interfaces
 

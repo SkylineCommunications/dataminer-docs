@@ -4,15 +4,15 @@ uid: Connector_help_Miranda_Kaleido_IP_X320
 
 # Miranda Kaleido IP X320
 
-This driver supports the new iteration of the Miranda Kaleido IP device, namely the Miranda Kaleido IP X320. Hardware monitoring is the main new feature of this new device.
+This connector supports the new iteration of the Miranda Kaleido IP device, namely the Miranda Kaleido IP X320. Hardware monitoring is the main new feature of this new device.
 
 ## About
 
-The Kaleido IP X320 is an IP Video Multiviewer that is used to monitor and view local/remote IP multicast streams. By means of SNMP and serial communication, information is gathered and loaded into the driver. After a configuration file (.xls/.xlsx) has been supplied, a DataMiner element will keep track of the provisioned services. If enabled on the device, SNMP traps will be used to update the hardware status more efficiently.
+The Kaleido IP X320 is an IP Video Multiviewer that is used to monitor and view local/remote IP multicast streams. By means of SNMP and serial communication, information is gathered and loaded into the connector. After a configuration file (.xls/.xlsx) has been supplied, a DataMiner element will keep track of the provisioned services. If enabled on the device, SNMP traps will be used to update the hardware status more efficiently.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Based on** | **Description** |
+| **Range**     | **Based on** | **Description** |
 |----------------------|--------------|-----------------|
 | 1.0.0.x \[SLC Main\] | \-           | Initial version |
 
@@ -24,7 +24,7 @@ To create a new element, several ports will need to be configured. Most of the v
 
 #### SNMP connections
 
-This driver uses Simple Network Management Protocol (SNMP) connections and requires the following input during element creation:
+This connector uses Simple Network Management Protocol (SNMP) connections and requires the following input during element creation:
 
 SNMP CONNECTION (KaleidoK3):
 
@@ -58,7 +58,7 @@ GSMALARM Settings:
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -94,25 +94,25 @@ The page also contains two page buttons:
 
 - **Load File**: Opens the configuration file import window.
 
-> To load the services that need to be monitored, an Excel file is required with a fixed format (.xls or .xlsx). Go to the **General** page and open the pop-up page **Load File**. Then specify the **File Path** and **File Name** of the file, and finally click **Import**.
->
-> The Excel file should contain columns with the following headers:
->
-> - **Input ref ID**: SID
-> - **Input Service Name**
-> - **Input mon device**: The name of the device, which must equal the element's name. This way, one file can be used to configure any element.
-> - **Input mon device port**: A unique port number (mandatory, used as index).
-> - **Program number**: Mandatory.
-> - **Multicast**: Mandatory.
-> - **UDP Port**: Mandatory.
-> - **Output Service name**
-> - **Source Friendly Name**: To be provided when the source-friendly name is not of the format {multicast}\_{udp port}. Range 1.0.1.x only
->
-> Finally, go to the **Alarm Table** page and enable the alarm table polling if necessary.
->
-> Note that the Transport Stream, Services, Teletext and Card health tables are filled via the imported Excel file, located in the folder indicated by the File Path parameter or in the element document folder. After these are filled in, the data is polled.
->
-> ![Example Excel Sheet Kaleido.png](~/connector-help/images/Miranda_Kaleido_IP_X320_Example_Excel_Sheet_Kaleido.png)
+  To load the services that need to be monitored, an Excel file is required with a fixed format (.xls or .xlsx). Go to the **General** page and open the pop-up page **Load File**. Then specify the **File Path** and **File Name** of the file, and finally click **Import**.
+
+  The Excel file should contain columns with the following headers:
+
+  - **Input ref ID**: SID
+  - **Input Service Name**
+  - **Input mon device**: The name of the device, which must equal the element's name. This way, one file can be used to configure any element.
+  - **Input mon device port**: A unique port number (mandatory, used as index).
+  - **Program number**: Mandatory.
+  - **Multicast**: Mandatory.
+  - **UDP Port**: Mandatory.
+  - **Output Service name**
+  - **Source Friendly Name**: To be provided when the source-friendly name is not of the format {multicast}\_{udp port}. Range 1.0.1.x only
+
+  Finally, go to the **Alarm Table** page and enable the alarm table polling if necessary.
+
+  Note that the Transport Stream, Services, Teletext and Card health tables are filled via the imported Excel file, located in the folder indicated by the File Path parameter or in the element document folder. After these are filled in, the data is polled.
+
+  ![Example Excel Sheet Kaleido.png](~/connector-help/images/Miranda_Kaleido_IP_X320_Example_Excel_Sheet_Kaleido.png)
 
 - **On-Air Services**: Opens a window where you can edit the on-air service times.
 
@@ -180,13 +180,11 @@ The commands are property of Kaleido and so they target specific fields on the d
 
 *\<setKDynamicText\>set address='Address' text='NewText' \</setKDynamicText\>*, where "Address" is the configured text address of the UMD or text label component and "NewText" is the text to display.
 
-In the driver, you can define up to four text strings to be displayed: Text1, Text2, Text3 and Text4, which will replace the "NewText" string.
+In the connector, you can define up to four text strings to be displayed: Text1, Text2, Text3 and Text4, which will replace the "NewText" string.
 
 ### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-
 
 ## Troubleshooting
 
@@ -196,11 +194,9 @@ In case the element immediately enters a timeout state when trying to load an Ex
 
 The GSM SNMP support can be added to the device by enabling the global action edition menu, using Miranda's XEdit software. Step-by-step guide on how to enable the GSM SNMP support:
 
-1.  Download XEdit.
-2.  Modify the *.medit.ini* file, present under the Windows user folder (usually "*C:\Users\\user name\>*").
-3.  Add this line to *.medit.ini* while XEdit is closed: *enableGlobalActionsEdition=true* .
-4.  Open *XEdit* and connect to the device.
-5.  Click the *Tools* menu and navigate to *Edit global actions...*.
-6.  Press *Add global...*, enter the name, community string and port *2161* and click *OK*.
-
-
+1. Download XEdit.
+1. Modify the *.medit.ini* file, present under the Windows user folder (usually "*C:\Users\\user name\>*").
+1. Add this line to *.medit.ini* while XEdit is closed: *enableGlobalActionsEdition=true* .
+1. Open *XEdit* and connect to the device.
+1. Click the *Tools* menu and navigate to *Edit global actions...*.
+1. Press *Add global...*, enter the name, community string and port *2161* and click *OK*.

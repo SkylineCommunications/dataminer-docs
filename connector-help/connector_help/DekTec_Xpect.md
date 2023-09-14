@@ -4,22 +4,22 @@ uid: Connector_help_DekTec_Xpect
 
 # DekTec Xpect
 
-The **DekTec Xpect** driver is used to monitor the different transport streams and their services and PIDs. Errors are monitored on transport stream level.
+The **DekTec Xpect** connector is used to monitor the different transport streams and their services and PIDs. Errors are monitored on transport stream level.
 
 ## About
 
-This driver monitors the transport streams via SOAP calls.
+This connector monitors the transport streams via SOAP calls.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 | 2.0.0.x          | HTTP Conversion | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.3.0 Build 5168            |
 | 2.0.0.x          | 3.3.0 Build 5174            |
@@ -30,7 +30,7 @@ This driver monitors the transport streams via SOAP calls.
 
 #### Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

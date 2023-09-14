@@ -10,7 +10,7 @@ For more information, refer to <http://www.moxa.com/product/nport_6650.htm>.
 
 ## About
 
-This driver is intended to get and set information in the device via an element in a DataMiner System, using SNMP commands.
+This connector is intended to get and set information in the device via an element in a DataMiner System, using SNMP commands.
 
 ### Version Info
 
@@ -42,7 +42,7 @@ This driver is intended to get and set information in the device via an element 
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -70,7 +70,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The element created using this driver consists of the data pages detailed below.
+The element created using this connector consists of the data pages detailed below.
 
 ### Overview
 

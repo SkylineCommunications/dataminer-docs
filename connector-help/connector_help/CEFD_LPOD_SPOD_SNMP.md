@@ -4,21 +4,21 @@ uid: Connector_help_CEFD_LPOD_SPOD_SNMP
 
 # CEFD LPOD SPOD SNMP
 
-The **CEFD LPOD SPOD** **SNMP** driver is used to control and monitor CEFD LPOD and CEFD SPOD amplifiers.
+The **CEFD LPOD SPOD** **SNMP** connector is used to control and monitor CEFD LPOD and CEFD SPOD amplifiers.
 
 ## About
 
 With this protocol, an LPOD or SPOD amplifier can be monitored and configured as described below. Events and statistics are also loaded from the device and displayed in close resemblance to the webpage of the device. This webpage is also accessible when opened within the same network as the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**        |
+| **Range** | **Device Firmware Version**        |
 |------------------|------------------------------------|
 | 1.0.0.x          | Boot:1.1.1 Bulk1:1.4.0 Bulk2:1.4.0 |
 
@@ -28,7 +28,7 @@ With this protocol, an LPOD or SPOD amplifier can be monitored and configured as
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

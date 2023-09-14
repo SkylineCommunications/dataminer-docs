@@ -8,21 +8,21 @@ The NEC N+1 Control HPC-1358 is a transmitter controller that can be used to man
 
 ## About
 
-This driver can be used to monitor and control the NEC N+1 Control HPC-1358D transmitter controller via an **SNMP** connection.
+This connector can be used to monitor and control the NEC N+1 Control HPC-1358D transmitter controller via an **SNMP** connection.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.1.3                       |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description**                      |
 |-----------------------|--------------------------------------|
@@ -35,7 +35,7 @@ This driver can be used to monitor and control the NEC N+1 Control HPC-1358D tra
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -73,4 +73,4 @@ This page displays the web interface of the device. Note that the client machine
 
 ### Notes
 
-For the current version of the driver, the traps for the main transmitter could not be generated on the device, and as such could not be properly tested. For this reason, main transmitter traps are currently not yet included in the driver.
+For the current version of the connector, the traps for the main transmitter could not be generated on the device, and as such could not be properly tested. For this reason, main transmitter traps are currently not yet included in the connector.

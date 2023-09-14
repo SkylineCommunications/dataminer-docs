@@ -8,19 +8,19 @@ The **CPI** **VZU-6997AB** is a 750 watts TWT High Power Amplifier in a 5 rack u
 
 ## About
 
-This driver is intended to communicate with the device using serial commands as described in the device's manual. For more information, refer to <http://www.cpii.com/product.cfm/4/10/23>.
+This connector is intended to communicate with the device using serial commands as described in the device's manual. For more information, refer to <http://www.cpii.com/product.cfm/4/10/23>.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                    | **DCF Integration** | **Cassandra Compliant** |
 |------------------|------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version (**obsolete**)     | Yes                 | Yes                     |
 | 1.1.0.x          | New release version (**obsolete**) | No                  | Yes                     |
 | 1.1.1.x          | Driver review                      | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Not Available               |
 | 1.1.0.x          | CPI 01023245 Rev. B         |
@@ -32,7 +32,7 @@ This driver is intended to communicate with the device using serial commands as 
 
 Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -66,7 +66,7 @@ This page displays the **Fault**, **Information** and **Error** status.
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** and **1.1.1.x** driver ranges of the CPI VZU-6997AB protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** and **1.1.1.x** connector ranges of the CPI VZU-6997AB protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

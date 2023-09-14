@@ -4,11 +4,11 @@ uid: Connector_help_Digidia_Tunell
 
 # Digidia Tunell
 
-This **SNMP** driver polls and sets parameters for devices such as the **Digidia Tunell**, designed for digital radio. It also retrieves traps in order to update alarm parameters.
+This **SNMP** connector polls and sets parameters for devices such as the **Digidia Tunell**, designed for digital radio. It also retrieves traps in order to update alarm parameters.
 
 ## About
 
-This driver polls parameters using three different timers, depending on the importance of the parameter. It also allows you to configure certain settings. Received traps update the alarm parameters and the trap notification table.
+This connector polls parameters using three different timers, depending on the importance of the parameter. It also allows you to configure certain settings. Received traps update the alarm parameters and the trap notification table.
 
 ## Installation and configuration
 
@@ -16,7 +16,7 @@ This driver polls parameters using three different timers, depending on the impo
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -41,7 +41,7 @@ To revert to normal functioning:
 
 ## Usage
 
-The driver consists of 7 pages:
+The connector consists of 7 pages:
 
 - **General:** This is the default page, which displays general system information.
 - **Users:** Displays a table with the user accounts.

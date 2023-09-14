@@ -35,7 +35,7 @@ Imagine Communications' Software-Defined Networking (SDN) framework is a hybrid 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -44,7 +44,7 @@ SERIAL CONNECTION:
 
 #### HTTP Connection
 
-This driver uses an HTTP Rest API connection and requires the following input during element creation:
+This connector uses an HTTP Rest API connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

@@ -8,17 +8,17 @@ The BMM-810 is a multiviewer and content monitoring solution for broadcast netwo
 
 ## About
 
-This driver allows the total monitoring of the sources and inputs of generic GMIT BMM-810 devices. It provides not only a general overview of the entire system, but also a detailed visualization of all video and audio parameters for every existing input.
+This connector allows the total monitoring of the sources and inputs of generic GMIT BMM-810 devices. It provides not only a general overview of the entire system, but also a detailed visualization of all video and audio parameters for every existing input.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver allows the total monitoring of the sources and inputs of generic GMI
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -42,7 +42,7 @@ SNMP Settings:
 
 #### HTTP HTTPConnection Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

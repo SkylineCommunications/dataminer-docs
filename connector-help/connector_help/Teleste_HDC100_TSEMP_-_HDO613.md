@@ -8,15 +8,15 @@ The HDO613 is a Forward Path Amplifiear that supports frequencies up to 1218 MHz
 
 About
 
-The **Teleste HDC100 TSEMP - HDO613** driver can be used to display and configure information of the related device. A **serial** connection is used in order to successfully retrieve and configure the information of the device. There are also different possibilities available for **alarm monitoring** and **trending**.
+The **Teleste HDC100 TSEMP - HDO613** connector can be used to display and configure information of the related device. A **serial** connection is used in order to successfully retrieve and configure the information of the device. There are also different possibilities available for **alarm monitoring** and **trending**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 4.0.0.x          | Initial Version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
 <table>
 <colgroup>
@@ -40,7 +40,7 @@ The **Teleste HDC100 TSEMP - HDO613** driver can be used to display and configur
 
 ### Creation
 
-### A DVE using this driver is automatically created by an element using the parent driver.
+### A DVE using this connector is automatically created by an element using the parent connector.
 
 ## Usage
 

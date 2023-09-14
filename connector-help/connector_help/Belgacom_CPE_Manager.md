@@ -4,7 +4,7 @@ uid: Connector_help_Belgacom_CPE_Manager
 
 # Belgacom CPE Manager
 
-The **Belgacom CPE Manager** is part of a CPE setup, where it works together with the **Belgacom RTCP Collector**, **Belgacom Modem Collector** and **Belgacom DB Push Topology** drivers. This particular driver is responsible for aggregating the data and providing the user interface.
+The **Belgacom CPE Manager** is part of a CPE setup, where it works together with the **Belgacom RTCP Collector**, **Belgacom Modem Collector** and **Belgacom DB Push Topology** connectors. This particular connector is responsible for aggregating the data and providing the user interface.
 
 ## About
 
@@ -15,9 +15,9 @@ Different elements are needed for this setup:
 
 All elements provide access to the CPE UI. It does not matter which element is opened, they all show the same data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -27,7 +27,7 @@ All elements provide access to the CPE UI. It does not matter which element is o
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration parameters
 

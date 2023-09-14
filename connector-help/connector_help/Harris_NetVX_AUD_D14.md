@@ -4,7 +4,7 @@ uid: Connector_help_Harris_NetVX_AUD_D14
 
 # Harris NetVX AUD D14
 
-The **Harris NetVX AUD D14** driver is a **SNMP** driver that is **Audio Converter**.
+The **Harris NetVX AUD D14** connector is an **SNMP** connector that is **Audio Converter**.
 
 ## About
 
@@ -12,7 +12,7 @@ The **Harris NetVX AUD D14** is an overview of **Encoders** and **Decoders** con
 
 ## Installation and configuration
 
-The **Harris NetVX AUD D14** driver has a **SNMP** Connection:
+The **Harris NetVX AUD D14** driver has an **SNMP** Connection:
 
 - **Port:** 161
 - **Bus Address:** The slot number of the **Audio Converter.**
@@ -24,7 +24,7 @@ The **Harris NetVX AUD D14** driver has a **SNMP** Connection:
 
 ### General
 
-Here you see some **General Slot Configuration** parameters, where you can make some basic changes to the **Audio Converter** and you also have the **General Slot Status** parameters that shows you some basic information about the **Audio Converter.** So you have some **small overview** already about the driver on this page.
+Here you see some **General Slot Configuration** parameters, where you can make some basic changes to the **Audio Converter** and you also have the **General Slot Status** parameters that shows you some basic information about the **Audio Converter.** So you have some **small overview** already about the connector on this page.
 
 ### Ctl Configuration
 
@@ -48,4 +48,4 @@ This page has e **TreeControl** that shows you the **Status** of every **Decoder
 
 ## Notes
 
-It could happen that you make a new element of the driver and the **TreeControls** are **empty**, just **recreate / reopen** the element card and the **problem** is **fixed**.
+It could happen that you make a new element of the connector and the **TreeControls** are **empty**, just **recreate / reopen** the element card and the **problem** is **fixed**.

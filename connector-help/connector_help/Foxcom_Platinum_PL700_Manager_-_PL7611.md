@@ -4,15 +4,15 @@ uid: Connector_help_Foxcom_Platinum_PL700_Manager_-_PL7611
 
 # Foxcom Platinum PL700 Manager - PL7611
 
-The Foxcom Platinum PL700 Manager - PL7611 driver represents a group of cards with the system naming format PL7611.
+The Foxcom Platinum PL700 Manager - PL7611 connector represents a group of cards with the system naming format PL7611.
 
 ## About
 
-This driver uses **SNMP** polling to communicate with the device.
+This connector uses **SNMP** polling to communicate with the device.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.03.81                     |
 
@@ -20,7 +20,7 @@ This driver uses **SNMP** polling to communicate with the device.
 
 ### Creation
 
-This driver is used by DVE child elements that are **automatically created** by the driver [Platinum PL700 Manager](xref:Connector_help_Foxcom_Platinum_PL700_Manager), from version 1.0.0.1 onwards.
+This connector is used by DVE child elements that are **automatically created** by the connector [Platinum PL700 Manager](xref:Connector_help_Foxcom_Platinum_PL700_Manager), from version 1.0.0.1 onwards.
 
 ## Usage
 

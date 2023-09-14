@@ -4,21 +4,21 @@ uid: Connector_help_Geist_RCX
 
 # Geist RCX
 
-The **Geist RCX** driver was designed to monitor Geist's Power Monitoring (RCX) PDUs . These PDUs are rack-level units with circuit monitoring via a built-in web server, providing a comprehensive remote view on the power utilization of the installation. In addition to monitoring amps, volts, real power, apparent power, power factor and kWatt-hours, these units provide jacks for optional environmental monitoring.
+The **Geist RCX** connector was designed to monitor Geist's Power Monitoring (RCX) PDUs . These PDUs are rack-level units with circuit monitoring via a built-in web server, providing a comprehensive remote view on the power utilization of the installation. In addition to monitoring amps, volts, real power, apparent power, power factor and kWatt-hours, these units provide jacks for optional environmental monitoring.
 
 ## About
 
-This driver uses **SNMP** to retrieve data from the device, making it possible to fully monitor the PDUs.
+This connector uses **SNMP** to retrieve data from the device, making it possible to fully monitor the PDUs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 3.12.7                      |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** to retrieve data from the device, making it possible t
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ It also displays a toggle button at the top of the page called **Polling Airflow
 
 This page contains information about the smoke alarm sensors, in the **Smoke Alarm Table**. There you can find information regarding the sensor's identification and its measured values.
 
-Like the Airflow Info page, it also displays a toggle button called **Pollling Smoke Alarm Table** to enable and disable the polling of this specific table.
+Like the Airflow Info page, it also displays a toggle button called **Polling Smoke Alarm Table** to enable and disable the polling of this specific table.
 
 ### 3 Phase Outlet Control Page
 

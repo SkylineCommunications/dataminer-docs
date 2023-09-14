@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_HIX010
 
 The **HIX010** is a dual-channel high-performance 3 Gb/s, HD and SD SDI basic video and embedded audio probe (signal integrity monitor) with clean video switchover function.
 
-The **Axon ACP HIX010** driver is used to monitor and display status information of the HIX010 card.
+The **Axon ACP HIX010** connector is used to monitor and display status information of the HIX010 card.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Axon ACP HIX010** driver is used to monitor and display status information
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial IP Connection - Events Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -78,7 +78,7 @@ The element has the following pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP 2IX08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP 2IX08 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

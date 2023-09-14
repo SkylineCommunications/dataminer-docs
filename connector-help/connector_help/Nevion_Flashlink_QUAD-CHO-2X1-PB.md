@@ -32,7 +32,7 @@ The Nevion Flashlink QUAD-CHO-2X1-PB is a quad 2x1 3G/HD/SD-SDI changeover devic
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 ## Usage
 
-This is an **SNMP** driver for the Nevion Flashlink QUAD-CHO-2X1-PB device. The element created with this driver consists of the following data pages:
+This is an **SNMP** connector for the Nevion Flashlink QUAD-CHO-2X1-PB device. The element created with this connector consists of the following data pages:
 
 - **General**: Contains general information on the module.
 - **Alarms**: Displays a table listing all alarms associated with the card.

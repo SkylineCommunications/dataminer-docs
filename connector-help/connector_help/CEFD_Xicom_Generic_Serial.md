@@ -4,7 +4,7 @@ uid: Connector_help_CEFD_Xicom_Generic_Serial
 
 # CEFD Xicom Generic Serial
 
-The **CEFD Xicom Generic Serial** driver can be used to display and configure information of the related controller.
+The **CEFD Xicom Generic Serial** connector can be used to display and configure information of the related controller.
 
 ## About
 

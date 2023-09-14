@@ -4,7 +4,7 @@ uid: Connector_help_Aurora_Network_CX3001
 
 # Aurora Network CX3001
 
-The Aurora Network CX3001 driver allows the monitoring and management of multiple **Aurora Network Node NC 4000 Single DT transceivers**. Depending on the model number of the transceiver, the driver creates **Dynamic Virtual Elements type REV A or REV B** for each transceiver found in the Rev A table and Rev B table (on the Digital Transceivers page). It can also create Dynamic Virtual Elements of **type High Power EDFA** based on the High Power EDFA Table.
+The Aurora Network CX3001 connector allows the monitoring and management of multiple **Aurora Network Node NC 4000 Single DT transceivers**. Depending on the model number of the transceiver, the connector creates **Dynamic Virtual Elements type REV A or REV B** for each transceiver found in the Rev A table and Rev B table (on the Digital Transceivers page). It can also create Dynamic Virtual Elements of **type High Power EDFA** based on the High Power EDFA Table.
 
 ## About
 
@@ -18,15 +18,15 @@ The main element displays various information on several pages:
 - The **Shelf** page contains overall settings to enable or disable alarms and to verify AT/OS associations.
 - The **High Power EDFA** page contains the high power EDFA slots.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**     | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**     | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|---------------------|---------------------|-------------------------|
 | 1.0.0.x **\[Obsolete\]** | Initial version     | No                  | No                      |
 | 2.0.0.x                  | Update based on MIB | No                  | No                      |
 | 2.0.1.x                  | DVE Names changed   | No                  | Yes                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                                                    | **Description**                                                                    |
 |------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------|
@@ -45,7 +45,7 @@ The main element displays various information on several pages:
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -90,7 +90,7 @@ This page contains two tables:
 
 ### Digital Transceivers
 
-This page contains the **Rev A** table and **Rev B** table. These tables display the transceivers for which the driver should create Rev A and Rev B Dynamic Virtual Elements, respectively.
+This page contains the **Rev A** table and **Rev B** table. These tables display the transceivers for which the connector should create Rev A and Rev B Dynamic Virtual Elements, respectively.
 
 This page also has two subpages, which you can access through page buttons:
 

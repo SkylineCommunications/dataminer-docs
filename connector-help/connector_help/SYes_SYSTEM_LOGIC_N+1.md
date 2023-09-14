@@ -4,7 +4,7 @@ uid: Connector_help_SYes_SYSTEM_LOGIC_N+1
 
 # SYes SYSTEM LOGIC N+1
 
-The **SYes SYSTEM LOGIC N+1** driver monitors a Syes SYSTEM LOGIC N+1 system unit through **Simple Network Management Protocol (SNMP)**.
+The **SYes SYSTEM LOGIC N+1** connector monitors a Syes SYSTEM LOGIC N+1 system unit through **Simple Network Management Protocol (SNMP)**.
 
 ## About
 
@@ -14,7 +14,7 @@ The **SYes SYSTEM LOGIC N+1** driver polls relevant information from the device 
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -28,7 +28,7 @@ SNMP Settings:
 
 ## Usage
 
-This driver has eight data display pages:
+This connector has eight data display pages:
 
 ### General Page
 

@@ -4,24 +4,24 @@ uid: Connector_help_Adtec_EN_Manager
 
 # Adtec EN Manager
 
-The Adtec EN Manager is an MPEG 4 DSNG Encoder. This driver can be used to monitor and control this device.
+The Adtec EN Manager is an MPEG 4 DSNG Encoder. This connector can be used to monitor and control this device.
 
 ## About
 
 The base unit comes with Mpeg4 4:2:0 SD encoding, and optional high definition and Mpeg4 4:2:2. The standard audio encoder includes 4 stereo pairs (8 mono) of MPEG 1 layer 2 with an optional upper 4 stereo pairs (8 stereo pairs or 16 mono channels), 2 Dolby E Passthru via AES or SDI embedded. Standard VBI support includes captions, Teletext, AFD, and VITC (608 waveform, H/VANC for 708, OP47, SMPTE 2016/2031 with built-in VBI analyzer). BISS 1/E encryption included. Transport via 3X mirrored ASI and GigE with SMPTE-2022 FEC. Hardware configuration I/O includes composite, SDI, and SFP slot for SFP optical modules, and analog, AES and SDI audio inputs. Includes redundant AC power supplies.
 
-This driver uses **SNMP** to retrieve the entity IDs of the different components of the device.
+This connector uses **SNMP** to retrieve the entity IDs of the different components of the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**           | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**           | **Description**                                                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\]       | Initial version.                                                                                                                 | No                  | Yes                     |
 | 1.0.1.x (based on 1.0.0.3) | Added support for profiles by adding a new serial connection (Telnet). For more information, refer to the "Notes" section below. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.0.0.x          | Unknown                     |
@@ -32,7 +32,7 @@ This driver uses **SNMP** to retrieve the entity IDs of the different components
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### Serial Connection
 
-This driver uses a serial connection to set/retrieve profile information and requires the following input during element creation:
+This connector uses a serial connection to set/retrieve profile information and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -4,7 +4,7 @@ uid: Connector_help_WorldCast_Systems_Audemat_RDS_Encoder
 
 # WorldCast Systems Audemat RDS Encoder
 
-This is an SNMP driver that can be used to monitor a WorldCast Systems Audemat RDS Encoder. This device is a radio data system encoder with 1 RF input, 3 analog MPX inputs/outputs and 3 MPX through AES inputs/outputs.
+This is an SNMP connector that can be used to monitor a WorldCast Systems Audemat RDS Encoder. This device is a radio data system encoder with 1 RF input, 3 analog MPX inputs/outputs and 3 MPX through AES inputs/outputs.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP driver that can be used to monitor a WorldCast Systems Audemat R
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays system information such as the **Name**, **Description**, **Serial** **Number** and **Software** **Version**. Also displays **Date & Time** information and **Network** information.
 

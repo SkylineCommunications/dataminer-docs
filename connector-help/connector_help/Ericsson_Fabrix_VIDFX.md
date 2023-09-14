@@ -4,7 +4,7 @@ uid: Connector_help_Ericsson_Fabrix_VIDFX
 
 # Ericsson Fabrix VIDFX
 
-This is an SNMP driver for the Ericsson Fabrix VIDFX management system. It **exports DVEs** based on the **Nodes Tables**, which is then used to link data.
+This is an SNMP connector for the Ericsson Fabrix VIDFX management system. It **exports DVEs** based on the **Nodes Tables**, which is then used to link data.
 
 ## About
 
@@ -32,7 +32,7 @@ This is an SNMP driver for the Ericsson Fabrix VIDFX management system. It **exp
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -58,7 +58,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver has several data pages. You can find more information on these below.
+The element created with this connector has several data pages. You can find more information on these below.
 
 ### General
 

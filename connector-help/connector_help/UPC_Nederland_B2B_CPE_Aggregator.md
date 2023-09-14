@@ -4,15 +4,15 @@ uid: Connector_help_UPC_Nederland_B2B_CPE_Aggregator
 
 # UPC Nederland B2B CPE Aggregator
 
-This driver is used to automatically gather and process the **Availability** parameter of the **Cisco ISR** elements.
+This connector is used to automatically gather and process the **Availability** parameter of the **Cisco ISR** elements.
 
 ## About
 
-This driver will retrieve the **Availability** parameter of the **Cisco ISR** elements and will group the retrieved parameters by the **Region** property of the **Cisco ISR** elements to make an average calculation and determine the minimum value.
+This connector will retrieve the **Availability** parameter of the **Cisco ISR** elements and will group the retrieved parameters by the **Region** property of the **Cisco ISR** elements to make an average calculation and determine the minimum value.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ This driver will retrieve the **Availability** parameter of the **Cisco ISR** el
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 
@@ -33,5 +33,5 @@ This page contains the **Region Table**. This table has 5 columns:
 - **Region:** The index.
 - **Avg Availability CCM:** Displays the average value per region of the **Availability** parameter of the current calendar month. The summary column header displays the average value.
 - **Min Availability CCM:** Displays the minimum value of the **Availability** parameter that is found for this region. The summary column header displays the minimum value.
-- **Element Name Min Availability:** Displays the element name that has this minimum value. If there are more elements that have this minimum value, then the first element found by the driver will be filled in.
+- **Element Name Min Availability:** Displays the element name that has this minimum value. If there are more elements that have this minimum value, then the first element found by the connector will be filled in.
 - **CPE Count:** Displays the number of **Cisco ISR** elements that are in this region. The summary column header displays the sum.

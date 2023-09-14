@@ -12,7 +12,7 @@ The RF signals from the antennas are mixed down with downconverters to a single 
 
 The remote management is possible through its internal serial interface that implements a predefined protocol structure, allowing an acceptable level of monitoring functions, including the reporting of measurement points for a spectrum type graph.
 
-The driver implements most of the monitoring functions available in the protocol as well as a set of control parameters.
+The connector implements most of the monitoring functions available in the protocol as well as a set of control parameters.
 
 ## Installation and configuration
 
@@ -59,7 +59,7 @@ The following control parameters are available:
 
 ## Notes about the spectrum image
 
-This driver version was coded with the following assumptions:
+This connector version was coded with the following assumptions:
 
 - The resulting directory of the JPG image is *C:\Skyline DataMiner\Webpages\SpectrumThumbnail\\* It might therefore be necessary to create that folder beforehand, as stated in the **Configuration** section of this help page.
 - In the above directory, a file called *Grid.jpg* must exist, as this is the image template (the general aspect of the resulting spectrum image). As explained above, a sample of that image can be available as part of the protocol files in Source Safe.

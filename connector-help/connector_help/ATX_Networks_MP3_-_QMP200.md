@@ -8,19 +8,19 @@ The **QMP200 MAXNET II** modules are return RF/IF amplifiers, which offer two ga
 
 ## About
 
-This driver was designed to monitor and receive statistics from the **QMP200**.
+This connector was designed to monitor and receive statistics from the **QMP200**.
 
-The driver is generated automatically by the driver **ATX Networks MP3**.
+The connector is generated automatically by the connector **ATX Networks MP3**.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Complaint** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Complaint** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | DVE creation    | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | 1.0.9                       |
 
@@ -28,7 +28,7 @@ The driver is generated automatically by the driver **ATX Networks MP3**.
 
 ### Creation
 
-This driver is used by DVEs that are **automatically generated** when DVE creation is enabled for the corresponding card in the **DVE Control Table** of the parent element.
+This connector is used by DVEs that are **automatically generated** when DVE creation is enabled for the corresponding card in the **DVE Control Table** of the parent element.
 
 ## Usage
 

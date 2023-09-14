@@ -10,7 +10,7 @@ In a 1:2 phase combined system, two of the three SSPAs are normally online and t
 
 ## About
 
-The CEFD PCB-4300 demands a **serial** approach in order to communicate with it. This protocol allows the user to maintain some settings of the **PCB** and the **SSPAs**. It also gives an overview of the statusses and possible alarms
+The CEFD PCB-4300 demands a **serial** approach in order to communicate with it. This protocol allows the user to maintain some settings of the **PCB** and the **SSPAs**. It also gives an overview of the statuses and possible alarms
 
 ### Version Info
 
@@ -18,15 +18,11 @@ The CEFD PCB-4300 demands a **serial** approach in order to communicate with it.
 |----------------------|------------------|--------------|-------------------|
 | 1.0.0.x \[SLC Main\] | Initial version  | \-           | \-                |
 
-
-
 ### Product Info
 
 | **Range** | **Supported Firmware** |
 |-----------|------------------------|
 | 1.0.0.x   | N/A                    |
-
-
 
 ### System Info
 
@@ -34,15 +30,13 @@ The CEFD PCB-4300 demands a **serial** approach in order to communicate with it.
 |-----------|---------------------|-------------------------|-----------------------|-------------------------|
 | 1.0.0.x   | No                  | No                      | \-                    | \-                      |
 
-
-
 ## Configuration
 
 ### Connections
 
 #### Serial Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -74,7 +74,7 @@ On the **General** page, a table lists the events known by the connector. This t
 
 - **Administrative State**: Possible values: *Approved* or *Not Approved*. The operator can manipulate this configuration **both in the Jobs app and in the events table**.
 
-- If the Administrative State is *Not Approved*, the event has a job, but there is no booking. If you try to switch a job to *Approved*, if all the necessary conditions are met, a booking is created. The Booking State will reflect the booking status and the Event State will go from *Job Created* to *Booked*.
+  - If the Administrative State is *Not Approved*, the event has a job, but there is no booking. If you try to switch a job to *Approved*, if all the necessary conditions are met, a booking is created. The Booking State will reflect the booking status and the Event State will go from *Job Created* to *Booked*.
   - If the Administrative State is *Approved*, the event has a job and a booking that has not yet started. When you switch a job to *Not Approved*, the corresponding booking is canceled and deleted. The Booking State will be set to *N/A*, and the Event State will go from *Booked* to *Job Created*.
 
 - **Truck in PxP Date**: The truck park and power date. This is used as the booking start time.
@@ -83,8 +83,8 @@ On the **General** page, a table lists the events known by the connector. This t
 
 This table is populated as follows:
 
-1.  An update message from the NBCS NEP Provisioner connector is received by the NBCS Roadkit Manager through inter-app communication.
-2.  Every 30 seconds, jobs are polled from the Jobs app, so that they can be updated in the NBCS Roadkit Manager.
+1. An update message from the NBCS NEP Provisioner connector is received by the NBCS Roadkit Manager through inter-app communication.
+1. Every 30 seconds, jobs are polled from the Jobs app, so that they can be updated in the NBCS Roadkit Manager.
 
 ### Creating Jobs
 

@@ -6,7 +6,7 @@ uid: Connector_help_Axon_ACP_HXT150
 
 The HXT150 dual output up-/down-/cross-converter is a transmission tool optimized to have a second channel running on a medium long offset delay that will improve statistical multiplexing efficiency.
 
-The **Axon ACP HXT150** driver is used to configure and monitor the HXT150 Axon card.
+The **Axon ACP HXT150** connector is used to configure and monitor the HXT150 Axon card.
 
 ## About
 
@@ -34,7 +34,7 @@ The **Axon ACP HXT150** driver is used to configure and monitor the HXT150 Axon 
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### Serial Broadcast Connection
 
-This driver uses a smart-serial connection and requires the following input during element creation:
+This connector uses a smart-serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -56,7 +56,7 @@ SMART SERIAL CONNECTION:
   - **IP port**: The IP port of the destination (fixed value: *2071*).
   - **Bus address**: The bus address or slot number/position of the card in the frame.
 
-Note: The configuration of the element can also be performed via the Axon ACP Frame Manager. The Frame Manager will auto-populate the elements in the system if the card drivers are available.
+Note: The configuration of the element can also be performed via the Axon ACP Frame Manager. The Frame Manager will auto-populate the elements in the system if the card connectors are available.
 
 ### Initialization
 
@@ -87,7 +87,7 @@ The element has the following data pages:
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Axon ACP HXT150 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Axon ACP HXT150 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance, a manager).
 

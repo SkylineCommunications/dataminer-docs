@@ -6,7 +6,7 @@ uid: Connector_help_Evertz_570J2K-HW-X19
 
 The 570J2K-HW-X19 is a multi-channel J2K encoding and decoding platform, with direct conversion of up to 12 signals to direct mezzanine compression via JPEG2000.
 
-This driver uses SNMP to poll data from this device based on the encoder and decoder web interface layout.
+This connector uses SNMP to poll data from this device based on the encoder and decoder web interface layout.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver uses SNMP to poll data from this device based on the encoder and dec
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 - **General**: Contains all the general system information such as the **System Name** and **Location.**
 - **System**: Contains several tables where you can monitor and configure system-related parameters, as well as standalone parameters related to temperature, NMOS control and time management.

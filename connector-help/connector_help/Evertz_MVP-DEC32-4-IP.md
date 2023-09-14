@@ -4,13 +4,13 @@ uid: Connector_help_Evertz_MVP-DEC32-4-IP
 
 # Evertz MVP-DEC32-4-IP
 
-This driver is used to monitor **Evertz** **MVP-DEC32-4-IP** decoders, which can decode 32 IP streams in total.
+This connector is used to monitor **Evertz** **MVP-DEC32-4-IP** decoders, which can decode 32 IP streams in total.
 
 ## About
 
 All data is retrieved using a single SNMP connection.
 
-The driver can export DVE elements that display information for each stream and stream-related data.
+The connector can export DVE elements that display information for each stream and stream-related data.
 
 ## Installation and configuration
 
@@ -18,7 +18,7 @@ The driver can export DVE elements that display information for each stream and 
 
 #### SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -81,15 +81,15 @@ To solve these problems, a DataMiner restart may be required. However, you may b
 
 If you upgrade from version 1.0.0.3 (or lower) to 1.0.0.4 (or higher):
 
-1.  Pause all elements using this protocol.
-2.  Change the main element to use the new version.
-3.  Start the element.
-4.  Wait untill all DVEs have been removed.
-5.  Restart the element.
+1. Pause all elements using this protocol.
+1. Change the main element to use the new version.
+1. Start the element.
+1. Wait until all DVEs have been removed.
+1. Restart the element.
 
 If you downgrade to 1.0.0.3 or lower:
 
-1.  On the **General** page, click the **Virtual Elements ...** button.
-2.  On the pop-up page, select all the rows in the **DVE Table**.
-3.  Right-click the rows and select **Remove Virtual Elements**.
-4.  Change the protocol version.
+1. On the **General** page, click the **Virtual Elements ...** button.
+1. On the pop-up page, select all the rows in the **DVE Table**.
+1. Right-click the rows and select **Remove Virtual Elements**.
+1. Change the protocol version.

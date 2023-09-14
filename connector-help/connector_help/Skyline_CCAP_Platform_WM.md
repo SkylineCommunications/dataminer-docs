@@ -26,11 +26,11 @@ The Skyline CCAP Platform Workflow Manager protocol is used to handle workflows 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
-When you first start using this element, navigate to the **Configuration** page. A number of configuration options are available that can change the behavior of the driver. You can find more information about these settings in the "How to use" section below.
+When you first start using this element, navigate to the **Configuration** page. A number of configuration options are available that can change the behavior of the connector. You can find more information about these settings in the "How to use" section below.
 
 ### Redundancy
 
@@ -38,7 +38,7 @@ There is no redundancy defined.
 
 ## How to use
 
-As this is a virtual driver, **no data traffic** will be shown in **the Stream Viewer**.
+As this is a virtual connector, **no data traffic** will be shown in **the Stream Viewer**.
 
 The Skyline CCAP Platform WM is configured to handle requests for three drivers: **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**.
 
@@ -68,6 +68,6 @@ On the **Configuration** page, the following settings are available:
 
 ## Notes
 
-This driver requires specific Correlation rules and Automation scripts for communication with auxiliary drivers such as **Cisco Smart PHY**, **HP Network Automation**, and **Vecima RPM** and EPM drivers such as **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this driver.
+This connector requires specific Correlation rules and Automation scripts for communication with auxiliary connectors such as **Cisco Smart PHY**, **HP Network Automation**, and **Vecima RPM** and EPM connectors such as **CISCO CBR-8 CCAP Platform Collector**, **CISCO Manager CIN Platform**, and **Juniper Networks Manager CIN Platform**. The Correlation rules and Automation scripts must be configured and enabled in order to get the full functionality of this connector.
 
 For the DCF workflow to have its full use with the DCF framework, the **DCF Connectivity Discovery** script and **Cox IDP EPM Connectivity** driver are needed.

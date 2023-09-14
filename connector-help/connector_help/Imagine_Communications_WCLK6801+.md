@@ -4,11 +4,11 @@ uid: Connector_help_Imagine_Communications_WCLK6801+
 
 # Imagine Communications WCLK6801+
 
-The **Imagine Communications WCLK6801+** driver uses both **serial** and **smart-serial** communication to monitor and configure the Clock Distribution card in an Imagine Communications frame. On all important parameters, alarm monitoring can be activated.
+The **Imagine Communications WCLK6801+** connector uses both **serial** and **smart-serial** communication to monitor and configure the Clock Distribution card in an Imagine Communications frame. On all important parameters, alarm monitoring can be activated.
 
 ## About
 
-With this driver, it is possible to both monitor and set parameters of the Imagine Communications card.
+With this connector, it is possible to both monitor and set parameters of the Imagine Communications card.
 
 Current Version: 1.0.0.1
 
@@ -16,7 +16,7 @@ Current Version: 1.0.0.1
 
 ### Creation
 
-This a serial driver combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
+This a serial connector combined with smart-serial communication. During the creation of the element, the port settings need to be filled in correctly. These communication settings will be used to send and receive commands and responses to and from the device.
 
 #### SERIAL MAIN CONNECTION
 
@@ -47,6 +47,6 @@ On this page, you can access the web interface of the Imagine Communications fra
 
 ## Notes
 
-A **serial** driver with **smart-serial** connection requires a connection to a real device.
+A **serial** connector with **smart-serial** connection requires a connection to a real device.
 
 If there is a change on the device, a response will be pushed to the DMA, even if no poll request was sent.

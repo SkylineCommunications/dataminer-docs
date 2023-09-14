@@ -4,22 +4,21 @@ uid: Connector_help_Emerson_Liebert_GXT3
 
 # Emerson Liebert GXT3
 
-This driver can be used to monitor UPS platforms by Emerson Liebert in the GXT3 range.
+This connector can be used to monitor UPS platforms by Emerson Liebert in the GXT3 range.
 
 ## About
 
-The driver displays information about the battery, the input, and the output of the UPS (Uninterruptable Power Supply). A condition and alarms table are also available, amongst others, as well as the possibility to start tests and see the last test result.
+The connector displays information about the battery, the input, and the output of the UPS (Uninterruptable Power Supply). A condition and alarms table are also available, amongst others, as well as the possibility to start tests and see the last test result.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Indicate if required or not. If it is, specify default value and range.
 
 **SNMP Settings:**
 
@@ -70,11 +69,11 @@ It is possible that some settings need to be configured on the device before the
 
 ## Usage
 
-Below, you can find more information about all the pages in the driver, followed by information about the pop-up pages.
+Below, you can find more information about all the pages in the connector, followed by information about the pop-up pages.
 
 ### General
 
-This page contains a quick overview of the device status. Several parameters can also be found on another page in the driver, sometimes accompanied by an extra write control. The latter are not mentioned here for the sake of conciseness.
+This page contains a quick overview of the device status. Several parameters can also be found on another page in the connector, sometimes accompanied by an extra write control. The latter are not mentioned here for the sake of conciseness.
 
 The main groups of parameters are:
 
@@ -120,7 +119,7 @@ Note:
 
 - **System Up Time** is not polled, instead it is set by the heartbeat trap. This can be used to verify if traps are configured correctly.
 
-- The **Last Shutdown Cause** parameter is calculated by the driver, based on the values of the parameters behind the **Shutdown Cause** page button.
+- The **Last Shutdown Cause** parameter is calculated by the connector, based on the values of the parameters behind the **Shutdown Cause** page button.
 
   In short, the last shutdown cause will be the last parameter set to *Yes*. These parameters are also saved, but as long as all parameters are *No*, the cause will be *Unknown*.
 
@@ -133,7 +132,7 @@ This page contains an **Alarm** **Table** and an **Alarms Present** parameter di
 After the first startup, the alarm table is populated with all "well-known" alarms. This is a list of general alarms which should be implemented on all GXT3 devices.
 Some devices could generate some extra alarms depending on the installed configuration and firmware.
 
-The available columns in the driver are:
+The available columns in the connector are:
 
 - **Alarm ID:** This is a 'hidden' column. It is the first column in the table and can be made visible by positioning the mouse pointer in the top left corner of the table and, when the cursor changes, dragging the columns to the right. The content of this column is a unique ID for the alarm. In fact it is the OID (Object IDentifier) of a node in the MIB of the device. The description of that node is the description of the alarm.
 
@@ -223,7 +222,7 @@ This page contains parameters to (re)boot the UPS, and makes it possible to defi
 
 Accessible from the **General** page.
 
-This page contains parameters indicating what the cause was of the last shutdown. There is one parameter, **Last Shutdown Cause**, which is calculated by the driver using a best-effort mechanism. For more information, see the section about the General page above.
+This page contains parameters indicating what the cause was of the last shutdown. There is one parameter, **Last Shutdown Cause**, which is calculated by the connector using a best-effort mechanism. For more information, see the section about the General page above.
 
 ### Pop-up: Tests
 

@@ -34,7 +34,7 @@ This protocol communicates with the Temix LBA using SNMP. SNMP traps can be retr
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

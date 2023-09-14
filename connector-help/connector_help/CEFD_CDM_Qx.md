@@ -8,13 +8,13 @@ The CDM-Qx Multi-Channel Satellite Modem provides DoubleTalk Carrier-in-Carrier 
 
 ## About
 
-The CEFD CDM Qx driver allows the user to monitor and control a Comtech EF-Data CDM Qx device. The driver uses an **SNMP** and a **serial** connection to retrieve data from and set data on the device. The different device parameters are displayed on multiple pages according to subject.
+The CEFD CDM Qx connector allows the user to monitor and control a Comtech EF-Data CDM Qx device. The connector uses an **SNMP** and a **serial** connection to retrieve data from and set data on the device. The different device parameters are displayed on multiple pages according to subject.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 
@@ -27,7 +27,7 @@ This driver uses an SNMP connection and needs the following user information:
 - **Get community string**: The community string in order to read from the device. The default value is *public*.
 - **Set community string**: The community string in order to set to the device. The default value is *private.*
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -83,7 +83,3 @@ On this page, you can save all parameter values to a .csv file. Afterwards, this
 ### Web Interface
 
 This page displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
-
-## Notes
-
-N/A

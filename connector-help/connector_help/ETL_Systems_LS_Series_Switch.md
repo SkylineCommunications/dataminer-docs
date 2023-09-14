@@ -4,7 +4,7 @@ uid: Connector_help_ETL_Systems_LS_Series_Switch
 
 # ETL Systems LS Series Switch
 
-The **ETL Systems LS Series Switch** driver can be used to display and configure information of the ETL Systems Model-23178, Model-23179 and Model-23180.
+The **ETL Systems LS Series Switch** connector can be used to display and configure information of the ETL Systems Model-23178, Model-23179 and Model-23180.
 
 ## About
 
@@ -16,7 +16,7 @@ The protocol also has alarming and trending.
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION:**
 
@@ -30,7 +30,7 @@ This driver uses a Simple Network Management Protocol (SNMP) connection and need
 
 ### Configuration
 
-The driver is configured to update the **System Model** and the maximum value of **Channel** automatically, if a valid **System Name** is provided: *Model-23178*, *Model-23179* or *Model-23180*. If the **System Name** is not one of these three values, you will need to configure the **System Model** manually.
+The connector is configured to update the **System Model** and the maximum value of **Channel** automatically, if a valid **System Name** is provided: *Model-23178*, *Model-23179* or *Model-23180*. If the **System Name** is not one of these three values, you will need to configure the **System Model** manually.
 
 ## Usage
 

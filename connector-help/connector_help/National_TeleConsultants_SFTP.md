@@ -4,7 +4,7 @@ uid: Connector_help_National_TeleConsultants_SFTP
 
 # National TeleConsultants SFTP
 
-With the **NTC SFTP** driver, you can monitor the state of the **SFTP Mounts**.
+With the **NTC SFTP** connector, you can monitor the state of the **SFTP Mounts**.
 
 ## About
 
@@ -14,11 +14,11 @@ The SFTP driver periodically polls one or more SFTP mounts to retrieve status in
 
 ### Creation
 
-This driver uses a virtual connection and does not need any user input.
+This connector uses a virtual connection and does not need any user input.
 
 ### Installation
 
-For the installation of this driver, place the files *WinScpNet.dll* and *WinSCP.exe* in the folder *C:\Skyline DataMiner\ProtocolScripts*.
+For the installation of this connector, place the files *WinScpNet.dll* and *WinSCP.exe* in the folder *C:\Skyline DataMiner\ProtocolScripts*.
 
 ## Usage
 
@@ -34,5 +34,5 @@ This page provides the result table of all correctly configured **Filters**. The
 
 ## Notes
 
-- The current maximum number of filters should not exceed 200. However, if this is insufficient, a driver modification can be done to increase this number.
+- The current maximum number of filters should not exceed 200. However, if this is insufficient, a connector modification can be done to increase this number.
 - Be careful when determining the **Filter** and **Path**: make sure there are no symbolic links or mounted drives that link back to themselves to form an infinite loop. Every Filter has a time-out time of maximum 6 minutes before failing and logging an error.

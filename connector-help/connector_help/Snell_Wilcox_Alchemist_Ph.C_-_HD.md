@@ -40,7 +40,7 @@ The device converts high-definition video signals with a PH.C motion measurement
 
 #### SNMP Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -155,4 +155,4 @@ Physical fixed interfaces:
 
 ## Notes
 
-When upgrading from driver version 2.0.0.2 to 2.0.1.1, check if all Visio drawings and Automation scripts are still fully functional, as errors may occur with certain implementations.
+When upgrading from connector version 2.0.0.2 to 2.0.1.1, check if all Visio drawings and Automation scripts are still fully functional, as errors may occur with certain implementations.

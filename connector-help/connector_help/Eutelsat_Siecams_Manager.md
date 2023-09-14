@@ -4,25 +4,25 @@ uid: Connector_help_Eutelsat_Siecams_Manager
 
 # Eutelsat Siecams Manager
 
-This DataMiner driver allows to monitor the Tx and Rx power of multiple carriers/txp, based on the information stored in the (Oracle) database of the SIECAMS monitoring system.
+This DataMiner connector allows to monitor the Tx and Rx power of multiple carriers/txp, based on the information stored in the (Oracle) database of the SIECAMS monitoring system.
 
 ## About
 
-The driver connects to the configured Oracle database to retrieve data. Two tables are queried: "BG_MEAS" (displayed on **Carrier** page) and "TXP_EIRP" (displayed on **TXP** page).
+The connector connects to the configured Oracle database to retrieve data. Two tables are queried: "BG_MEAS" (displayed on **Carrier** page) and "TXP_EIRP" (displayed on **TXP** page).
 
-Because this driver uses a virtual connection, no communication can be seen in the element stream viewer.
+Because this connector uses a virtual connection, no communication can be seen in the element stream viewer.
 
 Each data row contains the timestamp when the values were measured. When values are older than x minutes, the values are replaced with the "NA" value. This timeout time is configurable on the **Setup** page.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -32,7 +32,7 @@ Each data row contains the timestamp when the values were measured. When values 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Configuration of the Oracle database settings
 
@@ -64,7 +64,3 @@ On this page, some important parameters can be configured:
 ### Statistics page
 
 Shows statistics about the database connection: status and time to execute the queries
-
-## Notes
-
-N/A

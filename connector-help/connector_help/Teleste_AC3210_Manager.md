@@ -4,11 +4,11 @@ uid: Connector_help_Teleste_AC3210_Manager
 
 # Teleste AC3210 Manager
 
-This driver will read CSV files with the hostname of the devices that should be polled. The information it retrieves will be displayed in a table on the main element and on a DVE element.
+This connector will read CSV files with the hostname of the devices that should be polled. The information it retrieves will be displayed in a table on the main element and on a DVE element.
 
-The driver uses round-robin polling to poll all devices within 10 seconds. Every 10 seconds, there is also a check if the DNS is working. If it is not, the timeout parameter will indicate a DNS error. If the manager cannot retrieve any info, this parameter will indicate a timeout state.
+The connector uses round-robin polling to poll all devices within 10 seconds. Every 10 seconds, there is also a check if the DNS is working. If it is not, the timeout parameter will indicate a DNS error. If the manager cannot retrieve any info, this parameter will indicate a timeout state.
 
-The driver includes normalization for the ingress switches. There is a button to normalize all the ingress switches. The state is displayed in the parameters State Ingress Switch 1 or 2.
+The connector includes normalization for the ingress switches. There is a button to normalize all the ingress switches. The state is displayed in the parameters State Ingress Switch 1 or 2.
 
 ## About
 
@@ -36,7 +36,7 @@ The driver includes normalization for the ingress switches. There is a button to
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

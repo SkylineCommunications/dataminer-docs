@@ -6,7 +6,7 @@ uid: Connector_help_Open_Broadcast_Systems_C_Series_Encoder
 
 The OBE C-100 and C-200 encoder support high-quality, low-latency news, sports and channel contribution.
 
-This driver uses an SNMP connection to monitor the OBE C-100 and C-200 encoder devices.
+This connector uses an SNMP connection to monitor the OBE C-100 and C-200 encoder devices.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver uses an SNMP connection to monitor the OBE C-100 and C-200 encoder d
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -52,7 +52,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following pages:
+The element created with this connector consists of the following pages:
 
 - **General**: Allows you to specify **which device** (C-100 or C-200) you are connected with. Also displays general system information.
 - **Dashboard**: Displays a tree view that shows the content of the other pages in a **tree structure** for increased accessibility.

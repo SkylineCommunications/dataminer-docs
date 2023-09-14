@@ -4,22 +4,22 @@ uid: Connector_help_Motorola_GX2-EA1000B6-12-CH21
 
 # Motorola GX2-EA1000B6-12-CH21
 
-The **Motorola GX2-EA1000B6-12-CH21** driver is an SNMP-based driver used to monitor and configure the **Motorola GX2-EA1000B6-12-CH21**.
+The **Motorola GX2-EA1000B6-12-CH21** connector is an SNMP-based connector used to monitor and configure the **Motorola GX2-EA1000B6-12-CH21**.
 
 ## About
 
-This driver provides a monitoring interface for the **Motorola GX2-EA1000B6-12-CH21** card.
+This connector provides a monitoring interface for the **Motorola GX2-EA1000B6-12-CH21** card.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 | 2.0.0.x          | DVE focused     | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | D                           |

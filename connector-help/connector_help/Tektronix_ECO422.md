@@ -4,15 +4,15 @@ uid: Connector_help_Tektronix_ECO422
 
 # Tektronix ECO422
 
-The **Tektronix ECO422** driver is used to display information from another driver, i.e. the Adam Converter Driver (which converts I/O to Ethernet).
+The **Tektronix ECO422** connector is used to display information from another driver, i.e. the Adam Converter Driver (which converts I/O to Ethernet).
 
 ## About
 
-With this driver, you can view specific information from another driver. This information can easily be adjusted when necessary. Both read-only and editable parameters are available.
+With this connector, you can view specific information from another driver. This information can easily be adjusted when necessary. Both read-only and editable parameters are available.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ With this driver, you can view specific information from another driver. This in
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

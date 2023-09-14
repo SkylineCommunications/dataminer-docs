@@ -4,7 +4,7 @@ uid: Connector_help_Huawei_UPS_AC
 
 # Huawei UPS AC
 
-This driver can be used to monitor and configure Huawei UPS AC devices.
+This connector can be used to monitor and configure Huawei UPS AC devices.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor and configure Huawei UPS AC devices.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays general information about the device such as the **Number of Devices**, **Number of Parallel Systems**, **Environment Temperature** and **Humidity**.
 - **Input** and **Output**: These two pages display information regarding the inputs and outputs, such as the **Voltages**, **Currents** and **Frequency**.

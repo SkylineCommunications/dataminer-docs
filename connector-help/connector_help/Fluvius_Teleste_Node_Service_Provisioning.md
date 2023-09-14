@@ -4,9 +4,9 @@ uid: Connector_help_Fluvius_Teleste_Node_Service_Provisioning
 
 # Fluvius Teleste Node Service Provisioning
 
-This driver allows you to check for changes in the manager elements that previously used the Kathrein VGP drivers and now use the Teleste AC3210 and AC8810 devices. The driver lists the changes that were detected, and then allows the services to be recreated with the new service template, thereby replacing the Kathrein VGP with the Teleste AC3210 and AC8810. For a new service to be created, it is only necessary that the Teleste AC8810 exists; the Teleste AC3210 is optional.
+This connector allows you to check for changes in the manager elements that previously used the Kathrein VGP drivers and now use the Teleste AC3210 and AC8810 devices. The connector lists the changes that were detected, and then allows the services to be recreated with the new service template, thereby replacing the Kathrein VGP with the Teleste AC3210 and AC8810. For a new service to be created, it is only necessary that the Teleste AC8810 exists; the Teleste AC3210 is optional.
 
-This is a virtual driver.
+This is a virtual connector.
 
 ## About
 
@@ -28,7 +28,7 @@ This is a virtual driver.
 
 #### Virtual Connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -42,7 +42,7 @@ The **Create Manually** page allows you to create a service with the new service
 
 ### General - Detect Changes
 
-When the **Detect Changes** button is used, the driver will scan for added and removed AC3210 and AC8810 devices.
+When the **Detect Changes** button is used, the connector will scan for added and removed AC3210 and AC8810 devices.
 
 First, it will check that all nodes of the cluster are up and running, in order to avoid synchronization issues. Then it will compare the current list of managers with the previous time the system was scanned.
 
@@ -59,7 +59,7 @@ The progress of the change detection process is indicated by a **progress bar**.
 After the change detection process is complete, to convert the services, the **Convert Services** button must be used within **2 minutes**. This time limit is implemented to make sure that the information is still up to date during the conversion.
 To see how much time is left, you can check the **Time Allowed to Apply Changes** parameter, which will count down to 0.
 
-If the button **Convert Services** is used in time, all services that have at least a **Teleste AC8810** device will be converted to the new **service template**. The driver will read out the old data, delete the old service, and recreate the new service with the service template. Services that have the **Teleste AC3210** but lack the **Teleste AC8810** device will not be converted.
+If the button **Convert Services** is used in time, all services that have at least a **Teleste AC8810** device will be converted to the new **service template**. The connector will read out the old data, delete the old service, and recreate the new service with the service template. Services that have the **Teleste AC3210** but lack the **Teleste AC8810** device will not be converted.
 
 Services that have been successfully converted will be listed in the **Successfully Converted Services** **Table**, which mentions the **Service Name** and the **Manager Element** for each service.
 
@@ -69,7 +69,7 @@ A service can fail to be converted for three reasons: The system was unable to r
 
 ### Create Manually - Detect Unassigned AC8810s
 
-When the **Detect Unassigned AC8810s** button is used, the driver will scan for **Teleste AC8810** devices that are not part of a service with that name, excluding the AC8810 part.
+When the **Detect Unassigned AC8810s** button is used, the connector will scan for **Teleste AC8810** devices that are not part of a service with that name, excluding the AC8810 part.
 
 First, it will check that all nodes of the cluster are up and running, in order to avoid synchronization issues. Then it will fill the **Manual Creation Services Table** with the list of detected **Teleste AC8810 devices**.
 
@@ -77,4 +77,4 @@ For unassigned **Teleste AC8810** devices, a service can be created manually. Fo
 
 ## Notes
 
-The driver will only function if all nodes in the cluster are online. Otherwise, a warning will be displayed.
+The connector will only function if all nodes in the cluster are online. Otherwise, a warning will be displayed.

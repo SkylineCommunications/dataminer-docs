@@ -4,17 +4,17 @@ uid: Connector_help_CTE_FMTX300
 
 # CTE FMTX300
 
-The **FMTX300** driver displays information related to the **300W Transmitter** device.
+The **FMTX300** connector displays information related to the **300W Transmitter** device.
 
 ## About
 
-This driver uses an **SNMP** interface to communicate with the FMTX300 device. It displays the parameters in a manner similar to the web interface of the device.
+This connector uses an **SNMP** interface to communicate with the FMTX300 device. It displays the parameters in a manner similar to the web interface of the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses an SNMP connection and needs the following user information:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

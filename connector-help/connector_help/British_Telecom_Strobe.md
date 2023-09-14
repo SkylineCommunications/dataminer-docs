@@ -4,23 +4,23 @@ uid: Connector_help_British_Telecom_Strobe
 
 # British Telecom Strobe
 
-This driver is designed to monitor a custom transport stream monitoring device from British Telecom.
+This connector is designed to monitor a custom transport stream monitoring device from British Telecom.
 
 ## About
 
-This is a **serial** driver, which communicates with the device via **SSH commands**.
+This is a **serial** connector, which communicates with the device via **SSH commands**.
 
-The driver uses a second TCP connection to receive syslog messages. These messages are used as traps, to immediately update the Channels table when there is a status change.
+The connector uses a second TCP connection to receive syslog messages. These messages are used as traps, to immediately update the Channels table when there is a status change.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -30,7 +30,7 @@ The driver uses a second TCP connection to receive syslog messages. These messag
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -41,7 +41,7 @@ SERIAL CONNECTION:
 
 #### Serial Syslog Connection
 
-This driver uses a serial connection to receive syslog messages and requires the following input during element creation:
+This connector uses a serial connection to receive syslog messages and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -74,4 +74,4 @@ This page contains the **Username** and **Password** parameters, which **must be
 
 It also contains the **Connection Status** parameter, which show the status *Connected*, *Invalid Response* or *Timeout*, and the **Last Changing State Response**, which shows the last received response after a channel state change.
 
-Note: It takes about 30 seconds to log in to the device. As such, it is normal for the driver to only show information after this time. It also takes around 5 seconds to implement a set and receive the corresponding feedback message.
+Note: It takes about 30 seconds to log in to the device. As such, it is normal for the connector to only show information after this time. It also takes around 5 seconds to implement a set and receive the corresponding feedback message.

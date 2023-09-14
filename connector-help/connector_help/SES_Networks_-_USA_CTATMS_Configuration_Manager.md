@@ -26,7 +26,7 @@ This connector is used as the engine of the SES CTATMS application.
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -52,8 +52,8 @@ The imported file needs to contain at least the following worksheets with the co
 
 ## How to use
 
-This driver is the engine of the SES C-Band Transition Automated Transponder Monitoring System (CTATMS) application.
+This connector is the engine of the SES C-Band Transition Automated Transponder Monitoring System (CTATMS) application.
 
 The UI of the application is available in Visual Overview, based on a Visio file that is assigned to the element. To make sure data is displayed, an Excel file has to be imported (see Initialization).
 
-The main goal of this connector is to retrieve and show data from Harmonic Proview PVR and SED Decimator devices, in order to provide an overview of the current system performance. This manager driver can also adjust settings on these devices in order to make sure all settings match the imported data from the Excel file, and to do ad-hoc investigations (deep dive).
+The main goal of this connector is to retrieve and show data from Harmonic Proview PVR and SED Decimator devices, in order to provide an overview of the current system performance. This manager connector can also adjust settings on these devices in order to make sure all settings match the imported data from the Excel file, and to do ad-hoc investigations (deep dive).

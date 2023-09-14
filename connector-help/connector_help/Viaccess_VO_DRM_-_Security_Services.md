@@ -4,7 +4,7 @@ uid: Connector_help_Viaccess_VO_DRM_-_Security_Services
 
 # Viaccess VO DRM - Security Services
 
-The Viaccess VO DRM - Security Services driver allows monitoring of multimedia services running on the connected devices. VO DRM and Security services monitor features for a multi-platform media player for premium live and VOD content, streamed or downloaded, providing end-to-end DRM content protection solutions for connected devices.
+The Viaccess VO DRM - Security Services connector allows monitoring of multimedia services running on the connected devices. VO DRM and Security services monitor features for a multi-platform media player for premium live and VOD content, streamed or downloaded, providing end-to-end DRM content protection solutions for connected devices.
 
 ## About
 
@@ -32,7 +32,7 @@ The Viaccess VO DRM - Security Services driver allows monitoring of multimedia s
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -50,7 +50,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Allows you to control polling for the data on the other pages.
 - **NPVR Services**: Displays parameters related to Content Services, Program Services, Recording Integration Services, Recording Services and Session Management.

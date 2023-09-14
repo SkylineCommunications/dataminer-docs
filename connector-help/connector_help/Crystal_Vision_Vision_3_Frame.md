@@ -4,10 +4,10 @@ uid: Connector_help_Crystal_Vision_Vision_3_Frame
 
 # Crystal Vision Vision 3 Frame
 
-This **SNMP** driver allows you to monitor a Crystal Vision Vision 3 Frame. Vision 3 is the rack frame for the Vision product range.
+This **SNMP** connector allows you to monitor a Crystal Vision Vision 3 Frame. Vision 3 is the rack frame for the Vision product range.
 3U high and holding up to 20 cards, Vision 3 is suitable for higher bandwidth signals such as IP and 4K as well as SDI video and audio.
 
-This driver also automatically creates Tandem 10 VF card DVEs if they are available in the **Frame Layout Table**.
+This connector also automatically creates Tandem 10 VF card DVEs if they are available in the **Frame Layout Table**.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver also automatically creates Tandem 10 VF card DVEs if they are availa
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General:** Displays system information such as the **System Description**, as well as the **Frame Layout Table**, which shows an overview of the frame cards available and whether a DVE is supported for them.
 

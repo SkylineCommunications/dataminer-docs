@@ -10,15 +10,15 @@ Generic redundancy controller with serial interface. Redundant lock up-converter
 
 This protocol uses a **serial** connection to allow the user to monitor and configure the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ This protocol uses a **serial** connection to allow the user to monitor and conf
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -49,7 +49,7 @@ This page displays the **general status** of the device and **switches**, includ
 
 ## Notes
 
-In order to make the driver functional for BUC and BDC devices, the RF switches are named from 1 to 8 and mapped as follows:
+In order to make the connector functional for BUC and BDC devices, the RF switches are named from 1 to 8 and mapped as follows:
 
 | **BUC**         | **Driver**     | **BDC**         |
 |-----------------|----------------|-----------------|

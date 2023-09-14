@@ -4,7 +4,7 @@ uid: Connector_help_Leitch_Panacea_16x16_SNMP
 
 # Leitch Panacea 16x16 SNMP
 
-This driver monitors and controls the **Leitch Panacea 16x16 SNMP** equipment. With this driver, you can monitor the existing matrix connections and the status of each input/output, and also alter the existing connections, lock the outputs and label the inputs/outputs.
+This connector monitors and controls the **Leitch Panacea 16x16 SNMP** equipment. With this connector, you can monitor the existing matrix connections and the status of each input/output, and also alter the existing connections, lock the outputs and label the inputs/outputs.
 
 For short-term monitoring, the protocol polls the status of the inputs and the outputs every 10 seconds; for medium to long-term monitoring, the protocol polls every hour.
 
@@ -12,16 +12,16 @@ For short-term monitoring, the protocol polls the status of the inputs and the o
 
 The protocol uses **SNMP** to poll and control the current matrix connections, the physical state of the inputs/outputs, the labels assigned to the inputs/outputs, and the lock status of the outputs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**         | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version, SNMPv1 | No                  | Yes                     |
 | 1.0.1.x          | SNMPv2                  | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                                                |
+| **Range** | **Device Firmware Version**                                                                |
 |------------------|--------------------------------------------------------------------------------------------|
 | 1.0.0.x/2.0.0.x  | Unknown. The protocol conforms to the initial MIB version of the device (date 2005/02/23). |
 
@@ -31,7 +31,7 @@ The protocol uses **SNMP** to poll and control the current matrix connections, t
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

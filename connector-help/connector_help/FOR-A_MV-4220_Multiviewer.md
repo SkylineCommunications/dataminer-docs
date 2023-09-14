@@ -4,7 +4,7 @@ uid: Connector_help_FOR-A_MV-4220_Multiviewer
 
 # FOR-A MV-4220 Multiviewer
 
-This driver allows you to monitor the FOR-A MV-4220 Multiviewer device via an SNMP connection. From version 1.0.1.x of the driver onwards, an additional serial connection is used.
+This connector allows you to monitor the FOR-A MV-4220 Multiviewer device via an SNMP connection. From version 1.0.1.x of the connector onwards, an additional serial connection is used.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to monitor the FOR-A MV-4220 Multiviewer device via an SN
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -49,7 +49,7 @@ SNMP Settings:
 
 #### Serial IP Connection - LAN Commands Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver will poll the **Unit Info**, **Unit Status**, **Output Status** and **Video Window Status**.
+This connector will poll the **Unit Info**, **Unit Status**, **Output Status** and **Video Window Status**.
 
 Device alarms can be reset via the **Reset Alarm** button on the Video Window Status page.
 

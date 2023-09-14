@@ -10,15 +10,15 @@ This is a monitoring device that can be used to perform direct measure testing o
 
 Data and commands are retrieved/set through JSON commands.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.50a                       |
 
@@ -28,7 +28,7 @@ Data and commands are retrieved/set through JSON commands.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -51,9 +51,13 @@ You can choose between *Round Robin* or *Monitor* mode with the **Status** param
 The page contains a number of buttons that provide access to configuration options:
 
 - Via the **Channel Panel** page button, you can among others set the **Target TV Mode**, **Target Symbol Rate** and **Target Frequency**.
+
 - Via the **Thresholds Panel** page button, you can set the **Max Level**, **Max bBER** or **Max Vision/Snd2 Threshold**.
+
 - Via the **Extra Settings Panel** page button, the **Target Audio Mismatch** or **Target Max Black Screen Size** can be configured.
+
 - You can get the measure once with the **Get Measure** button or use the **Measure Config** page button to automate the process.
+
   This opens a subpage where you can specify the **Measure Mode** and disable/enable the **Automatic Measure**. If the **Measure Mode** is set to *Continous*, the measure is done with an interval of 1 second. If it is set to *Streaming*, the measure is done, after a delay of 1 second, streaming is started and then stopped, the process is paused during 3 seconds, the measure is done again, and so on.
 
 In the **Measure Panel** section, parameters such as the **Measure Level**, **Measure Video Modulation** and **Radio Modulation** are displayed.
@@ -84,10 +88,10 @@ On this page, you can perform a firmware upgrade. To do so, you first need to se
 
 The **Upgrade Step** parameter indicates the stage of the current upgrade. The steps are:
 
-1.  **GO TO BOOT**: The device is set to BOOT mode.
-2.  **ERASE FLASH**: The flash memory is erased. (The **Erasing Flash** parameter shows the progress.)
-3.  **FIRMWARE SEND**: The firmware is sent, divided over pages of 64 KB (The total number of pages is displayed by the **Total Pages** parameter and the **Firmware Upload** parameter shows the upload progress.)
-4.  **TURN OFF METER**: The device is restarted, so that it can go back to normal mode and polling is automatically reactivated.
+1. **GO TO BOOT**: The device is set to BOOT mode.
+1. **ERASE FLASH**: The flash memory is erased. (The **Erasing Flash** parameter shows the progress.)
+1. **FIRMWARE SEND**: The firmware is sent, divided over pages of 64 KB (The total number of pages is displayed by the **Total Pages** parameter and the **Firmware Upload** parameter shows the upload progress.)
+1. **TURN OFF METER**: The device is restarted, so that it can go back to normal mode and polling is automatically reactivated.
 
 ### Web Interface
 

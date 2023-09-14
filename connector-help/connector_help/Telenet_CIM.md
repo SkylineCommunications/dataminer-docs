@@ -34,7 +34,7 @@ This protocol will establish an HTTP connection via TCP/IP with the CIM nodes. T
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

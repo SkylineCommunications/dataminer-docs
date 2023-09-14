@@ -8,17 +8,17 @@ The **CISCO ROSA VSM** (Video Service Manager) system provides a complete soluti
 
 ## About
 
-The driver uses an HTTP connection to retrieve lineups, configurations and events. SNMP traps are used to obtain active alarm information.
+The connector uses an HTTP connection to retrieve lineups, configurations and events. SNMP traps are used to obtain active alarm information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.02.05                     |
 
@@ -28,7 +28,7 @@ The driver uses an HTTP connection to retrieve lineups, configurations and event
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -38,7 +38,7 @@ HTTP CONNECTION:
 
 #### SNMP Trap Connection Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

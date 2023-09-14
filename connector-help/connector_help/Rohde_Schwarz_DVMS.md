@@ -8,18 +8,18 @@ The **Rohde Schwarz DVMS** is a digital TV monitoring system that allows users t
 
 ## About
 
-By means of a tree view, the driver displays all streams, services and PIDs. The tree view is divided into DVB-S streams, DVB-T streams, and DVB-T2 streams.
+By means of a tree view, the connector displays all streams, services and PIDs. The tree view is divided into DVB-S streams, DVB-T streams, and DVB-T2 streams.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                                                                     | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version. This range uses the Round Robin type scheduler from Rohde Schwarz. | No                  | No                      |
 | 2.0.0.x          | Based on full review of range 1.0.0.x. This range only uses the DVMS directly.      | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
@@ -30,7 +30,7 @@ By means of a tree view, the driver displays all streams, services and PIDs. The
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

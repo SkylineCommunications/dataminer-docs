@@ -4,17 +4,17 @@ uid: Connector_help_CEFD_H_SNMP_-_FSK
 
 # CEFD H SNMP - FSK
 
-The CEFD H SNMP - FSK driver is used by virtual elements created by the **CEFD H SNMP** driver. It displays information on the FSK functionality of the CEFD H SNMP driver.
+The CEFD H SNMP - FSK connector is used by virtual elements created by the **CEFD H SNMP** connector. It displays information on the FSK functionality of the CEFD H SNMP connector.
 
 NOTE: In the ranges **1.x.x.x** and **2.0.0.x**, the created DVE protocol is called **CEFD H SNMP (FSK)** instead.
 
 ## About
 
-This driver is **exported** by the CEFD H SNMP driver. It provides information on the FSK functionality and allows the user to monitor and control **BUC and LNB components**.
+This connector is **exported** by the CEFD H SNMP connector. It provides information on the FSK functionality and allows the user to monitor and control **BUC and LNB components**.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 1.1.0.x          | 2.4.1                       |
@@ -26,7 +26,7 @@ This driver is **exported** by the CEFD H SNMP driver. It provides information o
 
 ### Creation
 
-In order to generate the DVE using this driver, enter the FSK **Element Name** on the **FSK page** of the [CEFD H SNMP](xref:Connector_help_CEFD_H_SNMP) driver, ranges 1.1.0.x, 1.2.0.x, 2.0.0.x and 2.0.1.x.
+In order to generate the DVE using this connector, enter the FSK **Element Name** on the **FSK page** of the [CEFD H SNMP](xref:Connector_help_CEFD_H_SNMP) connector, ranges 1.1.0.x, 1.2.0.x, 2.0.0.x and 2.0.1.x.
 
 ## Usage
 

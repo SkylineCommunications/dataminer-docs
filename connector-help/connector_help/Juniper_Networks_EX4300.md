@@ -4,7 +4,7 @@ uid: Connector_help_Juniper_Networks_EX4300
 
 # Juniper Networks EX4300
 
-The Juniper Networks EX4300 driver is an SNMP-based driver used to monitor and configure the Juniper Networks EX4300.
+The Juniper Networks EX4300 connector is an SNMP-based connector used to monitor and configure the Juniper Networks EX4300.
 
 ### Version Info
 
@@ -30,7 +30,7 @@ The Juniper Networks EX4300 driver is an SNMP-based driver used to monitor and c
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ No extra configuration is needed.
 
 There is no redundancy defined.
 
-### Webinterface
+### Web Interface
 
 The web interface is only accessible when the client machine has network access to the product. Note that this interface should be enabled first on the device.
 
@@ -67,6 +67,7 @@ The three tables on this page provide monitoring for temperature, memory and CPU
 ### Operating States Page
 
 Three tables display the operating states of the different components of the device.
+
 This page also provides the possibility to import/export monitoring configuration.
 
 ### Chassis Page
@@ -84,8 +85,9 @@ This page provides information about the yellow and red alarms.
 
 ### Interfaces Page
 
-This page contains the Interface Table. It also provides the option to choose the naming format used to identify interface in all 4 tables, including those that are accessible via the pagebuttons.
-The Interface poll table provides the option to enbale or disable polling for each interface.
+This page contains the Interface Table. It also provides the option to choose the naming format used to identify interface in all 4 tables, including those that are accessible via the page buttons.
+
+The Interface poll table provides the option to enable or disable polling for each interface.
 
 ### IP Page
 
@@ -94,5 +96,3 @@ Different monitoring parameters concerning IP can be found on this page.
 ### VLAN Page
 
 The tables on this page provide monitoring and configuration parameters for everything related to VLAN.
-
-

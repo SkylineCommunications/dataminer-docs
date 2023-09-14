@@ -10,18 +10,18 @@ The microserver is an SDMP (Software Defined Media Platform) designed to run the
 
 ## About
 
-This driver uses the **HTTP API** to collect information from the device and adjust settings on the device.
+This connector uses the **HTTP API** to collect information from the device and adjust settings on the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|--------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial version.               | No                  | Yes                     |
-| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi drivers. | No                  | Yes                     |
+| 1.0.1.x **\[SLC Main\]** | Streamlined all Aperi connectors. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 2.0.23                      |
 | 1.0.1.x          | 2.0.23                      |
@@ -32,7 +32,7 @@ This driver uses the **HTTP API** to collect information from the device and adj
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

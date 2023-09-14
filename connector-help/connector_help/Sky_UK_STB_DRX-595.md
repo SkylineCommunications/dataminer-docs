@@ -4,22 +4,22 @@ uid: Connector_help_Sky_UK_STB_DRX-595
 
 # Sky UK STB DRX-595
 
-This driver can be used as a remote control for the Sky DRX-595 set-top box.
+This connector can be used as a remote control for the Sky DRX-595 set-top box.
 
 ## About
 
-This driver uses the RFB protocol for **serial** communication and the UPnP interface for **HTTP** communication. After the serial communication has been established, only commands can be sent to the device, as there is no response.
+This connector uses the RFB protocol for **serial** communication and the UPnP interface for **HTTP** communication. After the serial communication has been established, only commands can be sent to the device, as there is no response.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version | No                  | Yes                     |
 | 1.0.1.x \[SLC_Main\] | DCF integration | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | SKY 000.001                 |
 | 1.0.1.x          | SKY 000.001                 |
@@ -30,7 +30,7 @@ This driver uses the RFB protocol for **serial** communication and the UPnP inte
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ SERIAL CONNECTION:
 
 #### HTTP connection
 
-This driver also uses an HTTP connection and requires the following input during element creation:
+This connector also uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -71,7 +71,7 @@ This page can be used to debug the HTTP communication. It displays the requests 
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the **Sky UK STB DRX-595** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the **Sky UK STB DRX-595** protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 

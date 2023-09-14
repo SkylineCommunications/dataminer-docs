@@ -12,15 +12,15 @@ On a TCP port, the element will listen to the incoming stream with RTCP packets.
 
 The processed data will not be stored on this element but will be forwarded to the **Belgacom RTCP Collector** element that stores the other KPIs, such as the broadcast KPIs, of the STB from which this data originates.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**    |
+| **Range** | **Device Firmware Version**    |
 |------------------|--------------------------------|
 | 1.0.0.x          | RTCP Compound Packet version 4 |
 
@@ -30,7 +30,7 @@ The processed data will not be stored on this element but will be forwarded to t
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -45,10 +45,10 @@ On the **General** page, the **Collector Type** can be set. The value of this pa
 
 The four possible values are:
 
-- *General Standalone*: The incoming stream originates from a VQE server that can get requests from any STB in the network. To be able to forward the data to the correct element, the driver needs to store the mapping between every STB and element to which data is to be forwarded.
-- *General Shared*: The same VQE server type as *General Standalone*; however, instead of storing the same mapping in memory, the driver checks the mapping from the *General Standalone* element in memory, which improves performance. This setting should only be used if there is another element on the same DMA with the **Collector Type** set to *General Standalone* and if there is only one SLScripting process running.
-- *POP Standalone*: The incoming stream comes from a VQE server that can only get requests from STBs that belong to a certain POP. To be able to forward the data to the correct element, the driver only needs to look up the configuration of the elements that are responsible for this POP. In this case, the **POP** parameter needs to be filled in with the name of the POP.
-- *POP Shared*: The same VQE server type as *POP Standalone*; however, instead of storing the same configuration in memory, the driver checks the configuration from the *POP* *Standalone* element in memory, which improves performance. This setting should only be used if there is another element on the same DMA with the **Collector Type** set to *POP* *Standalone* with the same **POP** and if there is only one SLScripting process running. In this case, the **POP** parameter needs to be filled in with the name of the POP.
+- *General Standalone*: The incoming stream originates from a VQE server that can get requests from any STB in the network. To be able to forward the data to the correct element, the connector needs to store the mapping between every STB and element to which data is to be forwarded.
+- *General Shared*: The same VQE server type as *General Standalone*; however, instead of storing the same mapping in memory, the connector checks the mapping from the *General Standalone* element in memory, which improves performance. This setting should only be used if there is another element on the same DMA with the **Collector Type** set to *General Standalone* and if there is only one SLScripting process running.
+- *POP Standalone*: The incoming stream comes from a VQE server that can only get requests from STBs that belong to a certain POP. To be able to forward the data to the correct element, the connector only needs to look up the configuration of the elements that are responsible for this POP. In this case, the **POP** parameter needs to be filled in with the name of the POP.
+- *POP Shared*: The same VQE server type as *POP Standalone*; however, instead of storing the same configuration in memory, the connector checks the configuration from the *POP* *Standalone* element in memory, which improves performance. This setting should only be used if there is another element on the same DMA with the **Collector Type** set to *POP* *Standalone* with the same **POP** and if there is only one SLScripting process running. In this case, the **POP** parameter needs to be filled in with the name of the POP.
 
 ## Usage
 

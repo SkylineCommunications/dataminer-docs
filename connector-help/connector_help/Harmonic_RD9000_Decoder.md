@@ -6,7 +6,7 @@ uid: Connector_help_Harmonic_RD9000_Decoder
 
 The Harmonic RD9000 is a multiformat professional **single or multi-slice UHD decoder that is HDR ready**.
 
-This SNMP driver contains different tables that allow the user to monitor and configure both the input and output.
+This SNMP connector contains different tables that allow the user to monitor and configure both the input and output.
 
 ## About
 
@@ -34,7 +34,7 @@ This SNMP driver contains different tables that allow the user to monitor and co
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Contains basic device information such as **Alias**, **Serial Number** and **Status**. Also contains the **CPU Core** and **Network Adapter** tables.
 - **Input**: Contains multiple tables with information related to inputs, such as **Input Source**, **PAT Entry** and **MPEG IP Receive**.

@@ -8,7 +8,7 @@ The **EMC Isilon** scale-out NAS storage platform combines modular hardware with
 
 ## About
 
-This driver provides centralized monitoring and administration to manage the following features:
+This connector provides centralized monitoring and administration to manage the following features:
 
 - A symmetrical cluster that runs a distributed file system.
 
@@ -37,15 +37,15 @@ This driver provides centralized monitoring and administration to manage the fol
   - Storage transport traps.
   - Cloud pools traps.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial range.  | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 7.2.1.2                     |
 
@@ -55,7 +55,7 @@ This driver provides centralized monitoring and administration to manage the fol
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

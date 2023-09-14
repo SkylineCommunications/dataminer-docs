@@ -8,17 +8,17 @@ The **7880R2x1-ASI-CS-2** is a complete hardware-based solution for MPEG-2 feed 
 
 ## About
 
-This **SNMP** driver is used to monitor and configure the **Evertz 7880R2x1-ASi-CS-2** redundancy controller.
+This **SNMP** connector is used to monitor and configure the **Evertz 7880R2x1-ASi-CS-2** redundancy controller.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Version 1.1.0 Build 4860    |
 
@@ -28,7 +28,7 @@ This **SNMP** driver is used to monitor and configure the **Evertz 7880R2x1-ASi-
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

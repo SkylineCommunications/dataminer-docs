@@ -12,9 +12,9 @@ This module shows information useful for antenna modules. This means LNBs, ampli
 
 ## About
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.1.x          | 1.1                         |
 | 1.0.2.x          | 1.1                         |

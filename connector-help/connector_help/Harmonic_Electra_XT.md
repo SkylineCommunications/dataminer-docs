@@ -32,7 +32,7 @@ The **Harmonic Electra XT** is a **video system** supporting all-IP environments
 
 #### SNMP Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -46,7 +46,7 @@ SNMP Settings:
 
 #### HTTP Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP CONNECTION**:
 
@@ -59,7 +59,7 @@ Once the element has been created, the user credentials must be filled in. To do
 
 ### Redundancy
 
-Redundancy is not defined in the driver.
+Redundancy is not defined in the connector.
 
 ### Web Interface
 
@@ -67,7 +67,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## Usage
 
-The element made using this driver has the following data pages:
+The element made using this connector has the following data pages:
 
 - **General**: Displays the date and time of the device, as well as the **Network Storage Table**. Via the **Credentials** page button, you can fill in the username and password to access the device.
 - **Workflow**: Displays the **Workflow Table**.

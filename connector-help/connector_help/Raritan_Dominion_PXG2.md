@@ -8,17 +8,17 @@ The Raritan Dominion PXG2 driver facilitates the monitoring of this line of Powe
 
 ## About
 
-This driver uses **SNMP** to extract all relevant information concerning the configuration and operating configuration of Raritan's PDU.
+This connector uses **SNMP** to extract all relevant information concerning the configuration and operating configuration of Raritan's PDU.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This driver uses **SNMP** to extract all relevant information concerning the con
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

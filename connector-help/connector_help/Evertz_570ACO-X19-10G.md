@@ -6,7 +6,7 @@ uid: Connector_help_Evertz_570ACO-X19-10G
 
 The Evertz 570ACO system uses mechanical latching relays to ensure maximum reliability and minimal disruption in the event of any failure, even a power failure.
 
-This driver is used to monitor and receive traps from this device.
+This connector is used to monitor and receive traps from this device.
 
 ## About
 
@@ -34,7 +34,7 @@ This driver is used to monitor and receive traps from this device.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -61,7 +61,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver has several data pages:
+The element created with this connector has several data pages:
 
 - The **General** page displays the uptime, ID, name and location of the system.
 - The **System** page contains various tables with information and settings, including card controls. At the bottom of the page, the **Configuration Management** section allows you to download and import a configuration.

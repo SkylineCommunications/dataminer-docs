@@ -8,13 +8,13 @@ The **XForm Systems HD Pro 40** is used for HD Up/Down/Framerate conversion, asp
 
 ## About
 
-With this driver, it is possible to monitor and configure XForm Systems HD Pro 40 devices. The different parameters from the device are displayed on multiple pages.
+With this connector, it is possible to monitor and configure XForm Systems HD Pro 40 devices. The different parameters from the device are displayed on multiple pages.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Smart-Serial connection and requires the following input during element creation:
+This connector uses a Smart-Serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION:**
 

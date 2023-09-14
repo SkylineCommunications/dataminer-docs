@@ -23,7 +23,7 @@ Refer to the additional document "Serial Protocol Description" for more informat
 
 #### Smart Serial Connection
 
-This driver uses a smart serial connection and requires the following input during element creation:
+This connector uses a smart serial connection and requires the following input during element creation:
 
 SMART SERIAL CONNECTION:
 
@@ -42,7 +42,7 @@ In addition, make sure to import the data from the *Data.xml* file.
 
 ### Help Page
 
-This page displays information about the driver and its functionality.
+This page displays information about the connector and its functionality.
 
 ### Basic Serial Page
 

@@ -4,7 +4,7 @@ uid: Connector_help_Evertz_570FC
 
 # Evertz 570FC
 
-This driver can be used to monitor and control the **Evertz 570FC** frame controller.
+This connector can be used to monitor and control the **Evertz 570FC** frame controller.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor and control the **Evertz 570FC** frame contro
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -50,7 +50,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver has several data pages:
+The element created with this connector has several data pages:
 
 - The **General** page displays the uptime, ID, name, and location of the system.
 - On the **Product Location, Hardware, Hardware LED, Software, Proxy Configuration** and **Time Management** pages you can find various tables with information and settings related to these subjects.

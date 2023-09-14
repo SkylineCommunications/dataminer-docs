@@ -24,7 +24,7 @@ This protocol is used by virtual elements created by the Electrosys G011 FM N+1 
 
 ### Connections
 
-This driver uses a virtual connection and does not require any input during element creation. This driver is used by DVE child elements that are **automatically created** by the parent driver [Electrosys G011 FM N+1](xref:Connector_help_Electrosys_G011_FM_N%2B1), from version 1.0.0.1 onwards.
+This connector uses a virtual connection and does not require any input during element creation. This connector is used by DVE child elements that are **automatically created** by the parent connector [Electrosys G011 FM N+1](xref:Connector_help_Electrosys_G011_FM_N%2B1), from version 1.0.0.1 onwards.
 
 ## How to use
 

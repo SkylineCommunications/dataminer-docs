@@ -6,7 +6,7 @@ uid: Connector_help_Technetix_FAM-124
 
 The Technetix FAM-124 is a forward amplifier and monitoring unit with one input and four outputs.
 
-This is an SNMP-based driver for the Technetix FAM-124. SNMP traps can be retrieved if this is enabled on the device.
+This is an SNMP-based connector for the Technetix FAM-124. SNMP traps can be retrieved if this is enabled on the device.
 
 ## About
 
@@ -34,7 +34,7 @@ This is an SNMP-based driver for the Technetix FAM-124. SNMP traps can be retrie
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -56,7 +56,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the data pages detailed below.
+The element created with this connector consists of the data pages detailed below.
 
 ### General
 

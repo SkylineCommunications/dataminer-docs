@@ -4,21 +4,21 @@ uid: Connector_help_Supermicro_SuperDoctor_III
 
 # Supermicro SuperDoctor III
 
-The **Supermicro SuperDoctor III** driver is an SNMP-based driver that can be used to monitor and configure the **Supermicro SuperDoctor III Monitoring Platform**.
+The **Supermicro SuperDoctor III** connector is an SNMP-based connector that can be used to monitor and configure the **Supermicro SuperDoctor III Monitoring Platform**.
 
 ## About
 
-This driver provides a monitoring and configuration interface for the **Supermicro SuperDoctor III Monitoring Platform**. It allows the user to display measurement values of different **Monitor Devices** and to configure their measurement limits.
+This connector provides a monitoring and configuration interface for the **Supermicro SuperDoctor III Monitoring Platform**. It allows the user to display measurement values of different **Monitor Devices** and to configure their measurement limits.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 
@@ -28,7 +28,7 @@ This driver provides a monitoring and configuration interface for the **Supermic
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

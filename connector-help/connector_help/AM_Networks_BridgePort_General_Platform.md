@@ -4,31 +4,31 @@ uid: Connector_help_AM_Networks_BridgePort_General_Platform
 
 # AM Networks BridgePort General Platform
 
-With this driver, you can gather and view information from the device **AM Networks BridgePort** and from the amplifiers connected to the device. It also allows you to configure the device.
+With this connector, you can gather and view information from the device **AM Networks BridgePort** and from the amplifiers connected to the device. It also allows you to configure the device.
 
 ## About
 
-This driver is used to gather information from the **AM Networks BridgePort** device and the attached amplifiers.
+This connector is used to gather information from the **AM Networks BridgePort** device and the attached amplifiers.
 
-The driver has several pages with general information, HMTS info, the HMTS device table, etc.
+The connector has several pages with general information, HMTS info, the HMTS device table, etc.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                   | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                   | No                  | Yes                     |
-| 1.0.1.x          | Added displaycolumn to a table.   | No                  | Yes                     |
-| 1.0.2.x          | Changed displaycolumn for naming. | No                  | Yes                     |
+| 1.0.1.x          | Added display column to a table.   | No                  | Yes                     |
+| 1.0.2.x          | Changed display column for naming. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | N/A                         |
 | 1.0.1.x          | N/A                         |
 | 1.0.2.x          | N/A                         |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                              | **Description**    |
 |----------------------------------------------------|--------------------|
@@ -44,7 +44,7 @@ The driver has several pages with general information, HMTS info, the HMTS devic
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 
@@ -78,7 +78,7 @@ This page contains a table with the HMTS reverse port information, allowing you 
 
 This page contains information regarding the amplifiers connected to the device. This information is shown in the **HMTS Device Table**.
 
-On this page, you can also import a .csv file with the name, type and view of the amplifiers, so that this infomation does not need to be set manually for every amplifier in the table. The import file should have the following format:
+On this page, you can also import a .csv file with the name, type and view of the amplifiers, so that this information does not need to be set manually for every amplifier in the table. The import file should have the following format:
 
 > Community String (IDX);Element Name;Node Type;View
 >
@@ -94,7 +94,7 @@ Each amplifier will create a new virtual element with the name present in the HM
 
 ## Notes
 
-Since this driver creates a large number of DVEs, you must keep the following in mind when using it:
+Since this connector creates a large number of DVEs, you must keep the following in mind when using it:
 
 - When a new .csv file is imported, if there are changes in the field Element Type, the corresponding existing DVE will need to be deleted and a new DVE will be created. This can take a while, depending on the number of DVEs to delete and create. You should not make another set on the device before the polling cycle parameters are back to the normal state, as otherwise the set will not take effect, but it will increase the load on the DMA even more.
 

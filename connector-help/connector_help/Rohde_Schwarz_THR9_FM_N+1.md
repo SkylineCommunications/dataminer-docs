@@ -10,19 +10,19 @@ The **Rohde Schwarz THR9 FM N+1** is an FM Audio Transmitter system capable of c
 
 This protocol can be used to monitor and perform basic configuring on the parent element and generated DVEs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                                              | **Description**    |
 |--------------------------------------------------------------------------------------------------------------------|--------------------|
@@ -34,7 +34,7 @@ This protocol can be used to monitor and perform basic configuring on the parent
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

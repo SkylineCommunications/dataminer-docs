@@ -37,7 +37,7 @@ This connector allows not only the complete monitoring of the device, but also t
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -85,7 +85,7 @@ This page contains the **Current Alarms** table and allows access to the **Alarm
 
 ## DataMiner Connectivity Framework
 
-The **1.0.1.x** driver range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.1.x** connector range of the protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 ### Interfaces
 

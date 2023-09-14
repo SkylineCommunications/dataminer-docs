@@ -8,11 +8,11 @@ The Arris CORView EMS is an **Element Manager**.
 
 ## About
 
-This driver **only** supports **SNMP traps** for the Arris CORView EMS.
+This connector **only** supports **SNMP traps** for the Arris CORView EMS.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                 |
+| **Range** | **Description**                                                                                 |
 |------------------|-------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Initial version.                                                                                |
 | 1.0.1.x          | Added "Down" or "Mismatch" to the DisplayKey when there is a Module Communication Status Event. |
@@ -23,7 +23,7 @@ This driver **only** supports **SNMP traps** for the Arris CORView EMS.
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -37,13 +37,13 @@ SNMP Settings:
 
 ## Usage
 
-This driver has only one page.
+This connector has only one page.
 
 ### Alarms
 
 This page displays the **Alarm** table, which is updated when SNMP traps are received. It contains a button to **Remove All** the alarms of the table. It also has a parameter to **Remove all Alarms by Interface** with a drop-down list showing the available choices.
 
-If the driver receives an alarm/trap with severity "*Clear*", it will update the severity in the relevant row and then remove the alarm from the table.
+If the connector receives an alarm/trap with severity "*Clear*", it will update the severity in the relevant row and then remove the alarm from the table.
 
 The display key of the table is composed of the following data, which comes directly from the **trap bindings**:
 
@@ -69,7 +69,7 @@ About the **Alarm Description**, **Chassis Number**, **Slot Number** and **Inter
 
 - The heCommonLogOID (2nd position) has the **EntPhysicalIndex**, which indicates the **Chassis** and **Slot Number**. If an OID follows the EntPhysicalIndex, it is an **Interface Number** and will be concatenated with the **Alarm Description**.
 
-- Note: It is possible that the EntPhysicalIndex is not always in the same logOID position. Up till now, it was detected between the 15th and 17th position. However, if there is a trap for which the EntPhysicalIndex is in another position in the logOID, the driver will need to be changed in order to process this.
+- Note: It is possible that the EntPhysicalIndex is not always in the same logOID position. Up till now, it was detected between the 15th and 17th position. However, if there is a trap for which the EntPhysicalIndex is in another position in the logOID, the connector will need to be changed in order to process this.
 
 - Trap Bindings:
   1.3.6.1.4.1.5591.1.11.2.1.1.1.2.3.1.2.11 (heCommonLogOID) = 1.3.6.1.4.1.5591.1.11.1.1.1.1.3.1.8.**101.1** - 101 is the EntPhysicalIndex and 1 is the interface number.

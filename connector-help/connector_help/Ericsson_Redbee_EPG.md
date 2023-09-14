@@ -4,19 +4,19 @@ uid: Connector_help_Ericsson_Redbee_EPG
 
 # Ericsson Redbee EPG
 
-This driver is used to visualize information from an **Ericsson Redbee Electronic Program Guide (EPG)**.
+This connector is used to visualize information from an **Ericsson Redbee Electronic Program Guide (EPG)**.
 
 ## 1. About
 
-The purpose of this driver is to visualize the scheduling of programs for different TV channels. For each program, miscellaneous information is available: **Start Time**, **Duration**, **Title**, **Synopsis**, etc. This timeline can be viewed in the DataMiner Resource Manager or it can be displayed using a Visio drawing.
+The purpose of this connector is to visualize the scheduling of programs for different TV channels. For each program, miscellaneous information is available: **Start Time**, **Duration**, **Title**, **Synopsis**, etc. This timeline can be viewed in the DataMiner Resource Manager or it can be displayed using a Visio drawing.
 
-The driver also checks for gaps between successive programs.
+The connector also checks for gaps between successive programs.
 
 To construct the program guide, the information is extracted from XML files that are retrieved from an FTP server or from a shared folder. These files are also called EPG or TVA files.
 
-### 1.1 Ranges of the driver
+### 1.1 Ranges of the connector
 
-| **Driver Range**     | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                            | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | Initial version                            | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | Recreation of element Impact: loss of data | No                  | Yes                     |
@@ -25,15 +25,15 @@ To construct the program guide, the information is extracted from XML files that
 
 ### 2.1 Creation
 
-This driver requires **WinSCPnet.dll**. This DLL must be placed in the folder "*\Skyline DataMiner\Files\\*". A restart of the DMA may be required.
+This connector requires **WinSCPnet.dll**. This DLL must be placed in the folder "*\Skyline DataMiner\Files\\*". A restart of the DMA may be required.
 
 #### Virtual Connection
 
-The Ericsson Redbee EPG driver uses a virtual connection and does not require any input during element creation.
+The Ericsson Redbee EPG connector uses a virtual connection and does not require any input during element creation.
 
 ## 3. Usage
 
-This driver contains the pages detailed in the sections below.
+This connector contains the pages detailed in the sections below.
 
 ### 3.1 General
 
@@ -55,7 +55,7 @@ The following settings must be configured:
 
 - **Password**: The corresponding password of the account.
 
-The **Server Status** indicates if there are connection issues with the server. Because the driver does not keep the connection alive, a healthy connection will often switch between **Ok** and **Connecting**.
+The **Server Status** indicates if there are connection issues with the server. Because the connector does not keep the connection alive, a healthy connection will often switch between **Ok** and **Connecting**.
 
 The **Error Message** provides more information in case something went wrong while connecting to the server.
 
@@ -68,11 +68,11 @@ This section focuses on the connection with the Stagis server. This server conta
 The following setting must be configured:
 
 - **Stagis IMI FTP Address**: The IP address or URL of the directory on the server where the Stagis IMI XML files are stored. For example: <ftp://11.12.13.14/path/to/stagis/imi/files>.
-- **Stagis IMI Backup Address**: A second location where the Stagis files can be found. The driver will automatically switch to this server when it is unable to access the main server.
-- **Stagis Status**: The connection status with the Stagis server. If the driver is using the backup server, the status will be **Backup**.
+- **Stagis IMI Backup Address**: A second location where the Stagis files can be found. The connector will automatically switch to this server when it is unable to access the main server.
+- **Stagis Status**: The connection status with the Stagis server. If the connector is using the backup server, the status will be **Backup**.
 - **Stagis IMI Forward Limit** and **Stagis IMI Backward Limit**: Only programs that have a start and end time within this time window will be updated with the Stagis IMI.
 
-The **Stagis Status** indicates if there are connection issues with the server. Note that the driver does not keep the connection alive, so a healthy connection will often switch between *Ok* and *Connecting*. When the main server is not available, the backup server will be used. In this case, the Stagis status will display **Backup**.
+The **Stagis Status** indicates if there are connection issues with the server. Note that the connector does not keep the connection alive, so a healthy connection will often switch between *Ok* and *Connecting*. When the main server is not available, the backup server will be used. In this case, the Stagis status will display **Backup**.
 
 The **Error Message** provides more information in case something went wrong while connecting to server.
 
@@ -98,13 +98,13 @@ The following settings can be configured:
   If the difference between the end of a program and the beginning of the next program is higher than or equal to this parameter, a gap will be detected. If the resolution is 0, the start time of the new program and the end time of the finished program must be exactly the same.
 - **Keep locations for**: Determines for how many days entries in the **Program Location Table** are kept in the database.
 - **EPG Backward Limit** and **EPG Forward Limit**: These parameters determine the time range of the EPG timeline.
-- **Status**: Indicates what the driver is currently is doing. Examples of Status values can be "Idle", "Processing Files", "Adding Resources", "Deleting Content", etc.
+- **Status**: Indicates what the connector is currently is doing. Examples of Status values can be "Idle", "Processing Files", "Adding Resources", "Deleting Content", etc.
 
 The **FTP File Index** contains the name of the last processed file.
 
 The **Amount of New Files** parameter shows how many new files have been found on the server. These files will soon be processed.
 
-The driver is capable of handling updates to the **start time** and **end time** of a program. A program can even be removed from the timeline. Thanks to this, the schedule can be changed without problems. While the schedule is updating, it is possible that temporary gaps will be created. To prevent alarms being created for these gaps, the **Gap Alarm Threshold** parameter is used. This parameter determines when a gap will be recognized as problematic. The value represents the number of hours before airing.
+The connector is capable of handling updates to the **start time** and **end time** of a program. A program can even be removed from the timeline. Thanks to this, the schedule can be changed without problems. While the schedule is updating, it is possible that temporary gaps will be created. To prevent alarms being created for these gaps, the **Gap Alarm Threshold** parameter is used. This parameter determines when a gap will be recognized as problematic. The value represents the number of hours before airing.
 
 ### 3.2 TVA Monitoring
 
@@ -127,7 +127,7 @@ On this page, the **Service Information Table** lists all the services/channels.
 - **Broadcast Setting**: Allows you to enter the names of programs, in order to mark these as **not broadcasting**. Wildcards can be used.
 - **Broadcast Start Time**: The beginning of the broadcast window.
 - **Broadcast Duration**: The duration of the broadcast window.
-- **Update**: Reports if there are pending updates for the timeline. The driver will automatically do these updates.
+- **Update**: Reports if there are pending updates for the timeline. The connector will automatically do these updates.
 - **Monitoring**: Enables or disables the monitoring of the channel. Channels that are monitored will **appear in the timeline** and will also be **checked for gaps**.
 - **Stagis IMI Verification**: Enables or disables the check for missing Stagis IMI on the channel.
 - **Creation Delta**: This is the smallest or most negative **program creation delta** value (see explanation **Program Location Table**).
@@ -137,9 +137,9 @@ On this page, the **Service Information Table** lists all the services/channels.
 - **Number of Late Creation**: This is the number of programs that were create late according to the **Delta Threshold**.
 - **Number of Late Delivery**: This is the number of programs that were delivered late according to the **Delta Threshold**.
 
-The **Update Bookings** button forces the driver to push all program changes of channels that require an update to the timeline.
+The **Update Bookings** button forces the connector to push all program changes of channels that require an update to the timeline.
 
-The **Reload Stagis IMI** button forces the driver to check the Stagis server and update the Stagis IMI of the programs.
+The **Reload Stagis IMI** button forces the connector to check the Stagis server and update the Stagis IMI of the programs.
 
 The four **color** parameters at the bottom of the page are used to change the color of the programs and gaps on the timeline. The **Off-Air Color** will be applied when a program is out of the **broadcast window**.
 
@@ -157,7 +157,7 @@ On this page, the **Overlap Table** shows which program updates have caused a ga
 
 ### 3.7 Programs
 
-This page contains the **Program Location Table**, which lists all the programs that are currently in the driver.
+This page contains the **Program Location Table**, which lists all the programs that are currently in the connector.
 
 - **Location ID**: Identifier of the program. This identifier is created from the Redbee CRID and IMI.
 - **Service ID**: Numeric identifier of the channel.
@@ -175,7 +175,7 @@ This page contains the **Program Location Table**, which lists all the programs 
   Negative values indicate that it was created before the start of the program. Positive values indicate that it was created after the program started.
 - **Delivered Delta**: The time **difference between** the time the entry was **last updated** and the **start time** of the program.
   Negative values indicate that it was last updated before the start of the program. Positive values indicate that it was last updated after the program started.
-- **Registered**: The timestamp when the program was processed by the driver.
+- **Registered**: The timestamp when the program was processed by the connector.
 
 This table can contain multiple entries for the same TV program/episode. This is because the program can air on multiple channels and at multiple times.
 
@@ -209,7 +209,7 @@ This page shows the same information as the **Stagis Delta** page, except here t
 
 ### 3.13 Configuration
 
-This page is used in order to reset parts of the driver. It is also used to configure the logging of additional information messages for debugging purposes.
+This page is used in order to reset parts of the connector. It is also used to configure the logging of additional information messages for debugging purposes.
 
 The **Reload All EPG Files** button will clear all tables except for the **Service Information Table** and clear the timeline. The data will be rebuilt immediately using the files that are available on the server, but **this can take a while**. This button must be used with caution.
 

@@ -4,7 +4,7 @@ uid: Connector_help_Miteq_D-9900
 
 # Miteq D-9900
 
-This driver allows monitoring and control of the down converter
+This connector allows monitoring and control of the down converter
 
 ## About
 
@@ -56,7 +56,7 @@ This driver allows monitoring and control of the down converter
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -82,6 +82,6 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-This driver will allow monitoring and control of the converter. No special actions are required.
+This connector will allow monitoring and control of the converter. No special actions are required.
 
 ## Notes

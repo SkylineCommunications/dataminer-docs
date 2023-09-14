@@ -10,16 +10,16 @@ The I30 DC is a power supply measurement module. It measures the voltage, curren
 
 ## About
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description**                                             | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                             | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|-------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x \[Obsolete\] | Initial version.                                            | No                  | Yes                     |
 | 1.0.1.x \[SLC Main\] | The element name can be customized from the parent element. | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \-                          |
 | 1.0.1.x          | \-                          |

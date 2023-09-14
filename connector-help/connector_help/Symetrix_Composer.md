@@ -8,19 +8,19 @@ The Symetrix Composer is a Windowsr application used to program Radius, Prism, E
 
 ## About
 
-This driver uses two connection a Serial and HTTP connection to poll data from the Symetrix Composer. The serial connection is responsible for the polling of the controllers' value and the HTTP is responsible for the polling
+This connector uses two connection a Serial and HTTP connection to poll data from the Symetrix Composer. The serial connection is responsible for the polling of the controllers' value and the HTTP is responsible for the polling
 
 of the system information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial Version | No                  | True                    |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.100                       |
 
@@ -30,7 +30,7 @@ of the system information.
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -46,7 +46,7 @@ SERIAL CONNECTION:
 
 #### HTTP Secondary Connection
 
-This driver uses a HTTP connection and requires the following input during element creation:
+This connector uses a HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -65,7 +65,7 @@ This page contains the **Controller Table,** on this page the user can add contr
 
 ### Best Practice
 
-This page contains information on how to use the driver.
+This page contains information on how to use the connector.
 
 ### Web Interface
 

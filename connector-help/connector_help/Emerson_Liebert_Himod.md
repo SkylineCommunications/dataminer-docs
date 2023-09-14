@@ -4,27 +4,27 @@ uid: Connector_help_Emerson_Liebert_Himod
 
 # Emerson Liebert Himod
 
-With this driver, you can gather and view information from the device **Emerson Liebert Himod**, as well as configure the device.
+With this connector, you can gather and view information from the device **Emerson Liebert Himod**, as well as configure the device.
 
 ## About
 
-This driver uses SNMP to monitor the **Emerson Liebert Himod** device.
+This connector uses SNMP to monitor the **Emerson Liebert Himod** device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | No                  | No                      |
 | 1.1.0.x          | New firmware based on 1.0.0.x (see below) | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | \< 5.0.0.0                  |
 | 1.1.0.x          | 5.0.0.0                     |
 
-**Important Note**: In order to switch to a different driver range for elements that were created with a driver range that supports an old firmware version, it is advised to create the elements again.
+**Important Note**: In order to switch to a different connector range for elements that were created with a connector range that supports an old firmware version, it is advised to create the elements again.
 
 ## Installation and configuration
 
@@ -32,7 +32,7 @@ This driver uses SNMP to monitor the **Emerson Liebert Himod** device.
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and needs the following user information:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

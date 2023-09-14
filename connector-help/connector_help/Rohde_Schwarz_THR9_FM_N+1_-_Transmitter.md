@@ -4,21 +4,21 @@ uid: Connector_help_Rohde_Schwarz_THR9_FM_N+1_-_Transmitter
 
 # Rohde Schwarz THR9 FM N+1 - Transmitter
 
-This exported driver shows data from a transmitter module in a Rohde Schwarz THR9 FM N+1.
+This exported connector shows data from a transmitter module in a Rohde Schwarz THR9 FM N+1.
 
 ## About
 
 This protocol can be used to monitor and perform basic configuration on the parent element and generated DVEs.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -28,7 +28,7 @@ This protocol can be used to monitor and perform basic configuration on the pare
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

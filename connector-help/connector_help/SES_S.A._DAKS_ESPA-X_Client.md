@@ -4,7 +4,7 @@ uid: Connector_help_SES_S.A._DAKS_ESPA-X_Client
 
 # SES S.A. DAKS ESPA-X Client
 
-This driver is designed to make a connection with an espa-x client, and behave as a server. It can process login, heartbeat and P-Start messages.
+This connector is designed to make a connection with an espa-x client, and behave as a server. It can process login, heartbeat and P-Start messages.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver is designed to make a connection with an espa-x client, and behave a
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,4 +51,4 @@ There is no redundancy defined.
 
 ## How to use
 
-To use the element created with this driver, specify the DMA ID and element ID of the main Tetronik DAKS element on the General page. The messages will then be forwarded to that element.
+To use the element created with this connector, specify the DMA ID and element ID of the main Tetronik DAKS element on the General page. The messages will then be forwarded to that element.

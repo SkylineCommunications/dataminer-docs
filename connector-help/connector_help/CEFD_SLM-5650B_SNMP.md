@@ -4,21 +4,21 @@ uid: Connector_help_CEFD_SLM-5650B_SNMP
 
 # CEFD SLM-5650B SNMP
 
-The Comtech EF Data (CEFD) SLM-5650B satellite modem uses state-of-the-art modulation and coding techniques to optimize satellite transponder bandwidth usage while retaining backwards compatibility. This driver provides an optimized user interface for the device.
+The Comtech EF Data (CEFD) SLM-5650B satellite modem uses state-of-the-art modulation and coding techniques to optimize satellite transponder bandwidth usage while retaining backwards compatibility. This connector provides an optimized user interface for the device.
 
 ## About
 
-This driver can be used to monitor and control a CEFD SLM-5650B satellite modem through SNMP.
+This connector can be used to monitor and control a CEFD SLM-5650B satellite modem through SNMP.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.3.1                       |
 
@@ -28,7 +28,7 @@ This driver can be used to monitor and control a CEFD SLM-5650B satellite modem 
 
 #### SNMP MAIN connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -110,4 +110,4 @@ DATE VERSION AUTHOR COMMENTS
 
 ## Notes
 
-Depending on the security level of the user, the driver can display a different set of parameters.
+Depending on the security level of the user, the connector can display a different set of parameters.

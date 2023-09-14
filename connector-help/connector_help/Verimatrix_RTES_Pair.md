@@ -4,31 +4,31 @@ uid: Connector_help_Verimatrix_RTES_Pair
 
 # Verimatrix RTES Pair
 
-With this driver, you can monitor a redundant pair of **Verimatrix RTES** devices using SNMP.
+With this connector, you can monitor a redundant pair of **Verimatrix RTES** devices using SNMP.
 
 ## About
 
-The Verimatrix RTES Pair driver monitors a redundant pair of Verimatrix RTES devices. The **two SNMP connections** are used to connect to the two RTES devices. Through **HTTP SOAP** communication, the driver also allows the user to retrieve the names of the channels that are described in a database.
+The Verimatrix RTES Pair connector monitors a redundant pair of Verimatrix RTES devices. The **two SNMP connections** are used to connect to the two RTES devices. Through **HTTP SOAP** communication, the connector also allows the user to retrieve the names of the channels that are described in a database.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**                           | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version                           | Yes                 | Yes                     |
 | 2.0.0.x          | Branch version based on 1.0.0.x           | Yes                 | Yes                     |
 | 2.0.1.x          | New firmware based on 2.0.1.x (see below) | Yes                 | Yes                     |
 | 2.0.2.x          | Change of index in retrieved tables       | Yes                 | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 | 2.0.0.x          | Unknown                     |
 | 2.0.1.x          | Unknown                     |
 | 2.0.2.x          | Unknown                     |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol**                                                                | **Description**                       |
 |--------------------------------------------------------------------------------------|---------------------------------------|

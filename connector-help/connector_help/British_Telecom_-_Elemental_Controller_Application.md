@@ -34,7 +34,7 @@ This **enables the users to step away from the conductor** and only use this app
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 
@@ -46,12 +46,6 @@ There is no redundancy defined.
 
 ## How to use
 
-This application contains one General page.
+This application contains one General page, which displays the **Conductor Cluster Table**. This table contains the Conductor identification and allows you to enable or disable event management through the visual overview page.
 
-General
-
-The General page contains a the **Conductor Cluster Table** that contains the Conductor identification and allows to enable or disable event management through the visual overview page.
-
-A subpage **Add Conductor** that can be accessed via pagebutton on the bottom of the page, and allows the user to add new entries on the Conductor Cluster Table.
-
-
+A subpage **Add Conductor** can be accessed via page button at the bottom of the page and allows you to add new entries to the Conductor Cluster Table.

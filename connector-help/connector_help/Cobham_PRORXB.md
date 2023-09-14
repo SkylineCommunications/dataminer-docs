@@ -12,15 +12,15 @@ This protocol can monitor status parameters of a Cobham PRORXB device. It also a
 
 HTTP requests are used to retrieve the device information.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                            |
+| **Range** | **Device Firmware Version**                            |
 |------------------|--------------------------------------------------------|
 | 1.0.0.x          | Software version 2.0 H264 Decoder software version 1.3 |
 
@@ -30,7 +30,7 @@ HTTP requests are used to retrieve the device information.
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

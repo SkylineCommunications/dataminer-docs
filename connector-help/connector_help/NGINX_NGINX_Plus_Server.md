@@ -8,17 +8,17 @@ NGINX Plus is a suite of media content delivery products such as load balancers,
 
 ## About
 
-This driver uses an HTTP connection to retrieve information from the device.
+This connector uses an HTTP connection to retrieve information from the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.11.5                      |
 
@@ -28,7 +28,7 @@ This driver uses an HTTP connection to retrieve information from the device.
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

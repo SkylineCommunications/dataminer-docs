@@ -4,7 +4,7 @@ uid: Connector_help_Rogers_Communications_Juniper_CSV_Importer
 
 # Rogers Communications Juniper CSV Importer
 
-This is a **data collector** driver that will import a CSV report file from the **Juniper** and will allow the user to filter the report using specific parameter filters.
+This is a **data collector** connector that will import a CSV report file from the **Juniper** and will allow the user to filter the report using specific parameter filters.
 
 ## About
 
@@ -26,7 +26,7 @@ This is a **data collector** driver that will import a CSV report file from the 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

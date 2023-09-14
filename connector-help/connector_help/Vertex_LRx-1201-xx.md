@@ -8,17 +8,17 @@ The **Vertex LRx-1201-xx** driver will display information related to the **Vert
 
 ## About
 
-The driver has a serial communication to the device and allows the end user to control and monitor the switches. Note that currently only a 2+1 system is supported.
+The connector has a serial communication to the device and allows the end user to control and monitor the switches. Note that currently only a 2+1 system is supported.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 2.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | 1.092                       |
 
@@ -28,7 +28,7 @@ The driver has a serial communication to the device and allows the end user to c
 
 Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

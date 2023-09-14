@@ -8,17 +8,17 @@ The **Emcore Medallion 8100** series is a family of high-performance DOCSIS 3.1 
 
 ## About
 
-This driver is used to monitor and configure the **Emcore Medallion 8100**. It uses an SNMP connection to get/set data from/to the device.
+This connector is used to monitor and configure the **Emcore Medallion 8100**. It uses an SNMP connection to get/set data from/to the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.20                        |
 
@@ -28,12 +28,11 @@ This driver is used to monitor and configure the **Emcore Medallion 8100**. It u
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: Indicate if required or not. If it is, specify default value and range.
 
 SNMP Settings:
 

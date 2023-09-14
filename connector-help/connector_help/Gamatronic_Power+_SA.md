@@ -6,19 +6,19 @@ uid: Connector_help_Gamatronic_Power+_SA
 
 The Gamatronic Power+ SA is used to control and manage a standalone online double-conversion UPS.
 
-With this driver, trending and alarm monitoring are available on a lot of important parameters.
+With this connector, trending and alarm monitoring are available on a lot of important parameters.
 
 ## About
 
 This device is used to monitor the status of power supplies.
 
-All the data is polled by SNMP. All parameters from the web interface are available in the driver, except the configuration tab, which is not included because of missing MIB.
+All the data is polled by SNMP. All parameters from the web interface are available in the connector, except the configuration tab, which is not included because of missing MIB.
 
 ## Installation and configuration
 
 ### Creation
 
-This is an SNMP driver. The IP has to be configured during creation of the element.
+This is an SNMP connector. The IP has to be configured during creation of the element.
 
 **SNMP Connection:**
 

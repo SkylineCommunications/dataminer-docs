@@ -4,17 +4,17 @@ uid: Connector_help_EventIS_TraxIS
 
 # EventIS TraxIS
 
-This driver is an interface towards the TraxIS platform.
+This connector is an interface towards the TraxIS platform.
 
 ## About
 
-This driver will query the TraxIS platform to retrieve the Package ID or Product ID of resources.
+This connector will query the TraxIS platform to retrieve the Package ID or Product ID of resources.
 
 XML over HTTP calls are used to query resources on the TraxIS Platform.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | Yes                 | Yes                     |
 
@@ -24,7 +24,7 @@ XML over HTTP calls are used to query resources on the TraxIS Platform.
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -34,7 +34,7 @@ HTTP CONNECTION:
 
 #### HTTP Backup connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

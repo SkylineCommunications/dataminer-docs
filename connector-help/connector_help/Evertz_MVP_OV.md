@@ -8,18 +8,18 @@ The MVP is a multi-image display and monitoring system. It provides a highly fle
 
 ## About
 
-This driver is intended to work with the **Evertz MVP OV** card. It was designed to provide status monitoring and fault trigger parameters.
+This connector is intended to work with the **Evertz MVP OV** card. It was designed to provide status monitoring and fault trigger parameters.
 
 ### Ranges of the Driver
 
-| **Driver Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
+| **Range**     | **Description**                                                                                  | **DCF Integration** | **Cassandra Compliant** |
 |----------------------|--------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x              | SNMP set not working.                                                                            | No                  | Yes                     |
 | 2.0.0.x \[SLC Main\] | Now uses DVEs for each bus address instead of using the bus address to look at a single channel. | No                  | Yes                     |
 
 ### Supported Firmware Versions
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -29,7 +29,7 @@ This driver is intended to work with the **Evertz MVP OV** card. It was designed
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -62,7 +62,7 @@ This page displays general parameters related to errors, such as **Error Duratio
 
 ### Audio Fault
 
-This page displays the **Audio Definition** and **Audio Pair Definition** **Tables**.
+This page displays the **Audio Definition** and **Audio Pair Definition Tables**.
 
 ### Hardware Control
 
@@ -74,7 +74,7 @@ On this page, you can configure the **Loudness Measure Audio Program** (1 to 8) 
 
 ### Audio Notifications
 
-This page displays the **Management Fault Audio 2** and **Management Audio 3** **Tables**.
+This page displays the **Management Fault Audio 2** and **Management Audio 3 Tables**.
 
 ### Dolby E
 

@@ -10,9 +10,9 @@ This protocol was created to connect with a particular **database** and with cer
 
 The database contains information that is needed for the protocol to create **presets**, **spectrum scripts** and **spectrum monitors**. The spectrum scripts also do calls to an Automation script, which does sets on the ACU, Beacon Receiver and RF Switch element. The monitor then stores the trace in the history database. This makes it possible to cross reference outages with history spectrum traces.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -22,7 +22,7 @@ The database contains information that is needed for the protocol to create **pr
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ## Usage
 

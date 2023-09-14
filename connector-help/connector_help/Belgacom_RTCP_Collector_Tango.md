@@ -4,25 +4,25 @@ uid: Connector_help_Belgacom_RTCP_Collector_Tango
 
 # Belgacom RTCP Collector Tango
 
-The **Belgacom RTCP Collector Tango** is a separate part of a CPE setup, where it works together with the **Belgacom DB Push Extended**. This driver is responsible for collecting the data from the Tango STBs.
+The **Belgacom RTCP Collector Tango** is a separate part of a CPE setup, where it works together with the **Belgacom DB Push Extended**. This connector is responsible for collecting the data from the Tango STBs.
 
 ## About
 
-This driver will have 2 connections: one RTCP connection and one SSH connection. The RTCP connection will listen to RTCP messages that are sent from the STB. An STB will send its messages to different collector elements, which need to forward the data to the correct element responsible for storing the data of this STB. The SSH connection is used to poll data multithreaded from the STB.
+This connector will have 2 connections: one RTCP connection and one SSH connection. The RTCP connection will listen to RTCP messages that are sent from the STB. An STB will send its messages to different collector elements, which need to forward the data to the correct element responsible for storing the data of this STB. The SSH connection is used to poll data multithreaded from the STB.
 
 Every day, the collector element will offload its data, which the **Belgacom DB Push Extended** element will then push into a database.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version**                                       |
+| **Range** | **Device Firmware Version**                                       |
 |------------------|-------------------------------------------------------------------|
-| 1.0.0.x          | All firmware versions should be supported with this driver range. |
+| 1.0.0.x          | All firmware versions should be supported with this connector range. |
 
 ## Installation and configuration
 
@@ -30,7 +30,7 @@ Every day, the collector element will offload its data, which the **Belgacom DB 
 
 #### Serial RTCP Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION
 
@@ -39,7 +39,7 @@ SERIAL CONNECTION
 
 #### Serial SSH Connection
 
-This driver uses a serial SSH connection and requires the following input during element creation:
+This connector uses a serial SSH connection and requires the following input during element creation:
 
 SERIAL CONNECTION
 
@@ -78,7 +78,7 @@ On this page, you can configure settings for the different firmware versions.
 
 In the **STB Hardware Table**, the **STB Total Processors** and **STB Total Memory** can be specified per **STB Hardware Version**. To add a new STB to this table, fill in **New STB Hardware**, and then click the **Add Row Hardware** button. To copy the **STB Hardware Table** to all the other collector elements, click the **Sync Hardware** button.
 
-In the **Ruleset Table**, the SSH connection settings can be configured per **HW Version** and **SW Version** combination. To reduce the number of configurations, *DEFAULT* can also be specified as **SW Version**, in which case the driver will use these settings whenever no exact **SW Version** match is found. To add a new row to the **Ruleset Table**, click the **Add Row Ruleset** button. To copy the **Ruleset Table** to all other collector elements, click the **Sync Ruleset** button.
+In the **Ruleset Table**, the SSH connection settings can be configured per **HW Version** and **SW Version** combination. To reduce the number of configurations, *DEFAULT* can also be specified as **SW Version**, in which case the connector will use these settings whenever no exact **SW Version** match is found. To add a new row to the **Ruleset Table**, click the **Add Row Ruleset** button. To copy the **Ruleset Table** to all other collector elements, click the **Sync Ruleset** button.
 
 ### Configuration of the Oracle parameters
 

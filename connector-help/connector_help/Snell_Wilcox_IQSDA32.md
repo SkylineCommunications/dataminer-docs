@@ -4,21 +4,21 @@ uid: Connector_help_Snell_Wilcox_IQSDA32
 
 # Snell Wilcox IQSDA32
 
-The **Snell Wilcox IQSDA32** driver monitors and controls changes on the distribution amplifier unit through a **Rollcall** **smart-serial** protocol. The card is used in the **IQ Modular Chassis**.
+The **Snell Wilcox IQSDA32** connector monitors and controls changes on the distribution amplifier unit through a **Rollcall** **smart-serial** protocol. The card is used in the **IQ Modular Chassis**.
 
 ## About
 
-The driver periodically polls relevant information from the device. This happens every 15 seconds for Rollcall protocol purposes and every two hours for backchannel purposes.
+The connector periodically polls relevant information from the device. This happens every 15 seconds for Rollcall protocol purposes and every two hours for backchannel purposes.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5.2 .5                      |
 
@@ -28,7 +28,7 @@ The driver periodically polls relevant information from the device. This happens
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

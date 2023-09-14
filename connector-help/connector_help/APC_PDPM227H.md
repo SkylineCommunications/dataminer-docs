@@ -4,7 +4,7 @@ uid: Connector_help_APC_PDPM227H
 
 # APC PDPM227H
 
-This driver can be used to monitor the APC Modular Remote Power Panel solution. It uses SNMP to retrieve data from the device.
+This connector can be used to monitor the APC Modular Remote Power Panel solution. It uses SNMP to retrieve data from the device.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor the APC Modular Remote Power Panel solution. 
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

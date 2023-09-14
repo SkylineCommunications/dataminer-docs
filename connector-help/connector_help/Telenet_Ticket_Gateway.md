@@ -4,11 +4,11 @@ uid: Connector_help_Telenet_Ticket_Gateway
 
 # Telenet Ticket Gateway
 
-The Telenet Ticket Gateway driver is part of the Telenet SAM Ticketing project. The driver communicates with OSB, a custom web service of Telenet.
+The Telenet Ticket Gateway connector is part of the Telenet SAM Ticketing project. The connector communicates with OSB, a custom web service of Telenet.
 
 ## About
 
-This driver will receive commands that need to be sent to a custom web service of Telenet, i.e. **OSB**. These commands will **Create**, **Update**, **Close**, and **Search** **Tickets** or **Edit Ninas Counters** in a custom database of Telenet. The tickets are called **'MO'** or **'PLM'** depending on the request.
+This connector will receive commands that need to be sent to a custom web service of Telenet, i.e. **OSB**. These commands will **Create**, **Update**, **Close**, and **Search** **Tickets** or **Edit Ninas Counters** in a custom database of Telenet. The tickets are called **'MO'** or **'PLM'** depending on the request.
 
 The commands will receive a response from OSB: *ACK*/*NACK* or *search* *result.* Create, Update, and Close commands will also receive an *Async* response. This is received by a custom SAMSERVICE web service created by Skyline to receive this response and put it in the correct cell in the communication table, which is a list of all requests sent to OSB. Each error returned from OSB will be logged in an Offload file, though this can be disabled if necessary*.*
 
@@ -32,7 +32,7 @@ Master Data:
 
 The new feature "**makeCommandByProtocol**" will make sure that data in a "to be executed" command (on DataMiner Stack) is correct and not overwritten by the last changed data. This is necessary for the RFC updates, because multiple commands can stay on the stack when OSB commands get execute priorities.
 
-To reduce the logging in the element log, the driver will generate an extended log file each hour. This is done via a buffer table, from which the data is offloaded in a file every half hour.
+To reduce the logging in the element log, the connector will generate an extended log file each hour. This is done via a buffer table, from which the data is offloaded in a file every half hour.
 
 MO CleanUp:
 When a **CleanUp** request is received from the **MailProc**, the Gateway will execute a series of requests in order to update/close the requested case with the provided MasterData from the MailProc. All this data can be found in the CleanUp request. The following is needed to fulfill the **MO** **Cleanup**:
@@ -48,7 +48,7 @@ Whenever an error occurs, it is returned to the MailProc. After finishing the MO
 
 ### Creation
 
-This driver uses a **Serial** connection and needs the following user information:
+This connector uses a **Serial** connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 

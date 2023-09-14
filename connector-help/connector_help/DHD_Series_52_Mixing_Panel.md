@@ -6,7 +6,7 @@ uid: Connector_help_DHD_Series_52_Mixing_Panel
 
 The DHD Series 52 Mixing Panel is an audio router and a mixing console.
 
-This driver uses a serial connection to get the current audio routing configuration and to allow the user to configure the audio routing.
+This connector uses a serial connection to get the current audio routing configuration and to allow the user to configure the audio routing.
 
 ## About
 
@@ -43,7 +43,7 @@ This driver uses a serial connection to get the current audio routing configurat
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -54,7 +54,7 @@ SERIAL CONNECTION:
 
 #### HTTP Main Connection\[2.0.0.x\]
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -66,7 +66,7 @@ HTTP CONNECTION:
 
 For the element to function properly, the current router configuration must be retrieved from the Toolbox 5. To do so, go to **File** \> **Export** and click **Export AudioIDs/LogicsIDs**. This will open a new page, where you should select the file **Ext. DHD AudioID/LogicID Export (.\*dpx)**.
 
-The element must then be configured with this configuration in DataMiner. To do so, on the **General** page, specify the **Path** where the configuration file is stored. Then click the **Load Configuration** button to make the driver parse the configuration file and start retrieving the routing information.
+The element must then be configured with this configuration in DataMiner. To do so, on the **General** page, specify the **Path** where the configuration file is stored. Then click the **Load Configuration** button to make the connector parse the configuration file and start retrieving the routing information.
 
 ### Initialization
 
@@ -80,4 +80,4 @@ There is no redundancy defined.
 
 On the **Matrix** page of the element, you can route the audio. This can also be done on the **Audio** **I/O** page, using the **Output Audio** table.
 
-In **range 2.0.0.x** of the driver, the pages have been organized to be as similar as possible to the device web interface.
+In **range 2.0.0.x** of the connector, the pages have been organized to be as similar as possible to the device web interface.

@@ -10,15 +10,15 @@ The **DB4004** is a second-generation digital FM Radio Modulation Analyzer.
 
 The device is able to check FM channels. It contains a round-robin system that does not keep track of the status parameters. The time each channel should be measured by the round-robin engine is actively checked and adjusted on the device in order to know which channel is being monitored. Once the channel is known, the status parameters are polled and a table is built with status data for the channels.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**     | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |----------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x \[SLC Main\] | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 1.9.123 (2014/09/08)        |
 
@@ -28,7 +28,7 @@ The device is able to check FM channels. It contains a round-robin system that d
 
 #### Main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

@@ -10,23 +10,23 @@ The Stagetec PMT32 transmits all amplified signals to the required speaker lines
 
 ## About
 
-This driver retrieves data via **Serial Communication TCP/IP**. Commands are sent to the device with or without a response in return.
+This connector retrieves data via **Serial Communication TCP/IP**. Commands are sent to the device with or without a response in return.
 
-- This driver exports a driver which corresponds to a slot. A list can be found in the section 'Exported Drivers'".
+- This connector exports a connector which corresponds to a slot. A list can be found in the section 'Exported Connectors'".
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | NA                          |
 
-### Exported drivers
+### Exported connectors
 
 | **Exported Protocol** | **Description** |
 |-----------------------|-----------------|
@@ -38,7 +38,7 @@ This driver retrieves data via **Serial Communication TCP/IP**. Commands are sen
 
 #### Serial Main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

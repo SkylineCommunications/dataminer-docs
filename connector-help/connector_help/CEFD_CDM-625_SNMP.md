@@ -8,7 +8,7 @@ The CDM-625 is an advanced satellite modem that provides the combination of adva
 
 ## About
 
-This driver uses SNMP to display information from the device and to set device settings. More detailed information can be found on the following website:
+This connector uses SNMP to display information from the device and to set device settings. More detailed information can be found on the following website:
 <http://www.comtechefdata.com/support/docs/satellitemodemdocs>
 
 ### Version Info
@@ -27,7 +27,7 @@ This driver uses SNMP to display information from the device and to set device s
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

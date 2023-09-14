@@ -4,7 +4,7 @@ uid: Connector_help_National_TeleConsultants_CIFS
 
 # National TeleConsultants CIFS
 
-With the **NTC CIFS** driver, you can monitor the state of the **SMB/CIFS mounts**.
+With the **NTC CIFS** connector, you can monitor the state of the **SMB/CIFS mounts**.
 
 ## About
 
@@ -14,7 +14,7 @@ The CIFS driver periodically polls one or more SMB/CIFS mounts to retrieve statu
 
 ### Creation
 
-This driver uses a virtual connection and does not need any user input.
+This connector uses a virtual connection and does not need any user input.
 
 ## Usage
 
@@ -30,5 +30,5 @@ This page provides the result table of all correctly configured **Filters**. The
 
 ## Notes
 
-- The current maximum number of filters should not exceed *200*. However, if this is insufficient, a driver modification can be done to increase this number.
+- The current maximum number of filters should not exceed *200*. However, if this is insufficient, a connector modification can be done to increase this number.
 - Be careful when determining the **Filter** and **Path**: make sure there are no symbolic links or mounted drives that link back to themselves to form an infinite loop. Every Filter has a time-out time of maximum 6 minutes before failing and logging an error.

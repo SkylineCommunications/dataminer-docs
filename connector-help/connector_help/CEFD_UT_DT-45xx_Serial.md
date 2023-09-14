@@ -12,19 +12,19 @@ A **down-converter** can be used for SCPC, DAMA and TDMA, as well as full transp
 
 ## About
 
-This is a generic driver for UT-4500, which uses a **serial** connection. The frequency range, frequency step size and attenuator step size need to be configured in the driver.
+This is a generic connector for UT-4500, which uses a **serial** connection. The frequency range, frequency step size and attenuator step size need to be configured in the connector.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
+| **Range**         | **Description**                                                                                                                                                                                                                                                                                                                                                                                                | **DCF Integration** | **Cassandra Compliant** |
 |--------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
 | 1.0.0.x                  | Initial version.                                                                                                                                                                                                                                                                                                                                                                                               | No                  | No                      |
 | 2.0.0.x **\[SLC Main\]** | Support for all 4505, 4514 and 4518 models. Configuration via interface (Device Specification page): - Frequency range (mandatory, no default) - Frequency step size (default: 125 KHz) - Attenuation step size (default: 0.25 dB) Fixed "packed configuration state" response. Fixed "equipment type" response. Supports a virtual address in bus address to access converter controlled by backup converter. | No                  | No                      |
 | 2.0.1.x                  | Major update on parameter descriptions.                                                                                                                                                                                                                                                                                                                                                                        | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | 5.11                        |
 
@@ -34,7 +34,7 @@ This is a generic driver for UT-4500, which uses a **serial** connection. The fr
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -89,4 +89,4 @@ This page displays a table with all **Status Faults**. It lists stored alarms wi
 
 ### Device Specification
 
-To adapt the driver to different device types (manufacturer models), on this page, you need to manually configure the **Frequency Range**, **Frequency Step Size** and **Attenuator Step Size**.
+To adapt the connector to different device types (manufacturer models), on this page, you need to manually configure the **Frequency Range**, **Frequency Step Size** and **Attenuator Step Size**.

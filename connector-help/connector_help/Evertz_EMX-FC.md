@@ -8,13 +8,13 @@ The **Evertz EMX** Frame Controller provides a unified platform for routing digi
 
 ## About
 
-The **Evertz EMX-FC** driver provides general information about the device and a **Faults Table** where you can enable or disable traps, and check the status of each fault.
+The **Evertz EMX-FC** connector provides general information about the device and a **Faults Table** where you can enable or disable traps, and check the status of each fault.
 
 ### Version Info
 
 | **Range**            | **Key Features**                                 | **Based on** | **System Impact**                      |
 |----------------------|--------------------------------------------------|--------------|----------------------------------------|
-| 1.0.1.x \[Obsolete\] | Full driver QA changing IDs and parameter names. | 1.0.0.1      | \-                                     |
+| 1.0.1.x \[Obsolete\] | Full connector QA changing IDs and parameter names. | 1.0.0.1      | \-                                     |
 | 1.0.2.x \[SLC Main\] | Adds redundant polling.                          | 1.0.1.2      | Added interface for redundant polling. |
 
 ### Product Info
@@ -37,7 +37,7 @@ The **Evertz EMX-FC** driver provides general information about the device and a
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -63,7 +63,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Provides device information, including the **Device Description**, **Device Up Time**, **Device Contact**, **Device Name**, and **Device Location**.
 - **Faults**: Contains the **Faults Table**. The **Name** column of the table lists the index combined with the monitored device, the **Fault** column contains the alarm value, **Status** shows if the alarm is *Enabled* or *Disabled*, and the **Send Trap** column can be used to enable or disable the trap functionality on the device.

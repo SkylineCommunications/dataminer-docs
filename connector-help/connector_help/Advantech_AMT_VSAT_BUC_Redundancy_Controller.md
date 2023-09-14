@@ -4,7 +4,7 @@ uid: Connector_help_Advantech_AMT_VSAT_BUC_Redundancy_Controller
 
 # Advantech AMT VSAT BUC Redundancy Controller
 
-This driver can be used to monitor and control the Advantech AMT VSAT uplink (standalone or in redundancy) and downlink system. The controller must be connected to the uplink and downlink serial M&C port to provide all monitoring and control functions.
+This connector can be used to monitor and control the Advantech AMT VSAT uplink (standalone or in redundancy) and downlink system. The controller must be connected to the uplink and downlink serial M&C port to provide all monitoring and control functions.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver can be used to monitor and control the Advantech AMT VSAT uplink (st
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -59,7 +59,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General:** Displays the default information of the device.
 - **Unit A-C**: Three pages to monitor and control each unit.

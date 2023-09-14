@@ -8,7 +8,7 @@ The **Cisco Monitor+** is an integrated and customizable product used to monitor
 
 ## About
 
-This driver retrieves the configuration of the device and polls the data for all valid components. By default, this data is the Process Information, as well as any group that was implemented and contains data in the response. (Note: .NET Framework 4.5/4.6 is required).
+This connector retrieves the configuration of the device and polls the data for all valid components. By default, this data is the Process Information, as well as any group that was implemented and contains data in the response. (Note: .NET Framework 4.5/4.6 is required).
 
 Implemented data 'groups':
 
@@ -22,14 +22,14 @@ Implemented data 'groups':
 - **Last Build Statistics** with **Compressed Database Sizes** and **Uncompressed Database Sizes**
 - **Fixed Bitrate Info** with **Last Fixed Bitrate Statistics** and **Stack Bitrates**
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                             |
+| **Range** | **Description**                                                                             |
 |------------------|---------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Initial version                                                                             |
 | 2.0.0.x          | Version created to be able to filter the alarms table on a different column Arquiva request |
 
-### Supported firmware versions
+### Product Info
 
 <table>
 <colgroup>
@@ -55,11 +55,11 @@ From this version onwards, the configuration of the device is retrieved, which f
 
 ### In version 1.0.0.1 and 1.0.0.2
 
-In these versions, the driver only consists of an alarm table.
+In these versions, the connector only consists of an alarm table.
 
 ## Installation and configuration
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 **HTTP** **CONNECTION**:
 

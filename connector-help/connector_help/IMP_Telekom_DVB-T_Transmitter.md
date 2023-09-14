@@ -4,21 +4,21 @@ uid: Connector_help_IMP_Telekom_DVB-T_Transmitter
 
 # IMP Telekom DVB-T Transmitter
 
-This driver monitors and configures the **IMP Telekom DVB-T Transmitter** **Unit**.
+This connector monitors and configures the **IMP Telekom DVB-T Transmitter** **Unit**.
 
 ## About
 
 The **IMP Telekom PAP-D** protocol gets and sets the changeover configuration between several transmitters. The protocol uses SNMP (including traps) to retrieve data.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | V3.65                       |
 
@@ -28,7 +28,7 @@ The **IMP Telekom PAP-D** protocol gets and sets the changeover configuration be
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP Connection:**
 

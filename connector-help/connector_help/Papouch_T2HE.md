@@ -4,7 +4,7 @@ uid: Connector_help_Papouch_T2HE
 
 # Papouch T2HE
 
-Depending on the sensor connected to it, **T2HE** is able to measure temperature and humidity, and calculate the dew point. The **Papouch T2HE** driver is an **HTTP** driver that is used to monitor this device.
+Depending on the sensor connected to it, **T2HE** is able to measure temperature and humidity, and calculate the dew point. The **Papouch T2HE** connector is an **HTTP** connector that is used to monitor this device.
 
 ## About
 
@@ -32,7 +32,7 @@ Depending on the sensor connected to it, **T2HE** is able to measure temperature
 
 #### HTTP Main Connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 

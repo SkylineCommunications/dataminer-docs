@@ -6,11 +6,11 @@ uid: Connector_help_Village_Island_VillageFlow
 
 ## About
 
-The **Village** **Island** **VillageFlow** driver is used to monitor the data coming from the VillageFlow Server. The driver uses a serial connection. It will listen to a certain port and will receive the data that will be sent to this port.
+The **Village** **Island** **VillageFlow** connector is used to monitor the data coming from the VillageFlow Server. The connector uses a serial connection. It will listen to a certain port and will receive the data that will be sent to this port.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**                                                                                                                                                                   |
+| **Range** | **Description**                                                                                                                                                                   |
 |------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1.0.0.x          | Initial version                                                                                                                                                                   |
 | 1.1.0.x          | This range is compatible with the VillageFlow software if the DriverVersion attribute in the VF_CONF.xml is set to 6 or higher, if it is set to 5 or lower, use the 1.0.0.x range |
@@ -19,7 +19,7 @@ The **Village** **Island** **VillageFlow** driver is used to monitor the data co
 
 ### Connections
 
-This driver uses a **Serial** connection and needs following user information:
+This connector uses a **Serial** connection and needs following user information:
 
 **SERIAL CONNECTION**:
 

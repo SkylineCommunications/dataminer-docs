@@ -6,7 +6,7 @@ uid: Connector_help_CISCO_D9854
 
 The CISCO D9854 advanced program receiver is designed for satellite content distribution applications requiring DVB-S and DVB-S2 reception capabilities with advanced digital outputs for digital-tier program distribution.
 
-The driver uses SNMP to retrieve data from the CISCO D9854. The driver also allows you to configure certain parameters.
+The connector uses SNMP to retrieve data from the CISCO D9854. The connector also allows you to configure certain parameters.
 
 ## About
 
@@ -34,7 +34,7 @@ The driver uses SNMP to retrieve data from the CISCO D9854. The driver also allo
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -118,7 +118,7 @@ On this page, you can configure the **IP Input Dejitter Algorithm**, **Flow FEC 
 
 ## DataMiner Connectivity Framework
 
-The **1.0.0.x** driver range of the Cisco D9854 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
+The **1.0.0.x** connector range of the Cisco D9854 protocol supports the usage of DCF and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
@@ -137,10 +137,13 @@ When you set the demodulator Rx Frequency (on the Demodulator page) and the acti
 
 If you want to change the value of both Rx Frequency and Local Oscillator, you can do so as follows:
 
-1.  Set the active Local Oscillator to 0.
-2.  Set the Rx Frequency to the desired value.
-    ![2020-12-17 16_18_44-DataMiner - Internet Explorer.png](~/connector-help/images/CISCO_D9854_2020-12-17_16_18_44-DataMiner_-_Internet_Explorer.png)
-3.  Set the active Local Oscillator to the desired value.
+1. Set the active Local Oscillator to 0.
+
+1. Set the Rx Frequency to the desired value.
+
+   ![2020-12-17 16_18_44-DataMiner - Internet Explorer.png](~/connector-help/images/CISCO_D9854_2020-12-17_16_18_44-DataMiner_-_Internet_Explorer.png)
+
+1. Set the active Local Oscillator to the desired value.
 
 In case both Local Oscillator 1 and 2 are in use, you need to set both to 0. Note also that the procedure above only applies when you want to change both values while keeping a valid range, e.g. changing RX Frequency from 3 GHz to 7 GHz while also changing the Local Oscillator from 5 GHz to 8 GHz.
 You can also configure an alternative RF Input to the desired values and then switch the active input over to the new configuration, as depicted below.

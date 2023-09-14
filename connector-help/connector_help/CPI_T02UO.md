@@ -8,7 +8,7 @@ The **CPI T02UO** is a 200 W outdoor TWT amplifier designed for satellite uplink
 
 ## About
 
-This driver communicates with the device using serial commands as described in the manual of the device. It can be used to monitor and control the amplifier.
+This connector communicates with the device using serial commands as described in the manual of the device. It can be used to monitor and control the amplifier.
 
 ### Version Info
 
@@ -34,7 +34,7 @@ This driver communicates with the device using serial commands as described in t
 
 Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -53,7 +53,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: This page contains information about the installed firmware version of the device, timing information on the heater, unit, standby and transmit time, and transmit and inhibit control parameters.
 - **Measurements**: The measurements page contains parameters that indicate the current measurements of the different temperature sensors, the output power and fan control.

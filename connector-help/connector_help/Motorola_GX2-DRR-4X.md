@@ -4,22 +4,22 @@ uid: Connector_help_Motorola_GX2-DRR-4X
 
 # Motorola GX2-DRR-4X
 
-The **Motorola GX2-DRR-4X** driver is an SNMP-based driver used to monitor and configure the **Motorola GX2-DRR-4X**.
+The **Motorola GX2-DRR-4X** connector is an SNMP-based connector used to monitor and configure the **Motorola GX2-DRR-4X**.
 
 ## About
 
-This driver provides a monitoring interface for the **Motorola GX2-DRR-4X** chassis.
+This connector provides a monitoring interface for the **Motorola GX2-DRR-4X** chassis.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | No                      |
 | 2.0.0.x          | DVE focused     | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | B                           |
 

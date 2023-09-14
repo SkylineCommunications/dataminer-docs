@@ -4,11 +4,11 @@ uid: Connector_help_TV2_Norway_Sumo_Monitoring
 
 # TV2 Norway Sumo Monitoring
 
-This driver is a manager driver that retrieves a list of assets and then configures an analyzer device to monitor the assets.
+This connector is a manager connector that retrieves a list of assets and then configures an analyzer device to monitor the assets.
 
 ## About
 
-This driver is used by TV2 Norway to manage the analysis of OTT services. It retrieves a list of assets from the SUMO platform, and determines for each of them whether it has to be analyzed.
+This connector is used by TV2 Norway to manage the analysis of OTT services. It retrieves a list of assets from the SUMO platform, and determines for each of them whether it has to be analyzed.
 
 If an asset has to be analyzed, a command will be sent to the Agama analyzer element to configure the monitoring.
 
@@ -16,7 +16,7 @@ If an asset has to be analyzed, a command will be sent to the Agama analyzer ele
 
 ### Creation
 
-The TV2 Norway Sumo Monotoring protocol is an **HTTP** driver. The **hostname** of the SUMO service has to be configured during creation of the **element**.
+The TV2 Norway Sumo Monotoring protocol is an **HTTP** connector. The **hostname** of the SUMO service has to be configured during creation of the **element**.
 
 **HTTP CONNECTION**:
 

@@ -8,13 +8,13 @@ The **Advantech** **ADAM5017** is an 8-channel analog input module.
 
 ## About
 
-The Advantech ADAM5017 driver monitors and controls an ADAM5017 device. The driver uses serial communication.
+The Advantech ADAM5017 connector monitors and controls an ADAM5017 device. The connector uses serial communication.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a serial connection and needs the following user information:
+This connector uses a serial connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -32,7 +32,3 @@ Two buttons are available:
 
 - **Zero** **Calibration**
 - **Span** **Calibration**
-
-## Notes
-
-N/A

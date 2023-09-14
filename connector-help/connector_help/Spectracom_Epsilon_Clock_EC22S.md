@@ -4,21 +4,21 @@ uid: Connector_help_Spectracom_Epsilon_Clock_EC22S
 
 # Spectracom Epsilon GPS Clock EC22S
 
-This driver is used to monitor and control a **Spectracom Epsilon GPS Clock EC22S**.
+This connector is used to monitor and control a **Spectracom Epsilon GPS Clock EC22S**.
 
 ## About
 
 Epsilon Clocks provide accurate and stable time and frequency signals for your high-performance synchronization application. The unit's architecture is well-suited to transmitter synchronization of digital broadcast signals (DVB-T/T2, T-DMB, DAB or DRM) in Single Frequency Network (SFN) modes: the high port density allows the simultaneous synchronization of many emitters on the same site.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | debian40                    |
 
@@ -28,7 +28,7 @@ Epsilon Clocks provide accurate and stable time and frequency signals for your h
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

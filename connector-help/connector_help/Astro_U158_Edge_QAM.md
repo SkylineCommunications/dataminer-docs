@@ -4,23 +4,23 @@ uid: Connector_help_Astro_U158_Edge_QAM
 
 # Astro U158 Edge QAM
 
-With this driver, it is possible to gather and view information from the device **Astro U158 Edge QAM**, as well as to configure the device.
+With this connector, it is possible to gather and view information from the device **Astro U158 Edge QAM**, as well as to configure the device.
 
 ## About
 
-This driver uses an **HTTP** connection to monitor the Astro U158 Edge QAM device.
+This connector uses an **HTTP** connection to monitor the Astro U158 Edge QAM device.
 
-This driver also contains a **SNMP** interface to receive traps from the device. These traps will automatically update the relevant parameter, generating an alarm if needed.
+This connector also contains an **SNMP** interface to receive traps from the device. These traps will automatically update the relevant parameter, generating an alarm if needed.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 5595                        |
 
@@ -28,13 +28,13 @@ This driver also contains a **SNMP** interface to receive traps from the device.
 
 ### Creation
 
-This driver uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
+This connector uses two interfaces: an HTTP interface to retrieve the data and an SNMP interface to collect the traps.
 
 #### HTTP connection
 
-This driver can communicate directly with the **U158** but it can also be configured to send requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on the communication mode, the HTTP connection must be configured differently:
+This connector can communicate directly with the **U158** but it can also be configured to send requests to the **Astro U100 Controller**, which will then serve as a proxy. Depending on the communication mode, the HTTP connection must be configured differently:
 
-#### A) Communication with U100C as proxy:
+#### A) Communication with U100C as proxy
 
 **SERIAL connection:**
 
@@ -42,7 +42,7 @@ This driver can communicate directly with the **U158** but it can also be config
 - **IP port**: The port of the destination, e.g. *80*.
 - **Bus address**: The IP address of the U158. Also, fill in 'ByPassProxy' to bypass any possible proxy that could block the HTTP communication. Both fields must be separated by a semicolon. For example: *ByPassProxy;10.11.12.13*.
 
-#### B) Direct Communication:
+#### B) Direct Communication
 
 **SERIAL connection:**
 
@@ -78,12 +78,12 @@ Some important parameters are available at the end of the first column:
 
 - **Communication Type**:
 
-- *Direct Communication*: The element sends the requests directly to the Astro module device.
+  - *Direct Communication*: The element sends the requests directly to the Astro module device.
   - *U100C Proxy*: The element sends the requests to the Astro U100 Controller, which will forward them to the Astro module. The controller acts as a proxy.
 
 - **Communication Method**: This parameter is only available in **Direct Communication** mode.
 
-- *Login*: The element logs in to the device for every request (read and write requests).
+  - *Login*: The element logs in to the device for every request (read and write requests).
   - *Anonymous*: The element only logs in to the device for write requests. The device does not log in for read requests.
 
 ### Status
@@ -142,21 +142,27 @@ This page allows you to upload and download config files to the device. You can 
 
 To download a file:
 
-1.  Click **Download**. The following pop-up message will be displayed:
-    ![Download.PNG](~/connector-help/images/Astro_U158_Edge_QAM_Download.PNG)
-2.  Enter the name of the file and click OK. The file will be saved in the following location:
+1. Click **Download**. The following pop-up message will be displayed:
+
+   ![Download.PNG](~/connector-help/images/Astro_U158_Edge_QAM_Download.PNG)
+
+1. Enter the name of the file and click OK. The file will be saved in the following location:
+
     C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 To upload a file:
 
-1.  Click **Upload**. The following pop-up window will be displayed:
-    ![Upload.PNG](~/connector-help/images/Astro_U158_Edge_QAM_Upload.PNG)
-2.  In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.
-    The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
+1. Click **Upload**. The following pop-up window will be displayed:
+
+   ![Upload.PNG](~/connector-help/images/Astro_U158_Edge_QAM_Upload.PNG)
+
+1. In this window, **Module Name** lists all the Astro elements of the same type in the system. **Upload File Name** lists all the files available in the Documents folder of the selected module.
+
+   The file to be uploaded must be located in the following folder: C:\Skyline DataMiner\Documents\\protocol name\>\\element name\>\\file name\>
 
 #### Software update
 
-The driver allows you to upload a firmware archive from the local disk of the DMA:
+The connector allows you to upload a firmware archive from the local disk of the DMA:
 
 ![SoftwareUpdate.PNG](~/connector-help/images/Astro_U158_Edge_QAM_SoftwareUpdate.PNG)
 

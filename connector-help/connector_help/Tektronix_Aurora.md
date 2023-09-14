@@ -4,25 +4,25 @@ uid: Connector_help_Tektronix_Aurora
 
 # Tektronix Aurora
 
-Since Tektronix aquired the Digimetrics Aurora device a new driver named Tektronix Aurora was created.
+Since Tektronix aquired the Digimetrics Aurora device a new connector named Tektronix Aurora was created.
 
 The Tektronix Aurora is a high volume automated, no reference, file-based QC with easy-to-use web client and efficient fault reporting.
 
 ## About
 
-This driver makes it possible to interact with the Aurora web service. Users monitor the status of jobs.
+This connector makes it possible to interact with the Aurora web service. Users monitor the status of jobs.
 
-The driver also retrieves information from the templates, machines, processors and the VUCoreMode.
+The connector also retrieves information from the templates, machines, processors and the VUCoreMode.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version | No                  | No                      |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | 6.3.2.102                   |
 
@@ -32,7 +32,7 @@ The driver also retrieves information from the templates, machines, processors a
 
 #### HTTP Main Connection
 
-- This driver uses an HTTP connection and needs the following user information:
+- This connector uses an HTTP connection and requires the following input during element creation:
 
   SERIAL CONNECTION:
 
@@ -70,7 +70,7 @@ When you click the Windows Login. page button, a pop-up page, the Configuration 
 
 On the Job Contracts page, a table is displayed containing 2 tables, the **Job Contract In Process Table** and the **Job Contracts Completed Table**.
 
-The driver looks for new entries for the **Job Contract In Process Table** every 2 seconds and refreshs it's content every 30 seconds.
+The connector looks for new entries for the **Job Contract In Process Table** every 2 seconds and refreshs it's content every 30 seconds.
 
 The **Job Contract Completed Table** gets updated whenever a Job Contract present in the In Process table reachs 100% Percentage Complete.
 

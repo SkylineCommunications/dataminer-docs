@@ -8,13 +8,13 @@ The **Evertz 160RM** device can interface with a consumer STB using standard con
 
 ## About
 
-This driver communicates with the Evertz 160RM using **SNMP** commands.
+This connector communicates with the Evertz 160RM using **SNMP** commands.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 **SNMP CONNECTION**:
 

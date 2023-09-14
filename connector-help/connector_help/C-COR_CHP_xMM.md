@@ -4,15 +4,15 @@ uid: Connector_help_C-COR_CHP_xMM
 
 # C-COR CHP xMM
 
-The **C-COR CHP xMM** driver is an SNMP-based driver used to monitor the **C-COR CHP xMM.**
+The **C-COR CHP xMM** connector is an SNMP-based connector used to monitor the **C-COR CHP xMM.**
 
 ## About
 
-This driver provides a monitoring interface for the **C-COR CHP xMM** Chassis.
+This connector provides a monitoring interface for the **C-COR CHP xMM** Chassis.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 2.0.0.x          | Boot v001.003               |
 

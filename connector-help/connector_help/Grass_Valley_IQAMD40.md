@@ -4,7 +4,7 @@ uid: Connector_help_Grass_Valley_IQAMD40
 
 # Grass Valley IQAMD40
 
-This driver allows you to set up and manage the IQMIX40 multi-channel video-over-IP transceiver, developed for use within low-latency and high-bandwidth Ethernet IP networks.
+This connector allows you to set up and manage the IQMIX40 multi-channel video-over-IP transceiver, developed for use within low-latency and high-bandwidth Ethernet IP networks.
 
 ## About
 
@@ -35,7 +35,7 @@ This driver allows you to set up and manage the IQMIX40 multi-channel video-over
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -51,7 +51,7 @@ The web interface is only accessible when the client machine has network access 
 
 ## How to Use
 
-The element created with this driver has the following data pages:
+The element created with this connector has the following data pages:
 
 - **General**: Shows the Display, Temperatures and Voltages of the device.
 - **Connection Info:** Shows the status of the connection with the device.

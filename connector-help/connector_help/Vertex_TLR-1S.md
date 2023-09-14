@@ -10,17 +10,17 @@ The Vertex TRL-S1 driver will display information concerning the Vertex TRL-S1 d
 
 The **Vertex TRL-S1** is a **tracking receiver** that provides a proportional DC tracking signal from any beacon frequency in the 950 to 1750MHz band for use with antenna control systems in satellite communications earth stations.
 
-The driver for this device uses **serial** communication.
+The connector for this device uses **serial** communication.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.1.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.1.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The driver for this device uses **serial** communication.
 
 Serial main connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

@@ -8,13 +8,13 @@ The TANDBERG TT4000 range of Transport Stream monitors combine advanced error de
 
 ## About
 
-The Tandberg TT4030 HTTP driver is used to monitor a Tandberg TT4030 device. The information is divided in several categories that are displayed in different pages. The driver uses HTTP to communicate with the device.
+The Tandberg TT4030 HTTP connector is used to monitor a Tandberg TT4030 device. The information is divided in several categories that are displayed in different pages. The connector uses HTTP to communicate with the device.
 
 ## Installation and configuration
 
 ### Creation
 
-This driver uses a **Serial** connection and needs the following user information:
+This connector uses a **Serial** connection and requires the following input during element creation:
 
 **SERIAL CONNECTION**:
 
@@ -44,7 +44,7 @@ The **Normalize CA.** page button opens a pop-up page where, when the **Normaliz
 
 On this page, the **PID** **Info** table can be seen. If PIDs are no longer available, these rows can be removed manually by clicking the **Clear** **PIDs** button. They can also be removed automatically by setting the **Auto Clear PIDs** parameter to *Enabled.*
 
-### Webinterface Page
+### Web Interface Page
 
 Here the user can see the web interface of the device.
 

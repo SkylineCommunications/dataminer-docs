@@ -8,7 +8,7 @@ The **Marlink ESV Controller** keeps track of the position of all vessels, their
 
 ## About
 
-The **Marlink ESV Controller** driver makes it possible to monitor the position of vessels and the speed of their connection with the satellite network.
+The **Marlink ESV Controller** connector makes it possible to monitor the position of vessels and the speed of their connection with the satellite network.
 
 The data comes in through HTTP requests and is parsed by DataMiner. All data in the ESV controller is used in the **Marlink 7 Seas Manager**.
 
@@ -54,4 +54,4 @@ Use the configuration button to specify the database credentials. Afterwards, cl
 
 ## Notes
 
-All data in the ESV Controller is used in the **Marlink 7 Seas Manager**. For this reason, in this driver alarm monitoring and trending are only available for the general parameters.
+All data in the ESV Controller is used in the **Marlink 7 Seas Manager**. For this reason, in this connector alarm monitoring and trending are only available for the general parameters.

@@ -4,7 +4,7 @@ uid: Connector_help_Riedel_Communications_ConnectDuo
 
 # Riedel Communications ConnectDuo
 
-This driver retrieves information from an ISDN & POTS Audio Codec via serial communication and makes it possible to configure certain settings.
+This connector retrieves information from an ISDN & POTS Audio Codec via serial communication and makes it possible to configure certain settings.
 
 ## About
 
@@ -32,7 +32,7 @@ This driver retrieves information from an ISDN & POTS Audio Codec via serial com
 
 #### Serial Main Connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 
@@ -60,7 +60,7 @@ There is no redundancy defined.
 
 ## How to use
 
-The element created with this driver consists of the following data pages:
+The element created with this connector consists of the following data pages:
 
 - **General**: Displays important information such as the Processor Load, Temperature, and Login Status of the device.
 - **Audio**: Displays the Audio Mode, Requested Audio Mode, Audio Decoder Mode and Audio Encoder Mode for line 1 and line 2 of the device.

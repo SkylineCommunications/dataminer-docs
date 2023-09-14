@@ -4,7 +4,7 @@ uid: Connector_help_Generic_XML_File_Reader
 
 # Generic XML File Reader
 
-This driver can be used to read the content of an XML file and also to validate it according to a provided XSD schema.
+This connector can be used to read the content of an XML file and also to validate it according to a provided XSD schema.
 
 ## About
 
@@ -26,7 +26,7 @@ This driver can be used to read the content of an XML file and also to validate 
 
 #### Virtual connection
 
-This driver uses a virtual connection and does not require any input during element creation.
+This connector uses a virtual connection and does not require any input during element creation.
 
 ### Initialization
 

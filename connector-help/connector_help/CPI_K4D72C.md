@@ -34,7 +34,7 @@ The protocol uses the CPI serial protocol in **ASCII mode** with STX/ETX bytes a
 
 #### Serial connection
 
-This driver uses a serial connection and requires the following input during element creation:
+This connector uses a serial connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

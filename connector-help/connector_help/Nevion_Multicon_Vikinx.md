@@ -8,19 +8,19 @@ The Multicon provides fully integrated state-of-the-art element management and s
 
 ## About
 
-A Nevion Multicon system can have multiple Vikinx routers. Each router has a unique 'level' in the system. To get the information of these routers, the main IP of the Multicon system is polled. This driver populates one matrix for a specific router in the system, which can then be used to set the input and output crosspoints in the system.
+A Nevion Multicon system can have multiple Vikinx routers. Each router has a unique 'level' in the system. To get the information of these routers, the main IP of the Multicon system is polled. This connector populates one matrix for a specific router in the system, which can then be used to set the input and output crosspoints in the system.
 
 The router used to populate the matrix is determined by the device address value that is specified during element creation.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Unknown                     |
 
@@ -30,7 +30,7 @@ The router used to populate the matrix is determined by the device address value
 
 #### SNMP Main Connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 

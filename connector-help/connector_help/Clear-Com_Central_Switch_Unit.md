@@ -8,18 +8,18 @@ The CSU is a matrix to enable push-to-talk communications between network operat
 
 ## About
 
-This driver uses a serial connection to communicate with the device.
+This connector uses a serial connection to communicate with the device.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
+| **Range** | **Description**             | **DCF Integration** | **Cassandra Compliant** |
 |------------------|-----------------------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial Version             | No                  | Yes                     |
 | 1.1.0.X          | Driver Review; New Features | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | HCI 2.0                     |
 | 1.1.0.x          | HCI 2.0                     |
@@ -30,7 +30,7 @@ This driver uses a serial connection to communicate with the device.
 
 #### Serial Main Connection
 
-This driver uses a serial-over-IP connection connection and requires the following input during element creation:
+This connector uses a serial-over-IP connection connection and requires the following input during element creation:
 
 SERIAL CONNECTION:
 

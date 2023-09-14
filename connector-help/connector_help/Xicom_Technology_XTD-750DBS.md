@@ -4,7 +4,7 @@ uid: Connector_help_Xicom_Technology_XTD-750DBS
 
 # Xicom Technology XTD-750DBS
 
-The **Xicom Technology XTD-750DBS** driver can be used to display and configure information of the related controller.
+The **Xicom Technology XTD-750DBS** connector can be used to display and configure information of the related controller.
 
 ## About
 

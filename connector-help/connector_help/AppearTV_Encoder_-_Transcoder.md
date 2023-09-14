@@ -4,29 +4,29 @@ uid: Connector_help_AppearTV_Encoder_-_Transcoder
 
 # AppearTV Encoder - Transcoder
 
-Driver for Skyline DataMiner that can be used to configure an AppearTV transcoder module with an automation script or manager driver.
+This connector can be used to configure an AppearTV transcoder module with an automation script or manager connector.
 
 ## About
 
-Only the the transcoder configuration parameters of AppearTV card are implemented in this driver.
+Only the the transcoder configuration parameters of AppearTV card are implemented in this connector.
 
 All communication with the device is done via the HTTP protocol.
 
 Note:
 
 - Individual configuration sets are not implemented. It's only possible to configure all settings at once.
-- This driver is intended to be used in combination with an automation script or a manager driver.
+- This connector is intended to be used in combination with an automation script or a manager connector.
 - The element bus address is used to specify the scope of this element: Slot -\> Block -\> Channel (port)
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | Software version 3.22       |
 
@@ -36,17 +36,17 @@ Note:
 
 #### HTTP Main connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 
-- **IP port**: \[The IP port of the destination. Default: *80*\]
+- **IP port**: The IP port of the destination. Default: *80*.
 
-- **Bus address**: \[semicolon separated value, format: "*bypassproxy;\<slot id\>.\<block id\>.\<port id\>*"\]
+- **Bus address**: Semicolon separated value, format: "*bypassproxy;\<slot id\>.\<block id\>.\<port id\>*"
 
-- If the proxy server has to be bypassed, specify *bypassproxy.*
+  - If the proxy server has to be bypassed, specify *bypassproxy.*
 
   - Scope of the element: *\<slot id\>.\<block id\>.\<port id\>*. Block ID is optional.
 
@@ -89,11 +89,11 @@ Displays the logo insertion configuration.
 
 ### Manager
 
-Contains read/write parameters that can be used by an automation script or manager driver, to get/set the complete configuration of the transcoder in one action.
+Contains read/write parameters that can be used by an automation script or manager connector, to get/set the complete configuration of the transcoder in one action.
 
 The "**Buffer Transcoder XML**" write parameter expects XML data in the same format as the corresponding read parameter.
 
-### Webinterface
+### Web Interface
 
 Displays the web interface of the device. Note that the client machine has to be able to access the device, as otherwise it will not be possible to open the web interface.
 

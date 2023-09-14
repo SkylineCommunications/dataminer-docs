@@ -4,19 +4,19 @@ uid: Connector_help_Generic_Shelter_Access
 
 # Generic Shelter Access
 
-This driver provides a mechanism to create database records every time an operator needs to request access to a specific shelter, allowing users to perform requests and authorizations of requests.
+This connector provides a mechanism to create database records every time an operator needs to request access to a specific shelter, allowing users to perform requests and authorizations of requests.
 
 ## About
 
-This driver is a virtual driver. As such, it does not require any connection to a device.
+This connector is a virtual connector. As such, it does not require any connection to a device.
 
 Users can use the "Request new access" page in order to generate a request to use a shelter. An administrator or supervisor can then approve or reject such a request.
 
 Users can also add shelters to the list of available shelters, using the Shelters Database Table.
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range** | **Description** | **DCF Integration** | **Cassandra Compliant** |
+| Range | Description | DCF Integration | Cassandra Compliant |
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Initial version | No                  | Yes                     |
 
@@ -24,7 +24,7 @@ Users can also add shelters to the list of available shelters, using the Shelter
 
 ### Creation
 
-This driver uses a **virtual connection** and does not require any input during element creation.
+This connector uses a **virtual connection** and does not require any input during element creation.
 
 ## Usage
 

@@ -4,15 +4,15 @@ uid: Connector_help_Inmarsat_Gateway_-_Terminal
 
 # Inmarsat Gateway - Terminal
 
-This driver represents one terminal of the Inmarsat Gateway driver.
+This connector represents one terminal of the Inmarsat Gateway driver.
 
 ## About
 
-This driver is **automatically generated** by the driver Inmarsat Gateway.
+This connector is **automatically generated** by the connector Inmarsat Gateway.
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range** | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------|-----------------------------|
 | 1.0.0.x          | API ICD V2.07               |
 | 1.0.1.x          | API ICD V2.07               |
@@ -21,7 +21,7 @@ This driver is **automatically generated** by the driver Inmarsat Gateway.
 
 ## Installation and configuration
 
-This driver is automatically created by the parent driver Inmarsat Gateway with the corresponding range.
+This connector is automatically created by the parent connector Inmarsat Gateway with the corresponding range.
 
 ## Usage
 
@@ -33,7 +33,7 @@ This is the default page of the **DVE**. It contains general information about t
 
 This page contains all the **location metrics** for the specific terminal.
 
-For the virtual elements, the **Average Speed** and **Heading** are displayed. These are calculated based on the **current** **and** **previous** **latitude** **and** **longitude** coordinates, which the driver receives on a regular basis.
+For the virtual elements, the **Average Speed** and **Heading** are displayed. These are calculated based on the **current** **and** **previous** **latitude** **and** **longitude** coordinates, which the connector receives on a regular basis.
 
 ### Beams
 
@@ -73,4 +73,4 @@ This page contains a table with all the events for the specific terminal.
 
 ### NSD
 
-This page contains three tables with data retrieved via the **SSH** connection (in versions 1.0.0.x to 2.0.0.x of the driver), namely the **Virtual Routing and Forwarding Table**, **IP Interfaces Table** and **NSD Parameters Table**.
+This page contains three tables with data retrieved via the **SSH** connection (in versions 1.0.0.x to 2.0.0.x of the connector), namely the **Virtual Routing and Forwarding Table**, **IP Interfaces Table** and **NSD Parameters Table**.

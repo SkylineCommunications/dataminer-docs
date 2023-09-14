@@ -8,19 +8,19 @@ The Kyrion DR5000 is an integrated receiver decoder dedicated to professional co
 
 ## About
 
-This driver uses **SNMP** to allow the user to monitor the **Ateme Kyrion DR5000** decoder and make changes to the configuration of the device.
+This connector uses **SNMP** to allow the user to monitor the **Ateme Kyrion DR5000** decoder and make changes to the configuration of the device.
 
 ### Version Info
 
 | **Range**            | **Key Features**                                                     | **Based on** | **System Impact**                                                                                         |
 |----------------------|----------------------------------------------------------------------|--------------|-----------------------------------------------------------------------------------------------------------|
 | 1.0.0.x              | Initial version                                                      | \-           | \-                                                                                                        |
-| 2.0.0.x              | Improved driver                                                      | 1.0.0.12     | \-                                                                                                        |
-| 3.0.0.x \[Obsolete\] | Full driver review                                                   | 2.0.0.10     | See "Notes" section below                                                                                 |
+| 2.0.0.x              | Improved connector                                                      | 1.0.0.12     | \-                                                                                                        |
+| 3.0.0.x \[Obsolete\] | Full connector review                                                   | 2.0.0.10     | See "Notes" section below                                                                                 |
 | 3.0.1.x              | Changed descriptions and display keys                                | 3.0.0.24     | \-                                                                                                        |
 | 3.0.2.x \[Obsolete\] | Reviewed DCF implementation                                          | 3.0.0.28     | \-                                                                                                        |
 | 3.0.3.x \[Obsolete\] | Added missing SNMP parameters to Program Stream Table                | 3.0.2.2      | \-                                                                                                        |
-| 3.0.4.x \[SLC Main\] | Fixed IDX of "Audio Output - Decoding Status" table to unique value. | 3.0.3.3      | From version 3.0.4.2 onwards the driver include the changes made on versions from 3.0.0.29 till 3.0.0.37. |
+| 3.0.4.x \[SLC Main\] | Fixed IDX of "Audio Output - Decoding Status" table to unique value. | 3.0.3.3      | From version 3.0.4.2 onwards the connector include the changes made on versions from 3.0.0.29 till 3.0.0.37. |
 | 3.1.0.x              | New firmware; fixed validator errors                                 | 3.0.4.22     | Forward IP Streams Table: Parameter "IP Output" changed to "Type"                                         |
 
 ### Product Info
@@ -55,7 +55,7 @@ This driver uses **SNMP** to allow the user to monitor the **Ateme Kyrion DR5000
 
 #### SNMP main connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -78,7 +78,7 @@ This page displays general information about the device, such as the **Software 
 This page displays the **Preset Table** and **Channel Action** parameters.
 
 From version 3.0.2.2 onwards, there is an **Export/Import** page button. This allows you to export the active configuration of the device in XML format or to import it from a specified location.
-If the export file path field does not end with the *.xml* extension, the driver assumes that only the directory is specified, and the exported file is named as *configuration_active\_\<date\>\_\<time\>*. Otherwise, the exported file path is exactly the one specified in the field.
+If the export file path field does not end with the *.xml* extension, the connector assumes that only the directory is specified, and the exported file is named as *configuration_active\_\<date\>\_\<time\>*. Otherwise, the exported file path is exactly the one specified in the field.
 
 ### RF Input Page
 
@@ -98,7 +98,7 @@ This page displays the ASI **Input Type** and **Interface Settings**.
 
 This page displays the decoding status, including the **Mode**, **Primary Service**, **Secondary Service**, etc.
 
-It also contains a **buffer mechanism** for services that need to be set. This mechanism can be **triggered** **externally** (e.g. via Automation scripts) or from within the driver.
+It also contains a **buffer mechanism** for services that need to be set. This mechanism can be **triggered** **externally** (e.g. via Automation scripts) or from within the connector.
 
 There is a **Program Stream Table** page button that displays all the input program streams configured in the device. This button opens the page **Stream Status**. The table that displays the streams is a static table, and can take a long time to be polled.
 
@@ -113,7 +113,7 @@ This page displays the audio and video status, including the **Codec**, **Profil
 
 This page contains a number of page buttons. Prior to version 3.0.0.18, the page buttons **Ancillary**, **Smpte 2031** and **VBI** are displayed.
 
-From version 3.0.0.18 of the driver onwards, there is an additional **Overlay** page button, which opens a subpage where **DVB Subtitle**, **Teletext** and **CC Service** parameters can be enabled, depending on the mode defined in the **Mode** parameter.
+From version 3.0.0.18 of the connector onwards, there is an additional **Overlay** page button, which opens a subpage where **DVB Subtitle**, **Teletext** and **CC Service** parameters can be enabled, depending on the mode defined in the **Mode** parameter.
 
 ### Conditional Access Page
 
@@ -129,7 +129,7 @@ This page displays values related to the output configuration, such as **SDI**, 
 
 ### Polling Control Page
 
-This page contains a table that allows you to define how fast each table in the driver must be polled.
+This page contains a table that allows you to define how fast each table in the connector must be polled.
 
 ### Web Interface Page
 
@@ -137,11 +137,11 @@ This page displays the web interface of the device. Note that the client machine
 
 ## DataMiner Connectivity Framework
 
-The **3.0.0.x** driver range of the protocol supports the usage of DCF, starting at version **3.0.0.14**, and can only be used on a DMA with **8.5.4** as the minimum version.
+The **3.0.0.x** connector range of the protocol supports the usage of DCF, starting at version **3.0.0.14**, and can only be used on a DMA with **8.5.4** as the minimum version.
 
 DCF can also be implemented through the DataMiner DCF user interface and through DataMiner third-party connectors (for instance a manager).
 
-In range **3.0.2.x** of the driver, DCF has been re-implemented, with a change to the number of available inputs and outputs.
+In range **3.0.2.x** of the connector, DCF has been re-implemented, with a change to the number of available inputs and outputs.
 
 ### Interfaces (3.0.0.x)
 
@@ -212,7 +212,7 @@ Physical fixed interfaces:
 
 ## Notes
 
-The **3.0.0.1** version of this Ateme Kyrion DR5000 driver has been fully reviewed, causing some changes to the number of pages and the names of the pages. Compared to the previous versions, the **General**, **Preset** and **Output** pages remain the same. For the other pages, the following changes were applied:
+The **3.0.0.1** version of this Ateme Kyrion DR5000 connector has been fully reviewed, causing some changes to the number of pages and the names of the pages. Compared to the previous versions, the **General**, **Preset** and **Output** pages remain the same. For the other pages, the following changes were applied:
 
 - For consistency with the web interface, instead of one **Input** page, there are now three input pages, **RF** **Input**, **IP** **Input** and **ASI** **Input**.
 - The **Stream** page is now a subpage that can be accessed via a button on the **Decoding** page.
