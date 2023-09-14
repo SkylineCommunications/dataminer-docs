@@ -228,7 +228,7 @@ Only applicable for parameters of type read.
 ### ssh options
 
 > [!IMPORTANT]
-> Link this parameter via the [Identity](xref:Protocol.PortSettings.SSH.Credentials.Identity) element 
+> Link this parameter via the [Identity](xref:Protocol.PortSettings.SSH.Identity) element 
 > instead of using this **ssh options** option.
 > This option only supports a single ssh connection and only supports port 22.
 
