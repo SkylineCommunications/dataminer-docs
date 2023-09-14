@@ -13,9 +13,6 @@ It is possible to create internal packages on GitHub that are stored in the GitH
 
 This can then be used by other repositories in our SkylineCommunications organization when using the workflows that are provided.
 
-> [!NOTE]
-> Internal NuGet packages on GitHub can not be used on Jenkins.
-
 ### Creating a personal access token
 
 > [!NOTE]
