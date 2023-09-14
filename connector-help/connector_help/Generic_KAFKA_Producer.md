@@ -80,7 +80,7 @@ DataMiner receives the alarm information in the incoming SNMP inform messages/tr
 - **Notification OID**: Needs to match the Custom Bindings Object ID displayed when you click the **More Configurations** page button on the Alarms page. Otherwise, received inform messages/traps will not be processed.
 - The custom bindings table should be filled in.
 
-You can also select the "Send the extra starting ping notification during resend" and "Send the extra ending ping notification during resend" options. For more information refer to the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_3/SNMP/Configuring_an_SNMP_manager_in_DataMiner_Cube.htm).
+You can also select the "Send the extra starting ping notification during resend" and "Send the extra ending ping notification during resend" options. For more information, refer to [Configuring an SNMP manager in DataMiner Cube](xref:Configuring_an_SNMP_manager_in_DataMiner_Cube).
 
 Each message forwarded to the topic contains a key string and a JSON value, where the key is known as the partition key and the value as a JSON of bindings.
 
@@ -95,10 +95,12 @@ On the Alarms page, the following parameters are available:
 - **Pending Alarms Range**: Displays the range of pending alarms to be sent to a non-reachable broker. An internal queue holds pending alarms and resends them once the broker's connection is established. The size of the queue is limited.
 
 - **Bindings Configuration** table: This table lists the inform/trap bindings that will be sent in a JSON-format message to the topic.
+
   Keep in mind that the bindings/OIDs defined or imported must match the bindings/OIDs defined in the SNMP Manager configuration.
+
   The following options are available via the **right-click menu** of the table:
 
-- **Add New Row**: Allows you to add a new row. You will need to specify the OID and the binding name. Because the OIDs present in the binding's discrete option match the binding's SNMP Forwarding configuration, when a new binding name is defined, the corresponding OID is automatically filled in and vice versa.
+  - **Add New Row**: Allows you to add a new row. You will need to specify the OID and the binding name. Because the OIDs present in the binding's discrete option match the binding's SNMP Forwarding configuration, when a new binding name is defined, the corresponding OID is automatically filled in and vice versa.
   - **Delete Selected Row(s)**: Deletes the selected rows.
   - **Clear Table**: Clears the content from the entire table.
   - **Partition Key**: To define a partition key, right-click the binding name in the table and select this option. Multiple binding names can be concatenated. By default, an underscore is used for concatenation.
@@ -171,7 +173,9 @@ It is possible to add parameters from all the elements with the same protocol na
 When you right-click the Parameters Configuration table, the following options are available:
 
 - **Add New Row**: Adds a default row with each cell value set to N/A except the Forwarding Time (with default value 30s), On Change (with default value *If Value Changes*) and Send Data (with default value *Disabled*). To properly set up a row, make sure to define the fields starting from the left-hand side: DataMiner ID first, then Protocol Name, and so on. This is because when you select the DataMiner ID, the discrete options for the Protocol Name are updated with the existing protocols on that DMA. The same occurs when you select a new Protocol Name: the discrete options for the Element Name are also updated.
+
   ![1.svg](/SiteAssets/Driver%20Help/Generic%20KAFKA%20Producer/1.svg)![2.svg](~/connector-help/images/Generic_KAFKA_Producer_2.svg)
+
 - **Enable Selected Row(s)**: The Send Data value will be set to *Enabled*, meaning that the parameter value will be sent to the parameter's topic in a Kafka message.
 - **Disable Selected Row(s)**: The Send Data value will be set to *Disabled*, meaning that the selected parameter values will not be sent to the parameter's topic in a Kafka message.
 - **Delete Selected Row(s)**: Deletes the selected rows.
@@ -189,9 +193,9 @@ This subpage allows you to import a CSV file with parameters into the Parameters
 
 To create a CSV template:
 
-1.  Manually add rows to the Parameters Configuration table.
-2.  Right-click the rows and select Other \> Export table.
-3.  Select to include hidden columns, as there are hidden columns that are required for the import.
+1. Manually add rows to the Parameters Configuration table.
+1. Right-click the rows and select Other \> Export table.
+1. Select to include hidden columns, as there are hidden columns that are required for the import.
 
 You can then use this template to create a file to import. The following parameters on the Import Parameters subpage can be used for this:
 

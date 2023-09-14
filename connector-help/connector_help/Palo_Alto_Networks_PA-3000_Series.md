@@ -4,7 +4,7 @@ uid: Connector_help_Palo_Alto_Networks_PA-3000_Series
 
 # Palo Alto Networks PA-3000 Series
 
-The Palo Alto Networksr PA-3000 series of next-generation firewall appliances comprises the PA-3060, PA-3050 and PA-3020, all of which are targeted at high-speed internet gateway deployments. The PA-3000 series manages network traffic flows using dedicated processing and memory for networking, security, threat prevention and management.
+The Palo Alto Networks PA-3000 series of next-generation firewall appliances comprises the PA-3060, PA-3050 and PA-3020, all of which are targeted at high-speed internet gateway deployments. The PA-3000 series manages network traffic flows using dedicated processing and memory for networking, security, threat prevention and management.
 
 ## About
 
@@ -18,7 +18,7 @@ This driver uses an SNMPv3 connection.
 |------------------|-----------------|---------------------|-------------------------|
 | 1.0.0.x          | Old range (\*). | No                  | Yes                     |
 
-**(\*) NOTE:** Drivers for all Palo Alto Networks firewall products will continue to be developed in the **new 1.0.0.x Palo Alto Networksr Firewall Series range** ([https://dcp.skyline.bexref:Connector_help_Palo_Alto_Networks_Firewall_Series](xref:Connector_help_Palo_Alto_Networks_Firewall_Series)).
+**(\*) NOTE:** Drivers for all Palo Alto Networks firewall products will continue to be developed in the **1.0.0.x [Palo Alto Networks Firewall Series](xref:Connector_help_Palo_Alto_Networks_Firewall_Series) range**.
 
 ### Supported firmware versions
 

@@ -146,15 +146,15 @@ Check if all files mentioned below are in the correct location in the system.
 
 - In the folder "*C:\Skyline DataMiner\Files*", or for versions 1.0.0.17 and higher in the folder "*C:\Skyline DataMiner\ProtocolScripts*":
 
-- omniORB416_vc10_rt.dll
+  - omniORB416_vc10_rt.dll
   - omnithread34_vc10_rt.dll
   - SLDCM Full 2.0.0.X .dll (up to and including version 1.0.0.60)
-    (where X can be found on [DCP\Drivers](/Lists/Drivers/DispForm3.aspx?ID=2048&Source=https%3a//dcp.skyline.be/Lists/Drivers/Drivers.aspx?View%3D%7bD7994BEF-9128-4127-AECD-1DD0CE047163%7d%26FilterField1%3DLinkTitleNoMenu%26FilterValue1%3DCISCO%2520DCM&ContentTypeId=0x010005687A40337134478B1A22AD5188C2F3))
+    (where X can be found in the [DataMiner Catalog](https://catalog.dataminer.services/).
 
 - In the folder "*C:\Skyline DataMiner\ProtocolScripts*"
 
 - CISCO DCM GENERIC CODE 1.0.0.X.dll
-    (Where X can be found on [DCP\Drivers](/Lists/Drivers/DispForm3.aspx?ID=2048&Source=https%3a//dcp.skyline.be/Lists/Drivers/Drivers.aspx?View%3D%7bD7994BEF-9128-4127-AECD-1DD0CE047163%7d%26FilterField1%3DLinkTitleNoMenu%26FilterValue1%3DCISCO%2520DCM&ContentTypeId=0x010005687A40337134478B1A22AD5188C2F3), removed in version 1.0.0.26)
+    (Where X can be found in the [DataMiner Catalog](https://catalog.dataminer.services/)
   - IIOPChannel.dll (since version 1.0.0.25)
   - SL_API_CISCO_D9900_IIOP.NET.dll (For versions 1.0.0.25 to 1.0.0.34 incl.)
   - SL_IIOPNet1910_CiscoDCM_20150326.dll (For versions 1.0.0.35 to 1.0.0.44 incl.)

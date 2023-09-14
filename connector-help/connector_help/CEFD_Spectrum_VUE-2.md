@@ -44,4 +44,4 @@ SERIAL CONNECTION:
 
 ## Usage
 
-On the Spectrum Analyzer page of the element, you can find the spectrum analyzer UI. this allows you to view and configure traces from the device using all DMS Spectrum Analysis features. For more information, refer to the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_4/SpectrumAnalysis/Working_with_spectrum_analyzer_elements.htm%23XREF_82474_36_2_Working_with).
+On the Spectrum Analyzer page of the element, you can find the spectrum analyzer UI. this allows you to view and configure traces from the device using all DMS Spectrum Analysis features. For more information, refer to [Working with spectrum analyzer elements](xref:Working_with_spectrum_analyzer_elements).

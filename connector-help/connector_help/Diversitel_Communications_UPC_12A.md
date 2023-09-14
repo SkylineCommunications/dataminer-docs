@@ -56,17 +56,17 @@ SERIAL CONNECTION:
 
 The element consists of the data pages detailed below.
 
-### General
+### General page
 
 This page contains general information about the device, such as the Status, Antenna Temperature, Mean, Variance, Uplink Attenuation and various angles and coordinates calculated by the device.
 
-### Configuration
+### Configuration page
 
 This page contains all available configuration options. These parameters influence the calibration and internal calculations for the uplink attenuation.
 
 With the **Calibrate** button, you can calibrate the radiometer.
 
-### Gain Units
+### Gain Units page
 
 This page contains the gain table, which has an entry for each address (0-15) of a possible gain unit or individual channel.
 
@@ -77,5 +77,5 @@ When the unit or channel is on, the current gain value can be monitored and a st
 ## Notes
 
 - The driver cannot detect the difference between an unused address and a gain unit that is powered off.
-- The status message could possibly have a different format if a certain gain unit reached its limits. If you notice this, please take a [stream viewer](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_6/logging/Connecting_to_an_element_using_Stream_Viewer.htm%23XREF_41758_43_1_1_Connecting) capture and let us know.
+- The status message could possibly have a different format if a certain gain unit reached its limits. If you notice this, please take a [stream viewer](xref:Connecting_to_an_element_using_Stream_Viewer) capture and let us know.
 - The calibration command is not implemented.

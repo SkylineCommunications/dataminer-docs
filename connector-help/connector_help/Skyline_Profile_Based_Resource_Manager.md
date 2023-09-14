@@ -73,8 +73,6 @@ Note that this will only occur when the *Sync Now* button was pressed or the **A
 
 ## Notes
 
-More info on how to functions can be found in the [DataMiner help](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_4/SRM/Functions_XML_files.htm?rhhlterm=functions&rhsyns=%20#XREF_43440_Uploading_a)
+For more information on functions, see [Functions XML files](xref:Functions_XML_files)
 
 This connector is to be used in SRM environments.
-
-

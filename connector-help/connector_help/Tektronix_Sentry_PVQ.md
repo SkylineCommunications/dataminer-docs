@@ -4,28 +4,28 @@ uid: Connector_help_Tektronix_Sentry_PVQ
 
 # Tektronix Sentry PVQ
 
-The **Tektronix Sentry PVQ** driver is used to display information related to the **Sentry PVQ** device.
+The **Tektronix Sentry PVQ** connector is used to display information related to the **Sentry PVQ** device.
 
 ## About
 
-This driver will display information related to the selected **Sentry PVQ** device. This information and details such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the driver, e.g. the **bitrate**.
+This connector will display information related to the selected **Sentry PVQ** device. This information and details such as Ports, Transport and Services, are available on different pages, described in the "Usage" section of this document. Alarm monitoring and trending are possible for some of the parameters in the connector, e.g. the **bitrate**.
 
-**Note: This driver requires the .Net Framework 4.0**
+**Note: This connector requires the .Net Framework 4.0**
 
-### Ranges of the driver
+### Version Info
 
-| **Driver Range**                                     | **Description**                                                                                                                                            | **DCF Integration** | **Cassandra Compliant** |
-|------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|-------------------------|
-| 1.0.0.x                                              | Initial version.                                                                                                                                           | No                  | Yes                     |
-| 1.1.0.x                                              | New firmware based on 1.0.0.x (see below).                                                                                                                 | No                  | Yes                     |
-| 1.2.0.x                                              | New firmware based on 2.1.0.x (see below).                                                                                                                 | No                  | Yes                     |
-| 1.3.0.x **(existing elements need to be recreated)** | Supports new firmware version 10.0.1.                                                                                                                     | No                  | Yes                     |
-| 1.4.0.x \[obsolete\]                                 | Supports firmware version 10.3. Improved communication with Tektronix Config Manager. Works with the latest version of Tektronix Config Manager (1.1.0.x). | No                  | Yes                     |
-| 1.4.1.x                                              | PID Overview table no longer has duplicate display keys that prevent the correct use of the alarm template.                                                | No                  | Yes                     |
+| Range | Description | DCF Integration | Cassandra Compliant |
+|--|--|--|--|
+| 1.0.0.x | Initial version. | No | Yes |
+| 1.1.0.x | New firmware based on 1.0.0.x (see below). | No | Yes |
+| 1.2.0.x | New firmware based on 2.1.0.x (see below). | No | Yes |
+| 1.3.0.x **(existing elements need to be recreated)** | Supports new firmware version 10.0.1. | No | Yes |
+| 1.4.0.x \[obsolete\] | Supports firmware version 10.3. Improved communication with Tektronix Config Manager. Works with the latest version of Tektronix Config Manager (1.1.0.x). | No | Yes |
+| 1.4.1.x | PID Overview table no longer has duplicate display keys that prevent the correct use of the alarm template. | No | Yes |
 
-### Supported firmware versions
+### Product Info
 
-| **Driver Range**                                     | **Device Firmware Version** |
+| Range | Supported Firmware Version |
 |------------------------------------------------------|-----------------------------|
 | 1.0.0.x                                              | Older versions              |
 | 1.1.0.x                                              | 9.3                         |
@@ -40,7 +40,7 @@ This driver will display information related to the selected **Sentry PVQ** devi
 
 SNMP connection
 
-This driver uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
+This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
 
 SNMP CONNECTION:
 
@@ -55,7 +55,7 @@ SNMP Settings:
 
 #### HTTP connection
 
-This driver uses an HTTP connection and requires the following input during element creation:
+This connector uses an HTTP connection and requires the following input during element creation:
 
 HTTP CONNECTION:
 
@@ -74,7 +74,7 @@ The first time you start a **Tektronix Sentry PVQ** element, you have to enter a
 1. If necessary, change the **Timespan Value**. This setting defines which time slot is used to visualize the data. Range: *1 minute* to *60 minutes*.
 1. **Log on.**
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
 1. Open the web interface.
 1. Select **Configure** \>**Users**.
@@ -92,7 +92,7 @@ The first time you start a **Tektronix Sentry Edge** element, you have to enter 
 1. Enter the **Username** and **Password**.
 1. Log on.
 
-Note that the driver uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
+Note that the connector uses the JSON API, so the username that the element uses to connect to the device must be granted API access rights. To grant these rights:
 
 1. Open the web interface.
 1. Select **Configure** \> **Users**.
@@ -237,7 +237,7 @@ The **Program Template Alert Table**, which displays the **Alert details**, allo
 
 The **Load From File** page button opens a subpage where you can **upload or load** an **exported program template alert**.
 
-From version 1.3.0.3 of the driver onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *true*.
+From version 1.3.0.3 of the connector onwards, the **Use Program Group** option in the **Program Template Alert Table** will be set to *true*.
 
 - To **create** a program template alert:
 
@@ -274,7 +274,7 @@ This page can be used to access the web interface of the device. Note that the c
 
 ## Usage (from 1.4.0.x onwards)
 
-This driver has been synced with the Tektronix Sentry driver (see [https://dcp.skyline.bexref:Connector_help_Tektronix_Sentry](xref:Connector_help_Tektronix_Sentry)), and is identical to that driver, except for the following:
+This connector has been synced with the [Tektronix Sentry](xref:Connector_help_Tektronix_Sentry) connector, and is identical to that connector, except for the following:
 
-- This driver allows alarm monitoring and trending of additional parameters.
+- This connector allows alarm monitoring and trending of additional parameters.
 - The traps functionality is slightly different.

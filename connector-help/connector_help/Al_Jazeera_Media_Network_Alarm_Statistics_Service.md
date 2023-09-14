@@ -22,7 +22,7 @@ This service protocol can be used to create an enhanced service that monitors th
 
 ## Configuration
 
-When you create the service, select the elements that should be included as outlined in the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/services/Adding_a_service.htm).
+When you create the service, select the elements that should be included as outlined under [Adding a service](xref:Adding_a_service).
 
 ## How to use
 

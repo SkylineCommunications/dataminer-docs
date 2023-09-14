@@ -22,7 +22,7 @@ This is an enhanced service protocol that can be used to monitor subscribed elem
 
 ## Configuration
 
-This protocol is intended to be used for services. When you create a service, in the advanced options section, select it as the service protocol. Then select the necessary elements and parameters, as described in the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/services/Adding_a_service.htm).
+This protocol is intended to be used for services. When you create a service, in the advanced options section, select it as the service protocol. Then select the necessary elements and parameters, as described under [Adding a service](xref:Adding_a_service).
 
 The following default protocols and parameters need to be included:
 

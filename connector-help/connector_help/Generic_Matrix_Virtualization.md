@@ -130,13 +130,13 @@ The above can be visualized as follows:
 
 To configure the elements connections:
 
-1.  On the **Settings** page of the element, in the **Input** **Data** table, configure the matrices you want to include in the matrix virtualization. To do so, add or delete rows via the context menu until the table contains the matrices you want to include.
-2.  In the Cube sidebar, go to Apps \> **Element Connections**.
-3.  In the Element Connections app, connect the **Status String (Input Data)** cells from the matrix virtualization with the correct **Status String** parameter of the child matrices. You can add rows by duplicating the Status String (Input Data) row.
-4.  Check in the **Input** **Data** table on the **Settings** page of the element if the **Status String** is displayed. If it is not, close the Element Connections app and open it again to see if the element connection was established correctly.
-5.  Go to the page of the method you want to use and specify the path and file name of the necessary CSV files, as detailed above.
-6.  Select the **Method** at the top of the page.
-7.  On the **Inputs/Outputs** page, check if all inputs and outputs of the virtual matrix are now available. If they are not, check in the element logging to see what went wrong with the CSV import.
+1. On the **Settings** page of the element, in the **Input** **Data** table, configure the matrices you want to include in the matrix virtualization. To do so, add or delete rows via the context menu until the table contains the matrices you want to include.
+1. In the Cube sidebar, go to Apps \> **Element Connections**.
+1. In the Element Connections app, connect the **Status String (Input Data)** cells from the matrix virtualization with the correct **Status String** parameter of the child matrices. You can add rows by duplicating the Status String (Input Data) row.
+1. Check in the **Input** **Data** table on the **Settings** page of the element if the **Status String** is displayed. If it is not, close the Element Connections app and open it again to see if the element connection was established correctly.
+1. Go to the page of the method you want to use and specify the path and file name of the necessary CSV files, as detailed above.
+1. Select the **Method** at the top of the page.
+1. On the **Inputs/Outputs** page, check if all inputs and outputs of the virtual matrix are now available. If they are not, check in the element logging to see what went wrong with the CSV import.
 
 ## How to use range 3.0.0.x
 
@@ -167,7 +167,7 @@ The **Refresh CSV** page button on the Input/Outputs page opens a subpage with t
 Note:
 
 - Refreshing the tables may disrupt the DCF connections.
-- The Refresh from CSV button is only visible for users with Administrator (level 3) [access level](https://docs.dataminer.services/user-guide/Advanced_Functionality/Security/About_DMS_Security/User_rights.html).
+- The Refresh from CSV button is only visible for users with Administrator (level 3) [access level](xref:User_rights).
 
 ### Concatenation
 
@@ -242,7 +242,7 @@ You can instruct the **Generic Matrix Virtualization connector** to not use cert
 
 This can be configured either using element connections or subscriptions.
 
-- **Element Connections**: In the [Element Connections](https://docs.dataminer.services/user-guide/Basic_Functionality/Elements/About_elements/Virtual_elements.html#configuring-virtual-elements-with-the-element-connections-module) module in DataMiner, you will find an entry for the Generic Matrix Virtualization for each row you have added. Link each source matrix (**Status String** parameter) with a row.
+- **Element Connections**: In the [Element Connections](xref:Virtual_elements#virtual-elements-used-for-element-connections) module in DataMiner, you will find an entry for the Generic Matrix Virtualization for each row you have added. Link each source matrix (**Status String** parameter) with a row.
 - **Subscriptions**: When you edit one of the subscription parameters, the parameter **Source Matrix Subscription State** will report ***Not Synced***. When you have configured all subscription parameters in the Source matrix data table (Element Name, Matrix Buffer PID, Max. Inputs, Max. Outputs, Source Table Pid, Destination Table Pid, and Park Input ID) you can click the **Sync** button on the page. This will cause the element to attempt to subscribe on the source matrices. After this configuration, data will be sent to the Generic Matrix Virtualization element, and tables will be filled in with inputs and outputs.
 
 ## How to use range 4.0.0.x
@@ -273,11 +273,11 @@ This page is only relevant if the connector is deployed as the SRM vMatrix solut
 
 ### Matrix Configuration
 
-If you use an [information template](https://docs.dataminer.services/user-guide/Basic_Functionality/Protocols_and_templates/Information_templates.html), you can rename the Label columns. This allows for more flexibility. In the **Label Management** table, you can change the names it should have. By default, this will be taken from the information template. With this table, Router Control can also show the correct descriptions. In addition, the table allows additional restrictions on the Labels columns. You can limit the character size and determine whether duplication is allowed.
+If you use an [information template](xref:Information_templates), you can rename the Label columns. This allows for more flexibility. In the **Label Management** table, you can change the names it should have. By default, this will be taken from the information template. With this table, Router Control can also show the correct descriptions. In addition, the table allows additional restrictions on the Labels columns. You can limit the character size and determine whether duplication is allowed.
 
 The **Routing Preference** indicates whether tie line reuse is preferred, or the shortest possible path should always be used.
 
-Linked to the virtual inputs and virtual outputs are **Actions**. This table contains the possible actions that can be executed when a column value changes. The **Triggers** column represent the column IDs that can trigger the action. These can be multiple IDs separated by a semicolon. The supported columns are Label, Label01, Label02, Label03, Label04, Label05, Label06, Notes, IsEnabled, IsLocked, and ConnectedInput (only for Outputs). In the **Description** column, you should use the same syntax as to execute an Automation script in Visual Overview (See [Linking a shape to an Automation script](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/visio/Linking_a_shape_to_an_Automation_script.htm) in the DataMiner Help). Placeholders are supported in this syntax.
+Linked to the virtual inputs and virtual outputs are **Actions**. This table contains the possible actions that can be executed when a column value changes. The **Triggers** column represent the column IDs that can trigger the action. These can be multiple IDs separated by a semicolon. The supported columns are Label, Label01, Label02, Label03, Label04, Label05, Label06, Notes, IsEnabled, IsLocked, and ConnectedInput (only for Outputs). In the **Description** column, you should use the same syntax as to execute an Automation script in Visual Overview (See [Linking a shape to an Automation script](xref:Linking_a_shape_to_an_Automation_script)). Placeholders are supported in this syntax.
 
 Example: Script:TestScript\|\|TriggerId=\[TRIGGER\];VirtualId=\[ID\];CellValue=\[VALUE\]\|\|\|
 
@@ -300,9 +300,9 @@ DCF reads out and maintains the tie lines. "Check DCF" means that the connector 
 
 Each tie line contains a **validation state**, which indicates if its configuration is still valid. The validation state is updated each time the Generic Matrix Virtualization receives an update message from its underlying DataMiner elements/connectors. When a tie line source or destination no longer exists, the following three actions take place:
 
-1.  The validation state of the tie line is set to *Invalid*.
-2.  The deleted tie line source/destination is removed from the source tables. The remaining destination/source is not transformed to a standard input/output node, but remains of the type tie line.
-3.  The connected input of each virtual output, of which the path includes the broken tie line, is set to *Not Connected*.
+1. The validation state of the tie line is set to *Invalid*.
+1. The deleted tie line source/destination is removed from the source tables. The remaining destination/source is not transformed to a standard input/output node, but remains of the type tie line.
+1. The connected input of each virtual output, of which the path includes the broken tie line, is set to *Not Connected*.
 
 It is important to note that in case the tie line configuration becomes invalid, only the validation column is altered. This means that no further actions are required on the Generic Matrix Virtualization when the configuration on each device is restored. The tie line configuration is still intact. The Generic Matrix Virtualization re-adds the restored tie line source/destination to its source tables. Finally, if the connections within the devices are still in place, the connected input of the virtual outputs will be updated as well.
 

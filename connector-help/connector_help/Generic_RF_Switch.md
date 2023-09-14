@@ -10,10 +10,10 @@ The Generic RF Switch virtual driver can be linked to an IO gateway element.
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                                                                                                                                 | **Based on** | **System Impact** |
-|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|-------------------|
-| 1.0.0.1              | Initial version                                                                                                                                                                                  | \-           | \-                |
-| 1.1.0.x \[SLC Main\] | Send '2' to the write command that allows the contact to send the 'm' command (temporarily close the contact and open it again). Must use driver ILC IO Link Intelligent 96 IO version 1.0.0.10. | \-           | \-                |
+| **Range** | **Key Features** | **Based on** | **System Impact** |
+|--|--|--|--|
+| 1.0.0.1 | Initial version | \- | \- |
+| 1.1.0.x \[SLC Main\] | Send '2' to the write command that allows the contact to send the 'm' command (temporarily close the contact and open it again). Must use driver ILC IO Link Intelligent 96 IO version 1.0.0.10. | \- | \- |
 
 ### System Info
 
@@ -32,7 +32,7 @@ This driver uses a virtual connection and does not require any input during elem
 
 ### Initialization
 
-Configure the element connections in DataMiner Cube in the Element Connections module. More information about this module is available in the [DataMiner Help](https://help.dataminer.services/dataminer/DataMinerUserGuide/part_2/elements/Virtual_elements.htm#XREF_77172_Virtual_elements).
+Configure the element connections in DataMiner Cube in the Element Connections module. For more information, see [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
 
 ## How to use
 

@@ -44,13 +44,13 @@ HTTP CONNECTION:
 
 ### Initialization
 
-In order to use the **Telefonica UDO Ticketing System** connector, you must first upload the **Process Alarm Service** Automation script. For more information on how to do so, see [Importing and exporting Automation scripts](https://docs.dataminer.services/user-guide/Advanced_Modules/Automation_module/Managing_Automation_scripts.html#importing-and-exporting-automation-scripts) in the DataMiner Help.
+In order to use the **Telefonica UDO Ticketing System** connector, you must first upload the **Process Alarm Service** Automation script. For more information on how to do so, see [Importing and exporting Automation scripts](xref:Managing_Automation_scripts#importing-and-exporting-automation-scripts).
 
 When the script has been imported, create a Correlation rule that will execute the Automation script whenever the Ineoquest iVMS generates or clears an alarm related to the video channels. The screenshot below illustrates how to do so.
 
 ![Correlation.jpg](~/connector-help/images/Telefonica_UDO_Ticketing_System_Correlation.jpg)
 
-For more information on the Correlation module, see [DataMiner Correlation](https://docs.dataminer.services/user-guide/Advanced_Modules/Correlation/correlation.html) in the DataMiner Help.
+For more information on the Correlation module, see [DataMiner Correlation](xref:correlation).
 
 ### Redundancy
 

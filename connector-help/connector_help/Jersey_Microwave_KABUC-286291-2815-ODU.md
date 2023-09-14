@@ -54,7 +54,7 @@ SMART SERIAL CONNECTION:
 
 ### Initialization
 
-At the top of the Alarms page, you can find a virtual DataMiner parameter that is intended to monitor the Power Supply Status. This placeholder will show "Not Initialized" by default. To be able to monitor the Power Supply Status, you need to have an active element using the Advantech ADAM IO driver. You then need to link the Power Supply Status parameter to the corresponding DataMiner parameter of the Advantech ADAM IO element. You can do so using the Element Connections module. For more information, refer to the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/elements/Virtual_elements.htm&rhsearch=element%20connections&rhhlterm=element%20connections&rhsyns=%20).
+At the top of the Alarms page, you can find a virtual DataMiner parameter that is intended to monitor the Power Supply Status. This placeholder will show "Not Initialized" by default. To be able to monitor the Power Supply Status, you need to have an active element using the Advantech ADAM IO driver. You then need to link the Power Supply Status parameter to the corresponding DataMiner parameter of the Advantech ADAM IO element. You can do so using the Element Connections module. For more information, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
 
 Other than that, no additional configuration is necessary in a newly created element. The driver will start to poll the factory default switch address (S). Based on the switch status response, the number of connected converters is retrieved. Empty rows (equal to the number of converters) will be filled in in the Outdoor Units Table, with the factory default address in each row (converter 1: A, converter 2: B, etc.). Finally, the converter status polling will start, using the factory default addresses.
 
@@ -88,22 +88,22 @@ On the Settings page, you can **control the switch** and adjust the bus address 
 
 - Switch
 
-- Device Address Change
+  - Device Address Change
   - Extended Indicator Mode
   - Automatic Mode
 
 - Converter
 
-- Device Address Change
+  - Device Address Change
   - Save Parameters (outdoor unit properties that can be adjusted for each unit in the Outdoor Units Table)
 
 **Only use the address configurations when really needed**! Take care when you adjust the bus address in case there are multiple units on the bus, so you do not assign duplicate addresses. To adjust the bus address, follow the steps below:
 
-1.  Select a device.
-2.  Clear the current bus address.
-3.  Go to the General page and wait until "@" shows up as the new address for the device you just cleared.
-4.  Go back to the Settings page, select a new **unique** address and confirm.
-5.  Go back to the General page and wait until the new unique address is assigned.
+1. Select a device.
+1. Clear the current bus address.
+1. Go to the General page and wait until "@" shows up as the new address for the device you just cleared.
+1. Go back to the Settings page, select a new **unique** address and confirm.
+1. Go back to the General page and wait until the new unique address is assigned.
 
 ### Alarms Page
 

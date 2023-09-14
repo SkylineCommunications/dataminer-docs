@@ -10,47 +10,21 @@ This protocol works with the Generic Matrix Virtualization connector and the Gra
 
 ### Version Info
 
-| **Range**            | **Key Features**                                                                             | **Based on** | **System Impact** |
+| Range            | Key Features                                                                             | Based on | System Impact |
 |----------------------|----------------------------------------------------------------------------------------------|--------------|-------------------|
 | 1.0.0.x \[SLC Main\] | \- Routing signals on multiple layers in 1 matrix. - Output path calculation for all layers. | \-           | \-                |
 
 ### Product Info
 
-| **Range** | **Supported Firmware** |
+| Range | Supported Firmware |
 |-----------|------------------------|
 | 1.0.0.x   | \-                     |
 
 ### System Info
 
-<table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-<col style="width: 20%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td><strong>Range</strong></td>
-<td><strong>DCF Integration</strong></td>
-<td><strong>Cassandra Compliant</strong></td>
-<td><strong>Linked Components</strong></td>
-<td><strong>Exported Components</strong></td>
-</tr>
-<tr class="even">
-<td>1.0.0.x</td>
-<td>No</td>
-<td>Yes</td>
-<td><p>Visio drawings:</p>
-<ul>
-<li>Generic vMatrix - RBM Aggregation Matrix - Main</li>
-<li>Generic vMatrix - RBM Aggregation Matrix - RouterControl</li>
-</ul></td>
-<td>-</td>
-</tr>
-</tbody>
-</table>
+| Range | DCF Integration | Cassandra Compliant | Linked Components | Exported Components |
+|--|--|--|--|--|
+| 1.0.0.x | No | Yes | Visio drawings:<br>- Generic vMatrix - RBM Aggregation Matrix - Main<br>Generic vMatrix - RBM Aggregation Matrix - RouterControl | - |
 
 ## Configuration
 
@@ -69,7 +43,7 @@ Two element connections then need to be created:
 - From the **Generic Matrix Virtualization** element, parameter: "Generic Matrix Virtualization - Info", to the **Aggregation matrix**, parameter: "Vmatrix Configuration String (write)".
 - From the **Grass Valley Convergent** element, parameter: "Convergent Layer Status String", to the **Aggregation matrix**, parameter: "Convergent Layer Status String (write)".
 
-For more information on element connections, see [Virtual elements](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/elements/Virtual_elements.htm) in the DataMiner Help.
+For more information on element connections, see [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
 
 ### Redundancy
 

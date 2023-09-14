@@ -44,4 +44,4 @@ There is no redundancy defined.
 
 The parameters on the General page are retrieved via element connections from the [Advantech ADAM6050](xref:Connector_help_Advantech_ADAM6050).
 
-For more information on element connections, see [Virtual elements](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_2/elements/Virtual_elements.htm) in the DataMiner Help.
+For more information on element connections, see [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).

@@ -43,6 +43,6 @@ GPIB CONNECTION:
 
 ## Usage
 
-On the **Spectrum Analyzer** page, you can find the spectrum analyzer user interface. For more information on how to work with this, refer to the [DataMiner Help](https://help.dataminer.services/dataminer/#t=DataMinerUserGuide/part_4/SpectrumAnalysis/Working_with_spectrum_analyzer_elements.htm%23XREF_82474_36_2_Working_with).
+On the **Spectrum Analyzer** page, you can find the spectrum analyzer user interface. For more information on how to work with this, refer to [Working with spectrum analyzer elements](xref:Working_with_spectrum_analyzer_elements).
 
 On the **General** page, you can find device information such as the Manufacturer, Model, Serial Number, Firmware Version and Display Status. The **DMS Spectrum Measurements** toggle button allows you to put the spectrum analyzer in automatic sweep mode.
