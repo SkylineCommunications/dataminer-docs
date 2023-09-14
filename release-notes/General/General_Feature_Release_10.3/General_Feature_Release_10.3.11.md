@@ -49,7 +49,7 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 
 #### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
 

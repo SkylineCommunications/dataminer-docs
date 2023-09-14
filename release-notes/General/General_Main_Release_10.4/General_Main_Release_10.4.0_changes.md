@@ -466,12 +466,6 @@ Some log entries have been rewritten to make them clearer, have been assigned an
 
 Up to now, when a DOM instance was deleted, the associated HistoryChange records were removed one by one. From now on, when a DOM instance is deleted, its HistoryChange records will be deleted in bulk. This will greatly improve overall performance when deleting DOM instances, especially when they are deleted synchronously.
 
-#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
-
-<!-- MR 10.4.0 - FR 10.3.11 -->
-
-Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
-
 #### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
