@@ -807,6 +807,6 @@ In some cases, an error could occur in the IIS web server when redirecting the u
 
 #### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
 
 In a Form component, the DOM button shadows would incorrectly be cut off.

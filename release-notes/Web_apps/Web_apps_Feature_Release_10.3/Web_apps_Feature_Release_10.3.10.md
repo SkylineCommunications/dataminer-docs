@@ -228,3 +228,9 @@ When two *State* components were fed the same query row data and had a column fi
 <!-- MR 10.3.0 [CU8] - FR 10.3.10 -->
 
 Up to now, it would not be possible to migrate a query with only a *start from* node linking to another query with only a *start from* node linking to another query.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.10 [CU0] -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.
