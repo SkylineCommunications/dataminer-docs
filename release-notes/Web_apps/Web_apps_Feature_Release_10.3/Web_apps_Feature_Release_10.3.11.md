@@ -47,6 +47,12 @@ Up to now, on web forms used to create or edit a DOM instance, auto-increment fi
 
 When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
 
+#### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
+
 #### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
