@@ -456,6 +456,14 @@ In order to reduce the package size for the Dashboards app and Low-Code Apps, a 
 
 The legacy Monitoring & Control app (obsolete since DataMiner 10.0.0/10.0.2) is no longer available. If you browse to `http(s)://[DMA]/m`, you will now be redirected to the regular Monitoring app.
 
+#### DataMiner Object Models: Auto-increment fields will no longer be visualized using input boxes [ID_37181]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An `AutoIncrementField` contains a unique value that is automatically incremented each time a DOM instance is created.
+
+Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
+
 #### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
