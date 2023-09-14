@@ -53,6 +53,12 @@ When, on a dashboard, a website was embedded using a Web component, in some case
 
 The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
 
+#### Dashboards app/Low-Code Apps: Query builder would display incorrect date/time values when a custom time zone had been configured [ID_37234]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
+
 #### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
