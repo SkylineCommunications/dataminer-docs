@@ -799,6 +799,12 @@ Up to now, when you had configured a custom time zone, date/time values displaye
 
 When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
 
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
+
 #### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->

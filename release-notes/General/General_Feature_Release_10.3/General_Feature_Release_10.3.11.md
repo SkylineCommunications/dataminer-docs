@@ -172,7 +172,7 @@ When SLLogCollector takes memory dumps, it stores them in a temporary folder bef
 
 #### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
 

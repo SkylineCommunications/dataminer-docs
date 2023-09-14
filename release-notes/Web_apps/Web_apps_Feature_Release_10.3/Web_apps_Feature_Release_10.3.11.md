@@ -76,6 +76,12 @@ For example, when you set a custom time zone in a *Clock* component, the current
 > [!NOTE]
 > This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
 
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
+
 #### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
