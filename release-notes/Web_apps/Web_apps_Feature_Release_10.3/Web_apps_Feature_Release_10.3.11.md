@@ -39,6 +39,12 @@ An `AutoIncrementField` contains a unique value that is automatically incremente
 
 Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
 
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
+
 ### Fixes
 
 #### Dashboards app - Web component: Embedded website would not function correctly [ID_37207]

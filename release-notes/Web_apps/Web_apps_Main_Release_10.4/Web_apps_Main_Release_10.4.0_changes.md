@@ -472,6 +472,12 @@ Up to now, a column resizer would span across the entire height of the column. F
 
 Note that, while you dragging a resizer, its height will be equal to that of the entire column you are resizing.
 
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
+
 ### Fixes
 
 #### Web apps: Problem with external authentication [ID_33405]
