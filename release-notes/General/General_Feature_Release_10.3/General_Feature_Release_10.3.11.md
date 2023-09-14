@@ -30,7 +30,7 @@ uid: General_Feature_Release_10.3.11
 
 #### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
 
