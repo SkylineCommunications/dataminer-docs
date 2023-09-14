@@ -7,9 +7,10 @@ uid: Producing_NuGet
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-Automatic creation and publishing of NuGet packages are supported via the Skyline CI/CD pipelines on Jenkins and on GitHub:
+Automatic creation and publishing of NuGet packages is supported via the Skyline CI/CD pipelines on Jenkins and GitHub:
 
 - [Producing NuGet packages via SLC SE Repository Manager](xref:Producing_NuGet_RepoManager)
+
 - [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub)
 
 > [!TIP]

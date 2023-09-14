@@ -5334,7 +5334,7 @@
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:
-            - name: Producing NuGet packages via Repo Manager
+            - name: Producing NuGet packages via SLC SE Repository Manager
               topicUid: Producing_NuGet_RepoManager
             - name: Producing NuGet packages via GitHub
               topicUid: Producing_NuGet_GitHub

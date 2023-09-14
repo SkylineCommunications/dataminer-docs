@@ -53,40 +53,69 @@ A NuGet with direct communication will circumvent the use of DataMiner processes
 
 We try to solve some of these limitations by writing middleware packages that bridge the QAction with the external communication package or technology. For more information, go to [Communication middleware](xref:Nuget_Communication_Middleware).
 
-## Access in Visual Studio towards GitHub NuGet registry
+## Accessing GitHub NuGet registry in Visual Studio
 
-### Step 0: Create Personal Access Token
+### Step 1: Creating a personal access token
 
 > [!NOTE]
-> This step isn't required if you already created a token to create packages.
-> See [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub).
+> If you have already created a token to create packages, you can immediately proceed to step 2. See [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub).
 
-First off you need to make a Personal Access Token (PAT). This will enable you to read from the NuGet registry. More information on how to create a PAT can be found here: [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+To access the GitHub NuGet registry, you need a personal access token (PAT). Follow these steps:
 
-Set the expiration to *No expiration*. You can let it expire, but then you'll need to more frequently update this locally and on your repositories.
+1. Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create a PAT.
 
-For the scopes select:
+   - **Expiration**: Choose the *No expiration* default option.
 
-- *read:packages*
+     > [!NOTE]
+     > You can choose to set an expiration date for your token. However, this will require you to update the token more frequently on your local machine and repositories.
 
-Click *Generate token* at the bottom and make sure to copy the token as you are unable to see it again afterwards!
+   - **Scope**: Select the *read:packages* scope.
 
-### Step 1: Configure Visual Studio to see the GitHub packages
+1. Click *Generate token* in the lower left corner.
 
-Open Visual Studio and go to *Tools* > *NuGet Package Manager* > *Package Manager Settings*. This will open the Options window.
+1. Copy your personal access token. You will not be able to see it again afterwards.
 
-In the *Package Sources* tab you need to add a new package source. Click the green plus sign to add a new entry. In the textboxes below you can fill in a *Name* (free to choose) and for the *Source* use `https://nuget.pkg.github.com/SkylineCommunications/index.json`. Click the Update button to make sure that the entry is properly saved.
+### Step 2: Configuring Visual Studio for GitHub packages
 
-### Step 2: Fill in credentials
+1. Open Visual Studio and go to *Tools > NuGet Package Manager > Package Manager Settings* to access the *Options* pop-up window.
 
-The easiest way to handle this is by trying to add a package to a project and selecting the new package source. A popup will appear to ask for credentials. For the username, use your GitHub username and for the password the PAT token. Select the 'remember password' so that you don't have the fill it in each time.
+1. Select *Package Sources* from the dropdown list on the left.
 
-#### Edit credentials
+1. In the *Package Sources* tab, click the green plus icon in the top-right corner to add a new package source.
 
-In case you use an expiring token or you entered a wrong value, you can go to the Windows Credentials in the *Control Panel* > *User Accounts* > *Credential Manager*.
+   - **Name**: Choose a name for your package source.
 
-This shows a list with all the credentials. There is a difference between Visual Studio 2019 & 2022, but in principle they are the same.
+   - **Source**: Enter `https://nuget.pkg.github.com/SkylineCommunications/index.json`.
 
-For Visual Studio 2019, you'll find the record under the *Generic Credentials* > *VSCredentials_nuget.pkg.github.com*.
+1. Click *Update* to save the entry.
 
-For Visual Studio 2022, you'll find the record under the *Windows Credentials* > *nuget.pkg.github.com*.
+### Step 3: Providing credentials
+
+To handle the credentials, follow these steps:
+
+1. When adding a package to a project, select the package source created in step 2.
+
+1. In the pop-up window, provide the following credentials:
+
+   - **Username**: Enter your GitHub username.
+
+   - **Password**: Enter your personal access token.
+
+     > [!NOTE]
+     > Select *remember password* to avoid entering your PAT each time.
+
+#### Editing credentials
+
+In case you are using a token that has an expiration date or if you entered the wrong value, you can edit the credentials:
+
+1. Navigate to *Control Panel > User Accounts > Credential Manager* and select *Windows Credentials* to access a list of all credentials.
+
+   A distinction is made between Visual Studio 2019 and 2022, although they share the same fundamental principles.
+
+   - Visual Studio 2019: *Generic Credentials > VSCredentials_nuget.pkg.github.com*
+
+   - Visual Studio 2022: *Windows Credentials > nuget.pkg.github.com*
+
+1. Select the credentials you want to edit and click *Edit* in the lower left corner.
+
+1. Update the username and/or password, and click *Save*.

@@ -16,35 +16,42 @@ This can then be used by other repositories in our SkylineCommunications organiz
 > [!NOTE]
 > Internal NuGet packages on GitHub can not be used on Jenkins.
 
-### Step 0: Create Personal Access Token
+### Creating a personal access token
 
 > [!NOTE]
-> If you have already created a token for reading the packages, you can adapt that token if you want.
-> See [Consuming NuGet packages](xref:Consuming_NuGet).
+> If you have already created a token for reading packages, you can optionally modify it. See [Consuming NuGet packages](xref:Consuming_NuGet).
 
-First off you need to make a Personal Access Token (PAT). This will enable you to read/write from/to the NuGet registry. More information on how to create a PAT can be found here: [Creating a personal access token (classic)](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic)
+To access the GitHub NuGet registry, you need a personal access token (PAT). Follow these steps:
 
-Set the expiration to *No expiration*. You can let it expire, but then you'll need to more frequently update this locally and on your repositories.
+1. Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-personal-access-token-classic) to create a PAT.
 
-For the scopes select:
+   - **Expiration**: Choose the *No expiration* default option.
 
-- *write:packages*
-- *delete:packages*
+     > [!NOTE]
+     > You can choose to set an expiration date for your token. However, this will require you to update the token more frequently on your local machine and repositories.
 
-You will see that the *repo* scope is automatically selected as well.
+   - **Scope**: Select the *write:packages* and *delete:packages* scopes. The *repo* scope should be selected by default as well.
 
-Click *Generate token* at the bottom and make sure to copy the token as you are unable to see it again afterwards!
+1. Click *Generate token* in the lower left corner.
+
+1. Copy your personal access token. You will not be able to see it again afterwards.
 
 ### Publishing an internal NuGet package
 
-#### Step 1: GitHub Workflow
+#### Editing the GitHub Workflow
 
-Instead of taking the regular Github workflow for NuGet solutions, use the one for Internal NuGet solutions. Add a secret `NUGETAPIKEY_GITHUB` with the PAT token as value.
+Instead of using the regular GitHub workflow for NuGet solutions, use the one designed for internal NuGet solutions.
 
-#### Step 2: Create a tag
+Follow the instructions in [the official GitHub Docs](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions) to add a new secret:
 
-After creating the tag and running the workflow you'll find your package on [GitHub Packages](https://github.com/orgs/SkylineCommunications/packages).
+- **Name**: Enter `NUGETAPIKEY_GITHUB`.
 
-If you didn't specify a repository url in the csproj file, then the package isn't linked with the repository. You can link it by following the steps explained [here](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package#connecting-a-repository-to-an-organization-scoped-package-on-github).
+- **Secret**: Enter your personal access token.
 
-This will link the repository and showcasing the Readme file, the contributors, etc. On the repository you'll also see at the right the package that is released.
+#### Creating a tag
+
+After creating the tag and running the workflow, you can find your package on the *Packages* page on [GitHub](https://github.com/orgs/SkylineCommunications/packages).
+
+If you did not specify a repository URL in the csproj file, the package will not be linked with the repository. You can establish this link by following the steps explained [in the official GitHub Docs](https://docs.github.com/en/packages/learn-github-packages/connecting-a-repository-to-a-package#connecting-a-repository-to-an-organization-scoped-package-on-github).
+
+This will link the repository and showcase the *README.md* file, contributors, and more. On the repository's right-hand side, you will also see the released packages.
