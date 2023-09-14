@@ -798,3 +798,9 @@ When a GQI query retrieved logger table data from an Elasticsearch database, the
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 In some cases, an error could occur in the IIS web server when redirecting the user to the login page.
+
+#### Low-Code Apps - Form component: DOM button shadows would be cut off [ID_37348]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In a Form component, the DOM button shadows would incorrectly be cut off.
