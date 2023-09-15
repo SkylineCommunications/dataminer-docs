@@ -4,37 +4,54 @@ uid: TutorialStepper
 
 # Using the stepper component
 
-In this tutorial, you'll learn how to add and configure a stepper component in your dashboard or low-code app.
+In this tutorial, you'll learn how to add and configure a stepper component in your dashboard or low-code app. This tutorial shows the usage of the stepper component to help with creating and managing incidents and their different states.
 
 ## Overview
 
-- [Step 1: Adding the component](#step-1-adding-the-component)
-- [Step 2: Adding the data](#step-2-adding-the-data)
-- [Step 3: Choosing a template](#step-3-choosing-a-template)
+- [Step 1: Setting up the data](#step-1-setting-up-the-data)
+- [Step 2: Creating the components](#step-2-creating-the-components)
+- [Step 3: Adding the data](#step-3-adding-the-data)
+- [Step 4: Adding a save action](#step-4-adding-a-save-action)
+- [Step 5: Styling the stepper](#step-5-styling-the-stepper)
 
-## Step 1: Adding the component
+## Step 1: Setting up the data
 
-The first step is adding the component to your dashboard or low-code app. In the side panel containing all the visualizations, you'll find the stepper under the 'General' category. From there, you can just drag and drop it onto your dashboard.
+Before you can begin using the stepper component, you'll need some data to visualize. To get some basic data for this tutorial, you can deploy [this package](https://catalog.dataminer.services/catalog/4383) from the catalog. The package will create an 'Incident' [DOM definition](https://docs.dataminer.services/user-guide/Advanced_Modules/DOM/DOM_objects/DomDefinition.html) and some [DOM instances](https://docs.dataminer.services/user-guide/Advanced_Modules/DOM/DOM_objects/DomInstance.html) using it.
 
-![Stepper icon](~/user-guide/images/StepperIcon.png)
+## Step 2: Creating the components
 
-## Step 2: Adding the data
+Now that there is some data to visualize, we can create the app to do so. Start with [creating a new application](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Low_Code_Apps/Creating_custom_apps.html). On the initial page of this application, you can add a stepper, a form and a table component. All of these components can be found in the side panel containing the visualizations. The stepper and form components are located under the 'General category', the table in the 'Tables' category. From there, you can just drag and drop them onto your dashboard.
 
-Data can be added to the component via a [data feed](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Dashboards_app/Creating_and_configuring_dashboards/Configuring_dashboard_components.html#applying-a-data-feed). The component can receive 2 types of data: a stateful DOM definition (only in low-code apps) or a stateful DOM instance.
+![Components](~/user-guide/images/StepperComponents.png)
 
-In case of a DOM definition, the component shows the happy path of the definition. This is the sequence of states an instance of that definition passes through when it follows the normal flow.
+## Step 3: Adding the data
 
-In case of a DOM instance, the component shows the history of states the instance has already been in and, if necessary, supplements this with the rest of the happy path based on the current state. This happy path can be different from the happy path of the definition, as it starts from the current state of the instance and not the initial state of the definition.
+Data can be added to components via a [data feed](https://docs.dataminer.services/user-guide/Advanced_Modules/Dashboards_and_Low_Code_Apps/Dashboards_app/Creating_and_configuring_dashboards/Configuring_dashboard_components.html#applying-a-data-feed). Each of the components on our page has to receive some data:
 
-## Step 3: Choosing a template
+- Add the DOM definition to the stepper component and the form component.
+- Create a simple query to fetch all Object Manager Instances of the DOM definition.
+- Link the 'Object manager instances' feed from the table component to both the stepper and the form component.
 
-Every stepper component has the same default template.
+![Components with their data](~/user-guide/images/StepperData.png)
 
-![Default style](~/user-guide/images/StepperDefaultStyle.png)
+## Step 4: Adding a save action
 
-You have the option to change the template using the appearance setting in the layout tab. You can pick from a list of 13 presets.
-![Default style](~/user-guide/images/StepperAppearanceCollapsed.png)
+The last step to complete our simple app is to add a header bar with a save button to save the changes to the incidents. Enable the header bar for the page and add a button to it. Then a chain of 3 actions can be added to the 'On click' event of the button:
 
-![Default style](~/user-guide/images/StepperAppearance.png)
+1. Save the current changes of the form component.
+1. Fetch the data in the table component.
+1. Select the updated incident in the table component.
 
-![Default style](~/user-guide/images/StepperArrowStyle.png)
+![Action configuration](~/user-guide/images/StepperActions.png)
+
+## Step 5: Styling the stepper
+
+Every stepper component has the same default template. You have the option to change the template using the appearance setting in the layout tab. You can pick from a list of 13 presets that we have provided.
+
+![Appearance presets](~/user-guide/images/StepperAppearance.png)
+
+## Using the low-code app
+
+Now that everything is configured, the app can be published and used. New incidents can be created using the form component and the save button in the header bar. Existing incidents can be inspected and updated by selecting them in the table component at the bottom.
+
+![Application usage](~/user-guide/images/StepperApp.gif)
