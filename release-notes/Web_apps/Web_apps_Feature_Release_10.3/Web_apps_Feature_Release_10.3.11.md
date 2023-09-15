@@ -62,6 +62,13 @@ The optimization applies when the following conditions are met:
 
 In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
 
+#### Dashboards app/Low-Code Apps - Stepper component: DOM instances without history will now default to the happy path [ID_37233]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+A DOM instance without history will now default to the happy path, i.e. the path that illustrates the states an instance would undergo following the standard workflow.
+
 #### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
