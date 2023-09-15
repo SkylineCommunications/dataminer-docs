@@ -108,7 +108,7 @@ When a GQI query retrieved logger table data from an Elasticsearch database, the
 <!-- MR 10.4.0 - FR 10.3.11 -->
 <!-- Not added to MR 10.4.0 -->
 
-Up to now, the *Stepper* component was not able to handle asynchronous saving of DOM instance history records. In some cases, the DOM instance would advance to the next state before the new history entry was saved.
+Up to now, the *Stepper* component was not able to handle asynchronous saving of DOM instance history records. While saving, in some cases, it would retrieve the history records of the DOM instance before the latest records had been added.
 
 #### Dashboards app/Low-Code Apps: Stepper component would apply an incorrect theme color [ID_37263]
 
