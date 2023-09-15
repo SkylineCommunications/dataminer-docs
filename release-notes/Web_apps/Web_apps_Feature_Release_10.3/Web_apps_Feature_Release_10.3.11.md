@@ -16,13 +16,34 @@ uid: Web_apps_Feature_Release_10.3.11
 
 ## New features
 
-*No new features have been added to this release yet.*
+#### GQI: Resources data source now allows filtering by resource pool ID or booking ID [ID_36970]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The *Resources* data source now allows you to filter resources by resource pool ID or booking ID.
+
+> [!NOTE]
+>
+> - The *Resources* data source is only available on systems with a *ResourceManager* license and/or an *IDP* license.
+> - Currently, the *Resources* data source still requires the *GenericInterface* [soft-launch option](xref:SoftLaunchOptions).
 
 ## Changes
 
 ### Enhancements
 
-*No enhancements have been added to this release yet.*
+#### DataMiner Object Models: Auto-increment fields will no longer be visualized using input boxes [ID_37181]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+An `AutoIncrementField` contains a unique value that is automatically incremented each time a DOM instance is created.
+
+Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
+
+#### Dashboards app/Low-Code Apps - Visual Overview component: Initial visual overview data will now be retrieved asynchronously [ID_37341]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a dashboard containing Visual Overview components would retrieve the initial visual overview data synchronously. From now on, the initial visual overview data will be retrieved asynchronously.
 
 ### Fixes
 
@@ -31,6 +52,18 @@ uid: Web_apps_Feature_Release_10.3.11
 <!-- MR 10.4.0 - FR 10.3.11 -->
 
 When, on a dashboard, a website was embedded using a Web component, in some cases, the embedded website would not function correctly.
+
+#### Dashboards app/Low-Code Apps: Initial selection of a component would not be applied when the query was replaced [ID_37230]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+The initial selection of a table, state or timeline component would incorrectly not be applied when the query of the component was replaced by another one.
+
+#### Dashboards app/Low-Code Apps: Query builder would display incorrect date/time values when a custom time zone had been configured [ID_37234]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, when you had configured a custom time zone, date/time values displayed in the query builder (fed through a time range component) would be incorrect.
 
 #### GQI: Problem when retrieving logger table data from an Elasticsearch database [ID_37251]
 
@@ -48,6 +81,12 @@ For example, when you set a custom time zone in a *Clock* component, the current
 
 > [!NOTE]
 > This problem would mostly occur when using a time zone that no longer observed daylight saving time (e.g. Altai Standard Time).
+
+#### Monitoring app: Casing problem when using NavigatePage [ID_37279]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When, in the *Monitoring* app, a visual overview page was opened using a shape data field of type *NavigatePage*, the value of this field was case sensitive. When the casing of the value was different from the casing of the page name, the page would not open. From now on, the casing of the value and that of the page name will be disregarded.
 
 #### Problem with the IIS web server when redirecting the user to the login page [ID_37288]
 

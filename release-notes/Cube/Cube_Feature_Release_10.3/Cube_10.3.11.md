@@ -26,6 +26,12 @@ uid: Cube_Feature_Release_10.3.11
 
 ### Fixes
 
+#### Trending: Problem when editing a trend pattern on a graph other than the one on which the pattern was created [ID_37191]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When you edited a trend pattern on a trend graph, up to now, the trend data on the graph on which the pattern was created would incorrectly be used instead. From now on, the trend data in the selected part of the graph will be used.
+
 #### Alarm Console : Problem when a correlation/incident alarm got cleared [ID_37231]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->

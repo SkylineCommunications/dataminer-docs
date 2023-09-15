@@ -30,7 +30,7 @@ uid: General_Feature_Release_10.3.11
 
 #### Cassandra Cluster Migrator is now able to resume a migration that was in progress when a DMA was stopped [ID_35199]
 
-<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When a DataMiner Agent is deliberately stopped or stops working due to an error while a Cassandra Cluster migration is in progress, it will now be possible to resume that migration for certain storages instead of having to start it from scratch again.
 
@@ -47,6 +47,12 @@ To resume a migration after restarting all DMAs in your DataMiner System, do the
 > - When a migration is resumed, the UI does not know how many rows were already migrated. Therefore, when a migration is resumed, it will erroneously display that 0 rows have been migrated so far.
 > - When a DMA is initialized, a file named *SavedState.xml* will be created in the `C:\Skyline DataMiner\Database` folder. *SLCCMigrator.exe* will use this file to determine the point from which a migration has to be resumed.
 
+#### Service & Resource Management: Enhanced performance when enabling and disabling function DVEs [ID_37030]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+Because of a number of enhancements, overall performance has increased when enabling and disabling function DVEs.
+
 #### Cassandra Cluster: IP addresses will no longer be added and synchronized automatically [ID_37154]
 
 <!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
@@ -55,9 +61,18 @@ Up to now, for the *CassandraCluster* database type, the IP addresses of the Cas
 
 Also, in case of a Failover setup, the above-mentioned list of IP addresses will no longer be automatically synchronized to prevent re-ordering.
 
-#### Security enhancements [ID_37267]
+#### DataMiner.xml: objectId attribute of AzureAD element will now be considered optional [ID_37162]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+Up to now, a run-time error would be thrown when the `<AzureAD>` element in the *DataMiner.xml* file did not contain an `objectId` attribute.
+
+This `objectId` attribute will now be considered optional. Hence, no run-time error will be thrown anymore when it has not been specified.
+
+#### Security enhancements [ID_37267] [ID_37291]
 
 <!-- 37267: MR 10.4.0 - FR 10.3.11 -->
+<!-- 37291: MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 A number of security enhancements have been made.
 
@@ -124,6 +139,12 @@ When a view or an element was deleted on the DMA before a synchronization was pe
 
 In some cases, SLElement could read and write to the same memory blocks on different threads, causing a serialized parameter update to get into a corrupt state.
 
+#### DataMiner.xml: Entire LDAP section could get removed when settings were updated with values containing illegal XML characters [ID_37235]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+When settings inside the `<LDAP>` element of the *DataMiner.xml* file were updated with values that contained illegal XML characters, the entire `<LDAP>` element would be removed from the file.
+
 #### MessageHandler method in SLHelperTypes.SLHelper would incorrectly try to serialize exceptions that could not be serialize [ID_37238]
 
 <!-- MR 10.4.0 - FR 10.3.11 -->
@@ -150,8 +171,20 @@ In some cases, when function DVEs were being cleaned up while a resource swap oc
 
 When SLLogCollector takes memory dumps, it stores them in a temporary folder before copying them to the correct location. In some cases, a parsing problem would cause some dumps to not get copied over to the correct location.
 
+#### Problem with SLNet due to unhandled MessageBroker exceptions in SLHelper [ID_37258]
+
+<!-- MR 10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in SLNet due to unhandled MessageBroker exceptions in SLHelper.
+
 #### DataMiner backup: DBConfiguration.xml file would not be included in backups [ID_37296]
 
 <!-- 10.2.0 [CU20]/MR 10.3.0 [CU8] - FR 10.3.11 -->
 
 When you took a DataMiner backup either via Cube or via the Taskbar Utility, the *DBConfiguration.xml* file would incorrectly not be included in the backup.
+
+#### SLAnalytics: Problem due to some features not starting up correctly [ID_37321]
+
+<!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
+
+An error could occur in the SLAnalytics process due to some features not starting up correctly.

@@ -29,7 +29,7 @@ See [Installing DataMiner Integration Studio](xref:Installing_and_configuring_th
 > [!IMPORTANT]
 > Dev Packs are suggested to be installed with PackageReferences. DIS was redesigned to work with PackageReferences and be future-proof.
 >
-> If packages.config is used, you may see incorrect dLLImports (protocols) or references (Automation scripts) when asking DIS to compile the results.
+> If packages.config is used, you may see incorrect dllImports (protocols) or references (Automation scripts) when asking DIS to compile the results.
 >
 > For more information on how to migrate from packages.config to PackageReferences, see [docs.microsoft.com](https://docs.microsoft.com/en-us/nuget/consume-packages/migrate-packages-config-to-package-reference).
 
