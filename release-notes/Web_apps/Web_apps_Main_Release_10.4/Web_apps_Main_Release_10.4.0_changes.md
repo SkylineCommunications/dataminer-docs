@@ -464,6 +464,19 @@ An `AutoIncrementField` contains a unique value that is automatically incremente
 
 Up to now, on web forms used to create or edit a DOM instance, auto-increment fields were incorrectly visualized using an input box. From now on, on web forms used to create a DOM instance, these fields will no longer be visualized, and on web form used to edit a DOM instance, these fields will be visualized as read-only fields.
 
+#### DataMiner Object Models: Enhanced performance when processing GQI count aggregation queries [ID_37187]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+
+In GQI, up to now, when you applied an aggregation node of type *count* to a query starting from *Object manager instances* (DOM instances), all objects would be retrieved from the database. From now on, count operations will be sent to the database. This will significantly improve the performance of this kind of GQI queries.
+
+The optimization applies when the following conditions are met:
+
+- The GQI query starts with *Object manager instances*.
+- Only one aggregation node is applied to column *ID* with method *COUNT*.
+
+In all other cases (e.g. multiple aggregation nodes, grouping, different columns), all objects will still be retrieved from the database.
+
 #### Dashboards app/Low-Code Apps - Table component: Height of a column resizer has been reduced to that of the column header [ID_37226]
 
 <!-- MR 10.4.0 - FR 10.3.10 -->
