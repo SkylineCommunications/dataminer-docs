@@ -103,6 +103,13 @@ The text will take up as much horizontal and vertical space as possible, and any
 
 When a GQI query retrieved logger table data from an Elasticsearch database, the row keys would be filled in incorrectly. As a result, not all rows would have a unique key.
 
+#### Dashboards app/Low-Code Apps: Stepper component would be unable to handle asynchronous saving of DOM instance history records [ID_37252]
+
+<!-- MR 10.4.0 - FR 10.3.11 -->
+<!-- Not added to MR 10.4.0 -->
+
+Up to now, the *Stepper* component was not able to handle asynchronous saving of DOM instance history records. In some cases, the DOM instance would advance to the next state before the new history entry was saved.
+
 #### Dashboards app/Low-Code Apps: Stepper component would apply an incorrect theme color [ID_37263]
 
 <!-- MR 10.2.0 [CU20]/10.3.0 [CU8] - FR 10.3.11 -->
