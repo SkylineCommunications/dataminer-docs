@@ -75,7 +75,6 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
 - **Last Successful CMTS Poll**: Calculated. The date and time of the last successful polling cycle based on Status, Last Registration Time, and System ID returning valid data.
 
-
 ## Subscriber
 
 - **IPv4 Address**: Direct value. The IPV4 address of the cable modem.
@@ -100,11 +99,11 @@ These parameters are displayed for the Cable Modem level in the I-DOCSIS dashboa
 
   The EPM engine makes this association via import operation.
 
-- **Node Name**: Direct value. The Node device associated with the cable modem.
+- **Node Name**: Direct value. The node device associated with the cable modem.
 
   The EPM engine makes this association via import operation.
 
-- **Amplifier Name**: Direct value. The Amplifier device associated with the cable modem.
+- **Amplifier Name**: Direct value. The amplifier device associated with the cable modem.
 
   The EPM engine makes this association via import operation.
 
