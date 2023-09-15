@@ -22,9 +22,9 @@ To configure the component:
    - When a DOM instance is applied, this will be used to display the current state, preceded by the states the instance has traversed until its current state, and followed by the future states it will go through if it follows the normal flow.
 
      > [!NOTE]
-     > Not all DOM instances keep a history of the states they traversed, this behaviour is decided by the module. When an instance has no history, the path from the first state to the current state is calculated in a similar way as the happy path after the current state. Concretely, this means you'll see the states the instance traverse through to get from the first possible state to the current state if it were to follow the normal flow. 
      >
-     > The [default storage behaviour](xref:DOM_DomInstanceHistorySettings) for DOM instances is that the history is saved asynchronously, as this improves performance. As a result, the history is not always up to date when it is fetched.When this is the case, the path between the incomplete history and the current state is completed in a similar manner.
+     > - Not all DOM instances maintain a history of their traversed states. This behavior is determined by the module. Instances without a history calculate the path from the initial state to the current state as if they followed the standard flow, similar to a happy path.
+     > - The [DOM instance history objects](xref:DOM_DomInstanceHistorySettings) are by default stored asynchronously, which enhances performance but may result in an outdated history when retrieved. In such cases, the path between the incomplete history and the current state is also completed according to the standard flow.
 
 1. Fine-tune the component layout. In the *Component > Layout* tab, the following options are available:
 
